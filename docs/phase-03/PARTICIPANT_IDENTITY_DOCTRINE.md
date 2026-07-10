@@ -213,7 +213,7 @@ A participant's value is **never** determined by:
 
 **[PEP-M09a]** **Relationships become a defining part of identity** — not a sidebar metric [OM-L2].
 
-**[PEP-M09b]** Full spec: Step 3.4 Personal Network System.
+**[PEP-M09b]** Full spec: Step 3.4 [Personal Relationship Network](PERSONAL_RELATIONSHIP_NETWORK.md).
 
 ---
 

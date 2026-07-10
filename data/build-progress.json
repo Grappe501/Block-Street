@@ -88,7 +88,7 @@
         { "id": "3.1", "name": "Participant Identity Doctrine [PHASE-003.1]", "status": "done", "notes": "PEP-M01–M14, Personal Mission PRM-001, people not users" },
         { "id": "3.2", "name": "Participant Journey Framework [PHASE-003.2]", "status": "done", "notes": "JRN-M01–M14, 9 stages, orchestration layer, milestones, CPP integration" },
         { "id": "3.3", "name": "Personal Headquarters & Profile System [PHQ-001]", "status": "done", "notes": "PHQ-M01–M20, 8 sections, platform center, USR-001 registration → HQ" },
-        { "id": "3.4", "name": "Personal Network System [NET-001]", "status": "pending", "notes": "Network, invite URL, QR, relationship tree" },
+        { "id": "3.4", "name": "Personal Relationship Network [NET-001]", "status": "done", "notes": "PRN-M01–M18, Trust Graph, auto-provision, QR/invite, participant-owned network" },
         { "id": "3.5", "name": "Recruitment Engine [NET-002/003]", "status": "pending", "notes": "Referral attribution, growth tracking" },
         { "id": "3.6", "name": "Network Board", "status": "pending", "notes": "Personal organizing dashboard" },
         { "id": "3.7", "name": "Privacy & Trust System", "status": "pending", "notes": "Visibility, minor protections" },
@@ -217,6 +217,12 @@
     { "version": "1.4.0", "name": "Election ready", "status": "pending", "date": null }
   ],
   "buildLog": [
+    {
+      "date": "2026-07-10",
+      "title": "PHASE-003.4 Personal Relationship Network (Canonical)",
+      "phase": 3,
+      "summary": "PRN-M01–M18 participant-owned living network, Trust Graph, auto-provision, relationship types, QR/invite philosophy"
+    },
     {
       "date": "2026-07-10",
       "title": "PHASE-003.3 Personal Headquarters & Profile System (Canonical)",
@@ -352,9 +358,9 @@
   ],
   "stats": {
     "totalSteps": 81,
-    "doneSteps": 23,
+    "doneSteps": 24,
     "inProgressSteps": 0,
-    "pendingSteps": 58,
-    "percentComplete": 28
+    "pendingSteps": 57,
+    "percentComplete": 30
   }
 }

@@ -683,22 +683,25 @@
     },
     {
       "id": "NET-001",
-      "title": "Personal Network Board",
-      "purpose": "Provide every participant with their own organizing dashboard",
-      "description": "Auto-generated network board showing recruits and network statistics",
+      "title": "Personal Relationship Network",
+      "purpose": "Every participant owns a living network — the platform's signature relational organizing engine",
+      "description": "PHASE-003.4 auto-provisioned network on registration, Trust Graph, relationship types and strength, network dashboard in HQ My Network section, participant-owned not org CRM",
       "priority": "critical",
       "principle": "CP-008",
-      "dependencies": ["USR-001"],
-      "related": ["NET-002", "NET-003", "LS-Q3"],
+      "dependencies": ["USR-001", "PHQ-001", "PEP-001"],
+      "related": ["NET-002", "NET-003", "LS-Q3", "REL-M10"],
       "acceptanceCriteria": [
-        "Dashboard generated automatically on registration",
-        "Network statistics visible",
-        "Invite link displayed"
+        "Every participant automatically receives a Personal Relationship Network",
+        "Relationship philosophy documented — not transactional recruitment",
+        "Network structure, types, strength, and lifecycle defined",
+        "Trust Graph architecture specified",
+        "HQ My Network integration documented",
+        "Blueprint for core relational organizing engine"
       ],
-      "futureNotes": "Volunteer metrics added in Version 2",
-      "implementationStatus": "pending",
+      "futureNotes": "Mentorship tree, health score, anniversaries, full trust signal derivation",
+      "implementationStatus": "done",
       "testingStatus": "pending",
-      "documentationStatus": "approved",
+      "documentationStatus": "done",
       "trace": {
         "database": "DB-NETWORKS",
         "api": "API-NETWORK-001",
@@ -706,24 +709,25 @@
         "test": "TEST-NET-001",
         "doc": "DOC-NET-001"
       },
-      "versionHistory": { "created": "2026-07-10" }
+      "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
     },
     {
       "id": "NET-002",
-      "title": "Share Link Generation",
-      "purpose": "Answer 'How do I invite others?' — personal referral URL",
-      "description": "Unique share link /s/[slug] for every participant",
+      "title": "Share Link & Invitation System",
+      "purpose": "Answer 'How do I invite others?' — personal, relationship-first referral URL",
+      "description": "Unique share link /s/[slug] for every participant; invitation philosophy emphasizes relationship not marketing [PRN-M11]",
       "priority": "critical",
       "principle": "CP-008",
       "dependencies": ["USR-001"],
       "related": ["NET-003", "NET-001"],
       "acceptanceCriteria": [
-        "Unique slug generated per user",
-        "Share link resolves to landing page",
-        "Link copyable from network board"
+        "Unique slug generated per user on network creation",
+        "Share link resolves to personal landing page with inviter context",
+        "Link copyable from My Network section",
+        "Invitation copy feels personal not marketing"
       ],
-      "futureNotes": "Social share metadata",
-      "implementationStatus": "pending",
+      "futureNotes": "Social share metadata, editable invite templates",
+      "implementationStatus": "in_progress",
       "testingStatus": "pending",
       "documentationStatus": "approved",
       "trace": {
@@ -737,20 +741,21 @@
     },
     {
       "id": "NET-003",
-      "title": "QR Code Generation",
-      "purpose": "Mobile-first recruitment tool for in-person organizing",
-      "description": "QR code encoding personal share link, displayable on network board",
+      "title": "QR Code — Portable Organizing Identity",
+      "purpose": "Mobile-first relationship invitation tool — participant's portable organizing identity",
+      "description": "Dynamic QR code encoding personal share link, displayable in My Network; future printable cards and event check-in [PRN-M10]",
       "priority": "critical",
       "principle": "CP-008",
-      "dependencies": ["NET-002"],
-      "related": ["NET-001"],
+      "dependencies": ["NET-002", "NET-001"],
+      "related": ["NET-001", "PHQ-001"],
       "acceptanceCriteria": [
-        "QR code generated for share link",
+        "QR code generated automatically with share link",
         "Scannable on mobile devices",
-        "Downloadable or displayable"
+        "Displayable and copyable from My Network",
+        "One-tap share from HQ Quick Actions"
       ],
-      "futureNotes": "Print-ready formats",
-      "implementationStatus": "pending",
+      "futureNotes": "Print-ready formats, downloadable graphics, event check-in",
+      "implementationStatus": "in_progress",
       "testingStatus": "pending",
       "documentationStatus": "approved",
       "trace": {

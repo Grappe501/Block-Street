@@ -51,7 +51,7 @@
       "requirement": "NET-001",
       "displays": ["peopleInvited", "mentors", "connections", "newMembers", "relationshipGrowth", "inviteTools", "qrCode", "shareLink"],
       "v1": "stubInvite",
-      "note": "Absorbs Network Board shell — depth in Step 3.6"
+      "note": "Personal Relationship Network [NET-001] — Step 3.4; depth widgets Step 3.6"
     },
     {
       "key": "journey",

@@ -4,6 +4,25 @@
 
 ---
 
+## 2026-07-10 — PHASE-003.4 Personal Relationship Network (Canonical)
+
+**Document ID:** PHASE-003.4 · **NET-001 · NET-002 · NET-003 · AC-023**
+
+### What Was Built
+
+- **Signature feature:** Every participant owns a living network — not an org CRM
+- **Trust Graph [PRN-M16]** — understands how people grew together, does not rank people
+- **Auto-provisioning** — network ID, dashboard, invite URL, QR on registration
+- **10 relationship types** — extensible graph edges, 3 in V1
+- **Relationship strength** — introduced → long-term, descriptive not competitive
+- **Invitation philosophy** — relationship-first, not marketing
+
+### Guiding Principle Locked
+
+> **Every relationship has the potential to strengthen a community.**
+
+---
+
 ## 2026-07-10 — PHASE-003.3 Personal Headquarters & Profile System (Canonical)
 
 **Document ID:** PHASE-003.3 · **PHQ-001 · USR-001 · USR-002 · AC-022**
@@ -84,7 +103,7 @@
 | Item | Detail |
 |------|--------|
 | Built | PARTICIPANT_IDENTITY_DOCTRINE, PHASE_3_MASTER_SEQUENCE |
-| Next | 3.4 Personal Network System (NET-001) |
+| Next | 3.5 Recruitment Engine (NET-002/003) |
 
 ---
 

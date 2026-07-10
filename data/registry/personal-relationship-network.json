@@ -1,0 +1,186 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/phase-03/PERSONAL_RELATIONSHIP_NETWORK.md",
+  "motto": "Every participant owns a living network.",
+  "principle": "Every relationship has the potential to strengthen a community.",
+  "purpose": "Foundational organizing engine — a living representation of trusted relationships, not a referral system or CRM contact list.",
+  "signatureFeature": "Most CRMs belong to organizations. This network belongs to the participant.",
+  "philosophy": {
+    "participantsDoNot": "collect users",
+    "participantsDo": "build communities",
+    "everyInvitation": "beginning of a relationship",
+    "everyRelationship": "strengthens Arkansas organizing network"
+  },
+  "antiPatterns": [
+    { "avoid": "Leaderboards by recruit count", "prefer": "Celebrate connection and collaboration" },
+    { "avoid": "Add contacts", "prefer": "Invite someone to organize together" },
+    { "avoid": "CRM ownership model", "prefer": "Participant-owned network" },
+    { "avoid": "Transactional invites", "prefer": "Personal, relationship-first invitations" }
+  ],
+  "autoProvisioning": {
+    "hook": "createPersonalNetwork(participantId)",
+    "onRegistration": true,
+    "assets": [
+      { "id": "networkId", "pattern": "NET-{uuid}", "v1": true },
+      { "id": "networkDashboard", "location": "hq.network", "v1": true },
+      { "id": "invitationUrl", "pattern": "/s/{slug}", "requirement": "NET-002", "v1": true },
+      { "id": "qrCode", "requirement": "NET-003", "v1": true },
+      { "id": "relationshipTimeline", "v1": "seedOnFirstInvite" },
+      { "id": "networkAnalytics", "v1": "basicCounts" },
+      { "id": "growthTimeline", "v1": "stub" },
+      { "id": "mentorshipTree", "v1": false }
+    ]
+  },
+  "personalCategories": [
+    "My Friends",
+    "My Classmates",
+    "My Family",
+    "My Neighbors",
+    "My Coworkers",
+    "My Organizations",
+    "My Volunteers",
+    "My Mentors"
+  ],
+  "relationshipTypes": [
+    { "key": "invited", "label": "Invited", "edge": "invited / invited_by", "v1": true },
+    { "key": "connected", "label": "Connected", "edge": "connected_to", "v1": true },
+    { "key": "mentored", "label": "Mentored", "edge": "mentors", "v1": false },
+    { "key": "volunteer_partner", "label": "Volunteer Partner", "edge": "volunteered_with", "v1": false },
+    { "key": "committee_member", "label": "Committee Member", "edge": "member_of", "v1": false },
+    { "key": "project_collaborator", "label": "Project Collaborator", "edge": "collaborates_on", "v1": false },
+    { "key": "campus_friend", "label": "Campus Friend", "edge": "attends + connected_to", "v1": "partial" },
+    { "key": "county_connection", "label": "County Connection", "edge": "resides_in + connected_to", "v1": "partial" },
+    { "key": "alumni_connection", "label": "Alumni Connection", "edge": "graduated_from", "v1": false },
+    { "key": "professional_connection", "label": "Professional Connection", "edge": "professional_with", "v1": false }
+  ],
+  "relationshipStrength": [
+    { "stage": "introduced", "meaning": "Invitation sent or accepted" },
+    { "stage": "connected", "meaning": "Both participants active" },
+    { "stage": "active", "meaning": "Regular platform engagement" },
+    { "stage": "collaborating", "meaning": "Shared work — committee, project, volunteer" },
+    { "stage": "mentoring", "meaning": "Development relationship" },
+    { "stage": "long_term", "meaning": "Sustained engagement over time" }
+  ],
+  "networkDashboard": {
+    "elements": [
+      "networkSize",
+      "newRelationships",
+      "recentActivity",
+      "mentorship",
+      "growthTimeline",
+      "communityImpact",
+      "suggestedConnections",
+      "relationshipAnniversaries"
+    ],
+    "celebratesConnection": true,
+    "noPublicLeaderboard": true
+  },
+  "qrSystem": {
+    "requirement": "NET-003",
+    "assets": [
+      { "id": "shareUrl", "v1": true },
+      { "id": "dynamicQr", "v1": true },
+      { "id": "downloadableGraphics", "v1": false },
+      { "id": "printableCards", "v1": false },
+      { "id": "eventCheckIn", "v1": false }
+    ],
+    "portableOrganizingIdentity": true
+  },
+  "invitationPhilosophy": {
+    "requirement": "NET-002",
+    "tone": "relationship not marketing",
+    "examples": [
+      "Join my network — let's organize together.",
+      "Help strengthen our campus.",
+      "Help strengthen our county.",
+      "I'd love for you to be part of what we're building."
+    ],
+    "landingPage": "PAGE-SHARE",
+    "showsInviterContext": true
+  },
+  "relationshipTimeline": {
+    "appendOnly": true,
+    "events": [
+      "relationship.invite_sent",
+      "relationship.joined",
+      "relationship.first_event",
+      "relationship.first_committee",
+      "relationship.first_volunteer",
+      "relationship.mentorship_started"
+    ],
+    "v1Events": ["invite_sent", "joined"]
+  },
+  "networkHealth": {
+    "emphasis": "healthy relationships over large numbers",
+    "signals": [
+      "activeParticipation",
+      "volunteerInvolvement",
+      "sharedProjects",
+      "mentorship",
+      "eventsTogether",
+      "longTermEngagement",
+      "communityBuilding"
+    ],
+    "privateToParticipant": true,
+    "v1": "sizePlusActiveThisMonth"
+  },
+  "trustGraph": {
+    "description": "Records history of collaboration — does not rank people",
+    "insight": "Most platforms know who is connected. This platform understands how people have grown together.",
+    "orchestrator": "buildTrustContext(participantA, participantB)",
+    "signals": [
+      "invited_by",
+      "shared_projects",
+      "committee_service",
+      "volunteer_service",
+      "events_attended_together",
+      "mentorship",
+      "introduced_organizers"
+    ],
+    "powers": [
+      "teamRecommendations",
+      "mentorMatching",
+      "projectStaffing",
+      "communityResilienceAnalysis",
+      "smarterIntroductions",
+      "meaningfulAiAssistance"
+    ],
+    "v1": "edgeStorageBasicContext"
+  },
+  "hqIntegration": {
+    "section": "network",
+    "aggregator": "assembleNetworkSection(participantId)",
+    "parentAggregator": "assembleHeadquarters(participantId)",
+    "deepRoute": "/hq/network"
+  },
+  "futureCapabilities": [
+    "relationshipMapping",
+    "sharedInterests",
+    "suggestedIntroductions",
+    "mentorMatching",
+    "volunteerMatching",
+    "professionalNetworking",
+    "alumniNetworking",
+    "careerPathways"
+  ],
+  "v1Scope": {
+    "autoNetworkOnRegistration": true,
+    "shareUrl": true,
+    "qrCode": true,
+    "inviteAttribution": "step_3.5",
+    "networkDashboard": "sizeInviteListShareTools",
+    "relationshipTimeline": "inviteSentJoined",
+    "trustGraph": "edgeStorage",
+    "hqIntegration": true
+  },
+  "implementation": {
+    "files": [
+      "src/lib/network/createPersonalNetwork.ts",
+      "src/lib/network/assembleNetworkSection.ts",
+      "src/lib/trust/buildTrustContext.ts",
+      "src/components/hq/sections/NetworkSection.tsx",
+      "src/app/s/[slug]/page.tsx"
+    ],
+    "tables": ["networks", "relationships", "relationship_events", "referrals"]
+  }
+}

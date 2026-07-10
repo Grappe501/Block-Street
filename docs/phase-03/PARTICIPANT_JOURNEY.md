@@ -445,6 +445,6 @@ Step 3.2 is complete when:
 
 ---
 
-**Next Step:** 3.4 — Personal Network System (NET-001)
+**Next Step:** 3.5 — Recruitment Engine (NET-002/003)
 
 *Trace: USR-001 registration → PHQ shell → NET-002/003 invite tools → JRN orchestrator → CPP timeline*

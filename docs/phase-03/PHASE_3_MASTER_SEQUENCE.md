@@ -38,7 +38,7 @@ When complete, every participant receives:
 | 3.1 | [Participant Identity Doctrine](PARTICIPANT_IDENTITY_DOCTRINE.md) | Constitutional document for people | ✅ |
 | 3.2 | [Participant Journey Framework](PARTICIPANT_JOURNEY.md) | Lifecycle stages — growth not rank | ✅ |
 | 3.3 | [Personal Headquarters & Profile System](PARTICIPANT_PROFILE_SYSTEM.md) | Organizing home — not a profile page | ✅ |
-| 3.4 | Personal Network System | Network, invite URL, QR, relationship tree | Pending |
+| 3.4 | [Personal Relationship Network](PERSONAL_RELATIONSHIP_NETWORK.md) | Participant-owned living network + Trust Graph | ✅ |
 | 3.5 | Recruitment Engine | Invitations, attribution, growth tracking | Pending |
 | 3.6 | Network Board | Personal organizing dashboard | Pending |
 | 3.7 | Privacy & Trust System | Visibility, permissions, minor protections | Pending |
@@ -68,18 +68,19 @@ The participant's **organizing home** — not a profile page:
 
 ---
 
-## 3.4 — Personal Network System
+## 3.4 — Personal Relationship Network
 
-**Requirement focus:** NET-001 · NET-002 · NET-003
+**Requirement focus:** NET-001 · NET-002 · NET-003 · PRN-M16 Trust Graph
 
-**Most important implementation document.**
+The platform's **signature feature** — every participant owns a living network:
 
-Every participant owns:
+- **Auto-provisioned** on registration — network ID, invite URL, QR, dashboard
+- **Relationship types** — invited, connected, mentored, collaborator, and more
+- **Trust Graph** — understands how people grew together; does not rank
+- **Participant-owned** — not an org CRM; relationships, not contacts
+- **HQ integration** — lives in My Network section [PHQ-M08]
 
-- **Network** · **Invite URL** · **QR Code**
-- **Relationship tree** · **Mentorship** edges
-- **Growth** metrics · **Activity** feed
-- Future **family tree of organizers**
+*Live spec:* `personal-relationship-network.json` · *Hook:* `createPersonalNetwork(participantId)`
 
 ---
 
