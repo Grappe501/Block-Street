@@ -1,1 +1,264 @@
-{"version":"1.0.0","requirementId":"DAB-006","docPath":"docs/volume-02/KNOWLEDGE_GRAPH_SCHEMA.md","syncLagSlaSeconds":60,"acceptanceCriteria":"AC-111"}
+{
+  "version": "2.0.0",
+  "documentId": "VOLUME-002.5",
+  "requirementId": "DAB-006",
+  "docPath": "docs/volume-02/KNOWLEDGE_GRAPH_SCHEMA.md",
+  "status": "canonical",
+  "priority": "critical",
+  "lastUpdated": "2026-07-10",
+  "guidingPrinciple": "The relational database stores truth. The Knowledge Graph understands truth.",
+  "notASecondDatabase": true,
+  "canonicalSource": "relational_database",
+  "relationshipLedgerPath": "data/registry/relationship-data-model.json",
+  "engCompanion": {
+    "requirementId": "ENG-008",
+    "docPath": "docs/volume-01/COMMUNITY_KNOWLEDGE_GRAPH_ARCHITECTURE.md",
+    "registryPath": "data/registry/community-knowledge-graph-architecture.json"
+  },
+  "graphPhilosophy": {
+    "derived": true,
+    "permissionAware": true,
+    "explainable": true,
+    "historical": true,
+    "observable": true,
+    "continuouslySynchronized": true,
+    "neverCanonical": true
+  },
+  "graphArchitecture": {
+    "components": ["Node", "Relationship", "Context", "History"],
+    "description": "Every graph object follows Node → Relationship → Context → History"
+  },
+  "nodeCategoryCount": 8,
+  "nodeCategories": [
+    {
+      "id": "identity",
+      "name": "Identity Nodes",
+      "examples": ["Participant", "Mentor", "Volunteer", "Leader", "Alumni", "InstitutionContact"],
+      "note": "Role labels are projected roles, not separate canonical entities"
+    },
+    {
+      "id": "community",
+      "name": "Community Nodes",
+      "examples": ["Community", "Committee", "WorkingGroup", "Campus", "CountyCommunity", "RegionalNetwork"]
+    },
+    {
+      "id": "registry",
+      "name": "Registry Nodes",
+      "examples": ["County", "City", "Institution", "Region", "Venue", "ServiceArea"]
+    },
+    {
+      "id": "mission",
+      "name": "Mission Nodes",
+      "examples": ["Mission", "Initiative", "Project", "Task", "Milestone"]
+    },
+    {
+      "id": "experience",
+      "name": "Experience Nodes",
+      "examples": ["Event", "Training", "Workshop", "VolunteerActivity", "Meeting", "Celebration"]
+    },
+    {
+      "id": "knowledge",
+      "name": "Knowledge Nodes",
+      "examples": ["Story", "Lesson", "ExperiencePlaybook", "CommunityBrainEntry", "MissionLibrary", "LegacyRecord", "Policy"]
+    },
+    {
+      "id": "resource",
+      "name": "Resource Nodes",
+      "examples": ["Skill", "Equipment", "Facility", "Transportation", "FundingSource", "Technology"]
+    },
+    {
+      "id": "intelligence",
+      "name": "Intelligence Nodes",
+      "examples": ["Insight", "Recommendation", "DigitalTwin", "GrowthPattern", "LeadershipPattern", "OperationalObservation"]
+    }
+  ],
+  "relationshipCategories": [
+    "MemberOf",
+    "Mentors",
+    "Invited",
+    "Leads",
+    "Supports",
+    "Created",
+    "Published",
+    "Attended",
+    "CollaboratedWith",
+    "LocatedIn",
+    "Uses",
+    "Improves",
+    "Inspired",
+    "SucceededBy",
+    "References"
+  ],
+  "relationshipCategoryCount": 15,
+  "configurableEdgeTypes": true,
+  "edgeMetadataFields": [
+    "relationshipType",
+    "source",
+    "target",
+    "createdDate",
+    "updatedDate",
+    "status",
+    "visibility",
+    "confidence",
+    "context",
+    "weight",
+    "auditReference"
+  ],
+  "weightSignals": [
+    "sharedMissions",
+    "mentorshipDuration",
+    "volunteerHours",
+    "leadershipCollaboration",
+    "knowledgeSharing",
+    "repeatedParticipation",
+    "communityInvolvement"
+  ],
+  "temporalGraph": {
+    "enabled": true,
+    "preservesStages": true,
+    "examplePathway": ["Volunteer", "CommitteeMember", "CommitteeChair", "Mentor", "RegionalAdvisor"]
+  },
+  "projectionPipeline": {
+    "stages": ["SQLDatabase", "DomainEvents", "ProjectionEngine", "KnowledgeGraph", "Search", "AI", "Analytics"],
+    "eventDriven": true,
+    "syncLagSlaSeconds": 60
+  },
+  "projectionRules": [
+    "never_modify_canonical_data",
+    "idempotent",
+    "support_replay",
+    "auto_recover_after_failure",
+    "independently_testable"
+  ],
+  "unifiedGraphProjectionEngine": {
+    "name": "Unified Graph Projection Engine",
+    "purpose": "Single mechanism for maintaining every derived graph from canonical domain events",
+    "inputs": "canonical_domain_events",
+    "projections": [
+      "CommunityKnowledgeGraph",
+      "ParticipantGraphs",
+      "CountyGraphs",
+      "LeadershipGraphs",
+      "GrowthGraphs",
+      "KnowledgeGraphs",
+      "PartnershipGraphs",
+      "DigitalTwins",
+      "SearchRelationshipIndexes",
+      "AIRetrievalContext"
+    ],
+    "advantages": [
+      "consistency",
+      "recoverability",
+      "scalability",
+      "observability",
+      "future_flexibility"
+    ],
+    "principle": "Write once to canonical data, project many times for specialized purposes"
+  },
+  "signatureSubgraphs": [
+    {
+      "id": "community",
+      "name": "Community Graph",
+      "contains": ["Members", "Leadership", "Stories", "Knowledge", "Events", "Missions", "Capacity", "Partners", "Growth"]
+    },
+    {
+      "id": "participant",
+      "name": "Participant Graph",
+      "contains": ["Communities", "VolunteerHistory", "Mentorship", "Skills", "Stories", "Events", "Knowledge", "Leadership"],
+      "feedsDigitalTwin": true
+    },
+    {
+      "id": "county",
+      "name": "County Graph",
+      "contains": ["Communities", "Institutions", "Partners", "Events", "Stories", "Capacity", "VolunteerActivity", "Growth"]
+    },
+    {
+      "id": "knowledge",
+      "name": "Knowledge Graph",
+      "contains": ["Stories", "Lessons", "Playbooks", "CommunityBrain", "MissionLibrary", "Legacy"]
+    },
+    {
+      "id": "leadership",
+      "name": "Leadership Graph",
+      "contains": ["LeadershipPathways", "Mentorship", "Succession", "CommunityBuilderDevelopment", "CrossCommunityLeadership"]
+    },
+    {
+      "id": "growth",
+      "name": "Growth Graph",
+      "contains": ["Invitations", "Belonging", "CommunityLaunches", "Expansion", "ReferralTrees", "VolunteerPathways"]
+    }
+  ],
+  "signatureSubgraphCount": 6,
+  "signatureGraphs": [
+    { "name": "Trust", "edgeTypes": ["mentors", "leads", "member_of"] },
+    { "name": "Growth", "edgeTypes": ["invited", "member_of", "participated_in"] },
+    { "name": "Conversation", "edgeTypes": ["participated_in", "attended"] },
+    { "name": "Capability", "edgeTypes": ["has_skill", "uses"] },
+    { "name": "Decision", "edgeTypes": ["documents_in", "references"] },
+    { "name": "Improvement", "edgeTypes": ["improves", "derived_from"] },
+    { "name": "Operational", "edgeTypes": ["parent_of", "organizes", "supports"] },
+    { "name": "Impact", "edgeTypes": ["contributed_to", "published", "inspired"] }
+  ],
+  "queryPatterns": [
+    "neighborhood_search",
+    "relationship_traversal",
+    "shortest_path",
+    "shared_connections",
+    "leadership_lineage",
+    "knowledge_lineage",
+    "community_influence",
+    "mentorship_chains"
+  ],
+  "explainabilityRequirements": [
+    "nodes_examined",
+    "relationships_that_mattered",
+    "evidence_supporting_conclusion",
+    "historical_patterns_contributed"
+  ],
+  "privacyRules": [
+    "visibility",
+    "permissions",
+    "community_boundaries",
+    "private_relationships",
+    "restricted_knowledge",
+    "authorization_before_traversal"
+  ],
+  "aiIntegration": {
+    "consumes": [
+      "node_relationships",
+      "historical_patterns",
+      "knowledge_flows",
+      "leadership_pathways",
+      "growth_signals",
+      "community_health"
+    ],
+    "capabilities": [
+      "recommendMentors",
+      "identifyCollaborationOpportunities",
+      "suggestPartnershipIntroductions",
+      "summarizeRelationshipHistory",
+      "recommendLeadershipSuccession"
+    ],
+    "replacesCanonical": false
+  },
+  "futureNodeTypes": [
+    "Scholarship",
+    "Housing",
+    "Employment",
+    "Research",
+    "Legislation",
+    "PublicPolicy",
+    "Healthcare"
+  ],
+  "performanceTargets": [
+    "traversal",
+    "relationship_lookup",
+    "projection_speed",
+    "caching",
+    "incremental_updates",
+    "read_scalability"
+  ],
+  "kernelPath": "src/lib/kernel/graph/",
+  "acceptanceCriteria": "AC-111",
+  "acceptanceCriteriaMet": true
+}
