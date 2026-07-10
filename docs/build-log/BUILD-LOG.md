@@ -4,6 +4,43 @@
 
 ---
 
+## 2026-07-10 — PHASE-002.7 Community Identity & Personalization System
+
+**Document ID:** PHASE-002.7  
+**Requirement IDs:** CID-M01–CID-M18, CID-001, AC-016  
+**Artifact:** `docs/phase-02/COMMUNITY_IDENTITY_PERSONALIZATION_SYSTEM.md`
+
+### What Was Built
+
+- **Community Identity System** — beyond campus pages to counties, committees, and personal profiles
+- **Community DNA** architecture [CID-M13] — one flexible schema every community inherits
+- Four identity layers: Geographic, Educational, Organizing, Human
+- County and institution personalization guidelines with IP boundaries [CID-M07]
+- Visual identity system — recognition over imitation
+- Welcome experience and living community evolution specs
+- `data/registry/community-identity.json` + `schemas/community-dna.schema.json`
+- Admin **Identity** tab with DNA category preview
+
+### Guiding Principle Locked
+
+> **One Platform. Hundreds of Communities. One Unique Experience for Each.**
+
+### Key Question Answered
+
+> How do we make a student from UCA feel like this is *their* platform, while making a student from Arkansas Tech feel exactly the same?
+
+**Answer:** Identity — not branding. Celebrate communities; never imitate institutions.
+
+### ED-FD Handoff
+
+| Item | Detail |
+|------|--------|
+| Built | COMMUNITY_IDENTITY_PERSONALIZATION_SYSTEM.md, community-identity.json, community-dna.schema.json |
+| Changed | Admin Dashboard (Identity tab), requirements registry (CID-001), build progress |
+| Next | 2.8 Registry Source & Verification Protocol |
+
+---
+
 ## 2026-07-10 — PHASE-002.6 Statewide Outreach Intelligence & Mission Board
 
 **Document ID:** PHASE-002.6  

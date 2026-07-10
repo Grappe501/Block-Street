@@ -1,0 +1,121 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/phase-02/COMMUNITY_IDENTITY_PERSONALIZATION_SYSTEM.md",
+  "schemaPath": "data/registry/schemas/community-dna.schema.json",
+  "motto": "One Platform. Hundreds of Communities. One Unique Experience for Each.",
+  "coreQuestion": "How do we make a student from UCA feel like this is their platform, while making a student from Arkansas Tech feel exactly the same?",
+  "answer": "Identity — not branding. Celebrate communities; never imitate institutions.",
+  "communityLayers": [
+    { "id": "geographic", "name": "Geographic Identity", "examples": ["County", "City", "Region", "Landmarks", "Community character"] },
+    { "id": "educational", "name": "Educational Identity", "examples": ["History", "Traditions", "Academics", "Student life", "Campus setting"] },
+    { "id": "organizing", "name": "Organizing Identity", "examples": ["Projects", "Volunteer work", "Committees", "Events", "Milestones"] },
+    { "id": "human", "name": "Human Identity", "examples": ["People", "Relationships", "Shared accomplishments"] }
+  ],
+  "dnaCategories": [
+    { "key": "history", "label": "History", "description": "Founding stories, milestones, narrative" },
+    { "key": "geography", "label": "Geography", "description": "Place, landscape, demographics, location" },
+    { "key": "culture", "label": "Culture", "description": "Character, interesting facts, community life" },
+    { "key": "traditions", "label": "Traditions", "description": "Publicly documented customs and campus traditions" },
+    { "key": "studentLife", "label": "Student / Community Life", "description": "Life on campus or in the county" },
+    { "key": "civicOpportunities", "label": "Civic Opportunities", "description": "Ways to engage locally" },
+    { "key": "milestones", "label": "Organizing Milestones", "description": "Platform-tracked achievements" },
+    { "key": "stories", "label": "Stories", "description": "Narrative content and leadership stories" },
+    { "key": "media", "label": "Media", "description": "Licensed photography and original illustrations" },
+    { "key": "faq", "label": "FAQ", "description": "Common questions" },
+    { "key": "communityGenerated", "label": "Community Content", "description": "User-submitted content (future, moderated)" }
+  ],
+  "entityTypeConfig": {
+    "county": {
+      "route": "/county/[slug]",
+      "requiredCategories": ["geography", "history"],
+      "optionalCategories": ["culture", "milestones", "media", "faq", "civicOpportunities"],
+      "sectionOrder": ["history", "geography", "culture", "civicOpportunities", "milestones", "stories", "media", "faq"],
+      "labelOverrides": { "studentLife": "Community Life" }
+    },
+    "institution": {
+      "route": "/schools/[slug]",
+      "requiredCategories": ["history", "geography", "studentLife"],
+      "optionalCategories": ["traditions", "culture", "civicOpportunities", "media", "faq"],
+      "sectionOrder": ["history", "geography", "traditions", "studentLife", "culture", "civicOpportunities", "milestones", "stories", "media", "faq"],
+      "disclaimerRequired": true
+    },
+    "committee": {
+      "route": "/committees/[slug]",
+      "requiredCategories": ["organizing"],
+      "optionalCategories": ["history", "stories", "media"],
+      "sectionOrder": ["history", "organizing", "stories", "media"],
+      "v1": "future"
+    },
+    "personal": {
+      "route": "/profile/[slug]",
+      "requiredCategories": [],
+      "optionalCategories": ["organizing", "milestones", "stories"],
+      "sectionOrder": ["organizing", "milestones", "stories"],
+      "v1": "future"
+    }
+  },
+  "personalizationBoundaries": {
+    "prohibited": [
+      "Unauthorized logos",
+      "Protected mascots",
+      "Official seals",
+      "Institutional branding implying affiliation",
+      "Marketing language copied from official sources"
+    ],
+    "preferred": [
+      "Original layouts and illustrations",
+      "Licensed photography",
+      "Accent colors inspired by publicly associated colors",
+      "Recognition over imitation"
+    ],
+    "requiredDisclaimer": "An independent student organizing network. Not affiliated with or endorsed by the institution."
+  },
+  "visualIdentity": {
+    "approach": "Accent colors inspired by geography or publicly associated colors — never logos or mascots",
+    "v1Fields": ["colors.primary", "colors.secondary"],
+    "futureFields": ["themeTokens", "heroImageRef", "iconSet"]
+  },
+  "welcomeExperience": {
+    "sections": [
+      { "id": "greeting", "heading": "Welcome" },
+      { "id": "introduction", "heading": "About this community", "dnaSource": ["history", "culture"] },
+      { "id": "opportunities", "heading": "Current opportunities", "source": "missionBoard" },
+      { "id": "accomplishments", "heading": "Recent accomplishments", "source": "milestones" },
+      { "id": "events", "heading": "Upcoming events", "v1": "future" },
+      { "id": "nextSteps", "heading": "Suggested first steps", "source": "opportunityEngine" }
+    ],
+    "rule": "Never arrive at an empty page"
+  },
+  "sharedPlatformElements": [
+    "Navigation",
+    "Buttons",
+    "Menus",
+    "Dashboard structure",
+    "Interaction patterns",
+    "Accessibility"
+  ],
+  "discoveryPrompts": [
+    { "id": "nearby-campuses", "template": "Explore campuses near {countyName}" },
+    { "id": "neighboring-counties", "template": "See organizing in neighboring counties" },
+    { "id": "regional-efforts", "template": "Regional organizing in {region}" },
+    { "id": "featured-projects", "template": "Featured projects in this community" }
+  ],
+  "renderPipeline": [
+    "Load registry node + DNA + status",
+    "Apply visualIdentity theme tokens",
+    "Render welcome block",
+    "Render DNA categories (type order, hide if empty)",
+    "Render Mission Board opportunities",
+    "Render discovery prompts",
+    "Render disclaimer (institution)",
+    "Render suggested next step"
+  ],
+  "v1Scope": {
+    "philosophyAndSchema": "done",
+    "institutionPagesBootstrap": "partial",
+    "countyPagesBootstrap": "partial",
+    "fullDnaMigration": "step_2.9",
+    "welcomeBlocks": "phase_3",
+    "livingTimeline": "future"
+  }
+}

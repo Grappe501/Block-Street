@@ -405,6 +405,6 @@ Step 2.6 is complete when:
 
 ---
 
-**Next Step:** 2.7 — Campus Page Personalization Rules (`CAMPUS_PAGE_PERSONALIZATION_RULES.md`)
+**Next Step:** 2.8 — Registry Source & Verification Protocol
 
 *Trace: LS-P7 → OIS-M05 → status-framework dashboardQueries → Mission Board [OIS-M16]*

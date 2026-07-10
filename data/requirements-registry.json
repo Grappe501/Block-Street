@@ -16,6 +16,7 @@
     { "prefix": "VOL", "domain": "Volunteer" },
     { "prefix": "ANL", "domain": "Analytics" },
     { "prefix": "OIS", "domain": "Outreach intelligence" },
+    { "prefix": "CID", "domain": "Community identity" },
     { "prefix": "STS", "domain": "Status & lifecycle" },
     { "prefix": "ADM", "domain": "Administration" },
     { "prefix": "SEC", "domain": "Security" },
@@ -47,8 +48,8 @@
     { "id": "PAGE-JOIN", "route": "/join", "title": "Join / Registration", "status": "in_progress" },
     { "id": "PAGE-MAP", "route": "/map", "title": "Statewide Map", "status": "in_progress", "requirement": "OIS-001" },
     { "id": "PAGE-SCHOOLS", "route": "/schools", "title": "Institution Directory", "status": "done" },
-    { "id": "PAGE-INSTITUTION", "route": "/schools/[slug]", "title": "Institution Hub", "status": "done" },
-    { "id": "PAGE-COUNTY", "route": "/county/[slug]", "title": "County Youth Hub", "status": "done" },
+    { "id": "PAGE-INSTITUTION", "route": "/schools/[slug]", "title": "Institution Hub", "status": "done", "requirement": "CID-001" },
+    { "id": "PAGE-COUNTY", "route": "/county/[slug]", "title": "County Youth Hub", "status": "done", "requirement": "CID-001" },
     { "id": "PAGE-NETWORK", "route": "/dashboard/network", "title": "Personal Network Board", "status": "pending" },
     { "id": "PAGE-SHARE", "route": "/s/[slug]", "title": "Share / Referral Landing", "status": "pending" },
     { "id": "PAGE-ADMIN", "route": "/admin", "title": "Director Workbench", "status": "done" },
@@ -349,6 +350,36 @@
         "frontend": "PAGE-ADMIN",
         "test": "TEST-OIS-001",
         "doc": "DOC-OIS-001"
+      },
+      "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
+    },
+    {
+      "id": "CID-001",
+      "title": "Community Identity & Personalization System",
+      "purpose": "Every community feels like theirs — identity through celebration, not imitation",
+      "description": "PHASE-002.7 Community DNA schema, four identity layers, county/campus personalization, IP boundaries, one flexible renderer",
+      "priority": "critical",
+      "principle": "CP-006",
+      "dependencies": ["INST-003", "CNTY-002", "OIS-001"],
+      "related": ["CID-M13", "DG-002", "INST-M11", "CNTY-M13"],
+      "acceptanceCriteria": [
+        "Community identity philosophy documented",
+        "County and institution personalization guidelines",
+        "Intellectual property boundaries respected",
+        "Shared platform consistency maintained",
+        "Community DNA architecture specified",
+        "Framework for community-specific experiences"
+      ],
+      "futureNotes": "Committee/personal DNA, welcome blocks, living timelines, community-generated content",
+      "implementationStatus": "done",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": "DB-INSTITUTIONS",
+        "api": null,
+        "frontend": "PAGE-INSTITUTION",
+        "test": "TEST-CID-001",
+        "doc": "DOC-CID-001"
       },
       "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
     },

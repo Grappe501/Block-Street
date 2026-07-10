@@ -1,0 +1,108 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://block-street.netlify.app/schemas/community-dna.json",
+  "title": "Community DNA Profile",
+  "description": "Structured identity profile for counties, institutions, committees, and personal communities. PHASE-002.7",
+  "type": "object",
+  "properties": {
+    "entityType": {
+      "type": "string",
+      "enum": ["county", "institution", "committee", "personal"]
+    },
+    "entityId": {
+      "type": "string",
+      "description": "Registry node ID e.g. CNTY-pulaski or INST-uca"
+    },
+    "history": { "$ref": "#/$defs/dnaCategory" },
+    "geography": { "$ref": "#/$defs/dnaCategory" },
+    "culture": { "$ref": "#/$defs/dnaCategory" },
+    "traditions": { "$ref": "#/$defs/dnaCategory" },
+    "studentLife": { "$ref": "#/$defs/dnaCategory" },
+    "civicOpportunities": { "$ref": "#/$defs/dnaCategory" },
+    "milestones": { "$ref": "#/$defs/dnaCategory" },
+    "stories": { "$ref": "#/$defs/dnaCategory" },
+    "media": { "$ref": "#/$defs/mediaCategory" },
+    "faq": { "$ref": "#/$defs/faqCategory" },
+    "communityGenerated": { "$ref": "#/$defs/dnaCategory" },
+    "visualIdentity": {
+      "type": "object",
+      "properties": {
+        "colors": {
+          "type": "object",
+          "properties": {
+            "primary": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+            "secondary": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" }
+          },
+          "required": ["primary"]
+        },
+        "heroImageRef": { "type": "string" },
+        "iconSet": { "type": "string" }
+      }
+    },
+    "lastUpdated": { "type": "string", "format": "date" }
+  },
+  "required": ["entityType", "entityId"],
+  "$defs": {
+    "dnaCategory": {
+      "type": "object",
+      "properties": {
+        "summary": { "type": "string" },
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "title": { "type": "string" },
+              "body": { "type": "string" },
+              "year": { "type": "integer" }
+            },
+            "required": ["body"]
+          }
+        },
+        "sources": {
+          "type": "array",
+          "items": { "type": "string", "format": "uri" }
+        },
+        "lastUpdated": { "type": "string", "format": "date" }
+      }
+    },
+    "mediaCategory": {
+      "type": "object",
+      "properties": {
+        "summary": { "type": "string" },
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "url": { "type": "string" },
+              "caption": { "type": "string" },
+              "license": { "type": "string", "enum": ["original", "licensed", "community_submitted"] },
+              "attribution": { "type": "string" }
+            },
+            "required": ["url", "license"]
+          }
+        },
+        "lastUpdated": { "type": "string", "format": "date" }
+      }
+    },
+    "faqCategory": {
+      "type": "object",
+      "properties": {
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "question": { "type": "string" },
+              "answer": { "type": "string" }
+            },
+            "required": ["question", "answer"]
+          }
+        },
+        "lastUpdated": { "type": "string", "format": "date" }
+      }
+    }
+  },
+  "additionalProperties": false
+}
