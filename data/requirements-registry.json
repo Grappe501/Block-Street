@@ -5056,28 +5056,34 @@
     },
     {
       "id": "UXB-012",
-      "title": "Engagement & Gamification Architecture — Volume 4.11",
-      "purpose": "Engagement & Gamification Architecture experience layer",
-      "description": "VOLUME-004.11 XP, badges, recognition without manipulation",
-      "priority": "critical",
+      "title": "Engagement, Motivation & Community Growth Architecture — Volume 4.11",
+      "purpose": "Ethical long-term engagement — reward contribution not consumption",
+      "description": "VOLUME-004.11 — Life Journey Graph, 7 growth trees, 6 growth dimensions, Civic Reputation Profile, multi-dimensional growth without manipulation",
+      "priority": "foundational",
       "principle": "CP-012",
       "dependencies": [
         "UXB-011",
-        "UXB-001"
+        "UXB-002",
+        "UXB-001",
+        "CAB-001"
       ],
       "related": [
-        "UXB-013"
+        "UXB-013",
+        "PBA-008",
+        "PBA-013"
       ],
       "acceptanceCriteria": [
-        "Experience philosophy documented",
-        "UX behaviors defined",
-        "Volume 0-3 integration specified",
-        "Implementation blueprint for experience layer"
+        "Engagement philosophy documented",
+        "Growth dimensions and Civic Reputation defined",
+        "Recognition, milestones, learning loops, AI coaching, analytics, and accessibility established",
+        "Community Health, Digital Twin, Community Event Ledger, and Knowledge integrations incorporated",
+        "Life Journey Graph specified",
+        "Complete blueprint for ethical long-term engagement"
       ],
-      "futureNotes": "Scaffold — pending canonical build step",
-      "implementationStatus": "pending",
+      "futureNotes": "Guiding principle: Reward contribution, not consumption.",
+      "implementationStatus": "done",
       "testingStatus": "pending",
-      "documentationStatus": "pending",
+      "documentationStatus": "done",
       "trace": {
         "database": null,
         "api": null,
@@ -5087,7 +5093,7 @@
       },
       "versionHistory": {
         "created": "2026-07-10",
-        "implemented": null
+        "implemented": "2026-07-10"
       }
     },
     {

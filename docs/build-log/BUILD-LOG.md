@@ -18,6 +18,24 @@
 
 ---
 
+## 2026-07-10 — Volume 4.11 Engagement, Motivation & Community Growth Architecture [UXB-012 · AC-147]
+
+**Document:** `docs/volume-04/ENGAGEMENT_ARCHITECTURE.md` · **Registry:** `data/registry/engagement-architecture.json`
+
+### What Changed
+
+- **Guiding principle:** *Reward contribution, not consumption.*
+- Ethical engagement — stronger communities not longer screen time; cultivates citizens not consumers
+- **7-layer growth cycle** and **8 engagement principles**
+- **6 growth dimensions:** Knowledge through Stewardship
+- **Civic Reputation Profile** — transparent, explainable, never a ranking system
+- Growth paths, learning loops, healthy motivation, community challenges, reflection, AI growth coach
+- Analytics measure retention and belonging — not DAU, time spent, or clicks
+- **Life Journey Graph (LJG)** — 7 interconnected growth trees, living civic forest, AI growth companion
+- Admin Volume 4 tab · requirements UXB-012 updated · Volume 4: 10/14 complete (4.4 pending)
+
+---
+
 ## 2026-07-10 — Volume 4.10 AI Experience Architecture [UXB-011 · AC-146]
 
 **Document:** `docs/volume-04/AI_EXPERIENCE_ARCHITECTURE.md` · **Registry:** `data/registry/ai-experience-architecture.json`
