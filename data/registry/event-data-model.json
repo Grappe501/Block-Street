@@ -1,1 +1,268 @@
-{"version":"1.0.0","requirementId":"DAB-007","docPath":"docs/volume-02/EVENT_DATA_MODEL.md","eventCategories":["identity","community","action","growth","knowledge","comms","system"],"acceptanceCriteria":"AC-112"}
+{
+  "version": "2.0.0",
+  "documentId": "VOLUME-002.6",
+  "requirementId": "DAB-007",
+  "docPath": "docs/volume-02/EVENT_DATA_MODEL.md",
+  "status": "canonical",
+  "priority": "critical",
+  "lastUpdated": "2026-07-10",
+  "guidingPrinciple": "Nothing important should happen without leaving a trace.",
+  "eventsAreMoreThanLogs": true,
+  "engCompanion": {
+    "requirementId": "ENG-009",
+    "docPath": "docs/volume-01/EVENT_TIMELINE_ARCHITECTURE.md",
+    "registryPath": "data/registry/event-timeline-architecture.json"
+  },
+  "lheCompanion": {
+    "requirementId": "LHE-001",
+    "docPath": "docs/volume-01/LIVING_HISTORY_ENGINE.md"
+  },
+  "eventPhilosophy": {
+    "immutable": true,
+    "oneMeaningfulOccurrence": true,
+    "describesHistory": true,
+    "presentReconstructableFromPast": true
+  },
+  "eventArchitecture": {
+    "components": ["Actor", "Action", "Target", "Context", "Timestamp"],
+    "questions": ["Who", "DidWhat", "ToWhat", "Where", "When", "Why"]
+  },
+  "eventCategoryCount": 11,
+  "eventCategories": [
+    {
+      "id": "identity",
+      "name": "Identity Events",
+      "domainSchema": "Identity",
+      "examples": ["ParticipantRegistered", "ProfileUpdated", "PasswordChanged", "AccountVerified", "PreferencesUpdated"],
+      "retention": "permanent"
+    },
+    {
+      "id": "community",
+      "name": "Community Events",
+      "domainSchema": "Community",
+      "examples": ["CommunityCreated", "CommunityActivated", "CommitteeFormed", "MembershipJoined", "MembershipEnded", "CommunityArchived"],
+      "retention": "permanent"
+    },
+    {
+      "id": "leadership",
+      "name": "Leadership Events",
+      "domainSchema": "Leadership",
+      "examples": ["LeaderAssigned", "LeaderRemoved", "MentorshipStarted", "MentorshipCompleted", "LeadershipPromoted", "SuccessionCompleted"],
+      "retention": "permanent"
+    },
+    {
+      "id": "mission",
+      "name": "Mission Events",
+      "domainSchema": "Mission",
+      "examples": ["MissionCreated", "MissionApproved", "MissionStarted", "MilestoneCompleted", "MissionFinished", "MissionReflected"],
+      "retention": "permanent"
+    },
+    {
+      "id": "experience",
+      "name": "Experience Events",
+      "domainSchema": "Experience",
+      "examples": ["EventScheduled", "RegistrationCompleted", "AttendanceRecorded", "VolunteerCheckedIn", "WorkshopFinished", "CommunityCelebration"],
+      "retention": "permanent"
+    },
+    {
+      "id": "growth",
+      "name": "Growth Events",
+      "domainSchema": "Growth",
+      "examples": ["InvitationSent", "InvitationAccepted", "ReferralCreated", "BelongingMilestone", "CommunityLaunch", "AmbassadorRecognition"],
+      "retention": "permanent"
+    },
+    {
+      "id": "knowledge",
+      "name": "Knowledge Events",
+      "domainSchema": "Knowledge",
+      "examples": ["StoryPublished", "LessonAdded", "PlaybookUpdated", "KnowledgeShared", "LegacyRecorded", "MissionReflectionSaved"],
+      "retention": "permanent"
+    },
+    {
+      "id": "partnership",
+      "name": "Partnership Events",
+      "domainSchema": "Partnership",
+      "examples": ["PartnerAdded", "AgreementSigned", "CollaborationStarted", "CollaborationCompleted", "FacilityShared"],
+      "retention": "permanent"
+    },
+    {
+      "id": "capacity",
+      "name": "Capacity Events",
+      "domainSchema": "Capacity",
+      "examples": ["SkillAdded", "EquipmentAssigned", "FacilityReserved", "TransportationScheduled", "CapacityUpdated"],
+      "retention": "permanent"
+    },
+    {
+      "id": "communication",
+      "name": "Communication Events",
+      "domainSchema": "Communication",
+      "examples": ["AnnouncementPublished", "NotificationDelivered", "DigestGenerated", "ReminderSent", "CommunicationRead"],
+      "retention": "mixed"
+    },
+    {
+      "id": "intelligence",
+      "name": "Intelligence Events",
+      "domainSchema": "Intelligence",
+      "examples": ["RecommendationGenerated", "InsightPublished", "DigitalTwinUpdated", "GraphProjectionCompleted", "ForecastGenerated"],
+      "retention": "derived",
+      "note": "Describe intelligence activity without becoming canonical truth"
+    }
+  ],
+  "metadataFields": [
+    "canonicalEventId",
+    "eventType",
+    "actor",
+    "target",
+    "relatedObjects",
+    "communityContext",
+    "timestamp",
+    "visibility",
+    "status",
+    "source",
+    "version",
+    "correlationId"
+  ],
+  "contextFields": [
+    "Community",
+    "Mission",
+    "County",
+    "Institution",
+    "Event",
+    "Initiative",
+    "Committee",
+    "Campaign",
+    "Location"
+  ],
+  "visibilityLevels": [
+    "Private",
+    "Team",
+    "Community",
+    "Regional",
+    "Statewide",
+    "Public"
+  ],
+  "immutabilityPolicy": {
+    "noInPlaceModification": true,
+    "correctionMechanisms": ["CorrectionEvent", "SupersedingEvent", "AdministrativeNote"],
+    "gdprRedactionViaMetadata": true
+  },
+  "versioningFields": [
+    "schemaVersion",
+    "producerVersion",
+    "platformVersion",
+    "migrationCompatibility"
+  ],
+  "correlationExample": {
+    "workflow": "LaunchCommunity",
+    "steps": [
+      "LaunchCommunity",
+      "CommunityCreated",
+      "LeaderAssigned",
+      "WelcomeJourneyStarted",
+      "KnowledgeSpaceInitialized",
+      "InvitationCampaignStarted",
+      "CommunityActivated"
+    ]
+  },
+  "eventStreams": [
+    "ParticipantStream",
+    "CommunityStream",
+    "MissionStream",
+    "CountyStream",
+    "InstitutionStream",
+    "StoryStream",
+    "LeadershipStream"
+  ],
+  "eventStreamCount": 7,
+  "replayCapabilities": [
+    "timeline_reconstruction",
+    "graph_rebuilding",
+    "analytics_regeneration",
+    "digital_twin_rebuilding",
+    "search_index_rebuilding",
+    "ai_context_rebuilding"
+  ],
+  "replayOrdering": ["occurred_at", "recorded_at", "canonicalEventId"],
+  "retentionPolicy": {
+    "communityEvents": "permanent_archive",
+    "operationalLogs": "configurable_shorter",
+    "coldArchiveSupported": true
+  },
+  "timelines": [
+    "ParticipantTimeline",
+    "CommunityTimeline",
+    "MissionTimeline",
+    "LeadershipTimeline",
+    "CountyTimeline",
+    "InstitutionTimeline",
+    "PlatformTimeline"
+  ],
+  "timelineCount": 7,
+  "graphIntegrationPipeline": [
+    "DomainEvent",
+    "CanonicalRelationship",
+    "KnowledgeGraphEdge",
+    "DigitalTwinUpdate",
+    "AnalyticsRollup",
+    "Recommendation"
+  ],
+  "searchDimensions": [
+    "date",
+    "actor",
+    "community",
+    "mission",
+    "eventType",
+    "location",
+    "relationship"
+  ],
+  "aiCapabilities": [
+    "summarizeEvents",
+    "detectTrends",
+    "generateAnnualReports",
+    "recommendFollowUp",
+    "identifyMilestones",
+    "interpretHistory"
+  ],
+  "aiNeverModifiesEvents": true,
+  "consumers": [
+    "LivingHistoryEngine",
+    "Timelines",
+    "CommunityKnowledgeGraph",
+    "DigitalTwins",
+    "Search",
+    "Notifications",
+    "Analytics",
+    "AI",
+    "Audit"
+  ],
+  "communityEventLedger": {
+    "name": "Community Event Ledger",
+    "purpose": "Authoritative chronological record of meaningful community activity — not technical audit logs alone",
+    "ledgerEntryFields": [
+      "eventType",
+      "actor",
+      "target",
+      "context",
+      "timestamp",
+      "correlationId",
+      "relatedEntities",
+      "visibility",
+      "source",
+      "eventSchemaVersion"
+    ],
+    "foundations": [
+      "LivingHistoryEngine",
+      "CKGProjections",
+      "DigitalTwinReconstruction",
+      "TimelineGeneration",
+      "SearchIndexing",
+      "NotificationGeneration",
+      "AnalyticsRollups",
+      "AIContextRetrieval"
+    ],
+    "rebuildability": true,
+    "principle": "Canonical truth is written once, and every specialized view of that truth is derived from it"
+  },
+  "acceptanceCriteria": "AC-112",
+  "acceptanceCriteriaMet": true
+}
