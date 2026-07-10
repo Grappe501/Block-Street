@@ -18,6 +18,23 @@
 
 ---
 
+## 2026-07-10 — Volume 3.11 Governance Engine [PBA-012 · AC-132]
+
+**Document:** `docs/volume-03/GOVERNANCE_ENGINE.md` · **Registry:** `data/registry/governance-engine.json`
+
+### What Changed
+
+- **Guiding principle:** *Power should be visible, accountable, and traceable.*
+- Governance as organizational memory — legitimate, transparent, accountable decisions
+- **8-layer governance architecture:** Proposal through Community Knowledge
+- **7 governance domains:** Platform through Financial (optional)
+- Authority model, 8 governance levels, proposal lifecycle, deliberation, voting, appeals, emergency governance
+- Calendar, knowledge, event ledger, Digital Twin, and AI integrations
+- **Constitutional Governance Office (CGO)** — institutional steward with 7 domains
+- Admin Volume 3 tab · requirements PBA-012 updated · Volume 3: 11/14 complete
+
+---
+
 ## 2026-07-10 — Volume 3.10 Notification & Attention Management Engine [PBA-011 · AC-131]
 
 **Document:** `docs/volume-03/ATTENTION_ENGINE.md` · **Registry:** `data/registry/attention-engine.json`

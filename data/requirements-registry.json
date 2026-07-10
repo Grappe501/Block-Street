@@ -4713,27 +4713,35 @@
     {
       "id": "PBA-012",
       "title": "Governance Engine — Volume 3.11",
-      "purpose": "Constitution, policies, approval chains, voting",
-      "description": "VOLUME-003.11 community and institution governance workflows",
+      "purpose": "Legitimate transparent accountable decision-making across all platform levels",
+      "description": "VOLUME-003.11 — Constitutional Governance Office, 7 governance domains, authority model, proposal lifecycle, voting, appeals, emergency governance",
       "priority": "critical",
       "principle": "CP-001",
       "dependencies": [
         "PBA-011",
-        "DAB-010"
+        "PBA-002",
+        "PBA-003",
+        "DAB-010",
+        "DAB-007"
       ],
       "related": [
-        "PBA-013"
+        "PBA-013",
+        "PBA-008",
+        "DAB-013",
+        "DAB-014"
       ],
       "acceptanceCriteria": [
-        "Engine philosophy documented",
-        "Operational behaviors defined",
-        "Volume 2 integration specified",
-        "Implementation blueprint for engine"
+        "Governance philosophy documented",
+        "Governance domains and authority model defined",
+        "Proposal lifecycle, deliberation, voting, appeals, and emergency governance established",
+        "Calendar, knowledge, Community Event Ledger, Digital Twin, and AI integrations incorporated",
+        "Constitutional Governance Office specified",
+        "Complete blueprint for Governance Engine"
       ],
-      "futureNotes": "Scaffold — pending canonical build step",
-      "implementationStatus": "pending",
+      "futureNotes": "Guiding principle: Power should be visible, accountable, and traceable.",
+      "implementationStatus": "done",
       "testingStatus": "pending",
-      "documentationStatus": "pending",
+      "documentationStatus": "done",
       "trace": {
         "database": "DB-COS",
         "api": null,
@@ -4743,7 +4751,7 @@
       },
       "versionHistory": {
         "created": "2026-07-10",
-        "implemented": null
+        "implemented": "2026-07-10"
       }
     },
     {

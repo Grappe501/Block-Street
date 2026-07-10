@@ -36,6 +36,9 @@ type EngineReg = {
   automationCategoryCount?: number;
   automationArchitectureLayerCount?: number;
   attentionIntelligenceLayer?: { evaluationDimensionCount: number };
+  constitutionalGovernanceOffice?: { domainCount: number };
+  governanceDomainCount?: number;
+  governanceArchitectureLayerCount?: number;
   communicationCategoryCount?: number;
   attentionArchitectureLayerCount?: number;
   intelligenceArchitectureLayerCount?: number;
@@ -54,6 +57,7 @@ const FEATURED_SUBTITLES: Record<string, string> = {
   "3.8": "Community Intelligence",
   "3.9": "Automation",
   "3.10": "Notification & Attention",
+  "3.11": "Governance",
 };
 
 const ENGINE_CARDS: { step: string; label: string; reg: EngineReg; cardClass: string; metaClass: string; titleClass: string; featured?: boolean }[] = [
@@ -67,7 +71,7 @@ const ENGINE_CARDS: { step: string; label: string; reg: EngineReg; cardClass: st
   { step: "3.8", label: "Community Intelligence Command Center", reg: cie, cardClass: "border-amber-300 bg-amber-50", metaClass: "text-amber-700", titleClass: "text-amber-950", featured: true },
   { step: "3.9", label: "Automation Mission Control", reg: aut, cardClass: "border-yellow-300 bg-yellow-50", metaClass: "text-yellow-700", titleClass: "text-yellow-950", featured: true },
   { step: "3.10", label: "Attention Intelligence Layer", reg: att, cardClass: "border-lime-300 bg-lime-50", metaClass: "text-lime-700", titleClass: "text-lime-950", featured: true },
-  { step: "3.11", label: "Governance", reg: gov, cardClass: "border-green-300 bg-green-50", metaClass: "text-green-700", titleClass: "text-green-950" },
+  { step: "3.11", label: "Constitutional Governance Office", reg: gov, cardClass: "border-green-300 bg-green-50", metaClass: "text-green-700", titleClass: "text-green-950", featured: true },
   { step: "3.12", label: "Knowledge Growth", reg: kge, cardClass: "border-emerald-300 bg-emerald-50", metaClass: "text-emerald-700", titleClass: "text-emerald-950" },
   { step: "3.13", label: "Operational Intelligence", reg: oie, cardClass: "border-teal-300 bg-teal-50", metaClass: "text-teal-700", titleClass: "text-teal-950" },
   { step: "3.14", label: "COS Orchestrator", reg: cos, cardClass: "border-cyan-300 bg-cyan-50", metaClass: "text-cyan-700", titleClass: "text-cyan-950" },
@@ -110,7 +114,11 @@ export function AdminPlatformBehavior() {
                 {reg.policyDecisionPoint.evaluationStepCount} PDP steps · {reg.policyDecisionPoint.exampleRequestCount} example requests
               </p>
             ) : null}
-            {reg.attentionIntelligenceLayer ? (
+            {reg.constitutionalGovernanceOffice ? (
+              <p className={`mt-1 text-xs ${metaClass}`}>
+                {reg.governanceDomainCount ?? 0} governance domains · {reg.constitutionalGovernanceOffice.domainCount} CGO domains
+              </p>
+            ) : reg.attentionIntelligenceLayer ? (
               <p className={`mt-1 text-xs ${metaClass}`}>
                 {reg.communicationCategoryCount ?? 0} communication categories · {reg.attentionIntelligenceLayer.evaluationDimensionCount} AIL dimensions
               </p>
