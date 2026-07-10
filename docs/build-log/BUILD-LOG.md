@@ -18,6 +18,23 @@
 
 ---
 
+## 2026-07-10 — Volume 2.14 Master Data Dictionary & Data Governance [DAB-015 · AC-120] · **Volume 2 Complete**
+
+**Document:** `docs/volume-02/MASTER_DATA_DICTIONARY.md` · **Registry:** `data/registry/master-data-dictionary.json`
+
+### What Changed
+
+- **Guiding principle:** *Every piece of data has one canonical definition, one owner, and one meaning.*
+- Official language of the COS — highest authority for entities, fields, relationships, events, search, AI, analytics
+- **10 canonical registries:** Entity, Field, Identifier, Enumeration, Relationship, Configuration, Event, Search, AI, Analytics
+- Stewardship, version governance, naming standards, change management, deprecation policy
+- Data quality framework, governance reviews, AI governance (suggest only — never modify without approval)
+- **Canonical Metadata Registry** — standardized metadata envelope connecting all governed objects
+- **Volume 2 complete** — Volumes 0 + 1 + 2 form coherent implementation foundation
+- Admin Data tab · requirements DAB-015 updated
+
+---
+
 ## 2026-07-10 — Volume 2.13 Security & Privacy Data Model [DAB-014 · AC-119]
 
 **Document:** `docs/volume-02/SECURITY_PRIVACY_MODEL.md` · **Registry:** `data/registry/security-privacy-model.json`

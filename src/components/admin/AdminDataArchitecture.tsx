@@ -262,11 +262,20 @@ export function AdminDataArchitecture() {
 
       <div className="card border-indigo-300 bg-indigo-50">
         <p className="text-xs font-semibold uppercase text-indigo-800">VOLUME-002.14 · Master Data Dictionary</p>
-        <h2 className="mt-1 text-lg font-bold text-indigo-950">Governance & Registry</h2>
-        <p className="mt-2 text-xs text-indigo-800">
-          {mdd.coreEnumCount} core enums · migration governance · stewardship rules
+        <h2 className="mt-1 text-lg font-bold text-indigo-950">Canonical Metadata Registry</h2>
+        <p className="mt-1 text-xs italic text-indigo-900">&ldquo;{mdd.guidingPrinciple}&rdquo;</p>
+        <p className="mt-2 text-xs font-semibold text-indigo-800">
+          {mdd.registryTypeCount} registry types · {mdd.schemaReference.tableCount} tables · Volume 2 complete
         </p>
-        <p className="mt-1 text-xs text-indigo-700">Signature graphs: {dab.signatureGraphs.join(", ")}</p>
+        <div className="mt-2 flex flex-wrap gap-1">
+          {mdd.registryTypes.slice(0, 5).map((r) => (
+            <span key={r.id} className="badge bg-indigo-100 text-indigo-800">{r.name.replace(" Registry", "").replace("Canonical ", "")}</span>
+          ))}
+          <span className="badge bg-indigo-200 text-indigo-900">+{mdd.registryTypeCount - 5}</span>
+        </div>
+        <p className="mt-2 text-xs text-indigo-600">
+          {mdd.canonicalMetadataRegistry.metadataFieldCount} metadata fields · {mdd.acceptanceCriteria} · {dab.signatureGraphs.join(", ")}
+        </p>
       </div>
 
       <div className="card border-slate-300 bg-slate-50">
