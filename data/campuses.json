@@ -1,0 +1,7 @@
+[
+  { "slug": "ua-fayetteville", "name": "University of Arkansas — Fayetteville", "shortName": "U of A", "type": "university", "isFoundingCouncil": true, "city": "Fayetteville", "county": "washington" },
+  { "slug": "ouachita-baptist", "name": "Ouachita Baptist University", "shortName": "OBU", "type": "university", "isFoundingCouncil": true, "city": "Arkadelphia", "county": "clark" },
+  { "slug": "philander-smith", "name": "Philander Smith University", "shortName": "Philander Smith", "type": "university", "isFoundingCouncil": true, "city": "Little Rock", "county": "pulaski" },
+  { "slug": "uca", "name": "University of Central Arkansas", "shortName": "UCA", "type": "university", "isFoundingCouncil": true, "city": "Conway", "county": "faulkner" },
+  { "slug": "ua-pine-bluff", "name": "University of Arkansas at Pine Bluff", "shortName": "UAPB", "type": "university", "isFoundingCouncil": true, "city": "Pine Bluff", "county": "jefferson" }
+]

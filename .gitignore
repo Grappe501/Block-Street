@@ -1,0 +1,26 @@
+# Dependencies & caches (H: drive local)
+node_modules/
+.npm-cache/
+.tmp/
+.next/
+out/
+dist/
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Netlify
+.netlify/
+
+# OS & IDE
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
