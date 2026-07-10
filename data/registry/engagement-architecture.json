@@ -1,24 +1,310 @@
 {
-  "version": "1.0.0",
+  "version": "2.0.0",
   "documentId": "VOLUME-004.11",
   "requirementId": "UXB-012",
   "docPath": "docs/volume-04/ENGAGEMENT_ARCHITECTURE.md",
-  "status": "pending",
-  "priority": "critical",
+  "productName": "Engagement, Motivation & Community Growth Architecture",
+  "status": "canonical",
+  "priority": "foundational",
   "lastUpdated": "2026-07-10",
-  "guidingPrinciple": "Experience should feel intentional, welcoming, and trustworthy.",
-  "defines": [
-    "Missions",
-    "XP",
-    "Civicreputation",
-    "Streaks",
-    "Badges",
-    "Volunteerachievements",
-    "Communitymilestones",
-    "Leadershippathways",
-    "Recognition"
+  "guidingPrinciple": "Reward contribution, not consumption.",
+  "engagementPhilosophy": {
+    "noAttentionManipulation": true,
+    "optimizesForPurposeGrowthBelongingServiceLeadershipImpact": true,
+    "measuredByStrongerCommunitiesNotScreenTime": true,
+    "cultivatesCitizensNotConsumers": true,
+    "rewardContributionNotConsumption": true
+  },
+  "traditionalPlatformRewards": [
+    "Likes",
+    "Followers",
+    "Clicks",
+    "Views",
+    "EndlessScrolling"
   ],
-  "topicCount": 9,
+  "communityOSRewards": [
+    "Learning",
+    "Helping",
+    "Mentoring",
+    "Building",
+    "Organizing",
+    "Teaching",
+    "CreatingKnowledge",
+    "ServingCommunities"
+  ],
+  "growthCycle": {
+    "layers": [
+      "Curiosity",
+      "Participation",
+      "Contribution",
+      "Recognition",
+      "Growth",
+      "Leadership",
+      "Legacy"
+    ],
+    "layerCount": 7
+  },
+  "engagementPrincipleCount": 8,
+  "engagementPrinciples": [
+    "EncourageLearning",
+    "CelebrateService",
+    "BuildConfidence",
+    "PromoteBelonging",
+    "StrengthenRelationships",
+    "RecognizeGrowth",
+    "RemainTransparent",
+    "AvoidManipulation"
+  ],
+  "growthDimensionCount": 6,
+  "growthDimensions": [
+    {
+      "id": "knowledge",
+      "name": "Knowledge",
+      "growthThrough": ["Learning", "Courses", "Reading", "Research", "CommunityBrain", "Playbooks"]
+    },
+    {
+      "id": "service",
+      "name": "Service",
+      "growthThrough": ["VolunteerHours", "MissionParticipation", "CommunitySupport", "EventAssistance", "Mentorship"]
+    },
+    {
+      "id": "leadership",
+      "name": "Leadership",
+      "growthThrough": ["Mentoring", "CommitteeLeadership", "MissionCoordination", "Teaching", "Succession"]
+    },
+    {
+      "id": "collaboration",
+      "name": "Collaboration",
+      "growthThrough": ["HelpingOthers", "SharedDocuments", "CommunityPlanning", "MeetingParticipation", "KnowledgeSharing"]
+    },
+    {
+      "id": "innovation",
+      "name": "Innovation",
+      "growthThrough": ["Ideas", "Experiments", "NewPlaybooks", "ProblemSolving", "CommunityImprovements"]
+    },
+    {
+      "id": "stewardship",
+      "name": "Stewardship",
+      "growthThrough": ["LongTermParticipation", "KnowledgePreservation", "CommunityTraditions", "HistoricalContributions", "InstitutionalMemory"]
+    }
+  ],
+  "civicReputationProfile": {
+    "name": "Civic Reputation Profile",
+    "replacesSocialScore": true,
+    "qualities": ["Transparent", "Explainable", "NonCommercial", "NonPunitive", "Portable"],
+    "examples": [
+      "CommunitiesServed",
+      "VolunteerExperience",
+      "LeadershipHistory",
+      "KnowledgeContributions",
+      "Mentorship",
+      "MissionImpact"
+    ],
+    "neverBecomesRankingSystem": true
+  },
+  "achievementRecognizes": [
+    "FirstMission",
+    "FirstVolunteerDay",
+    "FirstCommunityJoined",
+    "FirstLessonPublished",
+    "FirstMentorship",
+    "LeadershipAppointment",
+    "CommunityAnniversary"
+  ],
+  "milestoneTypes": [
+    "PersonalMilestones",
+    "CommunityMilestones",
+    "MissionMilestones",
+    "LeadershipMilestones",
+    "KnowledgeMilestones",
+    "InstitutionMilestones",
+    "CountyMilestones"
+  ],
+  "communityRecognitionCelebrates": [
+    "VolunteerAppreciation",
+    "MissionSuccess",
+    "Leadership",
+    "KnowledgeContributions",
+    "Innovation",
+    "CommunityAnniversaries"
+  ],
+  "growthPathCount": 8,
+  "growthPaths": [
+    "Explorer",
+    "Volunteer",
+    "Contributor",
+    "Organizer",
+    "Leader",
+    "Mentor",
+    "Steward",
+    "LegacyBuilder"
+  ],
+  "developmentalPathwaysNotStatusSymbols": true,
+  "learningLoopEncourages": [
+    "Reflection",
+    "Learning",
+    "Application",
+    "Teaching",
+    "Improvement"
+  ],
+  "healthyMotivation": {
+    "avoid": ["Fear", "Scarcity", "Manipulation", "ArtificialUrgency", "InfiniteNotifications", "EndlessStreaks"],
+    "promote": ["Purpose", "Belonging", "Progress", "Service", "Mastery", "Community"]
+  },
+  "communityChallengeTypes": [
+    "VolunteerChallenges",
+    "KnowledgeChallenges",
+    "LeadershipDevelopment",
+    "MissionGoals",
+    "LearningGoals",
+    "CommunityImprovementInitiatives"
+  ],
+  "challengesCollaborativeNotCompetitive": true,
+  "reflectionEndsWith": [
+    "Reflection",
+    "Lessons",
+    "KnowledgeCapture",
+    "Recognition",
+    "NextOpportunity"
+  ],
+  "personalGrowthDashboardDisplays": [
+    "Learning",
+    "Service",
+    "Leadership",
+    "Communities",
+    "Mentorship",
+    "Knowledge",
+    "Recognition",
+    "Goals"
+  ],
+  "aiGrowthCoachRecommends": [
+    "LearningOpportunities",
+    "VolunteerOpportunities",
+    "Mentorship",
+    "LeadershipReadiness",
+    "KnowledgeContributions",
+    "CommunityInvolvement"
+  ],
+  "communityIntelligenceIncorporates": [
+    "CommunityHealth",
+    "VolunteerHealth",
+    "LeadershipHealth",
+    "KnowledgeHealth",
+    "GrowthHealth"
+  ],
+  "digitalTwinUnderstands": [
+    "GrowthTrajectory",
+    "Strengths",
+    "Interests",
+    "LeadershipReadiness",
+    "LearningGoals",
+    "CommunityContributions"
+  ],
+  "eventLedgerRecords": [
+    "Achievement",
+    "Recognition",
+    "Reflection",
+    "Knowledge",
+    "CommunityCelebration"
+  ],
+  "analyticsMeasure": [
+    "VolunteerRetention",
+    "LeadershipDevelopment",
+    "KnowledgeCreation",
+    "CommunityGrowth",
+    "MissionParticipation",
+    "Belonging"
+  ],
+  "analyticsDoNotMeasure": [
+    "DailyActiveUsers",
+    "TimeSpent",
+    "Clicks",
+    "Attention"
+  ],
+  "recognitionAccessibilitySupports": [
+    "Visual",
+    "Audio",
+    "Language",
+    "ReadingLevel",
+    "CulturalAppropriateness"
+  ],
+  "lifeJourneyGraph": {
+    "name": "Life Journey Graph",
+    "abbreviation": "LJG",
+    "replacesTraditionalGamification": true,
+    "livingVisualRepresentationOfCivicContribution": true,
+    "tellsStoryOfCivicLifeNotPointsOrBadges": true,
+    "growthTreeCount": 7,
+    "growthTrees": [
+      {
+        "id": "knowledgeTree",
+        "name": "Knowledge Tree",
+        "symbol": "🌱",
+        "represents": ["Learning", "Teaching", "Research", "Playbooks", "CommunityBrainContributions"]
+      },
+      {
+        "id": "serviceTree",
+        "name": "Service Tree",
+        "symbol": "🤝",
+        "represents": ["VolunteerWork", "Missions", "CommunitySupport", "HelpingOthers"]
+      },
+      {
+        "id": "leadershipTree",
+        "name": "Leadership Tree",
+        "symbol": "🧭",
+        "represents": ["Mentorship", "Leadership", "Committees", "Organizing", "Succession"]
+      },
+      {
+        "id": "communityTree",
+        "name": "Community Tree",
+        "symbol": "🏘",
+        "represents": ["CommunitiesJoined", "CommunitiesLaunched", "Partnerships", "LongTermBelonging"]
+      },
+      {
+        "id": "legacyTree",
+        "name": "Legacy Tree",
+        "symbol": "📖",
+        "represents": ["Stories", "HistoricalPreservation", "InstitutionalMemory", "KnowledgeStewardship"]
+      },
+      {
+        "id": "innovationTree",
+        "name": "Innovation Tree",
+        "symbol": "💡",
+        "represents": ["Ideas", "Experiments", "NewMethods", "CommunityImprovements"]
+      },
+      {
+        "id": "relationshipTree",
+        "name": "Relationship Tree",
+        "symbol": "❤️",
+        "represents": ["Mentorship", "Collaboration", "Partnerships", "Teams", "CommunityFriendships"]
+      }
+    ],
+    "livingCivicForest": {
+      "participantForest": true,
+      "communityCollectiveForests": true,
+      "countyRegionalForests": true,
+      "institutionOrganizationalForests": true,
+      "visualizesCivicLifeAcrossState": true
+    },
+    "aiGrowthCompanionExamples": [
+      "LeadershipTreeGrownWouldYouLikeToMentorOrganizers",
+      "KnowledgeTreeStrongServiceTreeQuietHereAreOpportunities",
+      "CommunityTreeConnectedThreeCountiesReadyForRegionalInitiative"
+    ],
+    "encouragementNotCompetition": true,
+    "compareToPastSelfNotOthers": true,
+    "cultivatesStrongerPeopleLeadersCommunities": true,
+    "architecturalInsight": "Instead of encouraging people to win, it encourages them to grow"
+  },
+  "burtImplementationGuidance": [
+    "Reward contribution instead of attention",
+    "Multi-dimensional growth not single score",
+    "Civic Reputation transparent and explainable",
+    "Integrate Community Health Digital Twins Event Ledger Leadership Academy Knowledge Growth Engine",
+    "Avoid manipulative engagement mechanics",
+    "Celebrate authentic community impact",
+    "Consult Life Journey Graph before engagement features"
+  ],
   "acceptanceCriteria": "AC-147",
-  "acceptanceCriteriaMet": false
+  "acceptanceCriteriaMet": true
 }
