@@ -6,11 +6,11 @@
 **Priority:** Critical  
 **Phase:** 3 — People & Relationship System
 
-> **Most platforms start with users. We start with people.**
+> **Phase 1 defined the platform. Phase 2 defined Arkansas. Phase 3 begins by defining the person.**
 
-A **user** logs into software. A **person** has relationships, aspirations, interests, skills, communities, and a story. The software simply serves that person.
+This is the most important document after the Constitution.
 
-**Builds On:** [Organizing Model](../build-steps/PHASE-001.5-ORGANIZING-MODEL.md) · [OM-L1](../build-steps/PHASE-001.5-ORGANIZING-MODEL.md) · [Living Systems](../master/LIVING-SYSTEMS-ARCHITECTURE.md) · [Digital Arkansas](../phase-02/PHASE_2_DIGITAL_ARKANSAS_BUILD_BIBLE.md)
+**Builds On:** [Organizing Model](../build-steps/PHASE-001.5-ORGANIZING-MODEL.md) · [Living Systems](../master/LIVING-SYSTEMS-ARCHITECTURE.md) · [Digital Arkansas](../phase-02/PHASE_2_DIGITAL_ARKANSAS_BUILD_BIBLE.md) · [Participant Journey](PARTICIPANT_JOURNEY.md)
 
 **Live spec:** `data/registry/participant-identity.json`
 
@@ -21,19 +21,29 @@ A **user** logs into software. A **person** has relationships, aspirations, inte
 | ID | Requirement |
 |----|-------------|
 | PEP-M01 | Purpose |
-| PEP-M02 | Guiding principle — people not users |
-| PEP-M03 | What is a participant |
-| PEP-M04 | Personal identity |
-| PEP-M05 | Profile philosophy |
-| PEP-M06 | Belonging |
-| PEP-M07 | Communities |
-| PEP-M08 | Life stages |
-| PEP-M09 | Privacy philosophy |
-| PEP-M10 | Personal Mission architecture |
-| PEP-M11 | Person vs account separation |
-| PEP-M12 | Relationship-first design |
-| PEP-M13 | Digital identity components |
-| PEP-M14 | V1 scope |
+| PEP-M02 | Core design question |
+| PEP-M03 | Guiding principles |
+| PEP-M04 | Identity philosophy |
+| PEP-M05 | What is a participant |
+| PEP-M06 | Identity layers overview |
+| PEP-M07 | Personal identity layer |
+| PEP-M08 | Community identity layer |
+| PEP-M09 | Relationship identity layer |
+| PEP-M10 | Leadership identity layer |
+| PEP-M11 | Journey identity layer |
+| PEP-M12 | Every participant has a home |
+| PEP-M13 | Equal opportunity |
+| PEP-M14 | Identity is dynamic |
+| PEP-M15 | Trust |
+| PEP-M16 | Identity persistence |
+| PEP-M17 | Identity beyond biography |
+| PEP-M18 | Participant Promise |
+| PEP-M19 | Personal Mission |
+| PEP-M20 | Civic Passport architecture |
+| PEP-M21 | Person vs account separation |
+| PEP-M22 | Relationship-first design |
+| PEP-M23 | Phase 3 roadmap |
+| PEP-M24 | V1 scope |
 | PEP-BG | Burt implementation guidance |
 | AC-020 | Step 3.1 acceptance criteria |
 
@@ -41,163 +51,323 @@ A **user** logs into software. A **person** has relationships, aspirations, inte
 
 ## PEP-M01 — Purpose
 
-**[PEP-M01]** This document is the **constitutional document for people** — the foundation of Phase 3.
+**[PEP-M01]** This document establishes the **philosophy, structure, and identity model** for every participant within ASYON.
 
-**[PEP-M01a]** Phase 3 answers:
+**[PEP-M01a]** The platform recognizes participants as **people first** and software users second.
+
+**[PEP-M01b]** Identity is not limited to authentication credentials or profile information.
+
+**[PEP-M01c]** Identity represents a participant's **relationships, interests, communities, experiences, growth, and contributions** throughout their journey.
+
+**[PEP-M01d]** Phase 3 answers:
 
 > **Who is this person, how do they grow, and how do they connect to others?**
 
-**[PEP-M01b]** Phase 3 becomes the **heart of the platform** — not an auth layer bolted onto a registry.
+---
 
-**[PEP-M01c]** Official phase name: **People & Relationship System**.
+## PEP-M02 — Core Design Question
+
+**[PEP-M02]** Most software asks:
+
+> "What information do we need about this user?"
+
+**[PEP-M02a]** We ask a different question:
+
+> **"What does this person need from us to become successful?"**
+
+**[PEP-M02b]** This one question influences **every screen** Burt builds.
+
+| Old framing | New framing |
+|-------------|-------------|
+| Collect fields | Enable belonging |
+| Complete profile | Find their home |
+| User onboarding | Journey beginning |
+| Feature adoption | Relationship growth |
 
 ---
 
-## PEP-M02 — Guiding Principle
+## PEP-M03 — Guiding Principles
 
-**[PEP-M02]**
+**[PEP-M03a]**
 
 > **Start with people, not users.**
 
-| User mindset | People mindset |
-|--------------|----------------|
-| Account credentials | Identity + story |
-| Login metrics | Relationship growth |
-| Feature adoption | Journey progression |
-| Database row | Person in a network |
+A **user** logs into software. A **person** has relationships, aspirations, interests, skills, communities, and a story.
 
-**[PEP-M02a]** The individual is the **root of the knowledge graph** [OM-L1] — not an afterthought.
+**[PEP-M03b]**
 
-**[PEP-M02b]** Every Phase 3 feature serves the **whole person** — not just authentication.
+> **Every participant matters before they contribute.**
 
----
+A participant's value is **never** determined by:
 
-## PEP-M03 — What Is a Participant
+- Popularity · Recruitment numbers · Volunteer hours
+- Leadership position · Time on the platform
 
-**[PEP-M03]** A **participant** is any person engaged with ASYON — registered or browsing.
+**[PEP-M03c]** Every participant begins with **equal dignity**, **equal opportunity**, and **equal access** to build relationships and contribute [PEP-M13].
 
-| Type | Description |
-|------|-------------|
-| **Visitor** | No account — exploring Arkansas |
-| **Participant** | Registered person — county/campus assigned |
-| **Organizer** | Journey stage — building community (not a separate account type) |
-
-**[PEP-M03a]** No privileged account tiers that bypass community governance [CP-003, DG-001].
-
-**[PEP-M03b]** Honor-system affiliation at V1 — participant selects county/campus [USR-001].
-
-**[PEP-M03c]** Permanent participant ID: `PRT-{uuid}` — immutable graph node.
+**[PEP-M03d]** The individual is the **root of the knowledge graph** [OM-L1].
 
 ---
 
-## PEP-M04 — Personal Identity
+## PEP-M04 — Identity Philosophy
 
-**[PEP-M04]** Personal identity includes:
+**[PEP-M04]** Participants are **not database records**. Participants are **community builders**.
 
-| Dimension | Examples |
-|-----------|----------|
-| Name & display | How they present |
-| County & campus | Where they belong |
-| Age bracket | 16–24 youth organizing scope |
-| Interests & passions | What they care about |
-| Skills | What they bring |
-| **Personal Mission** | Living statement of purpose [PEP-M10] |
-| Story | Timeline of contribution [Step 3.11] |
+**[PEP-M04a]** The platform exists to help each person:
 
-**[PEP-M04a]** Identity is **participant-controlled** — not inferred from institution affiliation alone.
-
-**[PEP-M04b]** Identity evolves — stored with version history where meaningful [KDG-M12].
+| Need | Platform response |
+|------|-------------------|
+| Find belonging | Registry homes + county/campus |
+| Build relationships | Personal network [Step 3.4] |
+| Develop leadership | Journey + skills [Steps 3.2, 3.8] |
+| Discover opportunities | Mission Board [OIS-M16] |
+| Strengthen communities | Organizing tools [Phase 5] |
+| Leave lasting impact | Civic Passport [PEP-M20] |
 
 ---
 
-## PEP-M05 — Profile Philosophy
+## PEP-M05 — What Is a Participant
 
-**[PEP-M05]** The profile is a **digital identity** — not a social media performance.
+**[PEP-M05]** A **participant** is any person engaged with ASYON.
 
-| Principle | Meaning |
-|-----------|---------|
-| Authentic | Real person, real communities |
-| Purposeful | Mission-forward, not vanity |
-| Private by default | Participant chooses visibility [Step 3.7] |
-| Organizing-focused | Skills, availability, volunteer interests |
-| Connected | Links to network, communities, timeline |
+| State | Description |
+|-------|-------------|
+| Visitor | Exploring — no account |
+| Participant | Registered — full identity model applies |
+| Journey stages | Descriptive labels — not separate account types |
 
-**[PEP-M05a]** Full profile spec: Step 3.3 Participant Profile System.
+**[PEP-M05a]** Permanent ID: `PRT-{uuid}` — immutable graph node.
 
-**[PEP-M05b]** V1 profile minimum: name, county, campus (if student), interests, mission statement, privacy level.
+**[PEP-M05b]** No privileged tiers bypassing community governance [CP-003, DG-001].
+
+**[PEP-M05c]** Honor-system county/campus at V1 [USR-001].
 
 ---
 
-## PEP-M06 — Belonging
+## PEP-M06 — Identity Layers Overview
 
-**[PEP-M06]** Belonging connects people to **places** from Digital Arkansas:
+**[PEP-M06]** Every participant has **five identity dimensions** — integrated, not siloed.
+
+| Layer | Question |
+|-------|----------|
+| **Personal** [PEP-M07] | Who am I? |
+| **Community** [PEP-M08] | Where do I belong? |
+| **Relationship** [PEP-M09] | Who do I know? |
+| **Leadership** [PEP-M10] | How am I growing? |
+| **Journey** [PEP-M11] | Where am I in my journey? |
+
+**[PEP-M06a]** All layers compose the **Civic Passport** [PEP-M20] — the living record of civic participation.
+
+---
+
+## PEP-M07 — Personal Identity Layer
+
+**[PEP-M07]** *Who am I?*
+
+| Element | V1 | Future |
+|---------|-----|--------|
+| Preferred name | ✅ | |
+| Pronouns (optional) | ✅ | |
+| Profile photo (optional) | Partial | |
+| Biography | Partial | |
+| **Mission statement** | ✅ [PEP-M19] | |
+| Personal interests | ✅ | |
+| Skills | Partial | Step 3.8 |
+| Goals | Future | |
+| Communication preferences | Future | Step 3.10 |
+| Privacy settings | ✅ | Step 3.7 |
+
+**[PEP-M07a]** Participant-controlled — never inferred from institution alone.
+
+---
+
+## PEP-M08 — Community Identity Layer
+
+**[PEP-M08]** *Where do I belong?*
+
+| Affiliation | Graph edge |
+|-------------|------------|
+| Educational institution | `attends` |
+| County | `resides_in` |
+| Committees | `member_of` (future) |
+| Projects | `contributes_to` (future) |
+| Volunteer teams | future |
+
+**[PEP-M08a]** Participants may belong to **multiple communities simultaneously** — edges, not duplicate records.
+
+**[PEP-M08b]** Every participant has a **county home** — always [LS-Q1].
+
+---
+
+## PEP-M09 — Relationship Identity Layer
+
+**[PEP-M09]** *Who do I know?*
+
+| Relationship | Meaning |
+|--------------|---------|
+| Personal network | People they've connected |
+| Mentors | `mentored_by` edges (future) |
+| People invited | Referral subgraph |
+| Collaborators | Shared projects |
+| Committee members | Shared committees |
+
+**[PEP-M09a]** **Relationships become a defining part of identity** — not a sidebar metric [OM-L2].
+
+**[PEP-M09b]** Full spec: Step 3.4 Personal Network System.
+
+---
+
+## PEP-M10 — Leadership Identity Layer
+
+**[PEP-M10]** *How am I growing?*
+
+Leadership is **descriptive rather than hierarchical**.
+
+| Role descriptor | Meaning |
+|-----------------|---------|
+| Organizer | Building community |
+| Mentor | Developing others |
+| Volunteer | Giving time |
+| Project leader | Leading action |
+| Committee facilitator | Enabling group process |
+
+**[PEP-M10a]** Derived from **participation signals** [JRN-M06] — not assigned titles alone.
+
+**[PEP-M10b]** Leadership milestones tracked in Civic Passport [PEP-M20] — not rank badges.
+
+---
+
+## PEP-M11 — Journey Identity Layer
+
+**[PEP-M11]** *Where am I in my journey?*
+
+Evolves continuously — full spec: [Participant Journey](PARTICIPANT_JOURNEY.md).
 
 ```
-Participant —resides_in→ County
-Participant —attends→ Institution (students)
-Participant —member_of→ Committee (future)
+Visitor → Interested → Registered → Connected → Contributor
+    → Organizer → Leader → Mentor → Alumni → Community Builder
 ```
 
-**[PEP-M06a]** A participant always has a **county home** — even non-students [LS-Q1].
-
-**[PEP-M06b]** Belonging is **declared at registration** — validated against Registry, not free-text.
-
-**[PEP-M06c]** Multiple belonging: county + campus + committees — graph edges, not duplicate records.
+**[PEP-M11a]** Journey stage may differ per community context — campus vs county.
 
 ---
 
-## PEP-M07 — Communities
+## PEP-M12 — Every Participant Has a Home
 
-**[PEP-M07]** Participants exist within **communities** — not in isolation.
+**[PEP-M12]** Immediately after registration, every participant receives:
 
-| Community | Connection |
-|-----------|------------|
-| County | Geographic organizing home |
-| Campus | Educational community |
-| Committee | Action team (future) |
-| Network | Personal relationship web |
+| Asset | V1 |
+|-------|-----|
+| Personal dashboard / network board | Step 3.6 |
+| Personal network | Step 3.4 |
+| County affiliation | ✅ Registry |
+| Educational affiliation (if applicable) | ✅ Registry |
+| Mission board (personal cards) | Partial |
+| Activity timeline | Step 3.11 |
+| Profile / Civic Passport | Step 3.3 |
+| Growth recommendations | Step 3.13 |
 
-**[PEP-M07a]** Community pages from Phase 2 [CID-M01] — participant profiles link **into** communities, not replace them.
+**[PEP-M12a]** **No participant arrives at an empty experience** [CID-M09, ADT-M10].
 
----
-
-## PEP-M08 — Life Stages
-
-**[PEP-M08]** Life stages intersect with [Participant Journey](PARTICIPANT_JOURNEY.md):
-
-| Life context | Platform handling |
-|--------------|-------------------|
-| High school student | Future expansion [Phase 9] |
-| College student | Primary V1 audience |
-| Non-student youth 16–24 | County-only path |
-| Alumni | Journey stage — stays connected |
-| Mentor | Journey stage — develops others |
-
-**[PEP-M08a]** Journey stage (engagement depth) ≠ life stage (life context) — both tracked.
+**[PEP-M12b]** Arkansas already exists [Phase 2] — the person steps into a **home waiting for them**.
 
 ---
 
-## PEP-M09 — Privacy Philosophy
+## PEP-M13 — Equal Opportunity
 
-**[PEP-M09]** Privacy is a **trust foundation** — not a settings afterthought.
+**[PEP-M13]** Every participant begins with **identical platform capabilities**.
 
-| Principle | Detail |
-|-----------|--------|
-| Participant control | Visibility, contact, messaging |
-| Minor protections | Age-appropriate defaults [DG-*] |
-| No surprise sharing | Explicit consent for network visibility |
-| Class B data | Operational — separate governance [KDG-M05] |
-| Future guardian controls | Documented in Step 3.7 |
+**[PEP-M13a]** Differences emerge through **participation** — not administrative privilege.
 
-**[PEP-M09a]** Full spec: Step 3.7 Privacy & Trust System.
+**[PEP-M13b]** Platform encourages **growth rather than ranking** [OIS-M14, CP-003].
+
+**[PEP-M13c]** No leaderboards. No vanity metrics. Recognition celebrates **contribution**, not popularity [Step 3.9].
 
 ---
 
-## PEP-M10 — Personal Mission Architecture
+## PEP-M14 — Identity Is Dynamic
 
-**[PEP-M10]** **Signature feature:** **Personal Mission** — a short, evolving statement of purpose.
+**[PEP-M14]** Profiles **evolve** — never static.
 
-**Not a resume.** A living declaration of why this person organizes.
+| What changes | How platform reflects it |
+|--------------|--------------------------|
+| Skills grow | Skills layer updates |
+| Communities change | Graph edges update |
+| Volunteer history expands | Civic Passport stamps |
+| Leadership develops | Journey stage advances |
+| Relationships deepen | Network graph grows |
+
+**[PEP-M14a]** Identity reflects **ongoing journey** — append-only history where meaningful [KDG-M12, Step 3.11].
+
+---
+
+## PEP-M15 — Trust
+
+**[PEP-M15]** Participants **control how they are represented**.
+
+| Control | Detail |
+|---------|--------|
+| Visibility | Who sees what |
+| Contact preferences | How others reach them |
+| Profile sharing | Network vs public |
+| Notifications | Step 3.10 |
+| Community participation | Opt-in to committees, events |
+
+**[PEP-M15a]** Trust is earned through **transparency** — full spec Step 3.7 Privacy & Trust System.
+
+**[PEP-M15b]** Minor protections — conservative defaults [DG-*].
+
+---
+
+## PEP-M16 — Identity Persistence
+
+**[PEP-M16]** Identity remains **meaningful over time**.
+
+| Life change | Platform behavior |
+|-------------|-------------------|
+| Graduating from school | → Alumni journey stage; relationships preserved |
+| Moving counties | History preserved; new `resides_in` edge |
+| Changing roles | Achievements preserved in Civic Passport |
+| Years later | Full narrative still accessible |
+
+**[PEP-M16a]** The platform **accompanies participants through different stages of life** — not a semester-only tool.
+
+**[PEP-M16b]** Nothing important is **destructively deleted** [KDG-M12].
+
+---
+
+## PEP-M17 — Identity Beyond Biography
+
+**[PEP-M17]** Future Civic Passport elements:
+
+- Volunteer portfolio · Projects completed · Community impact
+- Recognition · Recommendations · Training completed
+- Leadership pathway · Personal reflections
+
+**[PEP-M17a]** Identity should **tell a story** — narrative of civic participation, not a form dump.
+
+---
+
+## PEP-M18 — The Participant Promise
+
+**[PEP-M18]** Every participant should feel:
+
+> **I belong here.**  
+> **My voice matters.**  
+> **I can help.**  
+> **I can grow.**  
+> **I can lead.**  
+> **I can leave this community stronger than I found it.**
+
+**[PEP-M18a]** Every screen, notification, and empty state should reinforce this promise — or be redesigned.
+
+---
+
+## PEP-M19 — Personal Mission
+
+**[PEP-M19]** **Personal Mission** — forward-looking statement of purpose [PRM-001].
+
+**Not a resume.** Why this person organizes **today**.
 
 **Examples:**
 
@@ -205,103 +375,89 @@ Participant —member_of→ Committee (future)
 "I'm helping organize students at UCA."
 "I'm building youth engagement in Saline County."
 "I want to connect students interested in environmental conservation."
-"I'm recruiting first-time volunteers across Southeast Arkansas."
 ```
 
-**[PEP-M10a]** Platform uses Personal Mission to:
-
-| Use | Benefit |
-|-----|---------|
-| Introduce participants | Human connection |
-| Recommend collaborators | Complementary teams |
-| Build teams | Shared purpose matching |
-| Help new members belong | Find their people |
-| Show progress | Mission evolves with journey |
-
-**[PEP-M10b]** Structure:
-
-| Field | Description |
-|-------|-------------|
-| `missionStatement` | Free text, 280–500 chars recommended |
-| `updatedAt` | When last revised |
-| `visibility` | public · community · network · private |
-| `versionHistory` | Optional — track evolution |
-
-**[PEP-M10c]** Mission displayed on profile, network board, and introduction cards — never required to be polished prose.
-
-**[PEP-M10d]** Requirement: **PRM-001** Personal Mission
+**[PEP-M19a]** Mission is the **opening chapter** of the Civic Passport — intent before history.
 
 ---
 
-## PEP-M11 — Person vs Account Separation
+## PEP-M20 — Civic Passport Architecture
 
-**[PEP-M11]** Architecture separates:
+**[PEP-M20]** **Signature experience:** **Civic Passport** — not just a profile, but a **living record of civic participation**.
+
+**[PEP-M20a]** Every participant carries a passport that **grows with them**:
+
+| Stamp / chapter | Source |
+|-----------------|--------|
+| Communities joined | Graph edges |
+| Volunteer experiences | Operational data |
+| Events attended | Event module |
+| Committees served | Committee module |
+| Projects completed | Project module |
+| Skills learned | Skills system |
+| People mentored | Mentorship edges |
+| Organizers developed | Referral subgraph |
+| Milestones reached | Journey + recognition |
+
+**[PEP-M20b]** It is **not a scorecard**. It is a **narrative** of how someone became involved, what they helped build, and the relationships they formed.
+
+**[PEP-M20c]** Years later, a participant looks back and sees their **story** — aligning with long-term youth organizing infrastructure that develops **people**, not just campaigns.
+
+**[PEP-M20d]** Structure:
+
+```
+Civic Passport
+    ├── Personal Mission (forward-looking)
+    ├── Identity layers (five dimensions)
+    ├── Timeline stamps (append-only)
+    ├── Recognition (contribution-based)
+    └── Privacy-filtered public view
+```
+
+**[PEP-M20e]** Requirement: **CPP-001** Civic Passport
+
+**[PEP-M20f]** V1: profile + mission + county/campus + network stub. Full passport grows through Phase 3 steps.
+
+---
+
+## PEP-M21 — Person vs Account Separation
+
+**[PEP-M21]** Separate **authentication** from **participant identity** [PEP-BG].
 
 | Layer | Contains |
 |-------|----------|
-| **Person** (participant record) | Identity, mission, journey, graph node |
-| **Account** (auth credentials) | Email, session, login — Phase 7 Platform Services |
-| **Profile** (presentation) | What others see — privacy-filtered view |
-
-**[PEP-M11a]** V1: honor-system signup may collapse person+account — but **data model** keeps separation for future auth [Phase 7].
+| **Person** | Identity, passport, journey, graph node |
+| **Account** | Email, session — Phase 7 |
+| **Profile** | Privacy-filtered passport view |
 
 ---
 
-## PEP-M12 — Relationship-First Design
+## PEP-M22 — Relationship-First Design
 
-**[PEP-M12]** Every participant owns a **network** [Step 3.4] — the family tree of organizers.
+**[PEP-M22]** Every participant owns: network · invite URL · QR code · relationship tree [Step 3.4].
 
-| Asset | Owner |
-|-------|-------|
-| Network | Participant |
-| Invite URL | Participant |
-| QR Code | Participant |
-| Relationship tree | Participant |
-| Referral attribution | Participant's graph edges |
-
-**[PEP-M12a]** Relational organizing [OM-L2] — growth through **relationships**, not broadcast.
+Relational organizing [OM-L2] — the **family tree of organizers**.
 
 ---
 
-## PEP-M13 — Digital Identity Components
+## PEP-M23 — Phase 3 Roadmap
 
-**[PEP-M13]** Complete participant digital identity (Phase 3 deliverables):
-
-| Component | Step |
-|-----------|------|
-| Identity doctrine | 3.1 ✅ |
-| Journey framework | 3.2 |
-| Profile system | 3.3 |
-| Personal network | 3.4 |
-| Recruitment engine | 3.5 |
-| Network board | 3.6 |
-| Privacy & trust | 3.7 |
-| Skills & leadership | 3.8 |
-| Recognition | 3.9 |
-| Communication prefs | 3.10 |
-| Timeline | 3.11 |
-| Knowledge graph | 3.12 |
-| Recommendations | 3.13 |
-| Experience / onboarding | 3.14 |
-| Phase 3 Build Bible | 3.15 |
+**[PEP-M23]** Identity doctrine enables Steps 3.2–3.15 — see [PHASE_3_MASTER_SEQUENCE.md](PHASE_3_MASTER_SEQUENCE.md).
 
 ---
 
-## PEP-M14 — V1 Scope
+## PEP-M24 — V1 Scope
 
-**[PEP-M14]** Jul 12–14 minimum:
+**[PEP-M24]** Jul 12–14 minimum:
 
 | Deliverable | Step |
 |-------------|------|
-| Identity doctrine | 3.1 ✅ |
-| Journey stages | 3.2 ✅ |
-| Basic profile + mission | 3.3 |
-| Network + invite URL + QR | 3.4–3.5 |
-| Network board (core) | 3.6 |
+| Identity doctrine + Civic Passport spec | 3.1 ✅ |
+| Journey framework | 3.2 ✅ |
+| Profile + mission (passport seed) | 3.3 |
+| Network + invite + QR | 3.4–3.5 |
+| Network board home | 3.6 |
 | Basic privacy | 3.7 |
-| Registration → `registered` | 3.3 implementation |
-
-**[PEP-M14b]** Skills, full timeline, recommendations, AI — post-V1 steps.
 
 ---
 
@@ -311,13 +467,16 @@ Participant —member_of→ Committee (future)
 
 | # | Rule |
 |---|------|
-| 1 | **Person-first** data model — `PRT-*` graph node from registration |
-| 2 | **Personal Mission** field on every profile — encouraged at signup |
-| 3 | **Never say "user"** in participant-facing copy — say "participant" or "organizer" |
-| 4 | Profile = filtered view of person record — not duplicate data |
-| 5 | All person edges in relationship graph [Step 3.12] |
-| 6 | Privacy defaults conservative for minors |
-| 7 | Journey stage derived from signals [JRN-M06] — not manual rank |
+| 1 | Ask **"What does this person need?"** on every screen [PEP-M02] |
+| 2 | **Separate authentication from identity** [PEP-M21] |
+| 3 | **Civic Passport** — not a static profile form [PEP-M20] |
+| 4 | Allow identity to **evolve** — version history, append-only timeline |
+| 5 | Support **multiple community memberships** — graph edges |
+| 6 | **Preserve historical participation** — graduation doesn't erase [PEP-M16] |
+| 7 | **Respect privacy** — participant controls representation [PEP-M15] |
+| 8 | **Never say "user"** in participant-facing copy |
+| 9 | **Equal capabilities at start** — no pay-to-lead [PEP-M13] |
+| 10 | Design for **future expansion** — passport stamps from new modules |
 
 ---
 
@@ -325,15 +484,17 @@ Participant —member_of→ Committee (future)
 
 Step 3.1 is complete when:
 
-- [x] **[AC-020a]** Participant defined — people not users. `[PEP-M02, PEP-M03]`
-- [x] **[AC-020b]** Identity, belonging, communities documented. `[PEP-M04–M07]`
-- [x] **[AC-020c]** Privacy philosophy established. `[PEP-M09]`
-- [x] **[AC-020d]** Personal Mission architecture specified. `[PEP-M10]`
-- [x] **[AC-020e]** Phase 3 digital identity roadmap defined. `[PEP-M13]`
-- [x] **[AC-020f]** Burt has constitutional document for people. `[PEP-BG, participant-identity.json]`
+- [x] **[AC-020a]** Participant identity philosophy documented. `[PEP-M01, PEP-M04]`
+- [x] **[AC-020b]** Core design question established. `[PEP-M02]`
+- [x] **[AC-020c]** Identity layers defined. `[PEP-M06–M11]`
+- [x] **[AC-020d]** Equal opportunity reinforced. `[PEP-M13]`
+- [x] **[AC-020e]** Identity persistence defined. `[PEP-M16]`
+- [x] **[AC-020f]** Civic Passport architecture specified. `[PEP-M20]`
+- [x] **[AC-020g]** Participant Promise documented. `[PEP-M18]`
+- [x] **[AC-020h]** Burt has conceptual model for participant identity. `[PEP-BG, participant-identity.json]`
 
 ---
 
 **Next Step:** 3.2 — [Participant Journey Framework](PARTICIPANT_JOURNEY.md)
 
-*Trace: OM-L1 → PEP-M03 → PRT graph node → Personal Mission [PRM-001]*
+*Trace: OM-L1 → PEP-M02 → Civic Passport [CPP-001] → Personal Mission [PRM-001]*

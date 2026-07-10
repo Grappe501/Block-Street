@@ -4,6 +4,25 @@
 
 ---
 
+## 2026-07-10 — PHASE-003.1 Participant Identity Doctrine (Canonical Expansion)
+
+**Document ID:** PHASE-003.1 · **PEP-001 · CPP-001 · PRM-001 · AC-020**
+
+### Canonical Expansion
+
+- **Core design question:** "What does this person need from us to become successful?"
+- **Guiding principle:** Every participant matters before they contribute
+- **Five identity layers:** Personal · Community · Relationship · Leadership · Journey
+- **Civic Passport [CPP-001]** — living narrative of civic participation, not a scorecard
+- **Participant Promise** — six statements every screen should reinforce
+- Equal opportunity · Identity persistence · Dynamic evolution
+
+### Phase Arc Locked
+
+> Phase 1 defined the platform. Phase 2 defined Arkansas. Phase 3 defines the person.
+
+---
+
 ## 2026-07-10 — PHASE-003.1 Participant Identity Doctrine + Phase 3 Master Sequence
 
 **Document IDs:** PHASE-003.1, PHASE-003.0, PEP-001, PRM-001, AC-020  

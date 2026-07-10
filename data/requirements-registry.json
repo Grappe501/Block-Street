@@ -22,6 +22,7 @@
     { "prefix": "LSA", "domain": "Living systems architecture" },
     { "prefix": "PEP", "domain": "Participant identity" },
     { "prefix": "PRM", "domain": "Personal mission" },
+    { "prefix": "CPP", "domain": "Civic passport" },
     { "prefix": "STS", "domain": "Status & lifecycle" },
     { "prefix": "ADM", "domain": "Administration" },
     { "prefix": "SEC", "domain": "Security" },
@@ -509,18 +510,20 @@
     {
       "id": "PEP-001",
       "title": "Participant Identity Doctrine",
-      "purpose": "Start with people not users — constitutional document for Phase 3",
-      "description": "PHASE-003.1 participant definition, belonging, privacy philosophy, profile philosophy, life stages",
+      "purpose": "Define the person — most important document after the Constitution",
+      "description": "PHASE-003.1 five identity layers, equal opportunity, Civic Passport, core question: what does this person need to succeed?",
       "priority": "critical",
       "principle": "OM-L1",
       "dependencies": ["LSA-001", "REG-001"],
-      "related": ["PRM-001", "JRN-001", "USR-001"],
+      "related": ["PRM-001", "CPP-001", "JRN-001", "USR-001"],
       "acceptanceCriteria": [
-        "Participant defined — people not users",
-        "Identity, belonging, communities documented",
-        "Privacy philosophy established",
-        "Personal Mission architecture specified",
-        "Phase 3 digital identity roadmap defined"
+        "Participant identity philosophy documented",
+        "Core design question established",
+        "Five identity layers defined",
+        "Equal opportunity reinforced",
+        "Identity persistence defined",
+        "Civic Passport architecture specified",
+        "Participant Promise documented"
       ],
       "futureNotes": "Person vs account separation at scale, guardian controls",
       "implementationStatus": "done",
@@ -534,6 +537,35 @@
         "doc": "DOC-PEP-001"
       },
       "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
+    },
+    {
+      "id": "CPP-001",
+      "title": "Civic Passport",
+      "purpose": "Living record of civic participation — narrative, not scorecard",
+      "description": "PHASE-003.1 signature experience: passport grows with communities, volunteer work, events, mentorship, milestones",
+      "priority": "critical",
+      "principle": "OM-L5",
+      "dependencies": ["PEP-001", "JRN-001", "PRM-001"],
+      "related": ["USR-002", "NET-001", "VOL-001"],
+      "acceptanceCriteria": [
+        "Passport architecture documented",
+        "Stamp types defined",
+        "Identity persistence across life changes",
+        "Not a scorecard — narrative of participation",
+        "Privacy-filtered public view"
+      ],
+      "futureNotes": "Full stamp automation from events, committees, projects; portfolio export",
+      "implementationStatus": "pending",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": "DB-USERS",
+        "api": "API-USERS-002",
+        "frontend": "PAGE-NETWORK",
+        "test": "TEST-CPP-001",
+        "doc": "DOC-CPP-001"
+      },
+      "versionHistory": { "created": "2026-07-10" }
     },
     {
       "id": "PRM-001",

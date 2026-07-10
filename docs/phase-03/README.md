@@ -42,9 +42,10 @@ A user logs into software. A person has relationships, aspirations, interests, s
 
 | Feature | Doc |
 |---------|-----|
-| **Personal Mission** | [Identity Doctrine §PEP-M10](PARTICIPANT_IDENTITY_DOCTRINE.md) |
+| **Civic Passport** | Living narrative of civic participation [CPP-001] |
+| **Personal Mission** | Forward-looking purpose statement [PRM-001] |
+| **Five Identity Layers** | Personal · Community · Relationship · Leadership · Journey |
 | **Network Board** | Step 3.6 |
-| **Participant Graph** | Step 3.12 |
 
 ---
 

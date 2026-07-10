@@ -1,50 +1,107 @@
 {
-  "version": "1.0.0",
+  "version": "2.0.0",
   "docPath": "docs/phase-03/PARTICIPANT_IDENTITY_DOCTRINE.md",
-  "motto": "Start with people, not users.",
+  "importance": "Most important document after the Constitution",
+  "phaseArc": "Phase 1 defined the platform. Phase 2 defined Arkansas. Phase 3 defines the person.",
+  "coreDesignQuestion": "What does this person need from us to become successful?",
+  "legacyQuestion": "What information do we need about this user?",
+  "mottos": [
+    "Start with people, not users.",
+    "Every participant matters before they contribute."
+  ],
   "phaseName": "People & Relationship System",
   "phaseQuestion": "Who is this person, how do they grow, and how do they connect to others?",
-  "participantDefinition": "A person engaged with ASYON — with relationships, aspirations, interests, skills, communities, and a story.",
+  "participantDefinition": "Community builders — not database records. People with relationships, interests, communities, experiences, growth, and contributions.",
   "idPattern": "PRT-{uuid}",
-  "identityDimensions": [
-    "name",
-    "county",
-    "campus",
-    "ageBracket",
-    "interests",
-    "skills",
-    "passions",
-    "personalMission",
-    "story"
+  "identityLayers": [
+    {
+      "id": "personal",
+      "question": "Who am I?",
+      "elements": ["preferredName", "pronouns", "photo", "biography", "missionStatement", "interests", "skills", "goals", "communicationPrefs", "privacySettings"]
+    },
+    {
+      "id": "community",
+      "question": "Where do I belong?",
+      "elements": ["institution", "county", "committees", "projects", "volunteerTeams"]
+    },
+    {
+      "id": "relationship",
+      "question": "Who do I know?",
+      "elements": ["personalNetwork", "mentors", "peopleInvited", "collaborators", "committeeMembers"]
+    },
+    {
+      "id": "leadership",
+      "question": "How am I growing?",
+      "elements": ["organizer", "mentor", "volunteer", "projectLeader", "committeeFacilitator", "leadershipMilestones"],
+      "note": "Descriptive, not hierarchical"
+    },
+    {
+      "id": "journey",
+      "question": "Where am I in my journey?",
+      "elements": ["journeyStage", "newParticipant", "contributor", "organizer", "mentor", "communityBuilder", "alumni"]
+    }
   ],
-  "belongingEdges": [
-    { "type": "resides_in", "destination": "County" },
-    { "type": "attends", "destination": "Institution" },
-    { "type": "member_of", "destination": "Committee", "v1": "future" }
+  "registrationHome": [
+    "personalDashboard",
+    "personalNetwork",
+    "countyAffiliation",
+    "institutionAffiliation",
+    "missionBoard",
+    "activityTimeline",
+    "profile",
+    "growthRecommendations"
+  ],
+  "participantPromise": [
+    "I belong here.",
+    "My voice matters.",
+    "I can help.",
+    "I can grow.",
+    "I can lead.",
+    "I can leave this community stronger than I found it."
+  ],
+  "equalOpportunity": {
+    "principle": "Identical capabilities at start; differences through participation",
+    "neverDeterminedBy": ["popularity", "recruitmentNumbers", "volunteerHours", "leadershipPosition", "timeOnPlatform"]
+  },
+  "identityPersistence": [
+    { "change": "Graduation", "behavior": "Alumni stage; relationships preserved" },
+    { "change": "County move", "behavior": "History preserved; new resides_in edge" },
+    { "change": "Role change", "behavior": "Achievements preserved in passport" }
   ],
   "personalMission": {
     "requirementId": "PRM-001",
-    "description": "Living statement of purpose — not a resume",
-    "maxLengthRecommended": 500,
-    "visibilityOptions": ["public", "community", "network", "private"],
+    "role": "Opening chapter of Civic Passport — intent before history",
+    "description": "Forward-looking statement of purpose — not a resume",
     "examples": [
       "I'm helping organize students at UCA.",
       "I'm building youth engagement in Saline County.",
       "I want to connect students interested in environmental conservation.",
       "I'm recruiting first-time volunteers across Southeast Arkansas."
-    ],
-    "uses": [
-      "Introduce participants to one another",
-      "Recommend collaborators",
-      "Build complementary teams",
-      "Help new members find belonging",
-      "Show progress as role evolves"
     ]
   },
+  "civicPassport": {
+    "requirementId": "CPP-001",
+    "description": "Living record of civic participation — not a scorecard, a narrative",
+    "notA": "scorecard",
+    "isA": "narrative of civic participation",
+    "stamps": [
+      "communitiesJoined",
+      "volunteerExperiences",
+      "eventsAttended",
+      "committeesServed",
+      "projectsCompleted",
+      "skillsLearned",
+      "peopleMentored",
+      "organizersDeveloped",
+      "milestonesReached"
+    ],
+    "structure": ["personalMission", "identityLayers", "timelineStamps", "recognition", "privacyFilteredView"],
+    "v1": "profile + mission + county/campus + network stub"
+  },
   "layers": {
-    "person": "Identity, mission, journey, graph node",
+    "person": "Identity, passport, journey, graph node",
     "account": "Auth credentials — Phase 7",
-    "profile": "Privacy-filtered presentation"
+    "profile": "Privacy-filtered passport view"
   },
   "v1ProfileMinimum": [
     "name",
