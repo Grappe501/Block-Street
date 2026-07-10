@@ -79,7 +79,7 @@ Volume 3 is complete when Burt understands:
 | Step | Status |
 |------|--------|
 | 3.1 Business Rules Engine | ✅ Done |
-| 3.2 Workflow Engine | Pending |
+| 3.2 Workflow Engine | ✅ Done |
 | 3.3 Identity & Lifecycle Engine | Pending |
 | 3.4 Community Lifecycle Engine | Pending |
 | 3.5 Mission Execution Engine | Pending |
