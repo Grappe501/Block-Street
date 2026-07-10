@@ -3,8 +3,8 @@
     "name": "Block Street",
     "tagline": "Arkansas youth & student organizing platform",
     "version": "0.1.0",
-    "currentPhase": 1,
-    "currentPhaseName": "Mission + Structure",
+    "currentPhase": 2,
+    "currentPhaseName": "Data Model",
     "lastUpdated": "2026-07-10T08:30:00Z",
     "deployUrl": null,
     "githubRepo": "https://github.com/Grappe501/Block-Street",
@@ -16,7 +16,7 @@
       "id": 1,
       "name": "Mission + Structure",
       "slug": "phase-01-mission-structure",
-      "status": "in_progress",
+      "status": "done",
       "docPath": "docs/phases/PHASE-01-MISSION-STRUCTURE.md",
       "steps": [
         { "id": "1.1", "name": "Write mission statement", "status": "done", "notes": "docs/mission/MISSION.md" },
@@ -28,7 +28,7 @@
         { "id": "1.7", "name": "Write nonpartisan platform rules", "status": "done", "notes": "docs/architecture/NONPARTISAN-RULES.md" },
         { "id": "1.8", "name": "Create documentation index", "status": "done", "notes": "docs/00-INDEX.md" },
         { "id": "1.9", "name": "Scaffold project on H: drive", "status": "done", "notes": "Next.js + admin dashboard" },
-        { "id": "1.10", "name": "Initialize GitHub repo + first push", "status": "in_progress", "notes": "Grappe501/Block-Street" },
+        { "id": "1.10", "name": "Initialize GitHub repo + first push", "status": "done", "notes": "https://github.com/Grappe501/Block-Street" },
         { "id": "1.11", "name": "Admin dashboard: Mission tab live", "status": "done", "notes": "/admin with 8 tabs" }
       ]
     },
@@ -150,9 +150,9 @@
   ],
   "stats": {
     "totalSteps": 61,
-    "doneSteps": 12,
-    "inProgressSteps": 8,
+    "doneSteps": 13,
+    "inProgressSteps": 7,
     "pendingSteps": 41,
-    "percentComplete": 20
+    "percentComplete": 21
   }
 }
