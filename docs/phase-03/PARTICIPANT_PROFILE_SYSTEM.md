@@ -341,7 +341,7 @@ When a participant logs in, they should not feel like they are editing an accoun
 - Public visibility · Profile information · Contact methods
 - Community participation · Messaging permissions · Personal data sharing
 
-**[PHQ-M16a]** Privacy should be **understandable and participant-controlled** — full framework in Step 3.7 [SEC-001].
+**[PHQ-M16a]** Privacy should be **understandable and participant-controlled** — full framework in [Trust, Privacy & Digital Safety](TRUST_PRIVACY_DIGITAL_SAFETY.md) [SEC-001]. Trust Center at `/trust-center`.
 
 **[PHQ-M16b]** V1: sensible defaults — name + county visible; contact private.
 
@@ -485,6 +485,6 @@ Step 3.3 is complete when:
 
 ---
 
-**Next Step:** 3.7 — Privacy & Trust System (SEC-001)
+**Next Step:** 3.8 — Skills & Leadership System (VOL-001) · **V1 critical design path complete**
 
 *Trace: USR-001 registration → PHQ shell → NET-002/003 invite tools → JRN orchestrator → CPP timeline*

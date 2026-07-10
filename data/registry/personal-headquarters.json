@@ -108,7 +108,7 @@
     { "setting": "favoriteCommunities", "v1": false },
     { "setting": "notificationPreferences", "v1": false, "crossRef": "3.10" },
     { "setting": "dashboardLayout", "v1": false },
-    { "setting": "privacySettings", "v1": "basic", "crossRef": "3.7" }
+    { "setting": "privacySettings", "v1": "basic", "crossRef": "SEC-001" }
   ],
   "privacyControls": [
     "publicVisibility",

@@ -20,7 +20,7 @@
     { "id": "3.4", "name": "Personal Relationship Network", "artifact": "PERSONAL_RELATIONSHIP_NETWORK.md", "status": "done", "requirement": "NET-001" },
     { "id": "3.5", "name": "Relationship Growth Engine", "artifact": "RELATIONSHIP_GROWTH_ENGINE.md", "status": "done", "requirement": "RGE-001" },
     { "id": "3.6", "name": "Personal Command Center", "artifact": "PERSONAL_COMMAND_CENTER.md", "status": "done", "requirement": "PCC-001" },
-    { "id": "3.7", "name": "Privacy & Trust System", "artifact": "PRIVACY_TRUST_SYSTEM.md", "status": "pending", "requirement": "SEC-001" },
+    { "id": "3.7", "name": "Trust, Privacy & Digital Safety", "artifact": "TRUST_PRIVACY_DIGITAL_SAFETY.md", "status": "done", "requirement": "SEC-001" },
     { "id": "3.8", "name": "Skills & Leadership System", "artifact": "SKILLS_LEADERSHIP_SYSTEM.md", "status": "pending", "requirement": "VOL-001" },
     { "id": "3.9", "name": "Recognition & Milestones", "artifact": "RECOGNITION_MILESTONES.md", "status": "pending", "requirement": "JRN-001" },
     { "id": "3.10", "name": "Communication Preferences", "artifact": "COMMUNICATION_PREFERENCES.md", "status": "pending", "requirement": "MSG-001" },

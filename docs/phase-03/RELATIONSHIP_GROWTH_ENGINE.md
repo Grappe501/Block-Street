@@ -467,6 +467,6 @@ Step 3.5 is complete when:
 
 ---
 
-**Next Step:** 3.7 — Privacy & Trust System (SEC-001)
+**Next Step:** 3.8 — Skills & Leadership System (VOL-001)
 
 *Trace: PHQ home → PRN community → RGE expansion → PCC daily workspace → Morning Brief → Mission Board*

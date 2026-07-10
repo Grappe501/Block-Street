@@ -91,7 +91,7 @@
         { "id": "3.4", "name": "Personal Relationship Network [NET-001]", "status": "done", "notes": "PRN-M01–M18, Trust Graph, auto-provision, QR/invite, participant-owned network" },
         { "id": "3.5", "name": "Relationship Growth Engine [RGE-001]", "status": "done", "notes": "RGE-M01–M17, Organizing Circles, invitation lifecycle, attribution, healthy growth" },
         { "id": "3.6", "name": "Personal Command Center [PCC-001]", "status": "done", "notes": "PCC-M01–M20, Morning Brief, 11 widgets, six login questions, HQ implementation layer" },
-        { "id": "3.7", "name": "Privacy & Trust System", "status": "pending", "notes": "Visibility, minor protections" },
+        { "id": "3.7", "name": "Trust, Privacy & Digital Safety [SEC-001]", "status": "done", "notes": "TPS-M01–M18, Trust Center, visibility levels, data minimization, V1 critical path complete" },
         { "id": "3.8", "name": "Skills & Leadership System", "status": "pending", "notes": "Post-V1" },
         { "id": "3.9", "name": "Recognition & Milestones", "status": "pending", "notes": "Not popularity" },
         { "id": "3.10", "name": "Communication Preferences", "status": "pending", "notes": "Participant controlled" },
@@ -217,6 +217,12 @@
     { "version": "1.4.0", "name": "Election ready", "status": "pending", "date": null }
   ],
   "buildLog": [
+    {
+      "date": "2026-07-10",
+      "title": "PHASE-003.7 Trust, Privacy & Digital Safety Framework (Canonical)",
+      "phase": 3,
+      "summary": "TPS-M01–M18 trust as infrastructure, Trust Center, visibility levels, data minimization, ethical use — V1 critical path complete"
+    },
     {
       "date": "2026-07-10",
       "title": "PHASE-003.6 Personal Command Center (Canonical)",
@@ -370,9 +376,9 @@
   ],
   "stats": {
     "totalSteps": 81,
-    "doneSteps": 26,
+    "doneSteps": 27,
     "inProgressSteps": 0,
-    "pendingSteps": 55,
-    "percentComplete": 32
+    "pendingSteps": 54,
+    "percentComplete": 33
   }
 }

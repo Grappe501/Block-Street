@@ -193,7 +193,7 @@
     "theme": "future",
     "notificationPreferences": "step_3.10",
     "missionPriorities": "editMission",
-    "privacy": "step_3.7"
+    "privacy": "SEC-001"
   },
   "v1Scope": {
     "shell": true,

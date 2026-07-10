@@ -512,6 +512,6 @@ Step 3.6 is complete when:
 
 ---
 
-**Next Step:** 3.7 — Privacy & Trust System (SEC-001)
+**Next Step:** 3.8 — Skills & Leadership System (VOL-001) · **V1 critical design path complete**
 
 *Trace: PHQ home → PRN community → RGE expansion → PCC daily workspace → Morning Brief → Mission Board → journey next step*

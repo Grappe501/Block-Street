@@ -313,7 +313,7 @@ Visitor → Interested → Registered → Connected → Contributor
 | Notifications | Step 3.10 |
 | Community participation | Opt-in to committees, events |
 
-**[PEP-M15a]** Trust is earned through **transparency** — full spec Step 3.7 Privacy & Trust System.
+**[PEP-M15a]** Trust is earned through **transparency** — full spec [Trust, Privacy & Digital Safety Framework](TRUST_PRIVACY_DIGITAL_SAFETY.md).
 
 **[PEP-M15b]** Minor protections — conservative defaults [DG-*].
 
@@ -457,7 +457,7 @@ Relational organizing [OM-L2] — the **family tree of organizers**.
 | Profile + mission (passport seed) | 3.3 |
 | Network + invite + QR | 3.4–3.5 |
 | Command Center home | 3.6 |
-| Basic privacy | 3.7 |
+| Basic privacy | 3.7 [SEC-001] |
 
 ---
 

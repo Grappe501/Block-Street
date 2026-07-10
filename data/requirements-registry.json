@@ -23,7 +23,7 @@
     { "prefix": "PEP", "domain": "Participant identity" },
     { "prefix": "PHQ", "domain": "Personal headquarters" },
     { "prefix": "PCC", "domain": "Personal command center" },
-    { "prefix": "RGE", "domain": "Relationship growth engine" },
+    { "prefix": "TPS", "domain": "Trust, privacy & digital safety" },
     { "prefix": "CPP", "domain": "Civic passport" },
     { "prefix": "STS", "domain": "Status & lifecycle" },
     { "prefix": "ADM", "domain": "Administration" },
@@ -61,7 +61,8 @@
     { "id": "PAGE-HQ", "route": "/hq", "title": "Personal Headquarters (alias)", "status": "pending", "requirement": "PHQ-001" },
     { "id": "PAGE-PCC", "route": "/command-center", "title": "Personal Command Center", "status": "pending", "requirement": "PCC-001" },
     { "id": "PAGE-NETWORK", "route": "/dashboard/network", "title": "Legacy Network Board (redirects to PCC)", "status": "deprecated", "requirement": "PCC-001" },
-    { "id": "PAGE-SHARE", "route": "/s/[slug]", "title": "Share / Referral Landing", "status": "pending" },
+    { "id": "PAGE-TRUST", "route": "/trust-center", "title": "Trust Center", "status": "pending", "requirement": "SEC-001" },
+    { "id": "PAGE-SHARE", "route": "/s/[slug]", "title": "Share / Referral Landing", "status": "pending", "requirement": "RGE-001" },
     { "id": "PAGE-ADMIN", "route": "/admin", "title": "Director Workbench", "status": "done" },
     { "id": "PAGE-SEARCH", "route": "/search", "title": "Statewide Search", "status": "pending" }
   ],
@@ -742,6 +743,36 @@
         "frontend": "PAGE-PCC",
         "test": "TEST-PCC-001",
         "doc": "DOC-PCC-001"
+      },
+      "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
+    },
+    {
+      "id": "SEC-001",
+      "title": "Trust, Privacy & Digital Safety Framework",
+      "purpose": "Trust as infrastructure — participants confident inviting friends and sharing information",
+      "description": "PHASE-003.7 Trust Center, six visibility levels, data minimization, consent, community safety, ethical use, future AI principles, visibilityEngine",
+      "priority": "critical",
+      "principle": "CP-007",
+      "dependencies": ["PEP-001", "PHQ-001", "PCC-001"],
+      "related": ["DG-004", "KDG-001", "RGE-001", "NET-001"],
+      "acceptanceCriteria": [
+        "Trust philosophy documented as infrastructure",
+        "Privacy and visibility models established",
+        "Data minimization principles defined",
+        "Safety and transparency expectations documented",
+        "Trust Center architecture specified",
+        "Blueprint for participant trust as foundational infrastructure"
+      ],
+      "futureNotes": "Block/mute, guardian workflows, data export, login history, AI trust settings",
+      "implementationStatus": "done",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": "DB-USERS",
+        "api": null,
+        "frontend": "PAGE-TRUST",
+        "test": "TEST-SEC-001",
+        "doc": "DOC-SEC-001"
       },
       "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
     },

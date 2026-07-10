@@ -462,6 +462,6 @@ Step 3.4 is complete when:
 
 ---
 
-**Next Step:** 3.7 — Privacy & Trust System (SEC-001)
+**Next Step:** 3.8 — Skills & Leadership System (VOL-001)
 
 *Trace: PRN network → Relationship widget in PCC → Trust Graph → Morning Brief invite acceptance*

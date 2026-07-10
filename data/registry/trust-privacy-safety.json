@@ -1,0 +1,177 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/phase-03/TRUST_PRIVACY_DIGITAL_SAFETY.md",
+  "motto": "Trust is infrastructure.",
+  "principle": "Participants should always understand what information they are sharing, who can see it, and why it is being used.",
+  "purpose": "How participant trust is earned, protected, and maintained — foundational system, not optional feature.",
+  "trustChain": "Transparency → Trust → Invitations → Relationships → Communities",
+  "whyItMatters": "If people don't trust the platform, they won't invite friends. Relational organizing fails without trust.",
+  "trustPillars": [
+    "transparency",
+    "participantControl",
+    "clearCommunication",
+    "privacyByDesign",
+    "responsibleStewardship",
+    "respectForParticipants"
+  ],
+  "dataMinimization": {
+    "questions": [
+      "Why is this needed?",
+      "How does it help the participant?",
+      "Can the platform function without it?",
+      "Does the benefit justify collecting it?"
+    ],
+    "rule": "If any answer is no — do not collect",
+    "v1RegistrationFields": ["name", "county", "optionalCampus", "mission"],
+    "dataClass": "Controlled [KDG-M01]"
+  },
+  "participantControls": [
+    { "setting": "profileVisibility", "v1": "basic" },
+    { "setting": "contactInformation", "v1": "privateDefault" },
+    { "setting": "publicBiography", "v1": false },
+    { "setting": "missionVisibility", "v1": true },
+    { "setting": "communityMembershipsVisibility", "v1": "partial" },
+    { "setting": "messagingPermissions", "v1": false },
+    { "setting": "notificationPreferences", "v1": false, "crossRef": "3.10" },
+    { "setting": "connectionRequests", "v1": false }
+  ],
+  "visibilityLevels": [
+    { "key": "only_me", "label": "Only Me" },
+    { "key": "connections", "label": "My Connections" },
+    { "key": "campus", "label": "My Campus" },
+    { "key": "county", "label": "My County" },
+    { "key": "members", "label": "Platform Members" },
+    { "key": "public", "label": "Public" }
+  ],
+  "v1Defaults": [
+    { "element": "displayName", "default": "members" },
+    { "element": "county", "default": "members" },
+    { "element": "campus", "default": "members" },
+    { "element": "mission", "default": "connections" },
+    { "element": "contactInfo", "default": "only_me" },
+    { "element": "journeyStage", "default": "only_me" },
+    { "element": "networkSize", "default": "only_me" }
+  ],
+  "consent": {
+    "properties": ["clear", "specific", "revocable", "documented"],
+    "registrationConsent": true,
+    "auditTable": "consent_events"
+  },
+  "youthSafety": {
+    "v1AgeRange": "16-24",
+    "futureProtections": [
+      "ageAppropriateExperiences",
+      "guardianWorkflows",
+      "additionalModeration",
+      "restrictedPublicVisibility",
+      "enhancedPrivacyDefaults"
+    ],
+    "designBeforeExpand": true
+  },
+  "communitySafety": {
+    "actions": [
+      { "action": "reportConcerns", "v1": "placeholderContact" },
+      { "action": "blockInteractions", "v1": false },
+      { "action": "muteCommunications", "v1": false },
+      { "action": "controlInvitations", "v1": true },
+      { "action": "leaveCommunities", "v1": false },
+      { "action": "manageConnections", "v1": "partial" }
+    ]
+  },
+  "identityProtection": {
+    "authSeparateFromIdentity": true,
+    "protectedAssets": [
+      "accountAccess",
+      "personalIdentity",
+      "relationshipHistory",
+      "communityParticipation",
+      "historicalContributions"
+    ],
+    "participantOwnsHistory": true,
+    "dataExportViaTrustCenter": true
+  },
+  "transparency": {
+    "plainLanguage": true,
+    "topics": ["whatStored", "whyStored", "howUsed", "whoCanSee", "howToUpdateOrRemove"],
+    "everyFieldHasWhyTooltip": true
+  },
+  "trustSignals": [
+    "clearPrivacyIndicators",
+    "visibleAccountSecurity",
+    "verificationStatusOptional",
+    "recommendationExplanations",
+    "communityGuidelines",
+    "consistentInterfaceBehavior"
+  ],
+  "ethicalUse": {
+    "permitted": [
+      "relationshipBuilding",
+      "communityOrganizing",
+      "volunteerCoordination",
+      "leadershipDevelopment",
+      "platformImprovementAnonymized"
+    ],
+    "prohibited": [
+      "sellingDataToThirdParties",
+      "surveillanceWithoutConsent",
+      "popularityRankings",
+      "politicalTargetingOutsideMission",
+      "contradictingParticipantExpectations"
+    ]
+  },
+  "futureAiPrinciples": [
+    "participantsKnowWhenAiAssisting",
+    "participantsRetainControlOverImportantDecisions",
+    "recommendationsExplainable",
+    "aiNeverSilentlyModifiesInformation",
+    "humanJudgmentPrimary"
+  ],
+  "trustCenter": {
+    "description": "Single place to understand and manage relationship with platform — builds confidence, not just controls",
+    "route": "/trust-center",
+    "pageId": "PAGE-TRUST",
+    "aggregator": "assembleTrustCenter(participantId)",
+    "visibilityEngine": "visibilityEngine(element, viewerId, ownerId)",
+    "sections": [
+      "privacySettings",
+      "visibilityControls",
+      "connectedCommunities",
+      "connectedDevices",
+      "loginHistory",
+      "dataDownload",
+      "communicationPreferences",
+      "aiAssistanceSettings",
+      "securityRecommendations",
+      "howWeUseYourInformation"
+    ],
+    "v1Sections": ["privacySettings", "visibilityControls", "howWeUseYourInformation", "connectedCommunities"]
+  },
+  "crossSystemIntegration": {
+    "phqPcc": "Privacy link; visibility on profile elements",
+    "prn": "Trust Graph respects visibility",
+    "rge": "Landing page respects inviter visibility",
+    "jrn": "Journey stage visibility [JRN-M13]",
+    "cpp": "Passport public view privacy-filtered",
+    "organizingCircles": "Private to participant only",
+    "productionGate": "No feature ships without visibility review"
+  },
+  "v1Scope": {
+    "philosophyDocumented": true,
+    "visibilityDefaults": true,
+    "trustCenterShell": true,
+    "registrationConsent": true,
+    "shareLandingTrustBadge": true,
+    "safetyPlaceholder": true,
+    "consentAuditSchema": true
+  },
+  "implementation": {
+    "files": [
+      "src/app/(participant)/trust-center/page.tsx",
+      "src/components/trust/TrustCenterShell.tsx",
+      "src/lib/trust/visibilityEngine.ts",
+      "src/lib/trust/assembleTrustCenter.ts",
+      "src/lib/trust/consentLog.ts"
+    ],
+    "tables": ["users.visibility_settings", "consent_events", "safety_reports"]
+  }
+}

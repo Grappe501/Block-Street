@@ -41,8 +41,8 @@ When complete, every participant receives:
 | 3.4 | [Personal Relationship Network](PERSONAL_RELATIONSHIP_NETWORK.md) | Participant-owned living network + Trust Graph | ✅ |
 | 3.5 | [Relationship Growth Engine](RELATIONSHIP_GROWTH_ENGINE.md) | Self-expanding through trusted relationships | ✅ |
 | 3.6 | [Personal Command Center](PERSONAL_COMMAND_CENTER.md) | Daily workspace — Morning Brief + widgets | ✅ |
-| 3.7 | Privacy & Trust System | Visibility, permissions, minor protections | Pending |
-| 3.8 | Skills & Leadership System | Skills, training, volunteer specialties | Pending |
+| 3.7 | [Trust, Privacy & Digital Safety](TRUST_PRIVACY_DIGITAL_SAFETY.md) | Trust Center — trust as infrastructure | ✅ |
+| 3.8 | Skills & Leadership System | Post-V1 design | Pending |
 | 3.9 | Recognition & Milestones | Celebrate contribution — not popularity | Pending |
 | 3.10 | Communication Preferences | Email, text, push — participant controlled | Pending |
 | 3.11 | Participant Timeline | One timeline — everything | Pending |
@@ -116,9 +116,19 @@ Where **everything comes together** — the daily workspace participants open ev
 
 ---
 
-## 3.7 — Privacy & Trust System
+## 3.7 — Trust, Privacy & Digital Safety Framework
 
-Visibility · Profile permissions · Contact sharing · Messaging permissions · Minor protections · Future guardian controls · Trust philosophy
+**Requirement focus:** SEC-001 · CP-007 · DG-004
+
+The most important **trust document** in the project — trust as infrastructure:
+
+- **Trust Center** — single place for privacy, visibility, data inventory [PAGE-TRUST]
+- **Six visibility levels** — participant-controlled, simple defaults
+- **Data minimization** — four questions before collecting any field
+- **Community safety** — report, block, mute architecture
+- **Ethical use + future AI** — human judgment primary
+
+*Live spec:* `trust-privacy-safety.json` · *Engine:* `visibilityEngine(element, viewer)`
 
 ---
 
@@ -205,7 +215,7 @@ Identity · Journey · Profiles · Networks · Recruitment · Recognition · Pri
 | 3.3 | Register + basic profile + mission |
 | 3.4–3.5 | Invite URL + QR + referral |
 | 3.6 | Command Center core | ✅ design |
-| 3.7 | Basic privacy defaults |
+| 3.7 | Basic privacy + Trust Center | ✅ design |
 
 Steps 3.8–3.14: design now, implement post-launch.
 

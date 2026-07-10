@@ -19,7 +19,7 @@
     { "id": "purpose", "name": "Purpose", "phase": 3, "gives": "Journey stage, next action, growth" }
   ],
   "phaseSummaries": {
-    "3": ["Participant Journey", "Identity", "Profiles", "Network boards", "Invite links", "QR codes", "Recruitment", "Privacy"],
+    "3": ["Participant Journey", "Identity", "Headquarters", "Command Center", "Relationship Network", "Growth Engine", "Trust Center", "Invite links", "QR codes"],
     "4": ["Campus hubs", "County hubs", "Committees", "Projects", "Community dashboards"],
     "5": ["Events", "Volunteer management", "Tasks", "Campaigns", "Outreach", "Messaging"],
     "6": ["Search", "Recommendations", "Analytics", "Mission board", "Growth engine", "Relationship intelligence", "Future AI"],

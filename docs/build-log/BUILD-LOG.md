@@ -4,6 +4,25 @@
 
 ---
 
+## 2026-07-10 — PHASE-003.7 Trust, Privacy & Digital Safety Framework (Canonical)
+
+**Document ID:** PHASE-003.7 · **SEC-001 · AC-026**
+
+### What Was Built
+
+- **Trust is infrastructure** — not a feature; relational organizing fails without it
+- **Trust Center [TPS-M16]** — single place for privacy, visibility, data inventory, security
+- **Six visibility levels** — Only Me through Public with V1 defaults
+- **Data minimization** — four questions before any field collection
+- **Ethical use + future AI principles** — human judgment primary
+- **V1 critical path complete** — Phase 3 design ready for Jul 12 implementation
+
+### Guiding Principle Locked
+
+> **Participants should always understand what they are sharing, who can see it, and why.**
+
+---
+
 ## 2026-07-10 — PHASE-003.6 Personal Command Center (Canonical)
 
 **Document ID:** PHASE-003.6 · **PCC-001 · AC-025**
@@ -140,7 +159,7 @@
 | Item | Detail |
 |------|--------|
 | Built | PARTICIPANT_IDENTITY_DOCTRINE, PHASE_3_MASTER_SEQUENCE |
-| Next | 3.7 Privacy & Trust System (SEC-001) |
+| Next | V1 implementation — registration, Command Center, network, trust |
 
 ---
 
