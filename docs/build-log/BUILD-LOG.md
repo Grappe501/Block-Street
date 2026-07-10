@@ -18,6 +18,23 @@
 
 ---
 
+## 2026-07-10 — Volume 2.11 Analytics & Metrics Data Model [DAB-012 · AC-117]
+
+**Document:** `docs/volume-02/ANALYTICS_DATA_MODEL.md` · **Registry:** `data/registry/analytics-data-model.json`
+
+### What Changed
+
+- **Guiding principle:** *Measure what strengthens communities—not simply what is easy to count.*
+- Analytics as instruments for community strengthening — derived, never canonical
+- **10 metric categories:** Community Health through Geographic
+- **6-layer pipeline:** Canonical Data → Event Ledger → Analytics → Metric Engine → Dashboards → Decision Support
+- Metric objects, KPIs, dashboards, time series, rollups, benchmarking
+- Community Health Index — transparent and explainable, not opaque scores
+- **Community Health Observatory** — 7 signal domains with narrative health assessments
+- Explainability, privacy, AI integration · Admin Data tab · requirements DAB-012 updated
+
+---
+
 ## 2026-07-10 — Volume 2.10 Search Index Data Model [DAB-011 · AC-116]
 
 **Document:** `docs/volume-02/SEARCH_INDEX_MODEL.md` · **Registry:** `data/registry/search-index-model.json`

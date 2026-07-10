@@ -12,6 +12,7 @@ import tim from "../../../data/registry/time-calendar-data-model.json";
 import med from "../../../data/registry/media-document-model.json";
 import cfg from "../../../data/registry/configuration-model.json";
 import srch from "../../../data/registry/search-index-model.json";
+import anl from "../../../data/registry/analytics-data-model.json";
 
 export function AdminDataArchitecture() {
   const doneSteps = dab.steps.filter((s) => s.status === "done").length;
@@ -200,6 +201,24 @@ export function AdminDataArchitecture() {
         </div>
         <p className="mt-2 text-xs text-blue-600">
           {srch.universalDiscoveryIndex.foundations.length} discovery foundations · {srch.acceptanceCriteria}
+        </p>
+      </div>
+
+      <div className="card border-pink-300 bg-pink-50">
+        <p className="text-xs font-semibold uppercase text-pink-800">VOLUME-002.11 · Analytics</p>
+        <h2 className="mt-1 text-lg font-bold text-pink-950">Community Health Observatory</h2>
+        <p className="mt-1 text-xs italic text-pink-900">&ldquo;{anl.guidingPrinciple}&rdquo;</p>
+        <p className="mt-2 text-xs font-semibold text-pink-800">
+          {anl.metricCategoryCount} metric categories · {anl.analyticsArchitecture.layerCount} pipeline layers · derived only
+        </p>
+        <div className="mt-2 flex flex-wrap gap-1">
+          {anl.metricCategories.slice(0, 5).map((c) => (
+            <span key={c.id} className="badge bg-pink-100 text-pink-800">{c.name.replace(" Metrics", "")}</span>
+          ))}
+          <span className="badge bg-pink-200 text-pink-900">+{anl.metricCategoryCount - 5}</span>
+        </div>
+        <p className="mt-2 text-xs text-pink-600">
+          {anl.communityHealthObservatory.signalDomainCount} signal domains · {anl.acceptanceCriteria}
         </p>
       </div>
 

@@ -85,7 +85,7 @@
       { "id": "V2.8", "name": "Media & Document Model [DAB-009]", "status": "done", "notes": "7 categories, Evidence Vault, OCR, versioning, integrity — AC-114" },
       { "id": "V2.9", "name": "Configuration Data Model [DAB-010]", "status": "done", "notes": "12 categories, Platform Constitution Engine, inheritance — AC-115" },
       { "id": "V2.10", "name": "Search Index Model [DAB-011]", "status": "done", "notes": "9 categories, Universal Discovery Index, permission-aware — AC-116" },
-      { "id": "V2.11", "name": "Analytics & Metrics Model [DAB-012]", "status": "done", "notes": "KPIs, community health, rollups, reports — AC-117" },
+      { "id": "V2.11", "name": "Analytics & Metrics Model [DAB-012]", "status": "done", "notes": "10 categories, Community Health Observatory, explainable KPIs — AC-117" },
       { "id": "V2.12", "name": "AI Knowledge Model [DAB-013]", "status": "done", "notes": "Retrieval chunks, citations, twins, Community Brain — AC-118" },
       { "id": "V2.13", "name": "Security & Privacy Model [DAB-014]", "status": "done", "notes": "Consent, classification, audit, retention, erasure — AC-119" },
       { "id": "V2.14", "name": "Master Data Dictionary [DAB-015]", "status": "done", "notes": "60+ tables, enums, stewardship, migration governance — AC-120" },
