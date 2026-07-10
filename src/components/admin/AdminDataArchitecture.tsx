@@ -9,6 +9,7 @@ import sch from "../../../data/registry/database-schema-blueprint.json";
 import kgs from "../../../data/registry/knowledge-graph-schema.json";
 import evt from "../../../data/registry/event-data-model.json";
 import tim from "../../../data/registry/time-calendar-data-model.json";
+import med from "../../../data/registry/media-document-model.json";
 
 export function AdminDataArchitecture() {
   const doneSteps = dab.steps.filter((s) => s.status === "done").length;
@@ -143,6 +144,24 @@ export function AdminDataArchitecture() {
         </div>
         <p className="mt-2 text-xs text-lime-600">
           {tim.temporalIntelligenceEngine.evaluates.length} intelligence signals · {tim.acceptanceCriteria}
+        </p>
+      </div>
+
+      <div className="card border-fuchsia-300 bg-fuchsia-50">
+        <p className="text-xs font-semibold uppercase text-fuchsia-800">VOLUME-002.8 · Media & Documents</p>
+        <h2 className="mt-1 text-lg font-bold text-fuchsia-950">Evidence Vault</h2>
+        <p className="mt-1 text-xs italic text-fuchsia-900">&ldquo;{med.guidingPrinciple}&rdquo;</p>
+        <p className="mt-2 text-xs font-semibold text-fuchsia-800">
+          {med.mediaCategoryCount} media categories · {med.mediaArchitecture.layerCount} object layers · first-class knowledge
+        </p>
+        <div className="mt-2 flex flex-wrap gap-1">
+          {med.mediaCategories.slice(0, 5).map((c) => (
+            <span key={c.id} className="badge bg-fuchsia-100 text-fuchsia-800">{c.name}</span>
+          ))}
+          <span className="badge bg-fuchsia-200 text-fuchsia-900">+{med.mediaCategoryCount - 5}</span>
+        </div>
+        <p className="mt-2 text-xs text-fuchsia-600">
+          {med.evidenceVault.evidenceObjectFields.length} evidence fields · {med.acceptanceCriteria}
         </p>
       </div>
 

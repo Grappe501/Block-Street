@@ -18,6 +18,23 @@
 
 ---
 
+## 2026-07-10 — Volume 2.8 Media & Document Data Model [DAB-009 · AC-114]
+
+**Document:** `docs/volume-02/MEDIA_DOCUMENT_MODEL.md` · **Registry:** `data/registry/media-document-model.json`
+
+### What Changed
+
+- **Guiding principle:** *Knowledge is more valuable when its supporting evidence is preserved.*
+- Media as institutional memory — first-class knowledge objects, not attachments
+- **7 media categories:** Documents, Images, Videos, Audio, Presentations, Structured Data, Generated Artifacts
+- **6-layer architecture:** File → Metadata → Relationships → Permissions → Knowledge → History
+- Versioning, OCR, tagging, search, knowledge, story, and AI integration
+- Permission inheritance, retention, integrity verification, external references, collections
+- **Evidence Vault** — chain of custody, citations, answers "How do we know this is true?"
+- Admin Data tab · requirements DAB-009 updated
+
+---
+
 ## 2026-07-10 — Volume 2.7 Time & Calendar Data Model [DAB-008 · AC-113]
 
 **Document:** `docs/volume-02/TIME_CALENDAR_DATA_MODEL.md` · **Registry:** `data/registry/time-calendar-data-model.json`
