@@ -466,7 +466,7 @@ UI (pages, map, dashboard, signup)
 | 2.6 | `OUTREACH_GAP_DASHBOARD_REQUIREMENTS.md` | Gap metrics |
 | 2.7 | `CAMPUS_PAGE_PERSONALIZATION_RULES.md` | Legal bounds |
 | 2.8 | `REGISTRY_SOURCE_AND_VERIFICATION_PROTOCOL.md` | Provenance |
-| 2.9 | `REGISTRY_SEED_DATA_PLAN.md` | Initial dataset |
+| 2.9 | `ARKANSAS_DIGITAL_TWIN_INITIALIZATION_PLAN.md` | Digital twin init |
 | 2.10 | `PHASE_2_ARKANSAS_ORGANIZING_REGISTRY_BUILD_BIBLE.md` | Unified guide |
 
 ---

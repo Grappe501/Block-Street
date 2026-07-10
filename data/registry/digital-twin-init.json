@@ -1,0 +1,102 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/phase-02/ARKANSAS_DIGITAL_TWIN_INITIALIZATION_PLAN.md",
+  "motto": "The platform launches with Arkansas already built.",
+  "principle": "Ship a living Arkansas, not an empty database.",
+  "stateNode": {
+    "id": "STATE-AR",
+    "name": "Arkansas",
+    "slug": "arkansas",
+    "routes": ["/map", "/admin"]
+  },
+  "bootstrapStatus": {
+    "counties": { "current": 75, "target": 75, "schemaLevel": "minimal", "note": "Full canonical migration at init" },
+    "institutions": { "current": 23, "target": "all_v1_four_year", "schemaLevel": "partial", "note": "Expand to complete V1 set at init" },
+    "relationships": { "current": "denormalized", "target": "explicit_edges", "note": "institution.county → contains/belongs_to" },
+    "operationalData": { "current": "empty", "target": "empty", "note": "Participants created at registration only" }
+  },
+  "initializationPackage": {
+    "v1": [
+      "State of Arkansas (STATE-AR)",
+      "All 75 counties",
+      "Every Arkansas 4-year college and university",
+      "State→County contains edges",
+      "County→Institution contains edges",
+      "Permanent IDs and stable URLs",
+      "Default organizing status: needs_outreach",
+      "Community DNA welcome foundation",
+      "Knowledge Provenance on factual fields"
+    ],
+    "excludes": [
+      "Participants",
+      "Committees",
+      "Events",
+      "Projects",
+      "Volunteer records",
+      "Referral edges"
+    ]
+  },
+  "countyInit": {
+    "count": 75,
+    "idPattern": "CNTY-{slug}",
+    "urlPattern": "/county/{slug}",
+    "defaultStatus": "needs_outreach",
+    "requiredFields": ["id", "slug", "name", "fipsCode", "countySeat", "region", "pageUrl", "representationStatus"]
+  },
+  "institutionInit": {
+    "v1Scope": "four_year_colleges_and_universities",
+    "idPattern": "INST-{slug}",
+    "urlPattern": "/schools/{slug}",
+    "defaultStatus": "needs_outreach",
+    "requiredFields": ["id", "slug", "name", "commonName", "institutionType", "county", "disclaimer", "representationStatus"],
+    "disclaimer": "An independent student organizing network. Not affiliated with or endorsed by the institution."
+  },
+  "relationshipInit": [
+    { "type": "contains", "source": "STATE-AR", "destinationType": "County", "count": 75 },
+    { "type": "contains", "sourceType": "County", "destinationType": "Institution", "note": "One edge per institution" },
+    { "type": "located_in", "sourceType": "Institution", "destinationType": "County", "note": "Inverse view" },
+    { "type": "belongs_to", "sourceType": "Institution", "destinationType": "County", "note": "Graph canonical" }
+  ],
+  "initialPersonalization": [
+    { "section": "history", "source": "historySummary or DNA history" },
+    { "section": "geography", "source": "county seat, location, campus setting" },
+    { "section": "basicFacts", "source": "enrollment, population — with provenance" },
+    { "section": "overview", "source": "culture / studentLife DNA" },
+    { "section": "joinInvitation", "source": "/join with preselect" },
+    { "section": "disclaimer", "requiredOn": "institution" }
+  ],
+  "validationChecks": [
+    { "id": "county-count", "rule": "Exactly 75 counties", "blocking": true },
+    { "id": "institution-complete", "rule": "All V1 target institutions present", "blocking": true },
+    { "id": "no-duplicate-slugs", "rule": "Unique slugs across entity types", "blocking": true },
+    { "id": "no-orphan-institutions", "rule": "Every institution has county relationship", "blocking": true },
+    { "id": "state-county-edges", "rule": "STATE-AR contains all 75 counties", "blocking": true },
+    { "id": "stable-urls", "rule": "All pageUrl fields resolve", "blocking": true },
+    { "id": "schema-compliance", "rule": "Pass county and institution JSON schemas", "blocking": true },
+    { "id": "provenance-present", "rule": "Critical fields have confidence level", "blocking": false }
+  ],
+  "deployment": {
+    "trigger": "first_deployment_automatic",
+    "idempotent": true,
+    "initScript": "scripts/init-digital-twin.ts",
+    "validateScript": "scripts/validate-registry.ts",
+    "manifestOutput": "data/registry/initialization-manifest.json",
+    "relationshipsOutput": "data/registry/relationships-bootstrap.json"
+  },
+  "expansionPackages": [
+    { "version": "v1.5", "entities": ["community_colleges"], "preservesIds": true },
+    { "version": "v2", "entities": ["trade_schools", "technical_institutes"], "preservesIds": true },
+    { "version": "v3", "entities": ["high_schools"], "preservesIds": true }
+  ],
+  "adoptionExamples": [
+    { "participant": "Student from Conway", "finds": "UCA already waiting at /schools/uca" },
+    { "participant": "Student from Fayetteville", "finds": "University of Arkansas already represented" },
+    { "participant": "Young adult from Ashley County", "finds": "County hub at /county/ashley" }
+  ],
+  "v1Scope": {
+    "blueprint": "done",
+    "initScript": "phase_3",
+    "dbSeed": "phase_3",
+    "fullInstitutionSet": "phase_3"
+  }
+}

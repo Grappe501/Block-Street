@@ -434,6 +434,6 @@ Step 2.7 is complete when:
 
 ---
 
-**Next Step:** 2.9 — Registry Seed Data Plan
+**Next Step:** 2.10 — Phase 2 Build Bible
 
 *Trace: INST-M11 → CID-M06 → community-dna.schema.json → CommunityPage renderer [CID-M16]*

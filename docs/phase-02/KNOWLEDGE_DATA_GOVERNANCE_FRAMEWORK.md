@@ -433,6 +433,6 @@ Step 2.8 is complete when:
 
 ---
 
-**Next Step:** 2.9 — Registry Seed Data Plan
+**Next Step:** 2.10 — Phase 2 Build Bible
 
 *Trace: REG-D14 → KDG-M08 → knowledge-provenance.schema.json → Step 2.9 seed migration*

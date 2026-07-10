@@ -20,6 +20,7 @@ Every page, map, and dashboard builds on this Registry.
 | `outreach-intelligence.json` | Mission Board, opportunity types, dashboard levels (PHASE-002.6) |
 | `community-identity.json` | Community DNA categories, entity configs (PHASE-002.7) |
 | `knowledge-governance.json` | Data classes, provenance, source confidence (PHASE-002.8) |
+| `digital-twin-init.json` | Initialization package, validation, bootstrap status (PHASE-002.9) |
 | `schemas/community-dna.schema.json` | Community DNA profile schema |
 | `schemas/knowledge-provenance.schema.json` | Per-field provenance schema |
 | `schemas/status-transition.schema.json` | Status timeline transition records |
@@ -36,6 +37,7 @@ Every page, map, and dashboard builds on this Registry.
 | OIS-001 | Outreach Intelligence & Mission Board (PHASE-002.6) |
 | CID-001 | Community Identity & Personalization (PHASE-002.7) |
 | KDG-001 | Knowledge & Data Governance (PHASE-002.8) |
+| ADT-001 | Arkansas Digital Twin Initialization (PHASE-002.9) |
 | REG-002 | Arkansas Institution Registry |
 | REG-003 | Registry Purpose & Authority Doctrine |
 
