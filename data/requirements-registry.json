@@ -4985,27 +4985,31 @@
     {
       "id": "UXB-014",
       "title": "Institutional Experience Architecture — Volume 4.13",
-      "purpose": "Institutional Experience Architecture experience layer",
-      "description": "VOLUME-004.13 universities, counties, campaigns, tailored org experiences",
-      "priority": "critical",
+      "purpose": "One platform, infinite institutional experiences — configurations not forks",
+      "description": "VOLUME-004.13 — Institution Factory, 12 institution types, 14 templates, 6 capability packs, cross-institution intelligence",
+      "priority": "strategic",
       "principle": "CP-012",
       "dependencies": [
         "UXB-013",
-        "UXB-001"
+        "UXB-008",
+        "UXB-001",
+        "CAB-001"
       ],
       "related": [
-        "UXB-015"
+        "UXB-015",
+        "PBA-014"
       ],
       "acceptanceCriteria": [
-        "Experience philosophy documented",
-        "UX behaviors defined",
-        "Volume 0-3 integration specified",
-        "Implementation blueprint for experience layer"
+        "Institutional philosophy documented",
+        "Institution types and universal operational model defined",
+        "Operating Manuals, workspaces, AI, analytics, branding, Digital Twins, Event Ledger, and interoperability established",
+        "Institution Factory specified",
+        "Complete blueprint for institution-aware experiences throughout the platform"
       ],
-      "futureNotes": "Scaffold — pending canonical build step",
-      "implementationStatus": "pending",
+      "futureNotes": "Guiding principle: One platform. Infinite institutional experiences.",
+      "implementationStatus": "done",
       "testingStatus": "pending",
-      "documentationStatus": "pending",
+      "documentationStatus": "done",
       "trace": {
         "database": null,
         "api": null,
@@ -5015,7 +5019,7 @@
       },
       "versionHistory": {
         "created": "2026-07-10",
-        "implemented": null
+        "implemented": "2026-07-10"
       }
     },
     {

@@ -18,6 +18,24 @@
 
 ---
 
+## 2026-07-10 — Volume 4.13 Institutional Experience Architecture [UXB-014 · AC-149]
+
+**Document:** `docs/volume-04/INSTITUTIONAL_EXPERIENCE_ARCHITECTURE.md` · **Registry:** `data/registry/institutional-experience-architecture.json`
+
+### What Changed
+
+- **Guiding principle:** *One platform. Infinite institutional experiences.*
+- Institutions as specializations not forks — same constitutional foundation
+- **6-layer institutional architecture** and **8-layer universal institutional model**
+- **12 institution types:** Community through Enterprise
+- Institution Operating Manual, workspace, branding, AI, knowledge portability, collaboration
+- Institutional intelligence, contextual analytics, Institution Twin, Event Ledger
+- **Institution Factory (IF)** — 9-stage pipeline, 14 templates, 6 modular capability packs
+- Cross-institution intelligence and institutional ecosystem
+- Admin Volume 4 tab · requirements UXB-014 updated · Volume 4: 12/14 complete (4.4 pending)
+
+---
+
 ## 2026-07-10 — Volume 4.12 Trust, Transparency & Explainability Architecture [UXB-013 · AC-148]
 
 **Document:** `docs/volume-04/TRUST_ARCHITECTURE.md` · **Registry:** `data/registry/trust-architecture.json`
