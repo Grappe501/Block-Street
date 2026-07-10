@@ -4,6 +4,38 @@
 
 ---
 
+## 2026-07-10 — PHASE-002.1 Registry Purpose & Authority
+
+**Document ID:** PHASE-002.1  
+**Requirement IDs:** REG-D01–REG-D15, REG-003, AC-010  
+**Artifact:** `docs/phase-02/ARKANSAS_ORGANIZING_REGISTRY_DOCTRINE.md`
+
+### What Was Built
+
+- Registry authority doctrine — source of truth for counties, institutions, hubs, status, priority
+- Phase 2 step sequence (2.1–2.10) indexed in `docs/phase-02/README.md`
+- Admin **Registry** tab at `/admin`
+- `data/registry/README.md` updated to reference doctrine
+
+### Key Decisions [REG-D02]
+
+Priority when data conflicts: approved registry record → Phase 2 models → DB → JSON seed → hardcoded (never preferred)
+
+### Preliminary Implementation Note
+
+75 counties and 23 institutions exist in JSON with minimal schema. Formal models pending Steps 2.2–2.3. No schema changes until models approved [ED-GR].
+
+### ED-FD Handoff
+
+| Item | Detail |
+|------|--------|
+| Built | PHASE-002.1 doctrine, Phase 2 README, Registry admin tab |
+| Changed | build-progress Phase 2 steps restructured to design sequence |
+| Deferred | Steps 2.2–2.10 model documents |
+| Next | 2.2 County Registry Model |
+
+---
+
 ## 2026-07-10 — PHASE-001.9 Master Traceability — Phase 1 Final
 
 **Document ID:** PHASE-001.9  

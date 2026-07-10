@@ -141,7 +141,7 @@ If any answer is **no** → pause.
 | Phase | Name | Status |
 |-------|------|--------|
 | **1** | Foundational Constitution (Steps 1.1–1.9) | ✅ Complete |
-| **2** | Arkansas Organizing Registry | In progress |
+| **2** | Arkansas Organizing Registry (Steps 2.1–2.10) | In progress (2.1 ✅) |
 | **3** | V1 Launch — Signup + Network | Pending (Jul 12–14) |
 | **4+** | Teaching, voter registration, collective voice | Future |
 

@@ -342,6 +342,34 @@
       "versionHistory": { "created": "2026-07-10" }
     },
     {
+      "id": "REG-003",
+      "title": "Registry Purpose & Authority Doctrine",
+      "purpose": "Establish registry as canonical source of truth for Arkansas organizing geography",
+      "description": "Phase 2.1 doctrine defining scope, authority, hubs, status, priority, and artifact map",
+      "priority": "critical",
+      "principle": "CP-006",
+      "dependencies": [],
+      "related": ["REG-001", "REG-002", "REG-D01"],
+      "acceptanceCriteria": [
+        "Registry defined as source of truth",
+        "Scope covers counties, institutions, hubs, status, priority",
+        "Phase 2 artifact map documented",
+        "Change control protocol established"
+      ],
+      "futureNotes": "Phase 2 Build Bible unifies Steps 2.1–2.10",
+      "implementationStatus": "done",
+      "testingStatus": "done",
+      "documentationStatus": "done",
+      "trace": {
+        "database": null,
+        "api": null,
+        "frontend": null,
+        "test": "TEST-REG-001",
+        "doc": "DOC-REG-001"
+      },
+      "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
+    },
+    {
       "id": "ADM-001",
       "title": "Director Workbench",
       "purpose": "Administrative visibility into build progress and platform state",
@@ -370,8 +398,8 @@
     }
   ],
   "summary": {
-    "totalRequirements": 11,
-    "done": 4,
+    "totalRequirements": 12,
+    "done": 5,
     "inProgress": 4,
     "pending": 3,
     "criticalPending": 3,

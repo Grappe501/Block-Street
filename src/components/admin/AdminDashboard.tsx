@@ -14,6 +14,7 @@ import { AdminDeployment } from "@/components/admin/AdminDeployment";
 import { AdminLaunchReadiness } from "@/components/admin/AdminLaunchReadiness";
 import { AdminImplementationDoctrine } from "@/components/admin/AdminImplementationDoctrine";
 import { AdminTraceability } from "@/components/admin/AdminTraceability";
+import { AdminRegistry } from "@/components/admin/AdminRegistry";
 import { AdminGrowthModel } from "@/components/admin/AdminGrowthModel";
 import { AdminOrganizingModel } from "@/components/admin/AdminOrganizingModel";
 import { AdminGuardrails } from "@/components/admin/AdminGuardrails";
@@ -27,6 +28,7 @@ const TABS = [
   { id: "launch", label: "Launch", icon: "🚀" },
   { id: "engineering", label: "Engineering", icon: "🔧" },
   { id: "traceability", label: "Traceability", icon: "🧭" },
+  { id: "registry", label: "Registry", icon: "🗺️" },
   { id: "growth", label: "Growth", icon: "🌱" },
   { id: "organizing-model", label: "Organizing", icon: "🔗" },
   { id: "guardrails", label: "Guardrails", icon: "🛡️" },
@@ -113,6 +115,7 @@ export function AdminDashboard({ progress }: { progress: BuildProgress }) {
         {activeTab === "launch" && <AdminLaunchReadiness />}
         {activeTab === "engineering" && <AdminImplementationDoctrine />}
         {activeTab === "traceability" && <AdminTraceability />}
+        {activeTab === "registry" && <AdminRegistry />}
         {activeTab === "growth" && <AdminGrowthModel />}
         {activeTab === "organizing-model" && <AdminOrganizingModel />}
         {activeTab === "guardrails" && <AdminGuardrails />}

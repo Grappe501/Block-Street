@@ -7,7 +7,7 @@
     "version": "1.0.0-constitution",
     "currentPhase": 2,
     "currentPhaseName": "Arkansas Organizing Registry",
-    "lastUpdated": "2026-07-10T11:00:00Z",
+    "lastUpdated": "2026-07-10T12:00:00Z",
     "deployUrl": "https://block-street.netlify.app/",
     "githubRepo": "https://github.com/Grappe501/Block-Street",
     "netlifyStatus": "live",
@@ -58,17 +58,18 @@
       "name": "Arkansas Organizing Registry",
       "slug": "phase-02-registry",
       "status": "in_progress",
-      "docPath": "docs/master/MASTER-BUILD-SEQUENCE.md",
+      "docPath": "docs/phase-02/README.md",
       "steps": [
-        { "id": "2.1", "name": "Registry schema defined", "status": "done", "notes": "data/registry/README.md" },
-        { "id": "2.2", "name": "75 counties in registry", "status": "done", "notes": "data/registry/counties.json" },
-        { "id": "2.3", "name": "23 colleges/universities seeded", "status": "done", "notes": "data/registry/institutions.json" },
-        { "id": "2.4", "name": "Schools directory page /schools", "status": "done", "notes": "" },
-        { "id": "2.5", "name": "Personalized school pages /schools/[slug]", "status": "done", "notes": "Color-inspired, disclaimers" },
-        { "id": "2.6", "name": "Arkansas map page /map", "status": "in_progress", "notes": "County list live; SVG map pending" },
-        { "id": "2.7", "name": "Outreach gap dashboard", "status": "in_progress", "notes": "Stats on homepage + map" },
-        { "id": "2.8", "name": "Connect Netlify DB", "status": "pending", "notes": "Phase 2b" },
-        { "id": "2.9", "name": "Add remaining institutions", "status": "pending", "notes": "Community colleges next" }
+        { "id": "2.1", "name": "Registry Purpose & Authority [PHASE-002.1]", "status": "done", "notes": "REG-D01–D15, ARKANSAS_ORGANIZING_REGISTRY_DOCTRINE.md" },
+        { "id": "2.2", "name": "County Registry Model", "status": "pending", "notes": "COUNTY_REGISTRY_MODEL.md — 75-county field schema" },
+        { "id": "2.3", "name": "Institution Registry Model", "status": "pending", "notes": "INSTITUTION_REGISTRY_MODEL.md" },
+        { "id": "2.4", "name": "County-Institution Relationship Map", "status": "pending", "notes": "COUNTY_INSTITUTION_RELATIONSHIP_MAP.md" },
+        { "id": "2.5", "name": "Representation Status System", "status": "pending", "notes": "REPRESENTATION_STATUS_SYSTEM.md" },
+        { "id": "2.6", "name": "Outreach Gap Dashboard Requirements", "status": "pending", "notes": "OUTREACH_GAP_DASHBOARD_REQUIREMENTS.md" },
+        { "id": "2.7", "name": "Campus Page Personalization Rules", "status": "pending", "notes": "CAMPUS_PAGE_PERSONALIZATION_RULES.md" },
+        { "id": "2.8", "name": "Registry Source & Verification Protocol", "status": "pending", "notes": "REGISTRY_SOURCE_AND_VERIFICATION_PROTOCOL.md" },
+        { "id": "2.9", "name": "Registry Seed Data Plan", "status": "pending", "notes": "REGISTRY_SEED_DATA_PLAN.md — preliminary JSON exists" },
+        { "id": "2.10", "name": "Phase 2 Build Bible", "status": "pending", "notes": "PHASE_2_ARKANSAS_ORGANIZING_REGISTRY_BUILD_BIBLE.md" }
       ]
     },
     {
@@ -142,6 +143,12 @@
   "buildLog": [
     {
       "date": "2026-07-10",
+      "title": "PHASE-002.1 Registry Purpose & Authority",
+      "phase": 2,
+      "summary": "REG-D01–D15 doctrine, Phase 2 step sequence 2.1–2.10, admin Registry tab"
+    },
+    {
+      "date": "2026-07-10",
       "title": "PHASE-001.9 Master Traceability — Phase 1 Final",
       "phase": 1,
       "summary": "TR-MOTTO production code gate, requirements-registry.json (11 V1 reqs), admin Traceability tab"
@@ -196,10 +203,10 @@
     }
   ],
   "stats": {
-    "totalSteps": 42,
-    "doneSteps": 20,
-    "inProgressSteps": 5,
-    "pendingSteps": 17,
-    "percentComplete": 48
+    "totalSteps": 40,
+    "doneSteps": 11,
+    "inProgressSteps": 2,
+    "pendingSteps": 27,
+    "percentComplete": 28
   }
 }
