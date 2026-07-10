@@ -1,14 +1,304 @@
 {
-  "version": "1.0.0",
+  "version": "2.0.0",
+  "documentId": "VOLUME-002.14",
   "requirementId": "DAB-015",
   "docPath": "docs/volume-02/MASTER_DATA_DICTIONARY.md",
-  "schemaCount": 15,
-  "tableCount": 60,
-  "schemas": [
-    "platform", "config", "identity", "community", "geo", "action",
-    "growth", "knowledge", "graph", "events", "comms", "search",
-    "intelligence", "analytics", "media"
+  "status": "canonical",
+  "priority": "highest",
+  "lastUpdated": "2026-07-10",
+  "volume2Complete": true,
+  "guidingPrinciple": "Every piece of data has one canonical definition, one owner, and one meaning.",
+  "governancePhilosophy": {
+    "consistencyOverConvenience": true,
+    "preventsDuplicateFields": true,
+    "preventsConflictingTerminology": true,
+    "preventsSchemaDrift": true,
+    "preventsAiHallucinationAboutData": true,
+    "protectsArchitecturalIntegrity": true
+  },
+  "governanceHierarchy": [
+    "Volume0Constitution",
+    "Volume1Engineering",
+    "Volume2Data",
+    "MasterDataDictionary",
+    "Database",
+    "API",
+    "Applications",
+    "AI"
   ],
+  "governanceLayerCount": 8,
+  "canonicalVocabularyExamples": [
+    "Participant",
+    "Community",
+    "County",
+    "Institution",
+    "Mission",
+    "Initiative",
+    "Project",
+    "Task",
+    "Committee",
+    "Story",
+    "Lesson",
+    "Knowledge",
+    "Legacy",
+    "Partnership",
+    "Volunteer",
+    "Leadership",
+    "Opportunity",
+    "Capacity",
+    "Mentorship",
+    "DigitalTwin",
+    "CommunityBrain",
+    "LivingHistory"
+  ],
+  "vocabularyTermCount": 22,
+  "registryTypeCount": 10,
+  "registryTypes": [
+    {
+      "id": "entity",
+      "name": "Canonical Entity Registry",
+      "fields": ["officialName", "description", "businessPurpose", "owningService", "databaseSchema", "primaryIdentifier", "lifecycle", "visibilityRules", "relationships", "graphParticipation", "searchParticipation", "analyticsParticipation", "aiParticipation", "documentationReference"]
+    },
+    {
+      "id": "field",
+      "name": "Canonical Field Registry",
+      "fields": ["fieldName", "description", "dataType", "nullable", "default", "validationRules", "source", "owner", "versionIntroduced", "deprecationStatus", "sensitiveClassification", "searchParticipation", "aiVisibility"]
+    },
+    {
+      "id": "identifier",
+      "name": "Identifier Registry",
+      "examples": ["ParticipantId", "CommunityId", "MissionId", "EventId", "KnowledgeId", "StoryId", "PublicId", "ExternalId", "CorrelationId"]
+    },
+    {
+      "id": "enumeration",
+      "name": "Enumeration Registry",
+      "examples": ["Statuses", "Visibility", "CommunityTypes", "MissionTypes", "RelationshipTypes", "NotificationPriorities", "LeadershipLevels", "EventTypes", "PermissionLevels"]
+    },
+    {
+      "id": "relationship",
+      "name": "Relationship Registry",
+      "fields": ["sourceEntity", "targetEntity", "relationshipType", "cardinality", "lifecycle", "visibility", "historyRules", "graphProjection", "aiParticipation"]
+    },
+    {
+      "id": "configuration",
+      "name": "Configuration Registry",
+      "tracks": ["Templates", "Roles", "Permissions", "FeatureFlags", "WorkflowDefinitions", "PromptProfiles", "Taxonomies"]
+    },
+    {
+      "id": "event",
+      "name": "Event Registry",
+      "fields": ["eventName", "category", "producer", "consumers", "payloadDefinition", "visibility", "timelineParticipation", "graphProjection", "notificationParticipation", "analyticsParticipation"]
+    },
+    {
+      "id": "search",
+      "name": "Search Registry",
+      "fields": ["indexedFields", "rankingSignals", "facets", "permissionRules", "semanticParticipation", "autocomplete", "discoveryCategories"]
+    },
+    {
+      "id": "ai",
+      "name": "AI Registry",
+      "fields": ["knowledgeSources", "promptProfiles", "retrievalObjects", "embeddings", "citationRules", "explainability", "approvalRequirements"]
+    },
+    {
+      "id": "analytics",
+      "name": "Analytics Registry",
+      "fields": ["definition", "formula", "sourceData", "refreshSchedule", "dashboardUsage", "confidence", "historicalScope"]
+    }
+  ],
+  "dataStewardshipFields": [
+    "owner",
+    "reviewer",
+    "approvalAuthority",
+    "reviewSchedule",
+    "documentation"
+  ],
+  "stewardshipScopes": [
+    { "scope": "PlatformSchema", "steward": "PlatformKernelEngineering" },
+    { "scope": "CommunityData", "steward": "CommunityLeaders" },
+    { "scope": "DomainEntities", "steward": "ProductEngineeringDomainOwners" },
+    { "scope": "RetentionCompliance", "steward": "Operations" }
+  ],
+  "versionGovernanceRequirements": [
+    "Proposal",
+    "Review",
+    "Approval",
+    "MigrationPlan",
+    "Documentation",
+    "VersionIncrement",
+    "RollbackStrategy"
+  ],
+  "namingStandards": [
+    "BusinessLanguage",
+    "SingularEntities",
+    "ConsistentVerbs",
+    "NoAbbreviationsUnlessStandardized",
+    "AvoidImplementationSpecificNames"
+  ],
+  "changeManagementCategories": [
+    "Correction",
+    "Enhancement",
+    "Deprecation",
+    "Replacement",
+    "BreakingChange",
+    "HistoricalPreservation"
+  ],
+  "deprecationPolicySteps": [
+    "Deprecated",
+    "ReplacementIdentified",
+    "MigrationCompleted",
+    "HistoricalDocumentationPreserved",
+    "Retired"
+  ],
+  "dataQualityDimensions": [
+    "Completeness",
+    "Consistency",
+    "Accuracy",
+    "Freshness",
+    "Integrity",
+    "RelationshipValidity",
+    "DocumentationQuality",
+    "SearchQuality"
+  ],
+  "governanceReviewTopics": [
+    "UnusedFields",
+    "DuplicateConcepts",
+    "RelationshipConsistency",
+    "TaxonomyHealth",
+    "ConfigurationComplexity",
+    "SchemaGrowth",
+    "AiRetrievalQuality"
+  ],
+  "aiGovernanceCapabilities": [
+    "SuggestImprovements",
+    "DetectDuplication",
+    "RecommendSimplification",
+    "GenerateDocumentation",
+    "IdentifyInconsistencies"
+  ],
+  "aiNeverModifiesDictionaryWithoutApproval": true,
+  "canonicalMetadataRegistry": {
+    "name": "Canonical Metadata Registry",
+    "purpose": "Connective tissue for all governed objects — standardized metadata envelope for every entity, field, relationship, event, API contract, search index, AI object, metric, and configuration item",
+    "metadataFields": [
+      "canonicalIdentifier",
+      "humanReadableName",
+      "description",
+      "owningDomain",
+      "steward",
+      "version",
+      "status",
+      "sourceDocumentation",
+      "relatedArchitectureDocuments",
+      "securityClassification",
+      "privacyClassification",
+      "searchParticipation",
+      "knowledgeGraphParticipation",
+      "digitalTwinParticipation",
+      "aiRetrievalEligibility",
+      "analyticsEligibility",
+      "creationAndRevisionHistory"
+    ],
+    "metadataFieldCount": 17,
+    "statusValues": ["Draft", "Active", "Deprecated", "Retired"],
+    "developerVisibility": [
+      "DatabaseLocation",
+      "OwningServices",
+      "ExposedApis",
+      "SearchIndexes",
+      "GraphProjections",
+      "DigitalTwinConsumers",
+      "AnalyticsDependencies",
+      "AiRetrievalPipelines",
+      "GovernanceRules"
+    ],
+    "developerVisibilityCount": 9
+  },
+  "schemaReference": {
+    "blueprintDoc": "docs/volume-02/DATABASE_SCHEMA_BLUEPRINT.md",
+    "requirementId": "DAB-005",
+    "schemaCount": 15,
+    "tableCount": 60,
+    "schemas": [
+      "platform",
+      "config",
+      "identity",
+      "community",
+      "geo",
+      "action",
+      "growth",
+      "knowledge",
+      "graph",
+      "events",
+      "comms",
+      "search",
+      "intelligence",
+      "analytics",
+      "media"
+    ],
+    "dictionaryGovernsMeaning": true,
+    "blueprintGovernsStructure": true
+  },
   "coreEnumCount": 11,
-  "acceptanceCriteria": "AC-120"
+  "coreEnums": [
+    { "name": "journey_stage", "values": ["registered", "connected", "contributing", "leading", "mentoring", "legacy"] },
+    { "name": "growth_stage", "values": ["seed", "forming", "active", "thriving", "renewing", "archived"] },
+    { "name": "data_class", "values": ["public", "community", "restricted", "confidential", "highly_restricted"] },
+    { "name": "visibility", "values": ["public", "network", "community", "team", "private"] },
+    { "name": "community_type", "values": ["campus", "county", "cohort", "institution", "alliance"] },
+    { "name": "member_role", "values": ["member", "organizer", "leader", "mentor", "guest"] },
+    { "name": "member_status", "values": ["pending", "active", "paused", "removed"] },
+    { "name": "mission_status", "values": ["draft", "active", "completed", "archived"] },
+    { "name": "project_status", "values": ["planned", "in_progress", "blocked", "done", "archived"] },
+    { "name": "event_status", "values": ["draft", "scheduled", "live", "completed", "cancelled"] },
+    { "name": "invitation_status", "values": ["pending", "accepted", "expired", "revoked"] }
+  ],
+  "changeProcessSteps": [
+    "ProposeInRequirementsRegistry",
+    "UpdateVolume2StepDoc",
+    "UpdateMasterDataDictionary",
+    "UpdateMasterDataDictionaryJson",
+    "GenerateMigration",
+    "UpdateProjections",
+    "RecordInBuildLog"
+  ],
+  "schemaChangeChecklist": [
+    "EntityInCED",
+    "RelationshipInREL",
+    "FieldRegistered",
+    "VisibilityClassification",
+    "EventType",
+    "SearchMapping",
+    "GraphProjection",
+    "AiEligibility",
+    "AnalyticsMetric",
+    "MddUpdate",
+    "BuildLog"
+  ],
+  "volumeFoundation": {
+    "volume0": { "defines": "Why the Community Operating System exists and principles it must uphold" },
+    "volume1": { "defines": "How the software is engineered" },
+    "volume2": { "defines": "How every piece of information is represented, governed, and connected" },
+    "coherentFoundationForImplementation": true
+  },
+  "projectionIntegrations": {
+    "entityDictionaryPath": "data/registry/canonical-entity-dictionary.json",
+    "relationshipModelPath": "data/registry/relationship-data-model.json",
+    "schemaBlueprintPath": "data/registry/database-schema-blueprint.json",
+    "eventModelPath": "data/registry/event-data-model.json",
+    "searchIndexPath": "data/registry/search-index-model.json",
+    "analyticsPath": "data/registry/analytics-data-model.json",
+    "aiKnowledgePath": "data/registry/ai-knowledge-model.json",
+    "securityPrivacyPath": "data/registry/security-privacy-model.json",
+    "dataArchitectureBiblePath": "data/registry/data-architecture-bible.json"
+  },
+  "burtImplementationGuidance": [
+    "Consult the Master Data Dictionary before creating new fields or entities",
+    "Extend existing vocabulary whenever practical",
+    "Require governance review for structural additions",
+    "Keep documentation synchronized with implementation",
+    "Treat the Dictionary as the canonical reference for every layer of the platform",
+    "Consult Canonical Metadata Registry spec before registering new governed objects"
+  ],
+  "acceptanceCriteria": "AC-120",
+  "acceptanceCriteriaMet": true
 }
