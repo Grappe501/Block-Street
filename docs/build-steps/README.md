@@ -49,7 +49,12 @@ Guardrail conflict → **redesign** or **constitutional change** — never silen
 | 2 | **PHASE-001.2** | [North Star Outcome](PHASE-001.2-NORTH-STAR-OUTCOME.md) | ✅ Canonical |
 | 3 | **PHASE-001.3** | [Core Principles (Platform Constitution)](PHASE-001.3-CORE-PRINCIPLES.md) | ✅ Canonical |
 | 4 | **PHASE-001.4** | [Platform Boundaries & Design Guardrails](PHASE-001.4-PLATFORM-BOUNDARIES.md) | ✅ Canonical |
-| 5 | PHASE-001.5 | Organizing Model | Pending |
+| 5 | **PHASE-001.5** | [Organizing Model](PHASE-001.5-ORGANIZING-MODEL.md) | ✅ Canonical |
+| 6 | PHASE-001.6 | Growth Model (V1 vs later roadmap) | Pending |
+
+### Constitutional Layer — Complete ✅
+
+Steps 1.1–1.5 define who we are, where we're going, immutable doctrine, guardrails, and how people organize. Step 1.6 shifts to implementation roadmap.
 
 ## 2. Reference Systems
 
@@ -89,8 +94,11 @@ NS-002  The North Star statement
 NS-013  Five North Star questions
 ```
 
-### Step 1.1 — Platform Identity
+### Step 1.5 — Organizing Model
 ```
-PI-001  Working name: ASYON
-ER-001  Equal representation
+OM-002  Individual at center — database root entity
+OM-L1 through OM-L5  Five layers (build outward)
+OM-003  Relationship-based growth
+OM-005  Organizing homes (My Network, Campus, County…)
+OM-010  Burt database build order
 ```

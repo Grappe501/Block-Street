@@ -4,7 +4,21 @@
 
 ---
 
-## 2026-07-10 — PHASE-001.4 Platform Boundaries (Design Guardrails)
+## 2026-07-10 — PHASE-001.5 Organizing Model (People First)
+
+**Document ID:** PHASE-001.5  
+**Requirement IDs:** OM-001 through OM-010, OM-L1–L5, AC-005  
+**Status:** Complete — Canonical — Database Foundation
+
+### Key Insight
+
+Most platforms organize around **organizations**. ASYON organizes around **people**. Communities are built from individuals.
+
+### Constitutional Layer Complete
+
+Steps 1.1–1.5 complete the constitutional layer. Next: PHASE-001.6 Growth Model (V1 roadmap).
+
+---
 
 **Document ID:** PHASE-001.4  
 **Requirement IDs:** DG-001 through DG-015, BG-001, ED-001, AC-004  
