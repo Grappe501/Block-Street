@@ -1,0 +1,258 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/phase-06/COMMUNITY_GROWTH_INTELLIGENCE_SYSTEM.md",
+  "acronym": "CGIS",
+  "requirementId": "CGIS-001",
+  "plannedAliasSuperseded": "GIN-001",
+  "extends": "CIS-001",
+  "governedBy": "GCN-001",
+  "phaseRequirementId": "GOS-001",
+  "productName": "Community Growth Intelligence System",
+  "proactiveNotReactive": true,
+  "visibilityNotDirection": true,
+  "neverTellsCommunitiesWhatTheyMustDo": true,
+  "guidingPrinciple": "Growth begins by understanding where people are—and where they are still missing.",
+  "principle": "Intelligence creates awareness. Communities create action.",
+  "purpose": "Analyze participation, relationships, health, outreach, and leadership to identify opportunities for healthy growth — stronger, more welcoming, more representative communities.",
+  "philosophy": {
+    "notMaximizingMembership": true,
+    "communitiesChooseResponse": true,
+    "visibilityRatherThanDirection": true,
+    "communityQuestions": [
+      "whereGrowthHappening",
+      "whereParticipationSlowing",
+      "whoNeedsSupport",
+      "whichCommunitiesNeedOrganizers",
+      "whereNewOpportunities",
+      "whereLeadershipEmerging"
+    ]
+  },
+  "growthAwareness": {
+    "requirementRef": "CGIS-M04",
+    "orchestrator": "getGrowthAwareness(scope, period?)",
+    "observes": [
+      "communityParticipation",
+      "invitationActivity",
+      "volunteerEngagement",
+      "mentorship",
+      "leadershipDevelopment",
+      "communityRepresentation",
+      "returningParticipants",
+      "missionParticipation",
+      "relationshipGrowth"
+    ],
+    "statewideUnderstanding": true,
+    "feeds": "GOS-M16"
+  },
+  "opportunityDetection": {
+    "requirementRef": "CGIS-M05",
+    "orchestrator": "detectGrowthOpportunities(filters?)",
+    "examples": [
+      "campusWithoutOrganizers",
+      "countyNeedingVolunteers",
+      "communityReadyForCommittee",
+      "potentialMentorMatches",
+      "strongCommunitiesAbleToHelp",
+      "emergingCampusLeaders"
+    ],
+    "communitiesChooseResponse": true,
+    "deepenBeforeExpandFilter": "CGIS-M17"
+  },
+  "representationIntelligence": {
+    "requirementRef": "CGIS-M06",
+    "extends": "CGO-M05",
+    "examples": [
+      "academicDepartments",
+      "residenceHalls",
+      "studentOrganizations",
+      "countyRegions",
+      "neighborhoods",
+      "futureHighSchools",
+      "tradeSchools"
+    ],
+    "broadParticipationAwareness": true,
+    "visibilityNotJudgment": true
+  },
+  "growthTrends": {
+    "requirementRef": "CGIS-M07",
+    "orchestrator": "getGrowthTrends(communityId | scope, period)",
+    "periods": ["weekly", "semester", "yearOverYear"],
+    "metrics": [
+      "participation",
+      "volunteerTrends",
+      "leadershipDevelopment",
+      "communityExpansion",
+      "relationshipGrowth"
+    ]
+  },
+  "outreachIntelligence": {
+    "requirementRef": "CGIS-M08",
+    "highlights": [
+      "successfulOutreachEvents",
+      "highPerformingWelcomeActivities",
+      "communitiesNeedingFollowUp",
+      "invitationPatterns",
+      "seasonalOpportunities",
+      "upcomingCampusEvents"
+    ],
+    "noCompetitiveRanking": true
+  },
+  "leadershipIntelligence": {
+    "requirementRef": "CGIS-M09",
+    "orchestrator": "getLeadershipIntelligence(communityId | scope)",
+    "includes": [
+      "emergingLeaders",
+      "potentialMentors",
+      "successionOpportunities",
+      "trainingRecommendations",
+      "leadershipGaps"
+    ],
+    "integrates": "CLD-001"
+  },
+  "communityHealthSignals": {
+    "requirementRef": "CGIS-M10",
+    "integrates": "CIS-001",
+    "examples": [
+      "highVolunteerParticipation",
+      "lowEventAttendance",
+      "strongMentorship",
+      "knowledgeGrowth",
+      "inactiveCommittees",
+      "partnershipOpportunities"
+    ],
+    "growthLensOnHealth": true
+  },
+  "geographicIntelligence": {
+    "requirementRef": "CGIS-M11",
+    "extends": "CGO-M16",
+    "orchestrator": "getGeographicGrowthIntelligence(filters?)",
+    "mapLayer": "/map/coverage?layer=intelligence",
+    "identifies": [
+      "countiesWithoutOrganizers",
+      "campusesNotLaunched",
+      "communitiesRequestingAssistance",
+      "regionalPartnerships",
+      "nearbyMentors",
+      "expansionOpportunities"
+    ]
+  },
+  "predictiveInsights": {
+    "requirementRef": "CGIS-M12",
+    "advisoryOnly": true,
+    "futureExamples": [
+      "communitiesLikelyNeedSupport",
+      "upcomingLeadershipTransitions",
+      "volunteerShortages",
+      "seasonalParticipationChanges",
+      "communitiesReadyForInitiatives"
+    ],
+    "v1Status": "architecture only"
+  },
+  "explainability": {
+    "requirementRef": "CGIS-M13",
+    "orchestrator": "explainRecommendation(recommendationId)",
+    "everyRecommendationIncludes": [
+      "whatWasObserved",
+      "whyAppears",
+      "supportingInformation",
+      "possibleNextSteps"
+    ],
+    "transparencyStrengthensTrust": true,
+    "noBlackBoxScores": true
+  },
+  "deepenBeforeExpandRule": {
+    "requirementRef": "CGIS-M17",
+    "constitutionalRule": true,
+    "candidatePrinciple": "CP-017",
+    "statement": "The platform should always recommend strengthening existing communities before creating unnecessary new ones.",
+    "whenHealthySuggest": [
+      "developAdditionalLeaders",
+      "expandUnderrepresentedOutreach",
+      "launchNewCommittee",
+      "mentorNearbyCampus",
+      "supportNeighboringCounty"
+    ],
+    "newCommunityLaunchOnlyAfterCapacityHealthy": true,
+    "enforcedIn": ["detectGrowthOpportunities", "observatoryLaunchRecommendations"]
+  },
+  "arkansasGrowthObservatory": {
+    "acronym": "AGO",
+    "requirementRef": "CGIS-M16",
+    "signatureFeature": true,
+    "description": "Living executive view of statewide network evolution — not static reports",
+    "route": "/observatory/growth",
+    "orchestrator": "getArkansasGrowthObservatory(lens?, filters?)",
+    "lenses": {
+      "growth": [
+        "campusesExpanding",
+        "countiesWelcomingParticipants",
+        "invitationsToActiveInvolvement"
+      ],
+      "leadership": [
+        "newOrganizersEmerging",
+        "strongMentorship",
+        "areasNeedingLeadershipDevelopment"
+      ],
+      "representation": [
+        "institutionsWithActiveCommunities",
+        "countiesNeedingOrganizers",
+        "schoolsReadyToLaunch"
+      ],
+      "communityHealth": [
+        "volunteersActive",
+        "communitiesThriving",
+        "supportRequestsIncreasing"
+      ],
+      "networkExpansion": [
+        "partnershipsForming",
+        "communitiesCollaborating",
+        "newOpportunitiesAppearing"
+      ]
+    },
+    "roleBasedAccess": true,
+    "livingNotStatic": true,
+    "complements": ["CGO-M16", "AOS-M09", "COS-M09"]
+  },
+  "extendsCIS": {
+    "CIS-001": "community health intelligence, advisory insights",
+    "CGIS-001": "statewide growth intelligence, observatory, opportunity detection",
+    "cisQuestion": "How is this community doing?",
+    "cgisQuestion": "Where is attention needed for healthy growth across Arkansas?"
+  },
+  "platformIntegrations": {
+    "CIS-001": "community health foundation",
+    "CGO-001": "coverage map, representation, outreach",
+    "CLD-001": "leadership intelligence",
+    "WBS-001": "belonging checkpoints, welcome performance",
+    "PON-001": "invitation and relationship signals",
+    "OEX-001": "open opportunities",
+    "SCN-001": "collaboration and mentorship",
+    "CEF-001": "expansion — filtered by deepen-before-expand",
+    "SEC-001": "privacy and permissions",
+    "OPIS-001": "distinct — operational not growth",
+    "OIS-001": "distinct — outreach signals Phase 2"
+  },
+  "futureAiAssistance": {
+    "advisoryOnly": true,
+    "neverReplacesCommunityJudgment": true,
+    "maySupport": [
+      "recommendOutreachStrategies",
+      "suggestMentorshipPairings",
+      "identifyUnderservedCommunities",
+      "recommendLaunchPriorities",
+      "summarizeStatewideGrowth",
+      "detectEmergingPatterns"
+    ],
+    "mustPassExplainabilityAndDeepenBeforeExpand": true
+  },
+  "v1Scope": {
+    "philosophyDocumented": true,
+    "growthAwarenessAndOpportunityDetection": true,
+    "representationTrendsOutreachIntelligence": true,
+    "leadershipHealthGeographicIntelligence": true,
+    "explainabilityAndDeepenBeforeExpand": true,
+    "arkansasGrowthObservatorySpec": true,
+    "liveObservatoryAggregation": "v1.1",
+    "predictiveInsights": "v1.2"
+  }
+}

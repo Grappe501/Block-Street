@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "volume": 5,
+  "docPath": "docs/master/OPERATIONS_LAUNCH_BIBLE.md",
+  "requirementId": "OLB-001",
+  "productName": "Operations & Launch Bible",
+  "status": "v1_structure_complete",
+  "priority": "critical",
+  "launchStages": ["beta", "pilot", "campus", "county", "statewide", "self_expanding"],
+  "readinessLevelMapping": "GOS-001",
+  "incidentSeverityLevels": ["S1", "S2", "S3", "S4"],
+  "backupRTOHours": 4,
+  "backupRPOHours": 1
+}

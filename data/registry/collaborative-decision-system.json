@@ -1,0 +1,254 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/phase-05/COLLABORATIVE_DECISION_SYSTEM.md",
+  "acronym": "CDS",
+  "requirementId": "CDS-001",
+  "supersedes": "DEC-001",
+  "governedBy": "ACN-001",
+  "notAVotingSystem": true,
+  "organizationalDecisionSystem": true,
+  "productName": "Collaborative Decision System",
+  "guidingPrinciple": "Good decisions come from informed participation, thoughtful discussion, and transparent reasoning.",
+  "principle": "Communities remember the problem, options, discussion, decision, reasoning, and outcomes — future organizers inherit wisdom.",
+  "purpose": "Structured process for communities to discuss ideas, evaluate options, document reasoning, and make decisions transparently while preserving knowledge behind them.",
+  "decisionPhilosophy": {
+    "preserveProblem": true,
+    "preserveOptions": true,
+    "preserveDiscussion": true,
+    "preserveDecision": true,
+    "preserveReasoning": true,
+    "preserveOutcomes": true,
+    "inheritWisdomNotRepeatDebates": true
+  },
+  "decisionLifecycle": {
+    "stages": [
+      "question",
+      "discussion",
+      "research",
+      "proposal",
+      "review",
+      "decision",
+      "implementation",
+      "evaluation",
+      "archive"
+    ],
+    "configurable": true,
+    "eachStageContributesToInstitutionalKnowledge": true
+  },
+  "decisionTypes": {
+    "flexible": true,
+    "examples": [
+      "communityPlanning",
+      "missionApproval",
+      "projectDirection",
+      "budgetRecommendations",
+      "leadershipSelection",
+      "policyRecommendations",
+      "meetingDecisions",
+      "eventPlanning",
+      "resourceAllocation",
+      "strategicPlanning",
+      "initiativeParticipation"
+    ]
+  },
+  "decisionRecord": {
+    "description": "Permanent record for every decision — part of Community Brain",
+    "appendOnly": true,
+    "fields": [
+      "title",
+      "summary",
+      "purpose",
+      "community",
+      "participants",
+      "decisionType",
+      "date",
+      "relatedMission",
+      "relatedProject",
+      "outcome",
+      "status"
+    ],
+    "statuses": ["draft", "active", "implemented", "superseded", "archived"],
+    "integrates": "CKLS-M08",
+    "orchestrator": "recordDecision(proposalId, outcome, method, participants)"
+  },
+  "proposalSystem": {
+    "description": "Thoughtful proposals before action — separate from decisions",
+    "sections": [
+      "problemStatement",
+      "background",
+      "objectives",
+      "options",
+      "advantages",
+      "challenges",
+      "communityImpact",
+      "resourcesRequired",
+      "recommendation",
+      "supportingDocuments"
+    ],
+    "orchestrator": "createProposal(communityId, payload)"
+  },
+  "discussionSpace": {
+    "description": "Dedicated discussion connected to each proposal",
+    "capabilities": [
+      "askQuestions",
+      "offerSuggestions",
+      "shareResearch",
+      "expressConcerns",
+      "recommendImprovements"
+    ],
+    "connectedToProposal": true,
+    "integrates": "CCNET-001",
+    "feedsConversationGraph": "CCNET-M13"
+  },
+  "consensusSupport": {
+    "multipleGovernanceStyles": true,
+    "methods": [
+      "consensus",
+      "generalAgreement",
+      "formalVote",
+      "leadershipDecision",
+      "workingGroupRecommendation"
+    ],
+    "noImposedDefault": true,
+    "localAutonomy": "CCN-001"
+  },
+  "votingOptional": {
+    "votingIsOneMethodNotArchitecture": true,
+    "capabilities": [
+      "openVoting",
+      "anonymousVoting",
+      "rankedOptionsFuture",
+      "advisoryPolling",
+      "participationTracking"
+    ],
+    "resultsAttachToDecisionRecord": true
+  },
+  "decisionHistory": {
+    "preserves": [
+      "previousProposals",
+      "pastDiscussions",
+      "relatedDecisions",
+      "implementationOutcomes",
+      "lessonsLearned"
+    ],
+    "searchable": true,
+    "crossCommunityWherePermitted": "SCN-001"
+  },
+  "implementationTracking": {
+    "connectsTo": ["missions", "projects", "tasks", "teams", "timelines", "knowledge"],
+    "orchestrators": {
+      "mission": "linkDecisionToMission(decisionId, missionId)",
+      "project": "linkDecisionToProject(decisionId, projectId)"
+    },
+    "tracksWhetherDecisionsBecomeAction": true,
+    "unimplementedSurfacesIn": ["CCC-001", "CIS-001", "CFS-001"]
+  },
+  "decisionReview": {
+    "periodicRevisit": true,
+    "questions": [
+      "wasObjectiveAchieved",
+      "whatChanged",
+      "shouldDecisionBeUpdated",
+      "whatDidWeLearn"
+    ],
+    "appendOnlyOutcomes": true
+  },
+  "transparency": {
+    "participantsUnderstand": [
+      "whyDecisionExists",
+      "whoParticipated",
+      "howItWasReached",
+      "whatEvidenceSupportedIt",
+      "whatHappensNext"
+    ],
+    "strengthensTrust": true
+  },
+  "futureAiAssistance": {
+    "advisoryOnly": true,
+    "neverAutoDecides": true,
+    "capabilities": [
+      "summarizeDiscussions",
+      "identifySimilarPastDecisions",
+      "highlightUnansweredQuestions",
+      "suggestRelevantPlaybooks",
+      "identifyAffectedCommunities",
+      "surfaceHistoricalContext"
+    ]
+  },
+  "decisionGraph": {
+    "acronym": "DG",
+    "requirementRef": "CDS-M16",
+    "signatureFeature": true,
+    "description": "Living map of how decisions influence one another — ideas to action over time",
+    "route": "/community/[slug]/decisions/graph",
+    "orchestrator": "getDecisionGraph(communityId, filters?)",
+    "edgeTypes": [
+      "approved",
+      "created",
+      "generated",
+      "produced",
+      "reused_by",
+      "affected",
+      "launched",
+      "superseded",
+      "implemented_as"
+    ],
+    "exampleQuestions": [
+      "whyDoWeOrganizeWelcomeWeekThisWay",
+      "whichDecisionStartedStatewideInitiative",
+      "whatProjectsFromLeadershipRetreat",
+      "hasAnotherCommunitySolvedThisDifferently"
+    ],
+    "nodeTypes": [
+      "proposal",
+      "decision",
+      "mission",
+      "project",
+      "experiencePlaybook",
+      "initiative",
+      "team",
+      "community"
+    ]
+  },
+  "platformGraphStack": {
+    "layers": [
+      { "name": "Relationship Graph", "scope": "peopleAndCommunities", "requirement": "REL-001" },
+      { "name": "Trust Graph", "scope": "reliabilitySignals", "requirement": "PRN-001" },
+      { "name": "Growth Graph", "scope": "leadershipDevelopment", "requirement": "PGL-001" },
+      { "name": "Conversation Graph", "scope": "discussions", "requirement": "CCNET-M13" },
+      { "name": "Capability Graph", "scope": "skillsAndResources", "requirement": "CCE-001" },
+      { "name": "Decision Graph", "scope": "governanceAndCausality", "requirement": "CDS-M16" }
+    ]
+  },
+  "platformIntegrations": {
+    "CKLS-001": "decision library implementation",
+    "CCN-001": "local governance autonomy",
+    "MDS-001": "mission approval",
+    "EOS-001": "project direction",
+    "IOS-001": "initiative participation",
+    "EEOS-001": "event planning",
+    "TWG-001": "team decisions",
+    "TSOS-001": "timeline milestones",
+    "CCNET-001": "discussion transport",
+    "CIS-001": "decision health alerts",
+    "CLS-001": "living history",
+    "SCN-001": "cross-community discovery",
+    "ACN-M19": "preserve in Civic Operating Loop",
+    "CFS-001": "commitment follow-through for decisions",
+    "LIS-001": "lessons from outcomes"
+  },
+  "v1Scope": {
+    "philosophyDocumented": true,
+    "lifecycleSpec": true,
+    "proposalDiscussionWorkflows": true,
+    "decisionRecordSchema": true,
+    "consensusAndOptionalVoting": true,
+    "implementationTrackingModel": true,
+    "transparencyRequirements": true,
+    "decisionGraphArchitecture": true,
+    "platformGraphStack": true,
+    "decisionUiStub": true,
+    "liveGraphTraversal": "v1.1",
+    "aiSummarization": "future"
+  }
+}

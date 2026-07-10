@@ -1,0 +1,195 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/phase-04/COMMUNITY_OPERATING_SYSTEM_CERTIFICATION.md",
+  "buildBiblePath": "docs/phase-04/PHASE_4_COMMUNITY_OS_BUILD_BIBLE.md",
+  "requirementId": "COS-001",
+  "motto": "Every community deserves the same high-quality organizing infrastructure.",
+  "principle": "No community is too small to be well organized.",
+  "purpose": "Define minimum capabilities for a complete Community OS — certification standard for every community type.",
+  "certificationQuestion": "Is this community fully built?",
+  "philosophy": {
+    "notCompleteBecauseMembers": true,
+    "completeWhenHasSystems": ["welcomePeople", "coordinateWork", "preserveKnowledge", "developFutureLeaders"],
+    "platformProvidesConsistently": true,
+    "notRanking": true,
+    "finishLineForEveryCommunity": true
+  },
+  "requiredComponents": [
+    {
+      "key": "identity",
+      "label": "Identity",
+      "includes": ["communityName", "mission", "charter", "type", "location", "history", "traditions", "communityStory"],
+      "requirements": ["CCN-001", "CID-001", "CLS-001"]
+    },
+    {
+      "key": "people",
+      "label": "People",
+      "includes": ["participants", "teams", "mentors", "leadership", "alumni", "relationships", "volunteerRoles"],
+      "requirements": ["TWG-001", "PGL-001", "REL-001"]
+    },
+    {
+      "key": "organizing",
+      "label": "Organizing",
+      "includes": ["teams", "workingGroups", "committees", "projects", "missions", "volunteerOpportunities", "actionPlans"],
+      "requirements": ["TWG-001", "MPS-001", "OEX-001"]
+    },
+    {
+      "key": "time",
+      "label": "Time",
+      "includes": ["communityCalendar", "meetings", "events", "volunteerShifts", "milestones", "recurringActivities", "timeline"],
+      "requirements": ["TSOS-001"]
+    },
+    {
+      "key": "communication",
+      "label": "Communication",
+      "includes": ["announcements", "discussions", "communityPulse", "messages", "knowledgeSharing", "search", "moderation"],
+      "requirements": ["CCNET-001", "CCC-001"]
+    },
+    {
+      "key": "knowledge",
+      "label": "Knowledge",
+      "includes": ["communityBrain", "playbooks", "wiki", "meetingNotes", "decisionHistory", "training", "lessonsLearned"],
+      "requirements": ["CKLS-001"]
+    },
+    {
+      "key": "capabilities",
+      "label": "Capabilities",
+      "includes": ["sharedResources", "templates", "equipment", "skills", "services", "meetingSpaces", "capabilityExchangeParticipation"],
+      "requirements": ["CCE-001"]
+    },
+    {
+      "key": "intelligence",
+      "label": "Intelligence",
+      "includes": ["communityHealth", "communityCoach", "opportunityRecommendations", "trendAnalysis", "leadershipDevelopment", "growthInsights", "explainableRecommendations"],
+      "requirements": ["CIS-001", "CGS-001"]
+    },
+    {
+      "key": "collaboration",
+      "label": "Collaboration",
+      "includes": ["regionalPartnerships", "campusPartnerships", "countyPartnerships", "mentorship", "volunteerExchanges", "knowledgeExchange", "sharedInitiatives"],
+      "requirements": ["SCN-001"]
+    },
+    {
+      "key": "legacy",
+      "label": "Legacy",
+      "includes": ["communityTimeline", "communityStory", "leadershipHistory", "traditions", "annualReports", "scrapbook", "alumni", "institutionalMemory"],
+      "requirements": ["CLS-001"]
+    }
+  ],
+  "certificationLevels": [
+    {
+      "level": 1,
+      "key": "registered",
+      "label": "Registered",
+      "criteria": ["communityExists", "basicInfoComplete", "visibleOnArkansasMap", "acceptingParticipants"]
+    },
+    {
+      "level": 2,
+      "key": "organized",
+      "label": "Organized",
+      "criteria": ["missionEstablished", "participantsActive", "calendarFunctioning", "basicCommunication"]
+    },
+    {
+      "level": 3,
+      "key": "operational",
+      "label": "Operational",
+      "criteria": ["teamsActive", "projectsUnderway", "volunteerCoordination", "knowledgeCaptured", "communityPulseActive"]
+    },
+    {
+      "level": 4,
+      "key": "collaborative",
+      "label": "Collaborative",
+      "criteria": ["crossCommunityPartnerships", "knowledgeExchange", "mentorship", "regionalParticipation", "sharedMissions"]
+    },
+    {
+      "level": 5,
+      "key": "sustainable",
+      "label": "Sustainable",
+      "criteria": ["leadershipSuccessionDocumented", "communityBrainMature", "legacyPreserved", "healthyVolunteerPipeline", "institutionalMemoryMaintained"]
+    },
+    {
+      "level": 6,
+      "key": "modelCommunity",
+      "label": "Model Community",
+      "criteria": ["developsOtherCommunities", "sharesPlaybooks", "mentorsOrganizers", "createsReusableCapabilities", "strengthensStatewideEcosystem"],
+      "serviceRecognitionNotSuperiority": true
+    }
+  ],
+  "readinessChecklist": [
+    "missionIsCurrent",
+    "calendarActive",
+    "teamsFunctioning",
+    "projectsProgressing",
+    "volunteersWelcomed",
+    "knowledgeDocumented",
+    "leadershipDeveloping",
+    "legacyPreserved",
+    "communityNeedsPublished",
+    "collaborationOpportunitiesExplored",
+    "newParticipantsClearPathToContribute"
+  ],
+  "continuousImprovement": {
+    "certificationNotPermanent": true,
+    "communitiesEvolve": true,
+    "reflectionNotOneTimeAchievement": true,
+    "guidesSupportNeverShame": true
+  },
+  "platformResponsibilities": [
+    "reliableInfrastructure",
+    "trainingResources",
+    "organizingTools",
+    "knowledgePreservation",
+    "search",
+    "security",
+    "scalableArchitecture"
+  ],
+  "arkansasNetworkHealthDashboard": {
+    "description": "Statewide executive view tying Phase 4 together — living network, not community rankings",
+    "signatureFeature": true,
+    "doesNotRankCommunities": true,
+    "answersQuestions": [
+      "Which campuses still need organizers?",
+      "Which counties have no active projects?",
+      "Where are leadership transitions approaching?",
+      "Which communities are thriving and willing to mentor?",
+      "Where are volunteer requests unanswered?",
+      "Which playbooks are reused most often?",
+      "What statewide missions connect the most communities?",
+      "Which regions need additional support?"
+    ],
+    "livingNetworkShows": ["communitiesGrowing", "relationshipsExpanding", "newMissionsLaunching", "knowledgeSpreading", "partnershipsForming", "leadersEmerging"],
+    "executiveViewOfMovement": true,
+    "integrates": ["OIS-001", "SCN-M14", "CLS-M10", "CIS-001", "OEX-001", "CCE-001", "CKLS-001"],
+    "orchestrator": "queryArkansasNetworkHealth(filters)",
+    "v1": "specAndDashboardSchemaStub"
+  },
+  "phase4Complete": {
+    "phase3HumanOS": ["PHQ-001", "CPP-001", "PRN-001", "PDT-001", "PGL-001", "CJT-001", "OBE-001"],
+    "phase4CommunityOS": ["CCN-001", "CGS-001", "CCC-001", "TWG-001", "MPS-001", "TSOS-001", "CCNET-001", "CKLS-001", "CCE-001", "CIS-001", "SCN-001", "OEX-001", "CLS-001", "COS-001"],
+    "statewideCivicOperatingSystem": true,
+    "expandWithoutArchitectureChange": true
+  },
+  "v1Scope": {
+    "certificationFramework": true,
+    "tenComponentDomains": true,
+    "sixCertificationLevels": true,
+    "readinessChecklist": true,
+    "networkHealthDashboardSpec": true,
+    "buildBible": true,
+    "automatedCertificationScoring": "future",
+    "fullDashboardUI": "future"
+  },
+  "implementation": {
+    "reusableFramework": true,
+    "sameFoundationEveryCommunityType": true,
+    "specializationWithoutCoreChange": true,
+    "futureCertificationMetrics": true,
+    "flexibilityForFutureCommunityTypes": true,
+    "files": [
+      "src/lib/cos/assessCommunityCompleteness.ts",
+      "src/lib/cos/getCommunityCertificationLevel.ts",
+      "src/lib/cos/queryArkansasNetworkHealth.ts",
+      "src/components/admin/ArkansasNetworkHealthDashboard.tsx"
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/volume-01/REPOSITORY_CONSTITUTION.md",
+  "requirementId": "RCN-001",
+  "title": "Repository Constitution",
+  "status": "complete",
+  "parentRequirement": "ENG-003",
+  "rules": [
+    { "id": "RCN-01", "rule": "Every new domain must have README.md" },
+    { "id": "RCN-02", "rule": "Every service must include tests" },
+    { "id": "RCN-03", "rule": "Every public API must have a contract" },
+    { "id": "RCN-04", "rule": "Every database change must have a migration" },
+    { "id": "RCN-05", "rule": "Configuration stays outside business logic" },
+    { "id": "RCN-06", "rule": "Every new module documents dependencies" },
+    { "id": "RCN-07", "rule": "Domains expose only approved public interfaces" },
+    { "id": "RCN-08", "rule": "No miscellaneous folders" },
+    { "id": "RCN-09", "rule": "Dependency direction Apps → API → Services → Database" },
+    { "id": "RCN-10", "rule": "Requirement ID in commit for production features" },
+    { "id": "RCN-11", "rule": "BUILD-LOG entry for significant capabilities" },
+    { "id": "RCN-12", "rule": "No secrets in repository" },
+    { "id": "RCN-13", "rule": "Mobile-first review for user-facing UI" },
+    { "id": "RCN-14", "rule": "RLS for new tenant-scoped tables" }
+  ],
+  "acceptanceCriteria": "AC-086"
+}

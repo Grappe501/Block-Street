@@ -1,0 +1,283 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/phase-05/COMMUNITY_IMPACT_INTELLIGENCE_SYSTEM.md",
+  "acronym": "CIIS",
+  "requirementId": "CIIS-001",
+  "supersedes": "IMS-001",
+  "governedBy": "ACN-001",
+  "notJustReporting": true,
+  "impactIntelligenceNotMeasurement": true,
+  "productName": "Community Impact Intelligence System",
+  "coreQuestion": "Did we actually make our communities stronger?",
+  "guidingPrinciple": "Success is measured by stronger people, stronger relationships, and stronger communities.",
+  "principle": "Activities produce outputs; communities experience outcomes. Outcomes matter most.",
+  "purpose": "Help participants and communities understand real effects of work — meaningful impact, not busyness.",
+  "impactPhilosophy": {
+    "outputsVsOutcomes": true,
+    "outcomesMatterMost": true,
+    "nonRanking": true,
+    "storiesAndSignalsTogether": true
+  },
+  "outputsVsOutcomes": {
+    "outputs": {
+      "examples": ["heldFourEvents", "recruitedTwentyVolunteers", "hostedThreeMeetings"]
+    },
+    "outcomes": {
+      "examples": [
+        "newFriendshipsFormed",
+        "participantsBecameLeaders",
+        "communitiesSolvedProblemsTogether",
+        "newCampusPartnerships",
+        "participantsReturnedToVolunteer"
+      ]
+    }
+  },
+  "impactFramework": {
+    "dimensions": {
+      "people": {
+        "examples": [
+          "newParticipantsWelcomed",
+          "volunteerGrowth",
+          "leadershipDevelopment",
+          "mentorship",
+          "skillDevelopment",
+          "participantConfidence",
+          "senseOfBelonging"
+        ],
+        "integrates": ["VDS-001", "PGL-001", "PEL-001"]
+      },
+      "relationships": {
+        "examples": [
+          "newFriendships",
+          "crossCampusConnections",
+          "countyPartnerships",
+          "mentorshipRelationships",
+          "collaboration",
+          "communityTrust",
+          "networkGrowth"
+        ],
+        "integrates": ["PRN-001", "SCN-001"]
+      },
+      "communities": {
+        "examples": [
+          "projectsCompleted",
+          "communitiesServed",
+          "traditionsEstablished",
+          "knowledgePreserved",
+          "volunteerCultureStrengthened",
+          "communityResilience"
+        ],
+        "integrates": ["CLS-001", "CKLS-001"]
+      },
+      "knowledge": {
+        "examples": [
+          "playbooksCreated",
+          "lessonsDocumented",
+          "trainingDelivered",
+          "communityBrainExpanded",
+          "resourcesShared",
+          "experiencePreserved"
+        ],
+        "integrates": ["CKLS-001", "CCE-001", "EEOS-M17"]
+      },
+      "leadership": {
+        "examples": [
+          "newLeadersEmerged",
+          "mentorsDeveloped",
+          "committeesFormed",
+          "leadershipSuccession",
+          "communityOwnershipIncreased"
+        ],
+        "integrates": ["PGL-001", "TWG-001", "CCN-001"]
+      },
+      "statewideNetwork": {
+        "examples": [
+          "communitiesCollaborating",
+          "sharedInitiatives",
+          "crossCountySupport",
+          "crossCampusParticipation",
+          "capabilitySharing",
+          "volunteerExchanges"
+        ],
+        "integrates": ["SCN-001", "IOS-001", "CCE-001"]
+      }
+    }
+  },
+  "missionImpactReport": {
+    "description": "Auto-generated for every mission — attached to MOR",
+    "sections": [
+      "missionPurpose",
+      "peopleInvolved",
+      "communitiesRepresented",
+      "outcomesAchieved",
+      "storiesCollected",
+      "lessonsLearned",
+      "recommendations",
+      "communityReflections"
+    ],
+    "route": "/mission/[slug]/impact",
+    "orchestrator": "generateMissionImpactReport(missionId)",
+    "integrates": "ACN-M26"
+  },
+  "communityImpactDashboard": {
+    "description": "Living impact dashboard — growth not vanity metrics",
+    "widgets": [
+      "peopleServed",
+      "relationshipsFormed",
+      "volunteerDevelopment",
+      "knowledgeCreated",
+      "projectsCompleted",
+      "communityStories",
+      "leadershipGrowth",
+      "longTermTrends"
+    ],
+    "route": "/community/[slug]/impact",
+    "nonRanking": true,
+    "integrates": "CCC-001"
+  },
+  "storyBasedMeasurement": {
+    "description": "Stories provide meaning behind numbers",
+    "types": [
+      "volunteerReflections",
+      "participantExperiences",
+      "communityTestimonials",
+      "lessonsLearned",
+      "unexpectedSuccesses"
+    ],
+    "firstClassEvidence": true,
+    "pipelineTo": "CST-001"
+  },
+  "longTermImpact": {
+    "delayedOutcomesSupported": true,
+    "examples": [
+      "formerVolunteerBecomesMentor",
+      "committeeLaunchesStatewideInitiative",
+      "campusDevelopsAnnualTradition",
+      "partnershipExpands",
+      "knowledgeReusedStatewide"
+    ],
+    "preservedThrough": ["CLS-001", "CIIS-M16"],
+    "edgeType": "led_to"
+  },
+  "communityReflection": {
+    "questions": [
+      "whatChanged",
+      "whoBenefited",
+      "whatSurprisedUs",
+      "whatShouldContinue",
+      "whatShouldImprove"
+    ],
+    "appendOnly": true,
+    "connectsTo": "LIS-001"
+  },
+  "explainability": {
+    "participantsUnderstand": [
+      "whatWasMeasured",
+      "whyItMatters",
+      "howConclusionsReached",
+      "whatEvidenceSupportsThem"
+    ],
+    "noBlackBoxScores": true,
+    "extends": "CIS-M16"
+  },
+  "futureAiAssistance": {
+    "advisoryOnly": true,
+    "neverReplacesCommunityInterpretation": true,
+    "capabilities": [
+      "summarizeImpact",
+      "connectRelatedStories",
+      "identifyEmergingTrends",
+      "recommendImprovements",
+      "highlightOverlookedOutcomes",
+      "generateAnnualCommunityReports"
+    ]
+  },
+  "cisRelationship": {
+    "cis001": "Community Intelligence — how is the community doing?",
+    "ciis001": "Community Impact Intelligence — what changed because of our work?",
+    "together": "situational awareness plus impact understanding",
+    "neitherRanksCommunities": true
+  },
+  "impactChain": {
+    "acronym": "IC",
+    "requirementRef": "CIIS-M16",
+    "signatureFeature": true,
+    "description": "Traces how one action leads to another — causality not isolated results",
+    "route": "/mission/[slug]/impact/chain",
+    "orchestrator": "getImpactChain(missionId | communityId, filters?)",
+    "edgeTypes": [
+      "welcomed",
+      "joined",
+      "became",
+      "started",
+      "created",
+      "served",
+      "partnered",
+      "established",
+      "led_to",
+      "reused_by"
+    ],
+    "exampleQuestions": [
+      "whichMissionsDevelopLeaders",
+      "whichExperiencesLeadToLongTermParticipation",
+      "whichPartnershipsProduceSustainedCollaboration",
+      "whichPlaybooksCreateTraditions",
+      "howLocalEffortsGrowStatewide"
+    ],
+    "nodeTypes": [
+      "mission",
+      "participant",
+      "team",
+      "initiative",
+      "playbook",
+      "legacyEvent",
+      "partnership",
+      "tradition"
+    ]
+  },
+  "impactIntelligenceStack": {
+    "layers": [
+      { "name": "Mission Operating Record", "role": "what happened", "requirement": "ACN-M26" },
+      { "name": "Community Brain", "role": "what we learned", "requirement": "CKLS-001" },
+      { "name": "Community Legacy", "role": "what endures", "requirement": "CLS-001" },
+      { "name": "Personal Digital Twin", "role": "individual trajectories", "requirement": "PDT-001" },
+      { "name": "Growth Graph", "role": "development paths", "requirement": "PGL-001" },
+      { "name": "Decision Graph", "role": "governance causality", "requirement": "CDS-M16" },
+      { "name": "Capability Graph", "role": "skills gained", "requirement": "CCE-001" },
+      { "name": "Impact Chain", "role": "how actions led to change", "requirement": "CIIS-M16" }
+    ]
+  },
+  "platformIntegrations": {
+    "ACN-M26": "MOR impact section",
+    "MDS-001": "design success criteria → completion impact",
+    "VDS-001": "volunteer outcomes",
+    "PGL-001": "leadership dimension",
+    "PDT-001": "personal trajectories",
+    "PRN-001": "relationship outcomes",
+    "CDS-001": "decision graph links",
+    "CCE-001": "capability outcomes",
+    "CKLS-001": "knowledge dimension",
+    "CLS-001": "long-term legacy",
+    "CIS-001": "trend enrichment",
+    "SCN-001": "statewide network dimension",
+    "IOS-001": "initiative aggregation",
+    "EEOS-001": "experience outcomes",
+    "CRA-001": "recognition",
+    "CST-001": "story pipeline",
+    "LIS-001": "lessons feed impact",
+    "CCC-001": "dashboard widget"
+  },
+  "v1Scope": {
+    "philosophyDocumented": true,
+    "impactFrameworkSpec": true,
+    "missionImpactReportSchema": true,
+    "communityImpactDashboardSpec": true,
+    "storyBasedLongTermImpact": true,
+    "explainabilityRequirements": true,
+    "impactChainArchitecture": true,
+    "impactIntelligenceStack": true,
+    "impactUiStub": true,
+    "liveChainTraversal": "v1.1",
+    "aiImpactSummarization": "future"
+  }
+}

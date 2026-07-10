@@ -33,6 +33,11 @@ import { AdminPersonalDigitalTwin } from "@/components/admin/AdminPersonalDigita
 import { AdminOpportunityBelongingEngine } from "@/components/admin/AdminOpportunityBelongingEngine";
 import { AdminParticipantExperienceLifecycle } from "@/components/admin/AdminParticipantExperienceLifecycle";
 import { AdminCommunityOperatingSystem } from "@/components/admin/AdminCommunityOperatingSystem";
+import { AdminActionOperatingSystem } from "@/components/admin/AdminActionOperatingSystem";
+import { AdminMasterArchitectureBible } from "@/components/admin/AdminMasterArchitectureBible";
+import { AdminImplementationVolumes } from "@/components/admin/AdminImplementationVolumes";
+import { AdminEngineeringArchitecture } from "@/components/admin/AdminEngineeringArchitecture";
+import { AdminGrowthOperatingSystem } from "@/components/admin/AdminGrowthOperatingSystem";
 import { AdminGrowthModel } from "@/components/admin/AdminGrowthModel";
 import { AdminOrganizingModel } from "@/components/admin/AdminOrganizingModel";
 import { AdminGuardrails } from "@/components/admin/AdminGuardrails";
@@ -42,6 +47,9 @@ import { AdminDataModel } from "@/components/admin/AdminDataModel";
 
 const TABS = [
   { id: "overview", label: "Overview", icon: "📊" },
+  { id: "volume0", label: "Volume 0", icon: "📖" },
+  { id: "factory", label: "Factory", icon: "🏭" },
+  { id: "engineering", label: "Volume 1", icon: "⚙️" },
   { id: "phases", label: "Phases", icon: "🗂️" },
   { id: "launch", label: "Launch", icon: "🚀" },
   { id: "engineering", label: "Engineering", icon: "🔧" },
@@ -65,7 +73,9 @@ const TABS = [
   { id: "belonging", label: "Belonging", icon: "🌿" },
   { id: "experience", label: "Experience", icon: "💫" },
   { id: "commos", label: "Comm OS", icon: "🏘️" },
-  { id: "growth", label: "Growth", icon: "🌱" },
+  { id: "actionos", label: "Action OS", icon: "⚡" },
+  { id: "growthos", label: "Growth OS", icon: "🌳" },
+  { id: "growth", label: "Growth Model", icon: "🌱" },
   { id: "organizing-model", label: "Organizing", icon: "🔗" },
   { id: "guardrails", label: "Guardrails", icon: "🛡️" },
   { id: "constitution", label: "Constitution", icon: "📜" },
@@ -140,6 +150,9 @@ export function AdminDashboard({ progress }: { progress: BuildProgress }) {
       {/* Content */}
       <div className="mx-auto max-w-7xl px-4 py-8">
         {activeTab === "overview" && <AdminOverview progress={progress} onSelectPhase={(p) => { setSelectedPhase(p); setActiveTab("phases"); }} />}
+        {activeTab === "volume0" && <AdminMasterArchitectureBible />}
+        {activeTab === "factory" && <AdminImplementationVolumes />}
+        {activeTab === "engineering" && <AdminEngineeringArchitecture />}
         {activeTab === "phases" && (
           <AdminPhases
             progress={progress}
@@ -170,6 +183,8 @@ export function AdminDashboard({ progress }: { progress: BuildProgress }) {
         {activeTab === "belonging" && <AdminOpportunityBelongingEngine />}
         {activeTab === "experience" && <AdminParticipantExperienceLifecycle />}
         {activeTab === "commos" && <AdminCommunityOperatingSystem />}
+        {activeTab === "actionos" && <AdminActionOperatingSystem />}
+        {activeTab === "growthos" && <AdminGrowthOperatingSystem />}
         {activeTab === "growth" && <AdminGrowthModel />}
         {activeTab === "organizing-model" && <AdminOrganizingModel />}
         {activeTab === "guardrails" && <AdminGuardrails />}

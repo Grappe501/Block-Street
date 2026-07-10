@@ -1,0 +1,236 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/phase-05/CAPACITY_COORDINATION_SYSTEM.md",
+  "acronym": "CCS",
+  "requirementId": "CCS-001",
+  "supersedes": "RCS-001",
+  "governedBy": "ACN-001",
+  "capacityBroaderThanResources": true,
+  "logisticsEngine": true,
+  "productName": "Capacity Coordination System",
+  "guidingPrinciple": "Communities succeed when they understand and coordinate their collective capacity.",
+  "coreQuestions": [
+    "whatDoWeAlreadyHave",
+    "whatDoWeStillNeed"
+  ],
+  "principle": "Capacity is broader than inventory — people, knowledge, experience, equipment, facilities, skills, time, relationships, technology, and transportation.",
+  "purpose": "Help communities understand, organize, and coordinate assets required for missions — real-time capacity picture with matching to needs.",
+  "capacityPhilosophy": {
+    "broaderThanInventory": true,
+    "dimensions": [
+      "people",
+      "knowledge",
+      "experience",
+      "equipment",
+      "facilities",
+      "skills",
+      "time",
+      "relationships",
+      "technology",
+      "transportation"
+    ],
+    "makeVisible": true
+  },
+  "capacityCategories": {
+    "people": {
+      "examples": ["volunteers", "mentors", "subjectMatterExperts", "leaders", "supporters", "partnerOrganizations", "futureAlumni"],
+      "integrates": ["VDS-001", "PGL-001"]
+    },
+    "skills": {
+      "examples": ["photography", "teaching", "writing", "technology", "translation", "publicSpeaking", "eventPlanning", "research", "design", "leadership", "medicalTrainingFuture"],
+      "integrates": "CCE-001"
+    },
+    "facilities": {
+      "examples": ["meetingRooms", "campusSpaces", "communityCenters", "libraries", "outdoorVenues", "trainingLocations", "storage"]
+    },
+    "equipment": {
+      "examples": ["canopies", "tables", "projectors", "microphones", "cameras", "printers", "laptops", "signage", "extensionCords"],
+      "futureInventoryTracking": true
+    },
+    "transportation": {
+      "examples": ["personalVehiclesOptional", "rideCoordination", "equipmentTransport", "supplyDelivery", "travelPlanning"],
+      "futureMileageTracking": true
+    },
+    "technology": {
+      "examples": ["websites", "presentationSystems", "internetAccess", "streamingEquipment", "computers", "qrScanners", "softwareTools"]
+    },
+    "partnerships": {
+      "examples": ["communityOrganizations", "campusOrganizations", "faithCommunities", "businesses", "nonprofits", "governmentAgencies", "educationalInstitutions"],
+      "expandCapacity": true
+    }
+  },
+  "capacityProfile": {
+    "description": "Structured profile for every capacity item",
+    "fields": [
+      "name",
+      "category",
+      "description",
+      "owner",
+      "community",
+      "availability",
+      "location",
+      "usageRestrictions",
+      "relatedMissions",
+      "contactInformation",
+      "currentStatus"
+    ],
+    "statuses": ["available", "reserved", "inUse", "unavailable"],
+    "orchestrator": "createCapacityProfile(payload)"
+  },
+  "capacityRequests": {
+    "description": "Communities publish needs visible statewide",
+    "examples": [
+      "needProjector",
+      "needPhotographer",
+      "needMeetingRoom",
+      "needVolunteers",
+      "needTransportation",
+      "needTraining",
+      "needTechnology"
+    ],
+    "statewideVisibility": true,
+    "optInSharing": true,
+    "integrates": ["OEX-001", "SCN-001", "CFS-M09", "IOS-M10"],
+    "orchestrator": "publishCapacityRequest(communityId, need)"
+  },
+  "capacityMatching": {
+    "description": "Match community needs to available capacity",
+    "encouragesCollaboration": true,
+    "orchestrator": "matchCapacity(needId, filters?)",
+    "examples": [
+      "nearbyCampusHasEquipment",
+      "neighboringCountyHasVolunteers",
+      "experiencedOrganizerAvailable",
+      "unusedMeetingRoomNearby"
+    ]
+  },
+  "capacityPlanning": {
+    "beforeExecution": true,
+    "missionDesignersSee": [
+      "currentCapacity",
+      "projectedShortages",
+      "volunteerNeeds",
+      "facilityAvailability",
+      "equipmentConflicts",
+      "transportationRequirements"
+    ],
+    "integrates": ["MDS-M11", "EOS-M17"]
+  },
+  "capacitySharing": {
+    "shareable": ["equipment", "knowledge", "facilities", "training", "templates", "volunteers", "partnerships"],
+    "voluntary": true,
+    "integrates": ["CCE-001", "IOS-M10"]
+  },
+  "capacityForecasting": {
+    "advisoryOnly": true,
+    "signals": [
+      "volunteerShortages",
+      "facilityConflicts",
+      "transportationBottlenecks",
+      "busySeasons",
+      "technologyNeeds",
+      "leadershipGaps"
+    ],
+    "integrates": ["CIS-001", "TSOS-001", "OPIS-001"]
+  },
+  "capacityHistory": {
+    "preserves": [
+      "equipmentUsage",
+      "volunteerUtilization",
+      "facilityHistory",
+      "partnershipActivity",
+      "resourceSharing",
+      "communityCapacityGrowth"
+    ],
+    "contributesTo": ["ACN-M26", "CKLS-001", "CLS-001"]
+  },
+  "futureAiAssistance": {
+    "advisoryOnly": true,
+    "capabilities": [
+      "recommendAvailableResources",
+      "predictShortages",
+      "suggestPartnerships",
+      "optimizeEquipmentUsage",
+      "identifyUnderusedCapacity",
+      "recommendNeighboringCommunities"
+    ]
+  },
+  "cceRelationship": {
+    "cce001": "what communities can do — capability graph",
+    "ccs001": "what communities have available now — logistics engine",
+    "unifiedView": "CCS-M16 Arkansas Capacity Map",
+    "noDuplication": true
+  },
+  "arkansasCapacityMap": {
+    "acronym": "ACM",
+    "requirementRef": "CCS-M16",
+    "signatureFeature": true,
+    "description": "Live map of statewide collective capacity — operational logistics layer",
+    "route": "/map/capacity",
+    "orchestrator": "getCapacityMap(filters?)",
+    "extends": "SCN-M04",
+    "reveals": [
+      "trainedEventVolunteers",
+      "availableMeetingSpace",
+      "photographyEquipment",
+      "travelingMentors",
+      "partnerTrainingOffers",
+      "regionalEventHosts"
+    ],
+    "filters": [
+      "skills",
+      "equipment",
+      "facilities",
+      "volunteers",
+      "partnerships",
+      "transportation",
+      "technology",
+      "geographicRadius"
+    ],
+    "exampleQuestions": [
+      "whoCanHelpThisWeekend",
+      "whereIsNearestProjector",
+      "whichCampusHasWelcomeWeekExperience",
+      "whichCountyHostedSimilarInitiative"
+    ]
+  },
+  "logisticsLayerStack": {
+    "layers": [
+      { "name": "Community Brain", "role": "what we know", "requirement": "CKLS-001" },
+      { "name": "Capability Exchange", "role": "what we can do", "requirement": "CCE-001" },
+      { "name": "Opportunity Exchange", "role": "what we need", "requirement": "OEX-001" },
+      { "name": "Collaboration Network", "role": "who we connect with", "requirement": "SCN-001" },
+      { "name": "Arkansas Capacity Map", "role": "what we have available now", "requirement": "CCS-M16" }
+    ]
+  },
+  "platformIntegrations": {
+    "CCE-001": "skills matching",
+    "OEX-001": "needs discovery",
+    "SCN-001": "geographic context",
+    "CKLS-001": "knowledge capacity",
+    "MDS-001": "mission canvas resources",
+    "EOS-001": "execution status",
+    "VDS-001": "people capacity",
+    "EEOS-001": "event requirements",
+    "IOS-001": "initiative resources",
+    "CFS-001": "support fulfillment",
+    "CDS-001": "allocation decisions",
+    "TSOS-001": "availability scheduling",
+    "CIS-001": "shortage signals",
+    "CLS-001": "historical patterns",
+    "TWG-001": "team assignments"
+  },
+  "v1Scope": {
+    "philosophyDocumented": true,
+    "categoriesSpec": true,
+    "capacityProfileSchema": true,
+    "requestsMatchingModel": true,
+    "planningSharingPrinciples": true,
+    "forecastingHistory": true,
+    "arkansasCapacityMapArchitecture": true,
+    "logisticsLayerStack": true,
+    "capacityUiStub": true,
+    "liveMapAggregation": "v1.1",
+    "aiMatching": "future"
+  }
+}

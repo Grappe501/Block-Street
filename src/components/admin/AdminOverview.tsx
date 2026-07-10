@@ -52,6 +52,35 @@ export function AdminOverview({
         </div>
       </div>
 
+      {/* Volume 0 */}
+      {"implementationVolumes" in progress && progress.implementationVolumes && (
+        <div className="card border-indigo-300 bg-indigo-50">
+          <div className="flex items-center justify-between">
+            <span className="text-xs font-semibold text-indigo-700">Factory Layer</span>
+            <StatusBadge status={progress.implementationVolumes.status} />
+          </div>
+          <p className="mt-2 font-bold text-indigo-950">{progress.implementationVolumes.name}</p>
+          <p className="mt-1 text-sm text-indigo-800">{progress.implementationVolumes.question}</p>
+          <p className="mt-2 text-xs text-indigo-600">
+            Volumes 1–6 v1 · Phase 7 deferred
+          </p>
+        </div>
+      )}
+
+      {"volume0" in progress && progress.volume0 && (
+        <div className="card border-violet-300 bg-violet-50">
+          <div className="flex items-center justify-between">
+            <span className="text-xs font-semibold text-violet-700">Volume 0</span>
+            <StatusBadge status={progress.volume0.status} />
+          </div>
+          <p className="mt-2 font-bold text-violet-950">{progress.volume0.name}</p>
+          <p className="mt-1 text-sm text-violet-800">{progress.volume0.question}</p>
+          <p className="mt-2 text-xs text-violet-600">
+            [{progress.volume0.requirement}] · Read before any production code
+          </p>
+        </div>
+      )}
+
       {/* Phase Cards */}
       <div>
         <h2 className="mb-4 text-lg font-bold text-slate-900">Build Phases — Click to Drill Down</h2>

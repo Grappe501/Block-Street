@@ -1,0 +1,194 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/phase-04/MISSION_PROJECT_SYSTEM.md",
+  "motto": "People volunteer for meaningful missions—not task lists.",
+  "principle": "The mission inspires people. The project organizes the work.",
+  "purpose": "Structure communities use to turn ideas into meaningful action — purpose-driven, not task-driven.",
+  "philosophy": {
+    "missionAnswers": "Why are we doing this?",
+    "projectAnswers": "How will we accomplish it?",
+    "tasksAnswer": "What needs to happen next?",
+    "hierarchyPreservedThroughout": true,
+    "missionHas": ["purpose", "people", "outcomes", "stories", "memories", "legacy"],
+    "projectIs": "organizational structure for execution"
+  },
+  "organizationalShift": {
+    "mostSoftware": "projects as things to manage",
+    "asyon": "projects as missions with operational structure",
+    "missionInspires": true,
+    "projectOrganizes": true
+  },
+  "threeLayerModel": {
+    "communities": "identity [CCN-001]",
+    "teams": "action [TWG-001]",
+    "missions": "purpose [MPS-001]"
+  },
+  "missionTypes": [
+    { "key": "communityService", "label": "Community Service" },
+    { "key": "campusImprovement", "label": "Campus Improvement" },
+    { "key": "leadershipDevelopment", "label": "Leadership Development" },
+    { "key": "volunteerOutreach", "label": "Volunteer Outreach" },
+    { "key": "educationalPrograms", "label": "Educational Programs" },
+    { "key": "civicEngagement", "label": "Civic Engagement" },
+    { "key": "fundraising", "label": "Fundraising", "optional": true },
+    { "key": "environmentalProjects", "label": "Environmental Projects" },
+    { "key": "studentSuccess", "label": "Student Success" },
+    { "key": "neighborhoodSupport", "label": "Neighborhood Support" },
+    { "key": "communityCelebrations", "label": "Community Celebrations" },
+    { "key": "emergencyResponse", "label": "Emergency Response", "future": true }
+  ],
+  "projectLifecycle": [
+    { "stage": 1, "key": "idea", "label": "Idea" },
+    { "stage": 2, "key": "proposal", "label": "Proposal" },
+    { "stage": 3, "key": "planning", "label": "Planning" },
+    { "stage": 4, "key": "approved", "label": "Approved" },
+    { "stage": 5, "key": "recruiting", "label": "Recruiting" },
+    { "stage": 6, "key": "active", "label": "Active" },
+    { "stage": 7, "key": "milestoneReview", "label": "Milestone Review" },
+    { "stage": 8, "key": "completed", "label": "Completed" },
+    { "stage": 9, "key": "celebrated", "label": "Celebrated" },
+    { "stage": 10, "key": "archived", "label": "Archived" }
+  ],
+  "completedMissionsPreservedInHistory": true,
+  "missionHeadquarters": {
+    "description": "Operational center for every mission — CCC-consistent workspace",
+    "includes": [
+      "missionStatement",
+      "purpose",
+      "projectPlan",
+      "timeline",
+      "teamMembers",
+      "volunteerNeeds",
+      "resources",
+      "calendar",
+      "updates",
+      "photos",
+      "documents",
+      "recognition",
+      "lessonsLearned"
+    ],
+    "route": "/mission/[slug]",
+    "shell": "CommunityCommandCenterShell adapted for mission scope"
+  },
+  "missionStatement": {
+    "required": true,
+    "visibleThroughout": true,
+    "examples": [
+      "Provide healthy meals to local families.",
+      "Welcome every new student to campus.",
+      "Help register first-time voters.",
+      "Beautify the community park."
+    ]
+  },
+  "missionGoals": {
+    "fields": ["objectives", "expectedOutcomes", "successIndicators", "timeline", "communityBenefit"],
+    "emphasizeImpactNotVolume": true
+  },
+  "milestones": {
+    "celebrateProgress": true,
+    "examples": [
+      "Planning completed",
+      "First volunteer joined",
+      "Halfway point",
+      "Community event held",
+      "Mission accomplished",
+      "Reflection completed"
+    ],
+    "encourageMomentum": true
+  },
+  "volunteerOpportunities": {
+    "easilyDiscoverable": true,
+    "examples": ["photography", "transportation", "setup", "communications", "research", "teaching", "registration", "cleanup"],
+    "futureSkillsMatching": true,
+    "everyMissionExplainsWhereHelpNeeded": true
+  },
+  "resourceManagement": {
+    "includes": ["files", "graphics", "budgets", "meetingNotes", "training", "checklists", "contacts"],
+    "organizedAroundMission": true
+  },
+  "reflectionAndLessonsLearned": {
+    "onCompletion": true,
+    "captures": [
+      "whatWorkedWell",
+      "whatCouldImprove",
+      "unexpectedDiscoveries",
+      "communityStories",
+      "volunteerReflections",
+      "futureRecommendations"
+    ],
+    "communitiesBecomeWiser": true,
+    "appendOnly": true
+  },
+  "communityImpact": {
+    "documentOutcomes": true,
+    "examples": [
+      "peopleServed",
+      "treesPlanted",
+      "mealsDistributed",
+      "studentsReached",
+      "volunteersEngaged",
+      "relationshipsFormed",
+      "storiesCollected"
+    ],
+    "emphasizeCommunityImprovementNotOrgAchievement": true
+  },
+  "projectRelationships": {
+    "connectsTo": ["community", "team", "participants", "events", "resources", "volunteerOpportunities", "recognition", "timeline"],
+    "registryUnderstandsRelationships": true,
+    "requirement": "REL-001"
+  },
+  "missionCanvas": {
+    "description": "Signature planning tool completed before project begins — blueprint stored alongside mission",
+    "signatureFeature": true,
+    "orchestrator": "createMissionCanvas(missionId)",
+    "questions": [
+      "Why does this mission matter?",
+      "Who benefits?",
+      "Who should be involved?",
+      "What skills are needed?",
+      "What resources are required?",
+      "What does success look like?",
+      "What risks should we anticipate?",
+      "How will we celebrate completion?",
+      "What should future organizers learn from this mission?"
+    ],
+    "reusableTemplates": true,
+    "futureCommunitiesStartWithProvenTemplates": true,
+    "philosophy": "Capture knowledge, develop people, leave every community stronger",
+    "v1": "specAndCanvasFormStub"
+  },
+  "twgIntegration": {
+    "teamsCreateMissions": true,
+    "missionLinkedToTeam": true,
+    "separateMissionFromTeam": true
+  },
+  "cccIntegration": {
+    "projectsWidget": "missionsAndProjects",
+    "opportunityWidget": "volunteerRolesFromMissions",
+    "quickAction": "startMission"
+  },
+  "stsIntegration": {
+    "extends": "STS-001",
+    "orchestrator": "deriveMissionLifecycleStage(missionId)"
+  },
+  "v1Scope": {
+    "philosophyAndLifecycle": true,
+    "missionCanvasSpec": true,
+    "missionEntitySchema": true,
+    "missionHeadquartersStub": true,
+    "fullMissionWorkspace": "v1.1"
+  },
+  "implementation": {
+    "separateMissionFromProjectExecution": true,
+    "reusableProjectTemplates": true,
+    "preserveProjectHistory": true,
+    "modularMissionHeadquarters": true,
+    "files": [
+      "src/lib/missions/createMission.ts",
+      "src/lib/missions/createMissionCanvas.ts",
+      "src/lib/missions/deriveMissionLifecycleStage.ts",
+      "src/components/ccc/widgets/MissionsWidget.tsx",
+      "src/app/mission/[slug]/page.tsx"
+    ]
+  }
+}

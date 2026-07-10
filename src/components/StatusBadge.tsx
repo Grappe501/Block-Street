@@ -5,11 +5,13 @@ export function StatusBadge({ status }: { status: StepStatus | string }) {
     done: "badge-done",
     in_progress: "badge-progress",
     pending: "badge-pending",
+    deferred: "badge-pending",
   };
   const labels: Record<string, string> = {
     done: "Done",
     in_progress: "In Progress",
     pending: "Pending",
+    deferred: "Deferred",
   };
   return (
     <span className={map[status] ?? "badge-pending"}>

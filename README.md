@@ -20,12 +20,18 @@
 
 ## Repository Structure
 
+Canonical layout: [docs/volume-01/CANONICAL_REPOSITORY_ARCHITECTURE.md](docs/volume-01/CANONICAL_REPOSITORY_ARCHITECTURE.md) [ENG-003]
+
+**V1 transitional (this repo):**
+
 ```
-docs/           Mission, phases, architecture, build log (markdown)
-data/           Machine-readable config (campuses, counties, build progress)
-src/            Next.js application
+docs/           Architecture, phases, volumes, build log (markdown)
+data/           JSON registries & seeds (→ database/ + config/)
+src/            Next.js apps (→ apps/ + services/)
 public/         Static assets
 ```
+
+**GitHub:** https://github.com/Grappe501/Block-Street · **Live:** https://block-street.netlify.app/
 
 ## Build Phases
 

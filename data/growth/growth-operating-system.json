@@ -1,0 +1,163 @@
+{
+  "version": "2.2.0",
+  "docPath": "docs/phase-06/PHASE_6_MASTER_SEQUENCE.md",
+  "phaseName": "Growth Operating System",
+  "phaseQuestion": "How does the platform grow itself?",
+  "phaseShift": {
+    "phase5": "How does work get done?",
+    "phase6": "How does the platform grow itself?"
+  },
+  "principle": "Communities grow one trusted relationship at a time.",
+  "growthLoop": "Relationships → Communities → Action → Stories → New People → Relationships",
+  "notMarketingNotRecruiting": true,
+  "organicCommunityGrowth": true,
+  "scalabilityTarget": "2 students to 20,000 without architectural redesign",
+  "constitutionalPrinciple": {
+    "id": "CP-016",
+    "ref": "GCN-M12",
+    "name": "Invitation Impact Visibility",
+    "statement": "Every participant should be able to see the direct impact of the people they invited into the network.",
+    "notCompetition": true,
+    "asStory": true,
+    "exampleRipple": [
+      "You invited Alex",
+      "Alex invited Jordan",
+      "Jordan started a volunteer team",
+      "That team organized a food drive",
+      "The food drive became an annual campus tradition",
+      "Three years later it has served 1,200 families"
+    ]
+  },
+  "version": "3.0.0",
+  "signatureFeature": "Community Knowledge Graph",
+  "communityKnowledgeGraph": {
+    "acronym": "CKG",
+    "requirementRef": "NISS-M17",
+    "implements": "GOS-M16",
+    "description": "Unified node-edge model — every person, community, mission, story, and relationship interconnected; implements Living Network Graph vision",
+    "route": "/network/graph",
+    "orchestrator": "getCommunityKnowledgeGraph(scope, filters?, nodeTypes?, edgeTypes?)",
+    "livingNetworkGraphAlias": "getLivingNetworkGraph",
+    "notPrimaryUserUI": true,
+    "underlyingModel": true,
+    "unifiesGraphs": [
+      "relationshipGraph",
+      "trustGraph",
+      "growthGraph",
+      "conversationGraph",
+      "capabilityGraph",
+      "decisionGraph",
+      "improvementGraph",
+      "operationalGraph",
+      "impactChain",
+      "generationalGraph",
+      "partnershipGraph"
+    ]
+  },
+  "statewideNetworkTwin": {
+    "acronym": "SNT",
+    "requirementRef": "NISS-M16",
+    "description": "Living strategic model of entire ecosystem — query interface for statewide awareness",
+    "route": "/network/twin",
+    "orchestrator": "getStatewideNetworkTwin(query?, scope?, filters?)"
+  },
+  "livingNetworkGraph": {
+    "acronym": "LNG",
+    "requirementRef": "GOS-M16",
+    "implementedBy": "NISS-M17",
+    "description": "Master representation unifying all platform graphs — implemented as Community Knowledge Graph",
+    "route": "/network/graph",
+    "orchestrator": "getLivingNetworkGraph(scope, filters?)",
+    "notPrimaryUserUI": true,
+    "underlyingModel": true,
+    "unifiesGraphs": [
+      "relationshipGraph",
+      "trustGraph",
+      "growthGraph",
+      "conversationGraph",
+      "capabilityGraph",
+      "decisionGraph",
+      "improvementGraph",
+      "operationalGraph",
+      "impactChain"
+    ],
+    "answersQuestions": [
+      "countiesConnectedThroughVolunteers",
+      "campusesCollaborateMost",
+      "newLeadersEmerging",
+      "ideasSpreadingAcrossArkansas",
+      "mentorsInfluencingMultipleCommunities",
+      "missionsLeadingToLongTermEngagement",
+      "gapsInStatewideRepresentation"
+    ]
+  },
+  "deliverables": [
+    "Growth Constitution — organic, relational, trust before scale",
+    "Personal Organizing Network — invite link, QR, Impact Tree, original vision",
+    "Community Growth & Outreach System — Growth Dashboard, Arkansas Coverage Map",
+    "Community Leadership Development System — Leadership Constellation, statewide pipeline",
+    "Welcome & Belonging System — First 30 Days Journey, belonging not onboarding",
+    "Community Growth Intelligence System — Arkansas Growth Observatory, deepen before expand",
+    "Invitation & Connection System — Universal Invitation Builder, Dynamic QR, platform front door",
+    "Community Culture & Recognition System — Culture Garden, story-based recognition",
+    "Community Expansion Framework — Community Foundry, Mutual Strengthening",
+    "Institutional Partnership System — Arkansas Civic Ecosystem Map, Mutual Value",
+    "Lifelong Community Network — Generational Network, Open Door",
+    "Public Community Network — Arkansas Community Explorer, Community Personality",
+    "Network Intelligence & Strategy System — Statewide Network Twin, Community Knowledge Graph",
+    "Growth Operating System Certification & Network Readiness — Community Genome, self-expanding network"
+  ],
+  "steps": [
+    { "id": "6.1", "name": "Growth Constitution", "artifact": "GROWTH_CONSTITUTION.md", "status": "done", "requirement": "GCN-001" },
+    { "id": "6.2", "name": "Personal Organizing Network", "artifact": "PERSONAL_ORGANIZING_NETWORK.md", "status": "done", "requirement": "PON-001" },
+    { "id": "6.3", "name": "Community Growth & Outreach System", "artifact": "COMMUNITY_GROWTH_OUTREACH_SYSTEM.md", "status": "done", "requirement": "CGO-001" },
+    { "id": "6.4", "name": "Community Leadership Development System", "artifact": "COMMUNITY_LEADERSHIP_DEVELOPMENT_SYSTEM.md", "status": "done", "requirement": "CLD-001" },
+    { "id": "6.5", "name": "Welcome & Belonging System", "artifact": "WELCOME_BELONGING_SYSTEM.md", "status": "done", "requirement": "WBS-001" },
+    { "id": "6.6", "name": "Community Growth Intelligence System", "artifact": "COMMUNITY_GROWTH_INTELLIGENCE_SYSTEM.md", "status": "done", "requirement": "CGIS-001" },
+    { "id": "6.7", "name": "Invitation & Connection System", "artifact": "INVITATION_CONNECTION_SYSTEM.md", "status": "done", "requirement": "ICS-001" },
+    { "id": "6.8", "name": "Community Culture & Recognition System", "artifact": "COMMUNITY_CULTURE_RECOGNITION_SYSTEM.md", "status": "done", "requirement": "CCR-001" },
+    { "id": "6.9", "name": "Community Expansion Framework", "artifact": "COMMUNITY_EXPANSION_FRAMEWORK.md", "status": "done", "requirement": "CEF-001" },
+    { "id": "6.10", "name": "Institutional Partnership System", "artifact": "INSTITUTIONAL_PARTNERSHIP_SYSTEM.md", "status": "done", "requirement": "IPS-001" },
+    { "id": "6.11", "name": "Lifelong Community Network", "artifact": "LIFELONG_COMMUNITY_NETWORK.md", "status": "done", "requirement": "LCN-001" },
+    { "id": "6.12", "name": "Public Community Network", "artifact": "PUBLIC_COMMUNITY_NETWORK.md", "status": "done", "requirement": "PCN-001" },
+    { "id": "6.13", "name": "Network Intelligence & Strategy System", "artifact": "NETWORK_INTELLIGENCE_STRATEGY_SYSTEM.md", "status": "done", "requirement": "NISS-001" },
+    { "id": "6.14", "name": "Growth Operating System Certification & Network Readiness", "artifact": "GROWTH_OPERATING_SYSTEM_CERTIFICATION_NETWORK_READINESS.md", "status": "done", "requirement": "GOS-001" }
+  ],
+  "growthOSModules": [
+    "constitution",
+    "personalOrganizingNetwork",
+    "communityGrowthOutreach",
+    "communityLeadershipDevelopment",
+    "welcomeBelonging",
+    "communityGrowthIntelligence",
+    "invitationConnection",
+    "communityCultureRecognition",
+    "communityExpansionFramework",
+    "institutionalPartnerships",
+    "lifelongCommunityNetwork",
+    "publicCommunityNetwork",
+    "networkIntelligenceStrategy",
+    "certificationReadiness"
+  ],
+  "phase3Foundations": {
+    "PRN-001": "Personal Relationship Network → PON-001",
+    "RGE-001": "Relationship Growth Engine → ICS-001",
+    "NET-001": "Invite links",
+    "NET-002": "QR codes",
+    "CGS-001": "Community Growth & Sustainability → CGO-001",
+    "PGL-001": "Personal Growth & Leadership → CLD-001",
+    "CRA-001": "Community Recognition & Appreciation → CCR-001",
+    "JRN-001": "Participant Journey → WBS-001",
+    "PEL-001": "Participant Experience & Lifecycle → WBS-001",
+    "OBE-001": "Opportunity & Belonging Engine → WBS-001",
+    "CIS-001": "Community Intelligence → CGIS-001"
+  },
+  "fourOperatingSystems": {
+    "phase3": { "name": "Human Operating System", "question": "Who participates and how do they grow?" },
+    "phase4": { "name": "Community Operating System", "question": "Where do people organize?" },
+    "phase5": { "name": "Action Operating System", "question": "How does work get done?" },
+    "phase6": { "name": "Growth Operating System", "question": "How does the platform grow itself?" }
+  },
+  "evaluationQuestion": "Does this strengthen relationships, deepen belonging, and help people grow into community builders?",
+  "evaluationQuestionRef": "PEL-M13"
+}

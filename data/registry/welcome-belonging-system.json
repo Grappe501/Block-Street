@@ -1,0 +1,225 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/phase-06/WELCOME_BELONGING_SYSTEM.md",
+  "acronym": "WBS",
+  "requirementId": "WBS-001",
+  "plannedAliasSuperseded": "ONB-001",
+  "extends": ["JRN-001", "PEL-001", "OBE-001"],
+  "governedBy": "GCN-001",
+  "phaseRequirementId": "GOS-001",
+  "productName": "Welcome & Belonging System",
+  "notHrOnboarding": true,
+  "mostImportantGrowthStep": true,
+  "guidingPrinciple": "People join because they are invited. They stay because they belong.",
+  "principle": "Belonging is the foundation of long-term participation.",
+  "purpose": "Help every new participant become confident, connected, and active — discover people, opportunities, and communities where they belong.",
+  "philosophy": {
+    "joiningIsOnlyBeginning": true,
+    "reduceUncertaintyEncourageParticipation": true,
+    "separateRegistrationFromBelonging": true,
+    "newParticipantQuestions": [
+      "whoWelcomedMe",
+      "whereDoIFit",
+      "whatCanIDoToday",
+      "whoCanHelpMe",
+      "howCanIContribute",
+      "whatHappensNext"
+    ]
+  },
+  "welcomeJourney": {
+    "requirementRef": "WBS-M04",
+    "stages": [
+      "invitation",
+      "registration",
+      "welcome",
+      "firstCommunity",
+      "firstConnection",
+      "firstMission",
+      "firstVolunteerExperience",
+      "returningParticipant",
+      "leadershipDevelopment"
+    ],
+    "participationOverCompletion": true,
+    "orchestrator": "getWelcomeJourney(participantId)",
+    "alignsWith": ["GCN-M06", "JRN-001", "CLD-001"]
+  },
+  "personalizedWelcome": {
+    "requirementRef": "WBS-M05",
+    "route": "/welcome",
+    "orchestrator": "getPersonalizedWelcome(participantId)",
+    "includes": [
+      "welcomeMessage",
+      "communityIntroduction",
+      "personalCommandCenter",
+      "suggestedFirstActions",
+      "upcomingOpportunities",
+      "platformExplanation"
+    ],
+    "personalNotAutomated": true,
+    "usesInviteContext": "PON-001"
+  },
+  "welcomeGuide": {
+    "requirementRef": "WBS-M06",
+    "guideTypes": [
+      "inviter",
+      "mentor",
+      "volunteer",
+      "communityOrganizer",
+      "welcomeTeamMember"
+    ],
+    "optInLightweight": true,
+    "answersQuestionsAndIntroductions": true
+  },
+  "firstWeekExperience": {
+    "requirementRef": "WBS-M07",
+    "encourages": [
+      "completeProfile",
+      "joinCommunity",
+      "meetPeople",
+      "exploreOpportunities",
+      "attendEvent",
+      "volunteer",
+      "introduceSelfIfChoose"
+    ],
+    "encouragingNotOverwhelming": true,
+    "noNotificationSpam": true
+  },
+  "communityIntroduction": {
+    "requirementRef": "WBS-M08",
+    "route": "/welcome/community/[slug]",
+    "includes": [
+      "whatCommunityDoes",
+      "currentMissions",
+      "upcomingEvents",
+      "activeTeams",
+      "waysToHelp",
+      "communityTraditions",
+      "leadershipOpportunities"
+    ],
+    "seeYourselfAsPartOfCommunity": true
+  },
+  "firstMissionRecommendation": {
+    "requirementRef": "WBS-M09",
+    "orchestrator": "recommendFirstMission(participantId)",
+    "examples": [
+      "attendWelcomeEvent",
+      "volunteerOneHour",
+      "joinCommitteeMeeting",
+      "helpUpcomingProject",
+      "meetMentor"
+    ],
+    "smallExperiencesBuildConfidence": true,
+    "explainable": true,
+    "integrates": ["OBE-001", "OEX-001"]
+  },
+  "relationshipBuilder": {
+    "requirementRef": "WBS-M10",
+    "orchestrator": "suggestIntroductions(participantId, limit?)",
+    "examples": [
+      "similarInterests",
+      "sameCampus",
+      "nearbyCounties",
+      "potentialMentors",
+      "volunteerTeammates"
+    ],
+    "naturalNotForced": true
+  },
+  "belongingCheckpoints": {
+    "requirementRef": "WBS-M11",
+    "orchestrator": "getBelongingCheckpoints(participantId | communityId)",
+    "checkpoints": [
+      "communityJoined",
+      "volunteered",
+      "metSomeone",
+      "returned",
+      "foundMentor",
+      "contributed"
+    ],
+    "identifyNeedForSupport": true,
+    "notSurveillance": true,
+    "feeds": ["GCN-M16", "CGO-M04"]
+  },
+  "welcomeResources": {
+    "requirementRef": "WBS-M12",
+    "includes": [
+      "welcomeMessageTemplates",
+      "orientationGuides",
+      "campusIntroductions",
+      "communityFaqs",
+      "shortVideos",
+      "printableQrCards",
+      "presentationSlides"
+    ],
+    "configurablePerCommunityType": true,
+    "integrates": "CKLS-001"
+  },
+  "feedbackLoop": {
+    "requirementRef": "WBS-M13",
+    "collects": ["questions", "suggestions", "challenges", "ideas", "firstImpressions"],
+    "feeds": ["CIS-001", "LIS-001"],
+    "optionalLowFriction": true
+  },
+  "first30DaysJourney": {
+    "acronym": "F30",
+    "requirementRef": "WBS-M16",
+    "signatureFeature": true,
+    "description": "Guided first month — comfortable pace, not mandatory checklist",
+    "notMandatoryChecklist": true,
+    "route": "/welcome/first-30-days",
+    "orchestrator": "getFirst30DaysJourney(participantId)",
+    "phases": {
+      "day1": ["welcomeMessage", "meetCommunity", "meetWelcomeGuide"],
+      "week1": ["attendOneEvent", "exploreOneMission", "meetTwoPeople"],
+      "week2": ["volunteerOnce", "learnAboutCommittee", "firstReflection"],
+      "week3": ["joinProject", "attendCommunityMeeting", "inviteFriendIfFeelsRight"],
+      "week4": ["reflectOnFirstMonth", "meetMentor", "exploreLeadershipOpportunities"]
+    },
+    "after30DaysGoal": "Know people, understand community, clear ways to stay involved",
+    "primarySurface": "PHQ-001",
+    "complements": ["PON-M16", "GCN-M16"]
+  },
+  "extendsPhase3": {
+    "JRN-001": "participant journey stages",
+    "PEL-001": "emotional lifecycle design",
+    "OBE-001": "belonging-first discovery — primary welcome consumer",
+    "WBS-001": "operational welcome and belonging",
+    "phase3Question": "What should the journey feel like?",
+    "wbsQuestion": "How do we welcome every new person into belonging?"
+  },
+  "platformIntegrations": {
+    "PON-001": "invite attribution and welcome workflow",
+    "PHQ-001": "Personal HQ primary surface",
+    "PCC-001": "Personal Command Center",
+    "CGO-001": "welcome resources and growth dashboard",
+    "CLD-001": "leadership after belonging",
+    "OBE-001": "first mission and community recommendations",
+    "OEX-001": "opportunities",
+    "GCN-M16": "Belonging Index",
+    "SEC-001": "privacy and consent",
+    "CKLS-001": "welcome resource library"
+  },
+  "futureAiAssistance": {
+    "advisoryOnly": true,
+    "humanRelationshipsCentral": true,
+    "maySupport": [
+      "answerCommonQuestions",
+      "recommendCommunities",
+      "suggestFirstMissions",
+      "identifyOutreachNeeded",
+      "recommendMentors",
+      "summarizeWelcomeProgress"
+    ],
+    "prepareForConversationalGuidance": true
+  },
+  "v1Scope": {
+    "philosophyDocumented": true,
+    "welcomeJourneyAndCheckpoints": true,
+    "personalizedWelcomeAndGuide": true,
+    "firstWeekAndCommunityIntro": true,
+    "firstMissionAndRelationshipBuilder": true,
+    "resourcesAndFeedback": true,
+    "first30DaysJourneySpec": true,
+    "liveF30ProgressTracking": "v1.1",
+    "automatedWelcomeGuideMatching": "v1.1"
+  }
+}

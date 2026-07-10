@@ -1,30 +1,121 @@
 {
-  "version": "1.0.0",
+
+  "version": "1.1.0",
+
   "docPath": "docs/master/LIVING-SYSTEMS-ARCHITECTURE.md",
+
   "principle": "Think in living systems, not software modules.",
+
   "stack": [
+
+    { "order": 0, "volume": 0, "name": "Master Architecture Bible", "question": "What is the single source of truth?", "status": "complete", "requirement": "MAB-001" },
+
+    { "order": 0.5, "layer": "factory", "name": "Implementation Volumes 1–6", "question": "How is the COS built?", "status": "v1_complete", "requirement": "IVS-001", "docPath": "docs/master/VOLUMES-INDEX.md" },
+
     { "order": 1, "phase": 1, "name": "Constitution", "question": "Why are we building this?", "status": "complete" },
+
     { "order": 2, "phase": 2, "name": "Digital Arkansas", "question": "What exists?", "status": "complete" },
-    { "order": 3, "phase": 3, "name": "People & Relationship System", "question": "Who is this person, how do they grow, and how do they connect?", "status": "active" },
-    { "order": 4, "phase": 4, "name": "Community Operating System", "question": "Where do we work together?", "status": "in_progress" },
-    { "order": 5, "phase": 5, "name": "Organizing Engine", "question": "What do they do together?", "status": "pending" },
-    { "order": 6, "phase": 6, "name": "Intelligence Layer", "question": "How do we understand and guide?", "status": "pending" },
-    { "order": 7, "phase": 7, "name": "Platform Services", "question": "How does it run?", "status": "pending" },
-    { "order": 8, "phase": 8, "name": "Experience Layer", "question": "How does it feel?", "status": "pending" },
-    { "order": 9, "phase": 9, "name": "Growth & Expansion", "question": "How does it scale?", "status": "pending" }
+
+    { "order": 3, "phase": 3, "name": "Human Operating System", "question": "Who participates?", "status": "complete" },
+
+    { "order": 4, "phase": 4, "name": "Community Operating System", "question": "Where do people organize?", "status": "complete" },
+
+    { "order": 5, "phase": 5, "name": "Action Operating System", "question": "How does real work get done?", "status": "complete" },
+
+    { "order": 6, "phase": 6, "name": "Growth Operating System", "question": "How does the platform grow itself?", "status": "complete" },
+
+    { "order": 7, "phase": 7, "name": "Intelligence Layer", "question": "How do we understand and guide?", "status": "deferred", "deferredUntil": "Volumes 1–6 expansion complete" },
+
+    { "order": 8, "phase": 8, "name": "Platform Services", "question": "How does it run?", "status": "deferred", "deferredUntil": "Volumes 1–6 expansion complete" },
+
+    { "order": 9, "phase": 9, "name": "Experience Layer", "question": "How does it feel?", "status": "deferred", "deferredUntil": "Volumes 1–6 expansion complete" }
+
   ],
+
+  "fourOperatingSystems": [
+
+    { "phase": 3, "name": "Human Operating System", "question": "Who participates and how do they grow?" },
+
+    { "phase": 4, "name": "Community Operating System", "question": "Where do people organize?" },
+
+    { "phase": 5, "name": "Action Operating System", "question": "How does work get done?" },
+
+    { "phase": 6, "name": "Growth Operating System", "question": "How does the platform grow itself?" }
+
+  ],
+
+  "constitutionalPrinciple": {
+
+    "id": "CP-016",
+
+    "name": "Invitation Impact Visibility",
+
+    "statement": "Every participant should be able to see the direct impact of the people they invited into the network.",
+
+    "phase": 6,
+
+    "ref": "GCN-M12"
+
+  },
+
   "threePillars": [
+
     { "id": "place", "name": "Place", "phase": 2, "gives": "A community home — county, campus" },
+
     { "id": "relationships", "name": "Relationships", "phase": 3, "gives": "Network, invites, referrals" },
+
     { "id": "purpose", "name": "Purpose", "phase": 3, "gives": "Journey stage, next action, growth" }
+
   ],
+
+  "civicOperatingLoop": {
+
+    "description": "People → Relationships → Communities → Teams → Missions → Projects → Tasks → Events → Impact → Knowledge → Legacy → New People",
+
+    "phase": 5,
+
+    "growthLoopPhase": 6,
+
+    "compoundsOverDecades": true
+
+  },
+
+  "growthLoop": {
+
+    "description": "Relationships → Communities → Action → Stories → New People → Relationships",
+
+    "phase": 6
+
+  },
+
   "phaseSummaries": {
+
     "3": ["Participant Journey", "Identity", "Headquarters", "Command Center", "Relationship Network", "Growth Engine", "Trust Center", "Invite links", "QR codes"],
-    "4": ["Campus hubs", "County hubs", "Committees", "Projects", "Community dashboards"],
-    "5": ["Events", "Volunteer management", "Tasks", "Campaigns", "Outreach", "Messaging"],
-    "6": ["Search", "Recommendations", "Analytics", "Mission board", "Growth engine", "Relationship intelligence", "Future AI"],
-    "7": ["Authentication", "Administration", "CMS", "Notifications", "API", "Deployment", "Monitoring", "Security"],
-    "8": ["Design system", "Animation", "Accessibility", "Mobile", "Gamification", "Onboarding", "Storytelling"],
-    "9": ["High schools", "Youth organizations", "Alumni", "Partner organizations", "Other states", "Native mobile", "Integrations"]
+
+    "4": ["Community Constitution", "Command Center", "Teams", "Missions", "Scheduling", "Communication", "Knowledge", "Capability Exchange", "Intelligence", "Collaboration", "Opportunity Exchange", "Legacy", "Certification"],
+
+    "5": ["Action Constitution", "Mission Design", "Execution OS", "Volunteer Development", "Experiences", "Initiatives", "Decisions", "Commitments", "Capacity", "Impact Intelligence", "Community Storytelling", "Learning & Improvement", "Operational Intelligence", "Certification & Readiness"],
+
+    "6": ["Growth Constitution", "Personal Organizing Network", "Community Growth & Outreach", "Community Leadership Development", "Welcome & Belonging", "Community Growth Intelligence", "Invitation & Connection", "Community Culture & Recognition", "Community Expansion Framework", "Institutional Partnerships", "Lifelong Community Network", "Public Community Network", "Network Intelligence & Strategy", "Community Knowledge Graph", "Certification & Readiness"],
+
+    "7": ["Search", "Recommendations", "Analytics", "Mission board", "Relationship intelligence", "Future AI"],
+
+    "8": ["Authentication", "Administration", "CMS", "Notifications", "API", "Deployment", "Monitoring", "Security"],
+
+    "9": ["Design system", "Animation", "Accessibility", "Mobile", "Onboarding UX", "Storytelling"]
+
+  },
+
+  "signatureGraphs": {
+
+    "livingNetworkGraph": {
+
+      "phase": 6,
+
+      "unifies": ["relationshipGraph", "trustGraph", "growthGraph", "conversationGraph", "capabilityGraph", "decisionGraph", "improvementGraph", "operationalGraph", "impactChain"]
+
+    }
+
   }
+
 }

@@ -1,0 +1,72 @@
+{
+  "version": "1.0.0",
+  "volume": 1,
+  "step": "1.2",
+  "docPath": "docs/volume-01/SYSTEM_ARCHITECTURE.md",
+  "masterSequencePath": "docs/volume-01/VOLUME_1_MASTER_SEQUENCE.md",
+  "parentVolume": "EAB-001",
+  "requirementId": "ENG-002",
+  "title": "System Architecture",
+  "status": "complete",
+  "buildsOn": "ENG-001",
+  "guidingPrinciple": "One Community Operating System composed of many independent, cooperating services.",
+  "platformKernel": {
+    "description": "Foundational capabilities every domain service depends on — not a separate deployable",
+    "implementationPath": "src/lib/kernel/",
+    "capabilities": [
+      "identity_authentication",
+      "authorization_permissions",
+      "community_registry",
+      "time_calendar_foundation",
+      "event_activity_model",
+      "notification_routing",
+      "configuration_management",
+      "audit_logging",
+      "search_indexing_hooks",
+      "community_knowledge_graph_interface"
+    ]
+  },
+  "layers": [
+    { "order": 1, "id": "ENG-SA-L1", "name": "Presentation Layer" },
+    { "order": 2, "id": "ENG-SA-L2", "name": "Experience Layer" },
+    { "order": 3, "id": "ENG-SA-L3", "name": "Application Layer" },
+    { "order": 4, "id": "ENG-SA-L4", "name": "Domain Services Layer" },
+    { "order": 5, "id": "ENG-SA-L5", "name": "Knowledge & Intelligence Layer" },
+    { "order": 6, "id": "ENG-SA-L6", "name": "Data Layer" },
+    { "order": 7, "id": "ENG-SA-L7", "name": "Integration Layer" },
+    { "order": 8, "id": "ENG-SA-L8", "name": "Infrastructure Layer" },
+    { "order": 9, "id": "ENG-SA-L9", "name": "Observability Layer" }
+  ],
+  "domainServices": [
+    { "id": "ENG-SA-SVC-01", "name": "Identity Service", "kernel": true },
+    { "id": "ENG-SA-SVC-02", "name": "Registry Service", "kernel": "partial" },
+    { "id": "ENG-SA-SVC-03", "name": "Community Service" },
+    { "id": "ENG-SA-SVC-04", "name": "Mission Service" },
+    { "id": "ENG-SA-SVC-05", "name": "Experience Service" },
+    { "id": "ENG-SA-SVC-06", "name": "Growth Service" },
+    { "id": "ENG-SA-SVC-07", "name": "Opportunity Service" },
+    { "id": "ENG-SA-SVC-08", "name": "Knowledge Service" },
+    { "id": "ENG-SA-SVC-09", "name": "Capacity Service" },
+    { "id": "ENG-SA-SVC-10", "name": "Partnership Service" },
+    { "id": "ENG-SA-SVC-11", "name": "Intelligence Service" },
+    { "id": "ENG-SA-SVC-12", "name": "Communication Service" },
+    { "id": "ENG-SA-SVC-13", "name": "Search Service" },
+    { "id": "ENG-SA-SVC-14", "name": "Media Service" }
+  ],
+  "communicationPattern": ["presentation", "experience", "application", "domain_service", "platform_kernel", "data_layer"],
+  "stateLevels": ["client", "application", "persistent"],
+  "scalabilityPath": [
+    "one_campus",
+    "five_campuses",
+    "arkansas_institutions",
+    "statewide_counties",
+    "neighboring_states",
+    "national_expansion"
+  ],
+  "acceptanceCriteria": "AC-084",
+  "nextStep": {
+    "id": "1.4",
+    "requirementId": "ENG-004",
+    "artifact": "docs/volume-01/DATABASE_ARCHITECTURE.md"
+  }
+}

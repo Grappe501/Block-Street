@@ -1,0 +1,13 @@
+{
+  "version": "1.0.0",
+  "volume": 3,
+  "docPath": "docs/master/USER_EXPERIENCE_BIBLE.md",
+  "requirementId": "UXB-001",
+  "productName": "User Experience Bible",
+  "status": "v1_structure_complete",
+  "priority": "critical",
+  "companionVolume": 6,
+  "navigation": { "mobile": "bottom_tabs", "tablet": "bottom_tabs_side_panel", "desktop": "left_nav_main_insight" },
+  "screenCatalogCount": 15,
+  "accessibilityStandard": "WCAG 2.1 AA"
+}

@@ -1,0 +1,230 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/phase-05/COMMITMENT_FOLLOW_THROUGH_SYSTEM.md",
+  "acronym": "CFS",
+  "requirementId": "CFS-001",
+  "supersedes": "ACB-001",
+  "governedBy": "ACN-001",
+  "implementsConstitutional": "ACN-M14",
+  "accountabilityNotPunitive": true,
+  "productName": "Commitment & Follow-Through System",
+  "guidingPrinciple": "Communities become trustworthy when they consistently follow through on their commitments.",
+  "principle": "Commitments are promises. Promises deserve support. The platform helps participants keep commitments rather than punish when circumstances change.",
+  "cultureStatement": "People succeed together by making commitments, communicating openly, and helping one another follow through.",
+  "purpose": "Transform intentions into completed action through visibility, encouragement, reminders, and mutual support — not enforcement.",
+  "commitmentPhilosophy": {
+    "commitmentsArePromises": true,
+    "promisesDeserveSupport": true,
+    "helpRatherThanPunish": true,
+    "requestingHelpIsResponsibleLeadership": true,
+    "learningNotBlame": true
+  },
+  "commitmentLifecycle": {
+    "stages": [
+      "commitmentMade",
+      "accepted",
+      "planned",
+      "inProgress",
+      "needsSupport",
+      "completed",
+      "celebrated",
+      "capturedAsKnowledge"
+    ],
+    "needsSupportIsFirstClassState": true,
+    "celebratedIntegrates": "CRA-001",
+    "knowledgeIntegrates": ["ACN-M26", "CKLS-001"]
+  },
+  "commitmentTypes": {
+    "flexible": true,
+    "examples": [
+      "volunteerShift",
+      "taskOwnership",
+      "missionMilestone",
+      "leadershipResponsibility",
+      "mentorshipCommitment",
+      "trainingCompletion",
+      "communityFollowUp",
+      "projectDeliverable",
+      "eventPreparation",
+      "committeeResponsibility",
+      "decisionImplementation"
+    ]
+  },
+  "commitmentProfile": {
+    "description": "Shared clarity for every commitment",
+    "fields": [
+      "purpose",
+      "community",
+      "mission",
+      "project",
+      "owner",
+      "supportingParticipants",
+      "dueDate",
+      "status",
+      "dependencies",
+      "relatedResources",
+      "relatedCommunications",
+      "expectedOutcome"
+    ],
+    "orchestrator": "createCommitment(payload)"
+  },
+  "sharedVisibility": {
+    "participantsUnderstand": [
+      "whatTheyCommittedTo",
+      "upcomingDeadlines",
+      "relatedMilestones",
+      "whoIsDependingOnThem",
+      "whatHelpIsAvailable"
+    ],
+    "transparencyNotSurveillance": true,
+    "integrates": ["CFS-M16", "MPS-001"]
+  },
+  "progressUpdates": {
+    "statuses": ["notStarted", "working", "completed", "needHelp", "delayed", "blocked"],
+    "simpleToCommunicate": true,
+    "feeds": ["ACN-M26", "CCC-001"],
+    "orchestrator": "updateProgress(commitmentId, status, note?)"
+  },
+  "supportRequests": {
+    "description": "Requesting help is responsible leadership",
+    "types": [
+      "needVolunteer",
+      "needTransportation",
+      "needAdditionalTime",
+      "needClarification",
+      "needResources",
+      "needMentorship"
+    ],
+    "surfacesIn": ["OEX-001", "CFS-M16"],
+    "orchestrator": "requestSupport(commitmentId, requestType, details)"
+  },
+  "smartReminders": {
+    "qualities": ["relevant", "timely", "respectful", "configurable", "contextAware"],
+    "attentionBudget": "CAM-001",
+    "separateFromEnforcement": true,
+    "noPunitiveLanguage": true
+  },
+  "communitySupport": {
+    "responses": [
+      "offerVolunteers",
+      "shareResources",
+      "provideMentorship",
+      "adjustTimelines",
+      "redistributeWork"
+    ],
+    "supportReplacesBlame": true,
+    "communityCoachAdvisory": "CIS-001"
+  },
+  "leadershipAwareness": {
+    "visibility": [
+      "upcomingRisks",
+      "blockedWork",
+      "volunteerShortages",
+      "resourceGaps",
+      "missedMilestones",
+      "emergingOpportunities"
+    ],
+    "interveneWithEncouragementNotReprimand": true,
+    "nonRanking": true,
+    "surfacesIn": ["CFS-M16", "CCC-001"]
+  },
+  "commitmentReflection": {
+    "questions": [
+      "whatWentWell",
+      "whatWasDifficult",
+      "whatShouldImprove",
+      "whatDidILearn",
+      "howCanFutureOrganizersBenefit"
+    ],
+    "contributesTo": ["CKLS-001", "ACN-M26"],
+    "connectsTo": "LIS-001",
+    "orchestrator": "reflectOnCommitment(commitmentId, reflection)"
+  },
+  "healthyAccountability": {
+    "emphasizes": [
+      "honesty",
+      "reliability",
+      "communication",
+      "mutualRespect",
+      "constructiveSupport",
+      "continuousImprovement"
+    ],
+    "buildsTrustNotAssignsFault": true,
+    "implements": "ACN-M14"
+  },
+  "futureAiAssistance": {
+    "advisoryOnly": true,
+    "capabilities": [
+      "identifyCommitmentsAtRisk",
+      "suggestAdditionalVolunteers",
+      "recommendTimelineAdjustments",
+      "detectOverloadedParticipants",
+      "recommendMentors",
+      "surfaceRelatedPlaybooks"
+    ]
+  },
+  "commitmentCompass": {
+    "acronym": "CC",
+    "requirementRef": "CFS-M16",
+    "signatureFeature": true,
+    "description": "Daily experience reframing productivity around collaboration — not overdue task pressure",
+    "route": "/hq/commitments",
+    "personalRoute": "/me/commitments",
+    "orchestrator": "getCommitmentCompass(participantId, scope?)",
+    "quadrants": [
+      { "id": "today", "question": "What needs my attention today?" },
+      { "id": "soon", "question": "What commitments are approaching?" },
+      { "id": "waiting", "question": "What am I waiting on from others?" },
+      { "id": "support", "question": "Where can I ask for help, or where can I help someone else?" }
+    ],
+    "leaderHighlights": [
+      "teamsNeedingEncouragement",
+      "commitmentsWaitingOnDecisions",
+      "volunteerGaps",
+      "communitiesAskingForAssistance",
+      "recognitionOpportunities"
+    ],
+    "integratesDob": "EOS-M17",
+    "mobileFirst": true,
+    "personalCommandCenter": "PCC-001"
+  },
+  "dailyExperienceStack": {
+    "layers": [
+      { "name": "Morning Brief", "scope": "personal", "requirement": "PCC-001" },
+      { "name": "Community Pulse", "scope": "community", "requirement": "CCC-001" },
+      { "name": "Daily Operations Brief", "scope": "mission", "requirement": "EOS-M17" },
+      { "name": "Commitment Compass", "scope": "personalAndTeam", "requirement": "CFS-M16" }
+    ]
+  },
+  "platformIntegrations": {
+    "ACN-M14": "constitutional healthy accountability",
+    "ACN-M26": "MOR commitment history",
+    "EOS-001": "task and milestone commitments",
+    "CDS-001": "decision implementation",
+    "VDS-001": "volunteer shifts",
+    "EEOS-001": "event preparation",
+    "TWG-001": "team commitments",
+    "CAM-001": "reminder policy",
+    "CCNET-001": "related communications",
+    "CIS-001": "risk awareness",
+    "CRA-001": "celebration",
+    "CKLS-001": "reflection knowledge",
+    "OEX-001": "support as community needs",
+    "CCE-001": "resource sharing",
+    "PCC-001": "personal command center",
+    "LIS-001": "commitment lessons"
+  },
+  "v1Scope": {
+    "philosophyDocumented": true,
+    "lifecycleSpec": true,
+    "commitmentProfileSchema": true,
+    "supportAndCommunitySupport": true,
+    "smartRemindersPolicy": true,
+    "healthyAccountabilityPrinciples": true,
+    "commitmentCompassArchitecture": true,
+    "dailyExperienceStack": true,
+    "commitmentUiStub": true,
+    "liveCompassAggregation": "v1.1",
+    "aiRiskDetection": "future"
+  }
+}

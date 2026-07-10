@@ -1,0 +1,158 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/phase-04/STATEWIDE_COLLABORATION_NETWORK.md",
+  "acronym": "SCN",
+  "requirementId": "SCN-001",
+  "motto": "Strong local communities create a stronger Arkansas when they work together.",
+  "principle": "The platform exists to encourage collaboration—not centralization.",
+  "purpose": "Enable communities across Arkansas to work together, share knowledge, coordinate efforts, and build relationships while preserving local identity.",
+  "philosophy": {
+    "neverSilos": true,
+    "oneStatewideNetwork": true,
+    "locallyUniqueGloballyConnected": true,
+    "connectiveTissue": true,
+    "capabilities": ["learnFromOthers", "helpOthers", "askForHelp", "shareKnowledge", "shareResources", "buildPartnerships", "coordinateStatewide"],
+    "strengthensLocalAutonomy": true,
+    "activelyEncouragesConnection": true
+  },
+  "collaborationLevels": [
+    {
+      "key": "campusToCampus",
+      "label": "Campus ↔ Campus",
+      "examples": ["jointVolunteerProjects", "leadershipExchanges", "sharedTraining", "sharedEvents", "studentMentorship"]
+    },
+    {
+      "key": "countyToCounty",
+      "label": "County ↔ County",
+      "examples": ["regionalInitiatives", "volunteerSharing", "jointCommunityService", "leadershipCollaboration", "emergencySupport"]
+    },
+    {
+      "key": "campusToCounty",
+      "label": "Campus ↔ County",
+      "examples": ["studentsSupportingCountyProjects", "countyLeadersMentoringStudents", "internships", "volunteerOpportunities", "communityPartnerships"]
+    },
+    {
+      "key": "teamToTeam",
+      "label": "Team ↔ Team",
+      "examples": ["communicationsTeams", "volunteerTeams", "technologyTeams", "researchTeams", "leadershipTeams"],
+      "easilyDiscoverOneAnother": true
+    },
+    {
+      "key": "projectToProject",
+      "label": "Project ↔ Project",
+      "examples": ["reuseProjectPlans", "shareVolunteers", "coordinateSchedules", "exchangeLessonsLearned", "expandMissionsStatewide"]
+    },
+    {
+      "key": "statewideInitiatives",
+      "label": "Statewide Initiatives",
+      "examples": ["multipleCampuses", "multipleCounties", "multipleOrganizations", "sharedMissions", "largeVolunteerEfforts"],
+      "locallyLed": true
+    }
+  ],
+  "collaborationSpaces": {
+    "firstClassEntity": true,
+    "separateFromCommunitySpaces": true,
+    "includes": ["sharedCalendar", "sharedCommunication", "sharedFiles", "sharedTimeline", "sharedMission", "sharedKnowledge", "sharedParticipants"],
+    "consistentWithCommandCenter": "CCC-001",
+    "orchestrator": "createCollaborationSpace(participantCommunities, config)"
+  },
+  "knowledgeExchange": {
+    "naturallyExchanged": ["playbooks", "templates", "training", "lessonsLearned", "volunteerExpertise", "leadershipGuidance"],
+    "institutionalBecomesStatewide": true,
+    "integrates": ["CKLS-001", "CCE-001", "KDG-001"]
+  },
+  "sharedVolunteerNetwork": {
+    "volunteerBeyondHomeCommunity": true,
+    "examples": ["helpNeighboringCounties", "supportStatewideEvents", "assistAnotherCampus", "joinRegionalProjects"],
+    "participantChoicePreserved": true,
+    "integrates": ["OBE-001", "OEX-001"]
+  },
+  "mentorNetwork": {
+    "experiencedOrganizersMentor": ["newCampuses", "newCounties", "newTeams", "newProjectLeaders"],
+    "leadershipKnowledgeSpreads": true,
+    "orchestrator": "matchMentorMentee(criteria)",
+    "integrates": ["PGL-001", "CGS-001", "CIS-001"]
+  },
+  "communityPartnerships": {
+    "formalPartnerships": true,
+    "examples": ["campusAdoptsCounty", "universityCollaboration", "regionalVolunteerCoalition", "sharedAnnualEvents"],
+    "partOfCommunityHistory": true,
+    "configurableRelationshipTypes": "REL-001"
+  },
+  "collaborationDiscovery": {
+    "helpsCommunitiesDiscover": ["similarProjects", "nearbyInitiatives", "relevantExperience", "potentialPartners", "sharedInterests"],
+    "activelyEncouragesConnection": true,
+    "orchestrator": "discoverCollaborationOpportunities(communityId, filters)"
+  },
+  "collaborationHistory": {
+    "institutionalMemory": true,
+    "preserves": ["jointProjects", "sharedEvents", "volunteerExchanges", "leadershipMentoring", "knowledgeTransfers"],
+    "futureOrganizersInheritRelationships": true,
+    "appendOnly": true,
+    "orchestrator": "recordCollaborationHistory(collaborationId, event)"
+  },
+  "communityIndependence": {
+    "neverReduceLocalAutonomy": true,
+    "eachCommunityRetains": ["ownPriorities", "ownCulture", "ownLeadership", "ownIdentity"],
+    "voluntaryAndMutuallyBeneficial": true,
+    "noForcedMergers": true,
+    "encouragementNotGovernance": true
+  },
+  "futureAiAssistance": {
+    "may": ["identifyCollaborationOpportunities", "suggestMentors", "recommendSimilarProjects", "connectSimilarChallenges", "recommendPlaybooks"],
+    "facilitatesIntroductionsNotDecisions": true
+  },
+  "arkansasCollaborationMap": {
+    "description": "Live map of Arkansas displaying collaboration relationships—not just geography",
+    "signatureFeature": true,
+    "displays": ["jointProjectLines", "volunteerSharingLines", "mentorshipLines", "regionalInitiatives", "statewideMissionNodes"],
+    "filters": ["volunteerProjects", "leadershipMentoring", "environmentalInitiatives", "communityService", "training", "resourceSharing", "activePartnerships"],
+    "livingVisualization": true,
+    "operationalToolAndSymbol": true,
+    "oneNetworkHonoringLocalLeadership": true,
+    "buildsOn": ["ADT-001", "REL-001"],
+    "orchestrator": "queryCollaborationMap(filters)",
+    "v1": "specAndMapSchemaStub"
+  },
+  "platformIntegrations": {
+    "relationshipGraph": "REL-001",
+    "digitalArkansas": "ADT-001",
+    "constitution": "CCN-001",
+    "growthSustainability": "CGS-001",
+    "teams": "TWG-001",
+    "missions": "MPS-001",
+    "communication": "CCNET-001",
+    "knowledgeLearning": "CKLS-001",
+    "capabilityExchange": "CCE-001",
+    "intelligence": "CIS-001",
+    "opportunityEngine": "OBE-001",
+    "opportunityExchange": "OEX-001",
+    "civicJourney": "CJT-001"
+  },
+  "v1Scope": {
+    "philosophyAndLevels": true,
+    "collaborationMapSpec": true,
+    "collaborationEntitySchema": true,
+    "collaborationSpacesContract": true,
+    "communityIndependenceRequired": true,
+    "sharedVolunteerNetworkStub": true,
+    "fullInteractiveMap": "future",
+    "statewideInitiativeOrchestration": "future"
+  },
+  "implementation": {
+    "firstClassCollaborations": true,
+    "manyToManyRelationships": true,
+    "maintainHistory": true,
+    "separateCollaborationSpaces": true,
+    "preserveLocalAutonomy": true,
+    "futureStatewideExpansion": true,
+    "files": [
+      "src/lib/scn/createCollaborationSpace.ts",
+      "src/lib/scn/discoverCollaborationOpportunities.ts",
+      "src/lib/scn/queryCollaborationMap.ts",
+      "src/lib/scn/matchMentorMentee.ts",
+      "src/lib/scn/recordCollaborationHistory.ts",
+      "src/components/map/ArkansasCollaborationMap.tsx"
+    ]
+  }
+}

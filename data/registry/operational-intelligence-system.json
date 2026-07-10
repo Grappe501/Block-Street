@@ -1,0 +1,243 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/phase-05/OPERATIONAL_INTELLIGENCE_SYSTEM.md",
+  "acronym": "OPIS",
+  "requirementId": "OPIS-001",
+  "supersedes": "AIN-001",
+  "governedBy": "ACN-001",
+  "notTheAIPhase": true,
+  "coordinationLayer": true,
+  "productName": "Operational Intelligence System",
+  "corePrinciple": "Local communities lead. The platform helps them see the bigger picture.",
+  "peopleLeadPlatformAssists": true,
+  "guidingPrinciple": "Operational intelligence should make communities more capable, not more dependent.",
+  "principle": "Guidance, not direction — quietly answer what deserves attention, where help is needed, what patterns emerge.",
+  "purpose": "Analyze operational data to help participants, teams, communities, and initiatives coordinate — trusted advisor preserving human judgment.",
+  "operationalPhilosophy": {
+    "guidanceNotDirection": true,
+    "advisoryOnly": true,
+    "orchestratesExistingModuleAI": true,
+    "communityOperatingSystemCulmination": true
+  },
+  "operationalAwareness": {
+    "signalSources": {
+      "missionProgress": "EOS-001",
+      "volunteerAvailability": "VDS-001",
+      "communityHealth": "CIS-001",
+      "upcomingDeadlines": "TSOS-001",
+      "resourceUtilization": "CCS-001",
+      "leadershipTransitions": "CCN-001",
+      "knowledgeGrowth": "LIS-001",
+      "communicationTrends": "CCNET-001"
+    },
+    "situationalAwarenessNotSurveillance": true
+  },
+  "opportunityDetection": {
+    "examples": [
+      "newVolunteerMatches",
+      "potentialMentors",
+      "crossCampusCollaboration",
+      "availableEquipment",
+      "communitiesNeedingSupport",
+      "trainingRecommendations"
+    ],
+    "communitiesFreeToIgnore": true,
+    "explainable": true,
+    "integrates": ["OEX-001", "OIS-001", "OBE-001"]
+  },
+  "riskDetection": {
+    "earlyAwarenessNotEmergency": true,
+    "examples": [
+      "volunteerShortages",
+      "leadershipTransitions",
+      "scheduleConflicts",
+      "resourceBottlenecks",
+      "missedMilestones",
+      "knowledgeNotDocumented"
+    ],
+    "nonAlarmingLanguage": true,
+    "surfacesIn": ["CFS-M16", "CCC-001", "OPIS-M17"]
+  },
+  "patternRecognition": {
+    "examples": [
+      "successfulEventTiming",
+      "volunteerParticipationCycles",
+      "seasonalInitiatives",
+      "communityRhythms",
+      "reusedPlaybooks",
+      "commonBottlenecks"
+    ],
+    "advisoryOnly": true
+  },
+  "recommendationEngine": {
+    "mayRecommend": [
+      "playbooks",
+      "missionTemplates",
+      "nearbyPartners",
+      "experiencedOrganizers",
+      "training",
+      "equipment",
+      "meetingTimes",
+      "knowledgeArticles"
+    ],
+    "explainable": true,
+    "orchestrator": "getRecommendations(context, scope)",
+    "returns": ["recommendation", "explanation", "alternatives", "confidence"]
+  },
+  "executiveBriefs": {
+    "types": [
+      { "id": "participant", "audience": "individual", "scope": "PHQ-001" },
+      { "id": "team", "audience": "workingGroup", "scope": "TWG-001" },
+      { "id": "community", "audience": "communityLeaders", "scope": "CCC-001" },
+      { "id": "initiative", "audience": "initiativeCoordinators", "scope": "IOS-M16" },
+      { "id": "statewide", "audience": "networkOrganizers", "scope": "OPIS-M17" }
+    ],
+    "permissionScoped": true
+  },
+  "explainability": {
+    "everyRecommendationAnswers": [
+      "whatObserved",
+      "whyRecommended",
+      "whatSupportsIt",
+      "whatAlternativesExist"
+    ],
+    "noBlackBoxScores": true
+  },
+  "privacyGovernance": {
+    "respectsAllPrivacySettings": true,
+    "neverExposeUnauthorizedData": true,
+    "recommendationsWithinPermissions": true,
+    "governedBy": ["KDG-001", "SEC-001"]
+  },
+  "humanControl": {
+    "participantsRetainAuthority": true,
+    "actions": ["accept", "ignore", "modify", "provideFeedback"],
+    "neverAutoAssigns": true,
+    "neverAutoDecides": true,
+    "neverAutoPublishes": true,
+    "implements": "ACN-M06"
+  },
+  "continuousLearning": {
+    "sources": [
+      "missionOutcomes",
+      "communityReflections",
+      "playbookEvolution",
+      "impactChains",
+      "communityBrain",
+      "missionLibrary",
+      "userFeedback"
+    ]
+  },
+  "futureAiCapabilities": {
+    "transparentAndUserControlled": true,
+    "examples": [
+      "naturalLanguageQueries",
+      "missionPlanningAssistance",
+      "volunteerCoordinationSuggestions",
+      "meetingSummaries",
+      "actionItemExtraction",
+      "knowledgeRetrieval",
+      "operationalSimulations"
+    ]
+  },
+  "oisVsOpisDistinction": {
+    "OIS-001": { "name": "Outreach Intelligence", "phase": 2, "role": "community opportunity signals Mission Board" },
+    "OPIS-001": { "name": "Operational Intelligence", "phase": 5, "role": "Action OS coordination advisory layer" },
+    "opisConsumesOis": true
+  },
+  "operationalGraph": {
+    "acronym": "OG",
+    "requirementRef": "OPIS-M16",
+    "signatureFeature": true,
+    "description": "Connects all platform graphs — operational events across ecosystem",
+    "route": "/operations/graph",
+    "orchestrator": "getOperationalGraph(scope, filters?)",
+    "connectsGraphs": [
+      "relationshipGraph",
+      "trustGraph",
+      "growthGraph",
+      "conversationGraph",
+      "decisionGraph",
+      "capabilityGraph",
+      "improvementGraph",
+      "impactChain"
+    ],
+    "edgeTypes": [
+      "affects",
+      "delays",
+      "creates",
+      "fulfilled_by",
+      "improves",
+      "joined",
+      "completed",
+      "identified_as",
+      "recommended_for"
+    ]
+  },
+  "operationsCenter": {
+    "acronym": "OC",
+    "requirementRef": "OPIS-M17",
+    "signatureFeature": true,
+    "description": "Platform-wide situational awareness center — not a control room",
+    "route": "/operations",
+    "orchestrator": "getOperationsCenter(scope, permissions)",
+    "widgets": [
+      "activeMissions",
+      "volunteerMomentum",
+      "communitiesRequestingHelp",
+      "capacityAvailability",
+      "statewideEvents",
+      "leadershipTransitions",
+      "opportunityExchangeActivity",
+      "communityHealthSummaries",
+      "impactTrends",
+      "learningHighlights"
+    ],
+    "notAControlRoom": true,
+    "localCommunitiesLead": true
+  },
+  "commandCenterCulmination": {
+    "layers": [
+      { "name": "Personal Command Center", "scope": "individual", "requirement": "PCC-001" },
+      { "name": "Community Command Center", "scope": "community", "requirement": "CCC-001" },
+      { "name": "Mission Headquarters", "scope": "mission", "requirement": "MPS-001" },
+      { "name": "Experience Headquarters", "scope": "gathering", "requirement": "EEOS-001" },
+      { "name": "Initiative Command Center", "scope": "initiative", "requirement": "IOS-M16" },
+      { "name": "Operations Center", "scope": "platformWide", "requirement": "OPIS-M17" }
+    ],
+    "phase5Culmination": true
+  },
+  "platformIntegrations": {
+    "ACN-M06": "advise dont decide",
+    "CIS-001": "community health signals",
+    "OIS-001": "outreach opportunity signals",
+    "OEX-001": "needs matching",
+    "EOS-001": "mission progress",
+    "VDS-001": "volunteer data",
+    "CCS-001": "capacity signals",
+    "CFS-001": "commitment risks",
+    "CDS-001": "decision context",
+    "CIIS-001": "impact trends",
+    "LIS-001": "learning patterns",
+    "IOS-001": "initiative coordination",
+    "SCN-001": "collaboration network",
+    "CKLS-001": "knowledge retrieval",
+    "MDS-M20": "mission templates",
+    "EEOS-M17": "playbooks",
+    "CCC-001": "community briefs",
+    "PCC-001": "participant briefs",
+    "KDG-001": "privacy governance"
+  },
+  "v1Scope": {
+    "philosophyDocumented": true,
+    "opportunityRiskPatternDetection": true,
+    "recommendationExplainability": true,
+    "privacyHumanControl": true,
+    "operationalGraphArchitecture": true,
+    "operationsCenterArchitecture": true,
+    "commandCenterCulmination": true,
+    "opisUiStub": true,
+    "liveAggregation": "v1.1",
+    "nlQueriesAndModels": "future"
+  }
+}

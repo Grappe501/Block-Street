@@ -1,0 +1,168 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/phase-04/OPPORTUNITY_EXCHANGE.md",
+  "acronym": "OEX",
+  "requirementId": "OEX-001",
+  "motto": "No willing volunteer should wonder where they can help. No community should struggle alone if help exists elsewhere.",
+  "principle": "The Opportunity Exchange reduces the distance between willingness and action.",
+  "purpose": "Statewide discovery engine for meaningful participation — connects people, communities, teams, and missions.",
+  "philosophy": {
+    "notJobBoard": true,
+    "notCommercial": true,
+    "communityConnector": true,
+    "everyOpportunityEnables": ["serve", "learn", "lead", "meetPeople", "strengthenCommunity", "buildRelationships"],
+    "relationalNotTransactional": true,
+    "proactiveSurfacing": true,
+    "livingEcosystem": true
+  },
+  "opportunityCategories": [
+    {
+      "key": "volunteer",
+      "label": "Volunteer Opportunities",
+      "examples": ["foodDrives", "campusWelcomeEvents", "communityCleanup", "tutoring", "transportation", "photography", "eventSetup", "registrationAssistance"]
+    },
+    {
+      "key": "leadership",
+      "label": "Leadership Opportunities",
+      "examples": ["committeeCoordinator", "projectLeader", "mentor", "trainingFacilitator", "regionalOrganizer", "campusAmbassador", "countyCoordinator"],
+      "leadershipThroughService": true
+    },
+    {
+      "key": "learning",
+      "label": "Learning Opportunities",
+      "examples": ["workshops", "leadershipTraining", "communityConversations", "skillDevelopment", "volunteerOrientation", "futureCivicAcademy"]
+    },
+    {
+      "key": "collaboration",
+      "label": "Collaboration Opportunities",
+      "examples": ["communitiesSeekingPartners", "sharedEvents", "jointProjects", "regionalInitiatives", "knowledgeExchange", "volunteerExchanges"],
+      "integrates": "SCN-001"
+    },
+    {
+      "key": "mentorship",
+      "label": "Mentorship Opportunities",
+      "examples": ["becomeMentor", "findMentor", "leadershipCoaching", "careerGuidance", "organizingSupport", "peerLearning"]
+    },
+    {
+      "key": "resourceRequests",
+      "label": "Resource Requests",
+      "examples": ["needVolunteers", "needMeetingSpace", "needPhotographer", "needTranslator", "needTechnology", "needSupplies"],
+      "communitiesOpenlyRequestHelp": true
+    },
+    {
+      "key": "mission",
+      "label": "Mission Opportunities",
+      "examples": ["joinMission", "launchMission", "supportExistingMission", "continueUnfinishedWork", "expandSuccessfulProjects"],
+      "integrates": "MPS-001"
+    }
+  ],
+  "opportunityProfiles": {
+    "fields": ["title", "description", "purpose", "community", "mission", "skillsNeeded", "timeCommitment", "location", "dates", "capacity", "organizer", "currentParticipants", "relatedResources"],
+    "explainWhyItMatters": true,
+    "reusableEntities": true,
+    "distinctFromProjects": true
+  },
+  "personalizedDiscovery": {
+    "basedOn": ["interests", "skills", "journeyStage", "communities", "location", "relationships", "volunteerHistory", "availability"],
+    "naturalNotRandom": true,
+    "explainable": true,
+    "obePersonalizationLayer": "OBE-001",
+    "orchestrator": "discoverOpportunities(participantId, filters)"
+  },
+  "opportunityMap": {
+    "browseBy": ["county", "campus", "region", "mission", "date", "skill", "community"],
+    "visualizeActivityAcrossArkansas": true,
+    "distinctFromCollaborationMap": "SCN-M14 shows active collaborations; OEX map shows open opportunities",
+    "orchestrator": "queryOpportunityMap(filters)"
+  },
+  "opportunityFeed": {
+    "personalized": true,
+    "examples": ["todaysOpportunities", "nearbyEvents", "communitiesNeedingHelp", "leadershipOpenings", "volunteerRequests", "mentorshipOpportunities"],
+    "surfaces": ["PCC-M07", "CCC-M08", "CAM-001 Morning Brief"],
+    "freshAndRelevant": true,
+    "orchestrator": "assembleOpportunityFeed(participantId, lastVisitAt)"
+  },
+  "matching": {
+    "connects": [
+      "participantsToMissions",
+      "communitiesToVolunteers",
+      "mentorsToNewOrganizers",
+      "projectsToSkilledParticipants",
+      "countiesToPartnerCampuses"
+    ],
+    "transparentAndExplainable": true,
+    "orchestrator": "matchNeedsToCapabilities(needId)"
+  },
+  "communityNeeds": {
+    "easilyPublish": true,
+    "examples": ["committeeMembers", "eventVolunteers", "photographer", "mentor", "trainer"],
+    "visibleStatewide": true,
+    "orchestrator": "publishCommunityNeed(communityId, need)"
+  },
+  "successStories": {
+    "completedBecomeStories": true,
+    "includes": ["volunteerReflections", "communityImpact", "relationshipsFormed", "lessonsLearned", "recognition"],
+    "encouragesFutureParticipation": true,
+    "integrates": ["CRA-001", "CLS-001"]
+  },
+  "futureAiAssistance": {
+    "may": ["recommendOpportunities", "suggestVolunteers", "identifyUnmetNeeds", "recommendCollaborations", "explainRecommendations", "surfaceOverlookedOpportunities"],
+    "supportsDiscoveryNotDecisions": true
+  },
+  "communityNeedsIndex": {
+    "description": "Living index comparing community needs with available capabilities — mutual aid network",
+    "signatureFeature": true,
+    "communitiesPublishNeeds": ["volunteers", "skills", "equipment", "training", "mentorship", "partnerships", "meetingSpace", "projectAssistance"],
+    "participantsAndCommunitiesPublishOffers": ["availableSkills", "volunteerTime", "equipment", "mentorship", "partnershipInterest"],
+    "continuouslyComparesNeedsWithCapabilities": true,
+    "exampleMatch": {
+      "community": "Pulaski County",
+      "needs": ["graphicDesigner", "photographer", "volunteerCoordinator"],
+      "finds": ["ucaStudentDesign", "bentonCountyPhotographer", "philanderSmithCoordinatorMentor"]
+    },
+    "mutualAidNetworkNotBulletinBoard": true,
+    "orchestrators": ["queryCommunityNeedsIndex(filters)", "matchNeedsToCapabilities(needId)"],
+    "integrates": ["CCE-001", "PDT-001", "SCN-001"],
+    "v1": "specAndIndexSchemaStub"
+  },
+  "platformIntegrations": {
+    "opportunityBelongingEngine": "OBE-001 participant personalization",
+    "personalDigitalTwin": "PDT-001 context",
+    "capabilityExchange": "CCE-001 supply side",
+    "statewideCollaboration": "SCN-001",
+    "missions": "MPS-001",
+    "timeScheduling": "TSOS-001",
+    "commandCenter": "CCC-M08",
+    "personalCommandCenter": "PCC-M07",
+    "intelligence": "CIS-001 unmet needs",
+    "recognition": "CRA-001",
+    "outreachIntelligence": "OIS-001 community signals",
+    "threeLayerStack": ["OIS-001 community signals", "OEX-001 statewide needs matching", "OBE-001 participant personalization"]
+  },
+  "v1Scope": {
+    "philosophyAndCategories": true,
+    "communityNeedsIndexSpec": true,
+    "opportunityEntitySchema": true,
+    "matchingExplainability": true,
+    "opportunityFeedContract": true,
+    "fullContinuousMatching": "future",
+    "aiRecommendations": "future"
+  },
+  "implementation": {
+    "reusableOpportunityEntities": true,
+    "separateFromProjects": true,
+    "advancedFiltering": true,
+    "explainableMatching": true,
+    "integrateTimeOS": true,
+    "futureAiRecommendations": true,
+    "files": [
+      "src/lib/oex/publishCommunityNeed.ts",
+      "src/lib/oex/queryCommunityNeedsIndex.ts",
+      "src/lib/oex/matchNeedsToCapabilities.ts",
+      "src/lib/oex/assembleOpportunityFeed.ts",
+      "src/lib/oex/queryOpportunityMap.ts",
+      "src/lib/oex/discoverOpportunities.ts",
+      "src/components/ccc/widgets/OpportunityWidget.tsx"
+    ]
+  }
+}

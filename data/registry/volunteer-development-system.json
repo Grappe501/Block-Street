@@ -1,0 +1,281 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/phase-05/VOLUNTEER_DEVELOPMENT_SYSTEM.md",
+  "acronym": "VDS",
+  "requirementId": "VDS-001",
+  "supersedes": "VOL-001",
+  "governedBy": "ACN-001",
+  "notVolunteerManagement": true,
+  "productName": "Volunteer Development System",
+  "guidingPrinciple": "Service develops leaders.",
+  "principle": "Develop people through service — not manage volunteers as a scheduling problem.",
+  "purpose": "Connect participants with meaningful service opportunities while supporting long-term growth as organizers, leaders, mentors, and community builders.",
+  "objectiveNot": "fillingShifts",
+  "objectiveIs": "helpingPeopleDiscoverMeaningfulContributionGrowAndLead",
+  "philosophy": {
+    "volunteersNotAssigned": "invitedIntoMissionsThatMatter",
+    "questions": [
+      "whereCanIHelp",
+      "whatAmIGoodAt",
+      "whatWouldILikeToLearn",
+      "whoCanIServeAlongside",
+      "howCanIGrowThroughThisExperience"
+    ],
+    "invitationOverAssignment": true
+  },
+  "volunteerJourney": {
+    "emphasis": "growthNotStatus",
+    "notGamified": true,
+    "stages": [
+      "interested",
+      "firstVolunteerExperience",
+      "returningVolunteer",
+      "reliableContributor",
+      "volunteerLeader",
+      "mentor",
+      "communityBuilder"
+    ],
+    "orchestrator": "deriveVolunteerJourneyStage(participantId)"
+  },
+  "volunteerProfile": {
+    "extends": "PHQ-001",
+    "participantOwned": true,
+    "fields": [
+      "interests",
+      "skills",
+      "availability",
+      "preferredCauses",
+      "experience",
+      "certifications",
+      "volunteerHistory",
+      "physicalLimitations",
+      "communicationPreferences",
+      "transportationAvailability",
+      "languagePreferences"
+    ],
+    "visibilityControlledByParticipant": true
+  },
+  "volunteerAvailability": {
+    "easyToUpdate": true,
+    "types": [
+      "daysAvailable",
+      "timesAvailable",
+      "oneTime",
+      "recurring",
+      "virtualParticipation",
+      "travelWillingness",
+      "seasonal"
+    ],
+    "integrates": "TSOS-001",
+    "orchestrator": "updateVolunteerAvailability(participantId, availabilityPayload)"
+  },
+  "skillsMatching": {
+    "integrates": ["CCE-001", "MDS-M10", "OBE-001"],
+    "skillsEvolveOverTime": true,
+    "examples": [
+      "photography",
+      "writing",
+      "graphicDesign",
+      "technology",
+      "publicSpeaking",
+      "research",
+      "teaching",
+      "transportation",
+      "eventSetup",
+      "childcare",
+      "translation",
+      "medicalTraining"
+    ],
+    "orchestrators": {
+      "matchToMission": "matchVolunteersToMission(missionId)",
+      "matchToParticipant": "matchMissionsToParticipant(participantId)"
+    },
+    "explainable": true
+  },
+  "volunteerRoles": {
+    "examples": [
+      "eventVolunteer",
+      "registrationTeam",
+      "welcomeTeam",
+      "technologySupport",
+      "communications",
+      "photographer",
+      "trainer",
+      "mentor",
+      "projectCoordinator",
+      "volunteerCoordinator"
+    ],
+    "linksToWorkPackages": "EOS-M07"
+  },
+  "volunteerScheduling": {
+    "integrates": "TSOS-001",
+    "participantFriendly": true,
+    "capabilities": [
+      "acceptOpportunities",
+      "declineOpportunities",
+      "requestChanges",
+      "tradeShifts",
+      "receiveReminders",
+      "checkIn",
+      "recordCompletion"
+    ],
+    "declineWithoutPenalty": true,
+    "surfacesOn": ["EOS-M17", "PCC-001"]
+  },
+  "qrCheckIn": {
+    "optional": true,
+    "secondsNotForms": true,
+    "integrates": "EEOS-001",
+    "benefits": [
+      "attendance",
+      "volunteerHistory",
+      "missionOperatingRecord",
+      "communityStatistics",
+      "recognition",
+      "volunteerHoursOptional"
+    ],
+    "orchestrator": "checkInVolunteer(participantId, opportunityId, qrToken)",
+    "mobileFirst": true
+  },
+  "volunteerExperience": {
+    "afterEachExperience": [
+      "reflection",
+      "lessonsLearned",
+      "photos",
+      "stories",
+      "suggestions",
+      "skillsDeveloped"
+    ],
+    "feedsCivicPassport": true,
+    "appendOnly": true,
+    "participantOwned": true
+  },
+  "volunteerRecognition": {
+    "focus": "service",
+    "integrates": "CRA-001",
+    "notGamification": true,
+    "examples": [
+      "firstVolunteerDay",
+      "communityAppreciation",
+      "serviceMilestones",
+      "mentorship",
+      "projectContributions",
+      "volunteerAnniversaries"
+    ],
+    "feedsCJT": true
+  },
+  "volunteerDevelopmentPathways": {
+    "everyExperienceOpensAnotherDoor": true,
+    "recommendations": [
+      "leadershipOpportunities",
+      "training",
+      "mentorship",
+      "committeeParticipation",
+      "projectLeadership",
+      "communityPartnerships"
+    ],
+    "participantPaced": true
+  },
+  "volunteerHistory": {
+    "participantOwned": true,
+    "preserves": [
+      "eventsServed",
+      "projectsSupported",
+      "hoursOptional",
+      "skillsDemonstrated",
+      "communitiesServed",
+      "impactStories"
+    ],
+    "hoursTrackingOptional": true,
+    "neverRequired": true
+  },
+  "volunteerSafety": {
+    "transparentRequirements": true,
+    "examples": [
+      "trainingCompleted",
+      "ageRequirements",
+      "backgroundChecks",
+      "safetyBriefings",
+      "emergencyContacts"
+    ],
+    "visibleBeforeAcceptance": true
+  },
+  "futureAiAssistance": {
+    "advisoryOnly": true,
+    "supportsNotPressures": true,
+    "capabilities": [
+      "recommendOpportunities",
+      "suggestSkillDevelopment",
+      "identifyMentors",
+      "predictShortages",
+      "balancedWorkloads",
+      "preventBurnout"
+    ],
+    "respectsAttentionBudget": "CAM-001"
+  },
+  "volunteerPassport": {
+    "acronym": "VP",
+    "requirementRef": "VDS-M17",
+    "signatureFeature": true,
+    "description": "Rich record of service within Civic Passport — experiences not hour counts",
+    "notSimplyHours": true,
+    "capturesExperiences": true,
+    "recordTypes": [
+      "communitiesServed",
+      "missionsCompleted",
+      "skillsPracticed",
+      "newSkillsLearned",
+      "peopleMentored",
+      "teamsWorkedWith",
+      "leadershipRolesAccepted",
+      "communityAppreciationReceived",
+      "reflectionsWritten",
+      "storiesShared"
+    ],
+    "exampleStory": "Organized three campus welcome weeks. Mentored eight volunteers. Worked with nine Arkansas campuses. Created two statewide playbooks.",
+    "notExample": "Volunteer Hours: 146",
+    "inspiresContinuedService": true,
+    "orchestrators": {
+      "append": "appendVolunteerPassportEntry(participantId, experiencePayload)",
+      "get": "getVolunteerPassport(participantId)"
+    },
+    "database": "DB-VOLUNTEER-PASSPORT",
+    "table": "volunteer_passport_entries"
+  },
+  "civicPassportIntegration": {
+    "volunteerPassportIsFirstClassSection": true,
+    "requirement": "CJT-001",
+    "sections": {
+      "journeyTimeline": "CJT-001",
+      "volunteerPassport": "VDS-M17",
+      "growthLeadership": "PGL-001",
+      "recognition": "CRA-001",
+      "relationships": "NET-001"
+    }
+  },
+  "platformIntegrations": {
+    "OEX-001": "opportunity discovery",
+    "OBE-001": "explainable matching",
+    "TSOS-001": "scheduling",
+    "EOS-001": "mission needs, DOB",
+    "EEOS-001": "event QR check-in",
+    "MDS-001": "canvas participants and skills",
+    "CCE-001": "skills matching",
+    "CJT-001": "civic passport",
+    "CRA-001": "recognition",
+    "PGL-001": "growth mentorship",
+    "ACN-M26": "MOR volunteer section",
+    "CAM-001": "attention budget"
+  },
+  "v1Scope": {
+    "philosophyDocumented": true,
+    "journeyPathway": true,
+    "profileAvailabilitySkills": true,
+    "schedulingQrCheckIn": true,
+    "recognitionReflectionDevelopment": true,
+    "volunteerPassportSpec": true,
+    "volunteerUiStub": true,
+    "qrCheckInFlow": "v1.1 with EEOS-001",
+    "aiRecommendations": "future"
+  }
+}

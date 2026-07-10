@@ -1,0 +1,17 @@
+{
+  "version": "1.0.0",
+  "volume": 2,
+  "docPath": "docs/master/DATA_ARCHITECTURE_BIBLE.md",
+  "requirementId": "DAB-001",
+  "productName": "Data Architecture Bible",
+  "status": "v1_structure_complete",
+  "priority": "critical",
+  "canonicalEntities": [
+    "Participant", "Community", "EducationalInstitution", "County",
+    "Mission", "Initiative", "Project", "Task", "Event", "Opportunity",
+    "Story", "Lesson", "Partnership", "KnowledgeObject", "Team", "Capacity", "RelationshipEdge"
+  ],
+  "graphPattern": "entity_relationships",
+  "signatureGraphs": ["trust", "growth", "conversation", "capability", "decision", "improvement", "operational", "impact"],
+  "migrationOrder": ["identity", "graph", "action_hierarchy", "growth_invitation", "knowledge_stories", "intelligence_aggregates"]
+}

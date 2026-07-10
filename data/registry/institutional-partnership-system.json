@@ -1,0 +1,195 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/phase-06/INSTITUTIONAL_PARTNERSHIP_SYSTEM.md",
+  "acronym": "IPS",
+  "requirementId": "IPS-001",
+  "plannedAliasSuperseded": "PTN-001",
+  "extends": "SCN-001",
+  "governedBy": "GCN-001",
+  "phaseRequirementId": "GOS-001",
+  "productName": "Institutional Partnership System",
+  "beyondIndividualCommunities": true,
+  "bridgeToCivicEcosystem": true,
+  "guidingPrinciple": "Communities become stronger when institutions work together in service of the public good.",
+  "principle": "Partnerships expand opportunities while preserving community independence.",
+  "purpose": "Build lasting relationships with educational, nonprofit, civic, business, and public institutions — shared missions not organizational control.",
+  "philosophy": {
+    "institutionsBring": ["knowledge", "facilities", "mentors", "fundingOpportunities", "training", "networks", "experience"],
+    "communitiesBring": ["energy", "relationships", "ideas", "volunteers", "leadership", "localKnowledge"],
+    "togetherAccomplishMore": true,
+    "partnershipNotSponsorship": true
+  },
+  "partnerCategories": {
+    "requirementRef": "IPS-M04",
+    "orchestrator": "getPartnerCategoryConfig(categoryId)",
+    "categories": [
+      "educationalInstitutions",
+      "studentOrganizations",
+      "communityOrganizations",
+      "nonprofitOrganizations",
+      "publicInstitutions",
+      "businesses",
+      "professionalCommunities"
+    ],
+    "firstClassEntities": true,
+    "separateFromParticipantCommunities": true
+  },
+  "partnershipProfiles": {
+    "requirementRef": "IPS-M05",
+    "route": "/institutions/[slug]",
+    "orchestrator": "getPartnershipProfile(partnerId)",
+    "includes": [
+      "mission",
+      "areasOfInterest",
+      "communitiesServed",
+      "contactInformation",
+      "opportunitiesOffered",
+      "facilities",
+      "programs",
+      "skills",
+      "events",
+      "partnershipHistory"
+    ]
+  },
+  "partnershipOpportunities": {
+    "requirementRef": "IPS-M06",
+    "integrates": "OEX-001",
+    "examples": [
+      "volunteerOpportunities",
+      "internships",
+      "mentorship",
+      "meetingSpace",
+      "training",
+      "guestSpeakers",
+      "equipment",
+      "communityProjects",
+      "researchCollaboration",
+      "scholarshipsFuture"
+    ]
+  },
+  "partnershipDirectory": {
+    "requirementRef": "IPS-M07",
+    "route": "/partners/directory",
+    "orchestrator": "searchPartners(filters?)",
+    "searchBy": [
+      "location",
+      "mission",
+      "communityServed",
+      "services",
+      "educationalFocus",
+      "volunteerOpportunities",
+      "skills",
+      "tags"
+    ]
+  },
+  "partnershipRequests": {
+    "requirementRef": "IPS-M08",
+    "orchestrator": "createPartnershipRequest(communityId, partnerId, requestType, details)",
+    "examples": [
+      "guestSpeaker",
+      "meetingSpace",
+      "volunteerProject",
+      "mentorship",
+      "internshipPartner",
+      "training"
+    ],
+    "consentRequired": true
+  },
+  "partnershipHistory": {
+    "requirementRef": "IPS-M09",
+    "orchestrator": "getPartnershipHistory(communityId | partnerId)",
+    "preserves": [
+      "jointMissions",
+      "sharedEvents",
+      "communityImpact",
+      "stories",
+      "experiencePlaybooks",
+      "lessonsLearned"
+    ],
+    "feeds": ["CLS-001", "CST-001", "GOS-M16"]
+  },
+  "communityIndependence": {
+    "requirementRef": "IPS-M10",
+    "communitiesRetain": ["leadership", "missionPriorities", "decisionMaking", "identity"],
+    "collaborativeNotControlling": true,
+    "communityApprovedPartnerVisibility": true
+  },
+  "mutualValuePrinciple": {
+    "requirementRef": "IPS-M14",
+    "constitutionalPrinciple": true,
+    "candidatePrinciple": "CP-019",
+    "statement": "Partnerships should create mutual value.",
+    "communityGains": ["opportunities", "expertise", "support"],
+    "institutionGains": ["meaningfulEngagementWithStudentsVolunteersCommunities"],
+    "longTermNotOneTime": true
+  },
+  "arkansasCivicEcosystemMap": {
+    "acronym": "ACEM",
+    "requirementRef": "IPS-M13",
+    "signatureFeature": true,
+    "description": "Statewide map of communities and institutions connected — connections not ownership",
+    "route": "/map/ecosystem",
+    "orchestrator": "getArkansasCivicEcosystemMap(filters?, layers?)",
+    "complements": ["CGO-M16", "CCS-M16", "CST-M16", "CGIS-M16"],
+    "examplesVisible": [
+      "universitiesMentoringCounties",
+      "librariesHostingWorkshops",
+      "studentOrgsServiceProjects",
+      "nonprofitsMultipleCampuses",
+      "businessesMeetingSpace",
+      "museumsEducationalInitiatives"
+    ],
+    "answersQuestions": [
+      "countiesWithoutInstitutionalPartners",
+      "universitiesCollaborateBroadly",
+      "nonprofitsActiveMultipleRegions",
+      "internshipOpportunities",
+      "institutionalExpertiseByMission"
+    ],
+    "connectionsNotOwnership": true,
+    "layerToggles": ["partnerCategory", "opportunityType", "connectionStrength", "gapsView"]
+  },
+  "extendsSCN": {
+    "SCN-001": "statewide community collaboration",
+    "IPS-001": "institutional layer bridging civic ecosystem",
+    "scnQuestion": "How do communities collaborate?",
+    "ipsQuestion": "How do institutions and communities strengthen one another?"
+  },
+  "platformIntegrations": {
+    "SCN-001": "collaboration foundation",
+    "OEX-001": "partnership opportunities",
+    "OBE-001": "matching",
+    "CGO-001": "growth and coverage",
+    "CEF-001": "new community partner connections",
+    "IOS-001": "joint initiatives",
+    "CST-001": "partnership stories",
+    "CLS-001": "partnership legacy",
+    "CKLS-001": "playbooks",
+    "CGIS-001": "partnership intelligence",
+    "SEC-001": "privacy and consent",
+    "INST-001": "educational institution registry"
+  },
+  "futureAiAssistance": {
+    "facilitatesIntroductionsOnly": true,
+    "neverMakesPartnershipDecisions": true,
+    "maySupport": [
+      "recommendInstitutionalPartners",
+      "identifySharedInterests",
+      "suggestCollaborativeInitiatives",
+      "recommendMentors",
+      "highlightPartnershipOpportunities",
+      "summarizeSuccessfulPartnerships"
+    ],
+    "explainableRecommendations": true
+  },
+  "v1Scope": {
+    "philosophyDocumented": true,
+    "categoriesAndProfiles": true,
+    "directoryOpportunitiesRequests": true,
+    "historyAndIndependence": true,
+    "mutualValuePrinciple": true,
+    "civicEcosystemMapSpec": true,
+    "liveEcosystemMapAggregation": "v1.1",
+    "partnerVerificationWorkflow": "v1.2"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "version": "1.0.0",
+  "volume": 4,
+  "docPath": "docs/master/AI_INTELLIGENCE_BIBLE.md",
+  "requirementId": "AIB-001",
+  "productName": "AI & Intelligence Bible",
+  "status": "v1_structure_complete",
+  "priority": "critical",
+  "constitutionalPrinciple": "AI advises; people decide",
+  "intelligenceLayers": [
+    { "name": "LocalBrain", "scope": "participant" },
+    { "name": "Community Brain", "scope": "community" },
+    { "name": "Operations Intelligence", "scope": "operational" },
+    { "name": "Growth Intelligence", "scope": "growth" },
+    { "name": "Impact Intelligence", "scope": "impact" }
+  ],
+  "promptStorage": "prompts/{domain}/{name}.v{semver}.md",
+  "humanApprovalRequired": ["publish_story_summary", "statewide_insight", "outbound_message_draft"]
+}

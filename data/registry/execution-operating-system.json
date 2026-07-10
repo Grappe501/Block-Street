@@ -1,0 +1,260 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/phase-05/EXECUTION_OPERATING_SYSTEM.md",
+  "acronym": "EOS",
+  "requirementId": "EOS-001",
+  "supersedes": "TWS-001",
+  "governedBy": "ACN-001",
+  "notATaskManager": true,
+  "productName": "Execution System",
+  "guidingPrinciple": "People complete missions. Tasks simply describe the work.",
+  "principle": "People don't wake up wanting to manage tasks — they wake up wanting to accomplish something meaningful.",
+  "purpose": "Coordinate every action required to move a mission from planning to successful completion — clear, collaborative, adaptive execution.",
+  "executionPhilosophy": {
+    "questions": [
+      "whatAreWeTryingToAccomplish",
+      "whatNeedsToHappenNext",
+      "whoCanHelp",
+      "whatResourcesAreNeeded",
+      "areWeMakingProgress",
+      "whatShouldWeLearn"
+    ]
+  },
+  "executionHierarchy": {
+    "chain": ["mission", "project", "milestone", "workPackage", "task", "activity", "completion"],
+    "extends": "ACN-M08",
+    "noOrphanTasks": true
+  },
+  "missionDashboard": {
+    "description": "Mission command center — operational dashboard for every mission",
+    "route": "/mission/[slug]",
+    "extends": "MPS-M06",
+    "widgets": [
+      "missionStatus",
+      "currentMilestone",
+      "upcomingWork",
+      "volunteerNeeds",
+      "timeline",
+      "communityImpact",
+      "risks",
+      "resources",
+      "recentActivity",
+      "quickActions"
+    ],
+    "missionStatementAlwaysVisible": true
+  },
+  "milestoneSystem": {
+    "description": "Divide large missions into manageable phases — create momentum",
+    "examples": [
+      "planningComplete",
+      "venueReserved",
+      "volunteersRecruited",
+      "trainingCompleted",
+      "eventDay",
+      "followUp",
+      "reflection",
+      "knowledgeArchive"
+    ],
+    "orchestrators": {
+      "advance": "advanceMilestone(missionId, milestoneId)",
+      "progress": "getMilestoneProgress(missionId)"
+    }
+  },
+  "workPackages": {
+    "description": "Tasks naturally belong together — meaningful packages not isolated task lists",
+    "examples": [
+      { "key": "communications", "tasks": ["announcements", "reminders", "socialPosts"] },
+      { "key": "volunteer", "tasks": ["recruitment", "training", "scheduling"] },
+      { "key": "technology", "tasks": ["avSetup", "registrationSystems"] },
+      { "key": "logistics", "tasks": ["venue", "transportation", "supplies"] },
+      { "key": "photography", "tasks": ["coverage", "uploads", "permissions"] },
+      { "key": "training", "tasks": ["materials", "sessions", "checklists"] }
+    ],
+    "reusableTemplates": true,
+    "orchestrators": {
+      "create": "createWorkPackage(missionId, templateKey)",
+      "assign": "assignWorkPackage(packageId, ownerId)"
+    }
+  },
+  "taskSystem": {
+    "fields": [
+      "title",
+      "purpose",
+      "description",
+      "mission",
+      "project",
+      "milestone",
+      "workPackage",
+      "owner",
+      "collaborators",
+      "priority",
+      "status",
+      "dependencies",
+      "estimatedEffort",
+      "dueDate",
+      "completionNotes",
+      "relatedFiles",
+      "knowledgeLinks"
+    ],
+    "purposeRequired": true,
+    "subtasksAsActivities": true
+  },
+  "taskStates": {
+    "workflow": [
+      "notStarted",
+      "ready",
+      "inProgress",
+      "waiting",
+      "blocked",
+      "needsReview",
+      "completed",
+      "archived"
+    ],
+    "appendOnlyTransitions": true
+  },
+  "dependencies": {
+    "examples": [
+      "taskBAfterTaskA",
+      "trainingBeforeSetup",
+      "venueBeforeAnnouncement"
+    ],
+    "orchestrators": {
+      "add": "addTaskDependency(taskId, dependsOnTaskId)",
+      "blocked": "getBlockedTasks(missionId)",
+      "conflicts": "detectDependencyConflicts(missionId)"
+    },
+    "autoStateOnBlock": true
+  },
+  "assignments": {
+    "collaborationFirst": true,
+    "roles": [
+      { "key": "primaryOwner", "ref": "ACN-M09" },
+      { "key": "supportingParticipant", "permission": "contribute" },
+      { "key": "mentor", "ref": "PGL-001" },
+      { "key": "reviewer", "permission": "approveNeedsReview" },
+      { "key": "observer", "permission": "visibilityOnly" }
+    ]
+  },
+  "adaptivePlanning": {
+    "flexible": true,
+    "adaptWhen": ["volunteersUnavailable", "weatherChanges", "resourcesDelayed", "prioritiesShift"],
+    "preserveHistoricalContext": true,
+    "missionPurposeImmutable": true
+  },
+  "automation": {
+    "future": true,
+    "capabilities": [
+      "recurringTasks",
+      "automaticReminders",
+      "checklistGeneration",
+      "milestoneProgression",
+      "volunteerScheduling",
+      "templateReuse"
+    ],
+    "removesRepetitionNotDecisions": true,
+    "optInPerCommunity": true
+  },
+  "mobileExecution": {
+    "actionFirst": true,
+    "capabilities": [
+      "checkOffWork",
+      "uploadPhotos",
+      "recordNotes",
+      "requestHelp",
+      "scanQrCodes",
+      "viewDailyOperationsBrief"
+    ],
+    "dailyOperationsBriefMobilePrimary": true
+  },
+  "executionHistory": {
+    "feeds": [
+      "missionOperatingRecord",
+      "communityBrain",
+      "communityLegacy",
+      "participantTimeline",
+      "capabilityGraph",
+      "knowledgeLibrary"
+    ],
+    "appendOnly": true
+  },
+  "futureAiAssistance": {
+    "advisoryOnly": true,
+    "capabilities": [
+      "suggestNextTasks",
+      "identifyBottlenecks",
+      "recommendVolunteers",
+      "surfacePlaybooks",
+      "estimateTimelines",
+      "detectDependencyConflicts",
+      "recommendProcessImprovements"
+    ]
+  },
+  "dailyOperationsBrief": {
+    "acronym": "DOB",
+    "requirementRef": "EOS-M17",
+    "signatureFeature": true,
+    "description": "Personalized mission execution brief — most frequently used execution screen; participant doesn't search for work",
+    "exampleGreeting": "Good morning, Sarah.",
+    "surfaces": [
+      "scheduleEvents",
+      "volunteerGaps",
+      "workPackageProgress",
+      "staffingStatus",
+      "contextualInfo",
+      "milestoneProgress",
+      "newParticipants"
+    ],
+    "quickActions": [
+      "confirmVolunteerArrival",
+      "sendEventReminder",
+      "uploadPhotos",
+      "reviewTomorrowSchedule"
+    ],
+    "orchestrator": "generateDailyOperationsBrief(participantId, missionId?, date)",
+    "database": "DB-DOB",
+    "table": "daily_operations_briefs",
+    "mobileFirst": true
+  },
+  "threeBriefStack": {
+    "description": "Aware, organized, supportive — not overwhelming",
+    "briefs": [
+      { "name": "Morning Brief", "scope": "personal", "requirement": "PCC-001" },
+      { "name": "Community Pulse", "scope": "community", "requirement": "CCC-001" },
+      { "name": "Daily Operations Brief", "scope": "missionExecution", "requirement": "EOS-M17" }
+    ]
+  },
+  "mdsRelationship": {
+    "executionAfterDesign": true,
+    "noTasksUntilDesignReviewComplete": true,
+    "canvasSuccessIndicatorsDriveProgress": true
+  },
+  "platformIntegrations": {
+    "ACN-001": "mission-first execution history to MOR",
+    "MDS-001": "design before tasks",
+    "MPS-001": "mission HQ shell",
+    "TSOS-001": "timeline and DOB schedule",
+    "VDS-001": "volunteer needs and development",
+    "CCS-001": "capacity",
+    "EEOS-001": "event-day execution",
+    "PCC-001": "morning brief personal layer",
+    "CCC-001": "community pulse",
+    "OPIS-001": "advisory assistance"
+  },
+  "eventOperatingSystemNote": {
+    "step": "5.5",
+    "name": "Experience & Event Operating System",
+    "requirement": "EEOS-001",
+    "relationship": "experiences as first-class entities — integrates EOS execution and VDS volunteers"
+  },
+  "v1Scope": {
+    "philosophyDocumented": true,
+    "hierarchyAndWorkPackages": true,
+    "missionDashboardSpec": true,
+    "dailyOperationsBriefSpec": true,
+    "threeBriefStack": true,
+    "mobileFirstPrinciples": true,
+    "taskUiStub": true,
+    "dobGeneration": "v1.1",
+    "automation": "future"
+  }
+}

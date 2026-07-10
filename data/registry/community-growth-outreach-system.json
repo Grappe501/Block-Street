@@ -1,0 +1,232 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/phase-06/COMMUNITY_GROWTH_OUTREACH_SYSTEM.md",
+  "acronym": "CGO",
+  "requirementId": "CGO-001",
+  "plannedAliasSuperseded": "CGX-001",
+  "extends": "CGS-001",
+  "governedBy": "GCN-001",
+  "phaseRequirementId": "GOS-001",
+  "productName": "Community Growth & Outreach System",
+  "growthNotByAccident": true,
+  "institutionalCounterpartToPON": true,
+  "guidingPrinciple": "Every community deserves the opportunity to grow through relationships, service, and local leadership.",
+  "principle": "Growth is measured by healthy participation.",
+  "purpose": "Help every campus, county, and future community intentionally expand participation, develop leaders, and ensure Arkansas representation — sustainable development not rapid recruitment.",
+  "philosophy": {
+    "growthBeginsLocally": true,
+    "communityQuestions": [
+      "whoIsParticipating",
+      "whoIsMissing",
+      "whereReachNext",
+      "whoCanWelcome",
+      "howBecomingActive"
+    ],
+    "healthyParticipationNotCountsAlone": true,
+    "planPipelinePicture": true
+  },
+  "communityGrowthDashboard": {
+    "requirementRef": "CGO-M04",
+    "route": "/community/[slug]/growth",
+    "cccWidget": true,
+    "orchestrator": "getCommunityGrowthDashboard(communityId, period?)",
+    "displays": [
+      "totalParticipants",
+      "newParticipants",
+      "returningParticipants",
+      "volunteerParticipation",
+      "leadershipPipeline",
+      "mentorshipActivity",
+      "openOpportunities",
+      "communityNeeds",
+      "recentGrowth",
+      "growthGoals"
+    ],
+    "actionableNotVanity": true,
+    "complements": ["CCC-001", "CIS-001", "GCN-M16"]
+  },
+  "representationMap": {
+    "requirementRef": "CGO-M05",
+    "examples": [
+      "residenceHallsRepresented",
+      "studentOrganizationsParticipating",
+      "academicDepartmentsRepresented",
+      "countyCommunities",
+      "neighborhoodsReached",
+      "futureHighSchoolsConnected"
+    ],
+    "identifiesOutreachOpportunities": true,
+    "visibilityNotJudgment": true
+  },
+  "outreachZones": {
+    "requirementRef": "CGO-M06",
+    "configurablePerCommunityType": true,
+    "campusExamples": ["residenceHalls", "academicColleges", "studentOrganizations"],
+    "countyExamples": ["neighborhoods", "countyCommunities", "futureSchoolDistricts"],
+    "structuredNotRigid": true
+  },
+  "growthGoals": {
+    "requirementRef": "CGO-M07",
+    "locallyDetermined": true,
+    "examples": [
+      "welcomeNewParticipants",
+      "launchNewTeam",
+      "increaseVolunteerParticipation",
+      "expandMentorship",
+      "reachUnderrepresentedZone",
+      "strengthenCountyRepresentation"
+    ],
+    "noPlatformImposedQuotas": true
+  },
+  "growthCampaigns": {
+    "requirementRef": "CGO-M08",
+    "relationshipBuildingNotMarketing": true,
+    "examples": [
+      "welcomeWeek",
+      "volunteerMonth",
+      "leadershipRecruitment",
+      "mentorDrive",
+      "communityServiceWeek",
+      "studentOrganizationFair"
+    ],
+    "integrates": ["EEOS-001", "CGO-M11"]
+  },
+  "outreachActivities": {
+    "requirementRef": "CGO-M09",
+    "examples": [
+      "informationTables",
+      "campusPresentations",
+      "communityMeetings",
+      "serviceProjects",
+      "coffeeConversations",
+      "welcomeEvents",
+      "peerToPeerInvitations"
+    ],
+    "invitationMechanicsIn": "ICS-001"
+  },
+  "communityReadiness": {
+    "requirementRef": "CGO-M10",
+    "extends": "GCN-M10",
+    "checklist": [
+      "activeMentors",
+      "volunteerOpportunities",
+      "upcomingEvents",
+      "welcomeResources",
+      "communityBrainUpdates",
+      "orientationMaterials"
+    ],
+    "orchestrator": "assessCommunityGrowthReadiness(communityId)"
+  },
+  "growthTimeline": {
+    "requirementRef": "CGO-M11",
+    "examples": [
+      "communityFounded",
+      "firstOrganizer",
+      "growthMilestones",
+      "majorOutreachEfforts",
+      "leadershipTransitions",
+      "annualAchievements"
+    ],
+    "feeds": ["CLS-001", "CKLS-001", "CST-001"]
+  },
+  "growthHeatMap": {
+    "requirementRef": "CGO-M12",
+    "visibilityNotJudgment": true,
+    "examples": [
+      "lowParticipationBuildings",
+      "countiesWithFewVolunteers",
+      "communitiesNeedingMentors",
+      "hallsWithoutLeadershipOutreach",
+      "regionsLackingPartnerships"
+    ],
+    "communityScoped": true,
+    "statewideLayer": "CGO-M16"
+  },
+  "growthResources": {
+    "requirementRef": "CGO-M13",
+    "includes": [
+      "outreachPlaybooks",
+      "presentationTemplates",
+      "printableQrPosters",
+      "welcomeMaterials",
+      "trainingGuides",
+      "eventKits"
+    ],
+    "requirements": ["CCE-001", "CKLS-001", "NET-002"]
+  },
+  "communityStories": {
+    "requirementRef": "CGO-M14",
+    "requirement": "CST-001",
+    "reinforcesCulture": true
+  },
+  "arkansasCoverageMap": {
+    "acronym": "ACM",
+    "requirementRef": "CGO-M16",
+    "signatureFeature": true,
+    "description": "Statewide expansion map — every county and institution visible with growth and readiness signals",
+    "originalGoal": "Every Arkansas county has a place, every college has a place",
+    "route": "/map/coverage",
+    "orchestrator": "getArkansasCoverageMap(filters?, layers?)",
+    "perCommunitySignals": [
+      "communityLaunched",
+      "participantCount",
+      "activeMentors",
+      "activeTeams",
+      "activeMissions",
+      "volunteerOpportunities",
+      "communityHealth",
+      "growthTrends",
+      "partnershipStatus"
+    ],
+    "coverageLayers": [
+      "countiesWithoutOrganizers",
+      "collegesNeedingLeadershipOutreach",
+      "tradeSchoolsNotJoined",
+      "underrepresentedZones",
+      "communitiesReadyToMentorNeighbors"
+    ],
+    "visibilityNotJudgment": true,
+    "complements": ["COS-M09", "AOS-M09", "CCS-M16", "SCN-M14", "OIS-001"]
+  },
+  "extendsCGS": {
+    "CGS-001": "living organisms, lifecycle, Health Check, sustainability",
+    "CGO-001": "intentional growth, outreach, coverage map",
+    "cgsQuestion": "Is this community healthy?",
+    "cgoQuestion": "How is this community growing and where should it reach next?"
+  },
+  "platformIntegrations": {
+    "CGS-001": "sustainability foundation",
+    "CCC-001": "growth dashboard widget",
+    "CIS-001": "community health signals",
+    "OEX-001": "open opportunities and needs",
+    "SCN-001": "cross-community mentorship",
+    "PON-001": "peer invitations feed representation",
+    "CLD-001": "leadership pipeline and mentors in zones",
+    "WBS-001": "welcome resources",
+    "CNTY-001": "county registry",
+    "INST-001": "institution registry"
+  },
+  "futureAiAssistance": {
+    "advisoryOnly": true,
+    "maySupport": [
+      "identifyUnderservedGroups",
+      "recommendOutreachOpportunities",
+      "suggestMentorAssignments",
+      "highlightSuccessfulStrategies",
+      "recommendPartnerships",
+      "surfaceOutreachPlaybooks"
+    ]
+  },
+  "v1Scope": {
+    "philosophyDocumented": true,
+    "growthDashboardSpec": true,
+    "representationMapAndZones": true,
+    "goalsCampaignsActivities": true,
+    "readinessAndTimeline": true,
+    "heatMapArchitecture": true,
+    "resourcesAndStories": true,
+    "arkansasCoverageMapSpec": true,
+    "liveDashboardAggregation": "v1.1",
+    "fullCoverageMapLayers": "v1.1"
+  }
+}

@@ -31,7 +31,7 @@
       "key": "service",
       "label": "Service",
       "examples": ["volunteer", "communityProject", "campusActivity", "countyInitiative", "specialEvent", "emergencyResponseFuture"],
-      "sources": ["VOL-001", "OIS-M09"]
+      "sources": ["VDS-001", "OIS-M09"]
     },
     {
       "key": "learning",

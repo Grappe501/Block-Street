@@ -1,0 +1,230 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/phase-06/COMMUNITY_LEADERSHIP_DEVELOPMENT_SYSTEM.md",
+  "acronym": "CLD",
+  "requirementId": "CLD-001",
+  "plannedAliasSuperseded": "AMB-001",
+  "extends": "PGL-001",
+  "governedBy": "GCN-001",
+  "phaseRequirementId": "GOS-001",
+  "productName": "Community Leadership Development System",
+  "leadershipNotTitles": true,
+  "ambassadorWasRoleNotSystem": true,
+  "guidingPrinciple": "Strong communities are built by leaders who help create more leaders.",
+  "principle": "Leadership is a pattern of service, not a position.",
+  "purpose": "Identify, encourage, train, and support participants growing into organizers, mentors, and community leaders — service not authority; continuous next-generation development.",
+  "philosophy": {
+    "leadershipIsServiceNotAuthority": true,
+    "growsThroughContribution": true,
+    "notPopularityBased": true,
+    "recognizesWelcomingProblemSolvingKnowledgeSharing": true,
+    "protectsFromFewPeopleDependency": true
+  },
+  "leadershipJourney": {
+    "requirementRef": "CLD-M04",
+    "stages": [
+      "participant",
+      "volunteer",
+      "reliableContributor",
+      "teamOrganizer",
+      "communityOrganizer",
+      "mentor",
+      "communityBuilder",
+      "statewideMentor"
+    ],
+    "progressionBasedOn": ["demonstratedParticipation", "willingness"],
+    "notPopularity": true,
+    "communityScoped": true,
+    "orchestrator": "getLeadershipJourney(participantId, communityId?)",
+    "alignsWith": ["JRN-001", "GCN-M06", "VDS-001", "EOS-001", "TWG-001"]
+  },
+  "leadershipProfile": {
+    "requirementRef": "CLD-M05",
+    "route": "/leadership",
+    "orchestrator": "getLeadershipProfile(participantId)",
+    "extends": ["PCC-001", "PGL-001"],
+    "includes": [
+      "currentStage",
+      "communitiesServed",
+      "volunteerExperience",
+      "projectsCompleted",
+      "mentorshipActivity",
+      "trainingCompleted",
+      "leadershipInterests",
+      "recognitionReceived",
+      "communityStories"
+    ],
+    "privacyControlled": true,
+    "requirement": "SEC-001"
+  },
+  "leadershipOpportunities": {
+    "requirementRef": "CLD-M06",
+    "integrates": "OEX-001",
+    "accessibleToEveryone": true,
+    "examples": [
+      "leadingMission",
+      "organizingEvent",
+      "mentoringNewParticipant",
+      "facilitatingMeeting",
+      "servingOnCommittee",
+      "launchingNewCommunity",
+      "supportingAnotherCampusOrCounty"
+    ],
+    "orchestrator": "getLeadershipOpportunities(participantId | communityId, filters?)"
+  },
+  "leadershipDevelopment": {
+    "requirementRef": "CLD-M07",
+    "learnedThroughExperienceAndSupport": true,
+    "examples": [
+      "leadershipWorkshops",
+      "peerLearning",
+      "facilitatorTraining",
+      "conflictResolution",
+      "publicSpeaking",
+      "meetingFacilitation",
+      "projectPlanning",
+      "volunteerCoordination",
+      "arkansasCivicAcademyFuture"
+    ],
+    "feeds": ["CCE-001", "CKLS-001"]
+  },
+  "mentorshipNetwork": {
+    "requirementRef": "CLD-M08",
+    "menteeTypes": [
+      "newVolunteers",
+      "emergingOrganizers",
+      "communityCoordinators",
+      "newCampuses",
+      "newCounties",
+      "futureHighSchools"
+    ],
+    "normalCommunityLife": true,
+    "crossCommunity": "SCN-001",
+    "orchestrator": "getMentorshipNetwork(scope, filters?)"
+  },
+  "leadershipReadiness": {
+    "requirementRef": "CLD-M09",
+    "optInInterests": [
+      "leading",
+      "mentoring",
+      "organizing",
+      "training",
+      "statewideInitiatives"
+    ],
+    "matchWithOpportunities": true,
+    "consentRequired": true
+  },
+  "leadershipSuccession": {
+    "requirementRef": "CLD-M10",
+    "orchestrator": "assessLeadershipSuccession(communityId)",
+    "identifies": [
+      "emergingLeaders",
+      "potentialMentors",
+      "knowledgeRequiringDocumentation",
+      "upcomingGraduations",
+      "leadershipGaps"
+    ],
+    "continuousNotCrisis": true,
+    "feeds": ["CIS-001", "CGO-M16"]
+  },
+  "leadershipReflections": {
+    "requirementRef": "CLD-M11",
+    "examples": ["lessonsLearned", "challenges", "advice", "communityStories", "mentorshipExperiences"],
+    "feeds": ["CKLS-001", "CLS-001"],
+    "privateByDefault": true
+  },
+  "leadershipRecognition": {
+    "requirementRef": "CLD-M12",
+    "extends": "CRA-001",
+    "phase6Extension": "CCR-001",
+    "emphasizesContribution": true,
+    "notGamification": true,
+    "examples": [
+      "welcomingOthers",
+      "developingNewLeaders",
+      "communityStewardship",
+      "mentorship",
+      "service",
+      "knowledgeSharing"
+    ]
+  },
+  "leadershipNetwork": {
+    "requirementRef": "CLD-M13",
+    "relationalNotHierarchical": true,
+    "examples": [
+      "mentorConnections",
+      "leadershipCollaborations",
+      "crossCampusSupport",
+      "regionalLeadershipTeams",
+      "sharedInitiatives"
+    ],
+    "feeds": "GOS-M16"
+  },
+  "leadershipConstellation": {
+    "acronym": "LC",
+    "requirementRef": "CLD-M16",
+    "signatureFeature": true,
+    "description": "Leadership shown as relationships rather than org chart boxes — mentorship, collaboration, knowledge transfer",
+    "notOrgChart": true,
+    "notLeaderboard": true,
+    "route": "/leadership/constellation",
+    "orchestrator": "getLeadershipConstellation(scope, filters?)",
+    "emphasizes": [
+      "mentorship",
+      "collaboration",
+      "sharedProjects",
+      "knowledgeTransfer",
+      "communityBuilding"
+    ],
+    "answersQuestions": [
+      "whoDevelopedTodaysLeaders",
+      "mentorsSupportingMultipleCampuses",
+      "emergingLeadersAppearing",
+      "communitiesWithStrongSuccessionPipelines"
+    ],
+    "complements": ["PON-M16", "GOS-M16", "PGL-001"]
+  },
+  "extendsPGL": {
+    "PGL-001": "personal growth, Growth Graph, five domains, reflection",
+    "CLD-001": "community leadership journey, succession, constellation",
+    "pglQuestion": "How am I growing?",
+    "cldQuestion": "How is leadership spreading through our communities?"
+  },
+  "platformIntegrations": {
+    "PGL-001": "personal growth foundation",
+    "VDS-001": "volunteer experience evidence",
+    "OEX-001": "leadership opportunities",
+    "CIS-001": "community health and succession signals",
+    "CKLS-001": "Community Brain reflections and training",
+    "CLS-001": "legacy from leaders",
+    "CRA-001": "recognition categories",
+    "CGO-001": "growth dashboard leadership pipeline",
+    "SCN-001": "cross-community mentorship",
+    "CEF-001": "new community launch support",
+    "LCN-001": "graduation succession and lifelong participation",
+    "SEC-001": "privacy and consent"
+  },
+  "futureAiAssistance": {
+    "advisoryOnly": true,
+    "neverDeterminesWhoLeads": true,
+    "maySupport": [
+      "recommendLeadershipOpportunities",
+      "identifyPotentialMentors",
+      "suggestTraining",
+      "highlightSuccessionNeeds",
+      "recommendCrossCommunityCollaboration",
+      "connectEmergingWithExperienced"
+    ]
+  },
+  "v1Scope": {
+    "philosophyDocumented": true,
+    "leadershipJourneySpec": true,
+    "leadershipProfileSpec": true,
+    "opportunitiesDevelopmentReadiness": true,
+    "mentorshipAndSuccession": true,
+    "reflectionsRecognitionNetwork": true,
+    "leadershipConstellationSpec": true,
+    "liveJourneyAutomation": "v1.1",
+    "fullConstellationGraphUI": "v1.1"
+  }
+}

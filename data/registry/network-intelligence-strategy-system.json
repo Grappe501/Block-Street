@@ -1,0 +1,253 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/phase-06/NETWORK_INTELLIGENCE_STRATEGY_SYSTEM.md",
+  "acronym": "NISS",
+  "requirementId": "NISS-001",
+  "plannedAliasSuperseded": "NIN-001",
+  "implements": "GOS-M16",
+  "governedBy": "GCN-001",
+  "phaseRequirementId": "GOS-001",
+  "productName": "Network Intelligence & Strategy System",
+  "notSimplyAnalytics": true,
+  "platformBecomesAwareOfItself": true,
+  "doesNotControlNetwork": true,
+  "guidingPrinciple": "The strongest networks understand themselves without controlling themselves.",
+  "principle": "Awareness creates better collaboration.",
+  "purpose": "Continuously observe statewide network health, relationships, growth, and activity to help communities make better strategic decisions while preserving local autonomy.",
+  "philosophy": {
+    "communitiesCanAnswer": [
+      "whereStrongest",
+      "whereOpportunities",
+      "whereNeedHelp",
+      "howNetworkEvolving",
+      "whatPatternsEmerging",
+      "whatShouldWeLearn"
+    ],
+    "statewideSharedAwareness": true,
+    "advisesCommunitiesDecide": true
+  },
+  "strategicAwareness": {
+    "requirementRef": "NISS-M04",
+    "orchestrator": "getStrategicAwareness(scope, domains?, filters?)",
+    "domains": [
+      "communityGrowth",
+      "volunteerParticipation",
+      "leadershipDevelopment",
+      "missionActivity",
+      "partnerships",
+      "storytelling",
+      "knowledgeCreation",
+      "communityHealth",
+      "operationalReadiness",
+      "relationshipExpansion"
+    ],
+    "aggregationLayerNotDuplicateData": true
+  },
+  "statewideCoverage": {
+    "requirementRef": "NISS-M05",
+    "orchestrator": "getStatewideCoverage(filters?, layers?)",
+    "visualizes": [
+      "everyCounty",
+      "everyCampus",
+      "tradeSchools",
+      "futureHighSchools",
+      "communityLaunchStatus",
+      "representation",
+      "mentorship",
+      "regionalCollaboration"
+    ]
+  },
+  "communityHealthIntelligence": {
+    "requirementRef": "NISS-M06",
+    "orchestrator": "getCommunityHealthIntelligence(communityId)",
+    "integrates": [
+      "CIS-001",
+      "CGIS-001",
+      "OPIS-001",
+      "CIIS-001",
+      "CLD-001",
+      "WBS-001",
+      "CKLS-001"
+    ],
+    "unifiedHealthPicture": true
+  },
+  "leadershipIntelligence": {
+    "requirementRef": "NISS-M07",
+    "orchestrator": "getLeadershipIntelligence(scope, filters?)",
+    "understands": [
+      "emergingLeaders",
+      "mentorshipPipelines",
+      "successionPlanning",
+      "leadershipDevelopment",
+      "communitiesNeedingSupport",
+      "crossCampusMentoring"
+    ]
+  },
+  "collaborationIntelligence": {
+    "requirementRef": "NISS-M08",
+    "orchestrator": "getCollaborationIntelligence(scope, filters?)",
+    "observes": [
+      "crossCampusProjects",
+      "countyPartnerships",
+      "sharedInitiatives",
+      "volunteerExchanges",
+      "knowledgeSharing",
+      "institutionalPartnerships"
+    ]
+  },
+  "opportunityIntelligence": {
+    "requirementRef": "NISS-M09",
+    "orchestrator": "getOpportunityIntelligence(scope, filters?)",
+    "surfaces": [
+      "communitiesRequestingHelp",
+      "volunteerShortages",
+      "partnershipOpportunities",
+      "expansionReadiness",
+      "knowledgeGaps",
+      "mentorshipOpportunities"
+    ],
+    "communitiesChooseHowToRespond": true,
+    "advisoryOnly": true
+  },
+  "knowledgeIntelligence": {
+    "requirementRef": "NISS-M10",
+    "orchestrator": "getKnowledgeIntelligence(scope, filters?)",
+    "tracks": [
+      "communityBrainGrowth",
+      "missionLibraryUsage",
+      "experiencePlaybooks",
+      "storyAtlas",
+      "lessonsLearned",
+      "knowledgeReuse"
+    ]
+  },
+  "strategicForecasting": {
+    "requirementRef": "NISS-M11",
+    "orchestrator": "getStrategicForecasts(scope, horizon?)",
+    "status": "v1.2",
+    "advisoryOnly": true
+  },
+  "explainability": {
+    "requirementRef": "NISS-M12",
+    "orchestrator": "explainInsight(insightId)",
+    "everyInsightAnswers": [
+      "whatHappened",
+      "whyImportant",
+      "whatEvidence",
+      "whatActionsConsider"
+    ],
+    "noBlackBoxScores": true
+  },
+  "privacyAndGovernance": {
+    "requirementRef": "NISS-M13",
+    "authorizedAccessOnly": true,
+    "protectIndividualPrivacyInSummaries": true,
+    "roleBasedDashboards": true
+  },
+  "statewideNetworkTwin": {
+    "acronym": "SNT",
+    "requirementRef": "NISS-M16",
+    "signatureFeature": true,
+    "description": "Living model of entire ecosystem — strategic query interface analogous to Personal Digital Twin for the statewide network",
+    "route": "/network/twin",
+    "orchestrator": "getStatewideNetworkTwin(query?, scope?, filters?)",
+    "understands": [
+      "people",
+      "communities",
+      "missions",
+      "leadership",
+      "relationships",
+      "partnerships",
+      "knowledge",
+      "stories",
+      "capacity",
+      "opportunities",
+      "growth"
+    ],
+    "exampleQueries": [
+      "countiesThatCouldMentorNeighbors",
+      "campusesDevelopingNewLeaders",
+      "welcomePlaybooksStrongestParticipation",
+      "initiativesMostCrossCampusCollaboration",
+      "institutionsWithoutCommunityLaunched",
+      "communitiesRequestingMentors"
+    ],
+    "roleConfigurableViews": ["campusOrganizer", "countyCoordinator", "statewideStrategist"],
+    "complements": ["CGIS-M16", "OPIS-M17"]
+  },
+  "communityKnowledgeGraph": {
+    "acronym": "CKG",
+    "requirementRef": "NISS-M17",
+    "foundationalArchitecture": true,
+    "description": "Unified node-edge model — every person, community, institution, mission, story, event, playbook, capability, decision, and relationship interconnected",
+    "route": "/network/graph",
+    "orchestrator": "getCommunityKnowledgeGraph(scope, filters?, nodeTypes?, edgeTypes?)",
+    "implementsLivingNetworkGraph": "GOS-M16",
+    "livingNetworkGraphAlias": "getLivingNetworkGraph",
+    "unifiesGraphs": [
+      "relationshipGraph",
+      "trustGraph",
+      "growthGraph",
+      "conversationGraph",
+      "capabilityGraph",
+      "decisionGraph",
+      "improvementGraph",
+      "operationalGraph",
+      "impactChain",
+      "generationalGraph",
+      "partnershipGraph"
+    ],
+    "elevatesToCommunityOperatingSystem": true,
+    "notPrimaryUserUIMostOfTime": true,
+    "foundationForFutureCapabilities": true
+  },
+  "implementsGOSM16": {
+    "GOS-M16": "Living Network Graph vision",
+    "NISS-M17": "Community Knowledge Graph implementation",
+    "NISS-M16": "Statewide Network Twin strategic interface",
+    "gosQuestion": "Can the platform understand itself?",
+    "nissQuestion": "How does shared strategic awareness help every community lead better?"
+  },
+  "platformIntegrations": {
+    "CGIS-001": "growth intelligence",
+    "OPIS-001": "operational intelligence",
+    "CIIS-001": "impact intelligence",
+    "CIS-001": "community intelligence",
+    "CLD-001": "leadership",
+    "CGO-001": "coverage",
+    "IPS-001": "partnerships",
+    "LCN-001": "generational graph",
+    "PCN-001": "public discovery",
+    "PON-001": "relationships",
+    "CKLS-001": "knowledge",
+    "CST-001": "stories",
+    "SCN-001": "collaboration",
+    "CEF-001": "expansion",
+    "PDT-001": "personal twin analog",
+    "SEC-001": "permissions",
+    "KDG-001": "data governance",
+    "CDS-001": "decisions stay with communities"
+  },
+  "futureAiAssistance": {
+    "supportsPlanningPeopleDecide": true,
+    "maySupport": [
+      "summarizeStatewideTrends",
+      "recommendPartnerships",
+      "suggestLeadershipDevelopment",
+      "identifyCommunitiesReadyToMentor",
+      "generateAnnualStatewideReports",
+      "recommendStrategicPriorities"
+    ],
+    "explainableAndRoleAppropriate": true
+  },
+  "v1Scope": {
+    "philosophyDocumented": true,
+    "strategicAwarenessCategories": true,
+    "intelligenceDomainsDefined": true,
+    "explainabilityAndPrivacy": true,
+    "communityKnowledgeGraphSpec": true,
+    "statewideNetworkTwinSpec": true,
+    "liveGraphAggregation": "v1.1",
+    "predictiveForecasting": "v1.2"
+  }
+}

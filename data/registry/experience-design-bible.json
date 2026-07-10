@@ -1,0 +1,20 @@
+{
+  "version": "1.0.0",
+  "volume": 6,
+  "docPath": "docs/master/EXPERIENCE_DESIGN_BIBLE.md",
+  "requirementId": "EDB-001",
+  "productName": "Experience Design Bible",
+  "status": "v1_structure_complete",
+  "priority": "critical",
+  "distinction": "How people feel — not where buttons go (Volume 3)",
+  "personaArcs": ["first_time_visitor", "new_volunteer", "new_community_leader", "lifelong_member"],
+  "evaluationQuestion": "Does this strengthen relationships, deepen belonging, and help people grow into community builders?",
+  "emotionalPrinciples": [
+    "reduce_anxiety",
+    "create_confidence",
+    "celebrate_progress",
+    "build_trust_slowly",
+    "honor_culture",
+    "belonging_before_metrics"
+  ]
+}

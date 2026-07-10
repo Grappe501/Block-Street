@@ -1,0 +1,245 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/phase-06/GROWTH_CONSTITUTION.md",
+  "masterSequencePath": "docs/phase-06/PHASE_6_MASTER_SEQUENCE.md",
+  "acronym": "GCN",
+  "requirementId": "GCN-001",
+  "phaseRequirementId": "GOS-001",
+  "constitutionalRole": "Constitution of Growth — governs every future expansion of the platform",
+  "questionAnswered": "How should the network grow?",
+  "healthyGrowthNotGrowthAtAnyCost": true,
+  "guidingPrinciple": "Healthy growth begins with meaningful relationships.",
+  "principle": "Every participant represents a person — not a number.",
+  "purpose": "Establish principles governing how ASYON expands — strengthen relationships, communities, leadership, and service while preserving trust, authenticity, and local ownership.",
+  "growthPhilosophy": {
+    "growthNotForItsOwnSake": true,
+    "growthWithoutBelongingIncomplete": true,
+    "questionsGrowthMustAnswer": [
+      "whyInvitingPeople",
+      "howWillTheyBelong",
+      "whoWillWelcomeThem",
+      "whatOpportunitiesWillTheyDiscover",
+      "howWillCommunityBecomeStronger"
+    ],
+    "notMaximizeRegistrations": true,
+    "buildRelationshipsContributeHelpOthers": true
+  },
+  "permanentPlatformChoices": [
+    { "choose": "relationships", "over": "transactions" },
+    { "choose": "belonging", "over": "engagementMetrics" },
+    { "choose": "community", "over": "vanityMetrics" },
+    { "choose": "leadership", "over": "followerCounts" },
+    { "choose": "healthyGrowth", "over": "growthAtAnyCost" }
+  ],
+  "growthPrinciples": [
+    {
+      "key": "relationshipFirst",
+      "label": "Relationship First",
+      "description": "Invite people you know; support relationship-building not mass recruitment",
+      "requirements": ["RGE-001", "PRN-001", "OM-L2"]
+    },
+    {
+      "key": "communityBeforeScale",
+      "label": "Community Before Scale",
+      "description": "Communities capable of welcoming before rapidly expanding",
+      "requirements": ["CGS-001", "GCN-M10"]
+    },
+    {
+      "key": "localLeadership",
+      "label": "Local Leadership",
+      "description": "Develop new leaders; communities remain locally led",
+      "requirements": ["CCN-001", "PGL-001"]
+    },
+    {
+      "key": "sharedOpportunity",
+      "label": "Shared Opportunity",
+      "description": "Meaningful contribution paths from day one",
+      "requirements": ["OBE-001", "JRN-001"]
+    },
+    {
+      "key": "transparency",
+      "label": "Transparency",
+      "description": "Clear invitation context, data use, community operations, decisions",
+      "requirements": ["TPS-001", "CDS-001"]
+    },
+    {
+      "key": "voluntaryParticipation",
+      "label": "Voluntary Participation",
+      "description": "Encourage not pressure; invitation is opportunity not obligation",
+      "requirements": ["CP-004", "VDS-M04", "RGE-M06"]
+    },
+    {
+      "key": "diversityOfCommunities",
+      "label": "Diversity of Communities",
+      "description": "Universities, colleges, trade schools, high schools, counties, orgs — equal standing",
+      "requirements": ["CCN-M004", "CEF-001"]
+    },
+    {
+      "key": "longTermThinking",
+      "label": "Long-Term Thinking",
+      "description": "Leadership, knowledge, sustainability, institutional memory, multi-generational",
+      "requirements": ["CLS-001", "LCN-001", "LIS-001"]
+    }
+  ],
+  "growthLifecycle": {
+    "stages": [
+      "invitation",
+      "registration",
+      "welcome",
+      "belonging",
+      "participation",
+      "contribution",
+      "leadership",
+      "mentorship",
+      "legacy"
+    ],
+    "continuousCycle": true,
+    "parallels": ["JRN-001", "ACN-M04"]
+  },
+  "healthyGrowthIndicators": [
+    "returningParticipants",
+    "volunteerRetention",
+    "leadershipDevelopment",
+    "mentorship",
+    "crossCommunityRelationships",
+    "knowledgeSharing",
+    "communityResilience"
+  ],
+  "numbersAloneNeverDefineSuccess": true,
+  "growthEthics": {
+    "avoids": [
+      "manipulativeEngagement",
+      "artificialUrgency",
+      "spamInvitations",
+      "misleadingMessaging",
+      "attentionHarvesting",
+      "darkPatterns"
+    ],
+    "trustMoreValuableThanRapidGrowth": true,
+    "requirements": ["CAM-001", "TPS-001", "PEL-M13"]
+  },
+  "sharedResponsibility": {
+    "everyParticipantContributes": true,
+    "examples": [
+      "welcomingNewcomers",
+      "answeringQuestions",
+      "invitingFriends",
+      "sharingKnowledge",
+      "supportingCommunities",
+      "mentoringOthers"
+    ],
+    "growthBelongsToEveryone": true
+  },
+  "communityReadiness": {
+    "questionsBeforeSignificantGrowth": [
+      "welcomingVolunteers",
+      "meaningfulOpportunities",
+      "mentorsAvailable",
+      "activeMissions",
+      "updatedKnowledge"
+    ],
+    "strengthenNotOverwhelm": true,
+    "orchestrator": "assessCommunityGrowthReadiness(communityId)"
+  },
+  "growthReflection": {
+    "periodicQuestions": [
+      "whoJoined",
+      "whoStayed",
+      "whoBecameLeaders",
+      "whatHelpedBelonging",
+      "whatBarriersRemain"
+    ],
+    "guidesFutureGrowth": true,
+    "notShameForSlowGrowth": true
+  },
+  "invitationImpactVisibility": {
+    "constitutionalPrincipleId": "CP-016",
+    "requirementRef": "GCN-M12",
+    "statement": "Every participant should be able to see the direct impact of the people they invited into the network.",
+    "notCompetition": true,
+    "asStory": true,
+    "exampleRipple": [
+      "You invited Alex",
+      "Alex invited Jordan",
+      "Jordan started a volunteer team",
+      "That team organized a food drive",
+      "The food drive became an annual campus tradition",
+      "Three years later it has served 1,200 families"
+    ],
+    "implementedIn": ["PON-001", "ICS-001", "GOS-M16"]
+  },
+  "belongingIndex": {
+    "acronym": "BI",
+    "requirementRef": "GCN-M16",
+    "signatureFeature": true,
+    "description": "Community reflection on welcoming — not an individual score",
+    "coreQuestion": "How many people found a place where they felt they belonged?",
+    "notIndividualScore": true,
+    "communityReflection": true,
+    "route": "/community/[slug]/belonging",
+    "orchestrator": "getBelongingIndex(communityId, period?)",
+    "indicators": [
+      "joinedTeam",
+      "attendedSecondEvent",
+      "formedNewConnections",
+      "foundMentor",
+      "becameVolunteer",
+      "eventuallyInvitedSomeone",
+      "returnedAfterFirstMonth"
+    ],
+    "complements": ["CIS-001", "CGS-001"],
+    "feeds": ["CGIS-001", "GCN-M11"]
+  },
+  "futureAiAssistance": {
+    "advisoryOnly": true,
+    "neverReplaceRelationships": true,
+    "maySupport": [
+      "identifyUnderservedCommunities",
+      "recommendOnboardingImprovements",
+      "suggestMentorConnections",
+      "highlightWelcomingOpportunities",
+      "identifyParticipationGaps",
+      "recommendOutreachStrategies"
+    ],
+    "governedBy": ["ACN-M06", "OPIS-M12", "KDG-M16"]
+  },
+  "phase6ModuleInheritance": {
+    "6.1": "This document",
+    "6.2": "Personal Organizing Network · CP-016",
+    "6.3": "Community Before Scale · readiness · coverage",
+    "6.4": "Local Leadership · shared · succession",
+    "6.5": "Welcome & Belonging · First 30 Days",
+    "6.6": "Community Growth Intelligence · Deepen Before Expand",
+    "6.7": "Invitation & Connection · voluntary · transparent",
+    "6.8": "Community Culture & Recognition · Culture Garden",
+    "6.9": "Community Expansion Framework · Mutual Strengthening",
+    "6.10": "Institutional Partnership · Civic Ecosystem Map · Mutual Value",
+    "6.11": "Lifelong Community Network · Generational Network · Open Door",
+    "6.12": "Public Community Network · Community Explorer · Community Personality",
+    "6.13": "Network Intelligence & Strategy · Network Twin · Community Knowledge Graph",
+    "6.14": "Certification & Network Readiness · Community Genome · self-expanding network"
+  },
+  "platformIntegrations": {
+    "RGE-001": "relationship growth mechanics",
+    "PRN-001": "personal network foundation",
+    "PEL-001": "belonging evaluation",
+    "OBE-001": "opportunity discovery",
+    "CGS-001": "community sustainability",
+    "CCN-001": "local autonomy",
+    "CRA-001": "recognition not gamification",
+    "ACN-001": "action creates stories for growth",
+    "CIS-001": "community health complements BI"
+  },
+  "v1Scope": {
+    "philosophyDocumented": true,
+    "permanentChoicesEstablished": true,
+    "eightGrowthPrinciples": true,
+    "growthLifecycle": true,
+    "healthyIndicatorsAndEthics": true,
+    "readinessAndReflection": true,
+    "invitationImpactVisibility": true,
+    "belongingIndexArchitecture": true,
+    "automatedBiScoring": "v1.1",
+    "liveInvitationImpactStories": "PON-001 6.2"
+  }
+}

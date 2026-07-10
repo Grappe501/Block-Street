@@ -1,0 +1,235 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/phase-06/LIFELONG_COMMUNITY_NETWORK.md",
+  "acronym": "LCN",
+  "requirementId": "LCN-001",
+  "plannedAliasSuperseded": "ALN-001",
+  "extends": "CLS-001",
+  "governedBy": "GCN-001",
+  "phaseRequirementId": "GOS-001",
+  "productName": "Lifelong Community Network",
+  "solvesStudentOrgWeakness": true,
+  "leadershipAccumulatesNotDisappears": true,
+  "guidingPrinciple": "Communities become stronger when every generation remains connected to the next.",
+  "principle": "Leadership should accumulate rather than disappear.",
+  "purpose": "Participants remain connected through graduation, career changes, relocation, and life transitions — preserving relationships, knowledge, and service opportunities.",
+  "philosophy": {
+    "participationNotLimitedToStudent": true,
+    "lifeStages": [
+      "alumnus",
+      "mentor",
+      "volunteer",
+      "donorFuture",
+      "guestSpeaker",
+      "advisor",
+      "partner",
+      "lifelongCommunityBuilder"
+    ],
+    "relationshipEvolvesNotEnds": true,
+    "appliesBeyondGraduation": ["relocation", "careerChange", "retirement", "organizerTransition"]
+  },
+  "communityJourney": {
+    "requirementRef": "LCN-M04",
+    "stages": [
+      "student",
+      "volunteer",
+      "organizer",
+      "leader",
+      "graduate",
+      "alumni",
+      "mentor",
+      "communityAdvisor",
+      "lifelongParticipant"
+    ],
+    "noDefinedEndpoint": true,
+    "nonLinear": true,
+    "orchestrator": "getParticipantLifeStage(participantId, communityId?)"
+  },
+  "alumniCommunities": {
+    "requirementRef": "LCN-M05",
+    "route": "/community/[slug]/alumni",
+    "orchestrator": "getAlumniCommunity(communityId)",
+    "examples": [
+      "universityAlumni",
+      "formerOrganizers",
+      "pastCommitteeMembers",
+      "leadershipAlumni",
+      "regionalAlumniGroups"
+    ],
+    "communityGoverned": true
+  },
+  "continuingParticipation": {
+    "requirementRef": "LCN-M06",
+    "orchestrator": "getContinuingParticipationOptions(participantId)",
+    "options": [
+      "volunteer",
+      "mentor",
+      "speakAtEvents",
+      "shareOpportunities",
+      "supportNewCommunities",
+      "reviewPlaybooks",
+      "participateInInitiatives"
+    ]
+  },
+  "mentorshipPipeline": {
+    "requirementRef": "LCN-M07",
+    "orchestrator": "matchMentorshipAcrossGenerations(communityId | scope)",
+    "mentorsSupport": [
+      "newStudents",
+      "newOrganizers",
+      "communityLeaders",
+      "newCampuses",
+      "countyCommunities",
+      "futureCommunityLaunches"
+    ],
+    "knowledgeFlowsAcrossGenerations": true
+  },
+  "careerConnections": {
+    "requirementRef": "LCN-M08",
+    "orchestrator": "getCareerConnectionProfile(participantId)",
+    "optionalAndParticipantControlled": true,
+    "mayShare": [
+      "professionalExpertise",
+      "internshipOpportunities",
+      "careerAdvice",
+      "industryConnections",
+      "communityPartnerships",
+      "networkingOpportunities"
+    ]
+  },
+  "legacyContributions": {
+    "requirementRef": "LCN-M09",
+    "orchestrator": "submitLegacyContribution(participantId, communityId, contributionType, content)",
+    "types": [
+      "stories",
+      "historicalKnowledge",
+      "experiencePlaybooks",
+      "missionReflections",
+      "training",
+      "leadershipLessons"
+    ],
+    "feeds": ["CLS-001", "CST-001", "CKLS-001"]
+  },
+  "communityReconnection": {
+    "requirementRef": "LCN-M10",
+    "route": "/reconnect",
+    "orchestrator": "getReconnectionOpportunities(participantId)",
+    "examples": [
+      "communityAnniversary",
+      "annualServiceDay",
+      "leadershipReunion",
+      "specialInitiative",
+      "mentorshipMonth"
+    ]
+  },
+  "geographicContinuity": {
+    "requirementRef": "LCN-M11",
+    "orchestrator": "getGeographicContinuityOptions(participantId)",
+    "options": [
+      "remainConnectedOriginalCommunity",
+      "joinNewCountyCommunity",
+      "supportAnotherCampus",
+      "mentorRemotely",
+      "participateStatewideInitiatives"
+    ],
+    "communitiesTranscendGeography": true
+  },
+  "lifelongTimeline": {
+    "requirementRef": "LCN-M12",
+    "route": "/lifelong/timeline",
+    "orchestrator": "getLifelongTimeline(participantId)",
+    "includes": [
+      "communitiesServed",
+      "leadershipRoles",
+      "volunteerExperiences",
+      "mentorship",
+      "stories",
+      "impact",
+      "relationships"
+    ],
+    "participantControlledVisibility": true
+  },
+  "knowledgePreservation": {
+    "requirementRef": "LCN-M13",
+    "orchestrator": "getPreservedKnowledge(communityId, filters?)",
+    "preserves": [
+      "leadershipAdvice",
+      "historicDecisions",
+      "communityTraditions",
+      "missionHistory",
+      "experiencePlaybooks",
+      "communityBrainContributions"
+    ]
+  },
+  "generationalNetwork": {
+    "requirementRef": "LCN-M16",
+    "signatureFeature": true,
+    "description": "Communities as living generations connected through mentorship, service, and shared purpose — not just current members",
+    "route": "/community/[slug]/generations",
+    "orchestrator": "getGenerationalNetwork(communityId | participantId, scope?)",
+    "layerToggles": ["cohort", "mentorshipChain", "communitiesLaunched", "impactType"],
+    "feedsLivingNetworkGraph": true
+  },
+  "openDoorPrinciple": {
+    "requirementRef": "LCN-M17",
+    "constitutionalPrinciple": true,
+    "candidatePrinciple": "CP-020",
+    "statement": "Once someone becomes part of the community, there should always be a meaningful path back.",
+    "neverFormerParticipants": true,
+    "reconnectionPaths": [
+      "reconnect",
+      "mentor",
+      "volunteer",
+      "shareKnowledge",
+      "supportNextGeneration"
+    ]
+  },
+  "extendsCLS": {
+    "CLS-001": "alumni connections, anniversaries, legacy preservation",
+    "JRN-001": "Alumni stage 9 — continuing relationship",
+    "LCN-001": "full lifelong participation architecture across all life transitions",
+    "clsQuestion": "How does community memory persist?",
+    "lcnQuestion": "How do people remain connected across every stage of life?"
+  },
+  "platformIntegrations": {
+    "CLS-001": "legacy and alumni foundation",
+    "JRN-001": "journey stages",
+    "CLD-001": "leadership pipeline and mentorship",
+    "CJT-001": "civic timeline",
+    "CST-001": "stories across generations",
+    "CKLS-001": "playbooks and knowledge",
+    "PON-001": "relationship graph",
+    "WBS-001": "returning participant welcome",
+    "OEX-001": "continuing opportunities",
+    "IPS-001": "career and internship connections",
+    "CEF-001": "mentor new community launches",
+    "SCN-001": "statewide mentorship",
+    "SEC-001": "privacy and consent",
+    "CAM-001": "communication preferences",
+    "PHQ-001": "personal headquarters timeline",
+    "CPP-001": "civic passport longitudinal view"
+  },
+  "futureAiAssistance": {
+    "helpsSustainRelationships": true,
+    "neverForcesReengagement": true,
+    "maySupport": [
+      "reconnectMentorsWithCommunities",
+      "recommendSpeakingOpportunities",
+      "identifyAlumniExpertise",
+      "suggestMentoringRelationships",
+      "recommendVolunteerOpportunities",
+      "highlightAnniversaryEvents"
+    ],
+    "explainableRecommendations": true
+  },
+  "v1Scope": {
+    "philosophyDocumented": true,
+    "participationJourney": true,
+    "alumniMentorshipReconnection": true,
+    "legacyAndKnowledgePreservation": true,
+    "openDoorPrinciple": true,
+    "generationalNetworkSpec": true,
+    "liveGenerationalGraphAggregation": "v1.1",
+    "alumniFundraisingModule": "future"
+  }
+}

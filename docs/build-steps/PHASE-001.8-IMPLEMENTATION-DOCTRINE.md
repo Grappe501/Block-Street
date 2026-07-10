@@ -9,7 +9,7 @@
 > **This document explains *how Burt builds it*.**  
 > It is the engineering constitution — Burt's operating manual.
 
-**Builds On:** [ED-001] from PHASE-001.4 · [GM-P2] vertical slices · [BG-001] · [LS-010] · All PHASE-001.1–001.7
+*Extends [ED-001] from PHASE-001.4 · Volume 1.1 [ENG-001](../../volume-01/ENGINEERING_DOCTRINE.md) for COS factory layer · [GM-P2] vertical slices · [BG-001] · [LS-010] · All PHASE-001.1–001.7*
 
 ---
 

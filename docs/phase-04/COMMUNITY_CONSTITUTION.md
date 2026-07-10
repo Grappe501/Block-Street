@@ -92,7 +92,7 @@ Community Identity             [CID-001 + Community Charter CCN-M17]
         ↓
 Community Activity             [Projects, events, committees — Steps 4.4–4.7]
         ↓
-Community Legacy               [Memory, history — Step 4.13]
+Community Legacy               [CLS-001 — institutional history]
 ```
 
 **[CCN-M03a]** Every community becomes a **living institution** — not a static hub page.
@@ -193,7 +193,7 @@ Community Legacy               [Memory, history — Step 4.13]
 | Preserving community history |
 | Encouraging respectful participation |
 
-**[CCN-M08a]** Communities succeed when they **strengthen one another** — cross-community collaboration [Step 4.11].
+**[CCN-M08a]** Communities succeed when they **strengthen one another** — [Statewide Collaboration Network SCN-001].
 
 **[CCN-M08b]** Moderation and safety [Phase 4.7, TPS-M12] protect shared responsibility.
 
@@ -259,19 +259,19 @@ Mission · Vision · Goals · Traditions · History · Culture · Current priori
 | Project ↔ Volunteer team | Temporary team edges |
 | Regional ↔ Statewide | Coalition to initiative |
 
-**[CCN-M12a]** Step 4.11 specifies cross-community collaboration infrastructure.
+**[CCN-M12a]** [Statewide Collaboration Network](STATEWIDE_COLLABORATION_NETWORK.md) [SCN-001] specifies statewide collaboration infrastructure.
 
 **[CCN-M12b]** Relationship graph queryable statewide [REL-M01].
 
 ---
 
-## CCN-M13 — Community Memory
+## CCN-M13 — Community Legacy
 
 **[CCN-M13]** Every community **preserves its history** — institutional memory strengthens future generations:
 
 Projects · Milestones · Events · Volunteer stories · Leadership transitions · Photos · Resources · Meeting notes
 
-**[CCN-M13a]** Step 4.13 Community Memory implements at community level — parallel to participant [Civic Journey Timeline CJT-001].
+**[CCN-M13a]** [Community Legacy System](COMMUNITY_LEGACY_SYSTEM.md) [CLS-001] implements at community level — parallel to participant [Civic Journey Timeline CJT-001]. Legacy carries the past **into the future**.
 
 **[CCN-M13b]** Append-only archive pattern [KDG-M07, STS-M16] — legacy layer [CCN-M03].
 
@@ -293,7 +293,7 @@ Projects · Milestones · Events · Volunteer stories · Leadership transitions 
 
 **[CCN-M14a]** Growth measured by **community strength** — not raw size [OIS-M14, CCN-M05].
 
-**[CCN-M14b]** Step 4.10 Community Analytics — **health metrics**, not vanity.
+**[CCN-M14b]** Step 4.10 Community Intelligence [CIS-001] — **health metrics**, not vanity.
 
 ---
 
@@ -348,7 +348,7 @@ Choose local priorities · Organize events · Launch committees · Create projec
 
 **[CCN-M17b]** Charters become **living documents** — reflect evolution over time [KDG-M07 audit trail].
 
-**[CCN-M17c]** Charter surfaces on **Community HQ** [4.3] — informs OBE opportunities [4.12 Marketplace].
+**[CCN-M17c]** Charter surfaces on **Community HQ** [4.3] — informs [Opportunity Exchange OEX-001].
 
 **[CCN-M17d]** Orchestrator: `getCommunityCharter(communityId)` — extends DNA [CID-M13].
 
@@ -364,11 +364,11 @@ Choose local priorities · Organize events · Launch committees · Create projec
 Community OS
 ├── Inherited Constitution [this document]
 ├── Community Charter [CCN-M17]
-├── Headquarters [4.3]
+├── Command Center [4.3]
 ├── Calendar · Committees · Projects
 ├── Communications · Knowledge · Resources
-├── Marketplace · Analytics · Memory
-└── Collaboration links [4.11]
+├── Marketplace · Intelligence · Memory
+└── Collaboration links [SCN-001]
 ```
 
 **[CCN-M18a]** Network of interconnected OS instances statewide — Personal HQ [PHQ-001] is window in.
@@ -388,7 +388,7 @@ Community OS
 | **Phase 3** | PHQ My Communities → Community HQ; PEL-M13 gate |
 | **Steps 4.2–4.14** | Activity and legacy layers implement hierarchy |
 
-**[CCN-M19a]** OBE participant Marketplace + 4.12 community needs — complementary.
+**[CCN-M19a]** OBE participant personalization + OEX statewide needs — complementary layers [OEX-M14a].
 
 ---
 
@@ -445,6 +445,6 @@ Step 4.1 is complete when:
 
 ---
 
-**Next Step:** 4.2 — Community Lifecycle
+**Phase 4 Status:** Complete — [Build Bible](PHASE_4_COMMUNITY_OS_BUILD_BIBLE.md) · **Next:** Phase 5 — Action Operating System
 
 *Trace: Platform Constitution → Community Constitution → Charter → Identity → Activity → Legacy → living institution*

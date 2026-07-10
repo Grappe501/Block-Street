@@ -1,0 +1,157 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/phase-04/COMMUNITY_CAPABILITY_EXCHANGE.md",
+  "acronym": "CCE",
+  "requirementId": "CCE-001",
+  "motto": "What one community creates should be able to strengthen another.",
+  "principle": "Knowledge, tools, and talent should circulate throughout the statewide network whenever appropriate.",
+  "purpose": "Discover, share, request, and reuse people, knowledge, tools, materials, spaces, and services needed to accomplish missions.",
+  "philosophy": {
+    "notFolderOfFiles": true,
+    "communitiesShareCapabilities": true,
+    "capabilityExamples": ["knowledge", "people", "equipment", "templates", "training", "facilities", "experience", "relationships"],
+    "marketplaceForWhatCommunitiesHaveAndNeed": true
+  },
+  "capabilityCategories": [
+    {
+      "key": "documents",
+      "label": "Documents",
+      "examples": ["guides", "checklists", "policies", "meetingAgendas", "planningDocuments", "trainingManuals"]
+    },
+    {
+      "key": "templates",
+      "label": "Templates",
+      "examples": ["flyers", "socialGraphics", "presentationDecks", "emailDrafts", "pressReleases", "eventChecklists", "brandAssets"]
+    },
+    {
+      "key": "media",
+      "label": "Media",
+      "examples": ["photos", "videos", "audio", "graphics", "illustrations", "communityPhotography"]
+    },
+    {
+      "key": "equipment",
+      "label": "Equipment",
+      "examples": ["projectors", "canopies", "tables", "soundSystems", "laptops", "printers"],
+      "futureInventoryTracking": true
+    },
+    {
+      "key": "spaces",
+      "label": "Spaces",
+      "examples": ["meetingRooms", "communityCenters", "campusFacilities", "volunteerLocations", "trainingSpaces", "eventVenues"]
+    },
+    {
+      "key": "skills",
+      "label": "Skills",
+      "examples": ["photography", "graphicDesign", "writing", "translation", "technology", "publicSpeaking", "facilitation", "research", "legalKnowledge", "accounting"],
+      "configurable": true
+    },
+    {
+      "key": "services",
+      "label": "Services",
+      "examples": ["mentorship", "training", "workshops", "guestSpeakers", "volunteerCoordination", "projectConsulting", "communityCoaching"]
+    }
+  ],
+  "capabilityProfiles": {
+    "fields": ["title", "description", "owner", "community", "availability", "category", "relatedProjects", "usageHistory", "instructions", "permissions"],
+    "reusableAssets": true
+  },
+  "discovery": {
+    "searchBy": ["keyword", "community", "category", "location", "availability", "skill", "projectType", "tags"],
+    "effortless": true,
+    "orchestrator": "searchCapabilities(filters)"
+  },
+  "sharing": {
+    "encouraged": true,
+    "examples": ["uploadTemplates", "publishPlaybooks", "offerExpertise", "loanEquipment", "shareTraining", "collaborateAcrossCounties"],
+    "strengthensStatewideEcosystem": true
+  },
+  "requests": {
+    "communitiesMayRequest": true,
+    "examples": ["photographer", "meetingSpace", "graphicDesigner", "volunteers", "presentationTemplate", "training"],
+    "visibleCollaborationOpportunities": true,
+    "complementsOpportunityExchange": "OEX-001"
+  },
+  "recommendations": {
+    "platformRecommends": true,
+    "examples": [
+      "This project could use last year's event checklist",
+      "Nearby county has extra canopies",
+      "Three volunteers have photography skills",
+      "This committee already built a presentation"
+    ],
+    "reducesDuplicatedEffort": true,
+    "orchestrator": "recommendCapabilities(context)"
+  },
+  "versionHistory": {
+    "sharedCapabilitiesEvolve": true,
+    "preserves": ["originalVersion", "updates", "contributors", "communitiesUsing", "improvements"],
+    "collectiveKnowledgeGrowth": true
+  },
+  "recognition": {
+    "appreciationWhenOthersBenefit": true,
+    "examples": [
+      "Your event template has helped five campuses",
+      "Your volunteer guide was reused statewide"
+    ],
+    "encouragesGenerosityNotOwnership": true,
+    "integrates": "CRA-001"
+  },
+  "futureAiAssistance": {
+    "may": ["locateRelevantCapabilities", "suggestReusableResources", "recommendExperts", "summarizeDocumentation", "identifyDuplicateWork", "suggestImprovements"],
+    "increasesDiscoveryNotReplaceCollaboration": true
+  },
+  "capabilityGraph": {
+    "description": "Understands capability relationships across communities — not just file listings",
+    "signatureFeature": true,
+    "orchestrator": "queryCapabilityGraph(nodeId, depth)",
+    "platformGraphs": ["relationshipGraph", "trustGraph", "growthGraph", "conversationGraph", "personalDigitalTwin", "communityBrain", "capabilityGraph"],
+    "exampleChains": [
+      {
+        "label": "Template reuse chain",
+        "chain": ["community", "created", "eventChecklist", "usedBy", "twelveProjects", "improvedBy", "threeCommunities", "recommendedTo", "newVolunteerTeam"]
+      },
+      {
+        "label": "Skill match chain",
+        "chain": ["participant", "hasSkill", "photography", "neededBy", "foodDriveProject", "organizedBy", "pulaskiCountyCommunity"]
+      }
+    ],
+    "answersQuestions": [
+      "Who already knows how to do this?",
+      "Has another campus solved this problem?",
+      "What resources are commonly used together?",
+      "Which communities are experts in this area?",
+      "What capabilities are missing in this county?"
+    ],
+    "statewideCapabilityNetwork": true,
+    "v1": "specAndGraphSchemaStub"
+  },
+  "platformIntegrations": {
+    "communityBrain": "CKLS-001",
+    "knowledgeLearning": "CKLS-001 documents link to CCE assets",
+    "opportunityMarketplace": "OBE-001",
+    "opportunityExchange": "OEX-001",
+    "personalDigitalTwin": "PDT-001 skills",
+    "growthGraph": "PGL-001",
+    "governance": "KDG-001"
+  },
+  "v1Scope": {
+    "philosophyAndCategories": true,
+    "capabilityGraphSpec": true,
+    "capabilityEntitySchema": true,
+    "discoveryStub": true,
+    "fullInventoryManagement": "future"
+  },
+  "implementation": {
+    "structuredEntities": true,
+    "multipleCapabilityTypes": true,
+    "ownershipAndAttribution": true,
+    "reuseHistory": true,
+    "files": [
+      "src/lib/cce/queryCapabilityGraph.ts",
+      "src/lib/cce/searchCapabilities.ts",
+      "src/lib/cce/recommendCapabilities.ts",
+      "src/lib/cce/publishCapability.ts",
+      "src/components/ccc/widgets/CapabilitiesWidget.tsx"
+    ]
+  }
+}

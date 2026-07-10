@@ -1,0 +1,233 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/phase-06/INVITATION_CONNECTION_SYSTEM.md",
+  "acronym": "ICS",
+  "requirementId": "ICS-001",
+  "plannedAliasSuperseded": "INV-001",
+  "extends": ["RGE-001", "NET-001", "NET-002", "PON-001"],
+  "governedBy": "GCN-001",
+  "phaseRequirementId": "GOS-001",
+  "productName": "Invitation & Connection System",
+  "platformFrontDoor": true,
+  "invitationOnlyBeginning": true,
+  "goalIsRelationship": true,
+  "guidingPrinciple": "Every invitation is an invitation into a community—not just a platform.",
+  "principle": "Meaningful connection rather than mass recruitment.",
+  "purpose": "Simple relationship-centered ways for every participant and community to welcome new people — begin conversation, build trust, help invited participants belong.",
+  "philosophy": {
+    "invitationsArePersonal": true,
+    "reduceUncertainty": true,
+    "questionsEveryInvitationAnswers": [
+      "whoInvitedMe",
+      "whyInvited",
+      "whatCommunity",
+      "whatOpportunities",
+      "whatHappensAfterRegister"
+    ]
+  },
+  "invitationTypes": {
+    "requirementRef": "ICS-M04",
+    "orchestrator": "createInvitation(type, context, inviterId)",
+    "types": {
+      "personal": { "description": "One participant invites another", "relationshipCentered": true },
+      "community": { "description": "Campus or county invites", "examples": ["joinUcaCommunity", "joinPulaskiCounty"] },
+      "event": { "description": "Direct into event", "integrates": "EEOS-001" },
+      "mission": { "description": "Direct into mission", "integrates": ["MPS-001", "EOS-001"] },
+      "committee": { "description": "Team/committee invite", "integrates": "TWG-001" },
+      "organization": { "description": "Future org invites", "status": "future", "integrates": "IPS-001" }
+    }
+  },
+  "invitationIdentity": {
+    "requirementRef": "ICS-M05",
+    "includes": [
+      "communityIdentity",
+      "missionOrEventOrCommittee",
+      "organizer",
+      "qrCode",
+      "shareLink",
+      "invitationCode",
+      "optionalExpiration",
+      "invitationType"
+    ],
+    "flexibleAndReusable": true
+  },
+  "invitationLandingPages": {
+    "requirementRef": "ICS-M06",
+    "routePattern": "/i/{invitationCode}",
+    "communityVariant": "/join/{communitySlug}?ref={code}",
+    "answers": ["whatIsThis", "whyCare", "whoWillIMeet", "whatHappensNext"],
+    "generatedByBuilder": true,
+    "mobileFirst": true
+  },
+  "qrCodeSystem": {
+    "requirementRef": "ICS-M07",
+    "everyParticipantAndCommunity": true,
+    "mayPointTo": [
+      "personalProfile",
+      "community",
+      "mission",
+      "event",
+      "committee",
+      "volunteerOpportunity",
+      "campaignMaterialsFuture"
+    ],
+    "permanentWhenPractical": true,
+    "dynamicRouting": "ICS-M16"
+  },
+  "shareCenter": {
+    "requirementRef": "ICS-M08",
+    "route": "/share",
+    "orchestrator": "getShareCenter(participantId | communityId)",
+    "channels": [
+      "textMessage",
+      "email",
+      "socialMedia",
+      "printableFlyers",
+      "posters",
+      "businessCards",
+      "digitalBadges",
+      "nfcFuture"
+    ],
+    "fewSecondsToShare": true
+  },
+  "invitationTracking": {
+    "requirementRef": "ICS-M09",
+    "route": "/network/invitations",
+    "tracks": [
+      "invitationsSent",
+      "accepted",
+      "pending",
+      "communitiesJoined",
+      "firstVolunteerExperiences",
+      "relationshipsFormed"
+    ],
+    "communityBuildingNotCompetition": true,
+    "feeds": ["PON-M16", "CGIS-M04"]
+  },
+  "welcomeIntegration": {
+    "requirementRef": "ICS-M10",
+    "orchestrator": "onInvitationAccepted(invitationId, participantId)",
+    "onAccept": [
+      "welcomeGuideAssigned",
+      "communityIntroduced",
+      "ponUpdated",
+      "first30DaysBegins",
+      "invitationHistoryPreserved"
+    ],
+    "separateFromBelongingFlow": true
+  },
+  "communityCampaigns": {
+    "requirementRef": "ICS-M11",
+    "integrates": "CGO-M08",
+    "examples": [
+      "welcomeWeek",
+      "volunteerRecruitment",
+      "leadershipInterest",
+      "mentorshipMonth",
+      "communityServiceDay"
+    ]
+  },
+  "privacy": {
+    "requirementRef": "ICS-M12",
+    "participantControls": [
+      "whoMayInvite",
+      "invitationHistoryVisibility",
+      "relationshipInformationShared"
+    ],
+    "simpleTransparent": true,
+    "noPublicLeaderboards": true
+  },
+  "universalInvitationBuilder": {
+    "acronym": "UIB",
+    "requirementRef": "ICS-M15",
+    "signatureFeature": true,
+    "description": "Guided builder for every invitation type and share channel — most frequently used tool",
+    "route": "/invite/build",
+    "orchestrator": "buildInvitation(wizardInput)",
+    "wizard": {
+      "whoInviting": ["onePerson", "group", "studentOrganization", "class", "countyCommunity"],
+      "invitingTo": [
+        "joinCommunity",
+        "attendEvent",
+        "volunteer",
+        "joinCommittee",
+        "supportMission",
+        "explorePlatform"
+      ],
+      "howShare": [
+        "qrCode",
+        "text",
+        "email",
+        "printableFlyer",
+        "socialGraphic",
+        "digitalCard"
+      ]
+    },
+    "autoGenerates": [
+      "personalizedLandingPage",
+      "brandedQrCode",
+      "shortShareLink",
+      "suggestedLanguage",
+      "optionalFollowUpReminders"
+    ],
+    "primarySurfaces": ["PHQ-001", "CCC-001", "missionEventPages"]
+  },
+  "dynamicQrCodes": {
+    "acronym": "DQR",
+    "requirementRef": "ICS-M16",
+    "signatureFeature": true,
+    "description": "Permanent QR, mutable destination — print once, update all year",
+    "orchestrator": "setDynamicQrDestination(qrId, destination, effectiveFrom?)",
+    "samePhysicalQrDifferentDestinations": true,
+    "exampleLifecycle": [
+      { "period": "today", "destination": "welcomeWeek" },
+      { "period": "nextMonth", "destination": "volunteerFair" },
+      { "period": "later", "destination": "communityCleanup" },
+      { "period": "default", "destination": "personalOrganizingNetwork" }
+    ],
+    "persistentGateway": true,
+    "fallbackDestinationRequired": true,
+    "auditLog": true
+  },
+  "extendsRGEAndPON": {
+    "RGE-001": "lifecycle, attribution, healthy growth ethics",
+    "PON-001": "personal invite identity, Impact Tree, welcome",
+    "ICS-001": "full invitation types, builder, dynamic QR, front door",
+    "rgeQuestion": "How do personal invites work?",
+    "icsQuestion": "How does every invitation type open the platform through trusted relationships?"
+  },
+  "platformIntegrations": {
+    "RGE-001": "attribution and lifecycle",
+    "NET-001": "invite links",
+    "NET-002": "QR foundation",
+    "PON-001": "personal network and Impact Tree",
+    "WBS-001": "welcome on accept",
+    "CGO-001": "campaigns and outreach",
+    "CGIS-001": "invitation patterns intelligence",
+    "SEC-001": "privacy controls",
+    "EEOS-001": "event invitations",
+    "MPS-001": "mission invitations",
+    "TWG-001": "committee invitations"
+  },
+  "futureAiAssistance": {
+    "authenticCommunicationOnly": true,
+    "neverAutomatedMassOutreach": true,
+    "maySupport": [
+      "suggestFollowUps",
+      "recommendWording",
+      "identifyCommunitiesNeedingInvitations",
+      "recommendMentors",
+      "highlightSuccessfulStrategies"
+    ]
+  },
+  "v1Scope": {
+    "philosophyDocumented": true,
+    "allInvitationTypes": true,
+    "identityLandingQrShareTracking": true,
+    "welcomeCampaignsPrivacy": true,
+    "universalInvitationBuilderSpec": true,
+    "dynamicQrSpec": true,
+    "liveBuilderAndDqr": "v1.1",
+    "organizationInvitations": "v1.2"
+  }
+}

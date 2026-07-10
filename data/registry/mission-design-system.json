@@ -1,0 +1,229 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/phase-05/MISSION_DESIGN_SYSTEM.md",
+  "acronym": "MDS",
+  "requirementId": "MDS-001",
+  "extends": "MPS-001",
+  "governedBy": "ACN-001",
+  "guidingPrinciple": "A well-designed mission creates clarity before action.",
+  "principle": "Great missions are designed, not simply planned — think before you build.",
+  "purpose": "Structured framework for transforming ideas into well-defined, community-centered missions before execution begins.",
+  "problemSolved": "Most projects fail before they start — work begins before shared understanding of why, who benefits, and what success looks like.",
+  "missionPhilosophy": {
+    "everyMissionSolvesOrCreates": "real problem or meaningful opportunity",
+    "reinforcePurposeOverProcess": true,
+    "participantsAlwaysUnderstand": ["whyThisMissionExists", "whoBenefits", "whyItMattersNow"]
+  },
+  "missionLifecycle": {
+    "description": "Design stage is foundation for everything that follows",
+    "stages": [
+      "idea",
+      "discovery",
+      "missionDesign",
+      "review",
+      "approval",
+      "planning",
+      "execution",
+      "reflection",
+      "legacy"
+    ],
+    "noTasksUntilDesignComplete": true
+  },
+  "missionCanvas": {
+    "description": "Blueprint for execution — structured object, versioned, append-only",
+    "signatureFeature": true,
+    "extends": "MPS-M15",
+    "sectionCount": 10,
+    "orchestrators": {
+      "create": "createMissionCanvas(missionId)",
+      "update": "updateMissionCanvas(missionId, section, payload)",
+      "submitForReview": "submitMissionCanvasForReview(missionId)"
+    },
+    "database": "DB-MISSION-CANVAS",
+    "table": "mission_canvases",
+    "sections": [
+      {
+        "id": 1,
+        "key": "missionStatement",
+        "requirement": "MDS-M05",
+        "label": "Mission Statement",
+        "description": "One concise sentence — easy to explain",
+        "required": true,
+        "examples": [
+          "Welcome every new student to campus.",
+          "Organize a county-wide food drive.",
+          "Increase participation in community service."
+        ]
+      },
+      {
+        "id": 2,
+        "key": "communityNeed",
+        "requirement": "MDS-M06",
+        "label": "Community Need",
+        "description": "What need is being addressed?",
+        "examples": ["studentIsolation", "foodInsecurity", "communityBeautification", "leadershipDevelopment", "volunteerRecruitment", "communityAwareness"]
+      },
+      {
+        "id": 3,
+        "key": "desiredImpact",
+        "requirement": "MDS-M07",
+        "label": "Desired Impact",
+        "description": "What changes if the mission succeeds?",
+        "focus": "communityOutcomesNotActivityVolume",
+        "examples": ["moreStudentsConnected", "familiesServed", "cleanerNeighborhoods", "newVolunteersTrained", "strongerCampusRelationships"]
+      },
+      {
+        "id": 4,
+        "key": "participants",
+        "requirement": "MDS-M08",
+        "label": "Participants",
+        "description": "Who should participate — expectations clear",
+        "examples": ["students", "communityMembers", "volunteers", "mentors", "campusOrganizations", "partnerCommunities"]
+      },
+      {
+        "id": 5,
+        "key": "communitiesInvolved",
+        "requirement": "MDS-M09",
+        "label": "Communities Involved",
+        "scopeLevels": ["campus", "county", "committee", "projectTeam", "regionalCollaboration", "statewideInitiative"]
+      },
+      {
+        "id": 6,
+        "key": "skillsNeeded",
+        "requirement": "MDS-M10",
+        "label": "Skills Needed",
+        "integrates": "CCE-001",
+        "examples": ["leadership", "photography", "technology", "teaching", "communications", "transportation", "research", "facilitation"]
+      },
+      {
+        "id": 7,
+        "key": "resourcesNeeded",
+        "requirement": "MDS-M11",
+        "label": "Resources Needed",
+        "integrates": ["CCE-001", "CCS-001"],
+        "categories": ["meetingSpace", "equipment", "training", "budget", "transportation", "food", "technology", "graphics"]
+      },
+      {
+        "id": 8,
+        "key": "risks",
+        "requirement": "MDS-M12",
+        "label": "Risks",
+        "encouragesResilience": true,
+        "examples": ["volunteerShortages", "weather", "schedulingConflicts", "facilityAvailability", "communicationGaps", "leadershipTransitions"]
+      },
+      {
+        "id": 9,
+        "key": "successIndicators",
+        "requirement": "MDS-M13",
+        "label": "Success Indicators",
+        "focus": "outcomesNotActivity",
+        "integrates": "CIIS-001",
+        "examples": ["participantsEngaged", "volunteerRetention", "communityFeedback", "projectsCompleted", "relationshipsFormed", "peopleServed"]
+      },
+      {
+        "id": 10,
+        "key": "knowledgeCapturePlan",
+        "requirement": "MDS-M14",
+        "label": "Knowledge Capture Plan",
+        "description": "What should future organizers learn — planned before execution",
+        "integrates": ["LIS-001", "CKLS-001", "MDS-M20"]
+      }
+    ]
+  },
+  "missionTemplates": {
+    "reusable": true,
+    "examples": [
+      { "key": "campusWelcomeWeek", "category": "studentSuccess" },
+      { "key": "foodDrive", "category": "communityService" },
+      { "key": "leadershipRetreat", "category": "leadershipDevelopment" },
+      { "key": "communityCleanup", "category": "environmental" },
+      { "key": "bloodDrive", "category": "communityService" },
+      { "key": "volunteerFair", "category": "volunteerOutreach" }
+    ],
+    "orchestrator": "createMissionFromTemplate(templateId, communityId)",
+    "spreadAcrossArkansas": true
+  },
+  "missionRelationships": {
+    "connectsTo": ["communities", "teams", "participants", "projects", "timeline", "capabilities", "knowledge", "legacy"],
+    "automaticGraphEdges": true,
+    "requirement": "REL-001"
+  },
+  "collaborativeDesign": {
+    "multipleContributors": true,
+    "roles": [
+      { "key": "coAuthor", "permission": "editCanvasSections" },
+      { "key": "reviewer", "permission": "commentAndApproveSections" },
+      { "key": "mentor", "permission": "advisoryComments", "ref": "PGL-001" },
+      { "key": "subjectMatterExpert", "permission": "sectionSpecificGuidance" }
+    ],
+    "versionHistoryAppendOnly": true
+  },
+  "futureAiAssistance": {
+    "advisoryOnly": true,
+    "capabilities": [
+      "suggestSimilarMissions",
+      "recommendPlaybooks",
+      "identifyNeededSkills",
+      "highlightPotentialRisks",
+      "findReusableTemplates"
+    ],
+    "neverReplacesCommunityJudgment": true,
+    "explainable": true
+  },
+  "missionLibrary": {
+    "acronym": "ML",
+    "requirementRef": "MDS-M20",
+    "signatureFeature": true,
+    "description": "Statewide searchable catalog of proven missions — every completed mission enriches the library",
+    "autoEligibleOnSuccess": true,
+    "browseFilters": [
+      "communityType",
+      "missionCategory",
+      "timeOfYear",
+      "estimatedVolunteerSize",
+      "skillsRequired",
+      "resourcesRequired",
+      "communityImpact",
+      "difficultyLevel",
+      "averageCompletionTime"
+    ],
+    "entryIncludes": [
+      "originalMissionCanvas",
+      "missionOperatingRecord",
+      "photosAndMedia",
+      "lessonsLearned",
+      "playbooks",
+      "templates",
+      "communityReflections",
+      "suggestedImprovements"
+    ],
+    "orchestrators": {
+      "publish": "publishToMissionLibrary(missionId)",
+      "search": "searchMissionLibrary(filters)",
+      "fork": "forkMissionFromLibrary(libraryEntryId, communityId)"
+    },
+    "database": "DB-MISSION-LIBRARY",
+    "table": "mission_library_entries",
+    "integrates": ["CKLS-001", "ACN-M26", "CST-001", "LIS-001"]
+  },
+  "platformIntegrations": {
+    "ACN-001": "design before tasks",
+    "MPS-001": "mission entity and HQ",
+    "CCE-001": "skills and resources sections",
+    "CKLS-001": "playbooks and knowledge",
+    "OEX-001": "needs spawn ideas",
+    "SCN-001": "multi-community missions",
+    "ACN-M26": "canvas is first MOR section"
+  },
+  "v1Scope": {
+    "philosophyDocumented": true,
+    "canvasTenSectionSpec": true,
+    "lifecycleWithDesignStage": true,
+    "templatesArchitecture": true,
+    "collaborativeDesignSpec": true,
+    "missionLibraryArchitecture": true,
+    "canvasFormStub": true,
+    "libraryBrowseUi": "v1.1",
+    "aiDesignAssistance": "future"
+  }
+}

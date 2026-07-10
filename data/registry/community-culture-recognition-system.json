@@ -1,0 +1,196 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/phase-06/COMMUNITY_CULTURE_RECOGNITION_SYSTEM.md",
+  "acronym": "CCR",
+  "requirementId": "CCR-001",
+  "plannedAliasSuperseded": "RCG-001",
+  "extends": "CRA-001",
+  "governedBy": "GCN-001",
+  "phaseRequirementId": "GOS-001",
+  "productName": "Community Culture & Recognition System",
+  "recognitionIsOneOutcome": true,
+  "buildingCulture": true,
+  "notPopularity": true,
+  "guidingPrinciple": "Culture is built through the behaviors we celebrate.",
+  "principle": "Recognition should reinforce the kind of community we aspire to become.",
+  "purpose": "Intentionally cultivate welcoming, collaborative, service-oriented cultures — recognize contributions, preserve traditions, celebrate milestones, reinforce values.",
+  "philosophy": {
+    "notCompetition": true,
+    "strengthenCommunityIdentity": true,
+    "celebrates": [
+      "helping",
+      "teaching",
+      "learning",
+      "welcoming",
+      "collaborating",
+      "serving",
+      "mentoring",
+      "sharing",
+      "leadershipThroughService"
+    ],
+    "celebrateCommunityNotActivityVolume": true
+  },
+  "communityValues": {
+    "requirementRef": "CCR-M04",
+    "platformValues": [
+      "respect",
+      "curiosity",
+      "service",
+      "integrity",
+      "collaboration",
+      "inclusion",
+      "reliability",
+      "learning",
+      "hospitality"
+    ],
+    "communitiesMayAddLocalValues": true,
+    "alignWithConstitutionalPrinciples": true
+  },
+  "recognitionCategories": {
+    "requirementRef": "CCR-M05",
+    "extends": "CRA-001",
+    "categories": [
+      { "id": "welcomingOthers", "celebrates": "helping new members feel at home" },
+      { "id": "service", "celebrates": "mission and community project contributions" },
+      { "id": "mentorship", "celebrates": "developing confidence and leadership" },
+      { "id": "collaboration", "celebrates": "cross-campus county team work" },
+      { "id": "knowledgeSharing", "celebrates": "playbooks lessons Community Brain" },
+      { "id": "communityStewardship", "celebrates": "health and continuity" },
+      { "id": "leadershipThroughService", "celebrates": "leading by example developing leaders" }
+    ],
+    "noPointsBadgesLeaderboards": true
+  },
+  "communityTraditions": {
+    "requirementRef": "CCR-M06",
+    "configurablePerCommunity": true,
+    "examples": [
+      "annualWelcomeWeek",
+      "volunteerDay",
+      "leadershipRetreat",
+      "communityServiceMonth",
+      "recognitionBanquet",
+      "foundingAnniversary"
+    ],
+    "feeds": ["CGO-M11", "CCR-M14"]
+  },
+  "milestoneCelebrations": {
+    "requirementRef": "CCR-M07",
+    "examples": [
+      "firstVolunteerExperience",
+      "firstMissionCompleted",
+      "firstCommunityLaunched",
+      "newMentor",
+      "leadershipAnniversary",
+      "communityAnniversary",
+      "missionAnniversary"
+    ],
+    "integrates": ["CJT-001", "WBS-M11"]
+  },
+  "communityAppreciation": {
+    "requirementRef": "CCR-M08",
+    "route": "/community/[slug]/appreciation",
+    "examples": [
+      "thankYouNotes",
+      "volunteerSpotlights",
+      "communityHighlights",
+      "recognitionWalls",
+      "storiesOfAppreciation"
+    ],
+    "extends": "CRA-001",
+    "lowFriction": true
+  },
+  "storyBasedRecognition": {
+    "requirementRef": "CCR-M09",
+    "storiesNotTitles": true,
+    "storyPrompts": ["howTheyHelped", "whoBenefited", "whatTheyLearned", "whyItMattered"],
+    "feeds": ["CKLS-001", "CLS-001", "CST-001"]
+  },
+  "communityRituals": {
+    "requirementRef": "CCR-M10",
+    "examples": [
+      "welcomeEveryNewParticipant",
+      "celebrateCompletedMissions",
+      "reflectAfterMajorEvents",
+      "recognizeMentors",
+      "shareLessonsLearned"
+    ],
+    "communityConfigured": true,
+    "participationNotPoints": true
+  },
+  "communityHealthSignals": {
+    "requirementRef": "CCR-M11",
+    "integrates": "CIS-001",
+    "signals": [
+      "participation",
+      "mentorship",
+      "volunteerAppreciation",
+      "knowledgeSharing",
+      "belonging",
+      "leadershipDevelopment"
+    ],
+    "feeds": "CGIS-M10"
+  },
+  "cultureGarden": {
+    "acronym": "CG",
+    "requirementRef": "CCR-M14",
+    "signatureFeature": true,
+    "description": "Visual metaphor for community culture — grows through participation not points",
+    "notGameNotLeaderboard": true,
+    "route": "/community/[slug]/garden",
+    "cccWidget": true,
+    "orchestrator": "getCultureGarden(communityId)",
+    "sections": [
+      { "symbol": "🌱", "id": "welcoming", "represents": "new member support" },
+      { "symbol": "🌳", "id": "mentorship", "represents": "mentor activity" },
+      { "symbol": "🌼", "id": "service", "represents": "mission volunteer contribution" },
+      { "symbol": "🌿", "id": "collaboration", "represents": "cross-community work" },
+      { "symbol": "🌺", "id": "knowledgeSharing", "represents": "Community Brain contributions" },
+      { "symbol": "🍃", "id": "leadershipDevelopment", "represents": "service-leadership" }
+    ],
+    "sharedLanguageWithoutScores": true,
+    "visitorCanSeeCultureStrengths": true,
+    "feedsObservatoryNotCompetitiveRanking": "CGIS-M16"
+  },
+  "extendsCRA": {
+    "CRA-001": "appreciation not gamification, Community Gratitude, milestones",
+    "CCR-001": "full culture system, traditions, rituals, Culture Garden",
+    "craQuestion": "How do we appreciate contribution?",
+    "ccrQuestion": "What kind of community are we becoming?"
+  },
+  "platformIntegrations": {
+    "CRA-001": "recognition foundation",
+    "CST-001": "storytelling",
+    "CLS-001": "legacy",
+    "CLD-001": "leadership recognition categories",
+    "CIS-001": "community health",
+    "CGIS-001": "culture health lens",
+    "WBS-001": "welcoming recognition",
+    "VDS-001": "service recognition",
+    "SCN-001": "collaboration recognition",
+    "CKLS-001": "knowledge sharing",
+    "CGO-001": "traditions timeline stories",
+    "SEC-001": "privacy",
+    "GCN-M16": "Belonging Index"
+  },
+  "futureAiAssistance": {
+    "neverReplacesHumanAppreciation": true,
+    "neverAutoPublishes": true,
+    "maySupport": [
+      "suggestDeservingAppreciation",
+      "summarizeContributions",
+      "recommendStoriesToHighlight",
+      "identifyEmergingMentors",
+      "generateAppreciationDrafts",
+      "recommendMilestoneCelebrations"
+    ]
+  },
+  "v1Scope": {
+    "philosophyDocumented": true,
+    "valuesCategoriesTraditions": true,
+    "milestonesAppreciationStoryRecognition": true,
+    "ritualsHealthIntegration": true,
+    "cultureGardenSpec": true,
+    "liveGardenVisualization": "v1.1",
+    "aiAppreciationDrafts": "v1.2"
+  }
+}

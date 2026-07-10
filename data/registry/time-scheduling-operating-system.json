@@ -1,0 +1,180 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/phase-04/TIME_SCHEDULING_OPERATING_SYSTEM.md",
+  "acronym": "TSOS",
+  "motto": "One timeline. Personalized for every participant.",
+  "principle": "The platform understands everything that is happening. Participants see only what is relevant to them.",
+  "purpose": "Manage every time-based activity through one unified scheduling engine — not separate calendars per module.",
+  "philosophy": {
+    "timeIsSharedResource": true,
+    "oldQuestion": "What calendar is this on?",
+    "newQuestion": "Who needs to know about this?",
+    "oneUnifiedArchitecture": true,
+    "foundationalEngine": true
+  },
+  "masterTimeline": {
+    "description": "Single source of truth for all scheduled items",
+    "orchestrator": "queryMasterTimeline(filters)",
+    "itemTypes": [
+      "events",
+      "committeeMeetings",
+      "volunteerShifts",
+      "projectMilestones",
+      "training",
+      "deadlines",
+      "communityCelebrations",
+      "officeHours",
+      "recurringPrograms"
+    ],
+    "separateEventsFromViews": true
+  },
+  "personalViews": {
+    "description": "Personalized calendar — never manage multiple calendars",
+    "examples": [
+      "myEvents",
+      "myTeams",
+      "myMissions",
+      "myVolunteerShifts",
+      "myCampus",
+      "myCounty",
+      "recommendedOpportunities"
+    ],
+    "orchestrator": "assemblePersonalTimeline(participantId, range)"
+  },
+  "communityViews": {
+    "description": "Filtered timeline views referencing Master Timeline",
+    "examples": [
+      "campusCalendar",
+      "countyCalendar",
+      "teamCalendar",
+      "missionCalendar",
+      "volunteerCalendar",
+      "leadershipCalendar"
+    ],
+    "orchestrator": "assembleCommunityTimeline(communityId, range)"
+  },
+  "eventCategories": [
+    { "key": "meeting", "label": "Meeting" },
+    { "key": "volunteer", "label": "Volunteer" },
+    { "key": "training", "label": "Training" },
+    { "key": "communityEvent", "label": "Community Event" },
+    { "key": "planningSession", "label": "Planning Session" },
+    { "key": "socialGathering", "label": "Social Gathering" },
+    { "key": "projectMilestone", "label": "Project Milestone" },
+    { "key": "deadline", "label": "Deadline" },
+    { "key": "celebration", "label": "Celebration" }
+  ],
+  "relationshipAwareness": {
+    "description": "Scheduling understands graph relationships — no manual calendar subscriptions",
+    "rules": [
+      { "relationship": "participantBelongsToTeam", "effect": "teamMeetingsAppearAutomatically" },
+      { "relationship": "volunteerJoinsMission", "effect": "missionMilestonesAppearAutomatically" },
+      { "relationship": "campusEvent", "effect": "visibleToCampusMembers" },
+      { "relationship": "countyEvent", "effect": "visibleToCountyParticipants" }
+    ],
+    "requirement": "REL-001"
+  },
+  "smartScheduling": {
+    "future": true,
+    "capabilities": [
+      "conflictDetection",
+      "travelTimeEstimation",
+      "meetingRecommendations",
+      "volunteerAvailability",
+      "leadershipAvailability",
+      "projectCoordination",
+      "scheduleOptimization"
+    ],
+    "organizingAssistant": true
+  },
+  "recurringActivities": {
+    "supports": [
+      "weeklyMeetings",
+      "monthlyGatherings",
+      "semesterSchedules",
+      "annualTraditions",
+      "recurringVolunteerOpportunities",
+      "leadershipRotations",
+      "historicalAnniversaries"
+    ],
+    "connectedToCommunityHistory": true
+  },
+  "platformIntegrations": {
+    "personalHeadquarters": "PHQ-001",
+    "personalCommandCenter": "PCC-001",
+    "communityCommandCenter": "CCC-001",
+    "missionHeadquarters": "MPS-001",
+    "morningBrief": "PCC-M17",
+    "communityPulse": "CCC-M20",
+    "opportunityMarketplace": "OBE-001",
+    "heartbeatOfPlatform": true
+  },
+  "externalIntegration": {
+    "future": true,
+    "providers": ["googleCalendar", "appleCalendar", "microsoftOutlook", "icsFeeds", "localBrain"],
+    "participantControlled": true,
+    "extensionLayer": true
+  },
+  "notifications": {
+    "worksWith": "CAM-001",
+    "examples": ["morningBrief", "eventReminders", "volunteerReminders", "scheduleChanges", "meetingFollowUp"],
+    "respectsAttentionBudget": true
+  },
+  "timeIntelligence": {
+    "future": true,
+    "analytics": [
+      "volunteerAvailability",
+      "schedulingConflicts",
+      "busyPeriods",
+      "participationPatterns",
+      "optimalMeetingTimes",
+      "communityRhythms"
+    ],
+    "objective": "helpCommunitiesCoordinateMoreEffectively"
+  },
+  "historicalTimeline": {
+    "completedEventsPreserved": true,
+    "feeds": ["communityHistory", "missionHistory", "participantTimeline", "civicPassport", "institutionalMemory"],
+    "appendOnly": true
+  },
+  "rhythmEngine": {
+    "description": "Learns recurring community patterns — preserves habits across leadership changes",
+    "signatureFeature": true,
+    "orchestrator": "deriveCommunityRhythms(communityId)",
+    "examples": [
+      "Campus leadership meets every Monday",
+      "County volunteers serve on the second Saturday each month",
+      "Environmental team hosts quarterly cleanups",
+      "Annual traditions happen every spring",
+      "Debate watch parties occur during election season"
+    ],
+    "capabilities": [
+      "suggestFutureMeetingDates",
+      "remindLeadersAboutRecurringTraditions",
+      "highlightApproachingAnniversaries",
+      "helpNewOrganizersInheritSchedules",
+      "recommendAvoidingConflictsWithMajorEvents"
+    ],
+    "philosophy": "Communities should not rediscover their rhythm every time leadership changes",
+    "v1": "specAndRecurrenceRuleStub"
+  },
+  "v1Scope": {
+    "philosophyAndMasterTimeline": true,
+    "rhythmEngineSpec": true,
+    "personalViewStub": true,
+    "communityViewStub": true,
+    "relationshipAwareFilteringSpec": true,
+    "externalSync": "future",
+    "smartScheduling": "future"
+  },
+  "implementation": {
+    "oneCanonicalEngine": true,
+    "files": [
+      "src/lib/tsos/queryMasterTimeline.ts",
+      "src/lib/tsos/assemblePersonalTimeline.ts",
+      "src/lib/tsos/assembleCommunityTimeline.ts",
+      "src/lib/tsos/deriveCommunityRhythms.ts",
+      "src/lib/tsos/filterTimelineByRelationships.ts"
+    ]
+  }
+}

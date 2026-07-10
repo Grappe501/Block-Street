@@ -1,0 +1,187 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/phase-05/INITIATIVE_OPERATING_SYSTEM.md",
+  "acronym": "IOS",
+  "requirementId": "IOS-001",
+  "supersedes": "CIN-001",
+  "governedBy": "ACN-001",
+  "campaignIsOneTypeNotArchitecture": true,
+  "productName": "Initiative Operating System",
+  "corePrinciple": "Coordinate statewide. Empower locally.",
+  "guidingPrinciple": "Large goals are achieved through many communities working together.",
+  "principle": "An initiative is a collection of coordinated missions — each community contributes by interest, strength, and capacity.",
+  "purpose": "Coordinate large multi-community efforts spanning missions, projects, teams, campuses, counties, or regions while preserving local autonomy.",
+  "initiativeDefinition": "Any coordinated effort involving multiple people, communities, teams, projects, or missions",
+  "initiativePhilosophy": {
+    "collectionOfCoordinatedMissions": true,
+    "connectsEffortsIntoLargerMovement": true,
+    "localAutonomyPreserved": true
+  },
+  "initiativeExamples": {
+    "flexible": true,
+    "nonPartisanArchitecture": true,
+    "examples": [
+      "statewideCommunityServiceWeek",
+      "campusWelcomeMonth",
+      "leadershipDevelopmentSeries",
+      "arkansasVolunteerDay",
+      "regionalFoodDrive",
+      "environmentalStewardshipInitiative",
+      "studentCivicEducationInitiative",
+      "disasterReliefCoordination",
+      "communityHealthAwareness",
+      "neighborhoodRevitalization"
+    ]
+  },
+  "initiativeHierarchy": {
+    "chain": ["initiative", "mission", "project", "milestone", "task"],
+    "extends": "ACN-M08",
+    "strategicToOperational": true
+  },
+  "initiativeHeadquarters": {
+    "description": "Statewide coordination center for every initiative",
+    "route": "/initiative/[slug]",
+    "sections": [
+      "purpose",
+      "vision",
+      "goals",
+      "participatingCommunities",
+      "timeline",
+      "calendar",
+      "missionMap",
+      "progress",
+      "resources",
+      "knowledge",
+      "recognition",
+      "communityStories",
+      "impact"
+    ]
+  },
+  "participatingCommunities": {
+    "voluntary": true,
+    "types": ["universities", "communityColleges", "tradeSchools", "countyCommunities", "regionalPartnerships", "futureHighSchools"],
+    "localContributionSelfDetermined": true,
+    "orchestrators": {
+      "join": "joinInitiative(initiativeId, communityId, contributionPlan)",
+      "leave": "leaveInitiative(initiativeId, communityId)"
+    }
+  },
+  "initiativeTimeline": {
+    "stages": ["launch", "planning", "missionMilestones", "regionalEvents", "majorDeadlines", "celebrations", "reflection", "legacy"],
+    "integrates": "TSOS-001"
+  },
+  "missionCoordination": {
+    "multipleMissionsSimultaneously": true,
+    "independentMissionsOneInitiative": true,
+    "example": "Statewide Service Week → UCA Cleanup + Pulaski Food Drive + Benton Volunteer Fair",
+    "orchestrator": "linkMissionToInitiative(missionId, initiativeId)"
+  },
+  "sharedResources": {
+    "types": ["playbooks", "graphics", "training", "volunteers", "equipment", "knowledge", "templates", "communications"],
+    "optIn": true,
+    "integrates": ["CCE-001", "CKLS-001", "MDS-M20", "EEOS-M17"]
+  },
+  "communicationHub": {
+    "includes": ["announcements", "discussions", "updates", "communityHighlights", "volunteerCoordination", "recognition", "media"],
+    "integrates": "CCNET-001",
+    "attentionBudget": "CAM-001"
+  },
+  "initiativeDashboard": {
+    "statewideSituationalAwareness": true,
+    "widgets": [
+      "participatingCommunities",
+      "activeMissions",
+      "volunteerParticipation",
+      "upcomingEvents",
+      "currentNeeds",
+      "communityHighlights",
+      "impactStories"
+    ],
+    "nonRanking": true
+  },
+  "communityIndependence": {
+    "retainsControl": ["localLeadership", "localEvents", "localMissions", "localPriorities", "localCulture"],
+    "collaborativeNotCentralized": true
+  },
+  "initiativeLegacy": {
+    "contributes": [
+      "missionOperatingRecords",
+      "experiencePlaybooks",
+      "communityBrain",
+      "communityLegacy",
+      "statewideLivingHistory"
+    ],
+    "knowledgeCompoundsAcrossInitiatives": true,
+    "orchestrator": "archiveInitiative(initiativeId)"
+  },
+  "futureAiAssistance": {
+    "advisoryOnly": true,
+    "preservesLocalDecisionMaking": true,
+    "capabilities": [
+      "recommendParticipatingCommunities",
+      "suggestReusableMissions",
+      "identifyMissingResources",
+      "coordinateTimelines",
+      "highlightSuccessfulModels",
+      "recommendCrossCommunityPartnerships"
+    ]
+  },
+  "initiativeCommandCenter": {
+    "acronym": "ICC",
+    "requirementRef": "IOS-M16",
+    "signatureFeature": true,
+    "description": "Statewide operational cockpit — health and progress of entire initiative, drill down to any mission or community",
+    "route": "/initiative/[slug]/command",
+    "widgets": [
+      "participatingCommunitiesMap",
+      "missionsUnderway",
+      "volunteerMomentum",
+      "upcomingMilestones",
+      "resourceRequests",
+      "communityStories",
+      "newParticipants",
+      "communitiesNeedingSupport",
+      "experiencePlaybooksReused",
+      "communityPulseSummaries"
+    ],
+    "orchestrator": "getInitiativeCommandCenter(initiativeId)",
+    "aggregatesNotDuplicates": true,
+    "mobileResponsive": true
+  },
+  "commandCenterStack": {
+    "layers": [
+      { "name": "Personal Command Center", "scope": "individual", "requirement": "PCC-001" },
+      { "name": "Community Command Center", "scope": "community", "requirement": "CCC-001" },
+      { "name": "Mission Headquarters", "scope": "mission", "requirement": "MPS-001" },
+      { "name": "Experience Headquarters", "scope": "gathering", "requirement": "EEOS-001" },
+      { "name": "Initiative Command Center", "scope": "statewideRegional", "requirement": "IOS-M16" }
+    ]
+  },
+  "platformIntegrations": {
+    "SCN-001": "collaboration map",
+    "MDS-001": "mission templates",
+    "EEOS-001": "regional events",
+    "EOS-001": "cross-mission execution",
+    "VDS-001": "volunteer momentum",
+    "TSOS-001": "timeline",
+    "OEX-001": "cross-community needs",
+    "CCE-001": "shared capabilities",
+    "CKLS-001": "knowledge",
+    "CIS-001": "initiative health",
+    "CLS-001": "living history",
+    "CCNET-001": "communications",
+    "ACN-M26": "MOR aggregation"
+  },
+  "v1Scope": {
+    "philosophyDocumented": true,
+    "hierarchySpec": true,
+    "headquartersAndParticipation": true,
+    "missionCoordination": true,
+    "sharedResourcesLegacy": true,
+    "initiativeCommandCenterSpec": true,
+    "commandCenterStack": true,
+    "initiativeUiStub": true,
+    "liveIccAggregation": "v1.1",
+    "aiCoordination": "future"
+  }
+}

@@ -12,7 +12,7 @@
     { "layer": "communityConstitution", "ref": "This document CCN-001", "scope": "Inherited by all communities" },
     { "layer": "communityIdentity", "ref": "CID-001 + Community Charter", "scope": "Per-community identity" },
     { "layer": "communityActivity", "ref": "Steps 4.4–4.7", "scope": "Projects, events, committees" },
-    { "layer": "communityLegacy", "ref": "Step 4.13", "scope": "Memory and history" }
+    { "layer": "communityLegacy", "ref": "CLS-001", "scope": "Legacy and institutional history" }
   ],
   "definitionOfCommunity": "Group connected by shared place, purpose, interest, or commitment",
   "communityTypes": [
@@ -86,7 +86,7 @@
   },
   "communityMemory": {
     "preserves": ["projects", "milestones", "events", "volunteerStories", "leadershipTransitions", "photos", "resources", "meetingNotes"],
-    "implementsAt": "Step 4.13"
+    "implementsAt": "CLS-001"
   },
   "communityGrowth": {
     "healthySignals": ["welcomingCulture", "volunteerParticipation", "leadershipDevelopment", "knowledgeSharing", "relationshipBuilding", "successfulProjects", "communityResilience"],
@@ -132,7 +132,7 @@
     "constitutionAndHierarchy": true,
     "chartersSpec": true,
     "charterStubOnHubs": true,
-    "fullOS": "Steps 4.2-4.14"
+    "fullOS": "Steps 4.2-4.14 complete — COS-001 certification"
   },
   "implementation": {
     "gate": "Constitution inheritance + Charter schema required for all community types",

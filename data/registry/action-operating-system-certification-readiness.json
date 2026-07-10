@@ -1,0 +1,285 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/phase-05/ACTION_OPERATING_SYSTEM_CERTIFICATION_READINESS.md",
+  "masterSequencePath": "docs/phase-05/PHASE_5_MASTER_SEQUENCE.md",
+  "requirementId": "AOS-001",
+  "productName": "Action Operating System Certification & Readiness",
+  "readinessQuestion": "Can this platform actually run a real movement?",
+  "certificationQuestion": "Is the Action Operating System operationally ready?",
+  "guidingPrinciple": "A successful operating system doesn't simply organize work—it helps communities accomplish meaningful work together.",
+  "principle": "Readiness is measured by capability, not by the number of features.",
+  "purpose": "Define minimum operational capabilities for real-world organizing — operational readiness standard and Phase 5 closeout.",
+  "philosophy": {
+    "completeWhenCommunitiesCan": [
+      "designMissions",
+      "recruitParticipants",
+      "coordinateVolunteers",
+      "planExperiences",
+      "executeProjects",
+      "learnFromOutcomes",
+      "preserveKnowledge",
+      "strengthenFutureCommunities"
+    ],
+    "invisiblePartner": true,
+    "progressiveReadiness": true,
+    "notFeatureChecklist": true
+  },
+  "requiredCapabilities": [
+    {
+      "key": "missionDesign",
+      "label": "Mission Design",
+      "includes": ["missionCanvas", "missionLibrary", "missionHeadquarters", "missionTemplates", "missionOperatingRecords"],
+      "requirements": ["MDS-001", "MPS-001", "ACN-M26"]
+    },
+    {
+      "key": "execution",
+      "label": "Execution",
+      "includes": ["executionOS", "workPackages", "tasks", "milestones", "dependencies", "operationalDashboard", "dailyOperationsBrief"],
+      "requirements": ["EOS-001"]
+    },
+    {
+      "key": "volunteers",
+      "label": "Volunteers",
+      "includes": ["volunteerDevelopmentSystem", "volunteerPassport", "skillsMatching", "scheduling", "qrCheckIn", "recognition", "growthPathway"],
+      "requirements": ["VDS-001"]
+    },
+    {
+      "key": "experiences",
+      "label": "Experiences",
+      "includes": ["experienceHeadquarters", "registration", "checkIn", "agendaBuilder", "liveOperations", "experiencePlaybooks", "followUp"],
+      "requirements": ["EEOS-001"]
+    },
+    {
+      "key": "initiatives",
+      "label": "Initiatives",
+      "includes": ["initiativeHeadquarters", "multiCommunityCoordination", "sharedResources", "initiativeTimeline", "regionalCollaboration", "statewideInitiatives", "initiativeCommandCenter"],
+      "requirements": ["IOS-001"]
+    },
+    {
+      "key": "decisions",
+      "label": "Decisions",
+      "includes": ["proposalSystem", "discussion", "decisionRecords", "decisionHistory", "implementationTracking", "decisionGraph"],
+      "requirements": ["CDS-001"]
+    },
+    {
+      "key": "commitments",
+      "label": "Commitments",
+      "includes": ["commitmentCompass", "sharedOwnership", "supportRequests", "progressTracking", "healthyAccountability", "reflection"],
+      "requirements": ["CFS-001"]
+    },
+    {
+      "key": "capacity",
+      "label": "Capacity",
+      "includes": ["capacityProfiles", "capacityExchange", "capacityMap", "resourceRequests", "forecasting", "logistics"],
+      "requirements": ["CCS-001", "CCE-001"]
+    },
+    {
+      "key": "impact",
+      "label": "Impact",
+      "includes": ["missionImpactReports", "impactChains", "communityDashboards", "stories", "longTermOutcomes", "communityIntelligence"],
+      "requirements": ["CIIS-001"]
+    },
+    {
+      "key": "storytelling",
+      "label": "Storytelling",
+      "includes": ["storyAtlas", "storyCollection", "media", "recognition", "communityNarratives", "storyPreservation", "consentWorkflows"],
+      "requirements": ["CST-001"]
+    },
+    {
+      "key": "learning",
+      "label": "Learning",
+      "includes": ["learningDashboard", "lessonsLearned", "playbookUpdates", "missionLibrary", "improvementGraph", "continuousImprovement"],
+      "requirements": ["LIS-001", "MDS-M20"]
+    },
+    {
+      "key": "operationalIntelligence",
+      "label": "Operational Intelligence",
+      "includes": ["operationalIntelligenceSystem", "operationsCenter", "operationalGraph", "patternRecognition", "explainableRecommendations", "operationalAwareness"],
+      "requirements": ["OPIS-001"]
+    }
+  ],
+  "readinessLevels": [
+    {
+      "level": 1,
+      "key": "functional",
+      "label": "Functional",
+      "criteria": ["communitiesCanOrganizeBasicMissions"],
+      "requirements": ["MDS-001", "EOS-001"]
+    },
+    {
+      "level": 2,
+      "key": "coordinated",
+      "label": "Coordinated",
+      "criteria": ["teamsVolunteersProjectsOperateTogether"],
+      "requirements": ["VDS-001", "TWG-001", "CFS-001"]
+    },
+    {
+      "level": 3,
+      "key": "collaborative",
+      "label": "Collaborative",
+      "criteria": ["multipleCommunitiesCoordinateEffectively"],
+      "requirements": ["IOS-001", "SCN-001", "CCS-001"]
+    },
+    {
+      "level": 4,
+      "key": "intelligent",
+      "label": "Intelligent",
+      "criteria": ["operationalIntelligenceProvidesExplainableRecommendations"],
+      "requirements": ["OPIS-001"]
+    },
+    {
+      "level": 5,
+      "key": "learningOrganization",
+      "label": "Learning Organization",
+      "criteria": ["everyCompletedMissionImprovesFutureMissions"],
+      "requirements": ["LIS-001", "CKLS-001", "MDS-M20"]
+    },
+    {
+      "level": 6,
+      "key": "selfImprovingNetwork",
+      "label": "Self-Improving Network",
+      "criteria": [
+        "strongerLeaders",
+        "strongerCommunities",
+        "betterPlaybooks",
+        "richerInstitutionalKnowledge",
+        "moreEffectiveCollaboration"
+      ],
+      "maturityNotSuperiority": true
+    }
+  ],
+  "readinessChecklist": [
+    "createAndDesignMissions",
+    "recruitAndCoordinateVolunteers",
+    "scheduleEventsAndMeetings",
+    "formTeamsAndWorkingGroups",
+    "trackCommitments",
+    "coordinateResourcesAndCapacity",
+    "captureStoriesAndReflections",
+    "preserveKnowledge",
+    "measureImpact",
+    "learnFromCompletedWork",
+    "collaborateAcrossCommunities",
+    "discoverNewOpportunities",
+    "receiveExplainableOperationalGuidance"
+  ],
+  "platformCommitments": [
+    "reliableInfrastructure",
+    "consistentWorkflows",
+    "transparentGovernance",
+    "knowledgePreservation",
+    "operationalContinuity",
+    "participantCenteredDesign",
+    "scalableArchitecture",
+    "longTermMaintainability"
+  ],
+  "unifiedFramework": {
+    "notIndependentModules": true,
+    "sharedContracts": ["MOR", "reflectionImpactLegacy", "explainableRecommendations", "COSFoundation"],
+    "civicOperatingLoop": "Need → Mission → Planning → Execution → Reflection → Knowledge → Legacy",
+    "modularServicesSharedPatterns": true
+  },
+  "movementReadinessDashboard": {
+    "acronym": "MRD",
+    "requirementRef": "AOS-M09",
+    "signatureFeature": true,
+    "description": "Executive statewide readiness view — if thousands joined tomorrow, are we ready?",
+    "route": "/readiness",
+    "orchestrator": "getMovementReadinessDashboard(scope, permissions)",
+    "doesNotRankCommunities": true,
+    "dimensions": [
+      {
+        "key": "peopleReadiness",
+        "label": "People Readiness",
+        "signals": [
+          "newParticipantOnboardingCapacity",
+          "volunteerAvailability",
+          "mentorAvailability",
+          "leadershipPipeline",
+          "communitiesNeedingOrganizers"
+        ],
+        "requirements": ["PEL-001", "VDS-001", "PGL-001"]
+      },
+      {
+        "key": "communityReadiness",
+        "label": "Community Readiness",
+        "signals": [
+          "campusCoverage",
+          "countyCoverage",
+          "activeTeams",
+          "communityHealthSummaries",
+          "collaborationActivity"
+        ],
+        "requirements": ["CIS-001", "SCN-001", "COS-001"]
+      },
+      {
+        "key": "operationalReadiness",
+        "label": "Operational Readiness",
+        "signals": [
+          "activeMissions",
+          "upcomingExperiences",
+          "capacityAvailability",
+          "resourceRequests",
+          "operationalIntelligenceAlerts"
+        ],
+        "requirements": ["EOS-001", "EEOS-001", "CCS-001", "OPIS-001"]
+      },
+      {
+        "key": "learningReadiness",
+        "label": "Learning Readiness",
+        "signals": [
+          "missionLibraryGrowth",
+          "experiencePlaybooksAvailable",
+          "communityBrainMaturity",
+          "storyAtlasExpansion",
+          "lessonsAdoptedAcrossCommunities"
+        ],
+        "requirements": ["MDS-M20", "EEOS-M17", "CKLS-001", "CST-M16", "LIS-M16"]
+      }
+    ],
+    "complements": "Arkansas Network Health Dashboard [COS-M09]",
+    "integrates": ["COS-001", "OPIS-M17", "CCC-001", "CIS-001", "SCN-001", "CKLS-001", "LIS-001"]
+  },
+  "phase5Complete": {
+    "phase3HumanOS": {
+      "question": "How do individuals join, grow, and develop as leaders?",
+      "requirements": ["PHQ-001", "PEL-001", "PGL-001", "CJT-001", "REL-001", "CPP-001", "PRN-001", "PDT-001", "OBE-001"]
+    },
+    "phase4CommunityOS": {
+      "question": "How do communities function as healthy, connected institutions?",
+      "requirements": ["COS-001", "CCN-001", "CCC-001", "TWG-001", "MPS-001", "TSOS-001", "CCNET-001", "CKLS-001", "CCE-001", "CIS-001", "SCN-001", "OEX-001", "CLS-001"]
+    },
+    "phase5ActionOS": {
+      "question": "How do communities transform ideas into coordinated action?",
+      "requirements": ["ACN-001", "MDS-001", "EOS-001", "VDS-001", "EEOS-001", "IOS-001", "CDS-001", "CFS-001", "CCS-001", "CIIS-001", "CST-001", "LIS-001", "OPIS-001", "AOS-001"]
+    },
+    "communityOperatingSystem": true,
+    "expandWithoutArchitectureChange": true,
+    "evaluationQuestionRef": "PEL-M13"
+  },
+  "v1Scope": {
+    "philosophyDocumented": true,
+    "twelveCapabilityDomains": true,
+    "sixReadinessLevels": true,
+    "readinessChecklist": true,
+    "platformCommitments": true,
+    "unifiedFramework": true,
+    "movementReadinessDashboardSpec": true,
+    "phase5Closeout": true,
+    "automatedReadinessScoring": "future",
+    "fullMrdLiveAggregation": "v1.1"
+  },
+  "implementation": {
+    "unifiedFrameworkNotIndependentModules": true,
+    "modularServicesSharedContracts": true,
+    "reuseCommonPatterns": true,
+    "connectMissionToKnowledgeImpactLegacy": true,
+    "futureExpansionWithoutRedesign": true,
+    "files": [
+      "src/lib/aos/assessActionOSReadiness.ts",
+      "src/lib/aos/getActionOSReadinessLevel.ts",
+      "src/lib/aos/getMovementReadinessDashboard.ts",
+      "src/components/admin/MovementReadinessDashboard.tsx"
+    ]
+  }
+}

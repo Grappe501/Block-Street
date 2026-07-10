@@ -1,0 +1,167 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/phase-04/COMMUNITY_GROWTH_SUSTAINABILITY.md",
+  "motto": "Healthy communities continually develop new people, preserve knowledge, and create opportunities for others.",
+  "principle": "The measure of success is long-term resilience — not simply activity.",
+  "purpose": "Define how communities are created, sustained, renewed, and preserved as living systems.",
+  "objective": "Help communities thrive for decades — not merely launch.",
+  "communityPhilosophy": {
+    "neverFinished": true,
+    "always": ["learning", "growing", "teaching", "adapting", "renewing", "building"],
+    "softwareEvolvesWithThem": true
+  },
+  "lifecycleStages": [
+    {
+      "stage": 1,
+      "key": "seed",
+      "label": "Seed",
+      "description": "Community created — registry, page, mission; waiting for participants and organizers",
+      "signals": ["registryExists", "communityPageExists", "missionEstablished", "needsOutreach"],
+      "defaultForAdtInit": true
+    },
+    {
+      "stage": 2,
+      "key": "sprout",
+      "label": "Sprout",
+      "description": "First participants arrive — registrations, conversations, first organizer, first invite",
+      "signals": ["initialRegistrations", "firstRelationships", "firstOrganizer", "firstInvitation"]
+    },
+    {
+      "stage": 3,
+      "key": "growing",
+      "label": "Growing",
+      "description": "Participation increases — committees, projects, events, identity developing",
+      "signals": ["committeesForming", "projectsBeginning", "eventsOrganized", "momentumVisible"]
+    },
+    {
+      "stage": 4,
+      "key": "established",
+      "label": "Established",
+      "description": "Operates consistently — regular meetings, stable leadership, institutional knowledge",
+      "signals": ["regularMeetings", "stableLeadership", "recurringProjects", "mentorshipActive"]
+    },
+    {
+      "stage": 5,
+      "key": "thriving",
+      "label": "Thriving",
+      "description": "Develops other communities — mentors neighbors, shares resources, statewide contributor",
+      "signals": ["crossCommunityMentorship", "resourceSharing", "leaderDevelopment", "statewideContribution"]
+    },
+    {
+      "stage": 6,
+      "key": "legacy",
+      "label": "Legacy",
+      "description": "Lasting infrastructure — documentation, succession, traditions, alumni, institutional memory",
+      "signals": ["strongDocumentation", "leadershipSuccession", "traditions", "alumniInvolvement"]
+    },
+    {
+      "stage": 7,
+      "key": "renewal",
+      "label": "Renewal",
+      "description": "Natural transitions — graduation, decline, new priorities; rebuilding not failure",
+      "signals": ["leadershipTransition", "membershipDecline", "changingPriorities", "revivalOpportunity"],
+      "notFailure": true
+    }
+  ],
+  "sustainabilityPrinciples": [
+    "welcomeNewcomers",
+    "developFutureLeaders",
+    "documentKnowledge",
+    "shareResponsibility",
+    "encourageParticipation",
+    "celebrateService",
+    "adaptToChange"
+  ],
+  "leadershipSuccession": {
+    "intentionalPreparation": true,
+    "methods": ["mentorship", "sharedResponsibility", "leadershipTraining", "knowledgeTransfer", "gradualTransitions"],
+    "neverDependOnOneIndividual": true
+  },
+  "institutionalMemory": {
+    "preserves": ["meetingNotes", "guides", "traditions", "photos", "projects", "leadershipHistory", "lessonsLearned"],
+    "futureOrganizersInherit": true,
+    "appendOnly": true
+  },
+  "communityHealth": {
+    "holistic": true,
+    "indicators": [
+      "participantRetention",
+      "volunteerEngagement",
+      "leadershipDevelopment",
+      "committeeActivity",
+      "projectCompletion",
+      "relationshipGrowth",
+      "knowledgeSharing",
+      "communityResilience"
+    ],
+    "guidesSupportNotJudges": true,
+    "notVanityMetrics": true
+  },
+  "supportDuringDecline": {
+    "triggers": ["organizerRelocation", "graduation", "burnout", "membershipLoss"],
+    "platformSupport": [
+      "suggestedMentors",
+      "neighboringCommunities",
+      "leadershipResources",
+      "revivalOpportunities",
+      "historicalGuidance"
+    ],
+    "objectiveIsRenewal": true
+  },
+  "crossCommunitySupport": {
+    "thrivingHelpNewer": true,
+    "methods": ["mentorship", "resourceSharing", "jointEvents", "leadershipCoaching", "projectCollaboration"],
+    "statewideEcosystem": true
+  },
+  "communityRenewal": {
+    "alwaysAbleToRestart": true,
+    "preserved": ["history", "relationships", "knowledge", "charter", "statusTimeline"],
+    "dormantIsValid": true,
+    "neverDeleteOnRenewal": true
+  },
+  "communityHealthCheck": {
+    "description": "Reflection tool — not a score or grade; partner not supervisor",
+    "signatureFeature": true,
+    "orchestrator": "runCommunityHealthCheck(communityId)",
+    "questions": [
+      "Have you welcomed new members recently?",
+      "Are leadership responsibilities shared?",
+      "Do you have upcoming activities?",
+      "Are projects moving forward?",
+      "Is important knowledge documented?",
+      "Are experienced members mentoring newer participants?",
+      "Is anyone at risk of burnout?"
+    ],
+    "visibleTo": "communityLeaders",
+    "notPublicRank": true,
+    "respectsAttentionBudget": true,
+    "v1": "specAndManualChecklist"
+  },
+  "stsIntegration": {
+    "extends": "STS-001",
+    "timelinePattern": "STS-M16",
+    "defaultSeedStatus": "needs_outreach",
+    "orchestrator": "deriveCommunityLifecycleStage(communityId)"
+  },
+  "ccnHierarchyMapping": {
+    "seedSprout": "identityForming",
+    "growingEstablished": "activity",
+    "thriving": "activityPlusCrossCommunity",
+    "legacy": "legacy",
+    "renewal": "bridgeToGrowing"
+  },
+  "v1Scope": {
+    "philosophyAndStages": true,
+    "healthCheckSpec": true,
+    "derivedLifecycleStub": true,
+    "automatedHealthCheck": "v1.1"
+  },
+  "implementation": {
+    "gate": "lifecycle stage required — never assume permanent active",
+    "files": [
+      "src/lib/community/deriveCommunityLifecycleStage.ts",
+      "src/lib/community/runCommunityHealthCheck.ts",
+      "src/lib/community/communityLifecycleEvents.ts"
+    ]
+  }
+}

@@ -1,0 +1,272 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/phase-06/PUBLIC_COMMUNITY_NETWORK.md",
+  "acronym": "PCN",
+  "requirementId": "PCN-001",
+  "plannedAliasSuperseded": "PPS-001",
+  "extends": "CST-001",
+  "governedBy": "GCN-001",
+  "phaseRequirementId": "GOS-001",
+  "productName": "Public Community Network",
+  "notPassivePublicPage": true,
+  "livingWindowIntoCommunity": true,
+  "guidingPrinciple": "Every community deserves a public home that reflects its identity and welcomes new people.",
+  "principle": "Public pages should invite people into community life.",
+  "purpose": "Dynamic public presence for every community — discover, explore, learn mission, get involved — while protecting private information.",
+  "philosophy": {
+    "notBrochure": true,
+    "visitorQuestions": [
+      "whoAreWe",
+      "whyDoWeExist",
+      "whatAreWeDoing",
+      "howCanIHelp",
+      "howDoIJoin",
+      "whatMakesUsUnique"
+    ],
+    "separateFromInternalOperations": true
+  },
+  "publicCommunityProfiles": {
+    "requirementRef": "PCN-M04",
+    "route": "/community/[slug]",
+    "orchestrator": "getPublicCommunityProfile(slug)",
+    "includes": [
+      "mission",
+      "communityStory",
+      "location",
+      "foundingDate",
+      "photos",
+      "traditions",
+      "upcomingPublicEvents",
+      "currentInitiatives",
+      "volunteerOpportunities",
+      "leadershipContactOptional"
+    ],
+    "communityControlledPublicFields": true
+  },
+  "educationalInstitutionProfiles": {
+    "requirementRef": "PCN-M05",
+    "route": "/schools/[slug]/community",
+    "orchestrator": "getPublicInstitutionProfile(slug)",
+    "includes": [
+      "institutionOverview",
+      "location",
+      "county",
+      "yearFounded",
+      "enrollmentPublicSources",
+      "schoolColorsRespectfulNoAffiliationImplied",
+      "mascotTextOnly",
+      "academicHighlights",
+      "campusTraditionsPublicInfo",
+      "officialWebsiteLink"
+    ],
+    "studentsFeelCampusHome": true,
+    "respectTrademarksAndIdentity": true
+  },
+  "countyCommunityProfiles": {
+    "requirementRef": "PCN-M06",
+    "route": "/county/[slug]",
+    "orchestrator": "getPublicCountyProfile(slug)",
+    "includes": [
+      "countyOverview",
+      "map",
+      "communitiesServed",
+      "currentInitiatives",
+      "volunteerOpportunities",
+      "stories",
+      "upcomingEvents",
+      "partnerOrganizations"
+    ],
+    "visibleOrganizingHubs": true
+  },
+  "communityActivityFeed": {
+    "requirementRef": "PCN-M07",
+    "orchestrator": "getPublicActivityFeed(communityId, pagination?)",
+    "mayInclude": [
+      "stories",
+      "photos",
+      "completedMissions",
+      "upcomingPublicEvents",
+      "highlights",
+      "volunteerOpportunities",
+      "recognition"
+    ],
+    "publicContentOnly": true
+  },
+  "publicCalendar": {
+    "requirementRef": "PCN-M08",
+    "orchestrator": "getPublicCalendar(communityId, dateRange?)",
+    "publishable": [
+      "publicMeetings",
+      "volunteerOpportunities",
+      "trainingSessions",
+      "serviceEvents",
+      "communityCelebrations"
+    ],
+    "privateActivitiesRemainPrivate": true
+  },
+  "opportunityExplorer": {
+    "requirementRef": "PCN-M09",
+    "route": "/explore/opportunities",
+    "orchestrator": "explorePublicOpportunities(filters?)",
+    "integrates": "OEX-001",
+    "browse": [
+      "volunteerOpportunities",
+      "events",
+      "committeesSeekingParticipants",
+      "leadershipOpportunities",
+      "communityProjects"
+    ]
+  },
+  "storyShowcase": {
+    "requirementRef": "PCN-M10",
+    "orchestrator": "getPublicStoryShowcase(communityId)",
+    "integrates": "CST-001",
+    "features": [
+      "volunteerStories",
+      "leadershipJourneys",
+      "missionHighlights",
+      "traditions",
+      "photoGalleries",
+      "videos",
+      "recognitionStories"
+    ]
+  },
+  "communityMap": {
+    "requirementRef": "PCN-M11",
+    "route": "/map/communities",
+    "orchestrator": "getPublicCommunityMap(filters?, layers?)",
+    "browseBy": [
+      "county",
+      "college",
+      "university",
+      "tradeSchool",
+      "futureHighSchools",
+      "regionalCommunities"
+    ]
+  },
+  "searchAndDiscovery": {
+    "requirementRef": "PCN-M12",
+    "route": "/explore/search",
+    "orchestrator": "searchPublicCommunities(query, filters?)",
+    "searchBy": [
+      "institutionName",
+      "county",
+      "communityType",
+      "missionCategory",
+      "volunteerOpportunities",
+      "events",
+      "topics"
+    ],
+    "seoFriendly": true
+  },
+  "joinPathways": {
+    "requirementRef": "PCN-M13",
+    "orchestrator": "getJoinPathway(communityId)",
+    "answers": [
+      "howDoIJoin",
+      "whoCanParticipate",
+      "whatHappensAfterRegister",
+      "whoWillWelcomeMe"
+    ],
+    "integrates": ["ICS-001", "WBS-001"]
+  },
+  "privacy": {
+    "requirementRef": "PCN-M14",
+    "intentionallyMarkedPublicOnly": true,
+    "neverPublic": [
+      "communityDiscussions",
+      "memberLists",
+      "internalPlanning",
+      "operationalIntelligence",
+      "sensitiveStories"
+    ],
+    "dataClassificationAtQueryLayer": true
+  },
+  "arkansasCommunityExplorer": {
+    "acronym": "ACE",
+    "requirementRef": "PCN-M16",
+    "signatureFeature": true,
+    "description": "Interactive statewide discovery — map of Arkansas opening rich public profiles; homepage experience for first-time visitors",
+    "route": "/explore",
+    "homepageEnhancement": "/",
+    "orchestrator": "getArkansasCommunityExplorer(filters?, selectedSlug?)",
+    "clickTargets": [
+      "county",
+      "university",
+      "communityCollege",
+      "tradeSchool",
+      "futureHighSchool",
+      "statewideInitiative"
+    ],
+    "profileIncludes": [
+      "communityOverview",
+      "stories",
+      "publicEvents",
+      "volunteerOpportunities",
+      "growthHighlights",
+      "traditions",
+      "communityPhotos",
+      "waysToGetInvolved"
+    ],
+    "mapGrowsRicherAsNetworkGrows": true,
+    "complements": ["CGO-M16", "IPS-M13", "CST-M16"]
+  },
+  "communityPersonality": {
+    "requirementRef": "PCN-M17",
+    "description": "Consistent platform structure with local identity — each community tells its own story",
+    "orchestrator": "getCommunityPersonality(communityId)",
+    "examples": [
+      "ucaStudentLeadershipServiceLearning",
+      "philanderSmithHistoryCivicEngagement",
+      "countyLocalServiceRegionalPartnerships"
+    ],
+    "configurable": [
+      "heroImagery",
+      "accentThemesWithinBrandGuidelines",
+      "featuredTraditions",
+      "personalityTags",
+      "welcomeMessage"
+    ],
+    "sameCOSUniqueLocalExpression": true
+  },
+  "platformIntegrations": {
+    "CST-001": "stories and Story Atlas",
+    "OEX-001": "public opportunities",
+    "OBE-001": "matching",
+    "CGO-001": "growth highlights",
+    "ICS-001": "join and invitations",
+    "WBS-001": "welcome preview",
+    "CCR-001": "public recognition",
+    "CEF-001": "future community types",
+    "INST-001": "institution registry",
+    "CNTY-001": "county registry",
+    "IPS-001": "public partner orgs",
+    "KDG-001": "data classification",
+    "SEC-001": "privacy",
+    "CCC-001": "internal vs public separation",
+    "EEOS-001": "public events",
+    "CID-001": "community identity"
+  },
+  "futureAiAssistance": {
+    "assistsNotReplacesCommunityVoices": true,
+    "maySupport": [
+      "summarizeCommunityActivity",
+      "recommendCommunitiesByInterest",
+      "highlightVolunteerOpportunities",
+      "generatePublicEventDescriptions",
+      "recommendRelatedStories",
+      "multilingualPublicContentFuture"
+    ],
+    "communityApprovedBeforePublish": true
+  },
+  "v1Scope": {
+    "philosophyDocumented": true,
+    "profilesAndDiscovery": true,
+    "institutionAndCountyPages": true,
+    "privacyBoundaries": true,
+    "communityPersonalitySpec": true,
+    "communityExplorerSpec": true,
+    "liveExplorerMapAggregation": "v1.1",
+    "multilingualPublicContent": "future"
+  }
+}

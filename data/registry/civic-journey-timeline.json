@@ -28,7 +28,7 @@
       "key": "volunteerService",
       "label": "Volunteer Service",
       "examples": ["volunteerEvent", "serviceProject", "communityOutreach", "hoursContributed", "specialProjects", "recognition"],
-      "sources": ["VOL-001", "CRA-M10"]
+      "sources": ["VDS-001", "CRA-M10"]
     },
     {
       "key": "leadership",

@@ -4,6 +4,841 @@
 
 ---
 
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+## 2026-07-10 — VOLUME-001.3 Canonical Repository Architecture (Canonical)
+
+**Document ID:** VOLUME-001.3 · **ENG-003 · RCN-001 · AC-085**
+
+### What Was Built
+
+- **Canonical Repository Architecture** — permanent blueprint for every directory and module
+- **Top-level folders** — docs, apps, packages, services, database, api, shared, public, infrastructure, scripts, tests, tools, config
+- **Domain organization template** · dependency rule · shared code rule · plugin philosophy
+- **Block-Street transitional map** — current `src/`/`data/` → canonical evolution path
+- **Repository Constitution [RCN-001]** — 14 rules for PR, review, and AI build validation
+
+### Milestone
+
+**Volume 1 step 3/14 complete.** Next: **1.4 Database Architecture** [ENG-004].
+
+---
+
+## 2026-07-10 — VOLUME-001.2 System Architecture (Canonical)
+
+**Document ID:** VOLUME-001.2 · **ENG-002 · AC-084**
+
+### What Was Built
+
+- **Nine architectural layers** — Presentation through Observability
+- **Platform Kernel** — identity, auth, registry, time, events, notifications, config, audit, graph interface, search hooks
+- **Fourteen domain services** — Identity through Media with clear boundaries
+- **Communication pattern** — UI → Application → Domain → Kernel → Data
+- **State levels** — client · application · persistent
+- **Configuration, scalability, and failure philosophies**
+
+### Milestone
+
+**Volume 1 step 2/14 complete.** Next: **1.3 Repository Structure** [ENG-003].
+
+---
+
+## 2026-07-10 — VOLUME-001.1 Engineering Doctrine (Canonical)
+
+**Document ID:** VOLUME-001.1 · **ENG-001 · AC-083**
+
+### What Was Built
+
+- **Engineering Doctrine** — Volume 1 step 1/14; engineering constitution for COS factory layer
+- **Build philosophy** · modular architecture · design-first protocol · vertical slices
+- **Validation gates A–E** (design, constitution, technical, traceability, security/privacy)
+- **No overbuilding** · future-proofing rules · stable foundation order
+- **Extends** PHASE-001.8 [ED-002–ED-FD] for Volume 1+ implementation
+- **Master sequence:** `docs/volume-01/VOLUME_1_MASTER_SEQUENCE.md` (14 steps)
+
+### Milestone
+
+**Volume 1 formally sequenced.** Next: **1.2 System Architecture** [ENG-002].
+
+---
+
+## 2026-07-10 — Implementation Volumes 1–6 — Factory Layer (Canonical v1)
+
+**Document ID:** IVS-001 · **EAB-001 · DAB-001 · UXB-001 · AIB-001 · OLB-001 · EDB-001 · AC-077–082**
+
+### What Was Built
+
+- **Natural design pause** — shift from *what the system does* to *how the system is built*
+- **Volume 1** Engineering Architecture Bible — 14 chapters (system, DB, API, auth, search, AI, UI, maps, time, notifications, media, analytics, deployment, testing)
+- **Volume 2** Data Architecture Bible — canonical entities, graph model, migration order
+- **Volume 3** User Experience Bible — surfaces, navigation, dashboards, screen catalog
+- **Volume 4** AI & Intelligence Bible — LocalBrain, Community Brain, RAG, human approval
+- **Volume 5** Operations & Launch Bible — launch stages, moderation, backups, incidents
+- **Volume 6** Experience Design Bible — how people *feel* (distinct from UI wireframes)
+- **Phase 7–9 deferred** until Volumes 1–6 expanded toward full depth
+
+### Milestone
+
+**Factory layer v1 complete.** Product specification (Phases 1–6 + Volume 0) now paired with engineering, data, UX, AI, operations, and experience specifications.
+
+---
+
+## 2026-07-10 — VOLUME-000 Master Architecture Bible (Canonical)
+
+**Document ID:** VOLUME-000 · **MAB-001 · AC-076**
+
+### What Was Built
+
+- **Volume 0 — Master Architecture Bible** — Constitution, Encyclopedia, Engineering Handbook, Product Manual, Operating Standard
+- **Sections A–T** — vision through future expansion
+- **20 canonical principles** · **Burt's First Rule** (four questions before any feature)
+- **Community Operating System (COS) distinction** — not a platform; an operating system everything else runs on
+- **Conflict rule** — Volume 0 supersedes implementation docs unless newer approved revision
+- **Live registry:** `data/registry/master-architecture-bible.json` · Admin **Volume 0** tab
+
+### Milestone
+
+**Volume 0 v1 complete.** Burt reads this document first, then BUILD-BIBLE, then production code.
+
+---
+
+## 2026-07-10 — PHASE-006.14 Growth OS Certification & Network Readiness (Canonical)
+
+**Document ID:** PHASE-006.14 · **GOS-001 · AC-075 · PHASE 6 COMPLETE**
+
+### What Was Built
+
+- **Growth Operating System Certification & Network Readiness** — can the network grow itself?
+- **Twelve growth capability domains** mapping all Phase 6 modules (6.1–6.13)
+- **Six Growth Readiness Levels** — Discoverable through Self-Expanding Ecosystem
+- **Community Genome [GOS-M10]** — common DNA instantiated by Community Foundry
+- **Network Readiness Dashboard** · growth readiness checklist
+- **Six-phase architecture complete** (102 build steps designed)
+- **Recommends Volume 0 Master Architecture Bible MAB-001** before production code
+
+### Milestone
+
+**Phase 6 — Growth Operating System is architecturally complete.**
+
+---
+
+## 2026-07-10 — PHASE-006.13 Network Intelligence & Strategy System (Canonical)
+
+**Document ID:** PHASE-006.13 · **NISS-001 · AC-074**
+
+### What Was Built
+
+- **Network Intelligence & Strategy System** — statewide strategic intelligence; platform understands itself without controlling itself
+- **Statewide Network Twin [NISS-M16]** — living ecosystem model with strategic query interface
+- **Community Knowledge Graph [NISS-M17]** — unified graph architecture implementing GOS-M16 Living Network Graph vision
+- **Strategic awareness domains** — health, leadership, collaboration, opportunity, knowledge intelligence
+- **Explainability and privacy** — advisory intelligence, communities decide
+- **Supersedes planned NIN-001** · six phases unified into one self-aware model
+
+---
+
+## 2026-07-10 — PHASE-006.12 Public Community Network (Canonical)
+
+**Document ID:** PHASE-006.12 · **PCN-001 · AC-073**
+
+### What Was Built
+
+- **Public Community Network** — living public home for every community, not a passive brochure
+- **Arkansas Community Explorer [PCN-M16]** — interactive statewide discovery for first-time visitors
+- **Public profiles** — community, institution, and county pages with activity feed and calendar
+- **Opportunity Explorer, Story Showcase, join pathways** — discover and get involved
+- **Community Personality [PCN-M17]** — shared architecture, local identity
+- **Privacy boundaries** — public layer strictly separated from internal operations
+- **Extends CST-001** · supersedes planned PPS-001
+
+---
+
+## 2026-07-10 — PHASE-006.11 Lifelong Community Network (Canonical)
+
+**Document ID:** PHASE-006.11 · **LCN-001 · AC-072**
+
+### What Was Built
+
+- **Lifelong Community Network** — participation evolves across every life stage, never ends at graduation
+- **Generational Network [LCN-M16]** — communities as living generations connected through mentorship and service
+- **Community journey, alumni spaces, mentorship pipeline, lifelong timeline, reconnection**
+- **Knowledge preservation** — institutional memory grows over time
+- **Open Door [LCN-M17 · CP-020]** — always a meaningful path back
+- **Extends CLS-001 + JRN-001** · supersedes planned ALN-001
+
+---
+
+## 2026-07-10 — PHASE-006.10 Institutional Partnership System (Canonical)
+
+**Document ID:** PHASE-006.10 · **IPS-001 · AC-071**
+
+### What Was Built
+
+- **Institutional Partnership System** — bridge between community organizing and broader civic ecosystem
+- **Arkansas Civic Ecosystem Map [IPS-M13]** — statewide view of communities and institutions connected
+- **Partner categories, profiles, directory, requests, and partnership history**
+- **Community Independence [IPS-M10]** — partnerships collaborative not controlling
+- **Mutual Value [IPS-M14 · CP-019]** — every partnership benefits both sides
+- **Extends SCN-001** · supersedes planned PTN-001
+
+---
+
+## 2026-07-10 — PHASE-006.9 Community Expansion Framework (Canonical)
+
+**Document ID:** PHASE-006.9 · **CEF-001 · AC-070**
+
+### What Was Built
+
+- **Community Expansion Framework** — how new community types join without platform redesign
+- **Community Foundry [CEF-M15]** — guided launch provisioning entire community stack
+- **Community Blueprint + Launch Checklist + Templates**
+- **Mutual Strengthening [CEF-M16]** — new communities strengthen network; network strengthens them
+- **Extends COS-001 + CCN-001** · supersedes planned CXP-001
+
+---
+
+## 2026-07-10 — PHASE-006.8 Community Culture & Recognition System (Canonical)
+
+**Document ID:** PHASE-006.8 · **CCR-001 · AC-069**
+
+### What Was Built
+
+- **Community Culture & Recognition System** — culture not competition; recognition is one outcome
+- **Culture Garden [CCR-M14]** — visual metaphor for community health, not leaderboards
+- **Story-based recognition** — stories inspire more than titles
+- **Values, traditions, rituals, appreciation** — strengthens community identity
+- **Extends CRA-001** · supersedes planned RCG-001
+
+---
+
+## 2026-07-10 — PHASE-006.7 Invitation & Connection System (Canonical)
+
+**Document ID:** PHASE-006.7 · **ICS-001 · AC-068**
+
+### What Was Built
+
+- **Invitation & Connection System** — platform front door, not just referral links
+- **All invitation types** — personal, community, event, mission, committee, organization (future)
+- **Universal Invitation Builder [ICS-M15]** — who, what, how → landing page, QR, link, language
+- **Dynamic QR Codes [ICS-M16]** — permanent QR, mutable destination — print once, use all year
+- **Welcome integration** — accept flows into WBS First 30 Days and PON Impact Tree
+- **Extends RGE-001 + NET-002 + PON-001** · supersedes planned INV-001
+
+---
+
+## 2026-07-10 — PHASE-006.6 Community Growth Intelligence System (Canonical)
+
+**Document ID:** PHASE-006.6 · **CGIS-001 · AC-067**
+
+### What Was Built
+
+- **Community Growth Intelligence System** — proactive growth awareness, never directive
+- **Arkansas Growth Observatory [CGIS-M16]** — living executive view across five lenses
+- **Opportunity Detection + Representation Intelligence** — where attention is needed
+- **Deepen Before Expand [CGIS-M17]** — strengthen existing communities before launching new ones
+- **Explainability** — every recommendation shows what was observed and why
+- **Extends CIS-001** · supersedes planned GIN-001
+
+---
+
+## 2026-07-10 — PHASE-006.5 Welcome & Belonging System (Canonical)
+
+**Document ID:** PHASE-006.5 · **WBS-001 · AC-066**
+
+### What Was Built
+
+- **Welcome & Belonging System** — most important Growth OS step; not HR onboarding
+- **Guiding principle** — People join because they are invited. They stay because they belong.
+- **Welcome Journey + Welcome Guide** — personal welcome, not automated
+- **Belonging Checkpoints** — joined? volunteered? met someone? returned?
+- **First 30 Days Journey [WBS-M16]** — guided first month, not mandatory checklist
+- **Extends JRN-001 + PEL-001 + OBE-001** · supersedes planned ONB-001
+
+---
+
+## 2026-07-10 — PHASE-006.4 Community Leadership Development System (Canonical)
+
+**Document ID:** PHASE-006.4 · **CLD-001 · AC-065**
+
+### What Was Built
+
+- **Community Leadership Development System** — network-wide leadership pipeline, not ambassador titles
+- **Leadership Journey** — Participant → Volunteer → … → Statewide Mentor
+- **Leadership Profile** — growth over time via service and contribution
+- **Mentorship Network + Leadership Succession** — continuous next-generation development
+- **Leadership Constellation [CLD-M16]** — relationships not org charts
+- **Extends PGL-001** under Growth Constitution governance · supersedes planned AMB-001
+
+---
+
+## 2026-07-10 — PHASE-006.3 Community Growth & Outreach System (Canonical)
+
+**Document ID:** PHASE-006.3 · **CGO-001 · AC-064**
+
+### What Was Built
+
+- **Community Growth & Outreach System** — scales from individual (PON) to institution
+- **Growth doesn't happen by accident** — plan, pipeline, picture of today and tomorrow
+- **Community Growth Dashboard [CGO-M04]** — actionable growth signals per community
+- **Representation Map + Outreach Zones** — structured outreach without rigidity
+- **Growth Goals, Campaigns, Readiness, Timeline, Heat Map, Resources, Stories**
+- **Arkansas Coverage Map [CGO-M16]** — statewide expansion map for counties and institutions
+- **Extends CGS-001** under Growth Constitution governance
+
+---
+
+## 2026-07-10 — PHASE-006.2 Personal Organizing Network (Canonical)
+
+**Document ID:** PHASE-006.2 · **PON-001 · AC-063**
+
+### What Was Built
+
+- **Personal Organizing Network** — the feature that first inspired the platform
+- **Not referral program** — living community network; relationships not popularity
+- **Personal invite identity** — link, code, QR, short URL
+- **Impact Tree [PON-M16]** — ripple effects not invite counts; implements CP-016
+- **Welcome workflow + mentorship** — invitations begin relationships
+- **Extends PRN-001 + RGE-001** under Growth Constitution governance
+
+---
+
+## 2026-07-10 — PHASE-006.1 Growth Constitution (Canonical)
+
+**Document ID:** PHASE-006.1 · **GCN-001 · AC-062**
+
+### What Was Built
+
+- **Growth Constitution** — Constitution of Growth; governs every future expansion
+- **Guiding principle** — Healthy growth begins with meaningful relationships
+- **Permanent choices** — Relationships · Belonging · Community · Leadership over metrics
+- **Eight growth principles** — Relationship First through Long-Term Thinking
+- **Belonging Index [GCN-M16]** — community reflection, not individual scoring
+- **Invitation Impact Visibility [CP-016]** — constitutional ripple story, not competition
+
+---
+
+## 2026-07-10 — PHASE-006 Growth Operating System — Master Sequence (Canonical)
+
+**Document ID:** PHASE-006 · **GOS-001**
+
+### Architectural Turning Point
+
+Phases 1–5 built **infrastructure**. Phase 6 builds **growth** — not marketing, not recruiting, but organic community expansion.
+
+### What Was Defined
+
+- **Growth Operating System** — 14-step master sequence (6.1–6.14)
+- **Growth loop** — Relationships → Communities → Action → Stories → New People
+- **Living Network Graph [GOS-M16]** — master graph unifying all platform graphs
+- **Invitation Impact Visibility [CP-016]** — constitutional principle: see the ripple of your invites as story, not competition
+- **Four Operating Systems** — Human · Community · Action · **Growth**
+- **Phase restructure** — Intelligence → Phase 7 · Platform → 8 · Experience → 9 · expansion absorbed into Growth OS
+
+---
+
+## 2026-07-10 — PHASE-005.14 Action Operating System Certification & Readiness (Canonical)
+
+**Document ID:** PHASE-005.14 · **AOS-001 · AC-061**
+
+### What Was Built
+
+- **Action Operating System Certification & Readiness** — answers *Can this platform actually run a real movement?*
+- **Guiding principle** — A successful operating system helps communities accomplish meaningful work together
+- **Twelve capability domains** — Mission Design through Operational Intelligence
+- **Six readiness levels** — Functional through Self-Improving Network
+- **Movement Readiness Dashboard [AOS-M09]** — People · Community · Operational · Learning dimensions
+- **Phase 5 complete** — Human OS · Community OS · Action OS define the Community Operating System
+
+---
+
+## 2026-07-10 — PHASE-005.13 Operational Intelligence System (Canonical)
+
+**Document ID:** PHASE-005.13 · **OPIS-001 · AC-060**
+
+### What Was Built
+
+- **Operational Intelligence System** — coordination layer not AI phase; supersedes Action Intelligence
+- **Guiding principle** — Operational intelligence should make communities more capable, not more dependent
+- **People lead. The platform assists.** — guidance not direction; advisory only
+- **Operational Graph [OPIS-M16]** — connects all platform graphs across the ecosystem
+- **Operations Center [OPIS-M17]** — statewide situational awareness cockpit; not a control room
+- **Command center culmination** — PCC → CCC → Mission HQ → Experience HQ → Initiative Command Center → Operations Center
+
+---
+
+## 2026-07-10 — PHASE-005.12 Learning & Improvement System (Canonical)
+
+**Document ID:** PHASE-005.12 · **LIS-001 · AC-059**
+
+### What Was Built
+
+- **Learning & Improvement System** — universal learning language; supersedes After Action Review
+- **Guiding principle** — Every mission leaves behind more wisdom than work
+- **Learning lifecycle** — reflection as final phase of every mission
+- **Improvement Graph [LIS-M16]** — final graph; how improvements spread statewide
+- **Learning architecture stack** — completes platform learning loop
+- **Community Learning Dashboard** — visible knowledge growth without ranking
+
+---
+
+## 2026-07-10 — PHASE-005.11 Community Storytelling System (Canonical)
+
+**Document ID:** PHASE-005.11 · **CST-001 · AC-058**
+
+### What Was Built
+
+- **Community Storytelling System** — culture preservation not marketing; supersedes Storytelling System
+- **Guiding principle** — Communities are remembered through their stories
+- **Story categories** — six types from participant to legacy narratives
+- **Arkansas Story Atlas [CST-M16]** — map filling with human experience
+- **Memory triad** — Community Brain · Community Legacy · Story Atlas
+- **Consent workflows** — respect for participants before publication
+
+---
+
+## 2026-07-10 — PHASE-005.10 Community Impact Intelligence System (Canonical)
+
+**Document ID:** PHASE-005.10 · **CIIS-001 · AC-057**
+
+### What Was Built
+
+- **Community Impact Intelligence System** — meaningful impact not busyness; supersedes Impact Measurement
+- **Guiding principle** — Success = stronger people, relationships, communities
+- **Outputs vs outcomes** — activities produce outputs; communities experience outcomes
+- **Impact framework** — six dimensions from People to Statewide Network
+- **Impact Chain [CIIS-M16]** — traces how actions lead to change over time
+- **Impact intelligence stack** — MOR → Brain → Legacy → graphs → Impact Chain
+
+---
+
+## 2026-07-10 — PHASE-005.9 Capacity Coordination System (Canonical)
+
+**Document ID:** PHASE-005.9 · **CCS-001 · AC-056**
+
+### What Was Built
+
+- **Capacity Coordination System** — capacity not resources; logistics engine of the platform
+- **Guiding principle** — Communities succeed when they coordinate collective capacity
+- **Capacity categories** — People, skills, facilities, equipment, transportation, technology, partnerships
+- **Arkansas Capacity Map [CCS-M16]** — live statewide capacity picture with filters
+- **Logistics layer stack** — Community Brain → CCE → OEX → SCN → Capacity Map
+- **CCE relationship** — capabilities vs operational capacity, no duplication
+
+---
+
+## 2026-07-10 — PHASE-005.8 Commitment & Follow-Through System (Canonical)
+
+**Document ID:** PHASE-005.8 · **CFS-001 · AC-055**
+
+### What Was Built
+
+- **Commitment & Follow-Through System** — support not punishment; supersedes Accountability System
+- **Guiding principle** — Trust grows through reliable follow-through on commitments
+- **Commitment lifecycle** — Needs Support as first-class state; learning not blame
+- **Commitment Compass [CFS-M16]** — Today · Soon · Waiting · Support
+- **Daily experience stack** — Morning Brief → Pulse → DOB → Commitment Compass
+- **Implements ACN-M14** — healthy accountability without assigning fault
+
+---
+
+## 2026-07-10 — PHASE-005.7 Collaborative Decision System (Canonical)
+
+**Document ID:** PHASE-005.7 · **CDS-001 · AC-054**
+
+### What Was Built
+
+- **Collaborative Decision System** — organizational decision system, not a voting system
+- **Guiding principle** — Good decisions from informed participation, discussion, transparent reasoning
+- **Decision lifecycle** — Question through Archive, each stage builds institutional knowledge
+- **Decision Record** — permanent Community Brain artifact with full context
+- **Decision Graph [CDS-M16]** — living map of how decisions became action
+- **Platform graph stack** — Decision Graph joins Relationship, Trust, Growth, Conversation, Capability graphs
+
+---
+
+## 2026-07-10 — PHASE-005.6 Initiative Operating System (Canonical)
+
+**Document ID:** PHASE-005.6 · **IOS-001 · AC-053**
+
+### What Was Built
+
+- **Initiative Operating System** — initiative not campaign as architecture
+- **Guiding principle** — Large goals achieved through many communities working together
+- **Initiative hierarchy** — Initiative → Mission → Project → Milestone → Task
+- **Initiative Headquarters** — statewide coordination center
+- **Initiative Command Center [IOS-M16]** — operational cockpit with map, missions, momentum, needs
+- **Command center stack** — PCC → CCC → Mission HQ → Experience HQ → Initiative Command Center
+- **Core principle locked:** Coordinate statewide. Empower locally.
+
+---
+
+## 2026-07-10 — PHASE-005.5 Experience & Event Operating System (Canonical)
+
+**Document ID:** PHASE-005.5 · **EEOS-001 · AC-052**
+
+### What Was Built
+
+- **Experience & Event OS** — not event manager; experiences build community
+- **Guiding principle** — People attend for the event, return for the experience
+- **Experience lifecycle** — Idea → Mission Design → Live Experience → Legacy
+- **Experience Headquarters** — workspace before, during, after every gathering
+- **Check-in system** — QR, walk-in; feeds Civic Passport, Volunteer Passport, MOR
+- **Live Operations cockpit** — mobile-first for organizers in the field
+- **Experience Playbook [EEOS-M17]** — proven templates browsable across Arkansas
+
+### Guiding Principle Locked
+
+> **People may attend for the event, but they return because of the experience.**
+
+---
+
+## 2026-07-10 — PHASE-005.4 Volunteer Development System (Canonical)
+
+**Document ID:** PHASE-005.4 · **VDS-001 · AC-051**
+
+### What Was Built
+
+- **Volunteer Development System** — not volunteer management; develop people through service
+- **Guiding principle** — Service develops leaders
+- **Volunteer journey** — Interested → Community Builder; growth not status
+- **Invitation model** — invited into missions that matter, not assigned shifts
+- **Volunteer Passport [VDS-M17]** — rich service story within Civic Passport; experiences not hour counts
+- **Skills matching, scheduling, QR check-in, recognition, reflection**
+
+### Guiding Principle Locked
+
+> **Service develops leaders.**
+
+### Example
+
+After four years: *Organized three welcome weeks. Mentored eight volunteers. Nine campuses. Two statewide playbooks.* — not *Volunteer Hours: 146*.
+
+---
+
+## 2026-07-10 — PHASE-005.3 Execution Operating System (Canonical)
+
+**Document ID:** PHASE-005.3 · **EOS-001 · AC-050**
+
+### What Was Built
+
+- **Execution Operating System** — not a task manager; people complete missions, tasks describe work
+- **Execution hierarchy** — Mission → Project → Milestone → Work Package → Task → Activity → Completion
+- **Work Packages** — Communications, Volunteer, Logistics — meaningful groupings not isolated tasks
+- **Mission Dashboard** — operational command center for every mission
+- **Daily Operations Brief [EOS-M17]** — personalized today's priorities; participant doesn't search for work
+- **Three-brief stack** — Morning Brief (PCC) · Community Pulse (CCC) · Daily Operations Brief (EOS)
+- **Event OS renamed EVOS-001** — resolves acronym collision with Execution OS
+
+### Guiding Principle Locked
+
+> **People complete missions. Tasks simply describe the work.**
+
+---
+
+## 2026-07-10 — PHASE-005.2 Mission Design System (Canonical)
+
+**Document ID:** PHASE-005.2 · **MDS-001 · AC-049**
+
+### What Was Built
+
+- **Mission Design System** — renamed from Mission Planning Engine; great missions are designed, not simply planned
+- **Guiding principle** — A well-designed mission creates clarity before action
+- **Mission Canvas** — 10 structured sections (statement, need, impact, participants, communities, skills, resources, risks, success, knowledge plan)
+- **Design lifecycle** — Idea → Discovery → Mission Design → Review → Approval → Planning → Execution → Reflection → Legacy
+- **Mission Library [MDS-M20]** — statewide searchable catalog of proven missions; fork, adapt, enrich
+- **Collaborative design** — co-authors, reviewers, mentors, subject matter experts
+- **Extends MPS-M15** — Phase 4 canvas concept → Phase 5 full design process
+
+### Guiding Principle Locked
+
+> **A well-designed mission creates clarity before action.**
+
+### Problem Solved
+
+Most projects fail before they start — not because people don't care, but because work begins before shared understanding. MDS ensures design before tasks.
+
+---
+
+## 2026-07-10 — PHASE-005.1 Action Constitution (Canonical) — Phase 5 Launch
+
+**Document ID:** PHASE-005.1 · **ACN-001 · AC-048**
+
+### What Was Built
+
+- **Constitution of Action** — if Phase 1 is Constitution of Platform, Phase 5.1 governs all operational work for years to come
+- **Guiding principle** — Communities create change through purposeful action
+- **Action Cycle** — Need → Mission → Planning → Team → Resources → Execution → Reflection → Knowledge → Legacy
+- **Action Hierarchy** — Vision → Mission → Project → Milestone → Task → Activity
+- **Core principles** — Service, relationships, collaboration, learning, community, sustainability
+- **Mission Operating Record (MOR) [ACN-M26]** — auto-generated complete operational history; archived but never forgotten; searchable by future organizers
+- **Civic Operating Loop** — platform compounds over decades
+- **Preservation stack** — MOR feeds Community Brain, Legacy, Capability Graph, Civic Passport, Growth Graph
+
+### Guiding Principle Locked
+
+> **Communities create change through purposeful action.**
+
+### Phase 5 Milestone
+
+Phase 4 designed *what communities are*. Phase 5 designs *what communities do* — where most software begins, but only after constitutional, geographic, personal, and community layers exist.
+
+---
+
+## 2026-07-10 — PHASE-004.14 Community Operating System Certification (Canonical) — Phase 4 Complete
+
+**Document ID:** PHASE-004.14 · **COS-001 · AC-047**
+
+### What Was Built
+
+- **Certification standard** — Is this community fully built?
+- **Ten required components** — Identity through Legacy
+- **Six certification levels** — Registered → Model Community
+- **Arkansas Network Health Dashboard [COS-M09]** — executive movement view, not rankings
+- **Phase 4 Build Bible** — all 14 steps indexed
+
+### Guiding Principle Locked
+
+> **Every community deserves the same high-quality organizing infrastructure.**
+
+### Phase 4 Milestone
+
+Statewide **civic operating system** design complete — Human OS (Phase 3) + Community OS (Phase 4).
+
+---
+
+## 2026-07-10 — PHASE-004.13 Community Legacy System (Canonical)
+
+**Document ID:** PHASE-004.13 · **CLS-001 · AC-046**
+
+### What Was Built
+
+- **Legacy not memory** — carries the past into the future
+- **Arkansas Living History [CLS-M10]** — statewide tapestry of youth organizing
+- **Nine legacy categories** — Story · Leadership · Missions · Timeline · Traditions · Scrapbook · Oral History · Knowledge · Impact
+- **Permanent timeline + alumni + anniversaries** — leadership transitions never erase history
+- **CJT parallel at community level** — participant + community + statewide layers
+
+### Guiding Principle Locked
+
+> **Communities become stronger when every generation builds upon the work of the last.**
+
+---
+
+## 2026-07-10 — PHASE-004.12 Opportunity Exchange (Canonical)
+
+**Document ID:** PHASE-004.12 · **OEX-001 · AC-045**
+
+### What Was Built
+
+- **Not commercial** — community connector, not marketplace
+- **Community Needs Index [OEX-M13]** — continuously matches needs with capabilities
+- **Seven opportunity categories** — Volunteer · Leadership · Learning · Collaboration · Mentorship · Resources · Mission
+- **Mutual aid network** — proactive surfacing, explainable matching
+- **Three-layer stack** — OIS · OEX · OBE
+
+### Guiding Principle Locked
+
+> **No willing volunteer should wonder where they can help. No community should struggle alone if help exists elsewhere.**
+
+---
+
+## 2026-07-10 — PHASE-004.11 Statewide Collaboration Network (Canonical)
+
+**Document ID:** PHASE-004.11 · **SCN-001 · AC-044**
+
+### What Was Built
+
+- **Connective tissue** — one statewide network, not isolated campuses and counties
+- **Arkansas Collaboration Map [SCN-M14]** — live visualization of relationships across Arkansas
+- **Six collaboration levels** — Campus · County · Campus↔County · Team · Project · Statewide
+- **Collaboration spaces** — shared workspaces distinct from community Command Centers
+- **Community independence protected** — voluntary, mutually beneficial, never centralization
+
+### Guiding Principle Locked
+
+> **Strong local communities create a stronger Arkansas when they work together.**
+
+---
+
+## 2026-07-10 — PHASE-004.10 Community Intelligence System (Canonical)
+
+**Document ID:** PHASE-004.10 · **CIS-001 · AC-043**
+
+### What Was Built
+
+- **Intelligence not analytics** — why, what it means, what to do next
+- **Community Coach [CIS-M14]** — observes, explains, suggests; never decides
+- **Six intelligence categories** — Health · Growth · Opportunities · Relationships · Leadership · Knowledge
+- **Health Report + Pulse enrichment** — coach narrative, not spreadsheet dashboards
+- **Explainability required** — every insight traceable to sources
+
+### Guiding Principle Locked
+
+> **Information becomes valuable when it helps communities take meaningful action.**
+
+---
+
+## 2026-07-10 — PHASE-004.9 Community Capability Exchange (Canonical)
+
+**Document ID:** PHASE-004.9 · **CCE-001 · AC-042**
+
+### What Was Built
+
+- **Capabilities not files** — people, equipment, spaces, skills, services as reusable assets
+- **Capability Graph [CCE-M13]** — created → used by → improved by → recommended to
+- **Seven categories** — Documents · Templates · Media · Equipment · Spaces · Skills · Services
+- **Share · Request · Discover · Recommend** — statewide capability network
+- **Complements CKLS** (knowledge) and **4.12 Marketplace** (published needs)
+
+### Guiding Principle Locked
+
+> **What one community creates should be able to strengthen another.**
+
+---
+
+## 2026-07-10 — PHASE-004.8 Community Knowledge & Learning System (Canonical)
+
+**Document ID:** PHASE-004.8 · **CKLS-001 · AC-041**
+
+### What Was Built
+
+- **Knowledge as living asset** — not file storage; what people learn is valuable
+- **Community Brain [CKLS-M15]** — organized memory per community; PDT parallel
+- **Playbooks · Decision Library · Lessons Learned** — experience into repeatable success
+- **Community Wiki · Learning paths** — continuously building community intelligence
+- **KDG-001 governs · CKLS-001 implements** — governance + community knowledge layer
+
+### Guiding Principle Locked
+
+> **Knowledge shared becomes community strength.**
+
+---
+
+## 2026-07-10 — PHASE-004.7 Community Communication Network (Canonical)
+
+**Document ID:** PHASE-004.7 · **CCNET-001 · AC-040**
+
+### What Was Built
+
+- **Communication network** — not a messaging module; major platform engine
+- **Six communication types** — Direct · Community · Announcements · Threads · Broadcasts · Stories
+- **Conversation Graph [CCNET-M13]** — remember what happened because people talked
+- **Knowledge preservation** — discussions promoted to institutional memory
+- **CAM integration** — CCNET produces content; CAM-001 governs delivery
+- **CCNET-001** distinct from **CCN-001** Community Constitution
+
+### Guiding Principle Locked
+
+> **Communication should build stronger communities—not create more noise.**
+
+---
+
+## 2026-07-10 — PHASE-004.6 Time & Scheduling Operating System (Canonical)
+
+**Document ID:** PHASE-004.6 · **TSOS-001 · AC-039**
+
+### What Was Built
+
+- **Foundational engine** — not a calendar module; one Master Timeline for entire platform
+- **One timeline, personalized views** — platform knows everything; participants see what's relevant
+- **Relationship-aware scheduling** — no manual calendar subscriptions [REL-001]
+- **Rhythm Engine [TSOS-M16]** — learns community patterns; preserves habits across leadership changes
+- **Platform integrations** — Morning Brief · Community Pulse · PHQ · CCC · Mission HQ
+- **EVT-001 superseded** by TSOS-001
+
+### Guiding Principle Locked
+
+> **One timeline. Personalized for every participant.**
+
+---
+
+## 2026-07-10 — PHASE-004.5 Mission & Project System (Canonical)
+
+**Document ID:** PHASE-004.5 · **MPS-001 · AC-038**
+
+### What Was Built
+
+- **Mission-first philosophy** — people volunteer for meaningful missions, not task lists
+- **Mission inspires · Project organizes · Tasks execute** — hierarchy preserved in every workflow
+- **Mission Canvas [MPS-M15]** — signature planning tool; templates for future missions
+- **Project lifecycle** — Idea → Celebrated → Archived with reflection required
+- **Mission Headquarters** — CCC-consistent workspace at `/mission/[slug]`
+- **Reflection & community impact** — lessons learned and outcomes before archive (PRJ-001 → MPS-001)
+
+### Guiding Principle Locked
+
+> **People volunteer for meaningful missions—not task lists.**
+
+---
+
+## 2026-07-10 — PHASE-004.4 Team & Working Group System (Canonical)
+
+**Document ID:** PHASE-004.4 · **TWG-001 · AC-037**
+
+### What Was Built
+
+- **Architectural shift** — built around teams that solve problems, not rigid organizations
+- **14+ team types** — Standing Committee · Working Group · Task Force · Micro Team · and more
+- **Micro Teams [TWG-M16]** — quick to create, temporary by default, evolve into permanent teams
+- **Team lifecycle** — Planning → Recruiting → Active → Completing Work → Archived → Reactivated
+- **Team Headquarters** — CCC-consistent workspace per team at `/team/[slug]`
+- **Committees are a team type** — not a separate system (COM-001 → TWG-001)
+
+### Guiding Principle Locked
+
+> **Communities thrive when people can easily form teams to solve real problems.**
+
+---
+
+## 2026-07-10 — PHASE-004.3 Community Command Center (Canonical)
+
+**Document ID:** PHASE-004.3 · **CCC-001 · AC-036**
+
+### What Was Built
+
+- **Operational headquarters** for every community — not a webpage, a living workspace
+- **Community Pulse [CCC-M20]** — opening summary; community equivalent of Morning Brief
+- **12 modular widgets** — Mission · Opportunity · Calendar · Feed · People · Projects · Committees · Health · Resources · Recognition · Story
+- **Six visit questions** — Who are we? What changed? What needs attention? How can I help? What opportunities? Where going?
+- **PCC parallel** — same widget architecture as Personal Command Center; familiar across UCA, counties, committees, projects
+- **Mobile-first** — Pulse and Opportunity above fold; thumb-friendly Quick Actions
+
+### Guiding Principle Locked
+
+> **Every community deserves a home that feels alive.**
+
+---
+
+## 2026-07-10 — PHASE-004.2 Community Growth & Sustainability Framework (Canonical)
+
+**Document ID:** PHASE-004.2 · **CGS-001 · AC-035**
+
+### What Was Built
+
+- **Communities as living organisms** — born, growing, struggling, dormant, revived
+- **Seven lifecycle stages** — Seed · Sprout · Growing · Established · Thriving · Legacy · Renewal
+- **Community Health Check [CGS-M12]** — reflection tool, partner not supervisor (not a score)
+- **Sustainability philosophy** — leadership succession, institutional memory, cross-community support
+- **Renewal is natural** — decline is not failure; history and relationships preserved
+
+### Guiding Principle Locked
+
+> **Healthy communities continually develop new people, preserve knowledge, and create opportunities for others.**
+
+---
+
 ## 2026-07-10 — PHASE-004.1 Community Constitution (Expanded Canonical)
 
 **Document ID:** PHASE-004.1 · **CCN-001 · AC-034**

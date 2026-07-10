@@ -1,0 +1,258 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/phase-04/COMMUNITY_COMMAND_CENTER.md",
+  "motto": "Every community deserves a home that feels alive.",
+  "principle": "Command Center — coordination, awareness, and purpose. Not a static webpage.",
+  "purpose": "Primary operational workspace for every organizing community — campuses, counties, committees, projects, and future community types.",
+  "pccParallel": {
+    "personalCommandCenter": "PCC-001 — participant daily workspace",
+    "communityCommandCenter": "CCC-001 — community daily workspace",
+    "personalPulse": "Morning Brief [PCC-M17]",
+    "communityPulse": "Community Pulse [CCC-M20]",
+    "onePageNotTwoHomes": true,
+    "aggregator": "assembleCommunityCommandCenter(communityId)",
+    "pulseAggregator": "assembleCommunityPulse(communityId, lastVisitAt)"
+  },
+  "communityTypes": [
+    "university",
+    "college",
+    "county",
+    "committee",
+    "project",
+    "future"
+  ],
+  "exampleCommunities": [
+    "University of Central Arkansas",
+    "Philander Smith University",
+    "Benton County",
+    "Mississippi County",
+    "Volunteer Committee",
+    "Debate Watch Party Project"
+  ],
+  "sixQuestions": [
+    {
+      "question": "Who are we?",
+      "elements": ["name", "type", "mission", "charter", "status", "identity"],
+      "widgets": ["header", "mission", "story"]
+    },
+    {
+      "question": "What has changed?",
+      "elements": ["newMembers", "announcements", "accomplishments", "projectsLaunched", "eventsAdded"],
+      "widgets": ["pulse", "feed", "people", "recognition"]
+    },
+    {
+      "question": "What needs attention?",
+      "elements": ["volunteerGaps", "teamNeeds", "healthSignals", "upcomingDeadlines"],
+      "widgets": ["pulse", "opportunity", "health", "calendar"]
+    },
+    {
+      "question": "How can I help?",
+      "elements": ["volunteerNeeds", "openCommittees", "projectsSeekingHelp", "events"],
+      "widgets": ["opportunity", "missions", "teams", "quickActions"]
+    },
+    {
+      "question": "What opportunities exist?",
+      "elements": ["leadership", "mentorship", "teams", "projects", "events", "training"],
+      "widgets": ["opportunity", "calendar", "teams", "missions"]
+    },
+    {
+      "question": "Where are we going?",
+      "elements": ["priorities", "goals", "lifecycleStage", "upcomingInitiatives"],
+      "widgets": ["mission", "health", "projects", "story"]
+    }
+  ],
+  "header": {
+    "elements": [
+      "communityName",
+      "communityType",
+      "mission",
+      "currentStatus",
+      "countyOrInstitution",
+      "communityCharter",
+      "joinButton",
+      "shareButton",
+      "quickActions"
+    ],
+    "identityImmediatelyRecognizable": true
+  },
+  "widgets": [
+    {
+      "key": "pulse",
+      "label": "Community Pulse",
+      "priority": 1,
+      "mobileOrder": 1,
+      "v1": "ruleBased2to5Items",
+      "signatureFeature": true,
+      "pccEquivalent": "morningBrief"
+    },
+    {
+      "key": "mission",
+      "label": "Mission",
+      "requirement": "CCN-001",
+      "mobileOrder": 2,
+      "v1": "core",
+      "elements": ["missionStatement", "currentPriorities", "goals", "communityCharter", "leadershipMessage", "missionOfTheWeek"]
+    },
+    {
+      "key": "opportunity",
+      "label": "Opportunity",
+      "requirement": "OEX-001",
+      "relatedRequirements": ["OBE-001"],
+      "mobileOrder": 3,
+      "v1": "staticCards",
+      "elements": ["volunteerNeeds", "openCommittees", "projectsSeekingHelp", "upcomingEvents", "leadershipOpportunities", "mentorshipRequests"]
+    },
+    {
+      "key": "calendar",
+      "label": "Timeline",
+      "requirement": "TSOS-001",
+      "mobileOrder": 4,
+      "v1": "placeholder",
+      "elements": ["meetings", "events", "volunteerOpportunities", "deadlines", "training", "celebrations"],
+      "note": "Filtered view of Master Timeline — not a separate calendar"
+    },
+    {
+      "key": "feed",
+      "label": "Community Feed",
+      "requirement": "CCNET-001",
+      "mobileOrder": 5,
+      "v1": "announcementsStub",
+      "elements": ["announcements", "stories", "accomplishments", "newMembers", "volunteerHighlights", "recognition"],
+      "note": "Curated CCNET view — Conversation Graph backend"
+    },
+    {
+      "key": "people",
+      "label": "People",
+      "mobileOrder": 6,
+      "v1": "leadersStub",
+      "elements": ["recentParticipants", "mentors", "leaders", "committeeFacilitators", "volunteerCoordinators", "newMembers"],
+      "future": "memberDirectoryWithPrivacy"
+    },
+    {
+      "key": "missions",
+      "label": "Missions",
+      "requirement": "MPS-001",
+      "mobileOrder": 7,
+      "v1": "placeholder",
+      "elements": ["activeMissions", "upcomingInitiatives", "completedWork", "volunteerNeeds", "resources", "missionHistory"],
+      "note": "Mission statement visible before project status"
+    },
+    {
+      "key": "teams",
+      "label": "Teams",
+      "requirement": "TWG-001",
+      "mobileOrder": 8,
+      "v1": "placeholder",
+      "elements": ["activeTeams", "meetingSchedules", "currentNeeds", "teamLeaders", "projects", "openParticipation"],
+      "note": "All team types including committees and Micro Teams"
+    },
+    {
+      "key": "health",
+      "label": "Community Health",
+      "requirement": "CIS-001",
+      "relatedRequirements": ["CGS-001"],
+      "mobileOrder": 9,
+      "v1": "lifecycleStagePlusHealthReportStub",
+      "elements": ["participationTrends", "volunteerEngagement", "leadershipDevelopment", "projectActivity", "healthCheck", "momentumIndicators", "coachSuggestions"],
+      "guidesNotJudges": true,
+      "note": "CIS-powered intelligence — not vanity metrics"
+    },
+    {
+      "key": "capabilities",
+      "label": "Capabilities",
+      "requirement": "CCE-001",
+      "mobileOrder": 10,
+      "v1": "placeholder",
+      "elements": ["templates", "equipment", "spaces", "skills", "services", "requests", "recommendations"],
+      "note": "Capability Exchange — not file folder; links to CKLS knowledge"
+    },
+    {
+      "key": "recognition",
+      "label": "Recognition",
+      "requirement": "CRA-001",
+      "mobileOrder": 11,
+      "v1": "milestonesStub",
+      "elements": ["volunteerAppreciation", "milestones", "projectCelebrations", "impactStories", "mentorshipHighlights"]
+    },
+    {
+      "key": "story",
+      "label": "Community Story",
+      "requirement": "CLS-001",
+      "mobileOrder": 12,
+      "v1": "charterHistoryStub",
+      "elements": ["history", "traditions", "milestones", "photos", "annualAchievements", "leadershipTransitions"],
+      "note": "Community Legacy timeline — narrative layer"
+    }
+  ],
+  "communityPulse": {
+    "description": "Concise summary of what is happening right now — conversational, timely, action-oriented; community equivalent of Morning Brief",
+    "maxItems": 7,
+    "orchestrator": "assembleCommunityPulse(communityId, lastVisitAt)",
+    "exampleItems": [
+      "12 new members joined this month.",
+      "Three volunteer opportunities need help this week.",
+      "Your next committee meeting is Thursday.",
+      "Two new projects launched.",
+      "Five members completed leadership training.",
+      "Welcome our newest organizers."
+    ],
+    "feelsLike": "Walking into a room where someone immediately catches you up on everything important",
+    "notAStaticDashboard": true,
+    "reinforces": [
+      "Community is alive",
+      "Momentum is visible",
+      "Meaningful next step always waiting"
+    ],
+    "v1": "ruleBasedLifecycleAndOpportunityItems"
+  },
+  "quickActions": [
+    { "id": "join", "label": "Join Community", "v1": true },
+    { "id": "volunteer", "label": "Volunteer", "v1": false },
+    { "id": "register_event", "label": "Register for Event", "v1": false },
+    { "id": "invite_friend", "label": "Invite Friend", "v1": true },
+    { "id": "start_team", "label": "Start Team", "v1": false },
+    { "id": "create_mission", "label": "Start Mission", "v1": false },
+    { "id": "ask_help", "label": "Ask for Help", "v1": false },
+    { "id": "contact_organizers", "label": "Contact Organizers", "v1": true }
+  ],
+  "mobilePhilosophy": {
+    "primary": true,
+    "criticalInfoImmediate": true,
+    "widgetCollapse": "accordion",
+    "thumbFriendlyNavigation": true,
+    "mobilePriorityOrder": ["pulse", "opportunity", "mission", "calendar", "feed", "people", "others"]
+  },
+  "identityPersonalization": {
+    "requirement": "CID-001",
+    "familiarAcrossTypes": true,
+    "uniquePerCommunity": true,
+    "communityDna": true,
+    "configurableLayouts": "future"
+  },
+  "routes": {
+    "institution": "/schools/[slug]",
+    "county": "/county/[slug]",
+    "committee": "/committee/[slug]",
+    "project": "/project/[slug]",
+    "pageId": "PAGE-CCC"
+  },
+  "v1Scope": {
+    "shell": true,
+    "communityPulse": "ruleBased",
+    "widgets": ["header", "pulse", "mission", "opportunity", "feedStub", "peopleStub", "healthLifecycle", "recognitionStub", "storyStub"],
+    "placeholders": ["calendar", "missions", "teams", "capabilities"],
+    "routes": ["/schools/[slug]", "/county/[slug]"]
+  },
+  "implementation": {
+    "pattern": "independent widget registry — mirrors PCC",
+    "files": [
+      "src/components/ccc/CommunityCommandCenterShell.tsx",
+      "src/components/ccc/CommunityPulse.tsx",
+      "src/components/ccc/widgets/",
+      "src/lib/ccc/assembleCommunityCommandCenter.ts",
+      "src/lib/ccc/assembleCommunityPulse.ts"
+    ],
+    "separateContentFromPresentation": true,
+    "optimizeForGrowingCommunities": true
+  }
+}

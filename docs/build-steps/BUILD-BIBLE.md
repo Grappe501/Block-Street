@@ -2,11 +2,10 @@
 
 **Document ID:** BUILD-BIBLE  
 **Status:** Canonical  
-**Purpose:** Single authoritative index Burt reads before implementing any code.
+**Purpose:** Implementation index and traceability gate — read **after** [Volume 0](../master/MASTER_ARCHITECTURE_BIBLE.md).
 
-> Phase 1 is the **Constitution of the Platform**.  
-> Steps 1.1–1.9 define *what* we build, *how* we build it, and *how every requirement is tracked*.  
-> Phase 2 onward defines *implementation details* for each capability.
+> **Volume 0** is the Master Architecture Bible — the single source of truth for philosophy, vocabulary, standards, and build order.  
+> **This document** (BUILD-BIBLE) is Phase 1's constitutional layer and the production-code traceability gate.
 
 **Platform:** ASYON — Arkansas Student & Youth Organizing Network  
 **Live:** https://block-street.netlify.app/  
@@ -18,6 +17,8 @@
 
 | Order | Step | Document | Question It Answers |
 |-------|------|----------|---------------------|
+| **0** | **0.1** | **[Volume 0 — Master Architecture Bible](../master/MASTER_ARCHITECTURE_BIBLE.md)** | **What is the single source of truth?** |
+| **—** | **V1–V6** | **[Implementation Volumes Index](../master/VOLUMES-INDEX.md)** | **How is the COS built? (factory layer)** |
 | 1 | 1.1 | [Platform Identity](PHASE-001.1-PLATFORM-IDENTITY.md) | Who are we? |
 | 2 | 1.2 | [North Star Outcome](PHASE-001.2-NORTH-STAR-OUTCOME.md) | Where are we going? |
 | 3 | 1.3 | [Core Principles](PHASE-001.3-CORE-PRINCIPLES.md) | What do we stand for? |
@@ -38,10 +39,12 @@
 
 Before any production code:
 
-1. Locate requirement in `requirements-registry.json`
-2. Verify [TR-BR] checklist (6 items)
-3. Commit with requirement IDs
-4. Update registry status on completion
+0. Read [Volume 0 — Master Architecture Bible](../master/MASTER_ARCHITECTURE_BIBLE.md) [MAB-001]
+1. Read [Implementation Volumes 1–6](../master/VOLUMES-INDEX.md) [IVS-001]
+2. Locate requirement in `requirements-registry.json`
+3. Verify [TR-BR] checklist (6 items)
+4. Commit with requirement IDs
+5. Update registry status on completion
 
 ---
 

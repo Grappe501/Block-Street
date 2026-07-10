@@ -1,0 +1,239 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/phase-06/COMMUNITY_EXPANSION_FRAMEWORK.md",
+  "acronym": "CEF",
+  "requirementId": "CEF-001",
+  "plannedAliasSuperseded": "CXP-001",
+  "extends": ["COS-001", "CCN-001"],
+  "governedBy": "GCN-001",
+  "phaseRequirementId": "GOS-001",
+  "productName": "Community Expansion Framework",
+  "mostStrategicGrowthDoc": true,
+  "infinitelyExtensibleSamePlatform": true,
+  "guidingPrinciple": "The platform should be infinitely extensible while remaining recognizably the same.",
+  "principle": "Growth through replication rather than reinvention.",
+  "purpose": "Define process, standards, and architecture for introducing new community types — grow without structural redesign.",
+  "philosophy": {
+    "replicationNotReinvention": true,
+    "sharedFoundationalOS": true,
+    "customizeIdentityRemainInteroperable": true,
+    "configurationNotCustomCode": true
+  },
+  "communityTypes": {
+    "requirementRef": "CEF-M04",
+    "orchestrator": "getCommunityTypeConfig(typeId)",
+    "currentLaunch": [
+      "universities",
+      "communityColleges",
+      "tradeSchools",
+      "countyCommunities",
+      "youngAdultCountyCommunities"
+    ],
+    "futureSupported": [
+      "highSchools",
+      "graduateSchools",
+      "alumniCommunities",
+      "studentOrganizations",
+      "academicDepartments",
+      "neighborhoodCommunities",
+      "professionalOrganizations",
+      "volunteerOrganizations",
+      "regionalCoalitions",
+      "futureStates"
+    ],
+    "addedViaConfiguration": true
+  },
+  "communityBlueprint": {
+    "requirementRef": "CEF-M05",
+    "modules": [
+      "identity",
+      "communityCommandCenter",
+      "calendar",
+      "communityBrain",
+      "opportunityExchange",
+      "capabilityExchange",
+      "storytelling",
+      "leadershipDevelopment",
+      "growthSystem",
+      "legacy"
+    ],
+    "autoProvisionedByFoundry": true,
+    "requirements": {
+      "identity": "CCN-001",
+      "communityCommandCenter": "CCC-001",
+      "calendar": "TSOS-001",
+      "communityBrain": "CKLS-001",
+      "opportunityExchange": "OEX-001",
+      "capabilityExchange": "CCE-001",
+      "storytelling": "CST-001",
+      "leadershipDevelopment": "CLD-001",
+      "growthSystem": "CGO-001",
+      "legacy": "CLS-001"
+    }
+  },
+  "communityRegistration": {
+    "requirementRef": "CEF-M06",
+    "route": "/foundry/register",
+    "orchestrator": "submitCommunityRegistration(payload)",
+    "selfRegisterWithApproval": true,
+    "workflow": ["register", "review", "approve", "foundryLaunch", "active"]
+  },
+  "launchChecklist": {
+    "requirementRef": "CEF-M07",
+    "orchestrator": "getLaunchChecklist(communityId)",
+    "items": [
+      "missionEstablished",
+      "welcomeTeamIdentified",
+      "initialOrganizersConfirmed",
+      "communityProfileCompleted",
+      "calendarActivated",
+      "knowledgeSpaceCreated",
+      "growthGoalsDefined",
+      "firstMissionPlanned"
+    ],
+    "intentionalNotAccidental": true
+  },
+  "expansionReadiness": {
+    "requirementRef": "CEF-M08",
+    "orchestrator": "assessExpansionReadiness(proposedCommunity)",
+    "considers": [
+      "localInterest",
+      "potentialOrganizers",
+      "mentorshipSupport",
+      "nearbyPartnerCommunities",
+      "leadershipSuccession",
+      "communitySustainability"
+    ],
+    "deepenBeforeExpand": "CGIS-M17",
+    "strengthenNetworkNotFragment": true
+  },
+  "communityTemplates": {
+    "requirementRef": "CEF-M09",
+    "examples": [
+      "university",
+      "county",
+      "tradeSchool",
+      "highSchoolFuture",
+      "alumni",
+      "studentOrganization",
+      "professionalOrg"
+    ],
+    "registryPath": "data/registry/community-templates/",
+    "startingPointsCustomizable": true
+  },
+  "communityRelationships": {
+    "requirementRef": "CEF-M10",
+    "connectsTo": [
+      "neighboringCommunities",
+      "regionalPartnerships",
+      "sharedInitiatives",
+      "mentorshipNetworks",
+      "leadershipDevelopment",
+      "knowledgeSharing"
+    ],
+    "autoSuggestMentorCommunities": true
+  },
+  "geographicExpansion": {
+    "requirementRef": "CEF-M11",
+    "scopes": [
+      { "scope": "campus", "status": "launch" },
+      { "scope": "county", "status": "launch" },
+      { "scope": "regional", "status": "launch" },
+      { "scope": "statewide", "status": "launch" },
+      { "scope": "interstate", "status": "future" },
+      { "scope": "national", "status": "future" },
+      { "scope": "international", "status": "future" }
+    ],
+    "noPermanentGeographicLimits": true
+  },
+  "constitutionalAlignment": {
+    "requirementRef": "CEF-M12",
+    "agreesToPlatformPrinciples": true,
+    "maintainsLocalIdentity": true,
+    "sharedValuesNotCentralizedControl": true
+  },
+  "communityFoundry": {
+    "acronym": "CF",
+    "requirementRef": "CEF-M15",
+    "signatureFeature": true,
+    "description": "Guided launch process — repeatable community provisioning not custom software",
+    "route": "/foundry/launch",
+    "orchestrator": "runCommunityFoundry(wizardInput)",
+    "wizardQuestions": [
+      "communityType",
+      "location",
+      "foundingOrganizers",
+      "mentorCommunity",
+      "uniqueTraditionsAndGoals"
+    ],
+    "autoProvisions": [
+      "communityCommandCenter",
+      "calendar",
+      "communityBrain",
+      "opportunityExchange",
+      "storytelling",
+      "growthDashboard",
+      "leadershipDevelopment",
+      "communityLegacy",
+      "qrAndInvitationSystem",
+      "publicProfile",
+      "cultureGardenSeed",
+      "launchChecklist"
+    ],
+    "respectsExpansionReadiness": true,
+    "roleBasedAccess": true
+  },
+  "mutualStrengtheningPrinciple": {
+    "requirementRef": "CEF-M16",
+    "phase6ExpansionPrinciple": true,
+    "candidatePrinciple": "CP-018",
+    "statement": "Every new community should strengthen the network, and the network should make every new community stronger.",
+    "notIsolatedInstances": true,
+    "benefitFromCollectiveContributeBack": true,
+    "gracefulScalingSharedPurpose": true
+  },
+  "extendsCOS": {
+    "COS-001": "Community OS module stack",
+    "CCN-001": "constitutional principles",
+    "CEF-001": "how new types join via Foundry",
+    "cosQuestion": "How do communities operate?",
+    "cefQuestion": "How do new community types join without redesign?"
+  },
+  "platformIntegrations": {
+    "COS-001": "blueprint modules",
+    "CCN-001": "constitutional alignment",
+    "CGO-001": "coverage map gaps",
+    "CGIS-001": "deepen before expand readiness",
+    "SCN-001": "mentorship and partnerships",
+    "WBS-001": "welcome team checklist",
+    "CLD-001": "organizers and succession",
+    "CCR-001": "traditions templates",
+    "ICS-001": "QR and invitations on launch",
+    "ADT-001": "geographic model",
+    "INST-001": "institution registry",
+    "CNTY-001": "county registry"
+  },
+  "futureAiAssistance": {
+    "neverReplacesLocalLeadership": true,
+    "maySupport": [
+      "recommendLaunchReadiness",
+      "identifyNearbyMentors",
+      "suggestLaunchChecklists",
+      "recommendPartnerships",
+      "highlightGuidanceCommunities",
+      "summarizeSuccessfulLaunchPatterns"
+    ],
+    "passesDeepenBeforeExpandAndExplainability": true
+  },
+  "v1Scope": {
+    "philosophyDocumented": true,
+    "typesAndBlueprint": true,
+    "registrationAndChecklist": true,
+    "readinessAndTemplates": true,
+    "geographicAndConstitutional": true,
+    "communityFoundrySpec": true,
+    "mutualStrengtheningPrinciple": true,
+    "liveFoundryProvisioning": "v1.1",
+    "selfRegistrationWorkflow": "v1.2"
+  }
+}

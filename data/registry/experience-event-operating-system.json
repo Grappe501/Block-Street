@@ -1,0 +1,238 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/phase-05/EXPERIENCE_EVENT_OPERATING_SYSTEM.md",
+  "acronym": "EEOS",
+  "requirementId": "EEOS-001",
+  "supersedes": "EVOS-001",
+  "governedBy": "ACN-001",
+  "notEventManager": true,
+  "productName": "Experience & Event Operating System",
+  "guidingPrinciple": "People may attend for the event, but they return because of the experience.",
+  "principle": "We create experiences that build community — an event is the container, the experience is what people remember.",
+  "purpose": "Design, coordinate, deliver, and preserve meaningful community experiences that strengthen relationships and develop leaders.",
+  "experiencePhilosophy": {
+    "questions": [
+      "whyAreWeGathering",
+      "whoShouldFeelWelcome",
+      "whatRelationshipsMightBegin",
+      "whatMemoriesDoParticipantsLeaveWith",
+      "whatWillCommunityLearn"
+    ],
+    "experienceMattersAsMuchAsLogistics": true
+  },
+  "experienceTypes": {
+    "configurable": true,
+    "examples": [
+      { "key": "communityService", "label": "Community Service" },
+      { "key": "leadershipTraining", "label": "Leadership Training" },
+      { "key": "welcomeEvents", "label": "Welcome Events" },
+      { "key": "volunteerDays", "label": "Volunteer Days" },
+      { "key": "campusMeetings", "label": "Campus Meetings" },
+      { "key": "countyGatherings", "label": "County Gatherings" },
+      { "key": "workshops", "label": "Workshops" },
+      { "key": "debateWatchParties", "label": "Debate Watch Parties" },
+      { "key": "townHalls", "label": "Town Halls" },
+      { "key": "studyGroups", "label": "Study Groups" },
+      { "key": "socialEvents", "label": "Social Events" },
+      { "key": "recognitionCeremonies", "label": "Recognition Ceremonies" },
+      { "key": "communityCelebrations", "label": "Community Celebrations" },
+      { "key": "regionalSummits", "label": "Regional Summits" }
+    ]
+  },
+  "experienceLifecycle": {
+    "stages": [
+      "idea",
+      "missionDesign",
+      "planning",
+      "promotion",
+      "registration",
+      "preparation",
+      "liveExperience",
+      "followUp",
+      "reflection",
+      "legacy"
+    ],
+    "contributesKnowledgeBack": true
+  },
+  "experienceHeadquarters": {
+    "description": "Operational center before, during, and after every experience",
+    "route": "/experience/[slug]",
+    "sections": [
+      "purpose",
+      "mission",
+      "agenda",
+      "timeline",
+      "locationMap",
+      "participants",
+      "volunteerAssignments",
+      "resources",
+      "communications",
+      "files",
+      "checklists",
+      "media",
+      "recognition",
+      "lessonsLearned"
+    ],
+    "shell": "CommunityCommandCenterShell experience-scoped"
+  },
+  "registration": {
+    "frictionless": true,
+    "capabilities": [
+      "register",
+      "waitlist",
+      "cancel",
+      "inviteFriends",
+      "shareQrCodes",
+      "addToCalendar",
+      "receiveReminders"
+    ],
+    "orchestrators": {
+      "register": "registerForExperience(experienceId, participantId)",
+      "qr": "generateExperienceQrCode(experienceId, participantId)"
+    }
+  },
+  "checkInSystem": {
+    "modes": ["qrCodes", "manual", "walkIn", "volunteer", "speaker", "organizerDashboard"],
+    "updatesAutomatically": [
+      "civicPassport",
+      "volunteerPassport",
+      "communityTimeline",
+      "missionOperatingRecord"
+    ],
+    "orchestrators": {
+      "checkIn": "checkInExperienceParticipant(experienceId, participantId, method)",
+      "liveAttendance": "getLiveAttendance(experienceId)"
+    },
+    "secondsNotForms": true
+  },
+  "agendaBuilder": {
+    "includes": ["sessions", "breaks", "speakers", "activities", "volunteerAssignments", "resourceLinks", "maps", "documents"],
+    "mobileFriendly": true,
+    "easyToUpdateLive": true
+  },
+  "volunteerCoordination": {
+    "integrates": "VDS-001",
+    "roles": ["setup", "registration", "photography", "technology", "hospitality", "cleanup", "transportation", "safety"],
+    "volunteersSeeRelevantAssignmentsOnly": true
+  },
+  "liveOperations": {
+    "description": "Live operational cockpit during experience",
+    "capabilities": [
+      "attendance",
+      "volunteerStatus",
+      "announcements",
+      "scheduleUpdates",
+      "issueReporting",
+      "resourceRequests",
+      "emergencyContacts"
+    ],
+    "mobileOptimized": true,
+    "autoActivatesOnLiveStage": true
+  },
+  "experienceCapture": {
+    "preserves": ["photos", "videos", "speakerSlides", "handouts", "stories", "quotes", "reflections"],
+    "feeds": ["CLS-001", "EEOS-M17"],
+    "mobileUpload": true
+  },
+  "followUp": {
+    "autoGeneratesActions": true,
+    "examples": [
+      "thankYouMessages",
+      "volunteerAppreciation",
+      "photoSharing",
+      "optionalSurvey",
+      "lessonsLearned",
+      "missionReflections",
+      "opportunityRecommendations"
+    ],
+    "orchestrator": "generateExperienceFollowUp(experienceId)"
+  },
+  "experienceAnalytics": {
+    "emphasis": "communityImpactNotAttendanceAlone",
+    "metrics": [
+      "attendance",
+      "volunteerParticipation",
+      "newRelationships",
+      "communitiesRepresented",
+      "projectsLaunched",
+      "participantFeedback",
+      "storiesCollected",
+      "leadershipOpportunitiesCreated"
+    ],
+    "integrates": "CIS-001"
+  },
+  "accessibility": {
+    "inclusionFirst": true,
+    "examples": ["accessibilityInfo", "transportationGuidance", "virtualParticipation", "languageSupport", "dietaryInfo"]
+  },
+  "futureAiAssistance": {
+    "advisoryOnly": true,
+    "capabilities": [
+      "suggestAgendas",
+      "recommendVolunteers",
+      "predictAttendance",
+      "identifyMissingResources",
+      "summarizeFeedback",
+      "generateAAR",
+      "recommendPlaybookImprovements"
+    ]
+  },
+  "experiencePlaybook": {
+    "acronym": "EP",
+    "requirementRef": "EEOS-M17",
+    "signatureFeature": true,
+    "description": "Proven experience template — next organizer starts with wisdom not blank page",
+    "autoCreatedOnSuccess": true,
+    "includes": [
+      "originalMissionCanvas",
+      "planningTimeline",
+      "agenda",
+      "volunteerAssignments",
+      "checklists",
+      "communicationsUsed",
+      "attendanceSummary",
+      "photosAndMedia",
+      "communityReflections",
+      "lessonsLearned",
+      "budgetNotesOptional",
+      "suggestedImprovements",
+      "reusableTemplates"
+    ],
+    "orchestrators": {
+      "generate": "generateExperiencePlaybook(experienceId)",
+      "search": "searchExperiencePlaybooks(filters)",
+      "fork": "forkExperienceFromPlaybook(playbookId, communityId)"
+    },
+    "database": "DB-EXPERIENCE-PLAYBOOK",
+    "table": "experience_playbooks",
+    "integrates": ["CKLS-001", "MDS-M20"]
+  },
+  "missionLibraryRelationship": {
+    "missionLibrary": "MDS-M20 full mission design",
+    "experiencePlaybook": "single gathering day-of ops",
+    "missionMaySpawnMultipleExperiences": true
+  },
+  "platformIntegrations": {
+    "MDS-001": "mission design",
+    "EOS-001": "work packages, DOB event day",
+    "VDS-001": "volunteers, QR, passport",
+    "TSOS-001": "timeline, calendar",
+    "CLS-001": "legacy",
+    "CJT-001": "civic passport",
+    "CRA-001": "recognition",
+    "LIS-001": "reflection",
+    "ACN-M26": "MOR experience section",
+    "CKLS-001": "playbooks",
+    "SCN-001": "cross-campus sharing"
+  },
+  "v1Scope": {
+    "philosophyDocumented": true,
+    "lifecycleSpec": true,
+    "experienceHqSpec": true,
+    "registrationCheckInLiveOpsFollowUp": true,
+    "experiencePlaybookSpec": true,
+    "experienceHqUiStub": true,
+    "qrCheckInFlow": "v1.1",
+    "livestream": "future"
+  }
+}

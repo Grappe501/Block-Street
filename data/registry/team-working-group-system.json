@@ -1,0 +1,163 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/phase-04/TEAM_WORKING_GROUP_SYSTEM.md",
+  "motto": "Communities thrive when people can easily form teams to solve real problems.",
+  "principle": "Teams that solve problems — not rigid organizational structures.",
+  "purpose": "Define how participants organize into collaborative teams to accomplish shared goals.",
+  "philosophy": {
+    "communitiesProvide": "identity",
+    "teamsProvide": "action",
+    "missionsProvide": "purpose",
+    "everyParticipantCan": "find or create a team where they can contribute"
+  },
+  "organizationalShift": {
+    "mostPlatforms": "built around organizations",
+    "asyon": "built around teams that solve problems",
+    "committeesAre": "one kind of team",
+    "projectsAre": "another kind of team"
+  },
+  "teamTypes": [
+    { "key": "standingCommittee", "label": "Standing Committee", "permanent": true },
+    { "key": "workingGroup", "label": "Working Group", "permanent": false },
+    { "key": "taskForce", "label": "Task Force", "permanent": false },
+    { "key": "planningTeam", "label": "Planning Team", "permanent": false },
+    { "key": "volunteerTeam", "label": "Volunteer Team", "permanent": false },
+    { "key": "eventTeam", "label": "Event Team", "permanent": false },
+    { "key": "researchTeam", "label": "Research Team", "permanent": false },
+    { "key": "communicationsTeam", "label": "Communications Team", "permanent": false },
+    { "key": "technologyTeam", "label": "Technology Team", "permanent": false },
+    { "key": "communityServiceTeam", "label": "Community Service Team", "permanent": false },
+    { "key": "campusOutreachTeam", "label": "Campus Outreach Team", "permanent": false },
+    { "key": "countyOutreachTeam", "label": "County Outreach Team", "permanent": false },
+    { "key": "leadershipTeam", "label": "Leadership Team", "permanent": true },
+    { "key": "microTeam", "label": "Micro Team", "permanent": false, "signatureType": true }
+  ],
+  "teamIdentity": {
+    "fields": ["teamName", "mission", "purpose", "community", "status", "members", "leadership", "projects", "resources", "history"],
+    "immediatelyCommunicatesWhy": true
+  },
+  "teamLifecycle": [
+    { "stage": 1, "key": "planning", "label": "Planning" },
+    { "stage": 2, "key": "recruiting", "label": "Recruiting" },
+    { "stage": 3, "key": "launching", "label": "Launching" },
+    { "stage": 4, "key": "active", "label": "Active" },
+    { "stage": 5, "key": "growing", "label": "Growing" },
+    { "stage": 6, "key": "completingWork", "label": "Completing Work" },
+    { "stage": 7, "key": "archived", "label": "Archived" },
+    { "stage": 8, "key": "reactivated", "label": "Reactivated", "optional": true }
+  ],
+  "historyAlwaysPreserved": true,
+  "teamHeadquarters": {
+    "description": "Every team receives its own workspace — consistent with Community Command Center [CCC-001]",
+    "includes": ["mission", "members", "calendar", "projects", "files", "announcements", "resources", "discussions", "recognition", "volunteerOpportunities"],
+    "shell": "CommunityCommandCenterShell adapted for team scope",
+    "route": "/team/[slug]"
+  },
+  "membership": {
+    "multipleTeamsSimultaneously": true,
+    "crossCampusCollaboration": true,
+    "examples": [
+      "Campus Communications Team",
+      "County Volunteer Team",
+      "Environmental Working Group",
+      "Leadership Task Force",
+      "Debate Planning Committee"
+    ]
+  },
+  "leadership": {
+    "distributed": true,
+    "enablesParticipationNotHierarchy": true,
+    "roles": [
+      "coordinator",
+      "facilitator",
+      "projectLead",
+      "volunteerCoordinator",
+      "communicationsLead",
+      "trainingLead",
+      "documentationLead"
+    ]
+  },
+  "teamCommunication": {
+    "includes": ["announcements", "discussionSpace", "meetingNotes", "sharedDocuments", "actionItems", "calendar"],
+    "organizedAroundPurpose": true
+  },
+  "teamResources": {
+    "examples": ["meetingAgendas", "templates", "research", "graphics", "presentations", "volunteerGuides", "bestPractices"],
+    "knowledgeRemainsWithTeam": true,
+    "appendOnly": true
+  },
+  "teamProjects": {
+    "teamsCreateProjects": true,
+    "projectsLinkedToTeam": true,
+    "separateFromTeam": true,
+    "requirement": "MPS-001",
+    "examples": ["foodDrive", "registrationEvent", "campusDebate", "volunteerDay", "communityCleanup", "leadershipRetreat"]
+  },
+  "crossTeamCollaboration": {
+    "encouraged": true,
+    "examples": [
+      "Communications Team supports Volunteer Team",
+      "Technology Team assists Event Team",
+      "Research Team supports Advocacy Team",
+      "County Teams coordinate with Campus Teams"
+    ],
+    "knowledgeFlowsAcrossPlatform": true
+  },
+  "teamHealth": {
+    "indicators": ["participation", "volunteerEngagement", "meetingRhythm", "projectCompletion", "leadershipDevelopment", "knowledgeSharing", "welcomingCulture"],
+    "guidesImprovementNotRanking": true
+  },
+  "teamDiscovery": {
+    "channels": ["campusPages", "countyPages", "opportunityMarketplace", "search", "recommendations", "mentorSuggestions"],
+    "findingPlaceToContributeEasy": true
+  },
+  "microTeams": {
+    "description": "Lightweight teams for small efforts — not every effort requires a formal committee",
+    "signatureFeature": true,
+    "orchestrator": "createMicroTeam(params)",
+    "characteristics": {
+      "quickToCreate": true,
+      "easyToJoin": true,
+      "temporaryByDefault": true,
+      "canEvolveToPermanentTeam": true
+    },
+    "examples": [
+      "Three students planning a voter registration table",
+      "Four volunteers organizing transportation",
+      "Two photographers covering an event",
+      "Temporary team preparing a campus presentation",
+      "Group coordinating a weekend service project"
+    ],
+    "philosophy": "Small groups of motivated people solve problems; successful efforts grow into lasting institutions",
+    "defaultLifecycle": "planning → active → completingWork → archived",
+    "evolutionPath": "microTeam → workingGroup → standingCommittee",
+    "v1": "specAndCreateFlowStub"
+  },
+  "cccIntegration": {
+    "commandCenterWidget": "teams",
+    "teamsWidgetShows": ["activeTeams", "meetingSchedules", "currentNeeds", "teamLeaders", "projects", "openParticipation"],
+    "quickAction": "startTeam"
+  },
+  "stsIntegration": {
+    "extends": "STS-001",
+    "orchestrator": "deriveTeamLifecycleStage(teamId)"
+  },
+  "v1Scope": {
+    "philosophyAndTypes": true,
+    "microTeamSpec": true,
+    "teamEntitySchema": true,
+    "teamHeadquartersStub": true,
+    "fullTeamWorkspace": "v1.1"
+  },
+  "implementation": {
+    "firstClassEntities": true,
+    "configurableTeamTypes": true,
+    "separateTeamsFromProjects": true,
+    "files": [
+      "src/lib/teams/createTeam.ts",
+      "src/lib/teams/createMicroTeam.ts",
+      "src/lib/teams/deriveTeamLifecycleStage.ts",
+      "src/components/ccc/widgets/TeamsWidget.tsx"
+    ]
+  }
+}

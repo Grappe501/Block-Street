@@ -1,0 +1,156 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/phase-04/COMMUNITY_LEGACY_SYSTEM.md",
+  "acronym": "CLS",
+  "requirementId": "CLS-001",
+  "motto": "Communities become stronger when every generation builds upon the work of the last.",
+  "principle": "Legacy is a gift to future organizers.",
+  "purpose": "Preserve history, traditions, knowledge, relationships, and accomplishments so future participants inherit experience instead of starting from scratch.",
+  "philosophy": {
+    "notRecordsDatabase": true,
+    "remembersCommunitiesNotJustRecords": true,
+    "legacyNotMemory": "Memory remembers the past; legacy carries the past into the future",
+    "neverLoseStoryOnTransition": true,
+    "continuallyAddsToSharedHistory": true,
+    "stewardOfInstitutionalMemory": true,
+    "leadershipAsStewardshipNotStatus": true,
+    "appendOnlyWhereMeaningful": true
+  },
+  "legacyCategories": [
+    {
+      "key": "communityStory",
+      "label": "Community Story",
+      "includes": ["whyExists", "howBegan", "milestones", "traditions", "identity", "missionEvolution"],
+      "growsOverTime": true
+    },
+    {
+      "key": "leadershipHistory",
+      "label": "Leadership History",
+      "includes": ["leadershipTransitions", "majorOrganizers", "mentors", "teamCoordinators", "projectLeaders"],
+      "stewardshipNotStatus": true
+    },
+    {
+      "key": "missionHistory",
+      "label": "Mission History",
+      "includes": ["completedMissions", "majorAccomplishments", "communityImpact", "volunteerStories", "lessonsLearned"]
+    },
+    {
+      "key": "annualTimeline",
+      "label": "Annual Timeline",
+      "includes": ["majorEvents", "projects", "milestones", "celebrations", "growth", "challenges"],
+      "livingHistoricalRecord": true
+    },
+    {
+      "key": "traditions",
+      "label": "Traditions",
+      "examples": ["annualVolunteerDay", "leadershipRetreat", "campusWelcomeWeek", "holidayProjects", "communityCelebrations"],
+      "createsContinuity": true
+    },
+    {
+      "key": "communityScrapbook",
+      "label": "Community Scrapbook",
+      "includes": ["photos", "videos", "graphics", "stories", "interviews", "newsCoverage", "historicalArtifacts"],
+      "futureMediaArchive": true
+    },
+    {
+      "key": "oralHistory",
+      "label": "Oral History",
+      "future": ["interviews", "organizerReflections", "volunteerExperiences", "mentorshipStories"],
+      "futureGenerationsHearVoices": true
+    },
+    {
+      "key": "knowledgeLegacy",
+      "label": "Knowledge Legacy",
+      "includes": ["playbooks", "decisionHistory", "templates", "training", "research", "lessonsLearned", "communityBrain"],
+      "integrates": "CKLS-001"
+    },
+    {
+      "key": "impactHistory",
+      "label": "Impact History",
+      "includes": ["peopleServed", "projectsCompleted", "volunteersDeveloped", "leadersMentored", "communitiesStrengthened"]
+    }
+  ],
+  "communityTimeline": {
+    "permanent": true,
+    "examples": ["communityFounded", "firstOrganizer", "firstProject", "majorMilestones", "annualAchievements", "leadershipTransitions", "recognition"],
+    "partOfCommunityIdentity": true,
+    "parallelTo": "CJT-001 participant timeline",
+    "appendOnly": true,
+    "orchestrator": "appendCommunityLegacyEvent(communityId, event)"
+  },
+  "alumniConnections": {
+    "formerParticipantsRemainConnected": true,
+    "includes": ["graduates", "formerOrganizers", "mentors", "supporters", "communityAdvisors"],
+    "remainPartOfStory": true,
+    "orchestrator": "linkAlumniToCommunity(participantId, communityId, role)"
+  },
+  "anniversaryEngine": {
+    "celebratesAnniversaries": true,
+    "examples": ["communityAnniversary", "projectAnniversary", "volunteerAnniversaries", "leadershipMilestones", "historicEvents"],
+    "strengthensBelonging": true,
+    "orchestrator": "getUpcomingAnniversaries(communityId, window)",
+    "integrates": "TSOS-001"
+  },
+  "legacyPreservation": {
+    "nothingMeaningfulDisappears": true,
+    "archiveWhilePreservingIntegrity": true,
+    "futureParticipantsInheritCompleteStory": true,
+    "separateHistoricalFromOperational": true,
+    "completedMissionsNeverDeleted": "MPS-M05a"
+  },
+  "futureAiAssistance": {
+    "may": ["summarizeCommunityHistory", "recommendHistoricalPlaybooks", "highlightAnniversaries", "identifySimilarPastProjects", "surfaceForgottenKnowledge", "generateAnnualReports"],
+    "librarianNotAuthor": true
+  },
+  "arkansasLivingHistory": {
+    "description": "Interactive living history of Arkansas youth and community organizing — not a list of dates",
+    "signatureFeature": true,
+    "explore": ["campusFormationDates", "countyGrowth", "statewideMissions", "leadershipGenerations", "volunteerMovements", "traditions", "collaborativeMilestones", "organizerStories"],
+    "livingTapestry": true,
+    "ongoingStoryBeyondGraduation": true,
+    "lastingCivicInfrastructure": true,
+    "buildsOn": ["ADT-001", "SCN-001", "CLS community timelines"],
+    "orchestrator": "queryArkansasLivingHistory(filters)",
+    "v1": "specAndAggregationSchemaStub"
+  },
+  "platformIntegrations": {
+    "constitution": "CCN-M13 Legacy layer",
+    "growthSustainability": "CGS-M07 institutional memory",
+    "knowledgeLearning": "CKLS-M13",
+    "missions": "MPS-001 mission history",
+    "statewideCollaboration": "SCN-M11",
+    "opportunityExchange": "OEX-M11 success stories",
+    "intelligence": "CIS-M11 storytelling",
+    "recognition": "CRA-001",
+    "civicJourney": "CJT-001 participant parallel",
+    "commandCenter": "CCC-M18 story widget",
+    "digitalArkansas": "ADT-001 map layer",
+    "twoLayerTimeline": ["CJT-001 participant", "CLS-001 community", "Arkansas Living History statewide"]
+  },
+  "v1Scope": {
+    "philosophyAndCategories": true,
+    "communityTimelineSpec": true,
+    "arkansasLivingHistorySpec": true,
+    "alumniAndAnniversaryDefined": true,
+    "legacyPreservationRequired": true,
+    "fullMultimediaScrapbook": "future",
+    "oralHistoryRecording": "future",
+    "aiAnnualReports": "future"
+  },
+  "implementation": {
+    "separateHistoricalFromOperational": true,
+    "permanentTimelines": true,
+    "multimediaArchiveReady": true,
+    "preserveLeadershipHistory": true,
+    "longTermSearch": true,
+    "firstClassLegacyCapability": true,
+    "files": [
+      "src/lib/cls/appendCommunityLegacyEvent.ts",
+      "src/lib/cls/getCommunityTimeline.ts",
+      "src/lib/cls/getUpcomingAnniversaries.ts",
+      "src/lib/cls/linkAlumniToCommunity.ts",
+      "src/lib/cls/queryArkansasLivingHistory.ts",
+      "src/components/ccc/widgets/StoryWidget.tsx"
+    ]
+  }
+}

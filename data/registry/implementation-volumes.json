@@ -1,0 +1,88 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/master/VOLUMES-INDEX.md",
+  "requirementId": "IVS-001",
+  "purpose": "Index and precedence for Volumes 1–6 — the factory layer that builds the COS",
+  "naturalPause": {
+    "statement": "Architecture shifts from what the system does to how the system is built",
+    "productDesignComplete": "Phases 1–6 + Volume 0",
+    "factoryDesignCycle": "Volumes 1–6",
+    "phase7DeferredUntil": "implementation volumes v1 complete"
+  },
+  "volumes": [
+    {
+      "volume": 1,
+      "name": "Engineering Architecture Bible",
+      "subtitle": "How the software is built",
+      "requirementId": "EAB-001",
+      "docPath": "docs/master/ENGINEERING_ARCHITECTURE_BIBLE.md",
+      "masterSequencePath": "docs/volume-01/VOLUME_1_MASTER_SEQUENCE.md",
+      "registryPath": "data/registry/engineering-architecture-bible.json",
+      "chapters": 14,
+      "stepsComplete": 3,
+      "stepsTotal": 14,
+      "acceptanceCriteria": "AC-077",
+      "status": "in_progress"
+    },
+    {
+      "volume": 2,
+      "name": "Data Architecture Bible",
+      "subtitle": "Single source of truth for the database",
+      "requirementId": "DAB-001",
+      "docPath": "docs/master/DATA_ARCHITECTURE_BIBLE.md",
+      "registryPath": "data/registry/data-architecture-bible.json",
+      "acceptanceCriteria": "AC-078",
+      "status": "v1_complete"
+    },
+    {
+      "volume": 3,
+      "name": "User Experience Bible",
+      "subtitle": "Every screen, flow, and interaction state",
+      "requirementId": "UXB-001",
+      "docPath": "docs/master/USER_EXPERIENCE_BIBLE.md",
+      "registryPath": "data/registry/user-experience-bible.json",
+      "acceptanceCriteria": "AC-079",
+      "status": "v1_complete"
+    },
+    {
+      "volume": 4,
+      "name": "AI & Intelligence Bible",
+      "subtitle": "Technical AI architecture",
+      "requirementId": "AIB-001",
+      "docPath": "docs/master/AI_INTELLIGENCE_BIBLE.md",
+      "registryPath": "data/registry/ai-intelligence-bible.json",
+      "acceptanceCriteria": "AC-080",
+      "status": "v1_complete"
+    },
+    {
+      "volume": 5,
+      "name": "Operations & Launch Bible",
+      "subtitle": "How the system is operated",
+      "requirementId": "OLB-001",
+      "docPath": "docs/master/OPERATIONS_LAUNCH_BIBLE.md",
+      "registryPath": "data/registry/operations-launch-bible.json",
+      "acceptanceCriteria": "AC-081",
+      "status": "v1_complete"
+    },
+    {
+      "volume": 6,
+      "name": "Experience Design Bible",
+      "subtitle": "How people should feel",
+      "requirementId": "EDB-001",
+      "docPath": "docs/master/EXPERIENCE_DESIGN_BIBLE.md",
+      "registryPath": "data/registry/experience-design-bible.json",
+      "acceptanceCriteria": "AC-082",
+      "status": "v1_complete"
+    }
+  ],
+  "readOrderAfterVolume0": [1, 2, 3, 4, 5, 6],
+  "alignmentGoal": [
+    "product specification",
+    "engineering specification",
+    "data specification",
+    "UX specification",
+    "AI specification",
+    "operational specification",
+    "experience specification"
+  ]
+}

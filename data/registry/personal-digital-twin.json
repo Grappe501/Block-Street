@@ -36,7 +36,7 @@
     {
       "key": "activity",
       "includes": ["events", "volunteerService", "projects", "learning", "leadership", "recognition", "timeline"],
-      "sources": ["CJT-001", "EVT-001", "VOL-001", "CRA-001"]
+      "sources": ["CJT-001", "EVT-001", "VDS-001", "CRA-001"]
     },
     {
       "key": "growth",

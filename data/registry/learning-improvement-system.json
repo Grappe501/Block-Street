@@ -1,0 +1,217 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/phase-05/LEARNING_IMPROVEMENT_SYSTEM.md",
+  "acronym": "LIS",
+  "requirementId": "LIS-001",
+  "supersedes": "AAR-001",
+  "governedBy": "ACN-001",
+  "notMilitaryAAR": true,
+  "universalLearningLanguage": true,
+  "productName": "Learning & Improvement System",
+  "guidingPrinciple": "Every mission should leave behind more wisdom than work.",
+  "principle": "Completion is not the end. Reflection is the final phase of every mission.",
+  "purpose": "Ensure every mission contributes knowledge that improves future work — platform grows wiser with every completion.",
+  "definingCharacteristic": "Every completed mission becomes an investment in the success of future communities.",
+  "learningPhilosophy": {
+    "reflectionIsFinalPhase": true,
+    "constructiveNotCritical": true,
+    "neverRepeatAvoidableMistakes": true,
+    "investmentInFutureCommunities": true
+  },
+  "learningLifecycle": {
+    "stages": [
+      "missionComplete",
+      "reflection",
+      "lessonsCaptured",
+      "knowledgeOrganized",
+      "playbooksUpdated",
+      "recommendationsCreated",
+      "futureMissionsImproved"
+    ],
+    "partOfOperationalCycle": true,
+    "triggersOnMissionComplete": true
+  },
+  "reflectionFramework": {
+    "questions": [
+      "whatWentWell",
+      "whatChallenges",
+      "whatSurprisedUs",
+      "whatDecisionsProvedValuable",
+      "whatWouldWeDoDifferently",
+      "whatShouldFutureOrganizersKnow"
+    ],
+    "constructiveNotCritical": true
+  },
+  "communityReflection": {
+    "formats": [
+      "missionDebrief",
+      "volunteerDiscussion",
+      "leadershipReview",
+      "participantFeedback",
+      "partnerFeedback"
+    ],
+    "sharedReflectionRevealsMore": true,
+    "collaborativeSupported": true
+  },
+  "lessonsLearned": {
+    "structuredEntities": true,
+    "fields": [
+      "title",
+      "description",
+      "context",
+      "recommendation",
+      "relatedMission",
+      "relatedCommunity",
+      "tags",
+      "supportingEvidence",
+      "futureApplicability"
+    ],
+    "searchable": true,
+    "appendOnlyWithVersionHistory": true,
+    "orchestrator": "captureLesson(missionId, payload)",
+    "integrates": "CKLS-001"
+  },
+  "playbookUpdates": {
+    "questions": [
+      "improveExistingPlaybook",
+      "createNewPlaybook",
+      "changeChecklist",
+      "updateTemplates"
+    ],
+    "versionHistoryPreserved": true,
+    "integrates": ["EEOS-M17", "CKLS-M07", "MDS-M20"],
+    "orchestrator": "proposePlaybookUpdate(lessonId, playbookId, changes)"
+  },
+  "improvementRecommendations": {
+    "examples": [
+      "betterCommunication",
+      "differentVolunteerStructure",
+      "earlierPlanning",
+      "improvedLogistics",
+      "additionalTraining",
+      "resourceImprovements",
+      "leadershipDevelopment"
+    ],
+    "trackAdoption": true,
+    "surfacesIn": ["MDS-M11", "EOS-M17"]
+  },
+  "communityLearningDashboard": {
+    "description": "Visible knowledge growth — not ranking",
+    "widgets": [
+      "lessonsCollected",
+      "playbooksUpdated",
+      "recommendationsAdopted",
+      "reflectionParticipation",
+      "knowledgeGrowth"
+    ],
+    "route": "/community/[slug]/learning",
+    "integrates": "CCC-001",
+    "nonRanking": true
+  },
+  "crossCommunityLearning": {
+    "knowledgeCompoundsStatewide": true,
+    "optInSharing": true,
+    "examples": [
+      "campusOrientationImprovement",
+      "countyFoodDriveModel",
+      "experiencePlaybookRefinement",
+      "missionLibraryUpdate"
+    ],
+    "integrates": ["SCN-001", "CCE-001", "KDG-001"]
+  },
+  "learningLibrary": {
+    "searchable": true,
+    "searchBy": ["missionType", "community", "topic", "challenge", "recommendation", "tags"],
+    "routes": ["/learn", "/community/[slug]/lessons"],
+    "orchestrator": "searchLearningLibrary(query, filters?)",
+    "integrates": "CKLS-M09"
+  },
+  "continuousImprovementCycle": {
+    "cycle": ["design", "execute", "reflect", "learn", "improve", "repeat"],
+    "partOfEveryMission": true,
+    "integrates": ["ACN-M04", "ACN-M08", "MDS-001", "EOS-001"]
+  },
+  "futureAiAssistance": {
+    "advisoryOnly": true,
+    "capabilities": [
+      "summarizeReflections",
+      "identifyRecurringThemes",
+      "recommendPlaybookUpdates",
+      "detectCommonChallenges",
+      "connectSimilarLessons",
+      "suggestImprovements"
+    ]
+  },
+  "improvementGraph": {
+    "acronym": "IG",
+    "requirementRef": "LIS-M16",
+    "signatureFeature": true,
+    "description": "Final learning graph — how improvements spread across the network",
+    "route": "/learn/improvements",
+    "orchestrator": "getImprovementGraph(filters?)",
+    "edgeTypes": [
+      "reflected",
+      "identified",
+      "updated",
+      "adopted_by",
+      "improved",
+      "added_to",
+      "reused_by",
+      "created",
+      "became_standard"
+    ],
+    "exampleQuestions": [
+      "whichLessonsHadGreatestStatewideImpact",
+      "whichPlaybooksImprovingOverTime",
+      "whichCommunitiesDevelopAdoptedInnovations",
+      "howMissionEvolvedOverYears",
+      "whatImprovementsBecameStandardPractice"
+    ],
+    "completesLearningLoop": true
+  },
+  "learningArchitectureStack": {
+    "layers": [
+      { "name": "Community Brain", "role": "what we know", "requirement": "CKLS-001" },
+      { "name": "Mission Library", "role": "proven missions", "requirement": "MDS-M20" },
+      { "name": "Experience Playbooks", "role": "proven experiences", "requirement": "EEOS-M17" },
+      { "name": "Decision Graph", "role": "why we decided", "requirement": "CDS-M16" },
+      { "name": "Impact Chain", "role": "what changed", "requirement": "CIIS-M16" },
+      { "name": "Community Legacy", "role": "what endures", "requirement": "CLS-001" },
+      { "name": "Story Atlas", "role": "human experience", "requirement": "CST-M16" },
+      { "name": "Improvement Graph", "role": "how wisdom propagates", "requirement": "LIS-M16" }
+    ]
+  },
+  "platformIntegrations": {
+    "ACN-M04": "Civic Operating Loop",
+    "ACN-M08": "Action Cycle reflection",
+    "ACN-M26": "MOR lessons section",
+    "MDS-001": "design reads lessons",
+    "MDS-M20": "Mission Library updates",
+    "EOS-001": "mission complete trigger",
+    "EEOS-001": "Experience Playbook updates",
+    "VDS-001": "volunteer reflection",
+    "CFS-001": "commitment reflection",
+    "CDS-001": "decision outcomes",
+    "CIIS-001": "impact synthesis",
+    "CST-001": "stories as evidence",
+    "CKLS-001": "lessons learned layer",
+    "CLS-001": "long-term history",
+    "SCN-001": "cross-community spread",
+    "CIS-001": "theme detection",
+    "IOS-001": "initiative learning",
+    "CCC-001": "Learning Dashboard"
+  },
+  "v1Scope": {
+    "philosophyDocumented": true,
+    "learningLifecycleSpec": true,
+    "reflectionFramework": true,
+    "lessonsPlaybookUpdates": true,
+    "communityLearningDashboard": true,
+    "crossCommunityLearning": true,
+    "improvementGraphArchitecture": true,
+    "learningArchitectureStack": true,
+    "learningUiStub": true,
+    "liveGraphTraversal": "v1.1",
+    "aiThemeDetection": "future"
+  }
+}

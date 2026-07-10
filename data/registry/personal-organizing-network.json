@@ -1,0 +1,212 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/phase-06/PERSONAL_ORGANIZING_NETWORK.md",
+  "acronym": "PON",
+  "requirementId": "PON-001",
+  "plannedAliasSuperseded": "PNS-001",
+  "governedBy": "GCN-001",
+  "phaseRequirementId": "GOS-001",
+  "productName": "Personal Organizing Network",
+  "notReferralProgram": true,
+  "notAffiliateMarketing": true,
+  "livingCommunityNetwork": true,
+  "originalPlatformVision": true,
+  "guidingPrinciple": "Every participant has the ability to strengthen their community by inviting others into meaningful participation.",
+  "principle": "The network reflects relationships rather than popularity.",
+  "purpose": "Give every participant an organizing space for welcoming, relationships, mentoring, and community growth — authentic networks of people they know and trust.",
+  "philosophy": {
+    "notMyFollowers": true,
+    "about": ["peopleIntroduced", "peopleWelcomed", "peopleMentored", "peopleInCommunity"],
+    "relationshipsNotPopularity": true,
+    "everyParticipantCommunityBuilder": true
+  },
+  "personalInviteIdentity": {
+    "autoProvisionOnRegistration": true,
+    "assets": [
+      { "key": "uniqueInviteLink", "requirement": "NET-001", "route": "/s/[slug]" },
+      { "key": "permanentInviteCode", "description": "Short memorable code for verbal sharing" },
+      { "key": "personalQrCode", "requirement": "NET-002" },
+      { "key": "shortShareUrl", "requirement": "NET-001" },
+      { "key": "nfcSupport", "status": "future" }
+    ],
+    "alwaysAvailableDayOne": true
+  },
+  "invitationMethods": [
+    "qrCodes",
+    "shareLinks",
+    "textMessage",
+    "email",
+    "socialSharing",
+    "campusPostersQr",
+    "printedCards",
+    "futureBadgeScanning"
+  ],
+  "invitationJourney": {
+    "stages": [
+      "invitationSent",
+      "visited",
+      "registered",
+      "welcomed",
+      "firstCommunity",
+      "firstMission",
+      "firstVolunteerExperience",
+      "longTermParticipation"
+    ],
+    "belongingNotConversion": true,
+    "attributionPreserved": true,
+    "requirement": "RGE-M08"
+  },
+  "myNetwork": {
+    "route": "/network",
+    "pccWidget": true,
+    "displays": [
+      "peopleInvited",
+      "relationships",
+      "communitiesRepresented",
+      "sharedMissions",
+      "mentorshipConnections",
+      "growthTimeline",
+      "communityStories"
+    ],
+    "peopleNotStatistics": true,
+    "notLeaderboard": true
+  },
+  "networkTree": {
+    "optional": true,
+    "celebratesRelationshipsNotCompetition": true,
+    "permissionScoped": true,
+    "structuralView": true,
+    "complementsImpactTree": true
+  },
+  "welcomeWorkflow": {
+    "inviterEncouragedNotRequired": true,
+    "actions": [
+      "welcomeThem",
+      "answerQuestions",
+      "introduceToCommunity",
+      "suggestOpportunities",
+      "helpThemBelong"
+    ],
+    "surfacesIn": ["PCC-001", "WBS-001"]
+  },
+  "mentorship": {
+    "organicNotAssigned": true,
+    "supports": [
+      "supportNewMembers",
+      "answerQuestions",
+      "recommendCommunities",
+      "encourageParticipation",
+      "shareExperiences"
+    ],
+    "requirements": ["PGL-001", "VDS-001"]
+  },
+  "networkTimeline": {
+    "appendOnly": true,
+    "examples": [
+      "firstInvitation",
+      "firstVolunteer",
+      "newMentor",
+      "firstCommunityLaunched",
+      "statewideCollaboration"
+    ],
+    "feeds": ["CPP-001", "PDT-001", "CJT-001"]
+  },
+  "impactView": {
+    "rippleEffectsNotCounts": true,
+    "signals": [
+      "peopleWelcomed",
+      "communitiesStrengthened",
+      "projectsJoined",
+      "volunteerExperiencesCreated",
+      "leadersDeveloped",
+      "storiesCollected"
+    ],
+    "primaryUI": "impactTree"
+  },
+  "privacy": {
+    "participantControlsVisibility": true,
+    "requirements": ["TPS-001", "KDG-001", "SEC-001"],
+    "inviterSeesImpactStory": true,
+    "inviteeControlsProfile": true
+  },
+  "recognition": {
+    "contributionNotCompetition": true,
+    "examples": [
+      "welcomingNewParticipants",
+      "mentoring",
+      "helpingCommunitiesLaunch",
+      "supportingVolunteerExperiences",
+      "strengtheningRelationships"
+    ],
+    "requirements": ["CRA-001", "CCR-001"]
+  },
+  "impactTree": {
+    "acronym": "IT",
+    "requirementRef": "PON-M16",
+    "signatureFeature": true,
+    "description": "Most emotionally meaningful growth view — ripple effects of relationships over invite counts",
+    "implements": "GCN-M12 CP-016",
+    "notCompetition": true,
+    "storyNotStatus": true,
+    "route": "/network/impact",
+    "orchestrator": "getImpactTree(participantId, depth?, permissions)",
+    "coreMessage": "Because you welcomed a few people into this community, all of this became possible.",
+    "dataSources": [
+      "relationshipGraph",
+      "impactChain",
+      "missionOutcomes",
+      "volunteerPassport",
+      "storyAtlas",
+      "improvementGraph"
+    ],
+    "longTermRippleExamples": [
+      "newVolunteerTeams",
+      "communityTraditions",
+      "serviceOpportunities",
+      "newLeaders",
+      "crossCampusPartnerships",
+      "statewideInitiatives"
+    ],
+    "complementsNetworkTree": true
+  },
+  "communityIntegration": {
+    "PCC-001": "network widget, welcome prompts",
+    "CCC-001": "community growth from invites",
+    "VDS-M17": "volunteer passport service story",
+    "CPP-001": "civic passport milestones",
+    "OEX-001": "needs matching for new participants",
+    "GOS-001": "healthy growth signals",
+    "CKLS-001": "stories and lessons",
+    "GOS-M16": "living network graph edges"
+  },
+  "extends": {
+    "PRN-001": "participant-owned relationship foundation",
+    "RGE-001": "invitation lifecycle and attribution",
+    "NET-001": "invite links",
+    "NET-002": "QR codes"
+  },
+  "futureAiAssistance": {
+    "assistNotAutomate": true,
+    "neverSendInvitesWithoutConsent": true,
+    "maySupport": [
+      "recommendIntroductions",
+      "suggestMentors",
+      "identifyWelcomingOpportunities",
+      "recommendNearbyCommunities",
+      "highlightParticipantsNeedingSupport",
+      "suggestFollowUpAfterInvitations"
+    ]
+  },
+  "v1Scope": {
+    "philosophyDocumented": true,
+    "inviteIdentitySpec": true,
+    "invitationJourneyAndWelcome": true,
+    "myNetworkAndNetworkTree": true,
+    "impactTreeArchitecture": true,
+    "privacyAndRecognition": true,
+    "communityIntegrationMap": true,
+    "liveInviteLinkAndQr": "partial NET-001/002",
+    "liveImpactTreeAggregation": "v1.1",
+    "nfcBadgeScanning": "future"
+  }
+}

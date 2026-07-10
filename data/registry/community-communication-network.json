@@ -1,0 +1,161 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/phase-04/COMMUNITY_COMMUNICATION_NETWORK.md",
+  "acronym": "CCNET",
+  "requirementId": "CCNET-001",
+  "note": "CCNET-001 distinct from CCN-001 Community Constitution",
+  "motto": "Communication should build stronger communities—not create more noise.",
+  "principle": "Every communication should have purpose.",
+  "purpose": "Communication infrastructure connecting participants, teams, missions, campuses, counties, and statewide initiatives.",
+  "philosophy": {
+    "notOneFeature": "Communication is a network connecting every part of the platform",
+    "fourQuestions": ["whoNeedsThis", "whyDoesItMatter", "whatActionExpected", "whenIsItRelevant"],
+    "majorPlatformEngine": true
+  },
+  "organizationalShift": {
+    "mostPlatforms": "build messaging",
+    "asyon": "build a Communication Network",
+    "messagingIsOnePiece": true
+  },
+  "communicationTypes": [
+    {
+      "key": "directConversations",
+      "label": "Direct Conversations",
+      "scope": "private participant-to-participant",
+      "examples": ["questions", "mentorship", "planning", "coordination", "relationshipBuilding"]
+    },
+    {
+      "key": "communityConversations",
+      "label": "Community Conversations",
+      "scope": "open discussions within community",
+      "examples": ["campus", "county", "team", "mission", "volunteerTeam", "regionalCollaboration", "alumniNetworks"]
+    },
+    {
+      "key": "announcements",
+      "label": "Announcements",
+      "scope": "one-way",
+      "examples": ["leadershipUpdates", "meetingReminders", "volunteerOpportunities", "projectLaunches", "celebrations"],
+      "distinctFromConversations": true
+    },
+    {
+      "key": "discussionThreads",
+      "label": "Discussion Threads",
+      "scope": "organized topic conversations",
+      "examples": ["projectPlanning", "volunteerLogistics", "communityQuestions", "ideas", "feedback", "resources"]
+    },
+    {
+      "key": "broadcasts",
+      "label": "Broadcasts",
+      "scope": "large-scale intentional",
+      "examples": ["statewideUpdates", "countyWide", "campusNotices", "emergencyCommunications"]
+    },
+    {
+      "key": "communityStories",
+      "label": "Community Stories",
+      "scope": "narrative",
+      "examples": ["volunteerExperiences", "projectHighlights", "successStories", "lessonsLearned", "photoJournals"]
+    }
+  ],
+  "communicationSpaces": {
+    "autoProvisioned": true,
+    "defaultChannels": [
+      "generalDiscussion",
+      "announcements",
+      "questions",
+      "volunteerCoordination",
+      "events",
+      "leadership",
+      "resources"
+    ],
+    "communitiesCreateAdditional": true
+  },
+  "missionCenteredCommunication": {
+    "everyMissionReceives": ["planning", "volunteerCoordination", "files", "updates", "questions", "celebrations"],
+    "connectedToWork": true
+  },
+  "knowledgePreservation": {
+    "importantDiscussionsBecomeKnowledge": true,
+    "examples": ["faqs", "bestPractices", "meetingSummaries", "lessonsLearned", "decisionHistory"],
+    "preventDisappearingIntoThreads": true,
+    "feedsKnowledgeBase": "CKLS-001"
+  },
+  "attentionManagement": {
+    "integratesWith": "CAM-001",
+    "participantControls": ["subscriptions", "notificationFrequency", "quietHours", "digestPreferences"],
+    "participantCentered": true
+  },
+  "search": {
+    "allCommunicationSearchable": true,
+    "findable": ["messages", "announcements", "resources", "meetingNotes", "projects", "communityStories"],
+    "knowledgeDiscoverable": true
+  },
+  "moderation": {
+    "communityCapabilities": true,
+    "examples": ["communityGuidelines", "reporting", "contentReview", "roleBasedModeration", "conflictResolution"],
+    "protectHealthyParticipation": true
+  },
+  "crossCommunityCommunication": {
+    "encouraged": true,
+    "examples": [
+      "campusCollaboratingWithCounty",
+      "committeesWorkingTogether",
+      "regionalInitiatives",
+      "sharedVolunteerProjects"
+    ]
+  },
+  "futureAiAssistance": {
+    "mayAssist": [
+      "summarizeDiscussions",
+      "highlightUnansweredQuestions",
+      "identifyActionItems",
+      "suggestResources",
+      "connectSimilarConversations"
+    ],
+    "supportNotReplaceRelationships": true
+  },
+  "conversationGraph": {
+    "description": "Understands conversations — connects discussions to people, communities, missions, decisions, outcomes",
+    "signatureFeature": true,
+    "orchestrator": "queryConversationGraph(nodeId, depth)",
+    "platformGraphs": ["relationshipGraph", "growthGraph", "trustGraph", "personalDigitalTwin", "conversationGraph"],
+    "exampleChain": [
+      "conversationBelongsToProject",
+      "projectBelongsToTeam",
+      "teamBelongsToCampus",
+      "discussionProducedDecisions",
+      "decisionLaunchedMission",
+      "missionBecameStatewideInitiative"
+    ],
+    "institutionalMemory": "Remember what happened because people talked — not just what was said",
+    "nodeTypes": ["conversation", "thread", "message", "decision", "outcome", "mission", "team", "community", "participant", "resource"],
+    "v1": "specAndGraphSchemaStub"
+  },
+  "platformIntegrations": {
+    "communityCommandCenterFeed": "CCC-M10",
+    "teamCommunication": "TWG-M10",
+    "missionUpdates": "MPS-001",
+    "morningBrief": "PCC-M17",
+    "communityPulse": "CCC-M20",
+    "timeOperatingSystem": "TSOS-001",
+    "attentionPolicy": "CAM-001"
+  },
+  "v1Scope": {
+    "philosophyAndTypes": true,
+    "conversationGraphSpec": true,
+    "announcementsStub": true,
+    "feedWidgetStub": true,
+    "fullMessaging": "phase5OrV1.1"
+  },
+  "implementation": {
+    "separateChannelsFromCommunities": true,
+    "multipleCommunicationTypes": true,
+    "searchableHistory": true,
+    "preserveDiscussionContext": true,
+    "files": [
+      "src/lib/ccnet/queryConversationGraph.ts",
+      "src/lib/ccnet/promoteDiscussionToKnowledge.ts",
+      "src/lib/ccnet/assembleCommunityFeed.ts",
+      "src/components/ccc/widgets/FeedWidget.tsx"
+    ]
+  }
+}

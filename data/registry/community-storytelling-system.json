@@ -1,0 +1,227 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/phase-05/COMMUNITY_STORYTELLING_SYSTEM.md",
+  "acronym": "CST",
+  "requirementId": "CST-001",
+  "supersedes": "AST-001",
+  "governedBy": "ACN-001",
+  "notMarketing": true,
+  "partOfOperatingSystem": true,
+  "productName": "Community Storytelling System",
+  "guidingPrinciple": "Communities are remembered through their stories.",
+  "principle": "Statistics explain. Stories inspire. The platform preserves both.",
+  "purpose": "Capture, preserve, and share human stories from service, leadership, collaboration, and community life — authentically.",
+  "storytellingPhilosophy": {
+    "culturalPreservation": true,
+    "notAfterthought": true,
+    "authenticVoices": true,
+    "missionQuestions": [
+      "whoWasHelped",
+      "whoGrew",
+      "whatRelationshipsFormed",
+      "whatSurprisedUs",
+      "whatShouldFutureParticipantsRemember"
+    ]
+  },
+  "storyCategories": {
+    "participantStories": {
+      "examples": ["firstVolunteerExperience", "leadershipJourney", "mentorship", "personalGrowth", "communityConnections", "graduationReflections"]
+    },
+    "missionStories": {
+      "examples": ["foodDrive", "campusWelcomeWeek", "communityCleanup", "leadershipRetreat", "volunteerDay", "statewideInitiative"],
+      "everyMissionDeservesNarrative": true
+    },
+    "communityStories": {
+      "examples": ["campusTraditions", "countyMilestones", "annualEvents", "historicAccomplishments", "communityIdentity", "volunteerCulture"]
+    },
+    "leadershipStories": {
+      "examples": ["organizerReflections", "mentorExperiences", "committeeDevelopment", "lessonsFromLeadership", "leadershipTransitions"]
+    },
+    "partnershipStories": {
+      "examples": ["campusCountyCollaboration", "regionalInitiatives", "communityPartnerships", "sharedSuccesses", "relationshipBuilding"]
+    },
+    "legacyStories": {
+      "examples": ["communityHistory", "majorMilestones", "anniversaries", "generationalTransitions", "alumniReflections"],
+      "keepsCommunitiesConnectedAcrossTime": true
+    }
+  },
+  "storyStructure": {
+    "fields": [
+      "title",
+      "summary",
+      "participants",
+      "community",
+      "mission",
+      "timeline",
+      "photos",
+      "videos",
+      "quotes",
+      "lessonsLearned",
+      "relatedResources",
+      "relatedPlaybooks",
+      "relatedMissions",
+      "category",
+      "tags"
+    ],
+    "searchableKnowledge": true,
+    "integrates": "CKLS-M09"
+  },
+  "storyCollection": {
+    "formats": [
+      "writtenReflections",
+      "shortInterviews",
+      "photoJournals",
+      "videoClips",
+      "audioRecordings",
+      "eventHighlights",
+      "communityMemories"
+    ],
+    "simpleDuringNormalActivities": true,
+    "multimedia": true,
+    "orchestrator": "createStory(draft)"
+  },
+  "storyApproval": {
+    "workflows": ["drafts", "editing", "consent", "privacySettings", "roleBasedPublishing"],
+    "consentRequired": true,
+    "respectForParticipants": true,
+    "appendOnlyHistory": true,
+    "governedBy": "KDG-001"
+  },
+  "storyDiscovery": {
+    "browseBy": [
+      "community",
+      "mission",
+      "county",
+      "campus",
+      "topic",
+      "volunteerExperience",
+      "leadership",
+      "year",
+      "tags"
+    ],
+    "routes": ["/stories", "/community/[slug]/stories"]
+  },
+  "storyConnections": {
+    "connectsTo": [
+      "participants",
+      "communities",
+      "projects",
+      "initiatives",
+      "missionOperatingRecords",
+      "experiencePlaybooks",
+      "communityBrain",
+      "legacyTimeline",
+      "impactChain"
+    ],
+    "graphEdgesNotOrphans": true
+  },
+  "storytellingTemplates": {
+    "examples": [
+      "whatInspiredThisMission",
+      "whatSurprisedYouToday",
+      "whatChallengeDidYouOvercome",
+      "whoMadeADifference",
+      "whatWouldYouTellNextYearsOrganizers"
+    ],
+    "optionalNeverRequired": true,
+    "communitiesCanShare": true
+  },
+  "recognitionThroughStory": {
+    "description": "Celebrate contribution through narrative — not badges alone",
+    "examples": [
+      "volunteerSpotlight",
+      "leadershipJourney",
+      "communityAppreciation",
+      "mentorRecognition",
+      "projectReflections"
+    ],
+    "integrates": "CRA-001"
+  },
+  "futureAiAssistance": {
+    "preservesAuthenticVoices": true,
+    "capabilities": [
+      "transcribeInterviews",
+      "organizePhotos",
+      "summarizeStoriesWithReview",
+      "suggestTitles",
+      "connectRelatedStories",
+      "recommendHistoricalContext"
+    ]
+  },
+  "memoryTriad": {
+    "communityBrain": { "requirement": "CKLS-001", "preserves": "whatWeKnow" },
+    "communityLegacy": { "requirement": "CLS-001", "preserves": "whatWeveBuilt" },
+    "storyAtlas": { "requirement": "CST-M16", "preserves": "whoWeBecameWhileBuildingIt" }
+  },
+  "arkansasStoryAtlas": {
+    "acronym": "ASA",
+    "requirementRef": "CST-M16",
+    "signatureFeature": true,
+    "description": "Interactive map of Arkansas filling with human stories — emotional memory of the statewide network",
+    "route": "/map/stories",
+    "orchestrator": "getStoryAtlas(filters?)",
+    "extends": ["SCN-M04", "CCS-M16"],
+    "countyDiscoveries": [
+      "volunteerReflections",
+      "leadershipJourneys",
+      "communityTraditions",
+      "successfulMissions",
+      "historicMilestones",
+      "alumniMemories",
+      "partnershipStories",
+      "annualEvents"
+    ],
+    "topicFilters": [
+      "environmentalProjects",
+      "studentLeadership",
+      "communityService",
+      "mentorship",
+      "campusTraditions",
+      "regionalCollaboration"
+    ],
+    "mapLayers": {
+      "collaborationMap": "SCN — who connects",
+      "capacityMap": "CCS — what is available",
+      "storyAtlas": "CST — who we became"
+    }
+  },
+  "memoryPreservationStack": {
+    "layers": [
+      { "name": "Mission Operating Record", "content": "mission stories attached", "requirement": "ACN-M26" },
+      { "name": "Community Impact Intelligence", "content": "stories as evidence", "requirement": "CIIS-001" },
+      { "name": "Community Brain", "content": "searchable narratives", "requirement": "CKLS-001" },
+      { "name": "Community Legacy", "content": "timeline alumni", "requirement": "CLS-001" },
+      { "name": "Arkansas Story Atlas", "content": "geographic human memory", "requirement": "CST-M16" },
+      { "name": "Civic Passport", "content": "individual contributions", "requirement": "CPP-001" }
+    ]
+  },
+  "platformIntegrations": {
+    "ACN-M26": "story archive per mission",
+    "CIIS-001": "story-based measurement",
+    "CKLS-001": "searchable knowledge",
+    "CLS-001": "legacy timeline",
+    "CRA-001": "recognition through story",
+    "EEOS-001": "event capture",
+    "EOS-001": "mission media",
+    "VDS-001": "volunteer journeys",
+    "PGL-001": "leadership narratives",
+    "IOS-001": "initiative stories",
+    "SCN-001": "geographic discovery",
+    "CIS-001": "CIS-M11 storytelling",
+    "KDG-001": "consent privacy",
+    "CJT-001": "civic journey",
+    "LIS-001": "reflection to story"
+  },
+  "v1Scope": {
+    "philosophyDocumented": true,
+    "categoriesAndStructure": true,
+    "collectionDiscovery": true,
+    "approvalPrivacyWorkflows": true,
+    "storyConnectionsModel": true,
+    "arkansasStoryAtlasArchitecture": true,
+    "memoryTriadAndStack": true,
+    "storyUiStub": true,
+    "liveAtlasAggregation": "v1.1",
+    "aiTranscriptionOrganization": "future"
+  }
+}

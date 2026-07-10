@@ -1,0 +1,163 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/phase-04/COMMUNITY_INTELLIGENCE_SYSTEM.md",
+  "acronym": "CIS",
+  "requirementId": "CIS-001",
+  "motto": "Information becomes valuable when it helps communities take meaningful action.",
+  "principle": "The platform should explain what is happening and suggest where attention may be helpful.",
+  "purpose": "Continuously help communities understand health, momentum, opportunities, challenges, and future priorities — actionable insights, not dashboards of numbers.",
+  "philosophy": {
+    "notAnalytics": true,
+    "analyticsAnswers": "What happened?",
+    "intelligenceAnswers": ["Why?", "What does it mean?", "What should we do next?"],
+    "planningPartner": true,
+    "healthMetricsNotVanity": true,
+    "guidesNotJudges": true,
+    "distinctFromAnl001": "Phase 6 statewide analytics layer"
+  },
+  "intelligenceCategories": [
+    {
+      "key": "communityHealth",
+      "label": "Community Health",
+      "signals": ["participation", "volunteerEngagement", "leadershipDevelopment", "teamActivity", "projectCompletion", "relationshipGrowth", "knowledgeSharing", "communityResilience"]
+    },
+    {
+      "key": "growth",
+      "label": "Growth",
+      "signals": ["newParticipants", "retention", "returningVolunteers", "mentorship", "communityExpansion", "campusRepresentation", "countyRepresentation"]
+    },
+    {
+      "key": "opportunities",
+      "label": "Opportunities",
+      "signals": ["communitiesNeedingSupport", "projectsNeedingVolunteers", "leadershipOpportunities", "trainingNeeds", "knowledgeGaps", "openMissions"]
+    },
+    {
+      "key": "relationships",
+      "label": "Relationships",
+      "signals": ["newRelationships", "mentorshipGrowth", "crossCommunityCollaboration", "networkHealth", "partnershipDevelopment"]
+    },
+    {
+      "key": "leadership",
+      "label": "Leadership",
+      "signals": ["emergingLeaders", "mentorshipPipeline", "leadershipSuccession", "trainingProgress", "teamDevelopment", "volunteerDevelopment"]
+    },
+    {
+      "key": "knowledge",
+      "label": "Knowledge",
+      "signals": ["frequentlyUsedPlaybooks", "knowledgeGaps", "capabilityReuse", "communityBrainGrowth", "learningParticipation", "documentationQuality"]
+    }
+  ],
+  "communityHealthReport": {
+    "living": true,
+    "sections": ["strengths", "challenges", "momentum", "risks", "suggestions", "milestones", "supportOpportunities"],
+    "readsLikeCoachNotSpreadsheet": true,
+    "integratesHealthCheck": "CGS-001",
+    "orchestrator": "generateCommunityHealthReport(communityId)"
+  },
+  "communityPulse": {
+    "feedsCccPulse": true,
+    "cccRequirement": "CCC-001",
+    "doesNotReplacePulse": true,
+    "summarizes": ["volunteerMomentum", "upcomingEvents", "growingTeams", "projectsAtRisk", "communitiesNeedingAttention"],
+    "orchestrator": "assembleCommunityPulse(communityId, lastVisitAt)"
+  },
+  "trendAnalysis": {
+    "directionNotIsolatedNumbers": true,
+    "examples": ["participationTrend", "volunteerRetention", "teamGrowth", "projectCompletion", "leadershipDevelopment", "relationshipBuilding"],
+    "orchestrator": "analyzeCommunityTrends(communityId, window)"
+  },
+  "opportunityIntelligence": {
+    "makesHiddenNeedsVisible": true,
+    "examples": ["noActiveOrganizer", "countyLackingVolunteers", "readyToLaunchTeam", "projectNeedsHelp", "knowledgeShouldBeShared"],
+    "connectsTo": ["CCE-001", "OEX-001"],
+    "orchestrator": "identifyCommunityOpportunities(communityId)"
+  },
+  "predictiveAssistance": {
+    "advisoryOnly": true,
+    "humanJudgmentPrimary": true,
+    "futureSignals": ["volunteerShortages", "leadershipTransitions", "busySeasons", "communityBurnout", "knowledgeRisks", "schedulingConflicts"],
+    "noManipulativeScoring": true
+  },
+  "communityComparisons": {
+    "learningNotCompetition": true,
+    "examples": [
+      "This county successfully launched a mentorship program",
+      "This campus solved a similar problem",
+      "Here's a playbook another community found useful"
+    ],
+    "orchestrator": "findSimilarCommunitySuccesses(communityId, challenge)"
+  },
+  "storytelling": {
+    "contextForNumbers": true,
+    "examples": ["volunteerHighlights", "leadershipGrowth", "successfulProjects", "communityMilestones", "recognition"],
+    "integrates": "CRA-001"
+  },
+  "explainability": {
+    "required": true,
+    "everyInsightAnswers": ["whyShown", "supportingInformation", "suggestedAction"],
+    "orchestrator": "explainInsight(insightId)",
+    "privacyPreserved": true,
+    "noBlackBoxScores": true
+  },
+  "futureAiAssistance": {
+    "may": ["summarizeCommunityHealth", "recommendResources", "identifyOpportunities", "generateReports", "suggestMentors", "recommendCollaboration"],
+    "transparentAndExplainable": true
+  },
+  "communityCoach": {
+    "description": "Trusted advisor for the community itself — observes, explains, suggests; never decides",
+    "signatureFeature": true,
+    "parallelTo": "Community Companion [PEL-M01] for individuals",
+    "doesNotMakeDecisions": true,
+    "exampleMessages": [
+      "Your volunteer participation has been steadily growing over the last three months.",
+      "You have several experienced members who may be ready to mentor newer organizers.",
+      "Three nearby campuses recently completed similar projects. Would you like to see their playbooks?",
+      "Your annual leadership transition is approaching. Consider documenting meeting notes and assigning successors.",
+      "You've welcomed many new participants this semester. This may be a good time to schedule an orientation event."
+    ],
+    "drawsFrom": ["healthReport", "trendAnalysis", "opportunityIntelligence", "capabilityGraph", "communityBrain", "growthGraph", "relationshipGraph"],
+    "orchestrator": "getCommunityCoachInsights(communityId, context?)",
+    "v1": "specAndInsightSchemaStub"
+  },
+  "platformIntegrations": {
+    "commandCenter": "CCC-001 pulse + health widgets",
+    "growthSustainability": "CGS-001 health check",
+    "missions": "MPS-001 impact data",
+    "teams": "TWG-001 activity",
+    "timeScheduling": "TSOS-001 event density",
+    "communication": "CCNET-001 activity signals",
+    "knowledgeLearning": "CKLS-001 brain growth",
+    "capabilityExchange": "CCE-001 reuse",
+    "recognition": "CRA-001",
+    "participantExperience": "PEL-001 companion parallel",
+    "opportunityEngine": "OBE-001",
+    "statewideAnalytics": "ANL-001 Phase 6 — CIS feeds, does not duplicate"
+  },
+  "v1Scope": {
+    "philosophyAndCategories": true,
+    "communityCoachSpec": true,
+    "healthReportStructure": true,
+    "pulseEnrichmentContract": true,
+    "explainabilityRequired": true,
+    "trendAnalysisStub": true,
+    "opportunityIntelligenceStub": true,
+    "predictiveAssistance": "future",
+    "fullAiCoach": "future"
+  },
+  "implementation": {
+    "separateIntelligenceFromAnalytics": true,
+    "generateFromExistingData": true,
+    "explainableRecommendations": true,
+    "reusableComponents": true,
+    "preservePrivacy": true,
+    "avoidManipulativeScoring": true,
+    "files": [
+      "src/lib/cis/generateCommunityHealthReport.ts",
+      "src/lib/cis/getCommunityCoachInsights.ts",
+      "src/lib/cis/analyzeCommunityTrends.ts",
+      "src/lib/cis/identifyCommunityOpportunities.ts",
+      "src/lib/cis/explainInsight.ts",
+      "src/components/ccc/widgets/HealthWidget.tsx"
+    ]
+  }
+}

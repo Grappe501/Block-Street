@@ -1,0 +1,182 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/phase-04/COMMUNITY_KNOWLEDGE_LEARNING_SYSTEM.md",
+  "acronym": "CKLS",
+  "requirementId": "CKLS-001",
+  "buildsOnGovernance": "KDG-001",
+  "motto": "Knowledge shared becomes community strength.",
+  "principle": "The platform exists to preserve experience, reduce repeated mistakes, and accelerate future success.",
+  "purpose": "Capture, organize, preserve, and share collective community knowledge — knowledge as living asset, not file storage.",
+  "philosophy": {
+    "knowledgeIsNotDocumentation": true,
+    "knowledgeIs": "accumulated experience of a community",
+    "examples": [
+      "whatWorked",
+      "whatFailed",
+      "whyDecisionsWereMade",
+      "lessonsLearned",
+      "communityTraditions",
+      "provenPractices",
+      "localWisdom"
+    ],
+    "continuouslyLearn": true,
+    "documentNotValuableAlone": "What people learn from it is"
+  },
+  "knowledgeCategories": [
+    { "key": "communityGuides", "label": "Community Guides" },
+    { "key": "volunteerGuides", "label": "Volunteer Guides" },
+    { "key": "eventPlaybooks", "label": "Event Playbooks" },
+    { "key": "meetingNotes", "label": "Meeting Notes" },
+    { "key": "training", "label": "Training" },
+    { "key": "templates", "label": "Templates" },
+    { "key": "faqs", "label": "Frequently Asked Questions" },
+    { "key": "research", "label": "Research" },
+    { "key": "communityHistory", "label": "Community History" },
+    { "key": "leadershipTransitionGuides", "label": "Leadership Transition Guides" },
+    { "key": "projectPlaybooks", "label": "Project Playbooks" },
+    { "key": "policies", "label": "Policies" }
+  ],
+  "knowledgeStructure": {
+    "fields": [
+      "title",
+      "summary",
+      "purpose",
+      "community",
+      "authors",
+      "contributors",
+      "lastUpdated",
+      "relatedProjects",
+      "relatedTeams",
+      "relatedResources",
+      "relatedTimelineEvents"
+    ],
+    "interconnectedNotIsolated": true
+  },
+  "communityWiki": {
+    "description": "Living wiki for every community — evolves continuously",
+    "examples": [
+      "howOurCommunityWorks",
+      "annualTraditions",
+      "commonQuestions",
+      "leadershipContacts",
+      "volunteerExpectations",
+      "projectHistory",
+      "bestPractices"
+    ]
+  },
+  "playbooks": {
+    "description": "Transform experience into repeatable success",
+    "highValue": true,
+    "examples": [
+      "voterRegistrationDrive",
+      "welcomeNewMembers",
+      "debateWatchParty",
+      "campusCleanup",
+      "launchCountyTeam"
+    ]
+  },
+  "decisionLibrary": {
+    "description": "Preserve important decisions with context",
+    "fields": ["decisionMade", "why", "alternativesConsidered", "participants", "relatedProjects", "relatedDiscussions"],
+    "futureLeadersUnderstandContext": true,
+    "feedsConversationGraph": "CCNET-M13"
+  },
+  "lessonsLearned": {
+    "everyMajorProjectContributes": true,
+    "examples": ["whatSurprisedUs", "whatWorkedWell", "whatFailed", "recommendations", "resourcesCreated"],
+    "communitiesBecomeSmarter": true,
+    "feedsMissions": "MPS-M12"
+  },
+  "searchableKnowledge": {
+    "discoverable": ["guides", "training", "projects", "meetingNotes", "stories", "policies", "faqs"],
+    "everythingSearchable": true
+  },
+  "knowledgeRelationships": {
+    "connectsTo": ["projects", "teams", "communities", "participants", "timeline", "resources", "events", "training"],
+    "registryUnderstands": true,
+    "requirement": "REL-001"
+  },
+  "learningPaths": {
+    "examples": [
+      "newOrganizerPath",
+      "volunteerOrientation",
+      "committeeLeadership",
+      "projectManagement",
+      "communityBuilding",
+      "mentorship",
+      "futureCivicAcademy"
+    ],
+    "growsFromCommunityExperience": true,
+    "related": "PGL-001"
+  },
+  "communityMemory": {
+    "knowledgeBecomesInstitutionalMemory": true,
+    "examples": ["annualReports", "leadershipTransitions", "traditions", "historicProjects", "volunteerStories", "milestones"],
+    "feedsStep413": true
+  },
+  "aiKnowledgeAssistant": {
+    "future": true,
+    "capabilities": [
+      "recommendGuides",
+      "answerCommunityQuestions",
+      "suggestPlaybooks",
+      "summarizeDocumentation",
+      "connectSimilarKnowledge",
+      "identifyOutdatedResources"
+    ],
+    "assistsNotReplaces": true,
+    "consultsCommunityBrain": true
+  },
+  "communityBrain": {
+    "description": "Organized memory of each community — not an AI model; the structured knowledge corpus AI consults",
+    "signatureFeature": true,
+    "orchestrator": "queryCommunityBrain(communityId, question)",
+    "parallelTo": "PDT-001 Personal Digital Twin",
+    "knows": [
+      "howCommunityOperates",
+      "pastProjects",
+      "annualTraditions",
+      "successfulPlaybooks",
+      "leadershipHistory",
+      "volunteerKnowledge",
+      "faqs",
+      "communityVocabulary",
+      "lessonsLearned"
+    ],
+    "exampleQueries": [
+      "How did UCA organize last year's leadership summit?",
+      "What usually happens during the Benton County fall volunteer drive?",
+      "Show me the playbook Philander Smith used for welcoming first-year students."
+    ],
+    "groundedInCommunityKnowledge": true,
+    "philosophy": "PDT for people, Community Brain for communities — platform remembers how communities learn and improve",
+    "v1": "specAndKnowledgeGraphStub"
+  },
+  "platformIntegrations": {
+    "ccnetPromotion": "CCNET-M07 promoteDiscussionToKnowledge",
+    "missionReflection": "MPS-M12",
+    "institutionalMemory": "CGS-M07",
+    "conversationGraph": "CCNET-M13",
+    "resourceLibrary": "CCE-001",
+    "governance": "KDG-001"
+  },
+  "v1Scope": {
+    "philosophyAndCategories": true,
+    "communityBrainSpec": true,
+    "knowledgeEntitySchema": true,
+    "wikiStub": true,
+    "fullCollaborativeEditing": "v1.1"
+  },
+  "implementation": {
+    "structuredContentNotFiles": true,
+    "versionHistory": true,
+    "collaborativeEditingFuture": true,
+    "searchFromBeginning": true,
+    "files": [
+      "src/lib/ckls/queryCommunityBrain.ts",
+      "src/lib/ckls/promoteToKnowledge.ts",
+      "src/lib/ckls/searchCommunityKnowledge.ts",
+      "src/components/ccc/widgets/ResourcesWidget.tsx"
+    ]
+  }
+}

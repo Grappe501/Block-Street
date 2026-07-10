@@ -1,0 +1,48 @@
+{
+  "version": "1.0.0",
+  "volume": 1,
+  "step": "1.3",
+  "docPath": "docs/volume-01/CANONICAL_REPOSITORY_ARCHITECTURE.md",
+  "legacyArtifactName": "REPOSITORY_STRUCTURE.md",
+  "canonicalName": "Canonical Repository Architecture",
+  "masterSequencePath": "docs/volume-01/VOLUME_1_MASTER_SEQUENCE.md",
+  "parentVolume": "EAB-001",
+  "requirementId": "ENG-003",
+  "companionDoc": {
+    "requirementId": "RCN-001",
+    "docPath": "docs/volume-01/REPOSITORY_CONSTITUTION.md",
+    "registryPath": "data/registry/repository-constitution.json"
+  },
+  "title": "Canonical Repository Architecture",
+  "status": "complete",
+  "buildsOn": "ENG-002",
+  "guidingPrinciple": "Repository organization should mirror system architecture.",
+  "githubRepo": "https://github.com/Grappe501/Block-Street",
+  "netlifyUrl": "https://block-street.netlify.app/",
+  "logicalRootName": "community-operating-system",
+  "topLevelFolders": [
+    "docs", "apps", "packages", "services", "database", "api",
+    "shared", "public", "infrastructure", "scripts", "tests", "tools", "config"
+  ],
+  "transitionalFolders": ["data", "src"],
+  "currentRepoMap": {
+    "docs": "docs/",
+    "data": "database/seeds + config/ (transitional)",
+    "src/app": "apps/",
+    "src/components": "packages/ui + presentation",
+    "src/lib": "services/ + shared/",
+    "public": "public/",
+    "netlify.toml": "infrastructure/netlify/"
+  },
+  "domainTemplate": [
+    "controllers", "service", "repository", "validation",
+    "contracts", "events", "tests", "documentation", "README.md"
+  ],
+  "dependencyDirection": ["apps", "api", "services", "database"],
+  "acceptanceCriteria": "AC-085",
+  "nextStep": {
+    "id": "1.4",
+    "requirementId": "ENG-004",
+    "artifact": "docs/volume-01/DATABASE_ARCHITECTURE.md"
+  }
+}
