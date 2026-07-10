@@ -1,22 +1,313 @@
 {
-  "version": "1.0.0",
+  "version": "2.0.0",
   "documentId": "VOLUME-003.13",
   "requirementId": "PBA-014",
   "docPath": "docs/volume-03/OPERATIONAL_INTELLIGENCE_ENGINE.md",
-  "status": "pending",
+  "status": "canonical",
   "priority": "critical",
   "lastUpdated": "2026-07-10",
-  "guidingPrinciple": "Behavior is governed, not improvised.",
-  "defines": [
-    "ExecutiveDashboards",
-    "HealthMonitoring",
-    "StrategicRecommendations",
-    "Forecasts",
-    "RiskDetection",
+  "guidingPrinciple": "Operational intelligence transforms awareness into coordinated action.",
+  "executiveQuestion": "What deserves our attention right now?",
+  "operationalPhilosophy": {
+    "synthesisNotReplacement": true,
+    "continuousSituationalAwareness": true,
+    "informationBecomesIntelligenceWhenActionable": true,
+    "everyRecommendationExplainable": true,
+    "advisoryNotAutonomous": true,
+    "evidencePreservedForEveryConclusion": true
+  },
+  "operationalArchitecture": {
+    "layers": [
+      "CanonicalData",
+      "CommunityIntelligence",
+      "CommunityHealthObservatory",
+      "KnowledgeObservatory",
+      "DigitalTwins",
+      "OperationalIntelligence",
+      "ExecutiveGuidance"
+    ],
+    "layerCount": 7
+  },
+  "operationalPhilosophyQuestions": [
+    "WhatChanged",
+    "WhyDidItChange",
+    "WhyDoesItMatter",
+    "WhoIsAffected",
+    "WhatActionDeservesConsideration",
+    "WhatEvidenceSupportsConclusion"
+  ],
+  "operationalPhilosophyQuestionCount": 6,
+  "operationalIntelligenceDomainCount": 9,
+  "operationalIntelligenceDomains": [
+    {
+      "id": "executive",
+      "name": "Executive Operations",
+      "monitors": ["PlatformReadiness", "OperationalLoad", "CommunityActivity", "LeadershipCapacity", "MissionPortfolio", "KnowledgeGrowth", "SystemHealth"]
+    },
+    {
+      "id": "community",
+      "name": "Community Operations",
+      "monitors": ["CommunityHealth", "Growth", "Participation", "LeadershipContinuity", "KnowledgeActivity", "ExpansionReadiness", "CommunityResilience"]
+    },
+    {
+      "id": "leadership",
+      "name": "Leadership Operations",
+      "monitors": ["LeadershipWorkload", "Pipeline", "SuccessionReadiness", "MentorshipHealth", "BurnoutIndicators", "LeadershipDistribution"]
+    },
+    {
+      "id": "mission",
+      "name": "Mission Operations",
+      "monitors": ["MissionExecution", "ResourceUtilization", "VolunteerEngagement", "MissionRisk", "MissionImpact", "KnowledgeGeneration"]
+    },
+    {
+      "id": "volunteer",
+      "name": "Volunteer Operations",
+      "monitors": ["Availability", "Participation", "Retention", "Recognition", "LeadershipReadiness", "VolunteerWellness"]
+    },
+    {
+      "id": "knowledge",
+      "name": "Knowledge Operations",
+      "monitors": ["KnowledgeCreation", "Validation", "Reuse", "DocumentationGaps", "PlaybookEvolution", "CommunityBrainGrowth"]
+    },
+    {
+      "id": "partnership",
+      "name": "Partnership Operations",
+      "monitors": ["InstitutionEngagement", "PartnerActivity", "Collaboration", "RelationshipHealth", "ExpansionOpportunities"]
+    },
+    {
+      "id": "geographic",
+      "name": "Geographic Operations",
+      "monitors": ["CountyCoverage", "RegionalActivity", "TravelDemand", "ResourceDistribution", "CommunityDensity", "ServiceGaps"]
+    },
+    {
+      "id": "platform",
+      "name": "Platform Operations",
+      "monitors": ["AutomationHealth", "WorkflowExecution", "NotificationHealth", "SearchPerformance", "AIUtilization", "GovernanceActivity", "PlatformReadiness"]
+    }
+  ],
+  "operationalObjectFields": [
+    "OperationalInsightId",
+    "Category",
+    "Summary",
+    "Evidence",
+    "Priority",
+    "Confidence",
+    "AffectedCommunities",
+    "AffectedLeaders",
+    "RecommendedActions",
+    "Timestamp",
+    "Version",
+    "Visibility"
+  ],
+  "operationalObjectFieldCount": 12,
+  "executivePrioritizationLevels": [
+    "Critical",
+    "High",
+    "Normal",
+    "Low",
+    "Informational"
+  ],
+  "executivePrioritizationLevelCount": 5,
+  "readinessModel": [
+    "CommunityReadiness",
+    "MissionReadiness",
+    "LeadershipReadiness",
+    "VolunteerReadiness",
+    "KnowledgeReadiness",
+    "PlatformReadiness"
+  ],
+  "readinessModelCount": 6,
+  "strategicForecasting": [
+    "LeadershipNeeds",
+    "VolunteerDemand",
+    "KnowledgeGrowth",
+    "CommunityExpansion",
+    "MissionCapacity",
+    "InstitutionEngagement"
+  ],
+  "strategicForecastingCount": 6,
+  "forecastsRemainAdvisory": true,
+  "operationalRisks": [
+    "LeadershipInstability",
+    "VolunteerShortages",
+    "MissionCongestion",
+    "KnowledgeLoss",
+    "GovernanceDelays",
+    "CommunityDecline",
+    "PlatformDegradation"
+  ],
+  "operationalRiskCount": 7,
+  "resourceCoordinationFactors": [
+    "LeadershipAvailability",
+    "VolunteerCapacity",
+    "Facilities",
+    "Equipment",
+    "Transportation",
+    "CalendarConflicts"
+  ],
+  "resourceCoordinationFactorCount": 6,
+  "communityHealthObservatorySignals": [
+    "HealthSignals",
+    "Participation",
+    "Knowledge",
+    "Leadership",
+    "Growth"
+  ],
+  "communityHealthObservatorySignalCount": 5,
+  "knowledgeObservatorySignals": [
+    "LearningTrends",
+    "PlaybookAdoption",
+    "Innovation",
+    "DocumentationGaps"
+  ],
+  "knowledgeObservatorySignalCount": 4,
+  "digitalTwinTypes": [
+    "ParticipantTwins",
+    "CommunityTwins",
+    "MissionTwins",
+    "CountyTwins",
+    "InstitutionTwins",
+    "PlatformTwin"
+  ],
+  "digitalTwinTypeCount": 6,
+  "calendarConsiderations": [
+    "MissionOverlap",
+    "LeadershipCommitments",
+    "VolunteerAvailability",
+    "InstitutionCalendars",
+    "RegionalEvents"
+  ],
+  "calendarConsiderationCount": 5,
+  "eventLedgerEventTypes": [
+    "WorkflowEvents",
+    "MissionEvents",
+    "GovernanceEvents",
+    "LeadershipEvents",
+    "KnowledgeEvents",
+    "AutomationEvents"
+  ],
+  "eventLedgerEventTypeCount": 6,
+  "aiCapabilities": [
+    "SummarizeOperationalConditions",
+    "IdentifyAnomalies",
+    "GenerateExecutiveBriefings",
+    "CompareHistoricalSituations",
+    "SuggestPlanningAlternatives",
+    "HighlightUncertainty"
+  ],
+  "aiCapabilityCount": 6,
+  "aiRemainsAdvisory": true,
+  "executiveBriefingTypes": [
+    "DailyBriefing",
+    "WeeklyBriefing",
+    "CountyBriefing",
+    "CommunityBriefing",
+    "LeadershipBriefing",
+    "MissionBriefing",
+    "ExecutiveBriefing"
+  ],
+  "executiveBriefingTypeCount": 7,
+  "operationalMetrics": [
     "OperationalReadiness",
-    "NetworkIntelligence",
-    "DecisionSupport"
+    "MissionThroughput",
+    "LeadershipStability",
+    "KnowledgeVelocity",
+    "VolunteerEngagement",
+    "CommunityHealth",
+    "DecisionLatency",
+    "CoordinationEffectiveness"
+  ],
+  "operationalMetricCount": 8,
+  "executiveOperationsCenter": {
+    "name": "Executive Operations Center",
+    "abbreviation": "EOC",
+    "purpose": "Highest-level operational environment — real-time executive command environment integrating every major subsystem",
+    "notReportingDashboard": true,
+    "networks": [
+      {
+        "id": "communityNetwork",
+        "name": "Community Network",
+        "integrates": ["CommunityHealth", "Growth", "Participation", "GeographicCoverage", "ExpansionReadiness"]
+      },
+      {
+        "id": "leadershipNetwork",
+        "name": "Leadership Network",
+        "integrates": ["LeadershipPipeline", "Succession", "Mentorship", "Workload", "BurnoutIndicators"]
+      },
+      {
+        "id": "missionNetwork",
+        "name": "Mission Network",
+        "integrates": ["ActiveMissions", "Risks", "ResourceAllocation", "CommunityImpact", "ReflectionCompletion"]
+      },
+      {
+        "id": "knowledgeNetwork",
+        "name": "Knowledge Network",
+        "integrates": ["KnowledgeObservatory", "CommunityBrain", "PlaybookAdoption", "Innovation", "DocumentationGaps"]
+      },
+      {
+        "id": "volunteerNetwork",
+        "name": "Volunteer Network",
+        "integrates": ["Participation", "Availability", "Recognition", "LeadershipReadiness", "Wellness"]
+      },
+      {
+        "id": "governanceNetwork",
+        "name": "Governance Network",
+        "integrates": ["ActiveProposals", "DecisionQueues", "Appeals", "PolicyReviews", "ConstitutionalCompliance"]
+      },
+      {
+        "id": "operations",
+        "name": "Operations",
+        "integrates": ["WorkflowHealth", "AutomationHealth", "CalendarCoordination", "CommunicationEffectiveness", "PlatformReadiness"]
+      },
+      {
+        "id": "strategicIntelligence",
+        "name": "Strategic Intelligence",
+        "integrates": ["Forecasts", "EmergingRisks", "Opportunities", "AIRecommendations", "DigitalTwinSummaries", "ExecutiveBriefings"]
+      }
+    ],
+    "networkCount": 8,
+    "continuousQuestion": "If leadership could focus on only five things today, what should they be, and why?",
+    "evidenceGroundedIn": [
+      "CommunityEventLedger",
+      "CommunityKnowledgeGraph",
+      "DigitalTwins",
+      "KnowledgeObservatory"
+    ]
+  },
+  "domainSchemaMapping": {
+    "schema": "PlatformBehavior",
+    "entities": [
+      "OperationalInsight",
+      "ReadinessAssessment",
+      "OperationalRisk",
+      "ExecutiveBriefing",
+      "ExecutiveOperationsCenter"
+    ]
+  },
+  "projectionIntegrations": {
+    "communityIntelligencePath": "data/registry/community-intelligence-engine.json",
+    "knowledgeGrowthPath": "data/registry/knowledge-growth-engine.json",
+    "governanceEnginePath": "data/registry/governance-engine.json",
+    "communityHealthPath": "data/registry/community-health-model.json",
+    "missionExecutionPath": "data/registry/mission-execution-engine.json",
+    "leadershipDevelopmentPath": "data/registry/leadership-development-engine.json",
+    "volunteerExperiencePath": "data/registry/volunteer-experience-engine.json",
+    "automationEnginePath": "data/registry/automation-engine.json",
+    "attentionEnginePath": "data/registry/attention-engine.json",
+    "aiKnowledgePath": "data/registry/ai-knowledge-model.json",
+    "eventLedgerPath": "data/registry/event-data-model.json",
+    "timeCalendarPath": "data/registry/time-calendar-data-model.json",
+    "securityPrivacyPath": "data/registry/security-privacy-model.json"
+  },
+  "burtImplementationGuidance": [
+    "Build Operational Intelligence as a synthesis layer",
+    "Integrate Community Intelligence, Community Health Observatory, Knowledge Observatory, and Digital Twins",
+    "Keep recommendations advisory",
+    "Preserve evidence for every conclusion",
+    "Generate explainable executive briefings",
+    "Avoid duplicating domain-specific intelligence",
+    "Consult Executive Operations Center spec before executive-facing features"
   ],
   "acceptanceCriteria": "AC-134",
-  "acceptanceCriteriaMet": false
+  "acceptanceCriteriaMet": true
 }
