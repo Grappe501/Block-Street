@@ -43,8 +43,8 @@ When complete, every participant receives:
 | 3.6 | [Personal Command Center](PERSONAL_COMMAND_CENTER.md) | Daily workspace — Morning Brief + widgets | ✅ |
 | 3.7 | [Trust, Privacy & Digital Safety](TRUST_PRIVACY_DIGITAL_SAFETY.md) | Trust Center — trust as infrastructure | ✅ |
 | 3.8 | [Personal Growth & Leadership](PERSONAL_GROWTH_LEADERSHIP.md) | Growth Graph — leadership operating system | ✅ |
-| 3.9 | Recognition & Milestones | Celebrate development — not popularity | Pending |
-| 3.10 | Communication Preferences | Email, text, push — participant controlled | Pending |
+| 3.9 | [Community Recognition & Appreciation](COMMUNITY_RECOGNITION_APPRECIATION.md) | Appreciation not gamification | ✅ |
+| 3.10 | Communication Preferences | Participant controlled | Pending |
 | 3.11 | Participant Timeline | One timeline — everything | Pending |
 | 3.12 | Participant Knowledge Graph | Person as graph node — all edges | Pending |
 | 3.13 | Recommendation Engine | People, events, mentors, opportunities | Pending |
@@ -148,11 +148,19 @@ The most important **trust document** in the project — trust as infrastructure
 
 ---
 
-## 3.9 — Recognition & Milestones
+## 3.9 — Community Recognition & Appreciation System
 
-Celebrate: helping people · mentoring · recruitment · volunteerism · projects · leadership · community service
+**Requirement focus:** CRA-001 · CPP-001 · JRN-001 · OIS-M14
 
-**Not popularity.** [OIS-M14, JRN-M09]
+**Appreciation — not gamification:**
+
+- **Community Gratitude** — peer messages: "Thank you for helping..."
+- **Eight milestone categories** — unified with JRN-M07 catalog
+- **Appreciation Board** — community-chosen, authentic not algorithmic
+- **Impact stories** — storytelling as recognition
+- **Anti-gamification** — no leaderboards, points, or popularity contests
+
+*Live spec:* `community-recognition-appreciation.json`
 
 ---
 
@@ -227,7 +235,7 @@ Identity · Journey · Profiles · Networks · Recruitment · Recognition · Pri
 | 3.6 | Command Center core | ✅ design |
 | 3.7 | Basic privacy + Trust Center | ✅ design |
 
-Steps 3.9–3.14: design now, implement post-launch. Step 3.8 design complete.
+Steps 3.10–3.14: design now, implement post-launch. Steps 3.8–3.9 design complete.
 
 ---
 

@@ -1,0 +1,156 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/phase-03/COMMUNITY_RECOGNITION_APPRECIATION.md",
+  "motto": "Every meaningful contribution deserves appreciation.",
+  "principle": "We're building appreciation — not gamification.",
+  "distinction": {
+    "gamification": "Beat everyone else.",
+    "appreciation": "Thank you for helping your community."
+  },
+  "purpose": "Recognize meaningful participation, celebrate contributions, reinforce positive organizing — service and gratitude, not competition.",
+  "philosophy": {
+    "about": ["service", "growth", "helpingOthers", "buildingRelationships", "strengtheningCommunities", "leadership"],
+    "celebrates": "actions that improve communities",
+    "not": "raw activity metrics",
+    "complementsIntrinsicMotivation": true
+  },
+  "appreciationCulture": {
+    "peerToPeer": true,
+    "notAdminOnly": true,
+    "examples": [
+      "Thank someone",
+      "Celebrate a milestone",
+      "Recognize volunteer service",
+      "Acknowledge mentorship",
+      "Celebrate community projects"
+    ]
+  },
+  "milestoneCategories": [
+    { "key": "relationship", "label": "Relationship Milestones" },
+    { "key": "volunteer", "label": "Volunteer Milestones" },
+    { "key": "leadership", "label": "Leadership Milestones" },
+    { "key": "community", "label": "Community Milestones" },
+    { "key": "learning", "label": "Learning Milestones" },
+    { "key": "mentorship", "label": "Mentorship Milestones" },
+    { "key": "project", "label": "Project Milestones" },
+    { "key": "committee", "label": "Committee Milestones" }
+  ],
+  "milestones": [
+    { "id": "first_friend_welcomed", "label": "First Friend Welcomed", "category": "relationship" },
+    { "id": "first_volunteer_project", "label": "First Volunteer Project", "category": "volunteer" },
+    { "id": "first_committee", "label": "First Committee Joined", "category": "committee" },
+    { "id": "first_event_attended", "label": "First Event Attended", "category": "community" },
+    { "id": "first_event_organized", "label": "First Event Organized", "category": "leadership" },
+    { "id": "first_community_project", "label": "First Community Project", "category": "project" },
+    { "id": "first_mentor", "label": "First Mentor", "category": "mentorship" },
+    { "id": "first_person_mentored", "label": "First Person Mentored", "category": "mentorship" },
+    { "id": "first_county_organizer", "label": "First County Organizer", "category": "leadership" },
+    { "id": "campus_launch", "label": "Campus Launch", "category": "community" },
+    { "id": "county_launch", "label": "County Launch", "category": "community" },
+    { "id": "community_builder", "label": "Community Builder", "category": "leadership" }
+  ],
+  "communityAppreciation": {
+    "celebrates": ["newOrganizers", "volunteers", "projectLeaders", "mentors", "problemSolvers", "collaborators"],
+    "emphasis": "gratitude not status"
+  },
+  "recognitionMethods": [
+    { "method": "communityGratitude", "v1": "spec" },
+    { "method": "communityAnnouncements", "v1": false },
+    { "method": "digitalCertificates", "v1": false },
+    { "method": "volunteerAppreciation", "v1": false },
+    { "method": "leadershipAcknowledgements", "v1": "milestoneStamps" },
+    { "method": "communitySpotlights", "v1": "impactStories" },
+    { "method": "storyFeatures", "v1": false },
+    { "method": "celebrationEvents", "v1": false }
+  ],
+  "impactStories": {
+    "description": "Storytelling as meaningful recognition",
+    "examples": [
+      "Volunteer describing a successful project",
+      "Student reflecting on organizing first event",
+      "Mentor sharing lessons learned",
+      "County celebrating first committee"
+    ],
+    "requiresConsent": true
+  },
+  "recognitionTimeline": {
+    "target": "Civic Passport [CPP-001]",
+    "includes": ["milestones", "service", "leadership", "growth", "communityAppreciation", "personalReflections"],
+    "appendOnly": true
+  },
+  "appreciationBoard": {
+    "description": "Per-community board — authentic not algorithmic",
+    "elements": [
+      "volunteerOfTheMonthCommunityChosen",
+      "recentMilestones",
+      "communityAchievements",
+      "projectsCompleted",
+      "mentorshipHighlights",
+      "actsOfService"
+    ],
+    "v1": "designSpecPhase4"
+  },
+  "avoid": [
+    "popularityContests",
+    "publicShaming",
+    "leaderboardsByRawNumbers",
+    "manipulativeGamification",
+    "artificialScarcity"
+  ],
+  "encourage": [
+    "service",
+    "humility",
+    "mentorship",
+    "collaboration",
+    "consistency",
+    "kindness"
+  ],
+  "communityGratitude": {
+    "description": "Peer appreciation messages — human side of organizing",
+    "signatureFeature": true,
+    "idPattern": "GRAT-{uuid}",
+    "exampleMessages": [
+      "Thanks for helping with registration at today's event.",
+      "You stayed late to clean up after the volunteer project.",
+      "You made our first meeting feel welcoming.",
+      "Your advice helped me organize my first committee."
+    ],
+    "structure": {
+      "fromParticipantId": true,
+      "toParticipantId": true,
+      "message": "plainText",
+      "contextOptional": true,
+      "visibility": ["connections", "community", "private_to_recipient"],
+      "appendToPassport": true
+    },
+    "distinctFromScores": "Collection of supported moments — not a rank",
+    "trustGraphSignal": true,
+    "v1": "schemaPlaceholderQuickAction"
+  },
+  "crossIntegration": {
+    "jrnM07": "unified milestone catalog",
+    "cpp001": "passport timeline",
+    "pglM11": "growth recognition",
+    "pccM13": "recognition widget",
+    "sec001": "visibility",
+    "oisM14": "no rank in mission board"
+  },
+  "v1Scope": {
+    "philosophy": true,
+    "milestoneRegistry": true,
+    "gratitudeSchema": true,
+    "passportStamps": "jrnV1Milestones",
+    "recognitionWidgetStub": true,
+    "peerGratitudeUi": "v1.1",
+    "appreciationBoard": "phase4"
+  },
+  "implementation": {
+    "hooks": ["recordMilestone(participantId, milestoneKey)", "sendGratitude(from, to, message)"],
+    "tables": ["recognition_events", "community_gratitude", "impact_stories"],
+    "files": [
+      "src/lib/recognition/recordMilestone.ts",
+      "src/lib/recognition/sendGratitude.ts",
+      "src/lib/recognition/assembleRecognitionSection.ts"
+    ]
+  }
+}

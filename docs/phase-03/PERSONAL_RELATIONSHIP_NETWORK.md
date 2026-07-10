@@ -462,6 +462,6 @@ Step 3.4 is complete when:
 
 ---
 
-**Next Step:** 3.9 — Recognition & Milestones
+**Next Step:** 3.10 — Communication Preferences (MSG-001)
 
 *Trace: PRN network → Relationship widget in PCC → Trust Graph → Morning Brief invite acceptance*

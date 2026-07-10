@@ -281,7 +281,7 @@ Visitor → Interested → Registered → Connected → Contributor
 
 **[PEP-M13b]** Platform encourages **growth rather than ranking** [OIS-M14, CP-003].
 
-**[PEP-M13c]** No leaderboards. No vanity metrics. Recognition celebrates **contribution**, not popularity [Step 3.9].
+**[PEP-M13c]** No leaderboards. No vanity metrics. Recognition celebrates **contribution**, not popularity [Community Recognition & Appreciation](COMMUNITY_RECOGNITION_APPRECIATION.md) [CRA-001].
 
 ---
 

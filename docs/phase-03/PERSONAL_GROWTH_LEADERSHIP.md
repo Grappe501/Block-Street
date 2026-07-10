@@ -219,7 +219,7 @@ Education · Environment · Healthcare · Economic Development · Arts · Agricu
 | First committee | JRN-M07 |
 | First organizer role | JRN-M05e |
 | First mentorship | JRN-M07 |
-| Leadership milestones | Step 3.9 |
+| Leadership milestones | [CRA-001] |
 
 **[PGL-M10a]** **Civic Passport becomes a narrative of growth** [CPP-001] — not a scorecard.
 
@@ -229,12 +229,12 @@ Education · Environment · Healthcare · Economic Development · Arts · Agricu
 
 ## PGL-M11 — Recognition
 
-**[PGL-M11]** Recognition celebrates **development** — not competition [Step 3.9, OIS-M14]:
+**[PGL-M11]** Recognition celebrates **development** — not competition [CRA-001, OIS-M14]:
 
 - Learned a new skill · Mentored someone · Completed leadership training
 - Served the community · Built a successful project
 
-**[PGL-M11a]** Recognition **reinforces learning** — visible in Command Center Recognition widget [PCC-M13].
+**[PGL-M11a]** Recognition **reinforces learning** — visible in Command Center Recognition widget [PCC-M13] [CRA-001].
 
 **[PGL-M11b]** Never popularity-based badges or leaderboards [PEP-M13, PRN-M13b].
 
@@ -408,6 +408,6 @@ Step 3.8 is complete when:
 
 ---
 
-**Next Step:** 3.9 — Recognition & Milestones
+**Next Step:** 3.10 — Communication Preferences (MSG-001)
 
 *Trace: Experience → Growth Graph → Civic Passport narrative → Journey stage → Command Center Growth widget*

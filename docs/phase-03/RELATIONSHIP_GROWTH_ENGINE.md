@@ -467,6 +467,6 @@ Step 3.5 is complete when:
 
 ---
 
-**Next Step:** 3.9 — Recognition & Milestones
+**Next Step:** 3.10 — Communication Preferences (MSG-001)
 
 *Trace: PHQ home → PRN community → RGE expansion → PCC daily workspace → Morning Brief → Mission Board*

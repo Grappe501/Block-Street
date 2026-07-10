@@ -22,7 +22,7 @@
     { "id": "3.6", "name": "Personal Command Center", "artifact": "PERSONAL_COMMAND_CENTER.md", "status": "done", "requirement": "PCC-001" },
     { "id": "3.7", "name": "Trust, Privacy & Digital Safety", "artifact": "TRUST_PRIVACY_DIGITAL_SAFETY.md", "status": "done", "requirement": "SEC-001" },
     { "id": "3.8", "name": "Personal Growth & Leadership Development", "artifact": "PERSONAL_GROWTH_LEADERSHIP.md", "status": "done", "requirement": "PGL-001" },
-    { "id": "3.9", "name": "Recognition & Milestones", "artifact": "RECOGNITION_MILESTONES.md", "status": "pending", "requirement": "JRN-001" },
+    { "id": "3.9", "name": "Community Recognition & Appreciation", "artifact": "COMMUNITY_RECOGNITION_APPRECIATION.md", "status": "done", "requirement": "CRA-001" },
     { "id": "3.10", "name": "Communication Preferences", "artifact": "COMMUNICATION_PREFERENCES.md", "status": "pending", "requirement": "MSG-001" },
     { "id": "3.11", "name": "Participant Timeline", "artifact": "PARTICIPANT_TIMELINE.md", "status": "pending", "requirement": "PEP-001" },
     { "id": "3.12", "name": "Participant Knowledge Graph", "artifact": "PARTICIPANT_KNOWLEDGE_GRAPH.md", "status": "pending", "requirement": "REL-001" },

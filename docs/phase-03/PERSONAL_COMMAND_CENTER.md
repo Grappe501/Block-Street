@@ -319,7 +319,7 @@ This is where everything built so far **comes together**:
 
 ## PCC-M13 — Recognition Widget
 
-**Key:** `recognition` · **Requirement:** [Step 3.9 future]
+**Key:** `recognition` · **Requirement:** [CRA-001]
 
 **[PCC-M13]** Displays:
 
@@ -512,6 +512,6 @@ Step 3.6 is complete when:
 
 ---
 
-**Next Step:** 3.9 — Recognition & Milestones
+**Next Step:** 3.10 — Communication Preferences (MSG-001)
 
 *Trace: PHQ home → PRN community → RGE expansion → PCC daily workspace → Morning Brief → Mission Board → journey next step*

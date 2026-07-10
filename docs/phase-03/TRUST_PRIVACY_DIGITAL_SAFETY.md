@@ -464,6 +464,6 @@ Step 3.7 is complete when:
 
 ---
 
-**Next Step:** 3.9 — Recognition & Milestones
+**Next Step:** 3.10 — Communication Preferences (MSG-001)
 
 *Trace: Trust → Invitations [RGE] → Relationships [PRN] → Communities → CP-007 privacy by design*

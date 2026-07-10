@@ -23,7 +23,7 @@
     { "prefix": "PEP", "domain": "Participant identity" },
     { "prefix": "PHQ", "domain": "Personal headquarters" },
     { "prefix": "PCC", "domain": "Personal command center" },
-    { "prefix": "PGL", "domain": "Personal growth & leadership" },
+    { "prefix": "CRA", "domain": "Community recognition & appreciation" },
     { "prefix": "CPP", "domain": "Civic passport" },
     { "prefix": "STS", "domain": "Status & lifecycle" },
     { "prefix": "ADM", "domain": "Administration" },
@@ -743,6 +743,36 @@
         "frontend": "PAGE-PCC",
         "test": "TEST-PCC-001",
         "doc": "DOC-PCC-001"
+      },
+      "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
+    },
+    {
+      "id": "CRA-001",
+      "title": "Community Recognition & Appreciation System",
+      "purpose": "Appreciation not gamification — celebrate contribution without competition",
+      "description": "PHASE-003.9 Community Gratitude, eight milestone categories, Appreciation Board, impact stories, anti-gamification principles, Civic Passport integration",
+      "priority": "critical",
+      "principle": "PEP-001",
+      "dependencies": ["JRN-001", "CPP-001", "PEP-001", "PGL-001"],
+      "related": ["OIS-001", "SEC-001", "PCC-001"],
+      "acceptanceCriteria": [
+        "Recognition philosophy documented — appreciation not gamification",
+        "Appreciation culture established — peer-to-peer",
+        "Milestone categories defined",
+        "Community storytelling incorporated",
+        "Community Gratitude architecture specified",
+        "Blueprint for meaningful recognition without competitive gamification"
+      ],
+      "futureNotes": "Peer gratitude UI, Appreciation Board Phase 4, digital certificates, impact story platform",
+      "implementationStatus": "done",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": "DB-USERS",
+        "api": null,
+        "frontend": "PAGE-PCC",
+        "test": "TEST-CRA-001",
+        "doc": "DOC-CRA-001"
       },
       "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
     },
