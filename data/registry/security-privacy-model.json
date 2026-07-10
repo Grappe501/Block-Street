@@ -1,1 +1,299 @@
-{"version":"1.0.0","requirementId":"DAB-014","docPath":"docs/volume-02/SECURITY_PRIVACY_MODEL.md","dataClasses":["public","community","restricted","personal"],"acceptanceCriteria":"AC-119"}
+{
+  "version": "2.0.0",
+  "documentId": "VOLUME-002.13",
+  "requirementId": "DAB-014",
+  "docPath": "docs/volume-02/SECURITY_PRIVACY_MODEL.md",
+  "status": "canonical",
+  "priority": "critical",
+  "lastUpdated": "2026-07-10",
+  "guidingPrinciple": "Participants own their identity. Communities steward their knowledge. The platform protects both.",
+  "securityPhilosophy": {
+    "securityNotAFeature": true,
+    "privacyNotAnOption": true,
+    "foundationalToEveryEntity": true,
+    "collectOnlyNecessary": true,
+    "explainWhyDataExists": true,
+    "participantAppropriateControl": true,
+    "neverExposeWithoutAuthorization": true,
+    "trustVisibleInArchitecture": true
+  },
+  "securityArchitecture": {
+    "layers": [
+      "Identity",
+      "Authentication",
+      "Authorization",
+      "Visibility",
+      "Protection",
+      "Audit",
+      "Governance"
+    ],
+    "layerCount": 7
+  },
+  "identityProtection": {
+    "components": [
+      "Participant",
+      "Account",
+      "AuthenticationProviders",
+      "RecoveryMethods",
+      "Preferences",
+      "SecuritySettings"
+    ],
+    "separateFromOperationalRecords": true
+  },
+  "dataClassificationCount": 5,
+  "dataClassifications": [
+    {
+      "id": "public",
+      "name": "Public",
+      "description": "May be displayed publicly",
+      "examples": ["CommunityName", "PublicStory", "InstitutionProfile", "PublicEvent"]
+    },
+    {
+      "id": "community",
+      "name": "Community",
+      "description": "Visible only within authorized communities",
+      "examples": ["CommitteeMembership", "InternalAnnouncement", "VolunteerAssignment"]
+    },
+    {
+      "id": "restricted",
+      "name": "Restricted",
+      "description": "Visible only to authorized roles",
+      "examples": ["LeadershipPlanning", "MentorshipNotes", "AdministrativeWorkflow"]
+    },
+    {
+      "id": "confidential",
+      "name": "Confidential",
+      "description": "Requires elevated authorization",
+      "examples": ["PersonalContactInformation", "SecuritySettings", "PrivateCommunication", "SensitiveOperationalRecord"]
+    },
+    {
+      "id": "highly_restricted",
+      "name": "Highly Restricted",
+      "description": "Requires explicit justification and auditing",
+      "examples": ["AuthenticationArtifact", "AccessHistory", "AdministrativeInvestigation", "EncryptionMetadata"]
+    }
+  ],
+  "classificationsAreCanonicalMetadata": true,
+  "visibilityObjectFields": [
+    "visibilityLevel",
+    "permissionScope",
+    "owner",
+    "inheritedRules",
+    "explicitOverrides"
+  ],
+  "visibilityAsDataNotHardCoded": true,
+  "consentTypes": [
+    "Communication",
+    "ProfileVisibility",
+    "MentorshipParticipation",
+    "AnalyticsParticipation",
+    "PublicRecognition",
+    "ResearchParticipation"
+  ],
+  "consentVersioned": true,
+  "privacyPreferenceTypes": [
+    "PublicProfile",
+    "ContactInformation",
+    "CommunityDirectory",
+    "LeadershipVisibility",
+    "VolunteerInterests",
+    "StoryParticipation",
+    "NotificationPreferences"
+  ],
+  "accessControlRecordExamples": [
+    "AdministrativeAccess",
+    "PermissionChange",
+    "SensitiveDataViewing",
+    "BulkExport",
+    "ConfigurationChange"
+  ],
+  "auditObjectFields": [
+    "actor",
+    "action",
+    "target",
+    "timestamp",
+    "reason",
+    "source",
+    "permissionContext",
+    "result",
+    "correlationId"
+  ],
+  "auditRecordsImmutable": true,
+  "encryptionMetadataFields": [
+    "encryptionStatus",
+    "keyVersion",
+    "rotationSchedule",
+    "storageClassification",
+    "integrityVerification"
+  ],
+  "cryptoImplementationSeparateFromModel": true,
+  "sessionRecordFields": [
+    "sessionId",
+    "participant",
+    "authenticationMethod",
+    "deviceSummary",
+    "startTime",
+    "expiration",
+    "revocationStatus",
+    "locationCoarse",
+    "securityEvents"
+  ],
+  "participantsCanReviewActiveSessions": true,
+  "dataRetentionFields": [
+    "retentionPolicy",
+    "archivePolicy",
+    "deletionEligibility",
+    "legalHold",
+    "historicalSignificance",
+    "reviewSchedule"
+  ],
+  "dataExportFields": [
+    "requester",
+    "scope",
+    "approvalStatus",
+    "generationTime",
+    "expiration",
+    "deliveryStatus"
+  ],
+  "exportsAudited": true,
+  "deletionWorkflowSteps": [
+    "Request",
+    "Review",
+    "Approval",
+    "Execution",
+    "Verification",
+    "HistoricalAudit"
+  ],
+  "incidentObjectFields": [
+    "type",
+    "severity",
+    "affectedSystems",
+    "discoveryTime",
+    "resolution",
+    "lessonsLearned",
+    "followUp"
+  ],
+  "complianceReferenceExamples": [
+    "PrivacyPolicy",
+    "InstitutionalAgreement",
+    "DataProcessingRule",
+    "ConsentLanguage",
+    "ReviewSchedule"
+  ],
+  "securityEventExamples": [
+    "Login",
+    "FailedLogin",
+    "PermissionGranted",
+    "PermissionRevoked",
+    "SensitiveExport",
+    "ConfigurationChange",
+    "ApiTokenIssued"
+  ],
+  "securityEventsFeedEventLedger": true,
+  "aiSecurityFields": [
+    "promptProfile",
+    "knowledgeSources",
+    "permissionContext",
+    "toolsInvoked",
+    "responseClassification",
+    "approvalStatus"
+  ],
+  "aiInteractionsAuditable": true,
+  "privacyByDesignQuestions": [
+    "WhatDataIsCollected",
+    "Why",
+    "WhoCanSeeIt",
+    "HowLongRetained",
+    "CanItBeExported",
+    "CanItBeRemoved"
+  ],
+  "securityMetrics": [
+    "AuthenticationHealth",
+    "PermissionChanges",
+    "AuditActivity",
+    "ConsentCoverage",
+    "SecurityIncidents",
+    "RetentionCompliance",
+    "ExportRequests"
+  ],
+  "trustLedger": {
+    "name": "Trust Ledger",
+    "purpose": "Specialized companion to Community Event Ledger — records security, privacy, and governance actions affecting platform confidence",
+    "companionTo": "CommunityEventLedger",
+    "entryTypes": [
+      "PermissionGrant",
+      "PermissionRevocation",
+      "ConsentChange",
+      "PrivacyPreferenceUpdate",
+      "SecuritySensitiveExport",
+      "AuthenticationEvent",
+      "AdministrativeAction",
+      "ConfigurationApproval",
+      "DataRetentionDecision",
+      "LegalHoldAction",
+      "AiApprovalWorkflow"
+    ],
+    "entryTypeCount": 11,
+    "entryFields": [
+      "actor",
+      "action",
+      "affectedEntity",
+      "permissionContext",
+      "timestamp",
+      "justification",
+      "approvalChain",
+      "relatedAuditRecords",
+      "visibilityClassification"
+    ],
+    "purposes": [
+      {
+        "id": "operational_accountability",
+        "name": "Operational Accountability",
+        "description": "Administrators and auditors reconstruct important security decisions"
+      },
+      {
+        "id": "institutional_trust",
+        "name": "Institutional Trust",
+        "description": "Platform explains how sensitive actions occurred without exposing unnecessary personal information"
+      }
+    ],
+    "dualLedgerPhilosophy": "Event Ledger tells how communities grow and work together; Trust Ledger preserves how the platform protected people and information entrusted to it"
+  },
+  "legalHoldIntegration": {
+    "blocksDeletionUntilReleased": true,
+    "fields": ["scope", "reason", "holdUntil", "createdBy", "releaseAuditTrail"]
+  },
+  "domainSchemaMapping": {
+    "schemas": ["Identity", "Platform"],
+    "entities": [
+      "ConsentRecord",
+      "VisibilityRule",
+      "AuditRecord",
+      "SessionRecord",
+      "RetentionPolicy",
+      "ExportRequest",
+      "DeletionRequest",
+      "IncidentRecord",
+      "ComplianceReference",
+      "TrustLedgerEntry"
+    ]
+  },
+  "projectionIntegrations": {
+    "eventLedgerPath": "data/registry/event-data-model.json",
+    "aiKnowledgePath": "data/registry/ai-knowledge-model.json",
+    "searchIndexPath": "data/registry/search-index-model.json",
+    "knowledgeGraphPath": "data/registry/knowledge-graph-schema.json"
+  },
+  "burtImplementationGuidance": [
+    "Classify every sensitive field",
+    "Treat visibility as canonical data",
+    "Separate identity from operational records",
+    "Audit privileged actions",
+    "Keep consent versioned",
+    "Design retention, export, and deletion workflows from the beginning",
+    "Keep cryptographic implementation details separate from the data model",
+    "Consult Trust Ledger spec before security-sensitive features"
+  ],
+  "acceptanceCriteria": "AC-119",
+  "acceptanceCriteriaMet": true
+}
