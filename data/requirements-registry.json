@@ -5532,6 +5532,48 @@
       }
     },
     {
+      "id": "PSI-013",
+      "title": "Scalability, Performance & Resilience Architecture — Volume 5.12",
+      "purpose": "Grow without redesign — preserve community quality while scaling to thousands of institutions",
+      "description": "VOLUME-005.12 — 12 scaling domains, Adaptive Capacity Grid, elastic federation, predictive scaling, community-preserving scalability",
+      "priority": "mission_critical",
+      "principle": "CP-012",
+      "dependencies": [
+        "PSI-012",
+        "PSI-010",
+        "PSI-006",
+        "PSI-001",
+        "AIB-001"
+      ],
+      "related": [
+        "PSI-001",
+        "PSI-014"
+      ],
+      "acceptanceCriteria": [
+        "Scalability philosophy documented",
+        "Scaling domains and performance strategies defined",
+        "Storage, compute, caching, queues, LocalBrain federation, and Runtime Federation established",
+        "Digital Twins, Community Event Ledger, AI optimization, observability, and resilience incorporated",
+        "Adaptive Capacity Grid specified",
+        "Complete blueprint for platform scalability"
+      ],
+      "futureNotes": "Guiding principle: Grow without redesign. Expand without fragmentation.",
+      "implementationStatus": "done",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": null,
+        "api": "API-SYSTEM",
+        "frontend": "UI-SYSTEM",
+        "test": "TEST-PSI-013",
+        "doc": "DOC-PSI-013"
+      },
+      "versionHistory": {
+        "created": "2026-07-10",
+        "implemented": "2026-07-10"
+      }
+    },
+    {
       "id": "PSI-012",
       "title": "Observability, Diagnostics & Platform Intelligence Architecture — Volume 5.11",
       "purpose": "Platform self-understanding — observability as continuous learning and operational intelligence",
@@ -6036,7 +6078,7 @@
         "Foundation stack Volumes 0-5 defined",
         "Complete blueprint for platform services and integration architecture"
       ],
-      "futureNotes": "Volume 5 scaffold — 11/14 canonical steps complete. LocalBrain woven throughout every chapter.",
+      "futureNotes": "Volume 5 scaffold — 12/14 canonical steps complete. LocalBrain woven throughout every chapter.",
       "implementationStatus": "scaffold",
       "testingStatus": "pending",
       "documentationStatus": "scaffold",

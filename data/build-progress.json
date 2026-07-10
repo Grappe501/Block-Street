@@ -128,7 +128,7 @@
       { "id": "V5.9", "name": "Deployment Architecture [PSI-010]", "status": "done", "notes": "Runtime Federation Manager, 6 deployment types, LocalBrain federation — AC-159" },
       { "id": "V5.10", "name": "Security Architecture [PSI-011]", "status": "done", "notes": "Constitutional Security Fabric, 24 domains, Trust Ledger, AI Safety — AC-160" },
       { "id": "V5.11", "name": "Observability Architecture [PSI-012]", "status": "done", "notes": "Operational Intelligence Grid, 14 signal domains, Platform Twin — AC-161" },
-      { "id": "V5.12", "name": "Scalability Architecture [PSI-013]", "status": "pending", "notes": "Horizontal scaling, distributed execution" },
+      { "id": "V5.12", "name": "Scalability Architecture [PSI-013]", "status": "done", "notes": "Adaptive Capacity Grid, 12 scaling domains, predictive scaling — AC-162" },
       { "id": "V5.13", "name": "Platform Operations Architecture [PSI-014]", "status": "pending", "notes": "Feature flags, migrations, release management" },
       { "id": "V5.14", "name": "Platform Integration Orchestrator [PSI-015]", "status": "pending", "notes": "Unified platform runtime orchestrator" },
       { "id": "V6.1", "name": "AI & Intelligence Bible [AIB-001]", "status": "done", "notes": "LocalBrain, RAG v1; AC-080" },

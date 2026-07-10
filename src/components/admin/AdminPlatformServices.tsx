@@ -12,6 +12,7 @@ import comm from "../../../data/registry/communication-architecture-volume5.json
 import deploy from "../../../data/registry/deployment-architecture-volume5.json";
 import security from "../../../data/registry/security-architecture-volume5.json";
 import observability from "../../../data/registry/observability-architecture-volume5.json";
+import scalability from "../../../data/registry/scalability-architecture-volume5.json";
 
 type ServiceReg = {
   acceptanceCriteria: string;
@@ -33,6 +34,9 @@ type ServiceReg = {
   runtimeFederationManager?: { abbreviation: string; fabricPipeline?: { stageCount: number }; runtimeRegistry?: { sectionCount: number } };
   constitutionalSecurityFabric?: { abbreviation: string; fabricLayers?: { layerCount: number }; securityFabricResponsibilities?: { fabricCount: number } };
   operationalIntelligenceGrid?: { abbreviation: string; gridLayers?: { layerCount: number }; oigResponsibilities?: { responsibilityCount: number } };
+  adaptiveCapacityGrid?: { abbreviation: string; gridPipeline?: { stageCount: number }; capacityDomains?: { domainCount: number } };
+  scalingDomainCount?: number;
+  scalabilityPrincipleCount?: number;
   signalDomainCount?: number;
   observabilityPrincipleCount?: number;
   securityDomainCount?: number;
@@ -67,6 +71,7 @@ type ServiceReg = {
   runtimeArchitecture?: { layerCount: number };
   constitutionalSecurityModel?: { layerCount: number };
   observabilityArchitecture?: { layerCount: number };
+  scalabilityArchitecture?: { layerCount: number };
   localBrainCompatibility?: { localBrainFirstClassRuntime: boolean };
   localBrainFederation?: {
     explicitIntegration?: boolean;
@@ -91,9 +96,11 @@ const FEATURED_SUBTITLES: Record<string, string> = {
   "5.9": "Deployment & Runtime",
   "5.10": "Security & Trust",
   "5.11": "Observability",
+  "5.12": "Scalability",
 };
 
 const SERVICE_CARDS: { step: string; label: string; reg: ServiceReg; cardClass: string; metaClass: string; titleClass: string; featured?: boolean }[] = [
+  { step: "5.12", label: "Adaptive Capacity Grid", reg: scalability, cardClass: "border-violet-300 bg-violet-50", metaClass: "text-violet-700", titleClass: "text-violet-950", featured: true },
   { step: "5.11", label: "Operational Intelligence Grid", reg: observability, cardClass: "border-cyan-300 bg-cyan-50", metaClass: "text-cyan-700", titleClass: "text-cyan-950", featured: true },
   { step: "5.10", label: "Constitutional Security Fabric", reg: security, cardClass: "border-emerald-300 bg-emerald-50", metaClass: "text-emerald-700", titleClass: "text-emerald-950", featured: true },
   { step: "5.9", label: "Runtime Federation Manager", reg: deploy, cardClass: "border-lime-300 bg-lime-50", metaClass: "text-lime-700", titleClass: "text-lime-950", featured: true },
@@ -136,7 +143,11 @@ export function AdminPlatformServices() {
             <p className={`mt-2 text-xs ${metaClass}`}>
               {reg.acceptanceCriteria} · {reg.status}
             </p>
-            {reg.operationalIntelligenceGrid ? (
+            {reg.adaptiveCapacityGrid ? (
+              <p className={`mt-1 text-xs ${metaClass}`}>
+                {reg.scalingDomainCount ?? 0} scaling domains · {reg.scalabilityPrincipleCount ?? 0} principles · {reg.scalabilityArchitecture?.layerCount ?? 0} scalability layers · {reg.adaptiveCapacityGrid.gridPipeline?.stageCount ?? 0} ACG pipeline stages · {reg.adaptiveCapacityGrid.capacityDomains?.domainCount ?? 0} capacity domains · Community-Preserving Scalability
+              </p>
+            ) : reg.operationalIntelligenceGrid ? (
               <p className={`mt-1 text-xs ${metaClass}`}>
                 {reg.signalDomainCount ?? 0} signal domains · {reg.observabilityPrincipleCount ?? 0} principles · {reg.observabilityArchitecture?.layerCount ?? 0} observability layers · {reg.operationalIntelligenceGrid.gridLayers?.layerCount ?? 0} OIG layers · {reg.operationalIntelligenceGrid.oigResponsibilities?.responsibilityCount ?? 0} OIG responsibilities · Platform Twin · Self-Diagnostics
               </p>

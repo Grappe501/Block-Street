@@ -18,6 +18,21 @@
 
 ---
 
+## 2026-07-10 — Volume 5.12 Scalability, Performance & Resilience Architecture [PSI-013 · AC-162]
+
+**Document:** `docs/volume-05/SCALABILITY_ARCHITECTURE.md` · **Registry:** `data/registry/scalability-architecture-volume5.json`
+
+### What Changed
+
+- **Guiding principle:** *Grow without redesign. Expand without fragmentation.*
+- Scale in institutional complexity — preserve governance, autonomy, and LocalBrain independence
+- **12 scaling domains** — platform services through runtime federation
+- Storage tiers, compute strategy, caching, queues, performance targets, resilience, disaster recovery
+- **Adaptive Capacity Grid (ACG)** — 6 pipeline stages, 5 capacity domains, predictive scaling, community-preserving scalability
+- Umbrella PSI-001 · platform-services-integration-bible 12/14 · Volume 5 in progress
+
+---
+
 ## 2026-07-10 — Volume 5.11 Observability, Diagnostics & Platform Intelligence Architecture [PSI-012 · AC-161]
 
 **Document:** `docs/volume-05/OBSERVABILITY_ARCHITECTURE.md` · **Registry:** `data/registry/observability-architecture-volume5.json`
