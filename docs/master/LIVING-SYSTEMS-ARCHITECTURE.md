@@ -71,20 +71,24 @@ Arkansas Registry · Counties · Institutions · Relationships · Status framewo
 
 ---
 
-## Phase 3 — People
+## Phase 3 — People & Relationship System
 
-The participant system.
+> **Who is this person, how do they grow, and how do they connect to others?**
 
 | Capability | Description |
 |------------|-------------|
-| Participant Journey | Stages from Visitor → Community Builder |
-| Identity & profiles | Who you are on the platform |
-| Network boards | Your relational organizing home |
+| Participant Identity Doctrine | Constitutional document for people — not users |
+| Participant Journey | Visitor → Community Builder |
+| **Personal Mission** | Living statement of purpose |
+| Profile system | Digital identity |
+| Network boards | Relational organizing home |
 | Invite links & QR | Growth mechanics |
 | Recruitment | Referral attribution |
 | Privacy | Participant data control |
 
-**V1 critical:** USR-001 · NET-001 · NET-002 · NET-003 · JRN-001
+**V1 critical:** PEP-001 · JRN-001 · PRM-001 · USR-001 · NET-001 · NET-002 · NET-003
+
+**Master sequence:** [docs/phase-03/PHASE_3_MASTER_SEQUENCE.md](../phase-03/PHASE_3_MASTER_SEQUENCE.md)
 
 ---
 

@@ -6,7 +6,7 @@
     "tagline": "Your organizing home",
     "version": "0.3.0-people",
     "currentPhase": 3,
-    "currentPhaseName": "People",
+    "currentPhaseName": "People & Relationship System",
     "lastUpdated": "2026-07-10T12:00:00Z",
     "deployUrl": "https://block-street.netlify.app/",
     "githubRepo": "https://github.com/Grappe501/Block-Street",
@@ -79,22 +79,27 @@
     },
     {
       "id": 3,
-      "name": "People",
+      "name": "People & Relationship System",
       "slug": "phase-03-people",
       "status": "in_progress",
-      "docPath": "docs/phase-03/README.md",
-      "question": "Who participates?",
+      "docPath": "docs/phase-03/PHASE_3_MASTER_SEQUENCE.md",
+      "question": "Who is this person, how do they grow, and how do they connect to others?",
       "steps": [
-        { "id": "3.1", "name": "Participant Journey [PHASE-003.1]", "status": "done", "notes": "JRN-M01–M12, three pillars, living systems bridge" },
-        { "id": "3.2", "name": "Participant Registration [USR-001]", "status": "in_progress", "notes": "County-first signup, DB pending" },
-        { "id": "3.3", "name": "Profiles & identity", "status": "pending", "notes": "Jul 12 target" },
-        { "id": "3.4", "name": "Personal network board [NET-001]", "status": "pending", "notes": "" },
-        { "id": "3.5", "name": "Share links [NET-002]", "status": "pending", "notes": "/s/[slug]" },
-        { "id": "3.6", "name": "QR codes [NET-003]", "status": "pending", "notes": "" },
-        { "id": "3.7", "name": "Referral & recruitment", "status": "pending", "notes": "" },
-        { "id": "3.8", "name": "Privacy controls", "status": "pending", "notes": "" },
-        { "id": "3.9", "name": "Leader testing build", "status": "pending", "notes": "Jul 12" },
-        { "id": "3.10", "name": "Launch call ready", "status": "pending", "notes": "Jul 14" }
+        { "id": "3.1", "name": "Participant Identity Doctrine [PHASE-003.1]", "status": "done", "notes": "PEP-M01–M14, Personal Mission PRM-001, people not users" },
+        { "id": "3.2", "name": "Participant Journey Framework [PHASE-003.2]", "status": "done", "notes": "JRN-M01–M12, Registered→Connected→Contributor stages" },
+        { "id": "3.3", "name": "Participant Profile System [USR-001]", "status": "pending", "notes": "Digital identity, registration, mission" },
+        { "id": "3.4", "name": "Personal Network System [NET-001]", "status": "pending", "notes": "Network, invite URL, QR, relationship tree" },
+        { "id": "3.5", "name": "Recruitment Engine [NET-002/003]", "status": "pending", "notes": "Referral attribution, growth tracking" },
+        { "id": "3.6", "name": "Network Board", "status": "pending", "notes": "Personal organizing dashboard" },
+        { "id": "3.7", "name": "Privacy & Trust System", "status": "pending", "notes": "Visibility, minor protections" },
+        { "id": "3.8", "name": "Skills & Leadership System", "status": "pending", "notes": "Post-V1" },
+        { "id": "3.9", "name": "Recognition & Milestones", "status": "pending", "notes": "Not popularity" },
+        { "id": "3.10", "name": "Communication Preferences", "status": "pending", "notes": "Participant controlled" },
+        { "id": "3.11", "name": "Participant Timeline", "status": "pending", "notes": "Append-only history" },
+        { "id": "3.12", "name": "Participant Knowledge Graph", "status": "pending", "notes": "Person-centric edges" },
+        { "id": "3.13", "name": "Recommendation Engine", "status": "pending", "notes": "Mission + graph based" },
+        { "id": "3.14", "name": "Participant Experience", "status": "pending", "notes": "Onboarding journey" },
+        { "id": "3.15", "name": "Phase 3 Build Bible", "status": "pending", "notes": "People System closeout" }
       ]
     },
     {
@@ -214,6 +219,12 @@
   "buildLog": [
     {
       "date": "2026-07-10",
+      "title": "PHASE-003.1 Participant Identity Doctrine + Phase 3 Master Sequence",
+      "phase": 3,
+      "summary": "PEP-M01–M14 people not users, Personal Mission PRM-001, 15-step Phase 3 sequence, Registered→Connected journey stages"
+    },
+    {
+      "date": "2026-07-10",
       "title": "Living Systems transition — Phase 2 complete, Phase 3 begins",
       "phase": 3,
       "summary": "PHASE-002.10 Digital Arkansas Build Bible, LIVING-SYSTEMS-ARCHITECTURE, PHASE-003.1 Participant Journey, master plan restructure Phases 3–9"
@@ -328,10 +339,10 @@
     }
   ],
   "stats": {
-    "totalSteps": 76,
-    "doneSteps": 21,
-    "inProgressSteps": 1,
-    "pendingSteps": 54,
-    "percentComplete": 28
+    "totalSteps": 81,
+    "doneSteps": 22,
+    "inProgressSteps": 0,
+    "pendingSteps": 59,
+    "percentComplete": 27
   }
 }

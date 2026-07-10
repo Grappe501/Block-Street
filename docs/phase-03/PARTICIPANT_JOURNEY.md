@@ -1,14 +1,14 @@
 # Participant Journey
 
-**Document ID:** PHASE-003.1  
+**Document ID:** PHASE-003.2  
 **Artifact:** `PARTICIPANT_JOURNEY.md`  
 **Status:** Canonical  
 **Priority:** Critical  
-**Phase:** 3 — People
+**Phase:** 3 — People & Relationship System
 
 > **Everything in the platform should help someone move one step forward.**
 
-**Builds On:** [Organizing Model](../build-steps/PHASE-001.5-ORGANIZING-MODEL.md) · [Growth Model](../build-steps/PHASE-001.6-GROWTH-MODEL.md) · [Status Framework](../phase-02/CANONICAL_STATUS_LIFECYCLE_FRAMEWORK.md) · [Living Systems](../master/LIVING-SYSTEMS-ARCHITECTURE.md)
+**Builds On:** [Participant Identity Doctrine](PARTICIPANT_IDENTITY_DOCTRINE.md) · [Organizing Model](../build-steps/PHASE-001.5-ORGANIZING-MODEL.md) · [Growth Model](../build-steps/PHASE-001.6-GROWTH-MODEL.md) · [Status Framework](../phase-02/CANONICAL_STATUS_LIFECYCLE_FRAMEWORK.md)
 
 **Live spec:** `data/registry/participant-journey.json`
 
@@ -31,7 +31,7 @@
 | JRN-M11 | Privacy & consent by stage |
 | JRN-M12 | V1 scope |
 | JRN-BG | Burt implementation guidance |
-| AC-019 | Step 3.1 acceptance criteria |
+| AC-021 | Step 3.2 acceptance criteria |
 
 ---
 
@@ -86,7 +86,9 @@ Visitor
     ↓
 Interested
     ↓
-Member
+Registered
+    ↓
+Connected
     ↓
 Contributor
     ↓
@@ -101,9 +103,9 @@ Alumni
 Community Builder
 ```
 
-**[JRN-M04a]** Stages are **not ranks** — they reflect **engagement depth** and **contribution type**.
+**[JRN-M04a]** Stages reflect **engagement depth** — not account types. A person is always a **participant** [PEP-M03].
 
-**[JRN-M04b]** Participants may hold different effective stages in different communities (campus vs county).
+**[JRN-M04b]** Legacy alias: `member` → `registered` in code until migration.
 
 ---
 
@@ -113,15 +115,16 @@ Community Builder
 |-------|-----|-------------|
 | **Visitor** | `visitor` | Browsing — no account |
 | **Interested** | `interested` | Started signup or saved intent |
-| **Member** | `member` | Registered — belongs to county/campus |
-| **Contributor** | `contributor` | Active participation — invites, events, projects |
+| **Registered** | `registered` | Account created — belongs to county/campus |
+| **Connected** | `connected` | Active in network — knows others, invited |
+| **Contributor** | `contributor` | Invites, events, projects — giving back |
 | **Organizer** | `organizer` | Building community — recruitment, coordination |
 | **Leader** | `leader` | Sustained leadership — committees, campaigns |
 | **Mentor** | `mentor` | Developing others — mentorship edges |
 | **Alumni** | `alumni` | Graduated / moved on — stays connected |
 | **Community Builder** | `community_builder` | Cross-community impact — regional/statewide |
 
-**[JRN-M05a]** V1 implements through **`member`** with signals toward **`contributor`** and **`organizer`**. Full stage automation in later phases.
+**[JRN-M05a]** V1 implements through **`registered`** with signals toward **`connected`** and **`contributor`**. Full stage automation in later steps.
 
 ---
 
@@ -131,8 +134,9 @@ Community Builder
 
 | Signal | Suggests stage |
 |--------|----------------|
-| Account created + county/campus | `member` |
-| First invite sent | `contributor` |
+| Account created + county/campus | `registered` |
+| First invite accepted / network link | `connected` |
+| First invite sent / active participation | `contributor` |
 | N invites / network depth | `contributor` → `organizer` |
 | Committee join / event host | `organizer` |
 | Sustained recruitment + projects | `leader` |
@@ -150,7 +154,8 @@ Community Builder
 |-------|---------------------|
 | Visitor | Map, campus/county pages, WHY, join CTA |
 | Interested | Resume signup, county/campus preselect |
-| Member | Network board, invite tools, Mission Board personal cards |
+| Registered | Network board, invite tools, Personal Mission, Mission Board cards |
+| Connected | See who you know, suggested connections |
 | Contributor | Milestones, recognition, suggested invites |
 | Organizer | Campus/county dashboard tools, outreach priorities |
 | Leader | Committee/project creation, moderation |
@@ -199,7 +204,8 @@ Community Builder
 
 | Stage | Example next action |
 |-------|---------------------|
-| Member | "Invite 3 classmates" |
+| Registered | "Invite 3 classmates" |
+| Connected | "Meet organizers at your campus" |
 | Contributor | "Join the team building at UCA" |
 | Organizer | "Host your first event" |
 | Mentor | "Welcome a new member" |
@@ -229,8 +235,8 @@ Community Builder
 |-------------|-----|
 | Journey philosophy & stages | ✅ This document |
 | `participant-journey.json` catalog | ✅ |
-| Registration → `member` | Phase 3 implementation |
-| Invite → `contributor` signals | Phase 3 implementation |
+| Registration → `registered` | Step 3.3 implementation |
+| Connected + contributor signals | Steps 3.4–3.5 |
 | Full stage automation | V1.1+ |
 | Mentor / alumni / community builder | Future |
 
@@ -254,17 +260,17 @@ Community Builder
 
 ## AC-019 — Acceptance Criteria
 
-Step 3.1 is complete when:
+Step 3.2 is complete when:
 
-- [x] **[AC-019a]** Participant Journey purpose documented. `[JRN-M01]`
-- [x] **[AC-019b]** Three pillars defined. `[JRN-M03]`
-- [x] **[AC-019c]** Journey stages specified. `[JRN-M04, JRN-M05]`
-- [x] **[AC-019d]** Progression signals and platform behaviors defined. `[JRN-M06, JRN-M07]`
-- [x] **[AC-019e]** Integration with status framework documented. `[JRN-M08]`
-- [x] **[AC-019f]** Burt has framework for Phase 3+ feature design. `[JRN-BG, participant-journey.json]`
+- [x] **[AC-021a]** Participant Journey purpose documented. `[JRN-M01]`
+- [x] **[AC-021b]** Three pillars defined. `[JRN-M03]`
+- [x] **[AC-021c]** Journey stages specified. `[JRN-M04, JRN-M05]`
+- [x] **[AC-021d]** Progression signals and platform behaviors defined. `[JRN-M06, JRN-M07]`
+- [x] **[AC-021e]** Integration with status framework documented. `[JRN-M08]`
+- [x] **[AC-021f]** Burt has framework for Phase 3+ feature design. `[JRN-BG, participant-journey.json]`
 
 ---
 
-**Next Step:** 3.2 — Participant Registration (USR-001)
+**Next Step:** 3.3 — Participant Profile System (USR-001)
 
 *Trace: OM-L1 → JRN-M04 → NET-001 → Mission Board personal cards [OIS-M16]*

@@ -20,7 +20,8 @@
     { "prefix": "KDG", "domain": "Knowledge & data governance" },
     { "prefix": "ADT", "domain": "Arkansas digital twin" },
     { "prefix": "LSA", "domain": "Living systems architecture" },
-    { "prefix": "JRN", "domain": "Participant journey" },
+    { "prefix": "PEP", "domain": "Participant identity" },
+    { "prefix": "PRM", "domain": "Personal mission" },
     { "prefix": "STS", "domain": "Status & lifecycle" },
     { "prefix": "ADM", "domain": "Administration" },
     { "prefix": "SEC", "domain": "Security" },
@@ -479,10 +480,10 @@
       "id": "JRN-001",
       "title": "Participant Journey Framework",
       "purpose": "Every feature helps someone move one step forward — place, relationships, purpose",
-      "description": "PHASE-003.1 journey stages Visitor through Community Builder, progression signals, status integration",
+      "description": "PHASE-003.2 journey stages Visitor through Community Builder, progression signals, status integration",
       "priority": "critical",
       "principle": "OM-L5",
-      "dependencies": ["LSA-001", "OIS-001", "STS-001"],
+      "dependencies": ["PEP-001", "LSA-001", "OIS-001", "STS-001"],
       "related": ["NET-001", "USR-001", "GM-P7"],
       "acceptanceCriteria": [
         "Journey purpose and stages documented",
@@ -506,14 +507,71 @@
       "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
     },
     {
+      "id": "PEP-001",
+      "title": "Participant Identity Doctrine",
+      "purpose": "Start with people not users — constitutional document for Phase 3",
+      "description": "PHASE-003.1 participant definition, belonging, privacy philosophy, profile philosophy, life stages",
+      "priority": "critical",
+      "principle": "OM-L1",
+      "dependencies": ["LSA-001", "REG-001"],
+      "related": ["PRM-001", "JRN-001", "USR-001"],
+      "acceptanceCriteria": [
+        "Participant defined — people not users",
+        "Identity, belonging, communities documented",
+        "Privacy philosophy established",
+        "Personal Mission architecture specified",
+        "Phase 3 digital identity roadmap defined"
+      ],
+      "futureNotes": "Person vs account separation at scale, guardian controls",
+      "implementationStatus": "done",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": "DB-USERS",
+        "api": null,
+        "frontend": "PAGE-NETWORK",
+        "test": "TEST-PEP-001",
+        "doc": "DOC-PEP-001"
+      },
+      "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
+    },
+    {
+      "id": "PRM-001",
+      "title": "Personal Mission",
+      "purpose": "Living statement of purpose — not a resume — evolves with the participant",
+      "description": "PHASE-003.1 signature feature for introductions, team building, recommendations, belonging",
+      "priority": "critical",
+      "principle": "OM-L5",
+      "dependencies": ["PEP-001", "JRN-001"],
+      "related": ["USR-002", "NET-001", "ANL-001"],
+      "acceptanceCriteria": [
+        "Mission statement on profile",
+        "Visibility controls",
+        "Used for introductions and recommendations",
+        "Encouraged at registration"
+      ],
+      "futureNotes": "Mission version history, AI-assisted refinement",
+      "implementationStatus": "pending",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": "DB-USERS",
+        "api": "API-USERS-002",
+        "frontend": "PAGE-NETWORK",
+        "test": "TEST-PRM-001",
+        "doc": "DOC-PRM-001"
+      },
+      "versionHistory": { "created": "2026-07-10" }
+    },
+    {
       "id": "USR-001",
       "title": "Participant Registration",
       "purpose": "Answer 'How do I get involved?' — honor-system signup",
       "description": "County-first flow: students pick county then school; non-students county-only (16-24)",
       "priority": "critical",
       "principle": "OM-L1",
-      "dependencies": ["REG-001", "REG-002"],
-      "related": ["USR-002", "NET-001", "LS-Q2"],
+      "dependencies": ["REG-001", "REG-002", "PEP-001"],
+      "related": ["USR-002", "NET-001", "LS-Q2", "PRM-001"],
       "acceptanceCriteria": [
         "Registration creates user record",
         "County assignment works",

@@ -1,42 +1,55 @@
-# Phase 3 — People
+# Phase 3 — People & Relationship System
 
-> **Question answered:** *Who participates?*
+> **Question answered:** *Who is this person, how do they grow, and how do they connect to others?*
 
-**Status:** Active — V1 target Jul 12 (leader testing) · Jul 14 (launch call)
+**Status:** Active — Steps 3.1–3.2 complete · V1 target Jul 12 / Jul 14
 
-**Architecture:** [Living Systems](../master/LIVING-SYSTEMS-ARCHITECTURE.md) · [Participant Journey](PARTICIPANT_JOURNEY.md)
-
----
-
-## The Three Pillars (People Phase)
-
-| Pillar | Source | Gives people |
-|--------|--------|--------------|
-| Place | Phase 2 Registry | Where they belong |
-| Relationships | Phase 3 Network | Who they know |
-| Purpose | Participant Journey | What to do next |
+**Master sequence:** [PHASE_3_MASTER_SEQUENCE.md](PHASE_3_MASTER_SEQUENCE.md)
 
 ---
 
-## Step Sequence
+## Guiding Principle
+
+> **Start with people, not users.**
+
+A user logs into software. A person has relationships, aspirations, interests, skills, communities, and a story.
+
+---
+
+## Step Sequence (15 Steps)
 
 | Step | Document | Status |
 |------|----------|--------|
-| 3.1 | [Participant Journey](PARTICIPANT_JOURNEY.md) | ✅ |
-| 3.2 | Participant Registration (USR-001) | Pending |
-| 3.3 | Profiles & identity | Pending |
-| 3.4 | Personal network board (NET-001) | Pending |
-| 3.5 | Share links (NET-002) | Pending |
-| 3.6 | QR codes (NET-003) | Pending |
-| 3.7 | Referral & recruitment | Pending |
-| 3.8 | Privacy controls | Pending |
-| 3.9 | Leader testing build | Pending |
-| 3.10 | Launch call ready | Pending |
+| 3.1 | [Participant Identity Doctrine](PARTICIPANT_IDENTITY_DOCTRINE.md) | ✅ |
+| 3.2 | [Participant Journey Framework](PARTICIPANT_JOURNEY.md) | ✅ |
+| 3.3 | Participant Profile System | Pending |
+| 3.4 | Personal Network System | Pending |
+| 3.5 | Recruitment Engine | Pending |
+| 3.6 | Network Board | Pending |
+| 3.7 | Privacy & Trust System | Pending |
+| 3.8 | Skills & Leadership System | Pending |
+| 3.9 | Recognition & Milestones | Pending |
+| 3.10 | Communication Preferences | Pending |
+| 3.11 | Participant Timeline | Pending |
+| 3.12 | Participant Knowledge Graph | Pending |
+| 3.13 | Recommendation Engine | Pending |
+| 3.14 | Participant Experience | Pending |
+| 3.15 | Phase 3 Build Bible | Pending |
 
 ---
 
-## V1 Critical Requirements
+## Signature Features
 
-USR-001 · NET-001 · NET-002 · NET-003 · JRN-001
+| Feature | Doc |
+|---------|-----|
+| **Personal Mission** | [Identity Doctrine §PEP-M10](PARTICIPANT_IDENTITY_DOCTRINE.md) |
+| **Network Board** | Step 3.6 |
+| **Participant Graph** | Step 3.12 |
 
-*Prior phase complete:* Digital Arkansas [Phase 2 Build Bible](../phase-02/PHASE_2_DIGITAL_ARKANSAS_BUILD_BIBLE.md)
+---
+
+## V1 Critical (Jul 12–14)
+
+PEP-001 · JRN-001 · PRM-001 · USR-001 · NET-001 · NET-002 · NET-003
+
+*Prior phase:* [Digital Arkansas](../phase-02/PHASE_2_DIGITAL_ARKANSAS_BUILD_BIBLE.md)

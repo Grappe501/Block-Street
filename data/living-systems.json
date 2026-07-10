@@ -5,7 +5,7 @@
   "stack": [
     { "order": 1, "phase": 1, "name": "Constitution", "question": "Why are we building this?", "status": "complete" },
     { "order": 2, "phase": 2, "name": "Digital Arkansas", "question": "What exists?", "status": "complete" },
-    { "order": 3, "phase": 3, "name": "People", "question": "Who participates?", "status": "active" },
+    { "order": 3, "phase": 3, "name": "People & Relationship System", "question": "Who is this person, how do they grow, and how do they connect?", "status": "active" },
     { "order": 4, "phase": 4, "name": "Communities", "question": "Where do they belong?", "status": "pending" },
     { "order": 5, "phase": 5, "name": "Organizing Engine", "question": "What do they do together?", "status": "pending" },
     { "order": 6, "phase": 6, "name": "Intelligence Layer", "question": "How do we understand and guide?", "status": "pending" },

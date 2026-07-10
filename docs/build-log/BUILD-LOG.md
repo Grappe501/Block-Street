@@ -4,6 +4,33 @@
 
 ---
 
+## 2026-07-10 — PHASE-003.1 Participant Identity Doctrine + Phase 3 Master Sequence
+
+**Document IDs:** PHASE-003.1, PHASE-003.0, PEP-001, PRM-001, AC-020  
+**Artifacts:** `PARTICIPANT_IDENTITY_DOCTRINE.md`, `PHASE_3_MASTER_SEQUENCE.md`
+
+### What Was Built
+
+- **Phase 3 officially named:** People & Relationship System
+- **Participant Identity Doctrine** — constitutional document for people (not users)
+- **Personal Mission** signature feature [PRM-001]
+- **15-step Phase 3 master sequence** (3.1–3.15)
+- Journey reframed as **3.2** with Registered → Connected → Contributor stages
+- `participant-identity.json` + `people-relationship-system.json`
+
+### Guiding Principle Locked
+
+> **Start with people, not users.**
+
+### ED-FD Handoff
+
+| Item | Detail |
+|------|--------|
+| Built | PARTICIPANT_IDENTITY_DOCTRINE, PHASE_3_MASTER_SEQUENCE |
+| Next | 3.3 Participant Profile System (USR-001) |
+
+---
+
 ## 2026-07-10 — Living Systems Transition · Phase 2 Complete · Phase 3 Begins
 
 **Document IDs:** PHASE-002.10, LSA-001, PHASE-003.1, JRN-001, AC-019  
