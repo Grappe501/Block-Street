@@ -43,6 +43,9 @@ type ExperienceReg = {
   collaborativeIntelligenceNetwork?: { layerCount: number; continuousQuestionCount: number };
   collaborationDomainCount?: number;
   collaborationPrincipleCount?: number;
+  fieldOperationsCommandLayer?: { assemblyDomainCount: number; deviceRoleCount: number };
+  fieldOperationModeCount?: number;
+  mobilePrincipleCount?: number;
 };
 
 const FEATURED_SUBTITLES: Record<string, string> = {
@@ -53,6 +56,7 @@ const FEATURED_SUBTITLES: Record<string, string> = {
   "4.6": "Components",
   "4.7": "Workspaces",
   "4.8": "Collaboration",
+  "4.9": "Field Operations",
 };
 
 const EXPERIENCE_CARDS: { step: string; label: string; reg: ExperienceReg; cardClass: string; metaClass: string; titleClass: string; featured?: boolean }[] = [
@@ -64,7 +68,7 @@ const EXPERIENCE_CARDS: { step: string; label: string; reg: ExperienceReg; cardC
   { step: "4.6", label: "Living Operational Component Registry", reg: comp, cardClass: "border-fuchsia-300 bg-fuchsia-50", metaClass: "text-fuchsia-700", titleClass: "text-fuchsia-950", featured: true },
   { step: "4.7", label: "Unified Workspace Manager", reg: work, cardClass: "border-pink-300 bg-pink-50", metaClass: "text-pink-700", titleClass: "text-pink-950", featured: true },
   { step: "4.8", label: "Collaborative Intelligence Network", reg: collab, cardClass: "border-rose-300 bg-rose-50", metaClass: "text-rose-700", titleClass: "text-rose-950", featured: true },
-  { step: "4.9", label: "Mobile Experience", reg: mobile, cardClass: "border-red-300 bg-red-50", metaClass: "text-red-700", titleClass: "text-red-950" },
+  { step: "4.9", label: "Field Operations Command Layer", reg: mobile, cardClass: "border-red-300 bg-red-50", metaClass: "text-red-700", titleClass: "text-red-950", featured: true },
   { step: "4.10", label: "AI Experience", reg: aiexp, cardClass: "border-orange-300 bg-orange-50", metaClass: "text-orange-700", titleClass: "text-orange-950" },
   { step: "4.11", label: "Engagement & Gamification", reg: engage, cardClass: "border-amber-300 bg-amber-50", metaClass: "text-amber-700", titleClass: "text-amber-950" },
   { step: "4.12", label: "Trust & Transparency", reg: trust, cardClass: "border-yellow-300 bg-yellow-50", metaClass: "text-yellow-700", titleClass: "text-yellow-950" },
@@ -98,7 +102,11 @@ export function AdminUserExperience() {
             <p className={`mt-2 text-xs ${metaClass}`}>
               {reg.acceptanceCriteria} · {reg.status}
             </p>
-            {reg.collaborativeIntelligenceNetwork ? (
+            {reg.fieldOperationsCommandLayer ? (
+              <p className={`mt-1 text-xs ${metaClass}`}>
+                {reg.fieldOperationModeCount ?? 0} field modes · {reg.mobilePrincipleCount ?? 0} mobile principles · {reg.fieldOperationsCommandLayer.assemblyDomainCount} FOCL domains · {reg.fieldOperationsCommandLayer.deviceRoleCount} device roles
+              </p>
+            ) : reg.collaborativeIntelligenceNetwork ? (
               <p className={`mt-1 text-xs ${metaClass}`}>
                 {reg.collaborationDomainCount ?? 0} collaboration domains · {reg.collaborationPrincipleCount ?? 0} principles · {reg.collaborativeIntelligenceNetwork.layerCount} CIN layers · {reg.collaborativeIntelligenceNetwork.continuousQuestionCount} intelligence questions
               </p>

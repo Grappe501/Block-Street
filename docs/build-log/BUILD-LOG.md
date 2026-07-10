@@ -18,6 +18,23 @@
 
 ---
 
+## 2026-07-10 — Volume 4.9 Mobile & Field Operations Experience Architecture [UXB-010 · AC-145]
+
+**Document:** `docs/volume-04/MOBILE_EXPERIENCE_ARCHITECTURE.md` · **Registry:** `data/registry/mobile-experience-architecture.json`
+
+### What Changed
+
+- **Guiding principle:** *The field is the primary workplace.*
+- Mobile as primary operating environment — not a reduced desktop app; design order Phone → Desktop
+- **7-layer field interaction flow** and **8 mobile principles**
+- **6 field operation modes:** Volunteer, Canvassing, Event, Meeting, Mission, Emergency
+- Thumb zone architecture, offline-first, intelligent sync, mobile capture, camera, QR, voice, maps
+- AI field assistant, Digital Twins, Community Event Ledger, accessibility, performance, security
+- **Field Operations Command Layer (FOCL)** — 6 assembly domains, multi-device continuity, 4 device roles
+- Admin Volume 4 tab · requirements UXB-010 updated · Volume 4: 8/14 complete (4.4 pending)
+
+---
+
 ## 2026-07-10 — Volume 4.8 Collaboration Architecture [UXB-009 · AC-144]
 
 **Document:** `docs/volume-04/COLLABORATION_ARCHITECTURE.md` · **Registry:** `data/registry/collaboration-architecture.json`

@@ -97,7 +97,7 @@ Volume 4 is complete when Burt understands:
 - [x] How people move through the platform (4.2, 4.4)
 - [x] How workspaces are organized (4.3, 4.7)
 - [x] How dashboards behave (4.3)
-- [ ] How mobile experiences function (4.9)
+- [x] How mobile experiences function (4.9)
 - [ ] How AI is presented (4.10)
 - [ ] How trust is communicated (4.12)
 - [ ] How engagement is sustained (4.11)
@@ -132,7 +132,7 @@ Together, Volumes 0–4 form a comprehensive foundation before implementation-sp
 | 4.6 Component Architecture | ✅ Done |
 | 4.7 Workspace Architecture | ✅ Done |
 | 4.8 Collaboration Architecture | ✅ Done |
-| 4.9 Mobile Experience Architecture | Pending |
+| 4.9 Mobile & Field Operations Experience Architecture | ✅ Done |
 | 4.10 AI Experience Architecture | Pending |
 | 4.11 Engagement & Gamification Architecture | Pending |
 | 4.12 Trust & Transparency Architecture | Pending |
