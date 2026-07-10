@@ -4,7 +4,28 @@
 
 ---
 
-## 2026-07-10 — PHASE-001.1 Platform Identity (Canonical)
+## 2026-07-10 — PHASE-001.2 North Star Outcome (Canonical)
+
+**Document ID:** PHASE-001.2  
+**Requirement IDs:** NS-001 through NS-014, AC-002  
+**Status:** Complete — Canonical
+
+### The One Question
+
+> Does this help us reach the North Star? If no — it doesn't belong in V1.
+
+### Deliverables
+
+- `docs/build-steps/PHASE-001.2-NORTH-STAR-OUTCOME.md`
+- Five North Star Questions [NS-013] as feature filter
+- Admin dashboard: new **North Star** tab at `/admin`
+- NS category added to ID convention
+
+### Next Step
+
+PHASE-001.3 — Core Principles (immutable doctrine, 10–15 principles)
+
+---
 
 **Document ID:** PHASE-001.1  
 **Requirement IDs:** PI-001 through ER-001, AC-001  

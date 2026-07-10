@@ -4,7 +4,7 @@
     "fullName": "Arkansas Student & Youth Organizing Network",
     "motto": "Connect Locally. Organize Statewide. Lead Together.",
     "tagline": "Your organizing home",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "currentPhase": 1,
     "currentPhaseName": "Project Constitution & Mission Doctrine",
     "lastUpdated": "2026-07-10T09:00:00Z",
@@ -26,12 +26,12 @@
       "id": 1,
       "name": "Project Constitution & Mission Doctrine",
       "slug": "phase-01-constitution",
-      "status": "done",
+      "status": "in_progress",
       "docPath": "docs/phases/PHASE-01-CONSTITUTION.md",
       "steps": [
         { "id": "1.1", "name": "Platform Identity [PHASE-001.1]", "status": "done", "notes": "PI-001 through ER-001, AC-001 — Canonical" },
-        { "id": "1.2", "name": "North Star Outcome", "status": "done", "notes": "Collective voice + voting block by Nov 3" },
-        { "id": "1.3", "name": "Core Principles — equal standing, no council", "status": "done", "notes": "Distributed leadership" },
+        { "id": "1.2", "name": "North Star Outcome [PHASE-001.2]", "status": "done", "notes": "NS-001 through NS-014, AC-002 — Canonical" },
+        { "id": "1.3", "name": "Core Principles [PHASE-001.3]", "status": "pending", "notes": "Immutable doctrine — 10-15 principles" },
         { "id": "1.4", "name": "Platform Boundaries", "status": "done", "notes": "No impersonation, no partisan direction" },
         { "id": "1.5", "name": "Organizing Model — county→school + county-only", "status": "done", "notes": "Honor system signup" },
         { "id": "1.6", "name": "Growth Model — staged institutions", "status": "done", "notes": "Universities first, trade/jr/high later" },
@@ -127,6 +127,12 @@
     { "version": "1.4.0", "name": "Surveys + collective voice", "status": "pending", "date": null }
   ],
   "buildLog": [
+    {
+      "date": "2026-07-10",
+      "title": "PHASE-001.2 North Star Outcome — Canonical",
+      "phase": 1,
+      "summary": "NS-002 statement, five questions NS-013, maturity visions, V1 feature filter, admin North Star tab"
+    },
     {
       "date": "2026-07-10",
       "title": "PHASE-001.1 Platform Identity — Canonical",
