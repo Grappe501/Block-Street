@@ -1,1 +1,241 @@
-{"version":"1.0.0","requirementId":"DAB-008","docPath":"docs/volume-02/TIME_CALENDAR_DATA_MODEL.md","calendarTypes":["personal","community","mission","network"],"defaultTimezone":"America/Chicago","acceptanceCriteria":"AC-113"}
+{
+  "version": "2.0.0",
+  "documentId": "VOLUME-002.7",
+  "requirementId": "DAB-008",
+  "docPath": "docs/volume-02/TIME_CALENDAR_DATA_MODEL.md",
+  "status": "canonical",
+  "priority": "critical",
+  "lastUpdated": "2026-07-10",
+  "guidingPrinciple": "Everything meaningful happens in time. The platform should understand time as a relationship, not just a timestamp.",
+  "defaultTimezone": "America/Chicago",
+  "storageTimezone": "UTC",
+  "calendarPhilosophy": {
+    "sharedOperatingLayer": true,
+    "firstClassEntities": true,
+    "multiCalendarNetwork": true,
+    "timeAsRelationship": true
+  },
+  "calendarHierarchy": [
+    "PlatformCalendar",
+    "StateCalendar",
+    "RegionalCalendar",
+    "CountyCalendar",
+    "InstitutionCalendar",
+    "CommunityCalendar",
+    "CommitteeCalendar",
+    "MissionCalendar",
+    "ParticipantCalendar"
+  ],
+  "calendarHierarchyLevels": 9,
+  "calendarTypeCount": 7,
+  "calendarTypes": [
+    {
+      "id": "personal",
+      "name": "Personal Calendar",
+      "owner": "Participant",
+      "contains": ["VolunteerCommitments", "Meetings", "Training", "Mentorship", "Assignments", "Reminders", "PersonalGoals"]
+    },
+    {
+      "id": "community",
+      "name": "Community Calendar",
+      "owner": "Community",
+      "contains": ["Meetings", "VolunteerOpportunities", "Celebrations", "Training", "CommunityTraditions", "PlanningSessions"]
+    },
+    {
+      "id": "county",
+      "name": "County Calendar",
+      "owner": "County",
+      "contains": ["CountyWideActivities", "PartnerEvents", "LeadershipGatherings", "SharedInitiatives", "RegionalCoordination"]
+    },
+    {
+      "id": "institution",
+      "name": "Institution Calendar",
+      "owner": "EducationalInstitution",
+      "contains": ["AcademicEvents", "CommunityEngagement", "Recruitment", "VolunteerOpportunities", "CampusActivities"]
+    },
+    {
+      "id": "mission",
+      "name": "Mission Calendar",
+      "owner": "Mission",
+      "contains": ["Planning", "Milestones", "Deadlines", "VolunteerAssignments", "Deliverables", "MissionReview"]
+    },
+    {
+      "id": "initiative",
+      "name": "Initiative Calendar",
+      "owner": "Initiative",
+      "contains": ["CommunityLaunches", "LeadershipDevelopment", "AnnualCampaigns", "RegionalExpansion"]
+    },
+    {
+      "id": "organizational",
+      "name": "Organizational Calendar",
+      "owner": "Partner",
+      "contains": ["PartnerScheduling", "CollaborationEvents", "SharedFacilities"]
+    }
+  ],
+  "calendarObjectFields": [
+    "canonicalId",
+    "owner",
+    "calendarType",
+    "visibility",
+    "timeZone",
+    "permissions",
+    "subscriptions",
+    "metadata",
+    "history"
+  ],
+  "eventObjectFields": [
+    "title",
+    "description",
+    "start",
+    "end",
+    "duration",
+    "location",
+    "participants",
+    "communityContext",
+    "missionContext",
+    "attachments",
+    "relatedStories",
+    "knowledgeLinks"
+  ],
+  "recurrenceModel": {
+    "patterns": ["Daily", "Weekly", "Monthly", "Yearly", "Custom"],
+    "exceptionsSupported": true,
+    "rruleCompatible": true,
+    "materializedOccurrenceHorizonDays": 90
+  },
+  "availabilityModel": {
+    "fields": [
+      "AvailabilityBlocks",
+      "PreferredMeetingTimes",
+      "VolunteerAvailability",
+      "TravelConstraints",
+      "QuietHours",
+      "Vacation"
+    ],
+    "supportsIntelligentScheduling": true
+  },
+  "schedulingRelationships": [
+    "Participant",
+    "Community",
+    "Mission",
+    "Event",
+    "Facility",
+    "Transportation",
+    "Partner",
+    "Mentor"
+  ],
+  "subscriptionTargets": [
+    "CommunityCalendars",
+    "CountyCalendars",
+    "MissionCalendars",
+    "LeadershipCalendars",
+    "InstitutionCalendars",
+    "PartnerCalendars"
+  ],
+  "sharedCalendarLayers": [
+    "PublicCalendar",
+    "MemberCalendar",
+    "LeadershipCalendar",
+    "PlanningCalendar",
+    "PrivateCoordinationCalendar"
+  ],
+  "reminderEntity": {
+    "independentFromEvents": true,
+    "capabilities": ["TimeOffsets", "Escalation", "Channels", "Acknowledgment", "RepeatRules", "ReminderHistory"]
+  },
+  "timelines": [
+    "ParticipantTimeline",
+    "CommunityTimeline",
+    "MissionTimeline",
+    "CountyTimeline",
+    "InstitutionTimeline",
+    "PlatformTimeline"
+  ],
+  "timelineCount": 6,
+  "notificationIntegrations": [
+    "NotificationEngine",
+    "AttentionManagementEngine",
+    "CommunicationPreferences",
+    "DigestGeneration"
+  ],
+  "knowledgeIntegrations": [
+    "Story",
+    "Lesson",
+    "Playbook",
+    "CommunityBrain",
+    "MissionLibrary"
+  ],
+  "geographicIntegrations": [
+    "Venue",
+    "Campus",
+    "County",
+    "MapLocation",
+    "TravelEstimates",
+    "FutureRouting"
+  ],
+  "aiScheduling": {
+    "capabilities": [
+      "recommendMeetingTimes",
+      "detectConflicts",
+      "suggestVolunteerAssignments",
+      "recommendEventSpacing",
+      "identifyOvercommittedLeaders",
+      "summarizeUpcomingCommitments"
+    ],
+    "requiresParticipantApproval": true,
+    "explainable": true
+  },
+  "calendarFederation": {
+    "providers": ["GoogleCalendar", "MicrosoftOutlook", "AppleCalendar", "ICS"],
+    "modularAdapters": true
+  },
+  "futureCalendarTypes": [
+    "CampaignCalendar",
+    "LegislativeCalendar",
+    "HousingCalendar",
+    "ScholarshipCalendar",
+    "CareerCalendar",
+    "ResearchCalendar"
+  ],
+  "temporalIntelligenceEngine": {
+    "name": "Temporal Intelligence Engine",
+    "purpose": "Understand time as a strategic resource — not merely manage events",
+    "evaluates": [
+      "PersonalAvailability",
+      "CommunityRhythms",
+      "MissionDeadlines",
+      "LeadershipWorkload",
+      "VolunteerCapacity",
+      "InstitutionalSchedules",
+      "CountyWideEvents",
+      "HistoricalParticipationPatterns",
+      "SeasonalTrends"
+    ],
+    "exampleQuestions": [
+      "When is the best time to launch a volunteer campaign?",
+      "Which week has historically produced the strongest attendance?",
+      "Which leaders are becoming overcommitted?",
+      "What recurring events are likely to compete for attention?",
+      "When should communities coordinate statewide initiatives?"
+    ],
+    "dataSources": [
+      "Calendars",
+      "CommunityEventLedger",
+      "LivingHistoryEngine",
+      "CommunityKnowledgeGraph",
+      "DigitalTwins",
+      "AttentionManagementEngine"
+    ],
+    "explainableRecommendations": true
+  },
+  "domainSchemaMapping": {
+    "schema": "Experience",
+    "entities": ["Calendar", "Schedule", "Event", "Venue", "Registration", "Attendance", "CheckIn"]
+  },
+  "eventLedgerIntegration": {
+    "experienceEvents": ["EventScheduled", "RegistrationCompleted", "AttendanceRecorded", "VolunteerCheckedIn"],
+    "ledgerPath": "data/registry/event-data-model.json"
+  },
+  "acceptanceCriteria": "AC-113",
+  "acceptanceCriteriaMet": true
+}
