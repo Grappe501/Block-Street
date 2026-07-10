@@ -1,7 +1,7 @@
 # Volume 5 Master Sequence — Platform Services & Integration Architecture
 
 **Document ID:** VOLUME-005 · **PSI-001**  
-**Status:** In progress (6/14 steps)  
+**Status:** In progress (7/14 steps)  
 **Priority:** Foundational
 
 > **How does the Community Operating System connect to the outside world while remaining one unified platform?**
@@ -45,7 +45,7 @@ Volumes 0–4 established **why the system exists, how it is engineered, how dat
 | **5.4** | Event Streaming Architecture | [EVENT_STREAM_ARCHITECTURE.md](EVENT_STREAM_ARCHITECTURE.md) | PSI-005 |
 | **5.5** | Synchronization Architecture | [SYNCHRONIZATION_ARCHITECTURE.md](SYNCHRONIZATION_ARCHITECTURE.md) | PSI-006 |
 | **5.6** | Search, Discovery & Knowledge Retrieval Architecture | [SEARCH_ARCHITECTURE.md](SEARCH_ARCHITECTURE.md) | PSI-007 |
-| **5.7** | Media & Content Architecture | [MEDIA_ARCHITECTURE.md](MEDIA_ARCHITECTURE.md) | PSI-008 |
+| **5.7** | Media, Content & Digital Asset Architecture | [MEDIA_ARCHITECTURE.md](MEDIA_ARCHITECTURE.md) | PSI-008 |
 | **5.8** | Communications Architecture | [COMMUNICATION_ARCHITECTURE.md](COMMUNICATION_ARCHITECTURE.md) | PSI-009 |
 | **5.9** | Deployment Architecture | [DEPLOYMENT_ARCHITECTURE.md](DEPLOYMENT_ARCHITECTURE.md) | PSI-010 |
 | **5.10** | Security Architecture | [SECURITY_ARCHITECTURE.md](SECURITY_ARCHITECTURE.md) | PSI-011 |
@@ -102,7 +102,7 @@ Volume 5 is complete when Burt understands:
 - [x] How events stream across the platform (5.4)
 - [x] How synchronization works across devices and LocalBrains (5.5)
 - [x] How search spans the platform (5.6)
-- [ ] How media is governed (5.7)
+- [x] How media is governed (5.7)
 - [ ] How communications are constitutional (5.8)
 - [ ] How deployment is portable (5.9)
 - [ ] How security is systemic (5.10)
@@ -123,7 +123,7 @@ Volume 5 is complete when Burt understands:
 | 5.4 Event Streaming Architecture | ✅ Done |
 | 5.5 Synchronization Architecture | ✅ Done |
 | 5.6 Search, Discovery & Knowledge Retrieval Architecture | ✅ Done |
-| 5.7 Media & Content Architecture | ⏳ Pending |
+| 5.7 Media, Content & Digital Asset Architecture | ✅ Done |
 | 5.8 Communications Architecture | ⏳ Pending |
 | 5.9 Deployment Architecture | ⏳ Pending |
 | 5.10 Security Architecture | ⏳ Pending |
@@ -132,7 +132,7 @@ Volume 5 is complete when Burt understands:
 | 5.13 Platform Operations Architecture | ⏳ Pending |
 | 5.14 Platform Integration Orchestrator | ⏳ Pending |
 
-**Volume 5 in progress.** 6/14 platform service layers documented.
+**Volume 5 in progress.** 7/14 platform service layers documented.
 
 ---
 
