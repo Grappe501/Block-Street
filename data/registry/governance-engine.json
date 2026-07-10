@@ -1,22 +1,298 @@
 {
-  "version": "1.0.0",
+  "version": "2.0.0",
   "documentId": "VOLUME-003.11",
   "requirementId": "PBA-012",
   "docPath": "docs/volume-03/GOVERNANCE_ENGINE.md",
-  "status": "pending",
+  "status": "canonical",
   "priority": "critical",
   "lastUpdated": "2026-07-10",
-  "guidingPrinciple": "Behavior is governed, not improvised.",
-  "defines": [
-    "Constitution",
+  "guidingPrinciple": "Power should be visible, accountable, and traceable.",
+  "governancePhilosophy": {
+    "notBureaucracy": true,
+    "legitimateTransparentAccountableRepeatable": true,
+    "governanceNotJustPermissions": true,
+    "authorityEarnedNotAssumed": true,
+    "strengthenTrustNotSlowProgress": true,
+    "organizationalMemory": true,
+    "constitutionGovernsPlatform": true
+  },
+  "governanceArchitecture": {
+    "layers": [
+      "Proposal",
+      "BusinessRuleEvaluation",
+      "Workflow",
+      "Review",
+      "Decision",
+      "Publication",
+      "HistoricalRecord",
+      "CommunityKnowledge"
+    ],
+    "layerCount": 8
+  },
+  "governanceDomainCount": 7,
+  "governanceDomains": [
+    {
+      "id": "platform",
+      "name": "Platform Governance",
+      "examples": ["PlatformConstitution", "ArchitectureStandards", "SystemWidePolicies", "SecurityGovernance", "ReleaseApprovals"],
+      "protectsLongTermIntegrity": true
+    },
+    {
+      "id": "community",
+      "name": "Community Governance",
+      "examples": ["CommunityCharter", "LeadershipAppointments", "CommitteeCreation", "OperatingProcedures", "MeetingDecisions", "CommunityPolicyUpdates"],
+      "withinConstitutionalBoundaries": true
+    },
+    {
+      "id": "leadership",
+      "name": "Leadership Governance",
+      "examples": ["LeadershipAppointments", "Succession", "MentorshipAssignments", "LeadershipReview", "Recognition", "LeadershipAccountability"]
+    },
+    {
+      "id": "mission",
+      "name": "Mission Governance",
+      "examples": ["MissionApproval", "MissionPrioritization", "ResourceAllocation", "MissionClosure", "LessonsLearned"]
+    },
+    {
+      "id": "knowledge",
+      "name": "Knowledge Governance",
+      "examples": ["PlaybookPublication", "StoryApproval", "LegacyDesignation", "CommunityBrainReview", "PolicyPublication"]
+    },
+    {
+      "id": "partnership",
+      "name": "Partnership Governance",
+      "examples": ["PartnerOnboarding", "SharedInitiatives", "MemorandumsOfUnderstanding", "InstitutionalRelationships", "PartnershipReview"]
+    },
+    {
+      "id": "financial",
+      "name": "Financial Governance",
+      "optional": true,
+      "examples": ["BudgetApprovals", "GrantOversight", "DonationGovernance", "ExpenseApprovals", "FinancialTransparency"]
+    }
+  ],
+  "governanceObjectFields": [
+    "GovernanceId",
+    "Category",
+    "Proposal",
+    "DecisionType",
+    "Authority",
+    "Workflow",
+    "Status",
+    "Version",
+    "Visibility",
+    "EffectiveDate",
+    "ReviewSchedule"
+  ],
+  "governanceObjectFieldCount": 11,
+  "decisionTypes": [
+    "Approve",
+    "Reject",
+    "Revise",
+    "Recommend",
+    "Table",
+    "Escalate",
+    "EmergencyAction",
+    "Sunset"
+  ],
+  "decisionTypeCount": 8,
+  "authoritySources": [
+    "PlatformConstitution",
+    "CommunityCharter",
+    "LeadershipRole",
+    "DelegatedAuthority",
+    "Workflow",
+    "BusinessRules"
+  ],
+  "authoritySourceCount": 6,
+  "governanceLevels": [
+    "Platform",
+    "State",
+    "Region",
+    "County",
+    "Institution",
+    "Community",
+    "Committee",
+    "Mission"
+  ],
+  "governanceLevelCount": 8,
+  "proposalLifecycleStages": [
+    "Draft",
+    "Submitted",
+    "Review",
+    "Revision",
+    "Decision",
+    "Publication",
+    "HistoricalArchive"
+  ],
+  "proposalLifecycleStageCount": 7,
+  "deliberationPreserves": [
+    "Discussion",
+    "SupportingDocuments",
+    "Evidence",
+    "AlternativesConsidered",
+    "PublicComments"
+  ],
+  "deliberationPreserveCount": 5,
+  "votingModels": [
+    "SimpleMajority",
+    "Supermajority",
+    "Consensus",
+    "RankedPreference",
+    "AdvisoryVote",
+    "DelegatedDecision"
+  ],
+  "votingModelCount": 6,
+  "quorumFactors": [
+    "QuorumRequirements",
+    "Attendance",
+    "ParticipationThresholds",
+    "VotingEligibility"
+  ],
+  "quorumFactorCount": 4,
+  "transparencyFields": [
+    "DecisionSummary",
+    "SupportingEvidence",
+    "DecisionMakers",
+    "Date",
+    "Version",
+    "RelatedPolicies"
+  ],
+  "transparencyFieldCount": 6,
+  "appealStages": [
+    "Request",
+    "Review",
+    "Evidence",
+    "Decision",
+    "Publication",
+    "HistoricalPreservation"
+  ],
+  "appealStageCount": 6,
+  "emergencyGovernanceTriggers": [
+    "Safety",
+    "Security",
+    "CriticalPlatformFailures",
+    "DisasterResponse"
+  ],
+  "emergencyGovernanceTriggerCount": 4,
+  "governanceCalendarIntegrations": [
+    "Meetings",
+    "ReviewCycles",
+    "ElectionSchedules",
+    "CommunityPlanning",
+    "PolicyAnniversaries"
+  ],
+  "governanceCalendarIntegrationCount": 5,
+  "knowledgeGenerates": [
     "Policies",
-    "ApprovalChains",
-    "Voting",
-    "CommunityGovernance",
-    "InstitutionGovernance",
-    "ChangeApproval",
-    "GovernanceWorkflows"
+    "Lessons",
+    "OperatingGuidance",
+    "Playbooks",
+    "HistoricalRecords"
+  ],
+  "knowledgeGenerateCount": 5,
+  "eventLedgerGovernanceTypes": [
+    "ProposalSubmitted",
+    "ReviewCompleted",
+    "DecisionMade",
+    "PolicyPublished",
+    "AppealFiled",
+    "AppealResolved"
+  ],
+  "eventLedgerGovernanceTypeCount": 6,
+  "digitalTwinGovernanceFields": [
+    "GovernanceMaturity",
+    "PolicyHealth",
+    "LeadershipStability",
+    "DecisionVelocity",
+    "Participation",
+    "ReviewSchedules"
+  ],
+  "digitalTwinGovernanceFieldCount": 6,
+  "aiCapabilities": [
+    "SummarizeProposals",
+    "DraftPolicyLanguage",
+    "CompareHistoricalDecisions",
+    "IdentifyPolicyConflicts",
+    "RecommendPrecedent",
+    "GenerateExecutiveSummaries"
+  ],
+  "aiNeverMakesGovernanceDecisions": true,
+  "constitutionalGovernanceOffice": {
+    "name": "Constitutional Governance Office",
+    "abbreviation": "CGO",
+    "purpose": "Institutional steward of governance — constitutional memory and governance coordinator for the entire Community Operating System",
+    "notAdministrativeDepartment": true,
+    "domains": [
+      {
+        "id": "constitutionalIntegrity",
+        "name": "Constitutional Integrity",
+        "oversees": ["ConstitutionalPrinciples", "GovernanceConsistency", "RuleConflicts", "DelegatedAuthority"]
+      },
+      {
+        "id": "governanceOperations",
+        "name": "Governance Operations",
+        "oversees": ["ActiveProposals", "PendingApprovals", "Appeals", "ReviewCycles", "PolicySunsets"]
+      },
+      {
+        "id": "institutionalMemory",
+        "name": "Institutional Memory",
+        "oversees": ["HistoricalDecisions", "GovernancePrecedents", "CommunityCharters", "PolicyEvolution"]
+      },
+      {
+        "id": "leadershipAccountability",
+        "name": "Leadership Accountability",
+        "oversees": ["LeadershipAppointments", "SuccessionTracking", "GovernanceParticipation", "TermMonitoring"]
+      },
+      {
+        "id": "transparency",
+        "name": "Transparency",
+        "oversees": ["PublicGovernanceRecords", "DecisionSummaries", "SupportingEvidence", "ParticipationStatistics"]
+      },
+      {
+        "id": "intelligence",
+        "name": "Intelligence",
+        "oversees": ["GovernanceMaturity", "PolicyConflicts", "ReviewRecommendations", "AIPolicyComparisons", "ConstitutionalComplianceObservations"]
+      },
+      {
+        "id": "communityHealth",
+        "name": "Community Health",
+        "oversees": ["GovernanceParticipation", "DecisionTimeliness", "AppealFrequency", "CharterReviewStatus", "OrganizationalResilience"]
+      }
+    ],
+    "domainCount": 7,
+    "philosophy": "The Constitution governs the platform — not personalities, convenience, or temporary leadership"
+  },
+  "domainSchemaMapping": {
+    "schema": "PlatformBehavior",
+    "entities": [
+      "GovernanceProcess",
+      "GovernanceProposal",
+      "GovernanceDecision",
+      "AuthorityDelegation",
+      "Appeal",
+      "EmergencyGovernance",
+      "ConstitutionalGovernanceOffice"
+    ]
+  },
+  "projectionIntegrations": {
+    "attentionEnginePath": "data/registry/attention-engine.json",
+    "businessRulesPath": "data/registry/business-rule-engine.json",
+    "workflowEnginePath": "data/registry/workflow-engine.json",
+    "configurationPath": "data/registry/configuration-model.json",
+    "eventLedgerPath": "data/registry/event-data-model.json",
+    "timeCalendarPath": "data/registry/time-calendar-data-model.json",
+    "aiKnowledgePath": "data/registry/ai-knowledge-model.json",
+    "securityPrivacyPath": "data/registry/security-privacy-model.json"
+  },
+  "burtImplementationGuidance": [
+    "Treat governance as a first-class operational capability",
+    "Preserve proposal and decision history",
+    "Separate authority from permissions",
+    "Support multiple governance models",
+    "Integrate with workflows, Business Rules, Community Event Ledger, and Digital Twins",
+    "Make governance transparent and explainable",
+    "Consult Constitutional Governance Office spec before governance-facing features"
   ],
   "acceptanceCriteria": "AC-132",
-  "acceptanceCriteriaMet": false
+  "acceptanceCriteriaMet": true
 }
