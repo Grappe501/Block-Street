@@ -1,4 +1,4 @@
-# Build Volume 2.10 — Search Index Model
+# Build Volume 2.10 — Search Index Data Model
 
 ### Data Architecture Bible
 
@@ -7,116 +7,371 @@
 **Status:** Canonical  
 **Priority:** Critical
 
-**Builds on:** [1.10 Search Architecture](../volume-01/SEARCH_ARCHITECTURE.md) [ENG-010] · [Discovery Engine](../volume-01/DISCOVERY_ENGINE.md) [DGE-001]  
+**Builds on:** [2.6 Event Data Model](EVENT_DATA_MODEL.md) [DAB-007] · [2.5 Knowledge Graph](KNOWLEDGE_GRAPH_SCHEMA.md) [DAB-006] · [1.10 Search Architecture](../volume-01/SEARCH_ARCHITECTURE.md) [ENG-010] · [Discovery Engine](../volume-01/DISCOVERY_ENGINE.md) [DGE-001]  
 **Live spec:** `data/registry/search-index-model.json`
 
----
-
-## DAB-SIX01 — Purpose
-
-**[DAB-SIX01]** Defines search indexes, full-text, semantic, ranking metadata, suggestions, and geographic indexes — supporting the **Discovery Engine**.
+> The search index is **not** the database. It is an optimized, permission-aware projection for discovery.
 
 ---
 
-## DAB-SIX02 — Search Document Envelope
+## Purpose
 
-**[DAB-SIX02a]** Table: `search.search_documents`:
+**[DAB-SIX01]** The Search Index Data Model defines how the Community Operating System transforms canonical data into **high-performance, permission-aware search structures**.
+
+**[DAB-SIX01a]** The index is built from:
+
+- Canonical relational database
+- Community Knowledge Graph [DAB-006]
+- Community Event Ledger [DAB-007]
+- Supporting metadata
+
+**[DAB-SIX01b]** Its purpose is to make discovery **fast, relevant, explainable, and secure**.
+
+---
+
+## Guiding Principle
+
+**[DAB-SIX02]**
+
+> **Search should never become another source of truth.**
+
+**[DAB-SIX02a]** The database owns truth. The search index owns **discovery** [DAB-PH19].
+
+---
+
+## Philosophy
+
+**[DAB-SIX03]** The Community Operating System is not a document search engine. It is a **relationship-centered discovery platform**.
+
+**[DAB-SIX03a]** Search should answer:
+
+- What am I looking for?
+- What else is related?
+- What should I discover next?
+- Who should I connect with?
+- What knowledge already exists?
+- What opportunities fit my interests?
+
+**[DAB-SIX03b]** Search becomes **intelligent navigation** [DGE-001].
+
+---
+
+## Search Architecture
+
+**[DAB-SIX04]** The search architecture consists of six layers:
 
 ```text
-search_documents (
-  id, entity_type, entity_id,
-  title, body, summary,
-  community_scope, visibility, data_class,
-  geo_point,              -- PostGIS point optional
-  county_id, institution_id,
-  tags[], entity_status,
-  ranking_boost, freshness_at,
-  indexed_at, source_version
-)
+Canonical Database
+        ↓
+Projection Engine
+        ↓
+Search Index
+        ↓
+Ranking Engine
+        ↓
+Discovery Engine
+        ↓
+Participant Experience
 ```
 
-**[DAB-SIX02b]** One document per searchable entity instance — upserted on domain events.
+**[DAB-SIX04a]** Each layer has **one responsibility** — indexing separate from ranking separate from presentation.
+
+**[DAB-SIX04b]** Projection Engine aligns with Unified Graph Projection Engine [DAB-KGS13] and Community Event Ledger replay [DAB-EVT14].
 
 ---
 
-## DAB-SIX03 — Index Types
+## Canonical Sources
 
-| Index | Technology V1 | Contents |
-|-------|---------------|----------|
-| **Full-text** | Postgres `tsvector` + GIN | title, body, summary |
-| **Entity** | B-tree composites | type + community + status |
-| **Geographic** | PostGIS | communities, events, institutions |
-| **Suggestion** | Prefix table / trigram | autocomplete candidates |
-| **Semantic** | pgvector V1.1+ | embedding column on search_documents |
+**[DAB-SIX05]** Indexes may be built from:
+
+Participants · Communities · Counties · Institutions · Missions · Events · Stories · Lessons · Playbooks · Community Brain · Partnerships · Resources · Knowledge Graph · Community Event Ledger · Digital Twins
+
+**[DAB-SIX05a]** Canonical data remains **authoritative** — index is always rebuildable.
 
 ---
 
-## DAB-SIX04 — Full-Text Index
+## Search Object
 
-**[DAB-SIX04a]** Column: `search_vector tsvector` generated from weighted fields:
+**[DAB-SIX06]** Every indexed object includes:
 
-- A: title
-- B: summary  
-- C: body
-- D: tags
+| Field | Purpose |
+|-------|---------|
+| Canonical Entity ID | Link to source of truth |
+| Entity Type | Index category |
+| Title | Display and match |
+| Summary | Short description |
+| Search Text | Full-text body |
+| Keywords | Controlled terms |
+| Tags | Discovery aids |
+| Visibility | Permission class |
+| Permission Scope | Community/role scope |
+| Location | Geographic metadata |
+| Relationships | Graph edge refs |
+| Ranking Signals | Explainable scores |
+| Last Indexed | Sync timestamp |
+| Version | Source version |
 
-**[DAB-SIX04b]** Language: `english` default; configurable per document.
-
----
-
-## DAB-SIX05 — Ranking Metadata
-
-**[DAB-SIX05a]** Stored fields for ranking [ENG-SR15]:
-
-```text
-rank_signals (document_id, signal_type, signal_value, computed_at)
-```
-
-**[DAB-SIX05b]** Signals: recency, community relevance, participation overlap, leadership boost, quality score.
-
-**[DAB-SIX05c]** PRE filters results **before** ranking — never index unauthorized content.
+**[DAB-SIX06a]** The search object is optimized for **retrieval** rather than storage.
 
 ---
 
-## DAB-SIX06 — Suggestion Index
+## Index Categories
 
-**[DAB-SIX06a]** Table: `search.suggestions (phrase, entity_type, entity_id, weight)`.
+**[DAB-SIX07]** Nine primary index categories aligned to business domains.
 
-**[DAB-SIX06b]** Built from entity names, community titles, county names, mission titles.
+### Identity Index
 
-**[DAB-SIX06c]** Trigram index for fuzzy match: `pg_trgm`.
+**[DAB-SIX07a]** Supports: Participants · Mentors · Leaders · Volunteers · Skills · Interests
+
+### Community Index
+
+**[DAB-SIX07b]** Supports: Communities · Committees · Community Profiles · Community Health · Growth
+
+### Registry Index
+
+**[DAB-SIX07c]** Supports: Counties · Cities · Institutions · Regions · Facilities
+
+### Mission Index
+
+**[DAB-SIX07d]** Supports: Initiatives · Missions · Projects · Tasks · Milestones
+
+### Experience Index
+
+**[DAB-SIX07e]** Supports: Events · Training · Workshops · Volunteer Opportunities · Attendance
+
+### Knowledge Index
+
+**[DAB-SIX07f]** Supports: Stories · Lessons · Playbooks · Mission Library · Community Brain · Legacy
+
+### Partnership Index
+
+**[DAB-SIX07g]** Supports: Organizations · Partners · Collaborations · Shared Initiatives · Facilities
+
+### Capacity Index
+
+**[DAB-SIX07h]** Supports: Skills · Equipment · Transportation · Resources · Availability
+
+### Intelligence Index
+
+**[DAB-SIX07i]** Supports: Recommendations · Insights · Patterns · Digital Twins · Search intelligence
+
+**[DAB-SIX07i1]** Intelligence index entries remain **derived** — never canonical [DAB-SCH16a].
 
 ---
 
-## DAB-SIX07 — Geographic Index
+## Geographic Index
 
-**[DAB-SIX07a]** Entities with location expose `geo_point` + admin boundaries (county_id).
+**[DAB-SIX08]** Every searchable object may include:
 
-**[DAB-SIX07b]** Supports map search and "near me" discovery [ENG-011 · ADT-002].
+State · County · Region · City · Institution · Coordinates · Map Layers
 
----
-
-## DAB-SIX08 — Semantic Index (V1.1+)
-
-**[DAB-SIX08a]** Column: `embedding vector(1536)` on `search_documents` or separate `search.semantic_chunks`.
-
-**[DAB-SIX08b]** Chunk strategy aligns with [AI_KNOWLEDGE_MODEL.md](AI_KNOWLEDGE_MODEL.md) [DAB-AIK].
+**[DAB-SIX08a]** Geography supports **spatial discovery** — map search and "near me" [ENG-011 · ADT-002].
 
 ---
 
-## DAB-SIX09 — Index Jobs
+## Temporal Index
 
-**[DAB-SIX09a]** Table: `search.index_jobs (entity_type, entity_id, operation, status, attempts, last_error)`.
+**[DAB-SIX09]** Support:
 
-**[DAB-SIX09b]** Worker consumes domain events — at-least-once processing, idempotent upsert.
+- Creation date
+- Modification
+- Historical events
+- Timeline position
+- Upcoming events
+- Anniversaries
+
+**[DAB-SIX09a]** Time becomes **searchable** — fed by Community Event Ledger [DAB-EVT17].
+
+---
+
+## Relationship Index
+
+**[DAB-SIX10]** Index relationship metadata.
+
+Examples: Mentorship · Leadership · Participation · Community membership · Shared missions · Collaborations
+
+**[DAB-SIX10a]** **Relationship-aware search** becomes possible [DAB-REL18].
+
+---
+
+## Semantic Index
+
+**[DAB-SIX11]** Future semantic capabilities include:
+
+- Embeddings
+- Topic clustering
+- Intent matching
+- Similarity search
+- Knowledge recommendations
+
+**[DAB-SIX11a]** Semantic search remains **derived** — V1.1+ optional [DAB-013 · ENG-010].
+
+**[DAB-SIX11b]** Chunk strategy aligns with AI Knowledge Model [DAB-AIK].
+
+---
+
+## Permission Index
+
+**[DAB-SIX12]** Every indexed object stores permission metadata.
+
+Before returning results:
+
+- Visibility is evaluated
+- Community scope is evaluated
+- Role permissions are evaluated
+
+**[DAB-SIX12a]** Sensitive objects **never appear** in unauthorized searches [PRE-001 · DAB-SPM].
+
+**[DAB-SIX12b]** PRE filters **before** ranking — never index unauthorized content.
+
+---
+
+## Ranking Signals
+
+**[DAB-SIX13]** Ranking may consider:
+
+Text relevance · Relationship proximity · Knowledge quality · Community context · Recent activity · Leadership relevance · Participant interests · Geographic proximity · Freshness
+
+**[DAB-SIX13a]** Search ranking should remain **explainable** — cite signals in results [ENG-SR15 · CIF-001].
+
+---
+
+## Facets
+
+**[DAB-SIX14]** Support faceted search.
+
+Examples: County · Community · Institution · Mission · Knowledge Area · Date · Topic · Status · Visibility · Type
+
+**[DAB-SIX14a]** Facets simplify **exploration** without replacing structured navigation.
+
+---
+
+## Autocomplete
+
+**[DAB-SIX15]** Autocomplete should support:
+
+Participants · Communities · Counties · Events · Stories · Knowledge · Playbooks · Organizations
+
+**[DAB-SIX15a]** Autocomplete **respects permissions** — prefix/trigram indexes on authorized entities only.
+
+---
+
+## Saved Search Objects
+
+**[DAB-SIX16]** Participants may save:
+
+Search queries · Filters · Collections · Alerts · Discovery preferences
+
+**[DAB-SIX16a]** Saved searches become **reusable data** — participant-owned operational records, not index truth.
+
+---
+
+## Discovery Objects
+
+**[DAB-SIX17]** Discovery recommendations include:
+
+Suggested communities · Volunteer opportunities · Relevant stories · Nearby events · Mentors · Knowledge · Partnerships
+
+**[DAB-SIX17a]** Discovery **extends search** — proactive recommendations via Discovery Engine [DGE-001].
+
+---
+
+## Reindex Strategy
+
+**[DAB-SIX18]** Indexes should support:
+
+- Incremental updates (domain events)
+- Full rebuild
+- Replay from Event Ledger [DAB-EVT14]
+- Verification
+- Health monitoring
+
+**[DAB-SIX18a]** Reindexing should be **automated** — idempotent upsert by entity ID.
+
+**[DAB-SIX18b]** Index jobs track: entity type, operation, status, attempts, last error.
+
+---
+
+## Search Observability
+
+**[DAB-SIX19]** Track:
+
+Query latency · Popularity · No-result searches · Ranking quality · Permission filtering · Click-through · Discovery success
+
+**[DAB-SIX19a]** Search **continuously improves** — observability feeds analytics [DAB-012].
+
+---
+
+## AI Integration
+
+**[DAB-SIX20]** AI may:
+
+- Generate search summaries
+- Recommend filters
+- Interpret search intent
+- Suggest related knowledge
+- Identify overlooked resources
+- Generate semantic queries
+
+**[DAB-SIX20a]** AI **assists search without changing canonical data** [DAB-PH10 · CIF-001].
+
+---
+
+## Universal Discovery Index
+
+**[DAB-SIX21]** **Major Architectural Recommendation:** Create a **Universal Discovery Index** as the unified search projection for the entire platform.
+
+**[DAB-SIX21a]** Instead of isolated indexes per feature, every canonical entity projects into **one standardized discovery model**.
+
+**[DAB-SIX21b]** Each indexed object contains:
+
+- Canonical entity reference
+- Human-readable title and summary
+- Searchable text
+- Relationships from Community Knowledge Graph
+- Geographic metadata
+- Timeline metadata
+- Visibility and permission metadata
+- Ranking signals
+- Semantic embeddings (when enabled)
+- Digital Twin references (where applicable)
+
+**[DAB-SIX21c]** The Universal Discovery Index becomes the foundation for:
+
+Global Search · Discovery Engine · AI retrieval · Recommendation systems · Dashboard suggestions · Map search · Community exploration · Knowledge reuse
+
+**[DAB-SIX21d]** Principle: **Canonical data is written once, projected many times, and discovered through a single, coherent model.**
+
+**[DAB-SIX21e]** Live spec: `data/registry/search-index-model.json` · `universalDiscoveryIndex`
+
+---
+
+## Burt Implementation Guidance
+
+**[DAB-SIX22]** Implementation should:
+
+1. Treat indexes as **projections**
+2. Keep search **independent from storage technology**
+3. Build **permission-aware indexes**
+4. Separate **ranking from indexing**
+5. Support **incremental and full reindexing**
+6. Integrate with CKG and Community Event Ledger
+7. Route all entity indexing through the **Universal Discovery Index**
+
+**[DAB-SIX22a]** V1 implementation options documented in [ENG-010](../volume-01/SEARCH_ARCHITECTURE.md): Postgres `tsvector` + GIN, PostGIS, trigram — technology replaceable.
 
 ---
 
 ## AC-116 — Acceptance Criteria
 
-- [x] **[AC-116a]** Search document envelope and index types documented. `[DAB-SIX02, SIX03]`
-- [x] **[AC-116b]** Full-text, ranking, and suggestion indexes defined. `[DAB-SIX04–SIX06]`
-- [x] **[AC-116c]** Geographic, semantic, and index job model specified. `[DAB-SIX07–SIX09]`
+Volume 2.10 is complete when:
+
+- [x] **[AC-116a]** Search philosophy is documented. `[DAB-SIX03]`
+- [x] **[AC-116b]** Search object model is defined. `[DAB-SIX06]`
+- [x] **[AC-116c]** Index categories, ranking, facets, autocomplete, and discovery are established. `[DAB-SIX07–SIX17]`
+- [x] **[AC-116d]** Permission, geographic, temporal, and semantic indexing are incorporated. `[DAB-SIX08–SIX12]`
+- [x] **[AC-116e]** Universal Discovery Index specified. `[DAB-SIX21]`
+- [x] **[AC-116f]** Burt has a complete blueprint for search and discovery. `[DAB-SIX22]`
 
 ---
 
