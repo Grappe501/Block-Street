@@ -5093,27 +5093,33 @@
     {
       "id": "UXB-011",
       "title": "AI Experience Architecture — Volume 4.10",
-      "purpose": "AI Experience Architecture experience layer",
-      "description": "VOLUME-004.10 AI Coach, trusted teammate presentation, executive advisor",
-      "priority": "critical",
+      "purpose": "Distributed AI operational capability — contextual teammates not chatbots",
+      "description": "VOLUME-004.10 — AI Federation, 10 specialized AI roles, 8 domain intelligence agents, Executive AI Council, explainability and constitutional governance",
+      "priority": "foundational",
       "principle": "CP-012",
       "dependencies": [
         "UXB-010",
-        "UXB-001"
+        "UXB-009",
+        "UXB-001",
+        "CAB-001"
       ],
       "related": [
-        "UXB-012"
+        "UXB-012",
+        "UXB-013",
+        "AIB-001"
       ],
       "acceptanceCriteria": [
-        "Experience philosophy documented",
-        "UX behaviors defined",
-        "Volume 0-3 integration specified",
-        "Implementation blueprint for experience layer"
+        "AI philosophy documented",
+        "Specialized AI roles defined",
+        "Context, explainability, citations, transparency, ethics, accessibility, and workspace integration established",
+        "Digital Twin, Community Brain, Community Event Ledger, and Operational Intelligence incorporated",
+        "AI Federation specified",
+        "Complete blueprint for AI experiences throughout the platform"
       ],
-      "futureNotes": "Scaffold — pending canonical build step",
-      "implementationStatus": "pending",
+      "futureNotes": "Guiding principle: AI should amplify human judgment, never replace it.",
+      "implementationStatus": "done",
       "testingStatus": "pending",
-      "documentationStatus": "pending",
+      "documentationStatus": "done",
       "trace": {
         "database": null,
         "api": null,
@@ -5123,7 +5129,7 @@
       },
       "versionHistory": {
         "created": "2026-07-10",
-        "implemented": null
+        "implemented": "2026-07-10"
       }
     },
     {

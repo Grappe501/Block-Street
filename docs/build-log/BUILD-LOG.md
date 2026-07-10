@@ -18,6 +18,24 @@
 
 ---
 
+## 2026-07-10 — Volume 4.10 AI Experience Architecture [UXB-011 · AC-146]
+
+**Document:** `docs/volume-04/AI_EXPERIENCE_ARCHITECTURE.md` · **Registry:** `data/registry/ai-experience-architecture.json`
+
+### What Changed
+
+- **Guiding principle:** *AI should amplify human judgment, never replace it.*
+- AI as distributed operational capability — not a feature or chatbot
+- **7-layer AI operational model** and **8 AI principles**
+- **10 specialized AI roles:** Personal Coach through Writing Assistant
+- Context assembly, conversation memory, explainability, citations, transparency, workspace presence
+- AI collaboration, learning from institutional knowledge, accessibility, mobile AI, Digital Twins, Event Ledger
+- **AI ethics** governed by Constitution — never override governance or replace leadership
+- **AI Federation** — Executive AI Council + 8 domain intelligence agents with shared operational memory
+- Admin Volume 4 tab · requirements UXB-011 updated · Volume 4: 9/14 complete (4.4 pending)
+
+---
+
 ## 2026-07-10 — Volume 4.9 Mobile & Field Operations Experience Architecture [UXB-010 · AC-145]
 
 **Document:** `docs/volume-04/MOBILE_EXPERIENCE_ARCHITECTURE.md` · **Registry:** `data/registry/mobile-experience-architecture.json`

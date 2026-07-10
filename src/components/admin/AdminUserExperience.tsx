@@ -46,6 +46,9 @@ type ExperienceReg = {
   fieldOperationsCommandLayer?: { assemblyDomainCount: number; deviceRoleCount: number };
   fieldOperationModeCount?: number;
   mobilePrincipleCount?: number;
+  aiFederation?: { domainIntelligenceAgentCount: number };
+  aiRoleCount?: number;
+  aiPrincipleCount?: number;
 };
 
 const FEATURED_SUBTITLES: Record<string, string> = {
@@ -57,6 +60,7 @@ const FEATURED_SUBTITLES: Record<string, string> = {
   "4.7": "Workspaces",
   "4.8": "Collaboration",
   "4.9": "Field Operations",
+  "4.10": "AI Experience",
 };
 
 const EXPERIENCE_CARDS: { step: string; label: string; reg: ExperienceReg; cardClass: string; metaClass: string; titleClass: string; featured?: boolean }[] = [
@@ -69,7 +73,7 @@ const EXPERIENCE_CARDS: { step: string; label: string; reg: ExperienceReg; cardC
   { step: "4.7", label: "Unified Workspace Manager", reg: work, cardClass: "border-pink-300 bg-pink-50", metaClass: "text-pink-700", titleClass: "text-pink-950", featured: true },
   { step: "4.8", label: "Collaborative Intelligence Network", reg: collab, cardClass: "border-rose-300 bg-rose-50", metaClass: "text-rose-700", titleClass: "text-rose-950", featured: true },
   { step: "4.9", label: "Field Operations Command Layer", reg: mobile, cardClass: "border-red-300 bg-red-50", metaClass: "text-red-700", titleClass: "text-red-950", featured: true },
-  { step: "4.10", label: "AI Experience", reg: aiexp, cardClass: "border-orange-300 bg-orange-50", metaClass: "text-orange-700", titleClass: "text-orange-950" },
+  { step: "4.10", label: "AI Federation", reg: aiexp, cardClass: "border-orange-300 bg-orange-50", metaClass: "text-orange-700", titleClass: "text-orange-950", featured: true },
   { step: "4.11", label: "Engagement & Gamification", reg: engage, cardClass: "border-amber-300 bg-amber-50", metaClass: "text-amber-700", titleClass: "text-amber-950" },
   { step: "4.12", label: "Trust & Transparency", reg: trust, cardClass: "border-yellow-300 bg-yellow-50", metaClass: "text-yellow-700", titleClass: "text-yellow-950" },
   { step: "4.13", label: "Institutional Experience", reg: inst, cardClass: "border-lime-300 bg-lime-50", metaClass: "text-lime-700", titleClass: "text-lime-950" },
@@ -102,7 +106,11 @@ export function AdminUserExperience() {
             <p className={`mt-2 text-xs ${metaClass}`}>
               {reg.acceptanceCriteria} · {reg.status}
             </p>
-            {reg.fieldOperationsCommandLayer ? (
+            {reg.aiFederation ? (
+              <p className={`mt-1 text-xs ${metaClass}`}>
+                {reg.aiRoleCount ?? 0} AI roles · {reg.aiPrincipleCount ?? 0} AI principles · {reg.aiFederation.domainIntelligenceAgentCount} federation agents · Executive AI Council
+              </p>
+            ) : reg.fieldOperationsCommandLayer ? (
               <p className={`mt-1 text-xs ${metaClass}`}>
                 {reg.fieldOperationModeCount ?? 0} field modes · {reg.mobilePrincipleCount ?? 0} mobile principles · {reg.fieldOperationsCommandLayer.assemblyDomainCount} FOCL domains · {reg.fieldOperationsCommandLayer.deviceRoleCount} device roles
               </p>
