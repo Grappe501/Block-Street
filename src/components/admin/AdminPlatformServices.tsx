@@ -13,6 +13,7 @@ import deploy from "../../../data/registry/deployment-architecture-volume5.json"
 import security from "../../../data/registry/security-architecture-volume5.json";
 import observability from "../../../data/registry/observability-architecture-volume5.json";
 import scalability from "../../../data/registry/scalability-architecture-volume5.json";
+import platformOps from "../../../data/registry/platform-operations-architecture-volume5.json";
 
 type ServiceReg = {
   acceptanceCriteria: string;
@@ -35,6 +36,9 @@ type ServiceReg = {
   constitutionalSecurityFabric?: { abbreviation: string; fabricLayers?: { layerCount: number }; securityFabricResponsibilities?: { fabricCount: number } };
   operationalIntelligenceGrid?: { abbreviation: string; gridLayers?: { layerCount: number }; oigResponsibilities?: { responsibilityCount: number } };
   adaptiveCapacityGrid?: { abbreviation: string; gridPipeline?: { stageCount: number }; capacityDomains?: { domainCount: number } };
+  platformStewardshipOffice?: { abbreviation: string; stewardshipResponsibilities?: { responsibilityCount: number }; platformSelfAssessment?: { dimensionCount: number } };
+  operationalPrincipleCount?: number;
+  platformGovernanceAreaCount?: number;
   scalingDomainCount?: number;
   scalabilityPrincipleCount?: number;
   signalDomainCount?: number;
@@ -72,6 +76,7 @@ type ServiceReg = {
   constitutionalSecurityModel?: { layerCount: number };
   observabilityArchitecture?: { layerCount: number };
   scalabilityArchitecture?: { layerCount: number };
+  platformLifecycle?: { layerCount: number };
   localBrainCompatibility?: { localBrainFirstClassRuntime: boolean };
   localBrainFederation?: {
     explicitIntegration?: boolean;
@@ -97,9 +102,11 @@ const FEATURED_SUBTITLES: Record<string, string> = {
   "5.10": "Security & Trust",
   "5.11": "Observability",
   "5.12": "Scalability",
+  "5.13": "Platform Operations",
 };
 
 const SERVICE_CARDS: { step: string; label: string; reg: ServiceReg; cardClass: string; metaClass: string; titleClass: string; featured?: boolean }[] = [
+  { step: "5.13", label: "Platform Stewardship Office", reg: platformOps, cardClass: "border-fuchsia-300 bg-fuchsia-50", metaClass: "text-fuchsia-700", titleClass: "text-fuchsia-950", featured: true },
   { step: "5.12", label: "Adaptive Capacity Grid", reg: scalability, cardClass: "border-violet-300 bg-violet-50", metaClass: "text-violet-700", titleClass: "text-violet-950", featured: true },
   { step: "5.11", label: "Operational Intelligence Grid", reg: observability, cardClass: "border-cyan-300 bg-cyan-50", metaClass: "text-cyan-700", titleClass: "text-cyan-950", featured: true },
   { step: "5.10", label: "Constitutional Security Fabric", reg: security, cardClass: "border-emerald-300 bg-emerald-50", metaClass: "text-emerald-700", titleClass: "text-emerald-950", featured: true },
@@ -143,7 +150,11 @@ export function AdminPlatformServices() {
             <p className={`mt-2 text-xs ${metaClass}`}>
               {reg.acceptanceCriteria} · {reg.status}
             </p>
-            {reg.adaptiveCapacityGrid ? (
+            {reg.platformStewardshipOffice ? (
+              <p className={`mt-1 text-xs ${metaClass}`}>
+                {reg.platformGovernanceAreaCount ?? 0} governance areas · {reg.operationalPrincipleCount ?? 0} principles · {reg.platformLifecycle?.layerCount ?? 0} lifecycle stages · {reg.platformStewardshipOffice.stewardshipResponsibilities?.responsibilityCount ?? 0} PSO responsibilities · {reg.platformStewardshipOffice.platformSelfAssessment?.dimensionCount ?? 0} self-assessment dimensions · Digital Stewardship Twin
+              </p>
+            ) : reg.adaptiveCapacityGrid ? (
               <p className={`mt-1 text-xs ${metaClass}`}>
                 {reg.scalingDomainCount ?? 0} scaling domains · {reg.scalabilityPrincipleCount ?? 0} principles · {reg.scalabilityArchitecture?.layerCount ?? 0} scalability layers · {reg.adaptiveCapacityGrid.gridPipeline?.stageCount ?? 0} ACG pipeline stages · {reg.adaptiveCapacityGrid.capacityDomains?.domainCount ?? 0} capacity domains · Community-Preserving Scalability
               </p>

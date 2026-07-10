@@ -5532,6 +5532,49 @@
       }
     },
     {
+      "id": "PSI-014",
+      "title": "Platform Operations, Governance & Lifecycle Architecture — Volume 5.13",
+      "purpose": "Operate the platform as a governed institution — stewardship, certification, and decades-long evolution",
+      "description": "VOLUME-005.13 — Platform Stewardship Office, platform registry, feature lifecycle, certification, AI and connector governance, Digital Stewardship Twin",
+      "priority": "constitutional_infrastructure",
+      "principle": "CP-001",
+      "dependencies": [
+        "PSI-013",
+        "PSI-012",
+        "PSI-011",
+        "PSI-001",
+        "PBA-014",
+        "PBA-006"
+      ],
+      "related": [
+        "PSI-001",
+        "PSI-015"
+      ],
+      "acceptanceCriteria": [
+        "Platform operations philosophy documented",
+        "Governance, lifecycle, certification, and releases established",
+        "Registries, AI governance, connector governance, and LocalBrain governance defined",
+        "Platform Twins, Community Event Ledger, Executive Operations Center, and historical preservation incorporated",
+        "Platform Stewardship Office specified",
+        "Complete blueprint for operating the Community Operating System itself"
+      ],
+      "futureNotes": "Guiding principle: Govern the platform with the same principles used to govern communities.",
+      "implementationStatus": "done",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": null,
+        "api": "API-SYSTEM",
+        "frontend": "UI-SYSTEM",
+        "test": "TEST-PSI-014",
+        "doc": "DOC-PSI-014"
+      },
+      "versionHistory": {
+        "created": "2026-07-10",
+        "implemented": "2026-07-10"
+      }
+    },
+    {
       "id": "PSI-013",
       "title": "Scalability, Performance & Resilience Architecture — Volume 5.12",
       "purpose": "Grow without redesign — preserve community quality while scaling to thousands of institutions",
@@ -6078,7 +6121,7 @@
         "Foundation stack Volumes 0-5 defined",
         "Complete blueprint for platform services and integration architecture"
       ],
-      "futureNotes": "Volume 5 scaffold — 12/14 canonical steps complete. LocalBrain woven throughout every chapter.",
+      "futureNotes": "Volume 5 scaffold — 13/14 canonical steps complete. LocalBrain woven throughout every chapter.",
       "implementationStatus": "scaffold",
       "testingStatus": "pending",
       "documentationStatus": "scaffold",

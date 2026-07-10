@@ -10,7 +10,7 @@
   "readAfter": "UXB-001",
   "coreQuestion": "How does the Community Operating System connect to the outside world while remaining one unified platform?",
   "guidingPrinciple": "One platform. Many connections. Constitutional governance everywhere.",
-  "stepsComplete": 12,
+  "stepsComplete": 13,
   "stepsTotal": 14,
   "platformServiceCount": 27,
   "localBrainWovenThroughout": true,
@@ -29,7 +29,7 @@
     { "id": "5.10", "name": "Security Architecture", "requirement": "PSI-011", "artifact": "docs/volume-05/SECURITY_ARCHITECTURE.md", "registryPath": "data/registry/security-architecture-volume5.json", "status": "done" },
     { "id": "5.11", "name": "Observability Architecture", "requirement": "PSI-012", "artifact": "docs/volume-05/OBSERVABILITY_ARCHITECTURE.md", "registryPath": "data/registry/observability-architecture-volume5.json", "status": "done" },
     { "id": "5.12", "name": "Scalability Architecture", "requirement": "PSI-013", "artifact": "docs/volume-05/SCALABILITY_ARCHITECTURE.md", "registryPath": "data/registry/scalability-architecture-volume5.json", "status": "done" },
-    { "id": "5.13", "name": "Platform Operations Architecture", "requirement": "PSI-014", "artifact": "docs/volume-05/PLATFORM_OPERATIONS_ARCHITECTURE.md", "registryPath": "data/registry/platform-operations-architecture.json", "status": "pending" },
+    { "id": "5.13", "name": "Platform Operations Architecture", "requirement": "PSI-014", "artifact": "docs/volume-05/PLATFORM_OPERATIONS_ARCHITECTURE.md", "registryPath": "data/registry/platform-operations-architecture-volume5.json", "status": "done" },
     { "id": "5.14", "name": "Platform Integration Orchestrator", "requirement": "PSI-015", "artifact": "docs/volume-05/PLATFORM_ORCHESTRATOR.md", "registryPath": "data/registry/platform-orchestrator.json", "status": "pending" }
   ],
   "foundationStack": [

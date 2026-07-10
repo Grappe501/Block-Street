@@ -18,6 +18,21 @@
 
 ---
 
+## 2026-07-10 — Volume 5.13 Platform Operations, Governance & Lifecycle Architecture [PSI-014 · AC-163]
+
+**Document:** `docs/volume-05/PLATFORM_OPERATIONS_ARCHITECTURE.md` · **Registry:** `data/registry/platform-operations-architecture-volume5.json`
+
+### What Changed
+
+- **Guiding principle:** *Govern the platform with the same principles used to govern communities.*
+- Platform as governed institution — operations become stewardship
+- Platform lifecycle, feature lifecycle, certification, release architecture, platform registry
+- AI governance, connector governance, LocalBrain governance, historical preservation
+- **Platform Stewardship Office (PSO)** — 6 stewardship responsibilities, constitution review cycle, Digital Stewardship Twin
+- Umbrella PSI-001 · platform-services-integration-bible 13/14 · Volume 5 in progress
+
+---
+
 ## 2026-07-10 — Volume 5.12 Scalability, Performance & Resilience Architecture [PSI-013 · AC-162]
 
 **Document:** `docs/volume-05/SCALABILITY_ARCHITECTURE.md` · **Registry:** `data/registry/scalability-architecture-volume5.json`
