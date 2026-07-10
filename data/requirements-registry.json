@@ -30,7 +30,7 @@
     { "prefix": "OBE", "domain": "Opportunity & belonging engine" },
     { "prefix": "PEL", "domain": "Participant experience & lifecycle" },
     { "prefix": "COS", "domain": "Community operating system" },
-    { "prefix": "CMD", "domain": "Community doctrine" },
+    { "prefix": "CCN", "domain": "Community constitution" },
     { "prefix": "CHQ", "domain": "Community headquarters" },
     { "prefix": "PRJ", "domain": "Community projects" },
     { "prefix": "CPP", "domain": "Civic passport" },
@@ -942,7 +942,7 @@
       "description": "PHASE-004 master sequence 14 steps — Constitution, HQ, committees, projects, calendar, comms, knowledge, analytics, collaboration, memory",
       "priority": "critical",
       "principle": "CP-004",
-      "dependencies": ["CID-001", "CMD-001", "PHQ-001", "PEL-001"],
+      "dependencies": ["CID-001", "CCN-001", "PHQ-001", "PEL-001"],
       "related": ["COM-001", "OBE-001", "CAM-001", "STS-001"],
       "acceptanceCriteria": [
         "Community Operating System architecture documented",
@@ -963,22 +963,23 @@
       "versionHistory": { "created": "2026-07-10", "implemented": null }
     },
     {
-      "id": "CMD-001",
-      "title": "Community Doctrine",
-      "purpose": "One philosophy for every community — platform structure, people culture",
-      "description": "PHASE-004.1 Community Constitution, community types, Community OS concept, PHQ parallel, CID and Phase 3 integration",
+      "id": "CCN-001",
+      "title": "Community Constitution",
+      "purpose": "Inherited constitutional framework for every community — movement infrastructure",
+      "description": "PHASE-004.1 constitutional hierarchy, Community Charters, equal standing, rights/responsibilities, identity, leadership, growth, continuity — required reading for Burt",
       "priority": "critical",
       "principle": "CP-004",
-      "dependencies": ["CID-001", "OM-006", "PHQ-001", "PEL-001"],
+      "dependencies": ["CID-001", "OM-006", "PHQ-001", "PEL-001", "CONST"],
       "related": ["COS-001", "CNTY-002", "INST-003", "COM-001"],
       "acceptanceCriteria": [
-        "Community doctrine philosophy documented",
-        "Community types defined",
-        "Community Operating System concept specified",
-        "Community Constitution architecture documented",
-        "Blueprint for community-centric platform layer"
+        "Constitutional philosophy for communities documented",
+        "Community rights and responsibilities established",
+        "Equal standing among communities reinforced",
+        "Identity, leadership, growth, and continuity principles defined",
+        "Community Charters architecture specified",
+        "Blueprint for every community as living institution"
       ],
-      "futureNotes": "Constitution editor v1.1, full OS Steps 4.2–4.14",
+      "futureNotes": "Charter editor v1.1, full OS Steps 4.2–4.14",
       "implementationStatus": "done",
       "testingStatus": "pending",
       "documentationStatus": "done",
@@ -986,8 +987,8 @@
         "database": "DB-INSTITUTIONS",
         "api": null,
         "frontend": "PAGE-INSTITUTION",
-        "test": "TEST-CMD-001",
-        "doc": "DOC-CMD-001"
+        "test": "TEST-CCN-001",
+        "doc": "DOC-CCN-001"
       },
       "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
     },

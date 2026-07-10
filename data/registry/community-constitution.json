@@ -1,0 +1,146 @@
+{
+  "version": "1.1.0",
+  "docPath": "docs/phase-04/COMMUNITY_CONSTITUTION.md",
+  "requiredReadingForBurt": true,
+  "motto": "Communities are built by people, strengthened by relationships, and sustained by shared purpose.",
+  "principle": "The software exists to support communities — not define them.",
+  "frameworkPrinciple": "The platform provides the framework. The members create the culture.",
+  "purpose": "Constitutional framework inherited by every community — county, campus, committee, project, and future organizing spaces.",
+  "movementInfrastructure": true,
+  "constitutionalHierarchy": [
+    { "layer": "platformConstitution", "ref": "Phase 1 BUILD-BIBLE", "scope": "Entire ASYON" },
+    { "layer": "communityConstitution", "ref": "This document CCN-001", "scope": "Inherited by all communities" },
+    { "layer": "communityIdentity", "ref": "CID-001 + Community Charter", "scope": "Per-community identity" },
+    { "layer": "communityActivity", "ref": "Steps 4.4–4.7", "scope": "Projects, events, committees" },
+    { "layer": "communityLegacy", "ref": "Step 4.13", "scope": "Memory and history" }
+  ],
+  "definitionOfCommunity": "Group connected by shared place, purpose, interest, or commitment",
+  "communityTypes": [
+    "county",
+    "university",
+    "communityCollege",
+    "tradeSchool",
+    "highSchoolFuture",
+    "committee",
+    "volunteerTeam",
+    "project",
+    "alumniNetwork",
+    "regionalCollaboration",
+    "statewideInitiative"
+  ],
+  "equalStanding": {
+    "noInherentHierarchy": true,
+    "sameArchitecturalSupport": true,
+    "differsByParticipationNotImportance": true,
+    "ref": "OM-006"
+  },
+  "communityPurpose": [
+    "buildRelationships",
+    "developLeaders",
+    "supportMeaningfulParticipation",
+    "strengthenLocalConnections",
+    "createServiceOpportunities",
+    "preserveInstitutionalKnowledge",
+    "welcomeNewParticipants",
+    "helpMembersGrow"
+  ],
+  "communityRights": [
+    "developOwnIdentity",
+    "tellOwnStory",
+    "celebrateAchievements",
+    "defineLocalPriorities",
+    "organizeAroundLocalNeeds",
+    "createCommittees",
+    "launchProjects",
+    "buildPartnerships",
+    "archiveOwnHistory"
+  ],
+  "communityResponsibilities": [
+    "welcomingNewcomers",
+    "respectingParticipants",
+    "maintainingAccurateInformation",
+    "supportingCollaboration",
+    "developingFutureLeaders",
+    "sharingKnowledge",
+    "preservingCommunityHistory",
+    "encouragingRespectfulParticipation"
+  ],
+  "communityIdentity": {
+    "elements": ["mission", "vision", "goals", "traditions", "history", "culture", "currentPriorities", "communityStories", "localResources"],
+    "growsNaturally": true,
+    "extendsCommunityDNA": "CID-M13"
+  },
+  "communityLeadership": {
+    "servesCommunity": true,
+    "responsibilities": ["facilitatingParticipation", "developingOthers", "coordinatingProjects", "welcomingNewMembers", "protectingCulture", "sharingKnowledge"],
+    "rotatesAndExpands": true
+  },
+  "communityMembership": {
+    "basedOnParticipationNotStatus": true,
+    "multipleSimultaneous": true,
+    "complementNotCompete": true
+  },
+  "communityRelationships": {
+    "examples": ["campusCounty", "countyCounty", "campusCampus", "committeeProject", "projectVolunteerTeam", "regionalStatewide"],
+    "noIsolation": true
+  },
+  "communityMemory": {
+    "preserves": ["projects", "milestones", "events", "volunteerStories", "leadershipTransitions", "photos", "resources", "meetingNotes"],
+    "implementsAt": "Step 4.13"
+  },
+  "communityGrowth": {
+    "healthySignals": ["welcomingCulture", "volunteerParticipation", "leadershipDevelopment", "knowledgeSharing", "relationshipBuilding", "successfulProjects", "communityResilience"],
+    "measuredByStrengthNotSize": true
+  },
+  "communityAutonomy": {
+    "localDecisionsWithinFramework": true,
+    "toolsNotDirectives": true
+  },
+  "communityContinuity": {
+    "survivesLeadershipTransitions": true,
+    "knowledgeAvailableToFutureOrganizers": true
+  },
+  "communityCharters": {
+    "description": "Per-community document built on inherited Constitution — genuine local voice",
+    "signatureFeature": true,
+    "orchestrator": "getCommunityCharter(communityId)",
+    "constitutionVsCharter": {
+      "constitution": "Inherited by every community — consistent statewide",
+      "charter": "Written by that specific community — living document"
+    },
+    "elements": [
+      "missionThisYear",
+      "goalsThisSemester",
+      "meetingRhythm",
+      "traditions",
+      "values",
+      "currentProjects",
+      "howNewMembersGetInvolved",
+      "annualPriorities",
+      "successStories",
+      "communityAgreements"
+    ],
+    "participantEditable": true,
+    "appendOnlyHistory": true,
+    "v1": "missionWelcomePrioritiesStub"
+  },
+  "communityOperatingSystem": {
+    "ref": "PHASE_4_MASTER_SEQUENCE",
+    "modules": ["constitution", "charter", "headquarters", "calendar", "committees", "projects", "communications", "knowledge", "resources", "marketplace", "analytics", "memory", "collaboration"]
+  },
+  "v1Scope": {
+    "constitutionAndHierarchy": true,
+    "chartersSpec": true,
+    "charterStubOnHubs": true,
+    "fullOS": "Steps 4.2-4.14"
+  },
+  "implementation": {
+    "gate": "Constitution inheritance + Charter schema required for all community types",
+    "requiredReading": true,
+    "files": [
+      "src/lib/community/CommunityConstitution.ts",
+      "src/lib/community/CommunityCharter.ts",
+      "src/lib/community/assembleCommunityHQ.ts"
+    ]
+  }
+}

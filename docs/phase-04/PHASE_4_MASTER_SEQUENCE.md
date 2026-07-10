@@ -13,7 +13,7 @@ Phase 3 answered **Who am I?** Phase 4 is where the platform changes from a coll
 
 Every campus, county, committee, and project functions like a small **operating system** — with its own people, communications, calendar, projects, leadership, and history.
 
-**Constitution for communities:** [Community Doctrine](COMMUNITY_DOCTRINE.md)
+**Constitution for communities:** [Community Constitution](COMMUNITY_CONSTITUTION.md)
 
 **Live index:** `data/community/community-operating-system.json`
 
@@ -48,7 +48,7 @@ When complete:
 
 | Step | Document | Focus | Status |
 |------|----------|-------|--------|
-| 4.1 | [Community Doctrine](COMMUNITY_DOCTRINE.md) | What a community is + Community Constitution | ✅ |
+| 4.1 | [Community Constitution](COMMUNITY_CONSTITUTION.md) | Inherited framework + Community Charters | ✅ |
 | 4.2 | Community Lifecycle | Born → grow → sustain → archive | Pending |
 | 4.3 | Community Headquarters | Community HQ — parallel to Personal HQ | Pending |
 | 4.4 | Committee System | Core organizing units | Pending |
@@ -65,17 +65,18 @@ When complete:
 
 ---
 
-## 4.1 — Community Doctrine
+## 4.1 — Community Constitution
 
-**Requirement focus:** CMD-001 · COS-001 · CID-001 · CP-004
+**Requirement focus:** CCN-001 · COS-001 · CP-004 · CID-001
 
-**One philosophy for every community type:**
+**Movement infrastructure** — inherited constitutional framework for every community:
 
-- Campus · County · Committee · Project · Interest Group · Regional Collaboration
-- **Community Constitution** — purpose, goals, values, priorities, stories, opportunities, traditions
-- **Platform provides structure. People create culture.**
+- **Constitutional hierarchy** — Platform → Community Constitution → Identity → Activity → Legacy
+- **Community Charters [CCN-M17]** — per-community voice on inherited framework
+- **Equal standing** — same capabilities; differs by participation not importance
+- **Rights, responsibilities, autonomy, continuity**
 
-*Live spec:* `community-doctrine.json`
+*Live spec:* `community-constitution.json` · **Required reading for Burt**
 
 ---
 

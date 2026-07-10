@@ -29,7 +29,7 @@ The platform becomes a **network of interconnected community operating systems**
 
 | Step | Document | Status |
 |------|----------|--------|
-| 4.1 | [Community Doctrine](COMMUNITY_DOCTRINE.md) | ✅ |
+| 4.1 | [Community Constitution](COMMUNITY_CONSTITUTION.md) | ✅ |
 | 4.2 | Community Lifecycle | Pending |
 | 4.3 | Community Headquarters | Pending |
 | 4.4 | Committee System | Pending |
@@ -50,7 +50,8 @@ The platform becomes a **network of interconnected community operating systems**
 
 | Feature | Doc |
 |---------|-----|
-| **Community Constitution** | Purpose, values, traditions — people create culture [CMD-001] |
+| **Community Constitution** | Inherited framework — Platform → Charter → Identity → Activity → Legacy [CCN-001] |
+| **Community Charters** | Per-community living documents — people create culture [CCN-M17] |
 | **Community HQ** | Parallel to Personal HQ — every community's organizing home [4.3] |
 | **Community OS modules** | Calendar · Committees · Projects · Comms · Knowledge · Analytics |
 | **Cross-community collaboration** | Communities never become silos [4.11] |

@@ -4,9 +4,27 @@
 
 ---
 
+## 2026-07-10 — PHASE-004.1 Community Constitution (Expanded Canonical)
+
+**Document ID:** PHASE-004.1 · **CCN-001 · AC-034**
+
+### What Was Built
+
+- **Movement infrastructure** — every future feature belongs to a community
+- **Constitutional hierarchy** — Platform → Community Constitution → Identity → Activity → Legacy
+- **Community Charters [CCN-M17]** — per-community living documents on inherited framework
+- **Rights, responsibilities, equal standing** — rural county = largest university architecturally
+- **Guiding principle:** Communities built by people, sustained by shared purpose
+
+### Guiding Principle Locked
+
+> **Communities are built by people, strengthened by relationships, and sustained by shared purpose.**
+
+---
+
 ## 2026-07-10 — PHASE-004.0 Community Operating System — Doctrine (Canonical)
 
-**Document ID:** PHASE-004.0 / PHASE-004.1 · **CMD-001 · COS-001 · AC-034**
+**Document ID:** PHASE-004.0 / PHASE-004.1 · **CCN-001 · COS-001 · AC-034**
 
 ### What Was Built
 

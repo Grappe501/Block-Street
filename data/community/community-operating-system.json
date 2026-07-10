@@ -20,7 +20,7 @@
     "Community memory and institutional history"
   ],
   "steps": [
-    { "id": "4.1", "name": "Community Doctrine", "artifact": "COMMUNITY_DOCTRINE.md", "status": "done", "requirement": "CMD-001" },
+    { "id": "4.1", "name": "Community Constitution", "artifact": "COMMUNITY_CONSTITUTION.md", "status": "done", "requirement": "CCN-001" },
     { "id": "4.2", "name": "Community Lifecycle", "artifact": "COMMUNITY_LIFECYCLE.md", "status": "pending", "requirement": "STS-001" },
     { "id": "4.3", "name": "Community Headquarters", "artifact": "COMMUNITY_HEADQUARTERS.md", "status": "pending", "requirement": "CHQ-001" },
     { "id": "4.4", "name": "Committee System", "artifact": "COMMITTEE_SYSTEM.md", "status": "pending", "requirement": "COM-001" },

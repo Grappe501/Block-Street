@@ -102,7 +102,7 @@ Network of **interconnected community operating systems** — each campus, count
 
 | Capability | Description |
 |------------|-------------|
-| Community Doctrine | One philosophy — platform structure, people culture |
+| Community Constitution | Inherited framework + Community Charters [CCN-001] |
 | **Community Constitution** | Purpose, values, traditions per community |
 | Community HQ | Parallel to Personal HQ [PHQ-001] |
 | Committees & Projects | Core organizing units |

@@ -110,7 +110,7 @@
       "docPath": "docs/phase-04/PHASE_4_MASTER_SEQUENCE.md",
       "question": "Where do we work together?",
       "steps": [
-        { "id": "4.1", "name": "Community Doctrine [CMD-001]", "status": "done", "notes": "CMD-M01–M14, Community Constitution, one philosophy all types, OS concept" },
+        { "id": "4.1", "name": "Community Constitution [CCN-001]", "status": "done", "notes": "CCN-M01–M20, constitutional hierarchy, Community Charters, rights/responsibilities, equal standing" },
         { "id": "4.2", "name": "Community Lifecycle", "status": "pending", "notes": "Planning through Rebuilding — STS-001 extension" },
         { "id": "4.3", "name": "Community Headquarters [CHQ-001]", "status": "pending", "notes": "Parallel to PHQ — mission, calendar, people, projects" },
         { "id": "4.4", "name": "Committee System [COM-001]", "status": "pending", "notes": "Core organizing units" },
@@ -227,9 +227,9 @@
   "buildLog": [
     {
       "date": "2026-07-10",
-      "title": "PHASE-004.0 Community Operating System — Doctrine (Canonical)",
+      "title": "PHASE-004.1 Community Constitution — expanded canonical (movement infrastructure)",
       "phase": 4,
-      "summary": "CMD-M01–M14 Community Constitution, 14-step master sequence, network of community OS instances, structure not culture"
+      "summary": "CCN-M01–M20 inherited Constitution, Community Charters, hierarchy Platform→Legacy, equal standing, rights and responsibilities"
     },
     {
       "date": "2026-07-10",
