@@ -1,0 +1,186 @@
+{
+  "version": "2.0.0",
+  "documentId": "VOLUME-005.4",
+  "requirementId": "PSI-005",
+  "docPath": "docs/volume-05/EVENT_STREAM_ARCHITECTURE.md",
+  "status": "canonical",
+  "priority": "foundational",
+  "lastUpdated": "2026-07-10",
+  "guidingPrinciple": "Every meaningful action becomes an event. Every event becomes institutional memory.",
+  "eventPhilosophy": {
+    "eventFirstNotPolling": true,
+    "institutionalEventsNotMerelyTransactions": true,
+    "eventsAreNervousSystem": true,
+    "nothingImportantDisappearsWhenWorkflowFinishes": true,
+    "contributesToKnowledgeIntelligenceHealthTwinsMemory": true
+  },
+  "eventArchitecture": {
+    "layers": [
+      "Action",
+      "PlatformService",
+      "BusinessRules",
+      "CommunityEventLedger",
+      "EventBus",
+      "Subscribers",
+      "KnowledgeGraph",
+      "DigitalTwins",
+      "OperationalIntelligence"
+    ],
+    "layerCount": 9
+  },
+  "eventPrincipleCount": 8,
+  "eventPrinciples": [
+    "Immutable",
+    "Timestamped",
+    "Versioned",
+    "Traceable",
+    "Replayable",
+    "PermissionAware",
+    "Observable",
+    "Explainable"
+  ],
+  "eventCategoryCount": 13,
+  "eventCategories": [
+    { "id": "identity", "name": "Identity Events", "examples": ["ParticipantCreated", "ProfileUpdated", "RoleAssigned", "PermissionChanged", "SessionStarted", "SessionEnded"] },
+    { "id": "community", "name": "Community Events", "examples": ["CommunityCreated", "MemberJoined", "LeaderAppointed", "CommunityHealthUpdated", "CommunityArchived"] },
+    { "id": "mission", "name": "Mission Events", "examples": ["MissionCreated", "MissionStarted", "VolunteerAssigned", "MissionCompleted", "ReflectionSubmitted", "ImpactRecorded"] },
+    { "id": "volunteer", "name": "Volunteer Events", "examples": ["VolunteerRegistered", "TrainingCompleted", "HoursLogged", "RecognitionAwarded", "MentorshipStarted"] },
+    { "id": "leadership", "name": "Leadership Events", "examples": ["LeadershipPathStarted", "MentorAssigned", "LeadershipMilestone", "SuccessionUpdated", "LeadershipHealthReviewed"] },
+    { "id": "knowledge", "name": "Knowledge Events", "examples": ["StoryPublished", "PlaybookUpdated", "ResearchAdded", "LessonLearned", "KnowledgeApproved"] },
+    { "id": "governance", "name": "Governance Events", "examples": ["ProposalSubmitted", "VoteRecorded", "DecisionApproved", "AppealFiled", "PolicyUpdated"] },
+    { "id": "calendar", "name": "Calendar Events", "examples": ["MeetingScheduled", "MeetingCompleted", "ReminderSent", "CalendarSynchronized", "AttendanceRecorded"] },
+    { "id": "communication", "name": "Communication Events", "examples": ["EmailSent", "SMSDelivered", "AnnouncementPublished", "PushNotificationDelivered", "VoiceBroadcastCompleted"] },
+    { "id": "ai", "name": "AI Events", "examples": ["RecommendationGenerated", "SummaryCreated", "CitationRetrieved", "ConfidenceUpdated", "HumanOverride", "AIFeedbackReceived"] },
+    { "id": "integration", "name": "Integration Events", "examples": ["SynchronizationCompleted", "ExternalImport", "ExternalExport", "ConnectorFailure", "ConflictDetected"] },
+    { "id": "security", "name": "Security Events", "examples": ["LoginSuccess", "LoginFailure", "PermissionEscalation", "TokenRevoked", "ThreatDetected"] },
+    { "id": "platform", "name": "Platform Events", "examples": ["ServiceStarted", "ServiceStopped", "UpgradeCompleted", "HealthWarning", "DeploymentCompleted"] }
+  ],
+  "eventStructure": {
+    "fields": ["EventId", "Timestamp", "EventType", "PlatformService", "Institution", "Community", "Mission", "Participant", "CorrelationId", "Version", "Payload", "Permissions", "TraceInformation"],
+    "fieldCount": 13,
+    "selfDescribing": true
+  },
+  "eventLifecycle": {
+    "stages": ["Generated", "Validated", "Published", "Consumed", "Archived", "Replayable"],
+    "stageCount": 6,
+    "noEventDiscarded": true
+  },
+  "eventBus": {
+    "distributesTo": ["PlatformServices", "AIFederation", "CommunityEventLedger", "KnowledgeGraph", "DigitalTwinService", "OperationalIntelligence", "CommunityHealth", "Notifications", "Automation"],
+    "subscriberCount": 9,
+    "looselyCoupledSubscribers": true
+  },
+  "eventSubscription": {
+    "serviceDeclares": ["SubscribedEvents", "RequiredEvents", "OptionalEvents", "Priority", "RetryStrategy", "DeadLetterBehavior"],
+    "explicitDependencies": true
+  },
+  "replay": {
+    "purposes": ["Recovery", "Testing", "Synchronization", "KnowledgeReconstruction", "DigitalTwinRebuilding"],
+    "firstClassCapability": true
+  },
+  "eventOrdering": {
+    "supports": ["OrderedStreams", "ParallelStreams", "CausalRelationships", "CorrelationIds", "DistributedTiming"],
+    "deterministicWhereRequired": true
+  },
+  "deadLetterQueue": {
+    "flow": ["DeadLetterQueue", "Investigation", "Correction", "Replay", "Resolution"],
+    "failuresObservable": true
+  },
+  "eventVersioning": {
+    "supports": ["SchemaEvolution", "BackwardCompatibility", "Migration", "Deprecation", "HistoricalReplay"],
+    "durableEvents": true
+  },
+  "localBrainFederation": {
+    "flow": ["LocalEventBus", "SynchronizationQueue", "RegionalBus", "CloudEventBus", "InstitutionalMemory"],
+    "offlineOperationContinues": true
+  },
+  "aiIntegration": {
+    "subscribesTo": ["MissionEvents", "KnowledgeEvents", "LeadershipEvents", "CommunityEvents", "VolunteerEvents", "CalendarEvents"],
+    "subscriptionCount": 6,
+    "reactsToInstitutionalChangeNotPolling": true
+  },
+  "communityEventLedgerIntegration": {
+    "ledgerQualities": ["Authoritative", "Immutable", "Searchable", "Historical", "Explainable"],
+    "eventBusFeedsLedger": true,
+    "ledgerDoesNotReplaceEventBus": true
+  },
+  "digitalTwinIntegration": {
+    "twinsUpdateFromEvents": true,
+    "neverFromDatabasePolling": true,
+    "eventsAreBehavioralHistorySource": true
+  },
+  "communityHealthIntegration": {
+    "recalculatesFrom": ["VolunteerEvents", "LeadershipEvents", "MissionEvents", "KnowledgeEvents", "CommunityEvents"],
+    "eventDrivenHealth": true
+  },
+  "observabilityStandard": {
+    "exposedMetrics": ["Latency", "Delivery", "Subscribers", "Failures", "ReplayHistory", "ProcessingTime"],
+    "metricCount": 6
+  },
+  "securityStandard": {
+    "eventContains": ["PermissionScope", "Visibility", "RetentionPolicy", "EncryptionStatus", "Classification"],
+    "securityTravelsWithEvents": true
+  },
+  "institutionalEventFabric": {
+    "name": "Institutional Event Fabric",
+    "abbreviation": "IEF",
+    "understandsEventsNotMerelyTransports": true,
+    "fabricLayers": {
+      "layers": [
+        "EventProducers",
+        "Validation",
+        "Classification",
+        "Routing",
+        "KnowledgeExtraction",
+        "DigitalTwinUpdates",
+        "CommunityHealthUpdates",
+        "OperationalIntelligence",
+        "CommunityEventLedger"
+      ],
+      "layerCount": 9
+    },
+    "eventEnrichment": {
+      "domains": [
+        { "id": "context", "name": "Context", "includes": ["Institution", "Community", "County", "Workspace", "Mission", "Calendar"] },
+        { "id": "relationships", "name": "Relationships", "includes": ["Participants", "Teams", "Mentors", "Organizations", "RelatedMissions"] },
+        { "id": "knowledge", "name": "Knowledge", "includes": ["RelatedPlaybooks", "PreviousSimilarEvents", "LessonsLearned", "CommunityBrainReferences"] },
+        { "id": "intelligence", "name": "Intelligence", "includes": ["CommunityHealthImplications", "OperationalIntelligence", "LeadershipImplications", "RiskIndicators"] }
+      ],
+      "domainCount": 4
+    },
+    "eventTimeMachine": {
+      "reconstructAnyPointInTime": true,
+      "examples": ["RebuildMissionTwinHistorically", "ReplayCommunityLaunch", "TraceGovernanceDecisionEvolution", "RecreatePreIncidentOperationalState", "AuditLeadershipDevelopmentProgression"],
+      "recreatesOperationalHistoryNotTransactionList": true
+    },
+    "eventStreamsAsKnowledge": {
+      "identifiesPatterns": ["FrequentlyRepeatedWorkflows", "EmergingVolunteerLeaders", "CollaboratingCommunities", "SuccessfulMissionSequences", "RecurringOperationalBottlenecks"],
+      "feeds": ["CommunityBrain", "OperationalIntelligence", "LeadershipAcademy", "AIFederation"],
+      "continuousInstitutionalLearning": true
+    },
+    "localBrainEventFederation": {
+      "maintainsLocalHistoryWithSelectiveSync": true,
+      "enables": ["FullyOfflineOperation", "EventualSynchronization", "CommunityAutonomy", "SharedInstitutionalLearning", "DisasterResilience"]
+    },
+    "pairsWithCommunityEventLedger": true,
+    "pairsWithPlatformServiceMesh": true
+  },
+  "architecturalInsight": {
+    "livingInstitutionalSystemNotRequestResponse": true,
+    "answersHowDidWeArriveHere": true,
+    "institutionalMemoryExplainableHistoryReplayableWorkflows": true,
+    "aiGroundedInHistoricalContext": true,
+    "platformGrowsWiserOverTime": true
+  },
+  "burtImplementationGuidance": [
+    "Build event-first architecture",
+    "Treat Community Event Ledger as institutional history",
+    "Separate event streaming from historical storage",
+    "Require every Platform Service to publish meaningful events",
+    "Support LocalBrain event synchronization",
+    "Design replay as first-class capability",
+    "Implement through Institutional Event Fabric"
+  ],
+  "acceptanceCriteria": "AC-154",
+  "acceptanceCriteriaMet": true
+}
