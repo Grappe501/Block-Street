@@ -1,1 +1,130 @@
-{"version":"1.0.0","requirementId":"DAB-004","docPath":"docs/volume-02/RELATIONSHIP_DATA_MODEL.md","coreEdgeTypes":["member_of","leads","mentors","invited","organizes","participated_in","contributed_to","partners_with","located_in","serves","documents_in","parent_of"],"acceptanceCriteria":"AC-109"}
+{
+  "version": "2.0.0",
+  "documentId": "VOLUME-002.3",
+  "requirementId": "DAB-004",
+  "docPath": "docs/volume-02/RELATIONSHIP_DATA_MODEL.md",
+  "status": "canonical",
+  "priority": "critical",
+  "lastUpdated": "2026-07-10",
+  "guidingPrinciple": "Relationships are data—not just connections between data.",
+  "canonicalTable": "graph.entity_relationships",
+  "relationshipLedger": {
+    "enabled": true,
+    "registryPath": "data/registry/relationship-data-model.json",
+    "ledgerFields": [
+      "participatingEntities",
+      "relationshipType",
+      "context",
+      "timelineOfChanges",
+      "relatedEvents",
+      "supportingStories",
+      "knowledgeGenerated",
+      "visibility",
+      "auditHistory"
+    ]
+  },
+  "relationshipCategories": [
+    { "id": "membership", "name": "Membership", "examples": ["Participant-Community", "Participant-Committee", "Participant-Initiative"] },
+    { "id": "leadership", "name": "Leadership", "examples": ["Participant-LeadershipRole", "Leader-Community", "Leader-Initiative"] },
+    { "id": "mentorship", "name": "Mentorship", "examples": ["Mentor-Participant", "Mentor-CommunityBuilder"] },
+    { "id": "invitation", "name": "Invitation", "examples": ["Participant-Participant", "Community-Participant", "Institution-Community"] },
+    { "id": "partnership", "name": "Partnership", "examples": ["Community-Organization", "Institution-Community", "County-University"] },
+    { "id": "collaboration", "name": "Collaboration", "examples": ["Mission-Community", "Community-Community", "Volunteer-Project"] },
+    { "id": "geographic", "name": "Geographic", "examples": ["Community-County", "Institution-City", "County-Region"] },
+    { "id": "knowledge", "name": "Knowledge", "examples": ["Lesson-Playbook", "Story-Mission", "BrainEntry-Community"] },
+    { "id": "story", "name": "Story", "examples": ["Story-Participant", "Story-Mission", "Story-Event", "Story-Lesson"] },
+    { "id": "resource", "name": "Resource", "examples": ["Equipment-Event", "Facility-Community", "Volunteer-Skill"] }
+  ],
+  "categoryCount": 10,
+  "coreEdgeTypes": [
+    "member_of",
+    "leads",
+    "mentors",
+    "invited",
+    "supports",
+    "organizes",
+    "attended",
+    "participated_in",
+    "partners_with",
+    "collaborates_with",
+    "located_in",
+    "serves",
+    "published",
+    "created",
+    "completed",
+    "inspired",
+    "uses",
+    "improves",
+    "succeeded_by",
+    "references",
+    "contributed_to",
+    "documents_in",
+    "derived_from",
+    "parent_of",
+    "has_skill"
+  ],
+  "edgeTypeCount": 25,
+  "metadataFields": [
+    "id",
+    "relationshipType",
+    "startDate",
+    "endDate",
+    "status",
+    "visibility",
+    "source",
+    "createdBy",
+    "updatedBy",
+    "confidence",
+    "notes",
+    "provenance"
+  ],
+  "lifecycleStates": ["proposed", "pending", "active", "paused", "completed", "archived"],
+  "visibilityLevels": ["private", "community", "regional", "statewide", "public"],
+  "provenanceFields": [
+    "establishedBy",
+    "participantCreated",
+    "systemGenerated",
+    "imported",
+    "verified",
+    "externalSource"
+  ],
+  "strengthSignals": [
+    "sharedMissions",
+    "volunteerHistory",
+    "mentorshipDuration",
+    "eventsAttendedTogether",
+    "knowledgeContributions",
+    "collaborativeInitiatives"
+  ],
+  "signatureGraphs": [
+    { "name": "Trust", "edgeTypes": ["mentors", "leads", "member_of"] },
+    { "name": "Growth", "edgeTypes": ["invited", "member_of", "participated_in"] },
+    { "name": "Conversation", "edgeTypes": ["participated_in", "attended"] },
+    { "name": "Capability", "edgeTypes": ["has_skill", "uses"] },
+    { "name": "Decision", "edgeTypes": ["documents_in", "references"] },
+    { "name": "Improvement", "edgeTypes": ["improves", "derived_from"] },
+    { "name": "Operational", "edgeTypes": ["parent_of", "organizes", "supports"] },
+    { "name": "Impact", "edgeTypes": ["contributed_to", "published", "inspired"] }
+  ],
+  "firstClassRelationshipEntities": [
+    "Membership",
+    "Mentorship",
+    "Partnership",
+    "Attendance",
+    "Application",
+    "LeadershipRole"
+  ],
+  "domainTables": [
+    { "name": "community.community_members", "mapsTo": "member_of" },
+    { "name": "growth.invitations", "mapsTo": "invited" }
+  ],
+  "aiCapabilities": [
+    "recommendMentors",
+    "identifyCollaborationOpportunities",
+    "suggestPartnershipIntroductions",
+    "summarizeRelationshipHistory",
+    "recommendLeadershipSuccession"
+  ],
+  "acceptanceCriteria": "AC-109",
+  "acceptanceCriteriaMet": true
+}
