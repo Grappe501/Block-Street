@@ -18,6 +18,22 @@
 
 ---
 
+## 2026-07-10 — Volume 5.7 Media, Content & Digital Asset Architecture [PSI-008 · AC-157]
+
+**Document:** `docs/volume-05/MEDIA_ARCHITECTURE.md` · **Registry:** `data/registry/media-architecture-volume5.json`
+
+### What Changed
+
+- **Guiding principle:** *Every digital asset should remain understandable, discoverable, reusable, and historically meaningful.*
+- Media as institutional knowledge — relationships not folders
+- **7 digital asset categories** — documents through evidence
+- Canonical metadata, version control, 6-stage media lifecycle, AI media intelligence
+- **Institutional Memory Repository (IMR)** — Memory Objects, Knowledge Extraction Engine, Evidence Objects, Living Collections
+- LocalBrain preservation, accessibility, security, Community Brain and Digital Twin integration
+- Umbrella PSI-001 · platform-services-integration-bible 7/14 · Volume 5 in progress
+
+---
+
 ## 2026-07-10 — Volume 5.6 Search, Discovery & Knowledge Retrieval [PSI-007 · AC-156]
 
 **Document:** `docs/volume-05/SEARCH_ARCHITECTURE.md` · **Registry:** `data/registry/search-architecture-volume5.json`

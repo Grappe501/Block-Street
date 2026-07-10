@@ -5532,6 +5532,49 @@
       }
     },
     {
+      "id": "PSI-008",
+      "title": "Media, Content & Digital Asset Architecture — Volume 5.7",
+      "purpose": "Govern every digital artifact as institutional memory — context, relationships, preservation",
+      "description": "VOLUME-005.7 — 7 asset categories, Institutional Memory Repository, Memory Objects, Knowledge Extraction Engine, Living Collections, Evidence preservation",
+      "priority": "strategic",
+      "principle": "CP-012",
+      "dependencies": [
+        "PSI-007",
+        "PSI-006",
+        "PSI-001",
+        "DAB-009",
+        "ENG-012",
+        "PBA-013"
+      ],
+      "related": [
+        "PSI-001",
+        "PSI-009"
+      ],
+      "acceptanceCriteria": [
+        "Media philosophy documented",
+        "Asset categories and lifecycle defined",
+        "Canonical metadata and AI enrichment established",
+        "Community Brain, Community Event Ledger, Digital Twin, search, LocalBrain, accessibility, observability, and security incorporated",
+        "Institutional Memory Repository specified",
+        "Complete blueprint for platform media architecture"
+      ],
+      "futureNotes": "Guiding principle: Every digital asset should remain understandable, discoverable, reusable, and historically meaningful.",
+      "implementationStatus": "done",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": null,
+        "api": "API-SYSTEM",
+        "frontend": "UI-SYSTEM",
+        "test": "TEST-PSI-008",
+        "doc": "DOC-PSI-008"
+      },
+      "versionHistory": {
+        "created": "2026-07-10",
+        "implemented": "2026-07-10"
+      }
+    },
+    {
       "id": "PSI-007",
       "title": "Search, Discovery & Knowledge Retrieval Architecture — Volume 5.6",
       "purpose": "Platform-wide discovery — participants search for answers, not files",
@@ -5824,7 +5867,7 @@
         "Foundation stack Volumes 0-5 defined",
         "Complete blueprint for platform services and integration architecture"
       ],
-      "futureNotes": "Volume 5 scaffold — 6/14 canonical steps complete. LocalBrain woven throughout every chapter.",
+      "futureNotes": "Volume 5 scaffold — 7/14 canonical steps complete. LocalBrain woven throughout every chapter.",
       "implementationStatus": "scaffold",
       "testingStatus": "pending",
       "documentationStatus": "scaffold",

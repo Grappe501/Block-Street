@@ -123,7 +123,7 @@
       { "id": "V5.4", "name": "Event Streaming Architecture [PSI-005]", "status": "done", "notes": "Institutional Event Fabric, 13 event categories, Event Time Machine — AC-154" },
       { "id": "V5.5", "name": "Synchronization Architecture [PSI-006]", "status": "done", "notes": "Federated Synchronization Mesh, 9 domains, 8 federation levels — AC-155" },
       { "id": "V5.6", "name": "Search, Discovery & Knowledge Retrieval [PSI-007]", "status": "done", "notes": "Knowledge Retrieval Fabric, 10 domains, 6 search types, Knowledge Bundles — AC-156" },
-      { "id": "V5.7", "name": "Media & Content Architecture [PSI-008]", "status": "pending", "notes": "Governed media lifecycle" },
+      { "id": "V5.7", "name": "Media, Content & Digital Asset Architecture [PSI-008]", "status": "done", "notes": "Institutional Memory Repository, 7 asset categories, Memory Objects, Living Collections — AC-157" },
       { "id": "V5.8", "name": "Communications Architecture [PSI-009]", "status": "pending", "notes": "Constitutional communications" },
       { "id": "V5.9", "name": "Deployment Architecture [PSI-010]", "status": "pending", "notes": "LocalBrain, cloud, hybrid, edge" },
       { "id": "V5.10", "name": "Security Architecture [PSI-011]", "status": "pending", "notes": "Systemic security, device trust" },
