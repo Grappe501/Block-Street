@@ -1,23 +1,369 @@
 {
-  "version": "1.0.0",
-  "documentId": "VOLUME-003.04",
+  "version": "2.0.0",
+  "documentId": "VOLUME-003.4",
   "requirementId": "PBA-005",
   "docPath": "docs/volume-03/COMMUNITY_LIFECYCLE.md",
-  "status": "pending",
+  "status": "canonical",
   "priority": "critical",
   "lastUpdated": "2026-07-10",
-  "guidingPrinciple": "Behavior is governed, not improvised.",
-  "defines": [
-    "CommunityProposal",
-    "Approval",
-    "Launch",
+  "guidingPrinciple": "Communities are cultivated, not simply created.",
+  "communityPhilosophy": {
+    "notMerelyDatabaseRecord": true,
+    "livingOrganization": true,
+    "matureIntentionally": true,
+    "technologySupportsNotDefines": true,
+    "lifecycleExtendsBeyondActivation": true
+  },
+  "communityArchitecture": {
+    "stages": [
+      "Vision",
+      "Proposal",
+      "Planning",
+      "Approval",
+      "Launch",
+      "Growth",
+      "Maturity",
+      "Expansion",
+      "Succession",
+      "Legacy"
+    ],
+    "stageCount": 10
+  },
+  "communityDimensions": [
+    "People",
+    "Leadership",
+    "Relationships",
+    "Knowledge",
+    "Traditions",
+    "Service",
+    "History",
+    "Legacy"
+  ],
+  "communityDimensionCount": 8,
+  "lifecycleStages": [
+    {
+      "id": "vision",
+      "name": "Vision",
+      "order": 1,
+      "origins": [
+        "ParticipantRequest",
+        "InstitutionRequest",
+        "CountyInitiative",
+        "LeadershipStrategy",
+        "CommunityDemand",
+        "GrowthAnalysis"
+      ]
+    },
+    {
+      "id": "proposal",
+      "name": "Proposal",
+      "order": 2,
+      "includes": [
+        "Purpose",
+        "TargetInstitution",
+        "TargetGeography",
+        "ExpectedLeadership",
+        "InitialGoals",
+        "CommunityType",
+        "ReadinessAssessment"
+      ],
+      "governedObject": true
+    },
+    {
+      "id": "planning",
+      "name": "Planning",
+      "order": 3,
+      "includes": [
+        "LeadershipRecruitment",
+        "CommunityCharter",
+        "MissionDefinition",
+        "CalendarPlanning",
+        "KnowledgeSpacePreparation",
+        "CommunicationPlanning",
+        "PartnershipIdentification"
+      ]
+    },
+    {
+      "id": "approval",
+      "name": "Approval",
+      "order": 4,
+      "evaluates": [
+        "LeadershipReadiness",
+        "CommunityCharter",
+        "BusinessRules",
+        "Governance",
+        "InstitutionalSupport",
+        "ResourceAvailability"
+      ],
+      "followsWorkflowEngine": true
+    },
+    {
+      "id": "launch",
+      "name": "Launch",
+      "order": 5,
+      "provisions": [
+        "CommunityProfile",
+        "LeadershipAssignments",
+        "CommitteeStructure",
+        "Calendar",
+        "KnowledgeSpace",
+        "WelcomeJourney",
+        "InitialEvents",
+        "InvitationCampaign"
+      ],
+      "coordinatedNotManual": true
+    },
+    {
+      "id": "growth",
+      "name": "Growth",
+      "order": 6,
+      "includes": [
+        "Recruitment",
+        "VolunteerDevelopment",
+        "KnowledgeCreation",
+        "MissionExecution",
+        "LeadershipDevelopment",
+        "CommunityTraditions"
+      ],
+      "measuredHolistically": true
+    },
+    {
+      "id": "maturity",
+      "name": "Maturity",
+      "order": 7,
+      "characteristics": [
+        "StableLeadership",
+        "HealthyParticipation",
+        "KnowledgeReuse",
+        "CommunityTraditions",
+        "Mentorship",
+        "OperationalConsistency"
+      ],
+      "selfSustaining": true
+    },
+    {
+      "id": "expansion",
+      "name": "Expansion",
+      "order": 8,
+      "activities": [
+        "LaunchNeighboringCommunities",
+        "SupportOtherCampuses",
+        "DevelopRegionalInitiatives",
+        "MentorNewLeaders",
+        "SharePlaybooks"
+      ],
+      "networkGrowth": true
+    },
+    {
+      "id": "succession",
+      "name": "Succession",
+      "order": 9,
+      "includes": [
+        "Mentorship",
+        "KnowledgeTransfer",
+        "HistoricalPreservation",
+        "RoleAssignment",
+        "Celebration",
+        "ContinuityPlanning"
+      ],
+      "expectedNotExceptional": true
+    },
+    {
+      "id": "legacy",
+      "name": "Legacy",
+      "order": 10,
+      "preserves": [
+        "CommunityHistory",
+        "Stories",
+        "Traditions",
+        "Playbooks",
+        "LeadershipHistory",
+        "Milestones",
+        "InstitutionalKnowledge"
+      ]
+    }
+  ],
+  "lifecycleStageCount": 10,
+  "communityHealthIndicators": [
+    "Participation",
+    "Leadership",
+    "Knowledge",
+    "VolunteerRetention",
+    "MissionActivity",
+    "Partnerships",
+    "Belonging"
+  ],
+  "communityHealthIndicatorCount": 7,
+  "communityHealthObservatory": {
+    "name": "Community Health Observatory",
+    "interpretsHealthSignals": true,
+    "registryPath": "data/registry/analytics-metrics-model.json"
+  },
+  "communityCharterFields": [
+    "Mission",
+    "Values",
+    "Purpose",
+    "OperatingPrinciples",
+    "LeadershipModel",
+    "MeetingRhythm",
+    "CommunityAgreements"
+  ],
+  "communityCharterFieldCount": 7,
+  "communityCapacityTracks": [
+    "Leaders",
+    "Mentors",
+    "Facilities",
+    "Technology",
+    "Resources",
+    "Funding",
+    "Skills"
+  ],
+  "communityCapacityTrackCount": 7,
+  "communityRelationshipTypes": [
+    "Institutions",
+    "Counties",
+    "Partners",
+    "OtherCommunities",
+    "Initiatives",
+    "Missions"
+  ],
+  "communityRelationshipTypeCount": 6,
+  "communityKnowledgeAssets": [
+    "CommunityBrain",
+    "Stories",
+    "Lessons",
+    "Playbooks",
+    "HistoricalArchive",
+    "MissionLibrary"
+  ],
+  "communityKnowledgeAssetCount": 6,
+  "communityCalendarEvents": [
+    "Meetings",
+    "VolunteerEvents",
+    "Training",
+    "Traditions",
+    "LeadershipSessions",
+    "Planning"
+  ],
+  "communityCalendarEventCount": 6,
+  "digitalTwinSummaryFields": [
+    "Health",
     "Growth",
-    "Maturity",
-    "Expansion",
-    "Succession",
-    "Archival",
-    "InstitutionalLegacy"
+    "Leadership",
+    "Knowledge",
+    "Capacity",
+    "Relationships",
+    "Calendar",
+    "CommunityHistory"
+  ],
+  "digitalTwinFieldCount": 8,
+  "knowledgeGraphProjections": [
+    "LeadershipGraph",
+    "MembershipGraph",
+    "MissionGraph",
+    "KnowledgeGraph",
+    "PartnershipGraph"
+  ],
+  "knowledgeGraphProjectionCount": 5,
+  "recognitionTypes": [
+    "Anniversaries",
+    "VolunteerMilestones",
+    "Leadership",
+    "KnowledgeContributions",
+    "MissionImpact",
+    "CommunityTraditions"
+  ],
+  "recognitionTypeCount": 6,
+  "closurePreserves": [
+    "Knowledge",
+    "LeadershipHistory",
+    "Stories",
+    "Relationships",
+    "Playbooks",
+    "HistoricalIdentity"
+  ],
+  "closurePreserveCount": 6,
+  "aiCapabilities": [
+    "RecommendGrowthStrategies",
+    "IdentifyLeadershipGaps",
+    "SuggestPartnerships",
+    "RecommendMissionTiming",
+    "SummarizeCommunityHistory",
+    "RecommendSuccessionPlanning"
+  ],
+  "aiNeverReplacesLeadership": true,
+  "communityOperatingManual": {
+    "name": "Community Operating Manual",
+    "purpose": "Living self-documenting manual generated from canonical community activity — synchronized operating knowledge for leaders and mentors",
+    "notStaticHandbook": true,
+    "generatedFromCanonicalData": true,
+    "selfDocumenting": true,
+    "domains": [
+      {
+        "id": "identity",
+        "name": "Identity",
+        "incorporates": ["Mission", "Charter", "Values", "LeadershipStructure"]
+      },
+      {
+        "id": "operations",
+        "name": "Operations",
+        "incorporates": ["MeetingCadence", "Committees", "Calendar", "VolunteerWorkflows", "MissionTemplates"]
+      },
+      {
+        "id": "knowledge",
+        "name": "Knowledge",
+        "incorporates": ["CommunityBrain", "LessonsLearned", "Playbooks", "Stories", "HistoricalMilestones"]
+      },
+      {
+        "id": "leadership",
+        "name": "Leadership",
+        "incorporates": ["CurrentLeaders", "SuccessionPlans", "MentorshipPathways", "LeadershipHistory"]
+      },
+      {
+        "id": "growth",
+        "name": "Growth",
+        "incorporates": ["MembershipTrends", "RecruitmentStrategies", "Partnerships", "CommunityHealthIndicators"]
+      },
+      {
+        "id": "legacy",
+        "name": "Legacy",
+        "incorporates": ["Traditions", "AnniversaryTimeline", "MajorAccomplishments", "CommunityArchives"]
+      }
+    ],
+    "domainCount": 6,
+    "philosophy": "Reusable blueprints for statewide network growth while preserving each community's unique culture and traditions"
+  },
+  "domainSchemaMapping": {
+    "schema": "PlatformBehavior",
+    "entities": [
+      "CommunityLifecycle",
+      "CommunityCharter",
+      "CommunityHealth",
+      "CommunityCapacity",
+      "CommunityOperatingManual",
+      "CommunityDigitalTwinProjection"
+    ]
+  },
+  "projectionIntegrations": {
+    "identityLifecyclePath": "data/registry/identity-lifecycle-engine.json",
+    "workflowEnginePath": "data/registry/workflow-engine.json",
+    "businessRulesPath": "data/registry/business-rule-engine.json",
+    "entityDictionaryPath": "data/registry/canonical-entity-dictionary.json",
+    "relationshipModelPath": "data/registry/relationship-data-model.json",
+    "knowledgeGraphPath": "data/registry/knowledge-graph-schema.json",
+    "timeCalendarPath": "data/registry/time-calendar-data-model.json",
+    "analyticsMetricsPath": "data/registry/analytics-metrics-model.json",
+    "aiKnowledgePath": "data/registry/ai-knowledge-model.json"
+  },
+  "burtImplementationGuidance": [
+    "Model communities as long-lived organizational entities",
+    "Preserve complete lifecycle history",
+    "Separate lifecycle stages from operational status",
+    "Integrate with workflows, calendars, knowledge, and Digital Twins",
+    "Preserve institutional memory after closure",
+    "Design communities to mentor future communities",
+    "Consult Community Operating Manual spec before community-facing lifecycle features"
   ],
   "acceptanceCriteria": "AC-125",
-  "acceptanceCriteriaMet": false
+  "acceptanceCriteriaMet": true
 }
