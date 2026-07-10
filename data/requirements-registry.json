@@ -4360,27 +4360,36 @@
     {
       "id": "PBA-004",
       "title": "Identity & Lifecycle Engine — Volume 3.3",
-      "purpose": "Participant progression Prospect through Legacy",
-      "description": "VOLUME-003.3 lifecycle transitions and permission evolution",
+      "purpose": "Participant lifecycle from Discovery through Legacy with earned progression",
+      "description": "VOLUME-003.3 — Personal Operating System, 9 lifecycle stages, timeline, portfolio, recognition, Digital Twin, graph and AI integration",
       "priority": "critical",
       "principle": "CP-001",
       "dependencies": [
         "PBA-003",
-        "DAB-003"
+        "DAB-003",
+        "DAB-004",
+        "DAB-007",
+        "DAB-014"
       ],
       "related": [
-        "PBA-005"
+        "PBA-005",
+        "DAB-006",
+        "DAB-013",
+        "ENG-008",
+        "ENG-009"
       ],
       "acceptanceCriteria": [
-        "Engine philosophy documented",
-        "Operational behaviors defined",
-        "Volume 2 integration specified",
-        "Implementation blueprint for engine"
+        "Identity philosophy documented",
+        "Lifecycle stages defined",
+        "Progression, recognition, portfolio, and legacy models established",
+        "Calendar, knowledge, graph, Digital Twin, and AI integrations incorporated",
+        "Personal Operating System specified",
+        "Complete blueprint for Identity & Lifecycle Engine"
       ],
-      "futureNotes": "Scaffold — pending canonical build step",
-      "implementationStatus": "pending",
+      "futureNotes": "Guiding principle: People are not static records. They are journeys.",
+      "implementationStatus": "done",
       "testingStatus": "pending",
-      "documentationStatus": "pending",
+      "documentationStatus": "done",
       "trace": {
         "database": "DB-COS",
         "api": null,
@@ -4390,7 +4399,7 @@
       },
       "versionHistory": {
         "created": "2026-07-10",
-        "implemented": null
+        "implemented": "2026-07-10"
       }
     },
     {

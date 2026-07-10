@@ -18,6 +18,22 @@
 
 ---
 
+## 2026-07-10 — Volume 3.3 Identity & Lifecycle Engine [PBA-004 · AC-124]
+
+**Document:** `docs/volume-03/IDENTITY_LIFECYCLE.md` · **Registry:** `data/registry/identity-lifecycle-engine.json`
+
+### What Changed
+
+- **Guiding principle:** *People are not static records. They are journeys.*
+- Developmental identity — not simply authentication; earned progression through participation
+- **9 lifecycle stages:** Discovery through Legacy
+- Identity components, timeline, portfolio, recognition, status model, privacy controls
+- Digital Twin, calendar, knowledge, knowledge graph, and AI integrations
+- **Personal Operating System** — participant operational cockpit with 7 domains (Identity through Intelligence)
+- Admin Volume 3 tab · requirements PBA-004 updated · Volume 3: 3/14 complete
+
+---
+
 ## 2026-07-10 — Volume 3.2 Workflow Engine [PBA-003 · AC-123]
 
 **Document:** `docs/volume-03/WORKFLOW_ENGINE.md` · **Registry:** `data/registry/workflow-engine.json`

@@ -25,14 +25,21 @@ type EngineReg = {
   workflowCategoryCount?: number;
   communityProcessOrchestrator?: { coordinateCount: number; communityLaunchExampleStepCount: number };
   policyDecisionPoint?: { evaluationStepCount: number; exampleRequestCount: number };
+  personalOperatingSystem?: { domainCount: number };
   lifecycleStageCount?: number;
   runtimePipelineLayerCount?: number;
+};
+
+const FEATURED_SUBTITLES: Record<string, string> = {
+  "3.1": "Business Rules",
+  "3.2": "Workflow",
+  "3.3": "Identity & Lifecycle",
 };
 
 const ENGINE_CARDS: { step: string; label: string; reg: EngineReg; cardClass: string; metaClass: string; titleClass: string; featured?: boolean }[] = [
   { step: "3.1", label: "Policy Decision Point", reg: bre, cardClass: "border-violet-300 bg-violet-50", metaClass: "text-violet-700", titleClass: "text-violet-950", featured: true },
   { step: "3.2", label: "Community Process Orchestrator", reg: wor, cardClass: "border-purple-300 bg-purple-50", metaClass: "text-purple-700", titleClass: "text-purple-950", featured: true },
-  { step: "3.3", label: "Identity Lifecycle", reg: idl, cardClass: "border-fuchsia-300 bg-fuchsia-50", metaClass: "text-fuchsia-700", titleClass: "text-fuchsia-950" },
+  { step: "3.3", label: "Personal Operating System", reg: idl, cardClass: "border-fuchsia-300 bg-fuchsia-50", metaClass: "text-fuchsia-700", titleClass: "text-fuchsia-950", featured: true },
   { step: "3.4", label: "Community Lifecycle", reg: clo, cardClass: "border-pink-300 bg-pink-50", metaClass: "text-pink-700", titleClass: "text-pink-950" },
   { step: "3.5", label: "Mission Execution", reg: mex, cardClass: "border-rose-300 bg-rose-50", metaClass: "text-rose-700", titleClass: "text-rose-950" },
   { step: "3.6", label: "Volunteer Experience", reg: vxe, cardClass: "border-red-300 bg-red-50", metaClass: "text-red-700", titleClass: "text-red-950" },
@@ -64,7 +71,7 @@ export function AdminPlatformBehavior() {
       <div className="grid gap-4 md:grid-cols-2">
         {ENGINE_CARDS.map(({ step, label, reg, cardClass, metaClass, titleClass, featured }) => (
           <div key={step} className={`card ${cardClass}`}>
-            <p className={`text-xs font-semibold uppercase ${metaClass}`}>VOLUME-00{step.replace(".", "-")} · {featured && step === "3.2" ? "Workflow" : featured ? "Business Rules" : label}</p>
+            <p className={`text-xs font-semibold uppercase ${metaClass}`}>VOLUME-00{step.replace(".", "-")} · {featured ? FEATURED_SUBTITLES[step] ?? label : label}</p>
             <h3 className={`mt-1 text-sm font-bold ${titleClass}`}>{label}</h3>
             {reg.guidingPrinciple ? (
               <p className={`mt-1 text-xs italic ${metaClass}`}>&ldquo;{reg.guidingPrinciple}&rdquo;</p>
@@ -83,7 +90,11 @@ export function AdminPlatformBehavior() {
                 {reg.policyDecisionPoint.evaluationStepCount} PDP steps · {reg.policyDecisionPoint.exampleRequestCount} example requests
               </p>
             ) : null}
-            {reg.lifecycleStageCount ? (
+            {reg.personalOperatingSystem ? (
+              <p className={`mt-1 text-xs ${metaClass}`}>
+                {reg.personalOperatingSystem.domainCount} Personal OS domains · {reg.lifecycleStageCount ?? 0} lifecycle stages
+              </p>
+            ) : reg.lifecycleStageCount ? (
               <p className={`mt-1 text-xs ${metaClass}`}>{reg.lifecycleStageCount} lifecycle stages</p>
             ) : null}
             {reg.runtimePipelineLayerCount ? (

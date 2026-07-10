@@ -58,7 +58,7 @@ This is where the project changes from software architecture into a **true opera
 
 Volume 3 is complete when Burt understands:
 
-- [ ] How people progress (3.3)
+- [x] How people progress (3.3)
 - [ ] How communities evolve (3.4)
 - [ ] How missions execute (3.5)
 - [ ] How volunteer journeys are engineered (3.6)
@@ -80,7 +80,7 @@ Volume 3 is complete when Burt understands:
 |------|--------|
 | 3.1 Business Rules Engine | ✅ Done |
 | 3.2 Workflow Engine | ✅ Done |
-| 3.3 Identity & Lifecycle Engine | Pending |
+| 3.3 Identity & Lifecycle Engine | ✅ Done |
 | 3.4 Community Lifecycle Engine | Pending |
 | 3.5 Mission Execution Engine | Pending |
 | 3.6 Volunteer Experience Engine | Pending |
