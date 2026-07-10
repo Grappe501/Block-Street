@@ -18,6 +18,23 @@
 
 ---
 
+## 2026-07-10 — Volume 2.9 Configuration Data Model [DAB-010 · AC-115]
+
+**Document:** `docs/volume-02/CONFIGURATION_MODEL.md` · **Registry:** `data/registry/configuration-model.json`
+
+### What Changed
+
+- **Guiding principle:** *If behavior may reasonably change, it should be configured—not hard-coded.*
+- Configuration separate from operational data — defines how platform behaves
+- **12 configuration categories** aligned to business domains
+- **7-level resolution hierarchy:** Platform through Participant
+- Inheritance, versioning, approval workflows, validation, deployment
+- Feature flags, workflow definitions, templates, taxonomies
+- **Platform Constitution Engine** — central config resolution for all services
+- DCL boundary, AI integration, security · Admin Data tab · requirements DAB-010 updated
+
+---
+
 ## 2026-07-10 — Volume 2.8 Media & Document Data Model [DAB-009 · AC-114]
 
 **Document:** `docs/volume-02/MEDIA_DOCUMENT_MODEL.md` · **Registry:** `data/registry/media-document-model.json`

@@ -10,6 +10,7 @@ import kgs from "../../../data/registry/knowledge-graph-schema.json";
 import evt from "../../../data/registry/event-data-model.json";
 import tim from "../../../data/registry/time-calendar-data-model.json";
 import med from "../../../data/registry/media-document-model.json";
+import cfg from "../../../data/registry/configuration-model.json";
 
 export function AdminDataArchitecture() {
   const doneSteps = dab.steps.filter((s) => s.status === "done").length;
@@ -162,6 +163,24 @@ export function AdminDataArchitecture() {
         </div>
         <p className="mt-2 text-xs text-fuchsia-600">
           {med.evidenceVault.evidenceObjectFields.length} evidence fields · {med.acceptanceCriteria}
+        </p>
+      </div>
+
+      <div className="card border-orange-300 bg-orange-50">
+        <p className="text-xs font-semibold uppercase text-orange-800">VOLUME-002.9 · Configuration</p>
+        <h2 className="mt-1 text-lg font-bold text-orange-950">Platform Constitution Engine</h2>
+        <p className="mt-1 text-xs italic text-orange-900">&ldquo;{cfg.guidingPrinciple}&rdquo;</p>
+        <p className="mt-2 text-xs font-semibold text-orange-800">
+          {cfg.configurationCategoryCount} config categories · {cfg.resolutionHierarchyLevels} hierarchy levels · not operational data
+        </p>
+        <div className="mt-2 flex flex-wrap gap-1">
+          {cfg.configurationCategories.slice(0, 6).map((c) => (
+            <span key={c.id} className="badge bg-orange-100 text-orange-800">{c.name.replace(" Configuration", "")}</span>
+          ))}
+          <span className="badge bg-orange-200 text-orange-900">+{cfg.configurationCategoryCount - 6}</span>
+        </div>
+        <p className="mt-2 text-xs text-orange-600">
+          {cfg.platformConstitutionEngine.resolves.length} resolution targets · {cfg.acceptanceCriteria}
         </p>
       </div>
 

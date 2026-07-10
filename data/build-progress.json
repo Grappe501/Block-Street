@@ -83,7 +83,7 @@
       { "id": "V2.6", "name": "Event Data Model [DAB-007]", "status": "done", "notes": "11 categories, Community Event Ledger, replay, 7 timelines — AC-112" },
       { "id": "V2.7", "name": "Time & Calendar Data Model [DAB-008]", "status": "done", "notes": "7 calendar types, Temporal Intelligence Engine, federation — AC-113" },
       { "id": "V2.8", "name": "Media & Document Model [DAB-009]", "status": "done", "notes": "7 categories, Evidence Vault, OCR, versioning, integrity — AC-114" },
-      { "id": "V2.9", "name": "Configuration Data Model [DAB-010]", "status": "done", "notes": "Roles, templates, workflows, feature flags — AC-115" },
+      { "id": "V2.9", "name": "Configuration Data Model [DAB-010]", "status": "done", "notes": "12 categories, Platform Constitution Engine, inheritance — AC-115" },
       { "id": "V2.10", "name": "Search Index Model [DAB-011]", "status": "done", "notes": "Search documents, full-text, ranking, geographic — AC-116" },
       { "id": "V2.11", "name": "Analytics & Metrics Model [DAB-012]", "status": "done", "notes": "KPIs, community health, rollups, reports — AC-117" },
       { "id": "V2.12", "name": "AI Knowledge Model [DAB-013]", "status": "done", "notes": "Retrieval chunks, citations, twins, Community Brain — AC-118" },
