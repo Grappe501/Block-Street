@@ -5273,27 +5273,31 @@
     {
       "id": "UXB-006",
       "title": "Design Language System — Volume 4.5",
-      "purpose": "Design Language System experience layer",
-      "description": "VOLUME-004.5 typography, color, spacing, tokens, components",
-      "priority": "critical",
+      "purpose": "Visual, interactive, and emotional language — token-based design system",
+      "description": "VOLUME-004.5 — Living Design System, 6 design principles, 6 semantic colors, 5 typography levels, component tokens, accessibility standards",
+      "priority": "foundational",
       "principle": "CP-012",
       "dependencies": [
         "UXB-005",
+        "UXB-002",
         "UXB-001"
       ],
       "related": [
-        "UXB-007"
+        "UXB-007",
+        "UXB-011"
       ],
       "acceptanceCriteria": [
-        "Experience philosophy documented",
-        "UX behaviors defined",
-        "Volume 0-3 integration specified",
-        "Implementation blueprint for experience layer"
+        "Design philosophy documented",
+        "Typography, color, spacing, motion, layout, and interaction systems defined",
+        "Component tokens and accessibility standards established",
+        "AI visual language and brand personality incorporated",
+        "Living Design System specified",
+        "Complete blueprint for unified design language"
       ],
-      "futureNotes": "Scaffold — pending canonical build step",
-      "implementationStatus": "pending",
+      "futureNotes": "Guiding principle: Design should disappear into understanding.",
+      "implementationStatus": "done",
       "testingStatus": "pending",
-      "documentationStatus": "pending",
+      "documentationStatus": "done",
       "trace": {
         "database": null,
         "api": null,
@@ -5303,7 +5307,7 @@
       },
       "versionHistory": {
         "created": "2026-07-10",
-        "implemented": null
+        "implemented": "2026-07-10"
       }
     },
     {

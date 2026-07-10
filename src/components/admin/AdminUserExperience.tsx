@@ -29,12 +29,17 @@ type ExperienceReg = {
   adaptiveWorkspaceEngine?: { compositionLayerCount: number };
   workspaceTypeCount?: number;
   universalDashboardPanelCount?: number;
+  livingDesignSystem?: { designTokenCategoryCount: number; componentCategoryCount: number };
+  designPrincipleCount?: number;
+  semanticColorCount?: number;
+  typographyLevelCount?: number;
 };
 
 const FEATURED_SUBTITLES: Record<string, string> = {
   "4.1": "Experience Design",
   "4.2": "Navigation",
   "4.3": "Dashboard & Workspace",
+  "4.5": "Design Language",
 };
 
 const EXPERIENCE_CARDS: { step: string; label: string; reg: ExperienceReg; cardClass: string; metaClass: string; titleClass: string; featured?: boolean }[] = [
@@ -42,7 +47,7 @@ const EXPERIENCE_CARDS: { step: string; label: string; reg: ExperienceReg; cardC
   { step: "4.2", label: "Intent Navigation Engine", reg: nav, cardClass: "border-blue-300 bg-blue-50", metaClass: "text-blue-700", titleClass: "text-blue-950", featured: true },
   { step: "4.3", label: "Adaptive Workspace Engine", reg: dash, cardClass: "border-indigo-300 bg-indigo-50", metaClass: "text-indigo-700", titleClass: "text-indigo-950", featured: true },
   { step: "4.4", label: "User Journey Architecture", reg: journey, cardClass: "border-violet-300 bg-violet-50", metaClass: "text-violet-700", titleClass: "text-violet-950" },
-  { step: "4.5", label: "Design Language System", reg: dls, cardClass: "border-purple-300 bg-purple-50", metaClass: "text-purple-700", titleClass: "text-purple-950" },
+  { step: "4.5", label: "Living Design System", reg: dls, cardClass: "border-purple-300 bg-purple-50", metaClass: "text-purple-700", titleClass: "text-purple-950", featured: true },
   { step: "4.6", label: "Component Architecture", reg: comp, cardClass: "border-fuchsia-300 bg-fuchsia-50", metaClass: "text-fuchsia-700", titleClass: "text-fuchsia-950" },
   { step: "4.7", label: "Workspace Architecture", reg: work, cardClass: "border-pink-300 bg-pink-50", metaClass: "text-pink-700", titleClass: "text-pink-950" },
   { step: "4.8", label: "Collaboration Architecture", reg: collab, cardClass: "border-rose-300 bg-rose-50", metaClass: "text-rose-700", titleClass: "text-rose-950" },
@@ -80,7 +85,11 @@ export function AdminUserExperience() {
             <p className={`mt-2 text-xs ${metaClass}`}>
               {reg.acceptanceCriteria} · {reg.status}
             </p>
-            {reg.adaptiveWorkspaceEngine ? (
+            {reg.livingDesignSystem ? (
+              <p className={`mt-1 text-xs ${metaClass}`}>
+                {reg.designPrincipleCount ?? 0} design principles · {reg.semanticColorCount ?? 0} semantic colors · {reg.livingDesignSystem.designTokenCategoryCount} LDS token categories · {reg.livingDesignSystem.componentCategoryCount} component categories
+              </p>
+            ) : reg.adaptiveWorkspaceEngine ? (
               <p className={`mt-1 text-xs ${metaClass}`}>
                 {reg.workspaceTypeCount ?? 0} workspace types · {reg.universalDashboardPanelCount ?? 0} dashboard panels · {reg.adaptiveWorkspaceEngine.compositionLayerCount} AWE layers
               </p>

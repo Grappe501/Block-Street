@@ -18,7 +18,23 @@
 
 ---
 
-## 2026-07-10 — Volume 4.3 Dashboard & Workspace Architecture [UXB-004 · AC-139]
+## 2026-07-10 — Volume 4.5 Design Language System [UXB-006 · AC-141]
+
+**Document:** `docs/volume-04/DESIGN_LANGUAGE_SYSTEM.md` · **Registry:** `data/registry/design-language-system.json`
+
+### What Changed
+
+- **Guiding principle:** *Design should disappear into understanding.*
+- Design language begins with purpose, emotion, meaning — not buttons and colors
+- **5-layer design language architecture** and **6 design principles** (Calm, Human, Purposeful, Consistent, Accessible, Optimistic)
+- **5 typography levels**, **6 semantic colors**, spacing, layout, card philosophy
+- Motion, animation, illustration, photography, sound, interaction, feedback, empty state, error, celebration language
+- AI visual language, component tokens, brand personality (8 traits)
+- **Living Design System (LDS)** — operational product with tokens, components, patterns, accessibility, analytics, AI integration
+- Admin Volume 4 tab · requirements UXB-006 updated · Volume 4: 4/14 complete (4.4 pending)
+
+---
+
 
 **Document:** `docs/volume-04/DASHBOARD_ARCHITECTURE.md` · **Registry:** `data/registry/dashboard-architecture.json`
 
