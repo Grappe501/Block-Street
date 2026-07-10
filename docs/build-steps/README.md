@@ -2,33 +2,47 @@
 
 > Read documents in this order before writing code.
 
-## The One Question
+## The One Question [NS-013]
 
-Before any feature, page, or database table:
-
-> **Does this help us reach the North Star?**  
-> If no — it doesn't belong in Version 1.
-
-See [PHASE-001.2-NORTH-STAR-OUTCOME.md](PHASE-001.2-NORTH-STAR-OUTCOME.md) [NS-002, NS-013]
-
----
+> **Does this help us reach the North Star?** If no — it doesn't belong in V1.
 
 ## Standing Engineering Doctrine [ED-001]
 
-> **Design First. Build Second. Validate Third. Iterate Fourth.**
+> **Design First · Build Second · Validate Third · Iterate Fourth**
 
-| # | Phase | Action |
-|---|-------|--------|
-| 1 | Design | Fully design and approve — user uploads step to Cursor |
-| 2 | Build | Burt implements from approved design only |
-| 3 | Validate | Test against design + Constitution + Guardrails |
-| 4 | Iterate | Feedback → Version 2 planning |
+## Growth Philosophy [GM-002]
 
-**No implementation without an approved design step document.**
+> **Launch early. Learn quickly. Improve continuously.**
 
 ---
 
-## Conflict Resolution Order [BG-001]
+## Foundational Constitution — Complete ✅
+
+| Step | Document | Status |
+|------|----------|--------|
+| 1.1 | [Platform Identity](PHASE-001.1-PLATFORM-IDENTITY.md) | ✅ |
+| 1.2 | [North Star Outcome](PHASE-001.2-NORTH-STAR-OUTCOME.md) | ✅ |
+| 1.3 | [Core Principles](PHASE-001.3-CORE-PRINCIPLES.md) | ✅ |
+| 1.4 | [Design Guardrails](PHASE-001.4-PLATFORM-BOUNDARIES.md) | ✅ |
+| 1.5 | [Organizing Model](PHASE-001.5-ORGANIZING-MODEL.md) | ✅ |
+| 1.6 | [Growth Model](PHASE-001.6-GROWTH-MODEL.md) | ✅ |
+
+**Phase 2 begins:** Arkansas Organizing Registry — canonical data backbone.
+
+---
+
+## Critical Dates [GM-V1]
+
+| Date | Milestone |
+|------|-----------|
+| **Jul 12** | Leader testing |
+| **Jul 14** | Launch call (~50 students) |
+| **Fall 2026** | Voter registration push |
+| **Nov 3, 2026** | Election |
+
+---
+
+## Conflict Resolution [BG-001]
 
 ```
 1. Platform Constitution [CP-*]
@@ -37,68 +51,26 @@ See [PHASE-001.2-NORTH-STAR-OUTCOME.md](PHASE-001.2-NORTH-STAR-OUTCOME.md) [NS-0
 4. Feature request / convenience
 ```
 
-Guardrail conflict → **redesign** or **constitutional change** — never silent drift.
-
 ---
 
-## 1. Design Steps (Identity & Doctrine — No Implementation)
-
-| Order | Document ID | Title | Status |
-|-------|-------------|-------|--------|
-| 1 | **PHASE-001.1** | [Platform Identity](PHASE-001.1-PLATFORM-IDENTITY.md) | ✅ Canonical |
-| 2 | **PHASE-001.2** | [North Star Outcome](PHASE-001.2-NORTH-STAR-OUTCOME.md) | ✅ Canonical |
-| 3 | **PHASE-001.3** | [Core Principles (Platform Constitution)](PHASE-001.3-CORE-PRINCIPLES.md) | ✅ Canonical |
-| 4 | **PHASE-001.4** | [Platform Boundaries & Design Guardrails](PHASE-001.4-PLATFORM-BOUNDARIES.md) | ✅ Canonical |
-| 5 | **PHASE-001.5** | [Organizing Model](PHASE-001.5-ORGANIZING-MODEL.md) | ✅ Canonical |
-| 6 | PHASE-001.6 | Growth Model (V1 vs later roadmap) | Pending |
-
-### Constitutional Layer — Complete ✅
-
-Steps 1.1–1.5 define who we are, where we're going, immutable doctrine, guardrails, and how people organize. Step 1.6 shifts to implementation roadmap.
-
-## 2. Reference Systems
-
-| Document | Purpose |
-|----------|---------|
-| [00-ID-CONVENTION.md](00-ID-CONVENTION.md) | Requirement ID naming |
-| [../PROJECT_CONSTITUTION_AND_MISSION_DOCTRINE.md](../PROJECT_CONSTITUTION_AND_MISSION_DOCTRINE.md) | Expanded constitution (timeline + teaching) |
-| [../master/MASTER-BUILD-SEQUENCE.md](../master/MASTER-BUILD-SEQUENCE.md) | 30-module long-range blueprint |
-
-## 3. Implementation Rules
+## Implementation Rules
 
 - One build step at a time — user uploads step to Cursor
-- Reference requirement IDs in commits and code comments
-- Evaluate every feature: [NS-013], [CT-001], [DG-015]
+- Reference requirement IDs in commits
+- Build vertically — complete end-to-end [GM-P2]
+- V1 scope only for July 14 — defer the rest [GM-V1]
 - Update `data/build-progress.json` every step
 - Commit + push → Netlify auto-deploys
-- All files on **H: drive only**
+- H: drive only
 
-## Requirement ID Quick Reference
+## ID Quick Reference
 
-### Step 1.4 — Design Guardrails
 ```
-DG-001 through DG-015  Platform boundaries
-BG-001  Burt implementation guardrails
-ED-001  Design First · Build Second · Validate Third · Iterate Fourth
-```
-
-### Step 1.3 — Core Principles
-```
-CP-001 through CP-015  Immutable principles
-CT-001  Constitutional test (10 questions)
-```
-
-### Step 1.2 — North Star
-```
-NS-002  The North Star statement
-NS-013  Five North Star questions
-```
-
-### Step 1.5 — Organizing Model
-```
-OM-002  Individual at center — database root entity
-OM-L1 through OM-L5  Five layers (build outward)
-OM-003  Relationship-based growth
-OM-005  Organizing homes (My Network, Campus, County…)
-OM-010  Burt database build order
+GM-V1     V1 launch scope (July 2026)
+GM-P1     Foundation before features
+GM-P2     Build vertically
+GM-ROAD   Version roadmap
+OM-L1     Individual = database root
+NS-013    Five North Star questions
+ED-001    Design → Build → Validate → Iterate
 ```

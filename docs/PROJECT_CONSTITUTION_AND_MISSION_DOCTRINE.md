@@ -1,6 +1,6 @@
 # Project Constitution & Mission Doctrine
 
-> **Burt: Read in order:** [001.1](build-steps/PHASE-001.1-PLATFORM-IDENTITY.md) → [001.2](build-steps/PHASE-001.2-NORTH-STAR-OUTCOME.md) → [001.3](build-steps/PHASE-001.3-CORE-PRINCIPLES.md) → [001.4](build-steps/PHASE-001.4-PLATFORM-BOUNDARIES.md) → [001.5 Organizing Model](build-steps/PHASE-001.5-ORGANIZING-MODEL.md)  
+> **Burt: Foundational Constitution complete (Steps 1.1–1.6).** Start at [docs/build-steps/README.md](build-steps/README.md). Phase 2: Arkansas Organizing Registry.  
 > That document establishes platform identity without implementation details.  
 > This constitution expands with timeline, teaching system, and build doctrine.
 

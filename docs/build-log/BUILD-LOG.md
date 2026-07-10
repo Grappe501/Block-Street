@@ -4,7 +4,15 @@
 
 ---
 
-## 2026-07-10 — PHASE-001.5 Organizing Model (People First)
+## 2026-07-10 — Foundational Constitution Complete (Steps 1.1–1.6)
+
+**PHASE-001.6 Growth Model** closes Phase 1.
+
+Six canonical documents define why ASYON exists, what it stands for, how it organizes people, what boundaries it respects, and how it evolves.
+
+**Phase 2 begins:** Arkansas Organizing Registry.
+
+---
 
 **Document ID:** PHASE-001.5  
 **Requirement IDs:** OM-001 through OM-010, OM-L1–L5, AC-005  

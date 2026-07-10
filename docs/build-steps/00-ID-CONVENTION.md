@@ -28,6 +28,7 @@ Examples: `PI-001`, `MS-001`, `ER-003`
 | **OP** | Organizing Philosophy | Relational organizing, beliefs, principles |
 | **OH** | Organizing Homes | Campus, county, personal network structures |
 | **ER** | Equal Representation | Equal standing, no hierarchy rules |
+| **GM** | Growth Model | Evolution strategy, versioning, V1 scope |
 | **OM** | Organizing Model | Five layers, organizing homes, database philosophy |
 | **CP** | Core Principles | Immutable platform constitution (CP-001–015) |
 | **DG** | Design Guardrails | Legal, ethical, operational, architectural boundaries |
@@ -100,3 +101,4 @@ Example: `PHASE-001.1-PLATFORM-IDENTITY.md`
 | PHASE-001.3 | Core Principles (Platform Constitution) | Canonical |
 | PHASE-001.4 | Platform Boundaries & Design Guardrails | Canonical |
 | PHASE-001.5 | Organizing Model | Canonical |
+| PHASE-001.6 | Growth Model & Evolution Strategy | Canonical |

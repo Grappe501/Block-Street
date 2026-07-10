@@ -4,9 +4,9 @@
     "fullName": "Arkansas Student & Youth Organizing Network",
     "motto": "Connect Locally. Organize Statewide. Lead Together.",
     "tagline": "Your organizing home",
-    "version": "0.2.5",
-    "currentPhase": 1,
-    "currentPhaseName": "Project Constitution & Mission Doctrine",
+    "version": "1.0.0-constitution",
+    "currentPhase": 2,
+    "currentPhaseName": "Arkansas Organizing Registry",
     "lastUpdated": "2026-07-10T09:00:00Z",
     "deployUrl": "https://block-street.netlify.app/",
     "githubRepo": "https://github.com/Grappe501/Block-Street",
@@ -15,6 +15,12 @@
     "electionDate": "2026-11-03",
     "launchCallDate": "2026-07-14",
     "leaderTestingDate": "2026-07-12"
+  },
+  "constitutionalLayer": {
+    "status": "complete",
+    "docPath": "docs/build-steps/README.md",
+    "stepsComplete": 6,
+    "stepsTotal": 6
   },
   "masterBuild": {
     "docPath": "docs/master/MASTER-BUILD-SEQUENCE.md",
@@ -26,18 +32,15 @@
       "id": 1,
       "name": "Project Constitution & Mission Doctrine",
       "slug": "phase-01-constitution",
-      "status": "in_progress",
-      "docPath": "docs/phases/PHASE-01-CONSTITUTION.md",
+      "status": "done",
+      "docPath": "docs/build-steps/README.md",
       "steps": [
-        { "id": "1.1", "name": "Platform Identity [PHASE-001.1]", "status": "done", "notes": "PI-001 through ER-001, AC-001 — Canonical" },
-        { "id": "1.2", "name": "North Star Outcome [PHASE-001.2]", "status": "done", "notes": "NS-001 through NS-014, AC-002 — Canonical" },
-        { "id": "1.3", "name": "Core Principles [PHASE-001.3]", "status": "done", "notes": "CP-001 through CP-015, CT-001, AC-003 — Immutable doctrine" },
-        { "id": "1.4", "name": "Platform Boundaries [PHASE-001.4]", "status": "done", "notes": "DG-001 through DG-015, BG-001, ED-001, AC-004 — Design Guardrails" },
-        { "id": "1.5", "name": "Organizing Model [PHASE-001.5]", "status": "done", "notes": "OM-L1 through OM-L5, OM-010 database foundation — People first" },
-        { "id": "1.6", "name": "Growth Model [PHASE-001.6]", "status": "pending", "notes": "V1 vs later versions — implementation roadmap" },
-        { "id": "1.7", "name": "Success Definition + timeline", "status": "done", "notes": "Jul 12 test, Jul 14 launch, Nov 3 election" },
-        { "id": "1.8", "name": "Burt Build Doctrine", "status": "done", "notes": "One step at a time, H: drive, GitHub+Netlify" },
-        { "id": "1.9", "name": "Constitution document compiled", "status": "done", "notes": "PROJECT_CONSTITUTION_AND_MISSION_DOCTRINE.md" }
+        { "id": "1.1", "name": "Platform Identity [PHASE-001.1]", "status": "done", "notes": "PI-001 through ER-001, AC-001" },
+        { "id": "1.2", "name": "North Star Outcome [PHASE-001.2]", "status": "done", "notes": "NS-002, NS-013, AC-002" },
+        { "id": "1.3", "name": "Core Principles [PHASE-001.3]", "status": "done", "notes": "CP-001–CP-015, CT-001, AC-003" },
+        { "id": "1.4", "name": "Platform Boundaries [PHASE-001.4]", "status": "done", "notes": "DG-001–DG-015, ED-001, AC-004" },
+        { "id": "1.5", "name": "Organizing Model [PHASE-001.5]", "status": "done", "notes": "OM-L1–L5, OM-010" },
+        { "id": "1.6", "name": "Growth Model [PHASE-001.6]", "status": "done", "notes": "GM-P1–P10, GM-V1, AC-006 — Constitution complete" }
       ]
     },
     {
@@ -129,45 +132,39 @@
   "buildLog": [
     {
       "date": "2026-07-10",
+      "title": "PHASE-001.6 Growth Model — Foundational Constitution Complete",
+      "phase": 1,
+      "summary": "GM-P1–P10, GM-V1 July launch scope, version roadmap. Phase 1 done. Phase 2: Registry begins."
+    },
+    {
+      "date": "2026-07-10",
       "title": "PHASE-001.5 Organizing Model — People First",
       "phase": 1,
-      "summary": "OM-L1 through OM-L5 five layers, individual as database root, organizing homes, constitutional layer complete"
+      "summary": "OM-L1 through OM-L5, individual as database root"
     },
     {
       "date": "2026-07-10",
       "title": "PHASE-001.4 Platform Boundaries — Design Guardrails",
       "phase": 1,
-      "summary": "DG-001 through DG-015, BG-001 Burt guardrails, ED-001 engineering doctrine, admin Guardrails tab"
+      "summary": "DG-001 through DG-015, ED-001 engineering doctrine"
     },
     {
       "date": "2026-07-10",
       "title": "PHASE-001.3 Core Principles — Platform Constitution",
       "phase": 1,
-      "summary": "CP-001 through CP-015 immutable principles, CT-001 constitutional test, admin Constitution tab"
+      "summary": "CP-001 through CP-015, CT-001"
     },
     {
       "date": "2026-07-10",
-      "title": "PHASE-001.2 North Star Outcome — Canonical",
+      "title": "PHASE-001.2 North Star Outcome",
       "phase": 1,
-      "summary": "NS-002 statement, five questions NS-013, maturity visions, V1 feature filter, admin North Star tab"
+      "summary": "NS-002, NS-013 five questions"
     },
     {
       "date": "2026-07-10",
-      "title": "PHASE-001.1 Platform Identity — Canonical",
+      "title": "PHASE-001.1 Platform Identity",
       "phase": 1,
-      "summary": "ASYON working name, requirement ID system (PI/MS/VS/etc.), build-steps/PHASE-001.1 canonical document"
-    },
-    {
-      "date": "2026-07-10",
-      "title": "Phase 1 Constitution + Registry",
-      "phase": 1,
-      "summary": "Constitution document, master build sequence, 23-school registry, map/schools pages, council removed, equal standing"
-    },
-    {
-      "date": "2026-07-10",
-      "title": "Initial Scaffold",
-      "phase": 0,
-      "summary": "Docs, admin workbench, Next.js on H: drive, GitHub push"
+      "summary": "ASYON working name, requirement ID system"
     }
   ],
   "stats": {
