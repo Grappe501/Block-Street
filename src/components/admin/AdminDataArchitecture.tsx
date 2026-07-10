@@ -4,6 +4,7 @@ import dab from "../../../data/registry/data-architecture-bible.json";
 import ced from "../../../data/registry/canonical-entity-dictionary.json";
 import mdd from "../../../data/registry/master-data-dictionary.json";
 import dphil from "../../../data/registry/data-philosophy.json";
+import rel from "../../../data/registry/relationship-data-model.json";
 
 export function AdminDataArchitecture() {
   const doneSteps = dab.steps.filter((s) => s.status === "done").length;
@@ -51,6 +52,22 @@ export function AdminDataArchitecture() {
         <p className="mt-2 text-xs text-cyan-600">
           {ced.firstClassRelationshipEntities.length} first-class relationship entities · {ced.acceptanceCriteria}
         </p>
+      </div>
+
+      <div className="card border-violet-300 bg-violet-50">
+        <p className="text-xs font-semibold uppercase text-violet-800">VOLUME-002.3 · Relationship Model</p>
+        <h2 className="mt-1 text-lg font-bold text-violet-950">Relationship Ledger</h2>
+        <p className="mt-1 text-xs italic text-violet-900">&ldquo;{rel.guidingPrinciple}&rdquo;</p>
+        <p className="mt-2 text-xs font-semibold text-violet-800">
+          {rel.categoryCount} categories · {rel.edgeTypeCount} edge types · {rel.signatureGraphs.length} signature graphs
+        </p>
+        <div className="mt-2 flex flex-wrap gap-1">
+          {rel.relationshipCategories.slice(0, 5).map((c) => (
+            <span key={c.id} className="badge bg-violet-100 text-violet-800">{c.name}</span>
+          ))}
+          <span className="badge bg-violet-200 text-violet-900">+{rel.categoryCount - 5}</span>
+        </div>
+        <p className="mt-2 text-xs text-violet-600 font-mono">{rel.canonicalTable} · {rel.acceptanceCriteria}</p>
       </div>
 
       <div className="card border-sky-300 bg-sky-50">

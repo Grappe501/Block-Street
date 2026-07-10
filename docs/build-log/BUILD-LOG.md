@@ -18,7 +18,20 @@
 
 ---
 
-## 2026-07-10 — Volume 2.2 Canonical Entity Dictionary [DAB-003 · AC-108]
+## 2026-07-10 — Volume 2.3 Relationship Data Model [DAB-004 · AC-109]
+
+**Document:** `docs/volume-02/RELATIONSHIP_DATA_MODEL.md` · **Registry:** `data/registry/relationship-data-model.json`
+
+### What Changed
+
+- **Guiding principle:** *Relationships are data—not just connections between data.*
+- **Relationship Ledger** — foundational structure backed by `graph.entity_relationships`
+- **10 relationship categories:** Membership, Leadership, Mentorship, Invitation, Partnership, Collaboration, Geographic, Knowledge, Story, Resource
+- **25 configurable edge types** · 8 signature graphs · lifecycle, metadata, provenance, visibility, strength signals
+- AI integration: mentor recommendations, collaboration opportunities, leadership succession (explainable)
+- Admin Data tab · requirements DAB-004 updated
+
+---
 
 **Document:** `docs/volume-02/CANONICAL_ENTITY_DICTIONARY.md` · **Registry:** `data/registry/canonical-entity-dictionary.json`
 
