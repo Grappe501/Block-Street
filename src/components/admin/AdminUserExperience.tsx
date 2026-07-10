@@ -37,6 +37,9 @@ type ExperienceReg = {
   componentHierarchyLevelCount?: number;
   operationalComponentCount?: number;
   universalComponentStructure?: { layerCount: number };
+  unifiedWorkspaceManager?: { coordinationDomainCount: number };
+  universalWorkspaceZoneCount?: number;
+  workspacePrincipleCount?: number;
 };
 
 const FEATURED_SUBTITLES: Record<string, string> = {
@@ -45,6 +48,7 @@ const FEATURED_SUBTITLES: Record<string, string> = {
   "4.3": "Dashboard & Workspace",
   "4.5": "Design Language",
   "4.6": "Components",
+  "4.7": "Workspaces",
 };
 
 const EXPERIENCE_CARDS: { step: string; label: string; reg: ExperienceReg; cardClass: string; metaClass: string; titleClass: string; featured?: boolean }[] = [
@@ -54,7 +58,7 @@ const EXPERIENCE_CARDS: { step: string; label: string; reg: ExperienceReg; cardC
   { step: "4.4", label: "User Journey Architecture", reg: journey, cardClass: "border-violet-300 bg-violet-50", metaClass: "text-violet-700", titleClass: "text-violet-950" },
   { step: "4.5", label: "Living Design System", reg: dls, cardClass: "border-purple-300 bg-purple-50", metaClass: "text-purple-700", titleClass: "text-purple-950", featured: true },
   { step: "4.6", label: "Living Operational Component Registry", reg: comp, cardClass: "border-fuchsia-300 bg-fuchsia-50", metaClass: "text-fuchsia-700", titleClass: "text-fuchsia-950", featured: true },
-  { step: "4.7", label: "Workspace Architecture", reg: work, cardClass: "border-pink-300 bg-pink-50", metaClass: "text-pink-700", titleClass: "text-pink-950" },
+  { step: "4.7", label: "Unified Workspace Manager", reg: work, cardClass: "border-pink-300 bg-pink-50", metaClass: "text-pink-700", titleClass: "text-pink-950", featured: true },
   { step: "4.8", label: "Collaboration Architecture", reg: collab, cardClass: "border-rose-300 bg-rose-50", metaClass: "text-rose-700", titleClass: "text-rose-950" },
   { step: "4.9", label: "Mobile Experience", reg: mobile, cardClass: "border-red-300 bg-red-50", metaClass: "text-red-700", titleClass: "text-red-950" },
   { step: "4.10", label: "AI Experience", reg: aiexp, cardClass: "border-orange-300 bg-orange-50", metaClass: "text-orange-700", titleClass: "text-orange-950" },
@@ -90,7 +94,11 @@ export function AdminUserExperience() {
             <p className={`mt-2 text-xs ${metaClass}`}>
               {reg.acceptanceCriteria} · {reg.status}
             </p>
-            {reg.livingOperationalComponentRegistry ? (
+            {reg.unifiedWorkspaceManager ? (
+              <p className={`mt-1 text-xs ${metaClass}`}>
+                {reg.workspaceTypeCount ?? 0} workspace types · {reg.universalWorkspaceZoneCount ?? 0} framework zones · {reg.workspacePrincipleCount ?? 0} principles · {reg.unifiedWorkspaceManager.coordinationDomainCount} UWM domains
+              </p>
+            ) : reg.livingOperationalComponentRegistry ? (
               <p className={`mt-1 text-xs ${metaClass}`}>
                 {reg.componentHierarchyLevelCount ?? 0} hierarchy levels · {reg.operationalComponentCount ?? 0} operational components · {reg.universalComponentStructure?.layerCount ?? 0} universal structure layers · {reg.livingOperationalComponentRegistry.definitionDomainCount} LOCR domains
               </p>

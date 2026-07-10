@@ -5201,27 +5201,32 @@
     {
       "id": "UXB-008",
       "title": "Workspace Architecture — Volume 4.7",
-      "purpose": "Workspace Architecture experience layer",
-      "description": "VOLUME-004.7 personal, community, mission, executive workspaces",
-      "priority": "critical",
+      "purpose": "Operational workspaces — living environments for meaningful work",
+      "description": "VOLUME-004.7 — Unified Workspace Manager, 9 workspace types, 8-zone universal framework, context preservation, multi-workspace coordination",
+      "priority": "foundational",
       "principle": "CP-012",
       "dependencies": [
         "UXB-007",
+        "UXB-004",
+        "UXB-003",
         "UXB-001"
       ],
       "related": [
-        "UXB-009"
+        "UXB-009",
+        "UXB-010"
       ],
       "acceptanceCriteria": [
-        "Experience philosophy documented",
-        "UX behaviors defined",
-        "Volume 0-3 integration specified",
-        "Implementation blueprint for experience layer"
+        "Workspace philosophy documented",
+        "Universal workspace framework defined",
+        "Primary workspace types established",
+        "Context preservation, collaboration, AI, personalization, and accessibility incorporated",
+        "Unified Workspace Manager specified",
+        "Complete blueprint for operational workspaces"
       ],
-      "futureNotes": "Scaffold — pending canonical build step",
-      "implementationStatus": "pending",
+      "futureNotes": "Guiding principle: People work in environments, not pages.",
+      "implementationStatus": "done",
       "testingStatus": "pending",
-      "documentationStatus": "pending",
+      "documentationStatus": "done",
       "trace": {
         "database": null,
         "api": null,
@@ -5231,7 +5236,7 @@
       },
       "versionHistory": {
         "created": "2026-07-10",
-        "implemented": null
+        "implemented": "2026-07-10"
       }
     },
     {

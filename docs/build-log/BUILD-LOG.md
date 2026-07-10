@@ -18,6 +18,23 @@
 
 ---
 
+## 2026-07-10 — Volume 4.7 Workspace Architecture [UXB-008 · AC-143]
+
+**Document:** `docs/volume-04/WORKSPACE_ARCHITECTURE.md` · **Registry:** `data/registry/workspace-architecture.json`
+
+### What Changed
+
+- **Guiding principle:** *People work in environments, not pages.*
+- Workspaces as living operational environments — not pages or modules
+- **8-layer universal workspace structure** and **8-zone universal framework** (Mission through Reflection)
+- **9 workspace types:** Personal through Executive including Institution and Volunteer
+- Context preservation, collaboration layer, AI companion, personalization, multi-workspace operations
+- Mobile workspace, accessibility, Community Event Ledger integration
+- **Unified Workspace Manager (UWM)** — 6 coordination domains extending Adaptive Workspace Engine to full operating shell
+- Admin Volume 4 tab · requirements UXB-008 updated · Volume 4: 6/14 complete (4.4 pending)
+
+---
+
 ## 2026-07-10 — Volume 4.6 Component Architecture [UXB-007 · AC-142]
 
 **Document:** `docs/volume-04/COMPONENT_ARCHITECTURE.md` · **Registry:** `data/registry/experience-component-architecture.json`
