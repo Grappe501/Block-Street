@@ -1,32 +1,351 @@
 {
-  "version": "1.0.0",
-  "documentId": "VOLUME-003.03",
+  "version": "2.0.0",
+  "documentId": "VOLUME-003.3",
   "requirementId": "PBA-004",
   "docPath": "docs/volume-03/IDENTITY_LIFECYCLE.md",
-  "status": "pending",
+  "status": "canonical",
   "priority": "critical",
   "lastUpdated": "2026-07-10",
-  "guidingPrinciple": "Behavior is governed, not improvised.",
-  "defines": [
-    "ParticipantProgression",
-    "LifecycleTransitions",
-    "StageGates",
-    "IdentityEvents",
-    "PermissionEvolution"
-  ],
-  "acceptanceCriteria": "AC-124",
-  "acceptanceCriteriaMet": false,
-  "lifecycleStages": [
-    "Prospect",
-    "Invited",
-    "Registered",
-    "Welcomed",
-    "Volunteer",
-    "Committee",
-    "Leader",
-    "Mentor",
-    "Alumni",
+  "guidingPrinciple": "People are not static records. They are journeys.",
+  "identityPhilosophy": {
+    "notSimplyAuthentication": true,
+    "developmentalNotTransactional": true,
+    "growthNotStaticProfiles": true,
+    "earnedProgression": true,
+    "continuousNotLinear": true,
+    "noSingleObjectRepresentsParticipant": true
+  },
+  "identityArchitecture": {
+    "stages": [
+      "Discovery",
+      "Invitation",
+      "Registration",
+      "Welcome",
+      "Participation",
+      "Contribution",
+      "Leadership",
+      "Mentorship",
+      "Legacy"
+    ],
+    "stageCount": 9
+  },
+  "identityDimensions": [
+    "Authentication",
+    "Profile",
+    "CommunityMembership",
+    "Experience",
+    "Knowledge",
+    "Leadership",
+    "Relationships",
     "Legacy"
   ],
-  "lifecycleStageCount": 10
+  "identityDimensionCount": 8,
+  "identityComponents": [
+    "Identity",
+    "Profile",
+    "Preferences",
+    "Memberships",
+    "Relationships",
+    "VolunteerHistory",
+    "LeadershipHistory",
+    "KnowledgeContributions",
+    "Recognition",
+    "DigitalTwin",
+    "LivingHistory"
+  ],
+  "identityComponentCount": 11,
+  "lifecycleStages": [
+    {
+      "id": "discovery",
+      "name": "Discovery",
+      "order": 1,
+      "entryPoints": [
+        "Invitation",
+        "QRCode",
+        "Website",
+        "CampusEvent",
+        "PartnerOrganization",
+        "VolunteerOpportunity",
+        "FriendReferral"
+      ],
+      "recorded": true
+    },
+    {
+      "id": "invitation",
+      "name": "Invitation",
+      "order": 2,
+      "examples": [
+        "InvitedByParticipant",
+        "InvitedByCommunity",
+        "InvitedByInstitution",
+        "CampaignInvitation",
+        "OpenRegistration"
+      ],
+      "permanentHistory": true
+    },
+    {
+      "id": "registration",
+      "name": "Registration",
+      "order": 3,
+      "establishes": [
+        "Authentication",
+        "Profile",
+        "Preferences",
+        "InitialPermissions",
+        "CommunityContext"
+      ]
+    },
+    {
+      "id": "welcome",
+      "name": "Welcome",
+      "order": 4,
+      "activities": [
+        "WelcomeJourney",
+        "Orientation",
+        "CommunityIntroduction",
+        "ProfileCompletion",
+        "FirstConnections",
+        "FirstCalendar"
+      ]
+    },
+    {
+      "id": "participation",
+      "name": "Participation",
+      "order": 5,
+      "examples": [
+        "AttendEvents",
+        "Volunteer",
+        "JoinCommittees",
+        "ReadKnowledge",
+        "CompleteTraining"
+      ]
+    },
+    {
+      "id": "contribution",
+      "name": "Contribution",
+      "order": 6,
+      "examples": [
+        "Stories",
+        "Lessons",
+        "VolunteerLeadership",
+        "MissionParticipation",
+        "Knowledge",
+        "MentorshipAssistance"
+      ]
+    },
+    {
+      "id": "leadership",
+      "name": "Leadership",
+      "order": 7,
+      "examples": [
+        "CommitteeChair",
+        "CommunityOrganizer",
+        "Mentor",
+        "RegionalLeader",
+        "InstitutionRepresentative"
+      ],
+      "serviceOriented": true
+    },
+    {
+      "id": "mentorship",
+      "name": "Mentorship",
+      "order": 8,
+      "activities": [
+        "Coaching",
+        "Teaching",
+        "KnowledgeSharing",
+        "LeadershipDevelopment",
+        "CommunityExpansion"
+      ]
+    },
+    {
+      "id": "legacy",
+      "name": "Legacy",
+      "order": 9,
+      "includes": [
+        "Stories",
+        "Lessons",
+        "Playbooks",
+        "LeadershipHistory",
+        "VolunteerImpact",
+        "HistoricalMilestones"
+      ],
+      "outlivesActiveParticipation": true
+    }
+  ],
+  "lifecycleStageCount": 9,
+  "identityStatuses": [
+    "Prospective",
+    "Active",
+    "Inactive",
+    "Paused",
+    "Alumni",
+    "Legacy",
+    "Archived"
+  ],
+  "identityStatusCount": 7,
+  "identityTimelineEvents": [
+    "Invitations",
+    "CommunitiesJoined",
+    "VolunteerExperiences",
+    "LeadershipAppointments",
+    "Stories",
+    "Knowledge",
+    "Recognition",
+    "Legacy"
+  ],
+  "identityTimelineEventCount": 8,
+  "identityPortfolioItems": [
+    "Skills",
+    "VolunteerHours",
+    "LeadershipHistory",
+    "Projects",
+    "Stories",
+    "Lessons",
+    "Training",
+    "Certificates",
+    "Recommendations"
+  ],
+  "identityPortfolioItemCount": 9,
+  "recognitionTypes": [
+    "VolunteerMilestones",
+    "LeadershipMilestones",
+    "KnowledgeContributions",
+    "CommunityImpact",
+    "Mentorship",
+    "ServiceAnniversaries"
+  ],
+  "recognitionTypeCount": 6,
+  "digitalTwinSummaryFields": [
+    "CurrentInterests",
+    "Communities",
+    "Skills",
+    "Availability",
+    "Leadership",
+    "Goals",
+    "Knowledge",
+    "Relationships",
+    "HistoricalParticipation"
+  ],
+  "digitalTwinFieldCount": 9,
+  "knowledgeGraphProjections": [
+    "MembershipGraph",
+    "LeadershipGraph",
+    "MentorshipGraph",
+    "KnowledgeGraph",
+    "VolunteerGraph"
+  ],
+  "knowledgeGraphProjectionCount": 5,
+  "privacyControlledFields": [
+    "Profile",
+    "VolunteerInterests",
+    "LeadershipHistory",
+    "Stories",
+    "Recognition",
+    "Skills",
+    "Preferences"
+  ],
+  "privacyControlledFieldCount": 7,
+  "aiCapabilities": [
+    "RecommendGrowthOpportunities",
+    "SuggestMentors",
+    "RecommendLeadershipPathways",
+    "SummarizeAccomplishments",
+    "IdentifyBurnoutRisk",
+    "SuggestTraining"
+  ],
+  "aiNeverDeterminesProgression": true,
+  "calendarIntegrations": [
+    "PersonalCalendar",
+    "CommunityCalendars",
+    "TrainingSchedules",
+    "VolunteerCommitments",
+    "MentorshipMeetings"
+  ],
+  "calendarIntegrationCount": 5,
+  "knowledgeIntegrations": [
+    "Stories",
+    "Lessons",
+    "Playbooks",
+    "CommunityBrain",
+    "MissionReflections"
+  ],
+  "personalOperatingSystem": {
+    "name": "Personal Operating System",
+    "purpose": "Participant operational cockpit — unified view of identity, commitments, growth, knowledge, relationships, impact, and intelligence",
+    "notAnotherProfilePage": true,
+    "domains": [
+      {
+        "id": "identity",
+        "name": "Identity",
+        "organizes": ["Profile", "Preferences", "Privacy", "Communities"]
+      },
+      {
+        "id": "commitments",
+        "name": "Commitments",
+        "organizes": ["Calendar", "VolunteerAssignments", "LeadershipResponsibilities", "MentorshipMeetings"]
+      },
+      {
+        "id": "growth",
+        "name": "Growth",
+        "organizes": ["Training", "Skills", "LeadershipPathway", "Certifications", "Goals"]
+      },
+      {
+        "id": "knowledge",
+        "name": "Knowledge",
+        "organizes": ["Stories", "Lessons", "Notes", "CommunityBrainContributions", "SavedResources"]
+      },
+      {
+        "id": "relationships",
+        "name": "Relationships",
+        "organizes": ["Mentors", "Mentees", "Committees", "Teams", "Partners"]
+      },
+      {
+        "id": "impact",
+        "name": "Impact",
+        "organizes": ["VolunteerHours", "MissionsCompleted", "CommunitiesServed", "Recognition", "LeadershipMilestones"]
+      },
+      {
+        "id": "intelligence",
+        "name": "Intelligence",
+        "organizes": ["DigitalTwinSummary", "AIRecommendations", "UpcomingOpportunities", "CommunityHealthSignals", "PersonalizedDiscovery"]
+      }
+    ],
+    "domainCount": 7,
+    "philosophy": "Daily operating environment for service, relationships, learning, and leadership — consistent operational model from individual to statewide network"
+  },
+  "domainSchemaMapping": {
+    "schema": "PlatformBehavior",
+    "entities": [
+      "ParticipantIdentity",
+      "LifecycleStage",
+      "IdentityTimeline",
+      "IdentityPortfolio",
+      "Recognition",
+      "PersonalOperatingSystem",
+      "DigitalTwinProjection"
+    ]
+  },
+  "projectionIntegrations": {
+    "workflowEnginePath": "data/registry/workflow-engine.json",
+    "businessRulesPath": "data/registry/business-rule-engine.json",
+    "entityDictionaryPath": "data/registry/canonical-entity-dictionary.json",
+    "relationshipModelPath": "data/registry/relationship-data-model.json",
+    "eventLedgerPath": "data/registry/event-data-model.json",
+    "timeCalendarPath": "data/registry/time-calendar-data-model.json",
+    "knowledgeGraphPath": "data/registry/knowledge-graph-schema.json",
+    "aiKnowledgePath": "data/registry/ai-knowledge-model.json",
+    "securityPrivacyPath": "data/registry/security-privacy-model.json"
+  },
+  "burtImplementationGuidance": [
+    "Model identity as a lifecycle rather than a static profile",
+    "Preserve complete historical progression",
+    "Separate authentication from participation",
+    "Treat recognition and legacy as first-class concepts",
+    "Integrate identity with calendars, knowledge, relationships, and Digital Twins",
+    "Allow multiple simultaneous community affiliations",
+    "Consult Personal Operating System spec before participant-facing identity features"
+  ],
+  "acceptanceCriteria": "AC-124",
+  "acceptanceCriteriaMet": true
 }
