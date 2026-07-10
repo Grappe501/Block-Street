@@ -1,22 +1,352 @@
 {
-  "version": "1.0.0",
+  "version": "2.0.0",
   "documentId": "VOLUME-003.12",
   "requirementId": "PBA-013",
   "docPath": "docs/volume-03/KNOWLEDGE_GROWTH_ENGINE.md",
-  "status": "pending",
+  "status": "canonical",
   "priority": "critical",
   "lastUpdated": "2026-07-10",
-  "guidingPrinciple": "Behavior is governed, not improvised.",
-  "defines": [
-    "LessonCapture",
-    "PlaybookEvolution",
-    "CommunityBrainUpdates",
-    "KnowledgeReuse",
-    "Review",
-    "Publication",
-    "LegacyPreservation",
-    "InstitutionalLearning"
+  "guidingPrinciple": "Every experience should leave behind reusable knowledge.",
+  "knowledgePhilosophy": {
+    "livingKnowledgeNotDocumentStorage": true,
+    "activeOperationalAsset": true,
+    "neverSolveSameProblemTwice": true,
+    "knowledgeAsPrimaryProduct": true,
+    "compoundsAcrossCommunities": true,
+    "humanGoverned": true
+  },
+  "knowledgeGrowthLifecycle": {
+    "stages": [
+      "Experience",
+      "Capture",
+      "Reflection",
+      "Validation",
+      "Publication",
+      "Discovery",
+      "Reuse",
+      "Improvement",
+      "Legacy"
+    ],
+    "stageCount": 9
+  },
+  "knowledgePhilosophyLayers": [
+    "Stories",
+    "Lessons",
+    "Playbooks",
+    "CommunityBrain",
+    "MissionLibrary",
+    "LeadershipGuidance",
+    "Legacy"
+  ],
+  "knowledgePhilosophyLayerCount": 7,
+  "experienceSources": [
+    "Mission",
+    "Meeting",
+    "VolunteerService",
+    "LeadershipDecision",
+    "Training",
+    "CommunityEvent",
+    "Conversation"
+  ],
+  "experienceSourceCount": 7,
+  "captureMethods": [
+    "ReflectionPrompts",
+    "MissionCloseout",
+    "VoiceNotes",
+    "Photos",
+    "Documents",
+    "MeetingSummaries",
+    "StoryDrafts"
+  ],
+  "captureMethodCount": 7,
+  "reflectionQuestions": [
+    "WhatWorked",
+    "WhatSurprisedUs",
+    "WhatFailed",
+    "WhatShouldChange",
+    "WhoBenefited"
+  ],
+  "reflectionQuestionCount": 5,
+  "validationCriteria": [
+    "Accuracy",
+    "Completeness",
+    "Evidence",
+    "Relevance",
+    "Sensitivity",
+    "CommunityAppropriateness"
+  ],
+  "validationCriteriaCount": 6,
+  "publicationTypes": [
+    "Story",
+    "Lesson",
+    "Playbook",
+    "CommunityBrainEntry",
+    "MissionSummary",
+    "TrainingMaterial"
+  ],
+  "publicationTypeCount": 6,
+  "discoveryChannels": [
+    "Search",
+    "CommunityKnowledgeGraph",
+    "Recommendations",
+    "MissionPlanning",
+    "VolunteerOnboarding",
+    "LeadershipDevelopment"
+  ],
+  "discoveryChannelCount": 6,
+  "reuseTracking": [
+    "CommunitiesReused",
+    "MissionsReferenced",
+    "LeadersCited",
+    "PlaybooksIncorporated"
+  ],
+  "reuseTrackingCount": 4,
+  "improvementSources": [
+    "Feedback",
+    "NewExperiences",
+    "UpdatedEvidence",
+    "BetterPractices",
+    "CommunityContributions"
+  ],
+  "improvementSourceCount": 5,
+  "legacyOutcomes": [
+    "HistoricalGuidance",
+    "InstitutionalMemory",
+    "LeadershipTradition",
+    "CommunityHeritage",
+    "TrainingFoundation"
+  ],
+  "legacyOutcomeCount": 5,
+  "knowledgeCategoryCount": 6,
+  "knowledgeCategories": [
+    {
+      "id": "operational",
+      "name": "Operational Knowledge",
+      "examples": ["MissionProcedures", "VolunteerOperations", "MeetingFacilitation", "CommunityOrganization", "Planning"]
+    },
+    {
+      "id": "leadership",
+      "name": "Leadership Knowledge",
+      "examples": ["Mentorship", "Succession", "DecisionMaking", "ConflictResolution", "CommunityStewardship"]
+    },
+    {
+      "id": "community",
+      "name": "Community Knowledge",
+      "examples": ["Traditions", "LocalHistory", "Partnerships", "CommunityBrain", "BelongingPractices"]
+    },
+    {
+      "id": "educational",
+      "name": "Educational Knowledge",
+      "examples": ["Training", "Courses", "Workshops", "Reading", "Research"]
+    },
+    {
+      "id": "historical",
+      "name": "Historical Knowledge",
+      "examples": ["Milestones", "LeadershipHistory", "MissionArchives", "CommunityEvolution", "InstitutionalMemory"]
+    },
+    {
+      "id": "innovation",
+      "name": "Innovation Knowledge",
+      "examples": ["Experiments", "PilotPrograms", "NewIdeas", "LessonsFromFailure", "EmergingPractices"],
+      "innovationBecomesReusable": true
+    }
+  ],
+  "knowledgeObjectFields": [
+    "KnowledgeId",
+    "Category",
+    "Author",
+    "Contributors",
+    "Evidence",
+    "RelatedCommunities",
+    "RelatedMissions",
+    "Version",
+    "ReviewStatus",
+    "Visibility"
+  ],
+  "knowledgeObjectFieldCount": 10,
+  "knowledgeQualityMeasures": [
+    "Evidence",
+    "Reuse",
+    "Completeness",
+    "Freshness",
+    "ReviewStatus",
+    "CommunityValidation"
+  ],
+  "knowledgeQualityMeasureCount": 6,
+  "knowledgeRelationships": [
+    "Stories",
+    "Lessons",
+    "Communities",
+    "Missions",
+    "Leaders",
+    "Events",
+    "Playbooks",
+    "DigitalTwins"
+  ],
+  "knowledgeRelationshipCount": 8,
+  "communityBrainIntegrationTargets": [
+    "CommunityBrain",
+    "MissionLibrary",
+    "LeadershipAcademy",
+    "VolunteerSuccessCenter",
+    "CommunityOperatingManual"
+  ],
+  "communityBrainIntegrationTargetCount": 5,
+  "knowledgeCalendarIntegrations": [
+    "ReviewSchedules",
+    "PublicationCycles",
+    "AnniversaryReviews",
+    "PolicyUpdates",
+    "PlaybookRefreshes"
+  ],
+  "knowledgeCalendarIntegrationCount": 5,
+  "communityKnowledgeGraphProjections": [
+    "StoryGraph",
+    "LessonGraph",
+    "MissionGraph",
+    "LeadershipGraph",
+    "CommunityGraph"
+  ],
+  "communityKnowledgeGraphProjectionCount": 5,
+  "digitalTwinKnowledgeFields": [
+    "KnowledgeContributions",
+    "AreasOfExpertise",
+    "LearningHistory",
+    "CommunityInterests",
+    "Mentorship",
+    "KnowledgeGaps"
+  ],
+  "digitalTwinKnowledgeFieldCount": 6,
+  "aiCapabilities": [
+    "SummarizeLessons",
+    "DraftPlaybooks",
+    "IdentifyDuplicateKnowledge",
+    "RecommendRelatedExperiences",
+    "SuggestImprovements",
+    "GenerateLearningPathways",
+    "HighlightMissingDocumentation"
+  ],
+  "aiCapabilityCount": 7,
+  "aiAcceleratesNotAuthorship": true,
+  "knowledgeAnalytics": [
+    "KnowledgeCreation",
+    "Reuse",
+    "SearchFrequency",
+    "CommunityAdoption",
+    "PlaybookEffectiveness",
+    "LearningTrends"
+  ],
+  "knowledgeAnalyticsCount": 6,
+  "recognitionCategories": [
+    "StoryContributors",
+    "PlaybookAuthors",
+    "Mentors",
+    "Researchers",
+    "Innovation",
+    "KnowledgeStewardship"
+  ],
+  "recognitionCategoryCount": 6,
+  "eventLedgerKnowledgeTypes": [
+    "ExperienceCaptured",
+    "ReflectionCompleted",
+    "KnowledgeValidated",
+    "KnowledgePublished",
+    "KnowledgeReused",
+    "KnowledgeImproved",
+    "LegacyDesignated"
+  ],
+  "eventLedgerKnowledgeTypeCount": 7,
+  "organizationalLearningLoop": [
+    "CommunitiesPerformMissions",
+    "MissionsGenerateExperiences",
+    "ExperiencesBecomeStructuredKnowledge",
+    "KnowledgeImprovesFutureMissions",
+    "FutureMissionsGenerateBetterExperiences"
+  ],
+  "organizationalLearningLoopStepCount": 5,
+  "knowledgeObservatory": {
+    "name": "Knowledge Observatory",
+    "abbreviation": "KO",
+    "purpose": "Central environment for institutional learning — monitors how knowledge is created, shared, reused, improved, and preserved across the entire Community Operating System",
+    "notDocumentLibrary": true,
+    "domains": [
+      {
+        "id": "knowledgeCreation",
+        "name": "Knowledge Creation",
+        "monitors": ["Stories", "Lessons", "Playbooks", "CommunityBrainEntries", "Research", "MissionReflections"]
+      },
+      {
+        "id": "knowledgeQuality",
+        "name": "Knowledge Quality",
+        "monitors": ["ValidationStatus", "EvidenceStrength", "ReviewHistory", "Freshness", "CommunityFeedback"]
+      },
+      {
+        "id": "knowledgeReuse",
+        "name": "Knowledge Reuse",
+        "monitors": ["CommunitiesReusingPlaybooks", "MissionsCitingLessons", "LeadershipGuidanceReferenced", "TrainingMaterialsAdopted"]
+      },
+      {
+        "id": "knowledgeGaps",
+        "name": "Knowledge Gaps",
+        "monitors": ["UnansweredFrequentQuestions", "MissingPlaybooks", "OutdatedGuidance", "UndocumentedMissionTypes"]
+      },
+      {
+        "id": "learning",
+        "name": "Learning",
+        "monitors": ["LeadershipAcademyContent", "VolunteerTraining", "CommunityOnboarding", "RecommendedLearningPaths"]
+      },
+      {
+        "id": "intelligence",
+        "name": "Intelligence",
+        "monitors": ["EmergingBestPractices", "RepeatingProblems", "SuccessfulInnovations", "CrossCommunityInsights", "AISynthesis"]
+      },
+      {
+        "id": "legacy",
+        "name": "Legacy",
+        "monitors": ["HistoricalArchives", "CommunityTraditions", "LeadershipHistories", "InstitutionalMilestones"]
+      }
+    ],
+    "domainCount": 7,
+    "leaderQuestions": [
+      "WhatAreOurMostValuablePlaybooks",
+      "WhichCommunitiesCreateMostReusableKnowledge",
+      "WhatLessonsAreBeingIgnored",
+      "WhereDoWeRepeatedlyEncounterSameProblems",
+      "WhatKnowledgeShouldEveryNewCommunityReceive"
+    ],
+    "leaderQuestionCount": 5
+  },
+  "domainSchemaMapping": {
+    "schema": "PlatformBehavior",
+    "entities": [
+      "KnowledgeObject",
+      "KnowledgeCapture",
+      "KnowledgeValidation",
+      "KnowledgePublication",
+      "KnowledgeReuse",
+      "KnowledgeObservatory"
+    ]
+  },
+  "projectionIntegrations": {
+    "governanceEnginePath": "data/registry/governance-engine.json",
+    "missionExecutionPath": "data/registry/mission-execution-engine.json",
+    "leadershipDevelopmentPath": "data/registry/leadership-development-engine.json",
+    "volunteerExperiencePath": "data/registry/volunteer-experience-engine.json",
+    "communityLifecyclePath": "data/registry/community-lifecycle-engine.json",
+    "aiKnowledgePath": "data/registry/ai-knowledge-model.json",
+    "eventLedgerPath": "data/registry/event-data-model.json",
+    "timeCalendarPath": "data/registry/time-calendar-data-model.json",
+    "securityPrivacyPath": "data/registry/security-privacy-model.json"
+  },
+  "burtImplementationGuidance": [
+    "Treat knowledge as a living operational asset",
+    "Require structured reflection before publication",
+    "Preserve version history",
+    "Track reuse and impact",
+    "Integrate with Community Brain, Digital Twins, Community Knowledge Graph, and AI",
+    "Keep knowledge human-governed",
+    "Consult Knowledge Observatory spec before knowledge-facing features"
   ],
   "acceptanceCriteria": "AC-133",
-  "acceptanceCriteriaMet": false
+  "acceptanceCriteriaMet": true
 }
