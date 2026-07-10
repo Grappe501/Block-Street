@@ -18,6 +18,22 @@
 
 ---
 
+## 2026-07-10 — Volume 3.4 Community Lifecycle Engine [PBA-005 · AC-125]
+
+**Document:** `docs/volume-03/COMMUNITY_LIFECYCLE.md` · **Registry:** `data/registry/community-lifecycle-engine.json`
+
+### What Changed
+
+- **Guiding principle:** *Communities are cultivated, not simply created.*
+- Long-lived organizational entities — mature intentionally, not grow accidentally
+- **10 lifecycle stages:** Vision through Legacy
+- Community health, charter, capacity, relationships, knowledge, calendar, recognition, closure
+- Community Health Observatory, Digital Twin, knowledge graph, and AI integrations
+- **Community Operating Manual** — self-documenting living manual with 6 domains (Identity through Legacy)
+- Admin Volume 3 tab · requirements PBA-005 updated · Volume 3: 4/14 complete
+
+---
+
 ## 2026-07-10 — Volume 3.3 Identity & Lifecycle Engine [PBA-004 · AC-124]
 
 **Document:** `docs/volume-03/IDENTITY_LIFECYCLE.md` · **Registry:** `data/registry/identity-lifecycle-engine.json`

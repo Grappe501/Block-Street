@@ -4405,27 +4405,35 @@
     {
       "id": "PBA-005",
       "title": "Community Lifecycle Engine — Volume 3.4",
-      "purpose": "Community proposal through institutional legacy",
-      "description": "VOLUME-003.4 launch, growth, maturity, succession, archival",
+      "purpose": "Community lifecycle from Vision through Legacy with intentional cultivation",
+      "description": "VOLUME-003.4 — Community Operating Manual, 10 lifecycle stages, health, charter, capacity, succession, closure, graph and AI integration",
       "priority": "critical",
       "principle": "CP-001",
       "dependencies": [
         "PBA-004",
-        "DAB-003"
+        "PBA-003",
+        "DAB-003",
+        "DAB-006",
+        "DAB-012"
       ],
       "related": [
-        "PBA-006"
+        "PBA-006",
+        "DAB-008",
+        "DAB-013",
+        "ENG-008"
       ],
       "acceptanceCriteria": [
-        "Engine philosophy documented",
-        "Operational behaviors defined",
-        "Volume 2 integration specified",
-        "Implementation blueprint for engine"
+        "Community lifecycle philosophy documented",
+        "All lifecycle stages defined",
+        "Health, knowledge, succession, and legacy models established",
+        "Calendar, graph, AI, and Digital Twin integrations incorporated",
+        "Community Operating Manual specified",
+        "Complete blueprint for Community Lifecycle Engine"
       ],
-      "futureNotes": "Scaffold — pending canonical build step",
-      "implementationStatus": "pending",
+      "futureNotes": "Guiding principle: Communities are cultivated, not simply created.",
+      "implementationStatus": "done",
       "testingStatus": "pending",
-      "documentationStatus": "pending",
+      "documentationStatus": "done",
       "trace": {
         "database": "DB-COS",
         "api": null,
@@ -4435,7 +4443,7 @@
       },
       "versionHistory": {
         "created": "2026-07-10",
-        "implemented": null
+        "implemented": "2026-07-10"
       }
     },
     {

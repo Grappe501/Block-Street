@@ -92,7 +92,7 @@
       { "id": "V3.1", "name": "Business Rules Engine [PBA-002]", "status": "done", "notes": "Policy Decision Point, 9 rule categories, hierarchy — AC-122" },
       { "id": "V3.2", "name": "Workflow Engine [PBA-003]", "status": "done", "notes": "Community Process Orchestrator, 9 categories, state machines — AC-123" },
       { "id": "V3.3", "name": "Identity & Lifecycle Engine [PBA-004]", "status": "done", "notes": "Personal Operating System, 9 lifecycle stages, portfolio, legacy — AC-124" },
-      { "id": "V3.4", "name": "Community Lifecycle Engine [PBA-005]", "status": "pending", "notes": "Proposal through institutional legacy — AC-125" },
+      { "id": "V3.4", "name": "Community Lifecycle Engine [PBA-005]", "status": "done", "notes": "Community Operating Manual, 10 lifecycle stages, health, succession — AC-125" },
       { "id": "V3.5", "name": "Mission Execution Engine [PBA-006]", "status": "pending", "notes": "Planning through playbook generation — AC-126" },
       { "id": "V3.6", "name": "Volunteer Experience Engine [PBA-007]", "status": "pending", "notes": "Discovery through alumni engagement — AC-127" },
       { "id": "V3.7", "name": "Leadership Development Engine [PBA-008]", "status": "pending", "notes": "Pathways, mentorship, succession — AC-128" },
