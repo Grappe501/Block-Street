@@ -1,22 +1,316 @@
 {
-  "version": "1.0.0",
+  "version": "2.0.0",
   "documentId": "VOLUME-004.10",
   "requirementId": "UXB-011",
   "docPath": "docs/volume-04/AI_EXPERIENCE_ARCHITECTURE.md",
-  "status": "pending",
-  "priority": "critical",
+  "productName": "AI Experience Architecture",
+  "status": "canonical",
+  "priority": "foundational",
   "lastUpdated": "2026-07-10",
-  "guidingPrinciple": "Experience should feel intentional, welcoming, and trustworthy.",
-  "defines": [
-    "AICoach",
-    "AIResearchAssistant",
-    "AIMissionPlanner",
-    "AICommunityGuide",
-    "AIKnowledgeAssistant",
-    "AIExecutiveAdvisor",
-    "AIWritingAssistant"
+  "guidingPrinciple": "AI should amplify human judgment, never replace it.",
+  "aiPhilosophy": {
+    "notAFeature": true,
+    "notAChatbot": true,
+    "distributedOperationalCapability": true,
+    "exceptionallyKnowledgeableTeammate": true,
+    "contextualNotGeneric": true,
+    "amplifiesHumanJudgmentNeverReplaces": true,
+    "buildsStrongerCommunitiesNotDependency": true
+  },
+  "traditionalAIPrompt": "Ask me anything.",
+  "communityOSAIPrompt": "How can I help you accomplish your mission today?",
+  "aiOperationalModel": {
+    "layers": [
+      "Context",
+      "Understanding",
+      "KnowledgeRetrieval",
+      "Reasoning",
+      "Guidance",
+      "HumanDecision",
+      "KnowledgeCapture"
+    ],
+    "layerCount": 7
+  },
+  "aiPrincipleCount": 8,
+  "aiPrinciples": [
+    "ContextAware",
+    "Transparent",
+    "Grounded",
+    "Explainable",
+    "Collaborative",
+    "PermissionAware",
+    "PrivacyRespecting",
+    "Advisory"
   ],
-  "topicCount": 7,
+  "participantAlwaysInControl": true,
+  "aiRoleCount": 10,
+  "aiRoles": [
+    {
+      "id": "personalCoach",
+      "name": "Personal Coach",
+      "helps": ["OrganizeWork", "UnderstandPriorities", "ManageTime", "TrackGoals", "Reflect", "Grow"],
+      "understands": "PersonalOperatingSystem"
+    },
+    {
+      "id": "communityGuide",
+      "name": "Community Guide",
+      "helps": ["CommunityHistory", "Members", "Traditions", "Events", "CommunityHealth", "OperatingManual"],
+      "outcome": "Institutional memory for each community"
+    },
+    {
+      "id": "missionPlanner",
+      "name": "Mission Planner",
+      "helps": ["PlanMissions", "EstimateResources", "BuildTimelines", "IdentifyRisks", "RecommendVolunteers", "SuggestPlaybooks"],
+      "understands": "OperationalExecution"
+    },
+    {
+      "id": "volunteerCoach",
+      "name": "Volunteer Coach",
+      "helps": ["FindOpportunities", "RecommendTraining", "TrackGrowth", "SuggestMentors", "CelebrateMilestones", "SupportVolunteerWellness"],
+      "outcome": "Long-term participation"
+    },
+    {
+      "id": "leadershipAdvisor",
+      "name": "Leadership Advisor",
+      "helps": ["DevelopLeaders", "SuggestMentorship", "IdentifySuccessionOpportunities", "SummarizeLeadershipHealth", "RecommendTraining"],
+      "constraint": "Leadership decisions remain human"
+    },
+    {
+      "id": "knowledgeNavigator",
+      "name": "Knowledge Navigator",
+      "helps": ["SearchCommunityBrain", "SummarizeResearch", "LocateStories", "RecommendPlaybooks", "IdentifyRelatedLessons"],
+      "outcome": "Knowledge becomes conversational"
+    },
+    {
+      "id": "executiveAdvisor",
+      "name": "Executive Advisor",
+      "helps": ["SummarizeOperationalIntelligence", "PrepareBriefings", "ExplainTrends", "HighlightRisks", "CompareCommunities", "SuggestStrategicQuestions"],
+      "outcome": "Supports executive thinking"
+    },
+    {
+      "id": "governanceAssistant",
+      "name": "Governance Assistant",
+      "helps": ["SummarizeProposals", "CompareHistoricalPrecedent", "ExplainPolicies", "DraftGovernanceDocuments", "IdentifyConflicts"],
+      "outcome": "Governance remains transparent"
+    },
+    {
+      "id": "researchAssistant",
+      "name": "Research Assistant",
+      "helps": ["OrganizeResearch", "SummarizeSources", "CompareDocuments", "SuggestAdditionalReading", "GenerateCitations"],
+      "outcome": "Research becomes faster"
+    },
+    {
+      "id": "writingAssistant",
+      "name": "Writing Assistant",
+      "helps": ["DraftCommunications", "ImproveWriting", "GenerateSummaries", "TranslateKnowledge", "AdaptTone"],
+      "constraint": "Writing remains participant-owned"
+    }
+  ],
+  "aiContextUnderstands": [
+    "CurrentWorkspace",
+    "CurrentMission",
+    "CurrentCommunity",
+    "CurrentCalendar",
+    "CurrentRole",
+    "CurrentWorkflow",
+    "RelevantKnowledge",
+    "Permissions",
+    "DigitalTwins"
+  ],
+  "aiConversationMemory": [
+    "CurrentConversation",
+    "MissionContext",
+    "Workspace",
+    "PendingWork",
+    "RecentDecisions",
+    "KnowledgeAlreadyDiscussed"
+  ],
+  "explainabilityAnswers": [
+    "WhyAmISuggestingThis",
+    "WhatEvidenceSupportsIt",
+    "WhichKnowledgeSourcesWereUsed",
+    "WhatAssumptionsWereMade",
+    "HowConfidentAmI"
+  ],
+  "citationSources": [
+    "CommunityBrain",
+    "Playbooks",
+    "MissionHistory",
+    "KnowledgeObjects",
+    "Policies",
+    "Research",
+    "CommunityEventLedger"
+  ],
+  "transparencyDiscloses": [
+    "WhenAIGeneratedSomething",
+    "WhenHumansGeneratedSomething",
+    "WhatWasEdited",
+    "WhatRemainsUncertain"
+  ],
+  "workspaceAIRoleMapping": [
+    { "workspace": "MissionWorkspace", "aiRole": "MissionPlanner" },
+    { "workspace": "LeadershipWorkspace", "aiRole": "LeadershipAdvisor" },
+    { "workspace": "KnowledgeWorkspace", "aiRole": "KnowledgeNavigator" },
+    { "workspace": "ExecutiveWorkspace", "aiRole": "ExecutiveAdvisor" }
+  ],
+  "aiCollaborationSupports": [
+    "Brainstorming",
+    "MeetingSummaries",
+    "AgendaGeneration",
+    "ActionItems",
+    "KnowledgeExtraction",
+    "IdeaOrganization"
+  ],
+  "aiLearningSources": [
+    "MissionReflections",
+    "KnowledgeGrowthEngine",
+    "CommunityFeedback",
+    "Governance",
+    "Playbooks",
+    "CommunityBrain"
+  ],
+  "learnsFromInstitutionalKnowledgeNotSurveillance": true,
+  "aiAccessibilitySupports": [
+    "Voice",
+    "Keyboard",
+    "Touch",
+    "Translation",
+    "ReadingAssistance",
+    "WritingAssistance"
+  ],
+  "mobileAIUnderstands": [
+    "CurrentLocationWithPermission",
+    "Mission",
+    "Community",
+    "Calendar",
+    "NearbyInstitutions",
+    "RecentKnowledge"
+  ],
+  "digitalTwinsConsulted": [
+    "ParticipantTwin",
+    "MissionTwin",
+    "CommunityTwin",
+    "CountyTwin",
+    "PlatformTwin"
+  ],
+  "eventLedgerRecords": [
+    "RecommendationsGenerated",
+    "KnowledgeCited",
+    "SummariesProduced",
+    "HumanApprovals",
+    "KnowledgeCaptured"
+  ],
+  "aiEthicsProhibitions": [
+    "OverrideGovernance",
+    "InventEvidence",
+    "HideUncertainty",
+    "BypassPermissions",
+    "ManipulateParticipants",
+    "ReplaceLeadership"
+  ],
+  "constitutionGovernsAI": true,
+  "aiFederation": {
+    "name": "AI Federation",
+    "replacesSinglePlatformAssistant": true,
+    "coordinatedNetworkOfSpecializedAgents": true,
+    "executiveAICouncil": {
+      "name": "Executive AI Council",
+      "coordinates": [
+        "OperationalPriorities",
+        "ContextRouting",
+        "CrossAgentCollaboration",
+        "GovernanceCompliance",
+        "ResourceAllocation"
+      ],
+      "participantExperiencesOneSeamlessAI": true
+    },
+    "domainIntelligenceAgentCount": 8,
+    "domainIntelligenceAgents": [
+      {
+        "id": "communityIntelligenceAgent",
+        "name": "Community Intelligence Agent",
+        "domain": ["CommunityHealth", "Growth", "Relationships", "CommunityOperatingManual"]
+      },
+      {
+        "id": "missionIntelligenceAgent",
+        "name": "Mission Intelligence Agent",
+        "domain": ["MissionPlanning", "Logistics", "Reflection", "ResourceOptimization"]
+      },
+      {
+        "id": "leadershipIntelligenceAgent",
+        "name": "Leadership Intelligence Agent",
+        "domain": ["LeadershipDevelopment", "Mentorship", "Succession", "LeadershipAcademy"]
+      },
+      {
+        "id": "volunteerIntelligenceAgent",
+        "name": "Volunteer Intelligence Agent",
+        "domain": ["VolunteerSuccessCenter", "Recognition", "Matching", "Wellness"]
+      },
+      {
+        "id": "knowledgeIntelligenceAgent",
+        "name": "Knowledge Intelligence Agent",
+        "domain": ["CommunityBrain", "KnowledgeObservatory", "Playbooks", "Stories", "Research"]
+      },
+      {
+        "id": "governanceIntelligenceAgent",
+        "name": "Governance Intelligence Agent",
+        "domain": ["ConstitutionalInterpretation", "Policies", "Decisions", "Appeals", "Transparency"]
+      },
+      {
+        "id": "executiveIntelligenceAgent",
+        "name": "Executive Intelligence Agent",
+        "domain": ["ExecutiveOperationsCenter", "StrategicForecasting", "OperationalIntelligence", "ExecutiveBriefings"]
+      },
+      {
+        "id": "communicationsIntelligenceAgent",
+        "name": "Communications Intelligence Agent",
+        "domain": ["Writing", "PublicMessaging", "MeetingPreparation", "CommunityCommunication", "KnowledgeTranslation"]
+      }
+    ],
+    "sharedOperationalMemory": [
+      "CommunityKnowledgeGraph",
+      "CommunityEventLedger",
+      "DigitalTwins",
+      "BusinessRules",
+      "Workflows",
+      "Calendars",
+      "KnowledgeObservatory",
+      "CommunityBrain"
+    ],
+    "agentCollaborationExample": {
+      "request": "Help me prepare for tomorrow's county volunteer summit",
+      "coordinatedAgents": [
+        { "agent": "ExecutiveIntelligenceAgent", "action": "Summarize county conditions" },
+        { "agent": "VolunteerIntelligenceAgent", "action": "Review volunteer participation" },
+        { "agent": "MissionIntelligenceAgent", "action": "Prepare mission updates" },
+        { "agent": "KnowledgeIntelligenceAgent", "action": "Retrieve relevant playbooks" },
+        { "agent": "CommunicationsIntelligenceAgent", "action": "Draft opening remarks" },
+        { "agent": "CalendarIntelligence", "action": "Verify schedule and logistics" }
+      ],
+      "deliversOneIntegratedResponse": true
+    },
+    "humanCenteredCoordination": {
+      "participantNeverManagesFederation": true,
+      "federationDetermines": [
+        "WhichSpecialistsNeeded",
+        "WhichKnowledgeRetrieved",
+        "WhichRecommendationsAppropriate",
+        "WhichApprovalsRequired",
+        "WhichUncertaintiesHighlighted"
+      ]
+    },
+    "constitutionalProperty": "AI is a constitutional public servant — transparent, explainable, and accountable",
+    "notIndependentAuthority": true
+  },
+  "burtImplementationGuidance": [
+    "Distributed contextual assistants",
+    "Automatically assemble context before prompting",
+    "Every recommendation explainable",
+    "Require citations where applicable",
+    "Integrate Community Brain Digital Twins Event Ledger Operational Intelligence Knowledge Growth Engine",
+    "Preserve human authority over consequential decisions",
+    "Consult AI Federation before AI-facing features"
+  ],
   "acceptanceCriteria": "AC-146",
-  "acceptanceCriteriaMet": false
+  "acceptanceCriteriaMet": true
 }
