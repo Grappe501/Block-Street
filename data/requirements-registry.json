@@ -4626,26 +4626,34 @@
     {
       "id": "PBA-010",
       "title": "Automation Engine — Volume 3.9",
-      "purpose": "Explainable triggers, actions, schedules",
-      "description": "VOLUME-003.9 automation governance and retries",
+      "purpose": "Safe transparent declarative automation for repetitive operational work",
+      "description": "VOLUME-003.9 — Automation Mission Control, 10 categories, 8-layer pipeline, triggers, conditions, actions, approval, simulation, safety, observability",
       "priority": "critical",
       "principle": "CP-001",
       "dependencies": [
-        "PBA-009"
+        "PBA-009",
+        "PBA-003",
+        "PBA-002",
+        "DAB-007",
+        "DAB-010"
       ],
       "related": [
-        "PBA-011"
+        "PBA-011",
+        "DAB-008",
+        "DAB-013"
       ],
       "acceptanceCriteria": [
-        "Engine philosophy documented",
-        "Operational behaviors defined",
-        "Volume 2 integration specified",
-        "Implementation blueprint for engine"
+        "Automation philosophy documented",
+        "Automation objects, triggers, conditions, and actions defined",
+        "Approval, simulation, safety, and observability established",
+        "Workflow, calendar, knowledge, Community Event Ledger, and AI integrations incorporated",
+        "Automation Mission Control specified",
+        "Complete blueprint for Automation Engine"
       ],
-      "futureNotes": "Scaffold — pending canonical build step",
-      "implementationStatus": "pending",
+      "futureNotes": "Guiding principle: Automate repetition. Preserve human judgment.",
+      "implementationStatus": "done",
       "testingStatus": "pending",
-      "documentationStatus": "pending",
+      "documentationStatus": "done",
       "trace": {
         "database": "DB-COS",
         "api": null,
@@ -4655,7 +4663,7 @@
       },
       "versionHistory": {
         "created": "2026-07-10",
-        "implemented": null
+        "implemented": "2026-07-10"
       }
     },
     {

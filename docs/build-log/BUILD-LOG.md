@@ -18,6 +18,23 @@
 
 ---
 
+## 2026-07-10 — Volume 3.9 Automation Engine [PBA-010 · AC-130]
+
+**Document:** `docs/volume-03/AUTOMATION_ENGINE.md` · **Registry:** `data/registry/automation-engine.json`
+
+### What Changed
+
+- **Guiding principle:** *Automate repetition. Preserve human judgment.*
+- Eliminates repetitive admin effort — never bypasses governance or human judgment
+- **8-layer automation pipeline:** Trigger through Community Event Ledger
+- **10 automation categories:** Identity through Intelligence
+- Triggers, conditions, actions, approval modes, safety controls, simulation, observability
+- Workflow, calendar, knowledge, event ledger, and AI integrations
+- **Automation Mission Control (AMC)** — visibility and governance with 7 domains
+- Admin Volume 3 tab · requirements PBA-010 updated · Volume 3: 9/14 complete
+
+---
+
 ## 2026-07-10 — Volume 3.8 Community Intelligence Engine [PBA-009 · AC-129]
 
 **Document:** `docs/volume-03/COMMUNITY_INTELLIGENCE_ENGINE.md` · **Registry:** `data/registry/community-intelligence-engine.json`

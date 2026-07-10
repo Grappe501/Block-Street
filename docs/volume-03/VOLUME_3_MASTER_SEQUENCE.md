@@ -64,7 +64,7 @@ Volume 3 is complete when Burt understands:
 - [x] How volunteer journeys are engineered (3.6)
 - [x] How leadership develops (3.7)
 - [ ] How intelligence assists (3.8, 3.13)
-- [ ] How automation behaves (3.9)
+- [x] How automation behaves (3.9)
 - [ ] How workflows run (3.2)
 - [ ] How business rules govern (3.1)
 - [ ] How approvals and governance function (3.11)
@@ -86,7 +86,7 @@ Volume 3 is complete when Burt understands:
 | 3.6 Volunteer Experience Engine | ✅ Done |
 | 3.7 Leadership Development Engine | ✅ Done |
 | 3.8 Community Intelligence Engine | ✅ Done |
-| 3.9 Automation Engine | Pending |
+| 3.9 Automation Engine | ✅ Done |
 | 3.10 Notification & Attention Engine | Pending |
 | 3.11 Governance Engine | Pending |
 | 3.12 Knowledge Growth Engine | Pending |
