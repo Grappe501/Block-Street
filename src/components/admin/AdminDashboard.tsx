@@ -25,6 +25,7 @@ import { AdminPersonalRelationshipNetwork } from "@/components/admin/AdminPerson
 import { AdminRelationshipGrowthEngine } from "@/components/admin/AdminRelationshipGrowthEngine";
 import { AdminPersonalCommandCenter } from "@/components/admin/AdminPersonalCommandCenter";
 import { AdminTrustPrivacySafety } from "@/components/admin/AdminTrustPrivacySafety";
+import { AdminPersonalGrowthLeadership } from "@/components/admin/AdminPersonalGrowthLeadership";
 import { AdminGrowthModel } from "@/components/admin/AdminGrowthModel";
 import { AdminOrganizingModel } from "@/components/admin/AdminOrganizingModel";
 import { AdminGuardrails } from "@/components/admin/AdminGuardrails";
@@ -49,6 +50,7 @@ const TABS = [
   { id: "rge", label: "Invites", icon: "🤝" },
   { id: "pcc", label: "Command", icon: "🎛️" },
   { id: "trust", label: "Trust", icon: "🔒" },
+  { id: "develop", label: "Develop", icon: "🎓" },
   { id: "growth", label: "Growth", icon: "🌱" },
   { id: "organizing-model", label: "Organizing", icon: "🔗" },
   { id: "guardrails", label: "Guardrails", icon: "🛡️" },
@@ -146,6 +148,7 @@ export function AdminDashboard({ progress }: { progress: BuildProgress }) {
         {activeTab === "rge" && <AdminRelationshipGrowthEngine />}
         {activeTab === "pcc" && <AdminPersonalCommandCenter />}
         {activeTab === "trust" && <AdminTrustPrivacySafety />}
+        {activeTab === "develop" && <AdminPersonalGrowthLeadership />}
         {activeTab === "growth" && <AdminGrowthModel />}
         {activeTab === "organizing-model" && <AdminOrganizingModel />}
         {activeTab === "guardrails" && <AdminGuardrails />}

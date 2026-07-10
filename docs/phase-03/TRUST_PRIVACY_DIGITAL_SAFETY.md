@@ -464,6 +464,6 @@ Step 3.7 is complete when:
 
 ---
 
-**Next Step:** 3.8 — Skills & Leadership System (VOL-001) · V1 critical path complete — ready for implementation
+**Next Step:** 3.9 — Recognition & Milestones
 
 *Trace: Trust → Invitations [RGE] → Relationships [PRN] → Communities → CP-007 privacy by design*

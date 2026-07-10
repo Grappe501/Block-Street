@@ -23,7 +23,7 @@
     { "prefix": "PEP", "domain": "Participant identity" },
     { "prefix": "PHQ", "domain": "Personal headquarters" },
     { "prefix": "PCC", "domain": "Personal command center" },
-    { "prefix": "TPS", "domain": "Trust, privacy & digital safety" },
+    { "prefix": "PGL", "domain": "Personal growth & leadership" },
     { "prefix": "CPP", "domain": "Civic passport" },
     { "prefix": "STS", "domain": "Status & lifecycle" },
     { "prefix": "ADM", "domain": "Administration" },
@@ -581,7 +581,7 @@
       "priority": "critical",
       "principle": "OM-L5",
       "dependencies": ["PEP-001", "JRN-001", "PRM-001"],
-      "related": ["USR-002", "NET-001", "VOL-001"],
+      "related": ["USR-002", "NET-001", "PGL-001"],
       "acceptanceCriteria": [
         "Passport architecture documented",
         "Stamp types defined",
@@ -743,6 +743,36 @@
         "frontend": "PAGE-PCC",
         "test": "TEST-PCC-001",
         "doc": "DOC-PCC-001"
+      },
+      "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
+    },
+    {
+      "id": "PGL-001",
+      "title": "Personal Growth & Leadership Development System",
+      "purpose": "Develop people — leadership operating system beyond contact management",
+      "description": "PHASE-003.8 five growth domains, Growth Graph, skills/interests, mentorship, reflection, learning pathways, Civic Academy future",
+      "priority": "critical",
+      "principle": "OM-L1",
+      "dependencies": ["JRN-001", "PEP-001", "CPP-001", "PCC-001"],
+      "related": ["VOL-001", "PRM-001", "SEC-001"],
+      "acceptanceCriteria": [
+        "Personal growth philosophy documented",
+        "Five growth domains established",
+        "Skills, interests, and learning pathways defined",
+        "Mentorship and reflection incorporated",
+        "Growth Graph architecture specified",
+        "Blueprint for leadership development throughout platform"
+      ],
+      "futureNotes": "Arkansas Civic Academy, full Growth Graph UI, skill proficiency, reflection journals",
+      "implementationStatus": "done",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": "DB-USERS",
+        "api": null,
+        "frontend": "PAGE-PCC",
+        "test": "TEST-PGL-001",
+        "doc": "DOC-PGL-001"
       },
       "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
     },

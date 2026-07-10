@@ -42,8 +42,8 @@ When complete, every participant receives:
 | 3.5 | [Relationship Growth Engine](RELATIONSHIP_GROWTH_ENGINE.md) | Self-expanding through trusted relationships | ✅ |
 | 3.6 | [Personal Command Center](PERSONAL_COMMAND_CENTER.md) | Daily workspace — Morning Brief + widgets | ✅ |
 | 3.7 | [Trust, Privacy & Digital Safety](TRUST_PRIVACY_DIGITAL_SAFETY.md) | Trust Center — trust as infrastructure | ✅ |
-| 3.8 | Skills & Leadership System | Post-V1 design | Pending |
-| 3.9 | Recognition & Milestones | Celebrate contribution — not popularity | Pending |
+| 3.8 | [Personal Growth & Leadership](PERSONAL_GROWTH_LEADERSHIP.md) | Growth Graph — leadership operating system | ✅ |
+| 3.9 | Recognition & Milestones | Celebrate development — not popularity | Pending |
 | 3.10 | Communication Preferences | Email, text, push — participant controlled | Pending |
 | 3.11 | Participant Timeline | One timeline — everything | Pending |
 | 3.12 | Participant Knowledge Graph | Person as graph node — all edges | Pending |
@@ -132,9 +132,19 @@ The most important **trust document** in the project — trust as infrastructure
 
 ---
 
-## 3.8 — Skills & Leadership System
+## 3.8 — Personal Growth & Leadership Development System
 
-Skills · Experience · Interests · Training · Leadership · Volunteer specialties · Future certifications · Future civic academy
+**Requirement focus:** PGL-001 · JRN-001 · CPP-001
+
+**Leadership operating system** — develop people, not just organize them:
+
+- **Five growth domains** — Civic, Organizing, Leadership, Personal, Community Impact
+- **Growth Graph [PGL-M13]** — how experiences connect; "How has this participant grown?"
+- **Skills + interests** — extensible registry; no competitive scoring
+- **Mentorship + reflection** — relationships accelerate growth
+- **Learning pathways** — future Arkansas Civic Academy
+
+*Live spec:* `personal-growth-leadership.json` · *Orchestrator:* `buildGrowthNarrative(participantId)`
 
 ---
 
@@ -217,7 +227,7 @@ Identity · Journey · Profiles · Networks · Recruitment · Recognition · Pri
 | 3.6 | Command Center core | ✅ design |
 | 3.7 | Basic privacy + Trust Center | ✅ design |
 
-Steps 3.8–3.14: design now, implement post-launch.
+Steps 3.9–3.14: design now, implement post-launch. Step 3.8 design complete.
 
 ---
 

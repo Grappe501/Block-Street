@@ -119,7 +119,7 @@ A participant's value is **never** determined by:
 |------|-------------------|
 | Find belonging | Registry homes + county/campus |
 | Build relationships | Personal network [Step 3.4] |
-| Develop leadership | Journey + skills [Steps 3.2, 3.8] |
+| Develop leadership | Journey + growth [Steps 3.2, 3.8 PGL-001] |
 | Discover opportunities | Mission Board [OIS-M16] |
 | Strengthen communities | Organizing tools [Phase 5] |
 | Leave lasting impact | Civic Passport [PEP-M20] |
@@ -172,7 +172,7 @@ A participant's value is **never** determined by:
 | Biography | Partial | |
 | **Mission statement** | ✅ [PEP-M19] | |
 | Personal interests | ✅ | |
-| Skills | Partial | Step 3.8 |
+| Skills | Partial | Step 3.8 [PGL-001] |
 | Goals | Future | |
 | Communication preferences | Future | Step 3.10 |
 | Privacy settings | ✅ | Step 3.7 |

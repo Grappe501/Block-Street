@@ -4,6 +4,25 @@
 
 ---
 
+## 2026-07-10 — PHASE-003.8 Personal Growth & Leadership Development (Canonical)
+
+**Document ID:** PHASE-003.8 · **PGL-001 · AC-027**
+
+### What Was Built
+
+- **Leadership operating system** — develop people, not just manage contacts
+- **Five growth domains** — Civic Knowledge, Organizing, Leadership, Personal, Community Impact
+- **Growth Graph [PGL-M13]** — connects experiences over time; "How has this participant grown?"
+- **Skills + interests** — extensible registry, no competitive scoring
+- **Mentorship + reflection** — accelerated growth through relationships
+- **Civic Passport** as narrative of growth [CPP-001]
+
+### Guiding Principle Locked
+
+> **People are the platform's greatest investment.**
+
+---
+
 ## 2026-07-10 — PHASE-003.7 Trust, Privacy & Digital Safety Framework (Canonical)
 
 **Document ID:** PHASE-003.7 · **SEC-001 · AC-026**

@@ -1,0 +1,188 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/phase-03/PERSONAL_GROWTH_LEADERSHIP.md",
+  "motto": "People are the platform's greatest investment.",
+  "principle": "This platform shouldn't just organize people. It should develop them.",
+  "purpose": "Intentionally develop leaders, organizers, volunteers, mentors, and community builders — a leadership operating system, not contact management.",
+  "growthPhilosophy": {
+    "channels": ["experience", "reflection", "service", "relationships", "learning", "mentorship", "leadership"],
+    "softwareRole": "support not replace",
+    "neverCompetitiveScoring": true
+  },
+  "growthDomains": [
+    {
+      "key": "civic_knowledge",
+      "label": "Civic Knowledge",
+      "examples": ["localGovernment", "communityIssues", "volunteerOpportunities", "civicParticipation", "publicService", "arkansasCivicAcademy"]
+    },
+    {
+      "key": "organizing_skills",
+      "label": "Organizing Skills",
+      "examples": ["recruitment", "relationshipBuilding", "communication", "eventPlanning", "committeeFacilitation", "volunteerCoordination", "conflictResolution"]
+    },
+    {
+      "key": "leadership_skills",
+      "label": "Leadership Skills",
+      "examples": ["listening", "decisionMaking", "delegation", "mentorship", "strategicThinking", "problemSolving", "teamBuilding"]
+    },
+    {
+      "key": "personal_development",
+      "label": "Personal Development",
+      "examples": ["confidence", "publicSpeaking", "timeManagement", "goalSetting", "reflection", "professionalGrowth", "networking"]
+    },
+    {
+      "key": "community_impact",
+      "label": "Community Impact",
+      "examples": ["volunteerService", "projectsCompleted", "communitiesStrengthened", "peopleMentored", "teamsDeveloped", "relationshipsBuilt"],
+      "emphasis": "service"
+    }
+  ],
+  "skills": {
+    "extensibleRegistry": true,
+    "proficiencyLevels": ["learning", "practicing", "teaching"],
+    "noCompetitivePoints": true,
+    "examples": [
+      "Public Speaking",
+      "Graphic Design",
+      "Photography",
+      "Writing",
+      "Event Planning",
+      "Technology",
+      "Data",
+      "Research",
+      "Community Outreach",
+      "Teaching",
+      "Fundraising",
+      "Languages"
+    ],
+    "v1": "optionalTagsOnProfile"
+  },
+  "interests": {
+    "examples": [
+      "Education",
+      "Environment",
+      "Healthcare",
+      "Economic Development",
+      "Arts",
+      "Agriculture",
+      "Technology",
+      "Community Service",
+      "Youth Leadership"
+    ],
+    "purpose": "discoverCommunitiesAndProjects",
+    "v1": "optionalMultiSelect"
+  },
+  "learningPathways": {
+    "future": [
+      "leadershipTracks",
+      "volunteerTraining",
+      "organizingCurriculum",
+      "communityProjects",
+      "skillCertifications",
+      "arkansasCivicAcademy"
+    ],
+    "lifelongLearning": true,
+    "pccWidget": "learning"
+  },
+  "mentorship": {
+    "capabilities": ["findMentor", "becomeMentor", "mentorshipHistory", "learningGoals", "sharedMilestones"],
+    "edgeType": "mentors",
+    "consentBased": true,
+    "partOfOrganizingCulture": true
+  },
+  "reflection": {
+    "formats": ["lessonsLearned", "volunteerExperiences", "leadershipJournals", "projectSummaries", "futurePortfolio"],
+    "defaultPrivacy": "private",
+    "appendToPassport": true,
+    "v1": "missionRefinementPrompt"
+  },
+  "growthTimeline": {
+    "appendOnly": true,
+    "milestones": [
+      "firstEvent",
+      "firstVolunteer",
+      "firstCommittee",
+      "firstOrganizerRole",
+      "firstMentorship",
+      "leadershipMilestones"
+    ],
+    "passportIntegration": "CPP-001"
+  },
+  "recognition": {
+    "celebratesDevelopmentNotCompetition": true,
+    "examples": [
+      "learnedNewSkill",
+      "mentoredSomeone",
+      "completedLeadershipTraining",
+      "servedCommunity",
+      "builtSuccessfulProject"
+    ],
+    "pccWidget": "recognition"
+  },
+  "growthGraph": {
+    "description": "Connects experiences over time — how one led to the next",
+    "coreQuestion": "How has this participant grown?",
+    "notThisQuestion": "What has this participant done?",
+    "orchestrator": "buildGrowthNarrative(participantId)",
+    "structure": {
+      "nodes": "GrowthExperience[]",
+      "edges": "led_to[]",
+      "domains": "GrowthDomain[]"
+    },
+    "exampleChain": [
+      "Attended Event",
+      "Met Organizer",
+      "Joined Committee",
+      "Volunteered",
+      "Organized Event",
+      "Mentored New Participant",
+      "Launched New Campus Group"
+    ],
+    "experienceTypes": [
+      "event_attended",
+      "relationship_formed",
+      "committee_joined",
+      "volunteer_service",
+      "event_organized",
+      "mentorship",
+      "skill_developed",
+      "reflection",
+      "milestone"
+    ],
+    "distinctFromTrustGraph": "Trust Graph = relationship depth; Growth Graph = development narrative",
+    "powers": [
+      "personalizedRecommendations",
+      "leadershipDevelopment",
+      "mentorshipMatching",
+      "storytelling",
+      "impactReporting",
+      "futureAiCoaching"
+    ],
+    "v1": "schemaSpecFirstNodesOnRegistration"
+  },
+  "commandCenterIntegration": {
+    "widgets": ["learning", "growth", "impact", "recognition", "morningBrief"],
+    "aggregator": "assembleGrowthSection(participantId)"
+  },
+  "journeyIntegration": {
+    "journeyDerivedFromGrowthGraph": true,
+    "orchestrator": "JRN-M10"
+  },
+  "v1Scope": {
+    "philosophyAndDomains": true,
+    "growthGraphSchema": true,
+    "skillsInterestsRegistry": true,
+    "profileInterestTags": "optional",
+    "learningWidgetPlaceholder": true,
+    "fullPathwaysUi": "v1.1"
+  },
+  "implementation": {
+    "files": [
+      "src/lib/growth/buildGrowthNarrative.ts",
+      "src/lib/growth/growthGraph.ts",
+      "src/lib/growth/assembleGrowthSection.ts",
+      "data/registry/personal-growth-leadership.json"
+    ],
+    "tables": ["growth_experiences", "growth_edges"]
+  }
+}

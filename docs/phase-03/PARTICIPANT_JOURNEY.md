@@ -445,6 +445,6 @@ Step 3.2 is complete when:
 
 ---
 
-**Next Step:** 3.8 — Skills & Leadership System (VOL-001)
+**Next Step:** 3.9 — Recognition & Milestones
 
 *Trace: USR-001 registration → PHQ shell → NET-002/003 invite tools → JRN orchestrator → CPP timeline*

@@ -467,6 +467,6 @@ Step 3.5 is complete when:
 
 ---
 
-**Next Step:** 3.8 — Skills & Leadership System (VOL-001)
+**Next Step:** 3.9 — Recognition & Milestones
 
 *Trace: PHQ home → PRN community → RGE expansion → PCC daily workspace → Morning Brief → Mission Board*
