@@ -1,271 +1,383 @@
-# Build Volume 2.14 — Master Data Dictionary & Governance
+# Build Volume 2.14 — Master Data Dictionary & Data Governance
 
 ### Data Architecture Bible
 
 **Document ID:** VOLUME-002.14 · **DAB-015**  
 **Artifact:** `MASTER_DATA_DICTIONARY.md`  
 **Status:** Canonical  
-**Priority:** Critical
+**Priority:** Highest
 
-**Builds on:** All Volume 2 steps 2.1–2.13  
+**Builds on:** All Volume 2 steps 2.1–2.13 · [DAB-001](../master/DATA_ARCHITECTURE_BIBLE.md)  
 **Live spec:** `data/registry/master-data-dictionary.json`
 
-> **The canonical reference for every table, field, enum, and identifier in the COS.**
+> Every piece of data has one canonical definition, one owner, and one meaning.
 
 ---
 
-## DAB-MDD01 — Purpose
+## Purpose
 
-**[DAB-MDD01]** The Master Data Dictionary consolidates **naming standards, stewardship, quality rules, and migration governance** — the index Burt searches before any schema change.
+**[DAB-MDD01]** The Master Data Dictionary & Data Governance defines the **official language** of the Community Operating System.
 
----
+**[DAB-MDD01a]** It is the highest authority for every:
 
-## DAB-MDD02 — Naming Standards
+Entity · Table · Field · Relationship · Enumeration · Identifier · Configuration object · Event · Graph node · Graph edge · Search object · Analytics metric · AI knowledge object
 
-| Artifact | Convention | Example |
-|----------|------------|---------|
-| Schema | lowercase domain | `action`, `knowledge` |
-| Table | snake_case plural | `participants`, `domain_events` |
-| Column | snake_case | `community_id`, `created_at` |
-| PK | `id` uuid | |
-| FK | `{entity}_id` | `mission_id` |
-| Enum | snake_case values | `growth_stage` |
-| Index | `idx_{table}_{cols}` | `idx_missions_community_status` |
-| Event type | dot.notation | `community.member.joined` |
+**[DAB-MDD01b]** If Volume 2 is the **blueprint**, the Master Data Dictionary is the **encyclopedia**.
+
+**[DAB-MDD01c]** No developer, AI assistant, migration, API, or report should invent new data structures **outside this governance process**.
 
 ---
 
-## DAB-MDD03 — Standard Columns
+## Guiding Principle
 
-**[DAB-MDD03a]** All tenant entities include where applicable:
+**[DAB-MDD02]**
+
+> **Every piece of data has one canonical definition, one owner, and one meaning.**
+
+**[DAB-MDD02a]** **Consistency is more valuable than convenience.**
+
+---
+
+## Philosophy
+
+**[DAB-MDD03]** The Master Data Dictionary exists to prevent:
+
+Duplicate fields · Conflicting terminology · Multiple definitions · Schema drift · Inconsistent APIs · AI hallucination about data · Reporting inconsistencies
+
+**[DAB-MDD03a]** Over years of development, this document **protects architectural integrity** [DAB-PH24].
+
+---
+
+## Governance Hierarchy
+
+**[DAB-MDD04]**
 
 ```text
-id, community_id, created_at, updated_at, created_by, version, archived_at
+Volume 0
+(Constitution)
+        ↓
+Volume 1
+(Engineering)
+        ↓
+Volume 2
+(Data)
+        ↓
+Master Data Dictionary
+        ↓
+Database
+        ↓
+API
+        ↓
+Applications
+        ↓
+AI
 ```
 
-**[DAB-MDD03b]** All config entries include: `effective_from`, `effective_to`, `scope_type`, `scope_id`.
-
-**[DAB-MDD03c]** All searchable entities sync to `search.search_documents`.
+**[DAB-MDD04a]** **Everything derives from the Dictionary.**
 
 ---
 
-## DAB-MDD04 — Schema Registry
+## Canonical Vocabulary
 
-### platform
+**[DAB-MDD05]** Every business term receives **one official definition**.
 
-| Table | Purpose | Owner |
-|-------|---------|-------|
-| `schema_migrations` | Migration history | Platform Kernel |
-| `audit_log` | Material mutations | Platform Kernel |
-| `access_log` | Sensitive reads | Platform Kernel |
-| `legal_holds` | Erasure blocks | Operator |
+Examples: Participant · Community · County · Institution · Mission · Initiative · Project · Task · Committee · Story · Lesson · Knowledge · Legacy · Partnership · Volunteer · Leadership · Opportunity · Capacity · Mentorship · Digital Twin · Community Brain · Living History
 
-### config
-
-| Table | Purpose |
-|-------|---------|
-| `config_entries` | Generic config KV |
-| `roles` | Platform roles |
-| `community_role_templates` | Default community roles |
-| `community_types` | Community taxonomy |
-| `community_templates` | Launch templates |
-| `mission_templates` | Mission canvas presets |
-| `workflow_definitions` | State machines |
-| `recognition_badges` | Badges |
-| `growth_stages` | Growth stage defs |
-| `feature_flags` | Feature toggles |
-| `retention_policies` | Data retention |
-
-### identity
-
-| Table | Purpose |
-|-------|---------|
-| `participants` | Root person entity |
-| `identity_links` | External identity |
-| `consent_records` | Privacy consent |
-
-### community
-
-| Table | Purpose |
-|-------|---------|
-| `communities` | Organizing home |
-| `community_members` | Membership junction |
-| `teams` | Committees/working groups |
-| `partnerships` | External partnerships |
-
-### geo
-
-| Table | Purpose |
-|-------|---------|
-| `counties` | 75 AR counties |
-| `institutions` | Schools/universities |
-| `places` | Venues/locations |
-
-### action
-
-| Table | Purpose |
-|-------|---------|
-| `missions` | Purpose container |
-| `initiatives` | Campaigns |
-| `projects` | Work packages |
-| `tasks` | Atomic work |
-| `events` | Gatherings |
-| `calendars` | Calendar containers |
-| `event_rsvps` | RSVP |
-| `event_reminders` | Reminders |
-| `availability_blocks` | Availability |
-
-### growth
-
-| Table | Purpose |
-|-------|---------|
-| `invitations` | Invite tracking |
-| `opportunities` | Participation invites |
-
-### knowledge
-
-| Table | Purpose |
-|-------|---------|
-| `stories` | Cultural memory |
-| `lessons` | Improvements |
-| `knowledge_objects` | Playbooks, decisions |
-
-### graph
-
-| Table | Purpose |
-|-------|---------|
-| `entity_relationships` | Canonical edges |
-| `graph_nodes` | Graph projection nodes |
-| `graph_edges` | Graph projection edges |
-
-### events
-
-| Table | Purpose |
-|-------|---------|
-| `domain_events` | Immutable event log |
-| `timeline_entries` | Curated timelines |
-| `domain_events_archive` | Cold storage |
-
-### comms
-
-| Table | Purpose |
-|-------|---------|
-| `notifications` | Notification records |
-| `notification_preferences` | User prefs |
-
-### search
-
-| Table | Purpose |
-|-------|---------|
-| `search_documents` | Search envelope |
-| `rank_signals` | Ranking metadata |
-| `suggestions` | Autocomplete |
-| `index_jobs` | Index worker queue |
-
-### intelligence
-
-| Table | Purpose |
-|-------|---------|
-| `retrieval_chunks` | AI retrieval |
-| `citations` | AI citations |
-| `context_packages` | Prompt context audit |
-| `participant_memory` | Participant AI memory |
-| `community_memory` | Community AI memory |
-| `twin_snapshots` | Digital twins |
-| `community_brain_entries` | Community Brain index |
-| `ai_interactions` | AI audit trail |
-
-### analytics
-
-| Table | Purpose |
-|-------|---------|
-| `metric_definitions` | KPI catalog |
-| `metric_snapshots` | Rollups |
-| `community_health_scores` | Health composite |
-| `report_snapshots` | Frozen reports |
-
-### media
-
-| Table | Purpose |
-|-------|---------|
-| `media_assets` | Binary files |
-| `documents` | Logical documents |
-| `document_versions` | Version history |
-| `entity_attachments` | Entity links |
-| `extraction_jobs` | OCR pipeline |
+**[DAB-MDD05a]** **No competing definitions are permitted** [DAB-E01–E43 · DAB-003].
 
 ---
 
-## DAB-MDD05 — Core Enums
+## Canonical Entity Registry
 
-| Enum | Values |
-|------|--------|
-| `journey_stage` | registered, connected, contributing, leading, mentoring, legacy |
-| `growth_stage` | seed, forming, active, thriving, renewing, archived |
-| `data_class` | public, community, restricted, personal |
-| `visibility` | public, network, community, team, private |
-| `community_type` | campus, county, cohort, institution, alliance |
-| `member_role` | member, organizer, leader, mentor, guest |
-| `member_status` | pending, active, paused, removed |
-| `mission_status` | draft, active, completed, archived |
-| `project_status` | planned, in_progress, blocked, done, archived |
-| `event_status` | draft, scheduled, live, completed, cancelled |
-| `invitation_status` | pending, accepted, expired, revoked |
+**[DAB-MDD06]** For every entity record:
+
+Official Name · Description · Business Purpose · Owning Service · Database Schema · Primary Identifier · Lifecycle · Visibility Rules · Relationships · Graph Participation · Search Participation · Analytics Participation · AI Participation · Documentation Reference
+
+**[DAB-MDD06a]** Every entity has **one canonical definition** [DAB-003 · CED].
 
 ---
 
-## DAB-MDD06 — Data Stewardship
+## Canonical Field Registry
 
-**[DAB-MDD06a]** **Platform steward** — platform schema, config, reference geo data.
+**[DAB-MDD07]** Every field records:
 
-**[DAB-MDD06b]** **Community steward** — community leaders maintain community-scoped data quality.
+Field Name · Description · Data Type · Nullable · Default · Validation Rules · Source · Owner · Version Introduced · Deprecation Status · Sensitive Classification · Search Participation · AI Visibility
 
-**[DAB-MDD06c]** **Domain owner** — engineering owns schema; product owns entity definitions; ops owns retention.
-
----
-
-## DAB-MDD07 — Quality Rules
-
-**[DAB-MDD07a]** Required fields enforced at DB constraint + service validation.
-
-**[DAB-MDD07b]** Slugs unique per scope; emails unique globally.
-
-**[DAB-MDD07c]** Referential integrity — no orphan FKs on active rows.
-
-**[DAB-MDD07d]** Data quality dashboard (V1.1): orphaned records, stale indexes, missing stewards.
+**[DAB-MDD07a]** **Fields are governed assets** — not ad hoc columns.
 
 ---
 
-## DAB-MDD08 — Migration Governance
+## Identifier Registry
 
-**[DAB-MDD08a]** Every migration references DAB dictionary version bump.
+**[DAB-MDD08]** Define every identifier.
 
-**[DAB-MDD08b]** Checklist: entity in CED → relationship in REL → table in MDD → field registered → RLS policy → event type → search mapping → MASTER_DATA_DICTIONARY update.
+Examples: Participant ID · Community ID · Mission ID · Event ID · Knowledge ID · Story ID · Public IDs · External IDs · Correlation IDs
 
-**[DAB-MDD08c]** Breaking changes require semver major + rollback script [ENG-DTR08].
+**[DAB-MDD08a]** Identifiers remain **globally consistent** [RCN-001 · ENG-DTR08].
 
 ---
 
-## DAB-MDD09 — Change Process
+## Enumeration Registry
+
+**[DAB-MDD09]** Enumerations become **governed objects**.
+
+Examples: Statuses · Visibility · Community Types · Mission Types · Relationship Types · Notification Priorities · Leadership Levels · Event Types · Permission Levels
+
+**[DAB-MDD09a]** Enumerations **evolve through governance** — not inline magic strings.
+
+**[DAB-MDD09b]** Core enums cataloged in live spec: `data/registry/master-data-dictionary.json` · `coreEnums`
+
+---
+
+## Relationship Registry
+
+**[DAB-MDD10]** Every relationship records:
+
+Source Entity · Target Entity · Relationship Type · Cardinality · Lifecycle · Visibility · History Rules · Graph Projection · AI Participation
+
+**[DAB-MDD10a]** Relationships remain **standardized** [DAB-004 · DAB-006].
+
+---
+
+## Configuration Registry
+
+**[DAB-MDD11]** Track:
+
+Templates · Roles · Permissions · Feature Flags · Workflow Definitions · Prompt Profiles · Taxonomies
+
+**[DAB-MDD11a]** **Configuration becomes fully documented** [DAB-009 · DCL-001].
+
+---
+
+## Event Registry
+
+**[DAB-MDD12]** Every event definition includes:
+
+Event Name · Category · Producer · Consumers · Payload Definition · Visibility · Timeline Participation · Graph Projection · Notification Participation · Analytics Participation
+
+**[DAB-MDD12a]** **Events become governed contracts** [DAB-007 · DAB-EVT].
+
+---
+
+## Search Registry
+
+**[DAB-MDD13]** Every searchable object defines:
+
+Indexed Fields · Ranking Signals · Facets · Permission Rules · Semantic Participation · Autocomplete · Discovery Categories
+
+**[DAB-MDD13a]** **Search becomes standardized** [DAB-011 · UDI].
+
+---
+
+## AI Registry
+
+**[DAB-MDD14]** Every AI object defines:
+
+Knowledge Sources · Prompt Profiles · Retrieval Objects · Embeddings · Citation Rules · Explainability · Approval Requirements
+
+**[DAB-MDD14a]** **AI becomes governed** [DAB-013 · CKF].
+
+---
+
+## Analytics Registry
+
+**[DAB-MDD15]** Every metric records:
+
+Definition · Formula · Source Data · Refresh Schedule · Dashboard Usage · Confidence · Historical Scope
+
+**[DAB-MDD15a]** **Metrics remain reproducible** [DAB-012 · CHO].
+
+---
+
+## Data Stewardship
+
+**[DAB-MDD16]** Every governed object has:
+
+Owner · Reviewer · Approval Authority · Review Schedule · Documentation
+
+**[DAB-MDD16a]** **Stewardship protects long-term quality.**
+
+**[DAB-MDD16b]** Stewards:
+
+| Scope | Steward |
+|-------|---------|
+| Platform schema | Platform Kernel / Engineering |
+| Community data | Community leaders |
+| Domain entities | Product + Engineering domain owners |
+| Retention & compliance | Operations |
+
+---
+
+## Version Governance
+
+**[DAB-MDD17]** Every change requires:
+
+Proposal · Review · Approval · Migration Plan · Documentation · Version Increment · Rollback Strategy
+
+**[DAB-MDD17a]** **Evolution becomes intentional** [ENG-DTR08].
+
+---
+
+## Naming Standards
+
+**[DAB-MDD18]** Rules:
+
+- Business language
+- Singular entities
+- Consistent verbs
+- No abbreviations unless standardized
+- Avoid implementation-specific names
+
+**[DAB-MDD18a]** Names should remain **understandable decades later**.
+
+**[DAB-MDD18b]** Implementation conventions (schema, table, column, event type notation) documented in [Database Schema Blueprint](DATABASE_SCHEMA_BLUEPRINT.md) [DAB-005] — the Dictionary governs **meaning**, the Blueprint governs **physical layout**.
+
+---
+
+## Change Management
+
+**[DAB-MDD19]** Changes are categorized:
+
+Correction · Enhancement · Deprecation · Replacement · Breaking Change · Historical Preservation
+
+**[DAB-MDD19a]** Each follows an **appropriate approval path**.
+
+**[DAB-MDD19b]** Change process:
 
 1. Propose change in requirements registry trace
 2. Update relevant Volume 2 step doc
 3. Update this dictionary
 4. Update `master-data-dictionary.json`
-5. Generate migration SQL
-6. Update search/graph/AI projections
+5. Generate migration
+6. Update search/graph/AI/analytics projections
 7. Record in BUILD-LOG
+
+---
+
+## Deprecation Policy
+
+**[DAB-MDD20]** Never immediately delete canonical definitions. Instead:
+
+Deprecated → Replacement identified → Migration completed → Historical documentation preserved → Retired
+
+**[DAB-MDD20a]** **Institutional memory remains intact.**
+
+---
+
+## Data Quality Framework
+
+**[DAB-MDD21]** Govern:
+
+Completeness · Consistency · Accuracy · Freshness · Integrity · Relationship validity · Documentation quality · Search quality
+
+**[DAB-MDD21a]** **Quality is continuously monitored** — not a one-time audit.
+
+---
+
+## Governance Reviews
+
+**[DAB-MDD22]** Periodic reviews include:
+
+Unused fields · Duplicate concepts · Relationship consistency · Taxonomy health · Configuration complexity · Schema growth · AI retrieval quality
+
+**[DAB-MDD22a]** **Architecture evolves thoughtfully.**
+
+---
+
+## AI Governance
+
+**[DAB-MDD23]** AI may:
+
+- Suggest improvements
+- Detect duplication
+- Recommend simplification
+- Generate documentation
+- Identify inconsistencies
+
+**[DAB-MDD23a]** AI **never modifies the dictionary without approval** [DAB-AIK02 · AIB-001].
+
+---
+
+## Schema Reference
+
+**[DAB-MDD24]** Physical schema registry maintained in [Database Schema Blueprint](DATABASE_SCHEMA_BLUEPRINT.md) [DAB-005]:
+
+15 domain schemas · 60+ tables · Canonical Schema Registry pattern
+
+**[DAB-MDD24a]** The Master Data Dictionary **governs meaning**; the Schema Blueprint **governs structure**. Both remain synchronized.
+
+---
+
+## Canonical Metadata Registry
+
+**[DAB-MDD25]** **Major Architectural Recommendation:** Create a **Canonical Metadata Registry** as the connective tissue for all governed objects.
+
+**[DAB-MDD25a]** Every governed object — entity, field, relationship, event, API contract, search index, AI knowledge object, analytics metric, or configuration item — carries a **standardized metadata envelope**.
+
+**[DAB-MDD25b]** Each metadata record includes:
+
+Canonical identifier · Human-readable name · Description · Owning domain · Steward · Version · Status (Draft, Active, Deprecated, Retired) · Source documentation · Related architecture documents · Security classification · Privacy classification · Search participation · Community Knowledge Graph participation · Digital Twin participation · AI retrieval eligibility · Analytics eligibility · Creation and revision history
+
+**[DAB-MDD25c]** A developer selecting an entity immediately understands:
+
+- Where it lives in the database
+- Which services own it
+- Which APIs expose it
+- Which search indexes include it
+- Which graph projections reference it
+- Which Digital Twins consume it
+- Which analytics depend on it
+- Which AI retrieval pipelines may use it
+- Which governance rules apply
+
+**[DAB-MDD25d]** Live spec: `data/registry/master-data-dictionary.json` · `canonicalMetadataRegistry`
+
+---
+
+## Volume 2 Completion
+
+**[DAB-MDD26]** With Volume 2 complete, Burt has three complementary blueprints:
+
+| Volume | Defines |
+|--------|---------|
+| **Volume 0** | **Why** the Community Operating System exists and the principles it must uphold |
+| **Volume 1** | **How** the software is engineered |
+| **Volume 2** | **How** every piece of information is represented, governed, and connected |
+
+**[DAB-MDD26a]** Those three volumes form a **coherent foundation for implementation** and provide a stable reference as the platform grows over time.
+
+**[DAB-MDD26b]** Next: close Volume 1 gap [1.5 API Architecture ENG-005] · then Phase 7 implementation.
+
+---
+
+## Burt Implementation Guidance
+
+**[DAB-MDD27]** Implementation should:
+
+1. **Consult the Master Data Dictionary** before creating new fields or entities
+2. **Extend existing vocabulary** whenever practical
+3. Require **governance review** for structural additions
+4. Keep **documentation synchronized** with implementation
+5. Treat the Dictionary as the **canonical reference for every layer** of the platform
+6. Consult **Canonical Metadata Registry** spec before registering new governed objects
+
+**[DAB-MDD27a]** Checklist before any schema change: entity in CED → relationship in REL → field registered → visibility/classification → event type → search mapping → graph projection → AI eligibility → analytics metric → MDD update → BUILD-LOG.
 
 ---
 
 ## AC-120 — Acceptance Criteria
 
-- [x] **[AC-120a]** Naming standards and standard columns documented. `[DAB-MDD02, MDD03]`
-- [x] **[AC-120b]** Full schema registry and core enums defined. `[DAB-MDD04, MDD05]`
-- [x] **[AC-120c]** Stewardship, quality rules, and migration governance established. `[DAB-MDD06–MDD09]`
+Volume 2.14 is complete when:
+
+- [x] **[AC-120a]** Governance philosophy is documented. `[DAB-MDD03]`
+- [x] **[AC-120b]** Canonical registries are defined. `[DAB-MDD06–MDD15]`
+- [x] **[AC-120c]** Stewardship and version governance are established. `[DAB-MDD16, MDD17]`
+- [x] **[AC-120d]** Naming, change management, and AI governance are incorporated. `[DAB-MDD18–MDD23]`
+- [x] **[AC-120e]** Canonical Metadata Registry specified. `[DAB-MDD25]`
+- [x] **[AC-120f]** Burt has a single authoritative reference for every data concept in the COS. `[DAB-MDD27]`
 
 ---
 
-**Volume 2 complete.** Next: close Volume 1 gap [1.5 API Architecture ENG-005] · then Phase 7 implementation.
+**Volume 2 complete.** All 14 steps documented · `data/registry/data-architecture-bible.json` · status: complete
 
-**End of Volume 2.14 — Master Data Dictionary & Governance.**
+**End of Volume 2.14 — Master Data Dictionary & Data Governance.**
