@@ -1,1 +1,77 @@
-{"version":"1.0.0","requirementId":"DAB-002","docPath":"docs/volume-02/DATA_PHILOSOPHY.md","guidingPrinciple":"Connected data beats isolated tables.","acceptanceCriteria":"AC-107"}
+{
+  "version": "2.0.0",
+  "documentId": "VOLUME-002.1",
+  "requirementId": "DAB-002",
+  "docPath": "docs/volume-02/DATA_PHILOSOPHY.md",
+  "status": "canonical",
+  "priority": "critical",
+  "lastUpdated": "2026-07-10",
+  "guidingPrinciple": "Data is the memory of the community.",
+  "corePrinciples": [
+    "canonical",
+    "relational",
+    "historical",
+    "permission-aware",
+    "auditable",
+    "searchable",
+    "explainable",
+    "exportable",
+    "extensible",
+    "human-centered"
+  ],
+  "canonicalSource": "SQL database (Postgres)",
+  "derivedLayers": [
+    "search indexes",
+    "AI embeddings",
+    "graph projections",
+    "analytics rollups",
+    "dashboard summaries"
+  ],
+  "philosophies": {
+    "entity": "Stable ID, ownership, lifecycle, status, visibility, timestamps",
+    "relationship": "First-class, queryable, historical, permission-aware edges",
+    "time": "Preserve change — current state and journey both matter",
+    "event": "Important actions produce immutable event records",
+    "configuration": "Platform behavior rules — governed separately from operational data",
+    "operational": "Community activity facts — preserved as institutional memory",
+    "publicFacts": "External truth with source attribution and periodic review",
+    "platformActivity": "Usage-generated truth with different governance",
+    "ownership": "Domain services own their records — Registry, Community, Mission, Experience, Story, Knowledge, Growth, Identity",
+    "stewardship": "Review, approve, attribute, dedupe, protect privacy, document revisions",
+    "versioning": "Charters, canvas, playbooks, profiles, policies, templates, knowledge, stories",
+    "status": "Explicit lifecycle — planned through archived; history preserved",
+    "visibility": "Separate from existence — evaluated through permission system",
+    "privacy": "Consent, minimization, export, deletion/archival, sensitive audit",
+    "audit": "Actor, action, target, timestamp, before/after, source, reason",
+    "search": "Projection of canonical data — never bypass authorization",
+    "ai": "Derived only — sources, confidence, explanation, human approval where needed",
+    "analytics": "Interpretations with documented source, method, refresh, limits, scope",
+    "archive": "Institutional memory retained; deletion for privacy/safety/legal/dedup only"
+  },
+  "dataQuality": [
+    "accurate",
+    "complete enough to be useful",
+    "consistent",
+    "externally attributed",
+    "reviewed when important",
+    "structured for search and intelligence",
+    "flexible for growth"
+  ],
+  "canonicalMetadataFields": [
+    "id",
+    "public_id",
+    "created_at",
+    "updated_at",
+    "created_by",
+    "updated_by",
+    "status",
+    "visibility",
+    "version",
+    "source",
+    "review_status",
+    "archived_at"
+  ],
+  "expansionRule": "Additive evolution — more institution types, communities, relationships, events, knowledge, states, AI capabilities",
+  "acceptanceCriteria": "AC-107",
+  "acceptanceCriteriaMet": true
+}
