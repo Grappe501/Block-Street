@@ -1,24 +1,255 @@
 {
-  "version": "1.0.0",
+  "version": "2.0.0",
   "documentId": "VOLUME-004.1",
   "requirementId": "UXB-002",
   "docPath": "docs/volume-04/EXPERIENCE_DESIGN_SYSTEM.md",
-  "status": "pending",
-  "priority": "critical",
+  "status": "canonical",
+  "priority": "foundational",
   "lastUpdated": "2026-07-10",
-  "guidingPrinciple": "Experience should feel intentional, welcoming, and trustworthy.",
-  "defines": [
-    "Experienceprinciples",
-    "Cognitiveload",
-    "Belongingfirstdesign",
-    "Mobilefirst",
-    "Accessibility",
-    "Trustfirstinteractions",
-    "Progressivedisclosure",
-    "Emotionaldesign",
-    "Experienceconsistency"
+  "guidingPrinciple": "Every interaction should leave people feeling more capable than before they arrived.",
+  "experiencePhilosophy": {
+    "designedAroundPeopleNotFeatures": true,
+    "experienceIsTheProduct": true,
+    "reduceAnxietyNotAddiction": true,
+    "confidenceOverClicks": true,
+    "purposeOverAttention": true,
+    "helpsPeopleFlourish": true
+  },
+  "traditionalSoftwareOptimizesFor": [
+    "MoreClicks",
+    "MoreEngagement",
+    "MoreTimeOnSite"
   ],
-  "topicCount": 9,
+  "communityOSOptimizesFor": [
+    "Confidence",
+    "Understanding",
+    "Progress",
+    "Belonging",
+    "Momentum",
+    "Trust",
+    "Purpose"
+  ],
+  "communityOSOptimizeForCount": 7,
+  "experienceArchitecture": {
+    "stages": [
+      "Curiosity",
+      "Understanding",
+      "Confidence",
+      "Participation",
+      "Contribution",
+      "Leadership",
+      "Belonging"
+    ],
+    "stageCount": 7
+  },
+  "coreExperiencePrincipleCount": 10,
+  "coreExperiencePrinciples": [
+    { "id": "belongingBeforeFeatures", "name": "Belonging Before Features", "summary": "Community before functionality — I belong here" },
+    { "id": "explainBeforeAsking", "name": "Explain Before Asking", "summary": "Never request action without context" },
+    { "id": "reduceCognitiveLoad", "name": "Reduce Cognitive Load", "summary": "One primary question per screen" },
+    { "id": "progressiveDisclosure", "name": "Progressive Disclosure", "summary": "Show only what is needed now" },
+    { "id": "confidenceOverSpeed", "name": "Confidence Over Speed", "summary": "Confidence compounds" },
+    { "id": "trustThroughTransparency", "name": "Trust Through Transparency", "summary": "Every decision explainable" },
+    { "id": "humanBeforeAutomation", "name": "Human Before Automation", "summary": "Supported, never replaced" },
+    { "id": "learningThroughDoing", "name": "Learning Through Doing", "summary": "Interface teaches through meaningful work" },
+    { "id": "communityBeforeIndividual", "name": "Community Before Individual", "summary": "Who else is involved, who benefits" },
+    { "id": "celebrateProgress", "name": "Celebrate Progress", "summary": "Recognition builds momentum" }
+  ],
+  "emotionalJourneyStages": [
+    "Curious",
+    "Welcomed",
+    "Safe",
+    "Confident",
+    "Useful",
+    "Connected",
+    "Proud",
+    "Purposeful"
+  ],
+  "emotionalJourneyStageCount": 8,
+  "cognitiveDesignQuestions": [
+    "WhereAmI",
+    "WhyAmIHere",
+    "WhatShouldIDo",
+    "WhatHappensNext",
+    "CanISafelyContinue"
+  ],
+  "cognitiveDesignQuestionCount": 5,
+  "interactionPrinciples": [
+    "Predictable",
+    "Forgiving",
+    "Recoverable",
+    "Responsive",
+    "Accessible",
+    "Explainable",
+    "Consistent"
+  ],
+  "interactionPrincipleCount": 7,
+  "visualHierarchyElements": [
+    "PrimaryAction",
+    "SupportingActions",
+    "Information",
+    "Warnings",
+    "Status",
+    "CommunityContext"
+  ],
+  "visualHierarchyElementCount": 6,
+  "motionPhilosophyPurposes": [
+    "GuideAttention",
+    "ConfirmActions",
+    "ShowProgress",
+    "ReduceConfusion",
+    "CelebrateMilestones"
+  ],
+  "motionPhilosophyPurposeCount": 5,
+  "emptyStateQuestions": [
+    "WhyIsThisEmpty",
+    "WhatBelongsHere",
+    "HowDoIBegin",
+    "WhatWillHappenAfterward"
+  ],
+  "emptyStateQuestionCount": 4,
+  "errorPhilosophyElements": [
+    "ExplainProblem",
+    "ExplainWhy",
+    "ExplainRecovery",
+    "AvoidBlame",
+    "TeachParticipants"
+  ],
+  "errorPhilosophyElementCount": 5,
+  "successFeedbackExamples": [
+    "MissionCompleted",
+    "CommunityLaunched",
+    "KnowledgePublished",
+    "VolunteerMilestone",
+    "LeadershipAppointment"
+  ],
+  "successFeedbackExampleCount": 5,
+  "accessibilityDimensions": [
+    "Vision",
+    "Hearing",
+    "Mobility",
+    "Language",
+    "ReadingLevel",
+    "TechnologyFamiliarity",
+    "Neurodiversity"
+  ],
+  "accessibilityDimensionCount": 7,
+  "accessibilityStandard": "WCAG 2.1 AA",
+  "mobileFirstOrder": [
+    "Phone",
+    "Tablet",
+    "Desktop",
+    "LargeDisplays"
+  ],
+  "mobileFirstOrderCount": 4,
+  "aiExperienceRoles": [
+    "Coach",
+    "ResearchAssistant",
+    "PlanningPartner",
+    "CommunityGuide",
+    "WritingAssistant",
+    "KnowledgeNavigator"
+  ],
+  "aiExperienceRoleCount": 6,
+  "aiRemainsCollaborative": true,
+  "communityPresenceElements": [
+    "CommunityActivity",
+    "VolunteerStories",
+    "SharedMissions",
+    "RecentKnowledge",
+    "Leadership"
+  ],
+  "communityPresenceElementCount": 5,
+  "delightMoments": [
+    "MissionCelebrations",
+    "VolunteerAnniversaries",
+    "KnowledgeMilestones",
+    "CommunityAchievements",
+    "UnexpectedEncouragement"
+  ],
+  "delightMomentCount": 5,
+  "attentionPhilosophy": {
+    "competeForPurposeNotAttention": true,
+    "comfortableWaitingWhenParticipantsLeave": true,
+    "trustIncreases": true
+  },
+  "experienceQualityEngine": {
+    "name": "Experience Quality Engine",
+    "abbreviation": "EQE",
+    "purpose": "Continuously evaluates whether the platform delivers on design principles — not bugs alone, but whether people flourish",
+    "notIndividualManipulation": true,
+    "constitutionalPromise": "Empowering communities",
+    "architecturalPrinciple": "The software should continuously evaluate not only whether it works, but whether it helps people flourish",
+    "domains": [
+      {
+        "id": "clarity",
+        "name": "Clarity",
+        "evaluates": ["PrimaryActionIdentifiable", "NextStepObvious", "WorkflowsUnderstandable"]
+      },
+      {
+        "id": "confidence",
+        "name": "Confidence",
+        "evaluates": ["HesitationPoints", "TaskAbandonment", "RepeatedQuestions"]
+      },
+      {
+        "id": "belonging",
+        "name": "Belonging",
+        "evaluates": ["CommunityJoining", "ReturnVisits", "RelationshipFormation", "ConversationEngagement"]
+      },
+      {
+        "id": "momentum",
+        "name": "Momentum",
+        "evaluates": ["MissionProgression", "OnboardingCompletion", "LeadershipAdvancement"]
+      },
+      {
+        "id": "trust",
+        "name": "Trust",
+        "evaluates": ["ExplanationViews", "PrivacySettingsUnderstood", "GovernanceTransparency", "AIRecommendationAcceptance"]
+      },
+      {
+        "id": "cognitiveLoad",
+        "name": "Cognitive Load",
+        "evaluates": ["TimeToFirstSuccessfulAction", "UnnecessaryClicks", "NavigationConfusion", "Backtracking"]
+      },
+      {
+        "id": "accessibility",
+        "name": "Accessibility",
+        "evaluates": ["KeyboardNavigation", "ScreenReaderCompatibility", "MobileUsability", "ReadingComplexity", "ColorContrast"]
+      },
+      {
+        "id": "emotionalHealth",
+        "name": "Emotional Health",
+        "evaluates": ["ConfidenceGrowth", "SenseOfAccomplishment", "VolunteerSatisfaction", "LeadershipReadiness", "CommunityConnectedness"]
+      }
+    ],
+    "domainCount": 8
+  },
+  "domainSchemaMapping": {
+    "schema": "ExperienceArchitecture",
+    "entities": [
+      "ExperiencePrinciple",
+      "EmotionalJourney",
+      "InteractionStandard",
+      "ExperienceQualityEngine"
+    ]
+  },
+  "projectionIntegrations": {
+    "platformBehaviorPath": "data/registry/platform-behavior-bible.json",
+    "attentionEnginePath": "data/registry/attention-engine.json",
+    "communityIntelligencePath": "data/registry/community-intelligence-engine.json",
+    "governanceEnginePath": "data/registry/governance-engine.json",
+    "securityPrivacyPath": "data/registry/security-privacy-model.json",
+    "aiKnowledgePath": "data/registry/ai-knowledge-model.json"
+  },
+  "burtImplementationGuidance": [
+    "Begin every design from emotional goals rather than components",
+    "Reduce cognitive load before adding functionality",
+    "Teach through interaction",
+    "Make trust visible",
+    "Prioritize accessibility from the first implementation",
+    "Reinforce belonging throughout the experience",
+    "Consult Experience Quality Engine spec before experience-facing features"
+  ],
   "acceptanceCriteria": "AC-137",
-  "acceptanceCriteriaMet": false
+  "acceptanceCriteriaMet": true
 }
