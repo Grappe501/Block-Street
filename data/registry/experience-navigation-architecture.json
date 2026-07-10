@@ -1,23 +1,257 @@
 {
-  "version": "1.0.0",
+  "version": "2.0.0",
   "documentId": "VOLUME-004.2",
   "requirementId": "UXB-003",
   "docPath": "docs/volume-04/NAVIGATION_ARCHITECTURE.md",
-  "status": "pending",
-  "priority": "critical",
+  "status": "canonical",
+  "priority": "foundational",
   "lastUpdated": "2026-07-10",
-  "guidingPrinciple": "Experience should feel intentional, welcoming, and trustworthy.",
-  "defines": [
-    "Navigationhierarchy",
-    "Routephilosophy",
-    "Executivenavigation",
-    "Participantnavigation",
-    "Communitynavigation",
-    "Crossmodulenavigation",
-    "Searchdrivennavigation",
-    "Contextawarenavigation"
+  "guidingPrinciple": "People should always know where they are, why they are there, and what to do next.",
+  "navigationPhilosophy": {
+    "notAMenu": true,
+    "purposeNotFeatures": true,
+    "humanQuestionsNotSoftwareModules": true,
+    "reducesAnxietyBuildsConfidence": true,
+    "eliminatesUncertainty": true,
+    "everyPageReinforcesOrientation": true
+  },
+  "humanNavigationQuestions": [
+    "WhatNeedsMyAttention",
+    "WhatShouldIDoToday",
+    "WhoNeedsMe",
+    "WhatCommunityAmIServing",
+    "WhatMissionAmIWorkingOn",
+    "WhatShouldILearnNext",
+    "WhereCanIHelp"
   ],
-  "topicCount": 8,
+  "humanNavigationQuestionCount": 7,
+  "navigationHierarchy": {
+    "layers": [
+      "Mission",
+      "Workspace",
+      "Context",
+      "Action",
+      "Details"
+    ],
+    "layerCount": 5
+  },
+  "navigationLevelCount": 5,
+  "navigationLevels": [
+    {
+      "level": 1,
+      "id": "global",
+      "name": "Global Navigation",
+      "alwaysAvailable": true,
+      "examples": ["Home", "Communities", "Missions", "People", "Knowledge", "Calendar", "Search", "Notifications", "PersonalOS"]
+    },
+    {
+      "level": 2,
+      "id": "workspace",
+      "name": "Workspace Navigation",
+      "determinedBy": "CurrentOperationalWorkspace",
+      "examples": ["MissionOperationsCenter", "VolunteerSuccessCenter", "LeadershipAcademy", "ExecutiveOperationsCenter", "KnowledgeObservatory", "CommunityWorkspace", "CountyWorkspace", "PersonalWorkspace"]
+    },
+    {
+      "level": 3,
+      "id": "context",
+      "name": "Context Navigation",
+      "changesBasedOn": "CurrentObject",
+      "examples": ["Members", "Calendar", "Knowledge", "Leadership", "Missions", "Files", "Partnerships", "Analytics"]
+    },
+    {
+      "level": 4,
+      "id": "action",
+      "name": "Action Navigation",
+      "focusedOn": "CurrentWork",
+      "examples": ["CreateMission", "InviteVolunteer", "PublishStory", "ApproveProposal", "AssignMentor", "ScheduleMeeting"]
+    },
+    {
+      "level": 5,
+      "id": "detail",
+      "name": "Detail Navigation",
+      "supports": "Exploration",
+      "examples": ["History", "Versions", "Relationships", "Evidence", "Timeline", "Activity", "Audit"]
+    }
+  ],
+  "navigationPhilosophyQuestions": [
+    "WhereAmI",
+    "WhatBelongsHere",
+    "WhereCanIGo",
+    "HowDoIReturn",
+    "WhatDeservesMyAttention"
+  ],
+  "navigationPhilosophyQuestionCount": 5,
+  "orientationSystemDisplays": [
+    "CurrentWorkspace",
+    "CurrentCommunity",
+    "CurrentMission",
+    "CurrentContext",
+    "NavigationPath"
+  ],
+  "orientationSystemDisplayCount": 5,
+  "contextAwarenessFactors": [
+    "Community",
+    "Mission",
+    "Role",
+    "Leadership",
+    "CurrentWorkflow",
+    "Calendar",
+    "PersonalPreferences"
+  ],
+  "contextAwarenessFactorCount": 7,
+  "searchNavigationTypes": [
+    "People",
+    "Communities",
+    "Knowledge",
+    "Missions",
+    "Calendar",
+    "Stories",
+    "Institutions",
+    "Counties"
+  ],
+  "searchNavigationTypeCount": 8,
+  "quickActions": [
+    "NewMission",
+    "NewStory",
+    "InviteVolunteer",
+    "ScheduleMeeting",
+    "Search",
+    "AIAssistant"
+  ],
+  "quickActionCount": 6,
+  "navigationRoles": [
+    "Participant",
+    "Volunteer",
+    "Leader",
+    "CommunityOrganizer",
+    "CountyCoordinator",
+    "Executive",
+    "Administrator"
+  ],
+  "navigationRoleCount": 7,
+  "mobileNavigationPriorities": [
+    "CurrentWork",
+    "NextAction",
+    "Search",
+    "Notifications",
+    "Calendar",
+    "PersonalOS"
+  ],
+  "mobileNavigationPriorityCount": 6,
+  "deepLinkObjectTypes": [
+    "Mission",
+    "Community",
+    "Story",
+    "Volunteer",
+    "Meeting",
+    "KnowledgeObject",
+    "LeadershipProfile"
+  ],
+  "deepLinkObjectTypeCount": 7,
+  "navigationMemoryItems": [
+    "RecentWorkspaces",
+    "RecentCommunities",
+    "RecentMissions",
+    "FrequentlyVisitedAreas",
+    "PinnedResources"
+  ],
+  "navigationMemoryItemCount": 5,
+  "aiNavigationQueries": [
+    "TakeMeTo",
+    "WhereDoI",
+    "WhatShouldIWorkOn",
+    "WhoNeedsAttention"
+  ],
+  "aiNavigationQueryCount": 4,
+  "crossSystemNavigationTargets": [
+    "PersonalOS",
+    "VolunteerSuccessCenter",
+    "MissionOperationsCenter",
+    "LeadershipAcademy",
+    "KnowledgeObservatory",
+    "ExecutiveOperationsCenter",
+    "CommunityOperatingManual"
+  ],
+  "crossSystemNavigationTargetCount": 7,
+  "attentionIntegrationHighlights": [
+    "PendingApprovals",
+    "UpcomingMeetings",
+    "MissionDeadlines",
+    "CommunityUpdates",
+    "LearningRecommendations"
+  ],
+  "attentionIntegrationHighlightCount": 5,
+  "communityPresenceElements": [
+    "Communities",
+    "Relationships",
+    "People",
+    "SharedMissions",
+    "Belonging"
+  ],
+  "communityPresenceElementCount": 5,
+  "navigationAccessibilityModes": [
+    "Keyboard",
+    "ScreenReaders",
+    "Voice",
+    "Touch",
+    "LargeDisplays",
+    "HighContrast",
+    "ReducedMotion"
+  ],
+  "navigationAccessibilityModeCount": 7,
+  "intentNavigationEngine": {
+    "name": "Intent Navigation Engine",
+    "abbreviation": "INE",
+    "purpose": "Purpose-driven navigation — begins with what the user is trying to accomplish, not software structure",
+    "notStaticMenuSystem": true,
+    "purposeDrivenGuidance": true,
+    "exampleIntents": [
+      "IWantToHelpThisWeekend",
+      "ShowMeCommunitiesNearMe",
+      "INeedToApproveSomething",
+      "FindMyMentor",
+      "WhatShouldIDoToday",
+      "PrepareForTonightsMeeting",
+      "ShowEveryoneWorkingOnVoterRegistration"
+    ],
+    "exampleIntentCount": 7,
+    "combines": {
+      "context": ["CurrentWorkspace", "CurrentCommunity", "CurrentMission", "Calendar", "LeadershipRole"],
+      "intelligence": ["CommunityIntelligence", "OperationalIntelligence", "PersonalOS", "DigitalTwin", "CommunityHealth"],
+      "navigation": ["Search", "DeepLinks", "RecentHistory", "PinnedWork", "AIConversation"],
+      "guidance": "CompleteWorkflowGuidanceNotJustPages"
+    },
+    "platformAdaptsToHumanIntent": true
+  },
+  "domainSchemaMapping": {
+    "schema": "ExperienceArchitecture",
+    "entities": [
+      "NavigationLevel",
+      "OrientationContext",
+      "DeepLink",
+      "NavigationMemory",
+      "IntentNavigationEngine"
+    ]
+  },
+  "projectionIntegrations": {
+    "experienceDesignSystemPath": "data/registry/experience-design-system.json",
+    "platformBehaviorPath": "data/registry/platform-behavior-bible.json",
+    "workflowEnginePath": "data/registry/workflow-engine.json",
+    "attentionEnginePath": "data/registry/attention-engine.json",
+    "communityIntelligencePath": "data/registry/community-intelligence-engine.json",
+    "operationalIntelligencePath": "data/registry/operational-intelligence-engine.json",
+    "searchIndexPath": "data/registry/search-index-model.json",
+    "relationshipModelPath": "data/registry/relationship-data-model.json"
+  },
+  "burtImplementationGuidance": [
+    "Organize navigation around purpose rather than features",
+    "Build layered navigation with clear orientation",
+    "Support contextual workspaces",
+    "Make search a first-class navigation mechanism",
+    "Preserve context during navigation",
+    "Keep navigation consistent across devices",
+    "Consult Intent Navigation Engine spec before navigation-facing features"
+  ],
   "acceptanceCriteria": "AC-138",
-  "acceptanceCriteriaMet": false
+  "acceptanceCriteriaMet": true
 }
