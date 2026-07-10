@@ -5532,6 +5532,48 @@
       }
     },
     {
+      "id": "PSI-006",
+      "title": "Synchronization Architecture — Volume 5.5",
+      "purpose": "Maintain coherent operational reality across LocalBrains, cloud, devices, and institutions",
+      "description": "VOLUME-005.5 — 9 sync domains, Federated Synchronization Mesh, conflict resolution, 8 federation levels, event-driven sync",
+      "priority": "mission_critical",
+      "principle": "CP-012",
+      "dependencies": [
+        "PSI-005",
+        "PSI-004",
+        "PSI-001",
+        "DAB-007",
+        "ENG-014"
+      ],
+      "related": [
+        "PSI-001",
+        "PSI-007"
+      ],
+      "acceptanceCriteria": [
+        "Synchronization philosophy documented",
+        "Synchronization domains and models defined",
+        "Conflict resolution and LocalBrain federation established",
+        "Queues, Community Event Ledger, Digital Twin, AI, observability, and security integrations incorporated",
+        "Federated Synchronization Mesh specified",
+        "Complete blueprint for synchronization across the platform"
+      ],
+      "futureNotes": "Guiding principle: Synchronize knowledge, preserve autonomy.",
+      "implementationStatus": "done",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": null,
+        "api": "API-SYSTEM",
+        "frontend": null,
+        "test": "TEST-PSI-006",
+        "doc": "DOC-PSI-006"
+      },
+      "versionHistory": {
+        "created": "2026-07-10",
+        "implemented": "2026-07-10"
+      }
+    },
+    {
       "id": "PSI-005",
       "title": "Event Streaming Architecture — Volume 5.4",
       "purpose": "Event-first information flow — every meaningful action becomes institutional memory",
@@ -5739,7 +5781,7 @@
         "Foundation stack Volumes 0-5 defined",
         "Complete blueprint for platform services and integration architecture"
       ],
-      "futureNotes": "Volume 5 scaffold — 4/14 canonical steps complete. LocalBrain woven throughout every chapter.",
+      "futureNotes": "Volume 5 scaffold — 5/14 canonical steps complete. LocalBrain woven throughout every chapter.",
       "implementationStatus": "scaffold",
       "testingStatus": "pending",
       "documentationStatus": "scaffold",

@@ -5,6 +5,7 @@ import psa from "../../../data/registry/platform-services-architecture.json";
 import api from "../../../data/registry/api-architecture-volume5.json";
 import integ from "../../../data/registry/integration-architecture.json";
 import evt from "../../../data/registry/event-stream-architecture.json";
+import sync from "../../../data/registry/synchronization-architecture.json";
 
 type ServiceReg = {
   acceptanceCriteria: string;
@@ -19,6 +20,9 @@ type ServiceReg = {
   eventCategoryCount?: number;
   eventPrincipleCount?: number;
   institutionalEventFabric?: { abbreviation: string; fabricLayers?: { layerCount: number }; eventEnrichment?: { domainCount: number } };
+  federatedSynchronizationMesh?: { abbreviation: string; federatedMeshArchitecture?: { levelCount: number }; responsibilityCount: number };
+  synchronizationDomainCount?: number;
+  synchronizationPrincipleCount?: number;
   platformServiceMesh?: { responsibilityCount: number; abbreviation: string };
   constitutionalApiGateway?: { responsibilityCount: number; abbreviation: string; gatewayPipeline?: { stageCount: number } };
   universalConnectorFramework?: { abbreviation: string; connectorPipeline?: { stageCount: number }; connectorCertification?: { criteriaCount: number } };
@@ -26,8 +30,14 @@ type ServiceReg = {
   apiArchitecture?: { layerCount: number };
   integrationArchitecture?: { layerCount: number };
   eventArchitecture?: { layerCount: number };
+  synchronizationArchitecture?: { layerCount: number };
   localBrainCompatibility?: { localBrainFirstClassRuntime: boolean };
-  localBrainFederation?: { explicitIntegration?: boolean; offlineOperationContinues?: boolean };
+  localBrainFederation?: {
+    explicitIntegration?: boolean;
+    offlineOperationContinues?: boolean;
+    everyLocalBrainSurvivesIndependently?: boolean;
+    flow?: string[];
+  };
   localBrainIntegration?: { someIntegrationsExecuteEntirelyInLocalBrain: boolean };
 };
 
@@ -36,9 +46,11 @@ const FEATURED_SUBTITLES: Record<string, string> = {
   "5.2": "API Layer",
   "5.3": "Integrations",
   "5.4": "Event Streaming",
+  "5.5": "Synchronization",
 };
 
 const SERVICE_CARDS: { step: string; label: string; reg: ServiceReg; cardClass: string; metaClass: string; titleClass: string; featured?: boolean }[] = [
+  { step: "5.5", label: "Federated Synchronization Mesh", reg: sync, cardClass: "border-gray-300 bg-gray-50", metaClass: "text-gray-700", titleClass: "text-gray-950", featured: true },
   { step: "5.4", label: "Institutional Event Fabric", reg: evt, cardClass: "border-neutral-300 bg-neutral-50", metaClass: "text-neutral-700", titleClass: "text-neutral-950", featured: true },
   { step: "5.3", label: "Universal Connector Framework", reg: integ, cardClass: "border-stone-300 bg-stone-50", metaClass: "text-stone-700", titleClass: "text-stone-950", featured: true },
   { step: "5.2", label: "Constitutional API Gateway", reg: api, cardClass: "border-zinc-300 bg-zinc-50", metaClass: "text-zinc-700", titleClass: "text-zinc-950", featured: true },
@@ -74,7 +86,11 @@ export function AdminPlatformServices() {
             <p className={`mt-2 text-xs ${metaClass}`}>
               {reg.acceptanceCriteria} · {reg.status}
             </p>
-            {reg.institutionalEventFabric ? (
+            {reg.federatedSynchronizationMesh ? (
+              <p className={`mt-1 text-xs ${metaClass}`}>
+                {reg.synchronizationDomainCount ?? 0} sync domains · {reg.synchronizationPrincipleCount ?? 0} principles · {reg.synchronizationArchitecture?.layerCount ?? 0} sync layers · {reg.federatedSynchronizationMesh.federatedMeshArchitecture?.levelCount ?? 0} federation levels · {reg.federatedSynchronizationMesh.responsibilityCount} {reg.federatedSynchronizationMesh.abbreviation} responsibilities · Operational Time Machine
+              </p>
+            ) : reg.institutionalEventFabric ? (
               <p className={`mt-1 text-xs ${metaClass}`}>
                 {reg.eventCategoryCount ?? 0} event categories · {reg.eventPrincipleCount ?? 0} principles · {reg.eventArchitecture?.layerCount ?? 0} event layers · {reg.institutionalEventFabric.fabricLayers?.layerCount ?? 0} IEF fabric layers · {reg.institutionalEventFabric.eventEnrichment?.domainCount ?? 0} enrichment domains · Event Time Machine
               </p>

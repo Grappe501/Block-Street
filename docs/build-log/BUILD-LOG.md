@@ -18,6 +18,23 @@
 
 ---
 
+## 2026-07-10 — Volume 5.5 Synchronization Architecture [PSI-006 · AC-155]
+
+**Document:** `docs/volume-05/SYNCHRONIZATION_ARCHITECTURE.md` · **Registry:** `data/registry/synchronization-architecture.json`
+
+### What Changed
+
+- **Guiding principle:** *Synchronize knowledge, preserve autonomy.*
+- Event-driven synchronization — one coherent operational reality across distributed nodes
+- **9 synchronization domains** — identity through configuration
+- **5 synchronization models** — real-time, near real-time, scheduled, manual, offline
+- Conflict resolution, merge strategies, canonical ownership, federation levels
+- **Federated Synchronization Mesh (FSM)** — 6 federation levels, 6 mesh responsibilities including Conflict Intelligence and Operational Time Machine
+- Federated civic platform — thousands of LocalBrains, one ecosystem
+- Umbrella PSI-001 · platform-services-integration-bible 5/14 · Volume 5 in progress
+
+---
+
 ## 2026-07-10 — Volume 5.4 Event Streaming Architecture [PSI-005 · AC-154]
 
 **Document:** `docs/volume-05/EVENT_STREAM_ARCHITECTURE.md` · **Registry:** `data/registry/event-stream-architecture.json`
