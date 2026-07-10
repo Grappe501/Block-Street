@@ -61,10 +61,10 @@
       "masterSequencePath": "docs/volume-04/VOLUME_4_MASTER_SEQUENCE.md",
       "registryPath": "data/registry/experience-architecture-bible.json",
       "chapters": 14,
-      "stepsComplete": 0,
+      "stepsComplete": 1,
       "stepsTotal": 14,
       "acceptanceCriteria": "AC-136",
-      "status": "scaffold"
+      "status": "in_progress"
     },
     {
       "volume": 5,

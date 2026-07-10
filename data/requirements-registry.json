@@ -5417,27 +5417,33 @@
     {
       "id": "UXB-002",
       "title": "Experience Design System — Volume 4.1",
-      "purpose": "Experience Design System experience layer",
-      "description": "VOLUME-004.1 experience principles, cognitive load, belonging-first, accessibility",
-      "priority": "critical",
+      "purpose": "Human-centered experience philosophy — how every participant should feel",
+      "description": "VOLUME-004.1 — Experience Quality Engine, 10 core principles, emotional journey, cognitive design, accessibility, attention philosophy",
+      "priority": "foundational",
       "principle": "CP-012",
       "dependencies": [
         "UXB-001",
-        "PBA-001"
+        "PBA-001",
+        "MAB-001"
       ],
       "related": [
-        "UXB-003"
+        "UXB-003",
+        "UXB-006",
+        "UXB-012",
+        "DAB-014"
       ],
       "acceptanceCriteria": [
         "Experience philosophy documented",
-        "UX behaviors defined",
-        "Volume 0-3 integration specified",
-        "Implementation blueprint for experience layer"
+        "Emotional and cognitive principles defined",
+        "Interaction, motion, accessibility, and AI experience standards established",
+        "Community presence and attention philosophy incorporated",
+        "Experience Quality Engine specified",
+        "Complete blueprint for human-centered experience"
       ],
-      "futureNotes": "Scaffold — pending canonical build step",
-      "implementationStatus": "pending",
+      "futureNotes": "Guiding principle: Every interaction should leave people feeling more capable than before they arrived.",
+      "implementationStatus": "done",
       "testingStatus": "pending",
-      "documentationStatus": "pending",
+      "documentationStatus": "done",
       "trace": {
         "database": null,
         "api": null,
@@ -5447,7 +5453,7 @@
       },
       "versionHistory": {
         "created": "2026-07-10",
-        "implemented": null
+        "implemented": "2026-07-10"
       }
     },
     {

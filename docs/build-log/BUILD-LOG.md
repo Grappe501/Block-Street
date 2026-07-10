@@ -18,6 +18,23 @@
 
 ---
 
+## 2026-07-10 — Volume 4.1 Experience Design System [UXB-002 · AC-137]
+
+**Document:** `docs/volume-04/EXPERIENCE_DESIGN_SYSTEM.md` · **Registry:** `data/registry/experience-design-system.json`
+
+### What Changed
+
+- **Guiding principle:** *Every interaction should leave people feeling more capable than before they arrived.*
+- Experience designed around people, not features — the experience is the product
+- **7-stage experience architecture:** Curiosity through Belonging
+- **10 core experience principles:** Belonging before features through celebrate progress
+- Emotional journey, cognitive design, interaction principles, motion, empty/loading/error states
+- Accessibility, mobile-first, AI experience, community presence, attention philosophy, delight
+- **Experience Quality Engine (EQE)** — 8 evaluation domains measuring whether people flourish
+- Admin Volume 4 tab · requirements UXB-002 updated · Volume 4: 1/14 complete
+
+---
+
 ## 2026-07-10 — Volume 4 User Experience & Product Architecture [UXB-001 · AC-136] — **FACTORY SCAFFOLD**
 
 **Document:** `docs/volume-04/VOLUME_4_MASTER_SEQUENCE.md` · **Umbrella:** `docs/master/USER_EXPERIENCE_PRODUCT_ARCHITECTURE.md` · **Registry:** `data/registry/experience-architecture-bible.json`

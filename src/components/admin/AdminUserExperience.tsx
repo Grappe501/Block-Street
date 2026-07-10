@@ -22,10 +22,16 @@ type ExperienceReg = {
   acceptanceCriteria: string;
   status: string;
   guidingPrinciple?: string;
+  coreExperiencePrincipleCount?: number;
+  experienceQualityEngine?: { domainCount: number };
 };
 
-const EXPERIENCE_CARDS: { step: string; label: string; reg: ExperienceReg; cardClass: string; metaClass: string; titleClass: string }[] = [
-  { step: "4.1", label: "Experience Design System", reg: eds, cardClass: "border-sky-300 bg-sky-50", metaClass: "text-sky-700", titleClass: "text-sky-950" },
+const FEATURED_SUBTITLES: Record<string, string> = {
+  "4.1": "Experience Design",
+};
+
+const EXPERIENCE_CARDS: { step: string; label: string; reg: ExperienceReg; cardClass: string; metaClass: string; titleClass: string; featured?: boolean }[] = [
+  { step: "4.1", label: "Experience Quality Engine", reg: eds, cardClass: "border-sky-300 bg-sky-50", metaClass: "text-sky-700", titleClass: "text-sky-950", featured: true },
   { step: "4.2", label: "Navigation Architecture", reg: nav, cardClass: "border-blue-300 bg-blue-50", metaClass: "text-blue-700", titleClass: "text-blue-950" },
   { step: "4.3", label: "Dashboard Architecture", reg: dash, cardClass: "border-indigo-300 bg-indigo-50", metaClass: "text-indigo-700", titleClass: "text-indigo-950" },
   { step: "4.4", label: "User Journey Architecture", reg: journey, cardClass: "border-violet-300 bg-violet-50", metaClass: "text-violet-700", titleClass: "text-violet-950" },
@@ -57,16 +63,23 @@ export function AdminUserExperience() {
       </div>
 
       <div className="grid gap-4 md:grid-cols-2">
-        {EXPERIENCE_CARDS.map(({ step, label, reg, cardClass, metaClass, titleClass }) => (
+        {EXPERIENCE_CARDS.map(({ step, label, reg, cardClass, metaClass, titleClass, featured }) => (
           <div key={step} className={`card ${cardClass}`}>
-            <p className={`text-xs font-semibold uppercase ${metaClass}`}>VOLUME-00{step.replace(".", "-")} · {label}</p>
+            <p className={`text-xs font-semibold uppercase ${metaClass}`}>VOLUME-00{step.replace(".", "-")} · {featured ? FEATURED_SUBTITLES[step] ?? label : label}</p>
             <h3 className={`mt-1 text-sm font-bold ${titleClass}`}>{label}</h3>
             {reg.guidingPrinciple ? (
               <p className={`mt-1 text-xs italic ${metaClass}`}>&ldquo;{reg.guidingPrinciple}&rdquo;</p>
             ) : null}
             <p className={`mt-2 text-xs ${metaClass}`}>
-              {reg.topicCount ?? reg.defines?.length ?? 0} topics · {reg.acceptanceCriteria} · {reg.status}
+              {reg.acceptanceCriteria} · {reg.status}
             </p>
+            {reg.experienceQualityEngine ? (
+              <p className={`mt-1 text-xs ${metaClass}`}>
+                {reg.coreExperiencePrincipleCount ?? 0} experience principles · {reg.experienceQualityEngine.domainCount} EQE domains
+              </p>
+            ) : reg.topicCount ? (
+              <p className={`mt-1 text-xs ${metaClass}`}>{reg.topicCount} topics</p>
+            ) : null}
           </div>
         ))}
       </div>

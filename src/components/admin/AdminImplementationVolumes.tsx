@@ -13,7 +13,7 @@ export function AdminImplementationVolumes() {
         <h2 className="mt-1 text-xl font-bold text-indigo-950">{ivs.purpose}</h2>
         <p className="mt-2 text-sm text-indigo-900">{ivs.naturalPause.statement}</p>
         <p className="mt-2 text-xs font-semibold text-indigo-800">
-          Volume 1: {eab.stepsComplete}/{eab.stepsTotal} · Volume 2: complete · Volume 3: 14/14 · Volume 4: 0/14 · Volumes 5–7: v1 · Phase 7 deferred
+          Volume 1: {eab.stepsComplete}/{eab.stepsTotal} · Volume 2: complete · Volume 3: 14/14 · Volume 4: 1/14 · Volumes 5–7: v1 · Phase 7 deferred
         </p>
       </div>
 

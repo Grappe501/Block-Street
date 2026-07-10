@@ -103,7 +103,7 @@
       { "id": "V3.12", "name": "Knowledge Growth Engine [PBA-013]", "status": "done", "notes": "Knowledge Observatory, 9-stage lifecycle, Community Brain — AC-133" },
       { "id": "V3.13", "name": "Operational Intelligence Engine [PBA-014]", "status": "done", "notes": "Executive Operations Center, 9 domains, readiness, risk, briefings — AC-134" },
       { "id": "V3.14", "name": "Community OS Orchestrator [PBA-015]", "status": "done", "notes": "Institutional Nervous System, 13-layer pipeline, Volume 3 complete — AC-135" },
-      { "id": "V4.1", "name": "Experience Design System [UXB-002]", "status": "pending", "notes": "Experience principles, belonging-first, cognitive load — AC-137" },
+      { "id": "V4.1", "name": "Experience Design System [UXB-002]", "status": "done", "notes": "Experience Quality Engine, 10 principles, emotional journey — AC-137" },
       { "id": "V4.2", "name": "Navigation Architecture [UXB-003]", "status": "pending", "notes": "Navigation hierarchy, context-aware routes — AC-138" },
       { "id": "V4.3", "name": "Dashboard Architecture [UXB-004]", "status": "pending", "notes": "Operational workspaces, MOC, EOC, KO dashboards — AC-139" },
       { "id": "V4.4", "name": "User Journey Architecture [UXB-005]", "status": "pending", "notes": "End-to-end journeys, onboarding, alumni — AC-140" },
