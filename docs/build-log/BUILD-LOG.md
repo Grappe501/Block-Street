@@ -18,6 +18,24 @@
 
 ---
 
+## 2026-07-10 — Volume 3.13 Operational Intelligence Engine [PBA-014 · AC-134]
+
+**Document:** `docs/volume-03/OPERATIONAL_INTELLIGENCE_ENGINE.md` · **Registry:** `data/registry/operational-intelligence-engine.json`
+
+### What Changed
+
+- **Guiding principle:** *Operational intelligence transforms awareness into coordinated action.*
+- Executive nervous system — synthesis layer across all platform intelligence
+- **7-layer operational architecture:** Canonical Data through Executive Guidance
+- **9 intelligence domains:** Executive through Platform Operations
+- Readiness model, strategic forecasting, executive prioritization, operational risk, resource coordination
+- Community Health, Knowledge Observatory, Digital Twin, Event Ledger, AI, and calendar integrations
+- **Executive Operations Center (EOC)** — real-time command environment with 8 networks
+- Continuous question: *If leadership could focus on only five things today, what should they be, and why?*
+- Admin Volume 3 tab · requirements PBA-014 updated · Volume 3: 13/14 complete
+
+---
+
 ## 2026-07-10 — Volume 3.12 Knowledge Growth Engine [PBA-013 · AC-133]
 
 **Document:** `docs/volume-03/KNOWLEDGE_GROWTH_ENGINE.md` · **Registry:** `data/registry/knowledge-growth-engine.json`

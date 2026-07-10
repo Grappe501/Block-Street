@@ -63,7 +63,7 @@ Volume 3 is complete when Burt understands:
 - [x] How missions execute (3.5)
 - [x] How volunteer journeys are engineered (3.6)
 - [x] How leadership develops (3.7)
-- [ ] How intelligence assists (3.8, 3.13)
+- [x] How intelligence assists (3.8, 3.13)
 - [x] How automation behaves (3.9)
 - [ ] How workflows run (3.2)
 - [ ] How business rules govern (3.1)
@@ -90,7 +90,7 @@ Volume 3 is complete when Burt understands:
 | 3.10 Notification & Attention Engine | ✅ Done |
 | 3.11 Governance Engine | ✅ Done |
 | 3.12 Knowledge Growth Engine | ✅ Done |
-| 3.13 Operational Intelligence Engine | Pending |
+| 3.13 Operational Intelligence Engine | ✅ Done |
 | 3.14 Community OS Orchestrator | Pending |
 
 ---

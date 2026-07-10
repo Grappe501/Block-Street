@@ -101,7 +101,7 @@
       { "id": "V3.10", "name": "Notification & Attention Engine [PBA-011]", "status": "done", "notes": "Attention Intelligence Layer, 6 categories, digests, budget — AC-131" },
       { "id": "V3.11", "name": "Governance Engine [PBA-012]", "status": "done", "notes": "Constitutional Governance Office, 7 domains, voting, appeals — AC-132" },
       { "id": "V3.12", "name": "Knowledge Growth Engine [PBA-013]", "status": "done", "notes": "Knowledge Observatory, 9-stage lifecycle, Community Brain — AC-133" },
-      { "id": "V3.13", "name": "Operational Intelligence Engine [PBA-014]", "status": "pending", "notes": "Executive dashboards, decision support — AC-134" },
+      { "id": "V3.13", "name": "Operational Intelligence Engine [PBA-014]", "status": "done", "notes": "Executive Operations Center, 9 domains, readiness, risk, briefings — AC-134" },
       { "id": "V3.14", "name": "Community OS Orchestrator [PBA-015]", "status": "pending", "notes": "Runtime engine coordination — AC-135" },
       { "id": "V4.1", "name": "User Experience Bible [UXB-001]", "status": "done", "notes": "Screens, flows, navigation v1; AC-079" },
       { "id": "V5.1", "name": "AI & Intelligence Bible [AIB-001]", "status": "done", "notes": "LocalBrain, RAG v1; AC-080" },

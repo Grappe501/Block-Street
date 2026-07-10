@@ -38,6 +38,8 @@ type EngineReg = {
   attentionIntelligenceLayer?: { evaluationDimensionCount: number };
   constitutionalGovernanceOffice?: { domainCount: number };
   knowledgeObservatory?: { domainCount: number };
+  executiveOperationsCenter?: { networkCount: number };
+  operationalIntelligenceDomainCount?: number;
   knowledgeCategoryCount?: number;
   knowledgeGrowthLifecycleStageCount?: number;
   governanceDomainCount?: number;
@@ -62,6 +64,7 @@ const FEATURED_SUBTITLES: Record<string, string> = {
   "3.10": "Notification & Attention",
   "3.11": "Governance",
   "3.12": "Knowledge Growth",
+  "3.13": "Operational Intelligence",
 };
 
 const ENGINE_CARDS: { step: string; label: string; reg: EngineReg; cardClass: string; metaClass: string; titleClass: string; featured?: boolean }[] = [
@@ -77,7 +80,7 @@ const ENGINE_CARDS: { step: string; label: string; reg: EngineReg; cardClass: st
   { step: "3.10", label: "Attention Intelligence Layer", reg: att, cardClass: "border-lime-300 bg-lime-50", metaClass: "text-lime-700", titleClass: "text-lime-950", featured: true },
   { step: "3.11", label: "Constitutional Governance Office", reg: gov, cardClass: "border-green-300 bg-green-50", metaClass: "text-green-700", titleClass: "text-green-950", featured: true },
   { step: "3.12", label: "Knowledge Observatory", reg: kge, cardClass: "border-emerald-300 bg-emerald-50", metaClass: "text-emerald-700", titleClass: "text-emerald-950", featured: true },
-  { step: "3.13", label: "Operational Intelligence", reg: oie, cardClass: "border-teal-300 bg-teal-50", metaClass: "text-teal-700", titleClass: "text-teal-950" },
+  { step: "3.13", label: "Executive Operations Center", reg: oie, cardClass: "border-teal-300 bg-teal-50", metaClass: "text-teal-700", titleClass: "text-teal-950", featured: true },
   { step: "3.14", label: "COS Orchestrator", reg: cos, cardClass: "border-cyan-300 bg-cyan-50", metaClass: "text-cyan-700", titleClass: "text-cyan-950" },
 ];
 
@@ -118,7 +121,11 @@ export function AdminPlatformBehavior() {
                 {reg.policyDecisionPoint.evaluationStepCount} PDP steps · {reg.policyDecisionPoint.exampleRequestCount} example requests
               </p>
             ) : null}
-            {reg.knowledgeObservatory ? (
+            {reg.executiveOperationsCenter ? (
+              <p className={`mt-1 text-xs ${metaClass}`}>
+                {reg.operationalIntelligenceDomainCount ?? 0} intelligence domains · {reg.executiveOperationsCenter.networkCount} EOC networks
+              </p>
+            ) : reg.knowledgeObservatory ? (
               <p className={`mt-1 text-xs ${metaClass}`}>
                 {reg.knowledgeCategoryCount ?? 0} knowledge categories · {reg.knowledgeObservatory.domainCount} KO domains
               </p>
