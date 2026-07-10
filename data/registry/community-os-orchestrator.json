@@ -1,22 +1,378 @@
 {
-  "version": "1.0.0",
+  "version": "2.0.0",
   "documentId": "VOLUME-003.14",
   "requirementId": "PBA-015",
   "docPath": "docs/volume-03/COMMUNITY_OS_ORCHESTRATOR.md",
-  "status": "pending",
-  "priority": "critical",
+  "status": "canonical",
+  "priority": "foundational",
   "lastUpdated": "2026-07-10",
-  "guidingPrinciple": "Behavior is governed, not improvised.",
-  "defines": [
-    "RuntimeOrchestration",
-    "EngineCoordination",
-    "CrossEngineEvents",
-    "OperationalPipeline",
-    "FailureHandling",
-    "Observability"
+  "guidingPrinciple": "One platform. One orchestration layer. Many specialized engines.",
+  "orchestrationPhilosophy": {
+    "coordinatesNotReplaces": true,
+    "oneUnifiedOperatingSystem": true,
+    "everySubsystemDoesOneThingWell": true,
+    "contextPrecedesExecution": true,
+    "noSubsystemSkipped": true,
+    "noEngineDuplicatesAnother": true,
+    "humanLeadershipRemainsSovereign": true,
+    "eventDrivenWhereverPractical": true
+  },
+  "platformEngineCount": 20,
+  "platformEngines": [
+    "Identity",
+    "Community",
+    "Volunteer",
+    "Leadership",
+    "Mission",
+    "Knowledge",
+    "Governance",
+    "Automation",
+    "Attention",
+    "CommunityIntelligence",
+    "OperationalIntelligence",
+    "BusinessRules",
+    "Workflow",
+    "Calendar",
+    "Search",
+    "Analytics",
+    "AI",
+    "DigitalTwins",
+    "KnowledgeGraph",
+    "CommunityEventLedger"
+  ],
+  "primaryResponsibilities": [
+    "LifecycleCoordination",
+    "ServiceCoordination",
+    "WorkflowCoordination",
+    "ContextAssembly",
+    "PriorityResolution",
+    "CrossDomainCommunication",
+    "FailureRecovery",
+    "Synchronization",
+    "Observability",
+    "OperationalConsistency"
+  ],
+  "primaryResponsibilityCount": 10,
+  "orchestrationArchitecture": {
+    "layers": [
+      "Request",
+      "ContextAssembly",
+      "PolicyDecisionPoint",
+      "WorkflowEngine",
+      "BusinessRules",
+      "CommunityProcessOrchestrator",
+      "AutomationEngine",
+      "AttentionIntelligenceLayer",
+      "CommunityEventLedger",
+      "KnowledgeGraph",
+      "DigitalTwins",
+      "Analytics",
+      "ExecutiveOperationsCenter"
+    ],
+    "layerCount": 13
+  },
+  "contextAssemblyFields": [
+    "ParticipantContext",
+    "CommunityContext",
+    "MissionContext",
+    "LeadershipContext",
+    "CalendarContext",
+    "KnowledgeContext",
+    "PermissionContext",
+    "Configuration",
+    "DigitalTwinSummaries",
+    "CommunityHealth"
+  ],
+  "contextAssemblyFieldCount": 10,
+  "executionPipelineSteps": [
+    "Validation",
+    "Authorization",
+    "BusinessRules",
+    "Workflow",
+    "Automation",
+    "Notifications",
+    "KnowledgeCapture",
+    "Analytics",
+    "HistoricalRecording"
+  ],
+  "executionPipelineStepCount": 9,
+  "engineBoundaryCount": 8,
+  "engineBoundaries": [
+    { "engine": "BusinessRules", "responsibility": "DeterminePolicy" },
+    { "engine": "Workflow", "responsibility": "DefineProcess" },
+    { "engine": "Automation", "responsibility": "PerformRepetitiveWork" },
+    { "engine": "Attention", "responsibility": "ManageCommunication" },
+    { "engine": "Knowledge", "responsibility": "PreserveLearning" },
+    { "engine": "Governance", "responsibility": "LegitimizeDecisions" },
+    { "engine": "Intelligence", "responsibility": "GenerateRecommendations" },
+    { "engine": "OperationalIntelligence", "responsibility": "CoordinateStrategy" }
+  ],
+  "eventCoordinationTypes": [
+    "WorkflowEvents",
+    "AutomationEvents",
+    "KnowledgeEvents",
+    "GovernanceEvents",
+    "LeadershipEvents",
+    "MissionEvents",
+    "CommunityEvents",
+    "IdentityEvents"
+  ],
+  "eventCoordinationTypeCount": 8,
+  "knowledgeCoordinationEnsures": [
+    "LessonsCaptured",
+    "StoriesRequested",
+    "PlaybooksUpdated",
+    "CommunityBrainRefreshed",
+    "KnowledgeGraphSynchronized"
+  ],
+  "knowledgeCoordinationEnsureCount": 5,
+  "calendarCoordinationAreas": [
+    "Scheduling",
+    "Availability",
+    "Deadlines",
+    "Reminders",
+    "MissionPlanning",
+    "LeadershipMeetings",
+    "VolunteerCommitments"
+  ],
+  "calendarCoordinationAreaCount": 7,
+  "digitalTwinTypes": [
+    "ParticipantTwin",
+    "CommunityTwin",
+    "MissionTwin",
+    "CountyTwin",
+    "InstitutionTwin",
+    "PlatformTwin"
+  ],
+  "digitalTwinTypeCount": 6,
+  "searchCoordinationAreas": [
+    "SearchIndexing",
+    "Discovery",
+    "SemanticIndexing",
+    "RelationshipIndexing"
+  ],
+  "searchCoordinationAreaCount": 4,
+  "aiCoordinationProvides": [
+    "ContextAssembly",
+    "KnowledgeRetrieval",
+    "PermissionFiltering",
+    "CitationGeneration",
+    "PromptProfiles",
+    "ResponseRecording"
+  ],
+  "aiCoordinationProvideCount": 6,
+  "failureRecoveryStrategies": [
+    "Retry",
+    "Compensation",
+    "Escalation",
+    "ManualIntervention",
+    "Replay",
+    "GracefulDegradation"
+  ],
+  "failureRecoveryStrategyCount": 6,
+  "performanceCoordinationSupports": [
+    "Caching",
+    "ParallelExecution",
+    "Prioritization",
+    "RateLimiting",
+    "QueueManagement",
+    "Backpressure"
+  ],
+  "performanceCoordinationSupportCount": 6,
+  "observabilityTargets": [
+    "WorkflowHealth",
+    "AutomationHealth",
+    "CommunityHealth",
+    "KnowledgeGrowth",
+    "LeadershipStability",
+    "MissionThroughput",
+    "AIUtilization",
+    "PlatformHealth"
+  ],
+  "observabilityTargetCount": 8,
+  "platformStateAwareness": [
+    "CurrentActivity",
+    "PendingWork",
+    "SystemLoad",
+    "CommunityReadiness",
+    "MissionReadiness",
+    "LeadershipReadiness",
+    "PlatformReadiness"
+  ],
+  "platformStateAwarenessCount": 7,
+  "securityCoordinationAreas": [
+    "Authentication",
+    "Authorization",
+    "Permissions",
+    "Privacy",
+    "Consent",
+    "Governance",
+    "TrustLedger"
+  ],
+  "securityCoordinationAreaCount": 7,
+  "configurationCoordinationSources": [
+    "PlatformConstitutionEngine",
+    "ConfigurationRegistry",
+    "BusinessRules",
+    "FeatureFlags",
+    "WorkflowDefinitions",
+    "PromptProfiles"
+  ],
+  "configurationCoordinationSourceCount": 6,
+  "executiveCoordinationTargets": [
+    "ExecutiveOperationsCenter",
+    "CommunityIntelligenceCommandCenter",
+    "KnowledgeObservatory",
+    "CommunityHealthObservatory",
+    "AutomationMissionControl",
+    "LeadershipAcademy",
+    "VolunteerSuccessCenter",
+    "MissionOperationsCenter"
+  ],
+  "executiveCoordinationTargetCount": 8,
+  "humanOverrideSupports": [
+    "Pause",
+    "ManualApproval",
+    "ManualCorrection",
+    "EmergencyOverride",
+    "Audit"
+  ],
+  "humanOverrideSupportCount": 5,
+  "institutionalNervousSystem": {
+    "name": "Institutional Nervous System",
+    "abbreviation": "INS",
+    "purpose": "Master coordination layer — senses, understands, coordinates, and learns across every engine without replacing specialized responsibilities",
+    "functions": [
+      {
+        "id": "sense",
+        "name": "Sense",
+        "collectsFrom": [
+          "CommunityEventLedger",
+          "CommunityHealthObservatory",
+          "KnowledgeObservatory",
+          "Calendars",
+          "Workflows",
+          "Automation",
+          "DigitalTwins",
+          "CommunityKnowledgeGraph",
+          "Search",
+          "Analytics"
+        ]
+      },
+      {
+        "id": "understand",
+        "name": "Understand",
+        "assemblesUsing": [
+          "BusinessRules",
+          "Governance",
+          "Configuration",
+          "Relationships",
+          "History",
+          "CommunityHealth",
+          "AIRetrieval",
+          "OperationalIntelligence"
+        ]
+      },
+      {
+        "id": "coordinate",
+        "name": "Coordinate",
+        "synchronizes": [
+          "Workflows",
+          "Missions",
+          "Communities",
+          "Volunteers",
+          "Leadership",
+          "Knowledge",
+          "Notifications",
+          "Automation",
+          "ExecutiveReporting"
+        ]
+      },
+      {
+        "id": "learn",
+        "name": "Learn",
+        "improvesThrough": [
+          "MissionReflections",
+          "CommunityFeedback",
+          "KnowledgeGrowthEngine",
+          "AIPatternRecognition",
+          "GovernanceReviews",
+          "CommunityEventLedgerReplay",
+          "CommunityHealthTrends"
+        ]
+      }
+    ],
+    "functionCount": 4,
+    "selfImprovingEcosystem": true,
+    "humanAuthorityPreserved": true
+  },
+  "volume3EngineCount": 14,
+  "volume3Engines": [
+    { "step": "3.1", "name": "Business Rules Engine", "requirement": "PBA-002" },
+    { "step": "3.2", "name": "Workflow Engine", "requirement": "PBA-003" },
+    { "step": "3.3", "name": "Identity & Lifecycle Engine", "requirement": "PBA-004" },
+    { "step": "3.4", "name": "Community Lifecycle Engine", "requirement": "PBA-005" },
+    { "step": "3.5", "name": "Mission Execution Engine", "requirement": "PBA-006" },
+    { "step": "3.6", "name": "Volunteer Experience Engine", "requirement": "PBA-007" },
+    { "step": "3.7", "name": "Leadership Development Engine", "requirement": "PBA-008" },
+    { "step": "3.8", "name": "Community Intelligence Engine", "requirement": "PBA-009" },
+    { "step": "3.9", "name": "Automation Engine", "requirement": "PBA-010" },
+    { "step": "3.10", "name": "Notification & Attention Management Engine", "requirement": "PBA-011" },
+    { "step": "3.11", "name": "Governance Engine", "requirement": "PBA-012" },
+    { "step": "3.12", "name": "Knowledge Growth Engine", "requirement": "PBA-013" },
+    { "step": "3.13", "name": "Operational Intelligence Engine", "requirement": "PBA-014" },
+    { "step": "3.14", "name": "Community Operating System Orchestrator", "requirement": "PBA-015" }
+  ],
+  "volume3Complete": true,
+  "foundationVolumes": [
+    { "volume": 0, "defines": "Constitutional Architecture" },
+    { "volume": 1, "defines": "Engineering Architecture" },
+    { "volume": 2, "defines": "Data Architecture" },
+    { "volume": 3, "defines": "Operational Architecture" }
+  ],
+  "domainSchemaMapping": {
+    "schema": "PlatformBehavior",
+    "entities": [
+      "OrchestrationRequest",
+      "ContextAssembly",
+      "ExecutionPipeline",
+      "CrossEngineEvent",
+      "InstitutionalNervousSystem"
+    ]
+  },
+  "projectionIntegrations": {
+    "businessRulesPath": "data/registry/business-rule-engine.json",
+    "workflowEnginePath": "data/registry/workflow-engine.json",
+    "identityLifecyclePath": "data/registry/identity-lifecycle-engine.json",
+    "communityLifecyclePath": "data/registry/community-lifecycle-engine.json",
+    "missionExecutionPath": "data/registry/mission-execution-engine.json",
+    "volunteerExperiencePath": "data/registry/volunteer-experience-engine.json",
+    "leadershipDevelopmentPath": "data/registry/leadership-development-engine.json",
+    "communityIntelligencePath": "data/registry/community-intelligence-engine.json",
+    "automationEnginePath": "data/registry/automation-engine.json",
+    "attentionEnginePath": "data/registry/attention-engine.json",
+    "governanceEnginePath": "data/registry/governance-engine.json",
+    "knowledgeGrowthPath": "data/registry/knowledge-growth-engine.json",
+    "operationalIntelligencePath": "data/registry/operational-intelligence-engine.json",
+    "configurationPath": "data/registry/configuration-model.json",
+    "eventLedgerPath": "data/registry/event-data-model.json",
+    "timeCalendarPath": "data/registry/time-calendar-data-model.json",
+    "searchIndexPath": "data/registry/search-index-model.json",
+    "analyticsPath": "data/registry/analytics-metrics-model.json",
+    "aiKnowledgePath": "data/registry/ai-knowledge-model.json",
+    "securityPrivacyPath": "data/registry/security-privacy-model.json"
+  },
+  "burtImplementationGuidance": [
+    "Treat orchestration as a coordination layer rather than a business domain",
+    "Preserve clear boundaries between engines",
+    "Keep orchestration event-driven wherever practical",
+    "Assemble context before execution",
+    "Record every significant transition",
+    "Make orchestration observable, recoverable, and explainable",
+    "Consult Institutional Nervous System spec before runtime orchestration features"
   ],
   "acceptanceCriteria": "AC-135",
-  "acceptanceCriteriaMet": false,
+  "acceptanceCriteriaMet": true,
   "runtimePipeline": [
     "Participant",
     "IdentityEngine",
