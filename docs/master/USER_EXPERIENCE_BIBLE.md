@@ -1,7 +1,13 @@
-# VOLUME 4 — User Experience Bible
+# VOLUME 4 — User Experience Bible (Legacy v1)
 
-**Document ID:** VOLUME-004 · **UXB-001**  
+**Document ID:** VOLUME-004-LEGACY · **UXB-001-v1**  
 **Artifact:** `USER_EXPERIENCE_BIBLE.md`  
+**Status:** Superseded by [14-step factory](../volume-04/VOLUME_4_MASTER_SEQUENCE.md)
+
+> **Canonical Volume 4:** [USER_EXPERIENCE_PRODUCT_ARCHITECTURE.md](USER_EXPERIENCE_PRODUCT_ARCHITECTURE.md) · `docs/volume-04/`
+
+---
+
 **Status:** Canonical · v1 Structure  
 **Priority:** Critical — no UX decisions left to invent at code time  
 **Live spec:** `data/registry/user-experience-bible.json`

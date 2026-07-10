@@ -2,7 +2,7 @@
 
 **Document ID:** VOLUME-003 · **PBA-001**  
 **Artifact:** `PLATFORM_BEHAVIOR_BIBLE.md`  
-**Status:** Canonical · **0/14 steps complete (scaffold)**  
+**Status:** Canonical · **14/14 steps complete**  
 **Priority:** Critical — operational brain of the Community Operating System
 
 **Master sequence:** [VOLUME_3_MASTER_SEQUENCE.md](../volume-03/VOLUME_3_MASTER_SEQUENCE.md)  

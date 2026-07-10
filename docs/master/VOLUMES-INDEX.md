@@ -22,8 +22,8 @@ The next design cycle designs the **factory** — the engineering foundation eve
 | **Volume 0** | Why does the COS exist? | [MASTER_ARCHITECTURE_BIBLE.md](MASTER_ARCHITECTURE_BIBLE.md) [MAB-001] |
 | **Volume 1** | How is the software built? | [ENGINEERING_ARCHITECTURE_BIBLE.md](ENGINEERING_ARCHITECTURE_BIBLE.md) [EAB-001] · [14 steps](../volume-01/VOLUME_1_MASTER_SEQUENCE.md) (13/14 · 1.5 API pending) |
 | **Volume 2** | How is information organized? | [DATA_ARCHITECTURE_BIBLE.md](DATA_ARCHITECTURE_BIBLE.md) [DAB-001] · [14 steps](../volume-02/VOLUME_2_MASTER_SEQUENCE.md) ✅ complete |
-| **Volume 3** | How does the platform behave? | [PLATFORM_BEHAVIOR_BIBLE.md](PLATFORM_BEHAVIOR_BIBLE.md) [PBA-001] · [14 engines](../volume-03/VOLUME_3_MASTER_SEQUENCE.md) scaffold |
-| **Volume 4** | What does every screen and flow look like? | [USER_EXPERIENCE_BIBLE.md](USER_EXPERIENCE_BIBLE.md) [UXB-001] |
+| **Volume 3** | How does the platform behave? | [PLATFORM_BEHAVIOR_BIBLE.md](PLATFORM_BEHAVIOR_BIBLE.md) [PBA-001] · [14 engines](../volume-03/VOLUME_3_MASTER_SEQUENCE.md) ✅ complete |
+| **Volume 4** | What does using the platform feel like? | [USER_EXPERIENCE_PRODUCT_ARCHITECTURE.md](USER_EXPERIENCE_PRODUCT_ARCHITECTURE.md) [UXB-001] · [14 layers](../volume-04/VOLUME_4_MASTER_SEQUENCE.md) scaffold |
 | **Volume 5** | How does AI work technically? | [AI_INTELLIGENCE_BIBLE.md](AI_INTELLIGENCE_BIBLE.md) [AIB-001] |
 | **Volume 6** | How is the system operated and launched? | [OPERATIONS_LAUNCH_BIBLE.md](OPERATIONS_LAUNCH_BIBLE.md) [OLB-001] |
 | **Volume 7** | How should people *feel* at every stage? | [EXPERIENCE_DESIGN_BIBLE.md](EXPERIENCE_DESIGN_BIBLE.md) [EDB-001] |
