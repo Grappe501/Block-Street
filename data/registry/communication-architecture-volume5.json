@@ -1,0 +1,186 @@
+{
+  "version": "2.0.0",
+  "documentId": "VOLUME-005.8",
+  "requirementId": "PSI-009",
+  "docPath": "docs/volume-05/COMMUNICATION_ARCHITECTURE.md",
+  "status": "canonical",
+  "priority": "mission_critical",
+  "lastUpdated": "2026-07-10",
+  "productName": "Communications Architecture",
+  "guidingPrinciple": "Every communication should strengthen a relationship or advance a mission.",
+  "communicationPhilosophy": {
+    "conversationCentricNotChannelCentric": true,
+    "purposeBeforeChannel": true,
+    "strengthensRelationshipsCoordinatesCommunities": true,
+    "communicationsNervousSystemForInstitutions": true,
+    "relationshipInfrastructureNotIsolatedMessaging": true
+  },
+  "communicationsArchitecture": {
+    "layers": [
+      "Purpose",
+      "Audience",
+      "Context",
+      "ChannelSelection",
+      "Delivery",
+      "Interaction",
+      "KnowledgeCapture",
+      "CommunityEventLedger"
+    ],
+    "layerCount": 8
+  },
+  "communicationPrincipleCount": 8,
+  "communicationPrinciples": [
+    "Intentional",
+    "ContextAware",
+    "PermissionAware",
+    "Accessible",
+    "Explainable",
+    "Observable",
+    "Recoverable",
+    "HistoricallyPreserved"
+  ],
+  "communicationDomainCount": 6,
+  "communicationDomains": [
+    { "id": "personToPerson", "name": "Person-to-Person", "supports": ["DirectMessages", "Mentorship", "LeadershipConversations", "VolunteerCoordination", "PrivateDiscussions"] },
+    { "id": "team", "name": "Team Communication", "supports": ["WorkingGroups", "Committees", "Departments", "MissionTeams", "LeadershipTeams"] },
+    { "id": "community", "name": "Community Communication", "supports": ["Announcements", "Events", "Discussion", "CommunityUpdates", "News", "Celebrations"] },
+    { "id": "institution", "name": "Institution Communication", "supports": ["ExecutiveCommunication", "Departments", "Training", "Governance", "OperationalUpdates", "EmergencyInformation"] },
+    { "id": "public", "name": "Public Communication", "supports": ["Websites", "Newsletters", "SocialPublishing", "PressReleases", "PodcastPublishing", "PublicEducation"] },
+    { "id": "emergency", "name": "Emergency Communication", "supports": ["Alerts", "SMS", "Voice", "Push", "PriorityBroadcasts", "EmergencyCoordination"], "reliabilityParamount": true }
+  ],
+  "communicationChannelCount": 11,
+  "communicationChannels": [
+    "Email",
+    "SMS",
+    "Push",
+    "Voice",
+    "Video",
+    "Chat",
+    "RSS",
+    "SocialPublishing",
+    "Web",
+    "PrintExports",
+    "QRDistribution"
+  ],
+  "channelSelection": {
+    "basedUpon": ["Urgency", "Audience", "Preferences", "Accessibility", "Availability", "InstitutionPolicy"],
+    "adaptiveCommunication": true
+  },
+  "conversationObject": {
+    "contains": ["Purpose", "Participants", "RelatedMission", "Community", "Institution", "Knowledge", "Attachments", "History", "AISummaries"],
+    "contextualConversations": true
+  },
+  "meetingArchitecture": {
+    "includes": ["Agenda", "Participants", "Calendar", "AIBriefing", "Notes", "Recording", "ActionItems", "KnowledgeExtraction"],
+    "operationalObjects": true
+  },
+  "broadcastArchitecture": {
+    "scopes": ["InstitutionWide", "CommunityWide", "CountyWide", "Regional", "Statewide", "Public", "Targeted"],
+    "governedBroadcasts": true
+  },
+  "campaignArchitecture": {
+    "supports": ["EmailCampaigns", "SMSCampaigns", "VolunteerOutreach", "FollowUp", "EventInvitations", "ConstituentEngagement"],
+    "permissionBased": true
+  },
+  "publishingPipeline": {
+    "stages": ["Draft", "Review", "Approval", "Scheduling", "Publication", "Engagement", "KnowledgeCapture"],
+    "stageCount": 7,
+    "institutionalPublishing": true
+  },
+  "aiCommunications": {
+    "assistsWith": ["Drafting", "Translation", "Summaries", "Accessibility", "ToneAdaptation", "AudienceAdaptation", "MeetingPreparation", "ResponseSuggestions"],
+    "neverSendsWithoutAuthorizationUnlessApprovedWorkflow": true
+  },
+  "translation": {
+    "supports": ["MultipleLanguages", "ReadingLevels", "AccessibilityAdaptations", "InstitutionTerminology"]
+  },
+  "accessibility": {
+    "supports": ["ScreenReaders", "Captions", "Voice", "Translation", "LargeText", "PlainLanguage", "MultipleFormats"]
+  },
+  "communicationPreferences": {
+    "participantControls": ["PreferredChannels", "QuietHours", "DigestFrequency", "Languages", "Accessibility", "NotificationCategories"]
+  },
+  "communityEventLedgerIntegration": {
+    "communicationEvents": ["MessageSent", "BroadcastDelivered", "MeetingCompleted", "CampaignPublished", "ResponseReceived", "KnowledgeExtracted"]
+  },
+  "digitalTwinIntegration": {
+    "contributesTo": ["ParticipantTwins", "CommunityTwins", "MissionTwins", "InstitutionTwins", "LeadershipTwins"],
+    "relationshipHistoryOperationalKnowledge": true
+  },
+  "communityBrainIntegration": {
+    "mayBecome": ["Stories", "Lessons", "Playbooks", "Research", "MeetingSummaries"]
+  },
+  "localBrainCommunications": {
+    "supports": ["OfflineDrafting", "QueuedDelivery", "LocalBroadcasts", "LocalMeetings", "Synchronization"],
+    "fieldCommunicationWithoutCloud": true
+  },
+  "observabilityStandard": {
+    "tracks": ["Delivery", "Latency", "Failures", "Engagement", "Reach", "Accessibility"],
+    "metricCount": 6
+  },
+  "securityStandard": {
+    "supports": ["Encryption", "DigitalSignatures", "PermissionValidation", "SensitiveClassification", "Retention", "LegalHold"]
+  },
+  "unifiedCommunicationsFabric": {
+    "name": "Unified Communications Fabric",
+    "abbreviation": "UCFab",
+    "platformWideCommunicationLayer": true,
+    "fabricPipeline": {
+      "stages": [
+        "Purpose",
+        "Audience",
+        "PolicyEvaluation",
+        "ChannelSelection",
+        "Delivery",
+        "Interaction",
+        "KnowledgeExtraction",
+        "InstitutionalMemory"
+      ],
+      "stageCount": 8
+    },
+    "communicationObject": {
+      "sections": [
+        { "id": "identity", "name": "Identity", "includes": ["CommunicationId", "Institution", "Community", "Mission", "Participants"] },
+        { "id": "content", "name": "Content", "includes": ["Message", "Attachments", "AISummary", "Translation", "AccessibilityVariants"] },
+        { "id": "operationalContext", "name": "Operational Context", "includes": ["RelatedWorkflow", "CalendarEvent", "Mission", "KnowledgeReferences", "CommunityEventLedgerLinks"] },
+        { "id": "delivery", "name": "Delivery", "includes": ["ChannelsUsed", "DeliveryStatus", "Retries", "Failures", "ReadConfirmations"] },
+        { "id": "history", "name": "History", "includes": ["Replies", "Edits", "FollowUp", "RelatedMeetings", "KnowledgeExtracted"] }
+      ],
+      "sectionCount": 5
+    },
+    "communicationIntelligence": {
+      "evaluates": ["AppropriateChannel", "DuplicateInformation", "ReminderWarranted", "TranslationNeeded", "AccessibilityAdaptations", "KnowledgeExtractionAfterInteraction"]
+    },
+    "meetingIntelligence": {
+      "before": ["AIBriefing", "CommunityBrainKnowledge", "PriorDecisionsSummary", "OutstandingActionItems"],
+      "during": ["NotesCaptured", "ActionItemsIdentified", "DecisionsTagged", "ParticipantCollaboration"],
+      "after": ["AISummary", "KnowledgeExtracted", "CommunityEventLedgerEntries", "DigitalTwinUpdates", "FollowUpWorkflows"]
+    },
+    "campaignCommunications": {
+      "governedOutreachCapability": true,
+      "supports": ["VolunteerRecruitment", "EventInvitations", "ConstituentOutreach", "EducationalCampaigns", "CommunityUpdates"]
+    },
+    "relationshipIntelligence": {
+      "understands": ["CommunicationPatterns", "MentorshipRelationships", "TeamCollaboration", "CommunityEngagement", "InstitutionalResponsiveness"],
+      "strengthensTwinsAndIntelligenceWithoutEngagementMetrics": true
+    },
+    "pairsWithAttentionIntelligenceLayer": true,
+    "pairsWithInstitutionalMemoryRepository": true
+  },
+  "architecturalInsight": {
+    "relationshipInfrastructure": true,
+    "preservesWhatWhyDecisionsKnowledgeEvolution": true,
+    "strengthensInstitutionalMemoryCollaborationGrowth": true
+  },
+  "burtImplementationGuidance": [
+    "Treat communication as operational capability",
+    "Separate purpose from channel",
+    "Build every conversation as contextual object",
+    "Integrate AI Community Brain CEL Digital Twins LocalBrain accessibility",
+    "Preserve complete communication history",
+    "Support offline-first communication workflows",
+    "Route through Unified Communications Fabric"
+  ],
+  "acceptanceCriteria": "AC-158",
+  "acceptanceCriteriaMet": true
+}
