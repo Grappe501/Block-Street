@@ -4279,27 +4279,32 @@
     {
       "id": "PBA-002",
       "title": "Business Rules Engine — Volume 3.1",
-      "purpose": "Business rule philosophy and governance",
-      "description": "VOLUME-003.1 rule hierarchy, evaluation, validation, versioning",
+      "purpose": "Centralized governed explainable operational decision layer",
+      "description": "VOLUME-003.1 — Policy Decision Point, 9 rule categories, hierarchy, versioning, testing, workflow and AI integration",
       "priority": "critical",
       "principle": "CP-001",
       "dependencies": [
         "PBA-001",
-        "DAB-010"
+        "DAB-010",
+        "DAB-014"
       ],
       "related": [
-        "PBA-003"
+        "PBA-003",
+        "DAB-015",
+        "ENG-006"
       ],
       "acceptanceCriteria": [
-        "Engine philosophy documented",
-        "Operational behaviors defined",
-        "Volume 2 integration specified",
-        "Implementation blueprint for engine"
+        "Business rule philosophy documented",
+        "Rule architecture and lifecycle defined",
+        "Categories, hierarchy, versioning, testing, and explainability established",
+        "Workflow, AI, and configuration integration incorporated",
+        "Policy Decision Point specified",
+        "Complete blueprint for centralized Business Rules Engine"
       ],
-      "futureNotes": "Scaffold — pending canonical build step",
-      "implementationStatus": "pending",
+      "futureNotes": "Guiding principle: Policy belongs in rules. Code executes rules.",
+      "implementationStatus": "done",
       "testingStatus": "pending",
-      "documentationStatus": "pending",
+      "documentationStatus": "done",
       "trace": {
         "database": "DB-COS",
         "api": null,
@@ -4309,7 +4314,7 @@
       },
       "versionHistory": {
         "created": "2026-07-10",
-        "implemented": null
+        "implemented": "2026-07-10"
       }
     },
     {

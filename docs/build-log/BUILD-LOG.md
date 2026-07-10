@@ -18,6 +18,22 @@
 
 ---
 
+## 2026-07-10 — Volume 3.1 Business Rules Engine [PBA-002 · AC-122]
+
+**Document:** `docs/volume-03/BUSINESS_RULE_ENGINE.md` · **Registry:** `data/registry/business-rule-engine.json`
+
+### What Changed
+
+- **Guiding principle:** *Policy belongs in rules. Code executes rules.*
+- Constitutional interpreter — centralized governed decision layer
+- **6-layer rule architecture:** Request → Context → Evaluation → Decision → Workflow → Audit
+- **9 rule categories:** Identity through AI
+- Rule hierarchy, outcomes, versioning, testing, simulation, explainability, audit
+- **Policy Decision Point (PDP)** — single gateway for all operational decisions
+- Admin Volume 3 tab · requirements PBA-002 updated · Volume 3: 1/14 complete
+
+---
+
 ## 2026-07-10 — Volume 3 Platform Behavior & Operational Architecture [PBA-001 · AC-121] · **Scaffold**
 
 **Umbrella:** `docs/master/PLATFORM_BEHAVIOR_BIBLE.md` · **Sequence:** `docs/volume-03/VOLUME_3_MASTER_SEQUENCE.md` · **Registry:** `data/registry/platform-behavior-bible.json`

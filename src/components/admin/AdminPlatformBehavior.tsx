@@ -17,15 +17,18 @@ import oie from "../../../data/registry/operational-intelligence-engine.json";
 import cos from "../../../data/registry/community-os-orchestrator.json";
 
 type EngineReg = {
-  defines: string[];
+  defines?: string[];
   acceptanceCriteria: string;
   status: string;
+  guidingPrinciple?: string;
+  ruleCategoryCount?: number;
+  policyDecisionPoint?: { evaluationStepCount: number; exampleRequestCount: number };
   lifecycleStageCount?: number;
   runtimePipelineLayerCount?: number;
 };
 
-const ENGINE_CARDS: { step: string; label: string; reg: EngineReg; cardClass: string; metaClass: string; titleClass: string }[] = [
-  { step: "3.1", label: "Business Rules", reg: bre, cardClass: "border-violet-300 bg-violet-50", metaClass: "text-violet-700", titleClass: "text-violet-950" },
+const ENGINE_CARDS: { step: string; label: string; reg: EngineReg; cardClass: string; metaClass: string; titleClass: string; featured?: boolean }[] = [
+  { step: "3.1", label: "Policy Decision Point", reg: bre, cardClass: "border-violet-300 bg-violet-50", metaClass: "text-violet-700", titleClass: "text-violet-950", featured: true },
   { step: "3.2", label: "Workflow", reg: wor, cardClass: "border-purple-300 bg-purple-50", metaClass: "text-purple-700", titleClass: "text-purple-950" },
   { step: "3.3", label: "Identity Lifecycle", reg: idl, cardClass: "border-fuchsia-300 bg-fuchsia-50", metaClass: "text-fuchsia-700", titleClass: "text-fuchsia-950" },
   { step: "3.4", label: "Community Lifecycle", reg: clo, cardClass: "border-pink-300 bg-pink-50", metaClass: "text-pink-700", titleClass: "text-pink-950" },
@@ -57,13 +60,22 @@ export function AdminPlatformBehavior() {
       </div>
 
       <div className="grid gap-4 md:grid-cols-2">
-        {ENGINE_CARDS.map(({ step, label, reg, cardClass, metaClass, titleClass }) => (
+        {ENGINE_CARDS.map(({ step, label, reg, cardClass, metaClass, titleClass, featured }) => (
           <div key={step} className={`card ${cardClass}`}>
-            <p className={`text-xs font-semibold uppercase ${metaClass}`}>VOLUME-00{step.replace(".", "-")}</p>
+            <p className={`text-xs font-semibold uppercase ${metaClass}`}>VOLUME-00{step.replace(".", "-")} · {featured ? "Business Rules" : label}</p>
             <h3 className={`mt-1 text-sm font-bold ${titleClass}`}>{label}</h3>
+            {reg.guidingPrinciple ? (
+              <p className={`mt-1 text-xs italic ${metaClass}`}>&ldquo;{reg.guidingPrinciple}&rdquo;</p>
+            ) : null}
             <p className={`mt-2 text-xs ${metaClass}`}>
-              {reg.defines.length} behaviors · {reg.acceptanceCriteria} · {reg.status}
+              {reg.ruleCategoryCount ? `${reg.ruleCategoryCount} rule categories · ` : reg.defines ? `${reg.defines.length} behaviors · ` : ""}
+              {reg.acceptanceCriteria} · {reg.status}
             </p>
+            {reg.policyDecisionPoint ? (
+              <p className={`mt-1 text-xs ${metaClass}`}>
+                {reg.policyDecisionPoint.evaluationStepCount} PDP steps · {reg.policyDecisionPoint.exampleRequestCount} example requests
+              </p>
+            ) : null}
             {reg.lifecycleStageCount ? (
               <p className={`mt-1 text-xs ${metaClass}`}>{reg.lifecycleStageCount} lifecycle stages</p>
             ) : null}
