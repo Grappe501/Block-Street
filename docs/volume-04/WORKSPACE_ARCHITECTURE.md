@@ -7,7 +7,9 @@
 **Status:** Pending  
 **Priority:** Critical
 
-**Builds on:** [4.6 Component Architecture](COMPONENT_ARCHITECTURE.md) [UXB-007] · [Volume 4 Master Sequence](VOLUME_4_MASTER_SEQUENCE.md) [UXB-001]  
+> **Foundational workspace patterns:** See [4.3 Dashboard & Workspace Architecture](DASHBOARD_ARCHITECTURE.md) [UXB-004] for universal structure, workspace types, and Adaptive Workspace Engine.
+
+**Builds on:** [4.3 Dashboard & Workspace Architecture](DASHBOARD_ARCHITECTURE.md) [UXB-004] · [4.2 Navigation Architecture](NAVIGATION_ARCHITECTURE.md) [UXB-003]  
 **Live spec:** `data/registry/workspace-architecture.json`
 
 > Experience should feel intentional, welcoming, and trustworthy.
