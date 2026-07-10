@@ -1,13 +1,13 @@
 {
-  "version": "1.0.0",
+  "version": "2.0.0",
   "docPath": "docs/master/VOLUMES-INDEX.md",
   "requirementId": "IVS-001",
-  "purpose": "Index and precedence for Volumes 1–6 — the factory layer that builds the COS",
+  "purpose": "Index and precedence for Volumes 1–7 — the factory layer that builds the COS",
   "naturalPause": {
-    "statement": "Architecture shifts from what the system does to how the system is built",
+    "statement": "Architecture shifts from what the system does to how the system is built and behaves",
     "productDesignComplete": "Phases 1–6 + Volume 0",
-    "factoryDesignCycle": "Volumes 1–6",
-    "phase7DeferredUntil": "implementation volumes v1 complete"
+    "factoryDesignCycle": "Volumes 1–7",
+    "phase7DeferredUntil": "implementation volumes complete"
   },
   "volumes": [
     {
@@ -27,7 +27,7 @@
     {
       "volume": 2,
       "name": "Data Architecture Bible",
-      "subtitle": "What is the data model that powers everything?",
+      "subtitle": "How information is organized",
       "requirementId": "DAB-001",
       "docPath": "docs/master/DATA_ARCHITECTURE_BIBLE.md",
       "masterSequencePath": "docs/volume-02/VOLUME_2_MASTER_SEQUENCE.md",
@@ -40,6 +40,20 @@
     },
     {
       "volume": 3,
+      "name": "Platform Behavior & Operational Architecture",
+      "subtitle": "How the platform actually behaves",
+      "requirementId": "PBA-001",
+      "docPath": "docs/master/PLATFORM_BEHAVIOR_BIBLE.md",
+      "masterSequencePath": "docs/volume-03/VOLUME_3_MASTER_SEQUENCE.md",
+      "registryPath": "data/registry/platform-behavior-bible.json",
+      "chapters": 14,
+      "stepsComplete": 0,
+      "stepsTotal": 14,
+      "acceptanceCriteria": "AC-121",
+      "status": "scaffold"
+    },
+    {
+      "volume": 4,
       "name": "User Experience Bible",
       "subtitle": "Every screen, flow, and interaction state",
       "requirementId": "UXB-001",
@@ -49,7 +63,7 @@
       "status": "v1_complete"
     },
     {
-      "volume": 4,
+      "volume": 5,
       "name": "AI & Intelligence Bible",
       "subtitle": "Technical AI architecture",
       "requirementId": "AIB-001",
@@ -59,7 +73,7 @@
       "status": "v1_complete"
     },
     {
-      "volume": 5,
+      "volume": 6,
       "name": "Operations & Launch Bible",
       "subtitle": "How the system is operated",
       "requirementId": "OLB-001",
@@ -69,7 +83,7 @@
       "status": "v1_complete"
     },
     {
-      "volume": 6,
+      "volume": 7,
       "name": "Experience Design Bible",
       "subtitle": "How people should feel",
       "requirementId": "EDB-001",
@@ -79,14 +93,16 @@
       "status": "v1_complete"
     }
   ],
-  "readOrderAfterVolume0": [1, 2, 3, 4, 5, 6],
+  "readOrderAfterVolume0": [1, 2, 3, 4, 5, 6, 7],
+  "foundationVolumes": [0, 1, 2, 3],
   "alignmentGoal": [
     "product specification",
     "engineering specification",
     "data specification",
+    "operational behavior specification",
     "UX specification",
     "AI specification",
-    "operational specification",
+    "operational launch specification",
     "experience specification"
   ]
 }

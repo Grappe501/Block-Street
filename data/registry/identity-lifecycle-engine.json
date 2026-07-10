@@ -1,0 +1,32 @@
+{
+  "version": "1.0.0",
+  "documentId": "VOLUME-003.03",
+  "requirementId": "PBA-004",
+  "docPath": "docs/volume-03/IDENTITY_LIFECYCLE.md",
+  "status": "pending",
+  "priority": "critical",
+  "lastUpdated": "2026-07-10",
+  "guidingPrinciple": "Behavior is governed, not improvised.",
+  "defines": [
+    "ParticipantProgression",
+    "LifecycleTransitions",
+    "StageGates",
+    "IdentityEvents",
+    "PermissionEvolution"
+  ],
+  "acceptanceCriteria": "AC-124",
+  "acceptanceCriteriaMet": false,
+  "lifecycleStages": [
+    "Prospect",
+    "Invited",
+    "Registered",
+    "Welcomed",
+    "Volunteer",
+    "Committee",
+    "Leader",
+    "Mentor",
+    "Alumni",
+    "Legacy"
+  ],
+  "lifecycleStageCount": 10
+}

@@ -1,0 +1,22 @@
+{
+  "version": "1.0.0",
+  "documentId": "VOLUME-003.09",
+  "requirementId": "PBA-010",
+  "docPath": "docs/volume-03/AUTOMATION_ENGINE.md",
+  "status": "pending",
+  "priority": "critical",
+  "lastUpdated": "2026-07-10",
+  "guidingPrinciple": "Behavior is governed, not improvised.",
+  "defines": [
+    "Triggers",
+    "Actions",
+    "Conditions",
+    "Schedules",
+    "Approvals",
+    "Notifications",
+    "Retries",
+    "AutomationGovernance"
+  ],
+  "acceptanceCriteria": "AC-130",
+  "acceptanceCriteriaMet": false
+}

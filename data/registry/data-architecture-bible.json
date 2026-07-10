@@ -141,10 +141,10 @@
   "signatureGraphs": ["trust", "growth", "conversation", "capability", "decision", "improvement", "operational", "impact"],
   "migrationOrder": ["platform_config_geo", "identity_community", "graph", "action", "growth", "knowledge_events", "projections"],
   "nextRecommendedStep": {
-    "volume": 1,
-    "id": "1.5",
-    "requirementId": "ENG-005",
-    "artifact": "docs/volume-01/API_ARCHITECTURE.md"
+    "volume": 3,
+    "id": "3.1",
+    "requirementId": "PBA-002",
+    "artifact": "docs/volume-03/BUSINESS_RULE_ENGINE.md"
   },
   "acceptanceCriteria": "AC-078"
 }

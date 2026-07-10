@@ -1,0 +1,22 @@
+{
+  "version": "1.0.0",
+  "documentId": "VOLUME-003.12",
+  "requirementId": "PBA-013",
+  "docPath": "docs/volume-03/KNOWLEDGE_GROWTH_ENGINE.md",
+  "status": "pending",
+  "priority": "critical",
+  "lastUpdated": "2026-07-10",
+  "guidingPrinciple": "Behavior is governed, not improvised.",
+  "defines": [
+    "LessonCapture",
+    "PlaybookEvolution",
+    "CommunityBrainUpdates",
+    "KnowledgeReuse",
+    "Review",
+    "Publication",
+    "LegacyPreservation",
+    "InstitutionalLearning"
+  ],
+  "acceptanceCriteria": "AC-133",
+  "acceptanceCriteriaMet": false
+}

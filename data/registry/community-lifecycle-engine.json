@@ -1,0 +1,23 @@
+{
+  "version": "1.0.0",
+  "documentId": "VOLUME-003.04",
+  "requirementId": "PBA-005",
+  "docPath": "docs/volume-03/COMMUNITY_LIFECYCLE.md",
+  "status": "pending",
+  "priority": "critical",
+  "lastUpdated": "2026-07-10",
+  "guidingPrinciple": "Behavior is governed, not improvised.",
+  "defines": [
+    "CommunityProposal",
+    "Approval",
+    "Launch",
+    "Growth",
+    "Maturity",
+    "Expansion",
+    "Succession",
+    "Archival",
+    "InstitutionalLegacy"
+  ],
+  "acceptanceCriteria": "AC-125",
+  "acceptanceCriteriaMet": false
+}

@@ -1,0 +1,22 @@
+{
+  "version": "1.0.0",
+  "documentId": "VOLUME-003.11",
+  "requirementId": "PBA-012",
+  "docPath": "docs/volume-03/GOVERNANCE_ENGINE.md",
+  "status": "pending",
+  "priority": "critical",
+  "lastUpdated": "2026-07-10",
+  "guidingPrinciple": "Behavior is governed, not improvised.",
+  "defines": [
+    "Constitution",
+    "Policies",
+    "ApprovalChains",
+    "Voting",
+    "CommunityGovernance",
+    "InstitutionGovernance",
+    "ChangeApproval",
+    "GovernanceWorkflows"
+  ],
+  "acceptanceCriteria": "AC-132",
+  "acceptanceCriteriaMet": false
+}
