@@ -1,23 +1,309 @@
 {
-  "version": "1.0.0",
+  "version": "2.0.0",
   "documentId": "VOLUME-004.8",
   "requirementId": "UXB-009",
   "docPath": "docs/volume-04/COLLABORATION_ARCHITECTURE.md",
-  "status": "pending",
-  "priority": "critical",
+  "productName": "Collaboration Architecture",
+  "status": "canonical",
+  "priority": "foundational",
   "lastUpdated": "2026-07-10",
-  "guidingPrinciple": "Experience should feel intentional, welcoming, and trustworthy.",
-  "defines": [
-    "Chat",
-    "Discussion",
-    "Mentorship",
-    "Sharednotes",
-    "Collaborativeediting",
-    "Whiteboards",
-    "Communityconversations",
-    "AIcollaboration"
+  "guidingPrinciple": "Collaboration should strengthen relationships, not merely exchange messages.",
+  "collaborationPhilosophy": {
+    "notAChatFeature": true,
+    "connectiveTissue": true,
+    "revolvesAroundSharedWorkNotConversations": true,
+    "alwaysConnectedToContext": true,
+    "discussionWithoutContextDifficultToReuse": true,
+    "deepensTrustAndCollectiveUnderstanding": true
+  },
+  "conversationConnectedTo": [
+    "Communities",
+    "Missions",
+    "Knowledge",
+    "Decisions",
+    "People",
+    "History"
   ],
-  "topicCount": 8,
+  "collaborationLifecycle": {
+    "layers": [
+      "Purpose",
+      "People",
+      "Conversation",
+      "Decision",
+      "Action",
+      "Knowledge",
+      "History"
+    ],
+    "layerCount": 7
+  },
+  "collaborationPrincipleCount": 8,
+  "collaborationPrinciples": [
+    "StrengthenRelationships",
+    "ReduceDuplication",
+    "CaptureKnowledge",
+    "SupportTransparency",
+    "RespectParticipantAttention",
+    "EncourageLearning",
+    "RemainDiscoverable",
+    "PreserveContext"
+  ],
+  "collaborationDomainCount": 7,
+  "collaborationDomains": [
+    {
+      "id": "communityCollaboration",
+      "name": "Community Collaboration",
+      "supports": ["CommunityDiscussions", "Announcements", "Planning", "Traditions", "CommunityQuestions", "SharedLearning"],
+      "outcome": "Communities become living conversations"
+    },
+    {
+      "id": "missionCollaboration",
+      "name": "Mission Collaboration",
+      "supports": ["MissionPlanning", "VolunteerCoordination", "ProblemSolving", "Logistics", "Reflection", "KnowledgeCapture"],
+      "outcome": "Mission conversations remain attached to the mission forever"
+    },
+    {
+      "id": "leadershipCollaboration",
+      "name": "Leadership Collaboration",
+      "supports": ["LeadershipMeetings", "Mentorship", "StrategicPlanning", "Succession", "DecisionMaking", "PolicyDiscussion"],
+      "outcome": "Leadership conversations become institutional assets"
+    },
+    {
+      "id": "volunteerCollaboration",
+      "name": "Volunteer Collaboration",
+      "supports": ["VolunteerCoordination", "Questions", "Recognition", "Mentorship", "ResourceSharing", "VolunteerSupport"],
+      "outcome": "Relationships remain central"
+    },
+    {
+      "id": "knowledgeCollaboration",
+      "name": "Knowledge Collaboration",
+      "supports": ["StoryDrafting", "PlaybookEditing", "LessonRefinement", "Research", "HistoricalReview"],
+      "outcome": "Knowledge grows collectively"
+    },
+    {
+      "id": "governanceCollaboration",
+      "name": "Governance Collaboration",
+      "supports": ["ProposalDiscussion", "PolicyReview", "EvidenceSharing", "PublicComments", "Appeals"],
+      "outcome": "Governance remains transparent"
+    },
+    {
+      "id": "partnershipCollaboration",
+      "name": "Partnership Collaboration",
+      "supports": ["JointPlanning", "MeetingNotes", "SharedMissions", "DocumentCollaboration", "RelationshipHistory"],
+      "outcome": "Organizations work together naturally"
+    }
+  ],
+  "collaborationSpaceElements": [
+    "Purpose",
+    "Participants",
+    "Context",
+    "Conversation",
+    "Documents",
+    "Knowledge",
+    "History",
+    "Decisions",
+    "Actions"
+  ],
+  "collaborationSpaceElementCount": 9,
+  "conversationConnectionTypes": [
+    "Mission",
+    "Community",
+    "Volunteer",
+    "Leader",
+    "Story",
+    "Proposal",
+    "Meeting",
+    "Institution",
+    "County"
+  ],
+  "noOrphanConversations": true,
+  "sharedNotesSupport": [
+    "CollaborativeNotes",
+    "MeetingNotes",
+    "Research",
+    "Brainstorming",
+    "Planning",
+    "Reflection"
+  ],
+  "decisionThread": {
+    "stages": [
+      "Conversation",
+      "Proposal",
+      "Review",
+      "Decision",
+      "GovernanceRecord",
+      "CommunityEventLedger"
+    ],
+    "stageCount": 6
+  },
+  "whiteboardSupports": [
+    "Planning",
+    "Mapping",
+    "JourneyDesign",
+    "MissionPlanning",
+    "CommunityStrategy",
+    "KnowledgeOrganization"
+  ],
+  "collaborativeDocumentSupports": [
+    "VersionHistory",
+    "Comments",
+    "Suggestions",
+    "Approval",
+    "KnowledgeExtraction",
+    "InstitutionalMemory"
+  ],
+  "mentorshipSpaceIncludes": [
+    "Goals",
+    "Meetings",
+    "Notes",
+    "LearningPlans",
+    "Reflection",
+    "Progress"
+  ],
+  "teamSpaceShares": [
+    "Calendar",
+    "Tasks",
+    "Knowledge",
+    "Files",
+    "MissionHistory",
+    "CommunityHealth"
+  ],
+  "calendarIntegrationConnects": [
+    "Meetings",
+    "Availability",
+    "PlanningSessions",
+    "VolunteerShifts",
+    "Mentorship",
+    "CommunityEvents"
+  ],
+  "knowledgeGraphContributions": [
+    "RelationshipGrowth",
+    "KnowledgeLinks",
+    "MissionConnections",
+    "LeadershipConnections",
+    "CommunityEvolution"
+  ],
+  "communityEventLedgerRecords": [
+    "MeetingHeld",
+    "DiscussionStarted",
+    "DecisionReached",
+    "DocumentUpdated",
+    "KnowledgeCaptured"
+  ],
+  "digitalTwinSummarizes": [
+    "RecentCollaborations",
+    "Mentorship",
+    "CommunicationPatterns",
+    "SharedMissions",
+    "KnowledgeContributions",
+    "RelationshipStrength"
+  ],
+  "aiCollaborationCapabilities": [
+    "SummarizeMeetings",
+    "DraftAgendas",
+    "OrganizeNotes",
+    "IdentifyUnansweredQuestions",
+    "SuggestCollaborators",
+    "RecommendKnowledge",
+    "GenerateActionItems"
+  ],
+  "collaborationIntelligenceIdentifies": [
+    "KnowledgeGaps",
+    "DisconnectedCommunities",
+    "PotentialMentors",
+    "CrossCommunityExpertise",
+    "RepeatedDiscussions",
+    "PartnershipOpportunities"
+  ],
+  "collaborationAnalyticsMeasures": [
+    "Participation",
+    "KnowledgeCreation",
+    "MeetingEffectiveness",
+    "DecisionCompletion",
+    "RelationshipGrowth",
+    "CommunityEngagement"
+  ],
+  "measureQualityNotMessageVolume": true,
+  "accessibilitySupports": [
+    "RealTime",
+    "Asynchronous",
+    "Voice",
+    "Mobile",
+    "Keyboard",
+    "ScreenReaders",
+    "Translation"
+  ],
+  "mobileCollaborationEmphasizes": [
+    "QuickDiscussions",
+    "MeetingParticipation",
+    "PhotoCapture",
+    "VoiceNotes",
+    "VolunteerCoordination",
+    "KnowledgeCapture"
+  ],
+  "collaborativeIntelligenceNetwork": {
+    "name": "Collaborative Intelligence Network",
+    "abbreviation": "CIN",
+    "transformsConversationsToOrganizationalIntelligence": true,
+    "understandsOperationalSignificance": true,
+    "layers": [
+      {
+        "level": 1,
+        "id": "conversation",
+        "name": "Conversation",
+        "includes": ["Discussions", "Questions", "Comments", "VoiceNotes", "MeetingChat"]
+      },
+      {
+        "level": 2,
+        "id": "collaboration",
+        "name": "Collaboration",
+        "includes": ["SharedNotes", "Documents", "Whiteboards", "Planning", "Brainstorming"]
+      },
+      {
+        "level": 3,
+        "id": "decisions",
+        "name": "Decisions",
+        "includes": ["Proposals", "Reviews", "Approvals", "Governance", "ActionItems"]
+      },
+      {
+        "level": 4,
+        "id": "knowledge",
+        "name": "Knowledge",
+        "includes": ["Lessons", "Stories", "Playbooks", "CommunityBrain", "MissionReflections"]
+      },
+      {
+        "level": 5,
+        "id": "relationships",
+        "name": "Relationships",
+        "includes": ["Mentorship", "Teams", "Communities", "Partnerships", "Leadership"]
+      },
+      {
+        "level": 6,
+        "id": "intelligence",
+        "name": "Intelligence",
+        "includes": ["AISummaries", "CommunityIntelligence", "OperationalIntelligence", "KnowledgeRecommendations", "RelationshipInsights"]
+      }
+    ],
+    "layerCount": 6,
+    "continuousQuestions": [
+      "DidThisConversationProduceADecision",
+      "DidThisMeetingGenerateALesson",
+      "ShouldThisDiscussionBecomeAPlaybook",
+      "WhoElseCouldBenefitFromThisKnowledge",
+      "AreTwoCommunitiesSolvingTheSameProblemIndependently",
+      "ShouldAMentorBeIntroduced"
+    ],
+    "continuousQuestionCount": 6,
+    "architecturalTheme": "Conversations are valuable, but the knowledge and relationships they create are even more valuable"
+  },
+  "burtImplementationGuidance": [
+    "Connect every conversation to operational context",
+    "Preserve collaboration history permanently",
+    "Integrate Community Event Ledger Knowledge Graph Digital Twins AI",
+    "Design around shared work not chat",
+    "Asynchronous collaboration first-class",
+    "Searchable and reusable collaboration",
+    "Consult Collaborative Intelligence Network before collaboration features"
+  ],
   "acceptanceCriteria": "AC-144",
-  "acceptanceCriteriaMet": false
+  "acceptanceCriteriaMet": true
 }
