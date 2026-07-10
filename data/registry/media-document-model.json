@@ -1,1 +1,261 @@
-{"version":"1.0.0","requirementId":"DAB-009","docPath":"docs/volume-02/MEDIA_DOCUMENT_MODEL.md","assetTypes":["image","video","audio","pdf","document","other"],"acceptanceCriteria":"AC-114"}
+{
+  "version": "2.0.0",
+  "documentId": "VOLUME-002.8",
+  "requirementId": "DAB-009",
+  "docPath": "docs/volume-02/MEDIA_DOCUMENT_MODEL.md",
+  "status": "canonical",
+  "priority": "critical",
+  "lastUpdated": "2026-07-10",
+  "guidingPrinciple": "Knowledge is more valuable when its supporting evidence is preserved.",
+  "mediaPhilosophy": {
+    "firstClassKnowledgeObjects": true,
+    "notJustFileStorage": true,
+    "connectedKnowledge": true,
+    "searchablePermissionAwareReusable": true
+  },
+  "mediaArchitecture": {
+    "layers": ["File", "Metadata", "Relationships", "Permissions", "Knowledge", "History"],
+    "layerCount": 6,
+    "description": "The file is only one part of the object"
+  },
+  "mediaCategoryCount": 7,
+  "mediaCategories": [
+    {
+      "id": "documents",
+      "name": "Documents",
+      "examples": ["PDF", "WordDocument", "Markdown", "Text", "Policy", "Report", "MeetingNotes", "Research"]
+    },
+    {
+      "id": "images",
+      "name": "Images",
+      "examples": ["Photo", "Graphic", "Map", "Infographic", "ScannedForm", "HistoricalPhotograph"]
+    },
+    {
+      "id": "videos",
+      "name": "Videos",
+      "examples": ["Training", "CommunityStory", "Meeting", "Presentation", "VolunteerHighlight", "InstructionalContent"]
+    },
+    {
+      "id": "audio",
+      "name": "Audio",
+      "examples": ["Podcast", "Interview", "MeetingRecording", "OralHistory", "TrainingAudio", "CommunityMemory"]
+    },
+    {
+      "id": "presentations",
+      "name": "Presentations",
+      "examples": ["SlideDeck", "Workshop", "LeadershipTraining", "MissionBriefing", "EducationalContent"]
+    },
+    {
+      "id": "structured_data",
+      "name": "Structured Data Files",
+      "examples": ["CSV", "Spreadsheet", "ImportTemplate", "ExportPackage", "Analytics", "SurveyResults"]
+    },
+    {
+      "id": "generated",
+      "name": "Generated Artifacts",
+      "examples": ["Report", "AISummary", "Certificate", "RecognitionDocument", "MeetingMinutes", "MissionSummary"],
+      "traceableToSource": true
+    }
+  ],
+  "canonicalMediaObjectFields": [
+    "canonicalId",
+    "title",
+    "description",
+    "mediaType",
+    "owner",
+    "creationDate",
+    "version",
+    "visibility",
+    "language",
+    "tags",
+    "source",
+    "relationships",
+    "reviewStatus"
+  ],
+  "relationshipTargets": [
+    "Participant",
+    "Community",
+    "Mission",
+    "Event",
+    "Story",
+    "Lesson",
+    "Playbook",
+    "Institution",
+    "County",
+    "Initiative",
+    "KnowledgeGraph"
+  ],
+  "relationshipRoles": [
+    "cover",
+    "gallery",
+    "evidence",
+    "attachment",
+    "charter",
+    "citation",
+    "source"
+  ],
+  "versioningCapabilities": [
+    "VersionHistory",
+    "RevisionNotes",
+    "AuthorHistory",
+    "ApprovalHistory",
+    "PublishedVersion",
+    "DraftVersion"
+  ],
+  "ocrExtraction": {
+    "enabled": true,
+    "optionalV1": true,
+    "extracts": ["Text", "Tables", "Metadata", "Images", "Forms", "Signatures"],
+    "preservesOriginalFile": true,
+    "stripExifOnPhotoUpload": true
+  },
+  "metadataFields": [
+    "Author",
+    "Created",
+    "Modified",
+    "Publisher",
+    "Keywords",
+    "Language",
+    "FileSize",
+    "Checksum",
+    "ContentType",
+    "License",
+    "ReviewStatus",
+    "RetentionPolicy"
+  ],
+  "tagDimensions": [
+    "Topics",
+    "Communities",
+    "Missions",
+    "Leadership",
+    "Training",
+    "Volunteer",
+    "KnowledgeAreas",
+    "Geography"
+  ],
+  "searchIntegrations": [
+    "FullTextSearch",
+    "SemanticSearch",
+    "RelationshipSearch",
+    "KnowledgeSearch",
+    "MediaSearch"
+  ],
+  "knowledgeIntegrations": [
+    "CommunityBrain",
+    "ExperiencePlaybook",
+    "Lesson",
+    "MissionLibrary",
+    "StoryAtlas",
+    "Legacy"
+  ],
+  "storyMediaTypes": [
+    "Photo",
+    "Video",
+    "Document",
+    "Audio",
+    "Map",
+    "HistoricalArtifact"
+  ],
+  "aiCapabilities": [
+    "summarizeDocuments",
+    "extractLessons",
+    "generateCitations",
+    "classifyTopics",
+    "recommendRelatedKnowledge",
+    "detectDuplicateDocuments"
+  ],
+  "aiNeverReplacesSource": true,
+  "permissionInheritance": [
+    "Owner",
+    "Community",
+    "Mission",
+    "KnowledgeObject",
+    "ExplicitOverride"
+  ],
+  "retentionFields": [
+    "RetentionPeriod",
+    "ArchivePolicy",
+    "DeletionEligibility",
+    "LegalHold",
+    "HistoricalSignificance"
+  ],
+  "integrityChecks": [
+    "ChecksumSHA256",
+    "VersionValidation",
+    "CorruptionDetection",
+    "BackupVerification"
+  ],
+  "externalReferencePolicy": {
+    "storeMetadataNotDuplicate": true,
+    "examples": ["GovernmentPublication", "AcademicPaper", "PublicReport", "OfficialGuidance"],
+    "governanceRef": "KDG-001"
+  },
+  "mediaCollections": [
+    "CommunityArchives",
+    "TrainingLibraries",
+    "MissionDocumentation",
+    "LeadershipResources",
+    "CountyHistory",
+    "VolunteerGalleries"
+  ],
+  "geographicIntegrations": [
+    "County",
+    "Institution",
+    "Venue",
+    "Map",
+    "Community",
+    "HistoricLocation"
+  ],
+  "futureMediaTypes": [
+    "ThreeDModel",
+    "VirtualTour",
+    "ARExperience",
+    "InteractiveMap",
+    "SimulationData",
+    "DroneImagery"
+  ],
+  "storageImplementation": {
+    "provider": "SupabaseStorage",
+    "phase": "V1",
+    "note": "Canonical metadata separated from storage implementation"
+  },
+  "evidenceVault": {
+    "name": "Evidence Vault",
+    "purpose": "Preserve evidence behind platform knowledge — not merely file storage",
+    "questionAnswered": "How do we know this is true?",
+    "traceTargets": [
+      "Story",
+      "Lesson",
+      "Recommendation",
+      "Report",
+      "CommunityBrainEntry"
+    ],
+    "evidenceExamples": [
+      "MeetingRecordingForMinutes",
+      "VolunteerProjectPhotos",
+      "ResearchReportForPlaybook",
+      "HistoricalDocumentForLegacy",
+      "PublicRecordForCountyProfile",
+      "VideoForCommunityStory",
+      "SignedAgreementForPartnership"
+    ],
+    "evidenceObjectFields": [
+      "Source",
+      "ChainOfCustody",
+      "RelatedEntities",
+      "AssociatedEvents",
+      "PermissionLevel",
+      "RetentionPolicy",
+      "IntegrityVerification",
+      "CitationMetadata"
+    ],
+    "eventLedgerIntegration": "data/registry/event-data-model.json",
+    "knowledgeGraphIntegration": "data/registry/knowledge-graph-schema.json"
+  },
+  "domainSchemaMapping": {
+    "schema": "Knowledge",
+    "entities": ["Story", "Lesson", "MediaReference", "Legacy", "ExperiencePlaybook"]
+  },
+  "acceptanceCriteria": "AC-114",
+  "acceptanceCriteriaMet": true
+}
