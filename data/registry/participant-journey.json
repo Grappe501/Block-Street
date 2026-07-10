@@ -1,49 +1,149 @@
 {
-  "version": "1.1.0",
+  "version": "2.0.0",
   "docPath": "docs/phase-03/PARTICIPANT_JOURNEY.md",
-  "motto": "One step forward.",
-  "principle": "The Registry gives people a place. The Network gives people relationships. The Journey gives people purpose.",
-  "threePillars": [
-    { "id": "place", "source": "Digital Arkansas (Phase 2)", "question": "Where do I belong?" },
-    { "id": "relationships", "source": "People / Network (Phase 3)", "question": "Who do I know?" },
-    { "id": "purpose", "source": "Participant Journey + Personal Mission", "question": "What should I do next?" }
+  "motto": "The platform exists to help people grow.",
+  "principle": "Most software tracks accounts. This platform tracks growth.",
+  "subPrinciple": "One step forward — always a visible next opportunity.",
+  "purpose": "Help every participant discover their next opportunity to learn, contribute, and lead — not to rank people.",
+  "journeyPhilosophy": [
+    "Where am I?",
+    "What have I accomplished?",
+    "What opportunities are available next?"
   ],
   "stages": [
-    { "key": "visitor", "label": "Visitor", "order": 1, "v1": "implicit" },
-    { "key": "interested", "label": "Interested", "order": 2, "v1": "partial" },
-    { "key": "registered", "label": "Registered", "order": 3, "v1": "target", "legacyAlias": "member" },
-    { "key": "connected", "label": "Connected", "order": 4, "v1": "signals" },
-    { "key": "contributor", "label": "Contributor", "order": 5, "v1": "signals" },
-    { "key": "organizer", "label": "Organizer", "order": 6, "v1": "future" },
-    { "key": "leader", "label": "Leader", "order": 7, "v1": "future" },
-    { "key": "mentor", "label": "Mentor", "order": 8, "v1": "future" },
-    { "key": "alumni", "label": "Alumni", "order": 9, "v1": "future" },
-    { "key": "community_builder", "label": "Community Builder", "order": 10, "v1": "future" }
+    {
+      "key": "explorer",
+      "label": "Explorer",
+      "order": 1,
+      "platformFocus": "Welcome · Inspiration · Discovery",
+      "objectives": ["Learn mission", "Explore counties and campuses", "Understand organizing model", "Decide to join"],
+      "v1": "implicit",
+      "legacyAliases": ["visitor", "interested"]
+    },
+    {
+      "key": "member",
+      "label": "Member",
+      "order": 2,
+      "platformFocus": "Belonging · Orientation",
+      "objectives": ["Complete profile", "Select campus/county", "Receive Civic Passport", "Receive Network Board", "Receive invite link and QR"],
+      "v1": "target",
+      "legacyAliases": ["registered"]
+    },
+    {
+      "key": "connector",
+      "label": "Connector",
+      "order": 3,
+      "platformFocus": "Relationships",
+      "objectives": ["Invite friends", "Join discussions", "Attend event", "Join committee", "Connect with members"],
+      "v1": "signals",
+      "legacyAliases": ["connected"]
+    },
+    {
+      "key": "contributor",
+      "label": "Contributor",
+      "order": 4,
+      "platformFocus": "Contribution",
+      "objectives": ["Volunteer", "Assist events", "Share resources", "Welcome new members", "Participate in projects"],
+      "v1": "signals"
+    },
+    {
+      "key": "organizer",
+      "label": "Organizer",
+      "order": 5,
+      "platformFocus": "Ownership",
+      "objectives": ["Organize event", "Start committee", "Recruit volunteers", "Coordinate projects", "Build campus/county"],
+      "v1": "future"
+    },
+    {
+      "key": "leader",
+      "label": "Leader",
+      "order": 6,
+      "platformFocus": "Leadership development",
+      "objectives": ["Mentor organizers", "Coordinate teams", "Solve community problems", "Lead initiatives", "Build sustainable systems"],
+      "v1": "future"
+    },
+    {
+      "key": "mentor",
+      "label": "Mentor",
+      "order": 7,
+      "platformFocus": "Multiplication",
+      "objectives": ["Coach new members", "Share experience", "Connect people", "Help launch communities"],
+      "v1": "future"
+    },
+    {
+      "key": "community_builder",
+      "label": "Community Builder",
+      "order": 8,
+      "platformFocus": "Legacy",
+      "objectives": ["Launch communities", "Build partnerships", "Improve platform", "Document knowledge", "Create infrastructure"],
+      "v1": "future"
+    },
+    {
+      "key": "alumni",
+      "label": "Alumni",
+      "order": 9,
+      "platformFocus": "Continuity",
+      "objectives": ["Graduated or moved", "Continue mentoring", "Support future organizers"],
+      "v1": "future",
+      "note": "Not an end — continuing relationship"
+    }
   ],
-  "progressionSignals": [
-    { "signal": "account_created", "stage": "registered" },
-    { "signal": "network_link_or_invite_accepted", "stage": "connected" },
-    { "signal": "first_invite_sent", "stage": "contributor" },
-    { "signal": "network_depth_threshold", "stage": "contributor" },
-    { "signal": "committee_join_or_event_host", "stage": "organizer" },
-    { "signal": "sustained_recruitment", "stage": "leader" },
-    { "signal": "mentorship_edge", "stage": "mentor" },
-    { "signal": "graduation_transition", "stage": "alumni" },
-    { "signal": "multi_community_leadership", "stage": "community_builder" }
+  "nonLinear": true,
+  "milestones": [
+    { "id": "first_login", "label": "First login" },
+    { "id": "profile_complete", "label": "First completed profile" },
+    { "id": "first_invite_accepted", "label": "First invitation accepted" },
+    { "id": "first_event_attended", "label": "First event attended" },
+    { "id": "first_volunteer", "label": "First volunteer activity" },
+    { "id": "first_committee", "label": "First committee joined" },
+    { "id": "first_event_organized", "label": "First event organized" },
+    { "id": "first_mentorship", "label": "First person mentored" },
+    { "id": "first_project_complete", "label": "First community project completed" }
   ],
-  "nextActionsByStage": [
-    { "stage": "visitor", "action": "Explore your county on the map" },
-    { "stage": "interested", "action": "Complete registration" },
-    { "stage": "registered", "action": "Write your Personal Mission and invite 3 classmates" },
-    { "stage": "connected", "action": "Meet organizers at your campus" },
-    { "stage": "contributor", "action": "Join the team building at your campus" },
-    { "stage": "organizer", "action": "Host your first event" },
-    { "stage": "mentor", "action": "Welcome a new member" }
+  "nextStepExamples": [
+    "Complete your profile",
+    "Meet people from your campus",
+    "Attend an event",
+    "Join a committee",
+    "Invite a friend",
+    "Volunteer this month",
+    "Mentor a new member"
   ],
+  "orchestrationLayer": {
+    "description": "Derive journey from real experiences — not a static database field",
+    "inputs": [
+      "relationships formed",
+      "events attended",
+      "events organized",
+      "projects completed",
+      "volunteer service",
+      "mentoring activity",
+      "leadership activities",
+      "milestones achieved"
+    ],
+    "outputs": [
+      "derived primary stage",
+      "personalized next steps",
+      "Civic Passport updates"
+    ],
+    "components": {
+      "journeyEventsTable": "journey_events",
+      "deriveFunction": "deriveJourneyStage(participantId)",
+      "recommendFunction": "suggestedNextSteps(participantId)",
+      "primaryStageCache": "optional denormalized — always refreshable from orchestrator"
+    },
+    "v1": "simple rules on registration + invite signals",
+    "fullOrchestrator": "v1.1"
+  },
+  "timelineIntegration": {
+    "target": "Civic Passport [CPP-001]",
+    "narrates": ["relationships built", "communities joined", "service performed", "leadership developed", "impact created"]
+  },
   "v1Scope": {
     "philosophyAndStages": "done",
-    "registeredOnSignup": "step_3.3",
-    "connectedAndContributorSignals": "steps_3.4_3.5",
-    "fullStageAutomation": "v1.1"
+    "orchestrationSpec": "done",
+    "memberOnRegistration": "step_3.3",
+    "connectorContributorSignals": "steps_3.4_3.5",
+    "fullOrchestrator": "v1.1"
   }
 }

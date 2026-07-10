@@ -480,19 +480,19 @@
     {
       "id": "JRN-001",
       "title": "Participant Journey Framework",
-      "purpose": "Every feature helps someone move one step forward — place, relationships, purpose",
-      "description": "PHASE-003.2 journey stages Visitor through Community Builder, progression signals, status integration",
+      "purpose": "Track growth not accounts — orchestration layer derives journey from real experiences",
+      "description": "PHASE-003.2 nine stages Explorer through Alumni, milestones, next steps, non-linear growth, Civic Passport integration",
       "priority": "critical",
       "principle": "OM-L5",
       "dependencies": ["PEP-001", "LSA-001", "OIS-001", "STS-001"],
       "related": ["NET-001", "USR-001", "GM-P7"],
       "acceptanceCriteria": [
-        "Journey purpose and stages documented",
-        "Three pillars defined",
-        "Progression signals specified",
-        "Platform behaviors per stage",
-        "Integration with status framework",
-        "Framework for Phase 3+ feature design"
+        "Participant lifecycle fully defined with nine stages",
+        "Growth through service and relationships emphasized",
+        "Milestones and next-step recommendations documented",
+        "Non-linear lifelong participation supported",
+        "Orchestration layer architecture specified",
+        "Framework for journey system implementation"
       ],
       "futureNotes": "Journey timeline table, full stage automation, mentor/alumni stages",
       "implementationStatus": "done",

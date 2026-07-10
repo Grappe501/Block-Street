@@ -4,6 +4,25 @@
 
 ---
 
+## 2026-07-10 — PHASE-003.2 Participant Journey Framework (Canonical)
+
+**Document ID:** PHASE-003.2 · **JRN-001 · AC-021**
+
+### What Was Built
+
+- **Track growth, not accounts** — lifelong journey philosophy
+- **Nine stages:** Explorer → Member → Connector → Contributor → Organizer → Leader → Mentor → Community Builder → Alumni
+- **Orchestration layer [JRN-M10]** — derive stage from real experiences, not a static field
+- **Non-linear journey** — mentors volunteer, leaders learn, alumni re-engage
+- **Milestones** — first login through first project — append to Civic Passport
+- **Personalized next steps** — always visible
+
+### Guiding Principle Locked
+
+> **The platform exists to help people grow.**
+
+---
+
 ## 2026-07-10 — PHASE-003.1 Participant Identity Doctrine (Canonical Expansion)
 
 **Document ID:** PHASE-003.1 · **PEP-001 · CPP-001 · PRM-001 · AC-020**

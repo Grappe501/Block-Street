@@ -1,4 +1,4 @@
-# Participant Journey
+# Participant Journey Framework
 
 **Document ID:** PHASE-003.2  
 **Artifact:** `PARTICIPANT_JOURNEY.md`  
@@ -6,9 +6,11 @@
 **Priority:** Critical  
 **Phase:** 3 — People & Relationship System
 
-> **Everything in the platform should help someone move one step forward.**
+> **Most software tracks accounts. This platform tracks growth.**
 
-**Builds On:** [Participant Identity Doctrine](PARTICIPANT_IDENTITY_DOCTRINE.md) · [Organizing Model](../build-steps/PHASE-001.5-ORGANIZING-MODEL.md) · [Growth Model](../build-steps/PHASE-001.6-GROWTH-MODEL.md) · [Status Framework](../phase-02/CANONICAL_STATUS_LIFECYCLE_FRAMEWORK.md)
+The journey begins the participant's **lifelong path** through the platform — not to rank people, but to help every participant discover their next opportunity to learn, contribute, and lead.
+
+**Builds On:** [Participant Identity Doctrine](PARTICIPANT_IDENTITY_DOCTRINE.md) · [Organizing Model](../build-steps/PHASE-001.5-ORGANIZING-MODEL.md) · [Growth Model](../build-steps/PHASE-001.6-GROWTH-MODEL.md) · [Civic Passport](PARTICIPANT_IDENTITY_DOCTRINE.md#pep-m20--civic-passport-architecture)
 
 **Live spec:** `data/registry/participant-journey.json`
 
@@ -20,16 +22,18 @@
 |----|-------------|
 | JRN-M01 | Purpose |
 | JRN-M02 | Guiding principle |
-| JRN-M03 | Three pillars |
-| JRN-M04 | Journey stages |
-| JRN-M05 | Stage definitions |
-| JRN-M06 | Progression signals |
-| JRN-M07 | Platform behaviors per stage |
-| JRN-M08 | Journey + status integration |
-| JRN-M09 | Recognition & milestones |
-| JRN-M10 | Suggested next actions |
-| JRN-M11 | Privacy & consent by stage |
-| JRN-M12 | V1 scope |
+| JRN-M03 | Journey philosophy |
+| JRN-M04 | Journey stages overview |
+| JRN-M05 | Stage definitions (1–9) |
+| JRN-M06 | Journey is not linear |
+| JRN-M07 | Progress signals & milestones |
+| JRN-M08 | Personalized next steps |
+| JRN-M09 | Journey timeline & Civic Passport |
+| JRN-M10 | Orchestration layer architecture |
+| JRN-M11 | Three pillars integration |
+| JRN-M12 | Status framework integration |
+| JRN-M13 | Privacy by stage |
+| JRN-M14 | V1 scope |
 | JRN-BG | Burt implementation guidance |
 | AC-021 | Step 3.2 acceptance criteria |
 
@@ -37,11 +41,13 @@
 
 ## JRN-M01 — Purpose
 
-**[JRN-M01]** The **Participant Journey** defines how every user progresses through the platform — from first visit to long-term community leadership.
+**[JRN-M01]** This document defines the **lifecycle of every participant** within ASYON.
 
-**[JRN-M01a]** Counties, schools, and networks are **places and relationships**. The Journey is what people **experience every day** — their path toward purpose.
+**[JRN-M01a]** The journey framework provides a shared model for participant development — from **first discovery** through **long-term community leadership**.
 
-**[JRN-M01b]** Every feature in Phases 3–9 should answer: *Does this help someone move one step forward?*
+**[JRN-M01b]** Every feature should support participants in taking **meaningful next steps** rather than remaining passive users.
+
+**[JRN-M01c]** Purpose is **not to rank people** — it is to help every participant discover their next opportunity to **learn, contribute, and lead**.
 
 ---
 
@@ -49,196 +55,362 @@
 
 **[JRN-M02]**
 
-> **One step forward.**
+> **The platform exists to help people grow.**
 
-**[JRN-M02a]** No dead ends. No vanity metrics. Every dashboard, notification, and Mission Board card should suggest a **meaningful next step** aligned with the participant's current stage.
+**[JRN-M02a]** Growth is measured by **participation, relationships, service, and leadership** — not by popularity [PEP-M13, OIS-M14].
 
-**[JRN-M02b]** Leadership develops **naturally** through participation — not assigned titles alone [OM-L5, GM-P7].
+**[JRN-M02b]** Complementary principle:
 
----
-
-## JRN-M03 — Three Pillars
-
-**[JRN-M03]** The platform serves participants through three integrated pillars:
-
-| Pillar | Phase | Gives people |
-|--------|-------|--------------|
-| **Place** | Digital Arkansas (2) | County, campus, community home |
-| **Relationships** | People (3) | Network, invites, referrals |
-| **Purpose** | Journey (3+) | Stage, growth, next action |
-
-```
-Registry  →  "Where do I belong?"
-Network   →  "Who do I know?"
-Journey   →  "What should I do next?"
-```
-
-**[JRN-M03a]** A student at UCA has a **place** (campus page), will build **relationships** (network board), and follows a **journey** (Visitor → Member → Organizer → …).
+> **One step forward.** — always a visible next opportunity [JRN-M08].
 
 ---
 
-## JRN-M04 — Journey Stages
+## JRN-M03 — Journey Philosophy
 
-**[JRN-M04]** Canonical progression:
+**[JRN-M03]** Participants should always know:
+
+| Question | Source |
+|----------|--------|
+| **Where am I?** | Derived journey stage [JRN-M10] |
+| **What have I accomplished?** | Milestones + Civic Passport [JRN-M09] |
+| **What's available next?** | Personalized recommendations [JRN-M08] |
+
+**[JRN-M03a]** The platform **gently encourages progress** — without pressure or competition [PEP-M13].
+
+**[JRN-M03b]** Journey reflects **growth, not rank** [JRN-M06].
+
+---
+
+## JRN-M04 — Journey Stages Overview
+
+**[JRN-M04]** Nine canonical stages:
 
 ```
-Visitor
-    ↓
-Interested
-    ↓
-Registered
-    ↓
-Connected
-    ↓
-Contributor
-    ↓
-Organizer
-    ↓
-Leader
-    ↓
-Mentor
-    ↓
-Alumni
-    ↓
-Community Builder
+Explorer → Member → Connector → Contributor → Organizer
+    → Leader → Mentor → Community Builder → Alumni
 ```
 
-**[JRN-M04a]** Stages reflect **engagement depth** — not account types. A person is always a **participant** [PEP-M03].
+**[JRN-M04a]** Stages describe **engagement depth** — not account types. Every registered person is a **participant** [PEP-M05].
 
-**[JRN-M04b]** Legacy alias: `member` → `registered` in code until migration.
+**[JRN-M04b]** Legacy aliases: `visitor`/`interested` → `explorer` · `registered`/`member` → `member` · `connected` → `connector`
 
 ---
 
 ## JRN-M05 — Stage Definitions
 
-| Stage | Key | Description |
-|-------|-----|-------------|
-| **Visitor** | `visitor` | Browsing — no account |
-| **Interested** | `interested` | Started signup or saved intent |
-| **Registered** | `registered` | Account created — belongs to county/campus |
-| **Connected** | `connected` | Active in network — knows others, invited |
-| **Contributor** | `contributor` | Invites, events, projects — giving back |
-| **Organizer** | `organizer` | Building community — recruitment, coordination |
-| **Leader** | `leader` | Sustained leadership — committees, campaigns |
-| **Mentor** | `mentor` | Developing others — mentorship edges |
-| **Alumni** | `alumni` | Graduated / moved on — stays connected |
-| **Community Builder** | `community_builder` | Cross-community impact — regional/statewide |
+### Stage 1 — Explorer
 
-**[JRN-M05a]** V1 implements through **`registered`** with signals toward **`connected`** and **`contributor`**. Full stage automation in later steps.
+**Key:** `explorer`
+
+**[JRN-M05a]** Participant has **discovered** the platform — no account required.
+
+| Objectives | Platform focus |
+|------------|----------------|
+| Learn the mission | Welcome |
+| Explore counties and campuses | Inspiration |
+| Understand organizing model | Discovery |
+| Decide whether to join | Join CTA |
 
 ---
 
-## JRN-M06 — Progression Signals
+### Stage 2 — Member
 
-**[JRN-M06]** Stage advancement derived from **behavior**, not manual assignment alone:
+**Key:** `member`
 
-| Signal | Suggests stage |
-|--------|----------------|
-| Account created + county/campus | `registered` |
-| First invite accepted / network link | `connected` |
-| First invite sent / active participation | `contributor` |
-| N invites / network depth | `contributor` → `organizer` |
-| Committee join / event host | `organizer` |
-| Sustained recruitment + projects | `leader` |
-| Mentorship relationships | `mentor` |
-| Graduation / age transition | `alumni` |
-| Multi-community leadership | `community_builder` |
+**[JRN-M05b]** Participant has **registered**.
 
-**[JRN-M06a]** Signals stored as **journey events** — append-only [KDG-M07, STS-M16 pattern].
+| Objectives | Platform focus |
+|------------|----------------|
+| Complete profile | Belonging |
+| Select campus and/or county | Orientation |
+| Meet the community | |
+| Receive **Civic Passport** [CPP-001] | |
+| Receive **Network Board** | |
+| Receive invite link and QR code | |
 
----
-
-## JRN-M07 — Platform Behaviors Per Stage
-
-| Stage | Platform experience |
-|-------|---------------------|
-| Visitor | Map, campus/county pages, WHY, join CTA |
-| Interested | Resume signup, county/campus preselect |
-| Registered | Network board, invite tools, Personal Mission, Mission Board cards |
-| Connected | See who you know, suggested connections |
-| Contributor | Milestones, recognition, suggested invites |
-| Organizer | Campus/county dashboard tools, outreach priorities |
-| Leader | Committee/project creation, moderation |
-| Mentor | Mentorship matching, new member welcome |
-| Alumni | Alumni network, advisory roles |
-| Community Builder | Cross-county opportunities, statewide Mission Board |
-
-**[JRN-M07a]** Features **unlock by stage** where appropriate — never gate basic belonging [CP-006].
+**V1 target stage** after registration [Step 3.3].
 
 ---
 
-## JRN-M08 — Journey + Status Integration
+### Stage 3 — Connector
 
-**[JRN-M08]** Participant Journey integrates with [Status Framework](../phase-02/CANONICAL_STATUS_LIFECYCLE_FRAMEWORK.md):
+**Key:** `connector`
+
+**[JRN-M05c]** Participant begins **building relationships**.
+
+| Examples | Platform focus |
+|----------|----------------|
+| Invites friends | Relationships |
+| Joins discussions | |
+| Attends an event | |
+| Joins a committee | |
+| Connects with other members | |
+
+---
+
+### Stage 4 — Contributor
+
+**Key:** `contributor`
+
+**[JRN-M05d]** Participant **actively helps** the community.
+
+| Examples | Platform focus |
+|----------|----------------|
+| Volunteers | Contribution |
+| Assists with events | |
+| Shares resources | |
+| Welcomes new members | |
+| Participates in projects | |
+
+---
+
+### Stage 5 — Organizer
+
+**Key:** `organizer`
+
+**[JRN-M05e]** Participant begins **creating opportunities**.
+
+| Examples | Platform focus |
+|----------|----------------|
+| Organizes an event | Ownership |
+| Starts a committee | |
+| Recruits volunteers | |
+| Coordinates projects | |
+| Helps build campus or county | |
+
+**[JRN-M05f]** First organizer at a campus also advances **community organizing status** [JRN-M12].
+
+---
+
+### Stage 6 — Leader
+
+**Key:** `leader`
+
+**[JRN-M05g]** Participant **develops people**.
+
+| Examples | Platform focus |
+|----------|----------------|
+| Mentors organizers | Leadership development |
+| Coordinates teams | |
+| Solves community problems | |
+| Leads initiatives | |
+| Builds sustainable systems | |
+
+---
+
+### Stage 7 — Mentor
+
+**Key:** `mentor`
+
+**[JRN-M05h]** Participant **intentionally develops future leaders**.
+
+| Examples | Platform focus |
+|----------|----------------|
+| Coaches new members | Multiplication |
+| Shares experience | |
+| Connects people | |
+| Helps new communities launch | |
+
+---
+
+### Stage 8 — Community Builder
+
+**Key:** `community_builder`
+
+**[JRN-M05i]** Participant **strengthens the entire network**.
+
+| Examples | Platform focus |
+|----------|----------------|
+| Launches new communities | Legacy |
+| Builds partnerships | |
+| Improves the platform | |
+| Documents knowledge | |
+| Creates lasting infrastructure | |
+
+---
+
+### Stage 9 — Alumni
+
+**Key:** `alumni`
+
+**[JRN-M05j]** Life circumstances change — **relationships remain** [PEP-M16].
+
+| Examples | Platform focus |
+|----------|----------------|
+| Graduated · Changed careers · Moved | Continuity |
+| Continues mentoring | |
+| Supports future organizers | |
+
+**[JRN-M05k]** Alumni is not an end — it is a **continuing relationship** with the network.
+
+---
+
+## JRN-M06 — Journey Is Not Linear
+
+**[JRN-M06]** Participants may **move forward, pause, or return** to earlier forms of participation.
+
+| Example | Meaning |
+|---------|---------|
+| A mentor also volunteers | Multiple active modes |
+| A leader joins a new committee as learner | Growth continues |
+| An alumnus organizes a new initiative | Re-engagement |
+
+**[JRN-M06a]** Journey reflects **growth, not rank** — no leaderboard, no forced progression [PEP-M13].
+
+**[JRN-M06b]** Orchestration layer supports **multiple concurrent activity types** [JRN-M10].
+
+---
+
+## JRN-M07 — Progress Signals & Milestones
+
+**[JRN-M07]** Celebrate **meaningful milestones** — participation, not competition:
+
+| Milestone | Signal |
+|-----------|--------|
+| First login | `first_login` |
+| First completed profile | `profile_complete` |
+| First invitation accepted | `first_invite_accepted` |
+| First event attended | `first_event_attended` |
+| First volunteer activity | `first_volunteer` |
+| First committee joined | `first_committee` |
+| First event organized | `first_event_organized` |
+| First person mentored | `first_mentorship` |
+| First community project completed | `first_project_complete` |
+
+**[JRN-M07a]** Milestones append to **journey timeline** and **Civic Passport** [JRN-M09].
+
+**[JRN-M07b]** Stored as **journey events** — append-only [STS-M16, KDG-M07].
+
+---
+
+## JRN-M08 — Personalized Next Steps
+
+**[JRN-M08]** Every participant always receives a **recommendation** — the journey never dead-ends [OIS-M15].
+
+| Example next step |
+|-------------------|
+| Complete your profile |
+| Meet people from your campus |
+| Attend an event |
+| Join a committee |
+| Invite a friend |
+| Volunteer this month |
+| Mentor a new member |
+
+**[JRN-M08a]** Recommendations derived from **orchestration layer** — stage + gaps + Mission Board [JRN-M10, OIS-M16].
+
+**[JRN-M08b]** One primary CTA visible on network board — additional options secondary.
+
+---
+
+## JRN-M09 — Journey Timeline & Civic Passport
+
+**[JRN-M09]** Every milestone becomes part of the participant's **Civic Passport** [CPP-001].
+
+The timeline tells the story of:
+
+- Relationships built · Communities joined · Service performed
+- Leadership developed · Impact created
+
+**[JRN-M09a]** Timeline is the **narrative backbone** of the passport — not a scorecard [PEP-M20].
+
+**[JRN-M09b]** Full timeline spec: Step 3.11 Participant Timeline.
+
+---
+
+## JRN-M10 — Orchestration Layer Architecture
+
+**[JRN-M10]** **Signature architecture:** Journey is an **orchestration layer** — not a single database field.
+
+**[JRN-M10a]** Instead of storing `"stage": "organizer"`, the platform **derives** journey from real experiences:
+
+```
+Journey Orchestrator
+    ← relationships formed (graph edges)
+    ← events attended / organized
+    ← projects completed
+    ← volunteer service hours
+    ← mentoring activity
+    ← leadership activities
+    ← milestones achieved
+    → derived primary stage
+    → derived next-step recommendations
+    → Civic Passport updates
+```
+
+**[JRN-M10b]** Benefits:
+
+| Benefit | Why |
+|---------|-----|
+| **Authentic** | Stage reflects what person actually did |
+| **Evolves naturally** | No manual stage updates |
+| **Better recommendations** | Based on real participation gaps |
+| **Non-linear** | Multiple activity types coexist [JRN-M06] |
+
+**[JRN-M10c]** Implementation:
+
+| Component | Role |
+|-----------|------|
+| `journey_events` table | Append-only milestone log |
+| `deriveJourneyStage(participantId)` | Query graph + operational data |
+| `suggestedNextSteps(participantId)` | Orchestrator output |
+| `primaryStage` cache | Optional denormalized cache — **derived**, refreshable |
+
+**[JRN-M10d]** V1: simple rules on registration + invite signals. Full orchestrator post-launch.
+
+---
+
+## JRN-M11 — Three Pillars Integration
+
+**[JRN-M11]** Journey connects the three pillars [PEP-M06]:
+
+```
+Place (Registry)     →  Explorer discovers, Member belongs
+Relationships (Net)  →  Connector builds, Contributor strengthens
+Purpose (Journey)    →  Every stage has next step + Mission alignment
+```
+
+**[JRN-M11a]** Personal Mission [PRM-001] informs recommendations at every stage.
+
+---
+
+## JRN-M12 — Status Framework Integration
+
+**[JRN-M12]** Journey stage ≠ organizing status:
 
 | Concept | Scope |
 |---------|-------|
-| **Organizing status** | County, institution, committee — community health |
-| **Journey stage** | Individual participant — personal progression |
-| **Verification status** | Data quality — separate from journey |
+| **Journey stage** | Individual participant growth |
+| **Organizing status** | County, institution, committee health [STS-M01] |
+| **Verification status** | Data quality [KDG-M09] |
 
-**[JRN-M08a]** First organizer at a campus advances **both**: participant → `organizer`, institution → `building`.
-
-**[JRN-M08b]** Journey stage stored on participant record + timeline — not inferred from page logic alone.
+**[JRN-M12a]** First organizer at campus: participant → `organizer`, institution → `building`.
 
 ---
 
-## JRN-M09 — Recognition & Milestones
+## JRN-M13 — Privacy by Stage
 
-**[JRN-M09]** Celebrate progression [OIS-M14, CP-003]:
+**[JRN-M13]** Journey visibility is **participant-controlled** [PEP-M15]:
 
-| Milestone | Example |
-|-----------|---------|
-| First invite | Contributor badge |
-| Network of 5 | Growing organizer |
-| First campus organizer | Community launch |
-| Mentor match | Leadership development |
-
-**[JRN-M09a]** Recognition encourages **collaboration** — not unhealthy competition.
+- Stage may be private, network-visible, or community-visible
+- Milestones follow same privacy rules
+- Never expose journey data to create pressure or comparison
 
 ---
 
-## JRN-M10 — Suggested Next Actions
+## JRN-M14 — V1 Scope
 
-**[JRN-M10]** Every personal dashboard ends with **one clear next step** [OIS-M15]:
-
-| Stage | Example next action |
-|-------|---------------------|
-| Registered | "Invite 3 classmates" |
-| Connected | "Meet organizers at your campus" |
-| Contributor | "Join the team building at UCA" |
-| Organizer | "Host your first event" |
-| Mentor | "Welcome a new member" |
-
-**[JRN-M10a]** Mission Board personal cards driven by journey stage + network state [OIS-M16].
-
----
-
-## JRN-M11 — Privacy & Consent by Stage
-
-**[JRN-M11]** Journey data follows privacy rules:
-
-| Rule | Detail |
-|------|--------|
-| Public profile scope | Participant controls visibility |
-| Journey stage | May be private or community-visible |
-| Network graph | Referral attribution with consent |
-| Minor protections | Age-appropriate defaults [DG-*] |
-
----
-
-## JRN-M12 — V1 Scope
-
-**[JRN-M12]** Version 1 (Jul 12–14):
+**[JRN-M14]** Jul 12–14:
 
 | Deliverable | V1 |
 |-------------|-----|
-| Journey philosophy & stages | ✅ This document |
-| `participant-journey.json` catalog | ✅ |
-| Registration → `registered` | Step 3.3 implementation |
-| Connected + contributor signals | Steps 3.4–3.5 |
-| Full stage automation | V1.1+ |
-| Mentor / alumni / community builder | Future |
+| Journey philosophy & 9 stages | ✅ This document |
+| Orchestration architecture spec | ✅ |
+| Milestones catalog | ✅ JSON |
+| Member stage on registration | Step 3.3 |
+| Connector + contributor signals | Steps 3.4–3.5 |
+| Simple derivation rules | Step 3.3–3.6 implementation |
+| Full orchestrator | V1.1+ |
 
 ---
 
@@ -248,29 +420,31 @@ Community Builder
 
 | # | Rule |
 |---|------|
-| 1 | Store journey stage on participant + **append-only journey timeline** |
-| 2 | Derive stage suggestions from **signals** — allow steward override |
-| 3 | Every Phase 3+ feature maps to **at least one journey stage** |
-| 4 | Personal dashboard: **Place + Relationships + Purpose** sections |
-| 5 | Mission Board cards filtered by journey stage |
-| 6 | Do not gate county/campus **belonging** behind advanced stages |
-| 7 | Integrate with status timeline pattern [STS-M16] |
+| 1 | **Derive** journey from experiences — orchestration layer [JRN-M10] |
+| 2 | Store stage **separately from authentication** [PEP-M21] |
+| 3 | Allow **flexible movement** between stages [JRN-M06] |
+| 4 | Base recommendations on **actual participation** — not vanity metrics |
+| 5 | **Preserve historical milestones** — append-only timeline |
+| 6 | Make progression **visible but never mandatory** |
+| 7 | Every milestone → **Civic Passport** stamp [CPP-001] |
+| 8 | Never gate **belonging** behind advanced stages [PEP-M12] |
+| 9 | Mission Board cards use orchestrator output [OIS-M16] |
 
 ---
 
-## AC-019 — Acceptance Criteria
+## AC-021 — Acceptance Criteria
 
 Step 3.2 is complete when:
 
-- [x] **[AC-021a]** Participant Journey purpose documented. `[JRN-M01]`
-- [x] **[AC-021b]** Three pillars defined. `[JRN-M03]`
-- [x] **[AC-021c]** Journey stages specified. `[JRN-M04, JRN-M05]`
-- [x] **[AC-021d]** Progression signals and platform behaviors defined. `[JRN-M06, JRN-M07]`
-- [x] **[AC-021e]** Integration with status framework documented. `[JRN-M08]`
-- [x] **[AC-021f]** Burt has framework for Phase 3+ feature design. `[JRN-BG, participant-journey.json]`
+- [x] **[AC-021a]** Participant lifecycle fully defined. `[JRN-M04, JRN-M05]`
+- [x] **[AC-021b]** Stages emphasize growth through service and relationships. `[JRN-M02, JRN-M05]`
+- [x] **[AC-021c]** Milestones and next-step recommendations documented. `[JRN-M07, JRN-M08]`
+- [x] **[AC-021d]** Non-linear journey and lifelong participation supported. `[JRN-M06, JRN-M05j]`
+- [x] **[AC-021e]** Orchestration layer architecture specified. `[JRN-M10]`
+- [x] **[AC-021f]** Burt has blueprint for journey system. `[JRN-BG, participant-journey.json]`
 
 ---
 
 **Next Step:** 3.3 — Participant Profile System (USR-001)
 
-*Trace: OM-L1 → JRN-M04 → NET-001 → Mission Board personal cards [OIS-M16]*
+*Trace: PEP-M11 → JRN-M10 orchestrator → CPP-001 timeline → Mission Board [OIS-M16]*
