@@ -1,23 +1,378 @@
 {
-  "version": "1.0.0",
-  "documentId": "VOLUME-003.06",
+  "version": "2.0.0",
+  "documentId": "VOLUME-003.6",
   "requirementId": "PBA-007",
   "docPath": "docs/volume-03/VOLUNTEER_EXPERIENCE_ENGINE.md",
-  "status": "pending",
+  "status": "canonical",
   "priority": "critical",
   "lastUpdated": "2026-07-10",
-  "guidingPrinciple": "Behavior is governed, not improvised.",
-  "defines": [
-    "Discovery",
-    "Interest",
-    "Assignment",
+  "guidingPrinciple": "Every volunteer is a future leader, mentor, or community builder.",
+  "volunteerPhilosophy": {
+    "notALaborPool": true,
+    "futureCommunityLeaders": true,
+    "nurtureNotAssignTasks": true,
+    "volunteerismBecomesLeadershipDevelopment": true,
+    "eachStageBuildsOnPrevious": true,
+    "participantControlledGrowth": true
+  },
+  "volunteerArchitecture": {
+    "stages": [
+      "Discovery",
+      "Interest",
+      "Conversation",
+      "Welcome",
+      "Training",
+      "Participation",
+      "Contribution",
+      "Leadership",
+      "Mentorship",
+      "Legacy"
+    ],
+    "stageCount": 10
+  },
+  "lifecycleStages": [
+    {
+      "id": "discovery",
+      "name": "Discovery",
+      "order": 1,
+      "channels": [
+        "CommunityRecommendations",
+        "Friends",
+        "Events",
+        "Institutions",
+        "Maps",
+        "Search",
+        "DiscoveryEngine",
+        "QRCodes",
+        "SocialSharing"
+      ],
+      "welcomingNotTransactional": true
+    },
+    {
+      "id": "interest",
+      "name": "Interest",
+      "order": 2,
+      "examples": [
+        "BookmarkOpportunity",
+        "RequestInformation",
+        "JoinWaitingList",
+        "AskOrganizer",
+        "Subscribe"
+      ],
+      "valuableData": true
+    },
+    {
+      "id": "conversation",
+      "name": "Conversation",
+      "order": 3,
+      "participants": [
+        "CommunityLeaders",
+        "Mentors",
+        "Organizers",
+        "CurrentVolunteers"
+      ],
+      "buildsConfidence": true
+    },
+    {
+      "id": "welcome",
+      "name": "Welcome",
+      "order": 4,
+      "includes": [
+        "Orientation",
+        "CommunityIntroduction",
+        "MissionExplanation",
+        "Calendar",
+        "CommunicationPreferences",
+        "FirstConnections"
+      ]
+    },
+    {
+      "id": "training",
+      "name": "Training",
+      "order": 5,
+      "topics": [
+        "MissionPreparation",
+        "Safety",
+        "CommunityValues",
+        "LeadershipFundamentals",
+        "OperationalProcedures",
+        "TechnologyOrientation"
+      ],
+      "adaptsToPathway": true
+    },
+    {
+      "id": "participation",
+      "name": "Participation",
+      "order": 6,
+      "records": [
+        "Attendance",
+        "VolunteerHours",
+        "Roles",
+        "Contributions",
+        "Media",
+        "Stories",
+        "Relationships"
+      ],
+      "institutionalMemory": true
+    },
+    {
+      "id": "contribution",
+      "name": "Contribution",
+      "order": 7,
+      "examples": [
+        "Ideas",
+        "Leadership",
+        "Knowledge",
+        "Storytelling",
+        "MentorshipAssistance",
+        "CommunityImprovement"
+      ],
+      "strengthensOwnership": true
+    },
+    {
+      "id": "leadership",
+      "name": "Leadership",
+      "order": 8,
+      "examples": [
+        "TeamLead",
+        "CommitteeMember",
+        "Organizer",
+        "Trainer",
+        "RegionalCoordinator"
+      ],
+      "growsFromDemonstratedService": true
+    },
+    {
+      "id": "mentorship",
+      "name": "Mentorship",
+      "order": 9,
+      "supports": [
+        "NewVolunteers",
+        "CommunityLaunches",
+        "LeadershipDevelopment",
+        "KnowledgeSharing"
+      ],
+      "multipliesCapacity": true
+    },
+    {
+      "id": "legacy",
+      "name": "Legacy",
+      "order": 10,
+      "becomes": [
+        "Stories",
+        "Playbooks",
+        "CommunityTraditions",
+        "LeadershipHistory",
+        "Recognition",
+        "InstitutionalKnowledge"
+      ],
+      "extendsBeyondActiveParticipation": true
+    }
+  ],
+  "lifecycleStageCount": 10,
+  "volunteerProfileFields": [
+    "Skills",
+    "Interests",
+    "Availability",
     "Training",
-    "Participation",
-    "Recognition",
+    "Communities",
+    "VolunteerHistory",
     "Leadership",
-    "Retention",
-    "AlumniEngagement"
+    "Recognition",
+    "Goals",
+    "GrowthPlans"
+  ],
+  "volunteerProfileFieldCount": 10,
+  "opportunityMatchingCriteria": [
+    "Skills",
+    "Interests",
+    "Availability",
+    "Location",
+    "Communities",
+    "LeadershipGoals",
+    "Mentorship",
+    "Accessibility"
+  ],
+  "opportunityMatchingCriteriaCount": 8,
+  "volunteerJourneyMilestones": [
+    "FirstEvent",
+    "FirstMission",
+    "FirstLeadershipRole",
+    "Mentorship",
+    "Recognition",
+    "KnowledgeContributions",
+    "CommunityMilestones"
+  ],
+  "volunteerJourneyMilestoneCount": 7,
+  "recognitionTypes": [
+    "VolunteerHours",
+    "MissionMilestones",
+    "Leadership",
+    "Innovation",
+    "KnowledgeContributions",
+    "CommunityImpact",
+    "ServiceAnniversaries"
+  ],
+  "recognitionTypeCount": 7,
+  "wellnessMonitors": [
+    "ParticipationBalance",
+    "Workload",
+    "LeadershipLoad",
+    "TrainingNeeds",
+    "BurnoutIndicators"
+  ],
+  "wellnessMonitorCount": 5,
+  "volunteerPortfolioItems": [
+    "VolunteerHours",
+    "Projects",
+    "Stories",
+    "Skills",
+    "Leadership",
+    "Training",
+    "Mentorship",
+    "Recognition",
+    "CommunityImpact"
+  ],
+  "volunteerPortfolioItemCount": 9,
+  "communityParticipationTypes": [
+    "MultipleCommunities",
+    "MultipleMissions",
+    "MultipleInstitutions",
+    "RegionalInitiatives",
+    "CrossCommunityCollaborations"
+  ],
+  "communityParticipationTypeCount": 5,
+  "calendarIntegrations": [
+    "Availability",
+    "Assignments",
+    "Training",
+    "CommunityEvents",
+    "MentorshipMeetings",
+    "RecognitionCeremonies"
+  ],
+  "calendarIntegrationCount": 6,
+  "knowledgeContributions": [
+    "Stories",
+    "Lessons",
+    "MissionReflections",
+    "CommunityBrain",
+    "Playbooks"
+  ],
+  "knowledgeContributionCount": 5,
+  "knowledgeGraphProjections": [
+    "MembershipGraph",
+    "MissionGraph",
+    "MentorshipGraph",
+    "LeadershipGraph",
+    "KnowledgeGraph"
+  ],
+  "knowledgeGraphProjectionCount": 5,
+  "digitalTwinSummaryFields": [
+    "Interests",
+    "Skills",
+    "Availability",
+    "Growth",
+    "Communities",
+    "LeadershipReadiness",
+    "VolunteerHistory",
+    "LearningGoals"
+  ],
+  "digitalTwinFieldCount": 8,
+  "accessibilityAccommodations": [
+    "DifferentSchedules",
+    "TransportationNeeds",
+    "PhysicalAccessibility",
+    "LanguagePreferences",
+    "TechnologyAccess"
+  ],
+  "accessibilityAccommodationCount": 5,
+  "aiCapabilities": [
+    "RecommendOpportunities",
+    "IdentifyMentors",
+    "SuggestTraining",
+    "RecognizeLeadershipPotential",
+    "RecommendHealthierWorkloads",
+    "GenerateVolunteerSummaries"
+  ],
+  "aiNeverReplacesHumanRelationships": true,
+  "volunteerSuccessCenter": {
+    "name": "Volunteer Success Center",
+    "purpose": "Primary workspace helping participants succeed throughout their volunteer journey — from managing volunteers to helping volunteers thrive",
+    "notSimpleVolunteerDashboard": true,
+    "domains": [
+      {
+        "id": "opportunities",
+        "name": "Opportunities",
+        "bringsTogether": ["RecommendedVolunteerRoles", "UpcomingMissions", "CommunityNeeds", "NearbyEvents"]
+      },
+      {
+        "id": "commitments",
+        "name": "Commitments",
+        "bringsTogether": ["Calendar", "Assignments", "TrainingSessions", "MentorshipMeetings"]
+      },
+      {
+        "id": "growth",
+        "name": "Growth",
+        "bringsTogether": ["Skills", "LeadershipPathway", "LearningProgress", "Certifications", "PersonalGoals"]
+      },
+      {
+        "id": "relationships",
+        "name": "Relationships",
+        "bringsTogether": ["Mentor", "Mentees", "Teams", "Committees", "CommunityLeaders"]
+      },
+      {
+        "id": "impact",
+        "name": "Impact",
+        "bringsTogether": ["VolunteerHours", "MissionsCompleted", "StoriesContributed", "CommunitiesServed", "RecognitionEarned"]
+      },
+      {
+        "id": "wellness",
+        "name": "Wellness",
+        "bringsTogether": ["ParticipationBalance", "LeadershipWorkload", "SuggestedBreaks", "BurnoutIndicators", "CelebrationReminders"]
+      },
+      {
+        "id": "intelligence",
+        "name": "Intelligence",
+        "bringsTogether": ["VolunteerDigitalTwin", "AIRecommendations", "DiscoveryEngineSuggestions", "CommunityHealthSignals"]
+      }
+    ],
+    "domainCount": 7,
+    "philosophy": "Platform invests in participant growth, meaningful opportunities, healthy participation, and next-generation community leadership"
+  },
+  "domainSchemaMapping": {
+    "schema": "PlatformBehavior",
+    "entities": [
+      "VolunteerExperience",
+      "VolunteerProfile",
+      "OpportunityMatching",
+      "VolunteerJourney",
+      "VolunteerWellness",
+      "VolunteerSuccessCenter",
+      "VolunteerPortfolio"
+    ]
+  },
+  "projectionIntegrations": {
+    "missionExecutionPath": "data/registry/mission-execution-engine.json",
+    "identityLifecyclePath": "data/registry/identity-lifecycle-engine.json",
+    "workflowEnginePath": "data/registry/workflow-engine.json",
+    "businessRulesPath": "data/registry/business-rule-engine.json",
+    "entityDictionaryPath": "data/registry/canonical-entity-dictionary.json",
+    "relationshipModelPath": "data/registry/relationship-data-model.json",
+    "timeCalendarPath": "data/registry/time-calendar-data-model.json",
+    "searchIndexPath": "data/registry/search-index-model.json",
+    "knowledgeGraphPath": "data/registry/knowledge-graph-schema.json",
+    "aiKnowledgePath": "data/registry/ai-knowledge-model.json",
+    "securityPrivacyPath": "data/registry/security-privacy-model.json"
+  },
+  "burtImplementationGuidance": [
+    "Model volunteering as a long-term journey",
+    "Preserve complete participation history",
+    "Separate volunteer identity from individual assignments",
+    "Integrate with calendars, knowledge, Digital Twins, and recognition",
+    "Treat mentorship as a natural progression",
+    "Support participant-controlled growth",
+    "Consult Volunteer Success Center spec before volunteer-facing experience features"
   ],
   "acceptanceCriteria": "AC-127",
-  "acceptanceCriteriaMet": false
+  "acceptanceCriteriaMet": true
 }
