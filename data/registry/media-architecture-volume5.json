@@ -1,0 +1,171 @@
+{
+  "version": "2.0.0",
+  "documentId": "VOLUME-005.7",
+  "requirementId": "PSI-008",
+  "docPath": "docs/volume-05/MEDIA_ARCHITECTURE.md",
+  "status": "canonical",
+  "priority": "strategic",
+  "lastUpdated": "2026-07-10",
+  "productName": "Media, Content & Digital Asset Architecture",
+  "guidingPrinciple": "Every digital asset should remain understandable, discoverable, reusable, and historically meaningful.",
+  "mediaPhilosophy": {
+    "mediaNotMerelyStorage": true,
+    "everyAssetIsInstitutionalKnowledge": true,
+    "organizesByRelationshipsNotFolders": true,
+    "contentBecomesOperationalKnowledge": true,
+    "institutionalMemoryManagementNotFileManagement": true
+  },
+  "mediaArchitecture": {
+    "layers": [
+      "Capture",
+      "Validation",
+      "Classification",
+      "RelationshipMapping",
+      "KnowledgeExtraction",
+      "Storage",
+      "Discovery",
+      "HistoricalPreservation"
+    ],
+    "layerCount": 8
+  },
+  "mediaPrincipleCount": 8,
+  "mediaPrinciples": [
+    "Versioned",
+    "Searchable",
+    "PermissionAware",
+    "Explainable",
+    "Linked",
+    "Observable",
+    "Recoverable",
+    "Preserved"
+  ],
+  "digitalAssetCategoryCount": 7,
+  "digitalAssetCategories": [
+    { "id": "documents", "name": "Documents", "examples": ["OperatingManuals", "MeetingNotes", "Reports", "Policies", "Research", "Presentations", "Forms", "Letters"] },
+    { "id": "images", "name": "Images", "examples": ["CommunityEvents", "VolunteerActivities", "Evidence", "HistoricalPhotographs", "Maps", "ScannedDocuments", "TrainingMaterial"] },
+    { "id": "video", "name": "Video", "examples": ["Training", "Meetings", "TownHalls", "CampaignMessages", "VolunteerInstruction", "CommunityHistory", "MissionDocumentation"] },
+    { "id": "audio", "name": "Audio", "examples": ["Interviews", "OralHistories", "Podcasts", "VoiceNotes", "MeetingRecordings", "Training", "CommunityStories"] },
+    { "id": "structuredContent", "name": "Structured Content", "examples": ["Articles", "Stories", "Playbooks", "Lessons", "KnowledgeEntries", "CommunityBrain", "Research"] },
+    { "id": "geographicContent", "name": "Geographic Content", "examples": ["Maps", "GISLayers", "Boundaries", "Routes", "Coverage", "LocationIntelligence"] },
+    { "id": "evidence", "name": "Evidence", "examples": ["Photos", "Video", "Receipts", "InspectionRecords", "SignedDocuments", "HistoricalArtifacts"], "additionalGovernance": true }
+  ],
+  "assetStructure": {
+    "fields": ["AssetId", "Owner", "Institution", "Community", "Mission", "Relationships", "Version", "Classification", "Permissions", "Metadata", "RetentionPolicy", "History"],
+    "fieldCount": 12,
+    "selfDescribing": true
+  },
+  "canonicalMetadata": {
+    "requiredFields": ["Title", "Summary", "Author", "Contributors", "CreationDate", "ReviewDate", "Keywords", "Communities", "RelatedMissions", "RelatedKnowledge", "AISummary", "Language", "AccessibilityInformation"],
+    "fieldCount": 13,
+    "metadataMandatory": true
+  },
+  "assetRelationships": {
+    "connectsTo": ["Communities", "Missions", "Participants", "Knowledge", "DigitalTwins", "Calendar", "Institutions", "CommunityEventLedger"],
+    "noOrphanFiles": true
+  },
+  "versionControl": {
+    "supports": ["MajorVersions", "MinorVersions", "Drafts", "Approvals", "ReviewHistory", "Rollback", "HistoricalComparison"],
+    "historyVisible": true
+  },
+  "mediaLifecycle": {
+    "stages": ["Draft", "Review", "Approved", "Published", "Archived", "HistoricalPreservation"],
+    "stageCount": 6,
+    "noAccidentalKnowledgeLoss": true
+  },
+  "aiMediaIntelligence": {
+    "capabilities": ["GenerateSummaries", "ExtractTranscripts", "IdentifyTopics", "SuggestTags", "RecommendRelationships", "CreateCitations", "DetectDuplicates"],
+    "capabilityCount": 7,
+    "aiEnrichesContent": true
+  },
+  "searchIntegration": {
+    "searchableBy": ["Meaning", "Metadata", "Relationships", "Communities", "Mission", "Institution", "People", "KnowledgeGraph"],
+    "beyondFilenames": true
+  },
+  "communityBrainIntegration": {
+    "contributesTo": ["Stories", "Playbooks", "Lessons", "Research", "CommunityMemory", "InstitutionalLearning"]
+  },
+  "communityEventLedgerIntegration": {
+    "mediaEvents": ["Created", "Edited", "Reviewed", "Published", "Referenced", "Archived"],
+    "historyPermanent": true
+  },
+  "digitalTwinIntegration": {
+    "enriches": ["ParticipantTwins", "MissionTwins", "CommunityTwins", "InstitutionTwins", "CountyTwins", "PlatformTwins"],
+    "twinsGainHistoricalEvidence": true
+  },
+  "accessibility": {
+    "supports": ["AlternativeText", "Captions", "Transcripts", "Translation", "AccessibleDocuments", "ScreenReaders"],
+    "mediaInclusive": true
+  },
+  "localBrainStorage": {
+    "flow": ["LocalAssetCache", "SynchronizationQueue", "CloudArchive", "InstitutionalRepository"],
+    "availableOffline": true
+  },
+  "synchronization": {
+    "supports": ["Incremental", "VersionAware", "ConflictAware", "BandwidthAware", "OfflineSynchronization"],
+    "efficientMediaSync": true
+  },
+  "securityStandard": {
+    "supports": ["Encryption", "Classification", "PermissionInheritance", "Retention", "LegalHold", "AuditHistory"],
+    "securityTravelsWithAsset": true
+  },
+  "observabilityStandard": {
+    "tracks": ["Storage", "Usage", "VersionHistory", "Synchronization", "Access", "AIProcessing", "Retention"],
+    "metricCount": 7
+  },
+  "institutionalMemoryRepository": {
+    "name": "Institutional Memory Repository",
+    "abbreviation": "IMR",
+    "beyondTraditionalDocumentManagement": true,
+    "memoryPipeline": {
+      "stages": ["Capture", "Classification", "RelationshipMapping", "KnowledgeExtraction", "CommunityBrain", "HistoricalPreservation", "InstitutionalMemory"],
+      "stageCount": 7
+    },
+    "memoryObject": {
+      "sections": [
+        { "id": "content", "name": "Content", "includes": ["File", "Media", "StructuredContent"] },
+        { "id": "context", "name": "Context", "includes": ["Mission", "Community", "Institution", "Calendar", "Participants", "Event"] },
+        { "id": "knowledge", "name": "Knowledge", "includes": ["AISummary", "Lessons", "PlaybookReferences", "RelatedStories", "Research"] },
+        { "id": "relationships", "name": "Relationships", "includes": ["People", "Communities", "Missions", "Institutions", "DigitalTwins", "KnowledgeGraph"] },
+        { "id": "history", "name": "History", "includes": ["Versions", "Reviews", "Approvals", "CommunityEventLedgerReferences"] }
+      ],
+      "sectionCount": 5
+    },
+    "knowledgeExtractionEngine": {
+      "automaticallyExtracts": ["Transcripts", "KeyTopics", "NamedPeople", "Organizations", "GeographicReferences", "ActionItems", "Decisions", "LessonsLearned", "PotentialPlaybookUpdates"],
+      "extractCount": 9,
+      "originalMediaIntactExtractedKnowledgeSearchable": true
+    },
+    "evidencePreservation": {
+      "evidenceObjectProtections": ["ImmutableVersionHistory", "CryptographicIntegrityVerification", "ChainOfCustodyRecords", "LegalRetentionPolicies", "RestrictedAccess", "TamperDetection"],
+      "protectionCount": 6
+    },
+    "livingCollections": {
+      "relationshipDrivenAutoUpdating": true,
+      "examples": ["2026CountyLeadershipSummit", "RoseBudCommunityHistory", "VolunteerTrainingLibrary", "SchoolBoardGovernance", "CountyFairOutreach"],
+      "exampleCount": 5
+    },
+    "localBrainPreservation": {
+      "eachLocalBrainMaintainsOwnIMR": true,
+      "preservesWithoutContinuousCloudConnectivity": true
+    },
+    "pairsWithKnowledgeRetrievalFabric": true,
+    "pairsWithCommunityEventLedger": true
+  },
+  "architecturalInsight": {
+    "institutionalMemoryManagement": true,
+    "interconnectedHistoricalRecord": true,
+    "richContextForAIKnowledgeTwinsEvents": true,
+    "knowledgeUsefulForYears": true
+  },
+  "burtImplementationGuidance": [
+    "Build media around relationships not folders",
+    "Require canonical metadata",
+    "Connect every asset to operational context",
+    "Integrate AI enrichment",
+    "Support LocalBrain caching and synchronization",
+    "Preserve version history permanently",
+    "Store assets as Memory Objects in Institutional Memory Repository"
+  ],
+  "acceptanceCriteria": "AC-157",
+  "acceptanceCriteriaMet": true
+}
