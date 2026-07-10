@@ -1,8 +1,8 @@
 # Project Constitution & Mission Doctrine
 
-> **Burt: Foundational Constitution complete (Steps 1.1–1.6).** Start at [docs/build-steps/README.md](build-steps/README.md). Phase 2: Arkansas Organizing Registry.  
-> That document establishes platform identity without implementation details.  
-> This constitution expands with timeline, teaching system, and build doctrine.
+> **Burt: Phase 1 Constitution complete (Steps 1.1–1.8).** Start at [docs/build-steps/BUILD-BIBLE.md](build-steps/BUILD-BIBLE.md).  
+> Phase 2: Arkansas Organizing Registry.  
+> This document expands with timeline, teaching system, and historical context.
 
 **Platform Working Name:** ASYON — Arkansas Student & Youth Organizing Network  
 **Requirement IDs:** See [build-steps/00-ID-CONVENTION.md](build-steps/00-ID-CONVENTION.md)

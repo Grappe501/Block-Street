@@ -5,9 +5,9 @@
     "motto": "Connect Locally. Organize Statewide. Lead Together.",
     "tagline": "Your organizing home",
     "version": "1.0.0-constitution",
-    "currentPhase": 1,
-    "currentPhaseName": "Foundational Constitution (closes at 1.8)",
-    "lastUpdated": "2026-07-10T09:00:00Z",
+    "currentPhase": 2,
+    "currentPhaseName": "Arkansas Organizing Registry",
+    "lastUpdated": "2026-07-10T10:00:00Z",
     "deployUrl": "https://block-street.netlify.app/",
     "githubRepo": "https://github.com/Grappe501/Block-Street",
     "netlifyStatus": "live",
@@ -17,9 +17,9 @@
     "leaderTestingDate": "2026-07-12"
   },
   "constitutionalLayer": {
-    "status": "in_progress",
-    "docPath": "docs/build-steps/README.md",
-    "stepsComplete": 7,
+    "status": "complete",
+    "docPath": "docs/build-steps/BUILD-BIBLE.md",
+    "stepsComplete": 8,
     "stepsTotal": 8,
     "launchReadinessPath": "data/launch-readiness.json",
     "launchReady": false,
@@ -29,15 +29,16 @@
   "masterBuild": {
     "docPath": "docs/master/MASTER-BUILD-SEQUENCE.md",
     "totalModules": 30,
-    "constitutionPath": "docs/PROJECT_CONSTITUTION_AND_MISSION_DOCTRINE.md"
+    "constitutionPath": "docs/PROJECT_CONSTITUTION_AND_MISSION_DOCTRINE.md",
+    "buildBiblePath": "docs/build-steps/BUILD-BIBLE.md"
   },
   "phases": [
     {
       "id": 1,
       "name": "Project Constitution & Mission Doctrine",
       "slug": "phase-01-constitution",
-      "status": "in_progress",
-      "docPath": "docs/build-steps/README.md",
+      "status": "done",
+      "docPath": "docs/build-steps/BUILD-BIBLE.md",
       "steps": [
         { "id": "1.1", "name": "Platform Identity [PHASE-001.1]", "status": "done", "notes": "PI-001 through ER-001" },
         { "id": "1.2", "name": "North Star Outcome [PHASE-001.2]", "status": "done", "notes": "NS-002, NS-013" },
@@ -46,7 +47,7 @@
         { "id": "1.5", "name": "Organizing Model [PHASE-001.5]", "status": "done", "notes": "OM-L1–L5" },
         { "id": "1.6", "name": "Growth Model [PHASE-001.6]", "status": "done", "notes": "GM-P1–P10, GM-V1" },
         { "id": "1.7", "name": "Launch Success Definition [PHASE-001.7]", "status": "done", "notes": "LS-CHK 10-item checklist, 7 pillars" },
-        { "id": "1.8", "name": "Implementation Doctrine + Build Bible", "status": "pending", "notes": "Closes Phase 1" }
+        { "id": "1.8", "name": "Implementation Doctrine [PHASE-001.8]", "status": "done", "notes": "ED-002–ED-FD, BUILD-BIBLE — Phase 1 complete" }
       ]
     },
     {
@@ -138,6 +139,12 @@
   "buildLog": [
     {
       "date": "2026-07-10",
+      "title": "PHASE-001.8 Implementation Doctrine — Phase 1 Complete",
+      "phase": 1,
+      "summary": "ED-002–ED-FD engineering protocol, BUILD-BIBLE.md, admin Engineering tab — Constitution closed"
+    },
+    {
+      "date": "2026-07-10",
       "title": "PHASE-001.7 Launch Success Definition",
       "phase": 1,
       "summary": "LS-CHK 10-item checklist, 7 pillars, 3 mission questions, launch-readiness.json, admin Launch tab"
@@ -181,9 +188,9 @@
   ],
   "stats": {
     "totalSteps": 41,
-    "doneSteps": 18,
+    "doneSteps": 19,
     "inProgressSteps": 5,
-    "pendingSteps": 18,
-    "percentComplete": 44
+    "pendingSteps": 17,
+    "percentComplete": 46
   }
 }

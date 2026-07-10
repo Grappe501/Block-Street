@@ -104,3 +104,5 @@ Example: `PHASE-001.1-PLATFORM-IDENTITY.md`
 | PHASE-001.5 | Organizing Model | Canonical |
 | PHASE-001.6 | Growth Model & Evolution Strategy | Canonical |
 | PHASE-001.7 | Launch Success Definition | Canonical |
+| PHASE-001.8 | Implementation Doctrine & Engineering Protocol | Canonical |
+| BUILD-BIBLE | Consolidated Phase 1 index (Steps 1.1–1.8) | Canonical |

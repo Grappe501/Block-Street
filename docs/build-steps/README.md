@@ -1,14 +1,16 @@
 # Burt — Start Here
 
-> Read documents in this order before writing code.
+> Read [BUILD-BIBLE.md](BUILD-BIBLE.md) before writing code.
 
 ## The One Question [NS-013]
 
 > **Does this help us reach the North Star?** If no — it doesn't belong in V1.
 
-## Standing Engineering Doctrine [ED-001]
+## Burt's Operating Manual [ED-003]
 
-> **Design First · Build Second · Validate Third · Iterate Fourth**
+> **Design completely. Build deliberately. Validate thoroughly. Improve continuously.**
+
+Full protocol: [PHASE-001.8-IMPLEMENTATION-DOCTRINE.md](PHASE-001.8-IMPLEMENTATION-DOCTRINE.md)
 
 ## Growth Philosophy [GM-002]
 
@@ -16,7 +18,7 @@
 
 ---
 
-## Foundational Constitution — Steps 1.1–1.8
+## Phase 1 — Constitution Complete ✅
 
 | Step | Document | Status |
 |------|----------|--------|
@@ -27,9 +29,9 @@
 | 1.5 | [Organizing Model](PHASE-001.5-ORGANIZING-MODEL.md) | ✅ |
 | 1.6 | [Growth Model](PHASE-001.6-GROWTH-MODEL.md) | ✅ |
 | 1.7 | [Launch Success Definition](PHASE-001.7-LAUNCH-SUCCESS-DEFINITION.md) | ✅ |
-| 1.8 | Implementation Doctrine + Build Bible | Pending |
+| 1.8 | [Implementation Doctrine](PHASE-001.8-IMPLEMENTATION-DOCTRINE.md) | ✅ |
 
-**Phase 1 closes after Step 1.8** with consolidated Project Constitution (Build Bible).
+**Build Bible:** [BUILD-BIBLE.md](BUILD-BIBLE.md) — authoritative index for Steps 1.1–1.8
 
 ---
 
@@ -66,24 +68,26 @@
 
 ---
 
-## Implementation Rules
+## Implementation Rules [ED-GR, ED-VS]
 
 - One build step at a time — user uploads step to Cursor
 - Reference requirement IDs in commits
-- Build vertically — complete end-to-end [GM-P2]
-- V1 scope only for July 14 — defer the rest [GM-V1]
+- Build vertically — complete end-to-end [GM-P2, ED-VS]
+- V1 scope only for July 14 — defer the rest [GM-V1, LS-DEF]
 - Update `data/build-progress.json` every step
 - Commit + push → Netlify auto-deploys
 - H: drive only
+- Conclude with ED-FD deliverable summary in BUILD-LOG
 
 ## ID Quick Reference
 
 ```
-GM-V1     V1 launch scope (July 2026)
-GM-P1     Foundation before features
-GM-P2     Build vertically
-GM-ROAD   Version roadmap
-OM-L1     Individual = database root
-NS-013    Five North Star questions
-ED-001    Design → Build → Validate → Iterate
+BUILD-BIBLE  Authoritative Phase 1 index
+ED-001       Design → Build → Validate → Iterate
+ED-GR        Never implement without approved design
+ED-VS        Vertical slice development
+GM-V1        V1 launch scope (July 2026)
+LS-CHK       Launch readiness checklist
+OM-L1        Individual = database root
+NS-013       Five North Star questions
 ```

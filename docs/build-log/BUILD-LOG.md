@@ -4,6 +4,37 @@
 
 ---
 
+## 2026-07-10 — PHASE-001.8 Implementation Doctrine — Phase 1 Complete
+
+**Document ID:** PHASE-001.8 · BUILD-BIBLE  
+**Requirement IDs:** ED-002–ED-FD, AC-008  
+**Status:** Phase 1 Constitution closed · Phase 2 active
+
+### What Was Built
+
+- `docs/build-steps/PHASE-001.8-IMPLEMENTATION-DOCTRINE.md` — Burt's operating manual
+- `docs/build-steps/BUILD-BIBLE.md` — authoritative index for Steps 1.1–1.8
+- Admin **Engineering** tab at `/admin`
+- Phase 1 marked complete in `build-progress.json`
+
+### Phase 1 Summary
+
+Eight canonical documents define identity, North Star, principles, boundaries, organizing model, growth strategy, launch success, and implementation doctrine.
+
+**Phase 2 begins:** Arkansas Organizing Registry.
+
+### ED-FD Handoff
+
+| Item | Detail |
+|------|--------|
+| Built | Step 1.8 doc, Build Bible, Engineering admin tab |
+| Changed | build-progress, README, ID convention, PROJECT_CONSTITUTION header |
+| Deferred | Phase 1.9 traceability matrix (Steve recommendation) |
+| Limitations | Traceability IDs not yet formalized beyond existing convention |
+| V2 rec | Implement Phase 1.9 before deep Phase 2 if Steve approves |
+
+---
+
 ## 2026-07-10 — PHASE-001.7 Launch Success Definition
 
 **Document ID:** PHASE-001.7  
