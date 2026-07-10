@@ -24,7 +24,7 @@ The next design cycle designs the **factory** — the engineering foundation eve
 | **Volume 2** | How is information organized? | [DATA_ARCHITECTURE_BIBLE.md](DATA_ARCHITECTURE_BIBLE.md) [DAB-001] · [14 steps](../volume-02/VOLUME_2_MASTER_SEQUENCE.md) ✅ complete |
 | **Volume 3** | How does the platform behave? | [PLATFORM_BEHAVIOR_BIBLE.md](PLATFORM_BEHAVIOR_BIBLE.md) [PBA-001] · [14 engines](../volume-03/VOLUME_3_MASTER_SEQUENCE.md) ✅ complete |
 | **Volume 4** | What does using the platform feel like? | [USER_EXPERIENCE_PRODUCT_ARCHITECTURE.md](USER_EXPERIENCE_PRODUCT_ARCHITECTURE.md) [UXB-001] · [14 layers](../volume-04/VOLUME_4_MASTER_SEQUENCE.md) 13/14 complete |
-| **Volume 5** | How does the platform connect to the outside world? | [PLATFORM_SERVICES_INTEGRATION_ARCHITECTURE.md](PLATFORM_SERVICES_INTEGRATION_ARCHITECTURE.md) [PSI-001] · [14 steps](../volume-05/VOLUME_5_MASTER_SEQUENCE.md) 4/14 |
+| **Volume 5** | How does the platform connect to the outside world? | [PLATFORM_SERVICES_INTEGRATION_ARCHITECTURE.md](PLATFORM_SERVICES_INTEGRATION_ARCHITECTURE.md) [PSI-001] · [14 steps](../volume-05/VOLUME_5_MASTER_SEQUENCE.md) 5/14 |
 | **Volume 6** | How does AI work technically? | [AI_INTELLIGENCE_BIBLE.md](AI_INTELLIGENCE_BIBLE.md) [AIB-001] |
 | **Volume 7** | How is the system operated and launched? | [OPERATIONS_LAUNCH_BIBLE.md](OPERATIONS_LAUNCH_BIBLE.md) [OLB-001] |
 | **Volume 8** | How should people *feel* at every stage? | [EXPERIENCE_DESIGN_BIBLE.md](EXPERIENCE_DESIGN_BIBLE.md) [EDB-001] |
