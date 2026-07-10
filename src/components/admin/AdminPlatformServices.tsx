@@ -9,6 +9,7 @@ import sync from "../../../data/registry/synchronization-architecture.json";
 import search from "../../../data/registry/search-architecture-volume5.json";
 import media from "../../../data/registry/media-architecture-volume5.json";
 import comm from "../../../data/registry/communication-architecture-volume5.json";
+import deploy from "../../../data/registry/deployment-architecture-volume5.json";
 
 type ServiceReg = {
   acceptanceCriteria: string;
@@ -27,6 +28,11 @@ type ServiceReg = {
   knowledgeRetrievalFabric?: { abbreviation: string; fabricPipeline?: { stageCount: number }; knowledgeSourceCount: number };
   institutionalMemoryRepository?: { abbreviation: string; memoryPipeline?: { stageCount: number }; memoryObject?: { sectionCount: number } };
   unifiedCommunicationsFabric?: { abbreviation: string; fabricPipeline?: { stageCount: number }; communicationObject?: { sectionCount: number } };
+  runtimeFederationManager?: { abbreviation: string; fabricPipeline?: { stageCount: number }; runtimeRegistry?: { sectionCount: number } };
+  deploymentTypeCount?: number;
+  runtimePrincipleCount?: number;
+  runtimeProfileCount?: number;
+  runtimeComponentCount?: number;
   communicationDomainCount?: number;
   communicationPrincipleCount?: number;
   communicationChannelCount?: number;
@@ -48,12 +54,15 @@ type ServiceReg = {
   searchArchitecture?: { layerCount: number };
   mediaArchitecture?: { layerCount: number };
   communicationsArchitecture?: { layerCount: number };
+  runtimeArchitecture?: { layerCount: number };
   localBrainCompatibility?: { localBrainFirstClassRuntime: boolean };
   localBrainFederation?: {
     explicitIntegration?: boolean;
     offlineOperationContinues?: boolean;
     everyLocalBrainSurvivesIndependently?: boolean;
     flow?: string[];
+    participatesIn?: string[];
+    autonomousCooperation?: boolean;
   };
   localBrainIntegration?: { someIntegrationsExecuteEntirelyInLocalBrain: boolean };
 };
@@ -67,9 +76,11 @@ const FEATURED_SUBTITLES: Record<string, string> = {
   "5.6": "Search & Discovery",
   "5.7": "Media & Assets",
   "5.8": "Communications",
+  "5.9": "Deployment & Runtime",
 };
 
 const SERVICE_CARDS: { step: string; label: string; reg: ServiceReg; cardClass: string; metaClass: string; titleClass: string; featured?: boolean }[] = [
+  { step: "5.9", label: "Runtime Federation Manager", reg: deploy, cardClass: "border-lime-300 bg-lime-50", metaClass: "text-lime-700", titleClass: "text-lime-950", featured: true },
   { step: "5.8", label: "Unified Communications Fabric", reg: comm, cardClass: "border-yellow-300 bg-yellow-50", metaClass: "text-yellow-700", titleClass: "text-yellow-950", featured: true },
   { step: "5.7", label: "Institutional Memory Repository", reg: media, cardClass: "border-amber-300 bg-amber-50", metaClass: "text-amber-700", titleClass: "text-amber-950", featured: true },
   { step: "5.6", label: "Knowledge Retrieval Fabric", reg: search, cardClass: "border-orange-300 bg-orange-50", metaClass: "text-orange-700", titleClass: "text-orange-950", featured: true },
@@ -109,7 +120,11 @@ export function AdminPlatformServices() {
             <p className={`mt-2 text-xs ${metaClass}`}>
               {reg.acceptanceCriteria} · {reg.status}
             </p>
-            {reg.unifiedCommunicationsFabric ? (
+            {reg.runtimeFederationManager ? (
+              <p className={`mt-1 text-xs ${metaClass}`}>
+                {reg.deploymentTypeCount ?? 0} deployment types · {reg.runtimeProfileCount ?? 0} profiles · {reg.runtimeComponentCount ?? 0} runtime components · {reg.runtimePrincipleCount ?? 0} principles · {reg.runtimeArchitecture?.layerCount ?? 0} runtime layers · {reg.runtimeFederationManager.fabricPipeline?.stageCount ?? 0} RFM pipeline stages · {reg.runtimeFederationManager.runtimeRegistry?.sectionCount ?? 0} Runtime Registry sections · Digital Infrastructure Twin
+              </p>
+            ) : reg.unifiedCommunicationsFabric ? (
               <p className={`mt-1 text-xs ${metaClass}`}>
                 {reg.communicationDomainCount ?? 0} comm domains · {reg.communicationChannelCount ?? 0} channels · {reg.communicationPrincipleCount ?? 0} principles · {reg.communicationsArchitecture?.layerCount ?? 0} comm layers · {reg.unifiedCommunicationsFabric.fabricPipeline?.stageCount ?? 0} UCFab pipeline stages · {reg.unifiedCommunicationsFabric.communicationObject?.sectionCount ?? 0} Communication Object sections
               </p>

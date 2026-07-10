@@ -125,7 +125,7 @@
       { "id": "V5.6", "name": "Search, Discovery & Knowledge Retrieval [PSI-007]", "status": "done", "notes": "Knowledge Retrieval Fabric, 10 domains, 6 search types, Knowledge Bundles — AC-156" },
       { "id": "V5.7", "name": "Media, Content & Digital Asset Architecture [PSI-008]", "status": "done", "notes": "Institutional Memory Repository, 7 asset categories, Memory Objects, Living Collections — AC-157" },
       { "id": "V5.8", "name": "Communications Architecture [PSI-009]", "status": "done", "notes": "Unified Communications Fabric, 6 domains, 11 channels, Meeting Intelligence — AC-158" },
-      { "id": "V5.9", "name": "Deployment Architecture [PSI-010]", "status": "pending", "notes": "LocalBrain, cloud, hybrid, edge" },
+      { "id": "V5.9", "name": "Deployment Architecture [PSI-010]", "status": "done", "notes": "Runtime Federation Manager, 6 deployment types, LocalBrain federation — AC-159" },
       { "id": "V5.10", "name": "Security Architecture [PSI-011]", "status": "pending", "notes": "Systemic security, device trust" },
       { "id": "V5.11", "name": "Observability Architecture [PSI-012]", "status": "pending", "notes": "Logging, metrics, tracing, audit" },
       { "id": "V5.12", "name": "Scalability Architecture [PSI-013]", "status": "pending", "notes": "Horizontal scaling, distributed execution" },

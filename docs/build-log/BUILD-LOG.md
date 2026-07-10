@@ -18,6 +18,22 @@
 
 ---
 
+## 2026-07-10 — Volume 5.9 Deployment, Runtime & LocalBrain Architecture [PSI-010 · AC-159]
+
+**Document:** `docs/volume-05/DEPLOYMENT_ARCHITECTURE.md` · **Registry:** `data/registry/deployment-architecture-volume5.json`
+
+### What Changed
+
+- **Guiding principle:** *Run anywhere. Operate together. Remain autonomous.*
+- Federation of intelligent operational nodes — LocalBrain first, not cloud-first
+- **6 deployment types** — Personal through Cloud Federation
+- **6 runtime profiles**, 9 runtime components, 8 runtime principles
+- Provisioning pipeline, service activation, rolling updates, offline operation, AI runtime, disaster recovery
+- **Runtime Federation Manager (RFM)** — Runtime Registry, Intelligent Workload Placement, Runtime Marketplace, Digital Infrastructure Twin
+- Umbrella PSI-001 · platform-services-integration-bible 9/14 · Volume 5 in progress
+
+---
+
 ## 2026-07-10 — Volume 5.8 Communications Architecture [PSI-009 · AC-158]
 
 **Document:** `docs/volume-05/COMMUNICATION_ARCHITECTURE.md` · **Registry:** `data/registry/communication-architecture-volume5.json`
