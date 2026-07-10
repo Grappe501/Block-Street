@@ -1,0 +1,160 @@
+{
+  "version": "2.0.0",
+  "documentId": "VOLUME-005.13",
+  "requirementId": "PSI-014",
+  "docPath": "docs/volume-05/PLATFORM_OPERATIONS_ARCHITECTURE.md",
+  "status": "canonical",
+  "priority": "constitutional_infrastructure",
+  "lastUpdated": "2026-07-10",
+  "productName": "Platform Operations, Governance & Lifecycle Architecture",
+  "guidingPrinciple": "Govern the platform with the same principles used to govern communities.",
+  "operationsPhilosophy": {
+    "operateThePlatformNotCommunities": true,
+    "platformBecomesLivingInstitution": true,
+    "operationsBecomeStewardship": true,
+    "platformBecomesGovernedInstitution": true,
+    "practicesConstitutionalValuesItPromotes": true
+  },
+  "platformLifecycle": {
+    "layers": [
+      "Vision",
+      "Proposal",
+      "Architecture",
+      "Implementation",
+      "Validation",
+      "Deployment",
+      "Observation",
+      "Improvement",
+      "HistoricalPreservation"
+    ],
+    "layerCount": 9,
+    "nothingEvolvesWithoutTraceability": true
+  },
+  "operationalPrincipleCount": 8,
+  "platformGovernanceAreaCount": 9,
+  "operationalPrinciples": [
+    "Constitutional",
+    "Observable",
+    "Reversible",
+    "Documented",
+    "Versioned",
+    "Explainable",
+    "Testable",
+    "HistoricallyPreserved"
+  ],
+  "platformGovernance": {
+    "governs": ["PlatformConstitution", "Architecture", "PlatformServices", "BusinessRules", "AI", "Connectors", "Security", "ReleasePolicy", "Documentation"],
+    "governanceAreaCount": 9,
+    "continuousGovernance": true
+  },
+  "platformRegistry": {
+    "registryEntryExamples": ["PlatformServices", "AIAgents", "Connectors", "BusinessRules", "Workflows", "Templates", "InstitutionTypes", "KnowledgeSchemas", "APIs", "Events"],
+    "exampleCount": 10,
+    "nothingExistsOutsideRegistry": true
+  },
+  "featureLifecycle": {
+    "stages": ["Concept", "Proposal", "Architecture", "Prototype", "Testing", "Certification", "Production", "Maintenance", "Retirement"],
+    "stageCount": 9,
+    "completeCapabilityHistory": true
+  },
+  "configurationGovernance": {
+    "governs": ["InstitutionTemplates", "Defaults", "FeatureFlags", "RuntimeProfiles", "ConnectorSettings", "Policies"],
+    "versionedConfigurations": true
+  },
+  "documentationGovernance": {
+    "requires": ["Purpose", "Owner", "History", "Version", "Dependencies", "AcceptanceCriteria", "ReviewSchedule"],
+    "executableDocumentation": true
+  },
+  "platformChangeManagement": {
+    "supports": ["ArchitectureReviews", "RFCProcess", "ImpactAnalysis", "RollbackPlanning", "Migration", "OperatorApproval"]
+  },
+  "releaseArchitecture": {
+    "supports": ["Development", "Testing", "Certification", "Pilot", "Production", "LongTermSupport", "EmergencyReleases"],
+    "standardizedReleaseManagement": true
+  },
+  "certification": {
+    "reviews": ["ArchitectureReview", "SecurityReview", "AccessibilityReview", "PerformanceReview", "ConstitutionalReview", "DocumentationReview", "OperationalReadiness"],
+    "reviewCount": 7,
+    "mandatoryCertification": true
+  },
+  "aiGovernance": {
+    "governs": ["Models", "PromptPolicies", "Safety", "Routing", "Providers", "Cost", "Performance", "Citations"]
+  },
+  "connectorGovernance": {
+    "requires": ["Certification", "Versioning", "Documentation", "SecurityReview", "SynchronizationReview", "Observability"]
+  },
+  "localBrainGovernance": {
+    "governs": ["RuntimeProfiles", "Synchronization", "Updates", "Security", "Recovery", "Federation", "Autonomy"]
+  },
+  "platformMetrics": {
+    "measures": ["ArchitectureCompleteness", "OperationalReadiness", "DocumentationQuality", "TechnicalDebt", "PlatformHealth", "KnowledgeGrowth", "DeploymentSuccess", "GovernanceEffectiveness"],
+    "metricCount": 8
+  },
+  "communityEventLedgerIntegration": {
+    "operationalEvents": ["Release", "Certification", "PolicyUpdate", "ArchitectureApproval", "IncidentReview", "CapabilityRetirement"]
+  },
+  "digitalTwinIntegration": {
+    "twins": ["PlatformTwin", "ArchitectureTwin", "OperationsTwin", "GovernanceTwin", "ReleaseTwin", "ConfigurationTwin"],
+    "twinCount": 6,
+    "modelsPlatformEvolution": true
+  },
+  "executiveOperationsCenter": {
+    "monitors": ["Architecture", "Services", "AI", "Connectors", "Releases", "Security", "CommunityHealth", "OperationalReadiness"],
+    "oneExecutiveView": true
+  },
+  "historicalPreservation": {
+    "neverLose": ["ArchitectureDecisions", "Releases", "Governance", "Knowledge", "Policies", "OperationalReviews"],
+    "platformRemembersItself": true
+  },
+  "platformStewardshipOffice": {
+    "name": "Platform Stewardship Office",
+    "abbreviation": "PSO",
+    "constitutionalGuardianOfPlatform": true,
+    "stewardshipResponsibilities": {
+      "responsibilities": [
+        { "id": "constitutionalStewardship", "name": "Constitutional Stewardship", "maintains": ["PlatformConstitution", "ArchitecturalPrinciples", "GovernancePolicies", "LongTermVision"] },
+        { "id": "architectureStewardship", "name": "Architecture Stewardship", "approves": ["NewPlatformServices", "APIs", "Connectors", "DataModels", "AICapabilities", "RuntimeProfiles"] },
+        { "id": "operationalStewardship", "name": "Operational Stewardship", "coordinates": ["Releases", "Certifications", "Deployments", "IncidentReviews", "PlatformOperations"] },
+        { "id": "knowledgeStewardship", "name": "Knowledge Stewardship", "maintains": ["ArchitectureBible", "EngineeringStandards", "OperationalPlaybooks", "KnowledgeObservatory", "HistoricalRecords"] },
+        { "id": "aiStewardship", "name": "AI Stewardship", "governs": ["AIFederation", "PromptStandards", "Safety", "Explainability", "CostOptimization", "ProviderStrategy"] },
+        { "id": "runtimeStewardship", "name": "Runtime Stewardship", "coordinates": ["RuntimeFederation", "LocalBrains", "Synchronization", "Infrastructure", "DisasterRecovery", "Scaling"] }
+      ],
+      "responsibilityCount": 6
+    },
+    "platformConstitutionReviewCycle": {
+      "reviews": ["ConstitutionalPrinciples", "PlatformArchitecture", "TechnicalDebt", "AIGovernance", "SecurityPosture", "CommunityFeedback", "KnowledgeGrowth"],
+      "reviewCount": 7
+    },
+    "institutionalMemory": {
+      "permanentRecordOf": ["ArchitecturalDecisions", "Releases", "GovernanceChanges", "Certifications", "IncidentReviews", "ConstitutionalAmendments"]
+    },
+    "platformSelfAssessment": {
+      "evaluates": ["ConstitutionalIntegrity", "ArchitectureQuality", "OperationalExcellence", "SecurityPosture", "AIResponsibility", "CommunityImpact", "KnowledgePreservation", "LongTermSustainability"],
+      "dimensionCount": 8
+    },
+    "digitalStewardshipTwin": {
+      "models": ["GovernanceMaturity", "DocumentationCompleteness", "CertificationCoverage", "TechnicalDebt", "ArchitecturalConsistency", "InstitutionalKnowledgeGrowth", "OperationalReadiness"],
+      "modelCount": 7,
+      "longTermHealthNotJustTechnicalStatus": true
+    },
+    "pairsWithExecutiveOperationsCenter": true,
+    "pairsWithCommunityEventLedger": true,
+    "pairsWithRuntimeFederationManager": true
+  },
+  "architecturalInsight": {
+    "platformBecomesGovernedInstitution": true,
+    "coherentTrustworthyAdaptableOverYears": true,
+    "appropriateForLongLivedPublicInterestInitiatives": true
+  },
+  "burtImplementationGuidance": [
+    "Treat platform governance as first-class capability",
+    "Maintain registries for every architectural object",
+    "Build certification pipelines",
+    "Preserve complete operational history",
+    "Integrate Platform Twins CEL EOC LocalBrain governance",
+    "Make documentation executable whenever practical",
+    "Route through Platform Stewardship Office"
+  ],
+  "acceptanceCriteria": "AC-163",
+  "acceptanceCriteriaMet": true
+}
