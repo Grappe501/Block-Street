@@ -1,0 +1,196 @@
+{
+  "version": "2.0.0",
+  "documentId": "VOLUME-005.5",
+  "requirementId": "PSI-006",
+  "docPath": "docs/volume-05/SYNCHRONIZATION_ARCHITECTURE.md",
+  "status": "canonical",
+  "priority": "mission_critical",
+  "lastUpdated": "2026-07-10",
+  "guidingPrinciple": "Synchronize knowledge, preserve autonomy.",
+  "synchronizationPhilosophy": {
+    "coherentOperationalRealityNotDataCopying": true,
+    "preserveTruthWhileRespectingAutonomy": true,
+    "eventDrivenNotDatabaseDriven": true,
+    "protectsOwnershipAutonomyIntegrityTrustContinuity": true,
+    "federatedCivicPlatformNotCentralizedCloud": true
+  },
+  "synchronizationArchitecture": {
+    "layers": [
+      "LocalChange",
+      "Validation",
+      "EventCreation",
+      "SynchronizationQueue",
+      "ConflictEvaluation",
+      "CanonicalResolution",
+      "PlatformServices",
+      "CommunityEventLedger",
+      "DigitalTwins"
+    ],
+    "layerCount": 9
+  },
+  "synchronizationPrincipleCount": 8,
+  "synchronizationPrinciples": [
+    "Deterministic",
+    "Observable",
+    "Recoverable",
+    "VersionAware",
+    "PermissionAware",
+    "Replayable",
+    "ConflictAware",
+    "Explainable"
+  ],
+  "synchronizationDomainCount": 9,
+  "synchronizationDomains": [
+    { "id": "identity", "name": "Identity Synchronization", "synchronizes": ["Participants", "Roles", "Permissions", "Organizations", "IdentityPreferences"], "neverDuplicatesIdentityOwnership": true },
+    { "id": "community", "name": "Community Synchronization", "synchronizes": ["Communities", "Membership", "Leadership", "CommunityHealth", "CommunityOperatingManuals"] },
+    { "id": "mission", "name": "Mission Synchronization", "synchronizes": ["MissionProgress", "Assignments", "Resources", "Reflection", "Impact", "History"] },
+    { "id": "knowledge", "name": "Knowledge Synchronization", "synchronizes": ["Stories", "Playbooks", "Research", "CommunityBrain", "KnowledgeGraph", "Versions"] },
+    { "id": "calendar", "name": "Calendar Synchronization", "synchronizes": ["Meetings", "Availability", "RecurringEvents", "Travel", "ExternalCalendars"], "explicitOwnership": true },
+    { "id": "digitalTwin", "name": "Digital Twin Synchronization", "synchronizes": ["ParticipantTwins", "CommunityTwins", "MissionTwins", "InstitutionTwins", "CountyTwins", "PlatformTwins"], "evolvesFromSynchronizedEvents": true },
+    { "id": "ai", "name": "AI Synchronization", "synchronizes": ["KnowledgeIndexes", "ContextCaches", "PromptProfiles", "ModelRouting", "CitationIndexes", "ConversationSummaries"], "aiDoesNotOwnCanonicalData": true },
+    { "id": "media", "name": "Media Synchronization", "synchronizes": ["Documents", "Photos", "Video", "Audio", "Metadata", "Versions", "Retention"] },
+    { "id": "configuration", "name": "Configuration Synchronization", "synchronizes": ["FeatureFlags", "InstitutionSettings", "Policies", "Templates", "WorkflowDefinitions"], "versioned": true }
+  ],
+  "synchronizationModelCount": 5,
+  "synchronizationModels": [
+    { "id": "realTime", "name": "Real-Time", "timing": "Immediate", "usedFor": ["Messaging", "Meetings", "Presence", "MissionCoordination"] },
+    { "id": "nearRealTime", "name": "Near Real-Time", "timing": "SecondsToMinutes", "usedFor": ["CommunityUpdates", "Knowledge", "Leadership", "OperationalDashboards"] },
+    { "id": "scheduled", "name": "Scheduled", "usedFor": ["Analytics", "ExternalSystems", "LargeImports", "HistoricalArchives"] },
+    { "id": "manual", "name": "Manual", "usedFor": ["HumanReview", "Governance", "SensitiveSynchronization", "LegalRequirements"] },
+    { "id": "offline", "name": "Offline", "description": "LocalBrain stores changes until connectivity returns", "operationsContinueUninterrupted": true }
+  ],
+  "synchronizationPipeline": {
+    "stages": ["DetectChange", "Validate", "PublishEvent", "Queue", "Resolve", "Apply", "Verify", "Notify"],
+    "stageCount": 8,
+    "everySynchronizationObservable": true
+  },
+  "conflictResolution": {
+    "objectDeclares": ["AuthoritativeOwner", "MergeStrategy", "ConflictPolicy", "ReviewRequirements", "ReplayCapability"],
+    "conflictsUnderstandable": true
+  },
+  "mergeStrategyCount": 6,
+  "mergeStrategies": [
+    "LastAcceptedChange",
+    "ConstitutionalAuthority",
+    "OperationalOwnership",
+    "HumanReview",
+    "SemanticMerge",
+    "FieldByFieldMerge"
+  ],
+  "canonicalOwnership": {
+    "objectDeclares": ["PrimaryOwner", "SecondaryReplicas", "ReadOnlyCopies", "CachePolicy", "SynchronizationAuthority"],
+    "ownershipExplicit": true
+  },
+  "localBrainFederation": {
+    "flow": ["LocalServices", "LocalEventBus", "SynchronizationManager", "RegionalFederation", "CloudFederation", "InstitutionalMemory"],
+    "everyLocalBrainSurvivesIndependently": true
+  },
+  "federationLevelCount": 8,
+  "federationLevels": [
+    "Individual",
+    "Community",
+    "Institution",
+    "County",
+    "Regional",
+    "State",
+    "National",
+    "Global"
+  ],
+  "synchronizationQueue": {
+    "supports": ["Retry", "Priority", "Ordering", "Inspection", "Replay", "Recovery"],
+    "queuesAreOperationalAssets": true
+  },
+  "synchronizationHealth": {
+    "monitors": ["Latency", "Backlog", "Conflicts", "Failures", "Recovery", "Throughput"],
+    "healthVisible": true
+  },
+  "communityEventLedgerIntegration": {
+    "records": ["Imported", "Exported", "Conflict", "Resolved", "Replayed", "Recovered"],
+    "historyPermanent": true
+  },
+  "digitalTwinIntegration": {
+    "twinsUpdateFromSynchronizedEvents": true,
+    "notDirectReplication": true,
+    "behavioralHistoryPreserved": true
+  },
+  "aiIntegration": {
+    "aiUnderstands": ["SynchronizationState", "PendingConflicts", "Freshness", "DataAuthority", "OfflineStatus"],
+    "aiNeverAssumesPerfectSynchronization": true
+  },
+  "securityStandard": {
+    "synchronizes": ["EncryptedData", "SignedEvents", "TrustedDevices", "Revocation", "CredentialRotation"],
+    "securitySynchronizesWithData": true
+  },
+  "observabilityStandard": {
+    "exposedMetrics": ["Trace", "Metrics", "History", "Latency", "Dependencies", "Errors"],
+    "metricCount": 6
+  },
+  "federatedSynchronizationMesh": {
+    "name": "Federated Synchronization Mesh",
+    "abbreviation": "FSM",
+    "managesFederationOfAutonomousNodes": true,
+    "federatedMeshArchitecture": {
+      "levels": ["PersonalLocalBrain", "CommunityLocalBrain", "InstitutionLocalBrain", "CountyHub", "RegionalHub", "CloudFederation"],
+      "levelCount": 6,
+      "everyLevelOperatesIndependently": true
+    },
+    "responsibilities": [
+      {
+        "id": "eventFederation",
+        "name": "Event Federation",
+        "synchronizes": ["CommunityEvents", "MissionEvents", "KnowledgeEvents", "LeadershipEvents", "CalendarEvents", "GovernanceEvents"],
+        "eventIsUnitOfSynchronization": true
+      },
+      {
+        "id": "knowledgeFederation",
+        "name": "Knowledge Federation",
+        "synchronizes": ["CommunityBrainUpdates", "Playbooks", "LessonsLearned", "Stories", "Research"],
+        "respectsPermissions": true
+      },
+      {
+        "id": "digitalTwinFederation",
+        "name": "Digital Twin Federation",
+        "twinMaintains": ["LocalBehavior", "RegionalInsights", "SharedOperationalContext"],
+        "coherentWithoutConstantReplication": true
+      },
+      {
+        "id": "aiFederation",
+        "name": "AI Federation",
+        "executionLocations": ["Local", "Regional", "Cloud"],
+        "synchronizes": ["KnowledgeIndexes", "PromptProfiles", "CitationIndexes", "ModelCapabilities"],
+        "functionsDuringNetworkInterruptions": true
+      },
+      {
+        "id": "conflictIntelligence",
+        "name": "Conflict Intelligence",
+        "classifications": ["Harmless", "Mergeable", "GovernanceReviewRequired", "HumanApprovalRequired", "SecurityConcern"]
+      },
+      {
+        "id": "operationalTimeMachine",
+        "name": "Operational Time Machine",
+        "reconstructs": ["LocalBrainPreSyncState", "RegionalOperationalHistory", "CommunityEvolution", "MissionExecution", "LeadershipChanges", "KnowledgeGrowth"]
+      }
+    ],
+    "responsibilityCount": 6,
+    "pairsWithInstitutionalEventFabric": true,
+    "pairsWithPlatformServiceMesh": true,
+    "pairsWithUniversalConnectorFramework": true
+  },
+  "architecturalInsight": {
+    "federatedCivicPlatformNotCentralizedCloud": true,
+    "enablesOfflineCommunitiesLocalOwnershipDistributedResilience": true,
+    "thousandsOfLocalBrainsOneEcosystem": true,
+    "operatesWhenNetworkDisconnected": true
+  },
+  "burtImplementationGuidance": [
+    "Synchronize events instead of tables whenever practical",
+    "Build LocalBrain as first-class synchronization participant",
+    "Keep ownership explicit",
+    "Treat conflict resolution as configurable",
+    "Support replay",
+    "Make synchronization observable from the beginning",
+    "Coordinate through Federated Synchronization Mesh"
+  ],
+  "acceptanceCriteria": "AC-155",
+  "acceptanceCriteriaMet": true
+}
