@@ -7,6 +7,7 @@ import dphil from "../../../data/registry/data-philosophy.json";
 import rel from "../../../data/registry/relationship-data-model.json";
 import sch from "../../../data/registry/database-schema-blueprint.json";
 import kgs from "../../../data/registry/knowledge-graph-schema.json";
+import evt from "../../../data/registry/event-data-model.json";
 
 export function AdminDataArchitecture() {
   const doneSteps = dab.steps.filter((s) => s.status === "done").length;
@@ -105,6 +106,24 @@ export function AdminDataArchitecture() {
         </div>
         <p className="mt-2 text-xs text-rose-600">
           {kgs.unifiedGraphProjectionEngine.projections.length} projections · sync SLA {kgs.projectionPipeline.syncLagSlaSeconds}s · {kgs.acceptanceCriteria}
+        </p>
+      </div>
+
+      <div className="card border-amber-300 bg-amber-50">
+        <p className="text-xs font-semibold uppercase text-amber-800">VOLUME-002.6 · Event Model</p>
+        <h2 className="mt-1 text-lg font-bold text-amber-950">Community Event Ledger</h2>
+        <p className="mt-1 text-xs italic text-amber-900">&ldquo;{evt.guidingPrinciple}&rdquo;</p>
+        <p className="mt-2 text-xs font-semibold text-amber-800">
+          {evt.eventCategoryCount} event categories · {evt.eventStreamCount} streams · {evt.timelineCount} timelines
+        </p>
+        <div className="mt-2 flex flex-wrap gap-1">
+          {evt.eventCategories.slice(0, 6).map((c) => (
+            <span key={c.id} className="badge bg-amber-100 text-amber-800">{c.name.replace(" Events", "")}</span>
+          ))}
+          <span className="badge bg-amber-200 text-amber-900">+{evt.eventCategoryCount - 6}</span>
+        </div>
+        <p className="mt-2 text-xs text-amber-600">
+          {evt.replayCapabilities.length} replay targets · immutable · {evt.acceptanceCriteria}
         </p>
       </div>
 

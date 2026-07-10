@@ -18,6 +18,23 @@
 
 ---
 
+## 2026-07-10 — Volume 2.6 Event Data Model [DAB-007 · AC-112]
+
+**Document:** `docs/volume-02/EVENT_DATA_MODEL.md` · **Registry:** `data/registry/event-data-model.json`
+
+### What Changed
+
+- **Guiding principle:** *Nothing important should happen without leaving a trace.*
+- Events are permanent historical record — not logs alone
+- **11 event categories** aligned to business domains: Identity through Intelligence
+- **Event architecture:** Actor → Action → Target → Context → Timestamp
+- **Community Event Ledger** — authoritative chronological record with rebuildability
+- Metadata, visibility, immutability, versioning, correlation, streams, replay
+- Timeline, graph, search, and AI integration pipelines
+- Admin Data tab · requirements DAB-007 updated
+
+---
+
 ## 2026-07-10 — Volume 2.5 Community Knowledge Graph Schema [DAB-006 · AC-111]
 
 **Document:** `docs/volume-02/KNOWLEDGE_GRAPH_SCHEMA.md` · **Registry:** `data/registry/knowledge-graph-schema.json`
