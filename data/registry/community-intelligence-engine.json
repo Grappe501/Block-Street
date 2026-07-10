@@ -1,22 +1,349 @@
 {
-  "version": "1.0.0",
-  "documentId": "VOLUME-003.08",
+  "version": "2.0.0",
+  "documentId": "VOLUME-003.8",
   "requirementId": "PBA-009",
   "docPath": "docs/volume-03/COMMUNITY_INTELLIGENCE_ENGINE.md",
-  "status": "pending",
+  "status": "canonical",
   "priority": "critical",
   "lastUpdated": "2026-07-10",
-  "guidingPrinciple": "Behavior is governed, not improvised.",
-  "defines": [
+  "guidingPrinciple": "Intelligence should illuminate decisions—not replace human judgment.",
+  "intelligencePhilosophy": {
+    "convertInformationToUnderstanding": true,
+    "doesNotMakeDecisionsForPeople": true,
+    "noBlackBoxDecisions": true,
+    "recommendationsNeverExecuteAutomatically": true,
+    "understandingBecomesContinuous": true,
+    "separateGenerationFromExecution": true
+  },
+  "intelligencePrinciples": [
+    "Explainable",
+    "EvidenceBased",
+    "PermissionAware",
+    "Transparent",
+    "Advisory",
+    "Versioned",
+    "Auditable",
+    "HumanCentered"
+  ],
+  "intelligencePrincipleCount": 8,
+  "intelligenceArchitecture": {
+    "layers": [
+      "CanonicalData",
+      "KnowledgeGraph",
+      "CommunityEventLedger",
+      "DigitalTwins",
+      "PatternAnalysis",
+      "Recommendations",
+      "HumanDecision"
+    ],
+    "layerCount": 7
+  },
+  "intelligenceDomainCount": 8,
+  "intelligenceDomains": [
+    {
+      "id": "community",
+      "name": "Community Intelligence",
+      "understands": [
+        "CommunityHealth",
+        "Growth",
+        "Participation",
+        "KnowledgeCreation",
+        "VolunteerEngagement",
+        "LeadershipContinuity",
+        "PartnershipStrength",
+        "CommunityMaturity"
+      ]
+    },
+    {
+      "id": "leadership",
+      "name": "Leadership Intelligence",
+      "evaluates": [
+        "LeadershipPipeline",
+        "MentorshipActivity",
+        "SuccessionReadiness",
+        "LeadershipWorkload",
+        "LeadershipDistribution",
+        "BurnoutIndicators",
+        "EmergingLeaders"
+      ]
+    },
+    {
+      "id": "volunteer",
+      "name": "Volunteer Intelligence",
+      "evaluates": [
+        "ParticipationTrends",
+        "VolunteerRetention",
+        "TrainingNeeds",
+        "Availability",
+        "RecognitionOpportunities",
+        "MatchingQuality",
+        "LeadershipReadiness"
+      ]
+    },
+    {
+      "id": "mission",
+      "name": "Mission Intelligence",
+      "evaluates": [
+        "MissionProgress",
+        "Risks",
+        "Dependencies",
+        "VolunteerEngagement",
+        "KnowledgeGenerated",
+        "PlaybookReuse",
+        "CommunityImpact"
+      ]
+    },
+    {
+      "id": "knowledge",
+      "name": "Knowledge Intelligence",
+      "measures": [
+        "KnowledgeGrowth",
+        "KnowledgeReuse",
+        "MissingDocumentation",
+        "StoryCoverage",
+        "PlaybookEvolution",
+        "CommunityBrainQuality",
+        "LegacyPreservation"
+      ]
+    },
+    {
+      "id": "partnership",
+      "name": "Partnership Intelligence",
+      "tracks": [
+        "PartnerEngagement",
+        "InstitutionCollaboration",
+        "CountyCooperation",
+        "SharedInitiatives",
+        "RelationshipStrength",
+        "ExpansionOpportunities"
+      ]
+    },
+    {
+      "id": "geographic",
+      "name": "Geographic Intelligence",
+      "evaluates": [
+        "CountyCoverage",
+        "InstitutionDensity",
+        "VolunteerDistribution",
+        "CommunityGaps",
+        "TravelEfficiency",
+        "ExpansionPriorities",
+        "RegionalCollaboration"
+      ]
+    },
+    {
+      "id": "growth",
+      "name": "Growth Intelligence",
+      "measures": [
+        "InvitationEffectiveness",
+        "Belonging",
+        "CommunityLaunches",
+        "ReferralNetworks",
+        "ExpansionReadiness",
+        "Retention",
+        "GrowthSustainability"
+      ]
+    }
+  ],
+  "intelligenceObjectFields": [
+    "InsightId",
+    "Category",
+    "Title",
+    "Summary",
+    "Evidence",
+    "Confidence",
+    "RelatedEntities",
     "Recommendations",
-    "Discovery",
-    "CommunityHealth",
-    "GrowthIntelligence",
-    "LeadershipIntelligence",
-    "RelationshipIntelligence",
-    "Forecasting",
-    "Explainability"
+    "Timestamp",
+    "Version",
+    "Visibility",
+    "SourceReferences"
+  ],
+  "intelligenceObjectFieldCount": 12,
+  "patternRecognitionTypes": [
+    "RecurringTrends",
+    "Seasonality",
+    "CommunitySimilarities",
+    "LeadershipPatterns",
+    "VolunteerPatterns",
+    "MissionOutcomes",
+    "KnowledgeEvolution"
+  ],
+  "patternRecognitionTypeCount": 7,
+  "recommendationTypes": [
+    "VolunteerOpportunities",
+    "LeadershipDevelopment",
+    "CommunitySupport",
+    "MissionImprovements",
+    "Training",
+    "PartnershipIntroductions",
+    "KnowledgeCapture"
+  ],
+  "recommendationTypeCount": 7,
+  "recommendationsNeverExecuteAutomatically": true,
+  "opportunityDetectionTypes": [
+    "CommunitiesNeedingSupport",
+    "PotentialMentors",
+    "LeadershipCandidates",
+    "PartnershipOpportunities",
+    "KnowledgeGaps",
+    "VolunteerShortages",
+    "ExpansionOpportunities"
+  ],
+  "opportunityDetectionTypeCount": 7,
+  "riskDetectionTypes": [
+    "LeadershipBurnout",
+    "VolunteerDecline",
+    "KnowledgeLoss",
+    "CommunityInactivity",
+    "MissedSuccession",
+    "MissionDelays",
+    "CapacityShortages"
+  ],
+  "riskDetectionTypeCount": 7,
+  "communityHealthObservatorySignals": [
+    "ParticipationSignals",
+    "LeadershipSignals",
+    "KnowledgeSignals",
+    "MissionSignals",
+    "GrowthSignals",
+    "CapacitySignals"
+  ],
+  "communityHealthObservatorySignalCount": 6,
+  "digitalTwinContributions": [
+    "CurrentState",
+    "HistoricalContext",
+    "Relationships",
+    "GrowthTrajectory",
+    "PredictedNeeds",
+    "OperationalReadiness"
+  ],
+  "digitalTwinContributionCount": 6,
+  "knowledgeGraphCapabilities": [
+    "MentorshipDiscovery",
+    "RelationshipMapping",
+    "KnowledgeReuse",
+    "PartnershipRecommendations",
+    "LeadershipLineage",
+    "CommunityCollaboration"
+  ],
+  "knowledgeGraphCapabilityCount": 6,
+  "calendarConsiderations": [
+    "UpcomingEvents",
+    "VolunteerAvailability",
+    "LeadershipCommitments",
+    "MissionDeadlines",
+    "InstitutionSchedules"
+  ],
+  "calendarConsiderationCount": 5,
+  "aiCapabilities": [
+    "SummarizeEvidence",
+    "ExplainRecommendations",
+    "GenerateReports",
+    "CompareHistoricalExamples",
+    "HighlightUncertainty",
+    "DraftStrategicOptions"
+  ],
+  "aiNeverBypassesExplainability": true,
+  "explainabilityQuestions": [
+    "WhatEvidenceWasUsed",
+    "WhichCommunitiesContributed",
+    "WhatHistoricalPatternsExist",
+    "WhichRelationshipsMatter",
+    "WhyIsThisRecommendationBeingMade"
+  ],
+  "explainabilityQuestionCount": 5,
+  "learningLoopInputs": [
+    "CommunityFeedback",
+    "VolunteerOutcomes",
+    "LeadershipFeedback",
+    "MissionReflections",
+    "KnowledgeUpdates",
+    "RecommendationAcceptance"
+  ],
+  "learningLoopInputCount": 6,
+  "communityIntelligenceCommandCenter": {
+    "name": "Community Intelligence Command Center",
+    "abbreviation": "CICC",
+    "purpose": "Executive strategic thinking workspace integrating every intelligence domain into one explainable unified operational picture",
+    "notMerelyDashboard": true,
+    "domains": [
+      {
+        "id": "communityHealth",
+        "name": "Community Health",
+        "integrates": ["HealthTrends", "Participation", "Belonging", "VolunteerEngagement", "CommunityMaturity"]
+      },
+      {
+        "id": "leadership",
+        "name": "Leadership",
+        "integrates": ["LeadershipPipeline", "SuccessionReadiness", "MentorshipActivity", "BurnoutIndicators"]
+      },
+      {
+        "id": "missions",
+        "name": "Missions",
+        "integrates": ["ActiveMissions", "Risks", "ResourceAllocation", "CommunityImpact"]
+      },
+      {
+        "id": "knowledge",
+        "name": "Knowledge",
+        "integrates": ["CommunityBrainGrowth", "PlaybookReuse", "LessonsCaptured", "DocumentationGaps"]
+      },
+      {
+        "id": "growth",
+        "name": "Growth",
+        "integrates": ["NewParticipants", "ReferralNetworks", "InvitationEffectiveness", "CommunityLaunches"]
+      },
+      {
+        "id": "partnerships",
+        "name": "Partnerships",
+        "integrates": ["InstitutionalCollaboration", "CountyRelationships", "SharedInitiatives", "RegionalCooperation"]
+      },
+      {
+        "id": "geography",
+        "name": "Geography",
+        "integrates": ["CoverageMaps", "ExpansionOpportunities", "UnderservedAreas", "ResourceDistribution"]
+      },
+      {
+        "id": "intelligence",
+        "name": "Intelligence",
+        "integrates": ["DigitalTwinSummaries", "AIRecommendations", "EmergingRisks", "StrategicOpportunities", "ForecastScenarios"]
+      }
+    ],
+    "domainCount": 8,
+    "philosophy": "Helps the entire network learn, adapt, and make wiser decisions over time — connecting people, communities, missions, knowledge, geography, relationships, and history"
+  },
+  "domainSchemaMapping": {
+    "schema": "PlatformBehavior",
+    "entities": [
+      "IntelligenceInsight",
+      "PatternAnalysis",
+      "Recommendation",
+      "OpportunityDetection",
+      "RiskDetection",
+      "IntelligenceLearningLoop",
+      "CommunityIntelligenceCommandCenter"
+    ]
+  },
+  "projectionIntegrations": {
+    "leadershipDevelopmentPath": "data/registry/leadership-development-engine.json",
+    "volunteerExperiencePath": "data/registry/volunteer-experience-engine.json",
+    "missionExecutionPath": "data/registry/mission-execution-engine.json",
+    "communityLifecyclePath": "data/registry/community-lifecycle-engine.json",
+    "knowledgeGraphPath": "data/registry/knowledge-graph-schema.json",
+    "eventLedgerPath": "data/registry/event-data-model.json",
+    "analyticsMetricsPath": "data/registry/analytics-metrics-model.json",
+    "aiKnowledgePath": "data/registry/ai-knowledge-model.json",
+    "timeCalendarPath": "data/registry/time-calendar-data-model.json"
+  },
+  "burtImplementationGuidance": [
+    "Build intelligence from canonical projections",
+    "Keep recommendations advisory",
+    "Preserve evidence for every insight",
+    "Integrate Digital Twins, Community Knowledge Graph, and Community Event Ledger",
+    "Make every recommendation explainable",
+    "Separate intelligence generation from operational execution",
+    "Consult Community Intelligence Command Center spec before intelligence-facing features"
   ],
   "acceptanceCriteria": "AC-129",
-  "acceptanceCriteriaMet": false
+  "acceptanceCriteriaMet": true
 }
