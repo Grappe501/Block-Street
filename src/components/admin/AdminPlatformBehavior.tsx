@@ -28,6 +28,7 @@ type EngineReg = {
   personalOperatingSystem?: { domainCount: number };
   communityOperatingManual?: { domainCount: number };
   missionOperationsCenter?: { domainCount: number };
+  volunteerSuccessCenter?: { domainCount: number };
   lifecycleStageCount?: number;
   runtimePipelineLayerCount?: number;
 };
@@ -38,6 +39,7 @@ const FEATURED_SUBTITLES: Record<string, string> = {
   "3.3": "Identity & Lifecycle",
   "3.4": "Community Lifecycle",
   "3.5": "Mission Execution",
+  "3.6": "Volunteer Experience",
 };
 
 const ENGINE_CARDS: { step: string; label: string; reg: EngineReg; cardClass: string; metaClass: string; titleClass: string; featured?: boolean }[] = [
@@ -46,7 +48,7 @@ const ENGINE_CARDS: { step: string; label: string; reg: EngineReg; cardClass: st
   { step: "3.3", label: "Personal Operating System", reg: idl, cardClass: "border-fuchsia-300 bg-fuchsia-50", metaClass: "text-fuchsia-700", titleClass: "text-fuchsia-950", featured: true },
   { step: "3.4", label: "Community Operating Manual", reg: clo, cardClass: "border-pink-300 bg-pink-50", metaClass: "text-pink-700", titleClass: "text-pink-950", featured: true },
   { step: "3.5", label: "Mission Operations Center", reg: mex, cardClass: "border-rose-300 bg-rose-50", metaClass: "text-rose-700", titleClass: "text-rose-950", featured: true },
-  { step: "3.6", label: "Volunteer Experience", reg: vxe, cardClass: "border-red-300 bg-red-50", metaClass: "text-red-700", titleClass: "text-red-950" },
+  { step: "3.6", label: "Volunteer Success Center", reg: vxe, cardClass: "border-red-300 bg-red-50", metaClass: "text-red-700", titleClass: "text-red-950", featured: true },
   { step: "3.7", label: "Leadership Development", reg: lde, cardClass: "border-orange-300 bg-orange-50", metaClass: "text-orange-700", titleClass: "text-orange-950" },
   { step: "3.8", label: "Community Intelligence", reg: cie, cardClass: "border-amber-300 bg-amber-50", metaClass: "text-amber-700", titleClass: "text-amber-950" },
   { step: "3.9", label: "Automation", reg: aut, cardClass: "border-yellow-300 bg-yellow-50", metaClass: "text-yellow-700", titleClass: "text-yellow-950" },
@@ -94,7 +96,11 @@ export function AdminPlatformBehavior() {
                 {reg.policyDecisionPoint.evaluationStepCount} PDP steps · {reg.policyDecisionPoint.exampleRequestCount} example requests
               </p>
             ) : null}
-            {reg.missionOperationsCenter ? (
+            {reg.volunteerSuccessCenter ? (
+              <p className={`mt-1 text-xs ${metaClass}`}>
+                {reg.volunteerSuccessCenter.domainCount} VSC domains · {reg.lifecycleStageCount ?? 0} lifecycle stages
+              </p>
+            ) : reg.missionOperationsCenter ? (
               <p className={`mt-1 text-xs ${metaClass}`}>
                 {reg.missionOperationsCenter.domainCount} MOC domains · {reg.lifecycleStageCount ?? 0} lifecycle stages
               </p>

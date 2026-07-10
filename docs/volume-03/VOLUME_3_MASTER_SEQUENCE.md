@@ -61,7 +61,7 @@ Volume 3 is complete when Burt understands:
 - [x] How people progress (3.3)
 - [x] How communities evolve (3.4)
 - [x] How missions execute (3.5)
-- [ ] How volunteer journeys are engineered (3.6)
+- [x] How volunteer journeys are engineered (3.6)
 - [ ] How leadership develops (3.7)
 - [ ] How intelligence assists (3.8, 3.13)
 - [ ] How automation behaves (3.9)
@@ -83,7 +83,7 @@ Volume 3 is complete when Burt understands:
 | 3.3 Identity & Lifecycle Engine | ✅ Done |
 | 3.4 Community Lifecycle Engine | ✅ Done |
 | 3.5 Mission Execution Engine | ✅ Done |
-| 3.6 Volunteer Experience Engine | Pending |
+| 3.6 Volunteer Experience Engine | ✅ Done |
 | 3.7 Leadership Development Engine | Pending |
 | 3.8 Community Intelligence Engine | Pending |
 | 3.9 Automation Engine | Pending |

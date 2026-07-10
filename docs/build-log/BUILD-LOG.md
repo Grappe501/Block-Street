@@ -18,6 +18,22 @@
 
 ---
 
+## 2026-07-10 — Volume 3.6 Volunteer Experience Engine [PBA-007 · AC-127]
+
+**Document:** `docs/volume-03/VOLUNTEER_EXPERIENCE_ENGINE.md` · **Registry:** `data/registry/volunteer-experience-engine.json`
+
+### What Changed
+
+- **Guiding principle:** *Every volunteer is a future leader, mentor, or community builder.*
+- Volunteers as future leaders — nurture people, not assign tasks; volunteerism becomes leadership development
+- **10 lifecycle stages:** Discovery through Legacy
+- Volunteer profile, opportunity matching, journey milestones, recognition, wellness, portfolio, accessibility
+- Digital Twin, knowledge graph, calendar, and AI integrations
+- **Volunteer Success Center** — primary workspace with 7 domains (Opportunities through Intelligence)
+- Admin Volume 3 tab · requirements PBA-007 updated · Volume 3: 6/14 complete
+
+---
+
 ## 2026-07-10 — Volume 3.5 Mission Execution Engine [PBA-006 · AC-126]
 
 **Document:** `docs/volume-03/MISSION_EXECUTION_ENGINE.md` · **Registry:** `data/registry/mission-execution-engine.json`
