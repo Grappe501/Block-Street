@@ -11,6 +11,7 @@ import evt from "../../../data/registry/event-data-model.json";
 import tim from "../../../data/registry/time-calendar-data-model.json";
 import med from "../../../data/registry/media-document-model.json";
 import cfg from "../../../data/registry/configuration-model.json";
+import srch from "../../../data/registry/search-index-model.json";
 
 export function AdminDataArchitecture() {
   const doneSteps = dab.steps.filter((s) => s.status === "done").length;
@@ -181,6 +182,24 @@ export function AdminDataArchitecture() {
         </div>
         <p className="mt-2 text-xs text-orange-600">
           {cfg.platformConstitutionEngine.resolves.length} resolution targets · {cfg.acceptanceCriteria}
+        </p>
+      </div>
+
+      <div className="card border-blue-300 bg-blue-50">
+        <p className="text-xs font-semibold uppercase text-blue-800">VOLUME-002.10 · Search Index</p>
+        <h2 className="mt-1 text-lg font-bold text-blue-950">Universal Discovery Index</h2>
+        <p className="mt-1 text-xs italic text-blue-900">&ldquo;{srch.guidingPrinciple}&rdquo;</p>
+        <p className="mt-2 text-xs font-semibold text-blue-800">
+          {srch.indexCategoryCount} index categories · {srch.searchArchitecture.layerCount} architecture layers · derived projection
+        </p>
+        <div className="mt-2 flex flex-wrap gap-1">
+          {srch.indexCategories.slice(0, 5).map((c) => (
+            <span key={c.id} className="badge bg-blue-100 text-blue-800">{c.name.replace(" Index", "")}</span>
+          ))}
+          <span className="badge bg-blue-200 text-blue-900">+{srch.indexCategoryCount - 5}</span>
+        </div>
+        <p className="mt-2 text-xs text-blue-600">
+          {srch.universalDiscoveryIndex.foundations.length} discovery foundations · {srch.acceptanceCriteria}
         </p>
       </div>
 

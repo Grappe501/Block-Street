@@ -18,6 +18,24 @@
 
 ---
 
+## 2026-07-10 — Volume 2.10 Search Index Data Model [DAB-011 · AC-116]
+
+**Document:** `docs/volume-02/SEARCH_INDEX_MODEL.md` · **Registry:** `data/registry/search-index-model.json`
+
+### What Changed
+
+- **Guiding principle:** *Search should never become another source of truth.*
+- Search index as permission-aware projection from DB, CKG, and Event Ledger
+- **6-layer architecture:** Canonical DB → Projection → Index → Ranking → Discovery → Experience
+- **9 index categories:** Identity through Intelligence (derived)
+- Search object model, geographic/temporal/relationship/semantic indexing
+- Ranking signals, facets, autocomplete, saved searches, discovery objects
+- Reindex strategy, observability, AI integration
+- **Universal Discovery Index** — single coherent discovery model for all entities
+- Admin Data tab · requirements DAB-011 updated
+
+---
+
 ## 2026-07-10 — Volume 2.9 Configuration Data Model [DAB-010 · AC-115]
 
 **Document:** `docs/volume-02/CONFIGURATION_MODEL.md` · **Registry:** `data/registry/configuration-model.json`
