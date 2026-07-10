@@ -394,6 +394,6 @@ Step 3.9 is complete when:
 
 ---
 
-**Next Step:** 3.14 — Participant Experience
+**Next Step:** 3.15 — Phase 3 Build Bible
 
 *Trace: Contribution → Milestone → Civic Passport → Community Gratitude → Appreciation Board → Morning Brief*

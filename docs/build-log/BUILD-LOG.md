@@ -4,6 +4,24 @@
 
 ---
 
+## 2026-07-10 — PHASE-003.14 Participant Experience & Lifecycle Design (Canonical)
+
+**Document ID:** PHASE-003.14 · **PEL-001 · AC-033**
+
+### What Was Built
+
+- **Emotional experience defined** — first hour through fifth year; required reading for Burt
+- **Community Companion [PEL-M11]** — warm guide, not chatbot; voice of community not software
+- **Seven lifecycle stages** — Discovery through long-term; never lost, alone, or unimportant
+- **Evaluation question locked** — every future feature judged against belonging and community building
+- **Phase 3 heart** — complete human experience designed; 3.15 Build Bible remains structural closeout
+
+### Guiding Principle Locked
+
+> **People remember how a community made them feel long after they forget what buttons they clicked.**
+
+---
+
 ## 2026-07-10 — PHASE-003.13 Opportunity & Belonging Engine (Canonical)
 
 **Document ID:** PHASE-003.13 · **OBE-001 · AC-032**

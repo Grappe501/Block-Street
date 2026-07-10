@@ -1,0 +1,172 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/phase-03/PARTICIPANT_EXPERIENCE_LIFECYCLE.md",
+  "requiredReadingForBurt": true,
+  "motto": "People remember how a community made them feel long after they forget what buttons they clicked.",
+  "principle": "Every design decision should strengthen belonging.",
+  "coreQuestion": "How should someone feel during their first hour, first month, first year, and fifth year?",
+  "purpose": "Define emotional experience from discovery through long-term leadership — welcoming, empowering, purposeful, sustainable.",
+  "neverFeel": ["lost", "overwhelmed", "alone", "unimportant", "confused"],
+  "shouldFeel": ["welcome", "connected", "capable", "appreciated", "growing", "needed", "hopeful"],
+  "lifecycleStages": [
+    {
+      "stage": 1,
+      "key": "discovery",
+      "label": "Discovery",
+      "emotionalGoal": "Curiosity replaces uncertainty",
+      "communicates": ["youBelongHere", "forPeopleLikeYou", "youCanMakeADifference", "communityAlreadyExists"],
+      "sources": ["PEP-M12", "CID-M09", "ADT-M02"]
+    },
+    {
+      "stage": 2,
+      "key": "registration",
+      "label": "Registration",
+      "emotionalGoal": "Joining a community — platform begins giving",
+      "immediateGifts": ["welcome", "personalHeadquarters", "civicPassport", "network", "county", "campus", "mission"],
+      "sources": ["USR-001", "PHQ-001", "RGE-001", "NET-001"]
+    },
+    {
+      "stage": 3,
+      "key": "firstHour",
+      "label": "First Hour",
+      "emotionalGoal": "Success arrives quickly — capable",
+      "examples": ["meetParticipant", "joinCommunity", "discoverOpportunities", "shareInviteLink", "exploreCampus", "completeFirstMission"],
+      "sources": ["PCC-001", "OBE-001"]
+    },
+    {
+      "stage": 4,
+      "key": "firstWeek",
+      "label": "First Week",
+      "emotionalGoal": "Small successes create momentum — growing",
+      "examples": ["attendEvent", "volunteer", "joinCommittee", "inviteFriend", "leadershipLesson", "receiveAppreciation"],
+      "sources": ["JRN-M10", "CRA-001"]
+    },
+    {
+      "stage": 5,
+      "key": "firstMonth",
+      "label": "First Month",
+      "emotionalGoal": "Observer to contributor",
+      "examples": ["recognizeNames", "developFriendships", "serveRegularly", "leadSmallEfforts", "discoverStrengths"],
+      "sources": ["JRN-M06", "NET-001"]
+    },
+    {
+      "stage": 6,
+      "key": "firstYear",
+      "label": "First Year",
+      "emotionalGoal": "Leadership emerges naturally — needed, hopeful",
+      "examples": ["mentorOthers", "organizeProjects", "launchInitiatives", "developOrganizers", "tellCommunityStories"],
+      "sources": ["PGL-001", "CRA-M09"]
+    },
+    {
+      "stage": 7,
+      "key": "longTerm",
+      "label": "Long-Term / Fifth Year",
+      "emotionalGoal": "Lifelong community — gratitude, continuity, legacy",
+      "capabilities": ["civicJourneyTimeline", "celebrateMemories", "reconnectFriends", "supportFutureParticipants", "continueContributing"],
+      "sources": ["CJT-001", "CPP-001", "NET-001"]
+    }
+  ],
+  "emotionalDesignPrinciples": [
+    { "emotion": "belonging", "how": "communities waiting, OBE suggestions" },
+    { "emotion": "purpose", "how": "Mission Board, PRM-001" },
+    { "emotion": "progress", "how": "journey stage, Growth Graph" },
+    { "emotion": "gratitude", "how": "Community Gratitude" },
+    { "emotion": "hope", "how": "OIS hopeful language" },
+    { "emotion": "trust", "how": "Trust Center" },
+    { "emotion": "curiosity", "how": "Marketplace discovery" },
+    { "emotion": "community", "how": "network, committees, stories" }
+  ],
+  "frictionPhilosophy": {
+    "reduce": ["complexNavigation", "unnecessarySteps", "jargon", "slowMobile"],
+    "frictionOnlyFor": ["privacyConfirmations", "minorProtections", "reportBlock", "sharingConsent"],
+    "neverForEngagement": true
+  },
+  "delightMoments": {
+    "examples": [
+      "welcomeMessageFromCommunity",
+      "memoryMoments",
+      "communityAppreciation",
+      "milestoneCelebrations",
+      "unexpectedThankYou",
+      "volunteerAnniversaries"
+    ],
+    "sincereNotManipulative": true,
+    "respectsAttentionBudget": true
+  },
+  "continuousEngagement": {
+    "alwaysHave": ["nextOpportunity", "nextRelationship", "nextLesson", "nextProject", "nextLeadershipStep"],
+    "neverPunishingIncomplete": true,
+    "maxSuggestionsPerSurface": 5
+  },
+  "communityCulture": {
+    "encourages": [
+      "welcomingNewcomers",
+      "helpingOthers",
+      "learningTogether",
+      "sharingKnowledge",
+      "celebratingService",
+      "buildingFriendships",
+      "developingFutureLeaders"
+    ],
+    "emergesFromBehavior": true,
+    "softwareSupports": ["welcomeFlows", "gratitudeTools", "appreciationBoards", "companionVoice"]
+  },
+  "communityCompanion": {
+    "description": "Gentle consistent guide — not chatbot, not interrupting AI",
+    "signatureFeature": true,
+    "personality": ["warm", "encouraging", "respectful", "neverPushy"],
+    "voiceOf": "community not software",
+    "responsibilities": [
+      "welcomeNewParticipants",
+      "explainWhatIsHappening",
+      "celebrateMilestones",
+      "introduceOpportunities",
+      "surfaceCommunityStories",
+      "suggestNextSteps",
+      "rememberImportantMoments",
+      "encourageParticipation"
+    ],
+    "orchestrator": "surfaceCompanionMessage(participantId, lifecycleStage, context)",
+    "inputs": ["PEL-M04 lifecycle", "PDT-M12 context", "OBE-001 opportunities", "CJT-M12 memoryMoments"],
+    "neverImpersonatesParticipant": true,
+    "dismissSnoozeAvailable": true,
+    "v1Surfaces": ["registrationWelcome", "commandCenterGreeting"],
+    "v1_1": "dedicatedCompanionPanel",
+    "v1_2": "aiEnhancedOptIn"
+  },
+  "evaluationQuestion": "Does this strengthen relationships, deepen belonging, and help people grow into community builders?",
+  "evaluationQuestionGate": true,
+  "phase3Heart": {
+    "phase1": "Why the platform exists",
+    "phase2": "Digital model of Arkansas",
+    "phase3": "Complete human experience",
+    "emotionalCloseout": "Step 3.14",
+    "structuralCloseout": "Step 3.15 Build Bible"
+  },
+  "crossSystemIntegration": {
+    "discovery": ["CID-M09", "ADT-M10"],
+    "registration": ["USR-001", "PHQ-001", "RGE-001", "NET-001"],
+    "firstHour": ["PCC-001", "OBE-001"],
+    "firstWeek": ["JRN-M10", "CRA-001"],
+    "firstMonth": ["PGL-001", "NET-001"],
+    "firstYear": ["PGL-001", "CRA-M09"],
+    "longTerm": ["CJT-001", "CPP-001"]
+  },
+  "v1Scope": {
+    "philosophyAndCompanionSpec": true,
+    "registrationWelcomeHqSeed": true,
+    "commandCenterStageGreeting": true,
+    "fullCompanionPanel": "v1.1",
+    "aiCompanion": "v1.2"
+  },
+  "implementation": {
+    "gate": "lifecycle stage mapping required on every participant workflow PR",
+    "requiredReading": true,
+    "files": [
+      "src/lib/companion/CommunityCompanion.ts",
+      "src/lib/companion/lifecycleStageCopy.ts",
+      "src/lib/companion/surfaceCompanionMessage.ts",
+      "src/content/companion/"
+    ]
+  }
+}

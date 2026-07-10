@@ -307,7 +307,7 @@ GrowthGraph
 | Use | Step |
 |-----|------|
 | Personalized recommendations | OBE-001 |
-| Leadership development paths | 3.14 |
+| Leadership development paths | PEL-001 |
 | Mentorship matching | OBE-001 |
 | Storytelling / Civic Passport | CPP-001 |
 | Impact reporting | Phase 6 |
@@ -408,6 +408,6 @@ Step 3.8 is complete when:
 
 ---
 
-**Next Step:** 3.14 — Participant Experience
+**Next Step:** 3.15 — Phase 3 Build Bible
 
 *Trace: Experience → Growth Graph → Civic Passport narrative → Journey stage → Command Center Growth widget*

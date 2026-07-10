@@ -407,6 +407,6 @@ Step 3.11 is complete when:
 
 ---
 
-**Next Step:** 3.14 — Participant Experience
+**Next Step:** 3.15 — Phase 3 Build Bible
 
 *Trace: Service → timeline entry → Civic Passport → Memory Moment → "remember why I stayed" → sustained engagement*

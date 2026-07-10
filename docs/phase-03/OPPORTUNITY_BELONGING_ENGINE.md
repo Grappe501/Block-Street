@@ -415,6 +415,6 @@ Step 3.13 is complete when:
 
 ---
 
-**Next Step:** 3.14 — Participant Experience
+**Next Step:** 3.15 — Phase 3 Build Bible
 
 *Trace: Context assembled → belonging-ranked opportunity → explained suggestion → participant chooses → community strengthened*

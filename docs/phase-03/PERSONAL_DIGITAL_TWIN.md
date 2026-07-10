@@ -409,6 +409,6 @@ Step 3.12 is complete when:
 
 ---
 
-**Next Step:** 3.14 — Participant Experience
+**Next Step:** 3.15 — Phase 3 Build Bible
 
 *Trace: Participation → twin evolves → Context Engine assembles → explainable suggestion → participant chooses → trust preserved*

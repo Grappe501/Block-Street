@@ -28,6 +28,7 @@
     { "prefix": "CJT", "domain": "Civic journey timeline" },
     { "prefix": "PDT", "domain": "Personal digital twin" },
     { "prefix": "OBE", "domain": "Opportunity & belonging engine" },
+    { "prefix": "PEL", "domain": "Participant experience & lifecycle" },
     { "prefix": "CPP", "domain": "Civic passport" },
     { "prefix": "STS", "domain": "Status & lifecycle" },
     { "prefix": "ADM", "domain": "Administration" },
@@ -897,6 +898,36 @@
         "frontend": "PAGE-PCC",
         "test": "TEST-OBE-001",
         "doc": "DOC-OBE-001"
+      },
+      "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
+    },
+    {
+      "id": "PEL-001",
+      "title": "Participant Experience & Lifecycle Design",
+      "purpose": "Define emotional experience from first hour through fifth year — how the platform should feel",
+      "description": "PHASE-003.14 seven lifecycle stages, Community Companion, emotional design principles, delight moments, evaluation question, required reading for Burt",
+      "priority": "critical",
+      "principle": "OM-L1",
+      "dependencies": ["JRN-001", "OBE-001", "PCC-001", "PHQ-001", "CRA-001", "CJT-001"],
+      "related": ["PEP-001", "CAM-001", "PDT-001", "USR-001"],
+      "acceptanceCriteria": [
+        "Participant experience philosophy documented",
+        "Emotional design principles established",
+        "Lifecycle stages defined",
+        "Long-term engagement strategy documented",
+        "Community Companion architecture specified",
+        "Blueprint for participant-centered experience"
+      ],
+      "futureNotes": "Full Companion panel v1.1, AI Companion v1.2 opt-in — Step 3.15 Build Bible closeout remains",
+      "implementationStatus": "done",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": "DB-USERS",
+        "api": null,
+        "frontend": "PAGE-PCC",
+        "test": "TEST-PEL-001",
+        "doc": "DOC-PEL-001"
       },
       "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
     },

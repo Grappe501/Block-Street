@@ -48,7 +48,7 @@ When complete, every participant receives:
 | 3.11 | [Civic Journey Timeline](CIVIC_JOURNEY_TIMELINE.md) | Lifelong story — Memory Moments | ✅ |
 | 3.12 | [Personal Digital Twin](PERSONAL_DIGITAL_TWIN.md) | Context Engine — living model | ✅ |
 | 3.13 | [Opportunity & Belonging Engine](OPPORTUNITY_BELONGING_ENGINE.md) | Community Marketplace — belonging | ✅ |
-| 3.14 | Participant Experience | Onboarding journey — first week to first leadership | Pending |
+| 3.14 | [Participant Experience & Lifecycle Design](PARTICIPANT_EXPERIENCE_LIFECYCLE.md) | Community Companion — emotional lifecycle | ✅ |
 | 3.15 | Phase 3 Build Bible | Complete People System closeout | Pending |
 
 ---
@@ -227,13 +227,18 @@ The most important **trust document** in the project — trust as infrastructure
 
 ---
 
-## 3.14 — Participant Experience
+## 3.14 — Participant Experience & Lifecycle Design
 
-Onboarding journey:
+**Requirement focus:** PEL-001 · JRN-001 · OBE-001 · CJT-M12
 
-First login · First week · First month · First event · First committee · First recruit · First leadership role · First mentorship
+**The heart of Phase 3** — emotional experience, not just structure:
 
-*Experience design — not just feature list.*
+- **Seven lifecycle stages** — Discovery → Registration → First Hour → Week → Month → Year → Long-term
+- **Community Companion [PEL-M11]** — warm guide; voice of community, not software
+- **Emotional design** — welcome, connected, capable, appreciated, growing, needed, hopeful
+- **Evaluation question** — does this strengthen relationships, deepen belonging, help people grow into community builders?
+
+*Live spec:* `participant-experience-lifecycle.json` · **Required reading for Burt**
 
 ---
 
@@ -255,7 +260,7 @@ Identity · Journey · Profiles · Networks · Recruitment · Recognition · Pri
 | 3.6 | Command Center core | ✅ design |
 | 3.7 | Basic privacy + Trust Center | ✅ design |
 
-Steps 3.14–3.15: design now, implement post-launch. Steps 3.8–3.13 design complete.
+Step 3.15: Build Bible closeout only. Steps 3.8–3.14 design complete — Phase 3 heart locked at 3.14.
 
 ---
 

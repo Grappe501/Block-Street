@@ -265,7 +265,7 @@ Visitor → Interested → Registered → Connected → Contributor
 | Mission board (personal cards) | Partial |
 | Activity timeline | CJT-001 [Step 3.11] |
 | Profile / Civic Passport | Step 3.3 |
-| Growth recommendations | OBE-001 |
+| Growth recommendations | PEL-001 |
 
 **[PEP-M12a]** **No participant arrives at an empty experience** [CID-M09, ADT-M10].
 

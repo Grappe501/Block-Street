@@ -409,6 +409,6 @@ Step 3.10 is complete when:
 
 ---
 
-**Next Step:** 3.14 — Participant Experience
+**Next Step:** 3.15 — Phase 3 Build Bible
 
 *Trace: Attention Budget → Morning Brief → Trust Center prefs → less noise → sustained trust → invitations continue*

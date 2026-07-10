@@ -2,7 +2,7 @@
 
 > **Question answered:** *Who is this person, how do they grow, and how do they connect to others?*
 
-**Status:** Active — Steps 3.1–3.13 complete · Steps 3.14–3.15 remaining
+**Status:** Active — Steps 3.1–3.14 complete · Step 3.15 remaining (Build Bible closeout)
 
 **Master sequence:** [PHASE_3_MASTER_SEQUENCE.md](PHASE_3_MASTER_SEQUENCE.md)
 
@@ -33,7 +33,7 @@ A user logs into software. A person has relationships, aspirations, interests, s
 | 3.11 | [Civic Journey Timeline](CIVIC_JOURNEY_TIMELINE.md) | ✅ |
 | 3.12 | [Personal Digital Twin](PERSONAL_DIGITAL_TWIN.md) | ✅ |
 | 3.13 | [Opportunity & Belonging Engine](OPPORTUNITY_BELONGING_ENGINE.md) | ✅ |
-| 3.14 | Participant Experience | Pending |
+| 3.14 | [Participant Experience & Lifecycle Design](PARTICIPANT_EXPERIENCE_LIFECYCLE.md) | ✅ |
 | 3.15 | Phase 3 Build Bible | Pending |
 
 ---
@@ -44,6 +44,7 @@ A user logs into software. A person has relationships, aspirations, interests, s
 |---------|-----|
 | **Relationship Growth Engine** | Self-expanding through trusted invites [RGE-001] |
 | **Personal Relationship Network** | Participant-owned living network + Trust Graph [NET-001] |
+| **Community Companion** | Warm guide — voice of community, not software [PEL-001] |
 | **Opportunity & Belonging Engine** | Community Marketplace — belonging not engagement [OBE-001] |
 | **Personal Digital Twin** | Context Engine — living participant model [PDT-001] |
 | **Civic Journey Timeline** | Lifelong story of service — Memory Moments [CJT-001] |
@@ -63,5 +64,7 @@ A user logs into software. A person has relationships, aspirations, interests, s
 ## V1 Critical (Jul 12–14)
 
 PEP-001 · JRN-001 · PHQ-001 · PCC-001 · RGE-001 · SEC-001 · PGL-001 · CRA-001 · PRM-001 · USR-001 · NET-001 · NET-002 · NET-003
+
+**Evaluation question (all features):** *Does this strengthen relationships, deepen belonging, and help people grow into community builders?* [PEL-001]
 
 *Prior phase:* [Digital Arkansas](../phase-02/PHASE_2_DIGITAL_ARKANSAS_BUILD_BIBLE.md)
