@@ -1,22 +1,290 @@
 {
-  "version": "1.0.0",
-  "documentId": "VOLUME-003.02",
+  "version": "2.0.0",
+  "documentId": "VOLUME-003.2",
   "requirementId": "PBA-003",
   "docPath": "docs/volume-03/WORKFLOW_ENGINE.md",
-  "status": "pending",
+  "status": "canonical",
   "priority": "critical",
   "lastUpdated": "2026-07-10",
-  "guidingPrinciple": "Behavior is governed, not improvised.",
-  "defines": [
-    "WorkflowArchitecture",
-    "StateMachines",
-    "WorkflowTemplates",
+  "guidingPrinciple": "People perform work. Workflows coordinate the work.",
+  "workflowPhilosophy": {
+    "notSimplyAutomation": true,
+    "governedNotScattered": true,
+    "reusableOrganizationalKnowledge": true,
+    "preserveHumanJudgment": true,
+    "everyStageObservable": true
+  },
+  "workflowArchitecture": {
+    "layers": [
+      "Trigger",
+      "Initialization",
+      "BusinessRuleEvaluation",
+      "TaskExecution",
+      "Approvals",
+      "Completion",
+      "Reflection",
+      "KnowledgeCapture"
+    ],
+    "layerCount": 8
+  },
+  "philosophyFlow": [
+    "BusinessRules",
+    "WorkflowDefinition",
     "WorkflowExecution",
-    "HumanApprovals",
-    "Escalation",
-    "ExceptionHandling",
-    "Rollback"
+    "HumanDecisions",
+    "HistoricalRecord"
+  ],
+  "workflowCategoryCount": 9,
+  "workflowCategories": [
+    {
+      "id": "identity",
+      "name": "Identity Workflows",
+      "examples": ["Registration", "Verification", "WelcomeJourney", "ProfileCompletion", "AccountRecovery", "IdentityMerge"]
+    },
+    {
+      "id": "community",
+      "name": "Community Workflows",
+      "examples": ["CommunityProposal", "CommunityApproval", "CommunityLaunch", "CommunityGrowth", "CommunitySuccession", "CommunityArchival"]
+    },
+    {
+      "id": "leadership",
+      "name": "Leadership Workflows",
+      "examples": ["LeadershipNomination", "ElectionOrAppointment", "Mentorship", "Training", "Certification", "Succession", "LeadershipRetirement"]
+    },
+    {
+      "id": "mission",
+      "name": "Mission Workflows",
+      "examples": ["MissionProposal", "Planning", "Approval", "Execution", "Reflection", "PlaybookCreation", "MissionArchive"]
+    },
+    {
+      "id": "volunteer",
+      "name": "Volunteer Workflows",
+      "examples": ["OpportunityDiscovery", "Application", "Assignment", "Training", "Participation", "Recognition", "LeadershipProgression"]
+    },
+    {
+      "id": "knowledge",
+      "name": "Knowledge Workflows",
+      "examples": ["StoryDrafting", "Review", "Publication", "LessonApproval", "PlaybookPublication", "LegacyPreservation"]
+    },
+    {
+      "id": "partnership",
+      "name": "Partnership Workflows",
+      "examples": ["PartnerOnboarding", "AgreementApproval", "SharedInitiative", "Renewal", "Conclusion"]
+    },
+    {
+      "id": "communication",
+      "name": "Communication Workflows",
+      "examples": ["Announcement", "Newsletter", "NotificationCampaigns", "CommunityUpdates", "Recognition"]
+    },
+    {
+      "id": "governance",
+      "name": "Governance Workflows",
+      "examples": ["PolicyProposal", "Review", "Voting", "Approval", "Implementation", "HistoricalRecording"]
+    }
+  ],
+  "workflowObjectFields": [
+    "canonicalWorkflowId",
+    "name",
+    "purpose",
+    "category",
+    "version",
+    "owner",
+    "status",
+    "visibility",
+    "effectiveDate",
+    "approvalRequirements"
+  ],
+  "workflowStageFields": [
+    "purpose",
+    "entryConditions",
+    "exitConditions",
+    "participants",
+    "tasks",
+    "approvals",
+    "notifications",
+    "escalations",
+    "deadlines"
+  ],
+  "defaultStateMachine": [
+    "Draft",
+    "Submitted",
+    "Review",
+    "Approved",
+    "InProgress",
+    "Completed",
+    "Reflection",
+    "Archived"
+  ],
+  "stateMachineStateCount": 8,
+  "taskModelFields": [
+    "owner",
+    "role",
+    "instructions",
+    "dependencies",
+    "dueDate",
+    "completionRules",
+    "evidence",
+    "history"
+  ],
+  "approvalTypes": [
+    "SingleApprover",
+    "MultipleApprovers",
+    "SequentialApproval",
+    "ParallelApproval",
+    "Consensus",
+    "Escalation"
+  ],
+  "escalationTriggers": [
+    "DeadlinesExpire",
+    "ParticipantsUnavailable",
+    "ApprovalsStall",
+    "CriticalFailures"
+  ],
+  "exceptionHandlingTypes": [
+    "Rejection",
+    "Revision",
+    "Cancellation",
+    "Rollback",
+    "ManualIntervention",
+    "AlternativePaths"
+  ],
+  "compensationActionExample": {
+    "scenario": "CommunityLaunchFailsAfterInvitationsSent",
+    "actions": ["DeactivateCommunity", "NotifyParticipants", "PreserveHistoricalRecords", "RecordLessonsLearned"]
+  },
+  "workflowContextSources": [
+    "Community",
+    "County",
+    "Institution",
+    "Mission",
+    "Calendar",
+    "Participant",
+    "Leadership",
+    "Configuration"
+  ],
+  "workflowTemplates": [
+    "CommunityLaunch",
+    "MissionPlanning",
+    "VolunteerOnboarding",
+    "MeetingPlanning",
+    "LeadershipAppointment",
+    "KnowledgePublication"
+  ],
+  "workflowVersioningFields": [
+    "version",
+    "author",
+    "approver",
+    "effectivePeriod",
+    "migrationStrategy"
+  ],
+  "workflowHistoryFields": [
+    "start",
+    "completion",
+    "participants",
+    "approvals",
+    "exceptions",
+    "actions",
+    "events",
+    "knowledgeGenerated"
+  ],
+  "workflowEventTypes": [
+    "WorkflowStarted",
+    "StageCompleted",
+    "ApprovalGranted",
+    "TaskFinished",
+    "WorkflowArchived"
+  ],
+  "knowledgeCaptureTypes": [
+    "LessonsLearned",
+    "Stories",
+    "PlaybookImprovements",
+    "CommunityBrainUpdates",
+    "MissionReflections"
+  ],
+  "aiCapabilities": [
+    "explainWorkflowStages",
+    "recommendNextSteps",
+    "draftDocuments",
+    "identifyBottlenecks",
+    "summarizeProgress",
+    "recommendImprovements"
+  ],
+  "aiNeverBypassesApprovals": true,
+  "monitoringMetrics": [
+    "RunningWorkflows",
+    "BlockedWorkflows",
+    "ApprovalDelays",
+    "CompletionRates",
+    "AverageDuration",
+    "FailurePatterns"
+  ],
+  "communityProcessOrchestrator": {
+    "name": "Community Process Orchestrator",
+    "purpose": "Runtime coordinator for every workflow — manages how work progresses through time",
+    "separationOfConcerns": [
+      { "component": "BusinessRulesEngine", "responsibility": "Determines whether actions are permitted" },
+      { "component": "WorkflowEngine", "responsibility": "Defines what a workflow looks like" },
+      { "component": "CommunityProcessOrchestrator", "responsibility": "Manages how work progresses through time" },
+      { "component": "CommunityEventLedger", "responsibility": "Records what happened" }
+    ],
+    "coordinates": [
+      "CurrentStage",
+      "PendingTasks",
+      "RequiredApprovals",
+      "CalendarDeadlines",
+      "NotificationScheduling",
+      "EscalationTimers",
+      "EventLedgerPublication",
+      "KnowledgeCaptureCheckpoints",
+      "KnowledgeGraphUpdates",
+      "DigitalTwinSynchronization"
+    ],
+    "coordinateCount": 10,
+    "communityLaunchExampleSteps": [
+      "CreateWorkflowInstance",
+      "RequestPolicyDecisionPointDecisions",
+      "AssignTasksToOrganizers",
+      "SchedulePlanningMeetings",
+      "MonitorCompletionDeadlines",
+      "EscalateOverdueApprovals",
+      "PublishWorkflowEvents",
+      "TriggerOnboardingWhenApproved",
+      "CaptureLessonsLearnedAfterLaunch",
+      "CloseWorkflowAndArchiveHistory"
+    ],
+    "communityLaunchExampleStepCount": 10,
+    "philosophy": "Predictable, observable, explainable execution for every operational process"
+  },
+  "domainSchemaMapping": {
+    "schema": "PlatformBehavior",
+    "entities": [
+      "Workflow",
+      "WorkflowStage",
+      "WorkflowInstance",
+      "Task",
+      "Approval",
+      "Escalation",
+      "WorkflowHistory",
+      "ProcessOrchestration"
+    ]
+  },
+  "projectionIntegrations": {
+    "businessRulesPath": "data/registry/business-rule-engine.json",
+    "eventLedgerPath": "data/registry/event-data-model.json",
+    "timeCalendarPath": "data/registry/time-calendar-data-model.json",
+    "configurationPath": "data/registry/configuration-model.json",
+    "aiKnowledgePath": "data/registry/ai-knowledge-model.json",
+    "knowledgeGraphPath": "data/registry/knowledge-graph-schema.json"
+  },
+  "burtImplementationGuidance": [
+    "Build workflows as declarative definitions rather than embedded code",
+    "Separate workflow execution from business rule evaluation",
+    "Preserve complete execution history",
+    "Support reusable templates",
+    "Integrate with calendars, events, notifications, and knowledge capture",
+    "Design for long-running workflows",
+    "Consult Community Process Orchestrator spec before workflow runtime features"
   ],
   "acceptanceCriteria": "AC-123",
-  "acceptanceCriteriaMet": false
+  "acceptanceCriteriaMet": true
 }

@@ -47,7 +47,7 @@
       "masterSequencePath": "docs/volume-03/VOLUME_3_MASTER_SEQUENCE.md",
       "registryPath": "data/registry/platform-behavior-bible.json",
       "chapters": 14,
-      "stepsComplete": 1,
+      "stepsComplete": 2,
       "stepsTotal": 14,
       "acceptanceCriteria": "AC-121",
       "status": "in_progress"
