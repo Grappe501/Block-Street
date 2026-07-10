@@ -7,105 +7,417 @@
 **Status:** Canonical  
 **Priority:** Critical
 
-**Builds on:** [Digital Constitution Layer](../volume-01/DIGITAL_CONSTITUTION_LAYER.md) [DCL-001] · [2.1 Data Philosophy](DATA_PHILOSOPHY.md) [DAB-PH09]  
+**Builds on:** [2.1 Data Philosophy](DATA_PHILOSOPHY.md) [DAB-PH10] · [Digital Constitution Layer](../volume-01/DIGITAL_CONSTITUTION_LAYER.md) [DCL-001] · [2.4 Database Schema Blueprint](DATABASE_SCHEMA_BLUEPRINT.md) [DAB-SCH18]  
 **Live spec:** `data/registry/configuration-model.json`
 
----
-
-## DAB-CFG01 — Purpose
-
-**[DAB-CFG01]** Defines **everything configurable** — roles, permissions templates, community types, mission templates, recognition, growth stages, workflows, notification settings — without code changes.
+> Configuration defines **how the platform behaves**. Operational data records **what actually happened**.
 
 ---
 
-## DAB-CFG02 — Configuration Schema
+## Purpose
 
-**[DAB-CFG02a]** All config lives in `config` schema + DCL registry JSON [DCL-001].
+**[DAB-CFG01]** The Configuration Data Model defines how the Community Operating System stores, governs, versions, and applies **configurable behavior**.
 
-**[DAB-CFG02b]** Pattern:
+**[DAB-CFG01a]** Configuration is **not** operational data.
+
+**[DAB-CFG01b]** This separation allows the platform to **evolve without rewriting code** [DAB-PH10].
+
+---
+
+## Guiding Principle
+
+**[DAB-CFG02]**
+
+> **If behavior may reasonably change, it should be configured—not hard-coded.**
+
+**[DAB-CFG02a]** Configuration is a **strategic capability**.
+
+---
+
+## Philosophy
+
+**[DAB-CFG03]** Traditional systems hard-code:
+
+Roles · Statuses · Menus · Permissions · Templates · Workflow rules
+
+**[DAB-CFG03a]** The Community Operating System stores these as **configurable platform objects**.
+
+**[DAB-CFG03b]** Communities evolve. Software should evolve with them.
+
+---
+
+## Configuration Architecture
+
+**[DAB-CFG04]** Configuration is organized into layers:
 
 ```text
-config.config_entries (
-  id, config_key, config_domain, value_json,
-  scope_type, scope_id,      -- platform | community | institution
-  version, effective_from, effective_to,
-  created_by, created_at
-)
+Platform Configuration
+        ↓
+State Configuration
+        ↓
+Organization Configuration
+        ↓
+Community Configuration
+        ↓
+Participant Preferences
 ```
 
----
+**[DAB-CFG04a]** Each layer overrides **only what it owns**.
 
-## DAB-CFG03 — Roles & Permissions Templates
-
-**[DAB-CFG03a]** `config.roles` — platform roles: `participant`, `organizer`, `moderator`, `admin`, `operator`.
-
-**[DAB-CFG03b]** `config.community_role_templates` — per community type: default permissions matrix seed.
-
-**[DAB-CFG03c]** Resolved at runtime by PRE [PRE-001] — config is input, not authority.
+**[DAB-CFG04b]** Operational participant preferences (e.g. notification channel) live in Identity/Communication schemas — configuration supplies **defaults and bounds** [DAB-SCH05 · DAB-SCH15].
 
 ---
 
-## DAB-CFG04 — Community Types & Templates
+## Configuration Principles
 
-**[DAB-CFG04a]** `config.community_types`: campus, county, cohort, institution, alliance.
+**[DAB-CFG05]** Configuration should be:
 
-**[DAB-CFG04b]** `config.community_templates` — genome defaults [GOS-M10]: welcome workflow, mission templates, committee structure.
+| Principle | Meaning |
+|-----------|---------|
+| **Versioned** | Every change tracked |
+| **Auditable** | Who, when, why |
+| **Permission-aware** | Who may read or change |
+| **Searchable** | Discoverable in admin |
+| **Documented** | Purpose and impact described |
+| **Reversible** | Rollback supported |
+| **Deployable** | Portable across environments |
 
-**[DAB-CFG04c]** Applied at community creation — overrides allowed per community.
-
----
-
-## DAB-CFG05 — Mission & Workflow Templates
-
-**[DAB-CFG05a]** `config.mission_templates` — canvas presets [MDS-001].
-
-**[DAB-CFG05b]** `config.workflow_definitions` — state machine for approvals, onboarding, launch certification [CRCC-001].
-
-**[DAB-CFG05c]** Steps reference service actions — not embedded business logic in JSON alone.
+**[DAB-CFG05a]** Configurable changes should **rarely require application redeployment** [ENG-DTR07].
 
 ---
 
-## DAB-CFG06 — Recognition & Growth Stages
+## Configuration Categories
 
-**[DAB-CFG06a]** `config.recognition_badges` — criteria jsonb, icon ref, visibility.
+**[DAB-CFG06]** Twelve configuration category groups aligned to business domains [DAB-SCH04].
 
-**[DAB-CFG06b]** `config.growth_stages` — maps to [CGS-001]: thresholds, recommended actions.
+### Identity Configuration
+
+**[DAB-CFG06a]** Examples: Authentication providers · Registration rules · Profile templates · Verification policies · Default privacy settings
+
+### Community Configuration
+
+**[DAB-CFG06b]** Examples: Community types · Membership rules · Leadership structures · Community templates · Welcome journeys · Community lifecycle rules
+
+### Leadership Configuration
+
+**[DAB-CFG06c]** Examples: Leadership pathways · Leadership terms · Succession templates · Mentorship programs · Recognition programs
+
+### Mission Configuration
+
+**[DAB-CFG06d]** Examples: Mission templates · Project templates · Task templates · Milestone definitions · Mission workflows
+
+### Event Configuration
+
+**[DAB-CFG06e]** Examples: Event types · Registration rules · Attendance policies · Reminder schedules · Calendar defaults · Venue templates
+
+### Growth Configuration
+
+**[DAB-CFG06f]** Examples: Invitation workflows · Referral recognition · Belonging milestones · Growth stages · Community launch templates · Volunteer onboarding
+
+### Knowledge Configuration
+
+**[DAB-CFG06g]** Examples: Story categories · Knowledge taxonomy · Playbook templates · Lesson templates · Community Brain categories · Legacy classifications
+
+### Communication Configuration
+
+**[DAB-CFG06h]** Examples: Notification rules · Digest schedules · Communication channels · Quiet hour defaults · Announcement templates · Message priorities
+
+### Partnership Configuration
+
+**[DAB-CFG06i]** Examples: Partner types · Agreement templates · Relationship classifications · Collaboration workflows
+
+### Capacity Configuration
+
+**[DAB-CFG06j]** Examples: Skill taxonomy · Resource categories · Equipment classifications · Transportation categories · Availability rules
+
+### Intelligence Configuration
+
+**[DAB-CFG06k]** Examples: Recommendation policies · AI prompt profiles · Confidence thresholds · Digital Twin refresh schedules · Search ranking · Knowledge weighting
+
+### System Configuration
+
+**[DAB-CFG06l]** Examples: Feature flags · Platform branding · Regional settings · Time zones · Localization · Environment profiles · Platform defaults
 
 ---
 
-## DAB-CFG07 — Notification Settings
+## Configuration Object
 
-**[DAB-CFG07a]** Platform defaults: category → channel → priority [AME-001].
+**[DAB-CFG07]** Every configuration object includes:
 
-**[DAB-CFG07b]** Participant overrides in `comms.notification_preferences` — not config schema (participant data).
+| Field | Purpose |
+|-------|---------|
+| Canonical ID | Stable identifier |
+| Configuration Category | Domain grouping |
+| Key | Namespaced config key |
+| Value | Typed value payload |
+| Version | Revision number |
+| Status | Draft, active, archived |
+| Owner | Steward responsible |
+| Effective Date | When value applies |
+| Expiration Date | Optional sunset |
+| Source | Origin (seed, admin, import) |
+| Approval Status | Governance state |
 
-**[DAB-CFG07c]** Community broadcast rules in config: digest schedule, quiet hours defaults.
+**[DAB-CFG07a]** Configuration itself becomes **managed data** — not scattered constants.
 
 ---
 
-## DAB-CFG08 — Feature Flags
+## Configuration Hierarchy
 
-**[DAB-CFG08a]** `config.feature_flags (key, enabled, scope, rollout_percentage, metadata)`.
+**[DAB-CFG08]** Configuration resolves in order:
 
-**[DAB-CFG08b]** Aligns with [ENG-DTR07](../volume-01/DEPLOYMENT_TESTING_RELEASE_ARCHITECTURE.md).
+```text
+Platform
+↓
+State
+↓
+Region
+↓
+County
+↓
+Institution
+↓
+Community
+↓
+Participant
+```
+
+**[DAB-CFG08a]** The **most specific applicable** configuration takes precedence unless explicitly locked at a higher level.
+
+**[DAB-CFG08b]** Locked values cannot be overridden downstream — used for constitutional constraints [DCL-001].
 
 ---
 
-## DAB-CFG09 — Config vs. DCL
+## Inheritance Model
 
-**[DAB-CFG09a]** **DCL** — constitutional rules (principles, non-overridable constraints).
+**[DAB-CFG09]** Communities inherit defaults from higher levels.
 
-**[DAB-CFG09b]** **Config** — operational toggles and templates within DCL bounds.
+**[DAB-CFG09a]** They may override **only approved settings**.
 
-**[DAB-CFG09c]** Config changes emit `config.updated` audit events.
+Example:
+
+```text
+Platform default notification cadence (daily digest)
+        ↓
+Community chooses weekly digest
+        ↓
+Participant chooses immediate notifications
+```
+
+**[DAB-CFG09b]** Overrides remain **predictable and traceable** — inheritance chain recorded on resolution.
+
+---
+
+## Versioning
+
+**[DAB-CFG10]** Configuration changes are versioned.
+
+Every version records:
+
+- Who changed it
+- Why (change reason)
+- Approval
+- Effective period
+- Rollback information
+- Historical values
+
+**[DAB-CFG10a]** Configuration history is **preserved** — never in-place overwrite of active values without version increment.
+
+**[DAB-CFG10b]** Config changes emit events to Community Event Ledger [DAB-EVT06 · `config.updated`].
+
+---
+
+## Approval Workflows
+
+**[DAB-CFG11]** Sensitive configuration requires approval.
+
+Examples: Permission changes · Leadership structure · Community templates · AI behavior · Workflow definitions
+
+**[DAB-CFG11a]** Approval rules are **themselves configurable** — workflow definitions as data [DAB-CFG14].
+
+---
+
+## Feature Flags
+
+**[DAB-CFG12]** Feature flags are **configuration objects**.
+
+Support rollout by:
+
+- Pilot
+- County
+- Institution
+- Community
+- Participant
+
+**[DAB-CFG12a]** Feature flags should be **temporary** rather than permanent architecture [ENG-DTR07].
+
+**[DAB-CFG12b]** Aligns with System schema [DAB-SCH18]: FeatureFlag entity.
+
+---
+
+## Workflow Definitions
+
+**[DAB-CFG13]** Business workflows should be configurable.
+
+Examples:
+
+- Community launch
+- Mission approval
+- Leadership succession
+- Volunteer onboarding
+- Knowledge publication
+
+**[DAB-CFG13a]** Workflow definitions remain **data** — steps reference service actions, not embedded business logic alone.
+
+**[DAB-CFG13b]** Maps to System schema: WorkflowDefinition [DAB-SCH18].
+
+---
+
+## Template Model
+
+**[DAB-CFG14]** Templates become configuration.
+
+Examples: Mission Canvas · Meeting Agenda · Story Template · Community Charter · Recognition Certificate · Welcome Email
+
+**[DAB-CFG14a]** Templates evolve **without code changes** — applied at entity creation with community override allowed.
+
+**[DAB-CFG14b]** Maps to System schema: TemplateDefinition · Community/Mission templates in domain configs.
+
+---
+
+## Taxonomy Model
+
+**[DAB-CFG15]** Taxonomies are configurable.
+
+Examples: Topics · Mission categories · Knowledge areas · Story types · Skills · Volunteer interests · Counties · Institution classifications
+
+**[DAB-CFG15a]** Taxonomy supports **consistent data entry** — maps to System schema: Enumeration [DAB-SCH18].
+
+---
+
+## Validation Rules
+
+**[DAB-CFG16]** Configuration should include validation:
+
+- Allowed values
+- Ranges
+- Dependencies
+- Required fields
+- Mutual exclusions
+
+**[DAB-CFG16a]** Validation prevents **invalid platform behavior** at config write time.
+
+---
+
+## Configuration Deployment
+
+**[DAB-CFG17]** Configuration supports:
+
+Export · Import · Promotion · Comparison · Rollback · Environment synchronization
+
+**[DAB-CFG17a]** Configuration becomes **portable** — seed JSON registries (`data/registry/*.json`) are V0 bootstrap; production config lives in governed store.
+
+---
+
+## AI Integration
+
+**[DAB-CFG18]** AI may:
+
+- Explain configuration
+- Recommend improvements
+- Detect conflicts
+- Generate templates
+- Suggest workflow refinements
+
+**[DAB-CFG18a]** AI **never changes configuration without approval** [DAB-PH10 · CIF-001].
+
+---
+
+## Security
+
+**[DAB-CFG19]** Configuration changes should be:
+
+- Permission-controlled
+- Audited
+- Versioned
+- Recoverable
+
+**[DAB-CFG19a]** Sensitive configuration receives **additional review** — aligned with PRE [PRE-001] and DCL non-overridable bounds [DCL-001].
+
+---
+
+## Config vs. DCL
+
+**[DAB-CFG20]** Boundary with Digital Constitution Layer [DCL-001]:
+
+| Layer | Role |
+|-------|------|
+| **DCL** | Constitutional principles — non-overridable constraints |
+| **Config** | Operational toggles and templates **within** DCL bounds |
+
+**[DAB-CFG20a]** PRE resolves permissions using config as **input**, not authority [PRE-001].
+
+---
+
+## Platform Constitution Engine
+
+**[DAB-CFG21]** **Major Architectural Recommendation:** Create a **Platform Constitution Engine** responsible for interpreting and enforcing governing configuration.
+
+**[DAB-CFG21a]** Instead of every service independently evaluating rules, the Constitution Engine resolves:
+
+- Active configuration values
+- Inheritance across platform, state, region, institution, community, and participant levels
+- Feature flag status
+- Workflow definitions
+- Permission policies
+- Template selection
+- Validation rules
+- Effective dates
+- Version applicability
+
+**[DAB-CFG21b]** Example — when a participant creates a new community, the engine determines:
+
+- Which community template applies
+- Which leadership pathway is active
+- Which onboarding workflow to use
+- Which notification rules govern the community
+- Which AI prompt profile should be used
+- Which feature flags are enabled
+
+**[DAB-CFG21c]** By **centralizing configuration resolution**, every service receives consistent behavior without duplicating configuration logic.
+
+**[DAB-CFG21d]** Keeps the COS adaptable as governance evolves — changes driven by **data and constitutional rules**, not scattered application code.
+
+**[DAB-CFG21e]** Live spec: `data/registry/configuration-model.json` · `platformConstitutionEngine`
+
+---
+
+## Burt Implementation Guidance
+
+**[DAB-CFG22]** Implementation should:
+
+1. Treat configuration as **data**
+2. Keep configuration **separate from operational records**
+3. Build **inheritance** rather than duplication
+4. Preserve **configuration history**
+5. Support **deployment between environments**
+6. Avoid hard-coded business behavior wherever practical
+7. Route all config resolution through the **Platform Constitution Engine**
+
+**[DAB-CFG22a]** Logical home: System schema [DAB-SCH18] — Configuration · FeatureFlag · WorkflowDefinition · Enumeration · TemplateDefinition.
 
 ---
 
 ## AC-115 — Acceptance Criteria
 
-- [x] **[AC-115a]** Configuration schema and entry pattern documented. `[DAB-CFG02]`
-- [x] **[AC-115b]** Roles, community types, templates, and workflows defined. `[DAB-CFG03–CFG05]`
-- [x] **[AC-115c]** Recognition, notifications, feature flags, and DCL boundary established. `[DAB-CFG06–CFG09]`
+Volume 2.9 is complete when:
+
+- [x] **[AC-115a]** Configuration philosophy is documented. `[DAB-CFG03]`
+- [x] **[AC-115b]** Configuration hierarchy and inheritance are defined. `[DAB-CFG08–CFG09]`
+- [x] **[AC-115c]** Versioning, approval, validation, and deployment models are established. `[DAB-CFG10–CFG17]`
+- [x] **[AC-115d]** Workflow, template, taxonomy, and feature flag configuration are incorporated. `[DAB-CFG12–CFG15]`
+- [x] **[AC-115e]** Platform Constitution Engine specified. `[DAB-CFG21]`
+- [x] **[AC-115f]** Burt has a complete blueprint for a configuration-driven COS. `[DAB-CFG22]`
 
 ---
 
