@@ -5532,6 +5532,48 @@
       }
     },
     {
+      "id": "PSI-011",
+      "title": "Security, Privacy & Constitutional Trust Architecture — Volume 5.10",
+      "purpose": "Constitutional security — protect people, institutions, knowledge, and communities with transparency and trust",
+      "description": "VOLUME-005.10 — 24 security domains, Constitutional Security Fabric, Trust Ledger, AI Safety Fabric, LocalBrain security, Constitutional Compliance Engine",
+      "priority": "constitutional_infrastructure",
+      "principle": "CP-001",
+      "dependencies": [
+        "PSI-010",
+        "PSI-009",
+        "PSI-001",
+        "DAB-014",
+        "ENG-006",
+        "AIB-001"
+      ],
+      "related": [
+        "PSI-001",
+        "PSI-012"
+      ],
+      "acceptanceCriteria": [
+        "Security philosophy documented",
+        "Identity, privacy, AI security, LocalBrain security, encryption, incident response, and threat intelligence defined",
+        "Trust Ledger, Security Twins, observability, and accessibility incorporated",
+        "Constitutional Security Fabric specified",
+        "Complete blueprint for constitutional security across the platform"
+      ],
+      "futureNotes": "Guiding principle: Protect people before protecting technology.",
+      "implementationStatus": "done",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": null,
+        "api": "API-SYSTEM",
+        "frontend": "UI-SYSTEM",
+        "test": "TEST-PSI-011",
+        "doc": "DOC-PSI-011"
+      },
+      "versionHistory": {
+        "created": "2026-07-10",
+        "implemented": "2026-07-10"
+      }
+    },
+    {
       "id": "PSI-010",
       "title": "Deployment, Runtime & LocalBrain Architecture — Volume 5.9",
       "purpose": "Federation of intelligent operational nodes — every deployment retains operational sovereignty",
@@ -5952,7 +5994,7 @@
         "Foundation stack Volumes 0-5 defined",
         "Complete blueprint for platform services and integration architecture"
       ],
-      "futureNotes": "Volume 5 scaffold — 9/14 canonical steps complete. LocalBrain woven throughout every chapter.",
+      "futureNotes": "Volume 5 scaffold — 10/14 canonical steps complete. LocalBrain woven throughout every chapter.",
       "implementationStatus": "scaffold",
       "testingStatus": "pending",
       "documentationStatus": "scaffold",

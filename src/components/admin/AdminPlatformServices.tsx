@@ -10,6 +10,7 @@ import search from "../../../data/registry/search-architecture-volume5.json";
 import media from "../../../data/registry/media-architecture-volume5.json";
 import comm from "../../../data/registry/communication-architecture-volume5.json";
 import deploy from "../../../data/registry/deployment-architecture-volume5.json";
+import security from "../../../data/registry/security-architecture-volume5.json";
 
 type ServiceReg = {
   acceptanceCriteria: string;
@@ -29,6 +30,11 @@ type ServiceReg = {
   institutionalMemoryRepository?: { abbreviation: string; memoryPipeline?: { stageCount: number }; memoryObject?: { sectionCount: number } };
   unifiedCommunicationsFabric?: { abbreviation: string; fabricPipeline?: { stageCount: number }; communicationObject?: { sectionCount: number } };
   runtimeFederationManager?: { abbreviation: string; fabricPipeline?: { stageCount: number }; runtimeRegistry?: { sectionCount: number } };
+  constitutionalSecurityFabric?: { abbreviation: string; fabricLayers?: { layerCount: number }; securityFabricResponsibilities?: { fabricCount: number } };
+  securityDomainCount?: number;
+  securityPrincipleCount?: number;
+  authenticationMethodCount?: number;
+  dataClassificationCount?: number;
   deploymentTypeCount?: number;
   runtimePrincipleCount?: number;
   runtimeProfileCount?: number;
@@ -55,6 +61,7 @@ type ServiceReg = {
   mediaArchitecture?: { layerCount: number };
   communicationsArchitecture?: { layerCount: number };
   runtimeArchitecture?: { layerCount: number };
+  constitutionalSecurityModel?: { layerCount: number };
   localBrainCompatibility?: { localBrainFirstClassRuntime: boolean };
   localBrainFederation?: {
     explicitIntegration?: boolean;
@@ -77,9 +84,11 @@ const FEATURED_SUBTITLES: Record<string, string> = {
   "5.7": "Media & Assets",
   "5.8": "Communications",
   "5.9": "Deployment & Runtime",
+  "5.10": "Security & Trust",
 };
 
 const SERVICE_CARDS: { step: string; label: string; reg: ServiceReg; cardClass: string; metaClass: string; titleClass: string; featured?: boolean }[] = [
+  { step: "5.10", label: "Constitutional Security Fabric", reg: security, cardClass: "border-emerald-300 bg-emerald-50", metaClass: "text-emerald-700", titleClass: "text-emerald-950", featured: true },
   { step: "5.9", label: "Runtime Federation Manager", reg: deploy, cardClass: "border-lime-300 bg-lime-50", metaClass: "text-lime-700", titleClass: "text-lime-950", featured: true },
   { step: "5.8", label: "Unified Communications Fabric", reg: comm, cardClass: "border-yellow-300 bg-yellow-50", metaClass: "text-yellow-700", titleClass: "text-yellow-950", featured: true },
   { step: "5.7", label: "Institutional Memory Repository", reg: media, cardClass: "border-amber-300 bg-amber-50", metaClass: "text-amber-700", titleClass: "text-amber-950", featured: true },
@@ -120,7 +129,11 @@ export function AdminPlatformServices() {
             <p className={`mt-2 text-xs ${metaClass}`}>
               {reg.acceptanceCriteria} · {reg.status}
             </p>
-            {reg.runtimeFederationManager ? (
+            {reg.constitutionalSecurityFabric ? (
+              <p className={`mt-1 text-xs ${metaClass}`}>
+                {reg.securityDomainCount ?? 0} security domains · {reg.authenticationMethodCount ?? 0} auth methods · {reg.dataClassificationCount ?? 0} classifications · {reg.securityPrincipleCount ?? 0} principles · {reg.constitutionalSecurityModel?.layerCount ?? 0} security model layers · {reg.constitutionalSecurityFabric.fabricLayers?.layerCount ?? 0} CSF layers · {reg.constitutionalSecurityFabric.securityFabricResponsibilities?.fabricCount ?? 0} security fabrics · Constitutional Compliance Engine
+              </p>
+            ) : reg.runtimeFederationManager ? (
               <p className={`mt-1 text-xs ${metaClass}`}>
                 {reg.deploymentTypeCount ?? 0} deployment types · {reg.runtimeProfileCount ?? 0} profiles · {reg.runtimeComponentCount ?? 0} runtime components · {reg.runtimePrincipleCount ?? 0} principles · {reg.runtimeArchitecture?.layerCount ?? 0} runtime layers · {reg.runtimeFederationManager.fabricPipeline?.stageCount ?? 0} RFM pipeline stages · {reg.runtimeFederationManager.runtimeRegistry?.sectionCount ?? 0} Runtime Registry sections · Digital Infrastructure Twin
               </p>

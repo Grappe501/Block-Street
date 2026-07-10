@@ -18,6 +18,22 @@
 
 ---
 
+## 2026-07-10 — Volume 5.10 Security, Privacy & Constitutional Trust Architecture [PSI-011 · AC-160]
+
+**Document:** `docs/volume-05/SECURITY_ARCHITECTURE.md` · **Registry:** `data/registry/security-architecture-volume5.json`
+
+### What Changed
+
+- **Guiding principle:** *Protect people before protecting technology.*
+- Constitutional responsibility — security as organizational capability, not IT function
+- **24 security domains** — identity through accessibility
+- **9 authentication methods**, **7 data classifications**, **8 security principles**
+- Constitutional Security Model lifecycle, Trust Ledger, Security Twins, incident response, threat intelligence
+- **Constitutional Security Fabric (CSF)** — 6 security fabrics, Constitutional Compliance Engine, Security Digital Twin
+- Umbrella PSI-001 · platform-services-integration-bible 10/14 · Volume 5 in progress
+
+---
+
 ## 2026-07-10 — Volume 5.9 Deployment, Runtime & LocalBrain Architecture [PSI-010 · AC-159]
 
 **Document:** `docs/volume-05/DEPLOYMENT_ARCHITECTURE.md` · **Registry:** `data/registry/deployment-architecture-volume5.json`
