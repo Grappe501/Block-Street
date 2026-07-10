@@ -1,7 +1,7 @@
 # Volume 5 Master Sequence — Platform Services & Integration Architecture
 
 **Document ID:** VOLUME-005 · **PSI-001**  
-**Status:** In progress (7/14 steps)  
+**Status:** In progress (8/14 steps)  
 **Priority:** Foundational
 
 > **How does the Community Operating System connect to the outside world while remaining one unified platform?**
@@ -103,7 +103,7 @@ Volume 5 is complete when Burt understands:
 - [x] How synchronization works across devices and LocalBrains (5.5)
 - [x] How search spans the platform (5.6)
 - [x] How media is governed (5.7)
-- [ ] How communications are constitutional (5.8)
+- [x] How communications are constitutional (5.8)
 - [ ] How deployment is portable (5.9)
 - [ ] How security is systemic (5.10)
 - [ ] How observability is first-class (5.11)
@@ -124,7 +124,7 @@ Volume 5 is complete when Burt understands:
 | 5.5 Synchronization Architecture | ✅ Done |
 | 5.6 Search, Discovery & Knowledge Retrieval Architecture | ✅ Done |
 | 5.7 Media, Content & Digital Asset Architecture | ✅ Done |
-| 5.8 Communications Architecture | ⏳ Pending |
+| 5.8 Communications Architecture | ✅ Done |
 | 5.9 Deployment Architecture | ⏳ Pending |
 | 5.10 Security Architecture | ⏳ Pending |
 | 5.11 Observability Architecture | ⏳ Pending |
@@ -132,7 +132,7 @@ Volume 5 is complete when Burt understands:
 | 5.13 Platform Operations Architecture | ⏳ Pending |
 | 5.14 Platform Integration Orchestrator | ⏳ Pending |
 
-**Volume 5 in progress.** 7/14 platform service layers documented.
+**Volume 5 in progress.** 8/14 platform service layers documented.
 
 ---
 

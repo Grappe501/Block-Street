@@ -5532,6 +5532,49 @@
       }
     },
     {
+      "id": "PSI-009",
+      "title": "Communications Architecture — Volume 5.8",
+      "purpose": "Communications nervous system — every message strengthens relationships or advances missions",
+      "description": "VOLUME-005.8 — 6 communication domains, 11 channels, Unified Communications Fabric, Conversation Objects, Meeting Intelligence, constitutional publishing",
+      "priority": "mission_critical",
+      "principle": "CP-012",
+      "dependencies": [
+        "PSI-008",
+        "PSI-007",
+        "PSI-001",
+        "ENG-012",
+        "PBA-011",
+        "UXB-009"
+      ],
+      "related": [
+        "PSI-001",
+        "PSI-010"
+      ],
+      "acceptanceCriteria": [
+        "Communication philosophy documented",
+        "Communication domains and channels defined",
+        "Conversation objects, meetings, and publishing established",
+        "AI, Community Brain, Community Event Ledger, Digital Twins, LocalBrain, observability, accessibility, and security incorporated",
+        "Unified Communications Fabric specified",
+        "Complete blueprint for platform communications"
+      ],
+      "futureNotes": "Guiding principle: Every communication should strengthen a relationship or advance a mission.",
+      "implementationStatus": "done",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": null,
+        "api": "API-SYSTEM",
+        "frontend": "UI-SYSTEM",
+        "test": "TEST-PSI-009",
+        "doc": "DOC-PSI-009"
+      },
+      "versionHistory": {
+        "created": "2026-07-10",
+        "implemented": "2026-07-10"
+      }
+    },
+    {
       "id": "PSI-008",
       "title": "Media, Content & Digital Asset Architecture — Volume 5.7",
       "purpose": "Govern every digital artifact as institutional memory — context, relationships, preservation",
@@ -5867,7 +5910,7 @@
         "Foundation stack Volumes 0-5 defined",
         "Complete blueprint for platform services and integration architecture"
       ],
-      "futureNotes": "Volume 5 scaffold — 7/14 canonical steps complete. LocalBrain woven throughout every chapter.",
+      "futureNotes": "Volume 5 scaffold — 8/14 canonical steps complete. LocalBrain woven throughout every chapter.",
       "implementationStatus": "scaffold",
       "testingStatus": "pending",
       "documentationStatus": "scaffold",

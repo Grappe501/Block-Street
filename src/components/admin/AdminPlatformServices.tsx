@@ -8,6 +8,7 @@ import evt from "../../../data/registry/event-stream-architecture.json";
 import sync from "../../../data/registry/synchronization-architecture.json";
 import search from "../../../data/registry/search-architecture-volume5.json";
 import media from "../../../data/registry/media-architecture-volume5.json";
+import comm from "../../../data/registry/communication-architecture-volume5.json";
 
 type ServiceReg = {
   acceptanceCriteria: string;
@@ -25,6 +26,10 @@ type ServiceReg = {
   federatedSynchronizationMesh?: { abbreviation: string; federatedMeshArchitecture?: { levelCount: number }; responsibilityCount: number };
   knowledgeRetrievalFabric?: { abbreviation: string; fabricPipeline?: { stageCount: number }; knowledgeSourceCount: number };
   institutionalMemoryRepository?: { abbreviation: string; memoryPipeline?: { stageCount: number }; memoryObject?: { sectionCount: number } };
+  unifiedCommunicationsFabric?: { abbreviation: string; fabricPipeline?: { stageCount: number }; communicationObject?: { sectionCount: number } };
+  communicationDomainCount?: number;
+  communicationPrincipleCount?: number;
+  communicationChannelCount?: number;
   digitalAssetCategoryCount?: number;
   mediaPrincipleCount?: number;
   searchDomainCount?: number;
@@ -42,6 +47,7 @@ type ServiceReg = {
   synchronizationArchitecture?: { layerCount: number };
   searchArchitecture?: { layerCount: number };
   mediaArchitecture?: { layerCount: number };
+  communicationsArchitecture?: { layerCount: number };
   localBrainCompatibility?: { localBrainFirstClassRuntime: boolean };
   localBrainFederation?: {
     explicitIntegration?: boolean;
@@ -60,9 +66,11 @@ const FEATURED_SUBTITLES: Record<string, string> = {
   "5.5": "Synchronization",
   "5.6": "Search & Discovery",
   "5.7": "Media & Assets",
+  "5.8": "Communications",
 };
 
 const SERVICE_CARDS: { step: string; label: string; reg: ServiceReg; cardClass: string; metaClass: string; titleClass: string; featured?: boolean }[] = [
+  { step: "5.8", label: "Unified Communications Fabric", reg: comm, cardClass: "border-yellow-300 bg-yellow-50", metaClass: "text-yellow-700", titleClass: "text-yellow-950", featured: true },
   { step: "5.7", label: "Institutional Memory Repository", reg: media, cardClass: "border-amber-300 bg-amber-50", metaClass: "text-amber-700", titleClass: "text-amber-950", featured: true },
   { step: "5.6", label: "Knowledge Retrieval Fabric", reg: search, cardClass: "border-orange-300 bg-orange-50", metaClass: "text-orange-700", titleClass: "text-orange-950", featured: true },
   { step: "5.5", label: "Federated Synchronization Mesh", reg: sync, cardClass: "border-gray-300 bg-gray-50", metaClass: "text-gray-700", titleClass: "text-gray-950", featured: true },
@@ -101,7 +109,11 @@ export function AdminPlatformServices() {
             <p className={`mt-2 text-xs ${metaClass}`}>
               {reg.acceptanceCriteria} · {reg.status}
             </p>
-            {reg.institutionalMemoryRepository ? (
+            {reg.unifiedCommunicationsFabric ? (
+              <p className={`mt-1 text-xs ${metaClass}`}>
+                {reg.communicationDomainCount ?? 0} comm domains · {reg.communicationChannelCount ?? 0} channels · {reg.communicationPrincipleCount ?? 0} principles · {reg.communicationsArchitecture?.layerCount ?? 0} comm layers · {reg.unifiedCommunicationsFabric.fabricPipeline?.stageCount ?? 0} UCFab pipeline stages · {reg.unifiedCommunicationsFabric.communicationObject?.sectionCount ?? 0} Communication Object sections
+              </p>
+            ) : reg.institutionalMemoryRepository ? (
               <p className={`mt-1 text-xs ${metaClass}`}>
                 {reg.digitalAssetCategoryCount ?? 0} asset categories · {reg.mediaPrincipleCount ?? 0} principles · {reg.mediaArchitecture?.layerCount ?? 0} media layers · {reg.institutionalMemoryRepository.memoryPipeline?.stageCount ?? 0} IMR pipeline stages · {reg.institutionalMemoryRepository.memoryObject?.sectionCount ?? 0} Memory Object sections · Living Collections
               </p>

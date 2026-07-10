@@ -18,6 +18,23 @@
 
 ---
 
+## 2026-07-10 — Volume 5.8 Communications Architecture [PSI-009 · AC-158]
+
+**Document:** `docs/volume-05/COMMUNICATION_ARCHITECTURE.md` · **Registry:** `data/registry/communication-architecture-volume5.json`
+
+### What Changed
+
+- **Guiding principle:** *Every communication should strengthen a relationship or advance a mission.*
+- Conversation-centric not channel-centric — purpose before channel
+- **6 communication domains** — person-to-person through emergency
+- **11 communication channels** — email through QR distribution
+- Conversation Objects, Meeting Intelligence, Campaign Architecture, publishing pipeline
+- **Unified Communications Fabric (UCFab)** — Communication Objects, Communication Intelligence, Relationship Intelligence
+- LocalBrain offline drafting, Community Brain and Digital Twin integration
+- Umbrella PSI-001 · platform-services-integration-bible 8/14 · Volume 5 in progress
+
+---
+
 ## 2026-07-10 — Volume 5.7 Media, Content & Digital Asset Architecture [PSI-008 · AC-157]
 
 **Document:** `docs/volume-05/MEDIA_ARCHITECTURE.md` · **Registry:** `data/registry/media-architecture-volume5.json`
