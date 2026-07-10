@@ -1,22 +1,258 @@
 {
-  "version": "1.0.0",
-  "documentId": "VOLUME-003.01",
+  "version": "2.0.0",
+  "documentId": "VOLUME-003.1",
   "requirementId": "PBA-002",
   "docPath": "docs/volume-03/BUSINESS_RULE_ENGINE.md",
-  "status": "pending",
+  "status": "canonical",
   "priority": "critical",
   "lastUpdated": "2026-07-10",
-  "guidingPrinciple": "Behavior is governed, not improvised.",
-  "defines": [
-    "BusinessRulePhilosophy",
-    "RuleHierarchy",
-    "RuleEvaluation",
-    "ValidationRules",
-    "ConditionalLogic",
-    "RuleVersioning",
-    "RuleTesting",
-    "RuleGovernance"
+  "guidingPrinciple": "Policy belongs in rules. Code executes rules.",
+  "rulePhilosophy": {
+    "centralizedNotScattered": true,
+    "managedPlatformKnowledge": true,
+    "constitutionalInterpreter": true,
+    "evolveWithoutRewrites": true,
+    "everyRuleExplainable": true
+  },
+  "ruleArchitecture": {
+    "layers": [
+      "Request",
+      "ContextAssembly",
+      "BusinessRuleEvaluation",
+      "Decision",
+      "Workflow",
+      "Audit"
+    ],
+    "layerCount": 6
+  },
+  "ruleCategoryCount": 9,
+  "ruleCategories": [
+    {
+      "id": "identity",
+      "name": "Identity Rules",
+      "examples": ["RegistrationEligibility", "ProfileCompleteness", "AccountVerification", "IdentityRecovery", "MultiFactorRequirements"]
+    },
+    {
+      "id": "community",
+      "name": "Community Rules",
+      "examples": ["CommunityLaunchRequirements", "MembershipEligibility", "CommitteeCreation", "CommunityStatusChanges", "CommunityArchival"]
+    },
+    {
+      "id": "leadership",
+      "name": "Leadership Rules",
+      "examples": ["LeadershipPrerequisites", "TermLimits", "Succession", "MentorshipRequirements", "LeadershipCertification"]
+    },
+    {
+      "id": "mission",
+      "name": "Mission Rules",
+      "examples": ["MissionApproval", "VolunteerRequirements", "MilestoneCompletion", "MissionClosure", "KnowledgeCapture"]
+    },
+    {
+      "id": "volunteer",
+      "name": "Volunteer Rules",
+      "examples": ["VolunteerEligibility", "TrainingRequirements", "AttendancePolicies", "Recognition", "LeadershipProgression"]
+    },
+    {
+      "id": "knowledge",
+      "name": "Knowledge Rules",
+      "examples": ["StoryPublication", "LessonApproval", "PlaybookPublication", "LegacyDesignation", "KnowledgeReview"]
+    },
+    {
+      "id": "communication",
+      "name": "Communication Rules",
+      "examples": ["NotificationTiming", "QuietHours", "DigestCreation", "AnnouncementVisibility", "PriorityRouting"]
+    },
+    {
+      "id": "security",
+      "name": "Security Rules",
+      "examples": ["PermissionEvaluation", "SensitiveDataAccess", "ExportApproval", "Retention", "PrivacyEnforcement"]
+    },
+    {
+      "id": "ai",
+      "name": "AI Rules",
+      "examples": ["PromptSelection", "KnowledgeRetrieval", "ApprovalRequirements", "CitationRequirements", "ConfidenceThresholds"]
+    }
+  ],
+  "ruleObjectFields": [
+    "canonicalRuleId",
+    "name",
+    "description",
+    "category",
+    "priority",
+    "owner",
+    "effectiveDate",
+    "expirationDate",
+    "version",
+    "status",
+    "visibility"
+  ],
+  "ruleComponents": [
+    "Trigger",
+    "Conditions",
+    "Evaluation",
+    "Decision",
+    "Explanation",
+    "Actions",
+    "Audit"
+  ],
+  "conditionContextSources": [
+    "Participant",
+    "Community",
+    "Mission",
+    "Leadership",
+    "Calendar",
+    "Geography",
+    "Permissions",
+    "Configuration",
+    "Knowledge",
+    "Relationships"
+  ],
+  "ruleOutcomes": [
+    "Allow",
+    "Deny",
+    "Recommend",
+    "RequireApproval",
+    "RequireAdditionalInformation",
+    "Delay",
+    "Escalate",
+    "Notify"
+  ],
+  "rulePriorityOrder": [
+    "Security",
+    "Privacy",
+    "Constitution",
+    "Governance",
+    "Community",
+    "Operational",
+    "Convenience"
+  ],
+  "ruleHierarchy": [
+    "PlatformConstitution",
+    "SecurityRules",
+    "PrivacyRules",
+    "GovernanceRules",
+    "PlatformRules",
+    "CommunityRules",
+    "ParticipantPreferences"
+  ],
+  "ruleHierarchyLevels": 7,
+  "lowerLevelsCannotOverrideHigher": true,
+  "ruleVersioningFields": [
+    "version",
+    "author",
+    "approval",
+    "effectivePeriod",
+    "supersededRule",
+    "reason"
+  ],
+  "ruleTestingTypes": [
+    "PositiveTests",
+    "NegativeTests",
+    "BoundaryConditions",
+    "HistoricalReplay",
+    "RegressionTesting"
+  ],
+  "ruleSimulationQuestions": [
+    "WhatWouldHappenIfRuleChanged",
+    "WhichWorkflowsAffected",
+    "WhichCommunitiesImpacted"
+  ],
+  "explainabilityQuestions": [
+    "WhichRulesEvaluated",
+    "WhichConditionsMatched",
+    "WhyDecisionReached",
+    "WhichRuleHadPrecedence"
+  ],
+  "ruleAuditFields": [
+    "request",
+    "context",
+    "rulesEvaluated",
+    "decision",
+    "timestamp",
+    "version",
+    "outcome",
+    "actor"
+  ],
+  "workflowIntegrationExamples": [
+    "CommunityLaunch",
+    "LeadershipAppointment",
+    "MissionApproval",
+    "KnowledgePublication",
+    "VolunteerProgression"
+  ],
+  "aiCapabilities": [
+    "explainRules",
+    "recommendNewRules",
+    "identifyConflictingRules",
+    "summarizeRuleChanges",
+    "assistRuleAuthors"
+  ],
+  "aiNeverModifiesRulesWithoutApproval": true,
+  "configurationSources": [
+    "Configuration",
+    "Taxonomies",
+    "FeatureFlags",
+    "Templates",
+    "GovernancePolicies"
+  ],
+  "performanceRequirements": [
+    "Caching",
+    "IncrementalEvaluation",
+    "ContextReuse",
+    "DeterministicExecution",
+    "Observability"
+  ],
+  "policyDecisionPoint": {
+    "name": "Policy Decision Point",
+    "abbreviation": "PDP",
+    "purpose": "Single gateway for operational decisions across the platform",
+    "exampleRequests": [
+      "CanParticipantLaunchCommunity",
+      "MayStoryBePublished",
+      "ShouldVolunteerReceiveRecognition",
+      "IsKnowledgeEligibleForPublicRelease",
+      "CanAdministrativeActionProceed",
+      "ShouldAiRecommendationRequireHumanApproval"
+    ],
+    "exampleRequestCount": 6,
+    "evaluationSteps": [
+      "AssembleRelevantContext",
+      "ResolveApplicableConfiguration",
+      "EvaluateBusinessRules",
+      "ApplyConstitutionalSecurityPrivacyPriorities",
+      "ReturnStructuredDecisionWithExplanations",
+      "RecordEvaluationInAuditTrail"
+    ],
+    "evaluationStepCount": 6,
+    "benefits": [
+      { "id": "consistency", "name": "Consistency", "description": "Every service applies the same policies" },
+      { "id": "explainability", "name": "Explainability", "description": "Decisions trace to specific rules" },
+      { "id": "governance", "name": "Governance", "description": "Policy changes occur in one place" },
+      { "id": "testability", "name": "Testability", "description": "Rules simulated independently of application logic" },
+      { "id": "scalability", "name": "Scalability", "description": "New workflows inherit the same decision framework" }
+    ],
+    "philosophy": "Application code performs work; the PDP determines whether that work is permitted and under what conditions"
+  },
+  "domainSchemaMapping": {
+    "schema": "PlatformBehavior",
+    "entities": ["Rule", "RuleVersion", "RuleEvaluation", "RuleOutcome", "PolicyDecision", "SimulationResult"]
+  },
+  "projectionIntegrations": {
+    "configurationModelPath": "data/registry/configuration-model.json",
+    "securityPrivacyPath": "data/registry/security-privacy-model.json",
+    "eventLedgerPath": "data/registry/event-data-model.json",
+    "aiKnowledgePath": "data/registry/ai-knowledge-model.json",
+    "masterDataDictionaryPath": "data/registry/master-data-dictionary.json"
+  },
+  "burtImplementationGuidance": [
+    "Centralize business rules",
+    "Keep rules separate from application code",
+    "Make every decision explainable",
+    "Version every rule",
+    "Support testing and simulation",
+    "Respect constitutional hierarchy during evaluation",
+    "Consult Policy Decision Point spec before operational decision features"
   ],
   "acceptanceCriteria": "AC-122",
-  "acceptanceCriteriaMet": false
+  "acceptanceCriteriaMet": true
 }

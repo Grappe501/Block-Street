@@ -47,10 +47,10 @@
       "masterSequencePath": "docs/volume-03/VOLUME_3_MASTER_SEQUENCE.md",
       "registryPath": "data/registry/platform-behavior-bible.json",
       "chapters": 14,
-      "stepsComplete": 0,
+      "stepsComplete": 1,
       "stepsTotal": 14,
       "acceptanceCriteria": "AC-121",
-      "status": "scaffold"
+      "status": "in_progress"
     },
     {
       "volume": 4,
