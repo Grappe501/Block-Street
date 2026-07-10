@@ -1,23 +1,373 @@
 {
-  "version": "1.0.0",
-  "documentId": "VOLUME-003.05",
+  "version": "2.0.0",
+  "documentId": "VOLUME-003.5",
   "requirementId": "PBA-006",
   "docPath": "docs/volume-03/MISSION_EXECUTION_ENGINE.md",
-  "status": "pending",
+  "status": "canonical",
   "priority": "critical",
   "lastUpdated": "2026-07-10",
-  "guidingPrinciple": "Behavior is governed, not improvised.",
-  "defines": [
-    "MissionPlanning",
-    "Approval",
-    "Scheduling",
-    "VolunteerAssignment",
+  "guidingPrinciple": "Every mission should leave the community stronger than it found it.",
+  "missionPhilosophy": {
+    "primaryUnitOfOrganizedWork": true,
+    "executionBecomesCommunityDevelopment": true,
+    "producesMoreThanDeliverables": true,
+    "everyStageProducesKnowledge": true,
+    "mandatoryReflection": true,
+    "institutionalLearningAutomatic": true
+  },
+  "missionArchitecture": {
+    "stages": [
+      "Vision",
+      "Proposal",
+      "Planning",
+      "Approval",
+      "Preparation",
+      "Execution",
+      "Reflection",
+      "KnowledgeCapture",
+      "CommunityImpact",
+      "Archive"
+    ],
+    "stageCount": 10
+  },
+  "missionDimensions": [
+    "Purpose",
+    "Objectives",
+    "People",
+    "Resources",
     "Execution",
     "Reflection",
-    "KnowledgeCapture",
-    "PlaybookGeneration",
-    "MissionArchive"
+    "Knowledge",
+    "Legacy"
+  ],
+  "missionDimensionCount": 8,
+  "lifecycleStages": [
+    {
+      "id": "vision",
+      "name": "Vision",
+      "order": 1,
+      "sources": [
+        "CommunityRequest",
+        "VolunteerIdea",
+        "LeadershipInitiative",
+        "InstitutionRequest",
+        "CountyStrategy",
+        "AIRecommendation",
+        "HistoricalLesson"
+      ]
+    },
+    {
+      "id": "proposal",
+      "name": "Proposal",
+      "order": 2,
+      "defines": [
+        "Purpose",
+        "ExpectedOutcomes",
+        "TargetCommunity",
+        "GeographicScope",
+        "EstimatedEffort",
+        "Leadership",
+        "RequiredResources",
+        "SuccessIndicators"
+      ],
+      "governedObject": true
+    },
+    {
+      "id": "planning",
+      "name": "Planning",
+      "order": 3,
+      "establishes": [
+        "Timeline",
+        "Calendar",
+        "VolunteerNeeds",
+        "Budget",
+        "Facilities",
+        "Transportation",
+        "RiskAssessment",
+        "KnowledgeReferences",
+        "RelatedPlaybooks"
+      ],
+      "reuseExistingKnowledge": true
+    },
+    {
+      "id": "approval",
+      "name": "Approval",
+      "order": 4,
+      "evaluates": [
+        "BusinessRules",
+        "Governance",
+        "LeadershipReadiness",
+        "CommunityCapacity",
+        "MissionDependencies",
+        "SchedulingConflicts"
+      ],
+      "transparent": true
+    },
+    {
+      "id": "preparation",
+      "name": "Preparation",
+      "order": 5,
+      "includes": [
+        "VolunteerAssignments",
+        "Training",
+        "Materials",
+        "Communications",
+        "CalendarConfirmation",
+        "Equipment",
+        "PartnershipCoordination"
+      ]
+    },
+    {
+      "id": "execution",
+      "name": "Execution",
+      "order": 6,
+      "tracks": [
+        "Progress",
+        "Attendance",
+        "VolunteerActivity",
+        "Milestones",
+        "Issues",
+        "Adjustments",
+        "Media",
+        "Stories"
+      ],
+      "realTimeRecording": true
+    },
+    {
+      "id": "reflection",
+      "name": "Reflection",
+      "order": 7,
+      "captures": [
+        "WhatWorked",
+        "WhatFailed",
+        "UnexpectedOutcomes",
+        "VolunteerFeedback",
+        "CommunityFeedback",
+        "LeadershipObservations"
+      ],
+      "mandatoryForMeaningfulMissions": true
+    },
+    {
+      "id": "knowledgeCapture",
+      "name": "Knowledge Capture",
+      "order": 8,
+      "becomes": [
+        "Lessons",
+        "PlaybookUpdates",
+        "Stories",
+        "MissionSummaries",
+        "CommunityBrainEntries",
+        "TrainingMaterial"
+      ]
+    },
+    {
+      "id": "communityImpact",
+      "name": "Community Impact",
+      "order": 9,
+      "includes": [
+        "PeopleServed",
+        "VolunteerGrowth",
+        "LeadershipDevelopment",
+        "KnowledgeGenerated",
+        "RelationshipsFormed",
+        "PartnershipsStrengthened",
+        "CommunityImprovements"
+      ]
+    },
+    {
+      "id": "archive",
+      "name": "Archive",
+      "order": 10,
+      "preserves": [
+        "MissionHistory",
+        "Timeline",
+        "Media",
+        "Lessons",
+        "Playbooks",
+        "VolunteerParticipation",
+        "HistoricalSignificance"
+      ]
+    }
+  ],
+  "lifecycleStageCount": 10,
+  "missionComponents": [
+    "Purpose",
+    "Objectives",
+    "Scope",
+    "Community",
+    "Leadership",
+    "Volunteers",
+    "Calendar",
+    "Tasks",
+    "Resources",
+    "Knowledge",
+    "Relationships",
+    "History"
+  ],
+  "missionComponentCount": 12,
+  "missionHealthIndicators": [
+    "Progress",
+    "VolunteerEngagement",
+    "KnowledgeGeneration",
+    "ScheduleAdherence",
+    "LeadershipEffectiveness",
+    "ResourceAvailability",
+    "CommunityImpact"
+  ],
+  "missionHealthIndicatorCount": 7,
+  "missionTemplates": [
+    "VolunteerDrive",
+    "CommunityCleanup",
+    "TrainingEvent",
+    "LeadershipRetreat",
+    "ListeningSession",
+    "ServiceProject",
+    "AdvocacyCampaign"
+  ],
+  "missionTemplateCount": 7,
+  "missionRelationshipTypes": [
+    "Communities",
+    "Participants",
+    "Events",
+    "Stories",
+    "Lessons",
+    "Playbooks",
+    "Partners",
+    "Facilities",
+    "KnowledgeGraph"
+  ],
+  "missionRelationshipTypeCount": 9,
+  "missionCalendarEvents": [
+    "PlanningMeetings",
+    "VolunteerShifts",
+    "Milestones",
+    "Deadlines",
+    "Training",
+    "ReflectionSessions"
+  ],
+  "missionCalendarEventCount": 6,
+  "digitalTwinSummaryFields": [
+    "CurrentProgress",
+    "VolunteerParticipation",
+    "Timeline",
+    "Risks",
+    "KnowledgeGenerated",
+    "Relationships",
+    "ResourceStatus",
+    "CommunityImpact"
+  ],
+  "digitalTwinFieldCount": 8,
+  "knowledgeGraphProjections": [
+    "VolunteerGraph",
+    "KnowledgeGraph",
+    "LeadershipGraph",
+    "CommunityGraph",
+    "PartnershipGraph"
+  ],
+  "knowledgeGraphProjectionCount": 5,
+  "recognitionTypes": [
+    "VolunteerMilestones",
+    "LeadershipAchievements",
+    "Innovation",
+    "KnowledgeContributions",
+    "CommunityImpact"
+  ],
+  "recognitionTypeCount": 5,
+  "continuousImprovementUpdates": [
+    "MissionTemplates",
+    "Playbooks",
+    "CommunityBrain",
+    "LeadershipGuidance",
+    "TrainingMaterials"
+  ],
+  "continuousImprovementUpdateCount": 5,
+  "aiCapabilities": [
+    "RecommendVolunteers",
+    "SuggestSchedules",
+    "IdentifySimilarMissions",
+    "RecommendPlaybooks",
+    "DraftMissionSummaries",
+    "HighlightRisks",
+    "SuggestReflectionQuestions"
+  ],
+  "aiNeverReplacesLeadership": true,
+  "missionOperationsCenter": {
+    "name": "Mission Operations Center",
+    "purpose": "Real-time operational command environment integrating platform information into one unified mission workspace",
+    "notTraditionalProjectDashboard": true,
+    "domains": [
+      {
+        "id": "planning",
+        "name": "Planning",
+        "combines": ["MissionObjectives", "Timeline", "Dependencies", "RiskRegister"]
+      },
+      {
+        "id": "people",
+        "name": "People",
+        "combines": ["Volunteers", "Leadership", "Mentors", "Assignments", "Availability"]
+      },
+      {
+        "id": "operations",
+        "name": "Operations",
+        "combines": ["Tasks", "Milestones", "Calendar", "Equipment", "Facilities", "Transportation"]
+      },
+      {
+        "id": "knowledge",
+        "name": "Knowledge",
+        "combines": ["RelatedPlaybooks", "LessonsLearned", "CommunityBrainReferences", "Stories", "HistoricalMissions"]
+      },
+      {
+        "id": "intelligence",
+        "name": "Intelligence",
+        "combines": ["MissionDigitalTwin", "CommunityHealthSignals", "VolunteerWorkload", "AIRecommendations", "SchedulingInsights"]
+      },
+      {
+        "id": "evidence",
+        "name": "Evidence",
+        "combines": ["Photos", "Documents", "MeetingNotes", "Media", "CommunityEventLedger", "EvidenceVaultReferences"]
+      },
+      {
+        "id": "communityImpact",
+        "name": "Community Impact",
+        "combines": ["PeopleServed", "VolunteerHours", "PartnershipsFormed", "KnowledgeCreated", "LeadershipDeveloped"]
+      }
+    ],
+    "domainCount": 7,
+    "philosophy": "Execution environment where communities transform plans into lasting impact while continuously generating knowledge for the entire network"
+  },
+  "domainSchemaMapping": {
+    "schema": "PlatformBehavior",
+    "entities": [
+      "MissionLifecycle",
+      "MissionHealth",
+      "MissionTemplate",
+      "MissionOperationsCenter",
+      "MissionDigitalTwinProjection",
+      "MissionArchive"
+    ]
+  },
+  "projectionIntegrations": {
+    "communityLifecyclePath": "data/registry/community-lifecycle-engine.json",
+    "identityLifecyclePath": "data/registry/identity-lifecycle-engine.json",
+    "workflowEnginePath": "data/registry/workflow-engine.json",
+    "businessRulesPath": "data/registry/business-rule-engine.json",
+    "entityDictionaryPath": "data/registry/canonical-entity-dictionary.json",
+    "relationshipModelPath": "data/registry/relationship-data-model.json",
+    "eventLedgerPath": "data/registry/event-data-model.json",
+    "timeCalendarPath": "data/registry/time-calendar-data-model.json",
+    "mediaDocumentPath": "data/registry/media-document-model.json",
+    "knowledgeGraphPath": "data/registry/knowledge-graph-schema.json",
+    "aiKnowledgePath": "data/registry/ai-knowledge-model.json"
+  },
+  "burtImplementationGuidance": [
+    "Treat missions as long-lived operational entities",
+    "Separate mission lifecycle from task management",
+    "Require structured reflection and knowledge capture",
+    "Integrate with workflows, calendars, events, and Digital Twins",
+    "Project mission relationships into the Community Knowledge Graph",
+    "Preserve complete historical records",
+    "Consult Mission Operations Center spec before mission-facing execution features"
   ],
   "acceptanceCriteria": "AC-126",
-  "acceptanceCriteriaMet": false
+  "acceptanceCriteriaMet": true
 }
