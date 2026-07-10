@@ -1,0 +1,170 @@
+{
+  "version": "2.0.0",
+  "documentId": "VOLUME-005.1",
+  "requirementId": "PSI-002",
+  "docPath": "docs/volume-05/PLATFORM_SERVICES_ARCHITECTURE.md",
+  "status": "canonical",
+  "priority": "foundational",
+  "lastUpdated": "2026-07-10",
+  "guidingPrinciple": "One service. One responsibility. Many consumers.",
+  "servicePhilosophy": {
+    "servicesNotFeatures": true,
+    "applicationsTemporaryServicesPermanent": true,
+    "singleAuthoritativeOwner": true,
+    "constitutionalInfrastructure": true
+  },
+  "serviceArchitecture": {
+    "layers": [
+      "Request",
+      "Authentication",
+      "Authorization",
+      "BusinessRules",
+      "Workflow",
+      "ServiceLogic",
+      "CommunityEventLedger",
+      "KnowledgeGraph",
+      "DigitalTwinUpdates",
+      "Response"
+    ],
+    "layerCount": 10
+  },
+  "servicePrincipleCount": 8,
+  "servicePrinciples": [
+    "SinglePurpose",
+    "EventDriven",
+    "StatelessWherePractical",
+    "Observable",
+    "Versioned",
+    "Explainable",
+    "PermissionAware",
+    "ConstitutionallyGoverned"
+  ],
+  "corePlatformServiceCount": 27,
+  "corePlatformServices": [
+    { "id": "identity", "name": "Identity Service", "owns": ["Participants", "Authentication", "Profiles", "Roles", "Permissions", "DigitalIdentity", "SessionManagement"], "neverOwns": ["Missions", "Communities"] },
+    { "id": "community", "name": "Community Service", "owns": ["Communities", "Membership", "CommunityHealth", "CommunityLifecycle", "CommunityOperatingManual", "CommunityRelationships"] },
+    { "id": "mission", "name": "Mission Service", "owns": ["MissionLifecycle", "MissionPlanning", "MissionExecution", "MissionReflection", "MissionImpact", "MissionHistory"] },
+    { "id": "volunteer", "name": "Volunteer Service", "owns": ["VolunteerProfiles", "Assignments", "Availability", "Recognition", "VolunteerHistory", "VolunteerDevelopment"] },
+    { "id": "leadership", "name": "Leadership Service", "owns": ["LeadershipPipeline", "Mentorship", "Succession", "LeadershipAcademy", "LeadershipHealth", "LeadershipPortfolios"] },
+    { "id": "knowledge", "name": "Knowledge Service", "owns": ["CommunityBrain", "Playbooks", "Stories", "Research", "Lessons", "KnowledgeObservatory", "KnowledgeVersions"] },
+    { "id": "governance", "name": "Governance Service", "owns": ["Policies", "Proposals", "Approvals", "Appeals", "GovernanceHistory", "ConstitutionalCompliance"] },
+    { "id": "calendar", "name": "Calendar Service", "owns": ["Meetings", "Schedules", "Events", "Availability", "RecurringEvents", "CalendarSynchronization"] },
+    { "id": "communication", "name": "Communication Service", "owns": ["Email", "SMS", "Push", "Voice", "Announcements", "Digests", "CommunityMessaging"] },
+    { "id": "notification", "name": "Notification Service", "owns": ["AttentionManagement", "Delivery", "NotificationQueues", "QuietHours", "Escalation", "DigestGeneration"] },
+    { "id": "search", "name": "Search Service", "owns": ["SemanticSearch", "PeopleSearch", "MissionSearch", "KnowledgeSearch", "CommunitySearch", "GeographicSearch", "AIRetrievalIndexes"] },
+    { "id": "ai", "name": "AI Service", "owns": ["AIFederation", "PromptRouting", "ContextAssembly", "ModelOrchestration", "AIMemory", "CitationGeneration", "AIPolicies"] },
+    { "id": "analytics", "name": "Analytics Service", "owns": ["Metrics", "Dashboards", "OperationalAnalytics", "Reports", "Forecasts", "CommunityIntelligence", "OperationalIntelligence"] },
+    { "id": "digitalTwin", "name": "Digital Twin Service", "owns": ["ParticipantTwins", "MissionTwins", "CommunityTwins", "InstitutionTwins", "CountyTwins", "PlatformTwin", "Synchronization"] },
+    { "id": "communityEventLedger", "name": "Community Event Ledger Service", "owns": ["EventPublishing", "History", "Replay", "Timeline", "Audit", "InstitutionalMemory"] },
+    { "id": "knowledgeGraph", "name": "Knowledge Graph Service", "owns": ["Relationships", "GraphTraversal", "Recommendations", "Connections", "SemanticNavigation", "RelationshipIntelligence"] },
+    { "id": "media", "name": "Media Service", "owns": ["Documents", "Photos", "Video", "Audio", "Evidence", "Metadata", "Versioning"] },
+    { "id": "file", "name": "File Service", "owns": ["StorageAbstraction", "Uploads", "Downloads", "Encryption", "Retention", "Synchronization"] },
+    { "id": "mapping", "name": "Mapping Service", "owns": ["Geography", "Regions", "Addresses", "GISLayers", "TravelCalculations", "CoverageMaps"] },
+    { "id": "integration", "name": "Integration Service", "owns": ["ExternalConnectors", "AdapterLifecycle", "CredentialManagement", "SynchronizationContracts", "APIMediation"] },
+    { "id": "automation", "name": "Automation Service", "owns": ["AutomationExecution", "Scheduling", "Retries", "Simulation", "AutomationHistory", "AutomationMissionControl"] },
+    { "id": "workflow", "name": "Workflow Service", "owns": ["WorkflowDefinitions", "WorkflowExecution", "StateTransitions", "WorkflowHistory", "WorkflowTemplates"] },
+    { "id": "businessRules", "name": "Business Rules Service", "owns": ["PolicyEvaluation", "Rules", "Constraints", "DecisionLogic", "RuleVersioning", "ConstitutionalEnforcement"] },
+    { "id": "configuration", "name": "Configuration Service", "owns": ["FeatureFlags", "Settings", "InstitutionConfiguration", "Defaults", "VersionedConfiguration"] },
+    { "id": "observability", "name": "Observability Service", "owns": ["Logs", "Metrics", "Tracing", "Health", "Diagnostics", "Alerting"] },
+    { "id": "security", "name": "Security Service", "owns": ["Encryption", "Secrets", "DeviceTrust", "ThreatDetection", "SecurityPolicy", "Compliance"] },
+    { "id": "platformAdministration", "name": "Platform Administration Service", "owns": ["SystemAdministration", "PlatformHealth", "InstitutionProvisioning", "Maintenance", "Upgrades", "Operations"] }
+  ],
+  "serviceCommunication": {
+    "modes": ["Events", "Commands", "Queries", "APIs", "Synchronization"],
+    "modeCount": 5,
+    "noDirectDatabaseSharing": true
+  },
+  "serviceContract": {
+    "publishedFields": ["Capabilities", "Events", "Commands", "Queries", "Permissions", "Version", "Health"],
+    "fieldCount": 7,
+    "everyServiceDiscoverable": true
+  },
+  "localBrainCompatibility": {
+    "layers": ["CloudCapable", "HybridCapable", "LocalCapable", "OfflineCapable", "SynchronizationStrategy"],
+    "layerCount": 5,
+    "localBrainFirstClassRuntime": true
+  },
+  "serviceLifecycle": {
+    "stages": ["Design", "Implementation", "Testing", "Deployment", "Monitoring", "Optimization", "Retirement"],
+    "stageCount": 7
+  },
+  "aiIntegration": {
+    "supports": ["ContextAssembly", "PermissionFiltering", "Explainability", "CitationSupport", "OperationalSummaries"],
+    "supportCount": 5,
+    "aiNeverBypassesServiceBoundaries": true
+  },
+  "communityEventLedgerIntegration": {
+    "everyServicePublishesEvents": true,
+    "exampleEvents": ["MissionCreated", "VolunteerAssigned", "CommunityUpdated", "KnowledgePublished", "PolicyApproved"]
+  },
+  "digitalTwinIntegration": {
+    "everyServiceUpdatesRelevantTwins": true,
+    "governedSynchronization": true,
+    "noServiceOwnsAnotherServicesTwin": true
+  },
+  "observabilityStandard": {
+    "exposedMetrics": ["Health", "Latency", "Errors", "Capacity", "Dependencies", "Version"],
+    "metricCount": 6
+  },
+  "platformServiceMesh": {
+    "name": "Platform Service Mesh",
+    "abbreviation": "PSM",
+    "isGovernedCommunicationFabric": true,
+    "notIsolatedMicroservicesOrMonolith": true,
+    "responsibilities": [
+      {
+        "id": "serviceDiscovery",
+        "name": "Service Discovery",
+        "provides": ["AvailableServices", "Versions", "Health", "Capabilities", "Endpoints"]
+      },
+      {
+        "id": "secureCommunication",
+        "name": "Secure Communication",
+        "manages": ["Authentication", "Authorization", "Encryption", "ServiceIdentity", "InterServiceTrust"]
+      },
+      {
+        "id": "eventDistribution",
+        "name": "Event Distribution",
+        "distributes": ["CommunityEventLedgerEvents", "WorkflowEvents", "AutomationEvents", "KnowledgeEvents", "AIEvents", "DigitalTwinUpdates"]
+      },
+      {
+        "id": "contextPropagation",
+        "name": "Context Propagation",
+        "carries": ["ParticipantIdentity", "Institution", "Community", "Mission", "CalendarContext", "CorrelationId", "Permissions", "TraceInformation"]
+      },
+      {
+        "id": "localBrainFederation",
+        "name": "LocalBrain Federation",
+        "deploymentModes": ["LocalOnly", "CloudOnly", "Hybrid", "Replicated", "Cached", "EventualConsistency"]
+      },
+      {
+        "id": "aiServiceAccess",
+        "name": "AI Service Access",
+        "enforces": ["Permissions", "RateLimits", "AuditTrails", "TrustPolicies", "Explainability", "CommunityEventLedgerPublication"]
+      },
+      {
+        "id": "executiveVisibility",
+        "name": "Executive Visibility",
+        "visualizes": ["RunningServices", "Dependencies", "SynchronizationStatus", "EventThroughput", "AIActivity", "LocalBrainConnectivity", "GeographicDeployment", "PlatformReadiness"]
+      }
+    ],
+    "responsibilityCount": 7,
+    "pairsWithInstitutionalNervousSystem": true,
+    "pairsWithExperienceOperatingSystem": true
+  },
+  "architecturalInsight": {
+    "distributedCivicInfrastructure": true,
+    "supports": ["CloudDeployment", "LocalBrainDeployment", "HybridEnvironments", "OfflineOperation", "AIFederation", "EventDrivenCoordination", "ConstitutionalGovernance"]
+  },
+  "burtImplementationGuidance": [
+    "Build services around domains not UI features",
+    "Prevent overlap in ownership",
+    "Require service contracts",
+    "Communicate through APIs and events",
+    "Support LocalBrain deployment from the beginning",
+    "Keep services independently deployable where practical",
+    "Consult Platform Service Mesh before cross-service communication"
+  ],
+  "acceptanceCriteria": "AC-151",
+  "acceptanceCriteriaMet": true
+}

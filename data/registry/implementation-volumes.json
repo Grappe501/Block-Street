@@ -2,11 +2,11 @@
   "version": "2.0.0",
   "docPath": "docs/master/VOLUMES-INDEX.md",
   "requirementId": "IVS-001",
-  "purpose": "Index and precedence for Volumes 1–7 — the factory layer that builds the COS",
+  "purpose": "Index and precedence for Volumes 1–8 — the factory layer that builds the COS",
   "naturalPause": {
     "statement": "Architecture shifts from what the system does to how the system is built and behaves",
     "productDesignComplete": "Phases 1–6 + Volume 0",
-    "factoryDesignCycle": "Volumes 1–7",
+    "factoryDesignCycle": "Volumes 1–8",
     "phase7DeferredUntil": "implementation volumes complete"
   },
   "volumes": [
@@ -68,6 +68,20 @@
     },
     {
       "volume": 5,
+      "name": "Platform Services & Integration Architecture",
+      "subtitle": "How the platform connects to the outside world",
+      "requirementId": "PSI-001",
+      "docPath": "docs/master/PLATFORM_SERVICES_INTEGRATION_ARCHITECTURE.md",
+      "masterSequencePath": "docs/volume-05/VOLUME_5_MASTER_SEQUENCE.md",
+      "registryPath": "data/registry/platform-services-integration-bible.json",
+      "chapters": 14,
+      "stepsComplete": 1,
+      "stepsTotal": 14,
+      "acceptanceCriteria": "AC-151",
+      "status": "in_progress"
+    },
+    {
+      "volume": 6,
       "name": "AI & Intelligence Bible",
       "subtitle": "Technical AI architecture",
       "requirementId": "AIB-001",
@@ -77,7 +91,7 @@
       "status": "v1_complete"
     },
     {
-      "volume": 6,
+      "volume": 7,
       "name": "Operations & Launch Bible",
       "subtitle": "How the system is operated",
       "requirementId": "OLB-001",
@@ -87,7 +101,7 @@
       "status": "v1_complete"
     },
     {
-      "volume": 7,
+      "volume": 8,
       "name": "Experience Design Bible",
       "subtitle": "How people should feel",
       "requirementId": "EDB-001",
@@ -97,14 +111,15 @@
       "status": "v1_complete"
     }
   ],
-  "readOrderAfterVolume0": [1, 2, 3, 4, 5, 6, 7],
-  "foundationVolumes": [0, 1, 2, 3],
+  "readOrderAfterVolume0": [1, 2, 3, 4, 5, 6, 7, 8],
+  "foundationVolumes": [0, 1, 2, 3, 4, 5],
   "alignmentGoal": [
     "product specification",
     "engineering specification",
     "data specification",
     "operational behavior specification",
     "UX specification",
+    "platform services specification",
     "AI specification",
     "operational launch specification",
     "experience specification"
