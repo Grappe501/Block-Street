@@ -1,0 +1,168 @@
+{
+  "version": "2.0.0",
+  "documentId": "VOLUME-005.12",
+  "requirementId": "PSI-013",
+  "docPath": "docs/volume-05/SCALABILITY_ARCHITECTURE.md",
+  "status": "canonical",
+  "priority": "mission_critical",
+  "lastUpdated": "2026-07-10",
+  "productName": "Scalability, Performance & Resilience Architecture",
+  "guidingPrinciple": "Grow without redesign. Expand without fragmentation.",
+  "scalabilityPhilosophy": {
+    "preserveGovernanceExperienceAutonomyMemoryAIResponsiveness": true,
+    "communityQualityOverRequestVolume": true,
+    "performanceSupportsPeopleNotBenchmarks": true,
+    "scaleInInstitutionalComplexityNotMerelySize": true,
+    "communityPreservingScalability": true
+  },
+  "scalabilityArchitecture": {
+    "layers": [
+      "Demand",
+      "Measurement",
+      "CapacityPlanning",
+      "Scaling",
+      "Verification",
+      "Optimization",
+      "InstitutionalLearning"
+    ],
+    "layerCount": 7
+  },
+  "scalabilityPrincipleCount": 8,
+  "scalabilityPrinciples": [
+    "HorizontallyScalable",
+    "FaultTolerant",
+    "Elastic",
+    "Observable",
+    "Recoverable",
+    "Federated",
+    "Replaceable",
+    "CostAware"
+  ],
+  "scalingDomainCount": 12,
+  "scalingDomains": [
+    { "id": "platformServices", "name": "Platform Services", "scales": ["Independently", "StatelessWherePractical", "ByDemand", "WithoutAffectingUnrelatedServices"] },
+    { "id": "apiLayer", "name": "API Layer", "scales": ["GatewayInstances", "Routing", "Authentication", "RateLimiting", "Caching", "RequestProcessing"] },
+    { "id": "eventFabric", "name": "Event Fabric", "scales": ["EventProducers", "Consumers", "Streams", "Replay", "Partitioning", "DeadLetterQueues"] },
+    { "id": "synchronizationMesh", "name": "Synchronization Mesh", "scales": ["LocalBrains", "Institutions", "Regions", "CloudFederation", "ConflictResolution", "OfflineSynchronization"] },
+    { "id": "knowledgeRetrievalFabric", "name": "Knowledge Retrieval Fabric", "scales": ["Indexes", "Vectors", "KnowledgeGraph", "Caching", "Retrieval", "AIContext"] },
+    { "id": "aiFederation", "name": "AI Federation", "scales": ["ModelRouting", "LocalInference", "CloudInference", "GPUClusters", "PromptQueues", "ContextAssembly"] },
+    { "id": "communityBrain", "name": "Community Brain", "scales": ["Stories", "Research", "Playbooks", "Lessons", "KnowledgeExtraction", "SemanticIndexing"] },
+    { "id": "communityEventLedger", "name": "Community Event Ledger", "scales": ["Storage", "Replay", "TimelineGeneration", "HistoricalQueries", "Archival"] },
+    { "id": "digitalTwins", "name": "Digital Twins", "scales": ["Participants", "Communities", "Institutions", "Missions", "Counties", "Platform", "Runtime", "Security"] },
+    { "id": "communications", "name": "Communications", "scales": ["Email", "SMS", "Push", "Meetings", "Publishing", "Campaigns", "Notifications"] },
+    { "id": "localBrainFederation", "name": "LocalBrain Federation", "scales": ["Individual", "Community", "Institution", "County", "Regional", "Cloud"] },
+    { "id": "runtimeFederation", "name": "Runtime Federation", "scales": ["ThousandsOfRuntimes", "HybridDeployments", "OfflineNodes", "EdgeDevices", "CloudInfrastructure"] }
+  ],
+  "storageStrategy": {
+    "tiers": ["HotStorage", "WarmStorage", "ColdStorage", "HistoricalArchives", "EvidenceArchives", "AIIndexes"],
+    "tierCount": 6,
+    "intentionalStorage": true
+  },
+  "computeStrategy": {
+    "modes": ["CPUWorkloads", "GPUWorkloads", "EdgeCompute", "RegionalCompute", "CloudCompute", "LocalCompute"],
+    "modeCount": 6
+  },
+  "caching": {
+    "supports": ["Knowledge", "Media", "AI", "Search", "Configuration", "DigitalTwins", "ConnectorResponses"],
+    "architecturalCaching": true
+  },
+  "queueArchitecture": {
+    "supports": ["Priority", "BackPressure", "Retries", "Inspection", "Recovery", "Partitioning"],
+    "observableQueues": true
+  },
+  "capacityPlanning": {
+    "evaluates": ["Communities", "Institutions", "Storage", "AI", "Search", "Synchronization", "Communications", "PlatformServices"],
+    "predictiveCapacity": true
+  },
+  "performanceTargets": {
+    "declares": ["LatencyTargets", "AvailabilityTargets", "RecoveryTargets", "SynchronizationTargets", "AIResponseTargets", "SearchTargets"],
+    "targetCount": 6,
+    "measurableTargets": true
+  },
+  "resilience": {
+    "supports": ["AutomaticRetries", "CircuitBreakers", "GracefulDegradation", "Failover", "SelfHealing", "Replay", "Recovery"]
+  },
+  "disasterRecovery": {
+    "protects": ["Knowledge", "CommunityEventLedger", "DigitalTwins", "PlatformServices", "AI", "Synchronization", "RuntimeFederation"]
+  },
+  "communityEventLedgerIntegration": {
+    "performanceEvents": ["Scaling", "Capacity", "Recovery", "Failover", "Optimization", "PlatformEvolution"]
+  },
+  "digitalTwinIntegration": {
+    "twins": ["InfrastructureTwin", "RuntimeTwin", "CapacityTwin", "PerformanceTwin", "ResilienceTwin"],
+    "twinCount": 5,
+    "modelsPlatformGrowth": true
+  },
+  "aiOptimization": {
+    "recommends": ["Scaling", "Caching", "Partitioning", "ResourceAllocation", "ModelPlacement", "KnowledgeOptimization"]
+  },
+  "observabilityIntegration": {
+    "measures": ["Capacity", "Latency", "Availability", "ResourceUtilization", "QueueDepth", "SearchPerformance", "Synchronization", "AI"]
+  },
+  "accessibility": {
+    "scalingMustNeverReduce": ["Accessibility", "Performance", "Translation", "MobileSupport", "OfflineCapability"],
+    "inclusiveGrowth": true
+  },
+  "adaptiveCapacityGrid": {
+    "name": "Adaptive Capacity Grid",
+    "abbreviation": "ACG",
+    "dynamicResourceAllocation": true,
+    "gridPipeline": {
+      "stages": [
+        "DemandDetection",
+        "CapacityAnalysis",
+        "ResourceAllocation",
+        "WorkloadPlacement",
+        "ContinuousOptimization",
+        "KnowledgeCapture"
+      ],
+      "stageCount": 6
+    },
+    "capacityDomains": {
+      "domains": [
+        { "id": "compute", "name": "Compute", "allocates": ["LocalCPU", "LocalGPU", "RegionalCompute", "CloudCompute", "SpecializedAIHardware"] },
+        { "id": "storage", "name": "Storage", "allocates": ["HotStorage", "WarmStorage", "ColdArchives", "EvidencePreservation", "AIIndexes"] },
+        { "id": "ai", "name": "AI", "routesBasedOn": ["Cost", "Latency", "Privacy", "Capability", "LocalBrainAvailability", "GPUCapacity"] },
+        { "id": "knowledge", "name": "Knowledge", "optimizes": ["SearchIndexes", "KnowledgeGraphPartitions", "CommunityBrainStorage", "VectorIndexes", "RetrievalCaches"] },
+        { "id": "communications", "name": "Communications", "scales": ["BroadcastInfrastructure", "NotificationQueues", "MeetingInfrastructure", "LiveStreaming", "VoiceServices"] }
+      ],
+      "domainCount": 5
+    },
+    "elasticFederation": {
+      "evaluatesWorkloadPlacement": true,
+      "localToStatewideDistribution": true,
+      "unchangedParticipantExperience": true
+    },
+    "predictiveScaling": {
+      "predicts": ["ElectionSeasons", "CommunityEvents", "VolunteerSurges", "LegislativeSessions", "DisasterResponse", "MajorConferences", "AIWorkloadSpikes"],
+      "preparesBeforeDemand": true
+    },
+    "communityPreservingScalability": {
+      "preserves": ["LocalOwnership", "LocalAutonomy", "LocalDecisionMaking", "LocalKnowledge", "LocalAIExecutionWhenAppropriate"],
+      "strengthensCommunitiesNotCentralizesPower": true
+    },
+    "selfOptimization": {
+      "learnsFrom": ["OperationalHistory", "CommunityEventLedger", "PlatformTwin", "RuntimeTwins", "PerformanceTwins", "AIRecommendations"],
+      "ongoingInstitutionalCapability": true
+    },
+    "pairsWithRuntimeFederationManager": true,
+    "pairsWithOperationalIntelligenceGrid": true,
+    "pairsWithFederatedSynchronizationMesh": true
+  },
+  "architecturalInsight": {
+    "scalesInstitutionalComplexity": true,
+    "moreCapableNotMoreFragile": true,
+    "resilientLongLivedCivicInfrastructure": true
+  },
+  "burtImplementationGuidance": [
+    "Design every Platform Service for horizontal scaling",
+    "Treat LocalBrain federation as primary scaling strategy",
+    "Build storage tiers from the beginning",
+    "Support graceful degradation",
+    "Keep AI routing flexible",
+    "Preserve explainability during optimization",
+    "Route through Adaptive Capacity Grid"
+  ],
+  "acceptanceCriteria": "AC-162",
+  "acceptanceCriteriaMet": true
+}
