@@ -59,6 +59,7 @@
     { "id": "DB-INSTITUTIONS", "table": "institutions", "status": "in_progress", "requirement": "REG-002" },
     { "id": "DB-COUNTIES", "table": "counties", "status": "in_progress", "requirement": "REG-001" },
     { "id": "DB-EVENTS", "table": "events", "status": "pending", "requirement": "EVT-001" },
+    { "id": "DB-RELATIONSHIPS", "table": "registry_relationships", "status": "pending", "requirement": "REL-001" },
     { "id": "DB-COMMITTEES", "table": "committees", "status": "pending", "requirement": "COM-001" }
   ],
   "apiEndpoints": [
@@ -262,6 +263,34 @@
       "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
     },
     {
+      "id": "REL-001",
+      "title": "Arkansas Relationship Graph",
+      "purpose": "Connect all Registry entities via explicit typed relationships — organizing intelligence system",
+      "description": "PHASE-002.4 graph model, geographic/educational/organizing/network intelligence, discovery engine",
+      "priority": "critical",
+      "principle": "CP-008",
+      "dependencies": ["CNTY-002", "INST-003"],
+      "related": ["REG-001", "REG-002", "NET-001", "REL-M02"],
+      "acceptanceCriteria": [
+        "Canonical relationship types defined",
+        "V1 edge scope documented",
+        "Entity vs relationship separation",
+        "Discovery and intelligence concepts established"
+      ],
+      "futureNotes": "Graph queries, AI recommendations, adjacent counties",
+      "implementationStatus": "done",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": "DB-RELATIONSHIPS",
+        "api": null,
+        "frontend": null,
+        "test": "TEST-REL-001",
+        "doc": "DOC-REL-001"
+      },
+      "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
+    },
+    {
       "id": "USR-001",
       "title": "Participant Registration",
       "purpose": "Answer 'How do I get involved?' — honor-system signup",
@@ -454,8 +483,8 @@
     }
   ],
   "summary": {
-    "totalRequirements": 14,
-    "done": 7,
+    "totalRequirements": 15,
+    "done": 8,
     "inProgress": 4,
     "pending": 3,
     "criticalPending": 3,

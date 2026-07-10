@@ -1,0 +1,76 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/phase-02/ARKANSAS_RELATIONSHIP_GRAPH.md",
+  "motto": "Everything belongs somewhere. Everything connects to something.",
+  "categories": [
+    {
+      "id": "geographic",
+      "name": "Geographic",
+      "types": [
+        { "type": "contains", "source": "Arkansas", "destination": "County", "v1": true, "bidirectional": false },
+        { "type": "contains", "source": "County", "destination": "Institution", "v1": true, "bidirectional": false, "inverse": "belongs_to" },
+        { "type": "located_in", "source": "Institution", "destination": "County", "v1": true, "bidirectional": false, "note": "Inverse view of contains" },
+        { "type": "resides_in", "source": "Participant", "destination": "County", "v1": true, "bidirectional": false },
+        { "type": "adjacent_to", "source": "County", "destination": "County", "v1": false, "bidirectional": true }
+      ]
+    },
+    {
+      "id": "educational",
+      "name": "Educational",
+      "types": [
+        { "type": "attends", "source": "Participant", "destination": "Institution", "v1": true, "bidirectional": false },
+        { "type": "belongs_to", "source": "Institution", "destination": "County", "v1": true, "bidirectional": false },
+        { "type": "graduated_from", "source": "Participant", "destination": "Institution", "v1": false, "bidirectional": false }
+      ]
+    },
+    {
+      "id": "organizing",
+      "name": "Organizing",
+      "types": [
+        { "type": "invited", "source": "Participant", "destination": "Participant", "v1": true, "bidirectional": false },
+        { "type": "invited_by", "source": "Participant", "destination": "Participant", "v1": true, "bidirectional": false, "inverse": "invited" },
+        { "type": "belongs_to", "source": "Participant", "destination": "Committee", "v1": false, "bidirectional": false },
+        { "type": "organized", "source": "Participant", "destination": "Event", "v1": false, "bidirectional": false },
+        { "type": "volunteered_for", "source": "Participant", "destination": "Project", "v1": false, "bidirectional": false }
+      ]
+    },
+    {
+      "id": "network",
+      "name": "Network",
+      "types": [
+        { "type": "connected_to", "source": "Participant", "destination": "Participant", "v1": true, "bidirectional": true },
+        { "type": "mentors", "source": "Participant", "destination": "Participant", "v1": false, "bidirectional": false },
+        { "type": "member_of", "source": "Participant", "destination": "Community", "v1": false, "bidirectional": false }
+      ]
+    },
+    {
+      "id": "civic",
+      "name": "Civic",
+      "types": [
+        { "type": "serves", "source": "Project", "destination": "County", "v1": false, "bidirectional": false },
+        { "type": "operates_in", "source": "Committee", "destination": "Institution", "v1": false, "bidirectional": false },
+        { "type": "operates_in", "source": "Committee", "destination": "County", "v1": false, "bidirectional": false },
+        { "type": "occurs_in", "source": "Event", "destination": "County", "v1": false, "bidirectional": false },
+        { "type": "occurs_at", "source": "Event", "destination": "Institution", "v1": false, "bidirectional": false }
+      ]
+    }
+  ],
+  "v1Edges": [
+    "County contains Institution",
+    "Institution belongs_to County",
+    "Participant resides_in County",
+    "Participant attends Institution",
+    "Participant invited_by Participant",
+    "Participant connected_to Participant"
+  ],
+  "nodeTypes": [
+    "Arkansas",
+    "County",
+    "Institution",
+    "Participant",
+    "Committee",
+    "Event",
+    "Project",
+    "Community"
+  ]
+}

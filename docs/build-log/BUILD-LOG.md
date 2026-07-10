@@ -4,6 +4,39 @@
 
 ---
 
+## 2026-07-10 — PHASE-002.4 Arkansas Relationship Graph
+
+**Document ID:** PHASE-002.4  
+**Requirement IDs:** REL-M01–REL-M14, REL-001, AC-013  
+**Artifact:** `docs/phase-02/ARKANSAS_RELATIONSHIP_GRAPH.md`
+
+### What Was Built
+
+- Registry elevated from database to **organizing intelligence system**
+- **Digital twin** of Arkansas youth organizing ecosystem [REL-M03]
+- Canonical relationship types: geographic, educational, organizing, network, civic
+- `data/registry/relationship-types.json` — live type catalog
+- `relationship-record.schema.json` — edge record schema
+- V1 edges: contains, resides_in, attends, invited_by, connected_to
+
+### Guiding Principle Locked
+
+> Everything belongs somewhere. Everything connects to something.
+
+### Key Shift
+
+**Pages are views over the graph** — not the source of truth. Think network, not pages.
+
+### ED-FD Handoff
+
+| Item | Detail |
+|------|--------|
+| Built | ARKANSAS_RELATIONSHIP_GRAPH.md, relationship-types.json, edge schema |
+| Changed | Phase 2 README, Admin Registry, requirements registry (REL-001, DB-RELATIONSHIPS) |
+| Next | 2.5 Representation Status System |
+
+---
+
 ## 2026-07-10 — PHASE-002.3 Institution Registry Model
 
 **Document ID:** PHASE-002.3  

@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://block-street.netlify.app/schemas/relationship-record.json",
+  "title": "Arkansas Organizing Registry — Relationship Record",
+  "description": "Graph edge record. PHASE-002.4 ARKANSAS_RELATIONSHIP_GRAPH.md",
+  "type": "object",
+  "required": [
+    "id", "type", "sourceEntityId", "sourceEntityType",
+    "destinationEntityId", "destinationEntityType", "createdAt", "status"
+  ],
+  "properties": {
+    "id": { "type": "string", "pattern": "^REL-[a-zA-Z0-9-]+$" },
+    "type": {
+      "type": "string",
+      "enum": [
+        "contains", "located_in", "resides_in", "adjacent_to",
+        "attends", "belongs_to", "graduated_from",
+        "invited", "invited_by", "organized", "volunteered_for",
+        "connected_to", "mentors", "member_of",
+        "serves", "operates_in", "occurs_in", "occurs_at"
+      ]
+    },
+    "sourceEntityId": { "type": "string" },
+    "sourceEntityType": {
+      "type": "string",
+      "enum": ["Arkansas", "County", "Institution", "Participant", "Committee", "Event", "Project", "Community"]
+    },
+    "destinationEntityId": { "type": "string" },
+    "destinationEntityType": {
+      "type": "string",
+      "enum": ["Arkansas", "County", "Institution", "Participant", "Committee", "Event", "Project", "Community"]
+    },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "status": { "type": "string", "enum": ["active", "inactive", "archived"] },
+    "metadata": { "type": "object", "additionalProperties": true }
+  },
+  "additionalProperties": false
+}

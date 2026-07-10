@@ -63,7 +63,7 @@
         { "id": "2.1", "name": "Registry Doctrine [PHASE-002.1]", "status": "done", "notes": "REG-D01–D21, graph model REG-D16, digital map philosophy" },
         { "id": "2.2", "name": "County Registry Model [PHASE-002.2]", "status": "done", "notes": "CNTY-M01–M16, county graph node, JSON schema" },
         { "id": "2.3", "name": "Institution Registry Model [PHASE-002.3]", "status": "done", "notes": "INST-M01–M18, Canonical Profile, knowledge graph INST-M17" },
-        { "id": "2.4", "name": "County-Institution Relationship Map", "status": "pending", "notes": "COUNTY_INSTITUTION_RELATIONSHIP_MAP.md" },
+        { "id": "2.4", "name": "Relationship Graph [PHASE-002.4]", "status": "done", "notes": "REL-M01–M14, digital twin, relationship-types.json, organizing intelligence" },
         { "id": "2.5", "name": "Representation Status System", "status": "pending", "notes": "REPRESENTATION_STATUS_SYSTEM.md" },
         { "id": "2.6", "name": "Outreach Gap Dashboard Requirements", "status": "pending", "notes": "OUTREACH_GAP_DASHBOARD_REQUIREMENTS.md" },
         { "id": "2.7", "name": "Campus Page Personalization Rules", "status": "pending", "notes": "CAMPUS_PAGE_PERSONALIZATION_RULES.md" },
@@ -143,6 +143,12 @@
   "buildLog": [
     {
       "date": "2026-07-10",
+      "title": "PHASE-002.4 Arkansas Relationship Graph",
+      "phase": 2,
+      "summary": "REL-M01–M14 organizing intelligence, digital twin, relationship-types.json, V1 edge scope"
+    },
+    {
+      "date": "2026-07-10",
       "title": "PHASE-002.3 Institution Registry Model",
       "phase": 2,
       "summary": "INST-M01–M18, Educational Institution Canonical Profile, knowledge graph INST-M17, institution-record.schema.json"
@@ -216,9 +222,9 @@
   ],
   "stats": {
     "totalSteps": 40,
-    "doneSteps": 13,
+    "doneSteps": 14,
     "inProgressSteps": 2,
-    "pendingSteps": 25,
-    "percentComplete": 33
+    "pendingSteps": 24,
+    "percentComplete": 35
   }
 }
