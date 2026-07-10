@@ -1,0 +1,226 @@
+{
+  "version": "2.0.0",
+  "documentId": "VOLUME-005.2",
+  "requirementId": "PSI-003",
+  "docPath": "docs/volume-05/API_ARCHITECTURE.md",
+  "status": "canonical",
+  "priority": "foundational",
+  "lastUpdated": "2026-07-10",
+  "guidingPrinciple": "Every API is a promise.",
+  "apiPhilosophy": {
+    "constitutionalContractNotEndpoint": true,
+    "operationalCapabilitiesNotTechnicalApis": true,
+    "preservesTrustSecurityExplainabilityVersionStability": true,
+    "apisArePublicCommitments": true,
+    "resourcesNeverMirrorDatabaseTables": true
+  },
+  "apiArchitecture": {
+    "layers": [
+      "Client",
+      "Authentication",
+      "Authorization",
+      "ContextAssembly",
+      "BusinessRules",
+      "Workflow",
+      "PlatformService",
+      "CommunityEventLedger",
+      "Response"
+    ],
+    "layerCount": 9
+  },
+  "apiPrincipleCount": 8,
+  "apiPrinciples": [
+    "Stable",
+    "Predictable",
+    "Versioned",
+    "PermissionAware",
+    "EventAware",
+    "Explainable",
+    "Observable",
+    "Documented"
+  ],
+  "apiCategoryCount": 6,
+  "apiCategories": [
+    { "id": "internal", "name": "Internal APIs", "usedBy": ["Workspaces", "Dashboards", "AIFederation", "PlatformServices"], "neverPublic": true },
+    { "id": "public", "name": "Public APIs", "availableFor": ["Partners", "Institutions", "ThirdPartyDevelopers", "ApprovedIntegrations"], "governedCapabilitiesOnly": true },
+    { "id": "localBrain", "name": "LocalBrain APIs", "supports": ["OfflineOperation", "LocalServices", "Synchronization", "EdgeDeployments", "CommunityOnlyOperations"], "localBrainFirstClass": true },
+    { "id": "ai", "name": "AI APIs", "supports": ["ContextAssembly", "KnowledgeRetrieval", "CitationGeneration", "PromptRouting", "OperationalReasoning"] },
+    { "id": "event", "name": "Event APIs", "supports": ["Publishing", "Subscriptions", "Replay", "Streaming", "Notifications"] },
+    { "id": "administrative", "name": "Administrative APIs", "supports": ["InstitutionProvisioning", "Configuration", "Maintenance", "PlatformOperations", "Diagnostics"] }
+  ],
+  "communicationStyleCount": 7,
+  "communicationStyles": [
+    "REST",
+    "GraphQL",
+    "EventStreams",
+    "WebSockets",
+    "ServerSentEvents",
+    "BatchAPIs",
+    "StreamingAPIs"
+  ],
+  "operationalResourceCount": 9,
+  "operationalResources": [
+    "Community",
+    "Mission",
+    "Volunteer",
+    "Knowledge",
+    "Institution",
+    "Calendar",
+    "Leadership",
+    "Policy",
+    "DigitalTwin"
+  ],
+  "versioning": {
+    "supports": ["MajorVersions", "MinorAdditions", "Deprecation", "CompatibilityWindows", "MigrationGuides"],
+    "backwardCompatibilityPolicy": true
+  },
+  "contextPropagation": {
+    "fields": ["Participant", "Institution", "Community", "Mission", "Role", "Permissions", "CorrelationId", "Workspace", "AIContext"],
+    "fieldCount": 9,
+    "automatic": true
+  },
+  "authentication": {
+    "methods": ["OAuth", "OpenIDConnect", "APIKeys", "ServiceAccounts", "LocalBrainTrust", "DeviceTrust"],
+    "methodCount": 6
+  },
+  "authorization": {
+    "evaluates": ["Role", "CommunityMembership", "Institution", "Mission", "BusinessRules", "Governance"],
+    "explainablePermissions": true
+  },
+  "responseStandard": {
+    "includes": ["Status", "Data", "Context", "Warnings", "Links", "Pagination", "Metadata", "ExplainabilityWhenAppropriate"],
+    "fieldCount": 8
+  },
+  "errorStandard": {
+    "explains": ["WhatFailed", "Why", "PossibleRecovery", "Documentation", "CorrelationId"],
+    "actionableErrors": true
+  },
+  "rateLimiting": {
+    "scopes": ["Participants", "Institutions", "Integrations", "AI", "ServiceAccounts", "BurstHandling"],
+    "transparent": true
+  },
+  "pagination": {
+    "supports": ["CursorPagination", "Filtering", "Sorting", "Searching", "IncrementalLoading"]
+  },
+  "filtering": {
+    "dimensions": ["Communities", "Counties", "Missions", "Institutions", "Dates", "Relationships", "Status"],
+    "dimensionCount": 7
+  },
+  "searchApiCount": 6,
+  "searchApis": [
+    "SemanticSearch",
+    "KnowledgeSearch",
+    "PeopleSearch",
+    "CommunitySearch",
+    "MissionSearch",
+    "GeographicSearch"
+  ],
+  "specializedApiDomains": {
+    "file": ["Upload", "Download", "Streaming", "Versioning", "MediaMetadata", "VirusScanning", "Retention"],
+    "calendar": ["Scheduling", "Availability", "Synchronization", "RecurringEvents", "MeetingCreation", "ExternalCalendarIntegration"],
+    "notification": ["Email", "SMS", "Push", "Voice", "Digest", "QuietHours", "Priority"]
+  },
+  "aiApiStandard": {
+    "requiredFields": ["Context", "Permissions", "KnowledgeScope", "CitationRequirements", "ExplanationLevel", "ConfidenceTarget"],
+    "fieldCount": 6,
+    "aiGoverned": true
+  },
+  "communityEventLedgerIntegration": {
+    "publishableActions": ["Create", "Update", "Delete", "Approve", "Reject", "Notify"],
+    "automaticPublication": true
+  },
+  "digitalTwinIntegration": {
+    "updatesThroughPlatformServices": true,
+    "neverDirectTwinUpdates": true
+  },
+  "observabilityStandard": {
+    "exposedMetrics": ["Latency", "Errors", "Usage", "Version", "Dependencies", "Health"],
+    "metricCount": 6
+  },
+  "localBrainFederation": {
+    "declarations": ["CloudSupported", "LocalSupported", "OfflineSupported", "SynchronizationModel", "ConflictStrategy"],
+    "explicitIntegration": true
+  },
+  "apiDocumentation": {
+    "endpointFields": ["Purpose", "Permissions", "Inputs", "Outputs", "Events", "BusinessRules", "Examples", "VersionHistory"],
+    "fieldCount": 8,
+    "executableDocumentation": true
+  },
+  "constitutionalApiGateway": {
+    "name": "Constitutional API Gateway",
+    "abbreviation": "CAG",
+    "isSingleEntryPoint": true,
+    "enforcesConstitutionalPrinciplesBeforeServiceExecution": true,
+    "gatewayPipeline": {
+      "stages": [
+        "IncomingRequest",
+        "IdentityVerification",
+        "PermissionEvaluation",
+        "ContextAssembly",
+        "BusinessRuleValidation",
+        "GovernanceReview",
+        "ServiceRouting",
+        "CommunityEventPublication",
+        "Response"
+      ],
+      "stageCount": 9
+    },
+    "responsibilities": [
+      {
+        "id": "identity",
+        "name": "Identity",
+        "verifies": ["Participant", "Institution", "Device", "LocalBrain", "ServiceAccounts", "AIFederation"]
+      },
+      {
+        "id": "authorization",
+        "name": "Authorization",
+        "evaluates": ["Role", "CommunityMembership", "InstitutionPermissions", "MissionPermissions", "BusinessRules", "GovernancePolicies"]
+      },
+      {
+        "id": "contextAssembly",
+        "name": "Context Assembly",
+        "injects": ["CurrentWorkspace", "Community", "Institution", "Mission", "Calendar", "CorrelationId", "Locale", "AccessibilityPreferences"]
+      },
+      {
+        "id": "aiGovernance",
+        "name": "AI Governance",
+        "enforces": ["PermissionBoundaries", "CitationRequirements", "ExplainabilityStandards", "AuditLogging", "RateLimits", "TrustPolicies"],
+        "aiNeverBypassesGovernance": true
+      },
+      {
+        "id": "localBrainFederation",
+        "name": "LocalBrain Federation",
+        "routingTargets": ["LocalServices", "CloudServices", "HybridServices", "CachedServices", "DeferredSynchronization"]
+      },
+      {
+        "id": "observability",
+        "name": "Observability",
+        "generates": ["TraceIds", "Metrics", "PerformanceData", "SecurityEvents", "CommunityEventLedgerEntries"]
+      },
+      {
+        "id": "developerExperience",
+        "name": "Developer Experience",
+        "discovers": ["AvailableAPIs", "RequiredPermissions", "ServiceOwnership", "EventContracts", "VersionHistory", "DeprecationNotices", "SampleRequests", "SampleResponses"]
+      }
+    ],
+    "responsibilityCount": 7,
+    "pairsWithPlatformServiceMesh": true
+  },
+  "architecturalInsight": {
+    "constitutionalInfrastructureNotTransport": true,
+    "unifiedCommunicationLayer": true,
+    "sameEvaluationForAllRequestSources": ["MobileApp", "LocalBrain", "ExternalPartner", "AIFederation", "PlatformService"],
+    "stableAroundOperationalConcepts": true
+  },
+  "burtImplementationGuidance": [
+    "Design APIs around operational capabilities",
+    "Preserve stable contracts",
+    "Keep Business Rules inside Platform Services",
+    "Require context propagation",
+    "Publish Community Event Ledger events automatically",
+    "Support LocalBrain from first implementation",
+    "Route all requests through Constitutional API Gateway"
+  ],
+  "acceptanceCriteria": "AC-152",
+  "acceptanceCriteriaMet": true
+}

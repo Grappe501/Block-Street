@@ -10,7 +10,7 @@
   "readAfter": "UXB-001",
   "coreQuestion": "How does the Community Operating System connect to the outside world while remaining one unified platform?",
   "guidingPrinciple": "One platform. Many connections. Constitutional governance everywhere.",
-  "stepsComplete": 1,
+  "stepsComplete": 2,
   "stepsTotal": 14,
   "platformServiceCount": 27,
   "localBrainWovenThroughout": true,
@@ -18,7 +18,7 @@
   "orchestratorEngine": "PlatformIntegrationOrchestrator",
   "steps": [
     { "id": "5.1", "name": "Platform Services Architecture", "requirement": "PSI-002", "artifact": "docs/volume-05/PLATFORM_SERVICES_ARCHITECTURE.md", "registryPath": "data/registry/platform-services-architecture.json", "status": "done" },
-    { "id": "5.2", "name": "API Architecture", "requirement": "PSI-003", "artifact": "docs/volume-05/API_ARCHITECTURE.md", "registryPath": "data/registry/api-architecture-volume5.json", "status": "pending" },
+    { "id": "5.2", "name": "API Architecture", "requirement": "PSI-003", "artifact": "docs/volume-05/API_ARCHITECTURE.md", "registryPath": "data/registry/api-architecture-volume5.json", "status": "done" },
     { "id": "5.3", "name": "Integration Architecture", "requirement": "PSI-004", "artifact": "docs/volume-05/INTEGRATION_ARCHITECTURE.md", "registryPath": "data/registry/integration-architecture.json", "status": "pending" },
     { "id": "5.4", "name": "Event Streaming Architecture", "requirement": "PSI-005", "artifact": "docs/volume-05/EVENT_STREAM_ARCHITECTURE.md", "registryPath": "data/registry/event-stream-architecture.json", "status": "pending" },
     { "id": "5.5", "name": "Synchronization Architecture", "requirement": "PSI-006", "artifact": "docs/volume-05/SYNCHRONIZATION_ARCHITECTURE.md", "registryPath": "data/registry/synchronization-architecture.json", "status": "pending" },
