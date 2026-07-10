@@ -69,7 +69,7 @@ Volume 3 is complete when Burt understands:
 - [ ] How business rules govern (3.1)
 - [x] How approvals and governance function (3.11)
 - [x] How attention is managed (3.10)
-- [ ] How knowledge compounds (3.12)
+- [x] How knowledge compounds (3.12)
 - [ ] How every subsystem coordinates (3.14)
 
 ---
@@ -89,7 +89,7 @@ Volume 3 is complete when Burt understands:
 | 3.9 Automation Engine | ✅ Done |
 | 3.10 Notification & Attention Engine | ✅ Done |
 | 3.11 Governance Engine | ✅ Done |
-| 3.12 Knowledge Growth Engine | Pending |
+| 3.12 Knowledge Growth Engine | ✅ Done |
 | 3.13 Operational Intelligence Engine | Pending |
 | 3.14 Community OS Orchestrator | Pending |
 

@@ -18,6 +18,24 @@
 
 ---
 
+## 2026-07-10 — Volume 3.12 Knowledge Growth Engine [PBA-013 · AC-133]
+
+**Document:** `docs/volume-03/KNOWLEDGE_GROWTH_ENGINE.md` · **Registry:** `data/registry/knowledge-growth-engine.json`
+
+### What Changed
+
+- **Guiding principle:** *Every experience should leave behind reusable knowledge.*
+- Living knowledge as active operational asset — not document storage
+- **9-stage knowledge lifecycle:** Experience through Legacy
+- **6 knowledge categories:** Operational through Innovation
+- Knowledge objects, quality measures, relationships, validation, reuse tracking
+- Community Brain, Knowledge Graph, Digital Twin, AI, and governance integrations
+- **Knowledge Observatory (KO)** — institutional learning environment with 7 domains
+- Organizational learning loop — missions generate experiences that compound into wisdom
+- Admin Volume 3 tab · requirements PBA-013 updated · Volume 3: 12/14 complete
+
+---
+
 ## 2026-07-10 — Volume 3.11 Governance Engine [PBA-012 · AC-132]
 
 **Document:** `docs/volume-03/GOVERNANCE_ENGINE.md` · **Registry:** `data/registry/governance-engine.json`

@@ -4757,27 +4757,33 @@
     {
       "id": "PBA-013",
       "title": "Knowledge Growth Engine — Volume 3.12",
-      "purpose": "Lesson capture and Community Brain evolution",
-      "description": "VOLUME-003.12 playbook evolution and legacy preservation",
+      "purpose": "Experience becomes knowledge, knowledge becomes institutional memory",
+      "description": "VOLUME-003.12 — Knowledge Observatory, 9-stage lifecycle, 6 knowledge categories, validation, reuse, Community Brain, Knowledge Graph, organizational learning loop",
       "priority": "critical",
       "principle": "CP-001",
       "dependencies": [
         "PBA-012",
-        "DAB-013"
+        "DAB-013",
+        "PBA-006",
+        "PBA-008"
       ],
       "related": [
-        "PBA-014"
+        "PBA-014",
+        "PBA-007",
+        "DAB-007"
       ],
       "acceptanceCriteria": [
-        "Engine philosophy documented",
-        "Operational behaviors defined",
-        "Volume 2 integration specified",
-        "Implementation blueprint for engine"
+        "Knowledge philosophy documented",
+        "Knowledge lifecycle defined",
+        "Categories, quality, reuse, validation, and analytics established",
+        "Community Brain, Knowledge Graph, Digital Twin, AI, and governance integrations incorporated",
+        "Knowledge Observatory specified",
+        "Complete blueprint for continuous organizational learning"
       ],
-      "futureNotes": "Scaffold — pending canonical build step",
-      "implementationStatus": "pending",
+      "futureNotes": "Guiding principle: Every experience should leave behind reusable knowledge.",
+      "implementationStatus": "done",
       "testingStatus": "pending",
-      "documentationStatus": "pending",
+      "documentationStatus": "done",
       "trace": {
         "database": "DB-COS",
         "api": null,
@@ -4787,7 +4793,7 @@
       },
       "versionHistory": {
         "created": "2026-07-10",
-        "implemented": null
+        "implemented": "2026-07-10"
       }
     },
     {
