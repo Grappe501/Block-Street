@@ -11,7 +11,7 @@
   "stepsComplete": 14,
   "stepsTotal": 14,
   "canonicalEntityCount": 43,
-  "schemaDomainCount": 15,
+  "schemaDomainCount": 14,
   "tableCount": 60,
   "steps": [
     {
@@ -128,9 +128,9 @@
     }
   ],
   "schemaDomains": [
-    "platform", "config", "identity", "community", "geo", "action",
-    "growth", "knowledge", "graph", "events", "comms", "search",
-    "intelligence", "analytics", "media"
+    "Identity", "Registry", "Community", "Leadership", "Mission",
+    "Experience", "Growth", "Knowledge", "Partnership", "Capacity",
+    "Communication", "Intelligence", "Analytics", "System"
   ],
   "canonicalEntities": [
     "Participant", "Community", "County", "EducationalInstitution",
