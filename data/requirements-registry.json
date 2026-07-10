@@ -5532,6 +5532,49 @@
       }
     },
     {
+      "id": "PSI-007",
+      "title": "Search, Discovery & Knowledge Retrieval Architecture — Volume 5.6",
+      "purpose": "Platform-wide discovery — participants search for answers, not files",
+      "description": "VOLUME-005.6 — 10 search domains, 6 search types, Knowledge Retrieval Fabric, Knowledge Bundles, federated hybrid semantic search",
+      "priority": "foundational",
+      "principle": "CP-012",
+      "dependencies": [
+        "PSI-006",
+        "PSI-005",
+        "PSI-001",
+        "DAB-011",
+        "ENG-010",
+        "PBA-013"
+      ],
+      "related": [
+        "PSI-001",
+        "PSI-008"
+      ],
+      "acceptanceCriteria": [
+        "Search philosophy documented",
+        "Search domains and search types defined",
+        "Federated retrieval and Knowledge Graph integration established",
+        "Community Brain, Community Event Ledger, Digital Twins, AI, LocalBrain, observability, and security incorporated",
+        "Knowledge Retrieval Fabric specified",
+        "Complete blueprint for platform-wide search and knowledge retrieval"
+      ],
+      "futureNotes": "Guiding principle: People search for answers—not files.",
+      "implementationStatus": "done",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": null,
+        "api": "API-SYSTEM",
+        "frontend": "UI-SYSTEM",
+        "test": "TEST-PSI-007",
+        "doc": "DOC-PSI-007"
+      },
+      "versionHistory": {
+        "created": "2026-07-10",
+        "implemented": "2026-07-10"
+      }
+    },
+    {
       "id": "PSI-006",
       "title": "Synchronization Architecture — Volume 5.5",
       "purpose": "Maintain coherent operational reality across LocalBrains, cloud, devices, and institutions",
@@ -5781,7 +5824,7 @@
         "Foundation stack Volumes 0-5 defined",
         "Complete blueprint for platform services and integration architecture"
       ],
-      "futureNotes": "Volume 5 scaffold — 5/14 canonical steps complete. LocalBrain woven throughout every chapter.",
+      "futureNotes": "Volume 5 scaffold — 6/14 canonical steps complete. LocalBrain woven throughout every chapter.",
       "implementationStatus": "scaffold",
       "testingStatus": "pending",
       "documentationStatus": "scaffold",

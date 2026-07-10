@@ -18,6 +18,23 @@
 
 ---
 
+## 2026-07-10 — Volume 5.6 Search, Discovery & Knowledge Retrieval [PSI-007 · AC-156]
+
+**Document:** `docs/volume-05/SEARCH_ARCHITECTURE.md` · **Registry:** `data/registry/search-architecture-volume5.json`
+
+### What Changed
+
+- **Guiding principle:** *People search for answers—not files.*
+- Search as institutional reasoning — contextual retrieval not keyword lookup
+- **10 search domains** — community through AI search
+- **6 search types** — keyword, semantic, vector, graph, hybrid (default), intent
+- Federated search, retrieval pipeline, ranking, explainability, continuous discovery
+- **Knowledge Retrieval Fabric (KRF)** — 8-stage pipeline, 7 knowledge sources, Knowledge Bundles with retrieval governance
+- Common retrieval layer for humans, AI, Platform Services, LocalBrains
+- Umbrella PSI-001 · platform-services-integration-bible 6/14 · Volume 5 in progress
+
+---
+
 ## 2026-07-10 — Volume 5.5 Synchronization Architecture [PSI-006 · AC-155]
 
 **Document:** `docs/volume-05/SYNCHRONIZATION_ARCHITECTURE.md` · **Registry:** `data/registry/synchronization-architecture.json`
