@@ -4,7 +4,28 @@
 
 ---
 
-## 2026-07-10 — PHASE-001.3 Core Principles (Platform Constitution)
+## 2026-07-10 — PHASE-001.4 Platform Boundaries (Design Guardrails)
+
+**Document ID:** PHASE-001.4  
+**Requirement IDs:** DG-001 through DG-015, BG-001, ED-001, AC-004  
+**Status:** Complete — Canonical — Mandatory Guardrails
+
+### Standing Engineering Doctrine [ED-001]
+
+> Design First · Build Second · Validate Third · Iterate Fourth
+
+### Deliverables
+
+- `docs/build-steps/PHASE-001.4-PLATFORM-BOUNDARIES.md` — 15 boundaries + conflict protocol
+- DG, BG, ED categories in ID convention
+- Admin dashboard: new **Guardrails** tab at `/admin`
+- Conflict resolution: redesign or constitutional change — never silent drift
+
+### Next Step
+
+PHASE-001.5 — Organizing Model
+
+---
 
 **Document ID:** PHASE-001.3  
 **Requirement IDs:** CP-001 through CP-015, CT-001, AC-003  

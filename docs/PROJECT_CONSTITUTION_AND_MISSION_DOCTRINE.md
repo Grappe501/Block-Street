@@ -1,6 +1,6 @@
 # Project Constitution & Mission Doctrine
 
-> **Burt: Read in order:** [PHASE-001.1](build-steps/PHASE-001.1-PLATFORM-IDENTITY.md) → [PHASE-001.2](build-steps/PHASE-001.2-NORTH-STAR-OUTCOME.md) → [PHASE-001.3](build-steps/PHASE-001.3-CORE-PRINCIPLES.md)  
+> **Burt: Read in order:** [001.1 Identity](build-steps/PHASE-001.1-PLATFORM-IDENTITY.md) → [001.2 North Star](build-steps/PHASE-001.2-NORTH-STAR-OUTCOME.md) → [001.3 Constitution](build-steps/PHASE-001.3-CORE-PRINCIPLES.md) → [001.4 Guardrails](build-steps/PHASE-001.4-PLATFORM-BOUNDARIES.md)  
 > That document establishes platform identity without implementation details.  
 > This constitution expands with timeline, teaching system, and build doctrine.
 

@@ -11,6 +11,7 @@ import { AdminArchitecture } from "@/components/admin/AdminArchitecture";
 import { AdminBuildLog } from "@/components/admin/AdminBuildLog";
 import { AdminVersions } from "@/components/admin/AdminVersions";
 import { AdminDeployment } from "@/components/admin/AdminDeployment";
+import { AdminGuardrails } from "@/components/admin/AdminGuardrails";
 import { AdminConstitution } from "@/components/admin/AdminConstitution";
 import { AdminNorthStar } from "@/components/admin/AdminNorthStar";
 import { AdminDataModel } from "@/components/admin/AdminDataModel";
@@ -18,6 +19,7 @@ import { AdminDataModel } from "@/components/admin/AdminDataModel";
 const TABS = [
   { id: "overview", label: "Overview", icon: "📊" },
   { id: "phases", label: "Phases", icon: "🗂️" },
+  { id: "guardrails", label: "Guardrails", icon: "🛡️" },
   { id: "constitution", label: "Constitution", icon: "📜" },
   { id: "north-star", label: "North Star", icon: "⭐" },
   { id: "mission", label: "Mission", icon: "🎯" },
@@ -98,6 +100,7 @@ export function AdminDashboard({ progress }: { progress: BuildProgress }) {
             onBack={() => setSelectedPhase(null)}
           />
         )}
+        {activeTab === "guardrails" && <AdminGuardrails />}
         {activeTab === "constitution" && <AdminConstitution />}
         {activeTab === "north-star" && <AdminNorthStar />}
         {activeTab === "mission" && <AdminMission />}
