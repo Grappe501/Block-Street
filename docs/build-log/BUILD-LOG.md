@@ -18,6 +18,22 @@
 
 ---
 
+## 2026-07-10 — Volume 2.12 AI Knowledge Data Model [DAB-013 · AC-118]
+
+**Document:** `docs/volume-02/AI_KNOWLEDGE_MODEL.md` · **Registry:** `data/registry/ai-knowledge-model.json`
+
+### What Changed
+
+- **Guiding principle:** *AI should retrieve knowledge—not invent institutional memory.*
+- Grounded, permission-aware, explainable AI knowledge — projections from canonical data
+- **7-layer pipeline:** Canonical Data → Knowledge Objects → Knowledge Graph → Retrieval Objects → Context Assembly → AI Orchestrator → Grounded Response
+- Knowledge Objects vs Retrieval Objects — canonical truth separate from AI projections
+- Chunking, embeddings, citations, explainability, memory separation
+- **Canonical Knowledge Fabric** — unified interface with permission filtering, deduplication, citation assembly
+- AI prompt profiles, governance, feedback, provider independence · Admin Data tab · requirements DAB-013 updated
+
+---
+
 ## 2026-07-10 — Volume 2.11 Analytics & Metrics Data Model [DAB-012 · AC-117]
 
 **Document:** `docs/volume-02/ANALYTICS_DATA_MODEL.md` · **Registry:** `data/registry/analytics-data-model.json`

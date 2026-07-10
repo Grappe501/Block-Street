@@ -13,6 +13,7 @@ import med from "../../../data/registry/media-document-model.json";
 import cfg from "../../../data/registry/configuration-model.json";
 import srch from "../../../data/registry/search-index-model.json";
 import anl from "../../../data/registry/analytics-data-model.json";
+import aik from "../../../data/registry/ai-knowledge-model.json";
 
 export function AdminDataArchitecture() {
   const doneSteps = dab.steps.filter((s) => s.status === "done").length;
@@ -219,6 +220,24 @@ export function AdminDataArchitecture() {
         </div>
         <p className="mt-2 text-xs text-pink-600">
           {anl.communityHealthObservatory.signalDomainCount} signal domains · {anl.acceptanceCriteria}
+        </p>
+      </div>
+
+      <div className="card border-emerald-300 bg-emerald-50">
+        <p className="text-xs font-semibold uppercase text-emerald-800">VOLUME-002.12 · AI Knowledge</p>
+        <h2 className="mt-1 text-lg font-bold text-emerald-950">Canonical Knowledge Fabric</h2>
+        <p className="mt-1 text-xs italic text-emerald-900">&ldquo;{aik.guidingPrinciple}&rdquo;</p>
+        <p className="mt-2 text-xs font-semibold text-emerald-800">
+          {aik.aiKnowledgeArchitecture.layerCount} pipeline layers · {aik.memoryLayerCount} memory layers · grounded retrieval
+        </p>
+        <div className="mt-2 flex flex-wrap gap-1">
+          {aik.aiPromptProfiles.slice(0, 4).map((p) => (
+            <span key={p} className="badge bg-emerald-100 text-emerald-800">{p.replace(/([A-Z])/g, " $1").trim()}</span>
+          ))}
+          <span className="badge bg-emerald-200 text-emerald-900">+{aik.aiPromptProfiles.length - 4}</span>
+        </div>
+        <p className="mt-2 text-xs text-emerald-600">
+          {aik.canonicalKnowledgeFabric.operationCount} fabric operations · {aik.acceptanceCriteria}
         </p>
       </div>
 
