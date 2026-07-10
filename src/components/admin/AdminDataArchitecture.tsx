@@ -37,14 +37,20 @@ export function AdminDataArchitecture() {
 
       <div className="card border-cyan-300 bg-cyan-50">
         <p className="text-xs font-semibold uppercase text-cyan-800">VOLUME-002.2 · Entity Dictionary</p>
-        <h2 className="mt-1 text-lg font-bold text-cyan-950">Canonical Entities</h2>
-        <p className="mt-2 text-xs font-semibold text-cyan-800">{ced.entityCount} primary entities</p>
+        <h2 className="mt-1 text-lg font-bold text-cyan-950">Universal Entity Registry</h2>
+        <p className="mt-1 text-xs italic text-cyan-900">&ldquo;{ced.guidingPrinciple}&rdquo;</p>
+        <p className="mt-2 text-xs font-semibold text-cyan-800">
+          {ced.entityCount} entities · {ced.domainCount} domains · {ced.derivedEntityCount} derived
+        </p>
         <div className="mt-2 flex flex-wrap gap-1">
-          {ced.entities.slice(0, 8).map((e) => (
-            <span key={e.id} className="badge bg-cyan-100 text-cyan-800">{e.name}</span>
+          {ced.domains.slice(0, 7).map((d) => (
+            <span key={d} className="badge bg-cyan-100 text-cyan-800">{d}</span>
           ))}
-          <span className="badge bg-cyan-200 text-cyan-900">+{ced.entityCount - 8} more</span>
+          <span className="badge bg-cyan-200 text-cyan-900">+{ced.domainCount - 7}</span>
         </div>
+        <p className="mt-2 text-xs text-cyan-600">
+          {ced.firstClassRelationshipEntities.length} first-class relationship entities · {ced.acceptanceCriteria}
+        </p>
       </div>
 
       <div className="card border-sky-300 bg-sky-50">

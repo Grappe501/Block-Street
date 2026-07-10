@@ -18,7 +18,20 @@
 
 ---
 
-## 2026-07-10 — Volume 2.1 Data Philosophy & Canonical Model [DAB-002 · AC-107]
+## 2026-07-10 — Volume 2.2 Canonical Entity Dictionary [DAB-003 · AC-108]
+
+**Document:** `docs/volume-02/CANONICAL_ENTITY_DICTIONARY.md` · **Registry:** `data/registry/canonical-entity-dictionary.json`
+
+### What Changed
+
+- **Guiding principle:** *Every important concept should exist exactly once in the platform's vocabulary.*
+- **43 entities** across **13 domains:** Identity, Registry, Community, Leadership, Mission, Experience, Opportunity, Knowledge, Partnership, Capacity, Communication, Intelligence, System
+- **Universal Entity Registry** — master catalog with domain ownership, lifecycle, graph/search/twin participation, audit requirements
+- **5 first-class relationship entities:** Membership, Mentorship, Partnership, Attendance, Application
+- **5 derived entities:** Insight, Recommendation, Digital Twin, Search Index, AI Knowledge Object
+- Admin Data tab · requirements DAB-003 · `data-architecture-bible.json` entity count updated to 43
+
+---
 
 **Document:** `docs/volume-02/DATA_PHILOSOPHY.md` · **Registry:** `data/registry/data-philosophy.json`
 
