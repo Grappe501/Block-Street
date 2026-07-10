@@ -8,6 +8,7 @@ import rel from "../../../data/registry/relationship-data-model.json";
 import sch from "../../../data/registry/database-schema-blueprint.json";
 import kgs from "../../../data/registry/knowledge-graph-schema.json";
 import evt from "../../../data/registry/event-data-model.json";
+import tim from "../../../data/registry/time-calendar-data-model.json";
 
 export function AdminDataArchitecture() {
   const doneSteps = dab.steps.filter((s) => s.status === "done").length;
@@ -124,6 +125,24 @@ export function AdminDataArchitecture() {
         </div>
         <p className="mt-2 text-xs text-amber-600">
           {evt.replayCapabilities.length} replay targets · immutable · {evt.acceptanceCriteria}
+        </p>
+      </div>
+
+      <div className="card border-lime-300 bg-lime-50">
+        <p className="text-xs font-semibold uppercase text-lime-800">VOLUME-002.7 · Time & Calendar</p>
+        <h2 className="mt-1 text-lg font-bold text-lime-950">Temporal Intelligence Engine</h2>
+        <p className="mt-1 text-xs italic text-lime-900">&ldquo;{tim.guidingPrinciple}&rdquo;</p>
+        <p className="mt-2 text-xs font-semibold text-lime-800">
+          {tim.calendarTypeCount} calendar types · {tim.calendarHierarchyLevels} hierarchy levels · {tim.defaultTimezone}
+        </p>
+        <div className="mt-2 flex flex-wrap gap-1">
+          {tim.calendarTypes.slice(0, 5).map((c) => (
+            <span key={c.id} className="badge bg-lime-100 text-lime-800">{c.name.replace(" Calendar", "")}</span>
+          ))}
+          <span className="badge bg-lime-200 text-lime-900">+{tim.calendarTypeCount - 5}</span>
+        </div>
+        <p className="mt-2 text-xs text-lime-600">
+          {tim.temporalIntelligenceEngine.evaluates.length} intelligence signals · {tim.acceptanceCriteria}
         </p>
       </div>
 

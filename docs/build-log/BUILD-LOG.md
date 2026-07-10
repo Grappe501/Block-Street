@@ -18,6 +18,24 @@
 
 ---
 
+## 2026-07-10 — Volume 2.7 Time & Calendar Data Model [DAB-008 · AC-113]
+
+**Document:** `docs/volume-02/TIME_CALENDAR_DATA_MODEL.md` · **Registry:** `data/registry/time-calendar-data-model.json`
+
+### What Changed
+
+- **Guiding principle:** *Everything meaningful happens in time. The platform should understand time as a relationship, not just a timestamp.*
+- Time as shared operating layer — planning, coordination, institutional memory, volunteer management
+- **7 calendar types:** Personal, Community, County, Institution, Mission, Initiative, Organizational
+- **9-level hierarchy** from Platform through Participant Calendar
+- Calendar and Event as first-class connected objects
+- Recurrence, availability, subscriptions, shared layers, independent reminder entities
+- **Temporal Intelligence Engine** — time as strategic resource with explainable recommendations
+- Timeline, notification, knowledge, geographic, AI, and federation integration
+- Admin Data tab · requirements DAB-008 updated
+
+---
+
 ## 2026-07-10 — Volume 2.6 Event Data Model [DAB-007 · AC-112]
 
 **Document:** `docs/volume-02/EVENT_DATA_MODEL.md` · **Registry:** `data/registry/event-data-model.json`
