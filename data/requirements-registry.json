@@ -1895,8 +1895,13 @@
       "principle": "CP-001",
       "dependencies": ["DAB-001", "ENG-004", "MAB-001"],
       "related": ["DAB-003", "DCL-001"],
-      "acceptanceCriteria": ["Canonical data principles documented", "Source of truth and ownership defined", "Relationship, event, config, versioning philosophy established"],
-      "futureNotes": "Foundation for all Volume 2 steps",
+      "acceptanceCriteria": [
+        "Canonical data philosophy documented",
+        "Source-of-truth rules established",
+        "Entity, relationship, event, status, visibility, privacy, audit, search, AI, and analytics philosophies defined",
+        "Governing doctrine for every future data model decision"
+      ],
+      "futureNotes": "Guiding principle: Data is the memory of the community",
       "implementationStatus": "done",
       "testingStatus": "pending",
       "documentationStatus": "done",

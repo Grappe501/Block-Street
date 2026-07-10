@@ -18,7 +18,19 @@
 
 ---
 
-## 2026-07-10 — Public High School Registry (All Counties · ADE)
+## 2026-07-10 — Volume 2.1 Data Philosophy & Canonical Model [DAB-002 · AC-107]
+
+**Document:** `docs/volume-02/DATA_PHILOSOPHY.md` · **Registry:** `data/registry/data-philosophy.json`
+
+### What Changed
+
+- **Guiding principle:** *Data is the memory of the community.*
+- Full canonical doctrine: entity, relationship, time, event, config vs operational, public facts vs platform activity, ownership, stewardship, versioning, status, visibility, privacy, audit, search, AI, analytics, archive
+- Expanded registry JSON with 10 core principles, 19 philosophy domains, canonical metadata fields, expansion rule
+- Admin Data Architecture tab reflects new registry structure
+- Requirements DAB-002 acceptance criteria aligned to Volume 2.1 completion standard
+
+---
 
 **Registry:** `high-schools.json` · `high-school-coverage.json` · **LS-P2b**
 

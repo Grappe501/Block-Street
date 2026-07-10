@@ -22,8 +22,17 @@ export function AdminDataArchitecture() {
       <div className="card border-teal-300 bg-teal-50">
         <p className="text-xs font-semibold uppercase text-teal-800">VOLUME-002.1 · Data Philosophy</p>
         <h2 className="mt-1 text-lg font-bold text-teal-950">Canonical Model Principles</h2>
-        <p className="mt-1 text-xs text-teal-900">{dphil.guidingPrinciple}</p>
-        <p className="mt-2 text-xs text-teal-700">SQL canonical · graph/search/AI derived · config vs data separation</p>
+        <p className="mt-1 text-xs italic text-teal-900">&ldquo;{dphil.guidingPrinciple}&rdquo;</p>
+        <p className="mt-2 text-xs text-teal-700">
+          {dphil.corePrinciples.length} core principles · SQL canonical · {dphil.derivedLayers.length} derived layers
+        </p>
+        <div className="mt-2 flex flex-wrap gap-1">
+          {dphil.corePrinciples.slice(0, 6).map((p) => (
+            <span key={p} className="badge bg-teal-100 text-teal-800 capitalize">{p}</span>
+          ))}
+          <span className="badge bg-teal-200 text-teal-900">+{dphil.corePrinciples.length - 6}</span>
+        </div>
+        <p className="mt-2 text-xs text-teal-600">{dphil.acceptanceCriteria} · {dphil.status}</p>
       </div>
 
       <div className="card border-cyan-300 bg-cyan-50">
