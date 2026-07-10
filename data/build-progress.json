@@ -61,7 +61,7 @@
       "docPath": "docs/phase-02/README.md",
       "steps": [
         { "id": "2.1", "name": "Registry Doctrine [PHASE-002.1]", "status": "done", "notes": "REG-D01–D21, graph model REG-D16, digital map philosophy" },
-        { "id": "2.2", "name": "County Registry Model", "status": "pending", "notes": "COUNTY_REGISTRY_MODEL.md — 75-county field schema" },
+        { "id": "2.2", "name": "County Registry Model [PHASE-002.2]", "status": "done", "notes": "CNTY-M01–M16, county graph node, JSON schema" },
         { "id": "2.3", "name": "Institution Registry Model", "status": "pending", "notes": "INSTITUTION_REGISTRY_MODEL.md" },
         { "id": "2.4", "name": "County-Institution Relationship Map", "status": "pending", "notes": "COUNTY_INSTITUTION_RELATIONSHIP_MAP.md" },
         { "id": "2.5", "name": "Representation Status System", "status": "pending", "notes": "REPRESENTATION_STATUS_SYSTEM.md" },
@@ -143,6 +143,12 @@
   "buildLog": [
     {
       "date": "2026-07-10",
+      "title": "PHASE-002.2 County Registry Model",
+      "phase": 2,
+      "summary": "CNTY-M01–M16 county graph node, 75 organizing homes, county-record.schema.json"
+    },
+    {
+      "date": "2026-07-10",
       "title": "PHASE-002.1 Registry Purpose & Authority",
       "phase": 2,
       "summary": "REG-D01–D15 doctrine, Phase 2 step sequence 2.1–2.10, admin Registry tab"
@@ -204,9 +210,9 @@
   ],
   "stats": {
     "totalSteps": 40,
-    "doneSteps": 11,
+    "doneSteps": 12,
     "inProgressSteps": 2,
-    "pendingSteps": 27,
-    "percentComplete": 28
+    "pendingSteps": 26,
+    "percentComplete": 30
   }
 }

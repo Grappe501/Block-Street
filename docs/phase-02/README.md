@@ -4,7 +4,7 @@
 > If something doesn't exist in the Registry, it doesn't exist in the platform.
 
 **Goal:** Build the canonical data foundation for the entire platform.  
-**Status:** In progress · Step 2.1 complete  
+**Status:** In progress · Steps 2.1–2.2 complete  
 **Build Bible (closeout):** `PHASE_2_ARKANSAS_ORGANIZING_REGISTRY_BUILD_BIBLE.md` (Step 2.10)
 
 ---
@@ -28,7 +28,7 @@
 | Step | Document | Status |
 |------|----------|--------|
 | 2.1 | [Registry Doctrine](ARKANSAS_ORGANIZING_REGISTRY_DOCTRINE.md) | ✅ |
-| 2.2 | County Registry Model (graph node) | Pending |
+| 2.2 | [County Registry Model](COUNTY_REGISTRY_MODEL.md) | ✅ |
 | 2.3 | Institution Registry Model (graph node) | Pending |
 | 2.4 | County-Institution Relationship Map (graph edges) | Pending |
 | 2.5 | Representation Status System | Pending |
@@ -44,7 +44,8 @@
 
 | File | Status |
 |------|--------|
-| `data/registry/counties.json` | 75 counties — formal node model in 2.2 |
+| `data/registry/counties.json` | 75 counties — minimal bootstrap; full schema in [COUNTY_REGISTRY_MODEL.md](COUNTY_REGISTRY_MODEL.md) · migrate in 2.9 |
+| `data/registry/schemas/county-record.schema.json` | JSON Schema for county graph node |
 | `data/registry/institutions.json` | 23 institutions — formal node model in 2.3 |
 | Relationship graph | Formalized in 2.4 |
 
@@ -52,8 +53,8 @@
 
 ## Burt's Rule
 
-**Ask the Registry first.** No production schema changes until Steps 2.2–2.4 approved.
+**Ask the Registry first.** County model approved (2.2). Institution model pending (2.3). Seed migration in 2.9.
 
 ---
 
-*Requirements: REG-001, REG-002, REG-003 · Principles: CP-006, OM-L3, OM-L4, LS-P1, LS-P2*
+*Requirements: REG-001, CNTY-002, REG-003 · Step 2.3 preview: Educational Institution Canonical Profile*

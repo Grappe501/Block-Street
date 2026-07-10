@@ -4,6 +4,43 @@
 
 ---
 
+## 2026-07-10 — PHASE-002.2 County Registry Model
+
+**Document ID:** PHASE-002.2  
+**Requirement IDs:** CNTY-M01–CNTY-M16, CNTY-002, AC-011  
+**Artifact:** `docs/phase-02/COUNTY_REGISTRY_MODEL.md`
+
+### What Was Built
+
+- First real Registry **graph node** specification — county as digital organizing community
+- Field model: identity, geography, demographics, organizing status
+- Canonical vs operational separation [CNTY-M16]
+- JSON Schema: `data/registry/schemas/county-record.schema.json`
+- Graph edges: county **contains** institutions, participants, future entities
+
+### Guiding Principle Locked
+
+> Every Arkansas county has an organizing home.
+
+### Not Yet Done (By Design)
+
+- `counties.json` migration to full schema → Step **2.9** seed plan
+- FIPS codes, regions, population for all 75 → Step 2.9
+
+### Step 2.3 Preview (Steve)
+
+Educational Institution **Canonical Profile** — standardized campus page sections (Identity, History, Academics, Student life, etc.) for consistency across institution types.
+
+### ED-FD Handoff
+
+| Item | Detail |
+|------|--------|
+| Built | COUNTY_REGISTRY_MODEL.md, county JSON schema |
+| Changed | Phase 2 README, Admin Registry, requirements registry |
+| Next | 2.3 Institution Registry Model |
+
+---
+
 ## 2026-07-10 — PHASE-002.1 Refinement: Digital Map & Graph Model
 
 **Enhancement to:** PHASE-002.1 Registry Doctrine  

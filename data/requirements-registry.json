@@ -78,7 +78,7 @@
       "priority": "critical",
       "principle": "CP-006",
       "dependencies": [],
-      "related": ["CNTY-001", "LS-P1"],
+      "related": ["CNTY-001", "CNTY-002", "LS-P1"],
       "acceptanceCriteria": [
         "All 75 counties in registry",
         "Each county has unique slug",
@@ -94,6 +94,34 @@
         "frontend": "PAGE-COUNTY",
         "test": "TEST-CNTY-001",
         "doc": "DOC-CNTY-001"
+      },
+      "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
+    },
+    {
+      "id": "CNTY-002",
+      "title": "County Registry Model",
+      "purpose": "Define canonical county graph node — primary organizing home",
+      "description": "PHASE-002.2 field spec, page sections, graph relationships, canonical vs operational separation",
+      "priority": "critical",
+      "principle": "OM-L3",
+      "dependencies": ["REG-003"],
+      "related": ["REG-001", "CNTY-001", "CNTY-M01"],
+      "acceptanceCriteria": [
+        "75 counties as permanent organizing communities",
+        "County record structure defined",
+        "County page V1 specified",
+        "Canonical vs operational fields separated"
+      ],
+      "futureNotes": "County health metrics, ambassadors — V2+",
+      "implementationStatus": "done",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": "DB-COUNTIES",
+        "api": "API-COUNTIES-001",
+        "frontend": "PAGE-COUNTY",
+        "test": "TEST-CNTY-007",
+        "doc": "DOC-CNTY-002"
       },
       "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
     },
@@ -398,8 +426,8 @@
     }
   ],
   "summary": {
-    "totalRequirements": 12,
-    "done": 5,
+    "totalRequirements": 13,
+    "done": 6,
     "inProgress": 4,
     "pending": 3,
     "criticalPending": 3,

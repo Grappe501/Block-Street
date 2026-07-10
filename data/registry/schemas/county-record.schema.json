@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://block-street.netlify.app/schemas/county-record.json",
+  "title": "Arkansas Organizing Registry — County Record",
+  "description": "Canonical county graph node. PHASE-002.2 COUNTY_REGISTRY_MODEL.md",
+  "type": "object",
+  "required": ["id", "slug", "name", "fipsCode", "state", "stateName", "countySeat", "region"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^CNTY-[a-z0-9-]+$", "description": "Permanent Registry ID" },
+    "slug": { "type": "string", "pattern": "^[a-z0-9-]+$", "description": "Immutable URL slug" },
+    "name": { "type": "string", "description": "Display name e.g. Pulaski County" },
+    "fipsCode": { "type": "string", "pattern": "^05[0-9]{3}$", "description": "Arkansas county FIPS" },
+    "state": { "type": "string", "const": "AR" },
+    "stateName": { "type": "string", "const": "Arkansas" },
+    "countySeat": { "type": "string" },
+    "region": {
+      "type": "string",
+      "enum": ["delta", "ozarks", "river_valley", "central", "southwest", "southeast", "northeast", "northwest"]
+    },
+    "mapBoundaryRef": { "type": "string", "description": "SVG path ID or GeoJSON ref — V1.1" },
+    "neighboringCounties": { "type": "array", "items": { "type": "string" } },
+    "population": { "type": "integer", "minimum": 0 },
+    "populationSource": { "type": "string" },
+    "populationUpdated": { "type": "string", "format": "date" },
+    "demographicsNotes": { "type": "string" },
+    "description": { "type": "string" },
+    "historySummary": { "type": "string" },
+    "representationStatus": {
+      "type": "string",
+      "enum": ["planned", "needs_outreach", "organizer_assigned", "building", "active", "under_review", "archived"]
+    },
+    "outreachPriority": { "type": "string", "enum": ["critical", "high", "medium", "low"] },
+    "verificationStatus": { "type": "string", "enum": ["verified", "needs_review"] },
+    "pageUrl": { "type": "string", "pattern": "^/county/" },
+    "youthHubEnabled": { "type": "boolean", "default": true }
+  },
+  "additionalProperties": false
+}

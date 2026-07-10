@@ -2,7 +2,7 @@
 
 const PHASE2_STEPS = [
   { step: "2.1", name: "Registry Doctrine", artifact: "ARKANSAS_ORGANIZING_REGISTRY_DOCTRINE.md", status: "done" },
-  { step: "2.2", name: "County Registry Model", artifact: "COUNTY_REGISTRY_MODEL.md", status: "pending" },
+  { step: "2.2", name: "County Registry Model", artifact: "COUNTY_REGISTRY_MODEL.md", status: "done" },
   { step: "2.3", name: "Institution Registry Model", artifact: "INSTITUTION_REGISTRY_MODEL.md", status: "pending" },
   { step: "2.4", name: "Relationship Map (graph edges)", artifact: "COUNTY_INSTITUTION_RELATIONSHIP_MAP.md", status: "pending" },
   { step: "2.5", name: "Representation Status System", artifact: "REPRESENTATION_STATUS_SYSTEM.md", status: "pending" },
@@ -92,7 +92,8 @@ export function AdminRegistry() {
       <div className="card">
         <h2 className="text-lg font-bold text-slate-900">Preliminary Seed Data</h2>
         <div className="mt-2 space-y-1 text-sm text-slate-600">
-          <p>✓ counties.json — 75 nodes (formal model in 2.2)</p>
+          <p>✓ counties.json — 75 nodes (minimal; full schema in COUNTY_REGISTRY_MODEL.md)</p>
+          <p>✓ county-record.schema.json — JSON Schema graph node</p>
           <p>✓ institutions.json — 23 nodes (formal model in 2.3)</p>
           <p>○ Relationship graph — Step 2.4</p>
           <p>○ Netlify DB — after models approved</p>
