@@ -381,16 +381,20 @@
       "domain": "User experience bible — Volume 4"
     },
     {
+      "prefix": "PSI",
+      "domain": "Platform services & integration bible — Volume 5"
+    },
+    {
       "prefix": "AIB",
-      "domain": "AI & intelligence bible — Volume 5"
+      "domain": "AI & intelligence bible — Volume 6"
     },
     {
       "prefix": "OLB",
-      "domain": "Operations & launch bible — Volume 6"
+      "domain": "Operations & launch bible — Volume 7"
     },
     {
       "prefix": "EDB",
-      "domain": "Experience design bible — Volume 7"
+      "domain": "Experience design bible — Volume 8"
     },
     {
       "prefix": "MPS",
@@ -5528,8 +5532,105 @@
       }
     },
     {
+      "id": "PSI-002",
+      "title": "Platform Services Architecture — Volume 5.1",
+      "purpose": "Define every core platform service — constitutional infrastructure, not features",
+      "description": "VOLUME-005.1 — 27 core platform services, Platform Service Mesh, service contracts, LocalBrain compatibility, event and Digital Twin integration",
+      "priority": "foundational",
+      "principle": "CP-012",
+      "dependencies": [
+        "UXB-015",
+        "UXB-001",
+        "PBA-015",
+        "ENG-007",
+        "PSI-001"
+      ],
+      "related": [
+        "PSI-001",
+        "PSI-003"
+      ],
+      "acceptanceCriteria": [
+        "Platform service philosophy documented",
+        "Core platform services defined",
+        "Ownership boundaries established",
+        "Service contracts, LocalBrain compatibility, observability, AI, Community Event Ledger, and Digital Twin integrations incorporated",
+        "Platform Service Mesh specified",
+        "Complete blueprint for platform service layer"
+      ],
+      "futureNotes": "Guiding principle: One service. One responsibility. Many consumers.",
+      "implementationStatus": "done",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": null,
+        "api": null,
+        "frontend": "UI-SYSTEM",
+        "test": "TEST-PSI-002",
+        "doc": "DOC-PSI-002"
+      },
+      "versionHistory": {
+        "created": "2026-07-10",
+        "implemented": "2026-07-10"
+      }
+    },
+    {
+      "id": "PSI-001",
+      "title": "Platform Services & Integration Architecture — Volume 5",
+      "purpose": "Complete platform services and integration architecture before production APIs",
+      "description": "VOLUME-005 fourteen-step factory — Platform Service Mesh orchestrates APIs, integrations, events, synchronization, search, media, communications, deployment, security, observability, scalability, and platform operations",
+      "priority": "critical",
+      "principle": "CP-012",
+      "dependencies": [
+        "MAB-001",
+        "EAB-001",
+        "DAB-001",
+        "PBA-001",
+        "UXB-001"
+      ],
+      "related": [
+        "PSI-002",
+        "PSI-003",
+        "PSI-004",
+        "PSI-005",
+        "PSI-006",
+        "PSI-007",
+        "PSI-008",
+        "PSI-009",
+        "PSI-010",
+        "PSI-011",
+        "PSI-012",
+        "PSI-013",
+        "PSI-014",
+        "PSI-015",
+        "AIB-001",
+        "OLB-001",
+        "EDB-001"
+      ],
+      "acceptanceCriteria": [
+        "Fourteen-step platform services sequence documented",
+        "Platform integration philosophy and orchestration model established",
+        "Foundation stack Volumes 0-5 defined",
+        "Complete blueprint for platform services and integration architecture"
+      ],
+      "futureNotes": "Volume 5 scaffold — 1/14 canonical steps complete. LocalBrain woven throughout every chapter.",
+      "implementationStatus": "scaffold",
+      "testingStatus": "pending",
+      "documentationStatus": "scaffold",
+      "trace": {
+        "database": null,
+        "api": null,
+        "frontend": "UI-SYSTEM",
+        "test": "TEST-PSI-001",
+        "doc": "DOC-PSI-001"
+      },
+      "versionHistory": {
+        "created": "2026-07-10",
+        "implemented": null
+      }
+    },
+    {
       "id": "AIB-001",
-      "title": "AI & Intelligence Bible — Volume 5",
+      "title": "AI & Intelligence Bible — Volume 6",
       "purpose": "Technical AI architecture — LocalBrain, Community Brain, retrieval, memory, explainability",
       "description": "VOLUME-005 five intelligence layers, prompt contracts, RAG pipelines, human approval workflows",
       "priority": "critical",

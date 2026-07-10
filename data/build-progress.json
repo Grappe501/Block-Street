@@ -117,9 +117,23 @@
       { "id": "V4.12", "name": "Trust, Transparency & Explainability [UXB-013]", "status": "done", "notes": "Trust Ledger, 7 trust domains, 4 explainability levels — AC-148" },
       { "id": "V4.13", "name": "Institutional Experience Architecture [UXB-014]", "status": "done", "notes": "Institution Factory, 12 institution types, 14 templates, 6 capability packs — AC-149" },
       { "id": "V4.14", "name": "Experience Orchestrator [UXB-015]", "status": "done", "notes": "Experience Operating System, 10 layers, 4 runtime loops — Volume 4 orchestrator AC-150" },
-      { "id": "V5.1", "name": "AI & Intelligence Bible [AIB-001]", "status": "done", "notes": "LocalBrain, RAG v1; AC-080" },
-      { "id": "V6.1", "name": "Operations & Launch Bible [OLB-001]", "status": "done", "notes": "Launch stages v1; AC-081" },
-      { "id": "V7.1", "name": "Experience Design Bible [EDB-001]", "status": "done", "notes": "Emotional design v1; AC-082" }
+      { "id": "V5.1", "name": "Platform Services Architecture [PSI-002]", "status": "done", "notes": "Platform Service Mesh, 27 core services, LocalBrain first-class — AC-151" },
+      { "id": "V5.2", "name": "API Architecture [PSI-003]", "status": "pending", "notes": "REST, GraphQL, public APIs, versioning" },
+      { "id": "V5.3", "name": "Integration Architecture [PSI-004]", "status": "pending", "notes": "External connectors, governed adapters" },
+      { "id": "V5.4", "name": "Event Streaming Architecture [PSI-005]", "status": "pending", "notes": "Community Event Ledger, event bus" },
+      { "id": "V5.5", "name": "Synchronization Architecture [PSI-006]", "status": "pending", "notes": "Local-first sync, conflict resolution" },
+      { "id": "V5.6", "name": "Search & Discovery Architecture [PSI-007]", "status": "pending", "notes": "Federated search, semantic retrieval" },
+      { "id": "V5.7", "name": "Media & Content Architecture [PSI-008]", "status": "pending", "notes": "Governed media lifecycle" },
+      { "id": "V5.8", "name": "Communications Architecture [PSI-009]", "status": "pending", "notes": "Constitutional communications" },
+      { "id": "V5.9", "name": "Deployment Architecture [PSI-010]", "status": "pending", "notes": "LocalBrain, cloud, hybrid, edge" },
+      { "id": "V5.10", "name": "Security Architecture [PSI-011]", "status": "pending", "notes": "Systemic security, device trust" },
+      { "id": "V5.11", "name": "Observability Architecture [PSI-012]", "status": "pending", "notes": "Logging, metrics, tracing, audit" },
+      { "id": "V5.12", "name": "Scalability Architecture [PSI-013]", "status": "pending", "notes": "Horizontal scaling, distributed execution" },
+      { "id": "V5.13", "name": "Platform Operations Architecture [PSI-014]", "status": "pending", "notes": "Feature flags, migrations, release management" },
+      { "id": "V5.14", "name": "Platform Integration Orchestrator [PSI-015]", "status": "pending", "notes": "Unified platform runtime orchestrator" },
+      { "id": "V6.1", "name": "AI & Intelligence Bible [AIB-001]", "status": "done", "notes": "LocalBrain, RAG v1; AC-080" },
+      { "id": "V7.1", "name": "Operations & Launch Bible [OLB-001]", "status": "done", "notes": "Launch stages v1; AC-081" },
+      { "id": "V8.1", "name": "Experience Design Bible [EDB-001]", "status": "done", "notes": "Emotional design v1; AC-082" }
     ]
   },
   "masterBuild": {

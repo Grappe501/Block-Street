@@ -18,6 +18,24 @@
 
 ---
 
+## 2026-07-10 — Volume 5.1 Platform Services Architecture [PSI-002 · AC-151] — **VOLUME 5 BEGINS**
+
+**Document:** `docs/volume-05/PLATFORM_SERVICES_ARCHITECTURE.md` · **Registry:** `data/registry/platform-services-architecture.json`
+
+### What Changed
+
+- **Guiding principle:** *One service. One responsibility. Many consumers.*
+- **27 core platform services** with explicit ownership boundaries — services not features
+- **10-stage service pipeline** — Request through Response with Community Event Ledger and Digital Twin integration
+- **8 service principles** — event-driven, observable, constitutionally governed
+- Service communication (events, commands, queries, APIs, synchronization) — no direct database sharing
+- **LocalBrain first-class** — cloud, hybrid, local, offline, synchronization strategy per service
+- **Platform Service Mesh (PSM)** — 7 mesh responsibilities including LocalBrain Federation and AI Service Access
+- Umbrella PSI-001 scaffold · platform-services-integration-bible v2.0.0 · implementation-volumes Volume 5 in progress
+- Foundation stack extended to **Volumes 0–5** · AI/Ops/Experience bibles renumbered to Volumes 6–8
+
+---
+
 ## 2026-07-10 — Volume 4.14 Experience Orchestrator [UXB-015 · AC-150] — **VOLUME 4 ORCHESTRATOR COMPLETE**
 
 **Document:** `docs/volume-04/EXPERIENCE_ORCHESTRATOR.md` · **Registry:** `data/registry/experience-orchestrator.json`
