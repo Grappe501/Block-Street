@@ -18,6 +18,22 @@
 
 ---
 
+## 2026-07-10 — Volume 2.4 Database Schema Blueprint [DAB-005 · AC-110]
+
+**Document:** `docs/volume-02/DATABASE_SCHEMA_BLUEPRINT.md` · **Registry:** `data/registry/database-schema-blueprint.json`
+
+### What Changed
+
+- **Guiding principle:** *Organize the database around business domains—not around screens or features.*
+- **Technology-neutral** logical blueprint — not SQL; Burt converts to migrations
+- **14 business domain schemas:** Identity, Registry, Community, Leadership, Mission, Experience, Growth, Knowledge, Partnership, Capacity, Communication, Intelligence, Analytics, System
+- **104 logical tables** · singular naming · identifier strategy · FK philosophy · join-table policy
+- **Canonical Schema Registry** — governing catalog with ownership, constraints, indexes, graph/search/analytics/AI participation per schema
+- Read models, materialized views, historical tables, soft deletes, partition strategy, migration philosophy
+- Admin Data tab · requirements DAB-005 · `data-architecture-bible.json` schema domains updated to 14
+
+---
+
 ## 2026-07-10 — Volume 2.3 Relationship Data Model [DAB-004 · AC-109]
 
 **Document:** `docs/volume-02/RELATIONSHIP_DATA_MODEL.md` · **Registry:** `data/registry/relationship-data-model.json`

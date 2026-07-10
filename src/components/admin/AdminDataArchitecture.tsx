@@ -5,6 +5,7 @@ import ced from "../../../data/registry/canonical-entity-dictionary.json";
 import mdd from "../../../data/registry/master-data-dictionary.json";
 import dphil from "../../../data/registry/data-philosophy.json";
 import rel from "../../../data/registry/relationship-data-model.json";
+import sch from "../../../data/registry/database-schema-blueprint.json";
 
 export function AdminDataArchitecture() {
   const doneSteps = dab.steps.filter((s) => s.status === "done").length;
@@ -72,15 +73,20 @@ export function AdminDataArchitecture() {
 
       <div className="card border-sky-300 bg-sky-50">
         <p className="text-xs font-semibold uppercase text-sky-800">VOLUME-002.4 · Schema Blueprint</p>
-        <h2 className="mt-1 text-lg font-bold text-sky-950">Postgres Domains</h2>
+        <h2 className="mt-1 text-lg font-bold text-sky-950">Canonical Schema Registry</h2>
+        <p className="mt-1 text-xs italic text-sky-900">&ldquo;{sch.guidingPrinciple}&rdquo;</p>
         <p className="mt-2 text-xs font-semibold text-sky-800">
-          {dab.schemaDomains.length} schemas · {mdd.tableCount}+ tables
+          {sch.schemaDomainCount} business domains · {sch.logicalTableCount} logical tables · technology-neutral
         </p>
         <div className="mt-2 flex flex-wrap gap-1">
-          {dab.schemaDomains.map((s) => (
-            <span key={s} className="badge bg-sky-100 text-sky-800 font-mono text-xs">{s}</span>
+          {sch.schemaDomains.slice(0, 7).map((s) => (
+            <span key={s} className="badge bg-sky-100 text-sky-800">{s}</span>
           ))}
+          <span className="badge bg-sky-200 text-sky-900">+{sch.schemaDomainCount - 7}</span>
         </div>
+        <p className="mt-2 text-xs text-sky-600">
+          {sch.canonicalSchemaRegistry.catalogFields.length} registry catalog fields · {sch.acceptanceCriteria}
+        </p>
       </div>
 
       <div className="card border-indigo-300 bg-indigo-50">

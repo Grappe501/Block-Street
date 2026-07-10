@@ -78,7 +78,7 @@
       { "id": "V2.1", "name": "Data Philosophy [DAB-002]", "status": "done", "notes": "Canonical principles, source of truth, ownership, lifecycle — AC-107" },
       { "id": "V2.2", "name": "Canonical Entity Dictionary [DAB-003]", "status": "done", "notes": "16 primary entities with fields, relationships, lifecycles — AC-108" },
       { "id": "V2.3", "name": "Relationship Data Model [DAB-004]", "status": "done", "notes": "Unified edges, membership, leadership, mentorship, invitations — AC-109" },
-      { "id": "V2.4", "name": "Database Schema Blueprint [DAB-005]", "status": "done", "notes": "15 schemas, naming, indexes, RLS, migration order — AC-110" },
+      { "id": "V2.4", "name": "Database Schema Blueprint [DAB-005]", "status": "done", "notes": "14 business domains, Canonical Schema Registry, 104 logical tables — AC-110" },
       { "id": "V2.5", "name": "Knowledge Graph Schema [DAB-006]", "status": "done", "notes": "Nodes, edges, projections, sync, query model — AC-111" },
       { "id": "V2.6", "name": "Event Data Model [DAB-007]", "status": "done", "notes": "domain_events, timelines, replay, retention — AC-112" },
       { "id": "V2.7", "name": "Time & Calendar Data Model [DAB-008]", "status": "done", "notes": "Calendars, recurrence, reminders, RSVP — AC-113" },
