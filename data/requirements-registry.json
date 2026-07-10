@@ -5532,6 +5532,49 @@
       }
     },
     {
+      "id": "PSI-005",
+      "title": "Event Streaming Architecture — Volume 5.4",
+      "purpose": "Event-first information flow — every meaningful action becomes institutional memory",
+      "description": "VOLUME-005.4 — 13 event categories, Institutional Event Fabric, Event Time Machine, replay, dead-letter queues, LocalBrain event federation",
+      "priority": "foundational",
+      "principle": "CP-012",
+      "dependencies": [
+        "PSI-004",
+        "PSI-003",
+        "PSI-001",
+        "DAB-007",
+        "ENG-009",
+        "PBA-015"
+      ],
+      "related": [
+        "PSI-001",
+        "PSI-006"
+      ],
+      "acceptanceCriteria": [
+        "Event philosophy documented",
+        "Event categories and lifecycle defined",
+        "Event Bus, replay, ordering, and dead-letter queues established",
+        "AI, Community Event Ledger, Digital Twin, Community Health, observability, security, and LocalBrain federation incorporated",
+        "Institutional Event Fabric specified",
+        "Complete blueprint for event streaming infrastructure"
+      ],
+      "futureNotes": "Guiding principle: Every meaningful action becomes an event. Every event becomes institutional memory.",
+      "implementationStatus": "done",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": null,
+        "api": "API-SYSTEM",
+        "frontend": null,
+        "test": "TEST-PSI-005",
+        "doc": "DOC-PSI-005"
+      },
+      "versionHistory": {
+        "created": "2026-07-10",
+        "implemented": "2026-07-10"
+      }
+    },
+    {
       "id": "PSI-004",
       "title": "Integration Architecture — Volume 5.3",
       "purpose": "Constitutional bridges to external platforms — governed adapters, not shortcuts",
@@ -5696,7 +5739,7 @@
         "Foundation stack Volumes 0-5 defined",
         "Complete blueprint for platform services and integration architecture"
       ],
-      "futureNotes": "Volume 5 scaffold — 3/14 canonical steps complete. LocalBrain woven throughout every chapter.",
+      "futureNotes": "Volume 5 scaffold — 4/14 canonical steps complete. LocalBrain woven throughout every chapter.",
       "implementationStatus": "scaffold",
       "testingStatus": "pending",
       "documentationStatus": "scaffold",

@@ -18,6 +18,22 @@
 
 ---
 
+## 2026-07-10 — Volume 5.4 Event Streaming Architecture [PSI-005 · AC-154]
+
+**Document:** `docs/volume-05/EVENT_STREAM_ARCHITECTURE.md` · **Registry:** `data/registry/event-stream-architecture.json`
+
+### What Changed
+
+- **Guiding principle:** *Every meaningful action becomes an event. Every event becomes institutional memory.*
+- Event-first architecture — institutional events not mere transactions
+- **13 event categories** — identity through platform events
+- Event Bus, replay, ordering, dead-letter queues, LocalBrain federation
+- Community Event Ledger feeds from Event Bus; Digital Twins update from events only
+- **Institutional Event Fabric (IEF)** — 9 fabric layers, 4 enrichment domains, Event Time Machine, event streams as knowledge
+- Umbrella PSI-001 · platform-services-integration-bible 4/14 · Volume 5 in progress
+
+---
+
 ## 2026-07-10 — Volume 5.3 Integration Architecture [PSI-004 · AC-153]
 
 **Document:** `docs/volume-05/INTEGRATION_ARCHITECTURE.md` · **Registry:** `data/registry/integration-architecture.json`
