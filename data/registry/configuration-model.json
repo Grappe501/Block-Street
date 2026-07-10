@@ -1,1 +1,256 @@
-{"version":"1.0.0","requirementId":"DAB-010","docPath":"docs/volume-02/CONFIGURATION_MODEL.md","configDomains":["roles","community_types","templates","workflows","recognition","feature_flags"],"acceptanceCriteria":"AC-115"}
+{
+  "version": "2.0.0",
+  "documentId": "VOLUME-002.9",
+  "requirementId": "DAB-010",
+  "docPath": "docs/volume-02/CONFIGURATION_MODEL.md",
+  "status": "canonical",
+  "priority": "critical",
+  "lastUpdated": "2026-07-10",
+  "guidingPrinciple": "If behavior may reasonably change, it should be configured—not hard-coded.",
+  "configIsNotOperationalData": true,
+  "dclCompanion": {
+    "requirementId": "DCL-001",
+    "docPath": "docs/volume-01/DIGITAL_CONSTITUTION_LAYER.md",
+    "boundary": "DCL defines non-overridable constraints; config operates within DCL bounds"
+  },
+  "configurationArchitecture": {
+    "layers": [
+      "PlatformConfiguration",
+      "StateConfiguration",
+      "OrganizationConfiguration",
+      "CommunityConfiguration",
+      "ParticipantPreferences"
+    ],
+    "layerCount": 5,
+    "description": "Each layer overrides only what it owns"
+  },
+  "configurationPrinciples": [
+    "Versioned",
+    "Auditable",
+    "PermissionAware",
+    "Searchable",
+    "Documented",
+    "Reversible",
+    "Deployable"
+  ],
+  "configurationCategoryCount": 12,
+  "configurationCategories": [
+    {
+      "id": "identity",
+      "name": "Identity Configuration",
+      "domainSchema": "Identity",
+      "examples": ["AuthenticationProviders", "RegistrationRules", "ProfileTemplates", "VerificationPolicies", "DefaultPrivacySettings"]
+    },
+    {
+      "id": "community",
+      "name": "Community Configuration",
+      "domainSchema": "Community",
+      "examples": ["CommunityTypes", "MembershipRules", "LeadershipStructures", "CommunityTemplates", "WelcomeJourneys", "CommunityLifecycleRules"]
+    },
+    {
+      "id": "leadership",
+      "name": "Leadership Configuration",
+      "domainSchema": "Leadership",
+      "examples": ["LeadershipPathways", "LeadershipTerms", "SuccessionTemplates", "MentorshipPrograms", "RecognitionPrograms"]
+    },
+    {
+      "id": "mission",
+      "name": "Mission Configuration",
+      "domainSchema": "Mission",
+      "examples": ["MissionTemplates", "ProjectTemplates", "TaskTemplates", "MilestoneDefinitions", "MissionWorkflows"]
+    },
+    {
+      "id": "event",
+      "name": "Event Configuration",
+      "domainSchema": "Experience",
+      "examples": ["EventTypes", "RegistrationRules", "AttendancePolicies", "ReminderSchedules", "CalendarDefaults", "VenueTemplates"]
+    },
+    {
+      "id": "growth",
+      "name": "Growth Configuration",
+      "domainSchema": "Growth",
+      "examples": ["InvitationWorkflows", "ReferralRecognition", "BelongingMilestones", "GrowthStages", "CommunityLaunchTemplates", "VolunteerOnboarding"]
+    },
+    {
+      "id": "knowledge",
+      "name": "Knowledge Configuration",
+      "domainSchema": "Knowledge",
+      "examples": ["StoryCategories", "KnowledgeTaxonomy", "PlaybookTemplates", "LessonTemplates", "CommunityBrainCategories", "LegacyClassifications"]
+    },
+    {
+      "id": "communication",
+      "name": "Communication Configuration",
+      "domainSchema": "Communication",
+      "examples": ["NotificationRules", "DigestSchedules", "CommunicationChannels", "QuietHourDefaults", "AnnouncementTemplates", "MessagePriorities"]
+    },
+    {
+      "id": "partnership",
+      "name": "Partnership Configuration",
+      "domainSchema": "Partnership",
+      "examples": ["PartnerTypes", "AgreementTemplates", "RelationshipClassifications", "CollaborationWorkflows"]
+    },
+    {
+      "id": "capacity",
+      "name": "Capacity Configuration",
+      "domainSchema": "Capacity",
+      "examples": ["SkillTaxonomy", "ResourceCategories", "EquipmentClassifications", "TransportationCategories", "AvailabilityRules"]
+    },
+    {
+      "id": "intelligence",
+      "name": "Intelligence Configuration",
+      "domainSchema": "Intelligence",
+      "examples": ["RecommendationPolicies", "AIPromptProfiles", "ConfidenceThresholds", "DigitalTwinRefreshSchedules", "SearchRanking", "KnowledgeWeighting"]
+    },
+    {
+      "id": "system",
+      "name": "System Configuration",
+      "domainSchema": "System",
+      "examples": ["FeatureFlags", "PlatformBranding", "RegionalSettings", "TimeZones", "Localization", "EnvironmentProfiles", "PlatformDefaults"]
+    }
+  ],
+  "configurationObjectFields": [
+    "canonicalId",
+    "configurationCategory",
+    "key",
+    "value",
+    "version",
+    "status",
+    "owner",
+    "effectiveDate",
+    "expirationDate",
+    "source",
+    "approvalStatus"
+  ],
+  "resolutionHierarchy": [
+    "Platform",
+    "State",
+    "Region",
+    "County",
+    "Institution",
+    "Community",
+    "Participant"
+  ],
+  "resolutionHierarchyLevels": 7,
+  "inheritanceModel": {
+    "inheritDefaultsFromHigherLevels": true,
+    "overrideOnlyApprovedSettings": true,
+    "lockedValuesCannotBeOverridden": true,
+    "traceableOverrideChain": true,
+    "example": ["PlatformDailyDigest", "CommunityWeeklyDigest", "ParticipantImmediateNotifications"]
+  },
+  "versioningFields": [
+    "ChangedBy",
+    "ChangeReason",
+    "Approval",
+    "EffectivePeriod",
+    "RollbackInformation",
+    "HistoricalValues"
+  ],
+  "approvalRequiredExamples": [
+    "PermissionChanges",
+    "LeadershipStructure",
+    "CommunityTemplates",
+    "AIBehavior",
+    "WorkflowDefinitions"
+  ],
+  "featureFlags": {
+    "areConfigurationObjects": true,
+    "rolloutScopes": ["Pilot", "County", "Institution", "Community", "Participant"],
+    "temporaryNotPermanent": true
+  },
+  "workflowDefinitions": [
+    "CommunityLaunch",
+    "MissionApproval",
+    "LeadershipSuccession",
+    "VolunteerOnboarding",
+    "KnowledgePublication"
+  ],
+  "templateExamples": [
+    "MissionCanvas",
+    "MeetingAgenda",
+    "StoryTemplate",
+    "CommunityCharter",
+    "RecognitionCertificate",
+    "WelcomeEmail"
+  ],
+  "taxonomyExamples": [
+    "Topics",
+    "MissionCategories",
+    "KnowledgeAreas",
+    "StoryTypes",
+    "Skills",
+    "VolunteerInterests",
+    "Counties",
+    "InstitutionClassifications"
+  ],
+  "validationRules": [
+    "AllowedValues",
+    "Ranges",
+    "Dependencies",
+    "RequiredFields",
+    "MutualExclusions"
+  ],
+  "deploymentCapabilities": [
+    "Export",
+    "Import",
+    "Promotion",
+    "Comparison",
+    "Rollback",
+    "EnvironmentSynchronization"
+  ],
+  "aiCapabilities": [
+    "explainConfiguration",
+    "recommendImprovements",
+    "detectConflicts",
+    "generateTemplates",
+    "suggestWorkflowRefinements"
+  ],
+  "aiNeverChangesWithoutApproval": true,
+  "securityRequirements": [
+    "PermissionControlled",
+    "Audited",
+    "Versioned",
+    "Recoverable",
+    "AdditionalReviewForSensitiveConfig"
+  ],
+  "eventLedgerIntegration": {
+    "eventType": "config.updated",
+    "ledgerPath": "data/registry/event-data-model.json"
+  },
+  "platformConstitutionEngine": {
+    "name": "Platform Constitution Engine",
+    "purpose": "Central interpreter and enforcer of governing configuration — not per-service rule duplication",
+    "resolves": [
+      "ActiveConfigurationValues",
+      "InheritanceChain",
+      "FeatureFlagStatus",
+      "WorkflowDefinitions",
+      "PermissionPolicies",
+      "TemplateSelection",
+      "ValidationRules",
+      "EffectiveDates",
+      "VersionApplicability"
+    ],
+    "communityCreationExample": {
+      "determines": [
+        "CommunityTemplate",
+        "LeadershipPathway",
+        "OnboardingWorkflow",
+        "NotificationRules",
+        "AIPromptProfile",
+        "FeatureFlags"
+      ]
+    },
+    "principle": "Changes driven by data and constitutional rules, not scattered application code"
+  },
+  "domainSchemaMapping": {
+    "schema": "System",
+    "entities": ["Configuration", "FeatureFlag", "WorkflowDefinition", "Enumeration", "StatusDefinition", "TemplateDefinition"]
+  },
+  "bootstrapRegistries": {
+    "note": "data/registry/*.json are V0 bootstrap seeds; production config lives in governed store",
+    "examples": ["status-framework.json", "community-identity.json", "knowledge-governance.json"]
+  },
+  "acceptanceCriteria": "AC-115",
+  "acceptanceCriteriaMet": true
+}
