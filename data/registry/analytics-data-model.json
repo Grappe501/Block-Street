@@ -1,1 +1,292 @@
-{"version":"1.0.0","requirementId":"DAB-012","docPath":"docs/volume-02/ANALYTICS_DATA_MODEL.md","metricDomains":["growth","health","operational","leadership"],"acceptanceCriteria":"AC-117"}
+{
+  "version": "2.0.0",
+  "documentId": "VOLUME-002.11",
+  "requirementId": "DAB-012",
+  "docPath": "docs/volume-02/ANALYTICS_DATA_MODEL.md",
+  "status": "canonical",
+  "priority": "critical",
+  "lastUpdated": "2026-07-10",
+  "guidingPrinciple": "Measure what strengthens communities—not simply what is easy to count.",
+  "coreQuestion": "How can we build stronger communities?",
+  "analyticsPhilosophy": {
+    "notThePurposeOfPlatform": true,
+    "meaningfulEngagementOverVanity": true,
+    "derivedNeverCanonical": true,
+    "rewardHealthyBehavior": true
+  },
+  "emphasisAreas": [
+    "Belonging",
+    "Participation",
+    "Leadership",
+    "Knowledge",
+    "Relationships",
+    "CommunityHealth",
+    "VolunteerImpact",
+    "LongTermSustainability"
+  ],
+  "deemphasizedVanityMetrics": [
+    "Clicks",
+    "Views",
+    "Logins",
+    "Downloads"
+  ],
+  "analyticsArchitecture": {
+    "layers": [
+      "CanonicalData",
+      "CommunityEventLedger",
+      "AnalyticsPipeline",
+      "MetricEngine",
+      "DashboardModels",
+      "DecisionSupport"
+    ],
+    "layerCount": 6
+  },
+  "canonicalSources": [
+    "Participant",
+    "Community",
+    "Mission",
+    "Event",
+    "VolunteerActivity",
+    "Story",
+    "Knowledge",
+    "Relationship",
+    "Partnership",
+    "Calendar",
+    "CommunityKnowledgeGraph",
+    "DigitalTwin",
+    "CommunityEventLedger"
+  ],
+  "metricCategoryCount": 10,
+  "metricCategories": [
+    {
+      "id": "community_health",
+      "name": "Community Health Metrics",
+      "measures": ["ActiveCommunities", "MemberParticipation", "LeadershipContinuity", "KnowledgeGrowth", "MissionCompletion", "CommunityResilience"]
+    },
+    {
+      "id": "participation",
+      "name": "Participation Metrics",
+      "measures": ["VolunteerHours", "EventAttendance", "MissionParticipation", "CommitteeInvolvement", "MentorshipEngagement", "ReturningVolunteers"],
+      "valuesConsistencyOverVolume": true
+    },
+    {
+      "id": "leadership",
+      "name": "Leadership Metrics",
+      "measures": ["LeadershipPipeline", "NewLeadersDeveloped", "MentorshipCompletion", "LeadershipSuccession", "LeadershipDiversity", "LeadershipRetention"]
+    },
+    {
+      "id": "growth",
+      "name": "Growth Metrics",
+      "measures": ["CommunityLaunches", "InvitationAcceptance", "ReferralChains", "BelongingMilestones", "InstitutionParticipation", "CountyCoverage"]
+    },
+    {
+      "id": "mission",
+      "name": "Mission Metrics",
+      "measures": ["MissionCompletion", "MilestoneCompletion", "VolunteerParticipation", "KnowledgeGenerated", "CommunityImpact", "MissionReuse"]
+    },
+    {
+      "id": "knowledge",
+      "name": "Knowledge Metrics",
+      "measures": ["StoriesPublished", "LessonsCaptured", "PlaybooksCreated", "KnowledgeReuse", "CommunityBrainGrowth", "LegacyPreservation"]
+    },
+    {
+      "id": "partnership",
+      "name": "Partnership Metrics",
+      "measures": ["ActivePartnerships", "SharedInitiatives", "PartnerEngagement", "CommunityCollaboration", "InstitutionParticipation", "CrossCountyRelationships"]
+    },
+    {
+      "id": "capacity",
+      "name": "Capacity Metrics",
+      "measures": ["SkillsAvailable", "Facilities", "EquipmentUtilization", "TransportationAvailability", "VolunteerCapacity", "CommunityReadiness"]
+    },
+    {
+      "id": "communication",
+      "name": "Communication Metrics",
+      "measures": ["AnnouncementReach", "DigestEngagement", "NotificationEffectiveness", "CommunicationPreferences", "CommunityResponse", "AttentionHealth"]
+    },
+    {
+      "id": "geographic",
+      "name": "Geographic Metrics",
+      "measures": ["CountyCoverage", "InstitutionCoverage", "RegionalActivity", "CommunityDensity", "TravelPatterns", "ServiceGaps"]
+    }
+  ],
+  "metricObjectFields": [
+    "canonicalId",
+    "metricName",
+    "category",
+    "definition",
+    "calculation",
+    "units",
+    "refreshSchedule",
+    "owner",
+    "visibility",
+    "confidence",
+    "source",
+    "version"
+  ],
+  "kpiExamples": [
+    "CommunitiesLaunched",
+    "VolunteerRetention",
+    "LeadershipPipelineHealth",
+    "KnowledgeGrowth",
+    "MissionCompletion",
+    "CommunityHealth",
+    "InstitutionParticipation"
+  ],
+  "dashboardTypes": [
+    "ParticipantDashboard",
+    "CommunityDashboard",
+    "CountyDashboard",
+    "InstitutionDashboard",
+    "LeadershipDashboard",
+    "StateDashboard"
+  ],
+  "timeSeriesGranularities": [
+    "Daily",
+    "Weekly",
+    "Monthly",
+    "Quarterly",
+    "Annual",
+    "HistoricalComparison",
+    "TrendAnalysis"
+  ],
+  "rollupHierarchy": [
+    "Participant",
+    "Community",
+    "Institution",
+    "County",
+    "Region",
+    "State"
+  ],
+  "rollupLevels": 6,
+  "benchmarkingTypes": [
+    "CommunityVsCommunity",
+    "CountyVsCounty",
+    "InstitutionVsInstitution",
+    "HistoricalComparison",
+    "PeerGroups"
+  ],
+  "communityHealthIndex": {
+    "components": [
+      "Participation",
+      "Leadership",
+      "Knowledge",
+      "Growth",
+      "MissionCompletion",
+      "VolunteerRetention"
+    ],
+    "transparentAndExplainable": true,
+    "noOpaqueSingleScore": true
+  },
+  "dataFreshnessFields": [
+    "LastRefreshed",
+    "RefreshFrequency",
+    "SourceData",
+    "KnownLimitations"
+  ],
+  "explainabilityQuestions": [
+    "WhatIsBeingMeasured",
+    "HowIsItCalculated",
+    "WhereDoesDataOriginate",
+    "WhatAssumptionsExist"
+  ],
+  "privacyRules": [
+    "Permissions",
+    "Visibility",
+    "AggregationThresholds",
+    "CommunityBoundaries",
+    "AggregateByDefault",
+    "IndividualMetricsRequireConsent"
+  ],
+  "aiCapabilities": [
+    "summarizeDashboards",
+    "identifyTrends",
+    "forecastGrowth",
+    "recommendImprovements",
+    "highlightAnomalies",
+    "generateExecutiveReports"
+  ],
+  "aiNeverRedefinesMetrics": true,
+  "communityHealthObservatory": {
+    "name": "Community Health Observatory",
+    "purpose": "Highest-level analytics — continuous explainable health evaluation across the statewide network",
+    "evaluates": [
+      "Participant",
+      "Community",
+      "Institution",
+      "County",
+      "StatewideNetwork"
+    ],
+    "signalDomains": [
+      {
+        "id": "participation",
+        "name": "Participation Signals",
+        "signals": ["VolunteerEngagement", "EventParticipation", "MissionInvolvement", "CommitteeActivity"]
+      },
+      {
+        "id": "leadership",
+        "name": "Leadership Signals",
+        "signals": ["LeadershipPipeline", "MentorshipActivity", "SuccessionReadiness", "LeadershipRetention"]
+      },
+      {
+        "id": "knowledge",
+        "name": "Knowledge Signals",
+        "signals": ["StoriesPublished", "LessonsCaptured", "PlaybooksReused", "CommunityBrainGrowth"]
+      },
+      {
+        "id": "growth",
+        "name": "Growth Signals",
+        "signals": ["NewParticipants", "CommunityLaunches", "ReferralNetworks", "BelongingMilestones"]
+      },
+      {
+        "id": "capacity",
+        "name": "Capacity Signals",
+        "signals": ["Skills", "Facilities", "Equipment", "VolunteerAvailability"]
+      },
+      {
+        "id": "partnership",
+        "name": "Partnership Signals",
+        "signals": ["InstitutionalEngagement", "SharedInitiatives", "CrossCommunityCollaboration"]
+      },
+      {
+        "id": "operational",
+        "name": "Operational Signals",
+        "signals": ["MissionCompletion", "CalendarActivity", "CommunicationEffectiveness", "ResponseTimes"]
+      }
+    ],
+    "signalDomainCount": 7,
+    "explainableAssessmentExample": [
+      "LeadershipContinuityStrong",
+      "VolunteerParticipationIncreasedLastThreeMonths",
+      "MentorshipActivityDeclined",
+      "KnowledgeContributionsAccelerating",
+      "PartnershipDevelopmentSlowed",
+      "CommunityEngagementStable"
+    ],
+    "philosophy": "Strengthen communities through understanding, not unexplained scores"
+  },
+  "operationalPlatformMetrics": [
+    "ApiErrorRate",
+    "P95Latency",
+    "NotificationDeliverySuccess",
+    "IndexLag",
+    "GraphSyncLag",
+    "BackgroundJobQueueDepth",
+    "MigrationStatus"
+  ],
+  "reportingSnapshots": {
+    "purpose": "Frozen exports for board meetings, grants, launch reviews",
+    "reproducible": true,
+    "sourceWatermarkRequired": true
+  },
+  "domainSchemaMapping": {
+    "schema": "Analytics",
+    "entities": ["Snapshot", "Aggregation", "DashboardMetric", "KPI", "Rollup", "HistoricalSummary", "PerformanceIndicator"]
+  },
+  "projectionIntegrations": {
+    "eventLedgerPath": "data/registry/event-data-model.json",
+    "knowledgeGraphPath": "data/registry/knowledge-graph-schema.json"
+  },
+  "acceptanceCriteria": "AC-117",
+  "acceptanceCriteriaMet": true
+}
