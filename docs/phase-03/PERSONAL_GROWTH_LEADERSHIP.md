@@ -145,7 +145,7 @@ Volunteer service · Projects completed · Communities strengthened · People me
 
 Education · Environment · Healthcare · Economic Development · Arts · Agriculture · Technology · Community Service · Youth Leadership
 
-**[PGL-M06a]** Interests power **discovery** [Step 3.13] and **Mission Board** alignment [PCC-M07].
+**[PGL-M06a]** Interests power **discovery** [OBE-001] and **Mission Board** alignment [PCC-M07].
 
 **[PGL-M06b]** V1: optional multi-select on registration or profile — honor-system.
 
@@ -178,7 +178,7 @@ Education · Environment · Healthcare · Economic Development · Arts · Agricu
 
 | Capability | Status |
 |------------|--------|
-| Find mentor | Step 3.13 recommendations |
+| Find mentor | OBE-001 opportunities |
 | Become mentor | Journey mentor stage [JRN-M05g] |
 | Mentorship history | Trust Graph + Growth Graph edges |
 | Learning goals | future |
@@ -242,7 +242,7 @@ Education · Environment · Healthcare · Economic Development · Arts · Agricu
 
 ## PGL-M12 — Future Growth Engine
 
-**[PGL-M12]** Future AI/recommendations may suggest [Step 3.13]:
+**[PGL-M12]** Future AI/opportunities may suggest [OBE-001]:
 
 Learning resources · Leadership opportunities · Mentors · Projects · Committees · Volunteer opportunities
 
@@ -306,9 +306,9 @@ GrowthGraph
 
 | Use | Step |
 |-----|------|
-| Personalized recommendations | 3.13 |
+| Personalized recommendations | OBE-001 |
 | Leadership development paths | 3.14 |
-| Mentorship matching | 3.13 |
+| Mentorship matching | OBE-001 |
 | Storytelling / Civic Passport | CPP-001 |
 | Impact reporting | Phase 6 |
 | Future AI coaching | Phase 6 |
@@ -408,6 +408,6 @@ Step 3.8 is complete when:
 
 ---
 
-**Next Step:** 3.13 — Recommendation Engine
+**Next Step:** 3.14 — Participant Experience
 
 *Trace: Experience → Growth Graph → Civic Passport narrative → Journey stage → Command Center Growth widget*

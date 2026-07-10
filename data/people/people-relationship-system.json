@@ -26,7 +26,7 @@
     { "id": "3.10", "name": "Communication & Attention Management", "artifact": "COMMUNICATION_ATTENTION_MANAGEMENT.md", "status": "done", "requirement": "CAM-001" },
     { "id": "3.11", "name": "Civic Journey Timeline", "artifact": "CIVIC_JOURNEY_TIMELINE.md", "status": "done", "requirement": "CJT-001" },
     { "id": "3.12", "name": "Personal Digital Twin", "artifact": "PERSONAL_DIGITAL_TWIN.md", "status": "done", "requirement": "PDT-001" },
-    { "id": "3.13", "name": "Recommendation Engine", "artifact": "RECOMMENDATION_ENGINE.md", "status": "pending", "requirement": "ANL-001" },
+    { "id": "3.13", "name": "Opportunity & Belonging Engine", "artifact": "OPPORTUNITY_BELONGING_ENGINE.md", "status": "done", "requirement": "OBE-001" },
     { "id": "3.14", "name": "Participant Experience", "artifact": "PARTICIPANT_EXPERIENCE.md", "status": "pending", "requirement": "JRN-001" },
     { "id": "3.15", "name": "Phase 3 Build Bible", "artifact": "PHASE_3_PEOPLE_RELATIONSHIP_BUILD_BIBLE.md", "status": "pending", "requirement": "PEP-001" }
   ],

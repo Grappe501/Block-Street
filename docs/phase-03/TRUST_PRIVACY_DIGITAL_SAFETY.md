@@ -271,7 +271,7 @@ Transparency → Trust → Invitations → Relationships → Communities
 
 **[TPS-M12a]** Plain language preferred over technical jargon — every data field has a **"why we ask"** tooltip.
 
-**[TPS-M12b]** Recommendation explanations [Step 3.13]: "Suggested because you share a county" — never black box [TPS-M15].
+**[TPS-M12b]** Opportunity explanations [OBE-001]: "Suggested because you share a county" — never black box [TPS-M15].
 
 ---
 
@@ -464,6 +464,6 @@ Step 3.7 is complete when:
 
 ---
 
-**Next Step:** 3.13 — Recommendation Engine
+**Next Step:** 3.14 — Participant Experience
 
 *Trace: Trust → Invitations [RGE] → Relationships [PRN] → Communities → CP-007 privacy by design*

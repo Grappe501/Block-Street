@@ -4,6 +4,24 @@
 
 ---
 
+## 2026-07-10 — PHASE-003.13 Opportunity & Belonging Engine (Canonical)
+
+**Document ID:** PHASE-003.13 · **OBE-001 · AC-032**
+
+### What Was Built
+
+- **Belonging over engagement** — good community organizer, not engagement optimizer
+- **Community Marketplace [OBE-M12]** — open browseable opportunities + personalized suggestions
+- **Six opportunity categories** — People, Communities, Service, Learning, Leadership, Growth
+- **Explainability required** — every recommendation includes a reason
+- **Ethical principles** — no dark patterns, popularity bias, or artificial urgency
+
+### Guiding Principle Locked
+
+> **Every participant should feel that there is always a meaningful next step waiting for them.**
+
+---
+
 ## 2026-07-10 — PHASE-003.12 Personal Digital Twin (Canonical)
 
 **Document ID:** PHASE-003.12 · **PDT-001 · AC-031**

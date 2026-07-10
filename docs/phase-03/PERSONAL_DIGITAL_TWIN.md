@@ -199,7 +199,7 @@ Participant
 
 **[PDT-M07a]** Every recommendation remains **explainable** [PDT-M09] — no black-box ranking.
 
-**[PDT-M07b]** Full Recommendation Engine spec: Step 3.13 — PDT provides **context**; 3.13 provides **recommendation logic**.
+**[PDT-M07b]** Full spec: [Opportunity & Belonging Engine](OPPORTUNITY_BELONGING_ENGINE.md) [OBE-001] — PDT provides **context**; OBE provides **opportunity logic**.
 
 ---
 
@@ -366,7 +366,7 @@ ParticipantContext
 
 **[PDT-M15a]** Jul 12/14: Command Center uses **simple context** — registration data + invite count + county/campus — not full twin engine.
 
-**[PDT-M15b]** Step 3.13 Recommendation Engine **consumes** ParticipantContext — does not rebuild it.
+**[PDT-M15b]** [Opportunity & Belonging Engine OBE-001](OPPORTUNITY_BELONGING_ENGINE.md) **consumes** ParticipantContext — does not rebuild it.
 
 ---
 
@@ -409,6 +409,6 @@ Step 3.12 is complete when:
 
 ---
 
-**Next Step:** 3.13 — Recommendation Engine
+**Next Step:** 3.14 — Participant Experience
 
 *Trace: Participation → twin evolves → Context Engine assembles → explainable suggestion → participant chooses → trust preserved*

@@ -76,9 +76,9 @@
   "personalizationSurfaces": [
     { "surface": "missionBoard", "ref": "PCC-M09" },
     { "surface": "morningBrief", "ref": "PCC-M17" },
-    { "surface": "recommendedEvents", "ref": "Step 3.13" },
-    { "surface": "suggestedCommittees", "ref": "Step 3.13" },
-    { "surface": "volunteerOpportunities", "ref": "Step 3.13" },
+    { "surface": "recommendedEvents", "ref": "OBE-001" },
+    { "surface": "suggestedCommittees", "ref": "OBE-001" },
+    { "surface": "volunteerOpportunities", "ref": "OBE-001" },
     { "surface": "mentorship", "ref": "PGL-001" },
     { "surface": "learning", "ref": "PGL-M08" },
     { "surface": "communityIntroductions", "ref": "NET-001" }
@@ -159,6 +159,6 @@
       "src/lib/context/explainRecommendation.ts",
       "src/lib/twin/composeTwinView.ts"
     ],
-    "consumer": "Step 3.13 Recommendation Engine"
+    "consumer": "OBE-001 Opportunity & Belonging Engine"
   }
 }

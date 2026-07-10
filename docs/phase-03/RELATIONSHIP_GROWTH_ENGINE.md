@@ -273,7 +273,7 @@ Participant invite
 
 ## RGE-M12 — Smart Recommendations
 
-**[RGE-M12]** Future versions may recommend (Step 3.13):
+**[RGE-M12]** Future versions may recommend [OBE-001]:
 
 - People who share interests · Nearby participants
 - Committees needing help · Events · Volunteer opportunities
@@ -467,6 +467,6 @@ Step 3.5 is complete when:
 
 ---
 
-**Next Step:** 3.13 — Recommendation Engine
+**Next Step:** 3.14 — Participant Experience
 
 *Trace: PHQ home → PRN community → RGE expansion → PCC daily workspace → Morning Brief → Mission Board*

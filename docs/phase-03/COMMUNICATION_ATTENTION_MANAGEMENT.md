@@ -154,7 +154,7 @@ Security notifications · Critical account issues · Urgent community alerts
 
 **[CAM-M06b]** Explainable notifications: `reason` field on every message — shown in UI and Trust Center history [CAM-M12].
 
-**[CAM-M06c]** Cross-ref recommendation engine [Step 3.13]: suggestions appear in Morning Brief / digest — not as interruptive push by default.
+**[CAM-M06c]** Cross-ref [OBE-001]: suggestions appear in Morning Brief / digest — not as interruptive push by default.
 
 ---
 
@@ -409,6 +409,6 @@ Step 3.10 is complete when:
 
 ---
 
-**Next Step:** 3.13 — Recommendation Engine
+**Next Step:** 3.14 — Participant Experience
 
 *Trace: Attention Budget → Morning Brief → Trust Center prefs → less noise → sustained trust → invitations continue*

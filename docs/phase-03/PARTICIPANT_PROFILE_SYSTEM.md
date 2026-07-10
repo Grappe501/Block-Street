@@ -243,7 +243,7 @@ When a participant logs in, they should not feel like they are editing an accoun
 
 ## PHQ-M11 — My Opportunities
 
-**Key:** `opportunities` · **Requirement:** [OIS-001, ANL-001 future]
+**Key:** `opportunities` · **Requirement:** [OIS-001, OBE-001]
 
 **[PHQ-M11]** Displays recommended:
 
@@ -254,7 +254,7 @@ When a participant logs in, they should not feel like they are editing an accoun
 
 **[PHQ-M11b]** V1: static next-step cards from journey rules — "Complete your profile," "Invite a friend," "Explore your county."
 
-**[PHQ-M11c]** Full recommendation engine: Step 3.13 — surfaces back to HQ [PHQ-M18].
+**[PHQ-M11c]** Full engine: [Opportunity & Belonging Engine](OPPORTUNITY_BELONGING_ENGINE.md) [OBE-001] — surfaces back to HQ [PHQ-M18].
 
 ---
 
@@ -485,6 +485,6 @@ Step 3.3 is complete when:
 
 ---
 
-**Next Step:** 3.13 — Recommendation Engine
+**Next Step:** 3.14 — Participant Experience
 
 *Trace: USR-001 registration → PHQ shell → NET-002/003 invite tools → JRN orchestrator → CPP timeline*

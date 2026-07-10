@@ -27,6 +27,7 @@
     { "prefix": "CAM", "domain": "Communication & attention management" },
     { "prefix": "CJT", "domain": "Civic journey timeline" },
     { "prefix": "PDT", "domain": "Personal digital twin" },
+    { "prefix": "OBE", "domain": "Opportunity & belonging engine" },
     { "prefix": "CPP", "domain": "Civic passport" },
     { "prefix": "STS", "domain": "Status & lifecycle" },
     { "prefix": "ADM", "domain": "Administration" },
@@ -856,7 +857,7 @@
         "Participant Context Engine architecture specified",
         "Blueprint for participant-centric intelligence"
       ],
-      "futureNotes": "Full graph traversal, AI context boundary, Recommendation Engine consumer — Step 3.13",
+      "futureNotes": "Full graph traversal, AI context boundary, OBE-001 consumer",
       "implementationStatus": "done",
       "testingStatus": "pending",
       "documentationStatus": "done",
@@ -866,6 +867,36 @@
         "frontend": "PAGE-PCC",
         "test": "TEST-PDT-001",
         "doc": "DOC-PDT-001"
+      },
+      "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
+    },
+    {
+      "id": "OBE-001",
+      "title": "Opportunity & Belonging Engine",
+      "purpose": "Help participants discover where they naturally belong — optimize for belonging, not engagement",
+      "description": "PHASE-003.13 Community Marketplace, six opportunity categories, explainable recommendations, ethical principles, PDT context consumer, Mission Board integration",
+      "priority": "critical",
+      "principle": "OM-L1",
+      "dependencies": ["PDT-001", "JRN-001", "OIS-001", "CAM-001", "SEC-001"],
+      "related": ["ANL-001", "PCC-001", "PHQ-001", "NET-001"],
+      "acceptanceCriteria": [
+        "Opportunity philosophy documented",
+        "Recommendation categories established",
+        "Explainability required",
+        "Ethical recommendation principles defined",
+        "Community Marketplace architecture specified",
+        "Blueprint for participant-centered opportunity discovery"
+      ],
+      "futureNotes": "Full PDT-powered engine, Marketplace browse UI, AI assistant — ANL-001 remains analytics layer",
+      "implementationStatus": "done",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": "DB-USERS",
+        "api": null,
+        "frontend": "PAGE-PCC",
+        "test": "TEST-OBE-001",
+        "doc": "DOC-OBE-001"
       },
       "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
     },

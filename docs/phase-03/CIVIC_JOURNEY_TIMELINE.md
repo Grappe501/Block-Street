@@ -407,6 +407,6 @@ Step 3.11 is complete when:
 
 ---
 
-**Next Step:** 3.13 — Recommendation Engine
+**Next Step:** 3.14 — Participant Experience
 
 *Trace: Service → timeline entry → Civic Passport → Memory Moment → "remember why I stayed" → sustained engagement*

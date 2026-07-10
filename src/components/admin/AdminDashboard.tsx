@@ -30,6 +30,7 @@ import { AdminCommunityRecognitionAppreciation } from "@/components/admin/AdminC
 import { AdminCommunicationAttentionManagement } from "@/components/admin/AdminCommunicationAttentionManagement";
 import { AdminCivicJourneyTimeline } from "@/components/admin/AdminCivicJourneyTimeline";
 import { AdminPersonalDigitalTwin } from "@/components/admin/AdminPersonalDigitalTwin";
+import { AdminOpportunityBelongingEngine } from "@/components/admin/AdminOpportunityBelongingEngine";
 import { AdminGrowthModel } from "@/components/admin/AdminGrowthModel";
 import { AdminOrganizingModel } from "@/components/admin/AdminOrganizingModel";
 import { AdminGuardrails } from "@/components/admin/AdminGuardrails";
@@ -59,6 +60,7 @@ const TABS = [
   { id: "comms", label: "Comms", icon: "📬" },
   { id: "timeline", label: "Timeline", icon: "📖" },
   { id: "pdt", label: "PDT", icon: "🪞" },
+  { id: "belonging", label: "Belonging", icon: "🌿" },
   { id: "growth", label: "Growth", icon: "🌱" },
   { id: "organizing-model", label: "Organizing", icon: "🔗" },
   { id: "guardrails", label: "Guardrails", icon: "🛡️" },
@@ -161,6 +163,7 @@ export function AdminDashboard({ progress }: { progress: BuildProgress }) {
         {activeTab === "comms" && <AdminCommunicationAttentionManagement />}
         {activeTab === "timeline" && <AdminCivicJourneyTimeline />}
         {activeTab === "pdt" && <AdminPersonalDigitalTwin />}
+        {activeTab === "belonging" && <AdminOpportunityBelongingEngine />}
         {activeTab === "growth" && <AdminGrowthModel />}
         {activeTab === "organizing-model" && <AdminOrganizingModel />}
         {activeTab === "guardrails" && <AdminGuardrails />}

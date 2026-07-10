@@ -352,7 +352,7 @@ This is where everything built so far **comes together**:
 **[PCC-M15]** Displays:
 
 - Journey progress · Leadership opportunities · Suggested mentors (future)
-- Next milestones · Future recommendations [Step 3.13]
+- Next milestones · Opportunity suggestions [OBE-001]
 
 **[PCC-M15a]** Maps to PHQ sections `journey` + `opportunities` [PHQ-M09, PHQ-M11].
 
@@ -512,6 +512,6 @@ Step 3.6 is complete when:
 
 ---
 
-**Next Step:** 3.13 — Recommendation Engine
+**Next Step:** 3.14 — Participant Experience
 
 *Trace: PHQ home → PRN community → RGE expansion → PCC daily workspace → Morning Brief → Mission Board → journey next step*

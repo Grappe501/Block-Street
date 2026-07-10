@@ -73,7 +73,7 @@ export function AdminPersonalDigitalTwin() {
       </div>
 
       <p className="text-sm text-slate-500">
-        docs/phase-03/PERSONAL_DIGITAL_TWIN.md · PDT-001 · REL-001 · ADT-001 · Step 3.13 consumes context
+        docs/phase-03/PERSONAL_DIGITAL_TWIN.md · PDT-001 · REL-001 · ADT-001 · OBE-001 consumes context
       </p>
     </div>
   );

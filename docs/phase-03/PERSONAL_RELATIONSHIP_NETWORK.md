@@ -363,11 +363,11 @@ TrustGraph
 
 | Capability | Step |
 |------------|------|
-| Better team recommendations | 3.13 |
-| Mentor matching | 3.13 |
+| Better team recommendations | OBE-001 |
+| Mentor matching | OBE-001 |
 | Project staffing | Phase 5 |
 | Community resilience analysis | Phase 6 |
-| Smarter introductions | 3.13 |
+| Smarter introductions | OBE-001 |
 | Meaningful AI assistance | Phase 6 |
 
 **[PRN-M16e]** V1: store `invited_by` + `connected_to` edges; trust orchestrator returns edge list. Full signal derivation in v1.1.
@@ -462,6 +462,6 @@ Step 3.4 is complete when:
 
 ---
 
-**Next Step:** 3.13 — Recommendation Engine
+**Next Step:** 3.14 — Participant Experience
 
 *Trace: PRN network → Relationship widget in PCC → Trust Graph → Morning Brief invite acceptance*

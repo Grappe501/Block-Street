@@ -47,7 +47,7 @@ When complete, every participant receives:
 | 3.10 | [Communication & Attention Management](COMMUNICATION_ATTENTION_MANAGEMENT.md) | Attention Budget — earn not abuse | ✅ |
 | 3.11 | [Civic Journey Timeline](CIVIC_JOURNEY_TIMELINE.md) | Lifelong story — Memory Moments | ✅ |
 | 3.12 | [Personal Digital Twin](PERSONAL_DIGITAL_TWIN.md) | Context Engine — living model | ✅ |
-| 3.13 | Recommendation Engine | People, events, mentors, opportunities | Pending |
+| 3.13 | [Opportunity & Belonging Engine](OPPORTUNITY_BELONGING_ENGINE.md) | Community Marketplace — belonging | ✅ |
 | 3.14 | Participant Experience | Onboarding journey — first week to first leadership | Pending |
 | 3.15 | Phase 3 Build Bible | Complete People System closeout | Pending |
 
@@ -207,15 +207,23 @@ The most important **trust document** in the project — trust as infrastructure
 - **Explainable personalization** — assistance not prediction; reason on every suggestion
 - **Composition not duplication** — twin references canonical stores
 
-*Live spec:* `personal-digital-twin.json` · *Distinction:* ADT-001 = state landscape · PDT-001 = participant journey · *Consumer:* Step 3.13 Recommendation Engine
+*Live spec:* `personal-digital-twin.json` · *Distinction:* ADT-001 = state landscape · PDT-001 = participant journey · *Consumer:* [Opportunity & Belonging Engine OBE-001]
 
 ---
 
-## 3.13 — Recommendation Engine
+## 3.13 — Opportunity & Belonging Engine
 
-Recommend: people · events · committees · volunteer opportunities · nearby campuses · nearby counties · training · mentors · future AI coaching
+**Requirement focus:** OBE-001 · PDT-001 · OIS-001 · JRN-M08
 
-*Uses Mission + journey stage + graph proximity [OIS-M11, JRN-M10]*
+**Good community organizer** — help people discover where they naturally belong:
+
+- **Community Marketplace [OBE-M12]** — open searchable opportunities + personalized suggestions
+- **Six categories** — People, Communities, Service, Learning, Leadership, Growth
+- **Explainability required** — reason on every recommendation
+- **Belonging over engagement** — ethical, transparent, participant-centered
+- **Mission Board integration** — PCC-M07, PHQ-M11 consume `generateOpportunities()`
+
+*Live spec:* `opportunity-belonging-engine.json` · *Consumes:* PDT Participant Context · *Extends:* OIS Mission Board [OIS-M16]
 
 ---
 
@@ -247,7 +255,7 @@ Identity · Journey · Profiles · Networks · Recruitment · Recognition · Pri
 | 3.6 | Command Center core | ✅ design |
 | 3.7 | Basic privacy + Trust Center | ✅ design |
 
-Steps 3.13–3.14: design now, implement post-launch. Steps 3.8–3.12 design complete.
+Steps 3.14–3.15: design now, implement post-launch. Steps 3.8–3.13 design complete.
 
 ---
 

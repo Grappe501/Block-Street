@@ -1,0 +1,187 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/phase-03/OPPORTUNITY_BELONGING_ENGINE.md",
+  "motto": "Every participant should feel that there is always a meaningful next step waiting for them.",
+  "principle": "Optimize for belonging — not engagement metrics. Help people discover where they naturally belong.",
+  "purpose": "Discover meaningful ways to connect, contribute, learn, and grow — recommendations serve participants, not the platform.",
+  "constitutionalAlignment": "Participants choose their own path — guidance plus freedom, never algorithm-only narrowing.",
+  "optimizeFor": "belonging",
+  "notFor": ["engagementMetrics", "timeOnSite", "notificationOpens", "popularityRanking"],
+  "philosophyQuestions": [
+    "Where do I belong?",
+    "Who should I meet?",
+    "How can I help?",
+    "What can I learn?",
+    "Where can I grow?"
+  ],
+  "categories": [
+    {
+      "key": "people",
+      "label": "People",
+      "examples": ["meetMentor", "welcomeNewParticipant", "reconnect", "collaborate", "similarInterests", "alumniIntroductions"],
+      "sources": ["NET-001", "PRN-M16", "PGL-M09"]
+    },
+    {
+      "key": "communities",
+      "label": "Communities",
+      "examples": ["joinCampus", "exploreCounty", "joinCommittee", "supportNeighboringCampus", "regionalInitiative"],
+      "sources": ["CID-001", "REG-001", "OIS-M06"]
+    },
+    {
+      "key": "service",
+      "label": "Service",
+      "examples": ["volunteer", "communityProject", "campusActivity", "countyInitiative", "specialEvent", "emergencyResponseFuture"],
+      "sources": ["VOL-001", "OIS-M09"]
+    },
+    {
+      "key": "learning",
+      "label": "Learning",
+      "examples": ["leadershipLesson", "organizingResources", "workshop", "training", "communityStories", "civicAcademyFuture"],
+      "sources": ["PGL-M08", "CRA-M09"]
+    },
+    {
+      "key": "leadership",
+      "label": "Leadership",
+      "examples": ["startCommittee", "organizeEvent", "mentorSomeone", "leadProject", "launchCommunity"],
+      "matchExperience": true,
+      "sources": ["JRN-M06", "PGL-M04", "COM-001"]
+    },
+    {
+      "key": "growth",
+      "label": "Growth",
+      "examples": ["completeProfile", "inviteFriend", "attendFirstEvent", "developSkill", "celebrateMilestone", "buildRelationships"],
+      "steadyProgress": true,
+      "sources": ["JRN-M08", "RGE-001"]
+    }
+  ],
+  "personalizationSignals": [
+    "interests",
+    "skills",
+    "journeyStage",
+    "communities",
+    "relationships",
+    "volunteerHistory",
+    "leadershipDevelopment",
+    "currentOpportunities"
+  ],
+  "orchestrator": "generateOpportunities(participantId, context: ParticipantContext)",
+  "explainability": {
+    "required": true,
+    "reasonFieldOnEveryCard": true,
+    "examples": [
+      "You expressed interest in environmental projects.",
+      "Your county is organizing a volunteer event this weekend.",
+      "Several classmates recently joined this committee.",
+      "You've been mentoring new participants—here's a leadership workshop."
+    ],
+    "dismissWithoutPenalty": true
+  },
+  "discovery": {
+    "encouragesExploration": true,
+    "types": ["nearbyCampuses", "neighboringCounties", "communityProjects", "volunteerOpportunities", "crossCampusCollaboration"],
+    "objective": "expandingRelationships"
+  },
+  "opportunityFeed": {
+    "sections": [
+      "todaysOpportunities",
+      "thisWeeksEvents",
+      "communitiesNeedingHelp",
+      "peopleToWelcome",
+      "volunteerProjects",
+      "learningResources"
+    ],
+    "surfaces": ["PCC-M07 Mission Board", "PHQ-M11 Opportunities"],
+    "respectsAttentionBudget": true,
+    "maxPrimarySuggestions": 5
+  },
+  "communityBenefit": {
+    "balancesIndividualAndCommunity": true,
+    "examples": [
+      "countyLackingOrganizers",
+      "committeeNeedsVolunteers",
+      "campusLaunchingFirstEvent",
+      "mentorshipOpportunities",
+      "statewideInitiativesFuture"
+    ],
+    "suggestNotAssign": true,
+    "oisUnderservedSignals": true
+  },
+  "ethicalRecommendations": {
+    "avoid": [
+      "manipulativeEngagement",
+      "darkPatterns",
+      "artificialUrgency",
+      "politicalPersuasion",
+      "popularityBias",
+      "commercialInfluence"
+    ],
+    "transparent": true,
+    "participantCentered": true,
+    "antiGamificationAlignment": ["CRA-M12b", "RGE-M13", "PGL-M03b", "OIS-M14"]
+  },
+  "futureAi": {
+    "capabilities": ["summarizeOpportunities", "findRelevantProjects", "introduceMentors", "suggestVolunteerWork", "explainRecommendations"],
+    "advisoryOnly": true,
+    "readsViaContextEngine": true,
+    "optInRequired": true
+  },
+  "communityMarketplace": {
+    "description": "Marketplace of opportunities — open, searchable, browseable. Not commercial.",
+    "signatureFeature": true,
+    "sections": [
+      "volunteerOpportunities",
+      "committeesSeekingMembers",
+      "campusProjects",
+      "countyInitiatives",
+      "mentorsOfferingGuidance",
+      "collaboratorsSought",
+      "leadershipOpportunities",
+      "trainingOpportunities",
+      "communityNeeds"
+    ],
+    "architecture": {
+      "marketplace": "open searchable browse",
+      "engine": "personalized suggestions atop",
+      "missionBoard": "curated top suggestions"
+    },
+    "futureRoute": "/opportunities",
+    "communityAttributionRequired": true
+  },
+  "integrations": {
+    "pdt001": "buildParticipantContext — primary input",
+    "jrnM10": "journey orchestrator suggested next steps",
+    "ois001": "community-level underserved signals, card templates",
+    "cam001": "delivery channel and Attention Budget",
+    "flow": "context + OIS + journey → generateOpportunities → rankByBelongingFit → reason → applyAttentionBudget"
+  },
+  "missionBoardIntegration": {
+    "ref": "OIS-M16",
+    "pccWidget": "PCC-M07",
+    "hqSection": "PHQ-M11",
+    "cardFields": ["title", "reason", "actionLabel", "category", "priority", "href"],
+    "v1Cards": "2-4 rule-based post-registration"
+  },
+  "ranking": {
+    "function": "rankByBelongingFit",
+    "factors": ["participantFit", "communityNeed", "journeyStageAlignment", "relationshipExpansion"],
+    "notFactors": ["engagementScore", "popularity", "sessionLength"]
+  },
+  "v1Scope": {
+    "philosophyAndMarketplaceSpec": true,
+    "categoryTaxonomyAndEthics": true,
+    "ruleBasedMissionBoardCards": true,
+    "fullPdtPoweredEngine": "v1.1",
+    "marketplaceBrowseUI": "v1.1",
+    "aiOpportunityAssistant": "v1.2"
+  },
+  "implementation": {
+    "gate": "reason field and PDT context required on every opportunity surface",
+    "files": [
+      "src/lib/opportunities/generateOpportunities.ts",
+      "src/lib/opportunities/rankByBelongingFit.ts",
+      "src/lib/opportunities/explainOpportunity.ts",
+      "src/lib/marketplace/listMarketplaceOpportunities.ts"
+    ],
+    "sharedType": "Opportunity"
+  }
+}
