@@ -22,7 +22,7 @@ Digital Arkansas      Phase 2 — What exists?
         ↓
 People                Phase 3 — Who participates?
         ↓
-Communities           Phase 4 — Where do they belong?
+Communities           Phase 4 — Where do we work together?
         ↓
 Relationships         Phase 5 — How do they connect?
         ↓
@@ -46,7 +46,7 @@ Platform              Phase 9 — How does it run?
 | **1** | Constitution | *Why are we building this?* | ✅ Complete |
 | **2** | Digital Arkansas | *What exists?* | ✅ Complete |
 | **3** | People | *Who participates?* | 🚀 Active — Jul 12/14 |
-| **4** | Communities | *Where do they belong?* | Pending |
+| **4** | Community Operating System | *Where do we work together?* | 🚀 Active |
 | **5** | Organizing Engine | *What do they do together?* | Pending |
 | **6** | Intelligence Layer | *How do we understand and guide?* | Pending |
 | **7** | Platform Services | *How does it run?* | Pending |
@@ -92,9 +92,21 @@ Arkansas Registry · Counties · Institutions · Relationships · Status framewo
 
 ---
 
-## Phase 4 — Communities
+## Phase 4 — Community Operating System
 
-Campus hubs · County hubs · Committees · Projects · Community identity · Community dashboards
+> **Where do we work together?**
+
+Network of **interconnected community operating systems** — each campus, county, committee, and project with Constitution, HQ, calendar, projects, comms, knowledge, analytics, memory.
+
+**Master sequence:** [docs/phase-04/PHASE_4_MASTER_SEQUENCE.md](../phase-04/PHASE_4_MASTER_SEQUENCE.md)
+
+| Capability | Description |
+|------------|-------------|
+| Community Doctrine | One philosophy — platform structure, people culture |
+| **Community Constitution** | Purpose, values, traditions per community |
+| Community HQ | Parallel to Personal HQ [PHQ-001] |
+| Committees & Projects | Core organizing units |
+| Cross-community collaboration | Never silos |
 
 ---
 

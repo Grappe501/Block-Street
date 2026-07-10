@@ -4,6 +4,24 @@
 
 ---
 
+## 2026-07-10 — PHASE-004.0 Community Operating System — Doctrine (Canonical)
+
+**Document ID:** PHASE-004.0 / PHASE-004.1 · **CMD-001 · COS-001 · AC-034**
+
+### What Was Built
+
+- **Phase 4 renamed** — Community Operating System (not "Communities")
+- **14-step master sequence** — Doctrine through Build Bible closeout
+- **Community Constitution [CMD-M07]** — purpose, values, traditions; people create culture
+- **Network of OS instances** — campus, county, committee, project share one philosophy
+- **Question shift** — Phase 3: Who am I? → Phase 4: Where do we work together?
+
+### Guiding Principle Locked
+
+> **The platform provides the structure. The people create the culture.**
+
+---
+
 ## 2026-07-10 — PHASE-003.14 Participant Experience & Lifecycle Design (Canonical)
 
 **Document ID:** PHASE-003.14 · **PEL-001 · AC-033**

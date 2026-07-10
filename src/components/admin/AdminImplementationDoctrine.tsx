@@ -12,7 +12,7 @@ const FOUNDATIONS = [
   "Identity",
   "Registry",
   "Relationships",
-  "Communities",
+  "Community OS",
   "Recruitment",
   "Communication",
   "Analytics",

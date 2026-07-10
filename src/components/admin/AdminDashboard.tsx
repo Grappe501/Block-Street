@@ -32,6 +32,7 @@ import { AdminCivicJourneyTimeline } from "@/components/admin/AdminCivicJourneyT
 import { AdminPersonalDigitalTwin } from "@/components/admin/AdminPersonalDigitalTwin";
 import { AdminOpportunityBelongingEngine } from "@/components/admin/AdminOpportunityBelongingEngine";
 import { AdminParticipantExperienceLifecycle } from "@/components/admin/AdminParticipantExperienceLifecycle";
+import { AdminCommunityOperatingSystem } from "@/components/admin/AdminCommunityOperatingSystem";
 import { AdminGrowthModel } from "@/components/admin/AdminGrowthModel";
 import { AdminOrganizingModel } from "@/components/admin/AdminOrganizingModel";
 import { AdminGuardrails } from "@/components/admin/AdminGuardrails";
@@ -63,6 +64,7 @@ const TABS = [
   { id: "pdt", label: "PDT", icon: "🪞" },
   { id: "belonging", label: "Belonging", icon: "🌿" },
   { id: "experience", label: "Experience", icon: "💫" },
+  { id: "commos", label: "Comm OS", icon: "🏘️" },
   { id: "growth", label: "Growth", icon: "🌱" },
   { id: "organizing-model", label: "Organizing", icon: "🔗" },
   { id: "guardrails", label: "Guardrails", icon: "🛡️" },
@@ -167,6 +169,7 @@ export function AdminDashboard({ progress }: { progress: BuildProgress }) {
         {activeTab === "pdt" && <AdminPersonalDigitalTwin />}
         {activeTab === "belonging" && <AdminOpportunityBelongingEngine />}
         {activeTab === "experience" && <AdminParticipantExperienceLifecycle />}
+        {activeTab === "commos" && <AdminCommunityOperatingSystem />}
         {activeTab === "growth" && <AdminGrowthModel />}
         {activeTab === "organizing-model" && <AdminOrganizingModel />}
         {activeTab === "guardrails" && <AdminGuardrails />}

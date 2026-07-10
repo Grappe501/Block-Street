@@ -4,9 +4,9 @@
     "fullName": "Arkansas Student & Youth Organizing Network",
     "motto": "Connect Locally. Organize Statewide. Lead Together.",
     "tagline": "Your organizing home",
-    "version": "0.3.0-people",
-    "currentPhase": 3,
-    "currentPhaseName": "People & Relationship System",
+    "version": "0.4.0-community",
+    "currentPhase": 4,
+    "currentPhaseName": "Community Operating System",
     "lastUpdated": "2026-07-10T12:00:00Z",
     "deployUrl": "https://block-street.netlify.app/",
     "githubRepo": "https://github.com/Grappe501/Block-Street",
@@ -104,18 +104,26 @@
     },
     {
       "id": 4,
-      "name": "Communities",
-      "slug": "phase-04-communities",
-      "status": "pending",
-      "docPath": "docs/master/LIVING-SYSTEMS-ARCHITECTURE.md",
-      "question": "Where do they belong?",
+      "name": "Community Operating System",
+      "slug": "phase-04-community-os",
+      "status": "in_progress",
+      "docPath": "docs/phase-04/PHASE_4_MASTER_SEQUENCE.md",
+      "question": "Where do we work together?",
       "steps": [
-        { "id": "4.1", "name": "Campus hub enhancement", "status": "pending", "notes": "Community dashboards" },
-        { "id": "4.2", "name": "County hub enhancement", "status": "pending", "notes": "" },
-        { "id": "4.3", "name": "Committee framework [COM-001]", "status": "pending", "notes": "v1.1" },
-        { "id": "4.4", "name": "Community projects", "status": "pending", "notes": "" },
-        { "id": "4.5", "name": "Community DNA enrichment", "status": "pending", "notes": "Living communities" },
-        { "id": "4.6", "name": "Moderation framework", "status": "pending", "notes": "Students determine rules" }
+        { "id": "4.1", "name": "Community Doctrine [CMD-001]", "status": "done", "notes": "CMD-M01–M14, Community Constitution, one philosophy all types, OS concept" },
+        { "id": "4.2", "name": "Community Lifecycle", "status": "pending", "notes": "Planning through Rebuilding — STS-001 extension" },
+        { "id": "4.3", "name": "Community Headquarters [CHQ-001]", "status": "pending", "notes": "Parallel to PHQ — mission, calendar, people, projects" },
+        { "id": "4.4", "name": "Committee System [COM-001]", "status": "pending", "notes": "Core organizing units" },
+        { "id": "4.5", "name": "Project System [PRJ-001]", "status": "pending", "notes": "Mission, timeline, people, volunteer roles" },
+        { "id": "4.6", "name": "Community Calendar System", "status": "pending", "notes": "Events, meetings, milestones — EVT-001" },
+        { "id": "4.7", "name": "Community Communication System", "status": "pending", "notes": "Announcements, discussions, CAM-001 attention" },
+        { "id": "4.8", "name": "Community Knowledge Base", "status": "pending", "notes": "FAQs, guides, institutional memory" },
+        { "id": "4.9", "name": "Community Resource Library", "status": "pending", "notes": "Templates, graphics, searchable assets" },
+        { "id": "4.10", "name": "Community Analytics", "status": "pending", "notes": "Health metrics not vanity — ANL-001" },
+        { "id": "4.11", "name": "Cross-Community Collaboration", "status": "pending", "notes": "Campus ↔ county ↔ regional — never silos" },
+        { "id": "4.12", "name": "Community Marketplace", "status": "pending", "notes": "Communities publish needs — complements OBE-001" },
+        { "id": "4.13", "name": "Community Memory", "status": "pending", "notes": "Timeline, scrapbook — CJT parallel at community level" },
+        { "id": "4.14", "name": "Community Operating System Closeout", "status": "pending", "notes": "Phase 4 Build Bible — COS-001" }
       ]
     },
     {
@@ -217,6 +225,12 @@
     { "version": "1.4.0", "name": "Election ready", "status": "pending", "date": null }
   ],
   "buildLog": [
+    {
+      "date": "2026-07-10",
+      "title": "PHASE-004.0 Community Operating System — Doctrine (Canonical)",
+      "phase": 4,
+      "summary": "CMD-M01–M14 Community Constitution, 14-step master sequence, network of community OS instances, structure not culture"
+    },
     {
       "date": "2026-07-10",
       "title": "PHASE-003.14 Participant Experience & Lifecycle Design (Canonical)",
@@ -417,10 +431,10 @@
     }
   ],
   "stats": {
-    "totalSteps": 81,
-    "doneSteps": 34,
+    "totalSteps": 89,
+    "doneSteps": 35,
     "inProgressSteps": 0,
-    "pendingSteps": 47,
-    "percentComplete": 42
+    "pendingSteps": 54,
+    "percentComplete": 39
   }
 }

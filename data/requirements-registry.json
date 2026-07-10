@@ -29,6 +29,10 @@
     { "prefix": "PDT", "domain": "Personal digital twin" },
     { "prefix": "OBE", "domain": "Opportunity & belonging engine" },
     { "prefix": "PEL", "domain": "Participant experience & lifecycle" },
+    { "prefix": "COS", "domain": "Community operating system" },
+    { "prefix": "CMD", "domain": "Community doctrine" },
+    { "prefix": "CHQ", "domain": "Community headquarters" },
+    { "prefix": "PRJ", "domain": "Community projects" },
     { "prefix": "CPP", "domain": "Civic passport" },
     { "prefix": "STS", "domain": "Status & lifecycle" },
     { "prefix": "ADM", "domain": "Administration" },
@@ -928,6 +932,62 @@
         "frontend": "PAGE-PCC",
         "test": "TEST-PEL-001",
         "doc": "DOC-PEL-001"
+      },
+      "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
+    },
+    {
+      "id": "COS-001",
+      "title": "Community Operating System",
+      "purpose": "Network of living community operating systems — where people work together",
+      "description": "PHASE-004 master sequence 14 steps — Constitution, HQ, committees, projects, calendar, comms, knowledge, analytics, collaboration, memory",
+      "priority": "critical",
+      "principle": "CP-004",
+      "dependencies": ["CID-001", "CMD-001", "PHQ-001", "PEL-001"],
+      "related": ["COM-001", "OBE-001", "CAM-001", "STS-001"],
+      "acceptanceCriteria": [
+        "Community Operating System architecture documented",
+        "All 14 phase steps complete in Build Bible",
+        "Every community type receives full OS capability set"
+      ],
+      "futureNotes": "Phase 4.2–4.14 implementation — Step 4.14 closeout",
+      "implementationStatus": "in_progress",
+      "testingStatus": "pending",
+      "documentationStatus": "in_progress",
+      "trace": {
+        "database": "DB-COMMITTEES",
+        "api": null,
+        "frontend": "PAGE-INSTITUTION",
+        "test": "TEST-COS-001",
+        "doc": "DOC-COS-001"
+      },
+      "versionHistory": { "created": "2026-07-10", "implemented": null }
+    },
+    {
+      "id": "CMD-001",
+      "title": "Community Doctrine",
+      "purpose": "One philosophy for every community — platform structure, people culture",
+      "description": "PHASE-004.1 Community Constitution, community types, Community OS concept, PHQ parallel, CID and Phase 3 integration",
+      "priority": "critical",
+      "principle": "CP-004",
+      "dependencies": ["CID-001", "OM-006", "PHQ-001", "PEL-001"],
+      "related": ["COS-001", "CNTY-002", "INST-003", "COM-001"],
+      "acceptanceCriteria": [
+        "Community doctrine philosophy documented",
+        "Community types defined",
+        "Community Operating System concept specified",
+        "Community Constitution architecture documented",
+        "Blueprint for community-centric platform layer"
+      ],
+      "futureNotes": "Constitution editor v1.1, full OS Steps 4.2–4.14",
+      "implementationStatus": "done",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": "DB-INSTITUTIONS",
+        "api": null,
+        "frontend": "PAGE-INSTITUTION",
+        "test": "TEST-CMD-001",
+        "doc": "DOC-CMD-001"
       },
       "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
     },
