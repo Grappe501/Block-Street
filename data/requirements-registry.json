@@ -19,6 +19,8 @@
     { "prefix": "CID", "domain": "Community identity" },
     { "prefix": "KDG", "domain": "Knowledge & data governance" },
     { "prefix": "ADT", "domain": "Arkansas digital twin" },
+    { "prefix": "LSA", "domain": "Living systems architecture" },
+    { "prefix": "JRN", "domain": "Participant journey" },
     { "prefix": "STS", "domain": "Status & lifecycle" },
     { "prefix": "ADM", "domain": "Administration" },
     { "prefix": "SEC", "domain": "Security" },
@@ -442,6 +444,64 @@
         "frontend": "PAGE-MAP",
         "test": "TEST-ADT-001",
         "doc": "DOC-ADT-001"
+      },
+      "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
+    },
+    {
+      "id": "LSA-001",
+      "title": "Living Systems Architecture",
+      "purpose": "Organize the platform around living systems — not software modules",
+      "description": "Phases 1–9 stack: Constitution → Digital Arkansas → People → Communities → Organizing → Intelligence → Platform → Experience → Growth",
+      "priority": "critical",
+      "principle": "OM-L1",
+      "dependencies": [],
+      "related": ["JRN-001", "BUILD-BIBLE"],
+      "acceptanceCriteria": [
+        "Living systems phase map documented",
+        "Legacy module mapping preserved",
+        "Three pillars defined",
+        "Phase 3–9 scope outlined"
+      ],
+      "futureNotes": "Phase-specific build bibles as each phase completes",
+      "implementationStatus": "done",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": null,
+        "api": null,
+        "frontend": "PAGE-ADMIN",
+        "test": "TEST-LSA-001",
+        "doc": "DOC-LSA-001"
+      },
+      "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
+    },
+    {
+      "id": "JRN-001",
+      "title": "Participant Journey Framework",
+      "purpose": "Every feature helps someone move one step forward — place, relationships, purpose",
+      "description": "PHASE-003.1 journey stages Visitor through Community Builder, progression signals, status integration",
+      "priority": "critical",
+      "principle": "OM-L5",
+      "dependencies": ["LSA-001", "OIS-001", "STS-001"],
+      "related": ["NET-001", "USR-001", "GM-P7"],
+      "acceptanceCriteria": [
+        "Journey purpose and stages documented",
+        "Three pillars defined",
+        "Progression signals specified",
+        "Platform behaviors per stage",
+        "Integration with status framework",
+        "Framework for Phase 3+ feature design"
+      ],
+      "futureNotes": "Journey timeline table, full stage automation, mentor/alumni stages",
+      "implementationStatus": "done",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": "DB-USERS",
+        "api": null,
+        "frontend": "PAGE-NETWORK",
+        "test": "TEST-JRN-001",
+        "doc": "DOC-JRN-001"
       },
       "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
     },

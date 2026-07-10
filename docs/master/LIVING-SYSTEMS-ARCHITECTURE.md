@@ -1,0 +1,156 @@
+# Living Systems Architecture
+
+**Document ID:** LSA-001  
+**Artifact:** `LIVING-SYSTEMS-ARCHITECTURE.md`  
+**Status:** Canonical  
+**Priority:** Critical
+
+> Think in **living systems**, not software modules.
+
+**Live spec:** `data/living-systems.json`
+
+---
+
+## The Stack
+
+Everything grows from **people**.
+
+```
+Constitution          Phase 1 — Why are we building this?
+        ↓
+Digital Arkansas      Phase 2 — What exists?
+        ↓
+People                Phase 3 — Who participates?
+        ↓
+Communities           Phase 4 — Where do they belong?
+        ↓
+Relationships         Phase 5 — How do they connect?
+        ↓
+Action                Phase 6 — What do they do?
+        ↓
+Knowledge             Phase 7 — What do we learn?
+        ↓
+Intelligence          Phase 8 — How do we improve?
+        ↓
+Platform              Phase 9 — How does it run?
+```
+
+*Note:* Phases 5–9 in the build sequence map to Organizing Engine, Intelligence, Platform Services, Experience, and Growth — see phase table below.
+
+---
+
+## Phase Map
+
+| Phase | Name | Question | Status |
+|-------|------|----------|--------|
+| **1** | Constitution | *Why are we building this?* | ✅ Complete |
+| **2** | Digital Arkansas | *What exists?* | ✅ Complete |
+| **3** | People | *Who participates?* | 🚀 Active — Jul 12/14 |
+| **4** | Communities | *Where do they belong?* | Pending |
+| **5** | Organizing Engine | *What do they do together?* | Pending |
+| **6** | Intelligence Layer | *How do we understand and guide?* | Pending |
+| **7** | Platform Services | *How does it run?* | Pending |
+| **8** | Experience Layer | *How does it feel?* | Pending |
+| **9** | Growth & Expansion | *How does it scale?* | Pending |
+
+---
+
+## Phase 1 — Constitution (Complete)
+
+Identity · Mission · North Star · Core principles · Boundaries · Organizing model · Growth model · Launch criteria · Engineering doctrine · Traceability
+
+**Deliverable:** [BUILD-BIBLE.md](../build-steps/BUILD-BIBLE.md)
+
+---
+
+## Phase 2 — Digital Arkansas (Complete)
+
+Arkansas Registry · Counties · Institutions · Relationships · Status framework · Outreach intelligence · Community identity · Data governance · Digital twin initialization
+
+**Deliverable:** [Phase 2 Build Bible](../phase-02/PHASE_2_DIGITAL_ARKANSAS_BUILD_BIBLE.md)
+
+---
+
+## Phase 3 — People
+
+The participant system.
+
+| Capability | Description |
+|------------|-------------|
+| Participant Journey | Stages from Visitor → Community Builder |
+| Identity & profiles | Who you are on the platform |
+| Network boards | Your relational organizing home |
+| Invite links & QR | Growth mechanics |
+| Recruitment | Referral attribution |
+| Privacy | Participant data control |
+
+**V1 critical:** USR-001 · NET-001 · NET-002 · NET-003 · JRN-001
+
+---
+
+## Phase 4 — Communities
+
+Campus hubs · County hubs · Committees · Projects · Community identity · Community dashboards
+
+---
+
+## Phase 5 — Organizing Engine
+
+Events · Volunteer management · Tasks · Campaigns · Committees · Projects · Outreach · Messaging
+
+---
+
+## Phase 6 — Intelligence Layer
+
+Search · Recommendations · Analytics · Mission board (live) · Growth engine · Relationship intelligence · Future AI
+
+*Mission Board designed in Phase 2 [OIS-M16] — fully operational here.*
+
+---
+
+## Phase 7 — Platform Services
+
+Authentication · Administration · CMS · Notifications · API · Deployment · Monitoring · Security
+
+---
+
+## Phase 8 — Experience Layer
+
+Design system · Animation · Accessibility · Mobile · Gamification · Onboarding · Storytelling
+
+---
+
+## Phase 9 — Growth & Expansion
+
+High schools · Youth organizations · Alumni · Partner organizations · Other states · Native mobile apps · Future integrations
+
+---
+
+## Design Philosophy
+
+Every feature should help someone move **one step forward** on the [Participant Journey](../phase-03/PARTICIPANT_JOURNEY.md).
+
+| Pillar | Gives people |
+|--------|--------------|
+| **Registry** (Phase 2) | A **place** |
+| **Network** (Phase 3) | **Relationships** |
+| **Journey** (Phase 3+) | **Purpose** |
+
+---
+
+## Legacy Module Map
+
+Old master plan modules map to living systems:
+
+| Old layer | Living system phase |
+|-----------|---------------------|
+| Foundation + Geographic | Phase 2 Digital Arkansas |
+| Identity + Relational | Phase 3 People |
+| Organizing (campus/county) | Phase 4 Communities |
+| Events, outreach, committees | Phase 5 Organizing Engine |
+| Analytics, dashboards | Phase 6 Intelligence |
+| Auth, API, deployment | Phase 7 Platform |
+| Design system, mobile | Phase 8 Experience |
+| Expansion | Phase 9 Growth |
+
+*Full module index preserved in [MASTER-BUILD-SEQUENCE.md](MASTER-BUILD-SEQUENCE.md) history section.*

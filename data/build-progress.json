@@ -4,9 +4,9 @@
     "fullName": "Arkansas Student & Youth Organizing Network",
     "motto": "Connect Locally. Organize Statewide. Lead Together.",
     "tagline": "Your organizing home",
-    "version": "1.0.0-constitution",
-    "currentPhase": 2,
-    "currentPhaseName": "Arkansas Organizing Registry",
+    "version": "0.3.0-people",
+    "currentPhase": 3,
+    "currentPhaseName": "People",
     "lastUpdated": "2026-07-10T12:00:00Z",
     "deployUrl": "https://block-street.netlify.app/",
     "githubRepo": "https://github.com/Grappe501/Block-Street",
@@ -29,18 +29,22 @@
     "launchChecklistTotal": 10
   },
   "masterBuild": {
-    "docPath": "docs/master/MASTER-BUILD-SEQUENCE.md",
-    "totalModules": 30,
+    "docPath": "docs/master/LIVING-SYSTEMS-ARCHITECTURE.md",
+    "legacyModulePath": "docs/master/MASTER-BUILD-SEQUENCE.md",
+    "totalPhases": 9,
     "constitutionPath": "docs/PROJECT_CONSTITUTION_AND_MISSION_DOCTRINE.md",
-    "buildBiblePath": "docs/build-steps/BUILD-BIBLE.md"
+    "buildBiblePath": "docs/build-steps/BUILD-BIBLE.md",
+    "phase2BiblePath": "docs/phase-02/PHASE_2_DIGITAL_ARKANSAS_BUILD_BIBLE.md",
+    "livingSystemsPath": "data/living-systems.json"
   },
   "phases": [
     {
       "id": 1,
-      "name": "Project Constitution & Mission Doctrine",
+      "name": "Constitution",
       "slug": "phase-01-constitution",
       "status": "done",
       "docPath": "docs/build-steps/BUILD-BIBLE.md",
+      "question": "Why are we building this?",
       "steps": [
         { "id": "1.1", "name": "Platform Identity [PHASE-001.1]", "status": "done", "notes": "PI-001 through ER-001" },
         { "id": "1.2", "name": "North Star Outcome [PHASE-001.2]", "status": "done", "notes": "NS-002, NS-013" },
@@ -50,97 +54,170 @@
         { "id": "1.6", "name": "Growth Model [PHASE-001.6]", "status": "done", "notes": "GM-P1–P10, GM-V1" },
         { "id": "1.7", "name": "Launch Success Definition [PHASE-001.7]", "status": "done", "notes": "LS-CHK 10-item checklist, 7 pillars" },
         { "id": "1.8", "name": "Implementation Doctrine [PHASE-001.8]", "status": "done", "notes": "ED-002–ED-FD, BUILD-BIBLE" },
-        { "id": "1.9", "name": "Master Traceability [PHASE-001.9]", "status": "done", "notes": "TR-MOTTO, requirements-registry.json — Phase 1 complete" }
+        { "id": "1.9", "name": "Master Traceability [PHASE-001.9]", "status": "done", "notes": "TR-MOTTO, requirements-registry.json" }
       ]
     },
     {
       "id": 2,
-      "name": "Arkansas Organizing Registry",
-      "slug": "phase-02-registry",
-      "status": "in_progress",
-      "docPath": "docs/phase-02/README.md",
+      "name": "Digital Arkansas",
+      "slug": "phase-02-digital-arkansas",
+      "status": "done",
+      "docPath": "docs/phase-02/PHASE_2_DIGITAL_ARKANSAS_BUILD_BIBLE.md",
+      "question": "What exists?",
       "steps": [
-        { "id": "2.1", "name": "Registry Doctrine [PHASE-002.1]", "status": "done", "notes": "REG-D01–D21, graph model REG-D16, digital map philosophy" },
-        { "id": "2.2", "name": "County Registry Model [PHASE-002.2]", "status": "done", "notes": "CNTY-M01–M16, county graph node, JSON schema" },
-        { "id": "2.3", "name": "Institution Registry Model [PHASE-002.3]", "status": "done", "notes": "INST-M01–M18, Canonical Profile, knowledge graph INST-M17" },
-        { "id": "2.4", "name": "Relationship Graph [PHASE-002.4]", "status": "done", "notes": "REL-M01–M14, digital twin, relationship-types.json, organizing intelligence" },
-        { "id": "2.5", "name": "Status & Lifecycle Framework [PHASE-002.5]", "status": "done", "notes": "STS-M01–M18, status-framework.json, status timeline STS-M16" },
-        { "id": "2.6", "name": "Outreach Intelligence & Mission Board [PHASE-002.6]", "status": "done", "notes": "OIS-M01–M18, Mission Board, outreach-intelligence.json" },
-        { "id": "2.7", "name": "Community Identity & Personalization [PHASE-002.7]", "status": "done", "notes": "CID-M01–M18, Community DNA, community-identity.json" },
-        { "id": "2.8", "name": "Knowledge & Data Governance [PHASE-002.8]", "status": "done", "notes": "KDG-M01–M18, Knowledge Provenance, knowledge-governance.json" },
-        { "id": "2.9", "name": "Arkansas Digital Twin Initialization [PHASE-002.9]", "status": "done", "notes": "ADT-M01–M16, digital-twin-init.json, ship living Arkansas" },
-        { "id": "2.10", "name": "Phase 2 Build Bible", "status": "pending", "notes": "PHASE_2_ARKANSAS_ORGANIZING_REGISTRY_BUILD_BIBLE.md" }
+        { "id": "2.1", "name": "Registry Doctrine [PHASE-002.1]", "status": "done", "notes": "REG-D01–D21" },
+        { "id": "2.2", "name": "County Registry Model [PHASE-002.2]", "status": "done", "notes": "CNTY-M01–M16" },
+        { "id": "2.3", "name": "Institution Registry Model [PHASE-002.3]", "status": "done", "notes": "INST-M01–M18" },
+        { "id": "2.4", "name": "Relationship Graph [PHASE-002.4]", "status": "done", "notes": "REL-M01–M14" },
+        { "id": "2.5", "name": "Status & Lifecycle Framework [PHASE-002.5]", "status": "done", "notes": "STS-M01–M18" },
+        { "id": "2.6", "name": "Outreach Intelligence [PHASE-002.6]", "status": "done", "notes": "OIS-M01–M18" },
+        { "id": "2.7", "name": "Community Identity [PHASE-002.7]", "status": "done", "notes": "CID-M01–M18" },
+        { "id": "2.8", "name": "Knowledge & Data Governance [PHASE-002.8]", "status": "done", "notes": "KDG-M01–M18" },
+        { "id": "2.9", "name": "Digital Twin Initialization [PHASE-002.9]", "status": "done", "notes": "ADT-M01–M16" },
+        { "id": "2.10", "name": "Phase 2 Build Bible [PHASE-002.10]", "status": "done", "notes": "Digital Arkansas complete, Living Systems transition" }
       ]
     },
     {
       "id": 3,
-      "name": "V1 Launch — Signup + Network",
-      "slug": "phase-03-v1-launch",
-      "status": "pending",
-      "docPath": "docs/master/MASTER-BUILD-SEQUENCE.md",
+      "name": "People",
+      "slug": "phase-03-people",
+      "status": "in_progress",
+      "docPath": "docs/phase-03/README.md",
+      "question": "Who participates?",
       "steps": [
-        { "id": "3.1", "name": "County-first signup flow (honor system)", "status": "in_progress", "notes": "UI done, DB pending" },
-        { "id": "3.2", "name": "Non-student county path (16-24)", "status": "in_progress", "notes": "UI done" },
-        { "id": "3.3", "name": "User profiles + interests", "status": "pending", "notes": "Jul 12 target" },
-        { "id": "3.4", "name": "Share link /s/[slug]", "status": "pending", "notes": "" },
-        { "id": "3.5", "name": "QR code generation", "status": "pending", "notes": "" },
-        { "id": "3.6", "name": "Personal network board", "status": "pending", "notes": "" },
-        { "id": "3.7", "name": "Referral attribution", "status": "pending", "notes": "" },
-        { "id": "3.8", "name": "WHY call-to-action on homepage", "status": "done", "notes": "Golden Circle WHY live" },
+        { "id": "3.1", "name": "Participant Journey [PHASE-003.1]", "status": "done", "notes": "JRN-M01–M12, three pillars, living systems bridge" },
+        { "id": "3.2", "name": "Participant Registration [USR-001]", "status": "in_progress", "notes": "County-first signup, DB pending" },
+        { "id": "3.3", "name": "Profiles & identity", "status": "pending", "notes": "Jul 12 target" },
+        { "id": "3.4", "name": "Personal network board [NET-001]", "status": "pending", "notes": "" },
+        { "id": "3.5", "name": "Share links [NET-002]", "status": "pending", "notes": "/s/[slug]" },
+        { "id": "3.6", "name": "QR codes [NET-003]", "status": "pending", "notes": "" },
+        { "id": "3.7", "name": "Referral & recruitment", "status": "pending", "notes": "" },
+        { "id": "3.8", "name": "Privacy controls", "status": "pending", "notes": "" },
         { "id": "3.9", "name": "Leader testing build", "status": "pending", "notes": "Jul 12" },
         { "id": "3.10", "name": "Launch call ready", "status": "pending", "notes": "Jul 14" }
       ]
     },
     {
       "id": 4,
-      "name": "Teaching System + Governance",
-      "slug": "phase-04-teaching-governance",
+      "name": "Communities",
+      "slug": "phase-04-communities",
       "status": "pending",
-      "docPath": "docs/PROJECT_CONSTITUTION_AND_MISSION_DOCTRINE.md",
+      "docPath": "docs/master/LIVING-SYSTEMS-ARCHITECTURE.md",
+      "question": "Where do they belong?",
       "steps": [
-        { "id": "4.1", "name": "WHY/HOW/WHAT teaching modules", "status": "pending", "notes": "" },
-        { "id": "4.2", "name": "Moderation framework for campuses", "status": "pending", "notes": "Students determine rules" },
-        { "id": "4.3", "name": "Roberts Rules guide", "status": "pending", "notes": "" },
-        { "id": "4.4", "name": "Committee formation guide", "status": "pending", "notes": "" },
-        { "id": "4.5", "name": "Campus moderator election guide", "status": "pending", "notes": "" }
+        { "id": "4.1", "name": "Campus hub enhancement", "status": "pending", "notes": "Community dashboards" },
+        { "id": "4.2", "name": "County hub enhancement", "status": "pending", "notes": "" },
+        { "id": "4.3", "name": "Committee framework [COM-001]", "status": "pending", "notes": "v1.1" },
+        { "id": "4.4", "name": "Community projects", "status": "pending", "notes": "" },
+        { "id": "4.5", "name": "Community DNA enrichment", "status": "pending", "notes": "Living communities" },
+        { "id": "4.6", "name": "Moderation framework", "status": "pending", "notes": "Students determine rules" }
       ]
     },
     {
       "id": 5,
-      "name": "Voter Registration Push",
-      "slug": "phase-05-voter-registration",
+      "name": "Organizing Engine",
+      "slug": "phase-05-organizing",
       "status": "pending",
-      "docPath": "docs/master/MASTER-BUILD-SEQUENCE.md",
+      "docPath": "docs/master/LIVING-SYSTEMS-ARCHITECTURE.md",
+      "question": "What do they do together?",
       "steps": [
-        { "id": "5.1", "name": "Voter registration resources", "status": "pending", "notes": "Fall 2026 school start" },
-        { "id": "5.2", "name": "Campus registration tracking", "status": "pending", "notes": "" },
-        { "id": "5.3", "name": "Registration drive events", "status": "pending", "notes": "" }
+        { "id": "5.1", "name": "Events [EVT-001]", "status": "pending", "notes": "v1.2" },
+        { "id": "5.2", "name": "Volunteer management [VOL-001]", "status": "pending", "notes": "" },
+        { "id": "5.3", "name": "Tasks & campaigns", "status": "pending", "notes": "" },
+        { "id": "5.4", "name": "Committee operations", "status": "pending", "notes": "" },
+        { "id": "5.5", "name": "Project tracking", "status": "pending", "notes": "" },
+        { "id": "5.6", "name": "Outreach tools", "status": "pending", "notes": "" },
+        { "id": "5.7", "name": "Messaging [MSG-001]", "status": "pending", "notes": "v1.3" },
+        { "id": "5.8", "name": "Voter registration push", "status": "pending", "notes": "Fall 2026" }
       ]
     },
     {
       "id": 6,
-      "name": "Election Ready — Collective Voice",
-      "slug": "phase-06-election",
+      "name": "Intelligence Layer",
+      "slug": "phase-06-intelligence",
       "status": "pending",
-      "docPath": "docs/master/MASTER-BUILD-SEQUENCE.md",
+      "docPath": "docs/master/LIVING-SYSTEMS-ARCHITECTURE.md",
+      "question": "How do we understand and guide?",
       "steps": [
-        { "id": "6.1", "name": "Surveys + collective voice tools", "status": "pending", "notes": "v1.4" },
-        { "id": "6.2", "name": "Statewide participation dashboard", "status": "pending", "notes": "" },
-        { "id": "6.3", "name": "Election day — Nov 3, 2026", "status": "pending", "notes": "" }
+        { "id": "6.1", "name": "Statewide search", "status": "pending", "notes": "" },
+        { "id": "6.2", "name": "Recommendations engine", "status": "pending", "notes": "" },
+        { "id": "6.3", "name": "Analytics [ANL-001]", "status": "pending", "notes": "" },
+        { "id": "6.4", "name": "Mission Board (live)", "status": "pending", "notes": "OIS-M16 operational" },
+        { "id": "6.5", "name": "Growth engine", "status": "pending", "notes": "" },
+        { "id": "6.6", "name": "Relationship intelligence", "status": "pending", "notes": "" },
+        { "id": "6.7", "name": "Future AI assistance", "status": "pending", "notes": "KDG-M16" }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Platform Services",
+      "slug": "phase-07-platform",
+      "status": "pending",
+      "docPath": "docs/master/LIVING-SYSTEMS-ARCHITECTURE.md",
+      "question": "How does it run?",
+      "steps": [
+        { "id": "7.1", "name": "Authentication", "status": "pending", "notes": "Honor system V1" },
+        { "id": "7.2", "name": "Administration [ADM-001]", "status": "pending", "notes": "Partial — workbench live" },
+        { "id": "7.3", "name": "CMS & content", "status": "pending", "notes": "" },
+        { "id": "7.4", "name": "Notifications", "status": "pending", "notes": "" },
+        { "id": "7.5", "name": "API layer [API-*]", "status": "pending", "notes": "" },
+        { "id": "7.6", "name": "Deployment & CI/CD", "status": "pending", "notes": "Netlify live" },
+        { "id": "7.7", "name": "Monitoring", "status": "pending", "notes": "" },
+        { "id": "7.8", "name": "Security [SEC-001]", "status": "pending", "notes": "" }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Experience Layer",
+      "slug": "phase-08-experience",
+      "status": "pending",
+      "docPath": "docs/master/LIVING-SYSTEMS-ARCHITECTURE.md",
+      "question": "How does it feel?",
+      "steps": [
+        { "id": "8.1", "name": "Design system", "status": "pending", "notes": "" },
+        { "id": "8.2", "name": "Animation & motion", "status": "pending", "notes": "" },
+        { "id": "8.3", "name": "Accessibility [ED-MF]", "status": "pending", "notes": "" },
+        { "id": "8.4", "name": "Mobile optimization", "status": "pending", "notes": "" },
+        { "id": "8.5", "name": "Gamification & recognition", "status": "pending", "notes": "JRN-M09" },
+        { "id": "8.6", "name": "Onboarding flows", "status": "pending", "notes": "Journey-driven" },
+        { "id": "8.7", "name": "Storytelling & WHY/HOW/WHAT", "status": "pending", "notes": "Partial live" }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Growth & Expansion",
+      "slug": "phase-09-growth",
+      "status": "pending",
+      "docPath": "docs/master/LIVING-SYSTEMS-ARCHITECTURE.md",
+      "question": "How does it scale?",
+      "steps": [
+        { "id": "9.1", "name": "High schools", "status": "pending", "notes": "ADT-M15" },
+        { "id": "9.2", "name": "Youth organizations", "status": "pending", "notes": "" },
+        { "id": "9.3", "name": "Alumni network", "status": "pending", "notes": "JRN alumni stage" },
+        { "id": "9.4", "name": "Partner organizations", "status": "pending", "notes": "" },
+        { "id": "9.5", "name": "Other states", "status": "pending", "notes": "" },
+        { "id": "9.6", "name": "Native mobile apps", "status": "pending", "notes": "" },
+        { "id": "9.7", "name": "Future integrations", "status": "pending", "notes": "" }
       ]
     }
   ],
   "versions": [
     { "version": "0.1.0", "name": "Initial scaffold", "status": "done", "date": "2026-07-10" },
-    { "version": "0.2.0", "name": "Constitution + Registry + Rebrand", "status": "in_progress", "date": "2026-07-10" },
-    { "version": "0.3.0", "name": "Leader testing build", "status": "pending", "date": "2026-07-12" },
+    { "version": "0.2.0", "name": "Constitution + Digital Arkansas", "status": "done", "date": "2026-07-10" },
+    { "version": "0.3.0", "name": "People — leader testing", "status": "in_progress", "date": "2026-07-12" },
     { "version": "1.0.0", "name": "Launch call — signup + network", "status": "pending", "date": "2026-07-14" },
-    { "version": "1.1.0", "name": "Committees + moderation tools", "status": "pending", "date": null },
-    { "version": "1.2.0", "name": "Events + voter registration", "status": "pending", "date": null },
-    { "version": "1.3.0", "name": "Messaging + outreach", "status": "pending", "date": null },
-    { "version": "1.4.0", "name": "Surveys + collective voice", "status": "pending", "date": null }
+    { "version": "1.1.0", "name": "Communities + committees", "status": "pending", "date": null },
+    { "version": "1.2.0", "name": "Organizing engine + events", "status": "pending", "date": null },
+    { "version": "1.3.0", "name": "Intelligence + messaging", "status": "pending", "date": null },
+    { "version": "1.4.0", "name": "Election ready", "status": "pending", "date": null }
   ],
   "buildLog": [
+    {
+      "date": "2026-07-10",
+      "title": "Living Systems transition — Phase 2 complete, Phase 3 begins",
+      "phase": 3,
+      "summary": "PHASE-002.10 Digital Arkansas Build Bible, LIVING-SYSTEMS-ARCHITECTURE, PHASE-003.1 Participant Journey, master plan restructure Phases 3–9"
+    },
     {
       "date": "2026-07-10",
       "title": "PHASE-002.9 Arkansas Digital Twin Initialization Plan",
@@ -199,25 +276,25 @@
       "date": "2026-07-10",
       "title": "PHASE-001.9 Master Traceability — Phase 1 Final",
       "phase": 1,
-      "summary": "TR-MOTTO production code gate, requirements-registry.json (11 V1 reqs), admin Traceability tab"
+      "summary": "TR-MOTTO production code gate, requirements-registry.json, admin Traceability tab"
     },
     {
       "date": "2026-07-10",
       "title": "PHASE-001.8 Implementation Doctrine — Phase 1 Complete",
       "phase": 1,
-      "summary": "ED-002–ED-FD engineering protocol, BUILD-BIBLE.md, admin Engineering tab — Constitution closed"
+      "summary": "ED-002–ED-FD engineering protocol, BUILD-BIBLE.md, admin Engineering tab"
     },
     {
       "date": "2026-07-10",
       "title": "PHASE-001.7 Launch Success Definition",
       "phase": 1,
-      "summary": "LS-CHK 10-item checklist, 7 pillars, 3 mission questions, launch-readiness.json, admin Launch tab"
+      "summary": "LS-CHK 10-item checklist, 7 pillars, launch-readiness.json"
     },
     {
       "date": "2026-07-10",
       "title": "PHASE-001.6 Growth Model",
       "phase": 1,
-      "summary": "GM-P1–P10, GM-V1 July launch scope, version roadmap"
+      "summary": "GM-P1–P10, GM-V1 July launch scope"
     },
     {
       "date": "2026-07-10",
@@ -227,13 +304,13 @@
     },
     {
       "date": "2026-07-10",
-      "title": "PHASE-001.4 Platform Boundaries — Design Guardrails",
+      "title": "PHASE-001.4 Platform Boundaries",
       "phase": 1,
-      "summary": "DG-001 through DG-015, ED-001 engineering doctrine"
+      "summary": "DG-001 through DG-015, ED-001"
     },
     {
       "date": "2026-07-10",
-      "title": "PHASE-001.3 Core Principles — Platform Constitution",
+      "title": "PHASE-001.3 Core Principles",
       "phase": 1,
       "summary": "CP-001 through CP-015, CT-001"
     },
@@ -251,10 +328,10 @@
     }
   ],
   "stats": {
-    "totalSteps": 40,
-    "doneSteps": 19,
-    "inProgressSteps": 2,
-    "pendingSteps": 19,
-    "percentComplete": 48
+    "totalSteps": 76,
+    "doneSteps": 21,
+    "inProgressSteps": 1,
+    "pendingSteps": 54,
+    "percentComplete": 28
   }
 }

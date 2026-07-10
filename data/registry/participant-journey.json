@@ -1,0 +1,46 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/phase-03/PARTICIPANT_JOURNEY.md",
+  "motto": "One step forward.",
+  "principle": "The Registry gives people a place. The Network gives people relationships. The Journey gives people purpose.",
+  "threePillars": [
+    { "id": "place", "source": "Digital Arkansas (Phase 2)", "question": "Where do I belong?" },
+    { "id": "relationships", "source": "People / Network (Phase 3)", "question": "Who do I know?" },
+    { "id": "purpose", "source": "Participant Journey", "question": "What should I do next?" }
+  ],
+  "stages": [
+    { "key": "visitor", "label": "Visitor", "order": 1, "v1": "implicit" },
+    { "key": "interested", "label": "Interested", "order": 2, "v1": "partial" },
+    { "key": "member", "label": "Member", "order": 3, "v1": "target" },
+    { "key": "contributor", "label": "Contributor", "order": 4, "v1": "signals" },
+    { "key": "organizer", "label": "Organizer", "order": 5, "v1": "future" },
+    { "key": "leader", "label": "Leader", "order": 6, "v1": "future" },
+    { "key": "mentor", "label": "Mentor", "order": 7, "v1": "future" },
+    { "key": "alumni", "label": "Alumni", "order": 8, "v1": "future" },
+    { "key": "community_builder", "label": "Community Builder", "order": 9, "v1": "future" }
+  ],
+  "progressionSignals": [
+    { "signal": "account_created", "stage": "member" },
+    { "signal": "first_invite_sent", "stage": "contributor" },
+    { "signal": "network_depth_threshold", "stage": "contributor" },
+    { "signal": "committee_join_or_event_host", "stage": "organizer" },
+    { "signal": "sustained_recruitment", "stage": "leader" },
+    { "signal": "mentorship_edge", "stage": "mentor" },
+    { "signal": "graduation_transition", "stage": "alumni" },
+    { "signal": "multi_community_leadership", "stage": "community_builder" }
+  ],
+  "nextActionsByStage": [
+    { "stage": "visitor", "action": "Explore your county on the map" },
+    { "stage": "interested", "action": "Complete registration" },
+    { "stage": "member", "action": "Invite 3 classmates" },
+    { "stage": "contributor", "action": "Join the team building at your campus" },
+    { "stage": "organizer", "action": "Host your first event" },
+    { "stage": "mentor", "action": "Welcome a new member" }
+  ],
+  "v1Scope": {
+    "philosophyAndStages": "done",
+    "memberOnRegistration": "phase_3.2",
+    "contributorSignals": "phase_3.7",
+    "fullStageAutomation": "v1.1"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/master/LIVING-SYSTEMS-ARCHITECTURE.md",
+  "principle": "Think in living systems, not software modules.",
+  "stack": [
+    { "order": 1, "phase": 1, "name": "Constitution", "question": "Why are we building this?", "status": "complete" },
+    { "order": 2, "phase": 2, "name": "Digital Arkansas", "question": "What exists?", "status": "complete" },
+    { "order": 3, "phase": 3, "name": "People", "question": "Who participates?", "status": "active" },
+    { "order": 4, "phase": 4, "name": "Communities", "question": "Where do they belong?", "status": "pending" },
+    { "order": 5, "phase": 5, "name": "Organizing Engine", "question": "What do they do together?", "status": "pending" },
+    { "order": 6, "phase": 6, "name": "Intelligence Layer", "question": "How do we understand and guide?", "status": "pending" },
+    { "order": 7, "phase": 7, "name": "Platform Services", "question": "How does it run?", "status": "pending" },
+    { "order": 8, "phase": 8, "name": "Experience Layer", "question": "How does it feel?", "status": "pending" },
+    { "order": 9, "phase": 9, "name": "Growth & Expansion", "question": "How does it scale?", "status": "pending" }
+  ],
+  "threePillars": [
+    { "id": "place", "name": "Place", "phase": 2, "gives": "A community home — county, campus" },
+    { "id": "relationships", "name": "Relationships", "phase": 3, "gives": "Network, invites, referrals" },
+    { "id": "purpose", "name": "Purpose", "phase": 3, "gives": "Journey stage, next action, growth" }
+  ],
+  "phaseSummaries": {
+    "3": ["Participant Journey", "Identity", "Profiles", "Network boards", "Invite links", "QR codes", "Recruitment", "Privacy"],
+    "4": ["Campus hubs", "County hubs", "Committees", "Projects", "Community dashboards"],
+    "5": ["Events", "Volunteer management", "Tasks", "Campaigns", "Outreach", "Messaging"],
+    "6": ["Search", "Recommendations", "Analytics", "Mission board", "Growth engine", "Relationship intelligence", "Future AI"],
+    "7": ["Authentication", "Administration", "CMS", "Notifications", "API", "Deployment", "Monitoring", "Security"],
+    "8": ["Design system", "Animation", "Accessibility", "Mobile", "Gamification", "Onboarding", "Storytelling"],
+    "9": ["High schools", "Youth organizations", "Alumni", "Partner organizations", "Other states", "Native mobile", "Integrations"]
+  }
+}

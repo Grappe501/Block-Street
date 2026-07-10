@@ -1,7 +1,28 @@
 # Master Build Sequence
 
 > **Arkansas youth organizing infrastructure** — not a website, a statewide platform.
-> This document is the long-range blueprint. Launch phases (V1) are a subset marked with 🚀.
+
+## Living Systems Architecture (Current)
+
+The master plan is organized around **living systems**, not software modules.
+
+→ **[LIVING-SYSTEMS-ARCHITECTURE.md](LIVING-SYSTEMS-ARCHITECTURE.md)** — canonical phase map (Phases 1–9)  
+→ **[Participant Journey](../phase-03/PARTICIPANT_JOURNEY.md)** — every feature helps someone move one step forward
+
+| Phase | Name | Question | Status |
+|-------|------|----------|--------|
+| 1 | Constitution | Why? | ✅ |
+| 2 | Digital Arkansas | What exists? | ✅ |
+| 3 | People | Who participates? | 🚀 Active |
+| 4–9 | Communities → Growth | See Living Systems doc | Pending |
+
+*This document preserves the original **30-module index** below for traceability.*
+
+---
+
+# Master Build Sequence (Module Index)
+
+> Long-range blueprint. Launch phases (V1) are a subset marked with 🚀.
 
 ---
 

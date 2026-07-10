@@ -19,6 +19,7 @@ import { AdminOutreachMission } from "@/components/admin/AdminOutreachMission";
 import { AdminCommunityIdentity } from "@/components/admin/AdminCommunityIdentity";
 import { AdminKnowledgeGovernance } from "@/components/admin/AdminKnowledgeGovernance";
 import { AdminDigitalTwinInit } from "@/components/admin/AdminDigitalTwinInit";
+import { AdminParticipantJourney } from "@/components/admin/AdminParticipantJourney";
 import { AdminGrowthModel } from "@/components/admin/AdminGrowthModel";
 import { AdminOrganizingModel } from "@/components/admin/AdminOrganizingModel";
 import { AdminGuardrails } from "@/components/admin/AdminGuardrails";
@@ -37,6 +38,7 @@ const TABS = [
   { id: "identity", label: "Identity", icon: "🎨" },
   { id: "governance", label: "Governance", icon: "⚖️" },
   { id: "twin", label: "Twin", icon: "🏛️" },
+  { id: "journey", label: "Journey", icon: "🧭" },
   { id: "growth", label: "Growth", icon: "🌱" },
   { id: "organizing-model", label: "Organizing", icon: "🔗" },
   { id: "guardrails", label: "Guardrails", icon: "🛡️" },
@@ -128,6 +130,7 @@ export function AdminDashboard({ progress }: { progress: BuildProgress }) {
         {activeTab === "identity" && <AdminCommunityIdentity />}
         {activeTab === "governance" && <AdminKnowledgeGovernance />}
         {activeTab === "twin" && <AdminDigitalTwinInit />}
+        {activeTab === "journey" && <AdminParticipantJourney />}
         {activeTab === "growth" && <AdminGrowthModel />}
         {activeTab === "organizing-model" && <AdminOrganizingModel />}
         {activeTab === "guardrails" && <AdminGuardrails />}

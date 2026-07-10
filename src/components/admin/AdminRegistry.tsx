@@ -13,7 +13,7 @@ const PHASE2_STEPS = [
   { step: "2.7", name: "Community Identity & Personalization", artifact: "COMMUNITY_IDENTITY_PERSONALIZATION_SYSTEM.md", status: "done" },
   { step: "2.8", name: "Knowledge & Data Governance", artifact: "KNOWLEDGE_DATA_GOVERNANCE_FRAMEWORK.md", status: "done" },
   { step: "2.9", name: "Digital Twin Initialization", artifact: "ARKANSAS_DIGITAL_TWIN_INITIALIZATION_PLAN.md", status: "done" },
-  { step: "2.10", name: "Phase 2 Build Bible", artifact: "PHASE_2_ARKANSAS_ORGANIZING_REGISTRY_BUILD_BIBLE.md", status: "pending" },
+  { step: "2.10", name: "Phase 2 Build Bible", artifact: "PHASE_2_DIGITAL_ARKANSAS_BUILD_BIBLE.md", status: "done" },
 ];
 
 const STATUS_STYLE: Record<string, string> = {

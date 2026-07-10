@@ -364,6 +364,6 @@ Step 2.9 is complete when:
 
 ---
 
-**Next Step:** 2.10 — Phase 2 Build Bible
+**Next Step:** 2.10 — Phase 2 Build Bible · then Phase 3 People
 
 *Trace: REG-D16 digital twin → ADT-M03 → init script → validate → participants step in [OM-L1]*
