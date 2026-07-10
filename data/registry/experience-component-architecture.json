@@ -1,25 +1,305 @@
 {
-  "version": "1.0.0",
+  "version": "2.0.0",
   "documentId": "VOLUME-004.6",
   "requirementId": "UXB-007",
   "docPath": "docs/volume-04/COMPONENT_ARCHITECTURE.md",
-  "status": "pending",
-  "priority": "critical",
+  "productName": "Component Architecture",
+  "status": "canonical",
+  "priority": "foundational",
   "lastUpdated": "2026-07-10",
-  "guidingPrinciple": "Experience should feel intentional, welcoming, and trustworthy.",
-  "defines": [
-    "Cards",
+  "guidingPrinciple": "Build components once. Compose experiences forever.",
+  "componentPhilosophy": {
+    "pagesNeverDesignedIndividually": true,
+    "componentNotPageIsPrimaryUnit": true,
+    "operationalComponentsNotGenericWidgets": true,
+    "componentsBecomeSmarterOverTime": true,
+    "meaningfulConceptsNotGenericWidgets": true
+  },
+  "traditionalUILibraryContains": [
+    "Buttons",
+    "Forms",
     "Tables",
-    "Timelines",
-    "Dashboards",
-    "Communitycards",
-    "Missioncards",
-    "DigitalTwincards",
-    "Knowledgecards",
-    "Graphviews",
-    "Calendarwidgets"
+    "Cards"
   ],
-  "topicCount": 10,
+  "compositionModel": {
+    "layers": [
+      "Experience",
+      "Workspace",
+      "Panels",
+      "OperationalComponents",
+      "PrimitiveComponents",
+      "DesignTokens"
+    ],
+    "layerCount": 6
+  },
+  "componentHierarchyLevelCount": 6,
+  "componentHierarchy": [
+    {
+      "level": 1,
+      "id": "designTokens",
+      "name": "Design Tokens",
+      "responsibility": "Foundation only",
+      "includes": ["Typography", "Spacing", "Color", "Motion", "Elevation", "Accessibility", "Icons"],
+      "businessKnowledge": false
+    },
+    {
+      "level": 2,
+      "id": "primitiveComponents",
+      "name": "Primitive Components",
+      "responsibility": "Small reusable elements",
+      "examples": ["Button", "Input", "Checkbox", "Badge", "Avatar", "Icon", "Chip", "Tooltip", "ProgressBar"],
+      "businessKnowledge": false
+    },
+    {
+      "level": 3,
+      "id": "compositeComponents",
+      "name": "Composite Components",
+      "responsibility": "Combinations of primitives",
+      "examples": ["SearchBox", "DatePicker", "CalendarWidget", "NavigationRail", "Timeline", "CommentThread", "ApprovalPanel", "NotificationCenter"],
+      "understandsWorkflow": true
+    },
+    {
+      "level": 4,
+      "id": "operationalComponents",
+      "name": "Operational Components",
+      "responsibility": "Core of the platform — domain-aware",
+      "examples": [
+        "MissionCard",
+        "VolunteerCard",
+        "LeadershipCard",
+        "KnowledgeCard",
+        "CommunityCard",
+        "PartnershipCard",
+        "InstitutionCard",
+        "CountyCard",
+        "StoryCard",
+        "DigitalTwinCard",
+        "CommunityHealthCard",
+        "DecisionPanel"
+      ]
+    },
+    {
+      "level": 5,
+      "id": "workspaceModules",
+      "name": "Workspace Modules",
+      "responsibility": "Collections of operational components",
+      "examples": [
+        "MissionDashboard",
+        "VolunteerQueue",
+        "ExecutiveBriefing",
+        "CommunityTimeline",
+        "KnowledgeFeed",
+        "LeadershipPipeline",
+        "CalendarPanel"
+      ]
+    },
+    {
+      "level": 6,
+      "id": "completeWorkspaces",
+      "name": "Complete Workspaces",
+      "responsibility": "Entire experiences from reusable modules",
+      "examples": [
+        "PersonalOperatingSystem",
+        "VolunteerSuccessCenter",
+        "MissionOperationsCenter",
+        "LeadershipAcademy",
+        "ExecutiveOperationsCenter",
+        "KnowledgeObservatory"
+      ]
+    }
+  ],
+  "componentQuestions": [
+    "WhatIsThis",
+    "WhyDoesItMatter",
+    "WhatCanIDo",
+    "WhatHappenedRecently",
+    "WhatShouldHappenNext"
+  ],
+  "universalComponentStructure": {
+    "layers": [
+      "Identity",
+      "Status",
+      "Purpose",
+      "Relationships",
+      "Actions",
+      "History",
+      "Intelligence",
+      "Navigation"
+    ],
+    "layerCount": 8
+  },
+  "operationalComponentCount": 12,
+  "operationalComponents": [
+    {
+      "id": "missionCard",
+      "name": "Mission Card",
+      "displays": ["Mission", "Status", "Community", "Leadership", "Volunteers", "Timeline", "CommunityImpact", "NextAction", "Knowledge"],
+      "purpose": "Operational summaries"
+    },
+    {
+      "id": "communityCard",
+      "name": "Community Card",
+      "displays": ["Community", "Health", "Leadership", "Members", "Calendar", "Knowledge", "Growth", "Partnerships"],
+      "purpose": "Communities remain visible everywhere"
+    },
+    {
+      "id": "volunteerCard",
+      "name": "Volunteer Card",
+      "displays": ["Volunteer", "Skills", "Availability", "Communities", "Recognition", "Mentorship", "LeadershipReadiness"],
+      "purpose": "Relationship building"
+    },
+    {
+      "id": "leadershipCard",
+      "name": "Leadership Card",
+      "displays": ["Leader", "CurrentResponsibilities", "Communities", "Mentorship", "Succession", "Workload", "LeadershipHealth"],
+      "purpose": "Leadership remains explainable"
+    },
+    {
+      "id": "knowledgeCard",
+      "name": "Knowledge Card",
+      "displays": ["Title", "Author", "Community", "Reuse", "Evidence", "Version", "RelatedMissions", "PlaybookReferences"],
+      "purpose": "Knowledge becomes discoverable"
+    },
+    {
+      "id": "digitalTwinCard",
+      "name": "Digital Twin Card",
+      "displays": ["Summary", "CurrentStatus", "Recommendations", "Relationships", "Goals", "Health", "RecentActivity"],
+      "purpose": "Digital Twin remains understandable"
+    },
+    {
+      "id": "communityHealthCard",
+      "name": "Community Health Card",
+      "displays": ["Participation", "Leadership", "Knowledge", "Growth", "VolunteerEngagement", "Trend", "HealthExplanation"],
+      "purpose": "Health remains transparent"
+    },
+    {
+      "id": "decisionPanel",
+      "name": "Decision Panel",
+      "displays": ["Decision", "Evidence", "Rules", "Approvals", "Timeline", "Alternatives"],
+      "purpose": "Governance becomes visible"
+    },
+    {
+      "id": "missionTimeline",
+      "name": "Mission Timeline",
+      "category": "timeline",
+      "supports": ["MissionHistory"]
+    },
+    {
+      "id": "communityFeed",
+      "name": "Community Feed",
+      "category": "feed",
+      "supports": ["CommunityActivity"]
+    },
+    {
+      "id": "timelineComponents",
+      "name": "Timeline Components",
+      "category": "timeline",
+      "supports": ["CommunityHistory", "MissionHistory", "LeadershipHistory", "KnowledgeEvolution", "VolunteerJourney"]
+    },
+    {
+      "id": "relationshipPanels",
+      "name": "Relationship Panels",
+      "category": "panel",
+      "visualizes": ["People", "Communities", "Mentors", "Partners", "Knowledge", "Missions"]
+    }
+  ],
+  "componentIntelligenceIncludes": [
+    "AIRecommendations",
+    "CommunityIntelligence",
+    "OperationalIntelligence",
+    "CommunityHealth",
+    "KnowledgeSuggestions"
+  ],
+  "componentMemoryRemembers": [
+    "ExpandedSections",
+    "RecentActivity",
+    "PinnedInformation",
+    "UserPreferences",
+    "WorkspaceContext"
+  ],
+  "accessibilitySupports": [
+    "Keyboard",
+    "ScreenReaders",
+    "Touch",
+    "ReducedMotion",
+    "HighContrast",
+    "ResponsiveLayouts"
+  ],
+  "mobileAdaptationStages": [
+    "DesktopRichOperationalPanel",
+    "TabletCondensedPanel",
+    "PhoneProgressiveDisclosure"
+  ],
+  "performanceSupports": [
+    "LazyLoading",
+    "Streaming",
+    "Caching",
+    "IncrementalRendering",
+    "Virtualization"
+  ],
+  "aiComponentExamples": [
+    "OpenTheCommunityCard",
+    "SummarizeThisMissionCard",
+    "CompareTheseLeadershipCards"
+  ],
+  "livingOperationalComponentRegistry": {
+    "name": "Living Operational Component Registry",
+    "abbreviation": "LOCR",
+    "isFoundationalEngineeringAsset": true,
+    "storesVisualAndOperationalKnowledge": true,
+    "definitionDomains": [
+      {
+        "id": "identity",
+        "name": "Identity",
+        "fields": ["CanonicalComponentId", "Purpose", "Category", "Owner", "Version"]
+      },
+      {
+        "id": "visualDefinition",
+        "name": "Visual Definition",
+        "fields": ["DesignTokens", "Typography", "Color", "Spacing", "Motion", "ResponsiveBehavior"]
+      },
+      {
+        "id": "operationalBehavior",
+        "name": "Operational Behavior",
+        "fields": ["SupportedWorkflows", "BusinessRules", "EventsPublished", "Permissions", "AICapabilities"]
+      },
+      {
+        "id": "dataContracts",
+        "name": "Data Contracts",
+        "fields": ["RequiredData", "OptionalData", "RelatedEntities", "DigitalTwinSupport", "CommunityHealthSupport"]
+      },
+      {
+        "id": "accessibility",
+        "name": "Accessibility",
+        "fields": ["WCAGCompliance", "KeyboardSupport", "ScreenReaderBehavior", "ReducedMotionBehavior"]
+      },
+      {
+        "id": "intelligence",
+        "name": "Intelligence",
+        "fields": ["AIActions", "CommunityIntelligenceIntegration", "OperationalIntelligenceIntegration", "ExplainabilityRequirements"]
+      },
+      {
+        "id": "governance",
+        "name": "Governance",
+        "fields": ["Steward", "ReviewSchedule", "VersionHistory", "DeprecationStatus"]
+      }
+    ],
+    "definitionDomainCount": 7,
+    "aiAssistedDevelopmentExamples": [
+      "AddACommunityHealthCardBeneathTheMissionTimeline",
+      "ReplaceThisVolunteerCardWithTheLeadershipCardVariant",
+      "EmbedADecisionPanelBeforeTheApprovalWorkflow"
+    ],
+    "architecturalProperty": "Every layer governed, reusable, explainable, and capable of evolving without fragmenting the platform"
+  },
+  "burtImplementationGuidance": [
+    "Build semantic operational components not generic widgets",
+    "Business intelligence inside operational components not primitives",
+    "Inherit all behavior from Design Language System",
+    "Responsive and accessible by default",
+    "Integrate AI Digital Twins Community Intelligence Community Event Ledger",
+    "Consult Living Operational Component Registry before interface features"
+  ],
   "acceptanceCriteria": "AC-142",
-  "acceptanceCriteriaMet": false
+  "acceptanceCriteriaMet": true
 }
