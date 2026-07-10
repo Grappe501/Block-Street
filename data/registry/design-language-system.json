@@ -1,0 +1,25 @@
+{
+  "version": "1.0.0",
+  "documentId": "VOLUME-004.5",
+  "requirementId": "UXB-006",
+  "docPath": "docs/volume-04/DESIGN_LANGUAGE_SYSTEM.md",
+  "status": "pending",
+  "priority": "critical",
+  "lastUpdated": "2026-07-10",
+  "guidingPrinciple": "Experience should feel intentional, welcoming, and trustworthy.",
+  "defines": [
+    "Typography",
+    "Colorsystem",
+    "Spacing",
+    "Icons",
+    "Motion",
+    "Elevation",
+    "Cards",
+    "Layout",
+    "Components",
+    "Accessibilitytokens"
+  ],
+  "topicCount": 10,
+  "acceptanceCriteria": "AC-141",
+  "acceptanceCriteriaMet": false
+}

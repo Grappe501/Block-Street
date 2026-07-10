@@ -1,0 +1,28 @@
+{
+  "version": "1.0.0",
+  "documentId": "VOLUME-004.14",
+  "requirementId": "UXB-015",
+  "docPath": "docs/volume-04/EXPERIENCE_ORCHESTRATOR.md",
+  "status": "pending",
+  "priority": "critical",
+  "lastUpdated": "2026-07-10",
+  "guidingPrinciple": "Experience should feel intentional, welcoming, and trustworthy.",
+  "defines": [
+    "ExperienceDesign",
+    "Navigation",
+    "Workspaces",
+    "Dashboards",
+    "Journeys",
+    "Components",
+    "Collaboration",
+    "Mobile",
+    "AI",
+    "Engagement",
+    "Trust",
+    "InstitutionalExperience",
+    "UnifiedCommunityExperience"
+  ],
+  "topicCount": 13,
+  "acceptanceCriteria": "AC-150",
+  "acceptanceCriteriaMet": false
+}

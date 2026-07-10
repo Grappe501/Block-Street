@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0",
+  "documentId": "VOLUME-004.11",
+  "requirementId": "UXB-012",
+  "docPath": "docs/volume-04/ENGAGEMENT_ARCHITECTURE.md",
+  "status": "pending",
+  "priority": "critical",
+  "lastUpdated": "2026-07-10",
+  "guidingPrinciple": "Experience should feel intentional, welcoming, and trustworthy.",
+  "defines": [
+    "Missions",
+    "XP",
+    "Civicreputation",
+    "Streaks",
+    "Badges",
+    "Volunteerachievements",
+    "Communitymilestones",
+    "Leadershippathways",
+    "Recognition"
+  ],
+  "topicCount": 9,
+  "acceptanceCriteria": "AC-147",
+  "acceptanceCriteriaMet": false
+}

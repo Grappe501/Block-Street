@@ -1,0 +1,23 @@
+{
+  "version": "1.0.0",
+  "documentId": "VOLUME-004.9",
+  "requirementId": "UXB-010",
+  "docPath": "docs/volume-04/MOBILE_EXPERIENCE_ARCHITECTURE.md",
+  "status": "pending",
+  "priority": "critical",
+  "lastUpdated": "2026-07-10",
+  "guidingPrinciple": "Experience should feel intentional, welcoming, and trustworthy.",
+  "defines": [
+    "Mobilefirstlayouts",
+    "Offlinebehavior",
+    "Pushinteractions",
+    "QRexperiences",
+    "Volunteercheckin",
+    "Fieldoperations",
+    "Thumbnavigation",
+    "Accessibility"
+  ],
+  "topicCount": 8,
+  "acceptanceCriteria": "AC-145",
+  "acceptanceCriteriaMet": false
+}

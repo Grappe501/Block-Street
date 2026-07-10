@@ -1,13 +1,19 @@
 {
-  "version": "1.0.0",
+  "version": "2.0.0",
   "volume": 4,
-  "docPath": "docs/master/USER_EXPERIENCE_BIBLE.md",
+  "docPath": "docs/master/USER_EXPERIENCE_PRODUCT_ARCHITECTURE.md",
+  "masterSequencePath": "docs/volume-04/VOLUME_4_MASTER_SEQUENCE.md",
   "requirementId": "UXB-001",
-  "productName": "User Experience Bible",
-  "status": "v1_structure_complete",
+  "productName": "User Experience & Product Architecture",
+  "status": "scaffold",
   "priority": "critical",
-  "companionVolume": 6,
-  "navigation": { "mobile": "bottom_tabs", "tablet": "bottom_tabs_side_panel", "desktop": "left_nav_main_insight" },
-  "screenCatalogCount": 15,
-  "accessibilityStandard": "WCAG 2.1 AA"
+  "readAfter": "PBA-001",
+  "legacyDocPath": "docs/master/USER_EXPERIENCE_BIBLE.md",
+  "coreQuestion": "What does using the Community Operating System actually feel like?",
+  "guidingPrinciple": "Experience should feel intentional, welcoming, and trustworthy.",
+  "stepsComplete": 0,
+  "stepsTotal": 14,
+  "experienceLayerCount": 14,
+  "registryPath": "data/registry/experience-architecture-bible.json",
+  "acceptanceCriteria": "AC-136"
 }

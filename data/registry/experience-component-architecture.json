@@ -1,0 +1,25 @@
+{
+  "version": "1.0.0",
+  "documentId": "VOLUME-004.6",
+  "requirementId": "UXB-007",
+  "docPath": "docs/volume-04/COMPONENT_ARCHITECTURE.md",
+  "status": "pending",
+  "priority": "critical",
+  "lastUpdated": "2026-07-10",
+  "guidingPrinciple": "Experience should feel intentional, welcoming, and trustworthy.",
+  "defines": [
+    "Cards",
+    "Tables",
+    "Timelines",
+    "Dashboards",
+    "Communitycards",
+    "Missioncards",
+    "DigitalTwincards",
+    "Knowledgecards",
+    "Graphviews",
+    "Calendarwidgets"
+  ],
+  "topicCount": 10,
+  "acceptanceCriteria": "AC-142",
+  "acceptanceCriteriaMet": false
+}

@@ -1,0 +1,22 @@
+{
+  "version": "1.0.0",
+  "documentId": "VOLUME-004.7",
+  "requirementId": "UXB-008",
+  "docPath": "docs/volume-04/WORKSPACE_ARCHITECTURE.md",
+  "status": "pending",
+  "priority": "critical",
+  "lastUpdated": "2026-07-10",
+  "guidingPrinciple": "Experience should feel intentional, welcoming, and trustworthy.",
+  "defines": [
+    "PersonalWorkspace",
+    "CommunityWorkspace",
+    "MissionWorkspace",
+    "LeadershipWorkspace",
+    "KnowledgeWorkspace",
+    "ExecutiveWorkspace",
+    "CountyWorkspace"
+  ],
+  "topicCount": 7,
+  "acceptanceCriteria": "AC-143",
+  "acceptanceCriteriaMet": false
+}

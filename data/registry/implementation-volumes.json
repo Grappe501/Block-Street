@@ -47,20 +47,24 @@
       "masterSequencePath": "docs/volume-03/VOLUME_3_MASTER_SEQUENCE.md",
       "registryPath": "data/registry/platform-behavior-bible.json",
       "chapters": 14,
-      "stepsComplete": 2,
+      "stepsComplete": 14,
       "stepsTotal": 14,
       "acceptanceCriteria": "AC-121",
-      "status": "in_progress"
+      "status": "complete"
     },
     {
       "volume": 4,
-      "name": "User Experience Bible",
-      "subtitle": "Every screen, flow, and interaction state",
+      "name": "User Experience & Product Architecture",
+      "subtitle": "How humans experience the platform",
       "requirementId": "UXB-001",
-      "docPath": "docs/master/USER_EXPERIENCE_BIBLE.md",
-      "registryPath": "data/registry/user-experience-bible.json",
-      "acceptanceCriteria": "AC-079",
-      "status": "v1_complete"
+      "docPath": "docs/master/USER_EXPERIENCE_PRODUCT_ARCHITECTURE.md",
+      "masterSequencePath": "docs/volume-04/VOLUME_4_MASTER_SEQUENCE.md",
+      "registryPath": "data/registry/experience-architecture-bible.json",
+      "chapters": 14,
+      "stepsComplete": 0,
+      "stepsTotal": 14,
+      "acceptanceCriteria": "AC-136",
+      "status": "scaffold"
     },
     {
       "volume": 5,

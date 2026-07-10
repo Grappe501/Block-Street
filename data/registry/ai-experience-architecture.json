@@ -1,0 +1,22 @@
+{
+  "version": "1.0.0",
+  "documentId": "VOLUME-004.10",
+  "requirementId": "UXB-011",
+  "docPath": "docs/volume-04/AI_EXPERIENCE_ARCHITECTURE.md",
+  "status": "pending",
+  "priority": "critical",
+  "lastUpdated": "2026-07-10",
+  "guidingPrinciple": "Experience should feel intentional, welcoming, and trustworthy.",
+  "defines": [
+    "AICoach",
+    "AIResearchAssistant",
+    "AIMissionPlanner",
+    "AICommunityGuide",
+    "AIKnowledgeAssistant",
+    "AIExecutiveAdvisor",
+    "AIWritingAssistant"
+  ],
+  "topicCount": 7,
+  "acceptanceCriteria": "AC-146",
+  "acceptanceCriteriaMet": false
+}

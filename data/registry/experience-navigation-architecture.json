@@ -1,0 +1,23 @@
+{
+  "version": "1.0.0",
+  "documentId": "VOLUME-004.2",
+  "requirementId": "UXB-003",
+  "docPath": "docs/volume-04/NAVIGATION_ARCHITECTURE.md",
+  "status": "pending",
+  "priority": "critical",
+  "lastUpdated": "2026-07-10",
+  "guidingPrinciple": "Experience should feel intentional, welcoming, and trustworthy.",
+  "defines": [
+    "Navigationhierarchy",
+    "Routephilosophy",
+    "Executivenavigation",
+    "Participantnavigation",
+    "Communitynavigation",
+    "Crossmodulenavigation",
+    "Searchdrivennavigation",
+    "Contextawarenavigation"
+  ],
+  "topicCount": 8,
+  "acceptanceCriteria": "AC-138",
+  "acceptanceCriteriaMet": false
+}
