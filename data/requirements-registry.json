@@ -5532,6 +5532,47 @@
       }
     },
     {
+      "id": "PSI-015",
+      "title": "Platform Orchestrator & Unified Runtime Architecture — Volume 5.14",
+      "purpose": "Master coordination layer — unify every Volume 5 capability into one Unified Civic Runtime",
+      "description": "VOLUME-005.14 — Constitutional Operating Kernel, 13 orchestrated systems, Platform Twins, COS Canon recommendation, Volume 5 completion",
+      "priority": "master_architecture",
+      "principle": "CP-012",
+      "dependencies": [
+        "PSI-014",
+        "PSI-002",
+        "PSI-001",
+        "PBA-015",
+        "PBA-014"
+      ],
+      "related": [
+        "PSI-001",
+        "AIB-001"
+      ],
+      "acceptanceCriteria": [
+        "Platform orchestration philosophy documented",
+        "Every Volume 5 subsystem coordinated",
+        "Runtime, AI, LocalBrain, Platform Twins, EOC, and governance unified",
+        "Constitutional Operating Kernel specified",
+        "Complete blueprint for platform runtime orchestration layer"
+      ],
+      "futureNotes": "Guiding principle: Many systems. One platform. One operational reality. Volume 5 complete — COS Canon recommended before Volume 6.",
+      "implementationStatus": "done",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": null,
+        "api": "API-SYSTEM",
+        "frontend": "UI-SYSTEM",
+        "test": "TEST-PSI-015",
+        "doc": "DOC-PSI-015"
+      },
+      "versionHistory": {
+        "created": "2026-07-10",
+        "implemented": "2026-07-10"
+      }
+    },
+    {
       "id": "PSI-014",
       "title": "Platform Operations, Governance & Lifecycle Architecture — Volume 5.13",
       "purpose": "Operate the platform as a governed institution — stewardship, certification, and decades-long evolution",
@@ -6121,10 +6162,10 @@
         "Foundation stack Volumes 0-5 defined",
         "Complete blueprint for platform services and integration architecture"
       ],
-      "futureNotes": "Volume 5 scaffold — 13/14 canonical steps complete. LocalBrain woven throughout every chapter.",
-      "implementationStatus": "scaffold",
+      "futureNotes": "Volume 5 complete — 14/14 canonical steps. Constitutional Operating Kernel unifies federated ecosystem. COS Canon recommended before Volume 6.",
+      "implementationStatus": "done",
       "testingStatus": "pending",
-      "documentationStatus": "scaffold",
+      "documentationStatus": "done",
       "trace": {
         "database": null,
         "api": null,

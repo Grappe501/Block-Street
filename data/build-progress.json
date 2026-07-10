@@ -130,7 +130,7 @@
       { "id": "V5.11", "name": "Observability Architecture [PSI-012]", "status": "done", "notes": "Operational Intelligence Grid, 14 signal domains, Platform Twin — AC-161" },
       { "id": "V5.12", "name": "Scalability Architecture [PSI-013]", "status": "done", "notes": "Adaptive Capacity Grid, 12 scaling domains, predictive scaling — AC-162" },
       { "id": "V5.13", "name": "Platform Operations Architecture [PSI-014]", "status": "done", "notes": "Platform Stewardship Office, certification, lifecycle governance — AC-163" },
-      { "id": "V5.14", "name": "Platform Integration Orchestrator [PSI-015]", "status": "pending", "notes": "Unified platform runtime orchestrator" },
+      { "id": "V5.14", "name": "Platform Integration Orchestrator [PSI-015]", "status": "done", "notes": "Constitutional Operating Kernel, 13 orchestrated systems, Unified Civic Runtime — AC-164 · Volume 5 complete" },
       { "id": "V6.1", "name": "AI & Intelligence Bible [AIB-001]", "status": "done", "notes": "LocalBrain, RAG v1; AC-080" },
       { "id": "V7.1", "name": "Operations & Launch Bible [OLB-001]", "status": "done", "notes": "Launch stages v1; AC-081" },
       { "id": "V8.1", "name": "Experience Design Bible [EDB-001]", "status": "done", "notes": "Emotional design v1; AC-082" }

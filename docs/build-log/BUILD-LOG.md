@@ -18,6 +18,22 @@
 
 ---
 
+## 2026-07-10 — Volume 5.14 Platform Orchestrator & Unified Runtime Architecture [PSI-015 · AC-164] · **VOLUME 5 COMPLETE**
+
+**Document:** `docs/volume-05/PLATFORM_ORCHESTRATOR.md` · **Registry:** `data/registry/platform-orchestrator-volume5.json`
+
+### What Changed
+
+- **Guiding principle:** *Many systems. One platform. One operational reality.*
+- Master coordination layer unifying all Volume 5.1–5.13 subsystems
+- **13 orchestrated systems** — PSM through PSO coordinated continuously
+- Platform coordination pipeline, runtime/AI/LocalBrain/executive coordination
+- **Constitutional Operating Kernel (COK)** — 6 layers, 6 kernel engines, Unified Civic Runtime
+- **COS Canon** strategic recommendation — master traceability index for Volumes 0–5
+- Umbrella PSI-001 · platform-services-integration-bible **14/14 complete** · Foundation stack Volumes 0–5 ready for Volume 6
+
+---
+
 ## 2026-07-10 — Volume 5.13 Platform Operations, Governance & Lifecycle Architecture [PSI-014 · AC-163]
 
 **Document:** `docs/volume-05/PLATFORM_OPERATIONS_ARCHITECTURE.md` · **Registry:** `data/registry/platform-operations-architecture-volume5.json`

@@ -75,10 +75,10 @@
       "masterSequencePath": "docs/volume-05/VOLUME_5_MASTER_SEQUENCE.md",
       "registryPath": "data/registry/platform-services-integration-bible.json",
       "chapters": 14,
-      "stepsComplete": 13,
+      "stepsComplete": 14,
       "stepsTotal": 14,
-      "acceptanceCriteria": "AC-151",
-      "status": "in_progress"
+      "acceptanceCriteria": "AC-164",
+      "status": "complete"
     },
     {
       "volume": 6,

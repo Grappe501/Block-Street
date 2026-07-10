@@ -1,7 +1,7 @@
 # Volume 5 Master Sequence — Platform Services & Integration Architecture
 
 **Document ID:** VOLUME-005 · **PSI-001**  
-**Status:** In progress (13/14 steps)  
+**Status:** Complete (14/14 steps)  
 **Priority:** Foundational
 
 > **How does the Community Operating System connect to the outside world while remaining one unified platform?**
@@ -109,7 +109,7 @@ Volume 5 is complete when Burt understands:
 - [x] How observability is first-class (5.11)
 - [x] How the platform scales (5.12)
 - [x] How platform operations are standardized (5.13)
-- [ ] How every infrastructure capability coordinates (5.14)
+- [x] How every infrastructure capability coordinates (5.14)
 
 ---
 
@@ -130,9 +130,9 @@ Volume 5 is complete when Burt understands:
 | 5.11 Observability Architecture | ✅ Done |
 | 5.12 Scalability Architecture | ✅ Done |
 | 5.13 Platform Operations Architecture | ✅ Done |
-| 5.14 Platform Integration Orchestrator | ⏳ Pending |
+| 5.14 Platform Integration Orchestrator | ✅ Done |
 
-**Volume 5 in progress.** 13/14 platform service layers documented.
+**Volume 5 complete.** All 14 platform service layers documented. Constitutional Operating Kernel unifies the federated ecosystem.
 
 ---
 

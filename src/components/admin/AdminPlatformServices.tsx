@@ -14,6 +14,7 @@ import security from "../../../data/registry/security-architecture-volume5.json"
 import observability from "../../../data/registry/observability-architecture-volume5.json";
 import scalability from "../../../data/registry/scalability-architecture-volume5.json";
 import platformOps from "../../../data/registry/platform-operations-architecture-volume5.json";
+import orchestrator from "../../../data/registry/platform-orchestrator-volume5.json";
 
 type ServiceReg = {
   acceptanceCriteria: string;
@@ -37,6 +38,10 @@ type ServiceReg = {
   operationalIntelligenceGrid?: { abbreviation: string; gridLayers?: { layerCount: number }; oigResponsibilities?: { responsibilityCount: number } };
   adaptiveCapacityGrid?: { abbreviation: string; gridPipeline?: { stageCount: number }; capacityDomains?: { domainCount: number } };
   platformStewardshipOffice?: { abbreviation: string; stewardshipResponsibilities?: { responsibilityCount: number }; platformSelfAssessment?: { dimensionCount: number } };
+  constitutionalOperatingKernel?: { abbreviation: string; kernelLayers?: { layerCount: number }; kernelResponsibilities?: { responsibilityCount: number } };
+  orchestratedSystemCount?: number;
+  orchestrationPrincipleCount?: number;
+  platformTwinCount?: number;
   operationalPrincipleCount?: number;
   platformGovernanceAreaCount?: number;
   scalingDomainCount?: number;
@@ -77,6 +82,7 @@ type ServiceReg = {
   observabilityArchitecture?: { layerCount: number };
   scalabilityArchitecture?: { layerCount: number };
   platformLifecycle?: { layerCount: number };
+  platformOrchestrationArchitecture?: { layerCount: number };
   localBrainCompatibility?: { localBrainFirstClassRuntime: boolean };
   localBrainFederation?: {
     explicitIntegration?: boolean;
@@ -103,9 +109,11 @@ const FEATURED_SUBTITLES: Record<string, string> = {
   "5.11": "Observability",
   "5.12": "Scalability",
   "5.13": "Platform Operations",
+  "5.14": "Platform Orchestrator",
 };
 
 const SERVICE_CARDS: { step: string; label: string; reg: ServiceReg; cardClass: string; metaClass: string; titleClass: string; featured?: boolean }[] = [
+  { step: "5.14", label: "Constitutional Operating Kernel", reg: orchestrator, cardClass: "border-indigo-400 bg-indigo-50", metaClass: "text-indigo-800", titleClass: "text-indigo-950", featured: true },
   { step: "5.13", label: "Platform Stewardship Office", reg: platformOps, cardClass: "border-fuchsia-300 bg-fuchsia-50", metaClass: "text-fuchsia-700", titleClass: "text-fuchsia-950", featured: true },
   { step: "5.12", label: "Adaptive Capacity Grid", reg: scalability, cardClass: "border-violet-300 bg-violet-50", metaClass: "text-violet-700", titleClass: "text-violet-950", featured: true },
   { step: "5.11", label: "Operational Intelligence Grid", reg: observability, cardClass: "border-cyan-300 bg-cyan-50", metaClass: "text-cyan-700", titleClass: "text-cyan-950", featured: true },
@@ -150,7 +158,11 @@ export function AdminPlatformServices() {
             <p className={`mt-2 text-xs ${metaClass}`}>
               {reg.acceptanceCriteria} · {reg.status}
             </p>
-            {reg.platformStewardshipOffice ? (
+            {reg.constitutionalOperatingKernel ? (
+              <p className={`mt-1 text-xs ${metaClass}`}>
+                {reg.orchestratedSystemCount ?? 0} orchestrated systems · {reg.orchestrationPrincipleCount ?? 0} principles · {reg.platformOrchestrationArchitecture?.layerCount ?? 0} orchestration layers · {reg.constitutionalOperatingKernel.kernelLayers?.layerCount ?? 0} COK layers · {reg.constitutionalOperatingKernel.kernelResponsibilities?.responsibilityCount ?? 0} kernel engines · {reg.platformTwinCount ?? 0} Platform Twins · Unified Civic Runtime · Volume 5 complete
+              </p>
+            ) : reg.platformStewardshipOffice ? (
               <p className={`mt-1 text-xs ${metaClass}`}>
                 {reg.platformGovernanceAreaCount ?? 0} governance areas · {reg.operationalPrincipleCount ?? 0} principles · {reg.platformLifecycle?.layerCount ?? 0} lifecycle stages · {reg.platformStewardshipOffice.stewardshipResponsibilities?.responsibilityCount ?? 0} PSO responsibilities · {reg.platformStewardshipOffice.platformSelfAssessment?.dimensionCount ?? 0} self-assessment dimensions · Digital Stewardship Twin
               </p>
