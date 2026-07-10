@@ -1,1 +1,276 @@
-{"version":"1.0.0","requirementId":"DAB-011","docPath":"docs/volume-02/SEARCH_INDEX_MODEL.md","indexTypes":["full_text","entity","geographic","suggestion","semantic"],"acceptanceCriteria":"AC-116"}
+{
+  "version": "2.0.0",
+  "documentId": "VOLUME-002.10",
+  "requirementId": "DAB-011",
+  "docPath": "docs/volume-02/SEARCH_INDEX_MODEL.md",
+  "status": "canonical",
+  "priority": "critical",
+  "lastUpdated": "2026-07-10",
+  "guidingPrinciple": "Search should never become another source of truth.",
+  "databaseOwnsTruth": true,
+  "indexOwnsDiscovery": true,
+  "engCompanion": {
+    "requirementId": "ENG-010",
+    "docPath": "docs/volume-01/SEARCH_ARCHITECTURE.md"
+  },
+  "dgeCompanion": {
+    "requirementId": "DGE-001",
+    "docPath": "docs/volume-01/DISCOVERY_ENGINE.md"
+  },
+  "searchPhilosophy": {
+    "relationshipCenteredDiscovery": true,
+    "intelligentNavigation": true,
+    "notADocumentSearchEngine": true
+  },
+  "searchArchitecture": {
+    "layers": [
+      "CanonicalDatabase",
+      "ProjectionEngine",
+      "SearchIndex",
+      "RankingEngine",
+      "DiscoveryEngine",
+      "ParticipantExperience"
+    ],
+    "layerCount": 6
+  },
+  "canonicalSources": [
+    "Participant",
+    "Community",
+    "County",
+    "Institution",
+    "Mission",
+    "Event",
+    "Story",
+    "Lesson",
+    "Playbook",
+    "CommunityBrain",
+    "Partnership",
+    "Resource",
+    "KnowledgeGraph",
+    "CommunityEventLedger",
+    "DigitalTwin"
+  ],
+  "searchObjectFields": [
+    "canonicalEntityId",
+    "entityType",
+    "title",
+    "summary",
+    "searchText",
+    "keywords",
+    "tags",
+    "visibility",
+    "permissionScope",
+    "location",
+    "relationships",
+    "rankingSignals",
+    "lastIndexed",
+    "version"
+  ],
+  "indexCategoryCount": 9,
+  "indexCategories": [
+    {
+      "id": "identity",
+      "name": "Identity Index",
+      "supports": ["Participant", "Mentor", "Leader", "Volunteer", "Skill", "Interest"]
+    },
+    {
+      "id": "community",
+      "name": "Community Index",
+      "supports": ["Community", "Committee", "CommunityProfile", "CommunityHealth", "Growth"]
+    },
+    {
+      "id": "registry",
+      "name": "Registry Index",
+      "supports": ["County", "City", "Institution", "Region", "Facility"]
+    },
+    {
+      "id": "mission",
+      "name": "Mission Index",
+      "supports": ["Initiative", "Mission", "Project", "Task", "Milestone"]
+    },
+    {
+      "id": "experience",
+      "name": "Experience Index",
+      "supports": ["Event", "Training", "Workshop", "VolunteerOpportunity", "Attendance"]
+    },
+    {
+      "id": "knowledge",
+      "name": "Knowledge Index",
+      "supports": ["Story", "Lesson", "Playbook", "MissionLibrary", "CommunityBrain", "Legacy"]
+    },
+    {
+      "id": "partnership",
+      "name": "Partnership Index",
+      "supports": ["Organization", "Partner", "Collaboration", "SharedInitiative", "Facility"]
+    },
+    {
+      "id": "capacity",
+      "name": "Capacity Index",
+      "supports": ["Skill", "Equipment", "Transportation", "Resource", "Availability"]
+    },
+    {
+      "id": "intelligence",
+      "name": "Intelligence Index",
+      "supports": ["Recommendation", "Insight", "Pattern", "DigitalTwin", "SearchIntelligence"],
+      "derived": true
+    }
+  ],
+  "geographicIndexFields": [
+    "State",
+    "County",
+    "Region",
+    "City",
+    "Institution",
+    "Coordinates",
+    "MapLayers"
+  ],
+  "temporalIndexFields": [
+    "CreationDate",
+    "Modification",
+    "HistoricalEvents",
+    "TimelinePosition",
+    "UpcomingEvents",
+    "Anniversaries"
+  ],
+  "relationshipIndexExamples": [
+    "Mentorship",
+    "Leadership",
+    "Participation",
+    "CommunityMembership",
+    "SharedMissions",
+    "Collaborations"
+  ],
+  "semanticIndex": {
+    "futureCapabilities": [
+      "Embeddings",
+      "TopicClustering",
+      "IntentMatching",
+      "SimilaritySearch",
+      "KnowledgeRecommendations"
+    ],
+    "derived": true,
+    "optionalV1": true
+  },
+  "permissionIndex": {
+    "evaluateBeforeReturn": true,
+    "checks": ["Visibility", "CommunityScope", "RolePermissions"],
+    "neverIndexUnauthorized": true,
+    "preFiltersBeforeRanking": true
+  },
+  "rankingSignals": [
+    "TextRelevance",
+    "RelationshipProximity",
+    "KnowledgeQuality",
+    "CommunityContext",
+    "RecentActivity",
+    "LeadershipRelevance",
+    "ParticipantInterests",
+    "GeographicProximity",
+    "Freshness"
+  ],
+  "explainableRanking": true,
+  "facets": [
+    "County",
+    "Community",
+    "Institution",
+    "Mission",
+    "KnowledgeArea",
+    "Date",
+    "Topic",
+    "Status",
+    "Visibility",
+    "Type"
+  ],
+  "autocompleteTargets": [
+    "Participant",
+    "Community",
+    "County",
+    "Event",
+    "Story",
+    "Knowledge",
+    "Playbook",
+    "Organization"
+  ],
+  "savedSearchCapabilities": [
+    "SearchQueries",
+    "Filters",
+    "Collections",
+    "Alerts",
+    "DiscoveryPreferences"
+  ],
+  "discoveryObjects": [
+    "SuggestedCommunities",
+    "VolunteerOpportunities",
+    "RelevantStories",
+    "NearbyEvents",
+    "Mentors",
+    "Knowledge",
+    "Partnerships"
+  ],
+  "reindexStrategy": {
+    "incrementalUpdates": true,
+    "fullRebuild": true,
+    "replayFromEventLedger": true,
+    "verification": true,
+    "healthMonitoring": true,
+    "automated": true,
+    "idempotentUpsert": true
+  },
+  "searchObservability": [
+    "QueryLatency",
+    "Popularity",
+    "NoResultSearches",
+    "RankingQuality",
+    "PermissionFiltering",
+    "ClickThrough",
+    "DiscoverySuccess"
+  ],
+  "aiCapabilities": [
+    "generateSearchSummaries",
+    "recommendFilters",
+    "interpretSearchIntent",
+    "suggestRelatedKnowledge",
+    "identifyOverlookedResources",
+    "generateSemanticQueries"
+  ],
+  "aiNeverChangesCanonicalData": true,
+  "universalDiscoveryIndex": {
+    "name": "Universal Discovery Index",
+    "purpose": "Unified search projection — every canonical entity into one standardized discovery model",
+    "indexedObjectContains": [
+      "CanonicalEntityReference",
+      "TitleAndSummary",
+      "SearchableText",
+      "KnowledgeGraphRelationships",
+      "GeographicMetadata",
+      "TimelineMetadata",
+      "VisibilityAndPermissionMetadata",
+      "RankingSignals",
+      "SemanticEmbeddings",
+      "DigitalTwinReferences"
+    ],
+    "foundations": [
+      "GlobalSearch",
+      "DiscoveryEngine",
+      "AIRetrieval",
+      "RecommendationSystems",
+      "DashboardSuggestions",
+      "MapSearch",
+      "CommunityExploration",
+      "KnowledgeReuse"
+    ],
+    "principle": "Canonical data is written once, projected many times, and discovered through a single, coherent model"
+  },
+  "projectionIntegrations": {
+    "knowledgeGraphPath": "data/registry/knowledge-graph-schema.json",
+    "eventLedgerPath": "data/registry/event-data-model.json",
+    "projectionEngine": "UnifiedGraphProjectionEngine"
+  },
+  "implementationNotes": {
+    "v1Technologies": ["PostgresTsvectorGIN", "PostGIS", "PgTrgm"],
+    "semanticV1_1": "pgvector optional",
+    "storageTechnologyReplaceable": true
+  },
+  "acceptanceCriteria": "AC-116",
+  "acceptanceCriteriaMet": true
+}
