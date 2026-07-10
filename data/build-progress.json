@@ -110,7 +110,7 @@
       { "id": "V4.5", "name": "Design Language System [UXB-006]", "status": "done", "notes": "Living Design System, 6 principles, 6 semantic colors, token-based design — AC-141" },
       { "id": "V4.6", "name": "Component Architecture [UXB-007]", "status": "done", "notes": "Living Operational Component Registry, 6-level hierarchy, 12 operational components — AC-142" },
       { "id": "V4.7", "name": "Workspace Architecture [UXB-008]", "status": "done", "notes": "Unified Workspace Manager, 9 workspace types, 8 framework zones — AC-143" },
-      { "id": "V4.8", "name": "Collaboration Architecture [UXB-009]", "status": "pending", "notes": "Chat, mentorship, collaborative editing — AC-144" },
+      { "id": "V4.8", "name": "Collaboration Architecture [UXB-009]", "status": "done", "notes": "Collaborative Intelligence Network, 7 domains, 6 CIN layers — AC-144" },
       { "id": "V4.9", "name": "Mobile Experience Architecture [UXB-010]", "status": "pending", "notes": "Mobile-first, offline, field operations — AC-145" },
       { "id": "V4.10", "name": "AI Experience Architecture [UXB-011]", "status": "pending", "notes": "AI Coach, trusted teammate presentation — AC-146" },
       { "id": "V4.11", "name": "Engagement Architecture [UXB-012]", "status": "pending", "notes": "XP, badges, recognition without manipulation — AC-147" },
