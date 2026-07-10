@@ -105,7 +105,7 @@
       { "id": "V3.14", "name": "Community OS Orchestrator [PBA-015]", "status": "done", "notes": "Institutional Nervous System, 13-layer pipeline, Volume 3 complete — AC-135" },
       { "id": "V4.1", "name": "Experience Design System [UXB-002]", "status": "done", "notes": "Experience Quality Engine, 10 principles, emotional journey — AC-137" },
       { "id": "V4.2", "name": "Navigation Architecture [UXB-003]", "status": "done", "notes": "Intent Navigation Engine, 5-level model, purpose-driven nav — AC-138" },
-      { "id": "V4.3", "name": "Dashboard Architecture [UXB-004]", "status": "pending", "notes": "Operational workspaces, MOC, EOC, KO dashboards — AC-139" },
+      { "id": "V4.3", "name": "Dashboard & Workspace Architecture [UXB-004]", "status": "done", "notes": "Adaptive Workspace Engine, 8 panels, 8 workspace types — AC-139" },
       { "id": "V4.4", "name": "User Journey Architecture [UXB-005]", "status": "pending", "notes": "End-to-end journeys, onboarding, alumni — AC-140" },
       { "id": "V4.5", "name": "Design Language System [UXB-006]", "status": "pending", "notes": "Typography, color, tokens, components — AC-141" },
       { "id": "V4.6", "name": "Component Architecture [UXB-007]", "status": "pending", "notes": "Reusable UI components, cards, timelines — AC-142" },

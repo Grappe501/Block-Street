@@ -5344,28 +5344,34 @@
     },
     {
       "id": "UXB-004",
-      "title": "Dashboard Architecture — Volume 4.3",
-      "purpose": "Dashboard Architecture experience layer",
-      "description": "VOLUME-004.3 operational dashboards, Personal OS, MOC, EOC, KO workspaces",
-      "priority": "critical",
+      "title": "Dashboard & Workspace Architecture — Volume 4.3",
+      "purpose": "Operational workspaces and adaptive dashboards — front door to meaningful work",
+      "description": "VOLUME-004.3 — Adaptive Workspace Engine, 8-panel universal layout, 8 workspace types, Digital Twin and AI integration",
+      "priority": "foundational",
       "principle": "CP-012",
       "dependencies": [
         "UXB-003",
-        "UXB-001"
+        "UXB-002",
+        "UXB-001",
+        "PBA-001"
       ],
       "related": [
-        "UXB-005"
+        "UXB-005",
+        "UXB-008",
+        "UXB-003"
       ],
       "acceptanceCriteria": [
-        "Experience philosophy documented",
-        "UX behaviors defined",
-        "Volume 0-3 integration specified",
-        "Implementation blueprint for experience layer"
+        "Workspace philosophy documented",
+        "Universal dashboard layout defined",
+        "All primary workspaces specified",
+        "Personalization, AI, Digital Twin, Community Event Ledger, and mobile integrations established",
+        "Adaptive Workspace Engine specified",
+        "Complete blueprint for operational workspaces"
       ],
-      "futureNotes": "Scaffold — pending canonical build step",
-      "implementationStatus": "pending",
+      "futureNotes": "Guiding principle: Every dashboard should answer one question — What should I do next?",
+      "implementationStatus": "done",
       "testingStatus": "pending",
-      "documentationStatus": "pending",
+      "documentationStatus": "done",
       "trace": {
         "database": null,
         "api": null,
@@ -5375,7 +5381,7 @@
       },
       "versionHistory": {
         "created": "2026-07-10",
-        "implemented": null
+        "implemented": "2026-07-10"
       }
     },
     {

@@ -1,7 +1,7 @@
 # Volume 4 Master Sequence — User Experience & Product Architecture
 
 **Document ID:** VOLUME-004 · **UXB-001**  
-**Status:** In progress (2/14 steps)  
+**Status:** In progress (3/14 steps)  
 **Priority:** Critical
 
 > **What does using the Community Operating System actually feel like?**
@@ -40,7 +40,7 @@ This volume establishes the complete experience architecture before Burt writes 
 |------|------|----------|-------------|
 | **4.1** | Experience Design System | [EXPERIENCE_DESIGN_SYSTEM.md](EXPERIENCE_DESIGN_SYSTEM.md) | UXB-002 |
 | **4.2** | Navigation Architecture | [NAVIGATION_ARCHITECTURE.md](NAVIGATION_ARCHITECTURE.md) | UXB-003 |
-| **4.3** | Dashboard Architecture | [DASHBOARD_ARCHITECTURE.md](DASHBOARD_ARCHITECTURE.md) | UXB-004 |
+| **4.3** | Dashboard & Workspace Architecture | [DASHBOARD_ARCHITECTURE.md](DASHBOARD_ARCHITECTURE.md) | UXB-004 |
 | **4.4** | User Journey Architecture | [USER_JOURNEY_ARCHITECTURE.md](USER_JOURNEY_ARCHITECTURE.md) | UXB-005 |
 | **4.5** | Design Language System | [DESIGN_LANGUAGE_SYSTEM.md](DESIGN_LANGUAGE_SYSTEM.md) | UXB-006 |
 | **4.6** | Component Architecture | [COMPONENT_ARCHITECTURE.md](COMPONENT_ARCHITECTURE.md) | UXB-007 |
@@ -95,8 +95,8 @@ Volume 4 is complete when Burt understands:
 
 - [x] How every screen should feel (4.1, 4.5)
 - [x] How people move through the platform (4.2, 4.4)
-- [ ] How workspaces are organized (4.7)
-- [ ] How dashboards behave (4.3)
+- [x] How workspaces are organized (4.3, 4.7)
+- [x] How dashboards behave (4.3)
 - [ ] How mobile experiences function (4.9)
 - [ ] How AI is presented (4.10)
 - [ ] How trust is communicated (4.12)
@@ -126,7 +126,7 @@ Together, Volumes 0–4 form a comprehensive foundation before implementation-sp
 |------|--------|
 | 4.1 Experience Design System | ✅ Done |
 | 4.2 Navigation Architecture | ✅ Done |
-| 4.3 Dashboard Architecture | Pending |
+| 4.3 Dashboard & Workspace Architecture | ✅ Done |
 | 4.4 User Journey Architecture | Pending |
 | 4.5 Design Language System | Pending |
 | 4.6 Component Architecture | Pending |

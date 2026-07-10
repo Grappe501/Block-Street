@@ -18,6 +18,23 @@
 
 ---
 
+## 2026-07-10 — Volume 4.3 Dashboard & Workspace Architecture [UXB-004 · AC-139]
+
+**Document:** `docs/volume-04/DASHBOARD_ARCHITECTURE.md` · **Registry:** `data/registry/dashboard-architecture.json`
+
+### What Changed
+
+- **Guiding principle:** *Every dashboard should answer one question: "What should I do next?"*
+- Dashboards as operational workspaces — not chart collections or page collections
+- **8-layer universal workspace structure** and **8-panel universal dashboard layout**
+- **8 workspace types:** Personal OS through Executive Operations Center
+- Workspace principles, memory, personalization, context, relationships, mobile, AI, Digital Twins
+- **Adaptive Workspace Engine (AWE)** — 7 composition layers constructing today's workspace from context
+- Pairs with Intent Navigation Engine for purpose-driven operating environment
+- Admin Volume 4 tab · requirements UXB-004 updated · Volume 4: 3/14 complete
+
+---
+
 ## 2026-07-10 — Volume 4.2 Navigation Architecture [UXB-003 · AC-138]
 
 **Document:** `docs/volume-04/NAVIGATION_ARCHITECTURE.md` · **Registry:** `data/registry/experience-navigation-architecture.json`
