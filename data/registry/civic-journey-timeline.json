@@ -1,0 +1,162 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/phase-03/CIVIC_JOURNEY_TIMELINE.md",
+  "motto": "Every act of service becomes part of your story.",
+  "principle": "Help participants understand their story — not just what's happening today.",
+  "purpose": "Preserve growth, relationships, leadership, and community contributions as a lifelong narrative in the Civic Passport.",
+  "philosophyQuestions": [
+    "How did I grow?",
+    "Who did I help?",
+    "Who helped me?",
+    "What communities did I strengthen?",
+    "What did we build together?"
+  ],
+  "categories": [
+    {
+      "key": "joining",
+      "label": "Joining",
+      "examples": ["registered", "completedProfile", "selectedCampus", "selectedCounty", "createdFirstNetwork", "joinedFirstCommunity"],
+      "sources": ["USR-001", "PHQ-001", "RGE-M11"]
+    },
+    {
+      "key": "relationships",
+      "label": "Relationships",
+      "examples": ["invitedFriend", "metMentor", "mentoredParticipant", "newCollaboration", "communityConnection", "longTermPartnership"],
+      "sources": ["PRN-M12", "RGE-M09"]
+    },
+    {
+      "key": "volunteerService",
+      "label": "Volunteer Service",
+      "examples": ["volunteerEvent", "serviceProject", "communityOutreach", "hoursContributed", "specialProjects", "recognition"],
+      "sources": ["VOL-001", "CRA-M10"]
+    },
+    {
+      "key": "leadership",
+      "label": "Leadership",
+      "examples": ["organizedEvent", "startedCommittee", "ledProject", "facilitatedMeeting", "developedOrganizer", "launchedCommunity"],
+      "sources": ["COM-001", "EVT-001", "PGL-M10"]
+    },
+    {
+      "key": "learning",
+      "label": "Learning",
+      "examples": ["completedTraining", "leadershipLesson", "workshop", "certification", "reflection", "civicAcademyFuture"],
+      "sources": ["PGL-M08"]
+    },
+    {
+      "key": "communities",
+      "label": "Communities",
+      "examples": ["joinedCommittee", "createdProject", "campusMilestone", "countyMilestone", "communityLaunch", "regionalCollaboration"],
+      "sources": ["CID-001", "Phase 4"]
+    },
+    {
+      "key": "recognition",
+      "label": "Recognition",
+      "examples": ["communityAppreciation", "volunteerRecognition", "leadershipMilestone", "mentorshipRecognition", "stories", "futureAwards"],
+      "sources": ["CRA-M10"]
+    }
+  ],
+  "experienceExamples": [
+    "Today you welcomed your first new participant.",
+    "Two years ago you organized your first campus event.",
+    "You have now mentored five organizers.",
+    "The committee you helped launch is celebrating its third anniversary."
+  ],
+  "reflection": {
+    "optional": true,
+    "types": ["lessonsLearned", "challengesOvercome", "projectSummaries", "personalGrowth", "communityStories"],
+    "defaultVisibility": "private",
+    "participantAuthoredOnly": true
+  },
+  "media": {
+    "futureTypes": ["photos", "documents", "videos", "graphics", "volunteerProjects", "presentations"],
+    "storagePattern": "objectStorageRefs",
+    "v1": false
+  },
+  "communityHistory": {
+    "sharedMoments": ["sharedVolunteerProject", "jointEvent", "committeeLaunch", "communityCelebration"],
+    "graphLinked": true,
+    "privacyRespectsVisibility": true
+  },
+  "search": {
+    "futureQueries": ["volunteerProjects", "committeeWork", "leadershipExperiences", "mentorship", "campusHistory"],
+    "indexes": ["category", "date", "community", "reflectionText"],
+    "v1": false
+  },
+  "privacy": {
+    "controls": ["timelineVisibility", "publicMilestones", "privateReflections", "communityStories", "recognitionSharing"],
+    "views": [
+      { "key": "private", "content": "Full timeline including reflections" },
+      { "key": "connections", "content": "Milestones and public gratitude" },
+      { "key": "public", "content": "Privacy-filtered highlights" }
+    ],
+    "defaultTimelineVisibility": "connections"
+  },
+  "historicalIntegrity": {
+    "appendOnly": true,
+    "archiveNotDelete": true,
+    "amendmentPattern": "correctionsAddAmendmentEntries",
+    "alignsWith": ["STS-M16", "KDG-M07"]
+  },
+  "memoryMoments": {
+    "description": "Occasionally surface significant memories — continuity and celebration, not nostalgia spam",
+    "signatureFeature": true,
+    "orchestrator": "surfaceMemoryMoments(participantId, asOfDate)",
+    "examples": [
+      "One year ago today you welcomed your first new member.",
+      "Three years ago you helped launch the Pulaski County community.",
+      "Remember your first volunteer event?",
+      "Today marks two years since you organized your first campus meeting."
+    ],
+    "delivery": {
+      "priority": "inspirational",
+      "channels": ["morningBrief", "passportHighlight"],
+      "attentionBudget": "CAM-M13",
+      "maxPerSession": 1,
+      "participantDismissSnooze": true
+    }
+  },
+  "civicPassportIntegration": {
+    "backbone": true,
+    "sections": ["milestones", "serviceHistory", "leadership", "growthNarrative", "recognition", "reflections"],
+    "sources": ["JRN-M09", "CPP-001", "PGL-M13", "CRA-M10"]
+  },
+  "eventSourcing": {
+    "pattern": "referenceCanonicalEvents",
+    "gate": "appendTimelineEntry(sourceType, sourceId)",
+    "idempotent": true,
+    "fields": ["source_type", "source_id", "narrative", "category", "occurred_at", "visibility"],
+    "producers": [
+      { "source": "USR-001", "event": "joined.registered" },
+      { "source": "RGE-001", "event": "relationships.inviteAccepted" },
+      { "source": "CRA-001", "event": "recognition.gratitudeReceived" },
+      { "source": "PGL-001", "event": "learning.milestoneReached" },
+      { "source": "PRN-M12", "event": "relationships.timelineSeed" }
+    ],
+    "unifiedStore": true,
+    "subTimelinesAreViews": true
+  },
+  "futurePortfolio": {
+    "useCases": ["scholarships", "applications", "leadershipReferences"],
+    "participantCurated": true,
+    "neverAutoPublic": true
+  },
+  "v1Scope": {
+    "philosophyAndTaxonomy": true,
+    "memoryMomentsSpec": true,
+    "eventSourcingPattern": true,
+    "registrationTimelineSeed": "minimal",
+    "fullSearchMediaPortfolio": "v1.1",
+    "memoryMomentsUI": "v1.1",
+    "reflectionAuthoring": "v1.1"
+  },
+  "implementation": {
+    "gate": "appendTimelineEntry before any milestone UI ships",
+    "files": [
+      "src/lib/timeline/appendTimelineEntry.ts",
+      "src/lib/timeline/generateNarrative.ts",
+      "src/lib/timeline/surfaceMemoryMoments.ts",
+      "src/lib/timeline/searchTimeline.ts"
+    ],
+    "tables": ["timeline_entries", "timeline_reflections", "timeline_media_refs"]
+  }
+}

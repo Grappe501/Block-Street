@@ -28,6 +28,7 @@ import { AdminTrustPrivacySafety } from "@/components/admin/AdminTrustPrivacySaf
 import { AdminPersonalGrowthLeadership } from "@/components/admin/AdminPersonalGrowthLeadership";
 import { AdminCommunityRecognitionAppreciation } from "@/components/admin/AdminCommunityRecognitionAppreciation";
 import { AdminCommunicationAttentionManagement } from "@/components/admin/AdminCommunicationAttentionManagement";
+import { AdminCivicJourneyTimeline } from "@/components/admin/AdminCivicJourneyTimeline";
 import { AdminGrowthModel } from "@/components/admin/AdminGrowthModel";
 import { AdminOrganizingModel } from "@/components/admin/AdminOrganizingModel";
 import { AdminGuardrails } from "@/components/admin/AdminGuardrails";
@@ -55,6 +56,7 @@ const TABS = [
   { id: "develop", label: "Develop", icon: "🎓" },
   { id: "thanks", label: "Thanks", icon: "💐" },
   { id: "comms", label: "Comms", icon: "📬" },
+  { id: "timeline", label: "Timeline", icon: "📖" },
   { id: "growth", label: "Growth", icon: "🌱" },
   { id: "organizing-model", label: "Organizing", icon: "🔗" },
   { id: "guardrails", label: "Guardrails", icon: "🛡️" },
@@ -155,6 +157,7 @@ export function AdminDashboard({ progress }: { progress: BuildProgress }) {
         {activeTab === "develop" && <AdminPersonalGrowthLeadership />}
         {activeTab === "thanks" && <AdminCommunityRecognitionAppreciation />}
         {activeTab === "comms" && <AdminCommunicationAttentionManagement />}
+        {activeTab === "timeline" && <AdminCivicJourneyTimeline />}
         {activeTab === "growth" && <AdminGrowthModel />}
         {activeTab === "organizing-model" && <AdminOrganizingModel />}
         {activeTab === "guardrails" && <AdminGuardrails />}

@@ -137,6 +137,8 @@
   },
   "timelineIntegration": {
     "target": "Civic Passport [CPP-001]",
+    "requirement": "CJT-001",
+    "docPath": "docs/phase-03/CIVIC_JOURNEY_TIMELINE.md",
     "narrates": ["relationships built", "communities joined", "service performed", "leadership developed", "impact created"]
   },
   "v1Scope": {

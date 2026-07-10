@@ -218,7 +218,7 @@ Service · Growth · Helping others · Building relationships · Strengthening c
 | Connections | Milestones + public gratitude |
 | Public | Privacy-filtered [SEC-001, TPS-M07] |
 
-**[CRA-M10c]** Step 3.11 Participant Timeline implements unified timeline UI — CRA defines **recognition event types**.
+**[CRA-M10c]** [Civic Journey Timeline](CIVIC_JOURNEY_TIMELINE.md) [CJT-001] implements unified timeline UI — CRA defines **recognition event types**.
 
 ---
 
@@ -394,6 +394,6 @@ Step 3.9 is complete when:
 
 ---
 
-**Next Step:** 3.11 — Participant Timeline
+**Next Step:** 3.12 — Participant Knowledge Graph
 
 *Trace: Contribution → Milestone → Civic Passport → Community Gratitude → Appreciation Board → Morning Brief*

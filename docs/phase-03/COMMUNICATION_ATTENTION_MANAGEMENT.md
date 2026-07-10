@@ -409,6 +409,6 @@ Step 3.10 is complete when:
 
 ---
 
-**Next Step:** 3.11 — Participant Timeline
+**Next Step:** 3.12 — Participant Knowledge Graph
 
 *Trace: Attention Budget → Morning Brief → Trust Center prefs → less noise → sustained trust → invitations continue*

@@ -45,7 +45,7 @@ When complete, every participant receives:
 | 3.8 | [Personal Growth & Leadership](PERSONAL_GROWTH_LEADERSHIP.md) | Growth Graph — leadership operating system | ✅ |
 | 3.9 | [Community Recognition & Appreciation](COMMUNITY_RECOGNITION_APPRECIATION.md) | Appreciation not gamification | ✅ |
 | 3.10 | [Communication & Attention Management](COMMUNICATION_ATTENTION_MANAGEMENT.md) | Attention Budget — earn not abuse | ✅ |
-| 3.11 | Participant Timeline | One timeline — everything | Pending |
+| 3.11 | [Civic Journey Timeline](CIVIC_JOURNEY_TIMELINE.md) | Lifelong story — Memory Moments | ✅ |
 | 3.12 | Participant Knowledge Graph | Person as graph node — all edges | Pending |
 | 3.13 | Recommendation Engine | People, events, mentors, opportunities | Pending |
 | 3.14 | Participant Experience | Onboarding journey — first week to first leadership | Pending |
@@ -180,13 +180,18 @@ The most important **trust document** in the project — trust as infrastructure
 
 ---
 
-## 3.11 — Participant Timeline
+## 3.11 — Civic Journey Timeline
 
-One timeline — everything:
+**Requirement focus:** CJT-001 · JRN-M09 · CPP-001 · CRA-M10
 
-Joined · Events · Volunteer · Projects · Committees · Training · Milestones · Photos · Future portfolio
+**Every act of service becomes part of your story** — not an activity log, a lifelong narrative:
 
-*Append-only pattern [STS-M16, KDG-M07]*
+- **Memory Moments [CJT-M12]** — anniversaries and firsts; Attention Budget-respecting
+- **Seven categories** — Joining, Relationships, Volunteer, Leadership, Learning, Communities, Recognition
+- **Civic Passport backbone** — unified append-only event sourcing
+- **Reflection + privacy views** — participant-controlled sharing
+
+*Live spec:* `civic-journey-timeline.json` · *Integrates:* Journey [JRN-M09], Recognition [CRA-M10], Growth [PGL-M10]
 
 ---
 
@@ -243,7 +248,7 @@ Identity · Journey · Profiles · Networks · Recruitment · Recognition · Pri
 | 3.6 | Command Center core | ✅ design |
 | 3.7 | Basic privacy + Trust Center | ✅ design |
 
-Steps 3.11–3.14: design now, implement post-launch. Steps 3.8–3.10 design complete.
+Steps 3.12–3.14: design now, implement post-launch. Steps 3.8–3.11 design complete.
 
 ---
 

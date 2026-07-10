@@ -408,6 +408,6 @@ Step 3.8 is complete when:
 
 ---
 
-**Next Step:** 3.11 — Participant Timeline
+**Next Step:** 3.12 — Participant Knowledge Graph
 
 *Trace: Experience → Growth Graph → Civic Passport narrative → Journey stage → Command Center Growth widget*

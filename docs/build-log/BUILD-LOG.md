@@ -4,6 +4,24 @@
 
 ---
 
+## 2026-07-10 — PHASE-003.11 Civic Journey Timeline (Canonical)
+
+**Document ID:** PHASE-003.11 · **CJT-001 · AC-030**
+
+### What Was Built
+
+- **Every act of service becomes part of your story** — guiding principle locked
+- **Memory Moments [CJT-M12]** — surface anniversaries and firsts; respects Attention Budget
+- **Seven timeline categories** — Joining, Relationships, Volunteer, Leadership, Learning, Communities, Recognition
+- **Civic Passport backbone** — narrative not transaction log [JRN-M09, CPP-001]
+- **Append-only event sourcing** — reference canonical events, archive not delete [STS-M16]
+
+### Guiding Principle Locked
+
+> **Every act of service becomes part of your story.**
+
+---
+
 ## 2026-07-10 — PHASE-003.10 Communication & Attention Management (Canonical)
 
 **Document ID:** PHASE-003.10 · **CAM-001 · AC-029**

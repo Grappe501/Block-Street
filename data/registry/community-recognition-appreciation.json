@@ -75,6 +75,7 @@
   },
   "recognitionTimeline": {
     "target": "Civic Passport [CPP-001]",
+    "unifiedTimeline": "CJT-001",
     "includes": ["milestones", "service", "leadership", "growth", "communityAppreciation", "personalReflections"],
     "appendOnly": true
   },

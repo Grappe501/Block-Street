@@ -263,7 +263,7 @@ Visitor → Interested → Registered → Connected → Contributor
 | County affiliation | ✅ Registry |
 | Educational affiliation (if applicable) | ✅ Registry |
 | Mission board (personal cards) | Partial |
-| Activity timeline | Step 3.11 |
+| Activity timeline | CJT-001 [Step 3.11] |
 | Profile / Civic Passport | Step 3.3 |
 | Growth recommendations | Step 3.13 |
 
@@ -297,7 +297,7 @@ Visitor → Interested → Registered → Connected → Contributor
 | Leadership develops | Journey stage advances |
 | Relationships deepen | Network graph grows |
 
-**[PEP-M14a]** Identity reflects **ongoing journey** — append-only history where meaningful [KDG-M12, Step 3.11].
+**[PEP-M14a]** Identity reflects **ongoing journey** — append-only history where meaningful [KDG-M12, CJT-001].
 
 ---
 

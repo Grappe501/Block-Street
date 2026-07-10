@@ -25,6 +25,7 @@
     { "prefix": "PCC", "domain": "Personal command center" },
     { "prefix": "CRA", "domain": "Community recognition & appreciation" },
     { "prefix": "CAM", "domain": "Communication & attention management" },
+    { "prefix": "CJT", "domain": "Civic journey timeline" },
     { "prefix": "CPP", "domain": "Civic passport" },
     { "prefix": "STS", "domain": "Status & lifecycle" },
     { "prefix": "ADM", "domain": "Administration" },
@@ -804,6 +805,36 @@
         "frontend": "PAGE-PCC",
         "test": "TEST-CAM-001",
         "doc": "DOC-CAM-001"
+      },
+      "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
+    },
+    {
+      "id": "CJT-001",
+      "title": "Civic Journey Timeline",
+      "purpose": "Every act of service becomes part of your story — lifelong narrative, not activity log",
+      "description": "PHASE-003.11 seven timeline categories, Memory Moments, reflection, Civic Passport backbone, append-only event sourcing, privacy views",
+      "priority": "critical",
+      "principle": "PEP-001",
+      "dependencies": ["JRN-001", "CPP-001", "CRA-001", "PGL-001", "SEC-001"],
+      "related": ["PEP-001", "PRN-M12", "CAM-001", "STS-M16"],
+      "acceptanceCriteria": [
+        "Civic Journey Timeline philosophy documented",
+        "Timeline categories established",
+        "Reflection and storytelling incorporated",
+        "Privacy and historical preservation defined",
+        "Memory Moments architecture specified",
+        "Blueprint for lifelong participant narrative"
+      ],
+      "futureNotes": "Search, media attachments, portfolio export, Memory Moments UI — post-V1",
+      "implementationStatus": "done",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": "DB-USERS",
+        "api": null,
+        "frontend": "PAGE-PCC",
+        "test": "TEST-CJT-001",
+        "doc": "DOC-CJT-001"
       },
       "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
     },

@@ -462,6 +462,6 @@ Step 3.4 is complete when:
 
 ---
 
-**Next Step:** 3.11 — Participant Timeline
+**Next Step:** 3.12 — Participant Knowledge Graph
 
 *Trace: PRN network → Relationship widget in PCC → Trust Graph → Morning Brief invite acceptance*

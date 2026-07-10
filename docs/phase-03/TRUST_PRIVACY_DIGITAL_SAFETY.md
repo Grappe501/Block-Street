@@ -464,6 +464,6 @@ Step 3.7 is complete when:
 
 ---
 
-**Next Step:** 3.11 — Participant Timeline
+**Next Step:** 3.12 — Participant Knowledge Graph
 
 *Trace: Trust → Invitations [RGE] → Relationships [PRN] → Communities → CP-007 privacy by design*

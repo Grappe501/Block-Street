@@ -314,7 +314,7 @@ The timeline tells the story of:
 
 **[JRN-M09a]** Timeline is the **narrative backbone** of the passport — not a scorecard [PEP-M20].
 
-**[JRN-M09b]** Full timeline spec: Step 3.11 Participant Timeline.
+**[JRN-M09b]** Full timeline spec: [Civic Journey Timeline](CIVIC_JOURNEY_TIMELINE.md) [CJT-001].
 
 ---
 
@@ -445,6 +445,6 @@ Step 3.2 is complete when:
 
 ---
 
-**Next Step:** 3.11 — Participant Timeline
+**Next Step:** 3.12 — Participant Knowledge Graph
 
 *Trace: USR-001 registration → PHQ shell → NET-002/003 invite tools → JRN orchestrator → CPP timeline*

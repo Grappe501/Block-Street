@@ -24,7 +24,7 @@
     { "id": "3.8", "name": "Personal Growth & Leadership Development", "artifact": "PERSONAL_GROWTH_LEADERSHIP.md", "status": "done", "requirement": "PGL-001" },
     { "id": "3.9", "name": "Community Recognition & Appreciation", "artifact": "COMMUNITY_RECOGNITION_APPRECIATION.md", "status": "done", "requirement": "CRA-001" },
     { "id": "3.10", "name": "Communication & Attention Management", "artifact": "COMMUNICATION_ATTENTION_MANAGEMENT.md", "status": "done", "requirement": "CAM-001" },
-    { "id": "3.11", "name": "Participant Timeline", "artifact": "PARTICIPANT_TIMELINE.md", "status": "pending", "requirement": "PEP-001" },
+    { "id": "3.11", "name": "Civic Journey Timeline", "artifact": "CIVIC_JOURNEY_TIMELINE.md", "status": "done", "requirement": "CJT-001" },
     { "id": "3.12", "name": "Participant Knowledge Graph", "artifact": "PARTICIPANT_KNOWLEDGE_GRAPH.md", "status": "pending", "requirement": "REL-001" },
     { "id": "3.13", "name": "Recommendation Engine", "artifact": "RECOMMENDATION_ENGINE.md", "status": "pending", "requirement": "ANL-001" },
     { "id": "3.14", "name": "Participant Experience", "artifact": "PARTICIPANT_EXPERIENCE.md", "status": "pending", "requirement": "JRN-001" },
