@@ -18,6 +18,24 @@
 
 ---
 
+## 2026-07-10 — Volume 4.12 Trust, Transparency & Explainability Architecture [UXB-013 · AC-148]
+
+**Document:** `docs/volume-04/TRUST_ARCHITECTURE.md` · **Registry:** `data/registry/trust-architecture.json`
+
+### What Changed
+
+- **Guiding principle:** *Nothing important should happen without being explainable.*
+- Trust experienced continuously — not a privacy policy; explanation replaces mystery
+- **7-layer trust model** and **8 trust principles**
+- **7 trust domains:** AI, Governance, Workflow, Automation, Permission, Knowledge, Community
+- Trust objects, 4 explainability levels, decision and recommendation transparency
+- AI citation model, confidence model, privacy transparency, activity history, Trust Dashboard
+- **Trust Ledger (TL)** — 6 entry sections recording what and why; platform trust score (not people)
+- Executive Trust Dashboard measuring constitutional compliance
+- Admin Volume 4 tab · requirements UXB-013 updated · Volume 4: 11/14 complete (4.4 pending)
+
+---
+
 ## 2026-07-10 — Volume 4.11 Engagement, Motivation & Community Growth Architecture [UXB-012 · AC-147]
 
 **Document:** `docs/volume-04/ENGAGEMENT_ARCHITECTURE.md` · **Registry:** `data/registry/engagement-architecture.json`

@@ -5020,28 +5020,34 @@
     },
     {
       "id": "UXB-013",
-      "title": "Trust & Transparency Architecture — Volume 4.12",
-      "purpose": "Trust & Transparency Architecture experience layer",
-      "description": "VOLUME-004.12 explainable AI, governance visibility, privacy controls",
-      "priority": "critical",
+      "title": "Trust, Transparency & Explainability Architecture — Volume 4.12",
+      "purpose": "Earn and maintain participant confidence — explainability as infrastructure",
+      "description": "VOLUME-004.12 — Trust Ledger, 7 trust domains, 4 explainability levels, platform trust score, Executive Trust Dashboard",
+      "priority": "constitutional",
       "principle": "CP-012",
       "dependencies": [
         "UXB-012",
-        "UXB-001"
+        "UXB-011",
+        "UXB-001",
+        "CAB-001"
       ],
       "related": [
-        "UXB-014"
+        "UXB-014",
+        "PBA-012",
+        "DAB-007"
       ],
       "acceptanceCriteria": [
-        "Experience philosophy documented",
-        "UX behaviors defined",
-        "Volume 0-3 integration specified",
-        "Implementation blueprint for experience layer"
+        "Trust philosophy documented",
+        "Trust domains and explainability levels defined",
+        "AI transparency, governance transparency, privacy, confidence, and history models established",
+        "Community Event Ledger, Digital Twin, Community Brain, Governance, and accessibility incorporated",
+        "Trust Ledger specified",
+        "Complete blueprint for trust and transparency throughout the platform"
       ],
-      "futureNotes": "Scaffold — pending canonical build step",
-      "implementationStatus": "pending",
+      "futureNotes": "Guiding principle: Nothing important should happen without being explainable.",
+      "implementationStatus": "done",
       "testingStatus": "pending",
-      "documentationStatus": "pending",
+      "documentationStatus": "done",
       "trace": {
         "database": null,
         "api": null,
@@ -5051,7 +5057,7 @@
       },
       "versionHistory": {
         "created": "2026-07-10",
-        "implemented": null
+        "implemented": "2026-07-10"
       }
     },
     {

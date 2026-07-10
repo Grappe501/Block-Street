@@ -114,7 +114,7 @@
       { "id": "V4.9", "name": "Mobile & Field Operations Experience Architecture [UXB-010]", "status": "done", "notes": "Field Operations Command Layer, 6 field modes, offline-first — AC-145" },
       { "id": "V4.10", "name": "AI Experience Architecture [UXB-011]", "status": "done", "notes": "AI Federation, 10 AI roles, 8 domain agents, Executive AI Council — AC-146" },
       { "id": "V4.11", "name": "Engagement, Motivation & Community Growth [UXB-012]", "status": "done", "notes": "Life Journey Graph, 7 growth trees, Civic Reputation — AC-147" },
-      { "id": "V4.12", "name": "Trust Architecture [UXB-013]", "status": "pending", "notes": "Explainable AI, governance visibility, privacy — AC-148" },
+      { "id": "V4.12", "name": "Trust, Transparency & Explainability [UXB-013]", "status": "done", "notes": "Trust Ledger, 7 trust domains, 4 explainability levels — AC-148" },
       { "id": "V4.13", "name": "Institutional Experience Architecture [UXB-014]", "status": "pending", "notes": "Universities, counties, campaigns, schools — AC-149" },
       { "id": "V4.14", "name": "Experience Orchestrator [UXB-015]", "status": "pending", "notes": "Unified experience runtime layer — AC-150" },
       { "id": "V5.1", "name": "AI & Intelligence Bible [AIB-001]", "status": "done", "notes": "LocalBrain, RAG v1; AC-080" },
