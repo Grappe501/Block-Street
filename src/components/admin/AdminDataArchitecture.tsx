@@ -6,6 +6,7 @@ import mdd from "../../../data/registry/master-data-dictionary.json";
 import dphil from "../../../data/registry/data-philosophy.json";
 import rel from "../../../data/registry/relationship-data-model.json";
 import sch from "../../../data/registry/database-schema-blueprint.json";
+import kgs from "../../../data/registry/knowledge-graph-schema.json";
 
 export function AdminDataArchitecture() {
   const doneSteps = dab.steps.filter((s) => s.status === "done").length;
@@ -86,6 +87,24 @@ export function AdminDataArchitecture() {
         </div>
         <p className="mt-2 text-xs text-sky-600">
           {sch.canonicalSchemaRegistry.catalogFields.length} registry catalog fields · {sch.acceptanceCriteria}
+        </p>
+      </div>
+
+      <div className="card border-rose-300 bg-rose-50">
+        <p className="text-xs font-semibold uppercase text-rose-800">VOLUME-002.5 · Knowledge Graph</p>
+        <h2 className="mt-1 text-lg font-bold text-rose-950">Unified Graph Projection Engine</h2>
+        <p className="mt-1 text-xs italic text-rose-900">&ldquo;{kgs.guidingPrinciple}&rdquo;</p>
+        <p className="mt-2 text-xs font-semibold text-rose-800">
+          {kgs.nodeCategoryCount} node classes · {kgs.signatureSubgraphCount} signature subgraphs · {kgs.signatureGraphs.length} signature graphs
+        </p>
+        <div className="mt-2 flex flex-wrap gap-1">
+          {kgs.nodeCategories.slice(0, 5).map((c) => (
+            <span key={c.id} className="badge bg-rose-100 text-rose-800">{c.name.replace(" Nodes", "")}</span>
+          ))}
+          <span className="badge bg-rose-200 text-rose-900">+{kgs.nodeCategoryCount - 5}</span>
+        </div>
+        <p className="mt-2 text-xs text-rose-600">
+          {kgs.unifiedGraphProjectionEngine.projections.length} projections · sync SLA {kgs.projectionPipeline.syncLagSlaSeconds}s · {kgs.acceptanceCriteria}
         </p>
       </div>
 

@@ -18,6 +18,23 @@
 
 ---
 
+## 2026-07-10 — Volume 2.5 Community Knowledge Graph Schema [DAB-006 · AC-111]
+
+**Document:** `docs/volume-02/KNOWLEDGE_GRAPH_SCHEMA.md` · **Registry:** `data/registry/knowledge-graph-schema.json`
+
+### What Changed
+
+- **Guiding principle:** *The relational database stores truth. The Knowledge Graph understands truth.*
+- **Not a second database** — semantic projection of canonical relational data
+- **8 node classes:** Identity, Community, Registry, Mission, Experience, Knowledge, Resource, Intelligence
+- **15 relationship categories** · rich edge metadata · explainable weight signals · temporal graph
+- **Unified Graph Projection Engine** — single event-driven mechanism for all derived graphs
+- **6 signature subgraphs:** Community, Participant, County, Knowledge, Leadership, Growth
+- Projection pipeline, privacy, explainability, AI integration, performance targets
+- Admin Data tab · requirements DAB-006 updated
+
+---
+
 ## 2026-07-10 — Volume 2.4 Database Schema Blueprint [DAB-005 · AC-110]
 
 **Document:** `docs/volume-02/DATABASE_SCHEMA_BLUEPRINT.md` · **Registry:** `data/registry/database-schema-blueprint.json`
