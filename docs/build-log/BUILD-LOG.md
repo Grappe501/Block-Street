@@ -4,7 +4,39 @@
 
 ---
 
-## 2026-07-10 — Phase 1 Scaffold Initiated
+## 2026-07-10 — Phase 1 Constitution Complete
+
+**Commit:** Gather Arkansas rebrand + constitution  
+**Phase:** 1 — Project Constitution & Mission Doctrine  
+**Deploy:** https://block-street.netlify.app/
+
+### What Was Built
+
+- **Platform name:** Gather Arkansas (neutral, nonpartisan)
+- **Constitution:** `docs/PROJECT_CONSTITUTION_AND_MISSION_DOCTRINE.md` — Burt reads this first
+- **Master build sequence:** `docs/master/MASTER-BUILD-SEQUENCE.md` (30 modules)
+- **Phase 1 design:** `docs/phases/PHASE-01-CONSTITUTION.md` (9 steps, all complete)
+- **Leadership council removed** — all schools equal standing
+- **Arkansas Organizing Registry:** 75 counties + 23 colleges/universities
+- **New pages:** `/map`, `/schools`, `/schools/[slug]` with personalized color-inspired design
+- **County-first signup:** honor system, county → school OR county-only for non-students 16-24
+- **WHY call-to-action:** Golden Circle teaching on homepage
+- **Netlify live:** block-street.netlify.app
+
+### Key Decisions Locked
+
+- Honor system affiliation (county → school)
+- No privileged campuses or founding council
+- Collective voice + voting block power (student-determined)
+- Election: November 3, 2026 | Launch call: July 14 | Leader test: July 12
+
+### Next Steps
+
+1. Phase 2: Complete registry (SVG map, remaining schools)
+2. Phase 3: Signup + share link + QR + network board (Jul 12-14)
+3. Connect Netlify DB
+
+---
 
 **Commit:** Initial project scaffold  
 **Phase:** 1 — Mission + Structure  

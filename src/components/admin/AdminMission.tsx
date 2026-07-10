@@ -1,65 +1,76 @@
+import { PLATFORM_NAME } from "@/lib/data";
+
 export function AdminMission() {
   return (
     <div className="space-y-6">
-      <div className="card">
-        <h2 className="text-lg font-bold text-slate-900">Mission Statement</h2>
-        <p className="mt-3 text-lg text-slate-700">
-          Give Arkansas college students and young adults one shared organizing home —
-          where every campus builds its own voice, every county welcomes those not in school,
-          and student energy becomes real civic power.
+      <div className="card border-brand-200 bg-brand-50">
+        <p className="text-xs font-semibold uppercase text-brand-600">Platform Identity</p>
+        <h2 className="mt-1 text-2xl font-bold text-brand-900">{PLATFORM_NAME}</h2>
+        <p className="mt-3 text-brand-800">
+          Gives every young Arkansan ages 16–24 an organizing home — through their school, their county,
+          or their personal network — to build collective voice and voting power.
         </p>
       </div>
 
       <div className="card">
-        <h2 className="text-lg font-bold text-slate-900">Guiding Principles</h2>
+        <h2 className="text-lg font-bold text-slate-900">Golden Circle Teaching</h2>
+        <div className="mt-4 space-y-4">
+          <div className="rounded-lg bg-red-50 p-4 border border-red-100">
+            <p className="font-bold text-red-900">WHY — Emotional Call to Action</p>
+            <p className="mt-1 text-sm text-red-800">Your generation decides Arkansas&apos;s future. We become impossible to ignore when we organize.</p>
+          </div>
+          <div className="rounded-lg bg-amber-50 p-4 border border-amber-100">
+            <p className="font-bold text-amber-900">HOW — Build Power</p>
+            <p className="mt-1 text-sm text-amber-800">Relationships → numbers → voting block → collective voice politicians cannot ignore.</p>
+          </div>
+          <div className="rounded-lg bg-green-50 p-4 border border-green-100">
+            <p className="font-bold text-green-900">WHAT — Tools (staged)</p>
+            <p className="mt-1 text-sm text-green-800">Signup, share links, QR, network boards, map, committees, events, voter registration.</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="card">
+        <h2 className="text-lg font-bold text-slate-900">Core Principles</h2>
         <div className="mt-4 grid gap-3 sm:grid-cols-2">
           {[
-            { title: "Student-Led", desc: "Students decide direction; platform serves them" },
-            { title: "Campus-Rooted", desc: "Every school gets its own hub" },
-            { title: "County-Connected", desc: "75 county catch-all spaces for non-students" },
-            { title: "Statewide-Connected", desc: "Local organizing links to global committees" },
-            { title: "Nonpartisan by Design", desc: "Tools, not political direction" },
-            { title: "Relational, Not Broadcast", desc: "Every person gets a share link + QR code" },
+            "Youth-led — students run moderation & rules",
+            "Nonpartisan infrastructure",
+            "Equal standing — no privileged campuses",
+            "Relational organizing first",
+            "No school impersonation",
+            "Teaching built in — they don't know what to do yet",
+            "Honor-system affiliation (county → school)",
+            "Distributed leadership through participation",
           ].map((p) => (
-            <div key={p.title} className="rounded-lg bg-slate-50 p-4">
-              <p className="font-semibold text-brand-700">{p.title}</p>
-              <p className="mt-1 text-sm text-slate-600">{p.desc}</p>
-            </div>
+            <div key={p} className="rounded-lg bg-slate-50 p-3 text-sm text-slate-700">{p}</div>
           ))}
         </div>
       </div>
 
       <div className="card">
-        <h2 className="text-lg font-bold text-slate-900">Two Entry Paths</h2>
-        <div className="mt-4 grid gap-4 md:grid-cols-2">
-          <div className="rounded-lg border border-brand-200 bg-brand-50 p-4">
-            <p className="font-bold text-brand-900">🎓 Campus Path</p>
-            <p className="mt-2 text-sm text-brand-800">
-              College, university, trade school, junior college, future high schools.
-              Each gets a hub with committees, events, leadership, outreach.
-            </p>
-          </div>
-          <div className="rounded-lg border border-accent-200 bg-accent-50 p-4">
-            <p className="font-bold text-accent-900">📍 County Path</p>
-            <p className="mt-2 text-sm text-accent-800">
-              Young adults not in school. 75 Arkansas counties each get a catch-all
-              youth organizing hub.
-            </p>
-          </div>
-        </div>
+        <h2 className="text-lg font-bold text-slate-900">Critical Dates</h2>
+        <table className="mt-4 w-full text-sm">
+          <tbody>
+            {[
+              ["Jul 10", "Constitution + master plan"],
+              ["Jul 12", "College leaders testing"],
+              ["Jul 14", "Launch call (~50 students)"],
+              ["Fall 2026", "Voter registration push"],
+              ["Nov 3, 2026", "Election"],
+            ].map(([date, event]) => (
+              <tr key={date} className="border-b border-slate-100">
+                <td className="py-2 pr-4 font-semibold text-brand-600">{date}</td>
+                <td className="py-2 text-slate-700">{event}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
 
-      <div className="card bg-brand-950 text-white">
-        <h2 className="text-lg font-bold">North Star</h2>
-        <p className="mt-3 text-brand-100">
-          By election season, students across Arkansas find each other, organize by campus,
-          coordinate across campuses, and speak with a collective voice —
-          without the platform forcing a political direction.
-        </p>
-        <p className="mt-4 text-sm italic text-brand-200">
-          Full docs: docs/mission/ · docs/architecture/NONPARTISAN-RULES.md
-        </p>
-      </div>
+      <p className="text-sm text-slate-500">
+        Full constitution: docs/PROJECT_CONSTITUTION_AND_MISSION_DOCTRINE.md
+      </p>
     </div>
   );
 }

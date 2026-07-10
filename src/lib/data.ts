@@ -1,21 +1,35 @@
-import campuses from "../../data/campuses.json";
-import counties from "../../data/counties.json";
+import counties from "../../data/registry/counties.json";
+import institutions from "../../data/registry/institutions.json";
 import buildProgress from "../../data/build-progress.json";
 
-export type Campus = (typeof campuses)[number];
 export type County = (typeof counties)[number];
+export type Institution = {
+  slug: string;
+  name: string;
+  shortName: string;
+  type: string;
+  sector: string;
+  hbcu: boolean;
+  city: string;
+  county: string;
+  founded: number;
+  enrollment: number;
+  website: string;
+  colors: { primary: string; secondary: string };
+  culture: string;
+  representationStatus: RepresentationStatus;
+  v1Priority: boolean;
+};
 export type BuildProgress = typeof buildProgress;
 export type Phase = BuildProgress["phases"][number];
 export type Step = Phase["steps"][number];
 export type StepStatus = "done" | "in_progress" | "pending";
+export type RepresentationStatus = "needs_organizer" | "building" | "active";
 
-export function getCampuses(): Campus[] {
-  return campuses;
-}
-
-export function getCampusBySlug(slug: string): Campus | undefined {
-  return campuses.find((c) => c.slug === slug);
-}
+export const PLATFORM_NAME = "Gather Arkansas";
+export const PLATFORM_TAGLINE = "Your organizing home";
+export const PLATFORM_DISCLAIMER =
+  "An independent youth organizing network. Not affiliated with or endorsed by any institution.";
 
 export function getCounties(): County[] {
   return counties;
@@ -23,6 +37,22 @@ export function getCounties(): County[] {
 
 export function getCountyBySlug(slug: string): County | undefined {
   return counties.find((c) => c.slug === slug);
+}
+
+export function getInstitutions(): Institution[] {
+  return institutions as Institution[];
+}
+
+export function getInstitutionBySlug(slug: string): Institution | undefined {
+  return (institutions as Institution[]).find((i) => i.slug === slug);
+}
+
+export function getInstitutionsByCounty(countySlug: string): Institution[] {
+  return (institutions as Institution[]).filter((i) => i.county === countySlug);
+}
+
+export function getV1Institutions(): Institution[] {
+  return (institutions as Institution[]).filter((i) => i.v1Priority);
 }
 
 export function getBuildProgress(): BuildProgress {
@@ -33,13 +63,15 @@ export function getPhaseById(id: number): Phase | undefined {
   return buildProgress.phases.find((p) => p.id === id);
 }
 
-export function getStepStats() {
-  const allSteps = buildProgress.phases.flatMap((p) => p.steps);
+export function getRegistryStats() {
+  const inst = institutions as Institution[];
   return {
-    total: allSteps.length,
-    done: allSteps.filter((s) => s.status === "done").length,
-    inProgress: allSteps.filter((s) => s.status === "in_progress").length,
-    pending: allSteps.filter((s) => s.status === "pending").length,
+    totalCounties: counties.length,
+    totalInstitutions: inst.length,
+    v1Institutions: inst.filter((i) => i.v1Priority).length,
+    needsOrganizer: inst.filter((i) => i.representationStatus === "needs_organizer").length,
+    building: inst.filter((i) => i.representationStatus === "building").length,
+    active: inst.filter((i) => i.representationStatus === "active").length,
   };
 }
 
@@ -50,5 +82,18 @@ export const INTERESTS = [
   { id: "communications", label: "Communications" },
   { id: "committees", label: "Committees" },
   { id: "voter_education", label: "Voter Education" },
+  { id: "voter_registration", label: "Voter Registration" },
   { id: "issue_organizing", label: "Issue Organizing" },
 ] as const;
+
+export const STATUS_LABELS: Record<RepresentationStatus, string> = {
+  needs_organizer: "Needs Organizer",
+  building: "Building",
+  active: "Active",
+};
+
+export const STATUS_COLORS: Record<RepresentationStatus, string> = {
+  needs_organizer: "bg-red-100 text-red-800",
+  building: "bg-amber-100 text-amber-800",
+  active: "bg-green-100 text-green-800",
+};

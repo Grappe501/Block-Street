@@ -3,6 +3,7 @@
 import { useState } from "react";
 import type { BuildProgress, Phase } from "@/lib/data";
 import { StatusBadge, ProgressBar } from "@/components/StatusBadge";
+import { PLATFORM_NAME } from "@/lib/data";
 import { AdminOverview } from "@/components/admin/AdminOverview";
 import { AdminPhases } from "@/components/admin/AdminPhases";
 import { AdminMission } from "@/components/admin/AdminMission";
@@ -39,7 +40,7 @@ export function AdminDashboard({ progress }: { progress: BuildProgress }) {
               <p className="text-xs font-semibold uppercase tracking-wider text-brand-600">
                 Director Workbench
               </p>
-              <h1 className="text-2xl font-bold text-slate-900">Block Street Build Control</h1>
+              <h1 className="text-2xl font-bold text-slate-900">{PLATFORM_NAME} Build Control</h1>
               <p className="text-sm text-slate-500">
                 v{progress.project.version} · Phase {progress.project.currentPhase}: {progress.project.currentPhaseName}
               </p>

@@ -1,158 +1,148 @@
 {
   "project": {
-    "name": "Block Street",
-    "tagline": "Arkansas youth & student organizing platform",
-    "version": "0.1.0",
-    "currentPhase": 2,
-    "currentPhaseName": "Data Model",
-    "lastUpdated": "2026-07-10T08:30:00Z",
-    "deployUrl": null,
+    "name": "Gather Arkansas",
+    "tagline": "Your organizing home",
+    "version": "0.2.0",
+    "currentPhase": 1,
+    "currentPhaseName": "Project Constitution & Mission Doctrine",
+    "lastUpdated": "2026-07-10T09:00:00Z",
+    "deployUrl": "https://block-street.netlify.app/",
     "githubRepo": "https://github.com/Grappe501/Block-Street",
-    "netlifyStatus": "pending",
-    "databaseStatus": "not_connected"
+    "netlifyStatus": "live",
+    "databaseStatus": "not_connected",
+    "electionDate": "2026-11-03",
+    "launchCallDate": "2026-07-14",
+    "leaderTestingDate": "2026-07-12"
+  },
+  "masterBuild": {
+    "docPath": "docs/master/MASTER-BUILD-SEQUENCE.md",
+    "totalModules": 30,
+    "constitutionPath": "docs/PROJECT_CONSTITUTION_AND_MISSION_DOCTRINE.md"
   },
   "phases": [
     {
       "id": 1,
-      "name": "Mission + Structure",
-      "slug": "phase-01-mission-structure",
+      "name": "Project Constitution & Mission Doctrine",
+      "slug": "phase-01-constitution",
       "status": "done",
-      "docPath": "docs/phases/PHASE-01-MISSION-STRUCTURE.md",
+      "docPath": "docs/phases/PHASE-01-CONSTITUTION.md",
       "steps": [
-        { "id": "1.1", "name": "Write mission statement", "status": "done", "notes": "docs/mission/MISSION.md" },
-        { "id": "1.2", "name": "Define design principles", "status": "done", "notes": "docs/mission/PRINCIPLES.md" },
-        { "id": "1.3", "name": "Document north star vision", "status": "done", "notes": "docs/mission/NORTH-STAR.md" },
-        { "id": "1.4", "name": "Map audience entry paths", "status": "done", "notes": "docs/mission/AUDIENCE-PATHS.md" },
-        { "id": "1.5", "name": "Document founding leadership council", "status": "done", "notes": "docs/campuses/FOUNDING-COUNCIL.md" },
-        { "id": "1.6", "name": "List all 75 Arkansas counties", "status": "done", "notes": "data/counties.json" },
-        { "id": "1.7", "name": "Write nonpartisan platform rules", "status": "done", "notes": "docs/architecture/NONPARTISAN-RULES.md" },
-        { "id": "1.8", "name": "Create documentation index", "status": "done", "notes": "docs/00-INDEX.md" },
-        { "id": "1.9", "name": "Scaffold project on H: drive", "status": "done", "notes": "Next.js + admin dashboard" },
-        { "id": "1.10", "name": "Initialize GitHub repo + first push", "status": "done", "notes": "https://github.com/Grappe501/Block-Street" },
-        { "id": "1.11", "name": "Admin dashboard: Mission tab live", "status": "done", "notes": "/admin with 8 tabs" }
+        { "id": "1.1", "name": "Platform Identity — Gather Arkansas", "status": "done", "notes": "Neutral name, mission, audience 16-24" },
+        { "id": "1.2", "name": "North Star Outcome", "status": "done", "notes": "Collective voice + voting block by Nov 3" },
+        { "id": "1.3", "name": "Core Principles — equal standing, no council", "status": "done", "notes": "Distributed leadership" },
+        { "id": "1.4", "name": "Platform Boundaries", "status": "done", "notes": "No impersonation, no partisan direction" },
+        { "id": "1.5", "name": "Organizing Model — county→school + county-only", "status": "done", "notes": "Honor system signup" },
+        { "id": "1.6", "name": "Growth Model — staged institutions", "status": "done", "notes": "Universities first, trade/jr/high later" },
+        { "id": "1.7", "name": "Success Definition + timeline", "status": "done", "notes": "Jul 12 test, Jul 14 launch, Nov 3 election" },
+        { "id": "1.8", "name": "Burt Build Doctrine", "status": "done", "notes": "One step at a time, H: drive, GitHub+Netlify" },
+        { "id": "1.9", "name": "Constitution document compiled", "status": "done", "notes": "PROJECT_CONSTITUTION_AND_MISSION_DOCTRINE.md" }
       ]
     },
     {
       "id": 2,
-      "name": "Data Model",
-      "slug": "phase-02-data-model",
-      "status": "pending",
-      "docPath": "docs/phases/PHASE-02-DATA-MODEL.md",
+      "name": "Arkansas Organizing Registry",
+      "slug": "phase-02-registry",
+      "status": "in_progress",
+      "docPath": "docs/master/MASTER-BUILD-SEQUENCE.md",
       "steps": [
-        { "id": "2.1", "name": "Finalize schema documentation", "status": "done", "notes": "docs/architecture/DATA-MODEL.md" },
-        { "id": "2.2", "name": "Connect Netlify DB (Postgres)", "status": "pending", "notes": "After Netlify site created" },
-        { "id": "2.3", "name": "Create migration: counties table", "status": "pending", "notes": "" },
-        { "id": "2.4", "name": "Create migration: campuses table", "status": "pending", "notes": "" },
-        { "id": "2.5", "name": "Create migration: users table", "status": "pending", "notes": "" },
-        { "id": "2.6", "name": "Create migration: referrals table", "status": "pending", "notes": "" },
-        { "id": "2.7", "name": "Seed county data", "status": "pending", "notes": "" },
-        { "id": "2.8", "name": "Seed campus data", "status": "pending", "notes": "" },
-        { "id": "2.9", "name": "API routes for read operations", "status": "pending", "notes": "" },
-        { "id": "2.10", "name": "Admin dashboard: Data Model tab", "status": "pending", "notes": "" }
+        { "id": "2.1", "name": "Registry schema defined", "status": "done", "notes": "data/registry/README.md" },
+        { "id": "2.2", "name": "75 counties in registry", "status": "done", "notes": "data/registry/counties.json" },
+        { "id": "2.3", "name": "23 colleges/universities seeded", "status": "done", "notes": "data/registry/institutions.json" },
+        { "id": "2.4", "name": "Schools directory page /schools", "status": "done", "notes": "" },
+        { "id": "2.5", "name": "Personalized school pages /schools/[slug]", "status": "done", "notes": "Color-inspired, disclaimers" },
+        { "id": "2.6", "name": "Arkansas map page /map", "status": "in_progress", "notes": "County list live; SVG map pending" },
+        { "id": "2.7", "name": "Outreach gap dashboard", "status": "in_progress", "notes": "Stats on homepage + map" },
+        { "id": "2.8", "name": "Connect Netlify DB", "status": "pending", "notes": "Phase 2b" },
+        { "id": "2.9", "name": "Add remaining institutions", "status": "pending", "notes": "Community colleges next" }
       ]
     },
     {
       "id": 3,
-      "name": "Public Website",
-      "slug": "phase-03-public-website",
+      "name": "V1 Launch — Signup + Network",
+      "slug": "phase-03-v1-launch",
       "status": "pending",
-      "docPath": "docs/phases/PHASE-03-PUBLIC-WEBSITE.md",
+      "docPath": "docs/master/MASTER-BUILD-SEQUENCE.md",
       "steps": [
-        { "id": "3.1", "name": "Home page with mission", "status": "in_progress", "notes": "Basic v0 landing" },
-        { "id": "3.2", "name": "Join page (path selector)", "status": "in_progress", "notes": "" },
-        { "id": "3.3", "name": "Campus hub pages", "status": "in_progress", "notes": "/campus/[slug]" },
-        { "id": "3.4", "name": "County hub pages", "status": "in_progress", "notes": "/county/[slug]" },
-        { "id": "3.5", "name": "Founding council page", "status": "pending", "notes": "/council" },
-        { "id": "3.6", "name": "FAQ page", "status": "pending", "notes": "" },
-        { "id": "3.7", "name": "Contact page", "status": "pending", "notes": "" },
-        { "id": "3.8", "name": "Mobile-responsive polish", "status": "pending", "notes": "" },
-        { "id": "3.9", "name": "Navigation + footer", "status": "in_progress", "notes": "" },
-        { "id": "3.10", "name": "Admin dashboard: reflect page status", "status": "in_progress", "notes": "" }
+        { "id": "3.1", "name": "County-first signup flow (honor system)", "status": "in_progress", "notes": "UI done, DB pending" },
+        { "id": "3.2", "name": "Non-student county path (16-24)", "status": "in_progress", "notes": "UI done" },
+        { "id": "3.3", "name": "User profiles + interests", "status": "pending", "notes": "Jul 12 target" },
+        { "id": "3.4", "name": "Share link /s/[slug]", "status": "pending", "notes": "" },
+        { "id": "3.5", "name": "QR code generation", "status": "pending", "notes": "" },
+        { "id": "3.6", "name": "Personal network board", "status": "pending", "notes": "" },
+        { "id": "3.7", "name": "Referral attribution", "status": "pending", "notes": "" },
+        { "id": "3.8", "name": "WHY call-to-action on homepage", "status": "done", "notes": "Golden Circle WHY live" },
+        { "id": "3.9", "name": "Leader testing build", "status": "pending", "notes": "Jul 12" },
+        { "id": "3.10", "name": "Launch call ready", "status": "pending", "notes": "Jul 14" }
       ]
     },
     {
       "id": 4,
-      "name": "Signup + Personal Network Board",
-      "slug": "phase-04-signup-network-board",
+      "name": "Teaching System + Governance",
+      "slug": "phase-04-teaching-governance",
       "status": "pending",
-      "docPath": "docs/phases/PHASE-04-SIGNUP-NETWORK-BOARD.md",
+      "docPath": "docs/PROJECT_CONSTITUTION_AND_MISSION_DOCTRINE.md",
       "steps": [
-        { "id": "4.1", "name": "Signup form", "status": "pending", "notes": "" },
-        { "id": "4.2", "name": "Generate unique user slug", "status": "pending", "notes": "" },
-        { "id": "4.3", "name": "Generate share link", "status": "pending", "notes": "" },
-        { "id": "4.4", "name": "Generate QR code", "status": "pending", "notes": "" },
-        { "id": "4.5", "name": "Referral attribution", "status": "pending", "notes": "" },
-        { "id": "4.6", "name": "Personal network board", "status": "pending", "notes": "" },
-        { "id": "4.7", "name": "Show people invited", "status": "pending", "notes": "" },
-        { "id": "4.8", "name": "Network growth stats", "status": "pending", "notes": "" },
-        { "id": "4.9", "name": "Copy link + download QR", "status": "pending", "notes": "" },
-        { "id": "4.10", "name": "Admin dashboard: signup metrics", "status": "pending", "notes": "" }
+        { "id": "4.1", "name": "WHY/HOW/WHAT teaching modules", "status": "pending", "notes": "" },
+        { "id": "4.2", "name": "Moderation framework for campuses", "status": "pending", "notes": "Students determine rules" },
+        { "id": "4.3", "name": "Roberts Rules guide", "status": "pending", "notes": "" },
+        { "id": "4.4", "name": "Committee formation guide", "status": "pending", "notes": "" },
+        { "id": "4.5", "name": "Campus moderator election guide", "status": "pending", "notes": "" }
       ]
     },
     {
       "id": 5,
-      "name": "Admin + Campus/County Dashboards",
-      "slug": "phase-05-admin-dashboards",
+      "name": "Voter Registration Push",
+      "slug": "phase-05-voter-registration",
       "status": "pending",
-      "docPath": "docs/phases/PHASE-05-ADMIN-DASHBOARDS.md",
+      "docPath": "docs/master/MASTER-BUILD-SEQUENCE.md",
       "steps": [
-        { "id": "5.1", "name": "Director workbench foundation", "status": "in_progress", "notes": "/admin" },
-        { "id": "5.2", "name": "Build progress tab", "status": "in_progress", "notes": "" },
-        { "id": "5.3", "name": "Campus admin dashboard", "status": "pending", "notes": "" },
-        { "id": "5.4", "name": "County admin dashboard", "status": "pending", "notes": "" },
-        { "id": "5.5", "name": "Signup list with filters", "status": "pending", "notes": "" },
-        { "id": "5.6", "name": "Referral tree visualization", "status": "pending", "notes": "" },
-        { "id": "5.7", "name": "Growth charts", "status": "pending", "notes": "" },
-        { "id": "5.8", "name": "CSV export", "status": "pending", "notes": "" },
-        { "id": "5.9", "name": "Role-based access", "status": "pending", "notes": "" },
-        { "id": "5.10", "name": "Statewide rollup dashboard", "status": "pending", "notes": "" }
+        { "id": "5.1", "name": "Voter registration resources", "status": "pending", "notes": "Fall 2026 school start" },
+        { "id": "5.2", "name": "Campus registration tracking", "status": "pending", "notes": "" },
+        { "id": "5.3", "name": "Registration drive events", "status": "pending", "notes": "" }
       ]
     },
     {
       "id": 6,
-      "name": "Launch Hardening",
-      "slug": "phase-06-launch-hardening",
+      "name": "Election Ready — Collective Voice",
+      "slug": "phase-06-election",
       "status": "pending",
-      "docPath": "docs/phases/PHASE-06-LAUNCH-HARDENING.md",
+      "docPath": "docs/master/MASTER-BUILD-SEQUENCE.md",
       "steps": [
-        { "id": "6.1", "name": "Privacy policy page", "status": "pending", "notes": "" },
-        { "id": "6.2", "name": "Terms of use page", "status": "pending", "notes": "" },
-        { "id": "6.3", "name": "Database security review", "status": "pending", "notes": "" },
-        { "id": "6.4", "name": "Netlify production config", "status": "pending", "notes": "" },
-        { "id": "6.5", "name": "GitHub Actions CI", "status": "pending", "notes": "" },
-        { "id": "6.6", "name": "Error monitoring", "status": "pending", "notes": "" },
-        { "id": "6.7", "name": "Analytics", "status": "pending", "notes": "" },
-        { "id": "6.8", "name": "Cross-browser testing", "status": "pending", "notes": "" },
-        { "id": "6.9", "name": "Mobile device testing", "status": "pending", "notes": "" },
-        { "id": "6.10", "name": "Launch checklist sign-off", "status": "pending", "notes": "" }
+        { "id": "6.1", "name": "Surveys + collective voice tools", "status": "pending", "notes": "v1.4" },
+        { "id": "6.2", "name": "Statewide participation dashboard", "status": "pending", "notes": "" },
+        { "id": "6.3", "name": "Election day — Nov 3, 2026", "status": "pending", "notes": "" }
       ]
     }
   ],
   "versions": [
-    { "version": "0.1.0", "name": "Scaffold + Docs + Admin Workbench", "status": "in_progress", "date": "2026-07-10" },
-    { "version": "1.0.0", "name": "Launch (Phases 1-6 complete)", "status": "pending", "date": null },
-    { "version": "1.1.0", "name": "Committees", "status": "pending", "date": null },
-    { "version": "1.2.0", "name": "Events / Calendar", "status": "pending", "date": null },
-    { "version": "1.3.0", "name": "Messaging / Email Export", "status": "pending", "date": null },
-    { "version": "1.4.0", "name": "Surveys / Issues", "status": "pending", "date": null },
-    { "version": "1.5.0", "name": "Volunteer Hours", "status": "pending", "date": null },
-    { "version": "1.6.0", "name": "Campus Leadership Tools", "status": "pending", "date": null },
-    { "version": "1.7.0", "name": "County Organizing Tools", "status": "pending", "date": null },
-    { "version": "1.8.0", "name": "Statewide Dashboards", "status": "pending", "date": null }
+    { "version": "0.1.0", "name": "Initial scaffold", "status": "done", "date": "2026-07-10" },
+    { "version": "0.2.0", "name": "Constitution + Registry + Rebrand", "status": "in_progress", "date": "2026-07-10" },
+    { "version": "0.3.0", "name": "Leader testing build", "status": "pending", "date": "2026-07-12" },
+    { "version": "1.0.0", "name": "Launch call — signup + network", "status": "pending", "date": "2026-07-14" },
+    { "version": "1.1.0", "name": "Committees + moderation tools", "status": "pending", "date": null },
+    { "version": "1.2.0", "name": "Events + voter registration", "status": "pending", "date": null },
+    { "version": "1.3.0", "name": "Messaging + outreach", "status": "pending", "date": null },
+    { "version": "1.4.0", "name": "Surveys + collective voice", "status": "pending", "date": null }
   ],
   "buildLog": [
     {
       "date": "2026-07-10",
-      "title": "Phase 1 Scaffold Initiated",
+      "title": "Phase 1 Constitution Complete",
       "phase": 1,
-      "summary": "Documentation system, data files, Next.js scaffold, admin workbench, H: drive config"
+      "summary": "Gather Arkansas rebrand, constitution document, master build sequence, 23-school registry, map/schools pages, council removed, equal standing"
+    },
+    {
+      "date": "2026-07-10",
+      "title": "Initial Scaffold",
+      "phase": 0,
+      "summary": "Docs, admin workbench, Next.js on H: drive, GitHub push"
     }
   ],
   "stats": {
-    "totalSteps": 61,
-    "doneSteps": 13,
-    "inProgressSteps": 7,
-    "pendingSteps": 41,
-    "percentComplete": 21
+    "totalSteps": 41,
+    "doneSteps": 18,
+    "inProgressSteps": 5,
+    "pendingSteps": 18,
+    "percentComplete": 44
   }
 }

@@ -5,9 +5,9 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Block Street — Arkansas Student & Youth Organizing",
+  title: "Gather Arkansas — Youth Organizing Platform",
   description:
-    "A nonpartisan organizing platform for Arkansas college students and young adults. Campus-rooted. County-connected. Student-led.",
+    "A nonpartisan organizing platform for Arkansas youth ages 16–24. Build collective voice and voting power. Campus-rooted. County-connected.",
 };
 
 export default function RootLayout({

@@ -20,10 +20,10 @@ export function AdminDeployment({ progress }: { progress: BuildProgress }) {
             <div>
               <p className="font-medium text-slate-900">Netlify Deploy</p>
               <p className="text-sm text-slate-500">
-                {project.deployUrl ?? "Connect after GitHub repo is live"}
+                {project.deployUrl ?? "Not connected"}
               </p>
             </div>
-            <StatusBadge status={project.netlifyStatus === "pending" ? "pending" : "done"} />
+            <StatusBadge status={project.netlifyStatus === "live" ? "done" : "pending"} />
           </div>
           <div className="flex items-center justify-between rounded-lg bg-slate-50 p-4">
             <div>
