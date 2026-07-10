@@ -1,23 +1,312 @@
 {
-  "version": "1.0.0",
+  "version": "2.0.0",
   "documentId": "VOLUME-004.12",
   "requirementId": "UXB-013",
   "docPath": "docs/volume-04/TRUST_ARCHITECTURE.md",
-  "status": "pending",
-  "priority": "critical",
+  "productName": "Trust, Transparency & Explainability Architecture",
+  "status": "canonical",
+  "priority": "constitutional",
   "lastUpdated": "2026-07-10",
-  "guidingPrinciple": "Experience should feel intentional, welcoming, and trustworthy.",
-  "defines": [
-    "ExplainableAI",
-    "Governancevisibility",
-    "Permissionexplanations",
-    "Audithistory",
-    "Privacycontrols",
-    "Knowledgecitations",
-    "Communitytransparency",
-    "Trustindicators"
+  "guidingPrinciple": "Nothing important should happen without being explainable.",
+  "trustPhilosophy": {
+    "trustNotPrivacyPolicy": true,
+    "experiencedContinuously": true,
+    "everyActionUnderstandable": true,
+    "neverTrustInvisibleProcesses": true,
+    "explanationReplacesMystery": true,
+    "trustTreatedAsInfrastructure": true
+  },
+  "traditionalSoftwareSays": "The system has determined...",
+  "communityOSSays": "Here's what happened, why it happened, the information considered, and what your options are.",
+  "trustModel": {
+    "layers": [
+      "Action",
+      "Evidence",
+      "Rules",
+      "Decision",
+      "Explanation",
+      "Review",
+      "History"
+    ],
+    "layerCount": 7
+  },
+  "trustPrincipleCount": 8,
+  "trustPrinciples": [
+    "Explainable",
+    "Traceable",
+    "Reviewable",
+    "PermissionAware",
+    "EvidenceBased",
+    "Respectful",
+    "ReversibleWherePractical",
+    "ConstitutionallyGoverned"
   ],
-  "topicCount": 8,
+  "trustDomainCount": 7,
+  "trustDomains": [
+    {
+      "id": "aiTrust",
+      "name": "AI Trust",
+      "participantsShouldKnow": [
+        "WhyAIMadeRecommendation",
+        "WhatInformationUsed",
+        "WhatInformationNotUsed",
+        "HowConfident",
+        "WhereUncertaintyExists"
+      ],
+      "constraint": "AI should never appear omniscient"
+    },
+    {
+      "id": "governanceTrust",
+      "name": "Governance Trust",
+      "participantsShouldUnderstand": [
+        "WhoMadeDecision",
+        "Why",
+        "WhichRulesApplied",
+        "SupportingEvidence",
+        "AppealProcess"
+      ],
+      "outcome": "Governance remains legitimate"
+    },
+    {
+      "id": "workflowTrust",
+      "name": "Workflow Trust",
+      "explains": ["CurrentStage", "PreviousStage", "NextStage", "Approvals", "Dependencies", "EstimatedCompletion"],
+      "outcome": "Participants understand process"
+    },
+    {
+      "id": "automationTrust",
+      "name": "Automation Trust",
+      "explains": ["Trigger", "BusinessRules", "Workflow", "ActionsTaken", "Results"],
+      "outcome": "Automation remains observable"
+    },
+    {
+      "id": "permissionTrust",
+      "name": "Permission Trust",
+      "participantsCanUnderstand": [
+        "WhyTheyHaveAccess",
+        "WhyTheyDoNot",
+        "WhoGrantedIt",
+        "HowToRequestAdditionalAccess"
+      ],
+      "outcome": "Permissions remain transparent"
+    },
+    {
+      "id": "knowledgeTrust",
+      "name": "Knowledge Trust",
+      "displays": ["Author", "Contributors", "Evidence", "ReviewHistory", "Version", "CommunityValidation"],
+      "outcome": "Knowledge earns credibility"
+    },
+    {
+      "id": "communityTrust",
+      "name": "Community Trust",
+      "exposes": ["Leadership", "Governance", "Policies", "History", "CommunityHealth", "OperatingManual"],
+      "outcome": "Communities become understandable"
+    }
+  ],
+  "trustObjectFields": [
+    "TrustId",
+    "Source",
+    "Evidence",
+    "Decision",
+    "Explanation",
+    "Confidence",
+    "Reviewer",
+    "History",
+    "Version",
+    "Visibility"
+  ],
+  "trustObjectFieldCount": 10,
+  "explainabilityLevelCount": 4,
+  "explainabilityLevels": [
+    {
+      "level": 1,
+      "name": "Simple",
+      "provides": "One sentence explanation",
+      "example": "You received this notification because tomorrow's mission begins at 9:00 AM."
+    },
+    {
+      "level": 2,
+      "name": "Operational",
+      "explains": ["Rule", "Workflow", "Context", "Timing"]
+    },
+    {
+      "level": 3,
+      "name": "Technical",
+      "displays": ["BusinessRules", "DataSources", "Evaluation", "Workflow", "Evidence"]
+    },
+    {
+      "level": 4,
+      "name": "Expert",
+      "displays": ["FullReasoning", "HistoricalPrecedent", "Governance", "Configuration", "CommunityEventLedger"]
+    }
+  ],
+  "decisionTransparencyDisplays": [
+    "Decision",
+    "Evidence",
+    "Alternatives",
+    "ParticipantsInvolved",
+    "Timeline",
+    "History"
+  ],
+  "recommendationTransparencyExplains": [
+    "WhyNow",
+    "WhyMe",
+    "WhichCommunities",
+    "WhichMissions",
+    "WhichKnowledge",
+    "WhichBusinessRules"
+  ],
+  "aiCitationSources": [
+    "CommunityBrainReferences",
+    "Playbooks",
+    "MissionHistory",
+    "KnowledgeObjects",
+    "Research",
+    "Policies",
+    "CommunityEventLedger"
+  ],
+  "confidenceLevels": [
+    "HighConfidence",
+    "ModerateConfidence",
+    "LimitedConfidence",
+    "RequiresHumanReview"
+  ],
+  "privacyTransparencyExplains": [
+    "WhatDataCollected",
+    "Why",
+    "HowLongRetained",
+    "WhoMayAccess",
+    "HowToRemove"
+  ],
+  "activityHistoryIncludes": [
+    "MajorActions",
+    "Approvals",
+    "AIRecommendations",
+    "Notifications",
+    "CommunityParticipation",
+    "KnowledgeContributions"
+  ],
+  "trustDashboardShows": [
+    "Permissions",
+    "DataUsage",
+    "RecentAutomations",
+    "AIInteractions",
+    "KnowledgeContributions",
+    "GovernanceParticipation",
+    "PrivacySettings"
+  ],
+  "trustEventLedgerIncludes": [
+    "DecisionRecorded",
+    "ExplanationGenerated",
+    "AppealInitiated",
+    "PermissionGranted",
+    "AutomationExecuted",
+    "RecommendationAccepted"
+  ],
+  "digitalTwinTrustIncludes": [
+    "TrustPreferences",
+    "PrivacySettings",
+    "AIInteractionStyle",
+    "ExplanationLevel",
+    "LearningPreferences"
+  ],
+  "aiTransparencyIndicates": [
+    "Sources",
+    "Confidence",
+    "Assumptions",
+    "MissingInformation",
+    "SuggestedVerification"
+  ],
+  "trustExplanationAccessibility": [
+    "ReadingLevels",
+    "Voice",
+    "Translation",
+    "ScreenReaders",
+    "VisualSummaries"
+  ],
+  "trustLedger": {
+    "name": "Trust Ledger",
+    "abbreviation": "TL",
+    "isCoreConstitutionalCapability": true,
+    "recordsWhatAndWhy": true,
+    "notTraditionalAuditLog": true,
+    "entrySections": [
+      {
+        "id": "identity",
+        "name": "Identity",
+        "fields": ["EntryId", "Timestamp", "Actor", "Community", "Workspace"],
+        "actorTypes": ["Human", "AI", "Automation", "Workflow"]
+      },
+      {
+        "id": "decision",
+        "name": "Decision",
+        "fields": ["ActionPerformed", "OperationalContext", "BusinessRulesEvaluated", "WorkflowStage", "GovernanceAuthority"]
+      },
+      {
+        "id": "evidence",
+        "name": "Evidence",
+        "fields": [
+          "CommunityBrainReferences",
+          "Policies",
+          "MissionHistory",
+          "KnowledgeObjects",
+          "CommunityEventLedgerEvents",
+          "ExternalReferences"
+        ]
+      },
+      {
+        "id": "explainability",
+        "name": "Explainability",
+        "fields": ["PlainLanguageExplanation", "OperationalExplanation", "TechnicalExplanation", "ExpertExplanation"],
+        "participantChoosesDepth": true
+      },
+      {
+        "id": "confidence",
+        "name": "Confidence",
+        "fields": ["EvidenceStrength", "AIConfidence", "HumanApproval", "RemainingUncertainty"]
+      },
+      {
+        "id": "participantRights",
+        "name": "Participant Rights",
+        "fields": ["AppealOptions", "CorrectionRequests", "FeedbackOpportunities", "PrivacyControls"]
+      }
+    ],
+    "entrySectionCount": 6,
+    "platformTrustScore": {
+      "scoresPlatformNotPeople": true,
+      "metrics": [
+        "PercentageOfAIResponsesWithCitations",
+        "PercentageOfMajorActionsWithExplanations",
+        "GovernanceTransparencyRate",
+        "AverageExplanationQuality",
+        "AppealResolutionTime",
+        "AutomationExplainabilityCoverage"
+      ],
+      "systemAccountableToUsers": true
+    },
+    "executiveTrustDashboard": {
+      "monitors": [
+        "TransparencyHealth",
+        "ExplanationCoverage",
+        "AIConfidenceTrends",
+        "PrivacyCompliance",
+        "GovernanceOpenness",
+        "TrustRelatedFeedback",
+        "AreasNeedingImprovement"
+      ],
+      "measuresConstitutionalCompliance": true
+    },
+    "architecturalInsight": "Trust is treated as infrastructure — transparency and accountability alongside identity, workflows, knowledge, and communities"
+  },
+  "burtImplementationGuidance": [
+    "Explainability as platform capability",
+    "Attach explanations to every major operational object",
+    "Multiple explanation depths",
+    "Integrate Event Ledger Community Brain Digital Twins Governance Business Rules AI",
+    "Preserve participant control over privacy and transparency preferences",
+    "Never allow consequential decisions to become opaque",
+    "Consult Trust Ledger before trust-facing features"
+  ],
   "acceptanceCriteria": "AC-148",
-  "acceptanceCriteriaMet": false
+  "acceptanceCriteriaMet": true
 }
