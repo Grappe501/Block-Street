@@ -14,7 +14,8 @@ Every page, map, and dashboard builds on this Registry.
 |------|----------|
 | `counties.json` | 75 Arkansas counties (minimal bootstrap — full model in Step 2.2) |
 | `schemas/county-record.schema.json` | JSON Schema for canonical county graph node |
-| `institutions.json` | Colleges & universities (formal model in Step 2.3) |
+| `institutions.json` | Colleges & universities (partial bootstrap — full Canonical Profile in Step 2.3) |
+| `schemas/institution-record.schema.json` | JSON Schema for institution graph node |
 
 ## Requirements
 
@@ -22,6 +23,7 @@ Every page, map, and dashboard builds on this Registry.
 |----|-------------|
 | REG-001 | Arkansas County Registry |
 | CNTY-002 | County Registry Model (PHASE-002.2) |
+| INST-003 | Institution Registry Model (PHASE-002.3) |
 | REG-002 | Arkansas Institution Registry |
 | REG-003 | Registry Purpose & Authority Doctrine |
 

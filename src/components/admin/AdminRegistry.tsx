@@ -3,7 +3,7 @@
 const PHASE2_STEPS = [
   { step: "2.1", name: "Registry Doctrine", artifact: "ARKANSAS_ORGANIZING_REGISTRY_DOCTRINE.md", status: "done" },
   { step: "2.2", name: "County Registry Model", artifact: "COUNTY_REGISTRY_MODEL.md", status: "done" },
-  { step: "2.3", name: "Institution Registry Model", artifact: "INSTITUTION_REGISTRY_MODEL.md", status: "pending" },
+  { step: "2.3", name: "Institution Registry Model", artifact: "INSTITUTION_REGISTRY_MODEL.md", status: "done" },
   { step: "2.4", name: "Relationship Map (graph edges)", artifact: "COUNTY_INSTITUTION_RELATIONSHIP_MAP.md", status: "pending" },
   { step: "2.5", name: "Representation Status System", artifact: "REPRESENTATION_STATUS_SYSTEM.md", status: "pending" },
   { step: "2.6", name: "Outreach Gap Dashboard", artifact: "OUTREACH_GAP_DASHBOARD_REQUIREMENTS.md", status: "pending" },
@@ -13,12 +13,13 @@ const PHASE2_STEPS = [
   { step: "2.10", name: "Phase 2 Build Bible", artifact: "PHASE_2_ARKANSAS_ORGANIZING_REGISTRY_BUILD_BIBLE.md", status: "pending" },
 ];
 
-const RELATIONSHIPS = [
-  { rel: "contains", from: "County", to: "Institution" },
-  { rel: "belongs_to", from: "Institution", to: "County" },
-  { rel: "belongs_to", from: "Participant", to: "County / Campus", note: "operational" },
-  { rel: "operates_within", from: "Committee", to: "Campus / County", note: "future" },
-  { rel: "occurs_at", from: "Event", to: "Location", note: "future" },
+const GRAPH_EDGES = [
+  { from: "Institution", rel: "belongs_to", to: "County" },
+  { from: "Institution", rel: "has_students", to: "Participants", note: "operational" },
+  { from: "Institution", rel: "hosts", to: "Events", note: "future" },
+  { from: "Institution", rel: "contains", to: "Committees", note: "future" },
+  { from: "Institution", rel: "neighbors", to: "Institutions", note: "future" },
+  { from: "Institution", rel: "participates_in", to: "Initiatives", note: "future" },
 ];
 
 const STATUS_STYLE: Record<string, string> = {
@@ -50,10 +51,13 @@ export function AdminRegistry() {
       </div>
 
       <div className="card border-purple-200 bg-purple-50">
-        <p className="text-xs font-semibold uppercase text-purple-800">Graph Model [REG-D16]</p>
-        <p className="mt-1 font-bold text-purple-950">Relationships, not isolated records</p>
+        <p className="text-xs font-semibold uppercase text-purple-800">Knowledge Graph [INST-M17]</p>
+        <p className="mt-1 font-bold text-purple-950">Digital homes — not a directory</p>
+        <p className="mt-1 text-sm text-purple-900 italic">
+          &ldquo;Every campus page should feel like walking onto that campus.&rdquo;
+        </p>
         <div className="mt-3 space-y-1">
-          {RELATIONSHIPS.map((r) => (
+          {GRAPH_EDGES.map((r) => (
             <p key={`${r.from}-${r.rel}`} className="font-mono text-xs text-purple-900">
               {r.from} <span className="text-purple-600">{r.rel}</span> {r.to}
               {r.note && <span className="ml-2 text-purple-500">({r.note})</span>}
@@ -94,7 +98,8 @@ export function AdminRegistry() {
         <div className="mt-2 space-y-1 text-sm text-slate-600">
           <p>✓ counties.json — 75 nodes (minimal; full schema in COUNTY_REGISTRY_MODEL.md)</p>
           <p>✓ county-record.schema.json — JSON Schema graph node</p>
-          <p>✓ institutions.json — 23 nodes (formal model in 2.3)</p>
+          <p>✓ institutions.json — 23 nodes (partial; Canonical Profile in INSTITUTION_REGISTRY_MODEL.md)</p>
+          <p>✓ institution-record.schema.json — JSON Schema graph node</p>
           <p>○ Relationship graph — Step 2.4</p>
           <p>○ Netlify DB — after models approved</p>
         </div>

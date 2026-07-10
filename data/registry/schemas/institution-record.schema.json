@@ -1,0 +1,76 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://block-street.netlify.app/schemas/institution-record.json",
+  "title": "Arkansas Organizing Registry — Institution Record",
+  "description": "Canonical institution graph node. Educational Institution Canonical Profile. PHASE-002.3",
+  "type": "object",
+  "required": [
+    "id", "slug", "name", "commonName", "institutionType", "sector",
+    "county", "city", "state", "founded", "historySummary",
+    "enrollment", "website", "referenceSources", "dataSourceAttribution",
+    "lastReviewed", "disclaimer"
+  ],
+  "properties": {
+    "id": { "type": "string", "pattern": "^INST-[a-z0-9-]+$" },
+    "slug": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "name": { "type": "string" },
+    "commonName": { "type": "string" },
+    "institutionType": {
+      "type": "string",
+      "enum": [
+        "public_university", "private_university", "public_college", "private_college",
+        "community_college", "technical_college", "trade_school",
+        "high_school", "career_center", "adult_education"
+      ]
+    },
+    "sector": { "type": "string", "enum": ["public", "private"] },
+    "hbcu": { "type": "boolean", "default": false },
+    "county": { "type": "string", "description": "County slug — graph edge belongs_to" },
+    "city": { "type": "string" },
+    "state": { "type": "string", "const": "AR" },
+    "latitude": { "type": "number" },
+    "longitude": { "type": "number" },
+    "founded": { "type": "integer", "minimum": 1800 },
+    "founder": { "type": "string" },
+    "historySummary": { "type": "string" },
+    "milestones": { "type": "array", "items": { "type": "string" } },
+    "publicMission": { "type": "string" },
+    "notableTraditions": { "type": "array", "items": { "type": "string" } },
+    "enrollment": { "type": "integer", "minimum": 0 },
+    "enrollmentUndergraduate": { "type": "integer", "minimum": 0 },
+    "enrollmentGraduate": { "type": "integer", "minimum": 0 },
+    "campusSetting": { "type": "string", "enum": ["urban", "suburban", "rural"] },
+    "residentialProfile": { "type": "string", "enum": ["residential", "commuter", "mixed"] },
+    "academicCalendar": { "type": "string", "enum": ["semester", "quarter", "other"] },
+    "academicStrengths": { "type": "array", "items": { "type": "string" } },
+    "studentLifeSummary": { "type": "string" },
+    "campusCultureNotes": { "type": "string" },
+    "communityContext": { "type": "string" },
+    "website": { "type": "string", "format": "uri" },
+    "publicContact": { "type": "string" },
+    "referenceSources": { "type": "array", "items": { "type": "string", "format": "uri" }, "minItems": 1 },
+    "dataSourceAttribution": { "type": "string" },
+    "lastReviewed": { "type": "string", "format": "date" },
+    "disclaimer": { "type": "string" },
+    "colors": {
+      "type": "object",
+      "properties": {
+        "primary": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+        "secondary": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" }
+      },
+      "required": ["primary"]
+    },
+    "representationStatus": {
+      "type": "string",
+      "enum": [
+        "needs_outreach", "initial_contact", "organizer_assigned", "building",
+        "active", "thriving", "under_review", "inactive", "needs_organizer"
+      ]
+    },
+    "recruitmentPriority": { "type": "string", "enum": ["critical", "high", "medium", "low"] },
+    "verificationStatus": { "type": "string", "enum": ["verified", "needs_review"] },
+    "v1Priority": { "type": "boolean" },
+    "pageUrl": { "type": "string", "pattern": "^/schools/" }
+  },
+  "additionalProperties": false
+}

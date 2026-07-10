@@ -4,6 +4,41 @@
 
 ---
 
+## 2026-07-10 — PHASE-002.3 Institution Registry Model
+
+**Document ID:** PHASE-002.3  
+**Requirement IDs:** INST-M01–INST-M18, INST-003, AC-012  
+**Artifact:** `docs/phase-02/INSTITUTION_REGISTRY_MODEL.md`
+
+### What Was Built
+
+- **Educational Institution Canonical Profile** — 8 standardized sections every campus page shares
+- Institution as **digital home**, not directory entry
+- **Knowledge graph** architecture [INST-M17] — belongs_to, has_students, hosts, contains, neighbors, etc.
+- JSON Schema: `data/registry/schemas/institution-record.schema.json`
+- Representation lifecycle stages (needs_outreach → thriving)
+
+### Design Intent Locked
+
+> Every campus page should feel like walking onto that campus — through respect, not copying.
+
+> "This is my campus community."
+
+### Not Yet Done (By Design)
+
+- `institutions.json` migration to Canonical Profile → Step **2.9**
+- Graph edges formalized → Step **2.4**
+
+### ED-FD Handoff
+
+| Item | Detail |
+|------|--------|
+| Built | INSTITUTION_REGISTRY_MODEL.md, institution JSON schema |
+| Changed | Phase 2 README, Admin Registry, requirements registry |
+| Next | 2.4 County-Institution Relationship Map |
+
+---
+
 ## 2026-07-10 — PHASE-002.2 County Registry Model
 
 **Document ID:** PHASE-002.2  

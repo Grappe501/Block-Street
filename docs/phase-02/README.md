@@ -4,7 +4,7 @@
 > If something doesn't exist in the Registry, it doesn't exist in the platform.
 
 **Goal:** Build the canonical data foundation for the entire platform.  
-**Status:** In progress · Steps 2.1–2.2 complete  
+**Status:** In progress · Steps 2.1–2.3 complete  
 **Build Bible (closeout):** `PHASE_2_ARKANSAS_ORGANIZING_REGISTRY_BUILD_BIBLE.md` (Step 2.10)
 
 ---
@@ -29,7 +29,7 @@
 |------|----------|--------|
 | 2.1 | [Registry Doctrine](ARKANSAS_ORGANIZING_REGISTRY_DOCTRINE.md) | ✅ |
 | 2.2 | [County Registry Model](COUNTY_REGISTRY_MODEL.md) | ✅ |
-| 2.3 | Institution Registry Model (graph node) | Pending |
+| 2.3 | [Institution Registry Model](INSTITUTION_REGISTRY_MODEL.md) | ✅ |
 | 2.4 | County-Institution Relationship Map (graph edges) | Pending |
 | 2.5 | Representation Status System | Pending |
 | 2.6 | Outreach Gap Dashboard Requirements | Pending |
@@ -46,15 +46,16 @@
 |------|--------|
 | `data/registry/counties.json` | 75 counties — minimal bootstrap; full schema in [COUNTY_REGISTRY_MODEL.md](COUNTY_REGISTRY_MODEL.md) · migrate in 2.9 |
 | `data/registry/schemas/county-record.schema.json` | JSON Schema for county graph node |
-| `data/registry/institutions.json` | 23 institutions — formal node model in 2.3 |
+| `data/registry/institutions.json` | 23 institutions — partial bootstrap; full Canonical Profile in [INSTITUTION_REGISTRY_MODEL.md](INSTITUTION_REGISTRY_MODEL.md) · migrate in 2.9 |
+| `data/registry/schemas/institution-record.schema.json` | JSON Schema for institution graph node |
 | Relationship graph | Formalized in 2.4 |
 
 ---
 
 ## Burt's Rule
 
-**Ask the Registry first.** County model approved (2.2). Institution model pending (2.3). Seed migration in 2.9.
+**Ask the Registry first.** County model (2.2) and Institution model (2.3) approved. Relationship map next (2.4). Seed migration in 2.9.
 
 ---
 
-*Requirements: REG-001, CNTY-002, REG-003 · Step 2.3 preview: Educational Institution Canonical Profile*
+*Requirements: REG-002, INST-003 · Canonical Profile: Identity · History · Academics · Student Life · Community · Organizing · Metrics · References*

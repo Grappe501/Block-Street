@@ -133,7 +133,7 @@
       "priority": "critical",
       "principle": "CP-006",
       "dependencies": ["REG-001"],
-      "related": ["INST-001", "INST-002", "LS-P2"],
+      "related": ["INST-001", "INST-002", "INST-003", "LS-P2"],
       "acceptanceCriteria": [
         "Every AR college/university has profile",
         "Institution pages render from registry",
@@ -230,6 +230,34 @@
         "frontend": "PAGE-INSTITUTION",
         "test": "TEST-INST-001",
         "doc": "DOC-INST-001"
+      },
+      "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
+    },
+    {
+      "id": "INST-003",
+      "title": "Institution Registry Model",
+      "purpose": "Define canonical institution graph node — digital home for every campus",
+      "description": "PHASE-002.3 Educational Institution Canonical Profile, knowledge graph, campus page spec",
+      "priority": "critical",
+      "principle": "OM-L4",
+      "dependencies": ["REG-003", "CNTY-002"],
+      "related": ["REG-002", "INST-001", "INST-002", "INST-M05"],
+      "acceptanceCriteria": [
+        "Canonical institution model with 8-section profile",
+        "V1 scope: universities and colleges",
+        "Organizing metadata separated from factual data",
+        "Knowledge graph architecture documented"
+      ],
+      "futureNotes": "Community colleges V1.5, high schools V3 — same profile structure",
+      "implementationStatus": "done",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": "DB-INSTITUTIONS",
+        "api": "API-INSTITUTIONS-001",
+        "frontend": "PAGE-INSTITUTION",
+        "test": "TEST-INST-001",
+        "doc": "DOC-INST-003"
       },
       "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
     },
@@ -426,8 +454,8 @@
     }
   ],
   "summary": {
-    "totalRequirements": 13,
-    "done": 6,
+    "totalRequirements": 14,
+    "done": 7,
     "inProgress": 4,
     "pending": 3,
     "criticalPending": 3,
