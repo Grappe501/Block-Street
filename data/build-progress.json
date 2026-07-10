@@ -87,7 +87,7 @@
       "steps": [
         { "id": "3.1", "name": "Participant Identity Doctrine [PHASE-003.1]", "status": "done", "notes": "PEP-M01–M14, Personal Mission PRM-001, people not users" },
         { "id": "3.2", "name": "Participant Journey Framework [PHASE-003.2]", "status": "done", "notes": "JRN-M01–M14, 9 stages, orchestration layer, milestones, CPP integration" },
-        { "id": "3.3", "name": "Participant Profile System [USR-001]", "status": "pending", "notes": "Digital identity, registration, mission" },
+        { "id": "3.3", "name": "Personal Headquarters & Profile System [PHQ-001]", "status": "done", "notes": "PHQ-M01–M20, 8 sections, platform center, USR-001 registration → HQ" },
         { "id": "3.4", "name": "Personal Network System [NET-001]", "status": "pending", "notes": "Network, invite URL, QR, relationship tree" },
         { "id": "3.5", "name": "Recruitment Engine [NET-002/003]", "status": "pending", "notes": "Referral attribution, growth tracking" },
         { "id": "3.6", "name": "Network Board", "status": "pending", "notes": "Personal organizing dashboard" },
@@ -219,6 +219,12 @@
   "buildLog": [
     {
       "date": "2026-07-10",
+      "title": "PHASE-003.3 Personal Headquarters & Profile System (Canonical)",
+      "phase": 3,
+      "summary": "PHQ-M01–M20 eight-section HQ, platform center architecture, mobile-first, USR-001 registration → HQ, not a profile page"
+    },
+    {
+      "date": "2026-07-10",
       "title": "PHASE-003.2 Participant Journey Framework (Canonical)",
       "phase": 3,
       "summary": "JRN-M01–M14 nine growth stages, orchestration layer, milestones, non-linear journey, Civic Passport timeline"
@@ -346,9 +352,9 @@
   ],
   "stats": {
     "totalSteps": 81,
-    "doneSteps": 22,
+    "doneSteps": 23,
     "inProgressSteps": 0,
-    "pendingSteps": 59,
-    "percentComplete": 27
+    "pendingSteps": 58,
+    "percentComplete": 28
   }
 }

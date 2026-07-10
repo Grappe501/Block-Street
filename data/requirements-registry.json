@@ -508,6 +508,36 @@
       "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
     },
     {
+      "id": "PHQ-001",
+      "title": "Personal Headquarters",
+      "purpose": "Every participant's organizing home — not a profile page",
+      "description": "PHASE-003.3 eight-section modular HQ (Mission, Communities, Network, Journey, Calendar, Opportunities, Impact, Passport), platform center architecture, mobile-first, assembleHeadquarters aggregator",
+      "priority": "critical",
+      "principle": "OM-L1",
+      "dependencies": ["PEP-001", "JRN-001", "PRM-001", "CPP-001"],
+      "related": ["USR-001", "USR-002", "NET-001", "OIS-001"],
+      "acceptanceCriteria": [
+        "Personal Headquarters concept defined — not a profile page",
+        "Eight core dashboard sections documented",
+        "Identity, relationships, opportunities, and impact unified",
+        "Mobile-first principles incorporated",
+        "Platform center architecture specified",
+        "Blueprint for primary participant experience"
+      ],
+      "futureNotes": "Widget layout customization, theme, full calendar sync, impact metrics",
+      "implementationStatus": "done",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": "DB-USERS",
+        "api": "API-USERS-002",
+        "frontend": "PAGE-HQ",
+        "test": "TEST-PHQ-001",
+        "doc": "DOC-PHQ-001"
+      },
+      "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
+    },
+    {
       "id": "PEP-001",
       "title": "Participant Identity Doctrine",
       "purpose": "Define the person — most important document after the Constitution",
@@ -598,12 +628,12 @@
     {
       "id": "USR-001",
       "title": "Participant Registration",
-      "purpose": "Answer 'How do I get involved?' — honor-system signup",
-      "description": "County-first flow: students pick county then school; non-students county-only (16-24)",
+      "purpose": "Answer 'How do I get involved?' — honor-system signup that seeds Personal Headquarters",
+      "description": "County-first flow: students pick county then school; non-students county-only (16-24). Registration immediately provisions HQ [PHQ-001]",
       "priority": "critical",
       "principle": "OM-L1",
       "dependencies": ["REG-001", "REG-002", "PEP-001"],
-      "related": ["USR-002", "NET-001", "LS-Q2", "PRM-001"],
+      "related": ["USR-002", "NET-001", "LS-Q2", "PRM-001", "PHQ-001"],
       "acceptanceCriteria": [
         "Registration creates user record",
         "County assignment works",
@@ -625,26 +655,27 @@
     },
     {
       "id": "USR-002",
-      "title": "Personal Profile & Dashboard",
-      "purpose": "Every participant has a home immediately after registration",
-      "description": "Profile, dashboard, activity timeline, welcome experience",
+      "title": "Personal Headquarters Experience",
+      "purpose": "Every participant walks into their organizing home immediately after registration",
+      "description": "Personal Headquarters shell with mission, communities, network stub, journey, opportunities, passport — mobile-first modular dashboard [PHQ-001]",
       "priority": "critical",
       "principle": "OM-L1",
-      "dependencies": ["USR-001"],
-      "related": ["NET-001", "LS-P3"],
+      "dependencies": ["USR-001", "PHQ-001"],
+      "related": ["NET-001", "LS-P3", "PRM-001", "CPP-001"],
       "acceptanceCriteria": [
-        "Profile created on registration",
-        "Dashboard accessible after signup",
-        "No dead ends after registration"
+        "Personal Headquarters loads after registration",
+        "Eight section cards visible with V1 content",
+        "No dead ends after signup",
+        "Mobile-first layout with quick actions"
       ],
-      "futureNotes": "Interests, avatar, privacy controls",
-      "implementationStatus": "pending",
+      "futureNotes": "Full widget customization, calendar sync, impact metrics",
+      "implementationStatus": "in_progress",
       "testingStatus": "pending",
       "documentationStatus": "approved",
       "trace": {
         "database": "DB-USERS",
         "api": "API-USERS-002",
-        "frontend": "PAGE-NETWORK",
+        "frontend": "PAGE-HQ",
         "test": "TEST-USR-005",
         "doc": "DOC-USR-002"
       },

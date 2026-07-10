@@ -42,13 +42,12 @@
     }
   ],
   "registrationHome": [
-    "personalDashboard",
+    "personalHeadquarters",
     "personalNetwork",
     "countyAffiliation",
     "institutionAffiliation",
     "missionBoard",
     "activityTimeline",
-    "profile",
     "growthRecommendations"
   ],
   "participantPromise": [

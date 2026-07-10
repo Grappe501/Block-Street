@@ -4,6 +4,25 @@
 
 ---
 
+## 2026-07-10 — PHASE-003.3 Personal Headquarters & Profile System (Canonical)
+
+**Document ID:** PHASE-003.3 · **PHQ-001 · USR-001 · USR-002 · AC-022**
+
+### What Was Built
+
+- **Not a profile page — a Personal Headquarters** — organizing home, not account settings
+- **Eight modular sections:** Mission · Communities · Network · Journey · Calendar · Opportunities · Impact · Passport
+- **Platform center architecture [PHQ-M18]** — every feature surfaces back to HQ via `assembleHeadquarters()`
+- **Three login questions** — what changed, what next, how am I helping
+- **Mobile-first** — thumb zone, persistent quick actions, minimal scroll for essentials
+- **Registration → HQ [USR-001]** — county-first signup with no dead ends
+
+### Guiding Principle Locked
+
+> **Every participant deserves a place that feels like their own.**
+
+---
+
 ## 2026-07-10 — PHASE-003.2 Participant Journey Framework (Canonical)
 
 **Document ID:** PHASE-003.2 · **JRN-001 · AC-021**
@@ -65,7 +84,7 @@
 | Item | Detail |
 |------|--------|
 | Built | PARTICIPANT_IDENTITY_DOCTRINE, PHASE_3_MASTER_SEQUENCE |
-| Next | 3.3 Participant Profile System (USR-001) |
+| Next | 3.4 Personal Network System (NET-001) |
 
 ---
 

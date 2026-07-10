@@ -1,0 +1,176 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/phase-03/PARTICIPANT_PROFILE_SYSTEM.md",
+  "motto": "Every participant deserves a place that feels like their own.",
+  "principle": "Most platforms have a profile page. This platform has a Personal Headquarters.",
+  "purpose": "Central operating space combining identity, relationships, organizing activity, leadership development, and opportunities — the page participants visit most often.",
+  "terminology": {
+    "avoid": ["profile page", "account dashboard", "edit profile", "user settings"],
+    "use": ["Personal Headquarters", "organizing home", "update your mission", "privacy & preferences"]
+  },
+  "loginQuestions": [
+    "What has changed since I was here last?",
+    "What should I do next?",
+    "How am I helping my community?"
+  ],
+  "homeScreenMessages": [
+    "Welcome back",
+    "Here's what's happening",
+    "Here's your progress",
+    "Here's what needs your attention",
+    "Here's how you can help today"
+  ],
+  "participantQuestions": [
+    { "question": "Who am I?", "sections": ["mission", "passport"] },
+    { "question": "What am I working on?", "sections": ["communities", "calendar"] },
+    { "question": "Who am I connected to?", "sections": ["network"] },
+    { "question": "Where can I help today?", "sections": ["opportunities", "quickActions"] },
+    { "question": "How am I growing?", "sections": ["journey", "impact"] }
+  ],
+  "sections": [
+    {
+      "key": "mission",
+      "label": "My Mission",
+      "identityLayer": "personal",
+      "requirement": "PRM-001",
+      "displays": ["personalMissionStatement", "currentFocus", "suggestedNextAction", "missionProgress"],
+      "v1": "core"
+    },
+    {
+      "key": "communities",
+      "label": "My Communities",
+      "identityLayer": "community",
+      "requirement": "REG-001",
+      "displays": ["campus", "county", "committees", "projects", "volunteerTeams", "futureCommunities"],
+      "v1": "countyCampus"
+    },
+    {
+      "key": "network",
+      "label": "My Network",
+      "identityLayer": "relationship",
+      "requirement": "NET-001",
+      "displays": ["peopleInvited", "mentors", "connections", "newMembers", "relationshipGrowth", "inviteTools", "qrCode", "shareLink"],
+      "v1": "stubInvite",
+      "note": "Absorbs Network Board shell — depth in Step 3.6"
+    },
+    {
+      "key": "journey",
+      "label": "My Journey",
+      "identityLayer": "journey",
+      "requirement": "JRN-001",
+      "displays": ["journeyStage", "milestones", "volunteerHistory", "leadershipDevelopment", "recognition", "timeline", "growthOpportunities"],
+      "v1": "stageNextSteps"
+    },
+    {
+      "key": "calendar",
+      "label": "My Calendar",
+      "identityLayer": null,
+      "displays": ["upcomingEvents", "volunteerOpportunities", "committeeMeetings", "deadlines", "personalReminders"],
+      "v1": "placeholder"
+    },
+    {
+      "key": "opportunities",
+      "label": "My Opportunities",
+      "requirement": "OIS-001",
+      "displays": ["recommendedEvents", "committees", "volunteerOpportunities", "nearbyProjects", "peopleToMeet", "communitiesNeedingHelp"],
+      "v1": "staticCards"
+    },
+    {
+      "key": "impact",
+      "label": "My Impact",
+      "identityLayer": "leadership",
+      "displays": ["relationshipsBuilt", "volunteerHours", "projectsCompleted", "eventsOrganized", "peopleMentored", "communitiesStrengthened"],
+      "v1": "welcomeStub"
+    },
+    {
+      "key": "passport",
+      "label": "My Passport",
+      "requirement": "CPP-001",
+      "displays": ["communityHistory", "achievements", "milestones", "leadershipExperiences", "training", "personalTimeline"],
+      "v1": "missionRegistrationStamp"
+    }
+  ],
+  "quickActions": [
+    { "id": "invite_friend", "label": "Invite a friend", "v1": true },
+    { "id": "share_qr", "label": "Share QR code", "v1": true },
+    { "id": "join_event", "label": "Join an event", "v1": false },
+    { "id": "volunteer", "label": "Volunteer", "v1": false },
+    { "id": "create_committee", "label": "Create a committee", "v1": false },
+    { "id": "start_project", "label": "Start a project", "v1": false },
+    { "id": "send_message", "label": "Send a message", "v1": false },
+    { "id": "view_county", "label": "View county", "v1": true },
+    { "id": "view_campus", "label": "View campus", "v1": true }
+  ],
+  "customization": [
+    { "setting": "missionStatement", "v1": true },
+    { "setting": "profileImage", "v1": "optional" },
+    { "setting": "theme", "v1": false },
+    { "setting": "favoriteCommunities", "v1": false },
+    { "setting": "notificationPreferences", "v1": false, "crossRef": "3.10" },
+    { "setting": "dashboardLayout", "v1": false },
+    { "setting": "privacySettings", "v1": "basic", "crossRef": "3.7" }
+  ],
+  "privacyControls": [
+    "publicVisibility",
+    "profileInformation",
+    "contactMethods",
+    "communityParticipation",
+    "messagingPermissions",
+    "personalDataSharing"
+  ],
+  "mobileFirst": {
+    "principles": [
+      "Design for phones before desktops",
+      "Important information in thumb zone",
+      "Minimal scrolling for essential actions",
+      "Single-column mobile; responsive grid on larger screens",
+      "Touch targets >= 44px"
+    ],
+    "persistentQuickActions": true
+  },
+  "platformCenter": {
+    "description": "HQ is the presentation layer — every feature surfaces back here",
+    "aggregator": "assembleHeadquarters(participantId)",
+    "dataSources": ["identity", "journey", "network", "communities", "organizing"],
+    "orchestrators": ["journeyStage", "nextSteps", "impactSummary", "sinceLastVisit"],
+    "networkBoardRelationship": "Step 3.6 implements depth within My Network — not a competing home"
+  },
+  "registration": {
+    "requirementId": "USR-001",
+    "flows": [
+      { "path": "student", "steps": ["county", "school", "basicInfo", "missionPrompt", "hqWelcome"] },
+      { "path": "nonStudent", "steps": ["county", "basicInfo", "missionPrompt", "hqWelcome"], "ageRange": "16-24" }
+    ],
+    "noDeadEnds": true,
+    "honorSystem": true
+  },
+  "routes": {
+    "primary": "PAGE-HQ",
+    "v1Alias": "PAGE-NETWORK",
+    "recommendedPath": "/hq"
+  },
+  "v1Scope": {
+    "hqShell": true,
+    "myMission": true,
+    "myCommunities": "countyCampus",
+    "myNetwork": "inviteQrStub",
+    "myJourney": "memberStageNextSteps",
+    "myCalendar": "placeholder",
+    "myOpportunities": "staticCards",
+    "myImpact": "welcomeStub",
+    "myPassport": "missionRegistrationStamp",
+    "quickActions": ["invite", "share", "viewCounty", "viewCampus"],
+    "registration": true
+  },
+  "implementation": {
+    "pattern": "modular dashboard with widget registry",
+    "separatePresentationFromData": true,
+    "noHeadquartersTable": true,
+    "recommendedFiles": [
+      "src/app/(participant)/hq/page.tsx",
+      "src/components/hq/HQShell.tsx",
+      "src/components/hq/sections/",
+      "src/lib/hq/assembleHeadquarters.ts"
+    ]
+  }
+}

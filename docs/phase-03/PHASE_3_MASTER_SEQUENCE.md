@@ -36,8 +36,8 @@ When complete, every participant receives:
 | Step | Document | Focus | Status |
 |------|----------|-------|--------|
 | 3.1 | [Participant Identity Doctrine](PARTICIPANT_IDENTITY_DOCTRINE.md) | Constitutional document for people | ✅ |
-| 3.2 | [Participant Journey Framework](PARTICIPANT_JOURNEY.md) | Lifecycle stages — one step forward | ✅ |
-| 3.3 | Participant Profile System | Digital identity — interests, skills, mission | Pending |
+| 3.2 | [Participant Journey Framework](PARTICIPANT_JOURNEY.md) | Lifecycle stages — growth not rank | ✅ |
+| 3.3 | [Personal Headquarters & Profile System](PARTICIPANT_PROFILE_SYSTEM.md) | Organizing home — not a profile page | ✅ |
 | 3.4 | Personal Network System | Network, invite URL, QR, relationship tree | Pending |
 | 3.5 | Recruitment Engine | Invitations, attribution, growth tracking | Pending |
 | 3.6 | Network Board | Personal organizing dashboard | Pending |
@@ -53,19 +53,18 @@ When complete, every participant receives:
 
 ---
 
-## 3.3 — Participant Profile System
+## 3.3 — Personal Headquarters & Profile System
 
-**Requirement focus:** USR-001 · USR-002 · PRM-001
+**Requirement focus:** PHQ-001 · USR-001 · USR-002 · PRM-001
 
-Everything about a participant:
+The participant's **organizing home** — not a profile page:
 
-- Basic information · Interests · Skills · Passions
-- Privacy settings · Communities · History
-- Future aspirations · Volunteer interests · Availability
-- Communication preferences (cross-ref 3.10)
-- **Personal Mission** — living statement of purpose
+- **Eight sections:** Mission · Communities · Network · Journey · Calendar · Opportunities · Impact · Passport
+- **Platform center** — every feature surfaces back to HQ
+- **Registration** seeds HQ immediately — no dead ends [USR-001]
+- **Mobile-first** — thumb zone, quick actions, minimal scroll
 
-*Becomes their digital identity.*
+*Route:* `/hq` [PAGE-HQ] · *Live spec:* `personal-headquarters.json`
 
 ---
 
@@ -92,13 +91,11 @@ Invitation philosophy · QR codes · Referral links · Welcome flow · Relations
 
 ## 3.6 — Network Board
 
-Every participant's personal organizing home:
+Depth within **My Network** in the Personal Headquarters [PHQ-M08] — not a competing home page:
 
-Dashboard · People · Growth · Events · Volunteer · Committees · Projects · Messages · Milestones · Recognition · Goals · **Mission Board**
+People · Growth · Events · Volunteer · Committees · Projects · Messages · Milestones · Recognition · Goals · **Mission Board**
 
-*Route:* `/dashboard/network` [PAGE-NETWORK]
-
----
+*Integrated into HQ section `network` · Step 3.4 provides invite/QR depth*
 
 ## 3.7 — Privacy & Trust System
 
