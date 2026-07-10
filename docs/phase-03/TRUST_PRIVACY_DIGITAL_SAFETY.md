@@ -139,7 +139,7 @@ Transparency → Trust → Invitations → Relationships → Communities
 | Mission statement visibility | ✅ |
 | Community memberships visibility | partial |
 | Messaging permissions | future |
-| Notification preferences | cross-ref 3.10 |
+| Notification preferences | cross-ref CAM-001 |
 | Connection requests | future |
 
 **[TPS-M06a]** The **participant—not the platform**—makes these choices whenever practical [PEP-M15].
@@ -352,7 +352,7 @@ Transparency → Trust → Invitations → Relationships → Communities
 | **Connected devices** | Active sessions (future) |
 | **Login history** | Recent sign-ins (future) |
 | **Data download** | Export my data [TPS-M11b] |
-| **Communication preferences** | cross-ref 3.10 |
+| **Communication preferences** | cross-ref CAM-001 |
 | **AI assistance settings** | future [TPS-M15] |
 | **Security recommendations** | Password, 2FA future |
 | **How we use your information** | Transparency inventory [TPS-M12] |
@@ -464,6 +464,6 @@ Step 3.7 is complete when:
 
 ---
 
-**Next Step:** 3.10 — Communication Preferences (MSG-001)
+**Next Step:** 3.11 — Participant Timeline
 
 *Trace: Trust → Invitations [RGE] → Relationships [PRN] → Communities → CP-007 privacy by design*

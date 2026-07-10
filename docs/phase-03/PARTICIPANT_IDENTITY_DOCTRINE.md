@@ -174,7 +174,7 @@ A participant's value is **never** determined by:
 | Personal interests | ✅ | |
 | Skills | Partial | Step 3.8 [PGL-001] |
 | Goals | Future | |
-| Communication preferences | Future | Step 3.10 |
+| Communication preferences | Future | CAM-001 [Step 3.10] |
 | Privacy settings | ✅ | Step 3.7 |
 
 **[PEP-M07a]** Participant-controlled — never inferred from institution alone.
@@ -310,7 +310,7 @@ Visitor → Interested → Registered → Connected → Contributor
 | Visibility | Who sees what |
 | Contact preferences | How others reach them |
 | Profile sharing | Network vs public |
-| Notifications | Step 3.10 |
+| Notifications | CAM-001 [Step 3.10] |
 | Community participation | Opt-in to committees, events |
 
 **[PEP-M15a]** Trust is earned through **transparency** — full spec [Trust, Privacy & Digital Safety Framework](TRUST_PRIVACY_DIGITAL_SAFETY.md).

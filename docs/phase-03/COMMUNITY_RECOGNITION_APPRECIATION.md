@@ -394,6 +394,6 @@ Step 3.9 is complete when:
 
 ---
 
-**Next Step:** 3.10 — Communication Preferences (MSG-001)
+**Next Step:** 3.11 — Participant Timeline
 
 *Trace: Contribution → Milestone → Civic Passport → Community Gratitude → Appreciation Board → Morning Brief*

@@ -32,7 +32,7 @@
     { "setting": "missionVisibility", "v1": true },
     { "setting": "communityMembershipsVisibility", "v1": "partial" },
     { "setting": "messagingPermissions", "v1": false },
-    { "setting": "notificationPreferences", "v1": false, "crossRef": "3.10" },
+    { "setting": "notificationPreferences", "v1": false, "crossRef": "CAM-001" },
     { "setting": "connectionRequests", "v1": false }
   ],
   "visibilityLevels": [

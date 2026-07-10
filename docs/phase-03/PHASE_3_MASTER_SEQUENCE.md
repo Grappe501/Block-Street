@@ -44,7 +44,7 @@ When complete, every participant receives:
 | 3.7 | [Trust, Privacy & Digital Safety](TRUST_PRIVACY_DIGITAL_SAFETY.md) | Trust Center — trust as infrastructure | ✅ |
 | 3.8 | [Personal Growth & Leadership](PERSONAL_GROWTH_LEADERSHIP.md) | Growth Graph — leadership operating system | ✅ |
 | 3.9 | [Community Recognition & Appreciation](COMMUNITY_RECOGNITION_APPRECIATION.md) | Appreciation not gamification | ✅ |
-| 3.10 | Communication Preferences | Participant controlled | Pending |
+| 3.10 | [Communication & Attention Management](COMMUNICATION_ATTENTION_MANAGEMENT.md) | Attention Budget — earn not abuse | ✅ |
 | 3.11 | Participant Timeline | One timeline — everything | Pending |
 | 3.12 | Participant Knowledge Graph | Person as graph node — all edges | Pending |
 | 3.13 | Recommendation Engine | People, events, mentors, opportunities | Pending |
@@ -164,11 +164,19 @@ The most important **trust document** in the project — trust as infrastructure
 
 ---
 
-## 3.10 — Communication Preferences
+## 3.10 — Communication & Attention Management System
 
-Email · Text · Push · Digest · Emergency · Committee · County · Campus · Personal messages
+**Requirement focus:** CAM-001 · PCC-001 · SEC-001 · MSG-001 (transport)
 
-Everything **participant controlled**.
+**Earn attention. Never abuse it** — how participants stay connected without becoming overwhelmed:
+
+- **Attention Budget [CAM-M13]** — consolidate low-priority updates; high-priority still immediate
+- **Smart Digest** — Morning Brief, Daily Digest, Weekly Summary, Monthly Impact Report
+- **Four communication types** — Personal, Community, Platform, Emergency
+- **Five priority levels** — participant-controlled delivery by priority
+- **Policy vs transport** — CAM is policy; MSG (Phase 5.7) is delivery infrastructure
+
+*Live spec:* `communication-attention-management.json` · *Integrates:* Morning Brief [PCC-M17], Trust Center prefs [SEC-001]
 
 ---
 
@@ -235,7 +243,7 @@ Identity · Journey · Profiles · Networks · Recruitment · Recognition · Pri
 | 3.6 | Command Center core | ✅ design |
 | 3.7 | Basic privacy + Trust Center | ✅ design |
 
-Steps 3.10–3.14: design now, implement post-launch. Steps 3.8–3.9 design complete.
+Steps 3.11–3.14: design now, implement post-launch. Steps 3.8–3.10 design complete.
 
 ---
 

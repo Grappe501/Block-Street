@@ -326,7 +326,7 @@ When a participant logs in, they should not feel like they are editing an accoun
 | Profile image | optional |
 | Theme | future |
 | Favorite communities | future |
-| Notification preferences | cross-ref Step 3.10 |
+| Notification preferences | cross-ref CAM-001 |
 | Dashboard layout | future (widget order) |
 | Privacy settings | basic — Step 3.7 depth |
 
@@ -485,6 +485,6 @@ Step 3.3 is complete when:
 
 ---
 
-**Next Step:** 3.10 — Communication Preferences (MSG-001)
+**Next Step:** 3.11 — Participant Timeline
 
 *Trace: USR-001 registration → PHQ shell → NET-002/003 invite tools → JRN orchestrator → CPP timeline*

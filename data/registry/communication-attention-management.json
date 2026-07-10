@@ -1,0 +1,134 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/phase-03/COMMUNICATION_ATTENTION_MANAGEMENT.md",
+  "motto": "Earn attention. Never abuse it.",
+  "principle": "Help people stay connected without becoming overwhelmed — attention is a valuable resource.",
+  "constitutionalAlignment": "The platform exists to help people organize their lives, not compete for their attention.",
+  "purpose": "Communicate with participants while respecting attention, preferences, and organizing priorities — strengthen relationships, not interrupt them.",
+  "communicateTo": ["inform", "encourage", "coordinate", "teach", "celebrate", "support", "invite"],
+  "neverCommunicateBecause": "the platform can",
+  "communicationTypes": [
+    {
+      "key": "personal",
+      "label": "Personal",
+      "examples": ["friendRequests", "invitations", "mentorship", "directMessages", "personalReminders"],
+      "defaultDelivery": "inPlatformOptionalPush"
+    },
+    {
+      "key": "community",
+      "label": "Community",
+      "examples": ["campusAnnouncements", "countyUpdates", "committeeNews", "projectUpdates", "volunteerOpportunities"],
+      "defaultDelivery": "digestEligible"
+    },
+    {
+      "key": "platform",
+      "label": "Platform",
+      "examples": ["newFeatures", "maintenance", "security", "training", "policyUpdates"],
+      "defaultDelivery": "emailForSecurity"
+    },
+    {
+      "key": "emergency",
+      "label": "Emergency",
+      "examples": ["securityNotifications", "criticalAccountIssues", "urgentCommunityAlerts"],
+      "defaultDelivery": "immediateSparingly"
+    }
+  ],
+  "deliveryChannels": [
+    { "channel": "inPlatform", "v1": true },
+    { "channel": "email", "v1": "transactional" },
+    { "channel": "sms", "v1": false },
+    { "channel": "push", "v1": false },
+    { "channel": "calendar", "v1": false },
+    { "channel": "digestEmail", "v1": "spec" }
+  ],
+  "notificationPhilosophy": {
+    "everyNotificationAnswers": [
+      "Why am I receiving this?",
+      "Why does it matter?",
+      "What action should I take?"
+    ],
+    "explainableReasonField": true
+  },
+  "preferences": [
+    { "key": "preferredChannels", "default": "inPlatformEmailSecurity" },
+    { "key": "notificationFrequency", "default": "smartDigest" },
+    { "key": "quietHours", "default": "10pm-8amLocal" },
+    { "key": "digestOptions", "default": "morningBriefOnLogin" },
+    { "key": "communitySubscriptions", "default": "countyCampusOptIn" },
+    { "key": "committeeNotifications", "default": "offUntilJoined" },
+    { "key": "mentorshipUpdates", "default": "onWhenMentoring" },
+    { "key": "volunteerReminders", "default": "offUntilVolunteer" }
+  ],
+  "smartDigest": {
+    "options": [
+      { "id": "morningBrief", "cadence": "eachLogin", "integration": "PCC-M17" },
+      { "id": "dailyDigest", "cadence": "daily", "channel": "emailOptional" },
+      { "id": "weeklySummary", "cadence": "weekly", "channel": "emailOptional" },
+      { "id": "monthlyImpactReport", "cadence": "monthly", "integration": "CPP-001" }
+    ],
+    "aggregator": "assembleDigest(participantId, cadence)"
+  },
+  "attentionProtection": {
+    "avoid": ["repeatedReminders", "duplicateMessages", "notificationOverload", "unnecessaryUrgency", "darkPatternEngagement"],
+    "protections": ["dedupeKey", "attentionBudget", "priorityGating", "rateLimits"]
+  },
+  "priorityLevels": [
+    { "key": "critical", "label": "Critical", "defaultDelivery": "immediateAllChannels" },
+    { "key": "important", "label": "Important", "defaultDelivery": "inPlatformPushIfEnabled" },
+    { "key": "informational", "label": "Informational", "defaultDelivery": "inPlatformDigestEligible" },
+    { "key": "optional", "label": "Optional", "defaultDelivery": "digestOnly" },
+    { "key": "inspirational", "label": "Inspirational", "defaultDelivery": "morningBriefOnly" }
+  ],
+  "attentionBudget": {
+    "description": "Internal cap — consolidate before overwhelming participant",
+    "signatureFeature": true,
+    "orchestrator": "applyAttentionBudget(participantId, message)",
+    "behaviors": [
+      "Three small updates become one Morning Brief item",
+      "Committee notices merge into digest",
+      "Repeated reminders intelligently combined",
+      "High-priority messages bypass budget"
+    ],
+    "structure": {
+      "dailySoftCap": "nonCriticalBeforeConsolidate",
+      "criticalBypass": true,
+      "consolidateInto": ["digest", "morningBrief"],
+      "participantOverride": "pauseAllNonCritical"
+    },
+    "v1": "specMorningBriefAsConsolidator"
+  },
+  "communicationHistory": {
+    "location": "Trust Center",
+    "includes": ["announcements", "messages", "notifications", "digests", "securityNotices"],
+    "appendOnly": true
+  },
+  "futureIntelligentCommunication": {
+    "aiAssistsAttentionNotNoise": true,
+    "capabilities": ["summarizeActivity", "prioritizeMessages", "recommendFollowUp", "highlightOpportunities", "filterLowValue"],
+    "optInRequired": true
+  },
+  "trustCenterIntegration": {
+    "sections": ["communicationPreferences", "communicationHistory", "aiAssistanceFuture", "quietHoursPause"],
+    "pccWidget": "communicationPreviewLinkToTrustCenter"
+  },
+  "msgRelationship": {
+    "cam": "policy and attention layer",
+    "msg001": "transport and messaging infrastructure Phase 5.7"
+  },
+  "v1Scope": {
+    "philosophyAndBudgetSpec": true,
+    "morningBriefPrimaryDigest": true,
+    "transactionalEmailOnly": true,
+    "trustCenterPrefsStub": true,
+    "fullPushSmsDigestEngine": "v1.1"
+  },
+  "implementation": {
+    "gate": "applyAttentionBudget before any outbound delivery",
+    "files": [
+      "src/lib/communication/applyAttentionBudget.ts",
+      "src/lib/communication/assembleDigest.ts",
+      "src/lib/communication/sendCommunication.ts"
+    ],
+    "tables": ["communication_preferences", "communication_events", "communication_queue"]
+  }
+}

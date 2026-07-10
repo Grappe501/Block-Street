@@ -4,6 +4,25 @@
 
 ---
 
+## 2026-07-10 — PHASE-003.10 Communication & Attention Management (Canonical)
+
+**Document ID:** PHASE-003.10 · **CAM-001 · AC-029**
+
+### What Was Built
+
+- **Earn attention. Never abuse it.** — guiding principle locked
+- **Attention Budget [CAM-M13]** — consolidate low-priority updates into digests; high-priority still immediate
+- **Smart Digest** — Morning Brief, Daily Digest, Weekly Summary, Monthly Impact Report
+- **Four communication types** — Personal, Community, Platform, Emergency
+- **Five priority levels** — Critical through Inspirational; participant-controlled delivery
+- **Policy vs transport** — CAM-001 policy layer; MSG-001 transport layer (Phase 5.7)
+
+### Guiding Principle Locked
+
+> **Earn attention. Never abuse it.**
+
+---
+
 ## 2026-07-10 — PHASE-003.9 Community Recognition & Appreciation (Canonical)
 
 **Document ID:** PHASE-003.9 · **CRA-001 · AC-028**

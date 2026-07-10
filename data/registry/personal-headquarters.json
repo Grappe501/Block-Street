@@ -106,7 +106,7 @@
     { "setting": "profileImage", "v1": "optional" },
     { "setting": "theme", "v1": false },
     { "setting": "favoriteCommunities", "v1": false },
-    { "setting": "notificationPreferences", "v1": false, "crossRef": "3.10" },
+    { "setting": "notificationPreferences", "v1": false, "crossRef": "CAM-001" },
     { "setting": "dashboardLayout", "v1": false },
     { "setting": "privacySettings", "v1": "basic", "crossRef": "SEC-001" }
   ],

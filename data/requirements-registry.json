@@ -24,6 +24,7 @@
     { "prefix": "PHQ", "domain": "Personal headquarters" },
     { "prefix": "PCC", "domain": "Personal command center" },
     { "prefix": "CRA", "domain": "Community recognition & appreciation" },
+    { "prefix": "CAM", "domain": "Communication & attention management" },
     { "prefix": "CPP", "domain": "Civic passport" },
     { "prefix": "STS", "domain": "Status & lifecycle" },
     { "prefix": "ADM", "domain": "Administration" },
@@ -773,6 +774,36 @@
         "frontend": "PAGE-PCC",
         "test": "TEST-CRA-001",
         "doc": "DOC-CRA-001"
+      },
+      "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
+    },
+    {
+      "id": "CAM-001",
+      "title": "Communication & Attention Management System",
+      "purpose": "Earn attention, never abuse it — right information, right time, chosen channels",
+      "description": "PHASE-003.10 Attention Budget, Smart Digest, priority levels, communication types, participant preferences, Morning Brief integration, anti-noise principles",
+      "priority": "critical",
+      "principle": "PEP-001",
+      "dependencies": ["PCC-001", "SEC-001", "PEP-001"],
+      "related": ["MSG-001", "JRN-001", "CRA-001"],
+      "acceptanceCriteria": [
+        "Communication philosophy documented",
+        "Notification and attention principles established",
+        "Participant-controlled preferences defined",
+        "Digest and priority concepts incorporated",
+        "Attention Budget architecture specified",
+        "Blueprint for respectful, participant-centered communication"
+      ],
+      "futureNotes": "Text/push channels, AI summarization, messaging integrations — policy layer separate from MSG transport",
+      "implementationStatus": "done",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": "DB-USERS",
+        "api": null,
+        "frontend": "PAGE-PCC",
+        "test": "TEST-CAM-001",
+        "doc": "DOC-CAM-001"
       },
       "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
     },

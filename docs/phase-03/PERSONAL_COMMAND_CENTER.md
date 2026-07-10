@@ -334,7 +334,7 @@ This is where everything built so far **comes together**:
 
 ## PCC-M14 — Communication Widget
 
-**Key:** `communication` · **Requirement:** [MSG-001 future]
+**Key:** `communication` · **Requirement:** [CAM-001]
 
 **[PCC-M14]** Displays:
 
@@ -441,7 +441,7 @@ assembleMorningBrief(participantId, lastVisitAt)
 | Widget order | future |
 | Favorites (pinned widgets) | future |
 | Theme | future |
-| Notification preferences | cross-ref 3.10 |
+| Notification preferences | cross-ref CAM-001 |
 | Mission priorities | edit mission |
 | Privacy | cross-ref 3.7 |
 
@@ -512,6 +512,6 @@ Step 3.6 is complete when:
 
 ---
 
-**Next Step:** 3.10 — Communication Preferences (MSG-001)
+**Next Step:** 3.11 — Participant Timeline
 
 *Trace: PHQ home → PRN community → RGE expansion → PCC daily workspace → Morning Brief → Mission Board → journey next step*
