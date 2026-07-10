@@ -19,7 +19,9 @@ Every page, map, and dashboard builds on this Registry.
 | `status-framework.json` | Lifecycles, status categories, dashboard queries (PHASE-002.5) |
 | `outreach-intelligence.json` | Mission Board, opportunity types, dashboard levels (PHASE-002.6) |
 | `community-identity.json` | Community DNA categories, entity configs (PHASE-002.7) |
+| `knowledge-governance.json` | Data classes, provenance, source confidence (PHASE-002.8) |
 | `schemas/community-dna.schema.json` | Community DNA profile schema |
+| `schemas/knowledge-provenance.schema.json` | Per-field provenance schema |
 | `schemas/status-transition.schema.json` | Status timeline transition records |
 
 ## Requirements
@@ -33,6 +35,7 @@ Every page, map, and dashboard builds on this Registry.
 | STS-001 | Status & Lifecycle Framework (PHASE-002.5) |
 | OIS-001 | Outreach Intelligence & Mission Board (PHASE-002.6) |
 | CID-001 | Community Identity & Personalization (PHASE-002.7) |
+| KDG-001 | Knowledge & Data Governance (PHASE-002.8) |
 | REG-002 | Arkansas Institution Registry |
 | REG-003 | Registry Purpose & Authority Doctrine |
 

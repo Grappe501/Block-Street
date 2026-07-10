@@ -11,7 +11,7 @@ const PHASE2_STEPS = [
   { step: "2.5", name: "Status & Lifecycle", artifact: "CANONICAL_STATUS_LIFECYCLE_FRAMEWORK.md", status: "done" },
   { step: "2.6", name: "Outreach Intelligence & Mission Board", artifact: "STATEWIDE_OUTREACH_INTELLIGENCE.md", status: "done" },
   { step: "2.7", name: "Community Identity & Personalization", artifact: "COMMUNITY_IDENTITY_PERSONALIZATION_SYSTEM.md", status: "done" },
-  { step: "2.8", name: "Source & Verification Protocol", artifact: "REGISTRY_SOURCE_AND_VERIFICATION_PROTOCOL.md", status: "pending" },
+  { step: "2.8", name: "Knowledge & Data Governance", artifact: "KNOWLEDGE_DATA_GOVERNANCE_FRAMEWORK.md", status: "done" },
   { step: "2.9", name: "Registry Seed Data Plan", artifact: "REGISTRY_SEED_DATA_PLAN.md", status: "pending" },
   { step: "2.10", name: "Phase 2 Build Bible", artifact: "PHASE_2_ARKANSAS_ORGANIZING_REGISTRY_BUILD_BIBLE.md", status: "pending" },
 ];

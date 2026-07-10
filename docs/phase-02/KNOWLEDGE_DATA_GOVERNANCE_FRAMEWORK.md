@@ -1,0 +1,438 @@
+# Knowledge & Data Governance Framework
+
+**Document ID:** PHASE-002.8  
+**Artifact:** `KNOWLEDGE_DATA_GOVERNANCE_FRAMEWORK.md`  
+**Status:** Canonical  
+**Priority:** Critical  
+**Phase:** 2 — Arkansas Organizing Registry
+
+> **If the Registry is the brain of the system, data quality is its memory.**
+
+This document establishes the credibility of the entire platform — where information comes from, how it is verified, and how it changes over time.
+
+**Builds On:** [PHASE-002.1 Registry Doctrine](ARKANSAS_ORGANIZING_REGISTRY_DOCTRINE.md) · [PHASE-002.5 Status Framework](CANONICAL_STATUS_LIFECYCLE_FRAMEWORK.md) · [REG-D14](ARKANSAS_ORGANIZING_REGISTRY_DOCTRINE.md) · [TR-MOTTO](../build-steps/PHASE-001.9-MASTER-TRACEABILITY.md)
+
+**Live spec:** `data/registry/knowledge-governance.json` · `data/registry/schemas/knowledge-provenance.schema.json`
+
+---
+
+## Requirement Index
+
+| ID | Requirement |
+|----|-------------|
+| KDG-M01 | Purpose |
+| KDG-M02 | Guiding principle |
+| KDG-M03 | Four classes of data |
+| KDG-M04 | Class A — Canonical Registry |
+| KDG-M05 | Class B — Operational |
+| KDG-M06 | Class C — Community content |
+| KDG-M07 | Class D — System metadata |
+| KDG-M08 | Approved data sources |
+| KDG-M09 | Source confidence |
+| KDG-M10 | Knowledge Provenance architecture |
+| KDG-M11 | Data stewardship |
+| KDG-M12 | Historical integrity |
+| KDG-M13 | Community contributions |
+| KDG-M14 | Data quality standards |
+| KDG-M15 | Versioned knowledge |
+| KDG-M16 | AI considerations |
+| KDG-M17 | Review workflows |
+| KDG-M18 | V1 scope |
+| KDG-BG | Burt implementation guidance |
+| AC-017 | Step 2.8 acceptance criteria |
+
+---
+
+## KDG-M01 — Purpose
+
+**[KDG-M01]** This document establishes how factual information **enters**, is **maintained within**, and **evolves throughout** ASYON.
+
+**[KDG-M01a]** Objective: Registry information remains **accurate**, **attributable**, **auditable**, and **trustworthy**.
+
+**[KDG-M01b]** The platform distinguishes clearly between:
+
+| Category | Nature |
+|----------|--------|
+| Public facts | Canonical Registry |
+| Organizing data | Operational DB |
+| Participant-generated content | Community content |
+| Administrative information | System metadata |
+
+**[KDG-M01c]** Each category follows its **own governance rules**.
+
+*Long-term goal:* Trusted statewide organizing platform through disciplined data stewardship.
+
+---
+
+## KDG-M02 — Guiding Principle
+
+**[KDG-M02]**
+
+> **Know the source. Preserve the history. Build trust.**
+
+**[KDG-M02a]** Participants should have confidence that information presented by the platform is handled **responsibly**.
+
+**[KDG-M02b]** Burt uses this framework **throughout the life of the project** — not only at launch.
+
+---
+
+## KDG-M03 — Four Classes of Data
+
+**[KDG-M03]** Every piece of information belongs to exactly **one** data class.
+
+| Class | Name | Change frequency | Governance |
+|-------|------|------------------|------------|
+| **A** | Canonical Registry Data | Infrequent | Controlled process |
+| **B** | Operational Data | Continuous | Platform activity |
+| **C** | Community Content | Variable | Moderation + attribution |
+| **D** | System Metadata | Append-only | Platform-generated |
+
+**[KDG-M03a]** Classes must **never be conflated** — e.g. community stories do not overwrite canonical enrollment without review.
+
+---
+
+## KDG-M04 — Class A — Canonical Registry Data
+
+**[KDG-M04]** Describes **permanent entities** [REG-D01].
+
+| Examples | Entity |
+|----------|--------|
+| County name, FIPS code | County |
+| Institution name, type, location | Institution |
+| Founding year, enrollment estimate | Institution |
+| County seat, population | County |
+
+**[KDG-M04a]** Changes **infrequently** — managed through controlled processes [KDG-M17].
+
+**[KDG-M04b]** Every factual field should carry **Knowledge Provenance** [KDG-M10].
+
+**Storage:** Registry JSON → `DB-COUNTIES`, `DB-INSTITUTIONS`
+
+---
+
+## KDG-M05 — Class B — Operational Data
+
+**[KDG-M05]** Describes **platform activity** — changes continuously.
+
+| Examples | Module |
+|----------|--------|
+| Participants | USR-001 |
+| Events | EVT (future) |
+| Committees | COM (future) |
+| Volunteer hours | VOL (future) |
+| Projects, recruitment | NET, OIS |
+
+**[KDG-M05a]** Operational data **references** Registry entities — never duplicates canonical identity fields [CNTY-M04b, INST-M06].
+
+**Storage:** Operational DB tables
+
+---
+
+## KDG-M06 — Class C — Community Content
+
+**[KDG-M06]** Created by **participants**.
+
+| Examples | Moderation |
+|----------|------------|
+| Community descriptions | Review before canonical merge |
+| Photos, stories | Attribution required |
+| Announcements, resources | Community moderation |
+| Discussion content | Campus/county moderation rules |
+
+**[KDG-M06a]** Follows **moderation and attribution rules** [KDG-M13].
+
+**[KDG-M06b]** Community content does **not** automatically become Class A — enters review workflow first.
+
+---
+
+## KDG-M07 — Class D — System Metadata
+
+**[KDG-M07]** Generated by the **platform** — not directly editable.
+
+| Examples | Purpose |
+|----------|---------|
+| Created / updated dates | Audit |
+| Status history | STS-M16 timeline |
+| Version history | KDG-M15 |
+| Audit records | Accountability |
+| Analytics | Reporting |
+
+**[KDG-M07a]** System metadata is **append-only** where historical preservation matters [KDG-M12].
+
+**Storage:** `DB-STATUS-TIMELINE`, audit tables, revision log
+
+---
+
+## KDG-M08 — Approved Data Sources
+
+**[KDG-M08]** Registry information drawn from **reliable public sources**.
+
+| Source | Use case |
+|--------|----------|
+| Official institutional websites | Institution facts |
+| Official county websites | County facts |
+| IPEDS / NCES | Enrollment, institution type |
+| Arkansas Dept. of Higher Education (or successor) | State higher ed data |
+| Arkansas state publications | Regional facts |
+| U.S. Census Bureau | Population, demographics |
+| Wikipedia | Non-critical background — **independently reviewed** |
+| Other reputable public references | Admin-approved |
+
+**[KDG-M08a]** Maintain **attribution internally** so future updates can be traced [KDG-M10].
+
+**[KDG-M08b]** When uncertain: `verificationStatus: needs_review` [REG-D14, CNTY-M07a].
+
+---
+
+## KDG-M09 — Source Confidence
+
+**[KDG-M09]** Each factual record includes a **confidence indicator**.
+
+| Level | Key | Meaning |
+|-------|-----|---------|
+| Verified Official Source | `verified_official` | Direct from institution/county/gov |
+| Verified Public Source | `verified_public` | Reputable public reference, reviewed |
+| Multiple Independent Sources | `multiple_sources` | Corroborated |
+| Community Submitted | `community_submitted` | Participant suggestion — pending review |
+| Needs Review | `needs_review` | Uncertain or stale |
+| Unknown | `unknown` | No source recorded — fix immediately |
+
+**[KDG-M09a]** Helps administrators **prioritize future review**.
+
+**[KDG-M09b]** Maps to existing `verificationStatus` on county/institution records — extended by provenance per-field in Step 2.9.
+
+---
+
+## KDG-M10 — Knowledge Provenance Architecture
+
+**[KDG-M10]** **Signature feature:** **Knowledge Provenance** — the platform remembers *why it believes something to be true*.
+
+Instead of storing only:
+
+```
+Enrollment: 10,327
+```
+
+The Registry also knows:
+
+| Provenance field | Example |
+|------------------|---------|
+| `value` | 10327 |
+| `source` | https://nces.ed.gov/ipeds/... |
+| `sourceType` | ipeds |
+| `collectedAt` | 2026-07-01 |
+| `confidence` | verified_official |
+| `reviewBy` | 2027-07-01 |
+| `lastReviewed` | 2026-07-10 |
+| `reviewedBy` | admin:steward-id |
+
+**[KDG-M10a]** Provenance attaches to **individual fields** — not just whole records.
+
+**[KDG-M10b]** Structure:
+
+```
+Entity Record
+    ├── identity fields (with provenance)
+    ├── dna fields (with provenance per category)
+    └── organizing metadata (status — separate lifecycle)
+```
+
+**[KDG-M10c]** Live schema: `data/registry/schemas/knowledge-provenance.schema.json`
+
+**[KDG-M10d]** Enables: future updates · audits · AI assistance · long-term maintenance as Registry grows.
+
+---
+
+## KDG-M11 — Data Stewardship
+
+**[KDG-M11]** Every canonical entity has an assigned **steward or review process**.
+
+| Responsibility | Description |
+|----------------|-------------|
+| Review updates | Approve canonical changes |
+| Correct inaccuracies | Fix errors with audit trail |
+| Approve structural changes | Slug, type, graph edges |
+| Maintain attribution | Keep provenance current |
+| Track review dates | `reviewBy` on provenance |
+
+**[KDG-M11a]** V1: Platform administrators. Future: regional/campus stewards.
+
+**[KDG-M11b]** Stewardship **evolves** as platform grows — roles documented, not hard-coded.
+
+---
+
+## KDG-M12 — Historical Integrity
+
+**[KDG-M12]** Historical information is **not overwritten unnecessarily**.
+
+| Rule | Implementation |
+|------|----------------|
+| Track revisions | Version log [KDG-M15] |
+| Preserve significant changes | Append-only history |
+| Maintain timestamps | `createdAt`, `updatedAt`, `collectedAt` |
+| Document why | `changeReason` on major edits |
+
+**[KDG-M12a]** Platform retains **institutional memory** — especially enrollment trends, status transitions, milestone history.
+
+**[KDG-M12b]** Avoid **destructive edits** where historical preservation is valuable [KDG-BG].
+
+---
+
+## KDG-M13 — Community Contributions
+
+**[KDG-M13]** Participants may **suggest**:
+
+- Corrections · Additional facts · Historical notes · Photos · Resources
+
+**[KDG-M13a]** Suggestions enter a **review workflow** before affecting Class A records [KDG-M17].
+
+| Stage | State |
+|-------|-------|
+| Submitted | `community_submitted` |
+| Under review | Admin queue |
+| Approved | Merged to canonical + provenance updated |
+| Rejected | Logged with reason |
+
+**[KDG-M13b]** Approved contributions retain **attribution** to submitter where appropriate.
+
+---
+
+## KDG-M14 — Data Quality Standards
+
+**[KDG-M14]** Registry information strives to be:
+
+| Standard | Meaning |
+|----------|---------|
+| **Accurate** | Matches best available source |
+| **Consistent** | Same field semantics across entities |
+| **Current** | `reviewBy` dates honored |
+| **Well-attributed** | Provenance on factual fields |
+| **Clearly categorized** | Class A/B/C/D separation |
+| **Auditable** | Version history + change log |
+
+**[KDG-M14a]** No single standard is perfect — **continuous improvement** expected [ED-003].
+
+---
+
+## KDG-M15 — Versioned Knowledge
+
+**[KDG-M15]** Every significant Registry revision is **versioned**.
+
+Future administrators can answer:
+
+| Question | Source |
+|----------|--------|
+| What changed? | Revision diff |
+| Who approved it? | `reviewedBy` / steward |
+| When? | `updatedAt` |
+| Why? | `changeReason` |
+
+**[KDG-M15a]** Revision record structure:
+
+```json
+{
+  "revisionId": "REV-{uuid}",
+  "entityId": "INST-uca",
+  "field": "enrollment",
+  "previousValue": 10200,
+  "newValue": 10327,
+  "changeReason": "Annual IPEDS update",
+  "approvedBy": "admin:steward-id",
+  "approvedAt": "2026-07-10T12:00:00Z"
+}
+```
+
+**[KDG-M15b]** Supports accountability and long-term maintenance.
+
+---
+
+## KDG-M16 — AI Considerations
+
+**[KDG-M16]** Future AI capabilities should:
+
+| Rule | Rationale |
+|------|-----------|
+| Reference Registry as **preferred factual source** | Trust |
+| Distinguish platform knowledge from **generated suggestions** | Transparency |
+| **Never modify** canonical records without human approval | Stewardship |
+| Document **uncertainty** when confidence is low | Honesty |
+| Assist — **not replace** — human stewards | Governance |
+
+**[KDG-M16a]** AI reads provenance metadata — does not invent enrollment or founding dates.
+
+**[KDG-M16b]** Extension points in governance catalog for future AI-assisted review [KDG-BG].
+
+---
+
+## KDG-M17 — Review Workflows
+
+**[KDG-M17]** Canonical update workflow:
+
+```
+1. Change proposed (admin, seed import, or community suggestion)
+2. Provenance attached (source, confidence, collectedAt)
+3. Steward review (if confidence < verified_public)
+4. Revision logged (KDG-M15)
+5. Canonical record updated
+6. reviewBy scheduled for next cycle
+```
+
+**[KDG-M17a]** Community suggestions: separate queue — never direct write to Class A.
+
+**[KDG-M17b]** Bulk seed import (Step 2.9): batch review with `needs_review` default where sources unverified.
+
+---
+
+## KDG-M18 — V1 Scope
+
+**[KDG-M18]** Version 1 delivers:
+
+| Deliverable | Status |
+|-------------|--------|
+| Four data classes defined | ✅ This document |
+| Approved source philosophy | ✅ |
+| Source confidence levels | ✅ |
+| Knowledge Provenance schema | ✅ JSON schema |
+| Stewardship model | ✅ Design |
+| Per-field provenance on records | Step 2.9 migration |
+| Community contribution queue | Future |
+| Revision log table | Future DB |
+| AI-assisted review | Future |
+
+**[KDG-M18b]** Bootstrap JSON uses `referenceSources`, `dataSourceAttribution`, `lastReviewed`, `verificationStatus` — full provenance in Step 2.9.
+
+---
+
+## KDG-BG — Burt Implementation Guidance
+
+**[KDG-BG]** Implementation should:
+
+| # | Rule |
+|---|------|
+| 1 | **Separate** Class A/B/C/D at storage and API layers |
+| 2 | **Support source attribution** on every canonical factual field |
+| 3 | **Design review workflows** for canonical updates |
+| 4 | **Record historical revisions** — append, don't destroy |
+| 5 | **Avoid destructive edits** where preservation matters |
+| 6 | **Extension points** for future AI-assisted review |
+| 7 | **Query confidence** to prioritize admin review queues |
+| 8 | **Never conflate** operational counts with canonical facts |
+
+---
+
+## AC-017 — Acceptance Criteria
+
+Step 2.8 is complete when:
+
+- [x] **[AC-017a]** Data categories defined. `[KDG-M03–M07]`
+- [x] **[AC-017b]** Approved source philosophy documented. `[KDG-M08]`
+- [x] **[AC-017c]** Governance responsibilities established. `[KDG-M11, KDG-M17]`
+- [x] **[AC-017d]** Attribution and versioning principles documented. `[KDG-M10, KDG-M15]`
+- [x] **[AC-017e]** Knowledge Provenance architecture specified. `[KDG-M10]`
+- [x] **[AC-017f]** Burt has framework for trustworthy data management. `[KDG-BG, knowledge-governance.json]`
+
+---
+
+**Next Step:** 2.9 — Registry Seed Data Plan
+
+*Trace: REG-D14 → KDG-M08 → knowledge-provenance.schema.json → Step 2.9 seed migration*

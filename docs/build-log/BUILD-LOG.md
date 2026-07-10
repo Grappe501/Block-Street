@@ -4,6 +4,41 @@
 
 ---
 
+## 2026-07-10 — PHASE-002.8 Knowledge & Data Governance Framework
+
+**Document ID:** PHASE-002.8  
+**Requirement IDs:** KDG-M01–KDG-M18, KDG-001, AC-017  
+**Artifact:** `docs/phase-02/KNOWLEDGE_DATA_GOVERNANCE_FRAMEWORK.md`
+
+### What Was Built
+
+- **Knowledge & Data Governance Framework** — credibility layer for the entire Registry
+- Four data classes: Canonical (A), Operational (B), Community (C), System Metadata (D)
+- **Knowledge Provenance** architecture [KDG-M10] — platform remembers *why* it believes facts
+- Approved sources (IPEDS, Census, official sites, etc.) with confidence levels
+- Data stewardship, historical integrity, versioned knowledge
+- Community contribution review workflow and AI governance rules
+- `data/registry/knowledge-governance.json` + `schemas/knowledge-provenance.schema.json`
+- Admin **Governance** tab
+
+### Guiding Principle Locked
+
+> **Know the source. Preserve the history. Build trust.**
+
+### Key Concept
+
+Instead of `Enrollment: 10,327` alone — the Registry knows source, collected date, confidence, and next review date.
+
+### ED-FD Handoff
+
+| Item | Detail |
+|------|--------|
+| Built | KNOWLEDGE_DATA_GOVERNANCE_FRAMEWORK.md, knowledge-governance.json, knowledge-provenance.schema.json |
+| Changed | Admin Dashboard (Governance tab), requirements registry (KDG-001), build progress |
+| Next | 2.9 Registry Seed Data Plan — per-field provenance migration |
+
+---
+
 ## 2026-07-10 — PHASE-002.7 Community Identity & Personalization System
 
 **Document ID:** PHASE-002.7  

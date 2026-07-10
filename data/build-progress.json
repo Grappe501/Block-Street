@@ -67,7 +67,7 @@
         { "id": "2.5", "name": "Status & Lifecycle Framework [PHASE-002.5]", "status": "done", "notes": "STS-M01–M18, status-framework.json, status timeline STS-M16" },
         { "id": "2.6", "name": "Outreach Intelligence & Mission Board [PHASE-002.6]", "status": "done", "notes": "OIS-M01–M18, Mission Board, outreach-intelligence.json" },
         { "id": "2.7", "name": "Community Identity & Personalization [PHASE-002.7]", "status": "done", "notes": "CID-M01–M18, Community DNA, community-identity.json" },
-        { "id": "2.8", "name": "Registry Source & Verification Protocol", "status": "pending", "notes": "REGISTRY_SOURCE_AND_VERIFICATION_PROTOCOL.md" },
+        { "id": "2.8", "name": "Knowledge & Data Governance [PHASE-002.8]", "status": "done", "notes": "KDG-M01–M18, Knowledge Provenance, knowledge-governance.json" },
         { "id": "2.9", "name": "Registry Seed Data Plan", "status": "pending", "notes": "REGISTRY_SEED_DATA_PLAN.md — preliminary JSON exists" },
         { "id": "2.10", "name": "Phase 2 Build Bible", "status": "pending", "notes": "PHASE_2_ARKANSAS_ORGANIZING_REGISTRY_BUILD_BIBLE.md" }
       ]
@@ -141,6 +141,12 @@
     { "version": "1.4.0", "name": "Surveys + collective voice", "status": "pending", "date": null }
   ],
   "buildLog": [
+    {
+      "date": "2026-07-10",
+      "title": "PHASE-002.8 Knowledge & Data Governance Framework",
+      "phase": 2,
+      "summary": "KDG-M01–M18 four data classes, Knowledge Provenance, source confidence, review workflows, knowledge-governance.json"
+    },
     {
       "date": "2026-07-10",
       "title": "PHASE-002.7 Community Identity & Personalization System",
@@ -240,9 +246,9 @@
   ],
   "stats": {
     "totalSteps": 40,
-    "doneSteps": 17,
+    "doneSteps": 18,
     "inProgressSteps": 2,
-    "pendingSteps": 21,
-    "percentComplete": 43
+    "pendingSteps": 20,
+    "percentComplete": 45
   }
 }

@@ -434,6 +434,6 @@ Step 2.7 is complete when:
 
 ---
 
-**Next Step:** 2.8 — Registry Source & Verification Protocol
+**Next Step:** 2.9 — Registry Seed Data Plan
 
 *Trace: INST-M11 → CID-M06 → community-dna.schema.json → CommunityPage renderer [CID-M16]*

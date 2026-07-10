@@ -1,0 +1,138 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/phase-02/KNOWLEDGE_DATA_GOVERNANCE_FRAMEWORK.md",
+  "schemaPath": "data/registry/schemas/knowledge-provenance.schema.json",
+  "motto": "Know the source. Preserve the history. Build trust.",
+  "principle": "If the Registry is the brain, data quality is its memory.",
+  "dataClasses": [
+    {
+      "id": "A",
+      "name": "Canonical Registry Data",
+      "description": "Permanent entities — counties, institutions",
+      "changeFrequency": "infrequent",
+      "governance": "controlled_process",
+      "storage": ["counties.json", "institutions.json", "DB-COUNTIES", "DB-INSTITUTIONS"],
+      "examples": ["County name", "Institution name", "Location", "Founding year", "FIPS code", "Enrollment estimate"]
+    },
+    {
+      "id": "B",
+      "name": "Operational Data",
+      "description": "Platform activity — changes continuously",
+      "changeFrequency": "continuous",
+      "governance": "platform_activity",
+      "storage": ["DB-USERS", "DB-NETWORKS", "DB-EVENTS", "DB-COMMITTEES"],
+      "examples": ["Participants", "Events", "Committees", "Volunteer hours", "Projects", "Recruitment"]
+    },
+    {
+      "id": "C",
+      "name": "Community Content",
+      "description": "Participant-generated — moderation required",
+      "changeFrequency": "variable",
+      "governance": "moderation_and_attribution",
+      "storage": ["future: community_content table"],
+      "examples": ["Community descriptions", "Photos", "Announcements", "Stories", "Resources", "Discussions"]
+    },
+    {
+      "id": "D",
+      "name": "System Metadata",
+      "description": "Platform-generated — append-only where historical",
+      "changeFrequency": "automatic",
+      "governance": "platform_generated",
+      "storage": ["DB-STATUS-TIMELINE", "revision_log", "audit_records"],
+      "examples": ["Created dates", "Status history", "Version history", "Audit records", "Analytics"]
+    }
+  ],
+  "approvedSources": [
+    { "id": "official_institution", "name": "Official institutional websites", "confidenceDefault": "verified_official" },
+    { "id": "official_county", "name": "Official county websites", "confidenceDefault": "verified_official" },
+    { "id": "ipeds", "name": "IPEDS / NCES", "confidenceDefault": "verified_official" },
+    { "id": "adhe", "name": "Arkansas Department of Higher Education (or successor)", "confidenceDefault": "verified_official" },
+    { "id": "state_publications", "name": "Arkansas state publications", "confidenceDefault": "verified_public" },
+    { "id": "census", "name": "U.S. Census Bureau", "confidenceDefault": "verified_official" },
+    { "id": "wikipedia", "name": "Wikipedia", "confidenceDefault": "needs_review", "note": "Non-critical background only — independently reviewed" },
+    { "id": "admin_approved", "name": "Other reputable public references", "confidenceDefault": "verified_public", "note": "Admin-approved" }
+  ],
+  "confidenceLevels": [
+    { "key": "verified_official", "label": "Verified Official Source", "priority": 1, "reviewCycleMonths": 12 },
+    { "key": "verified_public", "label": "Verified Public Source", "priority": 2, "reviewCycleMonths": 12 },
+    { "key": "multiple_sources", "label": "Multiple Independent Sources", "priority": 3, "reviewCycleMonths": 12 },
+    { "key": "community_submitted", "label": "Community Submitted", "priority": 4, "reviewCycleMonths": 3 },
+    { "key": "needs_review", "label": "Needs Review", "priority": 5, "reviewCycleMonths": 1 },
+    { "key": "unknown", "label": "Unknown", "priority": 6, "reviewCycleMonths": 0 }
+  ],
+  "provenanceFields": [
+    "value",
+    "source",
+    "sourceType",
+    "collectedAt",
+    "confidence",
+    "reviewBy",
+    "lastReviewed",
+    "reviewedBy"
+  ],
+  "provenanceExample": {
+    "field": "enrollment",
+    "value": 10327,
+    "source": "https://nces.ed.gov/ipeds/",
+    "sourceType": "ipeds",
+    "collectedAt": "2026-07-01",
+    "confidence": "verified_official",
+    "reviewBy": "2027-07-01",
+    "lastReviewed": "2026-07-10",
+    "reviewedBy": "admin:steward-id"
+  },
+  "stewardshipResponsibilities": [
+    "Review updates",
+    "Correct inaccuracies",
+    "Approve structural changes",
+    "Maintain attribution",
+    "Track review dates"
+  ],
+  "qualityStandards": [
+    "Accurate",
+    "Consistent",
+    "Current",
+    "Well-attributed",
+    "Clearly categorized",
+    "Auditable"
+  ],
+  "reviewWorkflow": [
+    "Change proposed (admin, seed import, or community suggestion)",
+    "Provenance attached (source, confidence, collectedAt)",
+    "Steward review (if confidence below verified_public)",
+    "Revision logged",
+    "Canonical record updated",
+    "reviewBy scheduled for next cycle"
+  ],
+  "communityContributionStages": [
+    { "stage": "submitted", "confidence": "community_submitted" },
+    { "stage": "under_review", "confidence": "needs_review" },
+    { "stage": "approved", "action": "merge_to_canonical" },
+    { "stage": "rejected", "action": "log_with_reason" }
+  ],
+  "aiRules": [
+    "Reference Registry as preferred factual source",
+    "Distinguish platform knowledge from generated suggestions",
+    "Never modify canonical records without human approval",
+    "Document uncertainty when confidence is low",
+    "Assist — not replace — human stewards"
+  ],
+  "revisionRecordFields": [
+    "revisionId",
+    "entityId",
+    "field",
+    "previousValue",
+    "newValue",
+    "changeReason",
+    "approvedBy",
+    "approvedAt"
+  ],
+  "v1Scope": {
+    "dataClassesAndPhilosophy": "done",
+    "provenanceSchema": "done",
+    "perFieldProvenanceOnRecords": "step_2.9",
+    "communityContributionQueue": "future",
+    "revisionLogTable": "future",
+    "aiAssistedReview": "future"
+  }
+}

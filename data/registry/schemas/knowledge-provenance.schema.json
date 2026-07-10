@@ -1,0 +1,67 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://block-street.netlify.app/schemas/knowledge-provenance.json",
+  "title": "Knowledge Provenance",
+  "description": "Tracks why the platform believes a factual value is true. PHASE-002.8",
+  "type": "object",
+  "required": ["value", "confidence"],
+  "properties": {
+    "value": {
+      "description": "The factual value at time of collection"
+    },
+    "source": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL or reference to data source"
+    },
+    "sourceType": {
+      "type": "string",
+      "enum": [
+        "official_institution",
+        "official_county",
+        "ipeds",
+        "adhe",
+        "state_publications",
+        "census",
+        "wikipedia",
+        "admin_approved",
+        "community_submitted",
+        "internal"
+      ]
+    },
+    "collectedAt": {
+      "type": "string",
+      "format": "date",
+      "description": "When the value was collected from source"
+    },
+    "confidence": {
+      "type": "string",
+      "enum": [
+        "verified_official",
+        "verified_public",
+        "multiple_sources",
+        "community_submitted",
+        "needs_review",
+        "unknown"
+      ]
+    },
+    "reviewBy": {
+      "type": "string",
+      "format": "date",
+      "description": "When this value should be reviewed again"
+    },
+    "lastReviewed": {
+      "type": "string",
+      "format": "date"
+    },
+    "reviewedBy": {
+      "type": "string",
+      "description": "Steward ID who last verified e.g. admin:steward-id"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Internal notes for stewards"
+    }
+  },
+  "additionalProperties": false
+}

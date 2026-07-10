@@ -4,7 +4,7 @@
 > **Step 2.5:** The platform becomes an **operating system** — status-driven, not page-driven.
 
 **Goal:** Build the canonical data foundation for the entire platform.  
-**Status:** In progress · Steps 2.1–2.7 complete  
+**Status:** In progress · Steps 2.1–2.8 complete  
 **Build Bible (closeout):** `PHASE_2_ARKANSAS_ORGANIZING_REGISTRY_BUILD_BIBLE.md` (Step 2.10)
 
 ---
@@ -36,7 +36,7 @@
 | 2.5 | [Status & Lifecycle Framework](CANONICAL_STATUS_LIFECYCLE_FRAMEWORK.md) | ✅ |
 | 2.6 | [Statewide Outreach Intelligence & Mission Board](STATEWIDE_OUTREACH_INTELLIGENCE.md) | ✅ |
 | 2.7 | [Community Identity & Personalization System](COMMUNITY_IDENTITY_PERSONALIZATION_SYSTEM.md) | ✅ |
-| 2.8 | Registry Data Source & Verification Protocol | Pending |
+| 2.8 | [Knowledge & Data Governance Framework](KNOWLEDGE_DATA_GOVERNANCE_FRAMEWORK.md) | ✅ |
 | 2.9 | Registry Seed Data Plan | Pending |
 | 2.10 | Phase 2 Build Bible | Pending |
 
@@ -49,7 +49,9 @@
 | `status-framework.json` | Lifecycles, categories, dashboard queries |
 | `outreach-intelligence.json` | Mission Board, opportunity types, dashboard levels |
 | `community-identity.json` | Community DNA categories, entity configs, IP boundaries |
+| `knowledge-governance.json` | Data classes, provenance, source confidence, review workflows |
 | `schemas/community-dna.schema.json` | Community DNA profile schema |
+| `schemas/knowledge-provenance.schema.json` | Per-field provenance schema |
 | `relationship-types.json` | Graph edge catalog |
 | `schemas/*.json` | County, institution, relationship, status-transition |
 

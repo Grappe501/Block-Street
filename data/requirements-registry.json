@@ -17,6 +17,7 @@
     { "prefix": "ANL", "domain": "Analytics" },
     { "prefix": "OIS", "domain": "Outreach intelligence" },
     { "prefix": "CID", "domain": "Community identity" },
+    { "prefix": "KDG", "domain": "Knowledge & data governance" },
     { "prefix": "STS", "domain": "Status & lifecycle" },
     { "prefix": "ADM", "domain": "Administration" },
     { "prefix": "SEC", "domain": "Security" },
@@ -380,6 +381,36 @@
         "frontend": "PAGE-INSTITUTION",
         "test": "TEST-CID-001",
         "doc": "DOC-CID-001"
+      },
+      "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
+    },
+    {
+      "id": "KDG-001",
+      "title": "Knowledge & Data Governance Framework",
+      "purpose": "Registry credibility — know the source, preserve history, build trust",
+      "description": "PHASE-002.8 four data classes, Knowledge Provenance, approved sources, source confidence, stewardship, versioned knowledge",
+      "priority": "critical",
+      "principle": "REG-D14",
+      "dependencies": ["REG-001", "REG-002", "STS-001"],
+      "related": ["KDG-M10", "REG-D14", "CNTY-M07", "INST-M09"],
+      "acceptanceCriteria": [
+        "Data categories defined",
+        "Approved source philosophy documented",
+        "Governance responsibilities established",
+        "Attribution and versioning principles documented",
+        "Knowledge Provenance architecture specified",
+        "Framework for trustworthy data management"
+      ],
+      "futureNotes": "Community contribution queue, revision log table, AI-assisted review, per-field provenance migration in 2.9",
+      "implementationStatus": "done",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": "DB-COUNTIES",
+        "api": null,
+        "frontend": "PAGE-ADMIN",
+        "test": "TEST-KDG-001",
+        "doc": "DOC-KDG-001"
       },
       "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
     },
