@@ -1,0 +1,169 @@
+{
+  "version": "2.0.0",
+  "documentId": "VOLUME-005.3",
+  "requirementId": "PSI-004",
+  "docPath": "docs/volume-05/INTEGRATION_ARCHITECTURE.md",
+  "status": "canonical",
+  "priority": "strategic",
+  "lastUpdated": "2026-07-10",
+  "guidingPrinciple": "Connect everything. Own only what should be owned.",
+  "integrationPhilosophy": {
+    "constitutionalBridgesNotShortcuts": true,
+    "governedAdaptersNotOneOffIntegrations": true,
+    "centralOperatingHubNotDataOwner": true,
+    "preservesDataOwnershipPrivacyExplainabilityGovernance": true,
+    "externalPlatformChangesContractDoesNot": true
+  },
+  "integrationArchitecture": {
+    "layers": [
+      "ExternalSystem",
+      "Connector",
+      "Adapter",
+      "ConstitutionalGateway",
+      "PlatformServices",
+      "CommunityEventLedger",
+      "KnowledgeGraph",
+      "DigitalTwins"
+    ],
+    "layerCount": 8,
+    "externalSystemsNeverBypassGovernance": true
+  },
+  "integrationPrincipleCount": 8,
+  "integrationPrinciples": [
+    "Secure",
+    "Observable",
+    "Versioned",
+    "Replaceable",
+    "PermissionAware",
+    "EventAware",
+    "Resilient",
+    "Explainable"
+  ],
+  "integrationCategoryCount": 13,
+  "integrationCategories": [
+    { "id": "productivity", "name": "Productivity Platforms", "examples": ["GoogleWorkspace", "Microsoft365", "AppleEcosystem", "Nextcloud", "OpenDocumentStandards"], "capabilities": ["Calendar", "Contacts", "Documents", "Email", "Meetings", "Tasks"] },
+    { "id": "communication", "name": "Communication Platforms", "examples": ["Zoom", "Discord", "Slack", "MicrosoftTeams", "Signal", "Matrix"], "capabilities": ["Meetings", "Chat", "Announcements", "Voice", "Video", "EventSynchronization"] },
+    { "id": "email", "name": "Email Platforms", "examples": ["SMTP", "Gmail", "MicrosoftExchange", "MicrosoftGraph", "IMAP", "TransactionalProviders"], "capabilities": ["CampaignCommunications", "CommunityAnnouncements", "Notifications", "WorkflowMessages", "Archival"] },
+    { "id": "smsVoice", "name": "SMS & Voice Platforms", "examples": ["Twilio", "Telnyx", "Bandwidth"], "capabilities": ["SMS", "Voice", "Verification", "Broadcast", "EmergencyMessaging"] },
+    { "id": "mappingGeographic", "name": "Mapping & Geographic Platforms", "examples": ["OpenStreetMap", "GoogleMaps", "Mapbox", "ArcGIS", "CountyGIS", "StateGIS", "FederalGIS"], "capabilities": ["Routing", "Travel", "Coverage", "Boundaries", "Districts", "GeospatialAnalysis"] },
+    { "id": "governmentData", "name": "Government Data Platforms", "examples": ["ElectionData", "Legislation", "CampaignFinance", "Census", "EconomicData", "PublicRecords", "OpenDataPortals"], "capabilities": ["ReadOnlyIngestion", "Normalization", "Citation", "HistoricalTracking"], "distinguishesPublicFromUserGenerated": true },
+    { "id": "identity", "name": "Identity Providers", "examples": ["OAuth", "OpenIDConnect", "SAML", "EnterpriseIdentity", "LocalIdentity"], "capabilities": ["SingleSignOn", "Federation", "IdentitySynchronization"] },
+    { "id": "learning", "name": "Learning Platforms", "examples": ["LMSSystems", "SCORM", "LTI", "EducationalAPIs", "CertificationProviders"], "capabilities": ["CourseSynchronization", "StudentRecords", "Certificates", "LearningAnalytics"] },
+    { "id": "payment", "name": "Payment Platforms", "examples": ["Stripe", "Square", "PayPal", "ACH"], "capabilities": ["Membership", "Donations", "Events", "Invoices", "FinancialReconciliation"], "financialGovernanceIndependent": true },
+    { "id": "aiProviders", "name": "AI Providers", "examples": ["MultipleModelProviders", "LocalModels", "CloudModels", "InstitutionSpecificModels"], "capabilities": ["Routing", "Fallback", "CostOptimization", "CapabilityMatching", "AIFederationCoordination"], "noSingleMandatoryProvider": true },
+    { "id": "fileStorage", "name": "File Storage Platforms", "examples": ["CloudObjectStorage", "LocalStorage", "SharePoint", "GoogleDrive", "Dropbox", "Box"], "capabilities": ["Synchronization", "Versioning", "Retention", "AccessControl"] },
+    { "id": "crmExternal", "name": "CRM & External Systems", "examples": ["Salesforce", "HubSpot", "NationBuilder", "CustomCRMs", "LegacySystems"], "capabilities": ["Synchronization", "Migration", "Federation", "HistoricalImport"] },
+    { "id": "socialPublishing", "name": "Social & Public Publishing", "examples": ["WebPublishing", "SocialNetworks", "RSS", "Newsletters", "PodcastPlatforms", "VideoPlatforms"], "capabilities": ["Publishing", "Scheduling", "Analytics", "Archival"], "outboundTargetsNotAuthoritativeSources": true }
+  ],
+  "connectorModel": {
+    "stages": ["ExternalPlatform", "Connector", "Adapter", "Validation", "Normalization", "PlatformServices"],
+    "stageCount": 6,
+    "adaptersIsolateChange": true
+  },
+  "canonicalDataModel": {
+    "flow": ["ExternalFormat", "Adapter", "CanonicalPlatformModel", "PlatformServices"],
+    "externalNeverDefinesInternal": true,
+    "protectsFromVendorSpecificDesigns": true
+  },
+  "synchronizationModeCount": 7,
+  "synchronizationModes": [
+    "OneWayImport",
+    "OneWayExport",
+    "BidirectionalSynchronization",
+    "ScheduledSynchronization",
+    "RealTimeSynchronization",
+    "ManualSynchronization",
+    "DeferredSynchronization"
+  ],
+  "eventIntegration": {
+    "publishableEvents": ["ImportedEvent", "SynchronizationCompleted", "ConflictDetected", "ImportFailed", "ExternalUpdate"],
+    "visibleThroughCommunityEventLedger": true
+  },
+  "conflictResolution": {
+    "declares": ["AuthoritativeSource", "MergeRules", "ConflictPolicy", "ManualReviewRequirements"],
+    "predictableSynchronization": true
+  },
+  "securityStandard": {
+    "supports": ["EncryptedCredentials", "LeastPrivilege", "TokenRotation", "Revocation", "AuditLogging", "CredentialIsolation"],
+    "standardized": true
+  },
+  "observabilityStandard": {
+    "exposedMetrics": ["Health", "Latency", "SynchronizationStatus", "FailureHistory", "Version", "UsageMetrics"],
+    "metricCount": 6
+  },
+  "localBrainIntegration": {
+    "declarations": ["CloudOnly", "LocalOnly", "Hybrid", "OfflineQueue", "SynchronizationBehavior"],
+    "someIntegrationsExecuteEntirelyInLocalBrain": true
+  },
+  "aiIntegration": {
+    "aiFederationUnderstands": ["AvailableConnectors", "ConnectorCapabilities", "ConnectorPermissions", "SynchronizationState", "DataFreshness"],
+    "aiNeverAccessesExternalSystemsDirectly": true,
+    "requestsThroughPlatformServices": true
+  },
+  "communityEventLedgerIntegration": {
+    "recordedActivities": ["Synchronization", "Import", "Export", "Conflict", "CredentialUpdate", "Failure", "Recovery"],
+    "externalInteractionsBecomeInstitutionalMemory": true
+  },
+  "digitalTwinIntegration": {
+    "mayEnrich": ["ParticipantTwins", "CommunityTwins", "MissionTwins", "InstitutionTwins", "CountyTwins", "PlatformTwins"],
+    "onlyThroughGovernedPlatformServices": true
+  },
+  "universalConnectorFramework": {
+    "name": "Universal Connector Framework",
+    "abbreviation": "UCF",
+    "everyConnectorInheritsSameRuntimeBehavior": true,
+    "connectorPipeline": {
+      "stages": [
+        "CapabilityDiscovery",
+        "Authentication",
+        "PermissionValidation",
+        "SchemaMapping",
+        "CanonicalTransformation",
+        "Synchronization",
+        "CommunityEventLedger",
+        "Observability"
+      ],
+      "stageCount": 8
+    },
+    "connectorManifest": {
+      "sections": [
+        { "id": "identity", "name": "Identity", "fields": ["ConnectorId", "Vendor", "Version", "Maintainer"] },
+        { "id": "capabilities", "name": "Capabilities", "examples": ["ReadCalendar", "WriteCalendar", "SendEmail", "ReceiveWebhook", "UploadFiles", "SearchRecords"] },
+        { "id": "authentication", "name": "Authentication", "methods": ["OAuth", "APIKeys", "ServiceAccounts", "LocalCredentials"] },
+        { "id": "synchronization", "name": "Synchronization", "modes": ["RealTime", "Scheduled", "Manual", "Bidirectional", "OfflineCapable"] },
+        { "id": "dataContracts", "name": "Data Contracts", "defines": ["CanonicalObjectsSupported", "RequiredMappings", "OptionalMappings", "ValidationRules"] },
+        { "id": "security", "name": "Security", "declares": ["PermissionsRequired", "SensitiveDataHandled", "EncryptionRequirements", "AuditRequirements"] },
+        { "id": "localBrainSupport", "name": "LocalBrain Support", "specifies": ["Cloud", "Local", "Hybrid", "OfflineSynchronization", "EdgeCaching"] }
+      ],
+      "sectionCount": 7,
+      "machineReadable": true
+    },
+    "connectorMarketplace": {
+      "governedConnectorEcosystem": true,
+      "exampleConnectorTypes": ["CountyGIS", "StateElectionDatabases", "SchoolInformationSystems", "ChurchManagementSoftware", "EmergencyManagementPlatforms", "AccountingSystems", "VolunteerSchedulingSystems", "DocumentRepositories"]
+    },
+    "connectorCertification": {
+      "criteria": ["Security", "ConstitutionalCompliance", "Explainability", "EventPublication", "Performance", "Accessibility", "LocalBrainCompatibility", "DocumentationQuality"],
+      "criteriaCount": 8,
+      "certifiedConnectorsAreTrustedExtensions": true
+    },
+    "pairsWithConstitutionalApiGateway": true
+  },
+  "architecturalInsight": {
+    "notDependentOnExternalVendors": true,
+    "stableConstitutionalIntegrationLayer": true,
+    "externalDependenciesIsolatedBehindAdapters": true,
+    "durableCapabilityNotRecurringLiability": true
+  },
+  "burtImplementationGuidance": [
+    "Use adapters between every external platform and canonical platform model",
+    "Prevent external schemas from leaking into internal architecture",
+    "Build connector health monitoring from the beginning",
+    "Support LocalBrain synchronization",
+    "Require Community Event Ledger publication for meaningful synchronization",
+    "Keep every integration replaceable",
+    "Implement connectors through Universal Connector Framework"
+  ],
+  "acceptanceCriteria": "AC-153",
+  "acceptanceCriteriaMet": true
+}
