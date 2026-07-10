@@ -10,7 +10,7 @@
   "readAfter": "DAB-001",
   "coreQuestion": "How does the platform actually behave?",
   "guidingPrinciple": "Behavior is governed, not improvised.",
-  "stepsComplete": 6,
+  "stepsComplete": 7,
   "stepsTotal": 14,
   "engineCount": 14,
   "steps": [
@@ -20,7 +20,7 @@
     { "id": "3.4", "name": "Community Lifecycle Engine", "requirement": "PBA-005", "artifact": "docs/volume-03/COMMUNITY_LIFECYCLE.md", "registryPath": "data/registry/community-lifecycle-engine.json", "status": "done" },
     { "id": "3.5", "name": "Mission Execution Engine", "requirement": "PBA-006", "artifact": "docs/volume-03/MISSION_EXECUTION_ENGINE.md", "registryPath": "data/registry/mission-execution-engine.json", "status": "done" },
     { "id": "3.6", "name": "Volunteer Experience Engine", "requirement": "PBA-007", "artifact": "docs/volume-03/VOLUNTEER_EXPERIENCE_ENGINE.md", "registryPath": "data/registry/volunteer-experience-engine.json", "status": "done" },
-    { "id": "3.7", "name": "Leadership Development Engine", "requirement": "PBA-008", "artifact": "docs/volume-03/LEADERSHIP_DEVELOPMENT_ENGINE.md", "registryPath": "data/registry/leadership-development-engine.json", "status": "pending" },
+    { "id": "3.7", "name": "Leadership Development Engine", "requirement": "PBA-008", "artifact": "docs/volume-03/LEADERSHIP_DEVELOPMENT_ENGINE.md", "registryPath": "data/registry/leadership-development-engine.json", "status": "done" },
     { "id": "3.8", "name": "Community Intelligence Engine", "requirement": "PBA-009", "artifact": "docs/volume-03/COMMUNITY_INTELLIGENCE_ENGINE.md", "registryPath": "data/registry/community-intelligence-engine.json", "status": "pending" },
     { "id": "3.9", "name": "Automation Engine", "requirement": "PBA-010", "artifact": "docs/volume-03/AUTOMATION_ENGINE.md", "registryPath": "data/registry/automation-engine.json", "status": "pending" },
     { "id": "3.10", "name": "Notification & Attention Engine", "requirement": "PBA-011", "artifact": "docs/volume-03/ATTENTION_ENGINE.md", "registryPath": "data/registry/attention-engine.json", "status": "pending" },

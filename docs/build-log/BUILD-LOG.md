@@ -18,6 +18,22 @@
 
 ---
 
+## 2026-07-10 — Volume 3.7 Leadership Development Engine [PBA-008 · AC-128]
+
+**Document:** `docs/volume-03/LEADERSHIP_DEVELOPMENT_ENGINE.md` · **Registry:** `data/registry/leadership-development-engine.json`
+
+### What Changed
+
+- **Guiding principle:** *The measure of a leader is the leaders they develop.*
+- Leadership as lifelong journey — developmental not positional; renewable community resource
+- **9 lifecycle stages:** Potential through Legacy
+- Competencies, flexible pathways, portfolio, health monitoring, recognition, communities of practice
+- Governance, Digital Twin, knowledge graph, calendar, and AI integrations
+- **Leadership Academy** — living development system with 8 domains (Leadership Journey through Recognition)
+- Admin Volume 3 tab · requirements PBA-008 updated · Volume 3: 7/14 complete · **lifecycle engines 3.3–3.7 complete**
+
+---
+
 ## 2026-07-10 — Volume 3.6 Volunteer Experience Engine [PBA-007 · AC-127]
 
 **Document:** `docs/volume-03/VOLUNTEER_EXPERIENCE_ENGINE.md` · **Registry:** `data/registry/volunteer-experience-engine.json`

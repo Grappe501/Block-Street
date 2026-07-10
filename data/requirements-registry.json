@@ -4537,26 +4537,36 @@
     {
       "id": "PBA-008",
       "title": "Leadership Development Engine — Volume 3.7",
-      "purpose": "Leadership pathways and succession",
-      "description": "VOLUME-003.7 mentorship, certification, regional leadership",
+      "purpose": "Leadership lifecycle from Potential through Legacy with developmental focus",
+      "description": "VOLUME-003.7 — Leadership Academy, 9 lifecycle stages, competencies, pathways, portfolio, succession, governance and AI integration",
       "priority": "critical",
       "principle": "CP-001",
       "dependencies": [
-        "PBA-007"
+        "PBA-007",
+        "PBA-005",
+        "PBA-002",
+        "DAB-006",
+        "DAB-012"
       ],
       "related": [
-        "PBA-009"
+        "PBA-009",
+        "PBA-012",
+        "DAB-008",
+        "DAB-013",
+        "ENG-008"
       ],
       "acceptanceCriteria": [
-        "Engine philosophy documented",
-        "Operational behaviors defined",
-        "Volume 2 integration specified",
-        "Implementation blueprint for engine"
+        "Leadership philosophy documented",
+        "Lifecycle stages defined",
+        "Competencies, pathways, portfolios, and succession established",
+        "Calendar, graph, governance, Digital Twin, AI, and knowledge integrations incorporated",
+        "Leadership Academy specified",
+        "Complete blueprint for Leadership Development Engine"
       ],
-      "futureNotes": "Scaffold — pending canonical build step",
-      "implementationStatus": "pending",
+      "futureNotes": "Guiding principle: The measure of a leader is the leaders they develop.",
+      "implementationStatus": "done",
       "testingStatus": "pending",
-      "documentationStatus": "pending",
+      "documentationStatus": "done",
       "trace": {
         "database": "DB-COS",
         "api": null,
@@ -4566,7 +4576,7 @@
       },
       "versionHistory": {
         "created": "2026-07-10",
-        "implemented": null
+        "implemented": "2026-07-10"
       }
     },
     {
