@@ -5532,6 +5532,48 @@
       }
     },
     {
+      "id": "PSI-003",
+      "title": "API Architecture — Volume 5.2",
+      "purpose": "Constitutional API contracts — how every capability communicates internally and externally",
+      "description": "VOLUME-005.2 — 6 API categories, 7 communication styles, Constitutional API Gateway, context propagation, versioning, auth, LocalBrain federation",
+      "priority": "foundational",
+      "principle": "CP-012",
+      "dependencies": [
+        "PSI-002",
+        "PSI-001",
+        "ENG-005",
+        "DAB-014",
+        "UXB-015"
+      ],
+      "related": [
+        "PSI-001",
+        "PSI-004"
+      ],
+      "acceptanceCriteria": [
+        "API philosophy documented",
+        "API categories and communication styles defined",
+        "Versioning, authentication, authorization, response standards established",
+        "AI, Community Event Ledger, Digital Twin, observability, and LocalBrain support incorporated",
+        "Constitutional API Gateway specified",
+        "Complete blueprint for API layer"
+      ],
+      "futureNotes": "Guiding principle: Every API is a promise.",
+      "implementationStatus": "done",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": null,
+        "api": "API-SYSTEM",
+        "frontend": null,
+        "test": "TEST-PSI-003",
+        "doc": "DOC-PSI-003"
+      },
+      "versionHistory": {
+        "created": "2026-07-10",
+        "implemented": "2026-07-10"
+      }
+    },
+    {
       "id": "PSI-002",
       "title": "Platform Services Architecture — Volume 5.1",
       "purpose": "Define every core platform service — constitutional infrastructure, not features",
@@ -5612,7 +5654,7 @@
         "Foundation stack Volumes 0-5 defined",
         "Complete blueprint for platform services and integration architecture"
       ],
-      "futureNotes": "Volume 5 scaffold — 1/14 canonical steps complete. LocalBrain woven throughout every chapter.",
+      "futureNotes": "Volume 5 scaffold — 2/14 canonical steps complete. LocalBrain woven throughout every chapter.",
       "implementationStatus": "scaffold",
       "testingStatus": "pending",
       "documentationStatus": "scaffold",

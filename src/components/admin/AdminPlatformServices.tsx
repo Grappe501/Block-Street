@@ -2,6 +2,7 @@
 
 import psi from "../../../data/registry/platform-services-integration-bible.json";
 import psa from "../../../data/registry/platform-services-architecture.json";
+import api from "../../../data/registry/api-architecture-volume5.json";
 
 type ServiceReg = {
   acceptanceCriteria: string;
@@ -9,16 +10,23 @@ type ServiceReg = {
   guidingPrinciple?: string;
   corePlatformServiceCount?: number;
   servicePrincipleCount?: number;
+  apiPrincipleCount?: number;
+  apiCategoryCount?: number;
   platformServiceMesh?: { responsibilityCount: number; abbreviation: string };
+  constitutionalApiGateway?: { responsibilityCount: number; abbreviation: string; gatewayPipeline?: { stageCount: number } };
   serviceArchitecture?: { layerCount: number };
+  apiArchitecture?: { layerCount: number };
   localBrainCompatibility?: { localBrainFirstClassRuntime: boolean };
+  localBrainFederation?: { explicitIntegration: boolean };
 };
 
 const FEATURED_SUBTITLES: Record<string, string> = {
   "5.1": "Platform Services",
+  "5.2": "API Layer",
 };
 
 const SERVICE_CARDS: { step: string; label: string; reg: ServiceReg; cardClass: string; metaClass: string; titleClass: string; featured?: boolean }[] = [
+  { step: "5.2", label: "Constitutional API Gateway", reg: api, cardClass: "border-zinc-300 bg-zinc-50", metaClass: "text-zinc-700", titleClass: "text-zinc-950", featured: true },
   { step: "5.1", label: "Platform Service Mesh", reg: psa, cardClass: "border-slate-300 bg-slate-50", metaClass: "text-slate-700", titleClass: "text-slate-950", featured: true },
 ];
 
@@ -50,7 +58,12 @@ export function AdminPlatformServices() {
             <p className={`mt-2 text-xs ${metaClass}`}>
               {reg.acceptanceCriteria} · {reg.status}
             </p>
-            {reg.platformServiceMesh ? (
+            {reg.constitutionalApiGateway ? (
+              <p className={`mt-1 text-xs ${metaClass}`}>
+                {reg.apiCategoryCount ?? 0} API categories · {reg.apiPrincipleCount ?? 0} principles · {reg.apiArchitecture?.layerCount ?? 0} request layers · {reg.constitutionalApiGateway.gatewayPipeline?.stageCount ?? 0} gateway stages · {reg.constitutionalApiGateway.responsibilityCount} {reg.constitutionalApiGateway.abbreviation} responsibilities
+                {reg.localBrainFederation?.explicitIntegration ? " · LocalBrain explicit" : ""}
+              </p>
+            ) : reg.platformServiceMesh ? (
               <p className={`mt-1 text-xs ${metaClass}`}>
                 {reg.corePlatformServiceCount ?? 0} core services · {reg.servicePrincipleCount ?? 0} principles · {reg.serviceArchitecture?.layerCount ?? 0} pipeline layers · {reg.platformServiceMesh.responsibilityCount} {reg.platformServiceMesh.abbreviation} responsibilities
                 {reg.localBrainCompatibility?.localBrainFirstClassRuntime ? " · LocalBrain first-class" : ""}
@@ -60,7 +73,7 @@ export function AdminPlatformServices() {
         ))}
 
         {psi.steps
-          .filter((s) => s.id !== "5.1")
+          .filter((s) => s.id !== "5.1" && s.id !== "5.2")
           .map((s) => (
             <div key={s.id} className="card border-slate-200 bg-white opacity-75">
               <p className="text-xs font-semibold uppercase text-slate-500">VOLUME-00{s.id.replace(".", "-")}</p>

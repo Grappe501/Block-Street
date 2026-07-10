@@ -18,6 +18,23 @@
 
 ---
 
+## 2026-07-10 — Volume 5.2 API Architecture [PSI-003 · AC-152]
+
+**Document:** `docs/volume-05/API_ARCHITECTURE.md` · **Registry:** `data/registry/api-architecture-volume5.json`
+
+### What Changed
+
+- **Guiding principle:** *Every API is a promise.*
+- APIs as constitutional contracts — operational capabilities not database tables
+- **6 API categories** — Internal, Public, LocalBrain, AI, Event, Administrative
+- **7 communication styles** — REST, GraphQL, event streams, WebSockets, SSE, batch, streaming
+- Context propagation, versioning, auth, response/error standards, rate limiting, pagination
+- AI API standards, Community Event Ledger publication, Digital Twin via Platform Services
+- **Constitutional API Gateway (CAG)** — 9-stage gateway pipeline, 7 responsibilities including AI governance and LocalBrain federation
+- Umbrella PSI-001 · platform-services-integration-bible 2/14 · Volume 5 in progress
+
+---
+
 ## 2026-07-10 — Volume 5.1 Platform Services Architecture [PSI-002 · AC-151] — **VOLUME 5 BEGINS**
 
 **Document:** `docs/volume-05/PLATFORM_SERVICES_ARCHITECTURE.md` · **Registry:** `data/registry/platform-services-architecture.json`
