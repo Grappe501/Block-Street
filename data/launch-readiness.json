@@ -10,7 +10,9 @@
   ],
   "pillars": [
     { "id": "LS-P1", "name": "Every County Exists", "status": "done", "notes": "75 county pages live" },
-    { "id": "LS-P2", "name": "Every College/University Exists", "status": "in_progress", "notes": "23 seeded; expand in Phase 2" },
+    { "id": "LS-P2", "name": "Every Post-Secondary School Exists", "status": "done", "notes": "67 institutions — all post-secondary types; 75 counties covered" },
+    { "id": "LS-P2b", "name": "Every Public High School Exists", "status": "done", "notes": "272 public high schools from ADE — all 75 counties" },
+    { "id": "LS-P2c", "name": "Every Private & Charter School Exists", "status": "done", "notes": "145 private + 102 charter schools from ADE — 51 counties with schools" },
     { "id": "LS-P3", "name": "Every Participant Has a Home", "status": "pending", "notes": "Signup + network board" },
     { "id": "LS-P4", "name": "Organizing Works", "status": "pending", "notes": "Join, invite, recruit workflows" },
     { "id": "LS-P5", "name": "Mobile Experience", "status": "in_progress", "notes": "Mobile-first CSS; device test pending" },
@@ -19,7 +21,9 @@
   ],
   "checklist": [
     { "id": 1, "item": "All 75 county pages exist", "ref": "LS-P1", "status": "done" },
-    { "id": 2, "item": "Every AR college/university has a profile", "ref": "LS-P2", "status": "in_progress" },
+    { "id": 2, "item": "Every AR post-secondary school type represented (4-year, 2-year, technical, trade)", "ref": "LS-P2", "status": "done" },
+    { "id": 11, "item": "Every public high school in every county has a profile", "ref": "LS-P2b", "status": "done" },
+    { "id": 12, "item": "Every private school and charter school in Arkansas has a profile", "ref": "LS-P2c", "status": "done" },
     { "id": 3, "item": "Registration is operational", "ref": "LS-P4", "status": "pending" },
     { "id": 4, "item": "Personal network boards auto-generated", "ref": "LS-P3", "status": "pending" },
     { "id": 5, "item": "Referral links and QR codes function", "ref": "LS-P3", "status": "pending" },
@@ -30,12 +34,12 @@
     { "id": 10, "item": "Documentation supports ongoing development", "ref": "LS-EN", "status": "done" }
   ],
   "summary": {
-    "done": 2,
-    "inProgress": 5,
+    "done": 5,
+    "inProgress": 4,
     "pending": 3,
-    "total": 10,
+    "total": 12,
     "launchReady": false,
-    "percentComplete": 45
+    "percentComplete": 58
   },
   "leaderTestMinimum": [3, 4, 5, 6],
   "explicitlyNotRequired": [

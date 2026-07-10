@@ -9,7 +9,7 @@
     "currentPhaseName": "Growth Operating System",
     "currentDesignCycle": "Implementation Volumes (Factory Layer)",
     "phase7Status": "deferred_until_volumes_complete",
-    "lastUpdated": "2026-07-10T12:00:00Z",
+    "lastUpdated": "2026-07-10T22:00:00Z",
     "deployUrl": "https://block-street.netlify.app/",
     "githubRepo": "https://github.com/Grappe501/Block-Street",
     "netlifyStatus": "live",
@@ -26,8 +26,9 @@
     "requirementsRegistryPath": "data/requirements-registry.json",
     "productionCodeGate": true,
     "launchReadinessPath": "data/launch-readiness.json",
+    "releaseReadinessPath": "data/release-readiness.json",
     "launchReady": false,
-    "launchChecklistComplete": 2,
+    "launchChecklistComplete": 4,
     "launchChecklistTotal": 10
   },
   "volume0": {
@@ -63,18 +64,31 @@
       { "id": "V1.1", "name": "Engineering Doctrine [ENG-001]", "status": "done", "notes": "ENG-D01–D18 doctrines, vertical slices, TR-MOTTO — AC-083 canonical" },
       { "id": "V1.2", "name": "System Architecture [ENG-002]", "status": "done", "notes": "9 layers, Platform Kernel, 14 domain services — AC-084" },
       { "id": "V1.3", "name": "Canonical Repository Architecture [ENG-003 · RCN-001]", "status": "done", "notes": "Domain-driven folders, dependency rules, Repository Constitution — AC-085" },
-      { "id": "V1.4", "name": "Database Architecture [ENG-004]", "status": "pending", "notes": "DATABASE_ARCHITECTURE.md" },
+      { "id": "V1.4", "name": "Database Architecture [ENG-004 · DCL-001]", "status": "done", "notes": "13 domain schemas, DCL constitution layer, audit/events/graph — AC-087" },
       { "id": "V1.5", "name": "API Architecture [ENG-005]", "status": "pending", "notes": "API_ARCHITECTURE.md" },
-      { "id": "V1.6", "name": "Authorization Architecture [ENG-006]", "status": "pending", "notes": "AUTHORIZATION_ARCHITECTURE.md" },
-      { "id": "V1.7", "name": "Domain Service Architecture [ENG-007]", "status": "pending", "notes": "DOMAIN_SERVICE_ARCHITECTURE.md" },
-      { "id": "V1.8", "name": "Knowledge Graph Architecture [ENG-008]", "status": "pending", "notes": "COMMUNITY_KNOWLEDGE_GRAPH_ARCHITECTURE.md" },
-      { "id": "V1.9", "name": "Event & Timeline Architecture [ENG-009]", "status": "pending", "notes": "EVENT_TIMELINE_ARCHITECTURE.md" },
-      { "id": "V1.10", "name": "Search Architecture [ENG-010]", "status": "pending", "notes": "SEARCH_ARCHITECTURE.md" },
-      { "id": "V1.11", "name": "Map & Geographic Architecture [ENG-011]", "status": "pending", "notes": "MAP_GEOGRAPHIC_ARCHITECTURE.md" },
-      { "id": "V1.12", "name": "Communication Architecture [ENG-012]", "status": "pending", "notes": "COMMUNICATION_ARCHITECTURE.md" },
-      { "id": "V1.13", "name": "AI Intelligence Architecture [ENG-013]", "status": "pending", "notes": "AI_INTELLIGENCE_ARCHITECTURE.md" },
-      { "id": "V1.14", "name": "Deployment & Release Architecture [ENG-014]", "status": "pending", "notes": "DEPLOYMENT_TESTING_RELEASE_ARCHITECTURE.md" },
-      { "id": "V2.1", "name": "Data Architecture Bible [DAB-001]", "status": "done", "notes": "Canonical data model v1 structure; AC-078" },
+      { "id": "V1.6", "name": "Authorization Architecture [ENG-006 · PRE-001]", "status": "done", "notes": "Six-layer auth model, PRE engine, community scope, audit — AC-089 (1.5 API still pending)" },
+      { "id": "V1.7", "name": "Domain Service Architecture [ENG-007 · SRG-001]", "status": "done", "notes": "16 domain services, contracts, events, Service Registry — AC-091" },
+      { "id": "V1.8", "name": "Knowledge Graph Architecture [ENG-008 · LDT-001]", "status": "done", "notes": "CKG nodes/edges, signature graphs, twins, explainability — AC-093" },
+      { "id": "V1.9", "name": "Event & Timeline Architecture [ENG-009 · LHE-001]", "status": "done", "notes": "domain_events, timeline hierarchy, immutable events, Living History Engine — AC-095" },
+      { "id": "V1.10", "name": "Search & Discovery Architecture [ENG-010 · DGE-001]", "status": "done", "notes": "6 search layers, ranking, privacy, Discovery Engine — AC-097" },
+      { "id": "V1.11", "name": "Map & Geographic Architecture [ENG-011 · ADT-002]", "status": "done", "notes": "8 core maps, geo hierarchy, layers, Arkansas Digital Twin — AC-099" },
+      { "id": "V1.12", "name": "Communication Architecture [ENG-012 · AME-001]", "status": "done", "notes": "5-layer comms, priorities, digests, Attention Management Engine — AC-101" },
+      { "id": "V1.13", "name": "AI Intelligence Architecture [ENG-013 · CIF-001]", "status": "done", "notes": "Orchestrator, agents, RAG pipeline, Community Intelligence Fabric — AC-103" },
+      { "id": "V1.14", "name": "Deployment & Release Architecture [ENG-014 · CRCC-001]", "status": "done", "notes": "Release pipeline, testing pyramid, rollback, Community Readiness Command Center — AC-105" },
+      { "id": "V2.1", "name": "Data Philosophy [DAB-002]", "status": "done", "notes": "Canonical principles, source of truth, ownership, lifecycle — AC-107" },
+      { "id": "V2.2", "name": "Canonical Entity Dictionary [DAB-003]", "status": "done", "notes": "16 primary entities with fields, relationships, lifecycles — AC-108" },
+      { "id": "V2.3", "name": "Relationship Data Model [DAB-004]", "status": "done", "notes": "Unified edges, membership, leadership, mentorship, invitations — AC-109" },
+      { "id": "V2.4", "name": "Database Schema Blueprint [DAB-005]", "status": "done", "notes": "15 schemas, naming, indexes, RLS, migration order — AC-110" },
+      { "id": "V2.5", "name": "Knowledge Graph Schema [DAB-006]", "status": "done", "notes": "Nodes, edges, projections, sync, query model — AC-111" },
+      { "id": "V2.6", "name": "Event Data Model [DAB-007]", "status": "done", "notes": "domain_events, timelines, replay, retention — AC-112" },
+      { "id": "V2.7", "name": "Time & Calendar Data Model [DAB-008]", "status": "done", "notes": "Calendars, recurrence, reminders, RSVP — AC-113" },
+      { "id": "V2.8", "name": "Media & Document Model [DAB-009]", "status": "done", "notes": "Assets, documents, OCR, versions, attachments — AC-114" },
+      { "id": "V2.9", "name": "Configuration Data Model [DAB-010]", "status": "done", "notes": "Roles, templates, workflows, feature flags — AC-115" },
+      { "id": "V2.10", "name": "Search Index Model [DAB-011]", "status": "done", "notes": "Search documents, full-text, ranking, geographic — AC-116" },
+      { "id": "V2.11", "name": "Analytics & Metrics Model [DAB-012]", "status": "done", "notes": "KPIs, community health, rollups, reports — AC-117" },
+      { "id": "V2.12", "name": "AI Knowledge Model [DAB-013]", "status": "done", "notes": "Retrieval chunks, citations, twins, Community Brain — AC-118" },
+      { "id": "V2.13", "name": "Security & Privacy Model [DAB-014]", "status": "done", "notes": "Consent, classification, audit, retention, erasure — AC-119" },
+      { "id": "V2.14", "name": "Master Data Dictionary [DAB-015]", "status": "done", "notes": "60+ tables, enums, stewardship, migration governance — AC-120" },
       { "id": "V3.1", "name": "User Experience Bible [UXB-001]", "status": "done", "notes": "Screens, flows, navigation v1; AC-079" },
       { "id": "V4.1", "name": "AI & Intelligence Bible [AIB-001]", "status": "done", "notes": "LocalBrain, RAG v1; AC-080" },
       { "id": "V5.1", "name": "Operations & Launch Bible [OLB-001]", "status": "done", "notes": "Launch stages v1; AC-081" },
@@ -298,6 +312,72 @@
     { "version": "1.4.0", "name": "Election ready", "status": "pending", "date": null }
   ],
   "buildLog": [
+    {
+      "date": "2026-07-10",
+      "title": "VOLUME-002 Data Architecture Bible — 14-Step Factory (Canonical)",
+      "phase": 0,
+      "summary": "DAB-002–DAB-015: philosophy, 16 entities, relationships, 15 schemas, graph, events, calendar, media, config, search, analytics, AI knowledge, security, master dictionary — AC-107–120"
+    },
+    {
+      "date": "2026-07-10",
+      "title": "VOLUME-001.14 Deployment, Testing & Release Architecture (Canonical)",
+      "phase": 0,
+      "summary": "ENG-DTR01–DTR25 release pipeline, environments, testing pyramid, rollback, monitoring, Community Readiness Command Center CRCC-001 — AC-105"
+    },
+    {
+      "date": "2026-07-10",
+      "title": "VOLUME-001.13 AI & Intelligence Technical Architecture (Canonical)",
+      "phase": 0,
+      "summary": "ENG-AI01–AI23 orchestration layer, 10 agents, memory model, retrieval pipeline, Community Intelligence Fabric CIF-001 — AC-103"
+    },
+    {
+      "date": "2026-07-10",
+      "title": "VOLUME-001.12 Notification & Communication Architecture (Canonical)",
+      "phase": 0,
+      "summary": "ENG-CM01–CM25 five-layer model, priorities, digests, outbox, Attention Management Engine AME-001 — AC-101"
+    },
+    {
+      "date": "2026-07-10",
+      "title": "VOLUME-001.11 Map & Geographic Architecture (Canonical)",
+      "phase": 0,
+      "summary": "ENG-MG01–MG28 eight core maps, geo hierarchy, layers, time-aware maps, Arkansas Digital Twin ADT-002 — AC-099"
+    },
+    {
+      "date": "2026-07-10",
+      "title": "VOLUME-001.10 Search & Discovery Architecture (Canonical)",
+      "phase": 0,
+      "summary": "ENG-SR01–SR28 six search layers, explainable ranking, timeline/geo search, Discovery Engine DGE-001 — AC-097"
+    },
+    {
+      "date": "2026-07-10",
+      "title": "VOLUME-001.9 Event & Timeline Architecture (Canonical)",
+      "phase": 0,
+      "summary": "ENG-ET01–ET28 immutable domain events, 9 entity timelines, event bus prep, Living History Engine LHE-001 — AC-095"
+    },
+    {
+      "date": "2026-07-10",
+      "title": "VOLUME-001.8 Community Knowledge Graph Architecture (Canonical)",
+      "phase": 0,
+      "summary": "ENG-KG01–KG26 CKG semantic layer, 8 node categories, signature graphs, explainable recommendations, Living Digital Twin LDT-001 — AC-093"
+    },
+    {
+      "date": "2026-07-10",
+      "title": "VOLUME-001.7 Domain Service Architecture (Canonical)",
+      "phase": 0,
+      "summary": "ENG-DS01–DS34 sixteen services, ownership rules, contracts, cross-domain orchestration, Service Registry SRG-001 — AC-091"
+    },
+    {
+      "date": "2026-07-10",
+      "title": "VOLUME-001.6 Authentication & Authorization Architecture (Canonical)",
+      "phase": 0,
+      "summary": "ENG-AU01–AU24 six-layer model, community-scoped RBAC, visibility, delegation, audit, Permission Resolution Engine PRE-001 — AC-089 (note: 1.5 API still pending)"
+    },
+    {
+      "date": "2026-07-10",
+      "title": "VOLUME-001.4 Database Architecture (Canonical)",
+      "phase": 0,
+      "summary": "ENG-DB01–DB34 eleven domains + platform + constitution, relational graph, audit/events, migration doctrine, Digital Constitution Layer DCL-001 — AC-087"
+    },
     {
       "date": "2026-07-10",
       "title": "VOLUME-001.3 Canonical Repository Architecture (Canonical)",
@@ -757,9 +837,9 @@
   ],
   "stats": {
     "totalSteps": 122,
-    "doneSteps": 85,
+    "doneSteps": 108,
     "inProgressSteps": 1,
-    "pendingSteps": 37,
-    "percentComplete": 70
+    "pendingSteps": 14,
+    "percentComplete": 89
   }
 }

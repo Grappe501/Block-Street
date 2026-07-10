@@ -4,6 +4,7 @@ import {
   getInstitutionBySlug,
   getCountyBySlug,
   INTERESTS,
+  getInstitutionTypeLabel,
   STATUS_COLORS,
   STATUS_LABELS,
   PLATFORM_DISCLAIMER,
@@ -64,7 +65,7 @@ export default async function SchoolPage({
             </div>
             <div>
               <p className="text-slate-500">Type</p>
-              <p className="font-semibold capitalize">{school.type} · {school.sector}</p>
+              <p className="font-semibold">{getInstitutionTypeLabel(school.type)} · {school.sector}</p>
             </div>
           </div>
           {school.website && (

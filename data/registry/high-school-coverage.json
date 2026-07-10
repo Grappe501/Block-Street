@@ -1,0 +1,433 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2026-07-10",
+  "totalHighSchools": 272,
+  "countiesWithLocalHighSchool": 75,
+  "totalCounties": 75,
+  "missingCounties": [],
+  "orphanLeaCount": 0,
+  "byCounty": {
+    "arkansas": [
+      "dewitt-hs",
+      "stuttgart-hs"
+    ],
+    "ashley": [
+      "crossett-hs",
+      "hamburg-hs"
+    ],
+    "baxter": [
+      "cotter-hs",
+      "norfork-hs"
+    ],
+    "benton": [
+      "arkansas-arts-academy-hs",
+      "bentonville-hs",
+      "bentonville-west-hs",
+      "decatur-hs",
+      "founders-classical-academies-of-arkansas-high-school-rogers-hs",
+      "gentry-hs",
+      "gravette-hs",
+      "pea-ridge-hs",
+      "rogers-heritage-hs",
+      "rogers-hs",
+      "siloam-springs-hs"
+    ],
+    "boone": [
+      "alpena-hs",
+      "bergman-hs",
+      "harrison-hs",
+      "lead-hill-hs",
+      "omaha-hs",
+      "valley-springs-hs"
+    ],
+    "bradley": [
+      "hermitage-hs",
+      "warren-hs"
+    ],
+    "calhoun": [
+      "hampton-hs"
+    ],
+    "carroll": [
+      "berryville-hs",
+      "eureka-springs-hs",
+      "green-forest-hs"
+    ],
+    "chicot": [
+      "dermott-hs",
+      "lakeside-hs"
+    ],
+    "clark": [
+      "arkadelphia-hs",
+      "gurdon-hs"
+    ],
+    "clay": [
+      "corning-hs",
+      "piggott-hs",
+      "rector-hs"
+    ],
+    "cleburne": [
+      "concord-hs",
+      "heber-springs-hs",
+      "quitman-hs",
+      "west-side-hs"
+    ],
+    "cleveland": [
+      "rison-hs",
+      "woodlawn-hs"
+    ],
+    "columbia": [
+      "bradley-hs",
+      "emerson-hs",
+      "magnolia-hs",
+      "taylor-hs"
+    ],
+    "conway": [
+      "morrilton-senior-hs",
+      "nemo-vista-hs",
+      "wonderview-hs"
+    ],
+    "craighead": [
+      "bay-hs",
+      "brookland-hs",
+      "buffalo-island-central-hs",
+      "nettleton-hs",
+      "riverside-hs",
+      "the-academies-at-jonesboro-hs",
+      "valley-view-hs",
+      "westside-hs"
+    ],
+    "crawford": [
+      "alma-hs",
+      "cedarville-hs",
+      "mountainburg-hs",
+      "mulberry-hs",
+      "van-buren-hs"
+    ],
+    "crittenden": [
+      "earle-virtual-hs",
+      "marion-hs"
+    ],
+    "cross": [
+      "cross-county-high-school-a-new-tech-hs",
+      "wynne-hs"
+    ],
+    "dallas": [
+      "fordyce-hs"
+    ],
+    "desha": [
+      "dumas-hs",
+      "mcgehee-hs"
+    ],
+    "drew": [
+      "drew-central-hs",
+      "monticello-hs"
+    ],
+    "faulkner": [
+      "conway-hs",
+      "greenbrier-hs",
+      "guy-perkins-hs",
+      "mayflower-hs",
+      "mt-vernon-enola-hs",
+      "vilonia-hs"
+    ],
+    "franklin": [
+      "charleston-hs",
+      "county-line-hs",
+      "ozark-jr-sr-hs"
+    ],
+    "fulton": [
+      "mammoth-spring-hs",
+      "salem-hs",
+      "viola-hs"
+    ],
+    "garland": [
+      "cutter-morning-star-hs",
+      "fountain-lake-hs",
+      "hot-springs-world-class-hs",
+      "jessieville-hs",
+      "lake-hamilton-hs",
+      "lakeside-hs-2606044",
+      "mountain-pine-hs"
+    ],
+    "grant": [
+      "poyen-hs",
+      "sheridan-hs"
+    ],
+    "greene": [
+      "greene-cty-tech-hs",
+      "marmaduke-hs",
+      "paragould-hs"
+    ],
+    "hempstead": [
+      "blevins-hs",
+      "hope-hs",
+      "spring-hill-hs"
+    ],
+    "hot-spring": [
+      "bismarck-hs",
+      "glen-rose-hs",
+      "magnet-cove-hs",
+      "malvern-hs",
+      "ouachita-hs"
+    ],
+    "howard": [
+      "dierks-hs",
+      "mineral-springs-hs",
+      "nashville-hs"
+    ],
+    "independence": [
+      "batesville-high-school-charter-hs",
+      "cedar-ridge-hs",
+      "midland-hs",
+      "southside-charter-hs"
+    ],
+    "izard": [
+      "calico-rock-hs",
+      "izard-county-consolidated-hs",
+      "melbourne-hs"
+    ],
+    "jackson": [
+      "the-academies-at-newport-hs",
+      "tuckerman-hs"
+    ],
+    "jefferson": [
+      "pine-bluff-hs",
+      "watson-chapel-hs",
+      "white-hall-hs"
+    ],
+    "johnson": [
+      "clarksville-hs",
+      "lamar-hs",
+      "westside-hs-3606026"
+    ],
+    "lafayette": [
+      "lafayette-county-hs"
+    ],
+    "lawrence": [
+      "hillcrest-hs",
+      "hoxie-hs",
+      "sloan-hendrix-hs",
+      "walnut-ridge-hs"
+    ],
+    "lee": [
+      "lee-hs"
+    ],
+    "lincoln": [
+      "star-city-hs"
+    ],
+    "little-river": [
+      "ashdown-hs",
+      "foreman-hs"
+    ],
+    "logan": [
+      "booneville-hs",
+      "booneville-jr-hs",
+      "magazine-hs",
+      "paris-hs",
+      "scranton-hs"
+    ],
+    "lonoke": [
+      "cabot-hs",
+      "carlisle-hs",
+      "england-hs",
+      "lonoke-hs"
+    ],
+    "madison": [
+      "huntsville-hs",
+      "st-paul-hs"
+    ],
+    "marion": [
+      "flippin-hs",
+      "yellville-summit-hs"
+    ],
+    "miller": [
+      "arkansas-hs",
+      "fouke-hs",
+      "genoa-central-hs"
+    ],
+    "mississippi": [
+      "academies-at-rivercrest-hs",
+      "armorel-hs",
+      "blytheville-hs",
+      "gosnell-hs",
+      "manila-hs",
+      "osceola-hs"
+    ],
+    "monroe": [
+      "brinkley-hs",
+      "clarendon-hs"
+    ],
+    "montgomery": [
+      "mount-ida-hs"
+    ],
+    "nevada": [
+      "prescott-hs"
+    ],
+    "newton": [
+      "jasper-hs",
+      "kingston-hs",
+      "oark-hs"
+    ],
+    "ouachita": [
+      "bearden-hs",
+      "camden-fairview-hs",
+      "harmony-grove-hs"
+    ],
+    "perry": [
+      "bigelow-hs",
+      "perryville-hs"
+    ],
+    "phillips": [
+      "barton-hs",
+      "central-hs",
+      "kipp-blytheville-collegiate-hs",
+      "kipp-delta-collegiate-hs",
+      "marvell-elaine-hs"
+    ],
+    "pike": [
+      "centerpoint-hs",
+      "kirby-hs",
+      "murfreesboro-hs"
+    ],
+    "poinsett": [
+      "east-poinsett-county-hs",
+      "harrisburg-hs",
+      "marked-tree-hs",
+      "trumann-hs"
+    ],
+    "polk": [
+      "acorn-hs",
+      "cossatot-river-hs",
+      "mena-hs"
+    ],
+    "pope": [
+      "atkins-hs",
+      "dover-hs",
+      "hector-hs",
+      "pottsville-hs",
+      "russellville-hs"
+    ],
+    "prairie": [
+      "des-arc-hs",
+      "hazen-hs"
+    ],
+    "pulaski": [
+      "arkansas-consolidate-high-school-vera-lloyd-hs",
+      "arkansas-consolidated-high-school-lewisville-hs",
+      "arkansas-consolidated-high-school-alexander-hs",
+      "arkansas-consolidated-high-school-dermott-hs",
+      "arkansas-consolidated-high-school-harrisburg-hs",
+      "arkansas-consolidated-high-school-mansfield-hs",
+      "arkansas-virtual-academy-hs",
+      "central-hs-6001001",
+      "estem-hs",
+      "exalt-academy-hs",
+      "hall-high-school-west-soi-hs",
+      "jacksonville-hs",
+      "jacksonville-lighthouse-hs",
+      "joe-t-robinson-hs",
+      "lisa-academy-north-hs",
+      "lisa-academy-rogers-bentonville-hs",
+      "little-rock-southwest-hs",
+      "maumelle-charter-hs",
+      "maumelle-hs",
+      "mills-university-studies-hs",
+      "north-little-rock-hs",
+      "parkview-magnet-hs",
+      "premier-high-school-of-fayetteville-hs",
+      "premier-high-school-of-fort-smith-hs",
+      "premier-high-school-of-little-rock-hs",
+      "premier-high-school-of-north-little-rock-hs",
+      "premier-high-school-of-russellville-hs",
+      "premier-high-school-of-springdale-hs",
+      "premier-high-school-of-texarkana-hs",
+      "premier-high-school-online-hs",
+      "sylvan-hills-hs"
+    ],
+    "randolph": [
+      "maynard-hs",
+      "pocahontas-hs"
+    ],
+    "saline": [
+      "forrest-city-hs",
+      "palestine-wheatley-senior-high-hs"
+    ],
+    "scott": [
+      "bauxite-hs",
+      "benton-hs",
+      "bryant-hs",
+      "harmony-grove-hs-6304030"
+    ],
+    "searcy": [
+      "waldron-hs"
+    ],
+    "sebastian": [
+      "marshall-hs",
+      "ozark-mountain-hs"
+    ],
+    "sevier": [
+      "greenwood-hs",
+      "hackett-hs",
+      "lavaca-hs",
+      "mansfield-hs",
+      "northside-hs",
+      "southside-hs"
+    ],
+    "sharp": [
+      "dequeen-hs",
+      "horatio-hs"
+    ],
+    "st-francis": [
+      "highland-hs"
+    ],
+    "stone": [
+      "mountain-view-hs",
+      "rural-special-hs",
+      "timbo-hs"
+    ],
+    "union": [
+      "barton-jr-hs",
+      "el-dorado-hs",
+      "junction-city-hs",
+      "parkers-chapel-hs",
+      "smackover-hs"
+    ],
+    "van-buren": [
+      "clinton-hs",
+      "clinton-jr-hs",
+      "shirley-hs",
+      "south-side-hs"
+    ],
+    "washington": [
+      "elkins-hs",
+      "farmington-hs",
+      "fayetteville-hs",
+      "greenland-hs",
+      "har-ber-hs",
+      "lincoln-hs",
+      "prairie-grove-hs",
+      "springdale-hs",
+      "west-fork-hs"
+    ],
+    "white": [
+      "bald-knob-hs",
+      "beebe-hs",
+      "bradford-hs",
+      "pangburn-hs",
+      "riverview-hs",
+      "rose-bud-hs",
+      "searcy-hs",
+      "white-county-central-hs"
+    ],
+    "woodruff": [
+      "augusta-hs",
+      "mccrory-hs"
+    ],
+    "yell": [
+      "danville-hs",
+      "dardanelle-hs",
+      "two-rivers-hs",
+      "western-yell-county-hs"
+    ]
+  }
+}

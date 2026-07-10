@@ -44,6 +44,7 @@ import { AdminGuardrails } from "@/components/admin/AdminGuardrails";
 import { AdminConstitution } from "@/components/admin/AdminConstitution";
 import { AdminNorthStar } from "@/components/admin/AdminNorthStar";
 import { AdminDataModel } from "@/components/admin/AdminDataModel";
+import { AdminDataArchitecture } from "@/components/admin/AdminDataArchitecture";
 
 const TABS = [
   { id: "overview", label: "Overview", icon: "📊" },
@@ -192,7 +193,12 @@ export function AdminDashboard({ progress }: { progress: BuildProgress }) {
         {activeTab === "north-star" && <AdminNorthStar />}
         {activeTab === "mission" && <AdminMission />}
         {activeTab === "architecture" && <AdminArchitecture />}
-        {activeTab === "data-model" && <AdminDataModel progress={progress} />}
+        {activeTab === "data-model" && (
+          <div className="space-y-8">
+            <AdminDataArchitecture />
+            <AdminDataModel progress={progress} />
+          </div>
+        )}
         {activeTab === "versions" && <AdminVersions progress={progress} />}
         {activeTab === "build-log" && <AdminBuildLog progress={progress} />}
         {activeTab === "deployment" && <AdminDeployment progress={progress} />}

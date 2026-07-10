@@ -1,0 +1,45 @@
+{
+  "version": "1.0.0",
+  "volume": 1,
+  "step": "1.8",
+  "docPath": "docs/volume-01/COMMUNITY_KNOWLEDGE_GRAPH_ARCHITECTURE.md",
+  "masterSequencePath": "docs/volume-01/VOLUME_1_MASTER_SEQUENCE.md",
+  "parentVolume": "EAB-001",
+  "requirementId": "ENG-008",
+  "requirementAlias": "CKG",
+  "companionDoc": {
+    "requirementId": "LDT-001",
+    "docPath": "docs/volume-01/LIVING_DIGITAL_TWIN_ARCHITECTURE.md",
+    "registryPath": "data/registry/living-digital-twin-architecture.json"
+  },
+  "title": "Community Knowledge Graph Architecture",
+  "status": "complete",
+  "buildsOn": "ENG-004",
+  "guidingPrinciple": "The platform should understand relationships—not just records.",
+  "canonicalSource": "PostgreSQL entity_relationships",
+  "projectionStrategy": "relational_derived",
+  "graphModel": ["node", "relationship", "metadata"],
+  "nodeCategories": [
+    "people", "communities", "institutions", "work",
+    "experiences", "knowledge", "resources", "geography"
+  ],
+  "coreEdgeTypes": [
+    "member_of", "mentors", "invited", "participated_in", "organized",
+    "leads", "supports", "partners_with", "located_in", "attended",
+    "created", "published", "inspired", "references", "succeeded_by",
+    "built_upon", "completed"
+  ],
+  "signatureGraphs": [
+    "trust", "growth", "conversation", "capability",
+    "decision", "improvement", "operational", "impact"
+  ],
+  "kernelPath": "src/lib/kernel/graph/",
+  "phaseRefs": ["NISS-001", "NISS-M17", "GOS-M16", "DAB-M03", "PDT-001"],
+  "acceptanceCriteria": "AC-093",
+  "nextRecommendedStep": {
+    "id": "1.9",
+    "requirementId": "ENG-009",
+    "artifact": "docs/volume-01/EVENT_TIMELINE_ARCHITECTURE.md",
+    "status": "done"
+  }
+}

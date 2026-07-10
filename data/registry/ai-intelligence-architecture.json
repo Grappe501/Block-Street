@@ -1,0 +1,42 @@
+{
+  "version": "1.0.0",
+  "volume": 1,
+  "step": "1.13",
+  "docPath": "docs/volume-01/AI_INTELLIGENCE_ARCHITECTURE.md",
+  "masterSequencePath": "docs/volume-01/VOLUME_1_MASTER_SEQUENCE.md",
+  "parentVolume": "EAB-001",
+  "requirementId": "ENG-013",
+  "productVolume": "AIB-001",
+  "companionDoc": {
+    "requirementId": "CIF-001",
+    "docPath": "docs/volume-01/COMMUNITY_INTELLIGENCE_FABRIC.md",
+    "registryPath": "data/registry/community-intelligence-fabric.json"
+  },
+  "title": "AI & Intelligence Technical Architecture",
+  "status": "complete",
+  "buildsOn": "ENG-008",
+  "guidingPrinciple": "AI augments human judgment. It never replaces community leadership.",
+  "constitutionalPrinciples": [
+    "human_oversight", "explainability", "privacy", "permission_awareness",
+    "evidence_based", "transparency", "graceful_degradation", "no_hidden_decisions"
+  ],
+  "memoryLayers": [
+    "session", "participant_context", "community",
+    "organizational", "platform"
+  ],
+  "specializedAgents": [
+    "community_guide", "mission_planner", "volunteer_coordinator",
+    "knowledge_librarian", "leadership_coach", "story_assistant",
+    "research_assistant", "growth_advisor", "operations_advisor",
+    "accessibility_assistant"
+  ],
+  "kernelPath": "src/lib/kernel/ai/",
+  "serviceOwner": "ENG-DS20",
+  "acceptanceCriteria": "AC-103",
+  "nextRecommendedStep": {
+    "id": "1.5",
+    "requirementId": "ENG-005",
+    "artifact": "docs/volume-01/API_ARCHITECTURE.md",
+    "note": "Close Volume 1 sequence gap"
+  }
+}

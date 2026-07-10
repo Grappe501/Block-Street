@@ -1,0 +1,40 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2026-07-10",
+  "currentRelease": "0.7.0-volumes",
+  "targetEnvironment": "production",
+  "overallStatus": "not_certified",
+  "technical": {
+    "status": "warn",
+    "checks": [
+      { "id": "build", "label": "Production build passes", "status": "pass", "notes": "npm run build" },
+      { "id": "tests", "label": "Test suite passing", "status": "warn", "notes": "Unit/integration expanding; E2E pending" },
+      { "id": "migrations", "label": "Database migrations validated", "status": "pending", "notes": "DB not connected" },
+      { "id": "security", "label": "Security validation", "status": "warn", "notes": "npm audit; PRE tests pending implementation" },
+      { "id": "a11y", "label": "Accessibility validation", "status": "warn", "notes": "Manual pass; axe CI pending" },
+      { "id": "monitoring", "label": "Monitoring enabled", "status": "warn", "notes": "Netlify analytics; health endpoint pending" }
+    ]
+  },
+  "operational": {
+    "status": "warn",
+    "checks": [
+      { "id": "launch_checklist", "label": "PHASE-001.7 launch checklist", "status": "warn", "notes": "2/10 done — see launch-readiness.json" },
+      { "id": "documentation", "label": "Volume 1 factory docs complete", "status": "pass", "notes": "13/14 ENG steps; ENG-005 API pending" },
+      { "id": "rollback", "label": "Rollback plan documented", "status": "pass", "notes": "ENG-DTR15; Netlify instant rollback" }
+    ]
+  },
+  "intelligence": {
+    "status": "pending",
+    "checks": [
+      { "id": "search_index", "label": "Search indexes current", "status": "pending", "notes": "Post DB connect" },
+      { "id": "ckg", "label": "CKG synchronized", "status": "pending", "notes": "Post DB connect" },
+      { "id": "ai_smoke", "label": "AI retrieval validated", "status": "pending", "notes": "Optional for V1 launch call per PHASE-001.7" }
+    ]
+  },
+  "blockers": [
+    "ENG-005 API Architecture not yet documented",
+    "Database not connected — migrations and auth flows pending"
+  ],
+  "launchReadinessPath": "data/launch-readiness.json",
+  "crccDocPath": "docs/volume-01/COMMUNITY_READINESS_COMMAND_CENTER.md"
+}

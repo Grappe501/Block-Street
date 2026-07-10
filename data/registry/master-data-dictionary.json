@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "requirementId": "DAB-015",
+  "docPath": "docs/volume-02/MASTER_DATA_DICTIONARY.md",
+  "schemaCount": 15,
+  "tableCount": 60,
+  "schemas": [
+    "platform", "config", "identity", "community", "geo", "action",
+    "growth", "knowledge", "graph", "events", "comms", "search",
+    "intelligence", "analytics", "media"
+  ],
+  "coreEnumCount": 11,
+  "acceptanceCriteria": "AC-120"
+}

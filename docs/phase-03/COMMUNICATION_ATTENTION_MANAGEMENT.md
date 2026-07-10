@@ -12,7 +12,8 @@ This is not notification settings. It is **how people stay connected without bec
 
 **Builds On:** [Trust, Privacy & Digital Safety](TRUST_PRIVACY_DIGITAL_SAFETY.md) · [Personal Command Center](PERSONAL_COMMAND_CENTER.md) · [Project Constitution](../PROJECT_CONSTITUTION_AND_MISSION_DOCTRINE.md) · [Core Principles](../build-steps/PHASE-001.3-CORE-PRINCIPLES.md)
 
-**Live spec:** `data/registry/communication-attention-management.json`
+**Live spec:** `data/registry/communication-attention-management.json`  
+**Engineering implementation:** [Volume 1.12 Communication Architecture](../volume-01/COMMUNICATION_ARCHITECTURE.md) [ENG-012] · [Attention Management Engine](../volume-01/ATTENTION_MANAGEMENT_ENGINE.md) [AME-001]
 
 ---
 

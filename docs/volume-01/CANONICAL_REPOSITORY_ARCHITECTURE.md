@@ -558,6 +558,6 @@ Volume 1.3 is complete when:
 
 ---
 
-**Next step:** [1.4 — Database Architecture](DATABASE_ARCHITECTURE.md) [ENG-004]
+**Next step:** [1.5 — API Architecture](API_ARCHITECTURE.md) [ENG-005]
 
 **End of Volume 1.3 — Canonical Repository Architecture.**

@@ -1,7 +1,9 @@
 import type { BuildProgress } from "@/lib/data";
+import { getRegistryStats } from "@/lib/data";
 import { StatusBadge } from "@/components/StatusBadge";
 
 export function AdminDataModel({ progress }: { progress: BuildProgress }) {
+  const stats = getRegistryStats();
   const tables = [
     {
       name: "users",
@@ -62,8 +64,13 @@ export function AdminDataModel({ progress }: { progress: BuildProgress }) {
         <h2 className="text-lg font-bold text-slate-900">Seed Data Ready</h2>
         <div className="mt-3 space-y-2 text-sm">
           <p>✅ <code className="text-brand-600">data/counties.json</code> — 75 counties</p>
-          <p>✅ <code className="text-brand-600">data/campuses.json</code> — 5 founding council campuses</p>
-          <p className="text-slate-500">Full schema: docs/architecture/DATA-MODEL.md</p>
+          <p>✅ <code className="text-brand-600">data/registry/institutions.json</code> — {stats.totalInstitutions} post-secondary schools</p>
+          <p>✅ <code className="text-brand-600">data/registry/high-schools.json</code> — {stats.totalHighSchools} public high schools (ADE)</p>
+          <p>✅ <code className="text-brand-600">data/registry/county-post-secondary-service.json</code> — post-secondary county coverage</p>
+          <p>✅ <code className="text-brand-600">data/registry/high-school-coverage.json</code> — high school county coverage (75/75)</p>
+          <p>✅ <code className="text-brand-600">data/registry/private-charter-schools.json</code> — {stats.totalPrivateCharterSchools} private &amp; charter schools (ADE)</p>
+          <p>✅ <code className="text-brand-600">data/registry/private-charter-coverage.json</code> — private/charter county coverage ({stats.countiesWithPrivateOrCharter}/75)</p>
+          <p className="text-slate-500">Legacy: <code className="text-brand-600">data/campuses.json</code> — founding council seed</p>
         </div>
       </div>
     </div>

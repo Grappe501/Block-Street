@@ -1,0 +1,44 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/volume-01/PERMISSION_RESOLUTION_ENGINE.md",
+  "requirementId": "PRE-001",
+  "title": "Permission Resolution Engine",
+  "status": "complete",
+  "parentRequirement": "ENG-006",
+  "kernelPath": "src/lib/kernel/permissions/resolver.ts",
+  "decisionOutcomes": ["allow", "deny", "pending_approval"],
+  "evaluationSteps": [
+    "authenticate",
+    "resolve_resource",
+    "resolve_context",
+    "check_visibility",
+    "check_permissions",
+    "check_ownership",
+    "check_approval",
+    "apply_policy",
+    "emit_decision"
+  ],
+  "explanationCodes": [
+    "UNAUTHENTICATED",
+    "INSUFFICIENT_ROLE",
+    "OUT_OF_SCOPE",
+    "VISIBILITY_DENIED",
+    "DELEGATION_EXPIRED",
+    "APPROVAL_REQUIRED",
+    "POLICY_BLOCKED",
+    "OWNER_ONLY"
+  ],
+  "cacheTtlSeconds": 60,
+  "testPath": "tests/kernel/permissions/",
+  "v1PermissionKeys": [
+    "community.view",
+    "community.edit",
+    "mission.create",
+    "mission.approve",
+    "event.manage",
+    "story.publish",
+    "participant.invite",
+    "mentor.assign"
+  ],
+  "acceptanceCriteria": "AC-090"
+}

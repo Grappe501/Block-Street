@@ -20,8 +20,8 @@ The next design cycle designs the **factory** — the engineering foundation eve
 | Layer | Question | Document |
 |-------|----------|----------|
 | **Volume 0** | What is the COS? | [MASTER_ARCHITECTURE_BIBLE.md](MASTER_ARCHITECTURE_BIBLE.md) [MAB-001] |
-| **Volume 1** | How is the software built? | [ENGINEERING_ARCHITECTURE_BIBLE.md](ENGINEERING_ARCHITECTURE_BIBLE.md) [EAB-001] · [14 steps](volume-01/VOLUME_1_MASTER_SEQUENCE.md) (1/14 done) |
-| **Volume 2** | What is the canonical data model? | [DATA_ARCHITECTURE_BIBLE.md](DATA_ARCHITECTURE_BIBLE.md) [DAB-001] |
+| **Volume 1** | How is the software built? | [ENGINEERING_ARCHITECTURE_BIBLE.md](ENGINEERING_ARCHITECTURE_BIBLE.md) [EAB-001] · [14 steps](../volume-01/VOLUME_1_MASTER_SEQUENCE.md) (13/14 · 1.5 API pending) |
+| **Volume 2** | What is the canonical data model? | [DATA_ARCHITECTURE_BIBLE.md](DATA_ARCHITECTURE_BIBLE.md) [DAB-001] · [14 steps](../volume-02/VOLUME_2_MASTER_SEQUENCE.md) ✅ complete |
 | **Volume 3** | What does every screen and flow look like? | [USER_EXPERIENCE_BIBLE.md](USER_EXPERIENCE_BIBLE.md) [UXB-001] |
 | **Volume 4** | How does AI work technically? | [AI_INTELLIGENCE_BIBLE.md](AI_INTELLIGENCE_BIBLE.md) [AIB-001] |
 | **Volume 5** | How is the system operated and launched? | [OPERATIONS_LAUNCH_BIBLE.md](OPERATIONS_LAUNCH_BIBLE.md) [OLB-001] |

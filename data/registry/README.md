@@ -14,7 +14,8 @@ Every page, map, and dashboard builds on this Registry.
 |------|----------|
 | `counties.json` | 75 Arkansas counties (minimal bootstrap — full model in Step 2.2) |
 | `schemas/county-record.schema.json` | JSON Schema for canonical county graph node |
-| `institutions.json` | Colleges & universities (partial bootstrap — full Canonical Profile in Step 2.3) |
+| `high-schools.json` | 272 public high schools — ADE County List School (all 75 counties) |
+| `high-school-coverage.json` | High school count per county |
 | `relationship-types.json` | Canonical relationship type catalog (PHASE-002.4) |
 | `status-framework.json` | Lifecycles, status categories, dashboard queries (PHASE-002.5) |
 | `outreach-intelligence.json` | Mission Board, opportunity types, dashboard levels (PHASE-002.6) |

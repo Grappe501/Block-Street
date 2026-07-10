@@ -1,0 +1,21 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/volume-01/COMMUNITY_INTELLIGENCE_FABRIC.md",
+  "requirementId": "CIF-001",
+  "title": "Community Intelligence Fabric",
+  "status": "complete",
+  "parentRequirement": "ENG-013",
+  "kernelPath": "src/lib/kernel/ai/fabric.ts",
+  "orchestratedComponents": [
+    "community_knowledge_graph", "search_service", "knowledge_domains",
+    "living_digital_twins", "living_history_engine", "growth_intelligence",
+    "network_intelligence", "operational_intelligence", "intelligence_service",
+    "maps", "calendar"
+  ],
+  "v1Capabilities": [
+    "fabric.capability.find_playbook",
+    "fabric.capability.suggest_mentor",
+    "fabric.capability.summarize_mission"
+  ],
+  "acceptanceCriteria": "AC-104"
+}

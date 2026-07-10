@@ -508,6 +508,8 @@ Volume 1.2 is complete when:
 
 ---
 
-**Next step:** [1.4 — Database Architecture](DATABASE_ARCHITECTURE.md) [ENG-004]
+**Next step:** [1.5 — API Architecture](API_ARCHITECTURE.md) [ENG-005]
+
+**Service detail:** [1.7 Domain Service Architecture](DOMAIN_SERVICE_ARCHITECTURE.md) [ENG-007] refines Layer 4 into **16 first-class services** (Leadership · Story elevated) · [Service Registry](SERVICE_REGISTRY.md) [SRG-001].
 
 **End of Volume 1.2 — System Architecture.**

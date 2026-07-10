@@ -1,0 +1,68 @@
+{
+  "version": "1.0.0",
+  "volume": 1,
+  "step": "1.6",
+  "docPath": "docs/volume-01/AUTHORIZATION_ARCHITECTURE.md",
+  "masterSequencePath": "docs/volume-01/VOLUME_1_MASTER_SEQUENCE.md",
+  "parentVolume": "EAB-001",
+  "requirementId": "ENG-006",
+  "companionDoc": {
+    "requirementId": "PRE-001",
+    "docPath": "docs/volume-01/PERMISSION_RESOLUTION_ENGINE.md",
+    "registryPath": "data/registry/permission-resolution-engine.json"
+  },
+  "title": "Authentication & Authorization Architecture",
+  "status": "complete",
+  "buildsOn": "ENG-004",
+  "dependsOnNote": "ENG-005 API Architecture pending — auth integrates at API middleware when built",
+  "guidingPrinciple": "Every participant should have access to everything they need—and nothing they should not.",
+  "authQuestion": "Who are you?",
+  "authzQuestion": "What are you allowed to do?",
+  "architecturalLayers": [
+    "identity",
+    "authentication",
+    "authorization",
+    "community_scope",
+    "feature_permissions",
+    "data_visibility"
+  ],
+  "authProvidersV1": ["email_password", "google_oauth"],
+  "platformRoles": [
+    "participant",
+    "volunteer",
+    "mentor",
+    "organizer",
+    "community_administrator",
+    "regional_coordinator",
+    "system_administrator"
+  ],
+  "visibilityLevels": [
+    "private",
+    "team",
+    "committee",
+    "community",
+    "regional",
+    "statewide",
+    "public"
+  ],
+  "securityPrinciples": [
+    "least_privilege",
+    "explicit_grants",
+    "secure_defaults",
+    "defense_in_depth",
+    "separation_of_duties",
+    "comprehensive_auditing"
+  ],
+  "kernelPaths": {
+    "identity": "src/lib/kernel/identity/",
+    "auth": "src/lib/kernel/auth/",
+    "permissions": "src/lib/kernel/permissions/"
+  },
+  "acceptanceCriteria": "AC-089",
+  "nextRecommendedStep": {
+    "id": "1.7",
+    "requirementId": "ENG-007",
+    "artifact": "docs/volume-01/DOMAIN_SERVICE_ARCHITECTURE.md",
+    "status": "done"
+  }
+}

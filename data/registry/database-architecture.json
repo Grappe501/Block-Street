@@ -1,0 +1,43 @@
+{
+  "version": "1.0.0",
+  "volume": 1,
+  "step": "1.4",
+  "docPath": "docs/volume-01/DATABASE_ARCHITECTURE.md",
+  "masterSequencePath": "docs/volume-01/VOLUME_1_MASTER_SEQUENCE.md",
+  "parentVolume": "EAB-001",
+  "requirementId": "ENG-004",
+  "companionDoc": {
+    "requirementId": "DCL-001",
+    "docPath": "docs/volume-01/DIGITAL_CONSTITUTION_LAYER.md",
+    "registryPath": "data/registry/digital-constitution-layer.json"
+  },
+  "relatedVolumeSteps": ["ENG-006"],
+  "entityCatalogVolume": "DAB-001",
+  "title": "Database Architecture",
+  "status": "complete",
+  "buildsOn": "ENG-003",
+  "guidingPrinciple": "The database preserves truth. The application interprets it.",
+  "primaryEngine": "PostgreSQL (Supabase)",
+  "graphStrategy": "relational_derived",
+  "domains": [
+    "identity", "registry", "community", "mission", "experience",
+    "opportunity", "growth", "knowledge", "partnership", "capacity",
+    "intelligence", "constitution", "platform"
+  ],
+  "canonicalEntityFields": [
+    "id", "created_at", "updated_at", "created_by", "updated_by",
+    "status", "visibility", "version", "archived_at", "audit_ref"
+  ],
+  "coreTables": {
+    "entityRelationships": "platform.entity_relationships",
+    "auditLog": "platform.audit_log",
+    "domainEvents": "platform.domain_events"
+  },
+  "migrationPath": "database/migrations/",
+  "acceptanceCriteria": "AC-087",
+  "nextStep": {
+    "id": "1.5",
+    "requirementId": "ENG-005",
+    "artifact": "docs/volume-01/API_ARCHITECTURE.md"
+  }
+}

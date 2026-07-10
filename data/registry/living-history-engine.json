@@ -1,0 +1,19 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/volume-01/LIVING_HISTORY_ENGINE.md",
+  "requirementId": "LHE-001",
+  "title": "Living History Engine",
+  "status": "complete",
+  "parentRequirement": "ENG-009",
+  "kernelPath": "src/lib/kernel/history/",
+  "storageTable": "platform.history_narratives",
+  "narrativeTypes": ["summary", "anniversary", "annual_report", "journey"],
+  "milestoneEntityTypes": ["community", "participant", "mission", "county"],
+  "v1Milestones": [
+    "community.launched",
+    "community.members_reached_100",
+    "mission.first_completed"
+  ],
+  "aiPolicy": "draft_with_human_approval",
+  "acceptanceCriteria": "AC-096"
+}

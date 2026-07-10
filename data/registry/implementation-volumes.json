@@ -19,7 +19,7 @@
       "masterSequencePath": "docs/volume-01/VOLUME_1_MASTER_SEQUENCE.md",
       "registryPath": "data/registry/engineering-architecture-bible.json",
       "chapters": 14,
-      "stepsComplete": 3,
+      "stepsComplete": 13,
       "stepsTotal": 14,
       "acceptanceCriteria": "AC-077",
       "status": "in_progress"
@@ -27,12 +27,16 @@
     {
       "volume": 2,
       "name": "Data Architecture Bible",
-      "subtitle": "Single source of truth for the database",
+      "subtitle": "What is the data model that powers everything?",
       "requirementId": "DAB-001",
       "docPath": "docs/master/DATA_ARCHITECTURE_BIBLE.md",
+      "masterSequencePath": "docs/volume-02/VOLUME_2_MASTER_SEQUENCE.md",
       "registryPath": "data/registry/data-architecture-bible.json",
+      "chapters": 14,
+      "stepsComplete": 14,
+      "stepsTotal": 14,
       "acceptanceCriteria": "AC-078",
-      "status": "v1_complete"
+      "status": "complete"
     },
     {
       "volume": 3,

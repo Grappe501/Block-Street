@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/volume-01/DIGITAL_CONSTITUTION_LAYER.md",
+  "requirementId": "DCL-001",
+  "title": "Digital Constitution Layer",
+  "status": "complete",
+  "parentRequirement": "ENG-004",
+  "schemaName": "constitution",
+  "definitionCategories": [
+    "community_types",
+    "leadership_pathways",
+    "mission_categories",
+    "relationship_types",
+    "permission_models",
+    "recognition_categories",
+    "workflow_definitions",
+    "growth_stages",
+    "status_transitions",
+    "constitutional_principles"
+  ],
+  "kernelPath": "src/lib/kernel/constitution/",
+  "v1TransitionalSource": "data/registry/*.json",
+  "acceptanceCriteria": "AC-088"
+}

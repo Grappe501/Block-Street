@@ -1,0 +1,1 @@
+{"version":"1.0.0","requirementId":"DAB-005","docPath":"docs/volume-02/DATABASE_SCHEMA_BLUEPRINT.md","schemaDomains":["platform","config","identity","community","geo","action","growth","knowledge","graph","events","comms","search","intelligence","analytics","media"],"acceptanceCriteria":"AC-110"}

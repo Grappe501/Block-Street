@@ -1,0 +1,28 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/volume-01/ARKANSAS_DIGITAL_TWIN_ARCHITECTURE.md",
+  "requirementId": "ADT-002",
+  "title": "Arkansas Digital Twin Architecture",
+  "status": "complete",
+  "parentRequirement": "ENG-011",
+  "initializationRequirement": "ADT-001",
+  "relatedTwin": "LDT-001",
+  "kernelPath": "src/lib/kernel/geo/arkansas-twin.ts",
+  "storageTable": "platform.arkansas_twin_snapshot",
+  "continuousDimensions": [
+    "community_locations", "growth_patterns", "leadership_distribution",
+    "volunteer_activity", "institutional_partnerships", "opportunity_density",
+    "service_gaps", "resource_availability", "community_health", "historical_development"
+  ],
+  "integrationStack": [
+    "registry", "ckg", "lhe", "growth_intelligence",
+    "network_intelligence", "search", "pre"
+  ],
+  "v1StrategicQueries": [
+    "counties_without_active_communities",
+    "institutions_without_communities",
+    "communities_by_county"
+  ],
+  "surfaces": ["/map", "/network/twin", "county_organizer", "regional_dashboard"],
+  "acceptanceCriteria": "AC-100"
+}

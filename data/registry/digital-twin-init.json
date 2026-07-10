@@ -11,7 +11,8 @@
   },
   "bootstrapStatus": {
     "counties": { "current": 75, "target": 75, "schemaLevel": "minimal", "note": "Full canonical migration at init" },
-    "institutions": { "current": 23, "target": "all_v1_four_year", "schemaLevel": "partial", "note": "Expand to complete V1 set at init" },
+    "institutions": { "current": 67, "target": "all_post_secondary_v1", "schemaLevel": "expanded", "note": "Post-secondary all types" },
+    "highSchools": { "current": 272, "target": "all_public_high_schools", "schemaLevel": "ade_sourced", "note": "ADE County List School 2025-2026 — 75/75 counties" },
     "relationships": { "current": "denormalized", "target": "explicit_edges", "note": "institution.county → contains/belongs_to" },
     "operationalData": { "current": "empty", "target": "empty", "note": "Participants created at registration only" }
   },
@@ -19,7 +20,8 @@
     "v1": [
       "State of Arkansas (STATE-AR)",
       "All 75 counties",
-      "Every Arkansas 4-year college and university",
+      "Every Arkansas post-secondary institution (4-year, 2-year, technical, trade)",
+      "Every public high school in every county (272 from ADE)",
       "State→County contains edges",
       "County→Institution contains edges",
       "Permanent IDs and stable URLs",
@@ -44,7 +46,7 @@
     "requiredFields": ["id", "slug", "name", "fipsCode", "countySeat", "region", "pageUrl", "representationStatus"]
   },
   "institutionInit": {
-    "v1Scope": "four_year_colleges_and_universities",
+    "v1Scope": "post_secondary_all_types",
     "idPattern": "INST-{slug}",
     "urlPattern": "/schools/{slug}",
     "defaultStatus": "needs_outreach",
@@ -84,9 +86,9 @@
     "relationshipsOutput": "data/registry/relationships-bootstrap.json"
   },
   "expansionPackages": [
-    { "version": "v1.5", "entities": ["community_colleges"], "preservesIds": true },
-    { "version": "v2", "entities": ["trade_schools", "technical_institutes"], "preservesIds": true },
-    { "version": "v3", "entities": ["high_schools"], "preservesIds": true }
+    { "version": "v1.5", "entities": ["community_colleges"], "preservesIds": true, "status": "merged_into_v1" },
+    { "version": "v2", "entities": ["trade_schools", "technical_institutes"], "preservesIds": true, "status": "merged_into_v1" },
+    { "version": "v3", "entities": ["high_schools"], "preservesIds": true, "status": "merged_into_v1" }
   ],
   "adoptionExamples": [
     { "participant": "Student from Conway", "finds": "UCA already waiting at /schools/uca" },

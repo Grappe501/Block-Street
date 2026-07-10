@@ -65,8 +65,8 @@
   ],
   "acceptanceCriteria": "AC-084",
   "nextStep": {
-    "id": "1.4",
-    "requirementId": "ENG-004",
-    "artifact": "docs/volume-01/DATABASE_ARCHITECTURE.md"
+    "id": "1.5",
+    "requirementId": "ENG-005",
+    "artifact": "docs/volume-01/API_ARCHITECTURE.md"
   }
 }

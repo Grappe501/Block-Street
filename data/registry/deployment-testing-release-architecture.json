@@ -1,0 +1,44 @@
+{
+  "version": "1.0.0",
+  "volume": 1,
+  "step": "1.14",
+  "docPath": "docs/volume-01/DEPLOYMENT_TESTING_RELEASE_ARCHITECTURE.md",
+  "masterSequencePath": "docs/volume-01/VOLUME_1_MASTER_SEQUENCE.md",
+  "parentVolume": "EAB-001",
+  "requirementId": "ENG-014",
+  "companionDoc": {
+    "requirementId": "CRCC-001",
+    "docPath": "docs/volume-01/COMMUNITY_READINESS_COMMAND_CENTER.md",
+    "registryPath": "data/registry/community-readiness-command-center.json"
+  },
+  "operationsVolume": "OLB-001",
+  "title": "Deployment, Testing & Release Architecture",
+  "status": "complete",
+  "buildsOn": "ENG-001",
+  "guidingPrinciple": "Every deployment is a promise to the communities that depend on the platform.",
+  "environments": ["local", "integration", "staging", "production"],
+  "releasePipeline": [
+    "architecture", "implementation", "validation", "integration_testing",
+    "release_candidate", "operator_approval", "production_deployment",
+    "verification", "monitoring"
+  ],
+  "testingLevels": ["unit", "integration", "e2e", "uat"],
+  "v1Hosting": {
+    "frontend": "netlify",
+    "configPath": "netlify.toml",
+    "deployUrl": "https://block-street.netlify.app/"
+  },
+  "alertTiers": ["critical", "high", "medium", "informational"],
+  "acceptanceCriteria": "AC-105",
+  "volume1Gap": {
+    "step": "1.5",
+    "requirementId": "ENG-005",
+    "artifact": "docs/volume-01/API_ARCHITECTURE.md"
+  },
+  "nextRecommendedStep": {
+    "id": "1.5",
+    "requirementId": "ENG-005",
+    "artifact": "docs/volume-01/API_ARCHITECTURE.md",
+    "note": "Close Volume 1 sequence gap before Phase 7 scale"
+  }
+}

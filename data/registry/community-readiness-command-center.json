@@ -1,0 +1,22 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/volume-01/COMMUNITY_READINESS_COMMAND_CENTER.md",
+  "requirementId": "CRCC-001",
+  "title": "Community Readiness Command Center",
+  "status": "complete",
+  "parentRequirement": "ENG-014",
+  "readinessDimensions": ["technical", "operational", "intelligence"],
+  "dataSources": {
+    "launchReadiness": "data/launch-readiness.json",
+    "releaseReadiness": "data/release-readiness.json",
+    "buildProgress": "data/build-progress.json"
+  },
+  "certificationGates": [
+    "statewide_production_release",
+    "community_activation",
+    "pilot_county"
+  ],
+  "adminSurface": "src/components/admin/AdminLaunchReadiness.tsx",
+  "overallStatuses": ["certified", "conditional", "blocked"],
+  "acceptanceCriteria": "AC-106"
+}

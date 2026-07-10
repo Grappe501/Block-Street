@@ -1,0 +1,25 @@
+{
+  "version": "1.0.0",
+  "requirementId": "DAB-003",
+  "docPath": "docs/volume-02/CANONICAL_ENTITY_DICTIONARY.md",
+  "entityCount": 16,
+  "entities": [
+    { "id": "DAB-E01", "name": "Participant", "schema": "identity" },
+    { "id": "DAB-E02", "name": "Community", "schema": "community" },
+    { "id": "DAB-E03", "name": "County", "schema": "geo" },
+    { "id": "DAB-E04", "name": "EducationalInstitution", "schema": "geo" },
+    { "id": "DAB-E05", "name": "Team", "schema": "community" },
+    { "id": "DAB-E06", "name": "Mission", "schema": "action" },
+    { "id": "DAB-E07", "name": "Project", "schema": "action" },
+    { "id": "DAB-E08", "name": "Event", "schema": "action" },
+    { "id": "DAB-E09", "name": "Opportunity", "schema": "growth" },
+    { "id": "DAB-E10", "name": "Partnership", "schema": "community" },
+    { "id": "DAB-E11", "name": "Resource", "schema": "community" },
+    { "id": "DAB-E12", "name": "Story", "schema": "knowledge" },
+    { "id": "DAB-E13", "name": "Lesson", "schema": "knowledge" },
+    { "id": "DAB-E14", "name": "KnowledgeObject", "schema": "knowledge" },
+    { "id": "DAB-E15", "name": "Initiative", "schema": "action" },
+    { "id": "DAB-E16", "name": "Task", "schema": "action" }
+  ],
+  "acceptanceCriteria": "AC-108"
+}

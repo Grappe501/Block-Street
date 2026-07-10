@@ -12,7 +12,8 @@ Before the first user ever logs in, the platform already knows Arkansas. The sta
 
 **Builds On:** [PHASE-002.1 Registry Doctrine](ARKANSAS_ORGANIZING_REGISTRY_DOCTRINE.md) · [PHASE-002.4 Relationship Graph](ARKANSAS_RELATIONSHIP_GRAPH.md) · [PHASE-002.7 Community Identity](COMMUNITY_IDENTITY_PERSONALIZATION_SYSTEM.md) · [PHASE-002.8 Knowledge Governance](KNOWLEDGE_DATA_GOVERNANCE_FRAMEWORK.md)
 
-**Live spec:** `data/registry/digital-twin-init.json`
+**Live spec:** `data/registry/digital-twin-init.json`  
+**Living model:** [Volume 1.11 Arkansas Digital Twin Architecture](../volume-01/ARKANSAS_DIGITAL_TWIN_ARCHITECTURE.md) [ADT-002 · ENG-011]
 
 ---
 

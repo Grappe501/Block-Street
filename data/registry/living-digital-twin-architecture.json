@@ -1,0 +1,26 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/volume-01/LIVING_DIGITAL_TWIN_ARCHITECTURE.md",
+  "requirementId": "LDT-001",
+  "title": "Living Digital Twin Architecture",
+  "status": "complete",
+  "parentRequirement": "ENG-008",
+  "kernelPath": "src/lib/kernel/twin/",
+  "twinTypes": [
+    { "type": "participant", "phaseRef": "PDT-001", "v1": true },
+    { "type": "community", "phaseRef": "COS-001", "v1": true },
+    { "type": "county", "phaseRef": "CNTY-001", "v1": true },
+    { "type": "institution", "phaseRef": "INST-001", "v1": false },
+    { "type": "mission", "phaseRef": "MDS-001", "v1": false },
+    { "type": "partnership", "phaseRef": "IPS-001", "v1": false },
+    { "type": "statewide_network", "phaseRef": "NISS-M16", "v1": false }
+  ],
+  "twinDimensions": [
+    "current_state", "historical_timeline", "relationships",
+    "participation", "growth", "leadership", "stories",
+    "knowledge", "capacity", "opportunities"
+  ],
+  "refreshStrategies": ["event_driven_incremental", "scheduled_full_rebuild", "on_demand"],
+  "storageTable": "platform.digital_twins",
+  "acceptanceCriteria": "AC-094"
+}

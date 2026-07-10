@@ -1,0 +1,40 @@
+{
+  "version": "1.0.0",
+  "volume": 1,
+  "step": "1.10",
+  "docPath": "docs/volume-01/SEARCH_ARCHITECTURE.md",
+  "masterSequencePath": "docs/volume-01/VOLUME_1_MASTER_SEQUENCE.md",
+  "parentVolume": "EAB-001",
+  "requirementId": "ENG-010",
+  "companionDoc": {
+    "requirementId": "DGE-001",
+    "docPath": "docs/volume-01/DISCOVERY_ENGINE.md",
+    "registryPath": "data/registry/discovery-engine.json"
+  },
+  "title": "Search & Discovery Architecture",
+  "status": "complete",
+  "buildsOn": "ENG-008",
+  "guidingPrinciple": "The right information should find the right person at the right time.",
+  "searchLayers": [
+    "global", "domain", "context", "relationship", "knowledge", "semantic"
+  ],
+  "searchableEntityTypes": [
+    "participant", "community", "mission", "event", "story", "lesson",
+    "playbook", "partnership", "opportunity", "institution", "committee", "resource"
+  ],
+  "rankingFactors": [
+    "relevance", "permissions", "relationship_proximity", "community_context",
+    "freshness", "popularity", "knowledge_quality"
+  ],
+  "indexTable": "platform.search_index",
+  "serviceOwner": "ENG-DS21",
+  "kernelPath": "src/lib/kernel/search/",
+  "phaseRefs": ["PCN-M12", "PRN-001", "CKLS-001"],
+  "acceptanceCriteria": "AC-097",
+  "nextRecommendedStep": {
+    "id": "1.11",
+    "requirementId": "ENG-011",
+    "artifact": "docs/volume-01/MAP_GEOGRAPHIC_ARCHITECTURE.md",
+    "status": "done"
+  }
+}

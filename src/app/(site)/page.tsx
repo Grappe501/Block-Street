@@ -98,12 +98,13 @@ export default function HomePage() {
         <div className="mx-auto max-w-6xl px-4">
           <p className="text-sm font-semibold uppercase tracking-wider text-brand-300">Fill the Map</p>
           <h2 className="mt-2 text-2xl font-bold">Who&apos;s represented? Who needs you?</h2>
-          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
             {[
               { label: "Counties", value: stats.totalCounties, sub: "All have a hub" },
-              { label: "Schools Listed", value: stats.v1Institutions, sub: "Colleges & universities" },
+              { label: "Post-Secondary", value: stats.v1Institutions, sub: "Colleges & trade" },
+              { label: "High Schools", value: stats.totalHighSchools, sub: "Public · every county" },
+              { label: "Private & Charter", value: stats.totalPrivateCharterSchools, sub: "145 private · 102 charter" },
               { label: "Need Organizers", value: stats.needsOrganizer, sub: "Outreach targets" },
-              { label: "Building", value: stats.building, sub: "Networks forming" },
             ].map((s) => (
               <div key={s.label} className="rounded-lg bg-slate-800 p-4">
                 <p className="text-3xl font-bold text-brand-400">{s.value}</p>

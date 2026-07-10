@@ -1,0 +1,41 @@
+{
+  "version": "1.0.0",
+  "volume": 1,
+  "step": "1.12",
+  "docPath": "docs/volume-01/COMMUNICATION_ARCHITECTURE.md",
+  "masterSequencePath": "docs/volume-01/VOLUME_1_MASTER_SEQUENCE.md",
+  "parentVolume": "EAB-001",
+  "requirementId": "ENG-012",
+  "companionDoc": {
+    "requirementId": "AME-001",
+    "docPath": "docs/volume-01/ATTENTION_MANAGEMENT_ENGINE.md",
+    "registryPath": "data/registry/attention-management-engine.json"
+  },
+  "title": "Notification & Communication Architecture",
+  "status": "complete",
+  "buildsOn": "ENG-009",
+  "guidingPrinciple": "Communication should create clarity, not noise.",
+  "communicationLayers": [
+    "platform_events",
+    "notification_engine",
+    "communication_rules",
+    "delivery_channels",
+    "participant_experience"
+  ],
+  "priorities": ["critical", "important", "informational", "optional"],
+  "categories": [
+    "community", "mission", "volunteer", "leadership", "mentorship",
+    "knowledge", "story", "growth", "partnership", "administrative", "system"
+  ],
+  "channelsV1": ["in_app", "email"],
+  "kernelPath": "src/lib/kernel/notifications/",
+  "serviceOwner": "ENG-DS19",
+  "phaseRefs": ["CAM-001", "CCNET-001", "TPS-001"],
+  "acceptanceCriteria": "AC-101",
+  "nextRecommendedStep": {
+    "id": "1.13",
+    "requirementId": "ENG-013",
+    "artifact": "docs/volume-01/AI_INTELLIGENCE_ARCHITECTURE.md",
+    "status": "done"
+  }
+}

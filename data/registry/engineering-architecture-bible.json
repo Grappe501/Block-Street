@@ -8,7 +8,7 @@
   "status": "in_progress",
   "priority": "critical",
   "readAfter": "MAB-001",
-  "stepsComplete": 3,
+  "stepsComplete": 13,
   "stepsTotal": 14,
   "steps": [
     {
@@ -41,7 +41,9 @@
       "name": "Database Architecture",
       "requirement": "ENG-004",
       "artifact": "docs/volume-01/DATABASE_ARCHITECTURE.md",
-      "status": "pending"
+      "registryPath": "data/registry/database-architecture.json",
+      "companion": "docs/volume-01/DIGITAL_CONSTITUTION_LAYER.md",
+      "status": "done"
     },
     {
       "id": "1.5",
@@ -55,63 +57,81 @@
       "name": "Authentication & Authorization",
       "requirement": "ENG-006",
       "artifact": "docs/volume-01/AUTHORIZATION_ARCHITECTURE.md",
-      "status": "pending"
+      "registryPath": "data/registry/authorization-architecture.json",
+      "companion": "docs/volume-01/PERMISSION_RESOLUTION_ENGINE.md",
+      "status": "done"
     },
     {
       "id": "1.7",
       "name": "Domain Service Architecture",
       "requirement": "ENG-007",
       "artifact": "docs/volume-01/DOMAIN_SERVICE_ARCHITECTURE.md",
-      "status": "pending"
+      "registryPath": "data/registry/domain-service-architecture.json",
+      "companion": "docs/volume-01/SERVICE_REGISTRY.md",
+      "status": "done"
     },
     {
       "id": "1.8",
       "name": "Community Knowledge Graph Architecture",
       "requirement": "ENG-008",
       "artifact": "docs/volume-01/COMMUNITY_KNOWLEDGE_GRAPH_ARCHITECTURE.md",
-      "status": "pending"
+      "registryPath": "data/registry/community-knowledge-graph-architecture.json",
+      "companion": "docs/volume-01/LIVING_DIGITAL_TWIN_ARCHITECTURE.md",
+      "status": "done"
     },
     {
       "id": "1.9",
       "name": "Event & Timeline Architecture",
       "requirement": "ENG-009",
       "artifact": "docs/volume-01/EVENT_TIMELINE_ARCHITECTURE.md",
-      "status": "pending"
+      "registryPath": "data/registry/event-timeline-architecture.json",
+      "companion": "docs/volume-01/LIVING_HISTORY_ENGINE.md",
+      "status": "done"
     },
     {
       "id": "1.10",
-      "name": "Search Architecture",
+      "name": "Search & Discovery Architecture",
       "requirement": "ENG-010",
       "artifact": "docs/volume-01/SEARCH_ARCHITECTURE.md",
-      "status": "pending"
+      "registryPath": "data/registry/search-architecture.json",
+      "companion": "docs/volume-01/DISCOVERY_ENGINE.md",
+      "status": "done"
     },
     {
       "id": "1.11",
       "name": "Map & Geographic Architecture",
       "requirement": "ENG-011",
       "artifact": "docs/volume-01/MAP_GEOGRAPHIC_ARCHITECTURE.md",
-      "status": "pending"
+      "registryPath": "data/registry/map-geographic-architecture.json",
+      "companion": "docs/volume-01/ARKANSAS_DIGITAL_TWIN_ARCHITECTURE.md",
+      "status": "done"
     },
     {
       "id": "1.12",
       "name": "Notification & Communication Architecture",
       "requirement": "ENG-012",
       "artifact": "docs/volume-01/COMMUNICATION_ARCHITECTURE.md",
-      "status": "pending"
+      "registryPath": "data/registry/communication-architecture.json",
+      "companion": "docs/volume-01/ATTENTION_MANAGEMENT_ENGINE.md",
+      "status": "done"
     },
     {
       "id": "1.13",
       "name": "AI & Intelligence Technical Architecture",
       "requirement": "ENG-013",
       "artifact": "docs/volume-01/AI_INTELLIGENCE_ARCHITECTURE.md",
-      "status": "pending"
+      "registryPath": "data/registry/ai-intelligence-architecture.json",
+      "companion": "docs/volume-01/COMMUNITY_INTELLIGENCE_FABRIC.md",
+      "status": "done"
     },
     {
       "id": "1.14",
       "name": "Deployment, Testing & Release Architecture",
       "requirement": "ENG-014",
       "artifact": "docs/volume-01/DEPLOYMENT_TESTING_RELEASE_ARCHITECTURE.md",
-      "status": "pending"
+      "registryPath": "data/registry/deployment-testing-release-architecture.json",
+      "companion": "docs/volume-01/COMMUNITY_READINESS_COMMAND_CENTER.md",
+      "status": "done"
     }
   ],
   "v1Stack": {

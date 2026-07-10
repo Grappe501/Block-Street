@@ -24,3 +24,7 @@ Thumbs.db
 # TypeScript
 *.tsbuildinfo
 next-env.d.ts
+
+# ADE scrape cache (regenerate via scripts/build-*-registry.mjs)
+data/raw/
+agent-tools-*.html

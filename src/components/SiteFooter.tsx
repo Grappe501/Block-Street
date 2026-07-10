@@ -12,7 +12,9 @@ export function SiteFooter() {
           </div>
           <div className="flex gap-6 text-sm text-slate-600">
             <Link href="/map" className="hover:text-brand-600">Arkansas Map</Link>
-            <Link href="/schools" className="hover:text-brand-600">Schools</Link>
+            <Link href="/schools" className="hover:text-brand-600">Colleges</Link>
+            <Link href="/high-schools" className="hover:text-brand-600">High Schools</Link>
+            <Link href="/private-schools" className="hover:text-brand-600">Private &amp; Charter</Link>
             <Link href="/admin" className="hover:text-brand-600">Director Workbench</Link>
           </div>
         </div>

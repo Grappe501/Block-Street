@@ -1,0 +1,39 @@
+{
+  "version": "1.0.0",
+  "volume": 1,
+  "step": "1.11",
+  "docPath": "docs/volume-01/MAP_GEOGRAPHIC_ARCHITECTURE.md",
+  "masterSequencePath": "docs/volume-01/VOLUME_1_MASTER_SEQUENCE.md",
+  "parentVolume": "EAB-001",
+  "requirementId": "ENG-011",
+  "companionDoc": {
+    "requirementId": "ADT-002",
+    "docPath": "docs/volume-01/ARKANSAS_DIGITAL_TWIN_ARCHITECTURE.md",
+    "registryPath": "data/registry/arkansas-digital-twin-architecture.json",
+    "buildsOnInit": "ADT-001"
+  },
+  "title": "Map & Geographic Architecture",
+  "status": "complete",
+  "buildsOn": "ENG-004",
+  "guidingPrinciple": "Communities exist in places, but relationships connect those places.",
+  "geoHierarchy": [
+    "state", "region", "county", "city", "institution", "community", "venue"
+  ],
+  "coreMaps": [
+    "arkansas_community", "community_coverage", "growth", "opportunity",
+    "partnership", "capacity", "story_atlas", "impact"
+  ],
+  "mapEngine": "mapbox_gl_v1",
+  "registryOwner": "ENG-DS08",
+  "kernelPath": "src/lib/kernel/geo/",
+  "packagesPath": "packages/maps/",
+  "v1Route": "/map",
+  "phaseRefs": ["ADT-001", "CNTY-001", "INST-001", "NISS-M16"],
+  "acceptanceCriteria": "AC-099",
+  "nextRecommendedStep": {
+    "id": "1.12",
+    "requirementId": "ENG-012",
+    "artifact": "docs/volume-01/COMMUNICATION_ARCHITECTURE.md",
+    "status": "done"
+  }
+}

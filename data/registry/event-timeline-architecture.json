@@ -1,0 +1,45 @@
+{
+  "version": "1.0.0",
+  "volume": 1,
+  "step": "1.9",
+  "docPath": "docs/volume-01/EVENT_TIMELINE_ARCHITECTURE.md",
+  "masterSequencePath": "docs/volume-01/VOLUME_1_MASTER_SEQUENCE.md",
+  "parentVolume": "EAB-001",
+  "requirementId": "ENG-009",
+  "companionDoc": {
+    "requirementId": "LHE-001",
+    "docPath": "docs/volume-01/LIVING_HISTORY_ENGINE.md",
+    "registryPath": "data/registry/living-history-engine.json"
+  },
+  "title": "Event & Timeline Architecture",
+  "status": "complete",
+  "buildsOn": "ENG-004",
+  "guidingPrinciple": "Every meaningful action becomes part of the community's memory.",
+  "canonicalStore": "platform.domain_events",
+  "kernelPath": "src/lib/kernel/events/",
+  "timelineHierarchy": [
+    "platform", "state", "county", "community",
+    "initiative", "mission", "participant"
+  ],
+  "entityTimelines": [
+    "participant", "community", "mission", "experience",
+    "initiative", "story", "knowledge", "leadership", "relationship"
+  ],
+  "eventCategories": [
+    "identity", "community", "mission", "volunteer", "leadership",
+    "story", "knowledge", "growth", "capacity", "partnership",
+    "communication", "system"
+  ],
+  "immutableEventExamples": [
+    "community.launched", "mission.completed", "participant.registered",
+    "story.published", "lesson.captured"
+  ],
+  "phaseRefs": ["CJT-001", "CLS-001", "LCN-001", "PEL-001"],
+  "acceptanceCriteria": "AC-095",
+  "nextRecommendedStep": {
+    "id": "1.10",
+    "requirementId": "ENG-010",
+    "artifact": "docs/volume-01/SEARCH_ARCHITECTURE.md",
+    "status": "done"
+  }
+}

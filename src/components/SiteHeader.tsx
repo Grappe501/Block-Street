@@ -16,7 +16,9 @@ export function SiteHeader() {
         </Link>
         <nav className="hidden items-center gap-6 text-sm font-medium text-slate-600 md:flex">
           <Link href="/map" className="hover:text-brand-600">Map</Link>
-          <Link href="/schools" className="hover:text-brand-600">Schools</Link>
+          <Link href="/schools" className="hover:text-brand-600">Colleges</Link>
+          <Link href="/high-schools" className="hover:text-brand-600">High Schools</Link>
+          <Link href="/private-schools" className="hover:text-brand-600">Private &amp; Charter</Link>
           <Link href="/join" className="hover:text-brand-600">Join</Link>
           <Link href="/admin" className="hover:text-brand-600">Director</Link>
         </nav>

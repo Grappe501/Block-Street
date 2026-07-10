@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/volume-01/DISCOVERY_ENGINE.md",
+  "requirementId": "DGE-001",
+  "title": "Discovery Engine",
+  "status": "complete",
+  "parentRequirement": "ENG-010",
+  "kernelPath": "src/lib/kernel/discovery/",
+  "dataSources": [
+    "community_knowledge_graph",
+    "community_brain",
+    "personal_organizing_network",
+    "living_digital_twin",
+    "intelligence_service",
+    "search_index"
+  ],
+  "surfaces": [
+    "personal_hq", "community_home", "county_organizing",
+    "mission_planning", "empty_search", "welcome_journey"
+  ],
+  "v1CardTypes": ["volunteer_opportunity", "nearby_event", "related_story"],
+  "policies": ["suggest_never_decide", "dismissible", "no_engagement_traps", "explainable"],
+  "acceptanceCriteria": "AC-098"
+}

@@ -1,0 +1,776 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2026-07-10",
+  "totalPrivateSchools": 145,
+  "totalCharterSchools": 102,
+  "countiesWithPrivateSchool": 44,
+  "countiesWithCharterSchool": 21,
+  "countiesWithPrivateOrCharter": 51,
+  "totalCounties": 75,
+  "countiesWithoutPrivateSchool": [
+    "ashley",
+    "bradley",
+    "calhoun",
+    "clay",
+    "cleveland",
+    "dallas",
+    "franklin",
+    "fulton",
+    "grant",
+    "independence",
+    "izard",
+    "jackson",
+    "lawrence",
+    "lincoln",
+    "little-river",
+    "madison",
+    "marion",
+    "monroe",
+    "montgomery",
+    "nevada",
+    "newton",
+    "perry",
+    "phillips",
+    "poinsett",
+    "polk",
+    "prairie",
+    "st-francis",
+    "searcy",
+    "sebastian",
+    "stone",
+    "woodruff"
+  ],
+  "orphanCount": 0,
+  "byCountyPrivate": {
+    "carroll": [
+      "academy-of-excellence-private",
+      "calvary-christian-academy-be-private",
+      "clear-spring-school-private"
+    ],
+    "hot-spring": [
+      "ambassador-baptist-academy-private"
+    ],
+    "faulkner": [
+      "ambassador-baptist-academy-private-2303000",
+      "conway-christian-school-conw-private",
+      "st-joseph-catholic-school-c-private"
+    ],
+    "benton": [
+      "anh-montessori-school-private",
+      "bentonville-7th-day-adventist-private",
+      "bentonville-christian-academy-private",
+      "clover-community-school-private",
+      "fayetteville-christian-school-private-0405000",
+      "first-baptist-christian-center-private",
+      "gentry-mennonite-school-private",
+      "holiness-bible-school-private",
+      "life-way-christian-school-ce-private",
+      "ozark-adventist-school-gentr-private",
+      "ozark-adventist-school-gentr-private-0403000",
+      "providence-classical-christian-private",
+      "st-joseph-catholic-school-f-private",
+      "st-vincent-de-paul-catholic-private",
+      "st-vincent-de-paul-catholic-private-0407000",
+      "thaden-school-private",
+      "walnut-farm-montessori-school-private"
+    ],
+    "washington": [
+      "anthem-classical-academy-private",
+      "fayetteville-christian-school-private",
+      "fayetteville-christian-school-private-7204000",
+      "fayetteville-christian-school-private-7201000",
+      "fayetteville-creative-school-private",
+      "first-school-of-first-united-p-private",
+      "oak-grove-montessori-school-private",
+      "prism-education-center-private",
+      "salem-lutheran-schools-private",
+      "shiloh-christian-schools-spr-private",
+      "st-joseph-catholic-school-f-private-7201000",
+      "st-joseph-catholic-school-f-private-7203000",
+      "the-hill-school-private"
+    ],
+    "boone": [
+      "arkansas-childrens-university-private",
+      "bible-baptist-christian-school-private",
+      "bible-baptist-christian-school-private-0503000",
+      "crestline-academy-private",
+      "harrison-seventh-day-adventist-private",
+      "hillcrest-christian-school-private"
+    ],
+    "pulaski": [
+      "baseline-bilingual-school-private",
+      "catholic-high-school-for-boys-private",
+      "christ-the-king-school-littl-private",
+      "easter-seals-the-academy-private",
+      "immaculate-conception-north-private",
+      "immaculate-conception-north-private-6003000",
+      "immaculate-heart-of-mary-nor-private",
+      "jacksonville-christian-private",
+      "mount-st-mary-academy-littl-private",
+      "north-little-rock-catholic-aca-private",
+      "our-lady-of-holy-souls-littl-private",
+      "shiloh-excel-christian-school-private",
+      "st-theresa-catholic-school-private",
+      "the-huda-academy-lr-private"
+    ],
+    "craighead": [
+      "blessed-sacrament-jonesboro-private",
+      "blessed-sacrament-jonesboro-private-1602000",
+      "blessed-sacrament-jonesboro-private-1608000",
+      "blessed-sacrament-jonesboro-private-1612000",
+      "ridgefield-christian-school-private"
+    ],
+    "scott": [
+      "bryant-christian-academy-private",
+      "cornerstone-christian-academy-private-6303000",
+      "our-lady-of-fatima-benton-private"
+    ],
+    "lonoke": [
+      "cabot-montessori-school-private",
+      "jacksonville-christian-private-4304000"
+    ],
+    "saline": [
+      "calvary-christian-academy-for-private"
+    ],
+    "ouachita": [
+      "camden-christian-academy-private",
+      "victory-christian-school-private"
+    ],
+    "white": [
+      "center-hill-school-private",
+      "cornerstone-christian-academy-private",
+      "cornerstone-christian-academy-private-7301000",
+      "crosspoint-preparatory-school-private",
+      "crosspoint-preparatory-school-private-7311000",
+      "harding-academy-searcy-private",
+      "harding-academy-searcy-private-7311000",
+      "liberty-christian-school-sea-private",
+      "liberty-christian-school-sea-private-7311000",
+      "lighthouse-christian-academy-private-7302000",
+      "trinity-christian-school-bra-private",
+      "trinity-christian-school-bradf-private"
+    ],
+    "sevier": [
+      "christ-the-king-school-ft-sm-private",
+      "first-lutheran-school-fort-s-private",
+      "fort-smith-montessori-private",
+      "harvest-time-christian-school-private",
+      "immaculate-conception-school-private",
+      "joshua-academy-private",
+      "trinity-junior-high-school-f-private",
+      "union-christian-academy-fort-private"
+    ],
+    "garland": [
+      "christian-ministries-private",
+      "gospel-christian-academy-private",
+      "hot-springs-community-school-private",
+      "lighthouse-christian-academy-private",
+      "st-johns-catholic-school-h-private",
+      "st-johns-catholic-school-hot-private",
+      "st-johns-catholic-school-hot-private-2605000"
+    ],
+    "clark": [
+      "clark-county-christian-academy-private"
+    ],
+    "columbia": [
+      "columbia-christian-school-private"
+    ],
+    "chicot": [
+      "cornerstone-christian-academy-private-0903000"
+    ],
+    "drew": [
+      "cornerstone-christian-academy-private-2202000"
+    ],
+    "desha": [
+      "cornerstone-christian-academy-private-2105000"
+    ],
+    "greene": [
+      "crowleys-ridge-academy-para-private",
+      "st-marys-school-paragould-private"
+    ],
+    "pike": [
+      "ewing-adventist-jr-academy-private",
+      "ouachita-hills-academy-private",
+      "trinity-holiness-private"
+    ],
+    "van-buren": [
+      "first-baptist-christian-center-private-7102000"
+    ],
+    "cleburne": [
+      "full-gospel-academy-private"
+    ],
+    "hempstead": [
+      "garrett-memorial-christian-sch-private"
+    ],
+    "johnson": [
+      "harmony-amish-mennonite-scho-private"
+    ],
+    "arkansas": [
+      "holy-rosary-catholic-school-private",
+      "st-johns-lutheran-stuttgar-private"
+    ],
+    "crawford": [
+      "joshua-academy-private-1705000"
+    ],
+    "lee": [
+      "lee-academy-private"
+    ],
+    "sharp": [
+      "legacy-academy-dequeen-private",
+      "legacy-academy-dequeen-private-6703000",
+      "winthrop-baptist-academy-private"
+    ],
+    "union": [
+      "maranatha-baptist-christian-private",
+      "west-side-christian-school-e-private",
+      "west-side-christian-school-e-private-7001000"
+    ],
+    "baxter": [
+      "mtn-home-christian-academy-private",
+      "mtn-home-seventh-day-adventis-private"
+    ],
+    "howard": [
+      "nashville-christian-day-school-private"
+    ],
+    "cross": [
+      "new-life-christian-academy-w-private"
+    ],
+    "yell": [
+      "pottsville-assembly-of-god-private",
+      "russellville-baptist-academy-private",
+      "st-johns-catholic-school-r-private"
+    ],
+    "pope": [
+      "pottsville-assembly-of-god-private-5804000",
+      "russellville-baptist-academy-private-5805000",
+      "russellville-baptist-academy-private-5804000",
+      "st-johns-catholic-school-r-private-5805000",
+      "st-johns-catholic-school-rus-private",
+      "valley-christian-academy-private",
+      "valley-christian-academy-private-5805000"
+    ],
+    "jefferson": [
+      "ridgeway-christian-school-pi-private"
+    ],
+    "conway": [
+      "sacred-heart-catholic-morril-private"
+    ],
+    "lafayette": [
+      "south-arkansas-christian-schoo-private"
+    ],
+    "logan": [
+      "st-joseph-catholic-school-p-private",
+      "subiaco-academy-subiaco-private"
+    ],
+    "randolph": [
+      "st-paul-catholic-school-poc-private"
+    ],
+    "miller": [
+      "texarkana-christian-academy-private",
+      "trinity-christian-school-tex-private"
+    ],
+    "mississippi": [
+      "the-delta-school-private"
+    ],
+    "crittenden": [
+      "west-memphis-christian-west-private"
+    ]
+  },
+  "byCountyCharter": {
+    "baxter": [
+      "mountain-home-career-academies-charter",
+      "guy-berry-college-and-career-academy-charter"
+    ],
+    "benton": [
+      "rogers-academy-of-leadership-and-innovation-charter",
+      "arkansas-arts-academy-elementary-charter",
+      "arkansas-arts-academy-high-school-charter",
+      "founders-classical-academies-of-arkansas-rogers-charter",
+      "founders-classical-academies-of-arkansas-bentonville-charter",
+      "founders-classical-academies-of-arkansas-high-school-rogers-charter",
+      "founders-classical-academies-of-arkansas-west-little-rock-elementary-charter",
+      "founders-classical-academies-of-arkansas-west-little-rock-charter",
+      "ischool-virtual-academy-of-arkansas-charter",
+      "arkansas-connections-academy-high-charter",
+      "school-for-advanced-studies-nw-ark-charter",
+      "garfield-scholars-39-academy-charter"
+    ],
+    "crawford": [
+      "mountainburg-middle-school-brain-academy-charter",
+      "mountainburg-high-school-charter"
+    ],
+    "crittenden": [
+      "the-academies-of-west-memphis-charter-school-charter"
+    ],
+    "cross": [
+      "cross-county-elementary-tech-academy-charter",
+      "cross-county-high-school-a-new-tech-school-charter"
+    ],
+    "faulkner": [
+      "vilonia-pathways-academy-charter"
+    ],
+    "garland": [
+      "hot-springs-junior-academy-charter",
+      "hot-springs-world-class-high-school-charter"
+    ],
+    "independence": [
+      "batesville-junior-high-school-charter-charter",
+      "batesville-high-school-charter-charter",
+      "southside-junior-high-school-charter",
+      "southside-charter-high-school-charter"
+    ],
+    "jackson": [
+      "the-academies-at-newport-high-school-charter"
+    ],
+    "jefferson": [
+      "friendship-aspire-academy-hazel-st-pine-bluff-charter",
+      "friendship-aspire-academy-little-rock-middle-school-charter",
+      "friendship-aspire-academy-southeast-pine-bluff-charter",
+      "friendship-academy-little-rock-elementary-charter",
+      "friendship-aspire-academy-southeast-middle-school-pine-bluff-charter",
+      "friendship-aspire-academy-downtown-pine-bluff-charter",
+      "friendship-aspire-lab-school-for-dyslexia-charter",
+      "friendship-aspire-academy-north-little-rock-elementary-charter"
+    ],
+    "lawrence": [
+      "imboden-area-charter-school-charter"
+    ],
+    "lonoke": [
+      "cabot-panther-academy-charter"
+    ],
+    "mississippi": [
+      "academies-at-rivercrest-high-school-charter"
+    ],
+    "montgomery": [
+      "caddo-academy-charter"
+    ],
+    "phillips": [
+      "kipp-delta-elementary-literacy-academy-charter",
+      "kipp-delta-collegiate-high-school-charter",
+      "kipp-blytheville-college-preparatory-charter",
+      "kipp-blytheville-collegiate-high-school-charter"
+    ],
+    "polk": [
+      "polk-county-virtual-academy-charter"
+    ],
+    "pulaski": [
+      "north-little-rock-center-of-excellence-charter",
+      "maumelle-charter-elementary-charter",
+      "maumelle-charter-high-school-charter",
+      "scott-charter-school-charter",
+      "maumelle-charter-middle-school-charter",
+      "lisa-academy-north-elementary-school-charter",
+      "lisa-academy-west-middle-school-charter",
+      "lisa-academy-west-high-school-charter",
+      "lisa-academy-north-middle-school-charter",
+      "lisa-academy-north-high-school-charter",
+      "lisa-academy-west-elementary-school-charter",
+      "lisa-academy-springdale-charter",
+      "lisa-academy-arkansas-hybrid-school-charter",
+      "lisa-academy-rogers-bentonville-elementary-school-charter",
+      "lisa-academy-rogers-bentonville-middle-school-charter",
+      "lisa-academy-rogers-bentonville-high-school-charter",
+      "lisa-academy-fayetteville-charter",
+      "lisa-academy-fayetteville-middle-school-charter",
+      "arkansas-virtual-academy-elementary-charter",
+      "arkansas-virtual-academy-middle-school-charter",
+      "arkansas-virtual-academy-high-school-charter",
+      "estem-elementary-school-charter",
+      "estem-junior-high-public-charter-school-charter",
+      "estem-high-school-charter",
+      "jacksonville-lighthouse-elementary-charter",
+      "jacksonville-lighthouse-high-school-charter",
+      "jacksonville-lighthouse-middle-school-charter",
+      "graduate-arkansas-charter-high-charter",
+      "premier-high-school-of-little-rock-charter",
+      "premier-high-school-of-fort-smith-charter",
+      "premier-high-school-of-texarkana-charter",
+      "premier-high-school-online-charter",
+      "premier-high-school-of-fayetteville-charter",
+      "premier-high-school-of-russellville-charter",
+      "premier-high-school-of-north-little-rock-charter",
+      "premier-high-school-of-springdale-charter",
+      "exalt-academy-of-southwest-little-rock-charter",
+      "exalt-academy-high-school-charter",
+      "the-excel-center-charter",
+      "the-excel-center-springdale-charter",
+      "ivy-hill-preparatory-academy-charter",
+      "westwind-school-for-performing-arts-school-charter",
+      "academies-of-math-and-science-school-charter"
+    ],
+    "scott": [
+      "miner-academy-charter"
+    ],
+    "sevier": [
+      "fort-smith-virtual-academy-charter",
+      "future-school-of-fort-smith-charter",
+      "institute-for-the-creative-arts-school-charter"
+    ],
+    "st-francis": [
+      "cave-city-middle-school-career-and-collegiate-preparatory-charter",
+      "cave-city-high-career-amp-collegiate-preparatory-school-charter"
+    ],
+    "washington": [
+      "fayetteville-virtual-academy-a-district-conversion-charter-school-charter",
+      "lincoln-high-school-charter",
+      "prairie-grove-high-school-charter",
+      "don-tyson-school-of-innovation-charter",
+      "haas-hall-academy-charter",
+      "haas-hall-academy-jones-center-charter",
+      "haas-hall-academy-rogers-charter",
+      "haas-hall-bentonville-charter",
+      "haas-hall-academy-fort-smith-charter"
+    ]
+  },
+  "byCounty": {
+    "carroll": [
+      "academy-of-excellence-private",
+      "calvary-christian-academy-be-private",
+      "clear-spring-school-private"
+    ],
+    "hot-spring": [
+      "ambassador-baptist-academy-private"
+    ],
+    "faulkner": [
+      "ambassador-baptist-academy-private-2303000",
+      "conway-christian-school-conw-private",
+      "st-joseph-catholic-school-c-private",
+      "vilonia-pathways-academy-charter"
+    ],
+    "benton": [
+      "anh-montessori-school-private",
+      "bentonville-7th-day-adventist-private",
+      "bentonville-christian-academy-private",
+      "clover-community-school-private",
+      "fayetteville-christian-school-private-0405000",
+      "first-baptist-christian-center-private",
+      "gentry-mennonite-school-private",
+      "holiness-bible-school-private",
+      "life-way-christian-school-ce-private",
+      "ozark-adventist-school-gentr-private",
+      "ozark-adventist-school-gentr-private-0403000",
+      "providence-classical-christian-private",
+      "st-joseph-catholic-school-f-private",
+      "st-vincent-de-paul-catholic-private",
+      "st-vincent-de-paul-catholic-private-0407000",
+      "thaden-school-private",
+      "walnut-farm-montessori-school-private",
+      "rogers-academy-of-leadership-and-innovation-charter",
+      "arkansas-arts-academy-elementary-charter",
+      "arkansas-arts-academy-high-school-charter",
+      "founders-classical-academies-of-arkansas-rogers-charter",
+      "founders-classical-academies-of-arkansas-bentonville-charter",
+      "founders-classical-academies-of-arkansas-high-school-rogers-charter",
+      "founders-classical-academies-of-arkansas-west-little-rock-elementary-charter",
+      "founders-classical-academies-of-arkansas-west-little-rock-charter",
+      "ischool-virtual-academy-of-arkansas-charter",
+      "arkansas-connections-academy-high-charter",
+      "school-for-advanced-studies-nw-ark-charter",
+      "garfield-scholars-39-academy-charter"
+    ],
+    "washington": [
+      "anthem-classical-academy-private",
+      "fayetteville-christian-school-private",
+      "fayetteville-christian-school-private-7204000",
+      "fayetteville-christian-school-private-7201000",
+      "fayetteville-creative-school-private",
+      "first-school-of-first-united-p-private",
+      "oak-grove-montessori-school-private",
+      "prism-education-center-private",
+      "salem-lutheran-schools-private",
+      "shiloh-christian-schools-spr-private",
+      "st-joseph-catholic-school-f-private-7201000",
+      "st-joseph-catholic-school-f-private-7203000",
+      "the-hill-school-private",
+      "fayetteville-virtual-academy-a-district-conversion-charter-school-charter",
+      "lincoln-high-school-charter",
+      "prairie-grove-high-school-charter",
+      "don-tyson-school-of-innovation-charter",
+      "haas-hall-academy-charter",
+      "haas-hall-academy-jones-center-charter",
+      "haas-hall-academy-rogers-charter",
+      "haas-hall-bentonville-charter",
+      "haas-hall-academy-fort-smith-charter"
+    ],
+    "boone": [
+      "arkansas-childrens-university-private",
+      "bible-baptist-christian-school-private",
+      "bible-baptist-christian-school-private-0503000",
+      "crestline-academy-private",
+      "harrison-seventh-day-adventist-private",
+      "hillcrest-christian-school-private"
+    ],
+    "pulaski": [
+      "baseline-bilingual-school-private",
+      "catholic-high-school-for-boys-private",
+      "christ-the-king-school-littl-private",
+      "easter-seals-the-academy-private",
+      "immaculate-conception-north-private",
+      "immaculate-conception-north-private-6003000",
+      "immaculate-heart-of-mary-nor-private",
+      "jacksonville-christian-private",
+      "mount-st-mary-academy-littl-private",
+      "north-little-rock-catholic-aca-private",
+      "our-lady-of-holy-souls-littl-private",
+      "shiloh-excel-christian-school-private",
+      "st-theresa-catholic-school-private",
+      "the-huda-academy-lr-private",
+      "north-little-rock-center-of-excellence-charter",
+      "maumelle-charter-elementary-charter",
+      "maumelle-charter-high-school-charter",
+      "scott-charter-school-charter",
+      "maumelle-charter-middle-school-charter",
+      "lisa-academy-north-elementary-school-charter",
+      "lisa-academy-west-middle-school-charter",
+      "lisa-academy-west-high-school-charter",
+      "lisa-academy-north-middle-school-charter",
+      "lisa-academy-north-high-school-charter",
+      "lisa-academy-west-elementary-school-charter",
+      "lisa-academy-springdale-charter",
+      "lisa-academy-arkansas-hybrid-school-charter",
+      "lisa-academy-rogers-bentonville-elementary-school-charter",
+      "lisa-academy-rogers-bentonville-middle-school-charter",
+      "lisa-academy-rogers-bentonville-high-school-charter",
+      "lisa-academy-fayetteville-charter",
+      "lisa-academy-fayetteville-middle-school-charter",
+      "arkansas-virtual-academy-elementary-charter",
+      "arkansas-virtual-academy-middle-school-charter",
+      "arkansas-virtual-academy-high-school-charter",
+      "estem-elementary-school-charter",
+      "estem-junior-high-public-charter-school-charter",
+      "estem-high-school-charter",
+      "jacksonville-lighthouse-elementary-charter",
+      "jacksonville-lighthouse-high-school-charter",
+      "jacksonville-lighthouse-middle-school-charter",
+      "graduate-arkansas-charter-high-charter",
+      "premier-high-school-of-little-rock-charter",
+      "premier-high-school-of-fort-smith-charter",
+      "premier-high-school-of-texarkana-charter",
+      "premier-high-school-online-charter",
+      "premier-high-school-of-fayetteville-charter",
+      "premier-high-school-of-russellville-charter",
+      "premier-high-school-of-north-little-rock-charter",
+      "premier-high-school-of-springdale-charter",
+      "exalt-academy-of-southwest-little-rock-charter",
+      "exalt-academy-high-school-charter",
+      "the-excel-center-charter",
+      "the-excel-center-springdale-charter",
+      "ivy-hill-preparatory-academy-charter",
+      "westwind-school-for-performing-arts-school-charter",
+      "academies-of-math-and-science-school-charter"
+    ],
+    "craighead": [
+      "blessed-sacrament-jonesboro-private",
+      "blessed-sacrament-jonesboro-private-1602000",
+      "blessed-sacrament-jonesboro-private-1608000",
+      "blessed-sacrament-jonesboro-private-1612000",
+      "ridgefield-christian-school-private"
+    ],
+    "scott": [
+      "bryant-christian-academy-private",
+      "cornerstone-christian-academy-private-6303000",
+      "our-lady-of-fatima-benton-private",
+      "miner-academy-charter"
+    ],
+    "lonoke": [
+      "cabot-montessori-school-private",
+      "jacksonville-christian-private-4304000",
+      "cabot-panther-academy-charter"
+    ],
+    "saline": [
+      "calvary-christian-academy-for-private"
+    ],
+    "ouachita": [
+      "camden-christian-academy-private",
+      "victory-christian-school-private"
+    ],
+    "white": [
+      "center-hill-school-private",
+      "cornerstone-christian-academy-private",
+      "cornerstone-christian-academy-private-7301000",
+      "crosspoint-preparatory-school-private",
+      "crosspoint-preparatory-school-private-7311000",
+      "harding-academy-searcy-private",
+      "harding-academy-searcy-private-7311000",
+      "liberty-christian-school-sea-private",
+      "liberty-christian-school-sea-private-7311000",
+      "lighthouse-christian-academy-private-7302000",
+      "trinity-christian-school-bra-private",
+      "trinity-christian-school-bradf-private"
+    ],
+    "sevier": [
+      "christ-the-king-school-ft-sm-private",
+      "first-lutheran-school-fort-s-private",
+      "fort-smith-montessori-private",
+      "harvest-time-christian-school-private",
+      "immaculate-conception-school-private",
+      "joshua-academy-private",
+      "trinity-junior-high-school-f-private",
+      "union-christian-academy-fort-private",
+      "fort-smith-virtual-academy-charter",
+      "future-school-of-fort-smith-charter",
+      "institute-for-the-creative-arts-school-charter"
+    ],
+    "garland": [
+      "christian-ministries-private",
+      "gospel-christian-academy-private",
+      "hot-springs-community-school-private",
+      "lighthouse-christian-academy-private",
+      "st-johns-catholic-school-h-private",
+      "st-johns-catholic-school-hot-private",
+      "st-johns-catholic-school-hot-private-2605000",
+      "hot-springs-junior-academy-charter",
+      "hot-springs-world-class-high-school-charter"
+    ],
+    "clark": [
+      "clark-county-christian-academy-private"
+    ],
+    "columbia": [
+      "columbia-christian-school-private"
+    ],
+    "chicot": [
+      "cornerstone-christian-academy-private-0903000"
+    ],
+    "drew": [
+      "cornerstone-christian-academy-private-2202000"
+    ],
+    "desha": [
+      "cornerstone-christian-academy-private-2105000"
+    ],
+    "greene": [
+      "crowleys-ridge-academy-para-private",
+      "st-marys-school-paragould-private"
+    ],
+    "pike": [
+      "ewing-adventist-jr-academy-private",
+      "ouachita-hills-academy-private",
+      "trinity-holiness-private"
+    ],
+    "van-buren": [
+      "first-baptist-christian-center-private-7102000"
+    ],
+    "cleburne": [
+      "full-gospel-academy-private"
+    ],
+    "hempstead": [
+      "garrett-memorial-christian-sch-private"
+    ],
+    "johnson": [
+      "harmony-amish-mennonite-scho-private"
+    ],
+    "arkansas": [
+      "holy-rosary-catholic-school-private",
+      "st-johns-lutheran-stuttgar-private"
+    ],
+    "crawford": [
+      "joshua-academy-private-1705000",
+      "mountainburg-middle-school-brain-academy-charter",
+      "mountainburg-high-school-charter"
+    ],
+    "lee": [
+      "lee-academy-private"
+    ],
+    "sharp": [
+      "legacy-academy-dequeen-private",
+      "legacy-academy-dequeen-private-6703000",
+      "winthrop-baptist-academy-private"
+    ],
+    "union": [
+      "maranatha-baptist-christian-private",
+      "west-side-christian-school-e-private",
+      "west-side-christian-school-e-private-7001000"
+    ],
+    "baxter": [
+      "mtn-home-christian-academy-private",
+      "mtn-home-seventh-day-adventis-private",
+      "mountain-home-career-academies-charter",
+      "guy-berry-college-and-career-academy-charter"
+    ],
+    "howard": [
+      "nashville-christian-day-school-private"
+    ],
+    "cross": [
+      "new-life-christian-academy-w-private",
+      "cross-county-elementary-tech-academy-charter",
+      "cross-county-high-school-a-new-tech-school-charter"
+    ],
+    "yell": [
+      "pottsville-assembly-of-god-private",
+      "russellville-baptist-academy-private",
+      "st-johns-catholic-school-r-private"
+    ],
+    "pope": [
+      "pottsville-assembly-of-god-private-5804000",
+      "russellville-baptist-academy-private-5805000",
+      "russellville-baptist-academy-private-5804000",
+      "st-johns-catholic-school-r-private-5805000",
+      "st-johns-catholic-school-rus-private",
+      "valley-christian-academy-private",
+      "valley-christian-academy-private-5805000"
+    ],
+    "jefferson": [
+      "ridgeway-christian-school-pi-private",
+      "friendship-aspire-academy-hazel-st-pine-bluff-charter",
+      "friendship-aspire-academy-little-rock-middle-school-charter",
+      "friendship-aspire-academy-southeast-pine-bluff-charter",
+      "friendship-academy-little-rock-elementary-charter",
+      "friendship-aspire-academy-southeast-middle-school-pine-bluff-charter",
+      "friendship-aspire-academy-downtown-pine-bluff-charter",
+      "friendship-aspire-lab-school-for-dyslexia-charter",
+      "friendship-aspire-academy-north-little-rock-elementary-charter"
+    ],
+    "conway": [
+      "sacred-heart-catholic-morril-private"
+    ],
+    "lafayette": [
+      "south-arkansas-christian-schoo-private"
+    ],
+    "logan": [
+      "st-joseph-catholic-school-p-private",
+      "subiaco-academy-subiaco-private"
+    ],
+    "randolph": [
+      "st-paul-catholic-school-poc-private"
+    ],
+    "miller": [
+      "texarkana-christian-academy-private",
+      "trinity-christian-school-tex-private"
+    ],
+    "mississippi": [
+      "the-delta-school-private",
+      "academies-at-rivercrest-high-school-charter"
+    ],
+    "crittenden": [
+      "west-memphis-christian-west-private",
+      "the-academies-of-west-memphis-charter-school-charter"
+    ],
+    "independence": [
+      "batesville-junior-high-school-charter-charter",
+      "batesville-high-school-charter-charter",
+      "southside-junior-high-school-charter",
+      "southside-charter-high-school-charter"
+    ],
+    "jackson": [
+      "the-academies-at-newport-high-school-charter"
+    ],
+    "lawrence": [
+      "imboden-area-charter-school-charter"
+    ],
+    "montgomery": [
+      "caddo-academy-charter"
+    ],
+    "phillips": [
+      "kipp-delta-elementary-literacy-academy-charter",
+      "kipp-delta-collegiate-high-school-charter",
+      "kipp-blytheville-college-preparatory-charter",
+      "kipp-blytheville-collegiate-high-school-charter"
+    ],
+    "polk": [
+      "polk-county-virtual-academy-charter"
+    ],
+    "st-francis": [
+      "cave-city-middle-school-career-and-collegiate-preparatory-charter",
+      "cave-city-high-career-amp-collegiate-preparatory-school-charter"
+    ]
+  }
+}

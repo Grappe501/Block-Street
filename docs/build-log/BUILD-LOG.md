@@ -18,6 +18,259 @@
 
 ---
 
+## 2026-07-10 — Public High School Registry (All Counties · ADE)
+
+**Registry:** `high-schools.json` · `high-school-coverage.json` · **LS-P2b**
+
+### What Changed
+
+- **272 public high schools** from Arkansas Department of Education County List — School (2025-2026)
+- **All 75 counties** have at least one public high school profile
+- Routes: `/high-schools` directory by county · `/high-schools/[slug]` profile pages
+- County pages list public high schools alongside post-secondary schools
+- Build script: `scripts/build-high-schools-registry.mjs` (re-fetch from ADE)
+
+---
+
+## 2026-07-10 — Post-Secondary Registry Expansion (All Types · Every County)
+
+**Registry:** `institutions.json` · `county-post-secondary-service.json` · **LS-P2**
+
+### What Changed
+
+- Expanded from **23** to **67** post-secondary institutions
+- Types: universities, colleges, **community colleges**, **technical colleges**, **trade schools**, **nursing colleges**
+- **46 counties** with a local campus; **all 75 counties** covered via district service map
+- County pages show local schools + nearby/district-served options
+- Schools directory renamed to **Arkansas Post-Secondary Schools**
+- Script: `scripts/expand-post-secondary-registry.mjs` (idempotent)
+
+---
+
+## 2026-07-10 — VOLUME-002 Data Architecture Bible — 14-Step Factory (Canonical)
+
+**Document ID:** VOLUME-002 · **DAB-001 · DAB-002–015 · AC-107–120**
+
+### What Was Built
+
+- **Volume 2 master sequence** — fourteen-step data factory under `docs/volume-02/`
+- **2.1 Data Philosophy** — canonical principles, source of truth, config vs data
+- **2.2 Canonical Entity Dictionary** — 16 primary entities with fields and lifecycles
+- **2.3 Relationship Data Model** — unified edges, membership, leadership, mentorship
+- **2.4 Database Schema Blueprint** — 15 Postgres schemas, naming, RLS, indexes
+- **2.5 Knowledge Graph Schema** — SQL-to-graph projections and sync
+- **2.6 Event Data Model** — immutable domain events, timelines, replay
+- **2.7 Time & Calendar** — personal, community, mission, network calendars
+- **2.8 Media & Documents** — assets, versions, OCR, attachments
+- **2.9 Configuration Model** — roles, templates, workflows, feature flags
+- **2.10 Search Index Model** — full-text, geographic, ranking, suggestions
+- **2.11 Analytics Model** — KPIs, community health, reporting snapshots
+- **2.12 AI Knowledge Model** — retrieval chunks, citations, twins, Community Brain
+- **2.13 Security & Privacy** — consent, classification, retention, erasure
+- **2.14 Master Data Dictionary** — 60+ tables, enums, migration governance
+
+### Milestone
+
+**Volume 2 complete (14/14).** COS now has full **engineering (V1)** and **data (V2)** factory blueprints. Next: **Volume 1.5 API** [ENG-005] · Phase 7 DDL.
+
+---
+
+## 2026-07-10 — VOLUME-001.14 Deployment, Testing & Release Architecture (Canonical)
+
+**Document ID:** VOLUME-001.14 · **ENG-014 · CRCC-001 · AC-105**
+
+### What Was Built
+
+- **Deployment, Testing & Release Architecture** — every deployment is a promise to communities
+- **Release pipeline** — architecture → implementation → validation → RC → approval → production → verification → monitoring
+- **Four environments** — local, integration, staging, production (Netlify + Supabase)
+- **Testing pyramid** — unit, integration, E2E, UAT with performance, accessibility, and security gates
+- **Progressive deployment** · rollback strategy · semantic versioning · release readiness checklist
+- **Community launch certification** — repeatable activation checklist
+- **Community Readiness Command Center [CRCC-001]** — technical + operational + intelligence readiness in one certification view
+- **`data/release-readiness.json`** — live release readiness snapshot feeding CRCC
+
+### Milestone
+
+**Volume 1 step 13/14 complete.** Only **1.5 API Architecture** [ENG-005] remains to close the sequence gap.
+
+---
+
+## 2026-07-10 — VOLUME-001.13 AI & Intelligence Technical Architecture (Canonical)
+
+**Document ID:** VOLUME-001.13 · **ENG-013 · CIF-001 · AC-103**
+
+### What Was Built
+
+- **AI & Intelligence Technical Architecture** — advisory layer; platform works without AI
+- **Constitutional AI principles** — human oversight, explainability, privacy, evidence-based, graceful degradation
+- **AI Orchestration Layer** — gateway for all AI interactions
+- **Retrieval pipeline** — PRE → context → graph → evidence → response → explainability
+- **5 memory layers** · **10 specialized agents** · auditable tool architecture
+- **Human approval** for governance actions · provider-independent design
+- **Community Intelligence Fabric [CIF-001]** — unified multi-source orchestration with citations
+
+### Milestone
+
+**Volume 1 step 13/14 complete.** Next: **1.5 API** [ENG-005] to close sequence gap.
+
+---
+
+## 2026-07-10 — VOLUME-001.12 Notification & Communication Architecture (Canonical)
+
+**Document ID:** VOLUME-001.12 · **ENG-012 · AME-001 · AC-101**
+
+### What Was Built
+
+- **Notification & Communication Architecture** — clarity over noise; relationship-centered delivery
+- **Five layers** — events → notification engine → rules → channels → participant experience
+- **Priorities** — critical, important, informational, optional with category preferences
+- **Notification Center** · digests · smart grouping · actionable payloads · outbox reliability
+- **Privacy and explainability** on every message
+- **Attention Management Engine [AME-001]** — implements CAM-001 Attention Budget; protects attention
+
+### Milestone
+
+**Volume 1 step 11/14 complete (1.5 API still pending).** Next: **1.5 API Architecture** [ENG-005].
+
+---
+
+## 2026-07-10 — VOLUME-001.11 Map & Geographic Architecture (Canonical)
+
+**Document ID:** VOLUME-001.11 · **ENG-011 · ADT-002 · AC-099**
+
+### What Was Built
+
+- **Map & Geographic Architecture** — geography as first-class concept; maps as decision-support
+- **Geographic hierarchy** — state → region → county → city → institution → community → venue
+- **Eight core maps** — community, coverage, growth, opportunity, partnership, capacity, story atlas, impact
+- **Layer architecture** · geographic filtering · time-aware historical views · search integration
+- **Map rendering separated** from business logic · Registry as geo authority
+- **Arkansas Digital Twin [ADT-002]** — living statewide model extending ADT-001 initialization
+
+### Milestone
+
+**Volume 1 step 10/14 complete (1.5 API still pending).** Next: **1.5 API Architecture** [ENG-005].
+
+---
+
+## 2026-07-10 — VOLUME-001.10 Search & Discovery Architecture (Canonical)
+
+**Document ID:** VOLUME-001.10 · **ENG-010 · DGE-001 · AC-097**
+
+### What Was Built
+
+- **Search & Discovery Architecture** — discovery engine, not just a search box
+- **Six search layers** — global, domain, context, relationship, knowledge, semantic
+- **Specialized search** — knowledge, opportunity, geographic, timeline
+- **Explainable ranking** · saved searches · collections · discovery pages
+- **Privacy-first** — PRE on every query; index separate from canonical storage
+- **Discovery Engine [DGE-001]** — proactive dashboard cards from CKG, PRN, twins, Community Brain
+
+### Milestone
+
+**Volume 1 step 9/14 complete (1.5 API still pending).** Next: **1.5 API Architecture** [ENG-005].
+
+---
+
+## 2026-07-10 — VOLUME-001.9 Event & Timeline Architecture (Canonical)
+
+**Document ID:** VOLUME-001.9 · **ENG-009 · LHE-001 · AC-095**
+
+### What Was Built
+
+- **Event & Timeline Architecture** — time as first-class concept; how the platform arrived at current state
+- **Event philosophy** — permanent records in `platform.domain_events`; immutable critical events
+- **Timeline hierarchy** — platform → state → county → community → initiative → mission → participant
+- **Nine entity timelines** — participant, community, mission, experience, initiative, story, knowledge, leadership, relationship
+- **12 event categories** · rich metadata · correction-via-new-event protocol
+- **Cross-timeline navigation** · search integration · event bus preparation
+- **Living History Engine [LHE-001]** — milestone detection, narrative assembly, evidence-linked summaries
+
+### Milestone
+
+**Volume 1 step 8/14 complete (1.5 API still pending).** Next: **1.5 API Architecture** [ENG-005].
+
+---
+
+## 2026-07-10 — VOLUME-001.8 Community Knowledge Graph Architecture (Canonical)
+
+**Document ID:** VOLUME-001.8 · **ENG-008 · LDT-001 · AC-093**
+
+### What Was Built
+
+- **Community Knowledge Graph Architecture** — semantic understanding of platform connections, not just visualization
+- **Graph model** — nodes, relationships, metadata; SQL canonical · graph derived
+- **Eight node categories** — people, communities, institutions, work, experiences, knowledge, resources, geography
+- **Configurable relationship types** · temporal history · multi-hop queries · knowledge inheritance
+- **Signature graphs** — trust, growth, conversation, capability, decision, improvement, operational, impact
+- **Story, leadership, and growth subgraphs** · community genome · explainable recommendations
+- **Privacy-aware traversal** · performance strategy · storage-agnostic graph API
+- **Living Digital Twin [LDT-001]** — participant, community, county, and future entity twins
+
+### Milestone
+
+**Volume 1 step 7/14 complete (1.5 API still pending).** Next: **1.5 API Architecture** [ENG-005].
+
+---
+
+## 2026-07-10 — VOLUME-001.7 Domain Service Architecture (Canonical)
+
+**Document ID:** VOLUME-001.7 · **ENG-007 · SRG-001 · AC-091**
+
+### What Was Built
+
+- **Domain Service Architecture** — one responsibility, one service, one source of truth per capability
+- **Sixteen core services** — Identity through Media; Leadership and Story elevated to first-class (refines ENG-002's 14)
+- **Uniform internal structure** — public interface → application logic → business rules → validation → repository → database
+- **Service contracts, communication patterns, domain ownership, cross-domain orchestration**
+- **Domain events, transaction philosophy, structured errors, observability, versioning**
+- **Service Registry [SRG-001]** — live catalog in `service-registry.json` with events, dependencies, and paths
+
+### Milestone
+
+**Volume 1 step 6/14 complete (1.5 API still pending).** Next: **1.5 API Architecture** [ENG-005].
+
+---
+
+## 2026-07-10 — VOLUME-001.6 Authentication & Authorization Architecture (Canonical)
+
+**Document ID:** VOLUME-001.6 · **ENG-006 · PRE-001 · AC-089**
+
+### What Was Built
+
+- **Authentication & Authorization Architecture** — separate who-you-are from what-you-may-do
+- **Six-layer model** — identity → authentication → authorization → community scope → feature permissions → data visibility
+- **Community-scoped RBAC** — roles as responsibility, granular permissions, configurable groups
+- **Visibility levels** — independent from edit permissions; privacy controls aligned with TPS-001
+- **Delegation, approval workflows, audit trail** — traceable security decisions
+- **Permission Resolution Engine [PRE-001]** — centralized access decisions with explainable outcomes
+
+### Milestone
+
+**Volume 1 step 5/14 complete (1.6 done; 1.5 API still pending).** Next: **1.5 API Architecture** [ENG-005].
+
+---
+
+## 2026-07-10 — VOLUME-001.4 Database Architecture (Canonical)
+
+**Document ID:** VOLUME-001.4 · **ENG-004 · DCL-001 · AC-087**
+
+### What Was Built
+
+- **Database Architecture** — Postgres as canonical source of truth; services interpret, database preserves truth
+- **Thirteen schema domains** — identity, registry, community, mission, experience, opportunity, growth, knowledge, partnership, capacity, intelligence, constitution, platform
+- **Cross-cutting models** — canonical entity fields, first-class relationships, temporal history, soft deletes, audit log, domain events
+- **Graph strategy** — relational `entity_relationships` derived to Community Knowledge Graph
+- **Migration & backup doctrine** — no manual prod DDL; verified encrypted backups
+- **Digital Constitution Layer [DCL-001]** — living rulebook for types, pathways, permissions, workflows, status transitions, constitutional principles
+
+### Milestone
+
+**Volume 1 step 4/14 complete.** Next: **1.5 API Architecture** [ENG-005].
+
+---
+
 ## 2026-07-10 — VOLUME-001.3 Canonical Repository Architecture (Canonical)
 
 **Document ID:** VOLUME-001.3 · **ENG-003 · RCN-001 · AC-085**

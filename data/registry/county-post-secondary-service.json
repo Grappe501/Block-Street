@@ -1,0 +1,288 @@
+{
+  "version": "1.0.0",
+  "description": "Post-secondary institutions serving counties without a local campus (commuter / district service)",
+  "lastUpdated": "2026-07-10",
+  "countiesWithLocalCampus": 46,
+  "totalCounties": 75,
+  "servedBy": {
+    "ashley": [
+      "south-arkansas",
+      "uam"
+    ],
+    "calhoun": [
+      "ouachita-baptist",
+      "henderson-state",
+      "southeast-arkansas"
+    ],
+    "chicot": [
+      "arkansas-northeastern",
+      "southeast-arkansas"
+    ],
+    "clay": [
+      "asu-newport",
+      "black-river-technical"
+    ],
+    "cleveland": [
+      "uaccm",
+      "ua-pine-bluff"
+    ],
+    "cross": [
+      "east-arkansas",
+      "ua-pulaski-tech"
+    ],
+    "crawford": [
+      "ua-fort-smith",
+      "uaccm"
+    ],
+    "dallas": [
+      "uam",
+      "southeast-arkansas"
+    ],
+    "desha": [
+      "southeast-arkansas",
+      "uam",
+      "phillips-helena"
+    ],
+    "franklin": [
+      "atu",
+      "uaccm"
+    ],
+    "grant": [
+      "ua-pulaski-tech",
+      "uaccm"
+    ],
+    "lafayette": [
+      "southern-arkansas",
+      "uacch-hope"
+    ],
+    "lincoln": [
+      "ua-pine-bluff",
+      "southeast-arkansas"
+    ],
+    "logan": [
+      "atu",
+      "uaccm"
+    ],
+    "madison": [
+      "nwacc",
+      "john-brown"
+    ],
+    "marion": [
+      "north-arkansas",
+      "asu-mountain-home"
+    ],
+    "monroe": [
+      "uaccb",
+      "east-arkansas"
+    ],
+    "montgomery": [
+      "ua-rich-mountain",
+      "national-park"
+    ],
+    "nevada": [
+      "southern-arkansas",
+      "uacch-hope"
+    ],
+    "newton": [
+      "north-arkansas",
+      "john-brown"
+    ],
+    "perry": [
+      "uaccm",
+      "national-park"
+    ],
+    "pike": [
+      "cossatot-de-queen",
+      "uacch-hope"
+    ],
+    "poinsett": [
+      "asu-newport",
+      "east-arkansas"
+    ],
+    "prairie": [
+      "uaccb",
+      "phillips-stuttgart"
+    ],
+    "searcy": [
+      "uaccb",
+      "north-arkansas"
+    ],
+    "sharp": [
+      "uaccb",
+      "ozarka-melbourne"
+    ],
+    "van-buren": [
+      "uaccb",
+      "north-arkansas"
+    ],
+    "woodruff": [
+      "east-arkansas",
+      "uaccb"
+    ],
+    "yell": [
+      "atu",
+      "uaccm"
+    ]
+  },
+  "localByCounty": {
+    "arkansas": [
+      "phillips-dewitt",
+      "phillips-stuttgart"
+    ],
+    "baxter": [
+      "asu-mountain-home"
+    ],
+    "benton": [
+      "john-brown",
+      "ecclesia",
+      "nwacc",
+      "bryan-university-rogers"
+    ],
+    "boone": [
+      "north-arkansas"
+    ],
+    "bradley": [
+      "south-arkansas-warren"
+    ],
+    "carroll": [
+      "north-arkansas-berryville"
+    ],
+    "clark": [
+      "henderson-state",
+      "ouachita-baptist"
+    ],
+    "cleburne": [
+      "asu-beebe-heber-springs"
+    ],
+    "columbia": [
+      "southern-arkansas"
+    ],
+    "conway": [
+      "uaccm"
+    ],
+    "craighead": [
+      "arkansas-state"
+    ],
+    "crittenden": [
+      "asu-mid-south"
+    ],
+    "drew": [
+      "ua-monticello"
+    ],
+    "faulkner": [
+      "uca",
+      "central-baptist",
+      "hendrix"
+    ],
+    "fulton": [
+      "ozarka-fulton"
+    ],
+    "garland": [
+      "champion-christian",
+      "national-park"
+    ],
+    "greene": [
+      "crowleys-ridge"
+    ],
+    "hempstead": [
+      "uacch-hope"
+    ],
+    "hot-spring": [
+      "asu-three-rivers"
+    ],
+    "howard": [
+      "cossatot-nashville"
+    ],
+    "independence": [
+      "lyon-college",
+      "uaccb"
+    ],
+    "izard": [
+      "ozarka-melbourne"
+    ],
+    "jackson": [
+      "asu-newport"
+    ],
+    "jefferson": [
+      "ua-pine-bluff",
+      "southeast-arkansas"
+    ],
+    "johnson": [
+      "university-of-the-ozarks"
+    ],
+    "lawrence": [
+      "williams-baptist"
+    ],
+    "lee": [
+      "east-arkansas-marianna"
+    ],
+    "little-river": [
+      "cossatot-ashdown"
+    ],
+    "lonoke": [
+      "asu-beebe-lrafb",
+      "arkansas-welding-academy"
+    ],
+    "miller": [
+      "uacch-texarkana"
+    ],
+    "mississippi": [
+      "arkansas-northeastern"
+    ],
+    "ouachita": [
+      "sau-tech"
+    ],
+    "phillips": [
+      "phillips-helena"
+    ],
+    "polk": [
+      "ua-rich-mountain"
+    ],
+    "pope": [
+      "arkansas-tech"
+    ],
+    "pulaski": [
+      "philander-smith",
+      "ua-little-rock",
+      "uams",
+      "arkansas-baptist",
+      "shorter-college",
+      "ua-pulaski-tech",
+      "baptist-health-college",
+      "platt-college"
+    ],
+    "randolph": [
+      "black-river-technical"
+    ],
+    "saline": [
+      "ua-pulaski-tech-saline"
+    ],
+    "scott": [
+      "ua-rich-mountain-waldron"
+    ],
+    "sebastian": [
+      "ua-fort-smith"
+    ],
+    "sevier": [
+      "cossatot-de-queen"
+    ],
+    "st-francis": [
+      "east-arkansas"
+    ],
+    "stone": [
+      "ozarka-mountain-view"
+    ],
+    "union": [
+      "south-arkansas"
+    ],
+    "washington": [
+      "ua-fayetteville",
+      "northwest-technical-institute"
+    ],
+    "white": [
+      "arkansas-state-beebe-searcy-center",
+      "harding",
+      "asu-beebe"
+    ]
+  }
+}

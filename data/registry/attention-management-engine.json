@@ -1,0 +1,30 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/volume-01/ATTENTION_MANAGEMENT_ENGINE.md",
+  "requirementId": "AME-001",
+  "title": "Attention Management Engine",
+  "status": "complete",
+  "parentRequirement": "ENG-012",
+  "phaseAlignment": "CAM-001",
+  "kernelPath": "src/lib/kernel/notifications/attention.ts",
+  "decisionOutcomes": [
+    "deliver_now", "deliver_in_app_only", "defer_to_digest",
+    "defer_until", "suppress", "collapse_group"
+  ],
+  "reasonCodes": [
+    "QUIET_HOURS", "FATIGUE_CAP", "ALREADY_ACTED",
+    "GROUPED", "DIGEST_SCHEDULED", "DUPLICATE"
+  ],
+  "inputSignals": [
+    "current_activity", "calendar_commitments", "notification_history",
+    "community_responsibilities", "message_urgency", "communication_style",
+    "existing_workload", "time_of_day"
+  ],
+  "v1Rules": [
+    "quiet_hours_defer_non_critical",
+    "digest_batch_informational",
+    "suppress_duplicate_24h",
+    "group_volunteer_reminders_by_mission"
+  ],
+  "acceptanceCriteria": "AC-102"
+}

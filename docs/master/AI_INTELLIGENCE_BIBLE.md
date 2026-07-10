@@ -8,7 +8,7 @@
 
 > Intelligence was designed **conceptually** in Phases 4–6. Volume 4 defines it **technically**.
 
-**Governed by:** [Volume 0 Section K](MASTER_ARCHITECTURE_BIBLE.md) [MAB-K] · [Volume 1 Ch.6](ENGINEERING_ARCHITECTURE_BIBLE.md)
+**Governed by:** [Volume 0 Section K](MASTER_ARCHITECTURE_BIBLE.md) [MAB-K] · [Volume 1.13 AI Technical Architecture](../volume-01/AI_INTELLIGENCE_ARCHITECTURE.md) [ENG-013 · CIF-001]
 
 ---
 

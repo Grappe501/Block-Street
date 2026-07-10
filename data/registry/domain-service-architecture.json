@@ -1,0 +1,46 @@
+{
+  "version": "1.0.0",
+  "volume": 1,
+  "step": "1.7",
+  "docPath": "docs/volume-01/DOMAIN_SERVICE_ARCHITECTURE.md",
+  "masterSequencePath": "docs/volume-01/VOLUME_1_MASTER_SEQUENCE.md",
+  "parentVolume": "EAB-001",
+  "requirementId": "ENG-007",
+  "companionDoc": {
+    "requirementId": "SRG-001",
+    "docPath": "docs/volume-01/SERVICE_REGISTRY.md",
+    "registryPath": "data/registry/service-registry.json"
+  },
+  "title": "Domain Service Architecture",
+  "status": "complete",
+  "buildsOn": "ENG-002",
+  "dependsOnNote": "ENG-005 API Architecture pending — contracts map to HTTP when built",
+  "guidingPrinciple": "One responsibility. One service. One source of truth for every business capability.",
+  "serviceCount": 16,
+  "refinementFromEng002": "Elevates Leadership and Story to first-class services (14 → 16)",
+  "internalStructure": [
+    "public_interface",
+    "application_logic",
+    "business_rules",
+    "validation",
+    "repository_layer",
+    "database"
+  ],
+  "errorCodes": [
+    "VALIDATION_ERROR",
+    "PERMISSION_DENIED",
+    "NOT_FOUND",
+    "CONFLICT",
+    "DEPENDENCY_UNAVAILABLE",
+    "INTERNAL_ERROR"
+  ],
+  "servicesPath": "services/",
+  "transitionalPath": "src/lib/",
+  "acceptanceCriteria": "AC-091",
+  "nextRecommendedStep": {
+    "id": "1.8",
+    "requirementId": "ENG-008",
+    "artifact": "docs/volume-01/COMMUNITY_KNOWLEDGE_GRAPH_ARCHITECTURE.md",
+    "status": "done"
+  }
+}

@@ -1,0 +1,1 @@
+{"version":"1.0.0","requirementId":"DAB-004","docPath":"docs/volume-02/RELATIONSHIP_DATA_MODEL.md","coreEdgeTypes":["member_of","leads","mentors","invited","organizes","participated_in","contributed_to","partners_with","located_in","serves","documents_in","parent_of"],"acceptanceCriteria":"AC-109"}
