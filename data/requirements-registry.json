@@ -4896,7 +4896,7 @@
       "id": "UXB-001",
       "title": "User Experience & Product Architecture — Volume 4",
       "purpose": "Complete experience architecture before production UI",
-      "description": "VOLUME-004 fourteen-step factory — experience design through experience orchestrator; defines how humans experience the platform",
+      "description": "VOLUME-004 fourteen-step factory — Experience Operating System orchestrates EQE, INE, AWE, LOCR, UWM, CIN, FOCL, AI Federation, LJG, Trust Ledger, Institution Factory",
       "priority": "critical",
       "principle": "CP-012",
       "dependencies": [
@@ -4930,10 +4930,10 @@
         "Foundation stack Volumes 0-4 defined",
         "Complete blueprint for user experience architecture"
       ],
-      "futureNotes": "Guiding principle: Experience should feel intentional, welcoming, and trustworthy. Volume 4 scaffold — build steps 4.1-4.14 next",
-      "implementationStatus": "scaffold",
+      "futureNotes": "Volume 4 orchestrator complete — 13/14 canonical steps (4.4 User Journey scaffold pending). Experience Operating System pairs with Institutional Nervous System.",
+      "implementationStatus": "done",
       "testingStatus": "pending",
-      "documentationStatus": "scaffold",
+      "documentationStatus": "done",
       "trace": {
         "database": null,
         "api": null,
@@ -4943,33 +4943,48 @@
       },
       "versionHistory": {
         "created": "2026-07-10",
-        "implemented": null
+        "implemented": "2026-07-10"
       }
     },
     {
       "id": "UXB-015",
       "title": "Experience Orchestrator — Volume 4.14",
-      "purpose": "Experience Orchestrator experience layer",
-      "description": "VOLUME-004.14 unified experience runtime layer, experience orchestration",
-      "priority": "critical",
+      "purpose": "Master coordination layer — one living operating environment for every participant",
+      "description": "VOLUME-004.14 — Experience Operating System, 10 experience layers, 4 runtime loops, coordinates all Volume 4 capabilities with Volume 3 engines",
+      "priority": "foundational",
       "principle": "CP-012",
       "dependencies": [
         "UXB-014",
-        "UXB-001"
+        "UXB-013",
+        "UXB-012",
+        "UXB-011",
+        "UXB-010",
+        "UXB-009",
+        "UXB-008",
+        "UXB-007",
+        "UXB-006",
+        "UXB-005",
+        "UXB-004",
+        "UXB-003",
+        "UXB-002",
+        "UXB-001",
+        "PBA-015"
       ],
       "related": [
         "UXB-001"
       ],
       "acceptanceCriteria": [
-        "Experience philosophy documented",
-        "UX behaviors defined",
-        "Volume 0-3 integration specified",
-        "Implementation blueprint for experience layer"
+        "Experience orchestration philosophy documented",
+        "Experience layers defined",
+        "Universal experience flow established",
+        "AI, navigation, workspaces, collaboration, trust, accessibility, personalization, and operational coordination integrated",
+        "Experience Operating System specified",
+        "Complete blueprint for runtime experience architecture"
       ],
-      "futureNotes": "Scaffold — pending canonical build step",
-      "implementationStatus": "pending",
+      "futureNotes": "Guiding principle: The participant experiences one living operating environment—not fourteen separate experience systems.",
+      "implementationStatus": "done",
       "testingStatus": "pending",
-      "documentationStatus": "pending",
+      "documentationStatus": "done",
       "trace": {
         "database": null,
         "api": null,
@@ -4979,7 +4994,7 @@
       },
       "versionHistory": {
         "created": "2026-07-10",
-        "implemented": null
+        "implemented": "2026-07-10"
       }
     },
     {

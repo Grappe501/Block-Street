@@ -18,6 +18,25 @@
 
 ---
 
+## 2026-07-10 — Volume 4.14 Experience Orchestrator [UXB-015 · AC-150] — **VOLUME 4 ORCHESTRATOR COMPLETE**
+
+**Document:** `docs/volume-04/EXPERIENCE_ORCHESTRATOR.md` · **Registry:** `data/registry/experience-orchestrator.json`
+
+### What Changed
+
+- **Guiding principle:** *The participant experiences one living operating environment—not fourteen separate experience systems.*
+- Master coordination layer for every human interaction — experiences not modules
+- **10-layer experience orchestration flow** and **10 experience layers** integrating all Volume 4 engines
+- **8-layer universal experience flow** — Observe through Teach
+- Experience memory, cross-device continuity, multi-community context, AI orchestration
+- Notification, knowledge, community, trust, accessibility coordination
+- **Experience Operating System (XOS)** — 10-stage runtime pipeline, 5 responsibilities, 4 runtime loops (Work, Learning, Relationship, Growth)
+- Pairs with Institutional Nervous System [PBA-015]
+- Umbrella UXB-001 · experience-architecture-bible v2.0.0 · implementation-volumes Volume 4 complete
+- **Volume 4: 13/14 canonical steps** (4.4 User Journey scaffold pending) · Foundation stack Volumes 0–4 complete
+
+---
+
 ## 2026-07-10 — Volume 4.13 Institutional Experience Architecture [UXB-014 · AC-149]
 
 **Document:** `docs/volume-04/INSTITUTIONAL_EXPERIENCE_ARCHITECTURE.md` · **Registry:** `data/registry/institutional-experience-architecture.json`
