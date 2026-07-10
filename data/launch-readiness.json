@@ -1,0 +1,52 @@
+{
+  "version": "1.0.0",
+  "targetDate": "2026-07-14",
+  "leaderTestDate": "2026-07-12",
+  "docPath": "docs/build-steps/PHASE-001.7-LAUNCH-SUCCESS-DEFINITION.md",
+  "missionQuestions": [
+    { "id": "LS-Q1", "question": "Where do I belong?", "status": "partial" },
+    { "id": "LS-Q2", "question": "How do I get involved?", "status": "pending" },
+    { "id": "LS-Q3", "question": "How do I invite others?", "status": "pending" }
+  ],
+  "pillars": [
+    { "id": "LS-P1", "name": "Every County Exists", "status": "done", "notes": "75 county pages live" },
+    { "id": "LS-P2", "name": "Every College/University Exists", "status": "in_progress", "notes": "23 seeded; expand in Phase 2" },
+    { "id": "LS-P3", "name": "Every Participant Has a Home", "status": "pending", "notes": "Signup + network board" },
+    { "id": "LS-P4", "name": "Organizing Works", "status": "pending", "notes": "Join, invite, recruit workflows" },
+    { "id": "LS-P5", "name": "Mobile Experience", "status": "in_progress", "notes": "Mobile-first CSS; device test pending" },
+    { "id": "LS-P6", "name": "Administration", "status": "in_progress", "notes": "Workbench live; participant mgmt pending DB" },
+    { "id": "LS-P7", "name": "Outreach Visibility", "status": "in_progress", "notes": "Map + stats; live counts pending DB" }
+  ],
+  "checklist": [
+    { "id": 1, "item": "All 75 county pages exist", "ref": "LS-P1", "status": "done" },
+    { "id": 2, "item": "Every AR college/university has a profile", "ref": "LS-P2", "status": "in_progress" },
+    { "id": 3, "item": "Registration is operational", "ref": "LS-P4", "status": "pending" },
+    { "id": 4, "item": "Personal network boards auto-generated", "ref": "LS-P3", "status": "pending" },
+    { "id": 5, "item": "Referral links and QR codes function", "ref": "LS-P3", "status": "pending" },
+    { "id": 6, "item": "Campus and county assignment works", "ref": "LS-P4", "status": "pending" },
+    { "id": 7, "item": "Statewide directory is searchable", "ref": "LS-P2", "status": "in_progress" },
+    { "id": 8, "item": "Basic admin tools operational", "ref": "LS-P6", "status": "in_progress" },
+    { "id": 9, "item": "Mobile experience complete", "ref": "LS-P5", "status": "in_progress" },
+    { "id": 10, "item": "Documentation supports ongoing development", "ref": "LS-EN", "status": "done" }
+  ],
+  "summary": {
+    "done": 2,
+    "inProgress": 5,
+    "pending": 3,
+    "total": 10,
+    "launchReady": false,
+    "percentComplete": 45
+  },
+  "leaderTestMinimum": [3, 4, 5, 6],
+  "explicitlyNotRequired": [
+    "Committee management",
+    "Advanced events",
+    "Rich messaging",
+    "Volunteer hours",
+    "Mentorship matching",
+    "AI recommendations",
+    "Advanced analytics",
+    "Native mobile apps",
+    "Public APIs"
+  ]
+}

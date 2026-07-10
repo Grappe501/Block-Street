@@ -16,7 +16,7 @@
 
 ---
 
-## Foundational Constitution — Complete ✅
+## Foundational Constitution — Steps 1.1–1.8
 
 | Step | Document | Status |
 |------|----------|--------|
@@ -26,8 +26,21 @@
 | 1.4 | [Design Guardrails](PHASE-001.4-PLATFORM-BOUNDARIES.md) | ✅ |
 | 1.5 | [Organizing Model](PHASE-001.5-ORGANIZING-MODEL.md) | ✅ |
 | 1.6 | [Growth Model](PHASE-001.6-GROWTH-MODEL.md) | ✅ |
+| 1.7 | [Launch Success Definition](PHASE-001.7-LAUNCH-SUCCESS-DEFINITION.md) | ✅ |
+| 1.8 | Implementation Doctrine + Build Bible | Pending |
 
-**Phase 2 begins:** Arkansas Organizing Registry — canonical data backbone.
+**Phase 1 closes after Step 1.8** with consolidated Project Constitution (Build Bible).
+
+---
+
+## Launch Readiness [LS-CHK]
+
+> How do we know V1 is ready? **10-item checklist** in PHASE-001.7.  
+> Live tracker: `data/launch-readiness.json` · Admin **Launch** tab
+
+**Three questions:** Where do I belong? · How do I get involved? · How do I invite others?
+
+**Jul 12 minimum:** Registration, network board, share link/QR, campus/county assignment.
 
 ---
 

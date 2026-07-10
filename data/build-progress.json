@@ -5,8 +5,8 @@
     "motto": "Connect Locally. Organize Statewide. Lead Together.",
     "tagline": "Your organizing home",
     "version": "1.0.0-constitution",
-    "currentPhase": 2,
-    "currentPhaseName": "Arkansas Organizing Registry",
+    "currentPhase": 1,
+    "currentPhaseName": "Foundational Constitution (closes at 1.8)",
     "lastUpdated": "2026-07-10T09:00:00Z",
     "deployUrl": "https://block-street.netlify.app/",
     "githubRepo": "https://github.com/Grappe501/Block-Street",
@@ -17,10 +17,14 @@
     "leaderTestingDate": "2026-07-12"
   },
   "constitutionalLayer": {
-    "status": "complete",
+    "status": "in_progress",
     "docPath": "docs/build-steps/README.md",
-    "stepsComplete": 6,
-    "stepsTotal": 6
+    "stepsComplete": 7,
+    "stepsTotal": 8,
+    "launchReadinessPath": "data/launch-readiness.json",
+    "launchReady": false,
+    "launchChecklistComplete": 2,
+    "launchChecklistTotal": 10
   },
   "masterBuild": {
     "docPath": "docs/master/MASTER-BUILD-SEQUENCE.md",
@@ -32,15 +36,17 @@
       "id": 1,
       "name": "Project Constitution & Mission Doctrine",
       "slug": "phase-01-constitution",
-      "status": "done",
+      "status": "in_progress",
       "docPath": "docs/build-steps/README.md",
       "steps": [
-        { "id": "1.1", "name": "Platform Identity [PHASE-001.1]", "status": "done", "notes": "PI-001 through ER-001, AC-001" },
-        { "id": "1.2", "name": "North Star Outcome [PHASE-001.2]", "status": "done", "notes": "NS-002, NS-013, AC-002" },
-        { "id": "1.3", "name": "Core Principles [PHASE-001.3]", "status": "done", "notes": "CP-001–CP-015, CT-001, AC-003" },
-        { "id": "1.4", "name": "Platform Boundaries [PHASE-001.4]", "status": "done", "notes": "DG-001–DG-015, ED-001, AC-004" },
-        { "id": "1.5", "name": "Organizing Model [PHASE-001.5]", "status": "done", "notes": "OM-L1–L5, OM-010" },
-        { "id": "1.6", "name": "Growth Model [PHASE-001.6]", "status": "done", "notes": "GM-P1–P10, GM-V1, AC-006 — Constitution complete" }
+        { "id": "1.1", "name": "Platform Identity [PHASE-001.1]", "status": "done", "notes": "PI-001 through ER-001" },
+        { "id": "1.2", "name": "North Star Outcome [PHASE-001.2]", "status": "done", "notes": "NS-002, NS-013" },
+        { "id": "1.3", "name": "Core Principles [PHASE-001.3]", "status": "done", "notes": "CP-001–CP-015, CT-001" },
+        { "id": "1.4", "name": "Platform Boundaries [PHASE-001.4]", "status": "done", "notes": "DG-001–DG-015, ED-001" },
+        { "id": "1.5", "name": "Organizing Model [PHASE-001.5]", "status": "done", "notes": "OM-L1–L5" },
+        { "id": "1.6", "name": "Growth Model [PHASE-001.6]", "status": "done", "notes": "GM-P1–P10, GM-V1" },
+        { "id": "1.7", "name": "Launch Success Definition [PHASE-001.7]", "status": "done", "notes": "LS-CHK 10-item checklist, 7 pillars" },
+        { "id": "1.8", "name": "Implementation Doctrine + Build Bible", "status": "pending", "notes": "Closes Phase 1" }
       ]
     },
     {
@@ -132,9 +138,15 @@
   "buildLog": [
     {
       "date": "2026-07-10",
-      "title": "PHASE-001.6 Growth Model — Foundational Constitution Complete",
+      "title": "PHASE-001.7 Launch Success Definition",
       "phase": 1,
-      "summary": "GM-P1–P10, GM-V1 July launch scope, version roadmap. Phase 1 done. Phase 2: Registry begins."
+      "summary": "LS-CHK 10-item checklist, 7 pillars, 3 mission questions, launch-readiness.json, admin Launch tab"
+    },
+    {
+      "date": "2026-07-10",
+      "title": "PHASE-001.6 Growth Model",
+      "phase": 1,
+      "summary": "GM-P1–P10, GM-V1 July launch scope, version roadmap"
     },
     {
       "date": "2026-07-10",

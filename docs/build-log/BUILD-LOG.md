@@ -4,7 +4,13 @@
 
 ---
 
-## 2026-07-10 — Foundational Constitution Complete (Steps 1.1–1.6)
+## 2026-07-10 — PHASE-001.7 Launch Success Definition
+
+**Document ID:** PHASE-001.7  
+**Requirement IDs:** LS-P1–P7, LS-CHK, AC-007  
+**Launch checklist:** 2/10 done · NOT launch ready · Jul 12 minimum: items 3–6
+
+---
 
 **PHASE-001.6 Growth Model** closes Phase 1.
 
