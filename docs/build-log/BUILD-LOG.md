@@ -18,6 +18,21 @@
 
 ---
 
+## 2026-07-10 — Volume 3 Platform Behavior & Operational Architecture [PBA-001 · AC-121] · **Scaffold**
+
+**Umbrella:** `docs/master/PLATFORM_BEHAVIOR_BIBLE.md` · **Sequence:** `docs/volume-03/VOLUME_3_MASTER_SEQUENCE.md` · **Registry:** `data/registry/platform-behavior-bible.json`
+
+### What Changed
+
+- **New Volume 3:** Platform Behavior & Operational Architecture — *How does the platform actually behave?*
+- **Guiding principle:** *Behavior is governed, not improvised.*
+- **14 operational engines** scaffolded (3.1 Business Rules through 3.14 Community OS Orchestrator)
+- Foundation stack now: Volume 0 (why) · Volume 1 (engineering) · Volume 2 (data) · Volume 3 (behavior)
+- Implementation volumes renumbered: UX → Volume 4 · AI → 5 · Ops → 6 · Experience → 7
+- Admin **Volume 3** tab · requirements PBA-001–PBA-015 · build-progress V3.1–V3.14
+
+---
+
 ## 2026-07-10 — Volume 2.14 Master Data Dictionary & Data Governance [DAB-015 · AC-120] · **Volume 2 Complete**
 
 **Document:** `docs/volume-02/MASTER_DATA_DICTIONARY.md` · **Registry:** `data/registry/master-data-dictionary.json`

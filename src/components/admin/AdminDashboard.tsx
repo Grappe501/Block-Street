@@ -45,6 +45,7 @@ import { AdminConstitution } from "@/components/admin/AdminConstitution";
 import { AdminNorthStar } from "@/components/admin/AdminNorthStar";
 import { AdminDataModel } from "@/components/admin/AdminDataModel";
 import { AdminDataArchitecture } from "@/components/admin/AdminDataArchitecture";
+import { AdminPlatformBehavior } from "@/components/admin/AdminPlatformBehavior";
 
 const TABS = [
   { id: "overview", label: "Overview", icon: "📊" },
@@ -84,6 +85,7 @@ const TABS = [
   { id: "mission", label: "Mission", icon: "🎯" },
   { id: "architecture", label: "Architecture", icon: "🏗️" },
   { id: "data-model", label: "Data Model", icon: "🗄️" },
+  { id: "behavior", label: "Volume 3", icon: "⚡" },
   { id: "versions", label: "Versions", icon: "🔢" },
   { id: "build-log", label: "Build Log", icon: "📜" },
   { id: "deployment", label: "Deployment", icon: "🚀" },
@@ -199,6 +201,7 @@ export function AdminDashboard({ progress }: { progress: BuildProgress }) {
             <AdminDataModel progress={progress} />
           </div>
         )}
+        {activeTab === "behavior" && <AdminPlatformBehavior />}
         {activeTab === "versions" && <AdminVersions progress={progress} />}
         {activeTab === "build-log" && <AdminBuildLog progress={progress} />}
         {activeTab === "deployment" && <AdminDeployment progress={progress} />}

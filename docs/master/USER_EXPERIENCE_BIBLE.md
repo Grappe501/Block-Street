@@ -1,6 +1,6 @@
-# VOLUME 3 — User Experience Bible
+# VOLUME 4 — User Experience Bible
 
-**Document ID:** VOLUME-003 · **UXB-001**  
+**Document ID:** VOLUME-004 · **UXB-001**  
 **Artifact:** `USER_EXPERIENCE_BIBLE.md`  
 **Status:** Canonical · v1 Structure  
 **Priority:** Critical — no UX decisions left to invent at code time  

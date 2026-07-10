@@ -5,16 +5,15 @@ import eab from "../../../data/registry/engineering-architecture-bible.json";
 
 export function AdminImplementationVolumes() {
   const vol1 = ivs.volumes.find((v) => v.volume === 1);
-  const otherDone = ivs.volumes.filter((v) => v.volume !== 1 && v.status === "v1_complete").length;
 
   return (
     <div className="space-y-6">
       <div className="card border-indigo-400 bg-indigo-100">
-        <p className="text-xs font-semibold uppercase text-indigo-900">Factory Layer · Implementation Volumes 1–6</p>
+        <p className="text-xs font-semibold uppercase text-indigo-900">Factory Layer · Implementation Volumes 1–7</p>
         <h2 className="mt-1 text-xl font-bold text-indigo-950">{ivs.purpose}</h2>
         <p className="mt-2 text-sm text-indigo-900">{ivs.naturalPause.statement}</p>
         <p className="mt-2 text-xs font-semibold text-indigo-800">
-          Volume 1: {eab.stepsComplete}/{eab.stepsTotal} steps · Volumes 2–6: {otherDone}/5 v1 · Phase 7 deferred
+          Volume 1: {eab.stepsComplete}/{eab.stepsTotal} · Volume 2: complete · Volume 3: scaffold · Volumes 4–7: v1 · Phase 7 deferred
         </p>
       </div>
 
@@ -34,8 +33,8 @@ export function AdminImplementationVolumes() {
           <div key={vol.volume} className="card border-indigo-200 bg-white">
             <div className="flex items-center justify-between">
               <span className="text-xs font-bold text-indigo-600">Volume {vol.volume}</span>
-              <span className={`badge text-xs ${vol.status === "in_progress" ? "bg-amber-100 text-amber-800" : "bg-green-100 text-green-800"}`}>
-                {vol.status === "in_progress" ? `${eab.stepsComplete}/${eab.stepsTotal}` : "v1"}
+              <span className={`badge text-xs ${vol.status === "in_progress" ? "bg-amber-100 text-amber-800" : vol.status === "scaffold" ? "bg-violet-100 text-violet-800" : vol.status === "complete" ? "bg-emerald-100 text-emerald-800" : "bg-green-100 text-green-800"}`}>
+                {vol.status === "in_progress" ? `${eab.stepsComplete}/${eab.stepsTotal}` : vol.status === "scaffold" ? "0/14" : vol.status === "complete" ? "14/14" : "v1"}
               </span>
             </div>
             <h3 className="mt-1 font-bold text-indigo-950">{vol.name}</h3>
