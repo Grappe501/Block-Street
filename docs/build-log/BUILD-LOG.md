@@ -18,6 +18,25 @@
 
 ---
 
+## 2026-07-10 — Volume 3.14 Community OS Orchestrator [PBA-015 · AC-135] — **VOLUME 3 COMPLETE**
+
+**Document:** `docs/volume-03/COMMUNITY_OS_ORCHESTRATOR.md` · **Registry:** `data/registry/community-os-orchestrator.json`
+
+### What Changed
+
+- **Guiding principle:** *One platform. One orchestration layer. Many specialized engines.*
+- Master coordination layer — coordinates all 14 engines without replacing them
+- **13-layer orchestration architecture:** Request through Executive Operations Center
+- Context assembly, execution pipeline, cross-engine coordination, event/knowledge/calendar/Digital Twin/AI/search coordination
+- Failure recovery, performance, observability, platform state, security, configuration, executive coordination
+- **Institutional Nervous System (INS)** — Sense · Understand · Coordinate · Learn
+- Human override preserved — leadership remains sovereign
+- **Volume 3 complete:** all 14 operational engines documented and coordinated
+- Volumes 0–3 foundation stack complete
+- Admin Volume 3 tab · requirements PBA-015 and PBA-001 updated · Volume 3: 14/14 complete
+
+---
+
 ## 2026-07-10 — Volume 3.13 Operational Intelligence Engine [PBA-014 · AC-134]
 
 **Document:** `docs/volume-03/OPERATIONAL_INTELLIGENCE_ENGINE.md` · **Registry:** `data/registry/operational-intelligence-engine.json`
