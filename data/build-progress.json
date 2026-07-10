@@ -96,7 +96,7 @@
         { "id": "3.9", "name": "Community Recognition & Appreciation [CRA-001]", "status": "done", "notes": "CRA-M01–M16, Community Gratitude, appreciation not gamification, milestone categories" },
         { "id": "3.10", "name": "Communication & Attention Management [CAM-001]", "status": "done", "notes": "CAM-M01–M17, Attention Budget, Smart Digest, Morning Brief integration, earn not abuse" },
         { "id": "3.11", "name": "Civic Journey Timeline [CJT-001]", "status": "done", "notes": "CJT-M01–M16, Memory Moments, Civic Passport backbone, append-only narrative" },
-        { "id": "3.12", "name": "Participant Knowledge Graph", "status": "pending", "notes": "Person-centric edges" },
+        { "id": "3.12", "name": "Personal Digital Twin [PDT-001]", "status": "done", "notes": "PDT-M01–M15, Participant Context Engine, composition not duplication, explainable personalization" },
         { "id": "3.13", "name": "Recommendation Engine", "status": "pending", "notes": "Mission + graph based" },
         { "id": "3.14", "name": "Participant Experience", "status": "pending", "notes": "Onboarding journey" },
         { "id": "3.15", "name": "Phase 3 Build Bible", "status": "pending", "notes": "People System closeout" }
@@ -217,6 +217,12 @@
     { "version": "1.4.0", "name": "Election ready", "status": "pending", "date": null }
   ],
   "buildLog": [
+    {
+      "date": "2026-07-10",
+      "title": "PHASE-003.12 Personal Digital Twin (Canonical)",
+      "phase": 3,
+      "summary": "PDT-M01–M15 Participant Context Engine, six core domains, explainable personalization, ADT-001 integration"
+    },
     {
       "date": "2026-07-10",
       "title": "PHASE-003.11 Civic Journey Timeline (Canonical)",
@@ -400,9 +406,9 @@
   ],
   "stats": {
     "totalSteps": 81,
-    "doneSteps": 31,
+    "doneSteps": 32,
     "inProgressSteps": 0,
-    "pendingSteps": 50,
-    "percentComplete": 38
+    "pendingSteps": 49,
+    "percentComplete": 40
   }
 }

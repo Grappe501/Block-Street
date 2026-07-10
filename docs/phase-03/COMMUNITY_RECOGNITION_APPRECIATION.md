@@ -394,6 +394,6 @@ Step 3.9 is complete when:
 
 ---
 
-**Next Step:** 3.12 — Participant Knowledge Graph
+**Next Step:** 3.13 — Recommendation Engine
 
 *Trace: Contribution → Milestone → Civic Passport → Community Gratitude → Appreciation Board → Morning Brief*

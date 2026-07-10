@@ -325,7 +325,7 @@ Participant ──connected_to──► Participant
 - Mentor matching · Volunteer matching · Professional networking
 - Alumni networking · Career pathways
 
-**[PRN-M15a]** All powered by **Trust Graph** traversal [PRN-M16] + Participant Knowledge Graph [Step 3.12].
+**[PRN-M15a]** All powered by **Trust Graph** traversal [PRN-M16] + Personal Digital Twin [PDT-001].
 
 ---
 
@@ -462,6 +462,6 @@ Step 3.4 is complete when:
 
 ---
 
-**Next Step:** 3.12 — Participant Knowledge Graph
+**Next Step:** 3.13 — Recommendation Engine
 
 *Trace: PRN network → Relationship widget in PCC → Trust Graph → Morning Brief invite acceptance*

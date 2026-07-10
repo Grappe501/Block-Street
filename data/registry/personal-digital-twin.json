@@ -1,0 +1,164 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/phase-03/PERSONAL_DIGITAL_TWIN.md",
+  "motto": "Understand participants well enough to serve them better — always respecting privacy and autonomy.",
+  "principle": "A living model of each participant — not a profile, not surveillance, not scoring.",
+  "purpose": "Connect identity, relationships, communities, participation, growth, leadership, and preferences into one continuously evolving representation.",
+  "distinction": {
+    "adt001": "Arkansas Digital Twin — state organizing landscape (Phase 2.9)",
+    "pdt001": "Personal Digital Twin — individual participant journey within it (Phase 3.12)"
+  },
+  "notThis": ["profile", "surveillance", "scoring"],
+  "isThis": [
+    "who this participant is",
+    "where they belong",
+    "who they know",
+    "how they participate",
+    "how they grow",
+    "what opportunities may help next"
+  ],
+  "coreComponents": [
+    {
+      "key": "identity",
+      "includes": ["personalIdentity", "mission", "journeyStage", "communities", "skills", "interests", "privacySettings", "communicationPreferences"],
+      "sources": ["PEP-001", "PHQ-001", "PRM-001", "SEC-001", "CAM-001"]
+    },
+    {
+      "key": "relationships",
+      "includes": ["peopleInvited", "mentors", "collaborators", "volunteerPartners", "committeeMembers", "longTermRelationships", "relationshipHistory"],
+      "sources": ["NET-001", "PRN-M12", "RGE-001", "PRN-M16"]
+    },
+    {
+      "key": "communities",
+      "includes": ["campus", "county", "committees", "projects", "volunteerTeams", "futureOrganizations"],
+      "sources": ["CID-001", "REG-001", "REG-002"]
+    },
+    {
+      "key": "activity",
+      "includes": ["events", "volunteerService", "projects", "learning", "leadership", "recognition", "timeline"],
+      "sources": ["CJT-001", "EVT-001", "VOL-001", "CRA-001"]
+    },
+    {
+      "key": "growth",
+      "includes": ["journeyProgression", "leadershipDevelopment", "skills", "learning", "communityImpact", "mentorship"],
+      "sources": ["PGL-001", "PGL-M13", "JRN-M10"]
+    },
+    {
+      "key": "preferences",
+      "includes": ["notificationSettings", "communicationChannels", "volunteerInterests", "projectInterests", "learningPreferences", "futurePersonalization"],
+      "sources": ["CAM-001", "SEC-001"]
+    }
+  ],
+  "understandingQuestions": [
+    "What communities does this participant belong to?",
+    "What leadership experiences have they had?",
+    "Who do they collaborate with most often?",
+    "What skills are they developing?",
+    "What opportunities align with their interests?",
+    "Where might they enjoy contributing next?"
+  ],
+  "relationshipGraph": {
+    "extends": "REL-M01",
+    "exampleEdges": [
+      "attends → Institution",
+      "lives_in → County",
+      "invited → Participant",
+      "mentors → Participant",
+      "volunteers_for → Project",
+      "belongs_to → Committee",
+      "attended → Event",
+      "learned → Skill",
+      "supports → Community"
+    ],
+    "overlays": ["PRN-M16 Trust Graph", "CJT-001 temporal narrative"],
+    "evolvesContinuously": true
+  },
+  "personalizationSurfaces": [
+    { "surface": "missionBoard", "ref": "PCC-M09" },
+    { "surface": "morningBrief", "ref": "PCC-M17" },
+    { "surface": "recommendedEvents", "ref": "Step 3.13" },
+    { "surface": "suggestedCommittees", "ref": "Step 3.13" },
+    { "surface": "volunteerOpportunities", "ref": "Step 3.13" },
+    { "surface": "mentorship", "ref": "PGL-001" },
+    { "surface": "learning", "ref": "PGL-M08" },
+    { "surface": "communityIntroductions", "ref": "NET-001" }
+  ],
+  "privacy": {
+    "participantControlled": true,
+    "neverExposePrivateWithoutPermission": true,
+    "primarilyForOwnExperience": true,
+    "visibilityEngine": "TPS-M08",
+    "privateReflectionsNeverCrossParticipant": true
+  },
+  "explainability": {
+    "requiredOnEveryRecommendation": true,
+    "reasonField": true,
+    "examples": [
+      "We suggested this event because you're active in environmental projects.",
+      "This committee may interest you because you've volunteered in similar activities."
+    ],
+    "participantMayDismiss": true,
+    "noBlackBoxRanking": true
+  },
+  "continuousLearning": {
+    "eventDriven": true,
+    "sources": ["communityJoin", "volunteering", "learning", "relationships", "organizing", "mentoring"],
+    "journeyStageDerived": true,
+    "notManualRefresh": true
+  },
+  "futureAi": {
+    "capabilities": ["summarizeActivity", "recommendOpportunities", "identifyMentors", "suggestLeadershipPathways", "supportOnboarding", "generateMorningBriefs"],
+    "readsViaContextEngine": true,
+    "optInRequired": true,
+    "respectsAttentionBudget": true,
+    "governance": "TPS-M15"
+  },
+  "participantContextEngine": {
+    "description": "Assembles temporary session context — what the platform should know right now to serve this participant well",
+    "signatureFeature": true,
+    "orchestrator": "buildParticipantContext(participantId, sessionOptions?)",
+    "question": "What should the platform know right now to serve this participant well?",
+    "sources": [
+      { "module": "Registry", "contributes": "geographic and institution landscape" },
+      { "module": "NET-001", "contributes": "people, invites, Trust Graph" },
+      { "module": "CJT-001", "contributes": "recent milestones, Memory Moments" },
+      { "module": "PGL-M13", "contributes": "growth domains, skills, mentorship" },
+      { "module": "CAM-001", "contributes": "channels, budget, quiet hours" },
+      { "module": "communities", "contributes": "campus, county, committees" },
+      { "module": "activity", "contributes": "events, volunteer, leadership signals" },
+      { "module": "JRN-M10", "contributes": "derived stage, next-step gaps" }
+    ],
+    "benefits": ["fasterPersonalization", "consistentRecommendations", "simplerFeatureDevelopment", "betterAiIntegration", "reducedDuplication"],
+    "ephemeral": true,
+    "cacheTtl": "sessionScoped",
+    "invalidatesOnParticipantEvents": true
+  },
+  "compositionNotDuplication": {
+    "pattern": "compose from existing services — derived summaries only where needed",
+    "noDuplicateParticipantTables": true,
+    "relationshipsNotRedundantFields": true,
+    "denormalizedCachesRebuildable": true
+  },
+  "arkansasTwinIntegration": {
+    "adt001": "state county institution landscape",
+    "pdt001": "participant overlay edges into ADT nodes",
+    "example": "attends → Institution connects to ADT-M06 initialized node"
+  },
+  "v1Scope": {
+    "philosophyAndContextEngineSpec": true,
+    "componentTaxonomy": true,
+    "buildParticipantContextStub": "minimal identity network journey",
+    "fullGraphAndPersonalization": "v1.1",
+    "aiContextBoundary": "v1.2"
+  },
+  "implementation": {
+    "gate": "buildParticipantContext before any personalization ships",
+    "files": [
+      "src/lib/context/buildParticipantContext.ts",
+      "src/lib/context/ParticipantContext.ts",
+      "src/lib/context/explainRecommendation.ts",
+      "src/lib/twin/composeTwinView.ts"
+    ],
+    "consumer": "Step 3.13 Recommendation Engine"
+  }
+}

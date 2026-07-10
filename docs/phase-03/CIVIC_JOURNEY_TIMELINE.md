@@ -196,7 +196,7 @@ Photos · Documents · Videos · Graphics · Volunteer projects · Presentations
 | Committee launch | Founding members linked |
 | Community celebration | Community node + participant edges |
 
-**[CJT-M08a]** Participants see how their story **intersects with others** — graph edges, not duplicate narratives [REL-M01, Step 3.12].
+**[CJT-M08a]** Participants see how their story **intersects with others** — graph edges, not duplicate narratives [REL-M01, PDT-001].
 
 **[CJT-M08b]** Privacy: co-participant names respect visibility [SEC-001, TPS-M07].
 
@@ -407,6 +407,6 @@ Step 3.11 is complete when:
 
 ---
 
-**Next Step:** 3.12 — Participant Knowledge Graph
+**Next Step:** 3.13 — Recommendation Engine
 
 *Trace: Service → timeline entry → Civic Passport → Memory Moment → "remember why I stayed" → sustained engagement*

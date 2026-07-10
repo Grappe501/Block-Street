@@ -26,6 +26,7 @@
     { "prefix": "CRA", "domain": "Community recognition & appreciation" },
     { "prefix": "CAM", "domain": "Communication & attention management" },
     { "prefix": "CJT", "domain": "Civic journey timeline" },
+    { "prefix": "PDT", "domain": "Personal digital twin" },
     { "prefix": "CPP", "domain": "Civic passport" },
     { "prefix": "STS", "domain": "Status & lifecycle" },
     { "prefix": "ADM", "domain": "Administration" },
@@ -835,6 +836,36 @@
         "frontend": "PAGE-PCC",
         "test": "TEST-CJT-001",
         "doc": "DOC-CJT-001"
+      },
+      "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
+    },
+    {
+      "id": "PDT-001",
+      "title": "Personal Digital Twin",
+      "purpose": "Living model of each participant — understand well enough to serve better, never surveillance or scoring",
+      "description": "PHASE-003.12 Participant Context Engine, six core domains, relationship graph overlay, explainable personalization, composition not duplication, ADT-001 integration",
+      "priority": "critical",
+      "principle": "PEP-001",
+      "dependencies": ["PEP-001", "NET-001", "CJT-001", "PGL-001", "CAM-001", "JRN-001", "REL-001"],
+      "related": ["ADT-001", "SEC-001", "PCC-001", "ANL-001"],
+      "acceptanceCriteria": [
+        "Personal Digital Twin concept documented",
+        "Core information domains defined",
+        "Personalization and explainability principles established",
+        "Privacy boundaries reinforced",
+        "Participant Context Engine architecture specified",
+        "Blueprint for participant-centric intelligence"
+      ],
+      "futureNotes": "Full graph traversal, AI context boundary, Recommendation Engine consumer — Step 3.13",
+      "implementationStatus": "done",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": "DB-RELATIONSHIPS",
+        "api": null,
+        "frontend": "PAGE-PCC",
+        "test": "TEST-PDT-001",
+        "doc": "DOC-PDT-001"
       },
       "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
     },

@@ -46,7 +46,7 @@ When complete, every participant receives:
 | 3.9 | [Community Recognition & Appreciation](COMMUNITY_RECOGNITION_APPRECIATION.md) | Appreciation not gamification | ✅ |
 | 3.10 | [Communication & Attention Management](COMMUNICATION_ATTENTION_MANAGEMENT.md) | Attention Budget — earn not abuse | ✅ |
 | 3.11 | [Civic Journey Timeline](CIVIC_JOURNEY_TIMELINE.md) | Lifelong story — Memory Moments | ✅ |
-| 3.12 | Participant Knowledge Graph | Person as graph node — all edges | Pending |
+| 3.12 | [Personal Digital Twin](PERSONAL_DIGITAL_TWIN.md) | Context Engine — living model | ✅ |
 | 3.13 | Recommendation Engine | People, events, mentors, opportunities | Pending |
 | 3.14 | Participant Experience | Onboarding journey — first week to first leadership | Pending |
 | 3.15 | Phase 3 Build Bible | Complete People System closeout | Pending |
@@ -195,20 +195,19 @@ The most important **trust document** in the project — trust as infrastructure
 
 ---
 
-## 3.12 — Participant Knowledge Graph
+## 3.12 — Personal Digital Twin
 
-Everything connected. Example:
+**Requirement focus:** PDT-001 · REL-001 · ADT-001 · JRN-M10
 
-```
-Steve —attends→ UCA
-Steve —lives_in→ Faulkner County
-Steve —invited→ Sarah
-Steve —volunteers_for→ Food Drive
-Steve —chairs→ Communications Committee
-Steve —attended→ Leadership Summit
-```
+**Living model of each participant** — where everything begins to think:
 
-The software **understands the participant** — extends [REL-M01] graph to person-centric queries.
+- **Participant Context Engine [PDT-M12]** — assemble session context from all People System modules
+- **Six core domains** — Identity, Relationships, Communities, Activity, Growth, Preferences
+- **Relationship graph** — person-centric overlay on Arkansas twin [REL-M01]
+- **Explainable personalization** — assistance not prediction; reason on every suggestion
+- **Composition not duplication** — twin references canonical stores
+
+*Live spec:* `personal-digital-twin.json` · *Distinction:* ADT-001 = state landscape · PDT-001 = participant journey · *Consumer:* Step 3.13 Recommendation Engine
 
 ---
 
@@ -248,7 +247,7 @@ Identity · Journey · Profiles · Networks · Recruitment · Recognition · Pri
 | 3.6 | Command Center core | ✅ design |
 | 3.7 | Basic privacy + Trust Center | ✅ design |
 
-Steps 3.12–3.14: design now, implement post-launch. Steps 3.8–3.11 design complete.
+Steps 3.13–3.14: design now, implement post-launch. Steps 3.8–3.12 design complete.
 
 ---
 

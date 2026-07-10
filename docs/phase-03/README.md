@@ -2,7 +2,7 @@
 
 > **Question answered:** *Who is this person, how do they grow, and how do they connect to others?*
 
-**Status:** Active — Steps 3.1–3.11 complete · Steps 3.12–3.15 remaining
+**Status:** Active — Steps 3.1–3.12 complete · Steps 3.13–3.15 remaining
 
 **Master sequence:** [PHASE_3_MASTER_SEQUENCE.md](PHASE_3_MASTER_SEQUENCE.md)
 
@@ -31,7 +31,7 @@ A user logs into software. A person has relationships, aspirations, interests, s
 | 3.9 | [Community Recognition & Appreciation](COMMUNITY_RECOGNITION_APPRECIATION.md) | ✅ |
 | 3.10 | [Communication & Attention Management](COMMUNICATION_ATTENTION_MANAGEMENT.md) | ✅ |
 | 3.11 | [Civic Journey Timeline](CIVIC_JOURNEY_TIMELINE.md) | ✅ |
-| 3.12 | Participant Knowledge Graph | Pending |
+| 3.12 | [Personal Digital Twin](PERSONAL_DIGITAL_TWIN.md) | ✅ |
 | 3.13 | Recommendation Engine | Pending |
 | 3.14 | Participant Experience | Pending |
 | 3.15 | Phase 3 Build Bible | Pending |
@@ -44,6 +44,7 @@ A user logs into software. A person has relationships, aspirations, interests, s
 |---------|-----|
 | **Relationship Growth Engine** | Self-expanding through trusted invites [RGE-001] |
 | **Personal Relationship Network** | Participant-owned living network + Trust Graph [NET-001] |
+| **Personal Digital Twin** | Context Engine — living participant model [PDT-001] |
 | **Civic Journey Timeline** | Lifelong story of service — Memory Moments [CJT-001] |
 | **Attention Budget** | Consolidate noise into digests — earn not abuse [CAM-001] |
 | **Community Gratitude** | Peer appreciation — human side of organizing [CRA-001] |

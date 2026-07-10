@@ -4,6 +4,24 @@
 
 ---
 
+## 2026-07-10 — PHASE-003.12 Personal Digital Twin (Canonical)
+
+**Document ID:** PHASE-003.12 · **PDT-001 · AC-031**
+
+### What Was Built
+
+- **Living model of each participant** — not profile, surveillance, or scoring
+- **Participant Context Engine [PDT-M12]** — "What should the platform know right now to serve this participant well?"
+- **Six core domains** — Identity, Relationships, Communities, Activity, Growth, Preferences
+- **Explainable personalization** — every recommendation includes a reason
+- **Composition not duplication** — twin composes existing modules; ADT-001 + PDT-001 distinction clear
+
+### Guiding Principle Locked
+
+> **The platform should understand participants well enough to serve them better, while always respecting their privacy and autonomy.**
+
+---
+
 ## 2026-07-10 — PHASE-003.11 Civic Journey Timeline (Canonical)
 
 **Document ID:** PHASE-003.11 · **CJT-001 · AC-030**

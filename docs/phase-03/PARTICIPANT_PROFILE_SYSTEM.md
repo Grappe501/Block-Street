@@ -376,8 +376,8 @@ When a participant logs in, they should not feel like they are editing an accoun
     [PEP-001]   [JRN-001]   [NET-*]    [REG-*]      [EVT/COM]
          │          │           │           │          │
          └──────────┴───────────┴───────────┴──────────┘
-                    Participant Knowledge Graph
-                         [Step 3.12]
+                    Personal Digital Twin
+                         [PDT-001]
 ```
 
 **[PHQ-M18a]** Rather than navigating primarily through menus, participants **naturally return to HQ** because it answers the three login questions [PHQ-M04b].
@@ -485,6 +485,6 @@ Step 3.3 is complete when:
 
 ---
 
-**Next Step:** 3.12 — Participant Knowledge Graph
+**Next Step:** 3.13 — Recommendation Engine
 
 *Trace: USR-001 registration → PHQ shell → NET-002/003 invite tools → JRN orchestrator → CPP timeline*
