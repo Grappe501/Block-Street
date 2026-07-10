@@ -18,6 +18,23 @@
 
 ---
 
+## 2026-07-10 — Volume 3.10 Notification & Attention Management Engine [PBA-011 · AC-131]
+
+**Document:** `docs/volume-03/ATTENTION_ENGINE.md` · **Registry:** `data/registry/attention-engine.json`
+
+### What Changed
+
+- **Guiding principle:** *Earn attention. Never abuse it.*
+- Meaningful engagement over notification volume — attention as shared resource
+- **8-layer attention architecture:** Event through Outcome Measurement
+- **6 communication categories:** Critical through Recognition
+- Attention budget, priority model, digests, quiet hours, escalation, conversation awareness
+- Calendar, workflow, event ledger, AI, analytics, and accessibility integrations
+- **Attention Intelligence Layer (AIL)** — communication governor with 6 evaluation dimensions
+- Admin Volume 3 tab · requirements PBA-011 updated · Volume 3: 10/14 complete
+
+---
+
 ## 2026-07-10 — Volume 3.9 Automation Engine [PBA-010 · AC-130]
 
 **Document:** `docs/volume-03/AUTOMATION_ENGINE.md` · **Registry:** `data/registry/automation-engine.json`

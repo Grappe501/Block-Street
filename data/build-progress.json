@@ -98,7 +98,7 @@
       { "id": "V3.7", "name": "Leadership Development Engine [PBA-008]", "status": "done", "notes": "Leadership Academy, 9 lifecycle stages, pathways, succession — AC-128" },
       { "id": "V3.8", "name": "Community Intelligence Engine [PBA-009]", "status": "done", "notes": "Community Intelligence Command Center, 8 domains, explainability — AC-129" },
       { "id": "V3.9", "name": "Automation Engine [PBA-010]", "status": "done", "notes": "Automation Mission Control, 10 categories, simulation, safety — AC-130" },
-      { "id": "V3.10", "name": "Notification & Attention Engine [PBA-011]", "status": "pending", "notes": "Priority, batching, digests — AC-131" },
+      { "id": "V3.10", "name": "Notification & Attention Engine [PBA-011]", "status": "done", "notes": "Attention Intelligence Layer, 6 categories, digests, budget — AC-131" },
       { "id": "V3.11", "name": "Governance Engine [PBA-012]", "status": "pending", "notes": "Constitution, approval chains, voting — AC-132" },
       { "id": "V3.12", "name": "Knowledge Growth Engine [PBA-013]", "status": "pending", "notes": "Lesson capture, Community Brain, legacy — AC-133" },
       { "id": "V3.13", "name": "Operational Intelligence Engine [PBA-014]", "status": "pending", "notes": "Executive dashboards, decision support — AC-134" },

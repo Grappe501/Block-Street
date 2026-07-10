@@ -10,7 +10,7 @@
   "readAfter": "DAB-001",
   "coreQuestion": "How does the platform actually behave?",
   "guidingPrinciple": "Behavior is governed, not improvised.",
-  "stepsComplete": 9,
+  "stepsComplete": 10,
   "stepsTotal": 14,
   "engineCount": 14,
   "steps": [
@@ -23,7 +23,7 @@
     { "id": "3.7", "name": "Leadership Development Engine", "requirement": "PBA-008", "artifact": "docs/volume-03/LEADERSHIP_DEVELOPMENT_ENGINE.md", "registryPath": "data/registry/leadership-development-engine.json", "status": "done" },
     { "id": "3.8", "name": "Community Intelligence Engine", "requirement": "PBA-009", "artifact": "docs/volume-03/COMMUNITY_INTELLIGENCE_ENGINE.md", "registryPath": "data/registry/community-intelligence-engine.json", "status": "done" },
     { "id": "3.9", "name": "Automation Engine", "requirement": "PBA-010", "artifact": "docs/volume-03/AUTOMATION_ENGINE.md", "registryPath": "data/registry/automation-engine.json", "status": "done" },
-    { "id": "3.10", "name": "Notification & Attention Engine", "requirement": "PBA-011", "artifact": "docs/volume-03/ATTENTION_ENGINE.md", "registryPath": "data/registry/attention-engine.json", "status": "pending" },
+    { "id": "3.10", "name": "Notification & Attention Engine", "requirement": "PBA-011", "artifact": "docs/volume-03/ATTENTION_ENGINE.md", "registryPath": "data/registry/attention-engine.json", "status": "done" },
     { "id": "3.11", "name": "Governance Engine", "requirement": "PBA-012", "artifact": "docs/volume-03/GOVERNANCE_ENGINE.md", "registryPath": "data/registry/governance-engine.json", "status": "pending" },
     { "id": "3.12", "name": "Knowledge Growth Engine", "requirement": "PBA-013", "artifact": "docs/volume-03/KNOWLEDGE_GROWTH_ENGINE.md", "registryPath": "data/registry/knowledge-growth-engine.json", "status": "pending" },
     { "id": "3.13", "name": "Operational Intelligence Engine", "requirement": "PBA-014", "artifact": "docs/volume-03/OPERATIONAL_INTELLIGENCE_ENGINE.md", "registryPath": "data/registry/operational-intelligence-engine.json", "status": "pending" },

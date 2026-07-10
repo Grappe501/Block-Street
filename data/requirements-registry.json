@@ -4668,28 +4668,36 @@
     },
     {
       "id": "PBA-011",
-      "title": "Notification & Attention Engine — Volume 3.10",
-      "purpose": "Priority, batching, digests, quiet hours",
-      "description": "VOLUME-003.10 attention scoring and communication routing",
+      "title": "Notification & Attention Management Engine — Volume 3.10",
+      "purpose": "Wise communication that earns attention and prevents overload",
+      "description": "VOLUME-003.10 — Attention Intelligence Layer, 6 communication categories, attention budget, digests, quiet hours, escalation, analytics",
       "priority": "critical",
       "principle": "CP-001",
       "dependencies": [
         "PBA-010",
+        "PBA-003",
+        "PBA-002",
+        "DAB-007",
+        "DAB-008",
         "ENG-012"
       ],
       "related": [
-        "PBA-012"
+        "PBA-012",
+        "DAB-013",
+        "DAB-014"
       ],
       "acceptanceCriteria": [
-        "Engine philosophy documented",
-        "Operational behaviors defined",
-        "Volume 2 integration specified",
-        "Implementation blueprint for engine"
+        "Attention philosophy documented",
+        "Notification categories and attention budgets defined",
+        "Priority, digest, channel, quiet hour, escalation, and analytics models established",
+        "Calendar, workflow, Community Event Ledger, AI, and accessibility integrations incorporated",
+        "Attention Intelligence Layer specified",
+        "Complete blueprint for Notification & Attention Management Engine"
       ],
-      "futureNotes": "Scaffold — pending canonical build step",
-      "implementationStatus": "pending",
+      "futureNotes": "Guiding principle: Earn attention. Never abuse it.",
+      "implementationStatus": "done",
       "testingStatus": "pending",
-      "documentationStatus": "pending",
+      "documentationStatus": "done",
       "trace": {
         "database": "DB-COS",
         "api": null,
@@ -4699,7 +4707,7 @@
       },
       "versionHistory": {
         "created": "2026-07-10",
-        "implemented": null
+        "implemented": "2026-07-10"
       }
     },
     {
