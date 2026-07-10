@@ -1,24 +1,324 @@
 {
-  "version": "1.0.0",
+  "version": "2.0.0",
   "documentId": "VOLUME-004.13",
   "requirementId": "UXB-014",
   "docPath": "docs/volume-04/INSTITUTIONAL_EXPERIENCE_ARCHITECTURE.md",
-  "status": "pending",
-  "priority": "critical",
+  "productName": "Institutional Experience Architecture",
+  "status": "canonical",
+  "priority": "strategic",
   "lastUpdated": "2026-07-10",
-  "guidingPrinciple": "Experience should feel intentional, welcoming, and trustworthy.",
-  "defines": [
-    "Universities",
-    "Counties",
-    "Campaigns",
-    "Nonprofits",
-    "Coalitions",
-    "Stateorganizations",
-    "Schools",
-    "Churches",
-    "Civicorganizations"
+  "guidingPrinciple": "One platform. Infinite institutional experiences.",
+  "institutionalPhilosophy": {
+    "neverGenericSoftware": true,
+    "onePlatformInfiniteExperiences": true,
+    "oneOSDifferentInstitutionalPerspectives": true,
+    "institutionChangesConstitutionDoesNot": true,
+    "specializationNotFork": true,
+    "sharedCivicOperatingInfrastructure": true
+  },
+  "traditionalSaaSCreates": [
+    "CRM",
+    "VolunteerSystem",
+    "LearningPlatform",
+    "CampaignSoftware",
+    "KnowledgeBase",
+    "CommunityPlatform"
   ],
-  "topicCount": 9,
+  "institutionalArchitecture": {
+    "layers": [
+      "PlatformConstitution",
+      "CoreEngines",
+      "InstitutionType",
+      "InstitutionOperatingManual",
+      "WorkspaceConfiguration",
+      "InstitutionExperience"
+    ],
+    "layerCount": 6
+  },
+  "institutionalPrincipleCount": 7,
+  "institutionalPrinciples": [
+    "FeelNative",
+    "ShareCommonArchitecture",
+    "ReuseOperationalEngines",
+    "ShareKnowledge",
+    "MaintainConstitutionalGovernance",
+    "PreserveInteroperability",
+    "ScaleNaturally"
+  ],
+  "universalInstitutionalModel": {
+    "layers": [
+      "Mission",
+      "People",
+      "Communities",
+      "Leadership",
+      "Knowledge",
+      "Operations",
+      "History",
+      "Growth"
+    ],
+    "layerCount": 8
+  },
+  "institutionTypeCount": 12,
+  "institutionTypes": [
+    {
+      "id": "communityOrganization",
+      "name": "Community Organization",
+      "examples": ["NeighborhoodGroups", "MutualAid", "CommunityAssociations", "LocalInitiatives"],
+      "primaryWorkspace": "CommunityWorkspace",
+      "primaryIntelligence": "CommunityHealthObservatory"
+    },
+    {
+      "id": "nonprofitOrganization",
+      "name": "Nonprofit Organization",
+      "examples": ["501c3", "Foundations", "ServiceOrganizations", "AdvocacyOrganizations"],
+      "primaryFocus": ["Programs", "Volunteers", "Funding", "CommunityImpact", "Knowledge"]
+    },
+    {
+      "id": "campaignOrganization",
+      "name": "Campaign Organization",
+      "examples": ["CandidateCampaigns", "BallotInitiatives", "PoliticalActionOrganizations"],
+      "primaryFocus": ["Field", "Volunteers", "Events", "Communications", "VoterEngagement", "MissionExecution"]
+    },
+    {
+      "id": "educationalInstitution",
+      "name": "Educational Institution",
+      "examples": ["Schools", "Universities", "TrainingAcademies", "LearningOrganizations"],
+      "primaryFocus": ["Courses", "Students", "Faculty", "Knowledge", "CommunityEngagement", "LeadershipDevelopment"]
+    },
+    {
+      "id": "faithCommunity",
+      "name": "Faith Community",
+      "examples": ["Churches", "Synagogues", "Mosques", "FaithNetworks"],
+      "primaryFocus": ["Members", "Service", "Teaching", "Community", "Volunteerism", "PastoralCare"]
+    },
+    {
+      "id": "countyGovernment",
+      "name": "County Government",
+      "primaryFocus": ["Departments", "Communities", "Citizens", "Planning", "Infrastructure", "PublicMeetings", "Knowledge"]
+    },
+    {
+      "id": "municipalGovernment",
+      "name": "Municipal Government",
+      "primaryFocus": ["Neighborhoods", "Boards", "Commissions", "PublicServices", "Planning", "CommunityParticipation", "Transparency"]
+    },
+    {
+      "id": "statewideCoalition",
+      "name": "Statewide Coalition",
+      "primaryFocus": ["Organizations", "RegionalCoordination", "Policy", "SharedMissions", "Knowledge", "Growth"]
+    },
+    {
+      "id": "professionalAssociation",
+      "name": "Professional Association",
+      "primaryFocus": ["Members", "Training", "Events", "Certification", "Knowledge", "Networking"]
+    },
+    {
+      "id": "researchInstitution",
+      "name": "Research Institution",
+      "primaryFocus": ["Research", "Knowledge", "Publication", "Collaboration", "Innovation", "HistoricalPreservation"]
+    },
+    {
+      "id": "civicAcademy",
+      "name": "Civic Academy",
+      "primaryFocus": ["Learning", "Leadership", "Community", "Knowledge", "Volunteerism", "Service"]
+    },
+    {
+      "id": "enterpriseOrganization",
+      "name": "Enterprise Organization",
+      "primaryFocus": ["Departments", "Projects", "Knowledge", "Leadership", "Training", "OperationalExcellence"]
+    }
+  ],
+  "institutionalOperatingManualIncludes": [
+    "Mission",
+    "Governance",
+    "Leadership",
+    "Policies",
+    "Playbooks",
+    "Knowledge",
+    "History",
+    "Growth"
+  ],
+  "institutionalWorkspaceIncludes": [
+    "InstitutionDashboard",
+    "People",
+    "Communities",
+    "Calendar",
+    "Knowledge",
+    "OperationalIntelligence",
+    "InstitutionDigitalTwin",
+    "OperatingManual"
+  ],
+  "institutionalBrandingCustomizes": [
+    "Logo",
+    "ColorAccents",
+    "Terminology",
+    "PublicPages",
+    "CommunityImagery",
+    "CommunicationTemplates"
+  ],
+  "brandIdentityChangesPlatformBehaviorDoesNot": true,
+  "institutionalAIUnderstands": [
+    "InstitutionType",
+    "OperatingManual",
+    "Policies",
+    "Knowledge",
+    "Leadership",
+    "Communities",
+    "Mission"
+  ],
+  "institutionalCollaborationThrough": [
+    "SharedMissions",
+    "SharedKnowledge",
+    "SharedCalendars",
+    "PartnershipWorkspaces",
+    "CrossCommunityInitiatives"
+  ],
+  "institutionalAnalyticsExamples": [
+    {
+      "institutionType": "Campaign",
+      "measures": ["VolunteerRecruitment", "VoterEngagement", "MissionCompletion"]
+    },
+    {
+      "institutionType": "School",
+      "measures": ["Learning", "Participation", "Leadership", "CommunityService"]
+    },
+    {
+      "institutionType": "County",
+      "measures": ["CommunityHealth", "CitizenEngagement", "Infrastructure", "Knowledge"]
+    }
+  ],
+  "institutionTwinTracks": [
+    "Mission",
+    "Health",
+    "Leadership",
+    "Knowledge",
+    "Communities",
+    "Growth",
+    "OperationalReadiness"
+  ],
+  "institutionalEventLedgerIncludes": [
+    "PolicyUpdates",
+    "LeadershipTransitions",
+    "MissionLaunches",
+    "KnowledgePublications",
+    "CommunityMilestones"
+  ],
+  "institutionFactory": {
+    "name": "Institution Factory",
+    "abbreviation": "IF",
+    "provisionsFromConstitutionalTemplate": true,
+    "operationalInMinutesNotMonths": true,
+    "pipeline": {
+      "stages": [
+        "InstitutionRequest",
+        "InstitutionTemplate",
+        "Constitution",
+        "OperatingManual",
+        "WorkspaceConfiguration",
+        "DigitalTwin",
+        "KnowledgeInitialization",
+        "AIInitialization",
+        "InstitutionLaunch"
+      ],
+      "stageCount": 9
+    },
+    "institutionTemplateCount": 14,
+    "institutionTemplates": [
+      "CommunityOrganization",
+      "Campaign",
+      "School",
+      "CivicAcademy",
+      "CountyGovernment",
+      "CityGovernment",
+      "Church",
+      "Coalition",
+      "Nonprofit",
+      "Foundation",
+      "AdvocacyGroup",
+      "ProfessionalAssociation",
+      "ResearchCenter",
+      "Enterprise"
+    ],
+    "templateIncludes": [
+      "RecommendedWorkspaces",
+      "GovernanceDefaults",
+      "OperatingManualStructure",
+      "KnowledgeCategories",
+      "AIProfiles",
+      "DashboardLayouts",
+      "ReportingModels",
+      "LifecycleGuidance"
+    ],
+    "modularCapabilityPackCount": 6,
+    "modularCapabilityPacks": [
+      {
+        "id": "civicEngagementPack",
+        "name": "Civic Engagement Pack",
+        "capabilities": ["Petitions", "VoterRegistration", "PublicMeetings", "CivicEducation"]
+      },
+      {
+        "id": "educationPack",
+        "name": "Education Pack",
+        "capabilities": ["Courses", "Certifications", "LearningPaths", "Assessments"]
+      },
+      {
+        "id": "campaignPack",
+        "name": "Campaign Pack",
+        "capabilities": ["FieldOperations", "Events", "VolunteerRecruitment", "Communications"]
+      },
+      {
+        "id": "disasterResponsePack",
+        "name": "Disaster Response Pack",
+        "capabilities": ["IncidentManagement", "ResourceTracking", "EmergencyVolunteers", "SituationReports"]
+      },
+      {
+        "id": "grantManagementPack",
+        "name": "Grant Management Pack",
+        "capabilities": ["FundingPipeline", "Reporting", "Deliverables", "Compliance"]
+      },
+      {
+        "id": "researchPack",
+        "name": "Research Pack",
+        "capabilities": ["Publications", "Citations", "ResearchCollaboration", "PeerReview"]
+      }
+    ],
+    "packsExtendBehaviorWithoutSeparateProducts": true,
+    "crossInstitutionIntelligenceQuestions": [
+      "WhichCountiesHaveStrongestVolunteerRetention",
+      "WhichSchoolsProduceMostCommunityLeaders",
+      "WhichNonprofitsHaveReusableVolunteerOnboarding",
+      "WhichCampaignsCreatedMostEffectiveFieldTraining",
+      "WhichCommunitiesHaveSolvedSimilarChallenges"
+    ],
+    "institutionalEcosystemContributions": [
+      "CommunitiesStrengthenCounties",
+      "CountiesStrengthenRegions",
+      "SchoolsStrengthenCommunities",
+      "CampaignsStrengthenCivicEngagement",
+      "FaithOrganizationsStrengthenVolunteerism",
+      "NonprofitsStrengthenPartnerships",
+      "CivicAcademiesStrengthenLeadership"
+    ],
+    "dayOneInherits": [
+      "Constitution",
+      "OperationalEngines",
+      "DataArchitecture",
+      "ExperienceArchitecture",
+      "AIFederation",
+      "KnowledgeObservatory",
+      "CommunityHealthObservatory",
+      "ExecutiveOperationsCenter"
+    ],
+    "architecturalVision": "Constitutional infrastructure for communities, institutions, and civic ecosystems — not software for one type of organization"
+  },
+  "burtImplementationGuidance": [
+    "Institutions as configurations not separate products",
+    "Reuse operational engines across institution types",
+    "Build Institution Operating Manuals automatically",
+    "Integrate AI Operational Intelligence Community Health Digital Twins Event Ledger Knowledge Growth",
+    "Branding without architectural divergence",
+    "Preserve interoperability among institutions",
+    "Consult Institution Factory before institution features"
+  ],
   "acceptanceCriteria": "AC-149",
-  "acceptanceCriteriaMet": false
+  "acceptanceCriteriaMet": true
 }
