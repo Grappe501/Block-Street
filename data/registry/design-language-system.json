@@ -1,25 +1,323 @@
 {
-  "version": "1.0.0",
+  "version": "2.0.0",
   "documentId": "VOLUME-004.5",
   "requirementId": "UXB-006",
   "docPath": "docs/volume-04/DESIGN_LANGUAGE_SYSTEM.md",
-  "status": "pending",
-  "priority": "critical",
+  "productName": "Design Language System",
+  "status": "canonical",
+  "priority": "foundational",
   "lastUpdated": "2026-07-10",
-  "guidingPrinciple": "Experience should feel intentional, welcoming, and trustworthy.",
-  "defines": [
-    "Typography",
-    "Colorsystem",
-    "Spacing",
-    "Icons",
-    "Motion",
-    "Elevation",
-    "Cards",
-    "Layout",
-    "Components",
-    "Accessibilitytokens"
+  "guidingPrinciple": "Design should disappear into understanding.",
+  "designLanguagePhilosophy": {
+    "moreThanStyleGuide": true,
+    "livingEcosystem": true,
+    "reinforcesTrustCompetenceOptimismCivicPurpose": true,
+    "visualDesignCommunicatesValuesFirst": true,
+    "formFollowsPurpose": true
+  },
+  "traditionalDesignSystemFocus": [
+    "Buttons",
+    "Colors",
+    "Fonts",
+    "Components"
   ],
-  "topicCount": 10,
+  "communityOSDesignHierarchy": {
+    "layers": [
+      "Purpose",
+      "Emotion",
+      "Meaning",
+      "Interaction",
+      "VisualExpression"
+    ],
+    "layerCount": 5
+  },
+  "designLanguageArchitecture": {
+    "layers": [
+      "Purpose",
+      "Meaning",
+      "Information",
+      "Interaction",
+      "VisualExpression"
+    ],
+    "layerCount": 5
+  },
+  "designPrincipleCount": 6,
+  "designPrinciples": [
+    {
+      "id": "calm",
+      "name": "Calm",
+      "qualities": ["Stable", "Predictable", "Unhurried", "Comfortable"],
+      "goal": "People should never feel overwhelmed"
+    },
+    {
+      "id": "human",
+      "name": "Human",
+      "qualities": ["Friendly", "Professional", "Respectful", "Approachable"],
+      "goal": "Never robotic"
+    },
+    {
+      "id": "purposeful",
+      "name": "Purposeful",
+      "question": "Why is this here?",
+      "goal": "Decoration without meaning should be avoided"
+    },
+    {
+      "id": "consistent",
+      "name": "Consistent",
+      "domains": ["Spacing", "Typography", "Motion", "Terminology", "Components", "Navigation"],
+      "goal": "Consistency builds confidence"
+    },
+    {
+      "id": "accessible",
+      "name": "Accessible",
+      "goal": "Accessibility is a design requirement rather than an enhancement"
+    },
+    {
+      "id": "optimistic",
+      "name": "Optimistic",
+      "qualities": ["Possibility", "Growth", "Progress", "Community", "Hope"],
+      "goal": "Without becoming childish"
+    }
+  ],
+  "typographyLevelCount": 5,
+  "typographyLevels": [
+    { "level": 1, "usedFor": ["Mission", "Purpose", "WorkspaceTitles"] },
+    { "level": 2, "usedFor": ["SectionHeadings", "MajorContent"] },
+    { "level": 3, "usedFor": ["Cards", "Panels", "Groups"] },
+    { "level": 4, "usedFor": ["BodyContent", "Knowledge", "Instructions"] },
+    { "level": 5, "usedFor": ["SupportingInformation", "Metadata", "Captions"] }
+  ],
+  "semanticColorCount": 6,
+  "semanticColors": [
+    {
+      "id": "trust",
+      "name": "Trust",
+      "usedFor": ["Navigation", "Identity", "PrimaryActions", "Community"]
+    },
+    {
+      "id": "growth",
+      "name": "Growth",
+      "usedFor": ["Learning", "VolunteerProgress", "Leadership", "Knowledge"]
+    },
+    {
+      "id": "action",
+      "name": "Action",
+      "usedFor": ["PrimaryCallsToAction", "MissionExecution", "ImportantNextSteps"]
+    },
+    {
+      "id": "attention",
+      "name": "Attention",
+      "usedFor": ["Warnings", "Deadlines", "Approvals", "CriticalUpdates"],
+      "usage": "sparingly"
+    },
+    {
+      "id": "reflection",
+      "name": "Reflection",
+      "usedFor": ["History", "Knowledge", "Stories", "Legacy"]
+    },
+    {
+      "id": "celebration",
+      "name": "Celebration",
+      "usedFor": ["Recognition", "Milestones", "CommunitySuccess"],
+      "usage": "meaningfulNotExcessive"
+    }
+  ],
+  "spacingCommunicates": [
+    "Hierarchy",
+    "Relationships",
+    "Grouping",
+    "Focus",
+    "BreathingRoom"
+  ],
+  "layoutSystem": {
+    "layers": [
+      "MissionBanner",
+      "PrimaryContent",
+      "SupportingPanels",
+      "Knowledge",
+      "Community",
+      "History",
+      "FooterActions"
+    ],
+    "layerCount": 7
+  },
+  "operationalCardTypes": [
+    "MissionCard",
+    "VolunteerCard",
+    "CommunityCard",
+    "KnowledgeCard",
+    "LeadershipCard",
+    "DigitalTwinCard"
+  ],
+  "operationalCardTypeCount": 6,
+  "iconographyPrinciples": ["Clarify", "NotDecorate", "Recognizable", "Accessible"],
+  "motionCommunicates": [
+    "Progress",
+    "Relationships",
+    "Transitions",
+    "Success",
+    "Focus"
+  ],
+  "animationPrinciples": [
+    "Purposeful",
+    "Subtle",
+    "SupportUnderstanding",
+    "RespectReducedMotion",
+    "CelebrateMilestones"
+  ],
+  "illustrationEmphasizes": [
+    "Community",
+    "People",
+    "Learning",
+    "Growth",
+    "Service",
+    "Collaboration"
+  ],
+  "photographyPrioritizes": [
+    "RealCommunities",
+    "RealVolunteers",
+    "RealLeaders",
+    "RealMissions"
+  ],
+  "soundPrinciples": ["Subtle", "SupportAccessibility", "NeverDistracting", "Optional"],
+  "outcomeBasedActionLabels": [
+    "JoinCommunity",
+    "ContinueMission",
+    "ReviewProposal",
+    "ScheduleMeeting"
+  ],
+  "avoidVagueLabels": ["Submit", "Continue", "ClickHere"],
+  "feedbackExplains": ["WhatHappened", "Why", "WhatComesNext"],
+  "emptyStatePattern": {
+    "example": "No missions yet.",
+    "invitation": "Your first mission starts your community's story."
+  },
+  "errorLanguagePattern": {
+    "avoid": "You entered invalid information.",
+    "prefer": "We couldn't verify that information. Let's try again."
+  },
+  "celebrationTargets": [
+    "CommunityGrowth",
+    "VolunteerMilestones",
+    "Leadership",
+    "Knowledge",
+    "MissionSuccess"
+  ],
+  "accessibilitySupports": [
+    "ReadableTypography",
+    "Contrast",
+    "Keyboard",
+    "ScreenReaders",
+    "Touch",
+    "Voice",
+    "ReducedMotion"
+  ],
+  "aiVisualQualities": [
+    "Helpful",
+    "Transparent",
+    "Explainable",
+    "Grounded",
+    "Collaborative"
+  ],
+  "componentTokenInherits": [
+    "Typography",
+    "Spacing",
+    "Color",
+    "Elevation",
+    "Motion",
+    "Interaction",
+    "Accessibility"
+  ],
+  "componentTokenCount": 7,
+  "brandPersonalityTraits": [
+    "Calm",
+    "Trustworthy",
+    "Competent",
+    "Hopeful",
+    "Welcoming",
+    "Purposeful",
+    "Collaborative",
+    "Intelligent"
+  ],
+  "brandPersonalityTraitCount": 8,
+  "livingDesignSystem": {
+    "name": "Living Design System",
+    "abbreviation": "LDS",
+    "isOperationalProduct": true,
+    "notStaticDesignGuide": true,
+    "designTokenCategories": [
+      "Typography",
+      "Color",
+      "Spacing",
+      "Elevation",
+      "Motion",
+      "Accessibility"
+    ],
+    "designTokenCategoryCount": 6,
+    "componentCategories": [
+      "MissionCards",
+      "CommunityCards",
+      "Dashboards",
+      "Navigation",
+      "Forms",
+      "Timelines",
+      "KnowledgePanels",
+      "DigitalTwinPanels"
+    ],
+    "componentCategoryCount": 8,
+    "interactionPatterns": [
+      "Onboarding",
+      "MissionExecution",
+      "VolunteerWorkflows",
+      "LeadershipJourneys",
+      "CommunityLaunch",
+      "GovernanceApprovals"
+    ],
+    "interactionPatternCount": 6,
+    "experiencePatterns": [
+      "Success",
+      "ErrorRecovery",
+      "EmptyStates",
+      "Loading",
+      "Celebration",
+      "Reflection"
+    ],
+    "experiencePatternCount": 6,
+    "accessibilityStandards": [
+      "WCAGCompliance",
+      "KeyboardNavigation",
+      "ScreenReaderTesting",
+      "ContrastValidation",
+      "ReducedMotion"
+    ],
+    "accessibilityStandardCount": 5,
+    "operationalAnalytics": [
+      "ComponentUsage",
+      "AccessibilityCompliance",
+      "DesignConsistency",
+      "UserConfusionHotspots",
+      "InteractionCompletionRates"
+    ],
+    "operationalAnalyticsCount": 5,
+    "aiIntegrationCapabilities": [
+      "GeneratePrototypesFollowingStandards",
+      "RecommendAppropriateComponents",
+      "DetectInconsistentDesigns",
+      "ExplainInteractionPatternRecommendations"
+    ],
+    "aiIntegrationCapabilityCount": 4,
+    "architecturalProperty": "Every new feature automatically inherits visual language, interaction philosophy, accessibility standards, and experience principles",
+    "visualConsistencyAsArchitecturalCapability": true
+  },
+  "burtImplementationGuidance": [
+    "Build token-based design system",
+    "Separate semantic meaning from visual styling",
+    "Accessible by default",
+    "Motion improves understanding",
+    "Cards as primary operational objects",
+    "Consistent typography and spacing platform-wide",
+    "Consult Living Design System before UI-facing features"
+  ],
   "acceptanceCriteria": "AC-141",
-  "acceptanceCriteriaMet": false
+  "acceptanceCriteriaMet": true
 }
