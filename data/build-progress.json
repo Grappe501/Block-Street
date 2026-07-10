@@ -65,7 +65,7 @@
         { "id": "2.3", "name": "Institution Registry Model [PHASE-002.3]", "status": "done", "notes": "INST-M01–M18, Canonical Profile, knowledge graph INST-M17" },
         { "id": "2.4", "name": "Relationship Graph [PHASE-002.4]", "status": "done", "notes": "REL-M01–M14, digital twin, relationship-types.json, organizing intelligence" },
         { "id": "2.5", "name": "Status & Lifecycle Framework [PHASE-002.5]", "status": "done", "notes": "STS-M01–M18, status-framework.json, status timeline STS-M16" },
-        { "id": "2.6", "name": "Outreach Gap Dashboard Requirements", "status": "pending", "notes": "OUTREACH_GAP_DASHBOARD_REQUIREMENTS.md" },
+        { "id": "2.6", "name": "Outreach Intelligence & Mission Board [PHASE-002.6]", "status": "done", "notes": "OIS-M01–M18, Mission Board, outreach-intelligence.json" },
         { "id": "2.7", "name": "Campus Page Personalization Rules", "status": "pending", "notes": "CAMPUS_PAGE_PERSONALIZATION_RULES.md" },
         { "id": "2.8", "name": "Registry Source & Verification Protocol", "status": "pending", "notes": "REGISTRY_SOURCE_AND_VERIFICATION_PROTOCOL.md" },
         { "id": "2.9", "name": "Registry Seed Data Plan", "status": "pending", "notes": "REGISTRY_SEED_DATA_PLAN.md — preliminary JSON exists" },
@@ -141,6 +141,12 @@
     { "version": "1.4.0", "name": "Surveys + collective voice", "status": "pending", "date": null }
   ],
   "buildLog": [
+    {
+      "date": "2026-07-10",
+      "title": "PHASE-002.6 Statewide Outreach Intelligence & Mission Board",
+      "phase": 2,
+      "summary": "OIS-M01–M18 opportunity-first dashboard, Mission Board architecture, outreach-intelligence.json, Admin Outreach tab"
+    },
     {
       "date": "2026-07-10",
       "title": "PHASE-002.5 Status & Lifecycle Framework",
@@ -228,9 +234,9 @@
   ],
   "stats": {
     "totalSteps": 40,
-    "doneSteps": 15,
+    "doneSteps": 16,
     "inProgressSteps": 2,
-    "pendingSteps": 23,
-    "percentComplete": 38
+    "pendingSteps": 22,
+    "percentComplete": 40
   }
 }

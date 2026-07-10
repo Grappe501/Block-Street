@@ -4,7 +4,7 @@
 > **Step 2.5:** The platform becomes an **operating system** — status-driven, not page-driven.
 
 **Goal:** Build the canonical data foundation for the entire platform.  
-**Status:** In progress · Steps 2.1–2.5 complete  
+**Status:** In progress · Steps 2.1–2.6 complete  
 **Build Bible (closeout):** `PHASE_2_ARKANSAS_ORGANIZING_REGISTRY_BUILD_BIBLE.md` (Step 2.10)
 
 ---
@@ -34,7 +34,7 @@
 | 2.3 | [Institution Registry Model](INSTITUTION_REGISTRY_MODEL.md) | ✅ |
 | 2.4 | [Relationship Graph](ARKANSAS_RELATIONSHIP_GRAPH.md) | ✅ |
 | 2.5 | [Status & Lifecycle Framework](CANONICAL_STATUS_LIFECYCLE_FRAMEWORK.md) | ✅ |
-| 2.6 | Outreach Gap Dashboard Requirements | Pending |
+| 2.6 | [Statewide Outreach Intelligence & Mission Board](STATEWIDE_OUTREACH_INTELLIGENCE.md) | ✅ |
 | 2.7 | Campus Page Personalization Rules | Pending |
 | 2.8 | Registry Data Source & Verification Protocol | Pending |
 | 2.9 | Registry Seed Data Plan | Pending |
@@ -47,6 +47,7 @@
 | File | Purpose |
 |------|---------|
 | `status-framework.json` | Lifecycles, categories, dashboard queries |
+| `outreach-intelligence.json` | Mission Board, opportunity types, dashboard levels |
 | `relationship-types.json` | Graph edge catalog |
 | `schemas/*.json` | County, institution, relationship, status-transition |
 

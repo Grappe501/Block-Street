@@ -17,6 +17,7 @@ Every page, map, and dashboard builds on this Registry.
 | `institutions.json` | Colleges & universities (partial bootstrap — full Canonical Profile in Step 2.3) |
 | `relationship-types.json` | Canonical relationship type catalog (PHASE-002.4) |
 | `status-framework.json` | Lifecycles, status categories, dashboard queries (PHASE-002.5) |
+| `outreach-intelligence.json` | Mission Board, opportunity types, dashboard levels (PHASE-002.6) |
 | `schemas/status-transition.schema.json` | Status timeline transition records |
 
 ## Requirements
@@ -28,6 +29,7 @@ Every page, map, and dashboard builds on this Registry.
 | INST-003 | Institution Registry Model (PHASE-002.3) |
 | REL-001 | Arkansas Relationship Graph (PHASE-002.4) |
 | STS-001 | Status & Lifecycle Framework (PHASE-002.5) |
+| OIS-001 | Outreach Intelligence & Mission Board (PHASE-002.6) |
 | REG-002 | Arkansas Institution Registry |
 | REG-003 | Registry Purpose & Authority Doctrine |
 

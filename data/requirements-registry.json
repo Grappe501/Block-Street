@@ -15,6 +15,8 @@
     { "prefix": "MSG", "domain": "Messaging" },
     { "prefix": "VOL", "domain": "Volunteer" },
     { "prefix": "ANL", "domain": "Analytics" },
+    { "prefix": "OIS", "domain": "Outreach intelligence" },
+    { "prefix": "STS", "domain": "Status & lifecycle" },
     { "prefix": "ADM", "domain": "Administration" },
     { "prefix": "SEC", "domain": "Security" },
     { "prefix": "API", "domain": "API endpoints" },
@@ -43,7 +45,7 @@
   "pages": [
     { "id": "PAGE-HOME", "route": "/", "title": "Homepage", "status": "done" },
     { "id": "PAGE-JOIN", "route": "/join", "title": "Join / Registration", "status": "in_progress" },
-    { "id": "PAGE-MAP", "route": "/map", "title": "Statewide Map", "status": "in_progress" },
+    { "id": "PAGE-MAP", "route": "/map", "title": "Statewide Map", "status": "in_progress", "requirement": "OIS-001" },
     { "id": "PAGE-SCHOOLS", "route": "/schools", "title": "Institution Directory", "status": "done" },
     { "id": "PAGE-INSTITUTION", "route": "/schools/[slug]", "title": "Institution Hub", "status": "done" },
     { "id": "PAGE-COUNTY", "route": "/county/[slug]", "title": "County Youth Hub", "status": "done" },
@@ -317,6 +319,36 @@
         "frontend": "PAGE-ADMIN",
         "test": "TEST-STS-001",
         "doc": "DOC-STS-001"
+      },
+      "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
+    },
+    {
+      "id": "OIS-001",
+      "title": "Statewide Outreach Intelligence & Mission Board",
+      "purpose": "Show what you don't have yet — statewide mission board, not inventory reporting",
+      "description": "PHASE-002.6 opportunity engine, four dashboard levels, Mission Board card architecture, heat map concepts",
+      "priority": "critical",
+      "principle": "LS-P7",
+      "dependencies": ["STS-001", "REL-001", "REG-001", "REG-002"],
+      "related": ["OIS-M16", "LS-CHK", "NET-001", "ANL-001"],
+      "acceptanceCriteria": [
+        "Outreach dashboard philosophy documented",
+        "Dashboard behavior at state, county, institution, personal levels",
+        "Opportunity-based organizing established",
+        "Mission Board architecture specified",
+        "Heat map and visualization concepts identified",
+        "Blueprint for statewide intelligence layer"
+      ],
+      "futureNotes": "SVG heat map, full opportunity engine with DB, personal invite cards",
+      "implementationStatus": "done",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": "DB-COUNTIES",
+        "api": null,
+        "frontend": "PAGE-ADMIN",
+        "test": "TEST-OIS-001",
+        "doc": "DOC-OIS-001"
       },
       "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
     },

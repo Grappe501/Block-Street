@@ -9,7 +9,7 @@ const PHASE2_STEPS = [
   { step: "2.3", name: "Institution Registry Model", artifact: "INSTITUTION_REGISTRY_MODEL.md", status: "done" },
   { step: "2.4", name: "Relationship Graph", artifact: "ARKANSAS_RELATIONSHIP_GRAPH.md", status: "done" },
   { step: "2.5", name: "Status & Lifecycle", artifact: "CANONICAL_STATUS_LIFECYCLE_FRAMEWORK.md", status: "done" },
-  { step: "2.6", name: "Outreach Gap Dashboard", artifact: "OUTREACH_GAP_DASHBOARD_REQUIREMENTS.md", status: "pending" },
+  { step: "2.6", name: "Outreach Intelligence & Mission Board", artifact: "STATEWIDE_OUTREACH_INTELLIGENCE.md", status: "done" },
   { step: "2.7", name: "Campus Page Personalization", artifact: "CAMPUS_PAGE_PERSONALIZATION_RULES.md", status: "pending" },
   { step: "2.8", name: "Source & Verification Protocol", artifact: "REGISTRY_SOURCE_AND_VERIFICATION_PROTOCOL.md", status: "pending" },
   { step: "2.9", name: "Registry Seed Data Plan", artifact: "REGISTRY_SEED_DATA_PLAN.md", status: "pending" },

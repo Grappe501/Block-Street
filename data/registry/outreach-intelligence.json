@@ -1,0 +1,60 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/phase-02/STATEWIDE_OUTREACH_INTELLIGENCE.md",
+  "motto": "The map is never finished.",
+  "principle": "Show what you don't have yet — inspire action, not just report activity.",
+  "primaryQuestions": [
+    "Where are we strong?",
+    "Where are we growing?",
+    "Where do we need help?",
+    "Where can I contribute?",
+    "What should we do next?"
+  ],
+  "dashboardLevels": [
+    { "id": "state", "name": "State Dashboard", "audience": "Directors, statewide organizers", "v1Route": "/admin" },
+    { "id": "county", "name": "County Dashboard", "audience": "County organizers", "v1Route": "/county/[slug]" },
+    { "id": "institution", "name": "Institution Dashboard", "audience": "Campus organizers", "v1Route": "/schools/[slug]" },
+    { "id": "personal", "name": "Personal Dashboard", "audience": "Every participant", "v1Route": "/dashboard/network" }
+  ],
+  "stateMetrics": [
+    { "id": "counties-represented", "label": "Counties represented", "query": "county.organizingStatus >= building" },
+    { "id": "counties-needing-outreach", "label": "Counties needing organizers", "query": "county.organizingStatus = needs_outreach" },
+    { "id": "institutions-active", "label": "Active institutions", "query": "institution.organizingStatus >= building" },
+    { "id": "institutions-needing-organizers", "label": "Institutions needing organizers", "query": "institution.organizingStatusIn outreachDashboardFilter" },
+    { "id": "total-participants", "label": "Total participants", "query": "count(participants)", "v1": "pending_db" },
+    { "id": "recruitment-momentum", "label": "Recruitment momentum", "query": "count(referral_edges, last_30d)", "v1": "pending_db" }
+  ],
+  "opportunityTypes": [
+    { "id": "first-organizer-campus", "template": "Be the first organizer at {institutionName}.", "actionLabel": "Step up", "statusTrigger": "institution.needs_outreach" },
+    { "id": "county-launch", "template": "Help launch {countyName}.", "actionLabel": "Get involved", "statusTrigger": "county.needs_outreach" },
+    { "id": "join-team", "template": "Join the team building at {institutionName}.", "actionLabel": "Join", "statusTrigger": "institution.building" },
+    { "id": "invite-friends", "template": "You have {n} friends who haven't invited anyone yet.", "actionLabel": "Send invites", "statusTrigger": "personal.network_idle" },
+    { "id": "nearby-volunteers", "template": "{institutionName} nearby is looking for volunteers.", "actionLabel": "Learn more", "statusTrigger": "future" },
+    { "id": "milestone-near", "template": "{countyName} is one step away from {nextStatus}.", "actionLabel": "Help reach it", "statusTrigger": "timeline.threshold" }
+  ],
+  "missionBoardExamples": [
+    { "type": "county-launch", "title": "Pulaski County needs its first youth committee.", "priority": "high", "v1": "future" },
+    { "type": "first-organizer-campus", "title": "Three students are waiting for an organizer at this campus.", "priority": "critical", "v1": "partial" },
+    { "type": "milestone-near", "title": "Faulkner County is one event away from reaching its next milestone.", "priority": "medium", "v1": "future" },
+    { "type": "invite-friends", "title": "You have five friends who haven't invited anyone yet.", "priority": "medium", "v1": "pending_db" },
+    { "type": "nearby-volunteers", "title": "This nearby campus is looking for volunteers.", "priority": "low", "v1": "future" }
+  ],
+  "heatMapStatusColors": {
+    "needs_outreach": { "label": "Needs Outreach", "semantic": "attention" },
+    "building": { "label": "Building", "semantic": "progress" },
+    "growing": { "label": "Growing", "semantic": "momentum" },
+    "established": { "label": "Established", "semantic": "stable" },
+    "thriving": { "label": "Thriving", "semantic": "strong" }
+  },
+  "actionOrientedSections": [
+    { "id": "what-happened", "heading": "What happened?" },
+    { "id": "what-matters", "heading": "What matters?" },
+    { "id": "what-next", "heading": "What can I do next?" }
+  ],
+  "v1Scope": {
+    "missionBoard": "partial",
+    "heatMap": "list_only",
+    "stateDashboard": "admin_and_map",
+    "personalOpportunities": "requires_phase_3"
+  }
+}
