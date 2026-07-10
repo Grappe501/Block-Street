@@ -1,1 +1,318 @@
-{"version":"1.0.0","requirementId":"DAB-013","docPath":"docs/volume-02/AI_KNOWLEDGE_MODEL.md","memoryLayers":["session","participant","community","organizational","platform"],"acceptanceCriteria":"AC-118"}
+{
+  "version": "2.0.0",
+  "documentId": "VOLUME-002.12",
+  "requirementId": "DAB-013",
+  "docPath": "docs/volume-02/AI_KNOWLEDGE_MODEL.md",
+  "status": "canonical",
+  "priority": "critical",
+  "lastUpdated": "2026-07-10",
+  "guidingPrinciple": "AI should retrieve knowledge—not invent institutional memory.",
+  "coreQuestion": "What evidence supports this response?",
+  "knowledgePhilosophy": {
+    "aiNeverBecomesDatabase": true,
+    "knowledgeCuratedByPlatform": true,
+    "projectionsFromCanonicalData": true,
+    "separationPreservesTrust": true,
+    "noRetrievalBypassesAuthorization": true
+  },
+  "aiKnowledgeArchitecture": {
+    "layers": [
+      "CanonicalData",
+      "KnowledgeObjects",
+      "KnowledgeGraph",
+      "RetrievalObjects",
+      "ContextAssembly",
+      "AIOrchestrator",
+      "GroundedResponse"
+    ],
+    "layerCount": 7
+  },
+  "philosophyFlow": [
+    "CanonicalTruth",
+    "KnowledgeObjects",
+    "RetrievalObjects",
+    "ContextAssembly",
+    "AIResponse",
+    "Explainability"
+  ],
+  "canonicalKnowledgeSources": [
+    "CommunityBrain",
+    "MissionLibrary",
+    "Story",
+    "Lesson",
+    "ExperiencePlaybook",
+    "CommunityLegacy",
+    "CommunityEventLedger",
+    "KnowledgeGraph",
+    "DigitalTwin",
+    "Configuration",
+    "Policy",
+    "PublicReferenceMaterial"
+  ],
+  "nonCanonicalAssistSources": [
+    "SearchIndex",
+    "Analytics"
+  ],
+  "knowledgeObjectExamples": [
+    "Lesson",
+    "Story",
+    "PlaybookSection",
+    "MissionSummary",
+    "CommunityProfile",
+    "LeadershipGuidance",
+    "VolunteerHandbook"
+  ],
+  "retrievalObjectFields": [
+    "canonicalSourceId",
+    "retrievalId",
+    "text",
+    "summary",
+    "topic",
+    "keywords",
+    "relationships",
+    "permissionMetadata",
+    "version",
+    "embeddingReference",
+    "citationReference"
+  ],
+  "retrievalObjectsAreProjections": true,
+  "chunkingModel": {
+    "semanticBoundaries": true,
+    "preserveContext": true,
+    "examples": [
+      "PlaybookChapter",
+      "StorySection",
+      "MeetingSummary",
+      "Lesson",
+      "MissionReflection",
+      "PolicyArticle"
+    ],
+    "alignsWithSearchIndex": true
+  },
+  "embeddingObjectFields": [
+    "embeddingId",
+    "modelVersion",
+    "embeddingTimestamp",
+    "language",
+    "sourceVersion",
+    "refreshStatus"
+  ],
+  "embeddingsReplaceable": true,
+  "embeddingsOptionalForV1": true,
+  "contextAssemblySteps": [
+    "SelectRetrievalObjects",
+    "EvaluatePermissions",
+    "ExamineKnowledgeGraphRelationships",
+    "ConsiderTimelineContext",
+    "AddDigitalTwinContext"
+  ],
+  "citationModel": {
+    "requiredForFactualClaims": true,
+    "fields": [
+      "canonicalSource",
+      "knowledgeObject",
+      "story",
+      "playbook",
+      "policy",
+      "event",
+      "version",
+      "location"
+    ],
+    "participantsCanInspectEvidence": true
+  },
+  "explainabilityObjectFields": [
+    "knowledgeSources",
+    "confidence",
+    "assumptions",
+    "missingInformation",
+    "reasoningSummary",
+    "toolUsage"
+  ],
+  "knowledgeFreshnessFields": [
+    "lastUpdated",
+    "refreshSchedule",
+    "canonicalVersion",
+    "reviewStatus",
+    "stalenessIndicator"
+  ],
+  "digitalTwinContextTypes": [
+    "ParticipantTwin",
+    "CommunityTwin",
+    "CountyTwin",
+    "MissionTwin",
+    "InstitutionTwin"
+  ],
+  "twinsAreDerivedSummaries": true,
+  "memoryLayers": [
+    {
+      "id": "session",
+      "name": "Session",
+      "scope": "Ephemeral — current conversation"
+    },
+    {
+      "id": "participant",
+      "name": "Participant",
+      "scope": "Preferences, recent interactions"
+    },
+    {
+      "id": "community",
+      "name": "Community",
+      "scope": "Community-scoped context"
+    },
+    {
+      "id": "organizational",
+      "name": "Organizational",
+      "scope": "Config + curated knowledge"
+    },
+    {
+      "id": "platform",
+      "name": "Platform",
+      "scope": "DCL + governance rules"
+    }
+  ],
+  "memoryLayerCount": 5,
+  "memorySeparateFromKnowledge": true,
+  "memoryRequiresConsent": true,
+  "aiPromptProfiles": [
+    "CommunityGuide",
+    "LeadershipCoach",
+    "MissionPlanner",
+    "VolunteerCoordinator",
+    "KnowledgeLibrarian",
+    "ResearchAssistant"
+  ],
+  "retrievalFilters": [
+    "Permissions",
+    "Visibility",
+    "CommunityBoundaries",
+    "KnowledgeQuality",
+    "Version",
+    "Language",
+    "ReviewStatus"
+  ],
+  "unauthorizedKnowledgeNeverEntersPrompt": true,
+  "knowledgeQualityFields": [
+    "author",
+    "reviewer",
+    "approval",
+    "source",
+    "evidence",
+    "qualityLevel",
+    "historicalSignificance"
+  ],
+  "aiConversationRecordFields": [
+    "conversationId",
+    "promptProfile",
+    "knowledgeSources",
+    "toolsInvoked",
+    "modelVersion",
+    "responseMetadata",
+    "approvalStatus"
+  ],
+  "aiFeedbackTypes": [
+    "Helpful",
+    "NeedsImprovement",
+    "Incorrect",
+    "Incomplete",
+    "SuggestedRevision"
+  ],
+  "feedbackImprovesRetrievalNotCanonical": true,
+  "aiGovernanceRequirements": [
+    "VersionTracking",
+    "Approval",
+    "Monitoring",
+    "Audit",
+    "PromptVersioning",
+    "KnowledgeVersioning"
+  ],
+  "futureAiModelsSupport": [
+    "CloudModels",
+    "LocalModels",
+    "HybridDeployment",
+    "SpecializedModels",
+    "FutureProviders"
+  ],
+  "providerIndependent": true,
+  "canonicalKnowledgeFabric": {
+    "name": "Canonical Knowledge Fabric",
+    "purpose": "Unified normalized interface for all knowledge sources before AI retrieval",
+    "assembles": [
+      "CanonicalKnowledgeObjects",
+      "CommunityKnowledgeGraphRelationships",
+      "CommunityEventLedgerHistory",
+      "DigitalTwinSummaries",
+      "StoryEvidence",
+      "LessonsLearned",
+      "ExperiencePlaybooks",
+      "CommunityBrainEntries",
+      "ConfigurationAndGovernanceRules",
+      "PublicReferenceMaterial"
+    ],
+    "assembleCount": 10,
+    "operations": [
+      "PermissionFiltering",
+      "Deduplication",
+      "VersionSelection",
+      "ContextRanking",
+      "CitationAssembly",
+      "ExplainabilityPreparation"
+    ],
+    "operationCount": 6,
+    "separationOfConcerns": [
+      {
+        "layer": "CanonicalSystems",
+        "responsibility": "Preserve truth"
+      },
+      {
+        "layer": "KnowledgeFabric",
+        "responsibility": "Prepare truth for retrieval"
+      },
+      {
+        "layer": "AIOrchestrator",
+        "responsibility": "Reason over prepared context"
+      },
+      {
+        "layer": "AIModels",
+        "responsibility": "Generate grounded responses"
+      }
+    ],
+    "deliversCoherentKnowledgePackage": true,
+    "philosophy": "Knowledge is curated by the platform, not created by the AI"
+  },
+  "communityBrainIntegration": {
+    "purpose": "Curated knowledge index per community",
+    "fields": ["priority", "freshnessScore", "lastValidated", "entryType", "sourceChunkReference"],
+    "feedsKnowledgeFabricRanking": true
+  },
+  "domainSchemaMapping": {
+    "schema": "Intelligence",
+    "entities": [
+      "KnowledgeObject",
+      "RetrievalObject",
+      "Embedding",
+      "ContextPackage",
+      "Citation",
+      "ExplainabilityRecord",
+      "ConversationRecord",
+      "MemoryObject",
+      "PromptProfile"
+    ]
+  },
+  "projectionIntegrations": {
+    "knowledgeGraphPath": "data/registry/knowledge-graph-schema.json",
+    "eventLedgerPath": "data/registry/event-data-model.json",
+    "searchIndexPath": "data/registry/search-index-model.json",
+    "digitalTwinPath": "data/registry/living-digital-twin-architecture.json"
+  },
+  "burtImplementationGuidance": [
+    "Keep canonical knowledge separate from retrieval objects",
+    "Build retrieval as a projection layer",
+    "Preserve citations for every response",
+    "Support semantic chunking",
+    "Separate memory from permanent knowledge",
+    "Keep AI provider-independent through AI Orchestration Layer",
+    "Consult Canonical Knowledge Fabric spec before AI retrieval features"
+  ],
+  "acceptanceCriteria": "AC-118",
+  "acceptanceCriteriaMet": true
+}
