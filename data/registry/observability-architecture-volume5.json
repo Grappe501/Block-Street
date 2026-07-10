@@ -1,0 +1,154 @@
+{
+  "version": "2.0.0",
+  "documentId": "VOLUME-005.11",
+  "requirementId": "PSI-012",
+  "docPath": "docs/volume-05/OBSERVABILITY_ARCHITECTURE.md",
+  "status": "canonical",
+  "priority": "mission_critical",
+  "lastUpdated": "2026-07-10",
+  "productName": "Observability, Diagnostics & Platform Intelligence Architecture",
+  "guidingPrinciple": "The platform should understand itself as well as it understands its communities.",
+  "observabilityPhilosophy": {
+    "moreThanLogsAndDashboards": true,
+    "selfExplainingBeforeSelfHealing": true,
+    "infrastructureAndMissionHealthOnePicture": true,
+    "observesExplainsLearnsFromOperation": true
+  },
+  "observabilityArchitecture": {
+    "layers": [
+      "Signal",
+      "Collection",
+      "Correlation",
+      "Analysis",
+      "Visualization",
+      "Recommendation",
+      "KnowledgeCapture"
+    ],
+    "layerCount": 7
+  },
+  "observabilityPrincipleCount": 8,
+  "observabilityPrinciples": [
+    "Traceable",
+    "Explainable",
+    "Actionable",
+    "Correlated",
+    "PermissionAware",
+    "HistoricallyPreserved",
+    "LowOverhead",
+    "ConstitutionallyGoverned"
+  ],
+  "signalDomainCount": 14,
+  "signalDomains": [
+    { "id": "platformServices", "name": "Platform Services", "monitors": ["Availability", "Latency", "ErrorRate", "Dependencies", "Version", "Capacity", "Recovery"] },
+    { "id": "apiHealth", "name": "API Health", "tracks": ["Requests", "Failures", "ResponseTimes", "RateLimiting", "Authentication", "Authorization", "VersionUsage"] },
+    { "id": "synchronization", "name": "Synchronization", "monitors": ["QueueDepth", "Latency", "ConflictRate", "OfflineDuration", "Replay", "FederationHealth"] },
+    { "id": "aiFederation", "name": "AI Federation", "tracks": ["ModelAvailability", "Routing", "Latency", "TokenUsage", "CitationCoverage", "Confidence", "HumanOverrides", "SafetyEvents"] },
+    { "id": "communityEventLedger", "name": "Community Event Ledger", "monitors": ["PublishingRate", "Subscribers", "ReplayHealth", "EventBacklog", "DeadLetterQueues", "EventIntegrity"] },
+    { "id": "knowledgeRetrievalFabric", "name": "Knowledge Retrieval Fabric", "tracks": ["SearchLatency", "RetrievalQuality", "CitationAccuracy", "KnowledgeFreshness", "RankingEffectiveness", "SearchSuccess"] },
+    { "id": "runtimeFederation", "name": "Runtime Federation", "monitors": ["LocalBrains", "CloudRuntimes", "RegionalNodes", "Synchronization", "DeploymentHealth", "ResourceUtilization"] },
+    { "id": "security", "name": "Security", "tracks": ["Authentication", "Threats", "Encryption", "Certificates", "KeyRotation", "TrustEvents", "SecurityHealth"] },
+    { "id": "communications", "name": "Communications", "monitors": ["Delivery", "Failures", "MeetingHealth", "NotificationLatency", "CampaignPerformance", "Accessibility"] },
+    { "id": "digitalTwins", "name": "Digital Twins", "monitors": ["Freshness", "Synchronization", "UpdateLatency", "Coverage", "Health", "Consistency"] },
+    { "id": "communityHealth", "name": "Community Health", "monitors": ["VolunteerParticipation", "Leadership", "KnowledgeGrowth", "MissionSuccess", "CommunityActivity", "Retention"] },
+    { "id": "infrastructure", "name": "Infrastructure", "tracks": ["CPU", "Memory", "Storage", "GPU", "Bandwidth", "Containers", "Databases", "Queues"] },
+    { "id": "businessRules", "name": "Business Rules", "monitors": ["RuleExecution", "Conflicts", "Overrides", "GovernanceExceptions", "PolicyViolations"] },
+    { "id": "workflowHealth", "name": "Workflow Health", "tracks": ["RunningWorkflows", "BlockedWorkflows", "ApprovalDelays", "AutomationSuccess", "CompletionTime"] }
+  ],
+  "observabilityPipeline": {
+    "stages": ["Telemetry", "CorrelationEngine", "OperationalGraph", "Dashboards", "AIAnalysis", "ExecutiveRecommendations"],
+    "stageCount": 6
+  },
+  "correlationEngine": {
+    "correlates": ["ServiceFailures", "SynchronizationDelays", "CommunityImpact", "MissionImpact", "ParticipantExperience"],
+    "causesNotIsolatedAlerts": true
+  },
+  "distributedTracing": {
+    "contextFields": ["TraceId", "CorrelationId", "Workspace", "Community", "Mission", "Institution", "Participant", "ServiceChain"],
+    "fieldCount": 8,
+    "endToEndTraces": true
+  },
+  "healthModel": {
+    "states": ["Healthy", "Warning", "Degraded", "Recovery", "Critical", "Unavailable"],
+    "stateCount": 6,
+    "standardizedHealth": true
+  },
+  "runtimeTwin": {
+    "tracks": ["Services", "Performance", "Storage", "Synchronization", "AI", "Connectors", "Security", "Configuration"]
+  },
+  "platformTwin": {
+    "represents": ["EntireEcosystem", "RegionalHealth", "CommunityHealth", "KnowledgeGrowth", "Infrastructure", "AI", "Federation"]
+  },
+  "aiObservability": {
+    "exposes": ["ReasoningLatency", "CitationRate", "PromptSuccess", "Confidence", "Safety", "HallucinationReports", "HumanCorrection"],
+    "accountableAI": true
+  },
+  "executiveDashboards": {
+    "views": ["PlatformHealth", "CommunityHealth", "InstitutionHealth", "AIHealth", "Synchronization", "KnowledgeGrowth", "Security", "Deployment"],
+    "oneOperationalPicture": true
+  },
+  "communityEventLedgerIntegration": {
+    "observabilityEvents": ["Alerts", "Recoveries", "Deployments", "PerformanceChanges", "Recommendations", "OperationalReviews"]
+  },
+  "localBrainObservability": {
+    "exposes": ["Health", "Synchronization", "Storage", "AI", "Security", "Updates", "OfflineDuration"],
+    "visibilityWithoutSacrificingAutonomy": true
+  },
+  "historicalAnalytics": {
+    "supports": ["TrendAnalysis", "FailurePrediction", "CapacityPlanning", "KnowledgeGrowth", "VolunteerGrowth", "MissionPerformance"]
+  },
+  "accessibility": {
+    "supports": ["ScreenReaders", "ColorBlindModes", "HighContrast", "PlainLanguageSummaries", "VoiceSummaries"],
+    "extendsToOperators": true
+  },
+  "operationalIntelligenceGrid": {
+    "name": "Operational Intelligence Grid",
+    "abbreviation": "OIG",
+    "notTraditionalMonitoring": true,
+    "gridLayers": {
+      "layers": [
+        "Telemetry",
+        "Correlation",
+        "KnowledgeGraph",
+        "PatternDetection",
+        "AIFederation",
+        "Recommendations",
+        "ExecutiveOperationsCenter"
+      ],
+      "layerCount": 7
+    },
+    "oigResponsibilities": {
+      "responsibilities": [
+        { "id": "infrastructureIntelligence", "name": "Infrastructure Intelligence", "evaluates": ["PlatformServices", "RuntimeHealth", "Storage", "Networks", "AICapacity", "LocalBrainConnectivity"] },
+        { "id": "operationalIntelligence", "name": "Operational Intelligence", "evaluates": ["MissionExecution", "WorkflowDelays", "VolunteerBottlenecks", "LeadershipWorkload", "CommunityHealth", "KnowledgeProduction"] },
+        { "id": "predictiveIntelligence", "name": "Predictive Intelligence", "identifies": ["CapacityShortages", "SynchronizationRisks", "AIResourceExhaustion", "ConnectorInstability", "VolunteerBurnoutTrends", "CommunitiesNeedingSupport"] },
+        { "id": "knowledgeFeedbackLoop", "name": "Knowledge Feedback Loop", "generates": ["PostIncidentReview", "LessonsLearned", "PlaybookUpdates", "AITrainingMaterial", "ExecutiveSummaries"] },
+        { "id": "runtimeFederationIntelligence", "name": "Runtime Federation Intelligence", "liveMapOf": ["PersonalLocalBrains", "CommunityLocalBrains", "InstitutionalRuntimes", "CountyHubs", "RegionalNodes", "CloudFederation"] },
+        { "id": "selfDiagnostics", "name": "Self-Diagnostics", "continuouslyAsks": ["PlatformServicesNormal", "AIRecommendationsWellCited", "SynchronizationDelaysIncreasing", "DeploymentsDrifting", "ParticipantsAbandoningWorkflows", "AccessibilityIssuesEmerging"] }
+      ],
+      "responsibilityCount": 6
+    },
+    "explainsWhyWhoAffectedWhatNextSimilarSituations": true,
+    "pairsWithRuntimeFederationManager": true,
+    "pairsWithConstitutionalSecurityFabric": true,
+    "pairsWithPlatformServiceMesh": true,
+    "pairsWithInstitutionalEventFabric": true,
+    "pairsWithKnowledgeRetrievalFabric": true,
+    "pairsWithExecutiveOperationsCenter": true
+  },
+  "architecturalInsight": {
+    "observesExplainsLearns": true,
+    "coherentEcosystemHealthUnderstanding": true,
+    "infrastructureToMissionOutcomes": true
+  },
+  "burtImplementationGuidance": [
+    "Treat observability as platform service",
+    "Build Runtime Twins and Platform Twins early",
+    "Correlate operational and community signals",
+    "Preserve historical observability",
+    "Support LocalBrain federation",
+    "Make every alert actionable",
+    "Route through Operational Intelligence Grid"
+  ],
+  "acceptanceCriteria": "AC-161",
+  "acceptanceCriteriaMet": true
+}
