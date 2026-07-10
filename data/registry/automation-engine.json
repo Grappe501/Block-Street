@@ -1,22 +1,284 @@
 {
-  "version": "1.0.0",
-  "documentId": "VOLUME-003.09",
+  "version": "2.0.0",
+  "documentId": "VOLUME-003.9",
   "requirementId": "PBA-010",
   "docPath": "docs/volume-03/AUTOMATION_ENGINE.md",
-  "status": "pending",
+  "status": "canonical",
   "priority": "critical",
   "lastUpdated": "2026-07-10",
-  "guidingPrinciple": "Behavior is governed, not improvised.",
-  "defines": [
-    "Triggers",
-    "Actions",
+  "guidingPrinciple": "Automate repetition. Preserve human judgment.",
+  "automationPhilosophy": {
+    "eliminateRepetitiveAdminNotHumanJudgment": true,
+    "automationServesCommunities": true,
+    "neverBypassesPlatformGovernance": true,
+    "alwaysExplainable": true,
+    "neverReplacesWorkflows": true,
+    "amplifyPeopleNotObscureBehavior": true
+  },
+  "automationArchitecture": {
+    "layers": [
+      "Trigger",
+      "ContextAssembly",
+      "BusinessRuleEvaluation",
+      "WorkflowEvaluation",
+      "AutomationDecision",
+      "Execution",
+      "Verification",
+      "CommunityEventLedger"
+    ],
+    "layerCount": 8
+  },
+  "automationCategoryCount": 10,
+  "automationCategories": [
+    {
+      "id": "identity",
+      "name": "Identity Automation",
+      "examples": ["WelcomeJourney", "ProfileReminders", "VerificationReminders", "TrainingInvitations", "AnniversaryRecognition"]
+    },
+    {
+      "id": "community",
+      "name": "Community Automation",
+      "examples": ["CommunityOnboarding", "LeadershipReminders", "HealthReviews", "CommunityAnniversaries", "OperatingManualUpdates"]
+    },
+    {
+      "id": "volunteer",
+      "name": "Volunteer Automation",
+      "examples": ["VolunteerReminders", "TrainingFollowUp", "Recognition", "OpportunityRecommendations", "AvailabilityReminders"]
+    },
+    {
+      "id": "leadership",
+      "name": "Leadership Automation",
+      "examples": ["MentorshipReminders", "LeadershipReviews", "SuccessionPlanning", "LeadershipAnniversaries", "TrainingRecommendations"]
+    },
+    {
+      "id": "mission",
+      "name": "Mission Automation",
+      "examples": ["DeadlineReminders", "VolunteerCoordination", "MeetingScheduling", "ReflectionReminders", "KnowledgeCaptureRequests", "MissionArchivePreparation"]
+    },
+    {
+      "id": "knowledge",
+      "name": "Knowledge Automation",
+      "examples": ["PlaybookGeneration", "LessonReminders", "StoryRequests", "CommunityBrainIndexing", "KnowledgeReview", "LegacyPreservation"]
+    },
+    {
+      "id": "communication",
+      "name": "Communication Automation",
+      "examples": ["Digests", "Announcements", "Notifications", "EventReminders", "RecognitionMessages", "QuietHourScheduling"]
+    },
+    {
+      "id": "partnership",
+      "name": "Partnership Automation",
+      "examples": ["PartnerCheckIns", "RenewalReminders", "MeetingScheduling", "SharedInitiativeUpdates", "Recognition"]
+    },
+    {
+      "id": "calendar",
+      "name": "Calendar Automation",
+      "examples": ["CalendarSynchronization", "ReminderScheduling", "ConflictDetection", "AvailabilityUpdates", "RecurringEvents"]
+    },
+    {
+      "id": "intelligence",
+      "name": "Intelligence Automation",
+      "examples": ["CommunityHealthRefresh", "DigitalTwinRefresh", "SearchReindex", "KnowledgeGraphProjections", "ForecastGeneration", "RecommendationUpdates"]
+    }
+  ],
+  "automationObjectFields": [
+    "AutomationId",
+    "Name",
+    "Category",
+    "Purpose",
+    "Owner",
+    "Trigger",
     "Conditions",
-    "Schedules",
+    "Actions",
+    "ApprovalMode",
+    "Status",
+    "Version",
+    "Visibility"
+  ],
+  "automationObjectFieldCount": 12,
+  "triggerTypes": [
+    "Time",
+    "Event",
+    "WorkflowTransition",
+    "BusinessRule",
+    "Calendar",
+    "CommunityHealth",
+    "ParticipantAction",
+    "ExternalIntegration",
+    "ManualInvocation"
+  ],
+  "triggerTypeCount": 9,
+  "conditionEvaluationSources": [
+    "Participants",
+    "Communities",
+    "Missions",
+    "Knowledge",
+    "Leadership",
+    "Relationships",
+    "Configuration",
+    "Calendar",
+    "Permissions"
+  ],
+  "conditionEvaluationSourceCount": 9,
+  "actionTypes": [
+    "Create",
+    "Update",
+    "Notify",
+    "Schedule",
+    "Recommend",
+    "Generate",
+    "Assign",
+    "Archive",
+    "PublishEvent"
+  ],
+  "actionTypeCount": 9,
+  "approvalModes": [
+    "Automatic",
+    "HumanApproval",
+    "RoleApproval",
+    "MultiStepApproval",
+    "EmergencyOverride"
+  ],
+  "approvalModeCount": 5,
+  "safetyControls": [
+    "Pause",
+    "Disable",
+    "Retry",
+    "Rollback",
+    "Compensation",
+    "ManualIntervention"
+  ],
+  "safetyControlCount": 6,
+  "automationHistoryFields": [
+    "Trigger",
+    "Conditions",
+    "Actions",
+    "Results",
+    "Duration",
+    "Errors",
     "Approvals",
-    "Notifications",
-    "Retries",
-    "AutomationGovernance"
+    "RelatedEvents"
+  ],
+  "automationHistoryFieldCount": 8,
+  "simulationCapabilities": [
+    "DryRun",
+    "ImpactAnalysis",
+    "RuleValidation",
+    "WorkflowPreview"
+  ],
+  "simulationCapabilityCount": 4,
+  "exceptionHandlingTypes": [
+    "MissingData",
+    "PermissionFailures",
+    "Timeouts",
+    "Conflicts",
+    "ExternalFailures",
+    "HumanEscalation"
+  ],
+  "exceptionHandlingTypeCount": 6,
+  "eventLedgerPublicationTypes": [
+    "AutomationStarted",
+    "AutomationCompleted",
+    "AutomationFailed",
+    "ApprovalRequested",
+    "ApprovalGranted",
+    "AutomationSkipped"
+  ],
+  "eventLedgerPublicationTypeCount": 6,
+  "observabilityMetrics": [
+    "ExecutionVolume",
+    "Failures",
+    "SuccessRate",
+    "Latency",
+    "ApprovalDelays",
+    "MostUsedAutomations",
+    "DisabledAutomations"
+  ],
+  "observabilityMetricCount": 7,
+  "aiCapabilities": [
+    "DraftAutomationDefinitions",
+    "RecommendAutomations",
+    "ExplainAutomationBehavior",
+    "IdentifyRepetitiveWork",
+    "SuggestOptimizations",
+    "PredictAutomationImpact"
+  ],
+  "aiNeverDeploysAutonomously": true,
+  "automationMissionControl": {
+    "name": "Automation Mission Control",
+    "abbreviation": "AMC",
+    "purpose": "Operational center providing full visibility, governance, and explainability over the automation ecosystem",
+    "notBackgroundScheduler": true,
+    "domains": [
+      {
+        "id": "automationActivity",
+        "name": "Automation Activity",
+        "displays": ["CurrentlyRunning", "UpcomingScheduled", "RecentlyCompleted", "FailedExecutions"]
+      },
+      {
+        "id": "health",
+        "name": "Health",
+        "displays": ["SuccessRates", "AverageExecutionTime", "RetryCounts", "ErrorTrends"]
+      },
+      {
+        "id": "governance",
+        "name": "Governance",
+        "displays": ["ApprovalQueues", "PendingReviews", "VersionHistory", "ConfigurationChanges"]
+      },
+      {
+        "id": "dependencies",
+        "name": "Dependencies",
+        "displays": ["BusinessRulesUsed", "WorkflowDependencies", "CalendarTriggers", "ExternalIntegrations"]
+      },
+      {
+        "id": "intelligence",
+        "name": "Intelligence",
+        "displays": ["FrequentlyTriggered", "OptimizationCandidates", "Bottlenecks", "SuggestedImprovements", "LoadForecasting"]
+      },
+      {
+        "id": "safety",
+        "name": "Safety",
+        "displays": ["EmergencyPause", "ScopedDisablement", "Replay", "DryRunTesting", "RollbackCompensationStatus"]
+      },
+      {
+        "id": "explainability",
+        "name": "Explainability",
+        "displays": ["WhyExecuted", "TriggerFired", "RulesAllowed", "WorkflowSupported", "ActionsTaken", "Evidence"]
+      }
+    ],
+    "domainCount": 7,
+    "philosophy": "Automation amplifies people while remaining transparent, observable, and accountable — complete visibility and governance over repetitive operational work"
+  },
+  "domainSchemaMapping": {
+    "schema": "PlatformBehavior",
+    "entities": [
+      "AutomationDefinition",
+      "AutomationExecution",
+      "AutomationTrigger",
+      "AutomationCondition",
+      "AutomationAction",
+      "AutomationSimulation",
+      "AutomationMissionControl"
+    ]
+  },
+  "projectionIntegrations": {
+    "communityIntelligencePath": "data/registry/community-intelligence-engine.json",
+    "workflowEnginePath": "data/registry/workflow-engine.json",
+    "businessRulesPath": "data/registry/business-rule-engine.json",
+    "eventLedgerPath": "data/registry/event-data-model.json",
+    "timeCalendarPath": "data/registry/time-calendar-data-model.json",
+    "configurationPath": "data/registry/configuration-model.json",
+    "aiKnowledgePath": "data/registry/ai-knowledge-model.json"
+  },
+  "burtImplementationGuidance": [
+    "Keep automation declarative rather than hard-coded",
+    "Separate triggers, conditions, and actions",
+    "Integrate with Business Rules and Workflow Engines",
+    "Preserve complete execution history",
+    "Support simulation before activation",
+    "Make every automation explainable",
+    "Consult Automation Mission Control spec before automation-facing features"
   ],
   "acceptanceCriteria": "AC-130",
-  "acceptanceCriteriaMet": false
+  "acceptanceCriteriaMet": true
 }
