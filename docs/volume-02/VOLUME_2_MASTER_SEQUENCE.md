@@ -95,8 +95,6 @@ Volume 2 is complete when Burt has a complete blueprint for:
 | 2.13 Security & Privacy Data Model | ✅ Done |
 | 2.14 Master Data Dictionary & Governance | ✅ Done |
 
-**Volume 2 complete.** Next: [Volume 1.5 — API Architecture](../volume-01/API_ARCHITECTURE.md) [ENG-005] · Phase 7 implementation.
-
----
+**Volume 2 complete.** Next: [Volume 3 — Platform Behavior](../master/PLATFORM_BEHAVIOR_BIBLE.md) [PBA-001]
 
 **End of Volume 2 Master Sequence.**

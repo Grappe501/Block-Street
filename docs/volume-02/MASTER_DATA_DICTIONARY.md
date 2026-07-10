@@ -346,7 +346,7 @@ Canonical identifier · Human-readable name · Description · Owning domain · S
 
 **[DAB-MDD26a]** Those three volumes form a **coherent foundation for implementation** and provide a stable reference as the platform grows over time.
 
-**[DAB-MDD26b]** Next: close Volume 1 gap [1.5 API Architecture ENG-005] · then Phase 7 implementation.
+**[DAB-MDD26b]** Next: [Volume 3 — Platform Behavior](../master/PLATFORM_BEHAVIOR_BIBLE.md) [PBA-001] · [3.1 Business Rules Engine](../volume-03/BUSINESS_RULE_ENGINE.md)
 
 ---
 
