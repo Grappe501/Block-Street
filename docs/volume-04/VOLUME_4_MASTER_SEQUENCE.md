@@ -1,7 +1,7 @@
 # Volume 4 Master Sequence — User Experience & Product Architecture
 
 **Document ID:** VOLUME-004 · **UXB-001**  
-**Status:** In progress (1/14 steps)  
+**Status:** In progress (2/14 steps)  
 **Priority:** Critical
 
 > **What does using the Community Operating System actually feel like?**
@@ -94,7 +94,7 @@ Unified Community Experience
 Volume 4 is complete when Burt understands:
 
 - [x] How every screen should feel (4.1, 4.5)
-- [ ] How people move through the platform (4.2, 4.4)
+- [x] How people move through the platform (4.2, 4.4)
 - [ ] How workspaces are organized (4.7)
 - [ ] How dashboards behave (4.3)
 - [ ] How mobile experiences function (4.9)
@@ -125,7 +125,7 @@ Together, Volumes 0–4 form a comprehensive foundation before implementation-sp
 | Step | Status |
 |------|--------|
 | 4.1 Experience Design System | ✅ Done |
-| 4.2 Navigation Architecture | Pending |
+| 4.2 Navigation Architecture | ✅ Done |
 | 4.3 Dashboard Architecture | Pending |
 | 4.4 User Journey Architecture | Pending |
 | 4.5 Design Language System | Pending |

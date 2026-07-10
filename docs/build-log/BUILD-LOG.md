@@ -18,6 +18,23 @@
 
 ---
 
+## 2026-07-10 — Volume 4.2 Navigation Architecture [UXB-003 · AC-138]
+
+**Document:** `docs/volume-04/NAVIGATION_ARCHITECTURE.md` · **Registry:** `data/registry/experience-navigation-architecture.json`
+
+### What Changed
+
+- **Guiding principle:** *People should always know where they are, why they are there, and what to do next.*
+- Navigation organized around human questions, not software features
+- **5-level navigation model:** Global through Detail navigation
+- **5-layer hierarchy:** Mission → Workspace → Context → Action → Details
+- Orientation system, context awareness, workspace switching, breadcrumbs, search-driven navigation
+- Role-aware, mobile-first, deep linking, navigation memory, AI navigation layer
+- **Intent Navigation Engine (INE)** — purpose-driven guidance from user intent to workspace and workflow
+- Admin Volume 4 tab · requirements UXB-003 updated · Volume 4: 2/14 complete
+
+---
+
 ## 2026-07-10 — Volume 4.1 Experience Design System [UXB-002 · AC-137]
 
 **Document:** `docs/volume-04/EXPERIENCE_DESIGN_SYSTEM.md` · **Registry:** `data/registry/experience-design-system.json`
