@@ -11,6 +11,7 @@ import media from "../../../data/registry/media-architecture-volume5.json";
 import comm from "../../../data/registry/communication-architecture-volume5.json";
 import deploy from "../../../data/registry/deployment-architecture-volume5.json";
 import security from "../../../data/registry/security-architecture-volume5.json";
+import observability from "../../../data/registry/observability-architecture-volume5.json";
 
 type ServiceReg = {
   acceptanceCriteria: string;
@@ -31,6 +32,9 @@ type ServiceReg = {
   unifiedCommunicationsFabric?: { abbreviation: string; fabricPipeline?: { stageCount: number }; communicationObject?: { sectionCount: number } };
   runtimeFederationManager?: { abbreviation: string; fabricPipeline?: { stageCount: number }; runtimeRegistry?: { sectionCount: number } };
   constitutionalSecurityFabric?: { abbreviation: string; fabricLayers?: { layerCount: number }; securityFabricResponsibilities?: { fabricCount: number } };
+  operationalIntelligenceGrid?: { abbreviation: string; gridLayers?: { layerCount: number }; oigResponsibilities?: { responsibilityCount: number } };
+  signalDomainCount?: number;
+  observabilityPrincipleCount?: number;
   securityDomainCount?: number;
   securityPrincipleCount?: number;
   authenticationMethodCount?: number;
@@ -62,6 +66,7 @@ type ServiceReg = {
   communicationsArchitecture?: { layerCount: number };
   runtimeArchitecture?: { layerCount: number };
   constitutionalSecurityModel?: { layerCount: number };
+  observabilityArchitecture?: { layerCount: number };
   localBrainCompatibility?: { localBrainFirstClassRuntime: boolean };
   localBrainFederation?: {
     explicitIntegration?: boolean;
@@ -85,9 +90,11 @@ const FEATURED_SUBTITLES: Record<string, string> = {
   "5.8": "Communications",
   "5.9": "Deployment & Runtime",
   "5.10": "Security & Trust",
+  "5.11": "Observability",
 };
 
 const SERVICE_CARDS: { step: string; label: string; reg: ServiceReg; cardClass: string; metaClass: string; titleClass: string; featured?: boolean }[] = [
+  { step: "5.11", label: "Operational Intelligence Grid", reg: observability, cardClass: "border-cyan-300 bg-cyan-50", metaClass: "text-cyan-700", titleClass: "text-cyan-950", featured: true },
   { step: "5.10", label: "Constitutional Security Fabric", reg: security, cardClass: "border-emerald-300 bg-emerald-50", metaClass: "text-emerald-700", titleClass: "text-emerald-950", featured: true },
   { step: "5.9", label: "Runtime Federation Manager", reg: deploy, cardClass: "border-lime-300 bg-lime-50", metaClass: "text-lime-700", titleClass: "text-lime-950", featured: true },
   { step: "5.8", label: "Unified Communications Fabric", reg: comm, cardClass: "border-yellow-300 bg-yellow-50", metaClass: "text-yellow-700", titleClass: "text-yellow-950", featured: true },
@@ -129,7 +136,11 @@ export function AdminPlatformServices() {
             <p className={`mt-2 text-xs ${metaClass}`}>
               {reg.acceptanceCriteria} · {reg.status}
             </p>
-            {reg.constitutionalSecurityFabric ? (
+            {reg.operationalIntelligenceGrid ? (
+              <p className={`mt-1 text-xs ${metaClass}`}>
+                {reg.signalDomainCount ?? 0} signal domains · {reg.observabilityPrincipleCount ?? 0} principles · {reg.observabilityArchitecture?.layerCount ?? 0} observability layers · {reg.operationalIntelligenceGrid.gridLayers?.layerCount ?? 0} OIG layers · {reg.operationalIntelligenceGrid.oigResponsibilities?.responsibilityCount ?? 0} OIG responsibilities · Platform Twin · Self-Diagnostics
+              </p>
+            ) : reg.constitutionalSecurityFabric ? (
               <p className={`mt-1 text-xs ${metaClass}`}>
                 {reg.securityDomainCount ?? 0} security domains · {reg.authenticationMethodCount ?? 0} auth methods · {reg.dataClassificationCount ?? 0} classifications · {reg.securityPrincipleCount ?? 0} principles · {reg.constitutionalSecurityModel?.layerCount ?? 0} security model layers · {reg.constitutionalSecurityFabric.fabricLayers?.layerCount ?? 0} CSF layers · {reg.constitutionalSecurityFabric.securityFabricResponsibilities?.fabricCount ?? 0} security fabrics · Constitutional Compliance Engine
               </p>

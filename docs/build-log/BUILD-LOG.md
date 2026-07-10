@@ -18,6 +18,22 @@
 
 ---
 
+## 2026-07-10 — Volume 5.11 Observability, Diagnostics & Platform Intelligence Architecture [PSI-012 · AC-161]
+
+**Document:** `docs/volume-05/OBSERVABILITY_ARCHITECTURE.md` · **Registry:** `data/registry/observability-architecture-volume5.json`
+
+### What Changed
+
+- **Guiding principle:** *The platform should understand itself as well as it understands its communities.*
+- Self-explaining before self-healing — infrastructure and mission health as one picture
+- **14 signal domains** — platform services through workflow health
+- Observability pipeline, correlation engine, distributed tracing, standardized health model
+- Runtime Twin, Platform Twin, AI observability, LocalBrain observability, executive dashboards
+- **Operational Intelligence Grid (OIG)** — 7 layers, 6 responsibilities, predictive intelligence, self-diagnostics
+- Umbrella PSI-001 · platform-services-integration-bible 11/14 · Volume 5 in progress
+
+---
+
 ## 2026-07-10 — Volume 5.10 Security, Privacy & Constitutional Trust Architecture [PSI-011 · AC-160]
 
 **Document:** `docs/volume-05/SECURITY_ARCHITECTURE.md` · **Registry:** `data/registry/security-architecture-volume5.json`

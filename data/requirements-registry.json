@@ -5532,6 +5532,48 @@
       }
     },
     {
+      "id": "PSI-012",
+      "title": "Observability, Diagnostics & Platform Intelligence Architecture — Volume 5.11",
+      "purpose": "Platform self-understanding — observability as continuous learning and operational intelligence",
+      "description": "VOLUME-005.11 — 14 signal domains, Operational Intelligence Grid, Platform Twin, correlation engine, AI observability, LocalBrain federation visibility",
+      "priority": "mission_critical",
+      "principle": "CP-012",
+      "dependencies": [
+        "PSI-011",
+        "PSI-010",
+        "PSI-005",
+        "PSI-001",
+        "AIB-001"
+      ],
+      "related": [
+        "PSI-001",
+        "PSI-013"
+      ],
+      "acceptanceCriteria": [
+        "Observability philosophy documented",
+        "Signal domains and pipelines defined",
+        "Runtime Twins, Platform Twin, AI observability, and LocalBrain observability established",
+        "Community Event Ledger, historical analytics, accessibility, and executive dashboards incorporated",
+        "Operational Intelligence Grid specified",
+        "Complete blueprint for platform-wide observability"
+      ],
+      "futureNotes": "Guiding principle: The platform should understand itself as well as it understands its communities.",
+      "implementationStatus": "done",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": null,
+        "api": "API-SYSTEM",
+        "frontend": "UI-SYSTEM",
+        "test": "TEST-PSI-012",
+        "doc": "DOC-PSI-012"
+      },
+      "versionHistory": {
+        "created": "2026-07-10",
+        "implemented": "2026-07-10"
+      }
+    },
+    {
       "id": "PSI-011",
       "title": "Security, Privacy & Constitutional Trust Architecture — Volume 5.10",
       "purpose": "Constitutional security — protect people, institutions, knowledge, and communities with transparency and trust",
@@ -5994,7 +6036,7 @@
         "Foundation stack Volumes 0-5 defined",
         "Complete blueprint for platform services and integration architecture"
       ],
-      "futureNotes": "Volume 5 scaffold — 10/14 canonical steps complete. LocalBrain woven throughout every chapter.",
+      "futureNotes": "Volume 5 scaffold — 11/14 canonical steps complete. LocalBrain woven throughout every chapter.",
       "implementationStatus": "scaffold",
       "testingStatus": "pending",
       "documentationStatus": "scaffold",
