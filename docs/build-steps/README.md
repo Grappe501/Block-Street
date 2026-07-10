@@ -19,8 +19,8 @@ See [PHASE-001.2-NORTH-STAR-OUTCOME.md](PHASE-001.2-NORTH-STAR-OUTCOME.md) [NS-0
 |-------|-------------|-------|--------|
 | 1 | **PHASE-001.1** | [Platform Identity](PHASE-001.1-PLATFORM-IDENTITY.md) | ✅ Canonical |
 | 2 | **PHASE-001.2** | [North Star Outcome](PHASE-001.2-NORTH-STAR-OUTCOME.md) | ✅ Canonical |
-| 3 | PHASE-001.3 | Core Principles (immutable doctrine) | Pending |
-| … | … | … | … |
+| 3 | **PHASE-001.3** | [Core Principles (Platform Constitution)](PHASE-001.3-CORE-PRINCIPLES.md) | ✅ Canonical |
+| 4 | PHASE-001.4 | Platform Boundaries (Design Guardrails) | Pending |
 
 ## 2. Reference Systems
 
@@ -62,4 +62,10 @@ NS-008  County vision
 NS-009  Statewide vision (connect, not control)
 NS-013  Five North Star questions (feature filter)
 NS-014  End-state statement
+```
+
+### Step 1.3 — Core Principles (Constitution)
+```
+CP-001 through CP-015  Immutable principles
+CT-001  Constitutional test (10 questions)
 ```

@@ -4,7 +4,24 @@
 
 ---
 
-## 2026-07-10 — PHASE-001.2 North Star Outcome (Canonical)
+## 2026-07-10 — PHASE-001.3 Core Principles (Platform Constitution)
+
+**Document ID:** PHASE-001.3  
+**Requirement IDs:** CP-001 through CP-015, CT-001, AC-003  
+**Status:** Complete — Canonical — Immutable Doctrine
+
+### Deliverables
+
+- `docs/build-steps/PHASE-001.3-CORE-PRINCIPLES.md` — 15 principles + constitutional test
+- CP and CT categories added to ID convention
+- Admin dashboard: new **Constitution** tab at `/admin`
+- Change protocol documented — principles require user approval to modify
+
+### Next Step
+
+PHASE-001.4 — Platform Boundaries (Design Guardrails)
+
+---
 
 **Document ID:** PHASE-001.2  
 **Requirement IDs:** NS-001 through NS-014, AC-002  

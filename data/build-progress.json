@@ -4,7 +4,7 @@
     "fullName": "Arkansas Student & Youth Organizing Network",
     "motto": "Connect Locally. Organize Statewide. Lead Together.",
     "tagline": "Your organizing home",
-    "version": "0.2.2",
+    "version": "0.2.3",
     "currentPhase": 1,
     "currentPhaseName": "Project Constitution & Mission Doctrine",
     "lastUpdated": "2026-07-10T09:00:00Z",
@@ -31,8 +31,8 @@
       "steps": [
         { "id": "1.1", "name": "Platform Identity [PHASE-001.1]", "status": "done", "notes": "PI-001 through ER-001, AC-001 — Canonical" },
         { "id": "1.2", "name": "North Star Outcome [PHASE-001.2]", "status": "done", "notes": "NS-001 through NS-014, AC-002 — Canonical" },
-        { "id": "1.3", "name": "Core Principles [PHASE-001.3]", "status": "pending", "notes": "Immutable doctrine — 10-15 principles" },
-        { "id": "1.4", "name": "Platform Boundaries", "status": "done", "notes": "No impersonation, no partisan direction" },
+        { "id": "1.3", "name": "Core Principles [PHASE-001.3]", "status": "done", "notes": "CP-001 through CP-015, CT-001, AC-003 — Immutable doctrine" },
+        { "id": "1.4", "name": "Platform Boundaries [PHASE-001.4]", "status": "pending", "notes": "Design Guardrails — legal, ethical, operational" },
         { "id": "1.5", "name": "Organizing Model — county→school + county-only", "status": "done", "notes": "Honor system signup" },
         { "id": "1.6", "name": "Growth Model — staged institutions", "status": "done", "notes": "Universities first, trade/jr/high later" },
         { "id": "1.7", "name": "Success Definition + timeline", "status": "done", "notes": "Jul 12 test, Jul 14 launch, Nov 3 election" },
@@ -127,6 +127,12 @@
     { "version": "1.4.0", "name": "Surveys + collective voice", "status": "pending", "date": null }
   ],
   "buildLog": [
+    {
+      "date": "2026-07-10",
+      "title": "PHASE-001.3 Core Principles — Platform Constitution",
+      "phase": 1,
+      "summary": "CP-001 through CP-015 immutable principles, CT-001 constitutional test, admin Constitution tab"
+    },
     {
       "date": "2026-07-10",
       "title": "PHASE-001.2 North Star Outcome — Canonical",

@@ -28,7 +28,10 @@ Examples: `PI-001`, `MS-001`, `ER-003`
 | **OP** | Organizing Philosophy | Relational organizing, beliefs, principles |
 | **OH** | Organizing Homes | Campus, county, personal network structures |
 | **ER** | Equal Representation | Equal standing, no hierarchy rules |
+| **CP** | Core Principles | Immutable platform constitution (CP-001–015) |
+| **CT** | Constitutional Test | Feature approval questions (CT-001) |
 | **NS** | North Star | Ultimate destination, success metrics, five questions |
+| **NB** | Nonpartisan Boundaries | What platform must not do |
 | **GV** | Governance | Moderation, rules, student leadership |
 | **TC** | Teaching Curriculum | WHY/HOW/WHAT, Roberts Rules, guides |
 | **RG** | Registry | Arkansas Organizing Registry data requirements |
@@ -90,3 +93,4 @@ Example: `PHASE-001.1-PLATFORM-IDENTITY.md`
 |-------------|-------|--------|
 | PHASE-001.1 | Platform Identity | Canonical |
 | PHASE-001.2 | North Star Outcome | Canonical |
+| PHASE-001.3 | Core Principles (Platform Constitution) | Canonical |
