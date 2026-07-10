@@ -1,0 +1,176 @@
+{
+  "version": "2.0.0",
+  "documentId": "VOLUME-005.6",
+  "requirementId": "PSI-007",
+  "docPath": "docs/volume-05/SEARCH_ARCHITECTURE.md",
+  "status": "canonical",
+  "priority": "foundational",
+  "lastUpdated": "2026-07-10",
+  "productName": "Search, Discovery & Knowledge Retrieval Architecture",
+  "guidingPrinciple": "People search for answers—not files.",
+  "searchPhilosophy": {
+    "searchNotATextBox": true,
+    "understandsMeaningRelationshipsHistoryContextIntent": true,
+    "retrievesUnderstandingNotDocuments": true,
+    "contextualReasoningNotKeywordLookup": true,
+    "institutionalReasoningInfrastructureNotIndexing": true
+  },
+  "searchArchitecture": {
+    "layers": [
+      "Intent",
+      "ContextAssembly",
+      "PermissionEvaluation",
+      "KnowledgeRetrieval",
+      "RelationshipExpansion",
+      "Ranking",
+      "Explanation",
+      "Response"
+    ],
+    "layerCount": 8,
+    "everyResultExplainable": true
+  },
+  "searchPrincipleCount": 8,
+  "searchPrinciples": [
+    "Semantic",
+    "ContextAware",
+    "PermissionAware",
+    "Explainable",
+    "Fast",
+    "Observable",
+    "Federated",
+    "OfflineCapable"
+  ],
+  "searchDomainCount": 10,
+  "searchDomains": [
+    { "id": "community", "name": "Community Search", "finds": ["Communities", "Neighborhoods", "Groups", "Coalitions", "Institutions", "Committees"], "basedUpon": ["Relationships", "Location", "Mission", "Participation", "CommunityHealth"] },
+    { "id": "people", "name": "People Search", "finds": ["Participants", "Volunteers", "Mentors", "Leaders", "Experts", "Partners"], "searchBy": ["Skills", "Communities", "Experience", "Availability", "Leadership", "Relationships"] },
+    { "id": "mission", "name": "Mission Search", "finds": ["ActiveMissions", "CompletedMissions", "HistoricalMissions", "MissionOutcomes", "MissionReflections", "MissionPlaybooks"] },
+    { "id": "knowledge", "name": "Knowledge Search", "finds": ["Stories", "Research", "Playbooks", "Lessons", "Policies", "OperatingManuals", "HistoricalDocuments"], "knowledgeConversational": true },
+    { "id": "calendar", "name": "Calendar Search", "finds": ["Meetings", "Events", "Training", "VolunteerShifts", "Travel", "Deadlines", "Availability"] },
+    { "id": "institution", "name": "Institution Search", "finds": ["Schools", "Churches", "Campaigns", "Counties", "Nonprofits", "Foundations", "GovernmentAgencies"] },
+    { "id": "geographic", "name": "Geographic Search", "searchBy": ["Address", "County", "City", "Region", "LegislativeDistrict", "CongressionalDistrict", "SchoolDistrict", "ZipCode", "GISLayers"] },
+    { "id": "relationship", "name": "Relationship Search", "finds": ["Mentors", "Teams", "Communities", "KnowledgeConnections", "MissionRelationships", "InstitutionPartnerships"], "poweredByKnowledgeGraph": true },
+    { "id": "operational", "name": "Operational Search", "finds": ["Workflows", "Approvals", "OpenTasks", "PendingDecisions", "Automation", "OperationalStatus"] },
+    { "id": "ai", "name": "AI Search", "retrieves": ["Knowledge", "History", "Playbooks", "CommunityBrain", "CommunityEventLedger", "DigitalTwins", "OperationalIntelligence"], "grounded": true }
+  ],
+  "searchTypeCount": 6,
+  "searchTypes": [
+    { "id": "keyword", "name": "Keyword Search", "description": "Traditional text matching" },
+    { "id": "semantic", "name": "Semantic Search", "description": "Meaning-based retrieval" },
+    { "id": "vector", "name": "Vector Search", "description": "Similarity search", "supports": ["Knowledge", "Stories", "Research", "CommunityBrain"] },
+    { "id": "graph", "name": "Graph Search", "description": "Knowledge Graph traversal", "traverses": ["People", "Communities", "Knowledge", "Relationships", "DigitalTwins"] },
+    { "id": "hybrid", "name": "Hybrid Search", "description": "Default experience", "combines": ["Keywords", "Vectors", "Graph", "OperationalMetadata"] },
+    { "id": "intent", "name": "Intent Search", "description": "Operational questions", "intentPrimary": true }
+  ],
+  "federatedSearch": {
+    "searchesAcross": ["LocalBrain", "Institution", "County", "Region", "Cloud", "PartnerSystems"],
+    "participantExperiencesOneSearch": true
+  },
+  "retrievalPipeline": {
+    "stages": ["Query", "IntentDetection", "Context", "PermissionFilter", "FederatedSearch", "Ranking", "KnowledgeAssembly", "Citations"],
+    "stageCount": 8,
+    "operationalReasoning": true
+  },
+  "ranking": {
+    "prioritizes": ["ContextRelevance", "RelationshipStrength", "CommunityRelevance", "KnowledgeQuality", "Freshness", "Authority", "OperationalImportance"],
+    "notAdvertising": true
+  },
+  "explainability": {
+    "explains": ["WhyThisResult", "WhichKnowledge", "WhichRelationships", "WhichPermissions", "WhichSources"],
+    "searchTrustworthy": true
+  },
+  "savedSearch": {
+    "participantsSave": ["Communities", "People", "Missions", "Knowledge", "Filters", "Alerts"],
+    "searchPersistent": true
+  },
+  "continuousDiscovery": {
+    "recommends": ["People", "Knowledge", "Communities", "Events", "Playbooks", "Mentors"],
+    "extendsBeyondExplicitSearch": true
+  },
+  "localBrainSearch": {
+    "flow": ["LocalIndex", "RegionalFederation", "CloudFederation", "UnifiedSearch"],
+    "functionsOffline": true
+  },
+  "communityBrainIntegration": {
+    "indexes": ["Lessons", "Stories", "Playbooks", "Research", "Policies", "HistoricalKnowledge"]
+  },
+  "communityEventLedgerIntegration": {
+    "retrieves": ["HistoricalEvents", "MissionTimelines", "CommunityHistory", "Governance", "VolunteerHistory", "InstitutionalMemory"]
+  },
+  "digitalTwinIntegration": {
+    "includes": ["ParticipantTwins", "MissionTwins", "CommunityTwins", "InstitutionTwins", "CountyTwins", "PlatformTwins"],
+    "twinsSearchableKnowledge": true
+  },
+  "aiIntegration": {
+    "aiReceives": ["SearchContext", "Citations", "Permissions", "Ranking", "KnowledgeFreshness", "Confidence"],
+    "aiNeverBypassesSearch": true
+  },
+  "observabilityStandard": {
+    "exposedMetrics": ["Latency", "IndexFreshness", "Coverage", "RankingQuality", "Failures", "QueryTrends"],
+    "metricCount": 6
+  },
+  "securityStandard": {
+    "respects": ["Permissions", "Communities", "Institutions", "Classification", "Privacy", "Governance"],
+    "unauthorizedKnowledgeInvisible": true
+  },
+  "knowledgeRetrievalFabric": {
+    "name": "Knowledge Retrieval Fabric",
+    "abbreviation": "KRF",
+    "unifiedRetrievalLayerForEntireEcosystem": true,
+    "fabricPipeline": {
+      "stages": [
+        "ParticipantOrAI",
+        "IntentUnderstanding",
+        "ContextAssembly",
+        "PermissionEvaluation",
+        "KnowledgeRetrievalFabric",
+        "KnowledgeGraphExpansion",
+        "EvidenceAssembly",
+        "ExplainableResponse"
+      ],
+      "stageCount": 8
+    },
+    "knowledgeSourceCount": 7,
+    "knowledgeSources": [
+      { "id": "communityBrain", "name": "Community Brain", "includes": ["Stories", "Playbooks", "Research", "Lessons"] },
+      { "id": "communityEventLedger", "name": "Community Event Ledger", "includes": ["HistoricalEvents", "MissionHistory", "Governance", "Reflections"] },
+      { "id": "knowledgeGraph", "name": "Knowledge Graph", "includes": ["Relationships", "Mentorship", "Communities", "Institutions", "Missions"] },
+      { "id": "digitalTwins", "name": "Digital Twins", "includes": ["ParticipantContext", "CommunityContext", "InstitutionContext", "OperationalSummaries"] },
+      { "id": "operationalIntelligence", "name": "Operational Intelligence", "includes": ["Forecasts", "Trends", "CommunityHealth", "ExecutiveInsights"] },
+      { "id": "localBrain", "name": "LocalBrain", "includes": ["LocalKnowledge", "OfflineKnowledge", "CachedIndexes"] },
+      { "id": "externalConnectors", "name": "External Connectors", "includes": ["GovernmentDatasets", "Calendars", "GIS", "LearningSystems", "ApprovedInstitutionalSources"], "throughUniversalConnectorFramework": true }
+    ],
+    "retrievalBundles": {
+      "assemblesOperationalContextNotDisconnectedDocuments": true,
+      "exampleBundleItems": ["MeetingAgenda", "LeadershipRoster", "CountyHealthSummary", "RecentMissionActivity", "RelatedPlaybooks", "PreviousMeetingNotes", "CommunityEventLedgerTimeline", "AIBriefing", "DigitalTwinSummaries", "SuggestedQuestions"],
+      "exampleItemCount": 10
+    },
+    "retrievalGovernance": {
+      "bundleRecords": ["SourcesConsulted", "Confidence", "MissingInformation", "PermissionsApplied", "AIReasoningBoundaries", "CitationList"],
+      "retrievalTransparent": true
+    },
+    "knowledgeFreshness": {
+      "objectIncludes": ["LastUpdated", "ReviewStatus", "VerificationLevel", "InstitutionalOwner", "SynchronizationStatus"]
+    },
+    "commonRetrievalLayerFor": ["HumanParticipants", "AIFederation", "PlatformServices", "OperationalIntelligence", "ExecutiveOperationsCenter", "LocalBrains"],
+    "pairsWithFederatedSynchronizationMesh": true,
+    "pairsWithInstitutionalEventFabric": true,
+    "pairsWithUniversalConnectorFramework": true
+  },
+  "architecturalInsight": {
+    "institutionalReasoningInfrastructure": true,
+    "sameGovernedRetrievalProcessEverywhere": true,
+    "completesFoundationalDistributedArchitectureLayer": true
+  },
+  "burtImplementationGuidance": [
+    "Build hybrid semantic search by default",
+    "Treat search as platform capability not feature",
+    "Integrate Knowledge Graph traversal",
+    "Support LocalBrain federation",
+    "Require citations for AI retrieval",
+    "Keep search explainable",
+    "Assemble Knowledge Bundles through Knowledge Retrieval Fabric"
+  ],
+  "acceptanceCriteria": "AC-156",
+  "acceptanceCriteriaMet": true
+}
