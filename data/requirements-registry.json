@@ -4449,27 +4449,35 @@
     {
       "id": "PBA-006",
       "title": "Mission Execution Engine — Volume 3.5",
-      "purpose": "Mission planning through playbook generation",
-      "description": "VOLUME-003.5 scheduling, execution, reflection, knowledge capture",
+      "purpose": "Mission lifecycle from Vision through Archive with community development focus",
+      "description": "VOLUME-003.5 — Mission Operations Center, 10 lifecycle stages, reflection, knowledge capture, templates, continuous improvement, graph and AI integration",
       "priority": "critical",
       "principle": "CP-001",
       "dependencies": [
         "PBA-005",
-        "DAB-007"
+        "PBA-003",
+        "DAB-007",
+        "DAB-008",
+        "DAB-009"
       ],
       "related": [
-        "PBA-007"
+        "PBA-007",
+        "DAB-006",
+        "DAB-013",
+        "ENG-008"
       ],
       "acceptanceCriteria": [
-        "Engine philosophy documented",
-        "Operational behaviors defined",
-        "Volume 2 integration specified",
-        "Implementation blueprint for engine"
+        "Mission philosophy documented",
+        "Mission lifecycle and operational stages defined",
+        "Planning, execution, reflection, and knowledge capture established",
+        "Calendar, graph, Digital Twin, AI, and recognition integrations incorporated",
+        "Mission Operations Center specified",
+        "Complete blueprint for Mission Execution Engine"
       ],
-      "futureNotes": "Scaffold — pending canonical build step",
-      "implementationStatus": "pending",
+      "futureNotes": "Guiding principle: Every mission should leave the community stronger than it found it.",
+      "implementationStatus": "done",
       "testingStatus": "pending",
-      "documentationStatus": "pending",
+      "documentationStatus": "done",
       "trace": {
         "database": "DB-COS",
         "api": null,
@@ -4479,7 +4487,7 @@
       },
       "versionHistory": {
         "created": "2026-07-10",
-        "implemented": null
+        "implemented": "2026-07-10"
       }
     },
     {

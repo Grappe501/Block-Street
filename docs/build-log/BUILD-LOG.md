@@ -18,6 +18,22 @@
 
 ---
 
+## 2026-07-10 — Volume 3.5 Mission Execution Engine [PBA-006 · AC-126]
+
+**Document:** `docs/volume-03/MISSION_EXECUTION_ENGINE.md` · **Registry:** `data/registry/mission-execution-engine.json`
+
+### What Changed
+
+- **Guiding principle:** *Every mission should leave the community stronger than it found it.*
+- Primary unit of organized work — execution becomes community development
+- **10 lifecycle stages:** Vision through Archive; every stage produces institutional knowledge
+- Mission components, health, templates, relationships, calendar, recognition, continuous improvement
+- Digital Twin, knowledge graph, and AI integrations
+- **Mission Operations Center** — real-time command environment with 7 domains (Planning through Community Impact)
+- Admin Volume 3 tab · requirements PBA-006 updated · Volume 3: 5/14 complete
+
+---
+
 ## 2026-07-10 — Volume 3.4 Community Lifecycle Engine [PBA-005 · AC-125]
 
 **Document:** `docs/volume-03/COMMUNITY_LIFECYCLE.md` · **Registry:** `data/registry/community-lifecycle-engine.json`
