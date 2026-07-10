@@ -1,10 +1,25 @@
 # Phase 2 — Arkansas Organizing Registry
 
-> **Goal:** Build the canonical data foundation for the entire platform.  
-> This phase defines **what exists**, **where it belongs**, and **how the system tracks representation and outreach gaps**.
+> **The Registry is not a list. It is the digital map of Arkansas.**  
+> If something doesn't exist in the Registry, it doesn't exist in the platform.
 
+**Goal:** Build the canonical data foundation for the entire platform.  
 **Status:** In progress · Step 2.1 complete  
 **Build Bible (closeout):** `PHASE_2_ARKANSAS_ORGANIZING_REGISTRY_BUILD_BIBLE.md` (Step 2.10)
+
+---
+
+## Core Concepts
+
+| Concept | Meaning |
+|---------|---------|
+| **AOR** | Arkansas Organizing Registry — source of truth |
+| **Graph model** | Counties contain institutions; entities link by typed relationships |
+| **Canonical data** | What exists (Registry) |
+| **Operational data** | What people do (references Registry) |
+| **One Arkansas** | One Registry. One Source of Truth. |
+
+**Doctrine:** [ARKANSAS_ORGANIZING_REGISTRY_DOCTRINE.md](ARKANSAS_ORGANIZING_REGISTRY_DOCTRINE.md)
 
 ---
 
@@ -12,10 +27,10 @@
 
 | Step | Document | Status |
 |------|----------|--------|
-| 2.1 | [Registry Purpose & Authority](ARKANSAS_ORGANIZING_REGISTRY_DOCTRINE.md) | ✅ |
-| 2.2 | County Registry Model | Pending |
-| 2.3 | Institution Registry Model | Pending |
-| 2.4 | County-to-Institution Relationship Map | Pending |
+| 2.1 | [Registry Doctrine](ARKANSAS_ORGANIZING_REGISTRY_DOCTRINE.md) | ✅ |
+| 2.2 | County Registry Model (graph node) | Pending |
+| 2.3 | Institution Registry Model (graph node) | Pending |
+| 2.4 | County-Institution Relationship Map (graph edges) | Pending |
 | 2.5 | Representation Status System | Pending |
 | 2.6 | Outreach Gap Dashboard Requirements | Pending |
 | 2.7 | Campus Page Personalization Rules | Pending |
@@ -29,30 +44,16 @@
 
 | File | Status |
 |------|--------|
-| `data/registry/counties.json` | 75 counties (minimal schema — formal model in 2.2) |
-| `data/registry/institutions.json` | 23 institutions (formal model in 2.3) |
-| `data/registry/README.md` | Schema notes (superseded by Phase 2 docs) |
+| `data/registry/counties.json` | 75 counties — formal node model in 2.2 |
+| `data/registry/institutions.json` | 23 institutions — formal node model in 2.3 |
+| Relationship graph | Formalized in 2.4 |
 
 ---
 
-## Phase 2 Completion Standard
+## Burt's Rule
 
-Phase 2 is complete when Burt has enough documentation to build:
-
-- All 75 county records
-- Initial college/university records
-- County pages · Institution pages
-- County/institution relationships
-- Status tracking · Outreach gap dashboard
-- Future expansion hooks (trade schools, junior colleges, high schools)
+**Ask the Registry first.** No production schema changes until Steps 2.2–2.4 approved.
 
 ---
 
-## Traceability
-
-Requirements: `REG-001`, `REG-002`, `REG-003` in `data/requirements-registry.json`  
-Principles: [CP-006], [OM-L3], [OM-L4], [LS-P1], [LS-P2], [LS-P7]
-
----
-
-*Burt: read Step 2.1 doctrine before extending registry data or schema.*
+*Requirements: REG-001, REG-002, REG-003 · Principles: CP-006, OM-L3, OM-L4, LS-P1, LS-P2*

@@ -60,7 +60,7 @@
       "status": "in_progress",
       "docPath": "docs/phase-02/README.md",
       "steps": [
-        { "id": "2.1", "name": "Registry Purpose & Authority [PHASE-002.1]", "status": "done", "notes": "REG-D01–D15, ARKANSAS_ORGANIZING_REGISTRY_DOCTRINE.md" },
+        { "id": "2.1", "name": "Registry Doctrine [PHASE-002.1]", "status": "done", "notes": "REG-D01–D21, graph model REG-D16, digital map philosophy" },
         { "id": "2.2", "name": "County Registry Model", "status": "pending", "notes": "COUNTY_REGISTRY_MODEL.md — 75-county field schema" },
         { "id": "2.3", "name": "Institution Registry Model", "status": "pending", "notes": "INSTITUTION_REGISTRY_MODEL.md" },
         { "id": "2.4", "name": "County-Institution Relationship Map", "status": "pending", "notes": "COUNTY_INSTITUTION_RELATIONSHIP_MAP.md" },

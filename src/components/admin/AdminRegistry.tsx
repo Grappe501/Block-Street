@@ -1,16 +1,24 @@
 "use client";
 
 const PHASE2_STEPS = [
-  { step: "2.1", name: "Registry Purpose & Authority", artifact: "ARKANSAS_ORGANIZING_REGISTRY_DOCTRINE.md", status: "done" },
+  { step: "2.1", name: "Registry Doctrine", artifact: "ARKANSAS_ORGANIZING_REGISTRY_DOCTRINE.md", status: "done" },
   { step: "2.2", name: "County Registry Model", artifact: "COUNTY_REGISTRY_MODEL.md", status: "pending" },
   { step: "2.3", name: "Institution Registry Model", artifact: "INSTITUTION_REGISTRY_MODEL.md", status: "pending" },
-  { step: "2.4", name: "County-Institution Relationship Map", artifact: "COUNTY_INSTITUTION_RELATIONSHIP_MAP.md", status: "pending" },
+  { step: "2.4", name: "Relationship Map (graph edges)", artifact: "COUNTY_INSTITUTION_RELATIONSHIP_MAP.md", status: "pending" },
   { step: "2.5", name: "Representation Status System", artifact: "REPRESENTATION_STATUS_SYSTEM.md", status: "pending" },
   { step: "2.6", name: "Outreach Gap Dashboard", artifact: "OUTREACH_GAP_DASHBOARD_REQUIREMENTS.md", status: "pending" },
   { step: "2.7", name: "Campus Page Personalization", artifact: "CAMPUS_PAGE_PERSONALIZATION_RULES.md", status: "pending" },
   { step: "2.8", name: "Source & Verification Protocol", artifact: "REGISTRY_SOURCE_AND_VERIFICATION_PROTOCOL.md", status: "pending" },
   { step: "2.9", name: "Registry Seed Data Plan", artifact: "REGISTRY_SEED_DATA_PLAN.md", status: "pending" },
   { step: "2.10", name: "Phase 2 Build Bible", artifact: "PHASE_2_ARKANSAS_ORGANIZING_REGISTRY_BUILD_BIBLE.md", status: "pending" },
+];
+
+const RELATIONSHIPS = [
+  { rel: "contains", from: "County", to: "Institution" },
+  { rel: "belongs_to", from: "Institution", to: "County" },
+  { rel: "belongs_to", from: "Participant", to: "County / Campus", note: "operational" },
+  { rel: "operates_within", from: "Committee", to: "Campus / County", note: "future" },
+  { rel: "occurs_at", from: "Event", to: "Location", note: "future" },
 ];
 
 const STATUS_STYLE: Record<string, string> = {
@@ -25,10 +33,13 @@ export function AdminRegistry() {
   return (
     <div className="space-y-6">
       <div className="card border-brand-300 bg-brand-50">
-        <p className="text-xs font-semibold uppercase text-brand-700">PHASE-002 · Arkansas Organizing Registry</p>
-        <h2 className="mt-1 text-xl font-bold text-brand-950">Canonical Data Foundation</h2>
-        <p className="mt-2 text-sm text-brand-800">
-          Defines what exists, where it belongs, and how representation and outreach gaps are tracked.
+        <p className="text-xs font-semibold uppercase text-brand-700">PHASE-002 · Arkansas Organizing Registry (AOR)</p>
+        <h2 className="mt-1 text-xl font-bold text-brand-950">The Digital Map of Arkansas</h2>
+        <p className="mt-2 text-sm font-medium text-brand-900">
+          The Registry is not a list. Ask the Registry first.
+        </p>
+        <p className="mt-1 text-sm text-brand-800">
+          If it doesn&apos;t exist in the Registry, it doesn&apos;t exist in the platform.
         </p>
         <div className="mt-4 flex gap-6">
           <div>
@@ -38,12 +49,28 @@ export function AdminRegistry() {
         </div>
       </div>
 
+      <div className="card border-purple-200 bg-purple-50">
+        <p className="text-xs font-semibold uppercase text-purple-800">Graph Model [REG-D16]</p>
+        <p className="mt-1 font-bold text-purple-950">Relationships, not isolated records</p>
+        <div className="mt-3 space-y-1">
+          {RELATIONSHIPS.map((r) => (
+            <p key={`${r.from}-${r.rel}`} className="font-mono text-xs text-purple-900">
+              {r.from} <span className="text-purple-600">{r.rel}</span> {r.to}
+              {r.note && <span className="ml-2 text-purple-500">({r.note})</span>}
+            </p>
+          ))}
+        </div>
+      </div>
+
       <div className="card">
-        <h2 className="text-lg font-bold text-slate-900">Registry Authority [REG-D02]</h2>
-        <p className="mt-2 text-sm text-slate-600">
-          Source of truth for 75 counties, institutions, campus/county hubs, representation status, and outreach priority.
+        <h2 className="text-lg font-bold text-slate-900">Guiding Principle [REG-D04]</h2>
+        <p className="mt-2 rounded-lg bg-slate-50 p-3 text-sm font-medium text-slate-800">
+          One Arkansas. One Registry. One Source of Truth.
         </p>
-        <p className="mt-2 font-mono text-xs text-slate-500">data/registry/ → DB-COUNTIES, DB-INSTITUTIONS → pages & API</p>
+        <div className="mt-3 grid gap-2 text-sm text-slate-600 md:grid-cols-2">
+          <p><strong>Registry defines:</strong> counties, institutions, status, relationships</p>
+          <p><strong>Registry excludes:</strong> messages, events, profiles, committees</p>
+        </div>
       </div>
 
       <div className="card">
@@ -65,14 +92,15 @@ export function AdminRegistry() {
       <div className="card">
         <h2 className="text-lg font-bold text-slate-900">Preliminary Seed Data</h2>
         <div className="mt-2 space-y-1 text-sm text-slate-600">
-          <p>✓ counties.json — 75 counties (minimal schema, formal model in 2.2)</p>
-          <p>✓ institutions.json — 23 colleges/universities (formal model in 2.3)</p>
-          <p>○ Netlify DB — pending (after models approved)</p>
+          <p>✓ counties.json — 75 nodes (formal model in 2.2)</p>
+          <p>✓ institutions.json — 23 nodes (formal model in 2.3)</p>
+          <p>○ Relationship graph — Step 2.4</p>
+          <p>○ Netlify DB — after models approved</p>
         </div>
       </div>
 
       <p className="text-sm text-slate-500">
-        Doctrine: docs/phase-02/ARKANSAS_ORGANIZING_REGISTRY_DOCTRINE.md · Requirements: REG-001, REG-002, REG-003
+        Doctrine: docs/phase-02/ARKANSAS_ORGANIZING_REGISTRY_DOCTRINE.md · REG-001, REG-002, REG-003
       </p>
     </div>
   );

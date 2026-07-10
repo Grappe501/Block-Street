@@ -1,13 +1,16 @@
-# Arkansas Organizing Registry — Purpose & Authority
+# Arkansas Organizing Registry Doctrine
 
 **Document ID:** PHASE-002.1  
 **Artifact:** `ARKANSAS_ORGANIZING_REGISTRY_DOCTRINE.md`  
 **Status:** Canonical  
 **Priority:** Critical  
-**Phase:** 2 — Arkansas Organizing Registry
+**Phase:** 2 — Arkansas Organizing Registry (AOR)
 
-> The registry is the **source of truth** for what exists in Arkansas organizing geography.  
-> Every page, map, search result, dashboard metric, and signup assignment traces back to it.
+> **The Registry is not a list. It is the digital map of Arkansas.**  
+> Everything Burt builds from this point forward should ask the Registry first.  
+> **If something doesn't exist in the Registry, it doesn't exist in the platform.**
+
+The Registry is the **database constitution** — the equivalent of a governing document for all platform data about place, institution, and organizing geography.
 
 **Builds On:** [BUILD-BIBLE.md](../build-steps/BUILD-BIBLE.md) · [PHASE-001.5 Organizing Model](../build-steps/PHASE-001.5-ORGANIZING-MODEL.md) · [PHASE-001.7 Launch Success](../build-steps/PHASE-001.7-LAUNCH-SUCCESS-DEFINITION.md) · [REG-001, REG-002, REG-003](../../data/requirements-registry.json)
 
@@ -18,68 +21,133 @@
 | ID | Requirement |
 |----|-------------|
 | REG-D01 | Purpose |
-| REG-D02 | Authority & source of truth |
-| REG-D03 | Registry scope |
-| REG-D04 | Counties as permanent organizing units |
-| REG-D05 | Institutions as campus organizing homes |
-| REG-D06 | Campus hubs |
-| REG-D07 | County hubs |
-| REG-D08 | Representation status |
-| REG-D09 | Outreach priority |
-| REG-D10 | Future expansion categories |
-| REG-D11 | Relationship to participants |
-| REG-D12 | Relationship to pages & routes |
-| REG-D13 | Data layer architecture |
-| REG-D14 | Governance & change control |
-| REG-D15 | Phase 2 artifact map |
+| REG-D02 | Mission |
+| REG-D03 | Vision |
+| REG-D04 | Guiding principle |
+| REG-D05 | Registry responsibilities |
+| REG-D06 | Canonical vs operational data |
+| REG-D07 | Registry is read by everyone |
+| REG-D08 | Entity categories |
+| REG-D09 | Registry philosophy |
+| REG-D10 | Canonical record rule |
+| REG-D11 | Stable identity |
+| REG-D12 | Registry status |
+| REG-D13 | Registry ownership |
+| REG-D14 | Data quality |
+| REG-D15 | Expansion policy |
+| REG-D16 | Graph model (relationships) |
+| REG-D17 | Registry consumers |
+| REG-D18 | Authority & conflict resolution |
+| REG-D19 | Data layer architecture |
+| REG-D20 | Governance & change control |
+| REG-D21 | Phase 2 artifact map |
+| REG-BG | Burt implementation guidance |
 | AC-010 | Step 2.1 acceptance criteria |
 
 ---
 
 ## REG-D01 — Purpose
 
-**[REG-D01]** The Arkansas Organizing Registry defines **what exists**, **where it belongs**, and **how the system tracks representation and outreach gaps**.
+**[REG-D01]** The **Arkansas Organizing Registry (AOR)** is the canonical source of truth for every geographic, educational, and organizational entity represented within the platform.
 
-**[REG-D01a]** It is the canonical data foundation for the entire ASYON platform.
+**[REG-D01a]** The Registry defines:
 
-**[REG-D01b]** The registry answers organizing questions before code answers them:
+- **What exists**
+- **Where it belongs**
+- **How it relates to other entities**
+- **Its current organizing status**
 
-| Question | Registry Answer |
-|----------|-----------------|
-| What counties exist? | 75 permanent county records |
-| What schools exist? | Institution records by type and county |
-| Where does this campus belong? | County relationship map |
-| Is this place represented? | Representation status |
-| Where should organizers focus? | Outreach priority |
-| What page does this entity get? | Hub URL mapping |
+**[REG-D01b]** Every page, search result, dashboard, report, API, and future feature derives its understanding of Arkansas from this Registry.
 
-**[REG-D01c]** Without the registry, pages are static content. With the registry, the platform is a **living map of Arkansas youth organizing**.
+**[REG-D01c]** The Registry is not merely a database table. It is the platform's **operational map of the state**.
 
-*Aligns with:* [LS-P1] Every County Exists · [LS-P2] Every College Exists · [LS-P7] Outreach Visibility
+**[REG-D01d]** Burt asks the Registry first. No subsystem invents Arkansas geography independently.
+
+*Aligns with:* [LS-P1] · [LS-P2] · [LS-P7] · [ED-DB] · [TR-MOTTO]
 
 ---
 
-## REG-D02 — Authority & Source of Truth
+## REG-D02 — Mission
 
-**[REG-D02]** The registry is the **authoritative source of truth** for geographic and institutional organizing data.
+**[REG-D02]** Provide one authoritative registry describing every organizing location, educational institution, county, and future organizational entity supported by the platform.
 
-**[REG-D02a]** Priority order when data conflicts:
+---
+
+## REG-D03 — Vision
+
+**[REG-D03]** The Registry becomes the **permanent digital representation** of Arkansas's organizing ecosystem.
+
+**[REG-D03a]** As the platform grows, the Registry expands without changing its underlying philosophy.
+
+**[REG-D03b]** Future generations inherit an increasingly complete map — rather than rebuilding institutional knowledge from scratch.
+
+*Aligns with:* [DG-009] Versioned Growth · [GM-ROAD]
+
+---
+
+## REG-D04 — Guiding Principle
+
+**[REG-D04]**
+
+> **One Arkansas. One Registry. One Source of Truth.**
+
+**[REG-D04a]** No duplicate institutional records.
+
+**[REG-D04b]** No duplicate county definitions.
+
+**[REG-D04c]** No conflicting data sources.
+
+**[REG-D04d]** Every system references the Registry.
+
+---
+
+## REG-D05 — Registry Responsibilities
+
+**[REG-D05]** The Registry **defines**:
+
+| Domain | Examples |
+|--------|----------|
+| Geography | Counties, state boundary, future city support |
+| Education | Universities, colleges, institution types |
+| Relationships | Geographic links, contains/belongs-to graph |
+| Organizing state | Representation status, outreach priority |
+| Future entities | Organizational categories (V2+) |
+
+**[REG-D05a]** The Registry does **not** store operational activity:
+
+| Operational (references Registry) | Module |
+|-----------------------------------|--------|
+| Messages | MSG (future) |
+| Events | EVT (future) |
+| Volunteer logs | VOL (future) |
+| Committees | COM (future) |
+| Personal profiles | USR |
+
+**[REG-D05b]** Operational modules **reference** Registry records by stable ID — they do not redefine entities.
+
+*Aligns with:* [OM-L1] People-first — individuals are root; homes are registry nodes.
+
+---
+
+## REG-D06 — Canonical vs Operational Data
+
+**[REG-D06]** **Canonical Registry data** = what exists in Arkansas organizing geography.
+
+**[REG-D06a]** **Operational data** = what people do (signup, recruit, message, organize events).
+
+**[REG-D06b]** Priority when data conflicts:
 
 ```
-1. Approved registry record (this system)
-2. Approved Phase 2 model documents (Steps 2.2–2.9)
-3. Live database (when connected — mirrors registry)
-4. Static JSON seed files (bootstrap until DB live)
-5. Page content hardcoded in components (never preferred)
+1. Approved Registry record (AOR)
+2. Approved Phase 2 model documents (Steps 2.2–2.10)
+3. Live database (mirrors Registry)
+4. JSON seed files (bootstrap)
+5. Hardcoded page content (never preferred)
 ```
 
-**[REG-D02b]** No page, API, or dashboard may invent county names, institution lists, or representation status independently of the registry.
+**[REG-D06c]** Participant records [USR-001] select Registry entities — they do not create them.
 
-**[REG-D02c]** Participant records [USR-001] **reference** registry entities — they do not define them.
-
-*Aligns with:* [ED-DB] Database as source of truth · [TR-MOTTO] Traceability
-
-**Live files (bootstrap layer):**
+**Bootstrap layer:**
 
 ```
 data/registry/
@@ -88,293 +156,332 @@ data/registry/
 └── README.md
 ```
 
-**Target layer (Phase 2 completion):** Netlify Postgres tables `DB-COUNTIES`, `DB-INSTITUTIONS` synced with registry doctrine.
+**Production layer:** `DB-COUNTIES`, `DB-INSTITUTIONS`, relationship tables (Step 2.4).
 
 ---
 
-## REG-D03 — Registry Scope
+## REG-D07 — Registry Is Read by Everyone
 
-**[REG-D03]** The registry governs these entity types:
+**[REG-D07]** Every major subsystem **consumes** Registry data.
 
-| Entity | Description | V1 Required |
-|--------|-------------|-------------|
-| **County** | One of 75 Arkansas counties | ✅ All 75 |
-| **Institution** | College or university campus | ✅ All AR 4-year (expand in 2.3) |
-| **Campus Hub** | Platform page for an institution | ✅ Per institution |
-| **County Hub** | Platform page for a county | ✅ Per county |
-| **Representation Status** | Organizing state of county/institution | ✅ |
-| **Outreach Priority** | Where organizers should focus next | ✅ |
-| **Future Categories** | CC, trade, high school placeholders | Hooks only in V1 |
+### Public Website
 
-**[REG-D03a]** The registry does **not** store participant personal data. Users link *to* registry entities; they are not embedded in them.
+County pages · Institution pages · Search · Maps · Directory
 
-*Aligns with:* [OM-L1] People-first — individuals reference homes, homes don't contain people lists in the registry itself.
+### Participant Experience
 
----
+Join flow · Campus selection · County selection · Discovery · Recommendations
 
-## REG-D04 — Counties as Permanent Organizing Units
+### Administration
 
-**[REG-D04]** All **75 Arkansas counties** are permanent organizing units. No county is omitted.
+Institution management · County management · Status updates · Outreach planning · Reporting
 
-**[REG-D04a]** Every county record represents a **youth organizing home** for:
+### Analytics
 
-- Students whose school is in that county
-- Young adults (16–24) not in school who choose county-only affiliation
+Coverage · Growth · Representation · Participation by geography · Outreach gaps
 
-**[REG-D04b]** Counties are geographic anchors — not hierarchical superiors to campuses. Equal standing [CP-003, ER-001].
-
-**[REG-D04c]** Formal field model defined in Step **2.2** (`COUNTY_REGISTRY_MODEL.md`).
-
-**Minimum V1 county record includes:**
-
-- Name · Slug · Region · County seat
-- Population placeholder · Status · Page URL
-- Youth hub status · Outreach priority
-
-*Requirement:* [REG-001] · [CNTY-001] · [LS-P1]
+**[REG-D07a]** No component maintains its own independent definition of Arkansas entities.
 
 ---
 
-## REG-D05 — Institutions as Campus Organizing Homes
+## REG-D08 — Entity Categories
 
-**[REG-D05]** Every Arkansas college and university in V1 scope has an institution record.
+**[REG-D08]** The Registry supports multiple entity categories. Each follows the same philosophy with specialized attributes.
 
-**[REG-D05a]** Each institution is an independent organizing home — not an official arm of the school [DG-001, CP-005].
+### Geographic
 
-**[REG-D05b]** Institution records power:
+| Entity | V1 |
+|--------|-----|
+| State (Arkansas) | Implicit anchor |
+| County (75) | ✅ All required |
+| City | Future if adopted |
 
-- `/schools/[slug]` campus hub pages
-- County relationship queries ("schools in Pulaski County")
-- Directory search and filters
-- Signup campus assignment [USR-001]
+### Educational
 
-**[REG-D05c]** Formal field model defined in Step **2.3** (`INSTITUTION_REGISTRY_MODEL.md`).
+| Type | Version |
+|------|---------|
+| Universities & colleges | V1 ✅ |
+| Community colleges | V1.5 |
+| Technical institutes | V2 |
+| Trade schools | V2 |
+| High schools | V3 |
 
-*Requirement:* [REG-002] · [INST-001, INST-002] · [LS-P2]
+### Organizational (Future)
 
----
+Youth organizations · Community organizations · Civic organizations (if adopted)
 
-## REG-D06 — Campus Hubs
-
-**[REG-D06]** A **campus hub** is the platform's organizing page for one institution.
-
-**[REG-D06a]** Route: `/schools/[slug]` · Page ID: `PAGE-INSTITUTION`
-
-**[REG-D06b]** Every campus hub must provide:
-
-- Institution identity (name, city, county, type)
-- Public facts and brief history
-- Independent platform disclaimer [DG-001]
-- Join pathway to registration [LS-Q2]
-- Representation status visibility [LS-P7]
-
-**[REG-D06c]** Personalization rules defined in Step **2.7** (`CAMPUS_PAGE_PERSONALIZATION_RULES.md`).
-
-*No campus hub may be blank for a seeded institution.*
+**Formal models:** Steps 2.2 (County) · 2.3 (Institution) · 2.4 (Relationships)
 
 ---
 
-## REG-D07 — County Hubs
+## REG-D09 — Registry Philosophy
 
-**[REG-D07]** A **county hub** is the platform's organizing page for one county.
+**[REG-D09]** The Registry is **descriptive rather than prescriptive**.
 
-**[REG-D07a]** Route: `/county/[slug]` · Page ID: `PAGE-COUNTY`
+**[REG-D09a]** It records factual information.
 
-**[REG-D07b]** Every county hub must provide:
+**[REG-D09b]** It does **not** assign political viewpoints, endorsements, or organizational priorities [DG-003, CP-002].
 
-- County identity and seat
-- Youth organizing context
-- Institutions in this county (from relationship map)
-- Join pathway [LS-Q1]
-- Representation and outreach status [LS-P7]
-
-**[REG-D07c]** County hubs connect local geography to campus options — the honor-system signup flow starts here [OH-002].
-
-*Requirement:* [CNTY-001] · 75 pages live [LS-CHK item 1]
+**[REG-D09c]** Its purpose is to help participants **discover and connect** with organizing communities.
 
 ---
 
-## REG-D08 — Representation Status
+## REG-D10 — Canonical Record Rule
 
-**[REG-D08]** **Representation status** describes the current organizing state of a county or institution.
+**[REG-D10]** Each real-world entity has exactly **one** canonical Registry record.
 
-**[REG-D08a]** Status is **organizing state**, not enrollment verification or official affiliation.
+**Examples:**
 
-**[REG-D08b]** Status applies uniformly to counties and institutions.
+| Entity | One Record |
+|--------|------------|
+| Pulaski County | `slug: pulaski` |
+| University of Central Arkansas | `slug: uca` |
+| Philander Smith University | `slug: philander-smith` |
 
-**[REG-D08c]** Full status vocabulary and transitions defined in Step **2.5** (`REPRESENTATION_STATUS_SYSTEM.md`).
+**[REG-D10a]** Operational systems reference these records — never duplicate them.
 
-**Preliminary V1 values** (subject to formalization in 2.5):
+**[REG-D10b]** Cross-module references use Registry ID or slug, not display name strings.
+
+---
+
+## REG-D11 — Stable Identity
+
+**[REG-D11]** Every Registry record receives a **permanent identifier**.
+
+**[REG-D11a]** The identifier remains stable even if:
+
+- Display name changes
+- Additional metadata is added
+- Organizing status changes
+- Future versions expand the record
+
+**[REG-D11b]** Slugs are permanent URLs. Changes require redirect strategy + BUILD-LOG entry.
+
+**[REG-D11c]** Stable identifiers preserve historical continuity and simplify long-term maintenance [DG-009].
+
+*Requirement IDs:* `REG-*`, `CNTY-*`, `INST-*` · Page IDs: `PAGE-*` · DB IDs: `DB-*`
+
+---
+
+## REG-D12 — Registry Status
+
+**[REG-D12]** Every Registry entity has an **organizing status**.
+
+**Preliminary values** (formalized in Step 2.5):
 
 | Status | Meaning |
 |--------|---------|
+| `planned` | Record exists, page not yet live |
 | `needs_outreach` | No active organizers — priority target |
-| `needs_organizer` | Alias / legacy — maps to needs_outreach |
-| `building` | Organizers joining, network forming |
+| `organizer_assigned` | Lead identified, not yet building |
+| `building` | Network forming |
 | `active` | Recruiting and growing |
-| `paused` | Intentionally inactive |
-| `verified` | Reviewed and confirmed active |
-| `needs_review` | Data or status requires admin review |
+| `under_review` | Data or status requires admin review |
+| `archived` | Intentionally inactive (if applicable) |
 
-**[REG-D08d]** Status drives outreach gap dashboards [LS-P7] and map visualization.
+**[REG-D12a]** Status is **organizing state** — not enrollment verification or official affiliation.
 
----
+**[REG-D12b]** Legacy alias: `needs_organizer` → maps to `needs_outreach`.
 
-## REG-D09 — Outreach Priority
-
-**[REG-D09]** **Outreach priority** identifies where statewide organizers should focus recruitment effort.
-
-**[REG-D09a]** Priority is derived from:
-
-- Representation status (`needs_outreach` > `building` > `active`)
-- Institution type and enrollment (larger campuses = higher potential reach)
-- Geographic gaps (counties with zero represented institutions)
-- Launch timeline [GM-V1] — Jul 12–14 campuses first
-
-**[REG-D09b]** Priority levels (formalized in Step **2.6**):
-
-| Level | Meaning |
-|-------|---------|
-| `critical` | Launch-week target — must have signup path |
-| `high` | V1 outreach list |
-| `medium` | Visible but not launch-blocking |
-| `low` | Future expansion |
-
-**[REG-D09c]** `v1Priority: true` on institution records marks launch-critical campuses.
-
-*Dashboard requirements:* Step **2.6** (`OUTREACH_GAP_DASHBOARD_REQUIREMENTS.md`)
+*Artifact:* Step 2.5 `REPRESENTATION_STATUS_SYSTEM.md`
 
 ---
 
-## REG-D10 — Future Expansion Categories
+## REG-D13 — Registry Ownership
 
-**[REG-D10]** The registry must support future institution types without schema redesign.
+**[REG-D13]** The Registry belongs to the **platform** — not to any individual participant.
 
-**Expansion sequence** [data/registry/README.md]:
+**[REG-D13a]** Updates occur through controlled administrative processes [TR-SR].
 
-| Version | Category | Registry `type` value |
-|---------|----------|-------------------------|
-| V1 | 4-year colleges & universities | `university` |
-| V1.5 | Community colleges | `community_college` |
-| V2 | Trade / technical schools | `trade_school` |
-| V3 | High schools (self-registration) | `high_school` |
+**[REG-D13b]** Public participants may suggest corrections or additions.
 
-**[REG-D10a]** V1 registry includes **schema hooks** for future types — not full records.
-
-**[REG-D10b]** Counties remain constant at 75. Institution count grows by version.
-
-**[REG-D10c]** Seed data plan in Step **2.9** defines placeholder handling for unseeded categories.
-
-*Aligns with:* [DG-009] Versioned Growth · [GM-ROAD]
+**[REG-D13c]** Canonical changes require **administrative review** and traceability [TR-BR].
 
 ---
 
-## REG-D11 — Relationship to Participants
+## REG-D14 — Data Quality
 
-**[REG-D11]** Participants **select** registry entities at signup — they do not create them.
+**[REG-D14]** Registry information should strive to be:
 
-**[REG-D11a]** Honor-system flow [USR-001]:
+- **Accurate** · **Verifiable** · **Consistent** · **Current**
+- **Properly attributed** where appropriate [DG-010]
+
+**[REG-D14a]** When uncertainty exists, records indicate **confidence level** or **review status** — not assumptions presented as fact.
+
+**[REG-D14b]** Source and verification protocol: Step 2.8.
+
+---
+
+## REG-D15 — Expansion Policy
+
+**[REG-D15]** The Registry is intentionally designed for growth.
+
+**[REG-D15a]** Future versions introduce additional entity categories **without altering core philosophy**.
+
+**Examples:**
+
+- High schools (V3)
+- Counties outside Arkansas (if expansion occurs)
+- Partner organizations
+
+**[REG-D15b]** Growth occurs by **extending** the Registry — never replacing it [DG-009].
+
+**[REG-D15c]** Schema hooks in V1; full records in later versions [REG-D08].
+
+---
+
+## REG-D16 — Graph Model (Relationships)
+
+**[REG-D16]** The Registry is not a flat list. It is a **graph of interconnected entities**.
+
+**[REG-D16a]** Every record can have typed relationships:
+
+| Relationship | Example |
+|--------------|---------|
+| County **contains** institution | Pulaski → UA Little Rock |
+| Institution **belongs to** county | UCA → Faulkner |
+| Participant **belongs to** community | User → county + campus |
+| Committee **operates within** | Campus or county (future) |
+| Event **occurs at** | Location (future) |
+| Volunteer project **serves** | Community (future) |
+
+**[REG-D16b]** Modeling around **relationships** rather than isolated records enables:
+
+- Richer search and discovery
+- Outreach gap analytics
+- Map visualization
+- Future AI capabilities
+
+**[REG-D16c]** Without changing fundamental architecture.
+
+**[REG-D16d]** Step **2.4** (`COUNTY_INSTITUTION_RELATIONSHIP_MAP.md`) formalizes V1 relationship types. Database design should normalize relationships — not duplicate foreign keys in multiple shapes [ED-ME].
 
 ```
-Student:     County (registry) → Institution (registry) → Profile created
-Non-student: County (registry) → Profile created (county-only)
+         ┌─────────┐
+         │  State  │
+         └────┬────┘
+              │ contains
+    ┌─────────┴─────────┐
+    │      County       │
+    └─────────┬─────────┘
+              │ contains
+    ┌─────────┴─────────┐
+    │   Institution     │
+    └─────────┬─────────┘
+              │ referenced by
+    ┌─────────┴─────────┐
+    │   Participant     │  (operational — not in Registry)
+    └───────────────────┘
 ```
 
-**[REG-D11b]** Registry records are **stable**. Participant counts attach via separate user/network tables [DB-USERS, DB-NETWORKS].
-
-**[REG-D11c]** Referral attribution [NET-003] links people to people — not to registry mutation.
-
-*Aligns with:* [OM-L1] Individual as database root · [OM-L3, OM-L4] Organizing homes
+*This is the architectural foundation for Steps 2.2–2.4.*
 
 ---
 
-## REG-D12 — Relationship to Pages & Routes
+## REG-D17 — Registry Consumers
 
-**[REG-D12]** Every registry entity maps to platform surfaces:
+**[REG-D17]** Platform components that **must** consume Registry data:
 
-| Registry Entity | Public Route | Admin Surface |
-|-----------------|--------------|---------------|
-| County | `/county/[slug]` | Admin registry tab (future) |
-| Institution | `/schools/[slug]` | Admin registry tab (future) |
-| All counties | `/map` | Launch + Traceability tabs |
-| All institutions | `/schools` | Launch tab |
-| Search (future) | `/search` | — |
-| Gap dashboard | `/map`, `/` stats | Admin Launch tab |
+| Consumer | Uses Registry For |
+|----------|-------------------|
+| County pages | Entity record, status, institutions in county |
+| Institution pages | Entity record, status, county link |
+| Maps | All counties, status coloring, gaps |
+| Search | Entity discovery, filters |
+| Dashboards | Coverage, outreach gaps |
+| Participant onboarding | County + campus selection [USR-001] |
+| Recruitment workflows | Share links tied to homes |
+| Outreach planning | Priority, needs_outreach lists |
+| Analytics | Representation by geography |
+| Reporting | Admin visibility |
+| Future mobile apps | Same Registry API |
 
-**[REG-D12a]** Slugs are **permanent URLs**. Slug changes require redirect strategy and BUILD-LOG entry.
-
-**[REG-D12b]** County-to-institution relationships power cross-links on hub pages — defined in Step **2.4**.
-
----
-
-## REG-D13 — Data Layer Architecture
-
-**[REG-D13]** Registry data flows through three layers:
-
-```
-Layer 1 — Doctrine & Models (Phase 2 docs, Steps 2.1–2.10)
-    ↓
-Layer 2 — Seed Files (data/registry/*.json — bootstrap)
-    ↓
-Layer 3 — Database (Netlify Postgres — production source of truth)
-    ↓
-Layer 4 — API (read/write endpoints — REG/CNTY/INST requirements)
-    ↓
-Layer 5 — UI (pages, map, dashboard, signup)
-```
-
-**[REG-D13a]** Build vertically [ED-VS]: complete each layer for one entity type before starting the next.
-
-**[REG-D13b]** JSON seed files remain valid export/import format [DG-008] even after DB is live.
-
-**API targets** (from requirements registry):
-
-- `API-COUNTIES-001` · `API-INSTITUTIONS-001`
+**[REG-D17a]** No independent Arkansas entity definitions outside the Registry.
 
 ---
 
-## REG-D14 — Governance & Change Control
+## REG-D18 — Authority & Conflict Resolution
 
-**[REG-D14]** Registry changes follow traceability protocol [TR-BR]:
+**[REG-D18]** The Registry is authoritative. When in doubt, consult [BG-001]:
+
+```
+1. Platform Constitution [CP-*]
+2. Design Guardrails [DG-*]
+3. Registry Doctrine [REG-D*]
+4. Phase 2 model documents
+5. Feature request / convenience
+```
+
+**[REG-D18a]** If it is not in the Registry, it does not exist in the platform.
+
+---
+
+## REG-D19 — Data Layer Architecture
+
+**[REG-D19]** Registry data flows vertically [ED-VS]:
+
+```
+Doctrine & Models (Phase 2 docs)
+    ↓
+Relationship graph schema (Step 2.4)
+    ↓
+Seed files (data/registry/*.json)
+    ↓
+Database (Netlify Postgres)
+    ↓
+API (API-COUNTIES-001, API-INSTITUTIONS-001)
+    ↓
+UI (pages, map, dashboard, signup)
+```
+
+**[REG-D19a]** JSON remains valid export/import format [DG-008] after DB is live.
+
+---
+
+## REG-D20 — Governance & Change Control
+
+**[REG-D20]** Registry changes follow [TR-BR]:
 
 1. Requirement exists (`REG-*`, `CNTY-*`, `INST-*`)
-2. Model document updated (Phase 2 step artifact)
-3. Seed data or DB migration applied
-4. Pages/API updated
-5. `requirements-registry.json` status updated
-6. BUILD-LOG entry with ED-FD handoff
+2. Model document updated
+3. Relationship map updated (if applicable)
+4. Seed data or DB migration
+5. Pages/API updated
+6. `requirements-registry.json` status updated
+7. BUILD-LOG + ED-FD handoff
 
-**[REG-D14a]** Adding an institution requires:
-
-- Approved record in registry
-- Disclaimer on hub page [DG-001]
-- Source verification [Step 2.8]
-- No trademark violations [DG-002, Step 2.7]
-
-**[REG-D14b]** Representation status changes may be manual (admin) or automatic (participant threshold) — rules in Step **2.5**.
-
-**[REG-D14c]** Steve approves new institution categories and constitutional changes [TR-SR].
+**Steve approves:** new entity categories · constitutional changes · major architecture [TR-SR].
 
 ---
 
-## REG-D15 — Phase 2 Artifact Map
-
-**[REG-D15]** Step 2.1 establishes authority. Steps 2.2–2.10 complete the registry blueprint:
+## REG-D21 — Phase 2 Artifact Map
 
 | Step | Artifact | Delivers |
 |------|----------|----------|
-| **2.1** | `ARKANSAS_ORGANIZING_REGISTRY_DOCTRINE.md` | Purpose, authority, scope ✅ |
-| 2.2 | `COUNTY_REGISTRY_MODEL.md` | 75-county field schema |
-| 2.3 | `INSTITUTION_REGISTRY_MODEL.md` | Institution field schema |
-| 2.4 | `COUNTY_INSTITUTION_RELATIONSHIP_MAP.md` | Cross-reference rules |
-| 2.5 | `REPRESENTATION_STATUS_SYSTEM.md` | Status vocabulary & transitions |
-| 2.6 | `OUTREACH_GAP_DASHBOARD_REQUIREMENTS.md` | Gap metrics & UI |
-| 2.7 | `CAMPUS_PAGE_PERSONALIZATION_RULES.md` | Legal personalization bounds |
-| 2.8 | `REGISTRY_SOURCE_AND_VERIFICATION_PROTOCOL.md` | Data provenance |
-| 2.9 | `REGISTRY_SEED_DATA_PLAN.md` | Initial dataset spec |
-| 2.10 | `PHASE_2_ARKANSAS_ORGANIZING_REGISTRY_BUILD_BIBLE.md` | Unified implementation guide |
+| **2.1** | `ARKANSAS_ORGANIZING_REGISTRY_DOCTRINE.md` | Map philosophy, graph model, authority ✅ |
+| 2.2 | `COUNTY_REGISTRY_MODEL.md` | 75-county node schema |
+| 2.3 | `INSTITUTION_REGISTRY_MODEL.md` | Institution node schema |
+| 2.4 | `COUNTY_INSTITUTION_RELATIONSHIP_MAP.md` | Graph edges (contains/belongs) |
+| 2.5 | `REPRESENTATION_STATUS_SYSTEM.md` | Status vocabulary |
+| 2.6 | `OUTREACH_GAP_DASHBOARD_REQUIREMENTS.md` | Gap metrics |
+| 2.7 | `CAMPUS_PAGE_PERSONALIZATION_RULES.md` | Legal bounds |
+| 2.8 | `REGISTRY_SOURCE_AND_VERIFICATION_PROTOCOL.md` | Provenance |
+| 2.9 | `REGISTRY_SEED_DATA_PLAN.md` | Initial dataset |
+| 2.10 | `PHASE_2_ARKANSAS_ORGANIZING_REGISTRY_BUILD_BIBLE.md` | Unified guide |
 
-**[REG-D15a]** Phase 2 is complete when Burt can implement all registry capabilities from documentation alone — without guessing.
+---
+
+## REG-BG — Burt Implementation Guidance
+
+**[REG-BG]** During implementation:
+
+- Treat the Registry as a **foundational domain model** — not a CRUD table
+- Keep Registry records **independent** from operational activity
+- Design **stable identifiers** from the beginning
+- Model **relationships as a graph** — normalize, don't duplicate
+- Document **future extension points** without speculative features
+- **Ask the Registry first** before any geographic or institutional logic
+- No schema changes until Steps 2.2–2.4 models approved [ED-GR]
 
 ---
 
@@ -382,27 +489,25 @@ Layer 5 — UI (pages, map, dashboard, signup)
 
 Step 2.1 is complete when:
 
-- [x] **[AC-010a]** Registry defined as platform source of truth. `[REG-D02]`
-- [x] **[AC-010b]** Scope covers counties, institutions, hubs, status, priority, expansion. `[REG-D03–D10]`
-- [x] **[AC-010c]** Relationship to participants, pages, and data layers documented. `[REG-D11–D13]`
-- [x] **[AC-010d]** Change control and Phase 2 artifact map established. `[REG-D14–D15]`
-- [x] **[AC-010e]** Traceability links to REG-001, REG-002, LS-P1, LS-P2, LS-P7. `[requirements-registry.json]`
+- [x] **[AC-010a]** Registry defined as authoritative source of truth. `[REG-D01, REG-D18]`
+- [x] **[AC-010b]** Canonical vs operational data distinction documented. `[REG-D05, REG-D06]`
+- [x] **[AC-010c]** Expansion principles established. `[REG-D15]`
+- [x] **[AC-010d]** Stable identity and data quality expectations defined. `[REG-D11, REG-D14]`
+- [x] **[AC-010e]** Graph relationship model established for Steps 2.2–2.4. `[REG-D16]`
+- [x] **[AC-010f]** Burt has clear guidance for Registry as foundational system. `[REG-BG]`
 
 ---
 
-## Burt — Before Registry Implementation
+## Burt — The Registry Rule
 
 ```
-1. Read this doctrine (PHASE-002.1)
-2. Wait for model docs (2.2–2.9) before schema changes
-3. Verify requirement ID in registry [TR-BR]
-4. Build vertically: model → seed/DB → API → page [ED-VS]
-5. Never hardcode county/institution lists in components
-6. Update requirements-registry.json on completion
+Before any geographic or institutional code:
+  1. Does this entity exist in the Registry?
+  2. If no → stop. Request Registry record first.
+  3. If yes → reference by stable ID/slug, never duplicate.
+  4. Relationships → query the graph, don't hardcode joins.
 ```
 
----
+**Next Step:** 2.2 — County Registry Model (graph **node** schema)
 
-**Next Step:** 2.2 — County Registry Model (`COUNTY_REGISTRY_MODEL.md`)
-
-*Principle trace: CP-006 Geographic Coverage → REG-001 → DB-COUNTIES → PAGE-COUNTY → TEST-CNTY-001*
+*Trace: CP-006 → REG-001 → DB-COUNTIES → contains → DB-INSTITUTIONS → PAGE-COUNTY*

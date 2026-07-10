@@ -345,7 +345,7 @@
       "id": "REG-003",
       "title": "Registry Purpose & Authority Doctrine",
       "purpose": "Establish registry as canonical source of truth for Arkansas organizing geography",
-      "description": "Phase 2.1 doctrine defining scope, authority, hubs, status, priority, and artifact map",
+      "description": "AOR doctrine — digital map of Arkansas, graph model, canonical vs operational data, database constitution",
       "priority": "critical",
       "principle": "CP-006",
       "dependencies": [],

@@ -1,10 +1,12 @@
-# Arkansas Organizing Registry
+# Arkansas Organizing Registry (AOR)
 
-> **Canonical data foundation for ASYON.**  
-> Authority doctrine: [docs/phase-02/ARKANSAS_ORGANIZING_REGISTRY_DOCTRINE.md](../../docs/phase-02/ARKANSAS_ORGANIZING_REGISTRY_DOCTRINE.md)  
-> Phase 2 index: [docs/phase-02/README.md](../../docs/phase-02/README.md)
+> **The Registry is not a list. It is the digital map of Arkansas.**  
+> If it doesn't exist in the Registry, it doesn't exist in the platform.
 
-Every page, map, and dashboard builds on this registry.
+**Authority doctrine:** [docs/phase-02/ARKANSAS_ORGANIZING_REGISTRY_DOCTRINE.md](../../docs/phase-02/ARKANSAS_ORGANIZING_REGISTRY_DOCTRINE.md)  
+**Architecture:** Graph of interconnected entities (counties **contain** institutions, etc.) — formalized in Step 2.4.
+
+Every page, map, and dashboard builds on this Registry.
 
 ## Files
 

@@ -4,6 +4,29 @@
 
 ---
 
+## 2026-07-10 — PHASE-002.1 Refinement: Digital Map & Graph Model
+
+**Enhancement to:** PHASE-002.1 Registry Doctrine  
+**Requirement IDs:** REG-D16 (graph model), REG-D04 (One Arkansas)
+
+### Key Concept Locked
+
+> The Registry is not a list. It is the digital map of Arkansas.
+
+### Architectural Decision [REG-D16]
+
+Registry modeled as **graph of interconnected entities** — counties contain institutions, participants belong to communities, future committees/events link by typed relationships. Steps 2.2–2.4 define nodes and edges.
+
+### ED-FD
+
+| Item | Detail |
+|------|--------|
+| Built | Enhanced doctrine (21 requirements + REG-BG), graph model section |
+| Changed | Admin Registry tab, phase-02 README, data/registry README |
+| Next | 2.2 County Registry Model (graph node) |
+
+---
+
 ## 2026-07-10 — PHASE-002.1 Registry Purpose & Authority
 
 **Document ID:** PHASE-002.1  
