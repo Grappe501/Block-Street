@@ -1,0 +1,111 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/phase-02/CANONICAL_STATUS_LIFECYCLE_FRAMEWORK.md",
+  "motto": "Everything has a lifecycle.",
+  "principle": "Status-driven, not page-driven.",
+  "categories": {
+    "operational": {
+      "name": "Operational Status",
+      "values": ["planning", "active", "paused", "completed", "archived"]
+    },
+    "verification": {
+      "name": "Verification Status",
+      "values": ["pending_review", "verified", "needs_update", "rejected", "historical"]
+    },
+    "organizing": {
+      "name": "Organizing Status",
+      "values": [
+        "needs_outreach",
+        "initial_contact",
+        "organizer_assigned",
+        "building",
+        "growing",
+        "established",
+        "thriving",
+        "inactive"
+      ]
+    },
+    "visibility": {
+      "name": "Visibility Status",
+      "values": ["private", "internal", "public", "featured", "hidden"]
+    },
+    "system": {
+      "name": "System Status",
+      "values": ["healthy", "warning", "needs_attention", "disabled", "retired"]
+    }
+  },
+  "entityLifecycles": {
+    "County": {
+      "primaryCategory": "organizing",
+      "v1": true,
+      "stages": [
+        { "key": "needs_outreach", "label": "Needs Outreach", "ui": { "showHelpUsLaunch": true } },
+        { "key": "initial_organizer", "label": "Initial Organizer", "mapsTo": "initial_contact" },
+        { "key": "building", "label": "Building" },
+        { "key": "active_community", "label": "Active Community", "mapsTo": "established" },
+        { "key": "growing_community", "label": "Growing Community", "mapsTo": "growing" },
+        { "key": "established_community", "label": "Established Community", "mapsTo": "established" },
+        { "key": "thriving_community", "label": "Thriving Community", "mapsTo": "thriving" }
+      ],
+      "defaultStatus": "needs_outreach"
+    },
+    "Institution": {
+      "primaryCategory": "organizing",
+      "v1": true,
+      "stages": [
+        { "key": "not_contacted", "label": "Not Contacted", "mapsTo": "needs_outreach", "ui": { "showLookingForOrganizers": true } },
+        { "key": "needs_organizer", "label": "Looking for Organizers", "mapsTo": "needs_outreach", "legacy": true, "ui": { "showLookingForOrganizers": true } },
+        { "key": "outreach_started", "label": "Outreach Started", "mapsTo": "initial_contact" },
+        { "key": "organizer_assigned", "label": "Organizer Assigned" },
+        { "key": "participant_registration", "label": "Registration Open", "mapsTo": "building" },
+        { "key": "building", "label": "Building", "legacy": true },
+        { "key": "campus_community", "label": "Campus Community", "mapsTo": "active" },
+        { "key": "active", "label": "Active", "legacy": true },
+        { "key": "growing_campus", "label": "Growing Campus", "mapsTo": "growing" },
+        { "key": "established_campus", "label": "Established Campus", "mapsTo": "thriving" }
+      ],
+      "defaultStatus": "needs_outreach",
+      "outreachDashboardFilter": ["needs_outreach", "initial_contact", "organizer_assigned", "needs_organizer"]
+    },
+    "Participant": {
+      "primaryCategory": "operational",
+      "v1": true,
+      "stages": [
+        { "key": "registered", "label": "Registered", "v1Default": true },
+        { "key": "verified", "label": "Verified" },
+        { "key": "engaged", "label": "Engaged" },
+        { "key": "contributor", "label": "Contributor" },
+        { "key": "organizer", "label": "Organizer" },
+        { "key": "mentor", "label": "Mentor", "ui": { "greetAsMentor": true } },
+        { "key": "alumni", "label": "Alumni" },
+        { "key": "community_supporter", "label": "Community Supporter" }
+      ]
+    },
+    "Committee": {
+      "primaryCategory": "operational",
+      "v1": false,
+      "stages": ["draft", "recruiting", "active", "established", "completed", "archived"]
+    },
+    "Event": {
+      "primaryCategory": "operational",
+      "v1": false,
+      "stages": ["planned", "published", "registration_open", "in_progress", "completed", "archived"]
+    },
+    "Project": {
+      "primaryCategory": "operational",
+      "v1": false,
+      "stages": ["idea", "planning", "building", "launching", "operating", "completed", "historical"]
+    },
+    "Relationship": {
+      "primaryCategory": "operational",
+      "v1": true,
+      "stages": ["invitation_sent", "joined", "active", "mentoring", "historical"]
+    }
+  },
+  "dashboardQueries": {
+    "countiesNeedingOutreach": { "entity": "County", "organizingStatus": "needs_outreach" },
+    "institutionsNeedingOrganizers": { "entity": "Institution", "organizingStatusIn": ["needs_outreach", "needs_organizer", "initial_contact"] },
+    "institutionsBuilding": { "entity": "Institution", "organizingStatus": "building" },
+    "participantsReadyForMentorship": { "entity": "Participant", "lifecycleGte": "engaged" }
+  }
+}

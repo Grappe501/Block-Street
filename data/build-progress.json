@@ -64,7 +64,7 @@
         { "id": "2.2", "name": "County Registry Model [PHASE-002.2]", "status": "done", "notes": "CNTY-M01–M16, county graph node, JSON schema" },
         { "id": "2.3", "name": "Institution Registry Model [PHASE-002.3]", "status": "done", "notes": "INST-M01–M18, Canonical Profile, knowledge graph INST-M17" },
         { "id": "2.4", "name": "Relationship Graph [PHASE-002.4]", "status": "done", "notes": "REL-M01–M14, digital twin, relationship-types.json, organizing intelligence" },
-        { "id": "2.5", "name": "Representation Status System", "status": "pending", "notes": "REPRESENTATION_STATUS_SYSTEM.md" },
+        { "id": "2.5", "name": "Status & Lifecycle Framework [PHASE-002.5]", "status": "done", "notes": "STS-M01–M18, status-framework.json, status timeline STS-M16" },
         { "id": "2.6", "name": "Outreach Gap Dashboard Requirements", "status": "pending", "notes": "OUTREACH_GAP_DASHBOARD_REQUIREMENTS.md" },
         { "id": "2.7", "name": "Campus Page Personalization Rules", "status": "pending", "notes": "CAMPUS_PAGE_PERSONALIZATION_RULES.md" },
         { "id": "2.8", "name": "Registry Source & Verification Protocol", "status": "pending", "notes": "REGISTRY_SOURCE_AND_VERIFICATION_PROTOCOL.md" },
@@ -141,6 +141,12 @@
     { "version": "1.4.0", "name": "Surveys + collective voice", "status": "pending", "date": null }
   ],
   "buildLog": [
+    {
+      "date": "2026-07-10",
+      "title": "PHASE-002.5 Status & Lifecycle Framework",
+      "phase": 2,
+      "summary": "STS-M01–M18 status-driven OS, status-framework.json, status timeline architecture, entity lifecycles"
+    },
     {
       "date": "2026-07-10",
       "title": "PHASE-002.4 Arkansas Relationship Graph",
@@ -222,9 +228,9 @@
   ],
   "stats": {
     "totalSteps": 40,
-    "doneSteps": 14,
+    "doneSteps": 15,
     "inProgressSteps": 2,
-    "pendingSteps": 24,
-    "percentComplete": 35
+    "pendingSteps": 23,
+    "percentComplete": 38
   }
 }

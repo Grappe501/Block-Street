@@ -1,13 +1,14 @@
 "use client";
 
 import relationshipTypes from "../../../data/registry/relationship-types.json";
+import statusFramework from "../../../data/registry/status-framework.json";
 
 const PHASE2_STEPS = [
   { step: "2.1", name: "Registry Doctrine", artifact: "ARKANSAS_ORGANIZING_REGISTRY_DOCTRINE.md", status: "done" },
   { step: "2.2", name: "County Registry Model", artifact: "COUNTY_REGISTRY_MODEL.md", status: "done" },
   { step: "2.3", name: "Institution Registry Model", artifact: "INSTITUTION_REGISTRY_MODEL.md", status: "done" },
   { step: "2.4", name: "Relationship Graph", artifact: "ARKANSAS_RELATIONSHIP_GRAPH.md", status: "done" },
-  { step: "2.5", name: "Representation Status System", artifact: "REPRESENTATION_STATUS_SYSTEM.md", status: "pending" },
+  { step: "2.5", name: "Status & Lifecycle", artifact: "CANONICAL_STATUS_LIFECYCLE_FRAMEWORK.md", status: "done" },
   { step: "2.6", name: "Outreach Gap Dashboard", artifact: "OUTREACH_GAP_DASHBOARD_REQUIREMENTS.md", status: "pending" },
   { step: "2.7", name: "Campus Page Personalization", artifact: "CAMPUS_PAGE_PERSONALIZATION_RULES.md", status: "pending" },
   { step: "2.8", name: "Source & Verification Protocol", artifact: "REGISTRY_SOURCE_AND_VERIFICATION_PROTOCOL.md", status: "pending" },
@@ -23,15 +24,16 @@ const STATUS_STYLE: Record<string, string> = {
 
 export function AdminRegistry() {
   const done = PHASE2_STEPS.filter((s) => s.status === "done").length;
+  const countyStages = statusFramework.entityLifecycles.County.stages.slice(0, 4);
+  const instStages = statusFramework.entityLifecycles.Institution.stages.filter((s) => s.legacy).slice(0, 3);
 
   return (
     <div className="space-y-6">
       <div className="card border-brand-300 bg-brand-50">
-        <p className="text-xs font-semibold uppercase text-brand-700">PHASE-002 · Organizing Intelligence System</p>
-        <h2 className="mt-1 text-xl font-bold text-brand-950">Digital Twin of Arkansas</h2>
-        <p className="mt-2 text-sm font-medium text-brand-900">
-          Not pages — a living network where everything is connected.
-        </p>
+        <p className="text-xs font-semibold uppercase text-brand-700">PHASE-002 · Platform Operating System</p>
+        <h2 className="mt-1 text-xl font-bold text-brand-950">Status-Driven Architecture</h2>
+        <p className="mt-2 text-sm font-medium text-brand-900">{statusFramework.motto}</p>
+        <p className="mt-1 text-sm text-brand-800">{statusFramework.principle}</p>
         <div className="mt-4 flex gap-6">
           <div>
             <p className="text-2xl font-bold text-brand-600">{done}/10</p>
@@ -40,27 +42,43 @@ export function AdminRegistry() {
         </div>
       </div>
 
-      <div className="card border-purple-200 bg-purple-50">
-        <p className="text-xs font-semibold uppercase text-purple-800">Relationship Graph [REL-M02]</p>
-        <p className="mt-1 font-bold text-purple-950">
-          Everything belongs somewhere. Everything connects to something.
+      <div className="card border-amber-200 bg-amber-50">
+        <p className="text-xs font-semibold uppercase text-amber-800">Status Timeline [STS-M16]</p>
+        <p className="mt-1 text-sm text-amber-900">
+          Not just current status — full history of transitions. Know where things are and how they got there.
         </p>
-        <p className="mt-2 text-sm text-purple-900">V1 edges:</p>
-        <ul className="mt-1 list-inside list-disc text-xs text-purple-900">
+      </div>
+
+      <div className="grid gap-4 md:grid-cols-2">
+        <div className="card">
+          <h3 className="font-bold text-slate-900">County Lifecycle (V1)</h3>
+          <div className="mt-2 space-y-1">
+            {countyStages.map((s) => (
+              <p key={s.key} className="text-xs text-slate-600">
+                <span className="font-mono text-brand-600">{s.key}</span> — {s.label}
+              </p>
+            ))}
+          </div>
+        </div>
+        <div className="card">
+          <h3 className="font-bold text-slate-900">Institution Lifecycle (V1)</h3>
+          <div className="mt-2 space-y-1">
+            {instStages.map((s) => (
+              <p key={s.key} className="text-xs text-slate-600">
+                <span className="font-mono text-brand-600">{s.key}</span> — {s.label}
+              </p>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="card border-purple-200 bg-purple-50">
+        <p className="text-xs font-semibold uppercase text-purple-800">Graph V1 Edges</p>
+        <ul className="mt-2 list-inside list-disc text-xs text-purple-900">
           {relationshipTypes.v1Edges.map((e) => (
             <li key={e}>{e}</li>
           ))}
         </ul>
-      </div>
-
-      <div className="card">
-        <h2 className="text-lg font-bold text-slate-900">Intelligence Layers</h2>
-        <div className="mt-2 grid gap-2 text-sm text-slate-600 md:grid-cols-2">
-          <p><strong>Geographic:</strong> counties, regions, contains</p>
-          <p><strong>Educational:</strong> institutions, attends, categories</p>
-          <p><strong>Organizing:</strong> outreach gaps, participation</p>
-          <p><strong>Network:</strong> invited_by, connected_to</p>
-        </div>
       </div>
 
       <div className="card">
@@ -79,18 +97,8 @@ export function AdminRegistry() {
         </div>
       </div>
 
-      <div className="card">
-        <h2 className="text-lg font-bold text-slate-900">Registry Artifacts</h2>
-        <div className="mt-2 space-y-1 text-sm text-slate-600">
-          <p>✓ Node schemas: county, institution</p>
-          <p>✓ Edge schema: relationship-record</p>
-          <p>✓ relationship-types.json — canonical type catalog</p>
-          <p>○ Edge materialization → Step 2.9 seed plan</p>
-        </div>
-      </div>
-
       <p className="text-sm text-slate-500">
-        Graph: docs/phase-02/ARKANSAS_RELATIONSHIP_GRAPH.md · REL-001
+        Status: docs/phase-02/CANONICAL_STATUS_LIFECYCLE_FRAMEWORK.md · STS-001
       </p>
     </div>
   );

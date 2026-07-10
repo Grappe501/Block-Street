@@ -60,6 +60,7 @@
     { "id": "DB-COUNTIES", "table": "counties", "status": "in_progress", "requirement": "REG-001" },
     { "id": "DB-EVENTS", "table": "events", "status": "pending", "requirement": "EVT-001" },
     { "id": "DB-RELATIONSHIPS", "table": "registry_relationships", "status": "pending", "requirement": "REL-001" },
+    { "id": "DB-STATUS-TIMELINE", "table": "status_transitions", "status": "pending", "requirement": "STS-001" },
     { "id": "DB-COMMITTEES", "table": "committees", "status": "pending", "requirement": "COM-001" }
   ],
   "apiEndpoints": [
@@ -291,6 +292,35 @@
       "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
     },
     {
+      "id": "STS-001",
+      "title": "Canonical Status & Lifecycle Framework",
+      "purpose": "Universal status-driven behavior — platform operating system layer",
+      "description": "PHASE-002.5 lifecycles for county, institution, participant; status timeline; dashboard queries",
+      "priority": "critical",
+      "principle": "LS-P7",
+      "dependencies": ["REL-001", "CNTY-002", "INST-003"],
+      "related": ["STS-M16", "LS-CHK", "ADM-001"],
+      "acceptanceCriteria": [
+        "Universal lifecycle philosophy documented",
+        "Status categories standardized",
+        "Entity lifecycles defined",
+        "Status timeline architecture",
+        "Dashboard derives from status queries"
+      ],
+      "futureNotes": "Committee, event, project lifecycles; automation workflows",
+      "implementationStatus": "done",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": "DB-STATUS-TIMELINE",
+        "api": null,
+        "frontend": "PAGE-ADMIN",
+        "test": "TEST-STS-001",
+        "doc": "DOC-STS-001"
+      },
+      "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
+    },
+    {
       "id": "USR-001",
       "title": "Participant Registration",
       "purpose": "Answer 'How do I get involved?' — honor-system signup",
@@ -483,8 +513,8 @@
     }
   ],
   "summary": {
-    "totalRequirements": 15,
-    "done": 8,
+    "totalRequirements": 16,
+    "done": 9,
     "inProgress": 4,
     "pending": 3,
     "criticalPending": 3,

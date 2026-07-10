@@ -4,6 +4,42 @@
 
 ---
 
+## 2026-07-10 — PHASE-002.5 Status & Lifecycle Framework
+
+**Document ID:** PHASE-002.5  
+**Requirement IDs:** STS-M01–STS-M18, STS-001, AC-014  
+**Artifact:** `docs/phase-02/CANONICAL_STATUS_LIFECYCLE_FRAMEWORK.md`
+
+### What Was Built
+
+- Platform elevated to **status-driven operating system**
+- Universal categories: operational, verification, organizing, visibility, system
+- Entity lifecycles: County, Institution, Participant (+ future Committee, Event, Project)
+- **Status Timeline** architecture [STS-M16] — history, not just current state
+- `data/registry/status-framework.json` — live catalog with dashboard queries
+
+### Guiding Principle Locked
+
+> Everything has a lifecycle.
+
+### Key Shift
+
+UI behavior from status queries: "Help Us Launch", "Looking for Organizers", outreach dashboard — **not hard-coded page logic**.
+
+### Legacy Mapping
+
+`needs_organizer` → `needs_outreach` · Code migration in Step 2.9
+
+### ED-FD Handoff
+
+| Item | Detail |
+|------|--------|
+| Built | CANONICAL_STATUS_LIFECYCLE_FRAMEWORK.md, status-framework.json, transition schema |
+| Changed | Admin Registry, requirements registry (STS-001, DB-STATUS-TIMELINE) |
+| Next | 2.6 Outreach Gap Dashboard Requirements |
+
+---
+
 ## 2026-07-10 — PHASE-002.4 Arkansas Relationship Graph
 
 **Document ID:** PHASE-002.4  

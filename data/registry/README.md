@@ -16,7 +16,8 @@ Every page, map, and dashboard builds on this Registry.
 | `schemas/county-record.schema.json` | JSON Schema for canonical county graph node |
 | `institutions.json` | Colleges & universities (partial bootstrap — full Canonical Profile in Step 2.3) |
 | `relationship-types.json` | Canonical relationship type catalog (PHASE-002.4) |
-| `schemas/relationship-record.schema.json` | JSON Schema for graph edges |
+| `status-framework.json` | Lifecycles, status categories, dashboard queries (PHASE-002.5) |
+| `schemas/status-transition.schema.json` | Status timeline transition records |
 
 ## Requirements
 
@@ -26,6 +27,7 @@ Every page, map, and dashboard builds on this Registry.
 | CNTY-002 | County Registry Model (PHASE-002.2) |
 | INST-003 | Institution Registry Model (PHASE-002.3) |
 | REL-001 | Arkansas Relationship Graph (PHASE-002.4) |
+| STS-001 | Status & Lifecycle Framework (PHASE-002.5) |
 | REG-002 | Arkansas Institution Registry |
 | REG-003 | Registry Purpose & Authority Doctrine |
 
