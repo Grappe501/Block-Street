@@ -1,22 +1,372 @@
 {
-  "version": "1.0.0",
-  "documentId": "VOLUME-003.07",
+  "version": "2.0.0",
+  "documentId": "VOLUME-003.7",
   "requirementId": "PBA-008",
   "docPath": "docs/volume-03/LEADERSHIP_DEVELOPMENT_ENGINE.md",
-  "status": "pending",
+  "status": "canonical",
   "priority": "critical",
   "lastUpdated": "2026-07-10",
-  "guidingPrinciple": "Behavior is governed, not improvised.",
-  "defines": [
-    "LeadershipPathways",
+  "guidingPrinciple": "The measure of a leader is the leaders they develop.",
+  "leadershipPhilosophy": {
+    "notAPosition": true,
+    "lifelongJourneyOfService": true,
+    "developmentalNotPositional": true,
+    "renewableCommunityResource": true,
+    "buildNextGeneration": true,
+    "leadershipBeginsWithService": true
+  },
+  "leadershipArchitecture": {
+    "stages": [
+      "Potential",
+      "Discovery",
+      "Preparation",
+      "Service",
+      "Leadership",
+      "Mentorship",
+      "Stewardship",
+      "Succession",
+      "Legacy"
+    ],
+    "stageCount": 9
+  },
+  "lifecycleStages": [
+    {
+      "id": "potential",
+      "name": "Potential",
+      "order": 1,
+      "identifiedThrough": [
+        "VolunteerParticipation",
+        "CommunityRecommendations",
+        "MentorObservations",
+        "MissionContributions",
+        "KnowledgeSharing",
+        "ServiceConsistency"
+      ],
+      "beginsWithService": true
+    },
+    {
+      "id": "discovery",
+      "name": "Discovery",
+      "order": 2,
+      "explores": [
+        "LeadershipPathways",
+        "Responsibilities",
+        "CommunityNeeds",
+        "Training",
+        "MentorshipOpportunities"
+      ],
+      "remainsVoluntary": true
+    },
+    {
+      "id": "preparation",
+      "name": "Preparation",
+      "order": 3,
+      "includes": [
+        "Training",
+        "Shadowing",
+        "CommitteeParticipation",
+        "MissionLeadership",
+        "LeadershipSimulations",
+        "KnowledgeDevelopment"
+      ],
+      "reducesFutureFailure": true
+    },
+    {
+      "id": "service",
+      "name": "Service",
+      "order": 4,
+      "examples": [
+        "CommitteeLeadership",
+        "MissionCoordination",
+        "VolunteerMentoring",
+        "KnowledgeStewardship",
+        "CommunityFacilitation"
+      ],
+      "practicedBeforeTitles": true
+    },
+    {
+      "id": "leadership",
+      "name": "Leadership",
+      "order": 5,
+      "responsibilities": [
+        "CommunityOrganization",
+        "MissionOversight",
+        "VolunteerSupport",
+        "StrategicPlanning",
+        "PartnershipDevelopment",
+        "CommunityCare"
+      ],
+      "remainsAccountable": true
+    },
+    {
+      "id": "mentorship",
+      "name": "Mentorship",
+      "order": 6,
+      "develops": [
+        "FutureLeaders",
+        "CommitteeChairs",
+        "MissionCoordinators",
+        "Volunteers",
+        "CommunityOrganizers"
+      ],
+      "multipliesItself": true
+    },
+    {
+      "id": "stewardship",
+      "name": "Stewardship",
+      "order": 7,
+      "stewards": [
+        "Culture",
+        "Knowledge",
+        "Relationships",
+        "Traditions",
+        "CommunityHistory",
+        "InstitutionalMemory"
+      ],
+      "protectsContinuity": true
+    },
+    {
+      "id": "succession",
+      "name": "Succession",
+      "order": 8,
+      "includes": [
+        "SuccessorIdentification",
+        "KnowledgeTransfer",
+        "MentorshipOverlap",
+        "LeadershipTransition",
+        "Celebration",
+        "HistoricalPreservation"
+      ],
+      "plannedNotReactive": true
+    },
+    {
+      "id": "legacy",
+      "name": "Legacy",
+      "order": 9,
+      "preserves": [
+        "Stories",
+        "LeadershipHistory",
+        "Playbooks",
+        "Lessons",
+        "CommunityTraditions",
+        "MissionImpact"
+      ],
+      "becomesCommunityMemory": true
+    }
+  ],
+  "lifecycleStageCount": 9,
+  "leadershipCompetencies": [
+    "Communication",
+    "Facilitation",
+    "StrategicThinking",
+    "VolunteerCoordination",
+    "ConflictResolution",
     "Mentorship",
+    "CommunityOrganizing",
+    "KnowledgeStewardship",
+    "DecisionMaking",
+    "RelationshipBuilding"
+  ],
+  "leadershipCompetencyCount": 10,
+  "leadershipPathways": [
+    {
+      "id": "volunteerToOrganizer",
+      "name": "Volunteer to Community Organizer",
+      "stages": ["Volunteer", "TeamLeader", "CommitteeChair", "CommunityOrganizer"]
+    },
+    {
+      "id": "researchToEducation",
+      "name": "Research to Education Leader",
+      "stages": ["ResearchContributor", "KnowledgeSteward", "EducationLeader"]
+    },
+    {
+      "id": "mentorToRegional",
+      "name": "Mentor to Regional Mentor",
+      "stages": ["Mentor", "LeadershipCoach", "RegionalMentor"]
+    },
+    {
+      "id": "missionToOperations",
+      "name": "Mission to Operations Leader",
+      "stages": ["MissionCoordinator", "OperationsLeader"]
+    }
+  ],
+  "leadershipPathwayCount": 4,
+  "leadershipPortfolioItems": [
+    "LeadershipRoles",
+    "MissionsLed",
+    "CommunitiesServed",
+    "MentorshipHistory",
+    "Stories",
+    "KnowledgeContributions",
+    "Recognition",
     "Training",
-    "Certification",
-    "CommitteeProgression",
-    "RegionalLeadership",
-    "Succession",
-    "LeadershipRetirement"
+    "CommunityImpact"
+  ],
+  "leadershipPortfolioItemCount": 9,
+  "leadershipHealthIndicators": [
+    "Workload",
+    "CommunitySupport",
+    "VolunteerRetention",
+    "MentorshipActivity",
+    "LeadershipContinuity",
+    "BurnoutIndicators",
+    "KnowledgeTransfer"
+  ],
+  "leadershipHealthIndicatorCount": 7,
+  "recognitionTypes": [
+    "YearsOfService",
+    "LeadershipMilestones",
+    "CommunityImpact",
+    "Innovation",
+    "Mentorship",
+    "KnowledgeContributions",
+    "LegacyAchievements"
+  ],
+  "recognitionTypeCount": 7,
+  "leadershipCommunityActivities": [
+    "SharedLearning",
+    "ProblemSolving",
+    "ResourceSharing",
+    "Mentorship",
+    "RegionalCollaboration"
+  ],
+  "leadershipCommunityActivityCount": 5,
+  "calendarActivities": [
+    "PlanningMeetings",
+    "Mentorship",
+    "CommunityEvents",
+    "Training",
+    "StrategicSessions",
+    "Reflection"
+  ],
+  "calendarActivityCount": 6,
+  "knowledgeContributions": [
+    "Playbooks",
+    "Lessons",
+    "Stories",
+    "CommunityBrain",
+    "MissionReflections",
+    "LeadershipGuidance"
+  ],
+  "knowledgeContributionCount": 6,
+  "knowledgeGraphProjections": [
+    "MentorshipGraph",
+    "SuccessionGraph",
+    "KnowledgeGraph",
+    "CommunityGraph",
+    "MissionGraph"
+  ],
+  "knowledgeGraphProjectionCount": 5,
+  "digitalTwinSummaryFields": [
+    "CurrentResponsibilities",
+    "LeadershipStrengths",
+    "GrowthAreas",
+    "MentorshipActivity",
+    "CommunityHealth",
+    "Availability",
+    "SuccessionReadiness",
+    "KnowledgeContributions"
+  ],
+  "digitalTwinFieldCount": 8,
+  "aiCapabilities": [
+    "RecommendMentors",
+    "SuggestLeadershipOpportunities",
+    "IdentifyBurnoutRisk",
+    "RecommendSuccessors",
+    "HighlightLeadershipGaps",
+    "SummarizeCommunityHealth",
+    "SuggestProfessionalDevelopment"
+  ],
+  "aiAdvisesLeadershipDecisionsRemainWithPeople": true,
+  "governanceIntegrations": [
+    "BusinessRulesEngine",
+    "WorkflowEngine",
+    "GovernanceEngine",
+    "CommunityLifecycleEngine"
+  ],
+  "governanceIntegrationCount": 4,
+  "leadershipAcademy": {
+    "name": "Leadership Academy",
+    "purpose": "Living leadership development system adapting to each participant's journey — greatest product is capable community leaders",
+    "notSimplyTrainingCatalog": true,
+    "domains": [
+      {
+        "id": "leadershipJourney",
+        "name": "Leadership Journey",
+        "bringsTogether": ["CurrentStage", "GrowthPathway", "Goals", "Milestones"]
+      },
+      {
+        "id": "learning",
+        "name": "Learning",
+        "bringsTogether": ["Courses", "Workshops", "Reading", "Simulations", "ReflectionExercises"]
+      },
+      {
+        "id": "mentorship",
+        "name": "Mentorship",
+        "bringsTogether": ["AssignedMentor", "MentorshipHistory", "CoachingSessions", "Feedback", "SuccessorPlanning"]
+      },
+      {
+        "id": "leadershipPractice",
+        "name": "Leadership Practice",
+        "bringsTogether": ["MissionsLed", "CommitteesServed", "VolunteerDevelopment", "CommunityFacilitation", "StrategicPlanning"]
+      },
+      {
+        "id": "communityIntelligence",
+        "name": "Community Intelligence",
+        "bringsTogether": ["CommunityHealth", "LeadershipPipeline", "SuccessionReadiness", "CapacityGaps"]
+      },
+      {
+        "id": "knowledge",
+        "name": "Knowledge",
+        "bringsTogether": ["LeadershipPlaybooks", "Stories", "LessonsLearned", "HistoricalCaseStudies", "CommunityBrain"]
+      },
+      {
+        "id": "personalReflection",
+        "name": "Personal Reflection",
+        "bringsTogether": ["LeadershipJournal", "Goals", "Strengths", "GrowthOpportunities", "AICoachingSummaries"]
+      },
+      {
+        "id": "recognition",
+        "name": "Recognition",
+        "bringsTogether": ["ServiceAnniversaries", "Milestones", "Certifications", "CommunityAcknowledgments"]
+      }
+    ],
+    "domainCount": 8,
+    "philosophy": "Intentionally develops organizers, mentors, committee chairs, and statewide leaders who sustain organizations over generations"
+  },
+  "domainSchemaMapping": {
+    "schema": "PlatformBehavior",
+    "entities": [
+      "LeadershipDevelopment",
+      "LeadershipCompetency",
+      "LeadershipPathway",
+      "LeadershipPortfolio",
+      "LeadershipHealth",
+      "LeadershipAcademy",
+      "SuccessionPlan"
+    ]
+  },
+  "projectionIntegrations": {
+    "volunteerExperiencePath": "data/registry/volunteer-experience-engine.json",
+    "communityLifecyclePath": "data/registry/community-lifecycle-engine.json",
+    "identityLifecyclePath": "data/registry/identity-lifecycle-engine.json",
+    "businessRulesPath": "data/registry/business-rule-engine.json",
+    "workflowEnginePath": "data/registry/workflow-engine.json",
+    "entityDictionaryPath": "data/registry/canonical-entity-dictionary.json",
+    "knowledgeGraphPath": "data/registry/knowledge-graph-schema.json",
+    "timeCalendarPath": "data/registry/time-calendar-data-model.json",
+    "analyticsMetricsPath": "data/registry/analytics-metrics-model.json",
+    "aiKnowledgePath": "data/registry/ai-knowledge-model.json"
+  },
+  "burtImplementationGuidance": [
+    "Treat leadership as a developmental journey",
+    "Separate leadership identity from specific offices",
+    "Preserve complete leadership history",
+    "Integrate mentorship into every leadership pathway",
+    "Connect leadership with calendars, knowledge, Digital Twins, and Community Health",
+    "Design succession as a continuous process",
+    "Consult Leadership Academy spec before leadership-facing development features"
   ],
   "acceptanceCriteria": "AC-128",
-  "acceptanceCriteriaMet": false
+  "acceptanceCriteriaMet": true
 }
