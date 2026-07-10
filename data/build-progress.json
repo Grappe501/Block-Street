@@ -87,7 +87,7 @@
       { "id": "V2.10", "name": "Search Index Model [DAB-011]", "status": "done", "notes": "9 categories, Universal Discovery Index, permission-aware — AC-116" },
       { "id": "V2.11", "name": "Analytics & Metrics Model [DAB-012]", "status": "done", "notes": "10 categories, Community Health Observatory, explainable KPIs — AC-117" },
       { "id": "V2.12", "name": "AI Knowledge Model [DAB-013]", "status": "done", "notes": "Canonical Knowledge Fabric, citations, memory separation — AC-118" },
-      { "id": "V2.13", "name": "Security & Privacy Model [DAB-014]", "status": "done", "notes": "Consent, classification, audit, retention, erasure — AC-119" },
+      { "id": "V2.13", "name": "Security & Privacy Model [DAB-014]", "status": "done", "notes": "Trust Ledger, 5 classifications, consent, audit, retention — AC-119" },
       { "id": "V2.14", "name": "Master Data Dictionary [DAB-015]", "status": "done", "notes": "60+ tables, enums, stewardship, migration governance — AC-120" },
       { "id": "V3.1", "name": "User Experience Bible [UXB-001]", "status": "done", "notes": "Screens, flows, navigation v1; AC-079" },
       { "id": "V4.1", "name": "AI & Intelligence Bible [AIB-001]", "status": "done", "notes": "LocalBrain, RAG v1; AC-080" },

@@ -18,6 +18,23 @@
 
 ---
 
+## 2026-07-10 — Volume 2.13 Security & Privacy Data Model [DAB-014 · AC-119]
+
+**Document:** `docs/volume-02/SECURITY_PRIVACY_MODEL.md` · **Registry:** `data/registry/security-privacy-model.json`
+
+### What Changed
+
+- **Guiding principle:** *Participants own their identity. Communities steward their knowledge. The platform protects both.*
+- Security and privacy as foundational properties — not features or options
+- **7-layer security architecture:** Identity → Authentication → Authorization → Visibility → Protection → Audit → Governance
+- **5 data classifications:** Public through Highly Restricted
+- Visibility objects, consent, privacy preferences, audit, encryption metadata, sessions
+- Retention, export, deletion, incidents, compliance, AI security, privacy by design
+- **Trust Ledger** — companion to Community Event Ledger for security and governance actions
+- Admin Data tab · requirements DAB-014 updated
+
+---
+
 ## 2026-07-10 — Volume 2.12 AI Knowledge Data Model [DAB-013 · AC-118]
 
 **Document:** `docs/volume-02/AI_KNOWLEDGE_MODEL.md` · **Registry:** `data/registry/ai-knowledge-model.json`

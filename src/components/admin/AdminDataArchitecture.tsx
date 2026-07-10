@@ -14,6 +14,7 @@ import cfg from "../../../data/registry/configuration-model.json";
 import srch from "../../../data/registry/search-index-model.json";
 import anl from "../../../data/registry/analytics-data-model.json";
 import aik from "../../../data/registry/ai-knowledge-model.json";
+import spm from "../../../data/registry/security-privacy-model.json";
 
 export function AdminDataArchitecture() {
   const doneSteps = dab.steps.filter((s) => s.status === "done").length;
@@ -238,6 +239,24 @@ export function AdminDataArchitecture() {
         </div>
         <p className="mt-2 text-xs text-emerald-600">
           {aik.canonicalKnowledgeFabric.operationCount} fabric operations · {aik.acceptanceCriteria}
+        </p>
+      </div>
+
+      <div className="card border-red-300 bg-red-50">
+        <p className="text-xs font-semibold uppercase text-red-800">VOLUME-002.13 · Security & Privacy</p>
+        <h2 className="mt-1 text-lg font-bold text-red-950">Trust Ledger</h2>
+        <p className="mt-1 text-xs italic text-red-900">&ldquo;{spm.guidingPrinciple}&rdquo;</p>
+        <p className="mt-2 text-xs font-semibold text-red-800">
+          {spm.dataClassificationCount} data classifications · {spm.securityArchitecture.layerCount} security layers · privacy by design
+        </p>
+        <div className="mt-2 flex flex-wrap gap-1">
+          {spm.dataClassifications.slice(0, 4).map((c) => (
+            <span key={c.id} className="badge bg-red-100 text-red-800">{c.name}</span>
+          ))}
+          <span className="badge bg-red-200 text-red-900">+{spm.dataClassificationCount - 4}</span>
+        </div>
+        <p className="mt-2 text-xs text-red-600">
+          {spm.trustLedger.entryTypeCount} trust entry types · {spm.acceptanceCriteria}
         </p>
       </div>
 
