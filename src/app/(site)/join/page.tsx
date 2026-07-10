@@ -3,7 +3,7 @@ import {
   getCounties,
   getInstitutionsByCounty,
   getV1Institutions,
-  PLATFORM_NAME,
+  PLATFORM,
 } from "@/lib/data";
 
 export default async function JoinPage({
@@ -119,7 +119,7 @@ export default async function JoinPage({
   // Entry: choose path
   return (
     <div className="mx-auto max-w-3xl px-4 py-16">
-      <h1 className="text-3xl font-bold text-slate-900">Join {PLATFORM_NAME}</h1>
+      <h1 className="text-3xl font-bold text-slate-900">Join {PLATFORM.workingName}</h1>
       <p className="mt-3 text-lg text-slate-600">Ages 16–24. How are you connecting?</p>
       <div className="mt-10 grid gap-6 md:grid-cols-2">
         <Link href="/join?path=student" className="card group text-center transition hover:border-brand-300 hover:shadow-md">

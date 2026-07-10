@@ -5,9 +5,9 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Gather Arkansas — Youth Organizing Platform",
+  title: "ASYON — Arkansas Student & Youth Organizing Network",
   description:
-    "A nonpartisan organizing platform for Arkansas youth ages 16–24. Build collective voice and voting power. Campus-rooted. County-connected.",
+    "Connect Locally. Organize Statewide. Lead Together. A nonpartisan organizing platform for Arkansas youth.",
 };
 
 export default function RootLayout({

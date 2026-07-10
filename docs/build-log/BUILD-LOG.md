@@ -4,7 +4,26 @@
 
 ---
 
-## 2026-07-10 — Phase 1 Constitution Complete
+## 2026-07-10 — PHASE-001.1 Platform Identity (Canonical)
+
+**Document ID:** PHASE-001.1  
+**Requirement IDs:** PI-001 through ER-001, AC-001  
+**Status:** Complete — Canonical
+
+### Deliverables
+
+- `docs/build-steps/PHASE-001.1-PLATFORM-IDENTITY.md` — first document Burt reads
+- `docs/build-steps/00-ID-CONVENTION.md` — requirement ID naming system
+- `docs/build-steps/README.md` — Burt start-here index
+- Platform working name: **ASYON** (final branding TBD)
+- Motto: *Connect Locally. Organize Statewide. Lead Together.*
+- Site updated to configurable `PLATFORM` object in `src/lib/data.ts`
+
+### Next Step
+
+PHASE-001.2 — North Star Outcome
+
+---
 
 **Commit:** Gather Arkansas rebrand + constitution  
 **Phase:** 1 — Project Constitution & Mission Doctrine  

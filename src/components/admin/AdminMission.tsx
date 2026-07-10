@@ -1,15 +1,14 @@
-import { PLATFORM_NAME } from "@/lib/data";
+import { PLATFORM } from "@/lib/data";
 
 export function AdminMission() {
   return (
     <div className="space-y-6">
       <div className="card border-brand-200 bg-brand-50">
         <p className="text-xs font-semibold uppercase text-brand-600">Platform Identity</p>
-        <h2 className="mt-1 text-2xl font-bold text-brand-900">{PLATFORM_NAME}</h2>
-        <p className="mt-3 text-brand-800">
-          Gives every young Arkansan ages 16–24 an organizing home — through their school, their county,
-          or their personal network — to build collective voice and voting power.
-        </p>
+        <h2 className="mt-1 text-2xl font-bold text-brand-900">{PLATFORM.workingName}</h2>
+        <p className="mt-1 text-sm text-brand-700">{PLATFORM.fullName}</p>
+        <p className="mt-3 text-brand-800">{PLATFORM.motto}</p>
+        <p className="mt-3 text-sm text-brand-800">{PLATFORM.fullName} — see PHASE-001.1 [MS-001]</p>
       </div>
 
       <div className="card">

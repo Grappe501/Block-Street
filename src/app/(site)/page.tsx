@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getRegistryStats, PLATFORM_NAME } from "@/lib/data";
+import { getRegistryStats, PLATFORM } from "@/lib/data";
 
 export default function HomePage() {
   const stats = getRegistryStats();
@@ -22,7 +22,7 @@ export default function HomePage() {
               Because nobody showed you how to sit down together.
             </p>
             <p className="font-semibold text-white">
-              {PLATFORM_NAME} exists because when young Arkansans organize —
+              {PLATFORM.workingName} exists because when young Arkansans organize —
               when we show up as one voice — we become impossible to ignore.
             </p>
             <p className="text-brand-200">

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { PLATFORM_NAME } from "@/lib/data";
+import { PLATFORM } from "@/lib/data";
 
 export function SiteFooter() {
   return (
@@ -7,10 +7,8 @@ export function SiteFooter() {
       <div className="mx-auto max-w-6xl px-4 py-8">
         <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <div>
-            <p className="font-semibold text-slate-900">{PLATFORM_NAME}</p>
-            <p className="text-sm text-slate-500">
-              Youth-led. Equal standing. Nonpartisan by design.
-            </p>
+            <p className="font-semibold text-slate-900">{PLATFORM.workingName}</p>
+            <p className="text-sm text-slate-500">{PLATFORM.motto}</p>
           </div>
           <div className="flex gap-6 text-sm text-slate-600">
             <Link href="/map" className="hover:text-brand-600">Arkansas Map</Link>

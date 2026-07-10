@@ -26,8 +26,15 @@ export type Step = Phase["steps"][number];
 export type StepStatus = "done" | "in_progress" | "pending";
 export type RepresentationStatus = "needs_organizer" | "building" | "active";
 
-export const PLATFORM_NAME = "Gather Arkansas";
-export const PLATFORM_TAGLINE = "Your organizing home";
+export const PLATFORM = {
+  workingName: "ASYON",
+  fullName: "Arkansas Student & Youth Organizing Network",
+  motto: "Connect Locally. Organize Statewide. Lead Together.",
+  tagline: "Your organizing home",
+} as const;
+
+/** @deprecated Use PLATFORM.workingName — kept for backward compatibility */
+export const PLATFORM_NAME = PLATFORM.workingName;
 export const PLATFORM_DISCLAIMER =
   "An independent youth organizing network. Not affiliated with or endorsed by any institution.";
 

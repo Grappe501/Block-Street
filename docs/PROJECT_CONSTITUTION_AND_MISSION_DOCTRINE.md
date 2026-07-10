@@ -1,16 +1,11 @@
 # Project Constitution & Mission Doctrine
 
-> **READ THIS FIRST.**  
-> This document governs every build decision for Gather Arkansas.  
-> Burt implements one step at a time. Nothing in this document gets overridden by convenience.
+> **Burt: Read [build-steps/PHASE-001.1-PLATFORM-IDENTITY.md](build-steps/PHASE-001.1-PLATFORM-IDENTITY.md) FIRST.**  
+> That document establishes platform identity without implementation details.  
+> This constitution expands with timeline, teaching system, and build doctrine.
 
-**Version:** 1.0  
-**Date:** July 10, 2026  
-**Platform:** Gather Arkansas  
-**Live URL:** https://block-street.netlify.app/  
-**Repository:** https://github.com/Grappe501/Block-Street  
-**Election Anchor:** November 3, 2026  
-**Launch Call:** Tuesday, July 14, 2026  
+**Platform Working Name:** ASYON — Arkansas Student & Youth Organizing Network  
+**Requirement IDs:** See [build-steps/00-ID-CONVENTION.md](build-steps/00-ID-CONVENTION.md)
 
 ---
 
