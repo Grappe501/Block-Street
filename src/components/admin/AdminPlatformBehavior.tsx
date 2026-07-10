@@ -22,6 +22,8 @@ type EngineReg = {
   status: string;
   guidingPrinciple?: string;
   ruleCategoryCount?: number;
+  workflowCategoryCount?: number;
+  communityProcessOrchestrator?: { coordinateCount: number; communityLaunchExampleStepCount: number };
   policyDecisionPoint?: { evaluationStepCount: number; exampleRequestCount: number };
   lifecycleStageCount?: number;
   runtimePipelineLayerCount?: number;
@@ -29,7 +31,7 @@ type EngineReg = {
 
 const ENGINE_CARDS: { step: string; label: string; reg: EngineReg; cardClass: string; metaClass: string; titleClass: string; featured?: boolean }[] = [
   { step: "3.1", label: "Policy Decision Point", reg: bre, cardClass: "border-violet-300 bg-violet-50", metaClass: "text-violet-700", titleClass: "text-violet-950", featured: true },
-  { step: "3.2", label: "Workflow", reg: wor, cardClass: "border-purple-300 bg-purple-50", metaClass: "text-purple-700", titleClass: "text-purple-950" },
+  { step: "3.2", label: "Community Process Orchestrator", reg: wor, cardClass: "border-purple-300 bg-purple-50", metaClass: "text-purple-700", titleClass: "text-purple-950", featured: true },
   { step: "3.3", label: "Identity Lifecycle", reg: idl, cardClass: "border-fuchsia-300 bg-fuchsia-50", metaClass: "text-fuchsia-700", titleClass: "text-fuchsia-950" },
   { step: "3.4", label: "Community Lifecycle", reg: clo, cardClass: "border-pink-300 bg-pink-50", metaClass: "text-pink-700", titleClass: "text-pink-950" },
   { step: "3.5", label: "Mission Execution", reg: mex, cardClass: "border-rose-300 bg-rose-50", metaClass: "text-rose-700", titleClass: "text-rose-950" },
@@ -62,15 +64,20 @@ export function AdminPlatformBehavior() {
       <div className="grid gap-4 md:grid-cols-2">
         {ENGINE_CARDS.map(({ step, label, reg, cardClass, metaClass, titleClass, featured }) => (
           <div key={step} className={`card ${cardClass}`}>
-            <p className={`text-xs font-semibold uppercase ${metaClass}`}>VOLUME-00{step.replace(".", "-")} · {featured ? "Business Rules" : label}</p>
+            <p className={`text-xs font-semibold uppercase ${metaClass}`}>VOLUME-00{step.replace(".", "-")} · {featured && step === "3.2" ? "Workflow" : featured ? "Business Rules" : label}</p>
             <h3 className={`mt-1 text-sm font-bold ${titleClass}`}>{label}</h3>
             {reg.guidingPrinciple ? (
               <p className={`mt-1 text-xs italic ${metaClass}`}>&ldquo;{reg.guidingPrinciple}&rdquo;</p>
             ) : null}
             <p className={`mt-2 text-xs ${metaClass}`}>
-              {reg.ruleCategoryCount ? `${reg.ruleCategoryCount} rule categories · ` : reg.defines ? `${reg.defines.length} behaviors · ` : ""}
+              {reg.workflowCategoryCount ? `${reg.workflowCategoryCount} workflow categories · ` : reg.ruleCategoryCount ? `${reg.ruleCategoryCount} rule categories · ` : reg.defines ? `${reg.defines.length} behaviors · ` : ""}
               {reg.acceptanceCriteria} · {reg.status}
             </p>
+            {reg.communityProcessOrchestrator ? (
+              <p className={`mt-1 text-xs ${metaClass}`}>
+                {reg.communityProcessOrchestrator.coordinateCount} orchestration coordinates · {reg.communityProcessOrchestrator.communityLaunchExampleStepCount} launch steps
+              </p>
+            ) : null}
             {reg.policyDecisionPoint ? (
               <p className={`mt-1 text-xs ${metaClass}`}>
                 {reg.policyDecisionPoint.evaluationStepCount} PDP steps · {reg.policyDecisionPoint.exampleRequestCount} example requests

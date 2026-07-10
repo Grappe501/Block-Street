@@ -4320,26 +4320,31 @@
     {
       "id": "PBA-003",
       "title": "Workflow Engine — Volume 3.2",
-      "purpose": "Workflow architecture and state machines",
-      "description": "VOLUME-003.2 templates, execution, approvals, escalation, rollback",
+      "purpose": "Governed workflows that coordinate people, approvals, and knowledge",
+      "description": "VOLUME-003.2 — Community Process Orchestrator, 9 categories, state machines, tasks, approvals, escalation, history",
       "priority": "critical",
       "principle": "CP-001",
       "dependencies": [
-        "PBA-002"
+        "PBA-002",
+        "DAB-007",
+        "DAB-008"
       ],
       "related": [
-        "PBA-004"
+        "PBA-004",
+        "DAB-010"
       ],
       "acceptanceCriteria": [
-        "Engine philosophy documented",
-        "Operational behaviors defined",
-        "Volume 2 integration specified",
-        "Implementation blueprint for engine"
+        "Workflow philosophy documented",
+        "Workflow objects and state machines defined",
+        "Tasks, approvals, escalation, exception handling, and history established",
+        "Calendar, event, knowledge, and AI integrations incorporated",
+        "Community Process Orchestrator specified",
+        "Complete blueprint for Workflow Engine"
       ],
-      "futureNotes": "Scaffold — pending canonical build step",
-      "implementationStatus": "pending",
+      "futureNotes": "Guiding principle: People perform work. Workflows coordinate the work.",
+      "implementationStatus": "done",
       "testingStatus": "pending",
-      "documentationStatus": "pending",
+      "documentationStatus": "done",
       "trace": {
         "database": "DB-COS",
         "api": null,
@@ -4349,7 +4354,7 @@
       },
       "versionHistory": {
         "created": "2026-07-10",
-        "implemented": null
+        "implemented": "2026-07-10"
       }
     },
     {

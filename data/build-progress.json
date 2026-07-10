@@ -90,7 +90,7 @@
       { "id": "V2.13", "name": "Security & Privacy Model [DAB-014]", "status": "done", "notes": "Trust Ledger, 5 classifications, consent, audit, retention — AC-119" },
       { "id": "V2.14", "name": "Master Data Dictionary [DAB-015]", "status": "done", "notes": "Canonical Metadata Registry, 10 registries, Volume 2 complete — AC-120" },
       { "id": "V3.1", "name": "Business Rules Engine [PBA-002]", "status": "done", "notes": "Policy Decision Point, 9 rule categories, hierarchy — AC-122" },
-      { "id": "V3.2", "name": "Workflow Engine [PBA-003]", "status": "pending", "notes": "State machines, approvals, escalation — AC-123" },
+      { "id": "V3.2", "name": "Workflow Engine [PBA-003]", "status": "done", "notes": "Community Process Orchestrator, 9 categories, state machines — AC-123" },
       { "id": "V3.3", "name": "Identity & Lifecycle Engine [PBA-004]", "status": "pending", "notes": "Prospect through Legacy progression — AC-124" },
       { "id": "V3.4", "name": "Community Lifecycle Engine [PBA-005]", "status": "pending", "notes": "Proposal through institutional legacy — AC-125" },
       { "id": "V3.5", "name": "Mission Execution Engine [PBA-006]", "status": "pending", "notes": "Planning through playbook generation — AC-126" },

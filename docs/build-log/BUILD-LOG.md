@@ -18,6 +18,22 @@
 
 ---
 
+## 2026-07-10 — Volume 3.2 Workflow Engine [PBA-003 · AC-123]
+
+**Document:** `docs/volume-03/WORKFLOW_ENGINE.md` · **Registry:** `data/registry/workflow-engine.json`
+
+### What Changed
+
+- **Guiding principle:** *People perform work. Workflows coordinate the work.*
+- Governed workflows — living operational procedures, not simply automation
+- **8-layer workflow lifecycle:** Trigger through Knowledge Capture
+- **9 workflow categories:** Identity through Governance
+- State machines, tasks, approvals, escalation, exception handling, compensation actions
+- **Community Process Orchestrator** — runtime coordinator separating rules, definition, execution, and ledger
+- Admin Volume 3 tab · requirements PBA-003 updated · Volume 3: 2/14 complete
+
+---
+
 ## 2026-07-10 — Volume 3.1 Business Rules Engine [PBA-002 · AC-122]
 
 **Document:** `docs/volume-03/BUSINESS_RULE_ENGINE.md` · **Registry:** `data/registry/business-rule-engine.json`
