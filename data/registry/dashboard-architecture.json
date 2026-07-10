@@ -1,22 +1,304 @@
 {
-  "version": "1.0.0",
+  "version": "2.0.0",
   "documentId": "VOLUME-004.3",
   "requirementId": "UXB-004",
   "docPath": "docs/volume-04/DASHBOARD_ARCHITECTURE.md",
-  "status": "pending",
-  "priority": "critical",
+  "productName": "Dashboard & Workspace Architecture",
+  "status": "canonical",
+  "priority": "foundational",
   "lastUpdated": "2026-07-10",
-  "guidingPrinciple": "Experience should feel intentional, welcoming, and trustworthy.",
-  "defines": [
-    "PersonalOS",
-    "CommunityDashboard",
-    "MissionOperationsCenter",
-    "VolunteerSuccessCenter",
-    "LeadershipAcademy",
-    "ExecutiveOperationsCenter",
-    "KnowledgeObservatory"
+  "guidingPrinciple": "Every dashboard should answer one question: What should I do next?",
+  "dashboardWorkspacePhilosophy": {
+    "dashboardsNotChartCollections": true,
+    "workspacesNotPageCollections": true,
+    "operationalEnvironments": true,
+    "frontDoorToMeaningfulWork": true,
+    "reduceUncertaintyCreateMomentum": true,
+    "prioritiesBeforeAnalytics": true,
+    "livingWorkspaceNotFixedDashboard": true
+  },
+  "traditionalDashboardShows": [
+    "Statistics",
+    "Reports",
+    "Widgets",
+    "Graphs"
   ],
-  "topicCount": 7,
+  "communityOSShows": [
+    "Purpose",
+    "Priorities",
+    "People",
+    "Communities",
+    "Missions",
+    "Knowledge",
+    "Decisions",
+    "GrowthOpportunities"
+  ],
+  "communityOSShowCount": 8,
+  "universalWorkspaceStructure": {
+    "layers": [
+      "Mission",
+      "TodaysPriorities",
+      "CurrentWork",
+      "People",
+      "Calendar",
+      "Knowledge",
+      "Intelligence",
+      "History"
+    ],
+    "layerCount": 8
+  },
+  "universalDashboardPanelCount": 8,
+  "universalDashboardPanels": [
+    {
+      "id": "missionBanner",
+      "name": "Mission Banner",
+      "displays": ["CurrentPurpose", "Community", "Role", "CurrentMission", "PrimaryObjective"]
+    },
+    {
+      "id": "todaysPriorities",
+      "name": "Today's Priorities",
+      "displays": ["Approvals", "Meetings", "VolunteerCommitments", "MissionDeadlines", "CommunityRequests", "KnowledgeAwaitingReview"],
+      "answers": "StartHere"
+    },
+    {
+      "id": "activeWork",
+      "name": "Active Work",
+      "displays": ["RunningWorkflows", "OpenMissions", "CurrentProjects", "Assignments", "LeadershipResponsibilities"]
+    },
+    {
+      "id": "communityPanel",
+      "name": "Community Panel",
+      "displays": ["Communities", "People", "Mentors", "Teams", "RecentActivity", "CommunityHealthSummary"]
+    },
+    {
+      "id": "calendarPanel",
+      "name": "Calendar Panel",
+      "displays": ["TodaysMeetings", "VolunteerShifts", "UpcomingDeadlines", "Training", "CommunityEvents"]
+    },
+    {
+      "id": "knowledgePanel",
+      "name": "Knowledge Panel",
+      "displays": ["RecentStories", "Lessons", "Playbooks", "CommunityBrainUpdates", "LearningRecommendations"]
+    },
+    {
+      "id": "intelligencePanel",
+      "name": "Intelligence Panel",
+      "displays": ["AIRecommendations", "CommunityIntelligence", "OperationalIntelligence", "DigitalTwinSummary", "GrowthSuggestions"]
+    },
+    {
+      "id": "activityTimeline",
+      "name": "Activity Timeline",
+      "displays": ["RecentActions", "WorkflowHistory", "CommunityEventLedger", "Notifications", "MissionUpdates"]
+    }
+  ],
+  "workspaceTypeCount": 8,
+  "workspaceTypes": [
+    {
+      "id": "personalOS",
+      "name": "Personal Operating System",
+      "answers": "WhatShouldIDoToday",
+      "tracks": ["Calendar", "Communities", "Growth", "VolunteerWork", "Leadership", "Knowledge", "PersonalDigitalTwin"]
+    },
+    {
+      "id": "volunteerSuccessCenter",
+      "name": "Volunteer Success Center",
+      "focusesOn": ["Opportunities", "VolunteerCommitments", "Training", "Recognition", "Mentorship", "Growth"]
+    },
+    {
+      "id": "missionOperationsCenter",
+      "name": "Mission Operations Center",
+      "focusesOn": ["MissionExecution", "Tasks", "Volunteers", "Resources", "Calendar", "Knowledge", "CommunityImpact"]
+    },
+    {
+      "id": "leadershipAcademy",
+      "name": "Leadership Academy",
+      "focusesOn": ["LeadershipDevelopment", "Mentorship", "Succession", "Learning", "LeadershipPortfolio", "CommunityHealth"]
+    },
+    {
+      "id": "communityWorkspace",
+      "name": "Community Workspace",
+      "focusesOn": ["CommunityHealth", "Members", "Calendar", "Knowledge", "Committees", "Partnerships", "Growth"]
+    },
+    {
+      "id": "countyWorkspace",
+      "name": "County Workspace",
+      "focusesOn": ["CountyInitiatives", "Communities", "Institutions", "Coverage", "Leadership", "RegionalIntelligence"]
+    },
+    {
+      "id": "knowledgeObservatory",
+      "name": "Knowledge Observatory",
+      "focusesOn": ["KnowledgeGrowth", "Playbooks", "Stories", "Lessons", "CommunityBrain", "Innovation"]
+    },
+    {
+      "id": "executiveOperationsCenter",
+      "name": "Executive Operations Center",
+      "focusesOn": ["OperationalIntelligence", "CommunityHealth", "Leadership", "Growth", "PlatformReadiness", "ExecutiveBriefings"]
+    }
+  ],
+  "workspacePrinciples": [
+    "HaveOnePrimaryPurpose",
+    "LimitCognitiveLoad",
+    "SurfaceCurrentPriorities",
+    "PreserveContext",
+    "SupportCollaboration",
+    "EncourageLearning",
+    "PromoteAction"
+  ],
+  "workspacePrincipleCount": 7,
+  "workspaceMemoryItems": [
+    "PinnedPanels",
+    "PreferredLayout",
+    "FrequentlyUsedTools",
+    "RecentWork",
+    "OpenMissions",
+    "WorkspaceHistory"
+  ],
+  "workspaceMemoryItemCount": 6,
+  "personalizationOptions": [
+    "PanelOrder",
+    "Favorites",
+    "Shortcuts",
+    "SavedSearches",
+    "PinnedCommunities",
+    "PreferredCalendarView"
+  ],
+  "personalizationOptionCount": 6,
+  "dashboardContextFactors": [
+    "CurrentRole",
+    "CurrentMission",
+    "LeadershipResponsibilities",
+    "Community",
+    "Calendar",
+    "PendingWorkflows"
+  ],
+  "dashboardContextFactorCount": 6,
+  "workspaceRelationshipChain": [
+    "Mission",
+    "Volunteer",
+    "Leadership",
+    "Knowledge",
+    "Community",
+    "Executive"
+  ],
+  "workspaceRelationshipChainCount": 6,
+  "mobileDashboardEmphasis": [
+    "TodaysPriorities",
+    "CurrentMission",
+    "QuickActions",
+    "Notifications",
+    "Calendar",
+    "Community"
+  ],
+  "mobileDashboardEmphasisCount": 6,
+  "aiWorkspaceAwareness": [
+    "CurrentContext",
+    "CurrentMission",
+    "CurrentCommunity",
+    "CurrentCalendar",
+    "CurrentWorkflow",
+    "CurrentKnowledge"
+  ],
+  "aiWorkspaceAwarenessCount": 6,
+  "digitalTwinWorkspaceMappings": [
+    { "workspace": "PersonalOS", "twin": "ParticipantTwin" },
+    { "workspace": "MissionOperationsCenter", "twin": "MissionTwin" },
+    { "workspace": "CommunityWorkspace", "twin": "CommunityTwin" },
+    { "workspace": "ExecutiveOperationsCenter", "twin": "PlatformTwin" }
+  ],
+  "digitalTwinWorkspaceMappingCount": 4,
+  "eventLedgerSurfaces": [
+    "RecentEvents",
+    "HistoricalContext",
+    "Activity",
+    "Milestones",
+    "MissionHistory"
+  ],
+  "eventLedgerSurfaceCount": 5,
+  "adaptiveWorkspaceEngine": {
+    "name": "Adaptive Workspace Engine",
+    "abbreviation": "AWE",
+    "purpose": "Continuously composes each participant's workspace from operational context — constructs today's workspace, not a fixed dashboard",
+    "notFixedDashboard": true,
+    "compositionLayers": [
+      {
+        "id": "identity",
+        "name": "Identity",
+        "sources": ["Role", "LeadershipResponsibilities", "Communities", "Permissions"]
+      },
+      {
+        "id": "currentWork",
+        "name": "Current Work",
+        "sources": ["ActiveMissions", "WorkflowStage", "PendingApprovals", "VolunteerAssignments"]
+      },
+      {
+        "id": "time",
+        "name": "Time",
+        "sources": ["Calendar", "Deadlines", "MeetingPreparation", "Travel"]
+      },
+      {
+        "id": "intelligence",
+        "name": "Intelligence",
+        "sources": ["CommunityIntelligence", "OperationalIntelligence", "AIRecommendations", "CommunityHealth"]
+      },
+      {
+        "id": "knowledge",
+        "name": "Knowledge",
+        "sources": ["RelevantPlaybooks", "Lessons", "CommunityBrain", "Stories"]
+      },
+      {
+        "id": "relationships",
+        "name": "Relationships",
+        "sources": ["Teams", "Mentors", "Volunteers", "Committees", "Partners"]
+      },
+      {
+        "id": "personalPreferences",
+        "name": "Personal Preferences",
+        "sources": ["PinnedPanels", "PreferredLayouts", "AccessibilitySettings", "FrequentlyUsedTools"]
+      }
+    ],
+    "compositionLayerCount": 7,
+    "adaptiveScenarios": [
+      "BeforeLeadershipMeeting",
+      "DuringMissionWeekend",
+      "AfterMissionConcludes"
+    ],
+    "adaptiveScenarioCount": 3,
+    "architecturalPrinciple": "Participants should experience a living workspace that responds to their responsibilities, not a fixed dashboard that forces them to hunt for what matters",
+    "pairsWithIntentNavigationEngine": true
+  },
+  "domainSchemaMapping": {
+    "schema": "ExperienceArchitecture",
+    "entities": [
+      "WorkspacePanel",
+      "WorkspaceType",
+      "DashboardContext",
+      "WorkspaceMemory",
+      "AdaptiveWorkspaceEngine"
+    ]
+  },
+  "projectionIntegrations": {
+    "experienceDesignSystemPath": "data/registry/experience-design-system.json",
+    "experienceNavigationPath": "data/registry/experience-navigation-architecture.json",
+    "platformBehaviorPath": "data/registry/platform-behavior-bible.json",
+    "identityLifecyclePath": "data/registry/identity-lifecycle-engine.json",
+    "missionExecutionPath": "data/registry/mission-execution-engine.json",
+    "volunteerExperiencePath": "data/registry/volunteer-experience-engine.json",
+    "leadershipDevelopmentPath": "data/registry/leadership-development-engine.json",
+    "knowledgeGrowthPath": "data/registry/knowledge-growth-engine.json",
+    "operationalIntelligencePath": "data/registry/operational-intelligence-engine.json",
+    "communityIntelligencePath": "data/registry/community-intelligence-engine.json",
+    "eventLedgerPath": "data/registry/event-data-model.json",
+    "timeCalendarPath": "data/registry/time-calendar-data-model.json"
+  },
+  "burtImplementationGuidance": [
+    "Treat dashboards as operational workspaces rather than reporting pages",
+    "Keep a consistent workspace structure",
+    "Surface priorities before analytics",
+    "Integrate AI, Digital Twins, Community Event Ledger, and Community Intelligence into every workspace",
+    "Preserve context across workspace transitions",
+    "Build mobile-first",
+    "Consult Adaptive Workspace Engine spec before dashboard-facing features"
+  ],
   "acceptanceCriteria": "AC-139",
-  "acceptanceCriteriaMet": false
+  "acceptanceCriteriaMet": true
 }
