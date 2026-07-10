@@ -5,7 +5,7 @@
 **Purpose:** Single authoritative index Burt reads before implementing any code.
 
 > Phase 1 is the **Constitution of the Platform**.  
-> Steps 1.1–1.8 define *what* we build and *how* we build it.  
+> Steps 1.1–1.9 define *what* we build, *how* we build it, and *how every requirement is tracked*.  
 > Phase 2 onward defines *implementation details* for each capability.
 
 **Platform:** ASYON — Arkansas Student & Youth Organizing Network  
@@ -26,8 +26,22 @@
 | 6 | 1.6 | [Growth Model](PHASE-001.6-GROWTH-MODEL.md) | How does the platform evolve? |
 | 7 | 1.7 | [Launch Success](PHASE-001.7-LAUNCH-SUCCESS-DEFINITION.md) | When is V1 ready? |
 | 8 | 1.8 | [Implementation Doctrine](PHASE-001.8-IMPLEMENTATION-DOCTRINE.md) | How does Burt build it? |
+| 9 | 1.9 | [Master Traceability](PHASE-001.9-MASTER-TRACEABILITY.md) | Why does every feature exist? |
 
-**ID Convention:** [00-ID-CONVENTION.md](00-ID-CONVENTION.md)
+**Requirements registry:** `data/requirements-registry.json` · Admin **Traceability** tab
+
+---
+
+## Production Code Gate [TR-MOTTO]
+
+> **If it cannot be traced, it should not be built.**
+
+Before any production code:
+
+1. Locate requirement in `requirements-registry.json`
+2. Verify [TR-BR] checklist (6 items)
+3. Commit with requirement IDs
+4. Update registry status on completion
 
 ---
 
@@ -63,6 +77,7 @@ V1 must answer for every visitor:
 | [ED-003] | Design completely. Build deliberately. Validate thoroughly. Improve continuously. |
 | [ED-GR] | Never implement without approved design |
 | [ED-VS] | Build vertically — complete one capability end-to-end |
+| [TR-MOTTO] | If it cannot be traced, it should not be built |
 | [GM-002] | Launch early. Learn quickly. Improve continuously. |
 
 ---
@@ -95,34 +110,29 @@ Live tracker: `data/launch-readiness.json` · Admin **Launch** tab
 
 **Jul 12 minimum:** Registration · Network boards · Share links/QR · Campus/county assignment
 
+**Critical pending requirements:** USR-001 · NET-001 · NET-002 · NET-003
+
 ---
 
-## Burt's Implementation Protocol [ED-IQ]
+## Burt's Implementation Protocol
 
-Before writing code:
+### Before writing code [ED-IQ + TR-BR]
 
-1. Has this been designed?
-2. Is the architecture approved?
-3. Does this align with the Constitution?
-4. Does it strengthen organizing?
-5. Can it scale?
-6. Can future versions extend it?
+1. Requirement exists and is approved
+2. Has this been designed?
+3. Dependencies complete
+4. Acceptance criteria and test IDs defined
+5. Does this align with the Constitution?
+6. Documentation location established
 
 If any answer is **no** → pause.
 
----
+### After every implementation [ED-FD]
 
-## After Every Implementation [ED-FD]
-
-Conclude with:
-
-- What was built
-- What changed
-- What was deferred
-- Known limitations
-- Recommendations for Version 2
-
-Record in `docs/build-log/BUILD-LOG.md`.
+- What was built · What changed · What was deferred
+- Known limitations · Recommendations for Version 2
+- Update `requirements-registry.json` status fields
+- Record in `docs/build-log/BUILD-LOG.md`
 
 ---
 
@@ -130,25 +140,15 @@ Record in `docs/build-log/BUILD-LOG.md`.
 
 | Phase | Name | Status |
 |-------|------|--------|
-| **1** | Foundational Constitution (Steps 1.1–1.8) | ✅ Complete |
+| **1** | Foundational Constitution (Steps 1.1–1.9) | ✅ Complete |
 | **2** | Arkansas Organizing Registry | In progress |
 | **3** | V1 Launch — Signup + Network | Pending (Jul 12–14) |
 | **4+** | Teaching, voter registration, collective voice | Future |
 
 **Master sequence:** `docs/master/MASTER-BUILD-SEQUENCE.md`  
+**ID convention:** `docs/build-steps/00-ID-CONVENTION.md`  
 **Expanded constitution:** `docs/PROJECT_CONSTITUTION_AND_MISSION_DOCTRINE.md`
 
 ---
 
-## Phase 1.9 Recommendation (Pending)
-
-Before deep Phase 2 work, consider **Master Traceability & Requirement ID System**:
-
-- Unique IDs for every future requirement (`REG-001`, `NET-014`, `CNTY-023`)
-- Traceability matrix: Constitutional principle → Design → Implementation → Test → Documentation
-
-*Not yet approved — Steve to decide before Phase 2 deep implementation.*
-
----
-
-*Phase 1 closed: 2026-07-10 · Burt: start Phase 2 at Arkansas Organizing Registry.*
+*Phase 1 closed: 2026-07-10 (Steps 1.1–1.9) · Burt: Phase 2 — Arkansas Organizing Registry*

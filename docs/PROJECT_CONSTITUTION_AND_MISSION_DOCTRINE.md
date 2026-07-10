@@ -1,6 +1,7 @@
 # Project Constitution & Mission Doctrine
 
-> **Burt: Phase 1 Constitution complete (Steps 1.1–1.8).** Start at [docs/build-steps/BUILD-BIBLE.md](build-steps/BUILD-BIBLE.md).  
+> **Burt: Phase 1 Constitution complete (Steps 1.1–1.9).** Start at [docs/build-steps/BUILD-BIBLE.md](build-steps/BUILD-BIBLE.md).  
+> Verify requirements in [data/requirements-registry.json](../data/requirements-registry.json) before production code.  
 > Phase 2: Arkansas Organizing Registry.  
 > This document expands with timeline, teaching system, and historical context.
 

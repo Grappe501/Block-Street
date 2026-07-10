@@ -1,0 +1,380 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/build-steps/PHASE-001.9-MASTER-TRACEABILITY.md",
+  "motto": "If it cannot be traced, it should not be built.",
+  "productionCodeGate": true,
+  "domainPrefixes": [
+    { "prefix": "CONST", "domain": "Constitution cross-references" },
+    { "prefix": "REG", "domain": "Registry" },
+    { "prefix": "CNTY", "domain": "County" },
+    { "prefix": "INST", "domain": "Institution" },
+    { "prefix": "USR", "domain": "User" },
+    { "prefix": "NET", "domain": "Network" },
+    { "prefix": "EVT", "domain": "Events" },
+    { "prefix": "COM", "domain": "Committees" },
+    { "prefix": "MSG", "domain": "Messaging" },
+    { "prefix": "VOL", "domain": "Volunteer" },
+    { "prefix": "ANL", "domain": "Analytics" },
+    { "prefix": "ADM", "domain": "Administration" },
+    { "prefix": "SEC", "domain": "Security" },
+    { "prefix": "API", "domain": "API endpoints" },
+    { "prefix": "DB", "domain": "Database objects" },
+    { "prefix": "UI", "domain": "User interface" },
+    { "prefix": "MOB", "domain": "Mobile" },
+    { "prefix": "DEP", "domain": "Deployment" },
+    { "prefix": "TEST", "domain": "Testing" },
+    { "prefix": "DOC", "domain": "Documentation" }
+  ],
+  "traceabilityChain": [
+    "Mission",
+    "North Star",
+    "Constitutional Principle",
+    "Requirement",
+    "Architecture",
+    "Database",
+    "Backend",
+    "Frontend",
+    "Testing",
+    "Documentation",
+    "Deployment",
+    "Feedback",
+    "Next Version"
+  ],
+  "pages": [
+    { "id": "PAGE-HOME", "route": "/", "title": "Homepage", "status": "done" },
+    { "id": "PAGE-JOIN", "route": "/join", "title": "Join / Registration", "status": "in_progress" },
+    { "id": "PAGE-MAP", "route": "/map", "title": "Statewide Map", "status": "in_progress" },
+    { "id": "PAGE-SCHOOLS", "route": "/schools", "title": "Institution Directory", "status": "done" },
+    { "id": "PAGE-INSTITUTION", "route": "/schools/[slug]", "title": "Institution Hub", "status": "done" },
+    { "id": "PAGE-COUNTY", "route": "/county/[slug]", "title": "County Youth Hub", "status": "done" },
+    { "id": "PAGE-NETWORK", "route": "/dashboard/network", "title": "Personal Network Board", "status": "pending" },
+    { "id": "PAGE-SHARE", "route": "/s/[slug]", "title": "Share / Referral Landing", "status": "pending" },
+    { "id": "PAGE-ADMIN", "route": "/admin", "title": "Director Workbench", "status": "done" },
+    { "id": "PAGE-SEARCH", "route": "/search", "title": "Statewide Search", "status": "pending" }
+  ],
+  "databaseObjects": [
+    { "id": "DB-USERS", "table": "users", "status": "pending", "requirement": "USR-001" },
+    { "id": "DB-NETWORKS", "table": "networks", "status": "pending", "requirement": "NET-001" },
+    { "id": "DB-REFERRALS", "table": "referrals", "status": "pending", "requirement": "NET-003" },
+    { "id": "DB-INSTITUTIONS", "table": "institutions", "status": "in_progress", "requirement": "REG-002" },
+    { "id": "DB-COUNTIES", "table": "counties", "status": "in_progress", "requirement": "REG-001" },
+    { "id": "DB-EVENTS", "table": "events", "status": "pending", "requirement": "EVT-001" },
+    { "id": "DB-COMMITTEES", "table": "committees", "status": "pending", "requirement": "COM-001" }
+  ],
+  "apiEndpoints": [
+    { "id": "API-USERS-001", "method": "POST", "path": "/api/users/register", "status": "pending", "requirement": "USR-001" },
+    { "id": "API-USERS-002", "method": "GET", "path": "/api/users/[id]", "status": "pending", "requirement": "USR-002" },
+    { "id": "API-NETWORK-001", "method": "GET", "path": "/api/network/[slug]", "status": "pending", "requirement": "NET-001" },
+    { "id": "API-NETWORK-002", "method": "POST", "path": "/api/network/invite", "status": "pending", "requirement": "NET-002" },
+    { "id": "API-INSTITUTIONS-001", "method": "GET", "path": "/api/institutions", "status": "pending", "requirement": "INST-001" },
+    { "id": "API-COUNTIES-001", "method": "GET", "path": "/api/counties", "status": "pending", "requirement": "CNTY-001" }
+  ],
+  "requirements": [
+    {
+      "id": "REG-001",
+      "title": "Arkansas County Registry",
+      "purpose": "Every county has a canonical record for organizing homes",
+      "description": "75 counties with slug, name, organizing status, and metadata",
+      "priority": "critical",
+      "principle": "CP-006",
+      "dependencies": [],
+      "related": ["CNTY-001", "LS-P1"],
+      "acceptanceCriteria": [
+        "All 75 counties in registry",
+        "Each county has unique slug",
+        "County pages render from registry"
+      ],
+      "futureNotes": "Live participation counts when DB connected",
+      "implementationStatus": "done",
+      "testingStatus": "in_progress",
+      "documentationStatus": "done",
+      "trace": {
+        "database": "DB-COUNTIES",
+        "api": "API-COUNTIES-001",
+        "frontend": "PAGE-COUNTY",
+        "test": "TEST-CNTY-001",
+        "doc": "DOC-CNTY-001"
+      },
+      "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
+    },
+    {
+      "id": "REG-002",
+      "title": "Arkansas Institution Registry",
+      "purpose": "Every college and university has a canonical profile",
+      "description": "Institutions with city, county, type, enrollment, history, links, disclaimer",
+      "priority": "critical",
+      "principle": "CP-006",
+      "dependencies": ["REG-001"],
+      "related": ["INST-001", "INST-002", "LS-P2"],
+      "acceptanceCriteria": [
+        "Every AR college/university has profile",
+        "Institution pages render from registry",
+        "Independent platform disclaimer on every page"
+      ],
+      "futureNotes": "Community colleges, trade schools in later versions",
+      "implementationStatus": "in_progress",
+      "testingStatus": "in_progress",
+      "documentationStatus": "done",
+      "trace": {
+        "database": "DB-INSTITUTIONS",
+        "api": "API-INSTITUTIONS-001",
+        "frontend": "PAGE-INSTITUTION",
+        "test": "TEST-INST-001",
+        "doc": "DOC-INST-001"
+      },
+      "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
+    },
+    {
+      "id": "CNTY-001",
+      "title": "County Youth Hub Page",
+      "purpose": "Answer 'Where do I belong?' for county-level organizers",
+      "description": "County page with basic info, organizing status, join option, representation status",
+      "priority": "critical",
+      "principle": "OM-L3",
+      "dependencies": ["REG-001"],
+      "related": ["USR-001", "LS-Q1"],
+      "acceptanceCriteria": [
+        "75 county pages exist",
+        "Join button links to registration",
+        "Mobile-responsive layout"
+      ],
+      "futureNotes": "Live member counts, outreach gap indicators",
+      "implementationStatus": "done",
+      "testingStatus": "in_progress",
+      "documentationStatus": "done",
+      "trace": {
+        "database": "DB-COUNTIES",
+        "api": "API-COUNTIES-001",
+        "frontend": "PAGE-COUNTY",
+        "test": "TEST-CNTY-007",
+        "doc": "DOC-CNTY-001"
+      },
+      "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
+    },
+    {
+      "id": "INST-001",
+      "title": "Institution Directory",
+      "purpose": "Searchable statewide list of Arkansas colleges and universities",
+      "description": "Public directory at /schools with filter and browse",
+      "priority": "critical",
+      "principle": "OM-L4",
+      "dependencies": ["REG-002"],
+      "related": ["INST-002", "LS-P2"],
+      "acceptanceCriteria": [
+        "All seeded institutions listed",
+        "Links to institution hub pages",
+        "Directory is searchable"
+      ],
+      "futureNotes": "Full-text search, filter by county/type",
+      "implementationStatus": "in_progress",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": "DB-INSTITUTIONS",
+        "api": "API-INSTITUTIONS-001",
+        "frontend": "PAGE-SCHOOLS",
+        "test": "TEST-INST-012",
+        "doc": "DOC-INST-001"
+      },
+      "versionHistory": { "created": "2026-07-10" }
+    },
+    {
+      "id": "INST-002",
+      "title": "Institution Hub Page",
+      "purpose": "Campus organizing home with join path",
+      "description": "Personalized institution page with metadata, disclaimer, join button",
+      "priority": "critical",
+      "principle": "OM-L4",
+      "dependencies": ["REG-002"],
+      "related": ["USR-001", "LS-Q1"],
+      "acceptanceCriteria": [
+        "Page renders for every institution slug",
+        "Independent platform disclaimer visible",
+        "Join button functional"
+      ],
+      "futureNotes": "Representation status from live DB",
+      "implementationStatus": "done",
+      "testingStatus": "in_progress",
+      "documentationStatus": "done",
+      "trace": {
+        "database": "DB-INSTITUTIONS",
+        "api": "API-INSTITUTIONS-001",
+        "frontend": "PAGE-INSTITUTION",
+        "test": "TEST-INST-001",
+        "doc": "DOC-INST-001"
+      },
+      "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
+    },
+    {
+      "id": "USR-001",
+      "title": "Participant Registration",
+      "purpose": "Answer 'How do I get involved?' — honor-system signup",
+      "description": "County-first flow: students pick county then school; non-students county-only (16-24)",
+      "priority": "critical",
+      "principle": "OM-L1",
+      "dependencies": ["REG-001", "REG-002"],
+      "related": ["USR-002", "NET-001", "LS-Q2"],
+      "acceptanceCriteria": [
+        "Registration creates user record",
+        "County assignment works",
+        "Campus assignment works for students",
+        "Non-student path available"
+      ],
+      "futureNotes": "Optional verification in later versions",
+      "implementationStatus": "in_progress",
+      "testingStatus": "pending",
+      "documentationStatus": "approved",
+      "trace": {
+        "database": "DB-USERS",
+        "api": "API-USERS-001",
+        "frontend": "PAGE-JOIN",
+        "test": "TEST-USR-004",
+        "doc": "DOC-USR-001"
+      },
+      "versionHistory": { "created": "2026-07-10" }
+    },
+    {
+      "id": "USR-002",
+      "title": "Personal Profile & Dashboard",
+      "purpose": "Every participant has a home immediately after registration",
+      "description": "Profile, dashboard, activity timeline, welcome experience",
+      "priority": "critical",
+      "principle": "OM-L1",
+      "dependencies": ["USR-001"],
+      "related": ["NET-001", "LS-P3"],
+      "acceptanceCriteria": [
+        "Profile created on registration",
+        "Dashboard accessible after signup",
+        "No dead ends after registration"
+      ],
+      "futureNotes": "Interests, avatar, privacy controls",
+      "implementationStatus": "pending",
+      "testingStatus": "pending",
+      "documentationStatus": "approved",
+      "trace": {
+        "database": "DB-USERS",
+        "api": "API-USERS-002",
+        "frontend": "PAGE-NETWORK",
+        "test": "TEST-USR-005",
+        "doc": "DOC-USR-002"
+      },
+      "versionHistory": { "created": "2026-07-10" }
+    },
+    {
+      "id": "NET-001",
+      "title": "Personal Network Board",
+      "purpose": "Provide every participant with their own organizing dashboard",
+      "description": "Auto-generated network board showing recruits and network statistics",
+      "priority": "critical",
+      "principle": "CP-008",
+      "dependencies": ["USR-001"],
+      "related": ["NET-002", "NET-003", "LS-Q3"],
+      "acceptanceCriteria": [
+        "Dashboard generated automatically on registration",
+        "Network statistics visible",
+        "Invite link displayed"
+      ],
+      "futureNotes": "Volunteer metrics added in Version 2",
+      "implementationStatus": "pending",
+      "testingStatus": "pending",
+      "documentationStatus": "approved",
+      "trace": {
+        "database": "DB-NETWORKS",
+        "api": "API-NETWORK-001",
+        "frontend": "PAGE-NETWORK",
+        "test": "TEST-NET-001",
+        "doc": "DOC-NET-001"
+      },
+      "versionHistory": { "created": "2026-07-10" }
+    },
+    {
+      "id": "NET-002",
+      "title": "Share Link Generation",
+      "purpose": "Answer 'How do I invite others?' — personal referral URL",
+      "description": "Unique share link /s/[slug] for every participant",
+      "priority": "critical",
+      "principle": "CP-008",
+      "dependencies": ["USR-001"],
+      "related": ["NET-003", "NET-001"],
+      "acceptanceCriteria": [
+        "Unique slug generated per user",
+        "Share link resolves to landing page",
+        "Link copyable from network board"
+      ],
+      "futureNotes": "Social share metadata",
+      "implementationStatus": "pending",
+      "testingStatus": "pending",
+      "documentationStatus": "approved",
+      "trace": {
+        "database": "DB-NETWORKS",
+        "api": "API-NETWORK-002",
+        "frontend": "PAGE-SHARE",
+        "test": "TEST-NET-011",
+        "doc": "DOC-NET-002"
+      },
+      "versionHistory": { "created": "2026-07-10" }
+    },
+    {
+      "id": "NET-003",
+      "title": "QR Code Generation",
+      "purpose": "Mobile-first recruitment tool for in-person organizing",
+      "description": "QR code encoding personal share link, displayable on network board",
+      "priority": "critical",
+      "principle": "CP-008",
+      "dependencies": ["NET-002"],
+      "related": ["NET-001"],
+      "acceptanceCriteria": [
+        "QR code generated for share link",
+        "Scannable on mobile devices",
+        "Downloadable or displayable"
+      ],
+      "futureNotes": "Print-ready formats",
+      "implementationStatus": "pending",
+      "testingStatus": "pending",
+      "documentationStatus": "approved",
+      "trace": {
+        "database": "DB-REFERRALS",
+        "api": "API-NETWORK-002",
+        "frontend": "PAGE-NETWORK",
+        "test": "TEST-NET-012",
+        "doc": "DOC-NET-003"
+      },
+      "versionHistory": { "created": "2026-07-10" }
+    },
+    {
+      "id": "ADM-001",
+      "title": "Director Workbench",
+      "purpose": "Administrative visibility into build progress and platform state",
+      "description": "Admin dashboard with phases, launch readiness, constitution, traceability",
+      "priority": "high",
+      "principle": "LS-P6",
+      "dependencies": [],
+      "related": ["ADM-002"],
+      "acceptanceCriteria": [
+        "Phase progress visible",
+        "Launch checklist tracked",
+        "Constitution tabs accessible"
+      ],
+      "futureNotes": "Participant management when DB connected",
+      "implementationStatus": "done",
+      "testingStatus": "in_progress",
+      "documentationStatus": "done",
+      "trace": {
+        "database": null,
+        "api": null,
+        "frontend": "PAGE-ADMIN",
+        "test": "TEST-ADM-001",
+        "doc": "DOC-ADM-001"
+      },
+      "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
+    }
+  ],
+  "summary": {
+    "totalRequirements": 11,
+    "done": 4,
+    "inProgress": 4,
+    "pending": 3,
+    "criticalPending": 3,
+    "productionCodeGate": true
+  }
+}

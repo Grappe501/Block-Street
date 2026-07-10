@@ -61,10 +61,10 @@ export function AdminImplementationDoctrine() {
       </div>
 
       <div className="card border-green-300 bg-green-50">
-        <p className="text-xs font-semibold uppercase text-green-800">Phase 1 Complete</p>
-        <p className="mt-1 font-bold text-green-950">Constitution of the Platform — Steps 1.1 through 1.8</p>
+        <p className="text-xs font-semibold uppercase text-green-800">Phase 1 Complete (9 Steps)</p>
+        <p className="mt-1 font-bold text-green-950">Constitution + Traceability Gate Active</p>
         <p className="mt-1 text-sm text-green-800">
-          Consolidated index: docs/build-steps/BUILD-BIBLE.md
+          Before production code: verify requirement in data/requirements-registry.json [TR-BR]
         </p>
       </div>
 

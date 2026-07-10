@@ -2,6 +2,14 @@
 
 > Read [BUILD-BIBLE.md](BUILD-BIBLE.md) before writing code.
 
+## Production Code Gate [TR-MOTTO]
+
+> **If it cannot be traced, it should not be built.**
+
+Registry: `data/requirements-registry.json` · Admin **Traceability** tab
+
+---
+
 ## The One Question [NS-013]
 
 > **Does this help us reach the North Star?** If no — it doesn't belong in V1.
@@ -12,13 +20,15 @@
 
 Full protocol: [PHASE-001.8-IMPLEMENTATION-DOCTRINE.md](PHASE-001.8-IMPLEMENTATION-DOCTRINE.md)
 
-## Growth Philosophy [GM-002]
+## Traceability [PHASE-001.9]
 
-> **Launch early. Learn quickly. Improve continuously.**
+> **Why does this exist?** Every feature traces to an approved requirement.
+
+Full system: [PHASE-001.9-MASTER-TRACEABILITY.md](PHASE-001.9-MASTER-TRACEABILITY.md)
 
 ---
 
-## Phase 1 — Constitution Complete ✅
+## Phase 1 — Constitution Complete ✅ (9 Steps)
 
 | Step | Document | Status |
 |------|----------|--------|
@@ -30,8 +40,9 @@ Full protocol: [PHASE-001.8-IMPLEMENTATION-DOCTRINE.md](PHASE-001.8-IMPLEMENTATI
 | 1.6 | [Growth Model](PHASE-001.6-GROWTH-MODEL.md) | ✅ |
 | 1.7 | [Launch Success Definition](PHASE-001.7-LAUNCH-SUCCESS-DEFINITION.md) | ✅ |
 | 1.8 | [Implementation Doctrine](PHASE-001.8-IMPLEMENTATION-DOCTRINE.md) | ✅ |
+| 1.9 | [Master Traceability](PHASE-001.9-MASTER-TRACEABILITY.md) | ✅ |
 
-**Build Bible:** [BUILD-BIBLE.md](BUILD-BIBLE.md) — authoritative index for Steps 1.1–1.8
+**Build Bible:** [BUILD-BIBLE.md](BUILD-BIBLE.md)
 
 ---
 
@@ -40,9 +51,7 @@ Full protocol: [PHASE-001.8-IMPLEMENTATION-DOCTRINE.md](PHASE-001.8-IMPLEMENTATI
 > How do we know V1 is ready? **10-item checklist** in PHASE-001.7.  
 > Live tracker: `data/launch-readiness.json` · Admin **Launch** tab
 
-**Three questions:** Where do I belong? · How do I get involved? · How do I invite others?
-
-**Jul 12 minimum:** Registration, network board, share link/QR, campus/county assignment.
+**Jul 12 minimum:** USR-001 · NET-001 · NET-002 · NET-003
 
 ---
 
@@ -68,26 +77,30 @@ Full protocol: [PHASE-001.8-IMPLEMENTATION-DOCTRINE.md](PHASE-001.8-IMPLEMENTATI
 
 ---
 
-## Implementation Rules [ED-GR, ED-VS]
+## Implementation Rules
 
+- Verify requirement in registry before production code [TR-BR]
 - One build step at a time — user uploads step to Cursor
-- Reference requirement IDs in commits
-- Build vertically — complete end-to-end [GM-P2, ED-VS]
-- V1 scope only for July 14 — defer the rest [GM-V1, LS-DEF]
-- Update `data/build-progress.json` every step
+- Reference requirement IDs in commits (`feat(signup): [USR-001]`)
+- Build vertically [ED-VS, GM-P2]
+- V1 scope only for July 14 [GM-V1, LS-DEF]
+- Update `build-progress.json` + `requirements-registry.json` every step
 - Commit + push → Netlify auto-deploys
 - H: drive only
-- Conclude with ED-FD deliverable summary in BUILD-LOG
+- ED-FD handoff in BUILD-LOG
 
 ## ID Quick Reference
 
 ```
-BUILD-BIBLE  Authoritative Phase 1 index
-ED-001       Design → Build → Validate → Iterate
-ED-GR        Never implement without approved design
-ED-VS        Vertical slice development
-GM-V1        V1 launch scope (July 2026)
-LS-CHK       Launch readiness checklist
-OM-L1        Individual = database root
-NS-013       Five North Star questions
+BUILD-BIBLE     Authoritative Phase 1 index
+TR-MOTTO        If it cannot be traced, it should not be built
+REG/CNTY/INST   Registry domain requirements
+USR/NET         User and network requirements
+TEST-*          Acceptance test IDs
+DOC-*           Documentation IDs
+PAGE-*          Page identifiers
+DB-*            Database object IDs
+API-*           API endpoint IDs
+ED-GR           Never implement without approved design
+LS-CHK          Launch readiness checklist
 ```

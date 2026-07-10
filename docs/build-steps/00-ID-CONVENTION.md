@@ -44,6 +44,56 @@ Examples: `PI-001`, `MS-001`, `ER-003`
 | **UI** | User Interface | Pages, flows, components |
 | **DM** | Data Model | Schema, tables, relationships |
 | **AC** | Acceptance Criteria | Step completion criteria |
+| **TR** | Traceability System | ID format, matrix, verification gate |
+
+---
+
+## Two ID Layers
+
+### Layer 1 — Constitutional IDs (Phase 1 docs)
+
+Used in build-step documents: `PI-001`, `CP-003`, `NS-013`, `ED-001`, etc.
+
+These define *why* the platform exists and *what principles* govern it.
+
+### Layer 2 — Production Requirement IDs (Phase 1.9+)
+
+Used in `data/requirements-registry.json` for implementation:
+
+```
+[DOMAIN]-[NUMBER]
+```
+
+Examples: `REG-001`, `NET-014`, `USR-022`, `TEST-NET-001`, `DOC-USR-001`
+
+| Prefix | Domain |
+|--------|--------|
+| **CONST** | Constitution cross-references |
+| **REG** | Registry |
+| **CNTY** | County |
+| **INST** | Institution |
+| **USR** | User |
+| **NET** | Network |
+| **EVT** | Events |
+| **COM** | Committees |
+| **MSG** | Messaging |
+| **VOL** | Volunteer |
+| **ANL** | Analytics |
+| **ADM** | Administration |
+| **SEC** | Security |
+| **API** | API endpoints |
+| **DB** | Database objects |
+| **UI** | User interface |
+| **MOB** | Mobile |
+| **DEP** | Deployment |
+| **TEST** | Testing |
+| **DOC** | Documentation |
+
+**Page IDs:** `PAGE-HOME`, `PAGE-JOIN`, `PAGE-NETWORK` (stable, not numbered)
+
+**Rule:** IDs never change. Superseded requirements marked deprecated; IDs never reused.
+
+**Registry:** `data/requirements-registry.json` · [PHASE-001.9](PHASE-001.9-MASTER-TRACEABILITY.md)
 
 ---
 
@@ -105,4 +155,5 @@ Example: `PHASE-001.1-PLATFORM-IDENTITY.md`
 | PHASE-001.6 | Growth Model & Evolution Strategy | Canonical |
 | PHASE-001.7 | Launch Success Definition | Canonical |
 | PHASE-001.8 | Implementation Doctrine & Engineering Protocol | Canonical |
-| BUILD-BIBLE | Consolidated Phase 1 index (Steps 1.1–1.8) | Canonical |
+| PHASE-001.9 | Master Traceability & Requirement ID System | Canonical |
+| BUILD-BIBLE | Consolidated Phase 1 index (Steps 1.1–1.9) | Canonical |
