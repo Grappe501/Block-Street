@@ -1,0 +1,194 @@
+{
+  "version": "2.0.0",
+  "documentId": "VOLUME-005.9",
+  "requirementId": "PSI-010",
+  "docPath": "docs/volume-05/DEPLOYMENT_ARCHITECTURE.md",
+  "status": "canonical",
+  "priority": "mission_critical",
+  "lastUpdated": "2026-07-10",
+  "productName": "Deployment, Runtime & LocalBrain Architecture",
+  "guidingPrinciple": "Run anywhere. Operate together. Remain autonomous.",
+  "deploymentPhilosophy": {
+    "federationOfIntelligentOperationalNodes": true,
+    "everyDeploymentFirstClassCitizen": true,
+    "deploymentDefinesOperationalSovereignty": true,
+    "localBrainFirstNotCloudFirst": true,
+    "everyLevelOperatesIndependently": true,
+    "distributedCivicComputingPlatform": true
+  },
+  "runtimeArchitecture": {
+    "layers": [
+      "Provision",
+      "Identity",
+      "Configuration",
+      "PlatformServices",
+      "Synchronization",
+      "Operations",
+      "Updates",
+      "InstitutionalMemory"
+    ],
+    "layerCount": 8
+  },
+  "runtimePrincipleCount": 8,
+  "runtimePrinciples": [
+    "Portable",
+    "SelfHealing",
+    "Observable",
+    "OfflineCapable",
+    "Secure",
+    "Synchronizable",
+    "Explainable",
+    "Replaceable"
+  ],
+  "deploymentTypeCount": 6,
+  "deploymentTypes": [
+    { "id": "personalLocalBrain", "name": "Personal LocalBrain", "runsOn": ["Laptop", "Desktop", "MiniPC", "HomeServer"], "purpose": ["PersonalOperatingSystem", "PersonalAI", "PersonalKnowledge", "PersonalCalendar", "VolunteerWork", "OfflineCapability"] },
+    { "id": "communityLocalBrain", "name": "Community LocalBrain", "runsFor": ["Neighborhoods", "CommunityOrganizations", "Churches", "VolunteerGroups"], "purpose": ["CommunityAutonomy", "CommunityKnowledge", "CommunityOperations", "SharedAI", "LocalCollaboration"] },
+    { "id": "institutionalLocalBrain", "name": "Institutional LocalBrain", "runsFor": ["Schools", "Nonprofits", "Campaigns", "CountyOffices", "CivicOrganizations"], "purpose": ["InstitutionalOperations", "Knowledge", "Leadership", "Governance", "Operations"] },
+    { "id": "countyRuntime", "name": "County Runtime", "supports": ["CountyCollaboration", "RegionalCoordination", "KnowledgeFederation", "CommunityHealth", "OperationalIntelligence", "CountyDigitalTwin"] },
+    { "id": "regionalRuntime", "name": "Regional Runtime", "coordinates": ["MultipleCounties", "Coalitions", "Institutions", "RegionalKnowledge", "EmergencyCoordination", "LargeScaleMissions"] },
+    { "id": "cloudFederation", "name": "Cloud Federation", "supports": ["Federation", "CrossRegionKnowledge", "AIRouting", "NationalCollaboration", "PlatformUpdates", "ConnectorEcosystem"], "coordinatesRatherThanDominates": true }
+  ],
+  "runtimeComponentCount": 9,
+  "runtimeComponents": [
+    "PlatformServiceMesh",
+    "EventFabric",
+    "SynchronizationMesh",
+    "KnowledgeRetrievalFabric",
+    "AIFederation",
+    "TrustLedger",
+    "CommunityEventLedger",
+    "DigitalTwins",
+    "Observability"
+  ],
+  "provisioningPipeline": {
+    "stages": [
+      "Install",
+      "Identity",
+      "InstitutionTemplate",
+      "Configuration",
+      "ServiceActivation",
+      "KnowledgeInitialization",
+      "AIInitialization",
+      "OperationalReadiness"
+    ],
+    "stageCount": 8,
+    "deterministicProvisioning": true
+  },
+  "runtimeProfileCount": 6,
+  "runtimeProfiles": [
+    "Personal",
+    "Community",
+    "Institution",
+    "County",
+    "Regional",
+    "Cloud"
+  ],
+  "serviceActivation": {
+    "declares": ["Required", "Optional", "CloudOnly", "Local", "Hybrid", "Background", "Dependencies"],
+    "efficientDeployments": true
+  },
+  "updateArchitecture": {
+    "supports": ["SecurityUpdates", "PlatformUpdates", "InstitutionTemplates", "Knowledge", "AIModels", "ConnectorUpdates", "Configuration"],
+    "governedUpdates": true
+  },
+  "rollingUpdates": {
+    "supports": ["Canary", "BlueGreen", "PhasedRollout", "LocalApproval", "Rollback", "InstitutionScheduling"],
+    "communityControlled": true
+  },
+  "runtimeHealth": {
+    "monitors": ["PlatformServices", "Synchronization", "Storage", "CPU", "Memory", "AI", "Connectors", "CommunityHealth"],
+    "metricCount": 8
+  },
+  "offlineOperation": {
+    "supports": ["OfflineWorkspaces", "Knowledge", "Media", "Calendar", "AIWhereAvailable", "Workflows", "SynchronizationQueues"],
+    "offlineNormal": true
+  },
+  "aiRuntime": {
+    "executionModes": ["Locally", "Regionally", "Cloud", "Hybrid"],
+    "routingDependsUpon": ["Capability", "Privacy", "Performance", "Availability", "Cost"],
+    "flexibleDeployment": true
+  },
+  "runtimeSecurity": {
+    "supports": ["DeviceTrust", "Encryption", "Secrets", "IdentityFederation", "SecureBoot", "Audit", "RemoteRevocation"]
+  },
+  "disasterRecovery": {
+    "supports": ["Snapshots", "EventReplay", "Backup", "Recovery", "SynchronizationRebuild", "KnowledgeReconstruction"]
+  },
+  "localBrainFederation": {
+    "participatesIn": ["EventFederation", "KnowledgeFederation", "DigitalTwinFederation", "AIFederation", "SynchronizationFederation"],
+    "autonomousCooperation": true
+  },
+  "communityEventLedgerIntegration": {
+    "deploymentEvents": ["Provisioned", "Updated", "Recovered", "Synchronized", "HealthWarning", "UpgradeCompleted"]
+  },
+  "digitalTwinIntegration": {
+    "runtimeTwin": {
+      "represents": ["Health", "Configuration", "Performance", "Capacity", "Synchronization", "ServiceAvailability"]
+    },
+    "platformUnderstandsItself": true
+  },
+  "observabilityStandard": {
+    "exposes": ["Metrics", "Logs", "Tracing", "Synchronization", "AI", "Services", "Storage", "Health"],
+    "metricCount": 8
+  },
+  "runtimeFederationManager": {
+    "name": "Runtime Federation Manager",
+    "abbreviation": "RFM",
+    "operatingSystemForEveryDeployment": true,
+    "fabricPipeline": {
+      "stages": [
+        "RuntimeDiscovery",
+        "Identity",
+        "CapabilityAssessment",
+        "Synchronization",
+        "HealthMonitoring",
+        "FederationCoordination",
+        "KnowledgeExchange",
+        "LifecycleManagement"
+      ],
+      "stageCount": 8
+    },
+    "runtimeRegistry": {
+      "sections": [
+        { "id": "identity", "name": "Identity", "includes": ["RuntimeId", "Institution", "Community", "DeploymentType", "GeographicRegion"] },
+        { "id": "capabilities", "name": "Capabilities", "includes": ["PlatformServicesAvailable", "AICapabilities", "LocalStorage", "OfflineSupport", "Connectors", "HardwareProfile"] },
+        { "id": "health", "name": "Health", "includes": ["CPU", "Memory", "Disk", "ServiceAvailability", "SynchronizationHealth", "EventThroughput"] },
+        { "id": "federationStatus", "name": "Federation Status", "includes": ["Local", "Regional", "CloudConnected", "Offline", "RecoveryMode"] }
+      ],
+      "sectionCount": 4
+    },
+    "intelligentWorkloadPlacement": {
+      "personalAIRequest": { "localWhen": ["ModelExists", "PrivacyPrefersLocal", "SufficientResources"], "otherwiseRouteTo": ["InstitutionRuntime", "RegionalRuntime", "CloudFederation"] },
+      "knowledgeSearch": { "searchOrder": ["LocalBrain", "Institution", "County", "Regional", "Cloud"], "mergedExperience": true },
+      "mediaProcessing": { "mayRunOn": ["InstitutionRuntime", "RegionalGPUCluster", "CloudInfrastructure"], "preservesOwnershipAndGovernance": true }
+    },
+    "runtimeMarketplace": {
+      "certifiedCapabilityPackages": ["ElectionManagement", "CivicEducation", "DisasterResponse", "VolunteerCoordination", "HistoricalPreservation", "CommunityJournalism", "GrantManagement", "ResearchCollaboration"],
+      "packageCount": 8,
+      "consistentProvisioningAcrossDeployments": true
+    },
+    "digitalInfrastructureTwin": {
+      "models": ["RuntimeAvailability", "FederationTopology", "SynchronizationStatus", "ResourceUtilization", "GeographicDistribution", "AICapacity", "ConnectorHealth"],
+      "realTimeOperationalUnderstanding": true
+    },
+    "pairsWithFederatedSynchronizationMesh": true,
+    "pairsWithPlatformServiceMesh": true
+  },
+  "architecturalInsight": {
+    "distributedCivicComputingPlatform": true,
+    "federationWithoutSacrificingAutonomy": true,
+    "foundationForResilientScalableCommunityOwnedInfrastructure": true
+  },
+  "burtImplementationGuidance": [
+    "Treat LocalBrain as first-class runtime",
+    "Build runtime profiles",
+    "Separate deployment from synchronization",
+    "Support offline operation by default",
+    "Make updates reversible",
+    "Build Runtime Twins from the beginning",
+    "Route through Runtime Federation Manager"
+  ],
+  "acceptanceCriteria": "AC-159",
+  "acceptanceCriteriaMet": true
+}
