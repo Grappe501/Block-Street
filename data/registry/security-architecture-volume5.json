@@ -1,0 +1,188 @@
+{
+  "version": "2.0.0",
+  "documentId": "VOLUME-005.10",
+  "requirementId": "PSI-011",
+  "docPath": "docs/volume-05/SECURITY_ARCHITECTURE.md",
+  "status": "canonical",
+  "priority": "constitutional_infrastructure",
+  "lastUpdated": "2026-07-10",
+  "productName": "Security, Privacy & Constitutional Trust Architecture",
+  "guidingPrinciple": "Protect people before protecting technology.",
+  "securityPhilosophy": {
+    "constitutionalResponsibilityNotFeature": true,
+    "trustContinuouslyEarned": true,
+    "protectsCommunitiesNotMerelySoftware": true,
+    "organizationalCapabilityNotITFunction": true,
+    "constitutionalCapabilityNotInfrastructureConcern": true
+  },
+  "constitutionalSecurityModel": {
+    "layers": [
+      "Identity",
+      "Authentication",
+      "Authorization",
+      "ContextVerification",
+      "RiskEvaluation",
+      "BusinessRules",
+      "GovernanceValidation",
+      "Execution",
+      "TrustLedger"
+    ],
+    "layerCount": 9,
+    "explainableSecurity": true
+  },
+  "securityPrincipleCount": 8,
+  "securityPrinciples": [
+    "LeastPrivilege",
+    "ZeroTrust",
+    "Explainable",
+    "Observable",
+    "Recoverable",
+    "Auditable",
+    "PrivacyFirst",
+    "HumanCentered"
+  ],
+  "securityDomainCount": 24,
+  "securityDomains": [
+    { "id": "identitySecurity", "name": "Identity Security", "protects": ["Participants", "Institutions", "Communities", "Devices", "AIAgents", "PlatformServices"] },
+    { "id": "authentication", "name": "Authentication", "methodCount": 9 },
+    { "id": "authorization", "name": "Authorization", "evaluates": ["Role", "CommunityMembership", "Institution", "Mission", "Governance", "BusinessRules", "OperationalContext"] },
+    { "id": "deviceTrust", "name": "Device Trust" },
+    { "id": "sessionManagement", "name": "Session Management" },
+    { "id": "dataClassification", "name": "Data Classification", "classificationCount": 7 },
+    { "id": "encryption", "name": "Encryption" },
+    { "id": "keyManagement", "name": "Key Management" },
+    { "id": "secretsManagement", "name": "Secrets Management" },
+    { "id": "privacyArchitecture", "name": "Privacy Architecture" },
+    { "id": "consentManagement", "name": "Consent Management" },
+    { "id": "aiSecurity", "name": "AI Security" },
+    { "id": "knowledgeIntegrity", "name": "Knowledge Integrity" },
+    { "id": "mediaSecurity", "name": "Media Security" },
+    { "id": "integrationSecurity", "name": "Integration Security" },
+    { "id": "localBrainSecurity", "name": "LocalBrain Security" },
+    { "id": "incidentResponse", "name": "Incident Response" },
+    { "id": "threatIntelligence", "name": "Threat Intelligence" },
+    { "id": "runtimeSecurity", "name": "Runtime Security" },
+    { "id": "trustLedger", "name": "Trust Ledger" },
+    { "id": "digitalTwinIntegration", "name": "Digital Twin Integration" },
+    { "id": "communityEventLedger", "name": "Community Event Ledger" },
+    { "id": "securityObservability", "name": "Security Observability" },
+    { "id": "accessibility", "name": "Accessibility" }
+  ],
+  "authenticationMethodCount": 9,
+  "authenticationMethods": [
+    "Passwordless",
+    "Passkeys",
+    "MultiFactorAuthentication",
+    "HardwareSecurityKeys",
+    "OAuth",
+    "OpenIDConnect",
+    "EnterpriseSSO",
+    "LocalBrainAuthentication",
+    "AdaptiveAuthentication"
+  ],
+  "dataClassificationCount": 7,
+  "dataClassifications": [
+    "Public",
+    "Community",
+    "Institution",
+    "Confidential",
+    "Restricted",
+    "Evidence",
+    "LegalHold"
+  ],
+  "encryption": {
+    "protects": ["DataAtRest", "DataInTransit", "LocalBrainStorage", "Media", "Backups", "Synchronization", "KeyMaterial"],
+    "universalEncryption": true
+  },
+  "privacyArchitecture": {
+    "participantControls": ["PersonalInformation", "Visibility", "Retention", "Consent", "DataPortability", "DeletionRequests"],
+    "participantCentric": true
+  },
+  "aiSecurity": {
+    "protectsAgainst": ["UnauthorizedPrompts", "PromptInjection", "SensitiveDataLeakage", "ModelMisuse", "UnsafeAutomation", "HallucinatedAuthority"],
+    "constitutionallyGoverned": true
+  },
+  "incidentResponse": {
+    "supports": ["Detection", "Containment", "Investigation", "Recovery", "PostIncidentReview", "KnowledgeCapture"]
+  },
+  "threatIntelligence": {
+    "monitors": ["CredentialAbuse", "UnusualAccess", "SynchronizationAnomalies", "AIMisuse", "ConnectorFailures", "SuspiciousAutomation"]
+  },
+  "trustLedger": {
+    "records": ["Who", "What", "When", "Why", "RiskLevel", "Decision", "Recovery"],
+    "permanentTrustHistory": true
+  },
+  "securityTwin": {
+    "maintainsFor": ["Participants", "Institutions", "Communities", "LocalBrains", "Platform"]
+  },
+  "communityEventLedgerIntegration": {
+    "securityEvents": ["Authentication", "Authorization", "PermissionChanges", "ThreatDetection", "Recovery", "SecurityReviews"]
+  },
+  "securityObservability": {
+    "exposes": ["AuthenticationHealth", "ThreatActivity", "KeyRotation", "EncryptionCoverage", "ConnectorSecurity", "SynchronizationIntegrity", "RuntimeSecurity"],
+    "metricCount": 7
+  },
+  "accessibility": {
+    "supports": ["Passkeys", "AccessibleMFA", "ScreenReaders", "VoiceGuidance", "AlternativeRecovery", "PlainLanguageExplanations"],
+    "neverExcludesParticipants": true
+  },
+  "constitutionalSecurityFabric": {
+    "name": "Constitutional Security Fabric",
+    "abbreviation": "CSF",
+    "spansEveryPlatformLayer": true,
+    "fabricLayers": {
+      "layers": [
+        "Identity",
+        "Authentication",
+        "Authorization",
+        "DeviceTrust",
+        "Privacy",
+        "Encryption",
+        "PlatformServices",
+        "AIFederation",
+        "LocalBrainFederation",
+        "TrustLedger"
+      ],
+      "layerCount": 10
+    },
+    "securityFabricResponsibilities": {
+      "fabrics": [
+        { "id": "identityFabric", "name": "Identity Fabric", "maintainsTrustedIdentitiesFor": ["People", "Institutions", "Communities", "Devices", "AIAgents", "PlatformServices"] },
+        { "id": "privacyFabric", "name": "Privacy Fabric", "evaluates": ["Consent", "Visibility", "Retention", "Sharing", "Jurisdiction", "InstitutionalPolicy"] },
+        { "id": "aiSafetyFabric", "name": "AI Safety Fabric", "protectsAgainst": ["PromptInjection", "SensitiveInformationDisclosure", "UnauthorizedModelActions", "UnsafeAutomation", "CitationBypass", "PermissionEscalation"] },
+        { "id": "synchronizationSecurity", "name": "Synchronization Security", "protects": ["EventAuthenticity", "SynchronizationIntegrity", "LocalBrainTrust", "ConflictValidation", "ReplayVerification"] },
+        { "id": "knowledgeIntegrityFabric", "name": "Knowledge Integrity Fabric", "verifies": ["KnowledgeAuthenticity", "VersionHistory", "EvidenceIntegrity", "CitationConsistency", "HistoricalPreservation"] },
+        { "id": "runtimeSecurityFabric", "name": "Runtime Security Fabric", "coordinates": ["SecureBoot", "ServiceIdentity", "CertificateManagement", "RuntimeHealth", "ThreatDetection", "AutomaticIsolationOfCompromisedNodes"] }
+      ],
+      "fabricCount": 6
+    },
+    "constitutionalComplianceEngine": {
+      "evaluatesBeforeSensitiveActions": ["Identity", "Permissions", "Governance", "Privacy", "BusinessRules", "AIPolicies", "InstitutionalPolicies", "LegalConstraints"],
+      "completeTransparencyForAllowDeny": true
+    },
+    "securityDigitalTwin": {
+      "models": ["IdentityPosture", "DeviceTrust", "EncryptionCoverage", "AISafety", "ConnectorTrust", "SynchronizationIntegrity", "RuntimeHealth", "ThreatTrends"],
+      "executiveOperationsCenterDashboard": true
+    },
+    "pairsWithRuntimeFederationManager": true,
+    "pairsWithTrustLedger": true,
+    "pairsWithConstitutionalApiGateway": true
+  },
+  "architecturalInsight": {
+    "constitutionalCapability": true,
+    "protectsPeopleCommunitiesInstitutionsKnowledgeDemocraticProcesses": true,
+    "consistentGovernedSecurityModelAcrossAllComponents": true,
+    "essentialForLongLivedCivicInstitutions": true
+  },
+  "burtImplementationGuidance": [
+    "Treat security as constitutional infrastructure",
+    "Build zero-trust communication between Platform Services",
+    "Support LocalBrain security from day one",
+    "Encrypt everything practical",
+    "Integrate Trust Ledger CEL Security Twins Runtime Federation",
+    "Preserve explainability for every security decision",
+    "Route through Constitutional Security Fabric"
+  ],
+  "acceptanceCriteria": "AC-160",
+  "acceptanceCriteriaMet": true
+}
