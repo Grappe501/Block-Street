@@ -13,7 +13,7 @@ export function AdminImplementationVolumes() {
         <h2 className="mt-1 text-xl font-bold text-indigo-950">{ivs.purpose}</h2>
         <p className="mt-2 text-sm text-indigo-900">{ivs.naturalPause.statement}</p>
         <p className="mt-2 text-xs font-semibold text-indigo-800">
-          Volume 1: {eab.stepsComplete}/{eab.stepsTotal} · Volume 2: complete · Volume 3: 2/14 · Volumes 4–7: v1 · Phase 7 deferred
+          Volume 1: {eab.stepsComplete}/{eab.stepsTotal} · Volume 2: complete · Volume 3: 14/14 · Volume 4: 0/14 · Volumes 5–7: v1 · Phase 7 deferred
         </p>
       </div>
 
@@ -34,7 +34,9 @@ export function AdminImplementationVolumes() {
             <div className="flex items-center justify-between">
               <span className="text-xs font-bold text-indigo-600">Volume {vol.volume}</span>
               <span className={`badge text-xs ${vol.status === "in_progress" ? "bg-amber-100 text-amber-800" : vol.status === "scaffold" ? "bg-violet-100 text-violet-800" : vol.status === "complete" ? "bg-emerald-100 text-emerald-800" : "bg-green-100 text-green-800"}`}>
-                {vol.status === "in_progress" ? `${vol.volume === 3 ? "2/14" : `${eab.stepsComplete}/${eab.stepsTotal}`}` : vol.status === "scaffold" ? "0/14" : vol.status === "complete" ? "14/14" : "v1"}
+                {vol.status === "scaffold" || vol.status === "in_progress" || vol.status === "complete"
+                  ? `${vol.stepsComplete ?? 0}/${vol.stepsTotal ?? 14}`
+                  : "v1"}
               </span>
             </div>
             <h3 className="mt-1 font-bold text-indigo-950">{vol.name}</h3>

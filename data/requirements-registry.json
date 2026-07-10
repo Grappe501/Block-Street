@@ -4894,31 +4894,46 @@
     },
     {
       "id": "UXB-001",
-      "title": "User Experience Bible — Volume 4",
-      "purpose": "Every screen, dashboard, navigation flow, and interaction state defined before UI code",
-      "description": "VOLUME-004 surfaces, navigation, dashboards, responsive standards, accessibility, screen catalog",
+      "title": "User Experience & Product Architecture — Volume 4",
+      "purpose": "Complete experience architecture before production UI",
+      "description": "VOLUME-004 fourteen-step factory — experience design through experience orchestrator; defines how humans experience the platform",
       "priority": "critical",
       "principle": "CP-012",
       "dependencies": [
         "MAB-001",
         "EAB-001",
+        "DAB-001",
         "PBA-001"
       ],
       "related": [
+        "UXB-002",
+        "UXB-003",
+        "UXB-004",
+        "UXB-005",
+        "UXB-006",
+        "UXB-007",
+        "UXB-008",
+        "UXB-009",
+        "UXB-010",
+        "UXB-011",
+        "UXB-012",
+        "UXB-013",
+        "UXB-014",
+        "UXB-015",
         "PHQ-001",
-        "CCC-001",
         "EDB-001",
         "WBS-001"
       ],
       "acceptanceCriteria": [
-        "Navigation architecture defined",
-        "Dashboard inventory documented",
-        "Screen catalog indexed"
+        "Fourteen-step experience sequence documented",
+        "Experience philosophy and orchestration model established",
+        "Foundation stack Volumes 0-4 defined",
+        "Complete blueprint for user experience architecture"
       ],
-      "futureNotes": "Full wireframes for all screens in v1.1+",
-      "implementationStatus": "done",
+      "futureNotes": "Guiding principle: Experience should feel intentional, welcoming, and trustworthy. Volume 4 scaffold — build steps 4.1-4.14 next",
+      "implementationStatus": "scaffold",
       "testingStatus": "pending",
-      "documentationStatus": "done",
+      "documentationStatus": "scaffold",
       "trace": {
         "database": null,
         "api": null,
@@ -4928,7 +4943,511 @@
       },
       "versionHistory": {
         "created": "2026-07-10",
-        "implemented": "2026-07-10"
+        "implemented": null
+      }
+    },
+    {
+      "id": "UXB-015",
+      "title": "Experience Orchestrator — Volume 4.14",
+      "purpose": "Experience Orchestrator experience layer",
+      "description": "VOLUME-004.14 unified experience runtime layer, experience orchestration",
+      "priority": "critical",
+      "principle": "CP-012",
+      "dependencies": [
+        "UXB-014",
+        "UXB-001"
+      ],
+      "related": [
+        "UXB-001"
+      ],
+      "acceptanceCriteria": [
+        "Experience philosophy documented",
+        "UX behaviors defined",
+        "Volume 0-3 integration specified",
+        "Implementation blueprint for experience layer"
+      ],
+      "futureNotes": "Scaffold — pending canonical build step",
+      "implementationStatus": "pending",
+      "testingStatus": "pending",
+      "documentationStatus": "pending",
+      "trace": {
+        "database": null,
+        "api": null,
+        "frontend": "UI-SYSTEM",
+        "test": "TEST-UXB-015",
+        "doc": "DOC-UXB-015"
+      },
+      "versionHistory": {
+        "created": "2026-07-10",
+        "implemented": null
+      }
+    },
+    {
+      "id": "UXB-014",
+      "title": "Institutional Experience Architecture — Volume 4.13",
+      "purpose": "Institutional Experience Architecture experience layer",
+      "description": "VOLUME-004.13 universities, counties, campaigns, tailored org experiences",
+      "priority": "critical",
+      "principle": "CP-012",
+      "dependencies": [
+        "UXB-013",
+        "UXB-001"
+      ],
+      "related": [
+        "UXB-015"
+      ],
+      "acceptanceCriteria": [
+        "Experience philosophy documented",
+        "UX behaviors defined",
+        "Volume 0-3 integration specified",
+        "Implementation blueprint for experience layer"
+      ],
+      "futureNotes": "Scaffold — pending canonical build step",
+      "implementationStatus": "pending",
+      "testingStatus": "pending",
+      "documentationStatus": "pending",
+      "trace": {
+        "database": null,
+        "api": null,
+        "frontend": "UI-SYSTEM",
+        "test": "TEST-UXB-014",
+        "doc": "DOC-UXB-014"
+      },
+      "versionHistory": {
+        "created": "2026-07-10",
+        "implemented": null
+      }
+    },
+    {
+      "id": "UXB-013",
+      "title": "Trust & Transparency Architecture — Volume 4.12",
+      "purpose": "Trust & Transparency Architecture experience layer",
+      "description": "VOLUME-004.12 explainable AI, governance visibility, privacy controls",
+      "priority": "critical",
+      "principle": "CP-012",
+      "dependencies": [
+        "UXB-012",
+        "UXB-001"
+      ],
+      "related": [
+        "UXB-014"
+      ],
+      "acceptanceCriteria": [
+        "Experience philosophy documented",
+        "UX behaviors defined",
+        "Volume 0-3 integration specified",
+        "Implementation blueprint for experience layer"
+      ],
+      "futureNotes": "Scaffold — pending canonical build step",
+      "implementationStatus": "pending",
+      "testingStatus": "pending",
+      "documentationStatus": "pending",
+      "trace": {
+        "database": null,
+        "api": null,
+        "frontend": "UI-SYSTEM",
+        "test": "TEST-UXB-013",
+        "doc": "DOC-UXB-013"
+      },
+      "versionHistory": {
+        "created": "2026-07-10",
+        "implemented": null
+      }
+    },
+    {
+      "id": "UXB-012",
+      "title": "Engagement & Gamification Architecture — Volume 4.11",
+      "purpose": "Engagement & Gamification Architecture experience layer",
+      "description": "VOLUME-004.11 XP, badges, recognition without manipulation",
+      "priority": "critical",
+      "principle": "CP-012",
+      "dependencies": [
+        "UXB-011",
+        "UXB-001"
+      ],
+      "related": [
+        "UXB-013"
+      ],
+      "acceptanceCriteria": [
+        "Experience philosophy documented",
+        "UX behaviors defined",
+        "Volume 0-3 integration specified",
+        "Implementation blueprint for experience layer"
+      ],
+      "futureNotes": "Scaffold — pending canonical build step",
+      "implementationStatus": "pending",
+      "testingStatus": "pending",
+      "documentationStatus": "pending",
+      "trace": {
+        "database": null,
+        "api": null,
+        "frontend": "UI-SYSTEM",
+        "test": "TEST-UXB-012",
+        "doc": "DOC-UXB-012"
+      },
+      "versionHistory": {
+        "created": "2026-07-10",
+        "implemented": null
+      }
+    },
+    {
+      "id": "UXB-011",
+      "title": "AI Experience Architecture — Volume 4.10",
+      "purpose": "AI Experience Architecture experience layer",
+      "description": "VOLUME-004.10 AI Coach, trusted teammate presentation, executive advisor",
+      "priority": "critical",
+      "principle": "CP-012",
+      "dependencies": [
+        "UXB-010",
+        "UXB-001"
+      ],
+      "related": [
+        "UXB-012"
+      ],
+      "acceptanceCriteria": [
+        "Experience philosophy documented",
+        "UX behaviors defined",
+        "Volume 0-3 integration specified",
+        "Implementation blueprint for experience layer"
+      ],
+      "futureNotes": "Scaffold — pending canonical build step",
+      "implementationStatus": "pending",
+      "testingStatus": "pending",
+      "documentationStatus": "pending",
+      "trace": {
+        "database": null,
+        "api": null,
+        "frontend": "UI-SYSTEM",
+        "test": "TEST-UXB-011",
+        "doc": "DOC-UXB-011"
+      },
+      "versionHistory": {
+        "created": "2026-07-10",
+        "implemented": null
+      }
+    },
+    {
+      "id": "UXB-010",
+      "title": "Mobile Experience Architecture — Volume 4.9",
+      "purpose": "Mobile Experience Architecture experience layer",
+      "description": "VOLUME-004.9 mobile-first, offline, field operations, thumb navigation",
+      "priority": "critical",
+      "principle": "CP-012",
+      "dependencies": [
+        "UXB-009",
+        "UXB-001"
+      ],
+      "related": [
+        "UXB-011"
+      ],
+      "acceptanceCriteria": [
+        "Experience philosophy documented",
+        "UX behaviors defined",
+        "Volume 0-3 integration specified",
+        "Implementation blueprint for experience layer"
+      ],
+      "futureNotes": "Scaffold — pending canonical build step",
+      "implementationStatus": "pending",
+      "testingStatus": "pending",
+      "documentationStatus": "pending",
+      "trace": {
+        "database": null,
+        "api": null,
+        "frontend": "UI-SYSTEM",
+        "test": "TEST-UXB-010",
+        "doc": "DOC-UXB-010"
+      },
+      "versionHistory": {
+        "created": "2026-07-10",
+        "implemented": null
+      }
+    },
+    {
+      "id": "UXB-009",
+      "title": "Collaboration Architecture — Volume 4.8",
+      "purpose": "Collaboration Architecture experience layer",
+      "description": "VOLUME-004.8 chat, mentorship, collaborative editing, AI collaboration",
+      "priority": "critical",
+      "principle": "CP-012",
+      "dependencies": [
+        "UXB-008",
+        "UXB-001"
+      ],
+      "related": [
+        "UXB-010"
+      ],
+      "acceptanceCriteria": [
+        "Experience philosophy documented",
+        "UX behaviors defined",
+        "Volume 0-3 integration specified",
+        "Implementation blueprint for experience layer"
+      ],
+      "futureNotes": "Scaffold — pending canonical build step",
+      "implementationStatus": "pending",
+      "testingStatus": "pending",
+      "documentationStatus": "pending",
+      "trace": {
+        "database": null,
+        "api": null,
+        "frontend": "UI-SYSTEM",
+        "test": "TEST-UXB-009",
+        "doc": "DOC-UXB-009"
+      },
+      "versionHistory": {
+        "created": "2026-07-10",
+        "implemented": null
+      }
+    },
+    {
+      "id": "UXB-008",
+      "title": "Workspace Architecture — Volume 4.7",
+      "purpose": "Workspace Architecture experience layer",
+      "description": "VOLUME-004.7 personal, community, mission, executive workspaces",
+      "priority": "critical",
+      "principle": "CP-012",
+      "dependencies": [
+        "UXB-007",
+        "UXB-001"
+      ],
+      "related": [
+        "UXB-009"
+      ],
+      "acceptanceCriteria": [
+        "Experience philosophy documented",
+        "UX behaviors defined",
+        "Volume 0-3 integration specified",
+        "Implementation blueprint for experience layer"
+      ],
+      "futureNotes": "Scaffold — pending canonical build step",
+      "implementationStatus": "pending",
+      "testingStatus": "pending",
+      "documentationStatus": "pending",
+      "trace": {
+        "database": null,
+        "api": null,
+        "frontend": "UI-SYSTEM",
+        "test": "TEST-UXB-008",
+        "doc": "DOC-UXB-008"
+      },
+      "versionHistory": {
+        "created": "2026-07-10",
+        "implemented": null
+      }
+    },
+    {
+      "id": "UXB-007",
+      "title": "Component Architecture — Volume 4.6",
+      "purpose": "Component Architecture experience layer",
+      "description": "VOLUME-004.6 reusable UI components, cards, timelines, graph views",
+      "priority": "critical",
+      "principle": "CP-012",
+      "dependencies": [
+        "UXB-006",
+        "UXB-001"
+      ],
+      "related": [
+        "UXB-008"
+      ],
+      "acceptanceCriteria": [
+        "Experience philosophy documented",
+        "UX behaviors defined",
+        "Volume 0-3 integration specified",
+        "Implementation blueprint for experience layer"
+      ],
+      "futureNotes": "Scaffold — pending canonical build step",
+      "implementationStatus": "pending",
+      "testingStatus": "pending",
+      "documentationStatus": "pending",
+      "trace": {
+        "database": null,
+        "api": null,
+        "frontend": "UI-SYSTEM",
+        "test": "TEST-UXB-007",
+        "doc": "DOC-UXB-007"
+      },
+      "versionHistory": {
+        "created": "2026-07-10",
+        "implemented": null
+      }
+    },
+    {
+      "id": "UXB-006",
+      "title": "Design Language System — Volume 4.5",
+      "purpose": "Design Language System experience layer",
+      "description": "VOLUME-004.5 typography, color, spacing, tokens, components",
+      "priority": "critical",
+      "principle": "CP-012",
+      "dependencies": [
+        "UXB-005",
+        "UXB-001"
+      ],
+      "related": [
+        "UXB-007"
+      ],
+      "acceptanceCriteria": [
+        "Experience philosophy documented",
+        "UX behaviors defined",
+        "Volume 0-3 integration specified",
+        "Implementation blueprint for experience layer"
+      ],
+      "futureNotes": "Scaffold — pending canonical build step",
+      "implementationStatus": "pending",
+      "testingStatus": "pending",
+      "documentationStatus": "pending",
+      "trace": {
+        "database": null,
+        "api": null,
+        "frontend": "UI-SYSTEM",
+        "test": "TEST-UXB-006",
+        "doc": "DOC-UXB-006"
+      },
+      "versionHistory": {
+        "created": "2026-07-10",
+        "implemented": null
+      }
+    },
+    {
+      "id": "UXB-005",
+      "title": "User Journey Architecture — Volume 4.4",
+      "purpose": "User Journey Architecture experience layer",
+      "description": "VOLUME-004.4 end-to-end journeys, onboarding, community launch, alumni",
+      "priority": "critical",
+      "principle": "CP-012",
+      "dependencies": [
+        "UXB-004",
+        "UXB-001"
+      ],
+      "related": [
+        "UXB-006"
+      ],
+      "acceptanceCriteria": [
+        "Experience philosophy documented",
+        "UX behaviors defined",
+        "Volume 0-3 integration specified",
+        "Implementation blueprint for experience layer"
+      ],
+      "futureNotes": "Scaffold — pending canonical build step",
+      "implementationStatus": "pending",
+      "testingStatus": "pending",
+      "documentationStatus": "pending",
+      "trace": {
+        "database": null,
+        "api": null,
+        "frontend": "UI-SYSTEM",
+        "test": "TEST-UXB-005",
+        "doc": "DOC-UXB-005"
+      },
+      "versionHistory": {
+        "created": "2026-07-10",
+        "implemented": null
+      }
+    },
+    {
+      "id": "UXB-004",
+      "title": "Dashboard Architecture — Volume 4.3",
+      "purpose": "Dashboard Architecture experience layer",
+      "description": "VOLUME-004.3 operational dashboards, Personal OS, MOC, EOC, KO workspaces",
+      "priority": "critical",
+      "principle": "CP-012",
+      "dependencies": [
+        "UXB-003",
+        "UXB-001"
+      ],
+      "related": [
+        "UXB-005"
+      ],
+      "acceptanceCriteria": [
+        "Experience philosophy documented",
+        "UX behaviors defined",
+        "Volume 0-3 integration specified",
+        "Implementation blueprint for experience layer"
+      ],
+      "futureNotes": "Scaffold — pending canonical build step",
+      "implementationStatus": "pending",
+      "testingStatus": "pending",
+      "documentationStatus": "pending",
+      "trace": {
+        "database": null,
+        "api": null,
+        "frontend": "UI-SYSTEM",
+        "test": "TEST-UXB-004",
+        "doc": "DOC-UXB-004"
+      },
+      "versionHistory": {
+        "created": "2026-07-10",
+        "implemented": null
+      }
+    },
+    {
+      "id": "UXB-003",
+      "title": "Navigation Architecture — Volume 4.2",
+      "purpose": "Navigation Architecture experience layer",
+      "description": "VOLUME-004.2 navigation hierarchy, route philosophy, context-aware navigation",
+      "priority": "critical",
+      "principle": "CP-012",
+      "dependencies": [
+        "UXB-002",
+        "UXB-001"
+      ],
+      "related": [
+        "UXB-004"
+      ],
+      "acceptanceCriteria": [
+        "Experience philosophy documented",
+        "UX behaviors defined",
+        "Volume 0-3 integration specified",
+        "Implementation blueprint for experience layer"
+      ],
+      "futureNotes": "Scaffold — pending canonical build step",
+      "implementationStatus": "pending",
+      "testingStatus": "pending",
+      "documentationStatus": "pending",
+      "trace": {
+        "database": null,
+        "api": null,
+        "frontend": "UI-SYSTEM",
+        "test": "TEST-UXB-003",
+        "doc": "DOC-UXB-003"
+      },
+      "versionHistory": {
+        "created": "2026-07-10",
+        "implemented": null
+      }
+    },
+    {
+      "id": "UXB-002",
+      "title": "Experience Design System — Volume 4.1",
+      "purpose": "Experience Design System experience layer",
+      "description": "VOLUME-004.1 experience principles, cognitive load, belonging-first, accessibility",
+      "priority": "critical",
+      "principle": "CP-012",
+      "dependencies": [
+        "UXB-001",
+        "PBA-001"
+      ],
+      "related": [
+        "UXB-003"
+      ],
+      "acceptanceCriteria": [
+        "Experience philosophy documented",
+        "UX behaviors defined",
+        "Volume 0-3 integration specified",
+        "Implementation blueprint for experience layer"
+      ],
+      "futureNotes": "Scaffold — pending canonical build step",
+      "implementationStatus": "pending",
+      "testingStatus": "pending",
+      "documentationStatus": "pending",
+      "trace": {
+        "database": null,
+        "api": null,
+        "frontend": "UI-SYSTEM",
+        "test": "TEST-UXB-002",
+        "doc": "DOC-UXB-002"
+      },
+      "versionHistory": {
+        "created": "2026-07-10",
+        "implemented": null
       }
     },
     {

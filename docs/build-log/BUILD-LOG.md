@@ -18,6 +18,21 @@
 
 ---
 
+## 2026-07-10 — Volume 4 User Experience & Product Architecture [UXB-001 · AC-136] — **FACTORY SCAFFOLD**
+
+**Document:** `docs/volume-04/VOLUME_4_MASTER_SEQUENCE.md` · **Umbrella:** `docs/master/USER_EXPERIENCE_PRODUCT_ARCHITECTURE.md` · **Registry:** `data/registry/experience-architecture-bible.json`
+
+### What Changed
+
+- **Core question:** *What does using the Community Operating System actually feel like?*
+- **14-step Volume 4 factory** scaffolded (4.1–4.14) — experience design through experience orchestrator
+- Experience orchestration model: Design → Navigation → Workspaces → Dashboards → Journeys → Components → Collaboration → Mobile → AI → Engagement → Trust → Institutional → Unified Experience
+- 14 step docs + registries in `docs/volume-04/` and `data/registry/`
+- Admin Volume 4 tab · requirements UXB-001 scaffold + UXB-002–015 pending · Volume 4: 0/14 complete
+- Volumes 0–3 foundation stack complete; Volume 4 begins experience layer
+
+---
+
 ## 2026-07-10 — Volume 3.14 Community OS Orchestrator [PBA-015 · AC-135] — **VOLUME 3 COMPLETE**
 
 **Document:** `docs/volume-03/COMMUNITY_OS_ORCHESTRATOR.md` · **Registry:** `data/registry/community-os-orchestrator.json`

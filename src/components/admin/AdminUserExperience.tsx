@@ -1,0 +1,87 @@
+"use client";
+
+import eab from "../../../data/registry/experience-architecture-bible.json";
+import eds from "../../../data/registry/experience-design-system.json";
+import nav from "../../../data/registry/experience-navigation-architecture.json";
+import dash from "../../../data/registry/dashboard-architecture.json";
+import journey from "../../../data/registry/user-journey-architecture.json";
+import dls from "../../../data/registry/design-language-system.json";
+import comp from "../../../data/registry/experience-component-architecture.json";
+import work from "../../../data/registry/workspace-architecture.json";
+import collab from "../../../data/registry/collaboration-architecture.json";
+import mobile from "../../../data/registry/mobile-experience-architecture.json";
+import aiexp from "../../../data/registry/ai-experience-architecture.json";
+import engage from "../../../data/registry/engagement-architecture.json";
+import trust from "../../../data/registry/trust-architecture.json";
+import inst from "../../../data/registry/institutional-experience-architecture.json";
+import orch from "../../../data/registry/experience-orchestrator.json";
+
+type ExperienceReg = {
+  defines?: string[];
+  topicCount?: number;
+  acceptanceCriteria: string;
+  status: string;
+  guidingPrinciple?: string;
+};
+
+const EXPERIENCE_CARDS: { step: string; label: string; reg: ExperienceReg; cardClass: string; metaClass: string; titleClass: string }[] = [
+  { step: "4.1", label: "Experience Design System", reg: eds, cardClass: "border-sky-300 bg-sky-50", metaClass: "text-sky-700", titleClass: "text-sky-950" },
+  { step: "4.2", label: "Navigation Architecture", reg: nav, cardClass: "border-blue-300 bg-blue-50", metaClass: "text-blue-700", titleClass: "text-blue-950" },
+  { step: "4.3", label: "Dashboard Architecture", reg: dash, cardClass: "border-indigo-300 bg-indigo-50", metaClass: "text-indigo-700", titleClass: "text-indigo-950" },
+  { step: "4.4", label: "User Journey Architecture", reg: journey, cardClass: "border-violet-300 bg-violet-50", metaClass: "text-violet-700", titleClass: "text-violet-950" },
+  { step: "4.5", label: "Design Language System", reg: dls, cardClass: "border-purple-300 bg-purple-50", metaClass: "text-purple-700", titleClass: "text-purple-950" },
+  { step: "4.6", label: "Component Architecture", reg: comp, cardClass: "border-fuchsia-300 bg-fuchsia-50", metaClass: "text-fuchsia-700", titleClass: "text-fuchsia-950" },
+  { step: "4.7", label: "Workspace Architecture", reg: work, cardClass: "border-pink-300 bg-pink-50", metaClass: "text-pink-700", titleClass: "text-pink-950" },
+  { step: "4.8", label: "Collaboration Architecture", reg: collab, cardClass: "border-rose-300 bg-rose-50", metaClass: "text-rose-700", titleClass: "text-rose-950" },
+  { step: "4.9", label: "Mobile Experience", reg: mobile, cardClass: "border-red-300 bg-red-50", metaClass: "text-red-700", titleClass: "text-red-950" },
+  { step: "4.10", label: "AI Experience", reg: aiexp, cardClass: "border-orange-300 bg-orange-50", metaClass: "text-orange-700", titleClass: "text-orange-950" },
+  { step: "4.11", label: "Engagement & Gamification", reg: engage, cardClass: "border-amber-300 bg-amber-50", metaClass: "text-amber-700", titleClass: "text-amber-950" },
+  { step: "4.12", label: "Trust & Transparency", reg: trust, cardClass: "border-yellow-300 bg-yellow-50", metaClass: "text-yellow-700", titleClass: "text-yellow-950" },
+  { step: "4.13", label: "Institutional Experience", reg: inst, cardClass: "border-lime-300 bg-lime-50", metaClass: "text-lime-700", titleClass: "text-lime-950" },
+  { step: "4.14", label: "Experience Orchestrator", reg: orch, cardClass: "border-green-300 bg-green-50", metaClass: "text-green-700", titleClass: "text-green-950" },
+];
+
+export function AdminUserExperience() {
+  const pendingSteps = eab.steps.filter((s) => s.status === "pending").length;
+
+  return (
+    <div className="space-y-6">
+      <div className="card border-sky-400 bg-sky-100">
+        <p className="text-xs font-semibold uppercase text-sky-900">VOLUME 4 · User Experience</p>
+        <h2 className="mt-1 text-xl font-bold text-sky-950">{eab.productName}</h2>
+        <p className="mt-2 text-sm text-sky-900">{eab.coreQuestion}</p>
+        <p className="mt-1 text-xs italic text-sky-900">&ldquo;{eab.guidingPrinciple}&rdquo;</p>
+        <p className="mt-2 text-xs font-semibold text-sky-800">
+          {eab.stepsComplete}/{eab.stepsTotal} experience layers · {eab.experienceLayerCount} layers · {eab.status}
+        </p>
+      </div>
+
+      <div className="grid gap-4 md:grid-cols-2">
+        {EXPERIENCE_CARDS.map(({ step, label, reg, cardClass, metaClass, titleClass }) => (
+          <div key={step} className={`card ${cardClass}`}>
+            <p className={`text-xs font-semibold uppercase ${metaClass}`}>VOLUME-00{step.replace(".", "-")} · {label}</p>
+            <h3 className={`mt-1 text-sm font-bold ${titleClass}`}>{label}</h3>
+            {reg.guidingPrinciple ? (
+              <p className={`mt-1 text-xs italic ${metaClass}`}>&ldquo;{reg.guidingPrinciple}&rdquo;</p>
+            ) : null}
+            <p className={`mt-2 text-xs ${metaClass}`}>
+              {reg.topicCount ?? reg.defines?.length ?? 0} topics · {reg.acceptanceCriteria} · {reg.status}
+            </p>
+          </div>
+        ))}
+      </div>
+
+      <div className="card border-slate-300 bg-slate-50">
+        <h3 className="text-sm font-bold text-slate-900">Foundation Stack</h3>
+        <ul className="mt-2 space-y-1 text-xs text-slate-700">
+          {eab.foundationStack.map((v) => (
+            <li key={v.volume}>
+              <span className="font-semibold">Volume {v.volume}</span> — {v.defines}
+            </li>
+          ))}
+        </ul>
+        <p className="mt-3 text-xs text-slate-500">{pendingSteps} experience layers pending · {eab.masterSequencePath}</p>
+      </div>
+    </div>
+  );
+}
