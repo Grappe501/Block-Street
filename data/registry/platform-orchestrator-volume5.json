@@ -1,0 +1,160 @@
+{
+  "version": "2.0.0",
+  "documentId": "VOLUME-005.14",
+  "requirementId": "PSI-015",
+  "docPath": "docs/volume-05/PLATFORM_ORCHESTRATOR.md",
+  "status": "canonical",
+  "priority": "master_architecture",
+  "lastUpdated": "2026-07-10",
+  "productName": "Platform Orchestrator & Unified Runtime Architecture",
+  "guidingPrinciple": "Many systems. One platform. One operational reality.",
+  "orchestrationPhilosophy": {
+    "unifiesVolumes51Through513": true,
+    "livingOperationalEcosystem": true,
+    "infrastructureServesMeaningfulWork": true,
+    "participantsExperienceOneOS": true,
+    "volume5Complete": true
+  },
+  "platformOrchestrationArchitecture": {
+    "layers": [
+      "Request",
+      "Identity",
+      "Context",
+      "PlatformServices",
+      "OperationalCoordination",
+      "AIFederation",
+      "Knowledge",
+      "Synchronization",
+      "InstitutionalMemory"
+    ],
+    "layerCount": 9
+  },
+  "orchestrationPrincipleCount": 8,
+  "orchestrationPrinciples": [
+    "ContextAware",
+    "Explainable",
+    "Observable",
+    "Recoverable",
+    "PermissionAware",
+    "ConstitutionallyGoverned",
+    "Distributed",
+    "Resilient"
+  ],
+  "orchestratedSystemCount": 13,
+  "orchestratedSystems": [
+    { "id": "platformServiceMesh", "name": "Platform Service Mesh", "requirement": "PSI-002", "abbreviation": "PSM" },
+    { "id": "constitutionalApiGateway", "name": "Constitutional API Gateway", "requirement": "PSI-003", "abbreviation": "CAG" },
+    { "id": "universalConnectorFramework", "name": "Universal Connector Framework", "requirement": "PSI-004", "abbreviation": "UCF" },
+    { "id": "institutionalEventFabric", "name": "Institutional Event Fabric", "requirement": "PSI-005", "abbreviation": "IEF" },
+    { "id": "federatedSynchronizationMesh", "name": "Federated Synchronization Mesh", "requirement": "PSI-006", "abbreviation": "FSM" },
+    { "id": "knowledgeRetrievalFabric", "name": "Knowledge Retrieval Fabric", "requirement": "PSI-007", "abbreviation": "KRF" },
+    { "id": "institutionalMemoryRepository", "name": "Institutional Memory Repository", "requirement": "PSI-008", "abbreviation": "IMR" },
+    { "id": "unifiedCommunicationsFabric", "name": "Unified Communications Fabric", "requirement": "PSI-009", "abbreviation": "UCFab" },
+    { "id": "runtimeFederationManager", "name": "Runtime Federation Manager", "requirement": "PSI-010", "abbreviation": "RFM" },
+    { "id": "constitutionalSecurityFabric", "name": "Constitutional Security Fabric", "requirement": "PSI-011", "abbreviation": "CSF" },
+    { "id": "operationalIntelligenceGrid", "name": "Operational Intelligence Grid", "requirement": "PSI-012", "abbreviation": "OIG" },
+    { "id": "adaptiveCapacityGrid", "name": "Adaptive Capacity Grid", "requirement": "PSI-013", "abbreviation": "ACG" },
+    { "id": "platformStewardshipOffice", "name": "Platform Stewardship Office", "requirement": "PSI-014", "abbreviation": "PSO" }
+  ],
+  "platformCoordinationPipeline": {
+    "stages": [
+      "Participant",
+      "ExperienceOS",
+      "APIGateway",
+      "PlatformServices",
+      "EventFabric",
+      "Synchronization",
+      "Knowledge",
+      "AIFederation",
+      "InstitutionalMemory",
+      "Observability"
+    ],
+    "stageCount": 10
+  },
+  "constitutionalOperatingKernel": {
+    "name": "Constitutional Operating Kernel",
+    "abbreviation": "COK",
+    "platformOrchestratorAsKernel": true,
+    "kernelLayers": {
+      "layers": [
+        "PlatformConstitution",
+        "ConstitutionalOperatingKernel",
+        "PlatformServiceMesh",
+        "OperationalEngines",
+        "ExperienceOperatingSystem",
+        "CommunitiesAndInstitutions"
+      ],
+      "layerCount": 6
+    },
+    "kernelResponsibilities": {
+      "responsibilities": [
+        { "id": "constitutionalEnforcement", "name": "Constitutional Enforcement", "evaluates": ["Identity", "Permissions", "Governance", "BusinessRules", "Privacy", "AIPolicies", "InstitutionalPolicies"] },
+        { "id": "contextEngine", "name": "Context Engine", "maintains": ["Participant", "Community", "Institution", "Mission", "Calendar", "Workspace", "Runtime", "Device", "LocalBrain", "AccessibilityPreferences"] },
+        { "id": "coordinationEngine", "name": "Coordination Engine", "coordinates": ["PlatformServices", "AIFederation", "EventFabric", "SynchronizationMesh", "Communications", "KnowledgeRetrieval", "RuntimeFederation"] },
+        { "id": "resourceEngine", "name": "Resource Engine", "worksWithACG": true, "determines": ["WorkExecution", "AIModel", "RuntimeProcessing", "CacheUsage", "ConnectorAvailability"] },
+        { "id": "trustEngine", "name": "Trust Engine", "generates": ["TrustLedgerEntries", "CommunityEventLedgerEvents", "ObservabilitySignals", "SecurityEvaluations", "HistoricalContext"] },
+        { "id": "learningEngine", "name": "Learning Engine", "feeds": ["KnowledgeObservatory", "CommunityBrain", "OperationalIntelligence", "ExecutiveOperationsCenter", "PlatformStewardshipOffice"] }
+      ],
+      "responsibilityCount": 6
+    },
+    "unifiedCivicRuntime": {
+      "participantExperiences": ["OneIdentity", "OneContext", "OneAI", "OneKnowledgeSystem", "OneCommunicationSystem", "OneOperationalEnvironment", "OneConstitutionalPlatform"],
+      "complexityBehindTheScenes": true
+    }
+  },
+  "platformTwins": {
+    "twins": ["PlatformTwin", "RuntimeTwin", "InfrastructureTwin", "OperationsTwin", "SecurityTwin", "CapacityTwin", "ArchitectureTwin", "StewardshipTwin"],
+    "twinCount": 8,
+    "continuouslyModelsItself": true
+  },
+  "localBrainCoordination": {
+    "participatesThrough": ["RuntimeFederation", "SynchronizationMesh", "EventFabric", "KnowledgeFederation", "PlatformServices", "ExecutiveOperationsCenter"],
+    "autonomyPreserved": true
+  },
+  "aiCoordination": {
+    "neverOperatesIndependently": true,
+    "coordinatesThrough": ["KnowledgeRetrievalFabric", "PlatformServices", "CommunityEventLedger", "DigitalTwins", "SecurityFabric", "TrustLedger"],
+    "constitutionalAI": true
+  },
+  "institutionalMemory": {
+    "contributesTo": ["CommunityEventLedger", "KnowledgeObservatory", "HistoricalPreservation", "ArchitectureEvolution", "OperationalPlaybooks"]
+  },
+  "volume5Completion": {
+    "complete": true,
+    "foundationStackVolumes": [
+      { "volume": 0, "defines": "Constitutional Architecture — Why the platform exists" },
+      { "volume": 1, "defines": "Engineering Architecture — How it is built" },
+      { "volume": 2, "defines": "Data Architecture — How knowledge is represented" },
+      { "volume": 3, "defines": "Operational Architecture — How the platform behaves" },
+      { "volume": 4, "defines": "Experience Architecture — How people experience it" },
+      { "volume": 5, "defines": "Platform Services & Integration Architecture — Federated ecosystem operations" }
+    ],
+    "readyForVolume6": true
+  },
+  "cosCanon": {
+    "name": "Community Operating System Canon",
+    "abbreviation": "COS Canon",
+    "masterIndexVolumes0Through5": true,
+    "constitutionEncyclopediaTraceabilityMatrix": true,
+    "includes": ["ArchitecturalObjects", "Engines", "Services", "Workflows", "DigitalTwins", "BusinessRules", "EventTypes", "APIContracts", "Integrations", "Documents", "RuntimeCapabilities", "AcceptanceCriteria"],
+    "singleSourceOfTruthForBurt": true,
+    "strategicRecommendationBeforeVolume6": true
+  },
+  "architecturalInsight": {
+    "unifiedCivicRuntime": true,
+    "volume5Complete": true,
+    "productionGradeFederatedBlueprint": true
+  },
+  "burtImplementationGuidance": [
+    "Build Platform Orchestrator as runtime capability",
+    "Coordinate all infrastructure through shared context",
+    "Prevent subsystem silos",
+    "Preserve explainability",
+    "Support LocalBrain federation",
+    "Integrate Platform Twins and Executive Operations Center",
+    "Implement through Constitutional Operating Kernel",
+    "Prepare COS Canon as master traceability index"
+  ],
+  "acceptanceCriteria": "AC-164",
+  "acceptanceCriteriaMet": true
+}
