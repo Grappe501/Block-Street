@@ -258,7 +258,7 @@ Visitor → Interested → Registered → Connected → Contributor
 
 | Asset | V1 |
 |-------|-----|
-| Personal dashboard / network board | Step 3.6 |
+| Personal dashboard / command center | Step 3.6 [PCC-001] |
 | Personal network | Step 3.4 |
 | County affiliation | ✅ Registry |
 | Educational affiliation (if applicable) | ✅ Registry |
@@ -456,7 +456,7 @@ Relational organizing [OM-L2] — the **family tree of organizers**.
 | Journey framework | 3.2 ✅ |
 | Profile + mission (passport seed) | 3.3 |
 | Network + invite + QR | 3.4–3.5 |
-| Network board home | 3.6 |
+| Command Center home | 3.6 |
 | Basic privacy | 3.7 |
 
 ---

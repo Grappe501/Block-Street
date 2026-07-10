@@ -2,7 +2,7 @@
 
 > **Question answered:** *Who is this person, how do they grow, and how do they connect to others?*
 
-**Status:** Active — Steps 3.1–3.5 complete · V1 target Jul 12 / Jul 14
+**Status:** Active — Steps 3.1–3.6 complete · V1 target Jul 12 / Jul 14
 
 **Master sequence:** [PHASE_3_MASTER_SEQUENCE.md](PHASE_3_MASTER_SEQUENCE.md)
 
@@ -25,7 +25,7 @@ A user logs into software. A person has relationships, aspirations, interests, s
 | 3.3 | [Personal Headquarters & Profile System](PARTICIPANT_PROFILE_SYSTEM.md) | ✅ |
 | 3.4 | [Personal Relationship Network](PERSONAL_RELATIONSHIP_NETWORK.md) | ✅ |
 | 3.5 | [Relationship Growth Engine](RELATIONSHIP_GROWTH_ENGINE.md) | ✅ |
-| 3.6 | Network Board | Pending |
+| 3.6 | [Personal Command Center](PERSONAL_COMMAND_CENTER.md) | ✅ |
 | 3.7 | Privacy & Trust System | Pending |
 | 3.8 | Skills & Leadership System | Pending |
 | 3.9 | Recognition & Milestones | Pending |
@@ -44,7 +44,8 @@ A user logs into software. A person has relationships, aspirations, interests, s
 |---------|-----|
 | **Relationship Growth Engine** | Self-expanding through trusted invites [RGE-001] |
 | **Personal Relationship Network** | Participant-owned living network + Trust Graph [NET-001] |
-| **Personal Headquarters** | Organizing home — not a profile page [PHQ-001] |
+| **Personal Command Center** | Daily workspace — Morning Brief + widgets [PCC-001] |
+| **Personal Headquarters** | Organizing home concept — implemented by PCC [PHQ-001] |
 | **Civic Passport** | Living narrative of civic participation [CPP-001] |
 | **Personal Mission** | Forward-looking purpose statement [PRM-001] |
 | **Five Identity Layers** | Personal · Community · Relationship · Leadership · Journey |
@@ -54,6 +55,6 @@ A user logs into software. A person has relationships, aspirations, interests, s
 
 ## V1 Critical (Jul 12–14)
 
-PEP-001 · JRN-001 · PHQ-001 · RGE-001 · PRM-001 · USR-001 · NET-001 · NET-002 · NET-003
+PEP-001 · JRN-001 · PHQ-001 · PCC-001 · RGE-001 · PRM-001 · USR-001 · NET-001 · NET-002 · NET-003
 
 *Prior phase:* [Digital Arkansas](../phase-02/PHASE_2_DIGITAL_ARKANSAS_BUILD_BIBLE.md)

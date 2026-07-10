@@ -51,7 +51,7 @@
       "requirement": "NET-001",
       "displays": ["peopleInvited", "mentors", "connections", "newMembers", "relationshipGrowth", "inviteTools", "qrCode", "shareLink"],
       "v1": "stubInvite",
-      "note": "Personal Relationship Network [NET-001] — Step 3.4; depth widgets Step 3.6"
+      "note": "Relationship widget in Personal Command Center [PCC-001]"
     },
     {
       "key": "journey",
@@ -129,11 +129,12 @@
     "persistentQuickActions": true
   },
   "platformCenter": {
-    "description": "HQ is the presentation layer — every feature surfaces back here",
-    "aggregator": "assembleHeadquarters(participantId)",
+    "description": "HQ is the concept; Personal Command Center [PCC-001] is the daily widget implementation",
+    "aggregator": "assembleCommandCenter(participantId)",
+    "hqAggregator": "assembleHeadquarters(participantId) — alias or thin wrapper",
     "dataSources": ["identity", "journey", "network", "communities", "organizing"],
-    "orchestrators": ["journeyStage", "nextSteps", "impactSummary", "sinceLastVisit"],
-    "networkBoardRelationship": "Step 3.6 implements depth within My Network — not a competing home"
+    "orchestrators": ["morningBrief", "journeyStage", "nextSteps", "impactSummary", "sinceLastVisit"],
+    "networkBoardRelationship": "Retired — Relationship widget in Command Center implements PRN depth [PCC-M09]"
   },
   "registration": {
     "requirementId": "USR-001",
@@ -145,9 +146,11 @@
     "honorSystem": true
   },
   "routes": {
-    "primary": "PAGE-HQ",
-    "v1Alias": "PAGE-NETWORK",
-    "recommendedPath": "/hq"
+    "primary": "PAGE-PCC",
+    "path": "/command-center",
+    "conceptAlias": "PAGE-HQ",
+    "conceptPath": "/hq",
+    "retires": "PAGE-NETWORK"
   },
   "v1Scope": {
     "hqShell": true,

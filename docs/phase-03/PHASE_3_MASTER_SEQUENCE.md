@@ -40,7 +40,7 @@ When complete, every participant receives:
 | 3.3 | [Personal Headquarters & Profile System](PARTICIPANT_PROFILE_SYSTEM.md) | Organizing home — not a profile page | ✅ |
 | 3.4 | [Personal Relationship Network](PERSONAL_RELATIONSHIP_NETWORK.md) | Participant-owned living network + Trust Graph | ✅ |
 | 3.5 | [Relationship Growth Engine](RELATIONSHIP_GROWTH_ENGINE.md) | Self-expanding through trusted relationships | ✅ |
-| 3.6 | Network Board | Depth widgets within My Network | Pending |
+| 3.6 | [Personal Command Center](PERSONAL_COMMAND_CENTER.md) | Daily workspace — Morning Brief + widgets | ✅ |
 | 3.7 | Privacy & Trust System | Visibility, permissions, minor protections | Pending |
 | 3.8 | Skills & Leadership System | Skills, training, volunteer specialties | Pending |
 | 3.9 | Recognition & Milestones | Celebrate contribution — not popularity | Pending |
@@ -100,13 +100,21 @@ Where the platform becomes **self-expanding** — through relationships, not cam
 
 ---
 
-## 3.6 — Network Board
+## 3.6 — Personal Command Center
 
-Depth within **My Network** in the Personal Headquarters [PHQ-M08] — not a competing home page:
+**Requirement focus:** PCC-001 · PHQ-001 · NET-001 · OIS-001 · JRN-001
 
-People · Growth · Events · Volunteer · Committees · Projects · Messages · Milestones · Recognition · Goals · **Mission Board**
+Where **everything comes together** — the daily workspace participants open every day:
 
-*Integrated into HQ section `network` · Step 3.4 provides invite/QR depth*
+- **Six login questions** — identity, changes, today, who needs me, accomplishments, direction
+- **Morning Brief** — personalized summary on each login [PCC-M17]
+- **11 modular widgets** — Mission Board, Relationship, Community, Growth, and more
+- **Implements HQ** — one page, not two homes; retires Network Board
+- **Mobile-first** — thumb zone, widget priority order
+
+*Route:* `/command-center` [PAGE-PCC] · *Live spec:* `personal-command-center.json`
+
+---
 
 ## 3.7 — Privacy & Trust System
 
@@ -196,7 +204,7 @@ Identity · Journey · Profiles · Networks · Recruitment · Recognition · Pri
 | 3.1–3.2 | Philosophy ✅ |
 | 3.3 | Register + basic profile + mission |
 | 3.4–3.5 | Invite URL + QR + referral |
-| 3.6 | Network board core |
+| 3.6 | Command Center core | ✅ design |
 | 3.7 | Basic privacy defaults |
 
 Steps 3.8–3.14: design now, implement post-launch.

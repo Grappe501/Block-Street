@@ -25,7 +25,7 @@
       "label": "Member",
       "order": 2,
       "platformFocus": "Belonging · Orientation",
-      "objectives": ["Complete profile", "Select campus/county", "Receive Civic Passport", "Receive Network Board", "Receive invite link and QR"],
+      "objectives": ["Complete profile", "Select campus/county", "Receive Civic Passport", "Receive Command Center", "Receive invite link and QR"],
       "v1": "target",
       "legacyAliases": ["registered"]
     },

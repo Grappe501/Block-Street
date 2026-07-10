@@ -4,6 +4,24 @@
 
 ---
 
+## 2026-07-10 — PHASE-003.6 Personal Command Center (Canonical)
+
+**Document ID:** PHASE-003.6 · **PCC-001 · AC-025**
+
+### What Was Built
+
+- **Daily workspace** — where HQ + PRN + RGE come together; page participants open every day
+- **Six login questions** — Who am I? What changed? What today? Who needs me? Accomplishments? Where going?
+- **Morning Brief [PCC-M17]** — personalized summary on each login, not a notification feed
+- **11 modular widgets** — Mission, Mission Board, Community, Relationship, Calendar, Learning, Impact, Recognition, Communication, Growth
+- **One page, not two homes** — PCC implements PHQ; retires Network Board concept
+
+### Guiding Principle Locked
+
+> **Every participant should immediately know what matters today.**
+
+---
+
 ## 2026-07-10 — PHASE-003.5 Relationship Growth Engine (Canonical)
 
 **Document ID:** PHASE-003.5 · **RGE-001 · NET-002 · NET-003 · AC-024**
@@ -122,7 +140,7 @@
 | Item | Detail |
 |------|--------|
 | Built | PARTICIPANT_IDENTITY_DOCTRINE, PHASE_3_MASTER_SEQUENCE |
-| Next | 3.6 Network Board (NET-001 depth) |
+| Next | 3.7 Privacy & Trust System (SEC-001) |
 
 ---
 

@@ -212,7 +212,7 @@ Alex
 
 **[PRN-M09a]** The dashboard should **celebrate connection** — warm copy, never shame for small networks.
 
-**[PRN-M09b]** Step 3.6 Network Board adds **depth widgets** within this section; HQ provides the shell [PHQ-M08a].
+**[PRN-M09b]** Relationship depth lives in **Relationship widget** of Personal Command Center [PCC-M09] — HQ provides section taxonomy [PHQ-M08a].
 
 ---
 
@@ -462,6 +462,6 @@ Step 3.4 is complete when:
 
 ---
 
-**Next Step:** 3.6 — Network Board (depth widgets within My Network)
+**Next Step:** 3.7 — Privacy & Trust System (SEC-001)
 
-*Trace: PRN auto-network → RGE toolkit → personalized landing → invited_by → Trust Graph → journey Connector stage*
+*Trace: PRN network → Relationship widget in PCC → Trust Graph → Morning Brief invite acceptance*

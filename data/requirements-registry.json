@@ -21,7 +21,9 @@
     { "prefix": "ADT", "domain": "Arkansas digital twin" },
     { "prefix": "LSA", "domain": "Living systems architecture" },
     { "prefix": "PEP", "domain": "Participant identity" },
-    { "prefix": "PRM", "domain": "Personal mission" },
+    { "prefix": "PHQ", "domain": "Personal headquarters" },
+    { "prefix": "PCC", "domain": "Personal command center" },
+    { "prefix": "RGE", "domain": "Relationship growth engine" },
     { "prefix": "CPP", "domain": "Civic passport" },
     { "prefix": "STS", "domain": "Status & lifecycle" },
     { "prefix": "ADM", "domain": "Administration" },
@@ -56,7 +58,9 @@
     { "id": "PAGE-SCHOOLS", "route": "/schools", "title": "Institution Directory", "status": "done" },
     { "id": "PAGE-INSTITUTION", "route": "/schools/[slug]", "title": "Institution Hub", "status": "done", "requirement": "CID-001" },
     { "id": "PAGE-COUNTY", "route": "/county/[slug]", "title": "County Youth Hub", "status": "done", "requirement": "CID-001" },
-    { "id": "PAGE-NETWORK", "route": "/dashboard/network", "title": "Personal Network Board", "status": "pending" },
+    { "id": "PAGE-HQ", "route": "/hq", "title": "Personal Headquarters (alias)", "status": "pending", "requirement": "PHQ-001" },
+    { "id": "PAGE-PCC", "route": "/command-center", "title": "Personal Command Center", "status": "pending", "requirement": "PCC-001" },
+    { "id": "PAGE-NETWORK", "route": "/dashboard/network", "title": "Legacy Network Board (redirects to PCC)", "status": "deprecated", "requirement": "PCC-001" },
     { "id": "PAGE-SHARE", "route": "/s/[slug]", "title": "Share / Referral Landing", "status": "pending" },
     { "id": "PAGE-ADMIN", "route": "/admin", "title": "Director Workbench", "status": "done" },
     { "id": "PAGE-SEARCH", "route": "/search", "title": "Statewide Search", "status": "pending" }
@@ -660,7 +664,7 @@
       "description": "Personal Headquarters shell with mission, communities, network stub, journey, opportunities, passport — mobile-first modular dashboard [PHQ-001]",
       "priority": "critical",
       "principle": "OM-L1",
-      "dependencies": ["USR-001", "PHQ-001"],
+      "dependencies": ["USR-001", "PHQ-001", "PCC-001"],
       "related": ["NET-001", "LS-P3", "PRM-001", "CPP-001"],
       "acceptanceCriteria": [
         "Personal Headquarters loads after registration",
@@ -675,7 +679,7 @@
       "trace": {
         "database": "DB-USERS",
         "api": "API-USERS-002",
-        "frontend": "PAGE-HQ",
+        "frontend": "PAGE-PCC",
         "test": "TEST-USR-005",
         "doc": "DOC-USR-002"
       },
@@ -689,7 +693,7 @@
       "priority": "critical",
       "principle": "CP-008",
       "dependencies": ["USR-001", "PHQ-001", "PEP-001"],
-      "related": ["NET-002", "NET-003", "LS-Q3", "REL-M10"],
+      "related": ["NET-002", "NET-003", "LS-Q3", "REL-M10", "PCC-001"],
       "acceptanceCriteria": [
         "Every participant automatically receives a Personal Relationship Network",
         "Relationship philosophy documented — not transactional recruitment",
@@ -705,9 +709,39 @@
       "trace": {
         "database": "DB-NETWORKS",
         "api": "API-NETWORK-001",
-        "frontend": "PAGE-NETWORK",
+        "frontend": "PAGE-PCC",
         "test": "TEST-NET-001",
         "doc": "DOC-NET-001"
+      },
+      "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
+    },
+    {
+      "id": "PCC-001",
+      "title": "Personal Command Center",
+      "purpose": "Daily workspace — participants immediately know what matters today",
+      "description": "PHASE-003.6 modular widget workspace, Morning Brief, six login questions, Mission Board, implements PHQ — retires Network Board",
+      "priority": "critical",
+      "principle": "OM-L1",
+      "dependencies": ["PHQ-001", "NET-001", "RGE-001", "JRN-001", "PRM-001"],
+      "related": ["OIS-001", "USR-002", "CPP-001"],
+      "acceptanceCriteria": [
+        "Personal Command Center defined as primary daily workspace",
+        "Six dashboard questions and core widgets documented",
+        "Action-oriented engagement emphasized",
+        "Morning Brief architecture specified",
+        "Mobile-first modular architecture established",
+        "Blueprint for daily participant experience"
+      ],
+      "futureNotes": "Widget reorder, full Morning Brief orchestrator, calendar sync, messaging widget",
+      "implementationStatus": "done",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": "DB-USERS",
+        "api": "API-USERS-002",
+        "frontend": "PAGE-PCC",
+        "test": "TEST-PCC-001",
+        "doc": "DOC-PCC-001"
       },
       "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
     },

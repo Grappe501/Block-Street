@@ -76,7 +76,7 @@ export function AdminPersonalHeadquarters() {
             </div>
           ))}
         </div>
-        <p className="mt-2 text-xs text-indigo-700">Route: {hq.routes.recommendedPath} [{hq.routes.primary}]</p>
+        <p className="mt-2 text-xs text-indigo-700">Route: {hq.routes.path} [{hq.routes.primary}]</p>
       </div>
 
       <div className="card border-green-200 bg-green-50">

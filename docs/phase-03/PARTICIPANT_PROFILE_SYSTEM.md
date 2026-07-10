@@ -395,7 +395,7 @@ When a participant logs in, they should not feel like they are editing an accoun
 
 **[PHQ-M18d]** If done well, the platform won't feel like a collection of pages. It will feel like a **living workspace** that grows with each participant throughout their organizing journey.
 
-**[PHQ-M18e]** Step 3.6 (Network Board) implements **depth within My Network** — not a competing home page.
+**[PHQ-M18e]** Step 3.6 [Personal Command Center](PERSONAL_COMMAND_CENTER.md) **implements** HQ as the daily widget workspace [PCC-001] — one page, not two homes.
 
 ---
 
@@ -485,6 +485,6 @@ Step 3.3 is complete when:
 
 ---
 
-**Next Step:** 3.6 — Network Board (depth widgets within My Network)
+**Next Step:** 3.7 — Privacy & Trust System (SEC-001)
 
 *Trace: USR-001 registration → PHQ shell → NET-002/003 invite tools → JRN orchestrator → CPP timeline*

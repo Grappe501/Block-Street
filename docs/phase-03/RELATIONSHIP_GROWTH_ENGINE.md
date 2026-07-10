@@ -467,6 +467,6 @@ Step 3.5 is complete when:
 
 ---
 
-**Next Step:** 3.6 — Network Board (depth widgets within My Network)
+**Next Step:** 3.7 — Privacy & Trust System (SEC-001)
 
-*Trace: PRN auto-network → RGE toolkit → personalized landing → invited_by → Trust Graph → journey Connector stage → Civic Passport milestone*
+*Trace: PHQ home → PRN community → RGE expansion → PCC daily workspace → Morning Brief → Mission Board*

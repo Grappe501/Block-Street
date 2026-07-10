@@ -1,0 +1,217 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/phase-03/PERSONAL_COMMAND_CENTER.md",
+  "motto": "Every participant should immediately know what matters today.",
+  "principle": "Command Center — action, awareness, and purpose. Not a passive dashboard.",
+  "purpose": "Primary daily workspace combining identity, relationships, organizing, communication, learning, growth, and opportunities — the page participants open every day.",
+  "phaseArc": {
+    "3.3": "Personal Headquarters — organizing home",
+    "3.4": "Personal Relationship Network — their community",
+    "3.5": "Relationship Growth Engine — how it expands",
+    "3.6": "Personal Command Center — daily workspace"
+  },
+  "hqIntegration": {
+    "headquartersIs": "organizing home concept and section taxonomy [PHQ-001]",
+    "commandCenterIs": "daily operational widget implementation",
+    "onePageNotTwoHomes": true,
+    "aggregator": "assembleCommandCenter(participantId)",
+    "morningBriefAggregator": "assembleMorningBrief(participantId, lastVisitAt)",
+    "hqAggregatorAlias": "assembleHeadquarters → thin wrapper or alias"
+  },
+  "routes": {
+    "primary": "PAGE-PCC",
+    "path": "/command-center",
+    "aliases": ["PAGE-HQ", "/hq"],
+    "retires": ["PAGE-NETWORK", "/dashboard/network"]
+  },
+  "sixQuestions": [
+    {
+      "question": "Who am I?",
+      "elements": ["mission", "communities", "journey", "identity"],
+      "widgets": ["mission", "community", "growth", "header"]
+    },
+    {
+      "question": "What changed?",
+      "elements": ["newMembers", "messages", "events", "committeeActivity", "volunteerOpportunities", "milestones"],
+      "widgets": ["morningBrief", "relationship", "communication", "calendar", "community", "recognition"]
+    },
+    {
+      "question": "What should I do today?",
+      "elements": ["recommendedActions", "pendingInvitations", "volunteerOpportunities", "suggestedPeople", "deadlines"],
+      "widgets": ["missionBoard", "relationship", "calendar", "growth"]
+    },
+    {
+      "question": "Who needs me?",
+      "elements": ["friendsWaiting", "committees", "campus", "county", "mentors", "projects"],
+      "widgets": ["morningBrief", "relationship", "community", "missionBoard"]
+    },
+    {
+      "question": "What have I accomplished?",
+      "elements": ["growth", "volunteerWork", "relationships", "projects", "leadership", "milestones"],
+      "widgets": ["growth", "impact", "relationship", "recognition"]
+    },
+    {
+      "question": "Where am I going?",
+      "elements": ["journey", "goals", "learning", "leadership", "communityBuilderPathway"],
+      "widgets": ["growth", "mission", "learning"]
+    }
+  ],
+  "header": {
+    "elements": ["welcome", "missionSnippet", "journeyStage", "campus", "county", "quickActions", "notificationCenter"]
+  },
+  "widgets": [
+    {
+      "key": "morningBrief",
+      "label": "Morning Brief",
+      "priority": 1,
+      "mobileOrder": 1,
+      "v1": "ruleBased2to3Items",
+      "signatureFeature": true
+    },
+    {
+      "key": "mission",
+      "label": "My Mission",
+      "requirement": "PRM-001",
+      "phqSection": "mission",
+      "mobileOrder": 3,
+      "v1": "core"
+    },
+    {
+      "key": "missionBoard",
+      "label": "Mission Board",
+      "requirement": "OIS-001",
+      "phqSection": "opportunities",
+      "mobileOrder": 2,
+      "v1": "static2to4Cards",
+      "exampleCards": [
+        "Invite one classmate",
+        "Volunteer this weekend",
+        "Welcome two new members",
+        "Join a committee",
+        "Start a project",
+        "Help launch a nearby county"
+      ]
+    },
+    {
+      "key": "community",
+      "label": "Community",
+      "requirement": "REG-001",
+      "phqSection": "communities",
+      "mobileOrder": 4,
+      "v1": "countyCampus"
+    },
+    {
+      "key": "relationship",
+      "label": "Relationship",
+      "requirement": "NET-001",
+      "phqSection": "network",
+      "mobileOrder": 3,
+      "v1": "invitesQrCount",
+      "implements": "PRN depth — formerly Network Board"
+    },
+    {
+      "key": "calendar",
+      "label": "Calendar",
+      "phqSection": "calendar",
+      "mobileOrder": 6,
+      "v1": "placeholder"
+    },
+    {
+      "key": "learning",
+      "label": "Learning",
+      "mobileOrder": 7,
+      "v1": "hiddenPlaceholder",
+      "future": "Civic Academy"
+    },
+    {
+      "key": "impact",
+      "label": "Impact",
+      "phqSection": "impact",
+      "mobileOrder": 5,
+      "v1": "encouragingStub"
+    },
+    {
+      "key": "recognition",
+      "label": "Recognition",
+      "phqSection": "passport",
+      "mobileOrder": 6,
+      "v1": "recentMilestones"
+    },
+    {
+      "key": "communication",
+      "label": "Communication",
+      "mobileOrder": 7,
+      "v1": "placeholder"
+    },
+    {
+      "key": "growth",
+      "label": "Growth",
+      "requirement": "JRN-001",
+      "phqSection": "journey",
+      "mobileOrder": 5,
+      "v1": "stageNextMilestone"
+    }
+  ],
+  "morningBrief": {
+    "description": "Personalized summary on each login — not a notification feed",
+    "maxItems": 7,
+    "orchestrator": "assembleMorningBrief(participantId, lastVisitAt)",
+    "exampleItems": [
+      "Three new students joined your campus yesterday.",
+      "Your county needs volunteers for an event this weekend.",
+      "One friend accepted your invitation.",
+      "A new leadership lesson is available.",
+      "Your committee meets tomorrow.",
+      "You're one milestone away from becoming a Mentor."
+    ],
+    "reinforces": [
+      "Platform is alive",
+      "Community is active",
+      "Meaningful next step always waiting"
+    ],
+    "v1": "welcomeBackInviteReminderCountyLink"
+  },
+  "quickActions": [
+    { "id": "invite", "label": "Invite", "v1": true },
+    { "id": "share_qr", "label": "Share QR", "v1": true },
+    { "id": "find_event", "label": "Find Event", "v1": false },
+    { "id": "volunteer", "label": "Volunteer", "v1": false },
+    { "id": "start_committee", "label": "Start Committee", "v1": false },
+    { "id": "create_project", "label": "Create Project", "v1": false },
+    { "id": "message_friend", "label": "Message Friend", "v1": false },
+    { "id": "search_arkansas", "label": "Search Arkansas", "v1": true }
+  ],
+  "mobilePhilosophy": {
+    "primary": true,
+    "thumbZone": ["headerActions", "quickActionsBar"],
+    "widgetCollapse": "accordion",
+    "mobilePriorityOrder": ["morningBrief", "missionBoard", "relationship", "community", "growth", "others"]
+  },
+  "personalization": {
+    "widgetOrder": "future",
+    "favorites": "future",
+    "theme": "future",
+    "notificationPreferences": "step_3.10",
+    "missionPriorities": "editMission",
+    "privacy": "step_3.7"
+  },
+  "v1Scope": {
+    "shell": true,
+    "morningBrief": "ruleBased",
+    "widgets": ["mission", "missionBoard", "community", "relationship", "growth", "impactStub", "recognitionMilestones"],
+    "placeholders": ["calendar", "learning", "communication"],
+    "route": "/command-center"
+  },
+  "implementation": {
+    "pattern": "independent widget registry",
+    "files": [
+      "src/app/(participant)/command-center/page.tsx",
+      "src/components/pcc/CommandCenterShell.tsx",
+      "src/components/pcc/MorningBrief.tsx",
+      "src/components/pcc/widgets/",
+      "src/lib/pcc/assembleCommandCenter.ts",
+      "src/lib/pcc/assembleMorningBrief.ts"
+    ],
+    "legacyRedirect": "/dashboard/network → /command-center"
+  }
+}
