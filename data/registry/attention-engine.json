@@ -1,22 +1,268 @@
 {
-  "version": "1.0.0",
+  "version": "2.0.0",
   "documentId": "VOLUME-003.10",
   "requirementId": "PBA-011",
   "docPath": "docs/volume-03/ATTENTION_ENGINE.md",
-  "status": "pending",
+  "status": "canonical",
   "priority": "critical",
   "lastUpdated": "2026-07-10",
-  "guidingPrinciple": "Behavior is governed, not improvised.",
-  "defines": [
+  "guidingPrinciple": "Earn attention. Never abuse it.",
+  "attentionPhilosophy": {
+    "notMaximizeNotifications": true,
+    "maximizeMeaningfulEngagement": true,
+    "attentionAsSharedResource": true,
+    "trustedBecauseCommunicatesWisely": true,
+    "intentionalNotReactive": true,
+    "everyInterruptionJustified": true
+  },
+  "attentionArchitecture": {
+    "layers": [
+      "Event",
+      "BusinessRules",
+      "AttentionEvaluation",
+      "PriorityAssessment",
+      "ChannelSelection",
+      "TimingOptimization",
+      "Delivery",
+      "OutcomeMeasurement"
+    ],
+    "layerCount": 8
+  },
+  "preDeliveryQuestions": [
+    "IsThisImportant",
+    "IsThisUrgent",
+    "IsThisRelevant",
+    "IsThisTheBestTime",
+    "RecentlyReceivedSimilarMessages",
+    "CouldThisWaitForDigest",
+    "ShouldAnotherPersonCommunicate"
+  ],
+  "preDeliveryQuestionCount": 7,
+  "communicationCategoryCount": 6,
+  "communicationCategories": [
+    {
+      "id": "critical",
+      "name": "Critical Notifications",
+      "examples": ["SecurityAlerts", "MajorWorkflowApprovals", "MissionEmergencies", "SafetyInformation", "SystemOutages"],
+      "bypassesMostBatching": true,
+      "respectsSafetyPolicies": true
+    },
+    {
+      "id": "operational",
+      "name": "Operational Notifications",
+      "examples": ["VolunteerAssignments", "UpcomingMeetings", "MissionUpdates", "TaskDeadlines", "ApprovalRequests"]
+    },
+    {
+      "id": "community",
+      "name": "Community Notifications",
+      "examples": ["CommunityAnnouncements", "Celebrations", "NewOpportunities", "MemberMilestones", "PartnershipNews"]
+    },
+    {
+      "id": "knowledge",
+      "name": "Knowledge Notifications",
+      "examples": ["NewPlaybooks", "Stories", "Lessons", "TrainingResources", "CommunityBrainUpdates"]
+    },
+    {
+      "id": "growth",
+      "name": "Growth Notifications",
+      "examples": ["VolunteerRecommendations", "LeadershipOpportunities", "MentorshipInvitations", "SuggestedCommunities"]
+    },
+    {
+      "id": "recognition",
+      "name": "Recognition Notifications",
+      "examples": ["VolunteerAnniversaries", "MissionMilestones", "LeadershipAchievements", "CommunityAppreciation"]
+    }
+  ],
+  "attentionObjectFields": [
+    "NotificationId",
+    "Category",
+    "SourceEvent",
     "Priority",
-    "Timing",
-    "Batching",
+    "Audience",
+    "RecommendedChannel",
+    "Expiration",
+    "BusinessContext",
+    "CommunityContext",
+    "Visibility",
+    "Version"
+  ],
+  "attentionObjectFieldCount": 11,
+  "prioritySignals": [
+    "SafetyImpact",
+    "MissionImpact",
+    "LeadershipRelevance",
+    "CalendarProximity",
+    "CommunityImportance",
+    "ParticipantPreferences",
+    "WorkflowUrgency"
+  ],
+  "prioritySignalCount": 7,
+  "attentionBudgetTracks": [
+    "MessagesReceived",
+    "MessagesAcknowledged",
+    "IgnoredMessages",
+    "RecentInterruptions",
+    "DigestParticipation",
+    "PreferredCommunicationRhythm"
+  ],
+  "attentionBudgetTrackCount": 6,
+  "communicationChannels": [
+    "InAppNotifications",
+    "Email",
+    "SMS",
+    "PushNotifications",
+    "Digest",
+    "CalendarUpdates",
+    "CommunityFeeds",
+    "ExternalIntegrations"
+  ],
+  "communicationChannelCount": 8,
+  "digestTypes": [
+    "DailyDigest",
+    "WeeklyDigest",
+    "CommunityDigest",
+    "LeadershipDigest",
+    "MissionDigest",
+    "CountyDigest"
+  ],
+  "digestTypeCount": 6,
+  "quietHourTypes": [
     "QuietHours",
-    "Escalation",
-    "CommunicationRouting",
-    "AttentionScoring",
-    "DigestGeneration"
+    "FocusPeriods",
+    "MeetingTimes",
+    "Vacation",
+    "DoNotDisturbSchedules"
+  ],
+  "quietHourTypeCount": 5,
+  "contextAwarenessFactors": [
+    "CurrentCalendar",
+    "UpcomingMeetings",
+    "MissionDeadlines",
+    "RecentActivity",
+    "VolunteerWorkload",
+    "TimeZone"
+  ],
+  "contextAwarenessFactorCount": 6,
+  "escalationTriggers": [
+    "ApprovalOverdue",
+    "MissionRiskIncreasing",
+    "CriticalVolunteerShortage",
+    "LeadershipResponseRequired"
+  ],
+  "escalationTriggerCount": 4,
+  "attentionScoreMetrics": [
+    "InformationOverload",
+    "ResponseQuality",
+    "CommunityParticipation",
+    "VolunteerSatisfaction",
+    "NotificationUsefulness",
+    "TrustInCommunication"
+  ],
+  "attentionScoreMetricCount": 6,
+  "eventLedgerCommunicationTypes": [
+    "NotificationQueued",
+    "NotificationDelivered",
+    "DigestGenerated",
+    "ReminderAcknowledged",
+    "EscalationInitiated"
+  ],
+  "eventLedgerCommunicationTypeCount": 5,
+  "aiCapabilities": [
+    "SummarizeUpdates",
+    "RecommendBatching",
+    "DraftAnnouncements",
+    "IdentifyNotificationFatigue",
+    "SuggestBetterTiming",
+    "GeneratePersonalizedDigests"
+  ],
+  "communicationAnalyticsMetrics": [
+    "DeliverySuccess",
+    "Acknowledgment",
+    "UsefulVsIgnoredMessages",
+    "DigestEngagement",
+    "CommunityParticipation",
+    "AttentionHealth"
+  ],
+  "communicationAnalyticsMetricCount": 6,
+  "accessibilitySupports": [
+    "LanguagePreferences",
+    "ReadingAccessibility",
+    "AlternativeFormats",
+    "ReducedInterruptions",
+    "AccessibleTiming"
+  ],
+  "accessibilitySupportCount": 5,
+  "attentionIntelligenceLayer": {
+    "name": "Attention Intelligence Layer",
+    "abbreviation": "AIL",
+    "purpose": "Communication governor between every event producer and every channel — preserves attention quality over notification volume",
+    "allRequestsPassThrough": true,
+    "noDirectSubsystemDelivery": true,
+    "evaluationDimensions": [
+      {
+        "id": "context",
+        "name": "Context",
+        "evaluates": ["CurrentActivity", "Calendar", "CommunityParticipation", "MissionInvolvement"]
+      },
+      {
+        "id": "importance",
+        "name": "Importance",
+        "evaluates": ["Safety", "Governance", "MissionCriticality", "PersonalRelevance"]
+      },
+      {
+        "id": "history",
+        "name": "History",
+        "evaluates": ["RecentNotifications", "ResponsePatterns", "DigestParticipation", "AttentionBudgetStatus"]
+      },
+      {
+        "id": "relationships",
+        "name": "Relationships",
+        "evaluates": ["CommunityMembership", "LeadershipRole", "MentorRelationships", "VolunteerCommitments"]
+      },
+      {
+        "id": "deliveryStrategy",
+        "name": "Delivery Strategy",
+        "evaluates": ["ImmediateNotification", "ScheduledReminder", "DailyDigest", "WeeklyDigest", "CommunityFeed", "NoNotification"]
+      },
+      {
+        "id": "explainability",
+        "name": "Explainability",
+        "evaluates": ["WhyDelivered", "ChannelSelected", "TimeChosen", "BusinessRulesApplied", "PreferencesHonored"]
+      }
+    ],
+    "evaluationDimensionCount": 6,
+    "philosophy": "Treats participant attention with the same care as community knowledge, leadership, and governance"
+  },
+  "domainSchemaMapping": {
+    "schema": "PlatformBehavior",
+    "entities": [
+      "AttentionNotification",
+      "AttentionBudget",
+      "DigestBatch",
+      "QuietHoursPolicy",
+      "EscalationPolicy",
+      "AttentionScore",
+      "AttentionIntelligenceLayer"
+    ]
+  },
+  "projectionIntegrations": {
+    "automationEnginePath": "data/registry/automation-engine.json",
+    "workflowEnginePath": "data/registry/workflow-engine.json",
+    "businessRulesPath": "data/registry/business-rule-engine.json",
+    "eventLedgerPath": "data/registry/event-data-model.json",
+    "timeCalendarPath": "data/registry/time-calendar-data-model.json",
+    "aiKnowledgePath": "data/registry/ai-knowledge-model.json",
+    "securityPrivacyPath": "data/registry/security-privacy-model.json"
+  },
+  "burtImplementationGuidance": [
+    "Treat attention as a finite resource",
+    "Separate notification generation from delivery",
+    "Build intelligent digesting and batching",
+    "Respect participant preferences and quiet hours",
+    "Integrate with calendars, workflows, and Business Rules",
+    "Keep every communication explainable",
+    "Consult Attention Intelligence Layer spec before communication-facing features"
   ],
   "acceptanceCriteria": "AC-131",
-  "acceptanceCriteriaMet": false
+  "acceptanceCriteriaMet": true
 }
