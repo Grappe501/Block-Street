@@ -119,7 +119,7 @@
       { "id": "V4.14", "name": "Experience Orchestrator [UXB-015]", "status": "done", "notes": "Experience Operating System, 10 layers, 4 runtime loops — Volume 4 orchestrator AC-150" },
       { "id": "V5.1", "name": "Platform Services Architecture [PSI-002]", "status": "done", "notes": "Platform Service Mesh, 27 core services, LocalBrain first-class — AC-151" },
       { "id": "V5.2", "name": "API Architecture [PSI-003]", "status": "done", "notes": "Constitutional API Gateway, 6 API categories, 7 communication styles — AC-152" },
-      { "id": "V5.3", "name": "Integration Architecture [PSI-004]", "status": "pending", "notes": "External connectors, governed adapters" },
+      { "id": "V5.3", "name": "Integration Architecture [PSI-004]", "status": "done", "notes": "Universal Connector Framework, 13 categories, connector marketplace — AC-153" },
       { "id": "V5.4", "name": "Event Streaming Architecture [PSI-005]", "status": "pending", "notes": "Community Event Ledger, event bus" },
       { "id": "V5.5", "name": "Synchronization Architecture [PSI-006]", "status": "pending", "notes": "Local-first sync, conflict resolution" },
       { "id": "V5.6", "name": "Search & Discovery Architecture [PSI-007]", "status": "pending", "notes": "Federated search, semantic retrieval" },

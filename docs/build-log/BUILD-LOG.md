@@ -18,6 +18,22 @@
 
 ---
 
+## 2026-07-10 — Volume 5.3 Integration Architecture [PSI-004 · AC-153]
+
+**Document:** `docs/volume-05/INTEGRATION_ARCHITECTURE.md` · **Registry:** `data/registry/integration-architecture.json`
+
+### What Changed
+
+- **Guiding principle:** *Connect everything. Own only what should be owned.*
+- Constitutional bridges to external platforms — governed adapters not one-off integrations
+- **13 integration categories** — productivity, communication, email, SMS/voice, mapping, government data, identity, learning, payment, AI, file storage, CRM, social publishing
+- Connector model, canonical data model, 7 synchronization modes, conflict resolution
+- Security, observability, LocalBrain integration, AI through Platform Services only
+- **Universal Connector Framework (UCF)** — 8-stage pipeline, connector manifest, marketplace, 8 certification criteria
+- Umbrella PSI-001 · platform-services-integration-bible 3/14 · Volume 5 in progress
+
+---
+
 ## 2026-07-10 — Volume 5.2 API Architecture [PSI-003 · AC-152]
 
 **Document:** `docs/volume-05/API_ARCHITECTURE.md` · **Registry:** `data/registry/api-architecture-volume5.json`

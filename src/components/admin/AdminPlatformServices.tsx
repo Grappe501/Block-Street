@@ -3,6 +3,7 @@
 import psi from "../../../data/registry/platform-services-integration-bible.json";
 import psa from "../../../data/registry/platform-services-architecture.json";
 import api from "../../../data/registry/api-architecture-volume5.json";
+import integ from "../../../data/registry/integration-architecture.json";
 
 type ServiceReg = {
   acceptanceCriteria: string;
@@ -12,26 +13,34 @@ type ServiceReg = {
   servicePrincipleCount?: number;
   apiPrincipleCount?: number;
   apiCategoryCount?: number;
+  integrationCategoryCount?: number;
+  integrationPrincipleCount?: number;
   platformServiceMesh?: { responsibilityCount: number; abbreviation: string };
   constitutionalApiGateway?: { responsibilityCount: number; abbreviation: string; gatewayPipeline?: { stageCount: number } };
+  universalConnectorFramework?: { abbreviation: string; connectorPipeline?: { stageCount: number }; connectorCertification?: { criteriaCount: number } };
   serviceArchitecture?: { layerCount: number };
   apiArchitecture?: { layerCount: number };
+  integrationArchitecture?: { layerCount: number };
   localBrainCompatibility?: { localBrainFirstClassRuntime: boolean };
   localBrainFederation?: { explicitIntegration: boolean };
+  localBrainIntegration?: { someIntegrationsExecuteEntirelyInLocalBrain: boolean };
 };
 
 const FEATURED_SUBTITLES: Record<string, string> = {
   "5.1": "Platform Services",
   "5.2": "API Layer",
+  "5.3": "Integrations",
 };
 
 const SERVICE_CARDS: { step: string; label: string; reg: ServiceReg; cardClass: string; metaClass: string; titleClass: string; featured?: boolean }[] = [
+  { step: "5.3", label: "Universal Connector Framework", reg: integ, cardClass: "border-stone-300 bg-stone-50", metaClass: "text-stone-700", titleClass: "text-stone-950", featured: true },
   { step: "5.2", label: "Constitutional API Gateway", reg: api, cardClass: "border-zinc-300 bg-zinc-50", metaClass: "text-zinc-700", titleClass: "text-zinc-950", featured: true },
   { step: "5.1", label: "Platform Service Mesh", reg: psa, cardClass: "border-slate-300 bg-slate-50", metaClass: "text-slate-700", titleClass: "text-slate-950", featured: true },
 ];
 
 export function AdminPlatformServices() {
   const pendingSteps = psi.steps.filter((s) => s.status === "pending").length;
+  const featuredStepIds = new Set(SERVICE_CARDS.map((c) => c.step));
 
   return (
     <div className="space-y-6">
@@ -58,7 +67,12 @@ export function AdminPlatformServices() {
             <p className={`mt-2 text-xs ${metaClass}`}>
               {reg.acceptanceCriteria} · {reg.status}
             </p>
-            {reg.constitutionalApiGateway ? (
+            {reg.universalConnectorFramework ? (
+              <p className={`mt-1 text-xs ${metaClass}`}>
+                {reg.integrationCategoryCount ?? 0} integration categories · {reg.integrationPrincipleCount ?? 0} principles · {reg.integrationArchitecture?.layerCount ?? 0} integration layers · {reg.universalConnectorFramework.connectorPipeline?.stageCount ?? 0} UCF pipeline stages · {reg.universalConnectorFramework.connectorCertification?.criteriaCount ?? 0} certification criteria
+                {reg.localBrainIntegration?.someIntegrationsExecuteEntirelyInLocalBrain ? " · LocalBrain integrations" : ""}
+              </p>
+            ) : reg.constitutionalApiGateway ? (
               <p className={`mt-1 text-xs ${metaClass}`}>
                 {reg.apiCategoryCount ?? 0} API categories · {reg.apiPrincipleCount ?? 0} principles · {reg.apiArchitecture?.layerCount ?? 0} request layers · {reg.constitutionalApiGateway.gatewayPipeline?.stageCount ?? 0} gateway stages · {reg.constitutionalApiGateway.responsibilityCount} {reg.constitutionalApiGateway.abbreviation} responsibilities
                 {reg.localBrainFederation?.explicitIntegration ? " · LocalBrain explicit" : ""}
@@ -73,7 +87,7 @@ export function AdminPlatformServices() {
         ))}
 
         {psi.steps
-          .filter((s) => s.id !== "5.1" && s.id !== "5.2")
+          .filter((s) => !featuredStepIds.has(s.id))
           .map((s) => (
             <div key={s.id} className="card border-slate-200 bg-white opacity-75">
               <p className="text-xs font-semibold uppercase text-slate-500">VOLUME-00{s.id.replace(".", "-")}</p>
