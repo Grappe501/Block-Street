@@ -96,7 +96,7 @@
       { "id": "V3.5", "name": "Mission Execution Engine [PBA-006]", "status": "done", "notes": "Mission Operations Center, 10 lifecycle stages, reflection, knowledge capture — AC-126" },
       { "id": "V3.6", "name": "Volunteer Experience Engine [PBA-007]", "status": "done", "notes": "Volunteer Success Center, 10 lifecycle stages, wellness, matching — AC-127" },
       { "id": "V3.7", "name": "Leadership Development Engine [PBA-008]", "status": "done", "notes": "Leadership Academy, 9 lifecycle stages, pathways, succession — AC-128" },
-      { "id": "V3.8", "name": "Community Intelligence Engine [PBA-009]", "status": "pending", "notes": "Recommendations, forecasting, explainability — AC-129" },
+      { "id": "V3.8", "name": "Community Intelligence Engine [PBA-009]", "status": "done", "notes": "Community Intelligence Command Center, 8 domains, explainability — AC-129" },
       { "id": "V3.9", "name": "Automation Engine [PBA-010]", "status": "pending", "notes": "Triggers, actions, explainable automation — AC-130" },
       { "id": "V3.10", "name": "Notification & Attention Engine [PBA-011]", "status": "pending", "notes": "Priority, batching, digests — AC-131" },
       { "id": "V3.11", "name": "Governance Engine [PBA-012]", "status": "pending", "notes": "Constitution, approval chains, voting — AC-132" },

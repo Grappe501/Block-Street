@@ -4582,28 +4582,35 @@
     {
       "id": "PBA-009",
       "title": "Community Intelligence Engine — Volume 3.8",
-      "purpose": "Operational intelligence and recommendations",
-      "description": "VOLUME-003.8 health, growth, leadership, relationship intelligence",
+      "purpose": "Advisory intelligence converting canonical data into explainable understanding",
+      "description": "VOLUME-003.8 — Community Intelligence Command Center, 8 intelligence domains, pattern recognition, recommendations, opportunity and risk detection, learning loop",
       "priority": "critical",
       "principle": "CP-001",
       "dependencies": [
         "PBA-008",
+        "DAB-006",
+        "DAB-007",
         "DAB-012",
         "DAB-013"
       ],
       "related": [
-        "PBA-010"
+        "PBA-010",
+        "PBA-013",
+        "PBA-014",
+        "ENG-008"
       ],
       "acceptanceCriteria": [
-        "Engine philosophy documented",
-        "Operational behaviors defined",
-        "Volume 2 integration specified",
-        "Implementation blueprint for engine"
+        "Intelligence philosophy documented",
+        "Intelligence domains defined",
+        "Pattern recognition, recommendation, opportunity, and risk models established",
+        "Community Health, Digital Twin, Knowledge Graph, calendar, and AI integrations incorporated",
+        "Community Intelligence Command Center specified",
+        "Complete blueprint for Community Intelligence Engine"
       ],
-      "futureNotes": "Scaffold — pending canonical build step",
-      "implementationStatus": "pending",
+      "futureNotes": "Guiding principle: Intelligence should illuminate decisions—not replace human judgment.",
+      "implementationStatus": "done",
       "testingStatus": "pending",
-      "documentationStatus": "pending",
+      "documentationStatus": "done",
       "trace": {
         "database": "DB-COS",
         "api": null,
@@ -4613,7 +4620,7 @@
       },
       "versionHistory": {
         "created": "2026-07-10",
-        "implemented": null
+        "implemented": "2026-07-10"
       }
     },
     {

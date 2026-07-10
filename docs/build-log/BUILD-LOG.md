@@ -18,6 +18,23 @@
 
 ---
 
+## 2026-07-10 — Volume 3.8 Community Intelligence Engine [PBA-009 · AC-129]
+
+**Document:** `docs/volume-03/COMMUNITY_INTELLIGENCE_ENGINE.md` · **Registry:** `data/registry/community-intelligence-engine.json`
+
+### What Changed
+
+- **Guiding principle:** *Intelligence should illuminate decisions—not replace human judgment.*
+- Converts information into understanding — advisory, evidence-based, never black box
+- **7-layer intelligence architecture:** Canonical Data through Human Decision
+- **8 intelligence domains:** Community through Growth
+- Pattern recognition, recommendations, opportunity and risk detection, learning loop
+- Community Health Observatory, Digital Twin, knowledge graph, calendar, and AI integrations
+- **Community Intelligence Command Center (CICC)** — strategic workspace with 8 domains
+- Admin Volume 3 tab · requirements PBA-009 updated · Volume 3: 8/14 complete
+
+---
+
 ## 2026-07-10 — Volume 3.7 Leadership Development Engine [PBA-008 · AC-128]
 
 **Document:** `docs/volume-03/LEADERSHIP_DEVELOPMENT_ENGINE.md` · **Registry:** `data/registry/leadership-development-engine.json`
