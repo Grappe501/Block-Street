@@ -191,7 +191,7 @@ Alex
 
 **[PRN-M08b]** Depth is unlimited; breadth celebrates **connection**, not rank.
 
-**[PRN-M08c]** Cross-ref Step 3.5 Recruitment Engine for attribution analytics and welcome flow.
+**[PRN-M08c]** Cross-ref Step 3.5 [Relationship Growth Engine](RELATIONSHIP_GROWTH_ENGINE.md) for attribution analytics and welcome flow.
 
 ---
 
@@ -402,7 +402,7 @@ TrustGraph
 | Auto network on registration | `NET-{uuid}`, slug, QR |
 | Share URL | `/s/{slug}` [NET-002] |
 | QR code | Display + copy [NET-003] |
-| Invite attribution | `invited_by` edge [Step 3.5] |
+| Invite attribution | `invited_by` edge [RGE-001] |
 | Network dashboard | Size, invite list, share tools |
 | Relationship timeline | invite_sent + joined |
 | Trust Graph | Edge storage; basic context |
@@ -462,6 +462,6 @@ Step 3.4 is complete when:
 
 ---
 
-**Next Step:** 3.5 — Recruitment Engine (NET-002/003 attribution depth)
+**Next Step:** 3.6 — Network Board (depth widgets within My Network)
 
-*Trace: USR-001 registration → createPersonalNetwork() → invited_by edges → Trust Graph → HQ My Network → Civic Passport timeline*
+*Trace: PRN auto-network → RGE toolkit → personalized landing → invited_by → Trust Graph → journey Connector stage*

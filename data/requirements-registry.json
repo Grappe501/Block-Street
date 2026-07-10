@@ -712,24 +712,54 @@
       "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
     },
     {
+      "id": "RGE-001",
+      "title": "Relationship Growth Engine",
+      "purpose": "Self-expanding platform through trusted relationships — not campaigns",
+      "description": "PHASE-003.5 invitation toolkit, personalized landing, referral attribution, invitation lifecycle, Organizing Circles, healthy growth principles, growth milestones",
+      "priority": "critical",
+      "principle": "CP-008",
+      "dependencies": ["NET-001", "PHQ-001", "USR-001"],
+      "related": ["NET-002", "NET-003", "JRN-001", "CPP-001"],
+      "acceptanceCriteria": [
+        "Relationship Growth Engine philosophy documented",
+        "Invitation methods and lifecycle defined",
+        "Personalized invitation experiences incorporated",
+        "Healthy growth principles established",
+        "Organizing Circles architecture specified",
+        "Blueprint for relationship-driven expansion"
+      ],
+      "futureNotes": "Email/SMS/social channels, full Organizing Circles UI, smart recommendations",
+      "implementationStatus": "done",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": "DB-REFERRALS",
+        "api": "API-NETWORK-002",
+        "frontend": "PAGE-SHARE",
+        "test": "TEST-RGE-001",
+        "doc": "DOC-RGE-001"
+      },
+      "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
+    },
+    {
       "id": "NET-002",
       "title": "Share Link & Invitation System",
       "purpose": "Answer 'How do I invite others?' — personal, relationship-first referral URL",
-      "description": "Unique share link /s/[slug] for every participant; invitation philosophy emphasizes relationship not marketing [PRN-M11]",
+      "description": "Unique share link /s/[slug]; personalized landing with inviter context; relationship-first invitation [RGE-M07, PRN-M11]",
       "priority": "critical",
       "principle": "CP-008",
-      "dependencies": ["USR-001"],
-      "related": ["NET-003", "NET-001"],
+      "dependencies": ["USR-001", "NET-001", "RGE-001"],
+      "related": ["NET-003", "NET-001", "PHQ-001"],
       "acceptanceCriteria": [
         "Unique slug generated per user on network creation",
         "Share link resolves to personal landing page with inviter context",
         "Link copyable from My Network section",
         "Invitation copy feels personal not marketing"
       ],
-      "futureNotes": "Social share metadata, editable invite templates",
+      "futureNotes": "Social share metadata, editable invite templates, email/SMS plugins",
       "implementationStatus": "in_progress",
       "testingStatus": "pending",
-      "documentationStatus": "approved",
+      "documentationStatus": "done",
       "trace": {
         "database": "DB-NETWORKS",
         "api": "API-NETWORK-002",
@@ -743,10 +773,10 @@
       "id": "NET-003",
       "title": "QR Code — Portable Organizing Identity",
       "purpose": "Mobile-first relationship invitation tool — participant's portable organizing identity",
-      "description": "Dynamic QR code encoding personal share link, displayable in My Network; future printable cards and event check-in [PRN-M10]",
+      "description": "Dynamic QR encoding share link; portable organizing identity; invitation lifecycle via QR scan [RGE-M05, PRN-M10]",
       "priority": "critical",
       "principle": "CP-008",
-      "dependencies": ["NET-002", "NET-001"],
+      "dependencies": ["NET-002", "NET-001", "RGE-001"],
       "related": ["NET-001", "PHQ-001"],
       "acceptanceCriteria": [
         "QR code generated automatically with share link",
@@ -754,10 +784,10 @@
         "Displayable and copyable from My Network",
         "One-tap share from HQ Quick Actions"
       ],
-      "futureNotes": "Print-ready formats, downloadable graphics, event check-in",
+      "futureNotes": "Print-ready formats, downloadable graphics, event check-in, NFC",
       "implementationStatus": "in_progress",
       "testingStatus": "pending",
-      "documentationStatus": "approved",
+      "documentationStatus": "done",
       "trace": {
         "database": "DB-REFERRALS",
         "api": "API-NETWORK-002",

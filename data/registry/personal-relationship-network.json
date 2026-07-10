@@ -167,7 +167,7 @@
     "autoNetworkOnRegistration": true,
     "shareUrl": true,
     "qrCode": true,
-    "inviteAttribution": "step_3.5",
+    "inviteAttribution": "RGE-001",
     "networkDashboard": "sizeInviteListShareTools",
     "relationshipTimeline": "inviteSentJoined",
     "trustGraph": "edgeStorage",

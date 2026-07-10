@@ -1,0 +1,172 @@
+{
+  "version": "1.0.0",
+  "docPath": "docs/phase-03/RELATIONSHIP_GROWTH_ENGINE.md",
+  "motto": "Communities grow one trusted relationship at a time.",
+  "principle": "Help participants invite people they already trust — not acquire users through campaigns.",
+  "purpose": "Self-expanding platform through relationships — invitation toolkit, attribution, lifecycle, healthy growth, and Organizing Circles.",
+  "coreQuestion": "How do we help participants invite people they already trust?",
+  "notThisQuestion": "How do we acquire more users?",
+  "philosophy": {
+    "objectiveNot": "viral growth",
+    "objectiveIs": "healthy growth",
+    "foundations": ["trust", "friendship", "sharedPurpose", "service", "collaboration"]
+  },
+  "antiPatterns": [
+    { "avoid": "Acquire users", "prefer": "Invite people you trust" },
+    { "avoid": "Campaign blast mindset", "prefer": "One relationship at a time" },
+    { "avoid": "Viral loops / spam incentives", "prefer": "Welcoming, mentoring, serving" },
+    { "avoid": "Generic signup pages", "prefer": "Personalized introductions" }
+  ],
+  "invitationToolkit": {
+    "autoOnRegistration": true,
+    "assets": [
+      { "id": "inviteUrl", "requirement": "NET-002", "v1": true },
+      { "id": "qrCode", "requirement": "NET-003", "v1": true },
+      { "id": "shareCard", "v1": "basicPreview" },
+      { "id": "digitalBusinessCard", "v1": false },
+      { "id": "printableMaterials", "v1": false }
+    ],
+    "surfacedIn": ["hq.quickActions", "hq.network"]
+  },
+  "invitationMethods": [
+    { "method": "qrCode", "v1": true },
+    { "method": "directLink", "v1": true },
+    { "method": "inPersonEvents", "v1": true },
+    { "method": "printedMaterials", "v1": false },
+    { "method": "email", "v1": false },
+    { "method": "textMessage", "v1": false },
+    { "method": "socialSharing", "v1": false },
+    { "method": "nfcCards", "v1": false }
+  ],
+  "invitationExperience": {
+    "tone": "belonging not marketing",
+    "examples": [
+      "Join my organizing network.",
+      "Let's strengthen our campus.",
+      "Help build our county.",
+      "Come organize with us."
+    ],
+    "copyEditable": true
+  },
+  "personalizedLanding": {
+    "route": "/s/{slug}",
+    "pageId": "PAGE-SHARE",
+    "elements": [
+      { "field": "inviterFirstName", "privacy": "always" },
+      { "field": "campusOrCounty", "privacy": "publicAffiliation" },
+      { "field": "personalMission", "privacy": "inviterOptional" },
+      { "field": "whyTheyJoined", "privacy": "inviterOptional" },
+      { "field": "howTheyHopeToHelp", "privacy": "inviterOptional" },
+      { "field": "sharedCommunity", "privacy": "contextual" }
+    ],
+    "cta": "Join {name}'s network",
+    "v1Minimum": ["inviterName", "countyOrCampus", "joinCta"]
+  },
+  "referralAttribution": {
+    "alwaysVisible": true,
+    "fields": ["whoInvitedWhom", "when", "how", "invitationStatus", "futureCampaignId"],
+    "edge": "invited_by",
+    "auditTable": "referrals",
+    "hook": "createReferralAttribution(inviterId, inviteeId, method)"
+  },
+  "invitationLifecycle": {
+    "states": [
+      { "key": "created", "v1": "implicit" },
+      { "key": "shared", "v1": "optional" },
+      { "key": "viewed", "v1": true },
+      { "key": "registered", "v1": true },
+      { "key": "verified", "v1": false },
+      { "key": "connected", "v1": true },
+      { "key": "community_member", "v1": "journeySignal" },
+      { "key": "future_organizer", "v1": "journeySignal" }
+    ],
+    "appendOnlyEvents": true
+  },
+  "communityGrowth": {
+    "layers": ["personalNetwork", "campusNetwork", "countyNetwork", "statewideGrowth"],
+    "oneInviteMultipleCommunities": true
+  },
+  "growthAnalytics": {
+    "privateToParticipant": true,
+    "noPublicLeaderboard": true,
+    "metrics": [
+      "newConnections",
+      "activeRelationships",
+      "communitiesGrowing",
+      "invitationSuccess",
+      "mentorshipOpportunities",
+      "suggestedFollowUp"
+    ],
+    "v1": ["connectionCount", "recentInvites", "viewedRegisteredCounts"]
+  },
+  "healthyGrowth": {
+    "reward": ["welcoming", "helping", "mentoring", "supportingCommunities", "lastingRelationships"],
+    "avoid": ["spamIncentives", "rawInviteCountPoints", "publicRecruitLeaderboards", "automatedBulkMessaging"]
+  },
+  "growthMilestones": [
+    { "id": "first_invitation", "label": "First invitation", "v1": true },
+    { "id": "first_new_participant", "label": "First new participant", "v1": true },
+    { "id": "five_connected", "label": "Five connected friends", "v1": false },
+    { "id": "first_committee", "label": "First committee formed", "v1": false },
+    { "id": "first_volunteer_recruited", "label": "First volunteer recruited", "v1": false },
+    { "id": "first_mentorship", "label": "First mentorship", "v1": false },
+    { "id": "county_milestone", "label": "County milestone", "v1": false },
+    { "id": "campus_milestone", "label": "Campus milestone", "v1": false }
+  ],
+  "organizingCircles": {
+    "description": "Private participant-owned groups to organize real-life relationships for outreach",
+    "signatureFeature": true,
+    "privateToParticipant": true,
+    "notSurveillanceOrMassMessaging": true,
+    "idPattern": "CIR-{uuid}",
+    "exampleCircles": [
+      "Friends",
+      "Classmates",
+      "Dorm",
+      "Student Organization",
+      "Church",
+      "Coworkers",
+      "Family",
+      "Volunteer Team",
+      "Debate Club",
+      "Intramural Team",
+      "Environmental Group"
+    ],
+    "futureQuestions": [
+      "Who from my Biology class hasn't joined yet?",
+      "Which volunteer friends are interested in this project?",
+      "Who in my church circle is already active?"
+    ],
+    "v1": "schemaAndTemplatesPlaceholder"
+  },
+  "integration": {
+    "registrationHookChain": [
+      "createPersonalNetwork",
+      "createInvitationToolkit",
+      "attributeReferral",
+      "recordLifecycleEvent",
+      "checkGrowthMilestones"
+    ],
+    "aggregator": "assembleGrowthSection(participantId)",
+    "parentAggregators": ["assembleNetworkSection", "assembleHeadquarters"]
+  },
+  "v1Scope": {
+    "toolkit": "urlQrCopyLink",
+    "landing": "inviterNameCountyCampusCta",
+    "attribution": "invited_byAndReferrals",
+    "lifecycle": "viewedRegistered",
+    "analytics": "basicCounts",
+    "milestones": "firstInvitationFirstAccepted",
+    "circles": "schemaPlaceholder"
+  },
+  "implementation": {
+    "files": [
+      "src/lib/growth/createInvitationToolkit.ts",
+      "src/lib/growth/attributeReferral.ts",
+      "src/lib/growth/trackInvitationLifecycle.ts",
+      "src/lib/growth/assembleGrowthSection.ts",
+      "src/app/s/[slug]/page.tsx"
+    ],
+    "apis": ["API-NETWORK-001", "API-NETWORK-002", "API-USERS-001"]
+  }
+}

@@ -445,6 +445,6 @@ Step 3.2 is complete when:
 
 ---
 
-**Next Step:** 3.5 — Recruitment Engine (NET-002/003)
+**Next Step:** 3.6 — Network Board (depth widgets within My Network)
 
 *Trace: USR-001 registration → PHQ shell → NET-002/003 invite tools → JRN orchestrator → CPP timeline*

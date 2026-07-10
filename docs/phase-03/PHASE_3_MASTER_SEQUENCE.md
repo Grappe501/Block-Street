@@ -39,8 +39,8 @@ When complete, every participant receives:
 | 3.2 | [Participant Journey Framework](PARTICIPANT_JOURNEY.md) | Lifecycle stages — growth not rank | ✅ |
 | 3.3 | [Personal Headquarters & Profile System](PARTICIPANT_PROFILE_SYSTEM.md) | Organizing home — not a profile page | ✅ |
 | 3.4 | [Personal Relationship Network](PERSONAL_RELATIONSHIP_NETWORK.md) | Participant-owned living network + Trust Graph | ✅ |
-| 3.5 | Recruitment Engine | Invitations, attribution, growth tracking | Pending |
-| 3.6 | Network Board | Personal organizing dashboard | Pending |
+| 3.5 | [Relationship Growth Engine](RELATIONSHIP_GROWTH_ENGINE.md) | Self-expanding through trusted relationships | ✅ |
+| 3.6 | Network Board | Depth widgets within My Network | Pending |
 | 3.7 | Privacy & Trust System | Visibility, permissions, minor protections | Pending |
 | 3.8 | Skills & Leadership System | Skills, training, volunteer specialties | Pending |
 | 3.9 | Recognition & Milestones | Celebrate contribution — not popularity | Pending |
@@ -84,9 +84,19 @@ The platform's **signature feature** — every participant owns a living network
 
 ---
 
-## 3.5 — Recruitment Engine
+## 3.5 — Relationship Growth Engine
 
-Invitation philosophy · QR codes · Referral links · Welcome flow · Relationship attribution · Growth tracking · Recruitment analytics
+**Requirement focus:** RGE-001 · NET-002 · NET-003
+
+Where the platform becomes **self-expanding** — through relationships, not campaigns:
+
+- **Invitation toolkit** — URL, QR, share card auto-provisioned
+- **Personalized landing** — introduction from trusted inviter [PAGE-SHARE]
+- **Referral attribution** — `invited_by` + lifecycle tracking
+- **Organizing Circles** — private real-life groups for outreach [RGE-M15]
+- **Healthy growth** — no spam incentives, no recruit leaderboards
+
+*Live spec:* `relationship-growth-engine.json` · *Hook:* `createInvitationToolkit(participantId)`
 
 ---
 

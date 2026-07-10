@@ -4,6 +4,25 @@
 
 ---
 
+## 2026-07-10 — PHASE-003.5 Relationship Growth Engine (Canonical)
+
+**Document ID:** PHASE-003.5 · **RGE-001 · NET-002 · NET-003 · AC-024**
+
+### What Was Built
+
+- **Self-expanding through relationships** — not campaigns; help invite people you trust
+- **Organizing Circles [RGE-M15]** — private real-life groups for intuitive outreach
+- **Invitation lifecycle** — created → shared → viewed → registered → connected
+- **Personalized landing** — introduction from a trusted person, not generic signup
+- **Referral attribution** — always visible; feeds Trust Graph
+- **Healthy growth guardrails** — no spam incentives, no recruit leaderboards
+
+### Guiding Principle Locked
+
+> **Communities grow one trusted relationship at a time.**
+
+---
+
 ## 2026-07-10 — PHASE-003.4 Personal Relationship Network (Canonical)
 
 **Document ID:** PHASE-003.4 · **NET-001 · NET-002 · NET-003 · AC-023**
@@ -103,7 +122,7 @@
 | Item | Detail |
 |------|--------|
 | Built | PARTICIPANT_IDENTITY_DOCTRINE, PHASE_3_MASTER_SEQUENCE |
-| Next | 3.5 Recruitment Engine (NET-002/003) |
+| Next | 3.6 Network Board (NET-001 depth) |
 
 ---
 
