@@ -18,6 +18,23 @@
 
 ---
 
+## 2026-07-10 — Volume 4.6 Component Architecture [UXB-007 · AC-142]
+
+**Document:** `docs/volume-04/COMPONENT_ARCHITECTURE.md` · **Registry:** `data/registry/experience-component-architecture.json`
+
+### What Changed
+
+- **Guiding principle:** *Build components once. Compose experiences forever.*
+- Component—not page—is the primary unit of interface construction
+- **6-layer composition model** and **6-level component hierarchy** (tokens through complete workspaces)
+- **8-layer universal component structure** (Identity through Navigation)
+- **12 operational components** specified: Mission Card through Decision Panel, timelines, relationship panels
+- Component intelligence, memory, accessibility, mobile adaptation, performance, AI semantic integration
+- **Living Operational Component Registry (LOCR)** — 7 definition domains with visual and operational knowledge
+- Admin Volume 4 tab · requirements UXB-007 updated · Volume 4: 5/14 complete (4.4 pending)
+
+---
+
 ## 2026-07-10 — Volume 4.5 Design Language System [UXB-006 · AC-141]
 
 **Document:** `docs/volume-04/DESIGN_LANGUAGE_SYSTEM.md` · **Registry:** `data/registry/design-language-system.json`

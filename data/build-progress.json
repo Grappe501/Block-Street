@@ -108,7 +108,7 @@
       { "id": "V4.3", "name": "Dashboard & Workspace Architecture [UXB-004]", "status": "done", "notes": "Adaptive Workspace Engine, 8 panels, 8 workspace types — AC-139" },
       { "id": "V4.4", "name": "User Journey Architecture [UXB-005]", "status": "pending", "notes": "End-to-end journeys, onboarding, alumni — AC-140" },
       { "id": "V4.5", "name": "Design Language System [UXB-006]", "status": "done", "notes": "Living Design System, 6 principles, 6 semantic colors, token-based design — AC-141" },
-      { "id": "V4.6", "name": "Component Architecture [UXB-007]", "status": "pending", "notes": "Reusable UI components, cards, timelines — AC-142" },
+      { "id": "V4.6", "name": "Component Architecture [UXB-007]", "status": "done", "notes": "Living Operational Component Registry, 6-level hierarchy, 12 operational components — AC-142" },
       { "id": "V4.7", "name": "Workspace Architecture [UXB-008]", "status": "pending", "notes": "Personal, community, mission, executive workspaces — AC-143" },
       { "id": "V4.8", "name": "Collaboration Architecture [UXB-009]", "status": "pending", "notes": "Chat, mentorship, collaborative editing — AC-144" },
       { "id": "V4.9", "name": "Mobile Experience Architecture [UXB-010]", "status": "pending", "notes": "Mobile-first, offline, field operations — AC-145" },
