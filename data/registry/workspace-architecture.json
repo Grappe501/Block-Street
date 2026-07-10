@@ -1,22 +1,296 @@
 {
-  "version": "1.0.0",
+  "version": "2.0.0",
   "documentId": "VOLUME-004.7",
   "requirementId": "UXB-008",
   "docPath": "docs/volume-04/WORKSPACE_ARCHITECTURE.md",
-  "status": "pending",
-  "priority": "critical",
+  "productName": "Workspace Architecture",
+  "status": "canonical",
+  "priority": "foundational",
   "lastUpdated": "2026-07-10",
-  "guidingPrinciple": "Experience should feel intentional, welcoming, and trustworthy.",
-  "defines": [
-    "PersonalWorkspace",
-    "CommunityWorkspace",
+  "guidingPrinciple": "People work in environments, not pages.",
+  "workspacePhilosophy": {
+    "workspaceNotPage": true,
+    "livingOperationalEnvironment": true,
+    "meaningfulWorkPlaceNotWebApp": true,
+    "organizesAroundMissionsNotModules": true,
+    "everythingBeginsWithPurpose": true,
+    "completeOperationalHome": true
+  },
+  "traditionalSoftwareModules": [
+    "CRM",
+    "Calendar",
+    "Tasks",
+    "Reports",
+    "Settings"
+  ],
+  "missionOrientedWork": [
+    "BuildCommunities",
+    "DevelopLeaders",
+    "CoordinateMissions",
+    "GrowKnowledge",
+    "SupportVolunteers",
+    "StrengthenPartnerships"
+  ],
+  "universalWorkspaceStructure": {
+    "layers": [
+      "Mission",
+      "People",
+      "CurrentWork",
+      "Knowledge",
+      "Calendar",
+      "Intelligence",
+      "History",
+      "Reflection"
+    ],
+    "layerCount": 8
+  },
+  "workspacePrincipleCount": 8,
+  "workspacePrinciples": [
+    "ReduceAnxiety",
+    "IncreaseConfidence",
+    "KeepContextVisible",
+    "PromoteCollaboration",
+    "SurfacePriorities",
+    "CaptureKnowledge",
+    "SupportGrowth",
+    "RemainExplainable"
+  ],
+  "universalWorkspaceZoneCount": 8,
+  "universalWorkspaceZones": [
+    {
+      "id": "missionZone",
+      "name": "Mission Zone",
+      "alwaysVisible": true,
+      "answers": ["WhyAmIHere", "WhatAreWeTryingToAccomplish", "WhatMattersMostToday"],
+      "purpose": "Mission anchors the workspace"
+    },
+    {
+      "id": "peopleZone",
+      "name": "People Zone",
+      "displays": ["Communities", "Teams", "Volunteers", "Mentors", "Leaders", "Partners"],
+      "purpose": "Work is always connected to people"
+    },
+    {
+      "id": "workZone",
+      "name": "Work Zone",
+      "displays": ["ActiveWorkflows", "Tasks", "Approvals", "CurrentMissions", "OpenDecisions"],
+      "purpose": "Current work remains central"
+    },
+    {
+      "id": "knowledgeZone",
+      "name": "Knowledge Zone",
+      "displays": ["CommunityBrain", "Playbooks", "Stories", "Lessons", "Research", "HistoricalGuidance"],
+      "purpose": "Knowledge accompanies every activity"
+    },
+    {
+      "id": "calendarZone",
+      "name": "Calendar Zone",
+      "displays": ["Meetings", "VolunteerCommitments", "Deadlines", "MissionMilestones", "Travel"],
+      "purpose": "Time becomes operational context"
+    },
+    {
+      "id": "intelligenceZone",
+      "name": "Intelligence Zone",
+      "displays": ["CommunityIntelligence", "OperationalIntelligence", "DigitalTwins", "AIRecommendations", "CommunityHealth"],
+      "purpose": "Intelligence supports work"
+    },
+    {
+      "id": "historyZone",
+      "name": "History Zone",
+      "displays": ["CommunityEventLedger", "Timeline", "RecentChanges", "GovernanceHistory", "MissionHistory"],
+      "purpose": "History provides continuity"
+    },
+    {
+      "id": "reflectionZone",
+      "name": "Reflection Zone",
+      "encourages": ["LessonsLearned", "MissionReflections", "CommunityFeedback", "Recognition", "GrowthPlanning"],
+      "purpose": "Reflection closes every operational cycle"
+    }
+  ],
+  "workspaceTypeCount": 9,
+  "workspaceTypes": [
+    {
+      "id": "personalWorkspace",
+      "name": "Personal Workspace",
+      "purpose": "Organize one participant's life inside the platform",
+      "includes": ["PersonalOS", "Calendar", "Communities", "VolunteerWork", "Learning", "Goals", "DigitalTwin"]
+    },
+    {
+      "id": "communityWorkspace",
+      "name": "Community Workspace",
+      "purpose": "Operate one community",
+      "includes": ["Members", "Leadership", "Knowledge", "Calendar", "Missions", "CommunityHealth", "CommunityOperatingManual"]
+    },
+    {
+      "id": "missionWorkspace",
+      "name": "Mission Workspace",
+      "purpose": "Coordinate mission execution",
+      "includes": ["MissionOperationsCenter", "Timeline", "Volunteers", "Knowledge", "Logistics", "Reflection", "Impact"]
+    },
+    {
+      "id": "leadershipWorkspace",
+      "name": "Leadership Workspace",
+      "purpose": "Develop community leaders",
+      "includes": ["LeadershipAcademy", "Mentorship", "Pipeline", "Succession", "Training", "LeadershipHealth"]
+    },
+    {
+      "id": "volunteerWorkspace",
+      "name": "Volunteer Workspace",
+      "purpose": "Support volunteer growth",
+      "includes": ["VolunteerSuccessCenter", "Assignments", "Training", "Recognition", "Communities", "Mentorship"]
+    },
+    {
+      "id": "countyWorkspace",
+      "name": "County Workspace",
+      "purpose": "Coordinate regional operations",
+      "includes": ["Communities", "Institutions", "Leadership", "Coverage", "Growth", "OperationalIntelligence", "CountyDigitalTwin"]
+    },
+    {
+      "id": "institutionWorkspace",
+      "name": "Institution Workspace",
+      "purpose": "Support schools, nonprofits, churches, campaigns, civic groups, and partner organizations",
+      "includes": ["OrganizationProfile", "Members", "Calendar", "Knowledge", "Communities", "Leadership", "Partnerships", "InstitutionOperatingManual"]
+    },
+    {
+      "id": "knowledgeWorkspace",
+      "name": "Knowledge Workspace",
+      "purpose": "Grow institutional intelligence",
+      "includes": ["KnowledgeObservatory", "CommunityBrain", "Playbooks", "Stories", "Research", "Innovation", "Legacy"]
+    },
+    {
+      "id": "executiveWorkspace",
+      "name": "Executive Workspace",
+      "purpose": "Strategic leadership",
+      "includes": ["ExecutiveOperationsCenter", "CommunityHealth", "Forecasts", "OperationalReadiness", "Risks", "ExecutiveBriefings", "PlatformDigitalTwin"]
+    }
+  ],
+  "workspaceRelationshipChain": [
     "MissionWorkspace",
+    "VolunteerWorkspace",
     "LeadershipWorkspace",
     "KnowledgeWorkspace",
-    "ExecutiveWorkspace",
-    "CountyWorkspace"
+    "ExecutiveWorkspace"
   ],
-  "topicCount": 7,
+  "contextPreservation": [
+    "CurrentMission",
+    "CurrentCommunity",
+    "CurrentParticipant",
+    "SearchContext",
+    "CalendarContext",
+    "WorkspaceMemory"
+  ],
+  "collaborationLayerSupports": [
+    "Discussion",
+    "SharedNotes",
+    "Mentorship",
+    "Approvals",
+    "Whiteboards",
+    "RealTimeCollaboration"
+  ],
+  "aiCompanionAwareOf": [
+    "CurrentMission",
+    "CurrentCalendar",
+    "CurrentCommunity",
+    "CurrentWorkflow",
+    "Knowledge",
+    "DigitalTwin"
+  ],
+  "personalizationOptions": [
+    "PinnedPanels",
+    "SavedLayouts",
+    "Shortcuts",
+    "Favorites",
+    "NotificationPreferences",
+    "WorkspaceThemes"
+  ],
+  "multiWorkspaceOperations": [
+    "Communities",
+    "Missions",
+    "Institutions",
+    "Counties",
+    "LeadershipRoles"
+  ],
+  "mobileEmphasizes": [
+    "TodaysPriorities",
+    "CurrentMission",
+    "Calendar",
+    "QuickActions",
+    "Community",
+    "VoiceInteraction"
+  ],
+  "accessibilitySupports": [
+    "Keyboard",
+    "Voice",
+    "ScreenReaders",
+    "ReducedMotion",
+    "HighContrast",
+    "LargeTouchTargets"
+  ],
+  "communityEventLedgerSurfaces": [
+    "RecentEvents",
+    "CurrentActivity",
+    "History",
+    "Milestones",
+    "InstitutionalMemory"
+  ],
+  "unifiedWorkspaceManager": {
+    "name": "Unified Workspace Manager",
+    "abbreviation": "UWM",
+    "isOperatingShell": true,
+    "coordinatesSeamlessOperationalEnvironment": true,
+    "extendsAdaptiveWorkspaceEngine": true,
+    "coordinationDomains": [
+      {
+        "id": "workspaceContext",
+        "name": "Workspace Context",
+        "tracks": ["CurrentWorkspace", "CurrentMission", "CurrentCommunity", "CurrentInstitution", "CurrentCounty", "CurrentRole"]
+      },
+      {
+        "id": "workspaceState",
+        "name": "Workspace State",
+        "tracks": ["OpenPanels", "ActiveWorkflows", "SearchState", "CalendarState", "SelectedPeople", "AIConversationContext"]
+      },
+      {
+        "id": "crossWorkspaceCoordination",
+        "name": "Cross-Workspace Coordination",
+        "noReNavigationRequired": true,
+        "preservesMissionContextOnReturn": true
+      },
+      {
+        "id": "operationalMemory",
+        "name": "Operational Memory",
+        "remembers": ["FrequentlyUsedWorkspaces", "OpenMissions", "ActiveApprovals", "DraftWork", "RecentCollaborators", "WorkspaceLayouts"]
+      },
+      {
+        "id": "aiCoordination",
+        "name": "AI Coordination",
+        "exampleRequests": [
+          "TakeMeBackToYesterdaysMission",
+          "ShowMeEverythingRelatedToPineBluff",
+          "CompareThisCommunityWithJonesboro",
+          "OpenTheLeadershipNotesFromLastWeek",
+          "ContinueWhereILeftOff"
+        ],
+        "aiInteractionModel": "OperationalEnvironmentNotIsolatedPages"
+      },
+      {
+        "id": "executiveView",
+        "name": "Executive View",
+        "provides": ["MultipleActiveWorkspaceSessions", "SharedCalendars", "CrossCommunityMissionVisibility", "UnifiedNotificationManagement", "OrganizationWideSearch", "GlobalAIContext"]
+      }
+    ],
+    "coordinationDomainCount": 6,
+    "architecturalVision": "The Community Operating System should feel less like a website and more like a living operating environment for communities, leaders, and institutions"
+  },
+  "burtImplementationGuidance": [
+    "Workspaces as operational environments not pages",
+    "Maintain universal workspace framework",
+    "Preserve context across transitions",
+    "Integrate AI Digital Twins Community Event Ledger Community Intelligence",
+    "Support multi-workspace participation",
+    "Mobile-first with accessibility by default",
+    "Consult Unified Workspace Manager before workspace features"
+  ],
   "acceptanceCriteria": "AC-143",
-  "acceptanceCriteriaMet": false
+  "acceptanceCriteriaMet": true
 }
