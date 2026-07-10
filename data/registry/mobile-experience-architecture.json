@@ -1,23 +1,305 @@
 {
-  "version": "1.0.0",
+  "version": "2.0.0",
   "documentId": "VOLUME-004.9",
   "requirementId": "UXB-010",
   "docPath": "docs/volume-04/MOBILE_EXPERIENCE_ARCHITECTURE.md",
-  "status": "pending",
-  "priority": "critical",
+  "productName": "Mobile & Field Operations Experience Architecture",
+  "status": "canonical",
+  "priority": "mission_critical",
   "lastUpdated": "2026-07-10",
-  "guidingPrinciple": "Experience should feel intentional, welcoming, and trustworthy.",
-  "defines": [
-    "Mobilefirstlayouts",
-    "Offlinebehavior",
-    "Pushinteractions",
-    "QRexperiences",
-    "Volunteercheckin",
-    "Fieldoperations",
-    "Thumbnavigation",
-    "Accessibility"
+  "guidingPrinciple": "The field is the primary workplace.",
+  "mobilePhilosophy": {
+    "notReducedDesktopApp": true,
+    "primaryOperatingEnvironmentForFieldWorkers": true,
+    "fieldIsPrimaryWorkplace": true,
+    "mobileFirstDesignOrder": true,
+    "largerDevicesExpandCapability": true
+  },
+  "fieldUsageContexts": [
+    "WalkingNeighborhoods",
+    "WorkingEvents",
+    "ConductingMeetings",
+    "OrganizingVolunteers",
+    "RunningCampaigns",
+    "RespondingToDisasters",
+    "ServingCommunities",
+    "StandingOnFrontPorches",
+    "SittingInChurches",
+    "TravelingCountyRoads"
   ],
-  "topicCount": 8,
+  "designOrder": [
+    "Phone",
+    "Tablet",
+    "Laptop",
+    "Desktop",
+    "LargeDisplays"
+  ],
+  "mobileArchitectureFlow": {
+    "layers": [
+      "CurrentContext",
+      "ImmediateSituation",
+      "OneHandOperation",
+      "MinimalDecisions",
+      "ImmediateAction",
+      "KnowledgeCapture",
+      "Synchronization"
+    ],
+    "layerCount": 7
+  },
+  "mobilePrincipleCount": 8,
+  "mobilePrinciples": [
+    "WorkOneHanded",
+    "UnderstandableInSeconds",
+    "WorkInSunlight",
+    "RecoverFromPoorConnectivity",
+    "SupportInterruptions",
+    "ResumeInstantly",
+    "CaptureKnowledgeImmediately",
+    "NeverAssumePerfectNetwork"
+  ],
+  "fieldOperationModeCount": 6,
+  "fieldOperationModes": [
+    {
+      "id": "volunteerMode",
+      "name": "Volunteer Mode",
+      "supports": ["Assignments", "Navigation", "CheckIn", "Contacts", "QuickNotes", "VolunteerHours", "Recognition"]
+    },
+    {
+      "id": "canvassingMode",
+      "name": "Canvassing Mode",
+      "supports": ["WalkLists", "HouseholdInformation", "ConversationNotes", "FollowUp", "Maps", "OfflineOperation", "QuickTagging"]
+    },
+    {
+      "id": "eventMode",
+      "name": "Event Mode",
+      "supports": ["Attendance", "QRScanning", "VolunteerCheckIn", "Schedules", "Announcements", "Photos", "LiveCoordination"]
+    },
+    {
+      "id": "meetingMode",
+      "name": "Meeting Mode",
+      "supports": ["Agenda", "Participants", "Notes", "Voting", "ActionItems", "KnowledgeCapture", "MeetingHistory"]
+    },
+    {
+      "id": "missionMode",
+      "name": "Mission Mode",
+      "supports": ["MissionTimeline", "Assignments", "Logistics", "Resources", "Issues", "Safety", "Reflection"]
+    },
+    {
+      "id": "emergencyMode",
+      "name": "Emergency Mode",
+      "supports": ["RapidCommunication", "IncidentReporting", "ResourceRequests", "VolunteerCoordination", "StatusUpdates", "OfflineOperation"]
+    }
+  ],
+  "mobileWorkspaceDisplays": [
+    "CurrentMission",
+    "NextAction",
+    "CurrentCommunity",
+    "Calendar",
+    "QuickCommunication",
+    "OfflineStatus"
+  ],
+  "thumbZoneActions": [
+    "CheckIn",
+    "CompleteTask",
+    "RecordNote",
+    "CallMentor",
+    "OpenAI",
+    "Navigate"
+  ],
+  "offlineFirstSupports": [
+    "MissionData",
+    "VolunteerLists",
+    "Knowledge",
+    "Maps",
+    "Checklists",
+    "Forms",
+    "Calendar"
+  ],
+  "mobileCaptureSupports": [
+    "VoiceNotes",
+    "Photos",
+    "Video",
+    "Documents",
+    "GPSOptional",
+    "QRCodes",
+    "QuickForms"
+  ],
+  "cameraIntegrationSupports": [
+    "DocumentScanning",
+    "VolunteerCheckIn",
+    "QRRegistration",
+    "EvidenceCapture",
+    "MissionPhotos",
+    "KnowledgeDocumentation"
+  ],
+  "qrExperienceSupports": [
+    "MissionJoin",
+    "CommunityJoin",
+    "VolunteerRegistration",
+    "MeetingAttendance",
+    "LearningModules",
+    "EventInformation",
+    "PartnershipOnboarding"
+  ],
+  "voiceExperienceSupports": [
+    "CreateNotes",
+    "StartMissions",
+    "Search",
+    "ScheduleMeetings",
+    "LogVolunteerHours",
+    "AskAIQuestions"
+  ],
+  "mapsIntegrates": [
+    "Communities",
+    "Missions",
+    "Institutions",
+    "Events",
+    "Volunteers",
+    "Coverage",
+    "Travel"
+  ],
+  "notificationPriorities": [
+    "MissionUpdates",
+    "Safety",
+    "MeetingReminders",
+    "VolunteerRequests",
+    "LeadershipMessages",
+    "KnowledgeReminders"
+  ],
+  "aiFieldAssistantUnderstands": [
+    "CurrentGPSContextIfPermitted",
+    "Mission",
+    "Calendar",
+    "Community",
+    "PeopleNearby",
+    "Knowledge",
+    "OperationalHistory"
+  ],
+  "aiFieldAssistantExamples": [
+    "WhatHappenedAtThisLocationLastYear",
+    "WhoIsTheCommunityLeaderHere",
+    "SummarizeMyNextMeeting",
+    "WhatShouldIKnowBeforeKnockingThisDoor"
+  ],
+  "digitalTwinSurfaces": [
+    "ParticipantTwin",
+    "MissionTwin",
+    "CommunityTwin",
+    "CountyTwin"
+  ],
+  "fieldEventLedgerPublishes": [
+    "VolunteerCheckIn",
+    "MissionUpdate",
+    "KnowledgeCapture",
+    "MeetingAttendance",
+    "PhotoEvidence",
+    "Reflection"
+  ],
+  "accessibilitySupports": [
+    "LargeTouchTargets",
+    "Voice",
+    "Offline",
+    "HighContrast",
+    "ReducedMotion",
+    "ScreenReaders",
+    "OneHandedOperation"
+  ],
+  "performanceTargets": [
+    "FastStartup",
+    "MinimalBandwidth",
+    "EfficientBatteryUse",
+    "OfflineResilience",
+    "InstantResume"
+  ],
+  "securitySupports": [
+    "BiometricLogin",
+    "DeviceTrust",
+    "OfflineEncryption",
+    "SecureSynchronization",
+    "RemoteLogout",
+    "PrivacyControls"
+  ],
+  "fieldOperationsCommandLayer": {
+    "name": "Field Operations Command Layer",
+    "abbreviation": "FOCL",
+    "transformsMobileDeviceToOperationalCommandCenter": true,
+    "opensOperationalContextNotApp": true,
+    "assemblyDomains": [
+      {
+        "id": "currentSituation",
+        "name": "Current Situation",
+        "assembles": ["CurrentMission", "CurrentCommunity", "CurrentCounty", "Calendar", "NearbyEvents"]
+      },
+      {
+        "id": "immediatePriorities",
+        "name": "Immediate Priorities",
+        "assembles": ["NextAssignment", "VolunteerRequests", "MeetingCountdown", "SafetyAlerts", "MissionMilestones"]
+      },
+      {
+        "id": "operationalResources",
+        "name": "Operational Resources",
+        "assembles": ["Maps", "Contacts", "Knowledge", "CommunityHistory", "Playbooks", "Checklists"]
+      },
+      {
+        "id": "aiCompanion",
+        "name": "AI Companion",
+        "autoUnderstands": ["Location", "Mission", "Calendar", "Team", "Community", "RecentConversations", "AvailableKnowledge"],
+        "noManualPromptingRequired": true
+      },
+      {
+        "id": "fieldCapture",
+        "name": "Field Capture",
+        "oneTapCaptures": ["Voice", "Photo", "Video", "QR", "Note", "Attendance", "Evidence", "Reflection"]
+      },
+      {
+        "id": "synchronization",
+        "name": "Synchronization",
+        "continuouslySyncs": ["CommunityEventLedger", "CommunityKnowledgeGraph", "DigitalTwins", "MissionStatus", "VolunteerProgress", "OperationalIntelligence"],
+        "invisibleToParticipant": true
+      }
+    ],
+    "assemblyDomainCount": 6,
+    "multiDeviceContinuity": {
+      "enabled": true,
+      "flow": ["DesktopPlanning", "TabletInTruck", "PhoneInField", "LaptopEveningReview"],
+      "preserves": ["Workspace", "AIContext", "Drafts", "OperationalState"]
+    },
+    "deviceRoles": [
+      {
+        "device": "Phone",
+        "emphasizes": ["ImmediateAction", "Capture", "Communication", "Navigation"]
+      },
+      {
+        "device": "Tablet",
+        "emphasizes": ["Meetings", "Presentations", "Whiteboards", "TeamCoordination"]
+      },
+      {
+        "device": "Laptop",
+        "emphasizes": ["Planning", "Writing", "Research", "Governance"]
+      },
+      {
+        "device": "Desktop",
+        "emphasizes": ["ExecutiveOperations", "Analytics", "KnowledgeManagement", "LongFormWork"]
+      }
+    ],
+    "deviceRoleCount": 4,
+    "architecturalInsight": "The Community Operating System is not software people occasionally use — it is an operational companion wherever community work happens",
+    "integratesWith": [
+      "PersonalOperatingSystem",
+      "UnifiedWorkspaceManager",
+      "IntentNavigationEngine",
+      "FieldOperationsCommandLayer"
+    ]
+  },
+  "burtImplementationGuidance": [
+    "Mobile as primary operational platform",
+    "Design for interruption and recovery",
+    "Offline-first",
+    "One-handed operation",
+    "Integrate AI Digital Twins Event Ledger QR camera voice maps",
+    "Optimize for real-world community work",
+    "Consult Field Operations Command Layer before mobile features"
+  ],
   "acceptanceCriteria": "AC-145",
-  "acceptanceCriteriaMet": false
+  "acceptanceCriteriaMet": true
 }
