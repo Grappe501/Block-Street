@@ -1,0 +1,30 @@
+{
+  "items": [
+    {
+      "id": "att-001",
+      "issue": "Pending administrator approvals",
+      "severity": "moderate",
+      "owner": "platform_administrator",
+      "scope_type": "platform",
+      "scope_id": "platform",
+      "created_at": "2026-07-10T12:00:00Z",
+      "deadline": null,
+      "required_action": "Review pending approval queue",
+      "status": "open",
+      "count": 0
+    },
+    {
+      "id": "att-002",
+      "issue": "Stale invitations",
+      "severity": "low",
+      "owner": "identity_administrator",
+      "scope_type": "platform",
+      "scope_id": "platform",
+      "created_at": "2026-07-10T12:00:00Z",
+      "deadline": null,
+      "required_action": "Review expiring invitations",
+      "status": "open",
+      "count": 0
+    }
+  ]
+}

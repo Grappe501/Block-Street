@@ -1,0 +1,9 @@
+{
+  "role_permissions": [
+    { "role_id": "role-platform-admin", "permission_keys": ["users.view", "users.invite", "users.suspend", "users.revoke_sessions", "organizations.view", "organizations.update", "organizations.archive", "workspaces.view", "workspaces.create", "roles.view", "roles.assign", "audit.view", "feature_flags.manage", "data.export", "integrations.configure", "incidents.manage", "approvals.approve"] },
+    { "role_id": "role-org-admin", "permission_keys": ["users.view", "users.invite", "users.suspend", "users.revoke_sessions", "organizations.view", "organizations.update", "workspaces.view", "workspaces.create", "roles.view", "roles.assign", "audit.view", "incidents.manage"] },
+    { "role_id": "role-ws-admin", "permission_keys": ["users.view", "users.invite", "workspaces.view", "roles.view", "audit.view"] },
+    { "role_id": "role-county-organizer", "permission_keys": ["users.view", "workspaces.view", "audit.view"] },
+    { "role_id": "role-auditor", "permission_keys": ["users.view", "organizations.view", "workspaces.view", "roles.view", "audit.view"] }
+  ]
+}

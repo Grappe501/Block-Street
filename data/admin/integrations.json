@@ -1,0 +1,34 @@
+{
+  "integrations": [
+    {
+      "id": "int-google-oauth",
+      "provider": "google",
+      "integration_type": "authentication",
+      "organization_id_optional": null,
+      "workspace_id_optional": null,
+      "status": "scaffold",
+      "environment": "development",
+      "credential_reference": "env:AUTH_GOOGLE_CLIENT_ID",
+      "scopes": ["openid", "email", "profile"],
+      "health_state": "not_configured",
+      "connected_at": null,
+      "last_success_at": null,
+      "last_failure_at": null
+    },
+    {
+      "id": "int-email-delivery",
+      "provider": "email",
+      "integration_type": "notification",
+      "organization_id_optional": null,
+      "workspace_id_optional": null,
+      "status": "scaffold",
+      "environment": "development",
+      "credential_reference": "env:EMAIL_PROVIDER",
+      "scopes": ["send_transactional"],
+      "health_state": "not_configured",
+      "connected_at": null,
+      "last_success_at": null,
+      "last_failure_at": null
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "permissions": [
+    { "id": "perm-users-view", "key": "users.view", "resource": "users", "action": "view", "description": "View user accounts", "risk_level": "low", "requires_mfa": false, "requires_approval": false, "is_system_permission": true },
+    { "id": "perm-users-invite", "key": "users.invite", "resource": "users", "action": "invite", "description": "Invite users", "risk_level": "moderate", "requires_mfa": false, "requires_approval": false, "is_system_permission": true },
+    { "id": "perm-users-suspend", "key": "users.suspend", "resource": "users", "action": "suspend", "description": "Suspend user access", "risk_level": "high", "requires_mfa": true, "requires_approval": false, "is_system_permission": true },
+    { "id": "perm-users-revoke-sessions", "key": "users.revoke_sessions", "resource": "users", "action": "revoke_sessions", "description": "Revoke user sessions", "risk_level": "moderate", "requires_mfa": false, "requires_approval": false, "is_system_permission": true },
+    { "id": "perm-orgs-view", "key": "organizations.view", "resource": "organizations", "action": "view", "description": "View organizations", "risk_level": "low", "requires_mfa": false, "requires_approval": false, "is_system_permission": true },
+    { "id": "perm-orgs-update", "key": "organizations.update", "resource": "organizations", "action": "update", "description": "Update organization settings", "risk_level": "high", "requires_mfa": true, "requires_approval": false, "is_system_permission": true },
+    { "id": "perm-orgs-archive", "key": "organizations.archive", "resource": "organizations", "action": "archive", "description": "Archive organization", "risk_level": "critical", "requires_mfa": true, "requires_approval": true, "is_system_permission": true },
+    { "id": "perm-ws-view", "key": "workspaces.view", "resource": "workspaces", "action": "view", "description": "View workspaces", "risk_level": "low", "requires_mfa": false, "requires_approval": false, "is_system_permission": true },
+    { "id": "perm-ws-create", "key": "workspaces.create", "resource": "workspaces", "action": "create", "description": "Create workspaces", "risk_level": "moderate", "requires_mfa": false, "requires_approval": false, "is_system_permission": true },
+    { "id": "perm-roles-view", "key": "roles.view", "resource": "roles", "action": "view", "description": "View roles", "risk_level": "low", "requires_mfa": false, "requires_approval": false, "is_system_permission": true },
+    { "id": "perm-roles-assign", "key": "roles.assign", "resource": "roles", "action": "assign", "description": "Assign roles to users", "risk_level": "high", "requires_mfa": true, "requires_approval": true, "is_system_permission": true },
+    { "id": "perm-audit-view", "key": "audit.view", "resource": "audit", "action": "view", "description": "View audit history", "risk_level": "low", "requires_mfa": false, "requires_approval": false, "is_system_permission": true },
+    { "id": "perm-flags-manage", "key": "feature_flags.manage", "resource": "feature_flags", "action": "manage", "description": "Manage feature flags", "risk_level": "high", "requires_mfa": true, "requires_approval": false, "is_system_permission": true },
+    { "id": "perm-data-export", "key": "data.export", "resource": "data", "action": "export", "description": "Export restricted data", "risk_level": "critical", "requires_mfa": true, "requires_approval": true, "is_system_permission": true },
+    { "id": "perm-integrations-manage", "key": "integrations.configure", "resource": "integrations", "action": "configure", "description": "Configure integrations", "risk_level": "high", "requires_mfa": true, "requires_approval": true, "is_system_permission": true },
+    { "id": "perm-incidents-manage", "key": "incidents.manage", "resource": "incidents", "action": "manage", "description": "Manage incidents", "risk_level": "high", "requires_mfa": false, "requires_approval": false, "is_system_permission": true },
+    { "id": "perm-approvals-approve", "key": "approvals.approve", "resource": "approvals", "action": "approve", "description": "Approve administrative requests", "risk_level": "high", "requires_mfa": true, "requires_approval": false, "is_system_permission": true }
+  ]
+}

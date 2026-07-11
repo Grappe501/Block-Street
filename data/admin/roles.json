@@ -1,0 +1,74 @@
+{
+  "roles": [
+    {
+      "id": "role-platform-admin",
+      "name": "platform_administrator",
+      "display_name": "Platform Administrator",
+      "description": "Full platform governance within policy bounds",
+      "role_type": "system",
+      "organization_id_optional": null,
+      "workspace_id_optional": null,
+      "status": "active",
+      "is_system_role": true,
+      "is_assignable": true,
+      "risk_level": "critical",
+      "created_at": "2026-07-10T00:00:00Z"
+    },
+    {
+      "id": "role-org-admin",
+      "name": "organization_administrator",
+      "display_name": "Organization Administrator",
+      "description": "Manage organization members, workspaces, and roles",
+      "role_type": "system",
+      "organization_id_optional": null,
+      "workspace_id_optional": null,
+      "status": "active",
+      "is_system_role": true,
+      "is_assignable": true,
+      "risk_level": "high",
+      "created_at": "2026-07-10T00:00:00Z"
+    },
+    {
+      "id": "role-ws-admin",
+      "name": "workspace_administrator",
+      "display_name": "Workspace Administrator",
+      "description": "Manage workspace members and configuration",
+      "role_type": "system",
+      "organization_id_optional": null,
+      "workspace_id_optional": null,
+      "status": "active",
+      "is_system_role": true,
+      "is_assignable": true,
+      "risk_level": "high",
+      "created_at": "2026-07-10T00:00:00Z"
+    },
+    {
+      "id": "role-county-organizer",
+      "name": "county_organizer",
+      "display_name": "County Organizer",
+      "description": "County team operations — custom role example",
+      "role_type": "custom",
+      "organization_id_optional": "org-washington-county",
+      "workspace_id_optional": "ws-county",
+      "status": "active",
+      "is_system_role": false,
+      "is_assignable": true,
+      "risk_level": "moderate",
+      "created_at": "2026-07-10T00:00:00Z"
+    },
+    {
+      "id": "role-auditor",
+      "name": "read_only_auditor",
+      "display_name": "Read-Only Auditor",
+      "description": "View audit and membership data without modification",
+      "role_type": "system",
+      "organization_id_optional": null,
+      "workspace_id_optional": null,
+      "status": "active",
+      "is_system_role": true,
+      "is_assignable": true,
+      "risk_level": "low",
+      "created_at": "2026-07-10T00:00:00Z"
+    }
+  ]
+}

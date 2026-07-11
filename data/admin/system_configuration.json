@@ -1,0 +1,28 @@
+{
+  "configurations": [
+    {
+      "id": "cfg-mfa-org-admins",
+      "configuration_key": "mfa.required_for_org_admins",
+      "scope_type": "platform",
+      "scope_id": "platform",
+      "value": true,
+      "value_type": "boolean",
+      "status": "active",
+      "version": 1,
+      "effective_at": "2026-07-10T00:00:00Z",
+      "created_by": "system"
+    },
+    {
+      "id": "cfg-session-hours",
+      "configuration_key": "session.standard_hours",
+      "scope_type": "platform",
+      "scope_id": "platform",
+      "value": 24,
+      "value_type": "number",
+      "status": "active",
+      "version": 1,
+      "effective_at": "2026-07-10T00:00:00Z",
+      "created_by": "system"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "policies": [
+    {
+      "id": "policy-mfa-admins",
+      "name": "MFA Required for Administrators",
+      "description": "Organization administrators must use MFA",
+      "policy_type": "authentication",
+      "scope_type": "platform",
+      "scope_id": "platform",
+      "effect": "require_mfa",
+      "priority": 100,
+      "status": "active",
+      "effective_at": "2026-07-10T00:00:00Z",
+      "version": 1
+    },
+    {
+      "id": "policy-export-approval",
+      "name": "Restricted Data Export Approval",
+      "description": "Restricted data exports require two-person approval",
+      "policy_type": "data_export",
+      "scope_type": "platform",
+      "scope_id": "platform",
+      "effect": "require_approval",
+      "priority": 90,
+      "status": "active",
+      "effective_at": "2026-07-10T00:00:00Z",
+      "version": 1
+    }
+  ]
+}
