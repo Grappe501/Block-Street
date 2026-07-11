@@ -2,11 +2,13 @@
 
 import psos from "../../../data/platform-services/platform-services-operating-system.json";
 import auth from "../../../data/registry/authentication-identity.json";
+import admin from "../../../data/registry/administration-platform.json";
 import { AdminAuthenticationIdentity } from "@/components/admin/AdminAuthenticationIdentity";
+import { AdminAdministrationPlatform } from "@/components/admin/AdminAdministrationPlatform";
 
 const STEPS = [
-  { step: auth, label: "8.1 Authentication & Identity", accent: "border-blue-300 bg-blue-50", featured: true },
-  { id: "8.2", label: "8.2 Administration", accent: "border-slate-300 bg-slate-50", name: "Administration Platform", requirementId: "ADM-001", acceptanceCriteria: "pending" },
+  { step: auth, label: "8.1 Authentication & Identity", accent: "border-blue-300 bg-blue-50", featured: false },
+  { step: admin, label: "8.2 Administration Platform", accent: "border-slate-400 bg-slate-100", featured: true },
   { id: "8.3", label: "8.3 CMS & Content", accent: "border-slate-300 bg-slate-50", name: "CMS and Content", requirementId: "CMS-001", acceptanceCriteria: "pending" },
   { id: "8.4", label: "8.4 Notifications", accent: "border-slate-300 bg-slate-50", name: "Notification Services", requirementId: "NTF-001", acceptanceCriteria: "pending" },
   { id: "8.5", label: "8.5 Unified API", accent: "border-slate-300 bg-slate-50", name: "API Layer", requirementId: "API-001", acceptanceCriteria: "pending" },
@@ -27,16 +29,11 @@ export function AdminPlatformServicesLayer() {
         </p>
       </div>
 
-      <div className="card border-slate-200 bg-slate-50/50">
-        <h2 className="text-sm font-bold text-slate-950">Guiding Principle</h2>
-        <p className="mt-1 text-sm italic text-slate-900">{psos.guidingPrinciple}</p>
-      </div>
-
       <div className="grid gap-4 md:grid-cols-2">
         {STEPS.map((item) => (
           <div
             key={item.label}
-            className={`card border-l-4 ${item.accent} ${"featured" in item && item.featured ? "ring-2 ring-slate-300" : ""}`}
+            className={`card border-l-4 ${item.accent} ${"featured" in item && item.featured ? "ring-2 ring-slate-400" : ""}`}
           >
             <p className="text-xs font-semibold text-slate-800">{item.label}</p>
             <h3 className="mt-1 font-bold text-slate-950">
@@ -51,6 +48,7 @@ export function AdminPlatformServicesLayer() {
         ))}
       </div>
 
+      <AdminAdministrationPlatform />
       <AdminAuthenticationIdentity />
     </div>
   );

@@ -20,6 +20,27 @@
 
 ---
 
+---
+
+## 2026-07-10 — Build 8.2 Administration Platform [ADM-001 · AC-179]
+
+**Documents:** `docs/phase-08/ADMINISTRATION_PLATFORM.md` · `docs/platform/admin/*` · **Registry:** `data/registry/administration-platform.json`
+
+### What Changed
+
+- **Unified Administration Center** — overview dashboard, attention queue, tabbed governance UI in Phase 8
+- **Role and permission model** — system roles, permission registry, scoped assignments, role simulation
+- **Admin engine** — `resolveAdminContext`, `assertAdminPermission`, scope enforcement, audit trail
+- **API surface** — `/api/admin/overview`, users, organizations, workspaces, roles, approvals, audit, jobs, incidents
+- **Approval workflow foundation** — pending approvals, independent approver, self-approve blocked
+- **Feature flags, integrations, policies** — governed admin records
+
+### Phase 8 Progress
+
+2/8 platform service steps complete (8.1 AUTH + 8.2 ADM)
+
+---
+
 ## 2026-07-10 — Build 8.1 Expanded · Authentication and Identity Foundation [AUTH-001 · AC-178]
 
 **Documents:** `docs/phase-08/AUTHENTICATION_AND_IDENTITY.md` · `docs/platform/auth/*` · **Registry:** `data/registry/authentication-identity.json`

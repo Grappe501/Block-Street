@@ -5986,6 +5986,37 @@
       "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
     },
     {
+      "id": "ADM-001-PLATFORM",
+      "title": "Administration Platform — Build 8.2",
+      "purpose": "Governed institutional control over platform operations",
+      "description": "BUILD-008.2 — Administration Center, roles, permissions, scope enforcement, approvals, audit explorer, /api/admin",
+      "priority": "critical",
+      "principle": "ENG-006",
+      "dependencies": ["AUTH-001", "PSV-001", "ENG-006", "PRE-001"],
+      "related": ["SEC-001", "API-001"],
+      "acceptanceCriteria": [
+        "Unified Administration Center with scoped authority",
+        "Role and permission management with simulation",
+        "Organization and workspace administration",
+        "User and membership governance",
+        "Approval workflows for high-risk actions",
+        "Append-only administrative audit trail",
+        "Server-side scope enforcement on all admin APIs"
+      ],
+      "futureNotes": "Support sessions, emergency access, full data operations. AC-179.",
+      "implementationStatus": "in_progress",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": null,
+        "api": "API-ADMIN",
+        "frontend": "PAGE-ADMIN-ADM",
+        "test": "TEST-ADM-001",
+        "doc": "DOC-ADM-001"
+      },
+      "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
+    },
+    {
       "id": "PSI-014",
       "title": "Platform Operations, Governance & Lifecycle Architecture — Volume 5.13",
       "purpose": "Operate the platform as a governed institution — stewardship, certification, and decades-long evolution",
