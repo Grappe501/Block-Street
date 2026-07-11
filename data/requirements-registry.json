@@ -5923,6 +5923,69 @@
       "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
     },
     {
+      "id": "PSV-001",
+      "title": "Platform Services — Phase 8",
+      "purpose": "Institutional backbone — secure, observable, governable, recoverable platform services",
+      "description": "PHASE-008 — identity, access, administration, content, notifications, APIs, deployment, monitoring, security",
+      "priority": "critical",
+      "principle": "ENG-006",
+      "dependencies": ["IAS-001", "ENG-006", "PSI-002", "ADM-001"],
+      "related": ["AUTH-001", "SEC-001", "API-001"],
+      "acceptanceCriteria": [
+        "Production-grade authentication across protected areas",
+        "Governed administration center",
+        "Shared CMS and notification services",
+        "Unified secured API layer",
+        "Reliable deployment pipeline",
+        "Live monitoring and incident management",
+        "Comprehensive security foundation",
+        "Platform-wide auditability"
+      ],
+      "futureNotes": "Phase 8 makes the platform operationally trustworthy. AC-179 when all 8 builds complete.",
+      "implementationStatus": "in_progress",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": null,
+        "api": null,
+        "frontend": "PAGE-ADMIN-PSV",
+        "test": "TEST-PSV-001",
+        "doc": "DOC-PSV-001"
+      },
+      "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
+    },
+    {
+      "id": "AUTH-001",
+      "title": "Authentication and Identity — Build 8.1",
+      "purpose": "Production identity foundation replacing honor system",
+      "description": "BUILD-008.1 — canonical user identity, membership model, sessions, middleware protection, account lifecycle audit, /api/auth",
+      "priority": "critical",
+      "principle": "ENG-006",
+      "dependencies": ["PSV-001", "ENG-006", "PRE-001", "KDG-001"],
+      "related": ["ADM-001", "SEC-001"],
+      "acceptanceCriteria": [
+        "Honor-system access removed from protected areas",
+        "Secure verified identity flows",
+        "Sessions securely managed and revocable",
+        "MFA scaffolding for elevated roles",
+        "Identity separated from roles and memberships",
+        "Account lifecycle events auditable",
+        "Protected routes cannot be bypassed client-side"
+      ],
+      "futureNotes": "OAuth, passwordless, SSO on roadmap. AC-178.",
+      "implementationStatus": "in_progress",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": null,
+        "api": "API-AUTH",
+        "frontend": "PAGE-ADMIN-AUTH",
+        "test": "TEST-AUTH-001",
+        "doc": "DOC-AUTH-001"
+      },
+      "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
+    },
+    {
       "id": "PSI-014",
       "title": "Platform Operations, Governance & Lifecycle Architecture — Volume 5.13",
       "purpose": "Operate the platform as a governed institution — stewardship, certification, and decades-long evolution",

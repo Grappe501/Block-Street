@@ -18,6 +18,27 @@
 
 ---
 
+## 2026-07-10 — Build 8.1 Authentication and Identity [AUTH-001 · AC-178]
+
+**Document:** `docs/phase-08/AUTHENTICATION_AND_IDENTITY.md` · **Registry:** `data/registry/authentication-identity.json`
+
+### What Changed
+
+- **Honor system removed** — `/admin` and protected `/api/*` require session cookie via middleware
+- **Canonical user identity** — durable user_id separate from organizational roles
+- **Membership model** — organization → workspace → roles → permissions
+- **Session management** — create, validate, revoke, list active sessions
+- **Account lifecycle audit** — append-only events in `data/auth/audit_events.jsonl`
+- **Login page** — `/admin/login` with secure httpOnly session cookie
+- **API routes** — `/api/auth/login`, `/session`, `/me`, `/sessions`, `/audit`, MFA scaffold
+- Phase 8 Platform Services tab with AUTH dashboard
+
+### Phase 8 Started
+
+Platform Services phase opens with production identity foundation. Recommended build order: 8.1 → 8.8 → 8.2 → 8.5 → 8.3 → 8.4 → 8.6 → 8.7
+
+---
+
 ## 2026-07-10 — Build 7.6 Executive AI Intelligence Layer [IAS-001 · AC-177] · **PHASE 7 COMPLETE**
 
 **Document:** `docs/phase-07/EXECUTIVE_AI_INTELLIGENCE_LAYER.md` · **Registry:** `data/registry/executive-ai-intelligence-layer.json`
