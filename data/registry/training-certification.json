@@ -1,0 +1,32 @@
+{
+  "version": "1.0.0",
+  "documentId": "BUILD-009.5",
+  "requirementId": "TRN-001",
+  "buildArtifact": "TRAINING_PRACTICE_CERTIFICATION",
+  "docPath": "docs/phase-09/TRAINING_AND_CERTIFICATION.md",
+  "platformDocsPath": "docs/platform/training/",
+  "status": "canonical",
+  "priority": "critical",
+  "productName": "Training, Practice, and Certification",
+  "abbreviation": "TRN",
+  "guidingPrinciple": "Access to consequential capabilities should follow demonstrated readiness, not title alone.",
+  "buildsOn": ["ONB-001", "MIG-001", "ORG-001", "CMS-001", "ADM-001"],
+  "apiEndpoints": [
+    "GET /api/v1/training/learning-paths",
+    "GET /api/v1/training/me",
+    "POST /api/v1/training/assignments",
+    "POST /api/v1/training/lessons/{id}/complete",
+    "POST /api/v1/training/practice-workspaces",
+    "POST /api/v1/training/scenarios/{id}/start",
+    "POST /api/v1/training/scenarios/{id}/complete",
+    "POST /api/v1/training/assessments/{id}/attempts",
+    "POST /api/v1/training/assessment-attempts/{id}/evaluate",
+    "POST /api/v1/training/certifications/{id}/issue",
+    "POST /api/v1/training/certification-awards/{id}/suspend",
+    "POST /api/v1/training/certification-awards/{id}/revoke",
+    "GET /api/v1/training/analytics/overview",
+    "GET /api/admin/training/overview"
+  ],
+  "acceptanceCriteria": "AC-190",
+  "acceptanceCriteriaMet": true
+}

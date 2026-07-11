@@ -1,0 +1,32 @@
+{
+  "assignments": [],
+  "learner_records": [],
+  "lesson_completions": [],
+  "practice_workspaces": [],
+  "scenario_attempts": [],
+  "assessment_attempts": [],
+  "certification_awards": [],
+  "evaluator_qualifications": [
+    {
+      "id": "eval-director",
+      "user_id": "director@block-street.local",
+      "competency_domain": "workspace_administration",
+      "qualification_level": "trainer",
+      "institution_id": "inst-block-street",
+      "status": "active",
+      "expires_at": "2027-07-11T00:00:00.000Z"
+    }
+  ],
+  "remediation_plans": [],
+  "audit_events": [],
+  "health": {
+    "assigned_learners": 0,
+    "in_progress": 0,
+    "completed": 0,
+    "overdue": 0,
+    "assessment_pass_rate": 0,
+    "active_certifications": 0,
+    "expiring_in_60_days": 0,
+    "human_help_per_learner": 0
+  }
+}

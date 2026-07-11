@@ -1,0 +1,40 @@
+{
+  "definitions": [
+    {
+      "id": "cert-workspace-admin",
+      "key": "workspace_administrator",
+      "name": "Workspace Administrator Certification",
+      "description": "Verified readiness for workspace administration",
+      "learning_path_id": "lp-workspace-admin",
+      "eligible_role_key": "workspace_administrator",
+      "eligible_permission_key": "workspaces.manage",
+      "renewal_period_days": 365,
+      "grace_period_days": 30,
+      "status": "active"
+    },
+    {
+      "id": "cert-content-publisher",
+      "key": "content_publisher",
+      "name": "Content Publisher Certification",
+      "description": "Verified readiness for content publication",
+      "learning_path_id": "lp-content-publisher",
+      "eligible_role_key": "content_publisher",
+      "eligible_permission_key": "content.publish",
+      "renewal_period_days": 365,
+      "grace_period_days": 30,
+      "status": "active"
+    },
+    {
+      "id": "cert-data-steward",
+      "key": "data_steward",
+      "name": "Data Steward Certification",
+      "description": "Verified readiness for data stewardship",
+      "learning_path_id": "lp-data-steward",
+      "eligible_role_key": "data_steward",
+      "eligible_permission_key": "data.export",
+      "renewal_period_days": 365,
+      "grace_period_days": 30,
+      "status": "active"
+    }
+  ]
+}

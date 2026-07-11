@@ -6366,6 +6366,36 @@
       "versionHistory": { "created": "2026-07-11", "implemented": "2026-07-11" }
     },
     {
+      "id": "TRN-001",
+      "title": "Training, Practice, and Certification — Build 9.5",
+      "purpose": "Verify sustained competence for consequential institutional responsibilities through guided practice, assessment, and certification",
+      "description": "BUILD-009.5 — learning paths, competencies, practice workspaces, scenarios, assessments, evaluator framework, certification issuance, eligibility gating, renewal, remediation, cohorts, analytics",
+      "priority": "critical",
+      "principle": "ILS-001",
+      "dependencies": ["ONB-001", "CMS-001", "ADM-001", "AUTH-001"],
+      "related": ["PLT-001"],
+      "acceptanceCriteria": [
+        "Elevated roles declare required learning and certification",
+        "Practice environments are isolated from production",
+        "Assessments support automated and human evaluation",
+        "Certification controls eligibility but does not grant access directly",
+        "Expired or revoked certification triggers access review",
+        "Training analytics measure completion and human-help count"
+      ],
+      "futureNotes": "AC-190. Registry TRN-001.",
+      "implementationStatus": "done",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": null,
+        "api": "API-TRN",
+        "frontend": "PAGE-ADMIN-ILS",
+        "test": "TEST-TRN-001",
+        "doc": "DOC-TRN-001"
+      },
+      "versionHistory": { "created": "2026-07-11", "implemented": "2026-07-11" }
+    },
+    {
       "id": "PSI-014",
       "title": "Platform Operations, Governance & Lifecycle Architecture — Volume 5.13",
       "purpose": "Operate the platform as a governed institution — stewardship, certification, and decades-long evolution",

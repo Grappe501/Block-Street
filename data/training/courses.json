@@ -1,0 +1,9 @@
+{
+  "courses": [
+    { "id": "crs-wsa-1", "learning_path_id": "lp-workspace-admin", "title": "Platform Fundamentals", "sequence": 1, "required": true },
+    { "id": "crs-wsa-2", "learning_path_id": "lp-workspace-admin", "title": "Identity and Access", "sequence": 2, "required": true },
+    { "id": "crs-wsa-3", "learning_path_id": "lp-workspace-admin", "title": "Membership Management", "sequence": 3, "required": true },
+    { "id": "crs-wsa-4", "learning_path_id": "lp-workspace-admin", "title": "Audit and Accountability", "sequence": 4, "required": true },
+    { "id": "crs-wsa-5", "learning_path_id": "lp-workspace-admin", "title": "Practice Administration", "sequence": 5, "required": true }
+  ]
+}

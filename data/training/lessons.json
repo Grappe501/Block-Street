@@ -1,0 +1,11 @@
+{
+  "lessons": [
+    { "id": "les-wsa-1", "course_id": "crs-wsa-1", "lesson_type": "interactive", "title": "Platform Navigation", "sequence": 1, "duration_minutes": 20, "required": true },
+    { "id": "les-wsa-2", "course_id": "crs-wsa-1", "lesson_type": "reading", "title": "Institutional Context", "sequence": 2, "duration_minutes": 15, "required": true },
+    { "id": "les-wsa-3", "course_id": "crs-wsa-2", "lesson_type": "scenario", "title": "Identity Verification", "sequence": 1, "duration_minutes": 25, "required": true },
+    { "id": "les-wsa-4", "course_id": "crs-wsa-2", "lesson_type": "guided_task", "title": "Role Assignment Basics", "sequence": 2, "duration_minutes": 30, "required": true },
+    { "id": "les-wsa-5", "course_id": "crs-wsa-3", "lesson_type": "practice", "title": "Membership Management", "sequence": 1, "duration_minutes": 35, "required": true },
+    { "id": "les-wsa-6", "course_id": "crs-wsa-4", "lesson_type": "reading", "title": "Audit Trail Review", "sequence": 1, "duration_minutes": 20, "required": true },
+    { "id": "les-wsa-7", "course_id": "crs-wsa-5", "lesson_type": "simulation", "title": "Practice Administration Overview", "sequence": 1, "duration_minutes": 45, "required": true }
+  ]
+}

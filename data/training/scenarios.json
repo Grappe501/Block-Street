@@ -1,0 +1,22 @@
+{
+  "scenarios": [
+    {
+      "id": "scn-role-assign",
+      "key": "guided_role_assignment",
+      "title": "Guided Role Assignment",
+      "description": "Assign correct workspace role to synthetic user with step-by-step support",
+      "competencies": ["workspace_administration", "identity_access"],
+      "difficulty": "beginner",
+      "guided": true
+    },
+    {
+      "id": "scn-admin-independent",
+      "key": "independent_administration",
+      "title": "Independent Administration Scenario",
+      "description": "Invite user, assign role, review permissions, revoke session, produce audit summary",
+      "competencies": ["workspace_administration"],
+      "difficulty": "intermediate",
+      "guided": false
+    }
+  ]
+}

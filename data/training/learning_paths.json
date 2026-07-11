@@ -1,0 +1,60 @@
+{
+  "paths": [
+    {
+      "id": "lp-workspace-admin",
+      "institution_id": "inst-block-street",
+      "name": "Workspace Administrator",
+      "description": "Qualification path for workspace administration responsibilities",
+      "target_role_key": "workspace_administrator",
+      "target_permission_key": "workspaces.manage",
+      "certification_definition_id": "cert-workspace-admin",
+      "required": true,
+      "version": 1,
+      "status": "published",
+      "estimated_duration_hours": 12,
+      "renewal_period_days": 365
+    },
+    {
+      "id": "lp-content-publisher",
+      "institution_id": "inst-block-street",
+      "name": "Content Publisher",
+      "description": "Editorial workflow and publication qualification",
+      "target_role_key": "content_publisher",
+      "target_permission_key": "content.publish",
+      "certification_definition_id": "cert-content-publisher",
+      "required": true,
+      "version": 1,
+      "status": "published",
+      "estimated_duration_hours": 8,
+      "renewal_period_days": 365
+    },
+    {
+      "id": "lp-data-steward",
+      "institution_id": "inst-block-street",
+      "name": "Data Steward",
+      "description": "Data classification, migration review, and export governance",
+      "target_role_key": "data_steward",
+      "target_permission_key": "data.export",
+      "certification_definition_id": "cert-data-steward",
+      "required": true,
+      "version": 1,
+      "status": "published",
+      "estimated_duration_hours": 10,
+      "renewal_period_days": 365
+    },
+    {
+      "id": "lp-campus-organizer",
+      "institution_id": "inst-block-street",
+      "name": "Campus Organizer",
+      "description": "Campus organizing, volunteer recruitment, and mission operations",
+      "target_role_key": "campus_organizer",
+      "target_permission_key": null,
+      "certification_definition_id": "cert-campus-organizer",
+      "required": false,
+      "version": 1,
+      "status": "published",
+      "estimated_duration_hours": 6,
+      "renewal_period_days": 365
+    }
+  ]
+}

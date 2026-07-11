@@ -1,0 +1,13 @@
+{
+  "assessments": [
+    {
+      "id": "asm-wsa-practical",
+      "learning_path_id": "lp-workspace-admin",
+      "title": "Workspace Administrator Practical Assessment",
+      "assessment_type": "practical_demonstration",
+      "passing_score": 80,
+      "attempt_limit": 3,
+      "requires_human_evaluation": true
+    }
+  ]
+}

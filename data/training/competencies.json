@@ -1,0 +1,7 @@
+{
+  "competencies": [
+    { "id": "comp-wsa", "key": "workspace_administration", "name": "Workspace Administration", "domain": "administration", "required_level": "independent" },
+    { "id": "comp-iam", "key": "identity_access", "name": "Identity and Access Management", "domain": "security", "required_level": "independent" },
+    { "id": "comp-export", "key": "restricted_data_export", "name": "Restricted Data Export", "domain": "data", "required_level": "independent" }
+  ]
+}
