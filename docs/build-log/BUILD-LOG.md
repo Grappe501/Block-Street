@@ -22,6 +22,27 @@
 
 ---
 
+## 2026-07-10 — Build 8.6 Deployment, Release Engineering, and CI/CD [DPL-001 · AC-183]
+
+**Documents:** `docs/phase-08/DEPLOYMENT_RELEASE_ENGINEERING.md` · `docs/platform/deployment/*` · **Registry:** `data/registry/deployment-platform.json`
+
+### What Changed
+
+- **Environment model** — local, test, preview, staging, production with isolated configuration
+- **Release governance** — state machine, risk classification (R1–R4), approval matrix, release manifests
+- **CI pipeline** — GitHub Actions workflow: lint, typecheck, build, validate:release
+- **Deployment APIs** — `/api/v1/deployments/*` (health, candidates, approve, deploy, verify, rollback)
+- **Admin dashboard** — release health, environments, migrations, config drift, audit in Phase 8 tab
+- **Migration governance** — staging rehearsal, risk review, verification scaffold
+- **Smoke tests** — post-deploy health checks and `npm run smoke:test` script
+- **Netlify standard** — documented build contract aligned with `netlify.toml`
+
+### Phase 8 Progress
+
+6/8 platform service steps complete (8.1–8.6)
+
+---
+
 ## 2026-07-10 — Build 8.5 Unified API and Integration Layer [API-001 · AC-182]
 
 **Documents:** `docs/phase-08/UNIFIED_API_AND_INTEGRATION_LAYER.md` · `docs/platform/api/*` · **Registry:** `data/registry/unified-api-layer.json`

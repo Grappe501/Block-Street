@@ -6088,7 +6088,7 @@
       "priority": "critical",
       "principle": "ENG-006",
       "dependencies": ["NTF-001", "CMS-001", "ADM-001", "AUTH-001", "PSV-001"],
-      "related": ["SEC-001", "DEP-001"],
+      "related": ["SEC-001", "DPL-001"],
       "acceptanceCriteria": [
         "Protected traffic passes through gateway with server-side context",
         "v1 endpoints use standard envelope and error contract",
@@ -6109,6 +6109,39 @@
         "frontend": "PAGE-ADMIN-API",
         "test": "TEST-API-001",
         "doc": "DOC-API-001"
+      },
+      "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
+    },
+    {
+      "id": "DPL-001",
+      "title": "Deployment, Release Engineering, and CI/CD — Build 8.6",
+      "purpose": "Governed software delivery from developer machine to production",
+      "description": "BUILD-008.6 — environment model, CI pipeline, preview/staging, release candidates, approval gates, migration governance, secrets, smoke tests, rollback, hotfixes, deployment audit",
+      "priority": "critical",
+      "principle": "ENG-006",
+      "dependencies": ["API-001", "ADM-001", "AUTH-001", "PSV-001", "ENG-014"],
+      "related": ["MON-001", "SEC-001"],
+      "acceptanceCriteria": [
+        "Canonical environment model with isolated secrets and data boundaries",
+        "CI pipeline blocks unsafe merges with lint, typecheck, and build gates",
+        "Preview deployments use nonproduction configuration",
+        "Release candidates are immutable with risk classification and approvals",
+        "Production deployments require governed path with release manifests",
+        "Database migrations rehearsed and gated in staging",
+        "Automated smoke tests and health verification after deploy",
+        "Rollback and hotfix procedures documented and operational",
+        "Deployment dashboard in Administration Center with audit history"
+      ],
+      "futureNotes": "Full Netlify API integration, automatic rollback hooks, monitoring markers (Build 8.7). AC-183.",
+      "implementationStatus": "done",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": null,
+        "api": "API-DPL",
+        "frontend": "PAGE-ADMIN-DPL",
+        "test": "TEST-DPL-001",
+        "doc": "DOC-DPL-001"
       },
       "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
     },
