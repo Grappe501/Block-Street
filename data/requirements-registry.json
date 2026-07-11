@@ -6303,6 +6303,38 @@
       "versionHistory": { "created": "2026-07-11", "implemented": "2026-07-11" }
     },
     {
+      "id": "MIG-001",
+      "title": "Migration and Data Readiness — Build 9.3",
+      "purpose": "Bring legacy institutional knowledge into the platform through governed staging, validation, and certification",
+      "description": "BUILD-009.3 — migration projects, secure intake, staging, profiling, mapping, identity resolution, duplicate handling, dry runs, approvals, canonical import, reconciliation, data readiness",
+      "priority": "critical",
+      "principle": "ILS-001",
+      "dependencies": ["ORG-001", "PRV-001", "ADM-001", "AUTH-001", "SEC-001"],
+      "related": ["ONB-001"],
+      "acceptanceCriteria": [
+        "Every migration is a governed project with owners and risk classification",
+        "Sources are inventoried, scanned, and institution-scoped before staging",
+        "Identity resolution does not rely on name alone",
+        "Dry runs occur without canonical writes",
+        "Canonical imports are idempotent, checkpointed, and auditable",
+        "Reconciliation verifies more than record counts",
+        "Data readiness is assessed and certified by domain",
+        "Legacy direct-import paths are governed or disabled"
+      ],
+      "futureNotes": "AC-188. Registry MIG-001.",
+      "implementationStatus": "done",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": null,
+        "api": "API-MIG",
+        "frontend": "PAGE-ADMIN-ILS",
+        "test": "TEST-MIG-001",
+        "doc": "DOC-MIG-001"
+      },
+      "versionHistory": { "created": "2026-07-11", "implemented": "2026-07-11" }
+    },
+    {
       "id": "PSI-014",
       "title": "Platform Operations, Governance & Lifecycle Architecture — Volume 5.13",
       "purpose": "Operate the platform as a governed institution — stewardship, certification, and decades-long evolution",

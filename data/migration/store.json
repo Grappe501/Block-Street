@@ -1,0 +1,29 @@
+{
+  "projects": [],
+  "risk_assessments": [],
+  "sources": [],
+  "intakes": [],
+  "field_mappings": [],
+  "staging_records": [],
+  "identity_matches": [],
+  "duplicate_candidates": [],
+  "exceptions": [],
+  "dry_runs": [],
+  "approvals": [],
+  "import_jobs": [],
+  "record_links": [],
+  "reconciliation_reports": [],
+  "readiness_assessments": [],
+  "quarantine_items": [],
+  "audit_events": [],
+  "health": {
+    "active_projects": 0,
+    "records_in_staging": 0,
+    "validation_pass_rate": 0,
+    "open_exceptions": 0,
+    "identity_conflicts": 0,
+    "quarantined_items": 0,
+    "reconciliation_success_rate": 0,
+    "readiness_blockers": 0
+  }
+}

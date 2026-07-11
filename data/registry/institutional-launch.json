@@ -14,7 +14,7 @@
   "abbreviation": "ILS",
   "guidingPrinciple": "The platform is not truly ready until it can successfully introduce, teach, support, and reproduce itself.",
   "buildsOn": ["PSV-001", "SEC-001", "MON-001", "DPL-001", "API-001", "ADM-001", "AUTH-001"],
-  "stepsComplete": 2,
+  "stepsComplete": 3,
   "stepsTotal": 8,
   "dataPaths": {
     "provisionings": "data/launch/provisionings.json",

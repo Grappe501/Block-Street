@@ -1,0 +1,9 @@
+{
+  "rules": [
+    { "id": "xform-trim", "key": "trim_whitespace", "name": "Trim Whitespace", "description": "Remove leading and trailing whitespace", "input_type": "string", "output_type": "string", "risk_level": "low", "status": "active" },
+    { "id": "xform-email", "key": "normalize_email", "name": "Normalize Email", "description": "Lowercase and trim email addresses", "input_type": "string", "output_type": "string", "risk_level": "low", "status": "active" },
+    { "id": "xform-campus", "key": "standardize_campus_alias", "name": "Standardize Campus Alias", "description": "Map known campus aliases to canonical names", "input_type": "string", "output_type": "string", "risk_level": "moderate", "status": "active" },
+    { "id": "xform-date", "key": "normalize_date", "name": "Normalize Date", "description": "Convert legacy date formats to ISO 8601", "input_type": "string", "output_type": "date", "risk_level": "moderate", "status": "active" },
+    { "id": "xform-phone", "key": "normalize_phone", "name": "Normalize Phone", "description": "E.164 phone normalization", "input_type": "string", "output_type": "string", "risk_level": "low", "status": "active" }
+  ]
+}
