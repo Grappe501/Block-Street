@@ -6,10 +6,12 @@ import prv from "../../../data/registry/institutional-provisioning.json";
 import org from "../../../data/registry/organizational-modeling.json";
 import mig from "../../../data/registry/data-migration.json";
 import onb from "../../../data/registry/guided-onboarding.json";
+import trn from "../../../data/registry/training-certification.json";
 import { AdminInstitutionalProvisioning } from "@/components/admin/AdminInstitutionalProvisioning";
 import { AdminInstitutionalOrganization } from "@/components/admin/AdminInstitutionalOrganization";
 import { AdminInstitutionalMigration } from "@/components/admin/AdminInstitutionalMigration";
 import { AdminInstitutionalOnboarding } from "@/components/admin/AdminInstitutionalOnboarding";
+import { AdminInstitutionalTraining } from "@/components/admin/AdminInstitutionalTraining";
 
 const STEPS: Array<
   | { step: { productName: string; requirementId: string; acceptanceCriteria: string }; label: string; accent: string; featured: boolean }
@@ -18,8 +20,8 @@ const STEPS: Array<
   { step: prv, label: "9.1 Institutional Provisioning", accent: "border-amber-500 bg-amber-100", featured: false },
   { step: org, label: "9.2 Configuration & Org Modeling", accent: "border-indigo-500 bg-indigo-100", featured: false },
   { step: mig, label: "9.3 Migration & Data Readiness", accent: "border-slate-500 bg-slate-100", featured: false },
-  { step: onb, label: "9.4 Guided Onboarding", accent: "border-emerald-500 bg-emerald-100", featured: true },
-  { label: "9.5 Training & Certification", accent: "border-slate-300 bg-slate-50", featured: false, pending: "TRN-001" },
+  { step: onb, label: "9.4 Guided Onboarding", accent: "border-emerald-500 bg-emerald-100", featured: false },
+  { step: trn, label: "9.5 Training & Certification", accent: "border-violet-500 bg-violet-100", featured: true },
   { label: "9.6 Pilot & Acceptance", accent: "border-slate-300 bg-slate-50", featured: false, pending: "PLT-001" },
   { label: "9.7 Support & Success", accent: "border-slate-300 bg-slate-50", featured: false, pending: "SUP-001" },
   { label: "9.8 Adoption & Scale", accent: "border-slate-300 bg-slate-50", featured: false, pending: "SCL-001" },
@@ -58,6 +60,7 @@ export function AdminInstitutionalLaunchLayer() {
         ))}
       </div>
 
+      <AdminInstitutionalTraining />
       <AdminInstitutionalOnboarding />
       <AdminInstitutionalMigration />
       <AdminInstitutionalOrganization />
