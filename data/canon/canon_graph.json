@@ -1,0 +1,11 @@
+{
+  "indexedAt": "2026-07-10T23:00:00Z",
+  "nodeCount": 26,
+  "edgeCount": 30,
+  "nodes": [],
+  "edges": [],
+  "adjacency": {
+    "downstream": {},
+    "upstream": {}
+  }
+}

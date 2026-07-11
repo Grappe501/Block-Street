@@ -1,0 +1,144 @@
+{
+  "version": "2.0.0",
+  "documentId": "COS-CKK-001",
+  "requirementId": "CKK-001",
+  "docPath": "docs/canon/CANONICAL_KNOWLEDGE_KERNEL.md",
+  "status": "canonical",
+  "priority": "constitutional_infrastructure",
+  "lastUpdated": "2026-07-10",
+  "productName": "Canonical Knowledge Kernel",
+  "abbreviation": "CKK",
+  "guidingPrinciple": "Every meaningful platform object must be known, connected, traceable, and governed.",
+  "constitutionalStack": {
+    "layers": [
+      "Community Operating System Constitution",
+      "COS Canon",
+      "Canonical Knowledge Kernel",
+      "Architecture · Requirements · Engineering",
+      "Implementation · Testing · Release",
+      "Production Runtime"
+    ],
+    "layerCount": 6
+  },
+  "kernelLayers": {
+    "layers": [
+      "Canonical Identity Registry",
+      "Metadata Registry",
+      "Relationship Graph",
+      "Traceability Engine",
+      "Version and Lifecycle Engine",
+      "Validation Engine",
+      "Change-Impact Engine",
+      "Knowledge Retrieval Layer",
+      "AI Grounding Interface",
+      "Readiness and Governance Layer"
+    ],
+    "layerCount": 10
+  },
+  "coreResponsibilityCount": 15,
+  "validationGateCount": 10,
+  "canonIdDomainCount": 28,
+  "canonIdDomains": [
+    "CON", "CAN", "ARCH", "REQ", "DATA", "REL", "SVC", "API", "EVT", "WF",
+    "RULE", "AUTO", "CFG", "UI", "JRN", "AI", "TWIN", "INT", "RUN", "SEC",
+    "OBS", "TEST", "RELSE", "DOC", "DEC", "INC", "MET", "RISK", "PACK", "PROD"
+  ],
+  "objectClasses": [
+    "Constitutional",
+    "Architectural",
+    "Contract",
+    "Implementation",
+    "Verification"
+  ],
+  "lifecycleStatuses": [
+    "proposed", "draft", "under_review", "approved", "implementation_ready",
+    "in_implementation", "implemented", "validated", "released", "maintained",
+    "deprecated", "retired", "historical", "rejected"
+  ],
+  "bootstrap": {
+    "currentStage": 1,
+    "stageName": "Canon Bootstrap",
+    "stagesTotal": 8,
+    "dataPath": "data/canon/",
+    "schemasPath": "canon/schemas/",
+    "validatorsPath": "canon/validators/",
+    "objectCount": 26,
+    "relationshipCount": 30,
+    "requirementCount": 4,
+    "registeredVolumes": [0, 1, 2, 3, 4, 5, 6, 7, 8],
+    "cosCanonId": "COS-CAN-000001",
+    "ckkCanonId": "COS-ARCH-000001",
+    "canonTwinId": "COS-TWIN-000001"
+  },
+  "cliCommands": [
+    "canon:validate",
+    "canon:index",
+    "canon:graph",
+    "canon:traceability",
+    "canon:orphans",
+    "canon:impact",
+    "canon:readiness",
+    "canon:report",
+    "canon:sync",
+    "canon:gate"
+  ],
+  "apiSurface": [
+    "GET /canon/objects",
+    "GET /canon/objects/{canon_id}",
+    "POST /canon/objects",
+    "PATCH /canon/objects/{canon_id}",
+    "GET /canon/objects/{canon_id}/relationships",
+    "GET /canon/objects/{canon_id}/impact",
+    "GET /canon/objects/{canon_id}/traceability",
+    "GET /canon/validation",
+    "POST /canon/validate",
+    "GET /canon/readiness",
+    "GET /canon/search"
+  ],
+  "cosCanon": {
+    "name": "Community Operating System Canon",
+    "canonId": "COS-CAN-000001",
+    "ckkGovernedBy": true,
+    "masterIndexVolumes0Through5": true,
+    "strategicRecommendationFrom": "PSI-015"
+  },
+  "canonTwin": {
+    "name": "Canon Twin",
+    "canonId": "COS-TWIN-000001",
+    "summarizes": [
+      "ActiveObjects",
+      "DependencyHealth",
+      "TraceabilityCoverage",
+      "TestCoverage",
+      "DocumentationCoverage",
+      "ImplementationStatus",
+      "ReleaseReadiness",
+      "ArchitecturalDrift",
+      "OpenRisks"
+    ]
+  },
+  "governanceRoles": [
+    "Canon Steward",
+    "Domain Steward",
+    "Requirement Owner",
+    "Implementation Owner",
+    "Validation Owner",
+    "Security Reviewer",
+    "Release Authority",
+    "Historical Archivist"
+  ],
+  "mvpCapabilities": [
+    "JSONL registries",
+    "Canon ID validation",
+    "Relationship registry",
+    "Orphan detection",
+    "Dependency validation",
+    "Traceability reports",
+    "Change-impact reports",
+    "Readiness reports",
+    "CLI commands",
+    "AI-readable exports"
+  ],
+  "acceptanceCriteria": "AC-165",
+  "acceptanceCriteriaMet": true
+}

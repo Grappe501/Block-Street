@@ -1,0 +1,46 @@
+{
+  "calculatedAt": "2026-07-10T23:00:00Z",
+  "architectureCoverage": {
+    "percent": 100,
+    "numerator": 26,
+    "denominator": 26,
+    "label": "objects with source_document"
+  },
+  "requirementTraceability": {
+    "percent": 100,
+    "numerator": 4,
+    "denominator": 4,
+    "label": "requirements with architecture_links"
+  },
+  "implementationCoverage": {
+    "percent": 35,
+    "numerator": 9,
+    "denominator": 26,
+    "label": "architecture objects implemented+"
+  },
+  "testCoverageByRequirement": {
+    "percent": 0,
+    "numerator": 0,
+    "denominator": 4,
+    "label": "requirements with test_links"
+  },
+  "documentationCoverage": {
+    "percent": 100,
+    "numerator": 24,
+    "denominator": 26,
+    "label": "objects with source_document"
+  },
+  "securityClassificationCoverage": {
+    "percent": 100,
+    "numerator": 26,
+    "denominator": 26,
+    "label": "objects with security_classification"
+  },
+  "validationIssueCount": 0,
+  "orphanObjectCount": 0,
+  "objectCount": 26,
+  "relationshipCount": 30,
+  "requirementCount": 4,
+  "bootstrapStage": 1,
+  "bootstrapStageName": "Canon Bootstrap"
+}

@@ -1,0 +1,13 @@
+{
+  "validatedAt": "2026-07-10T23:00:00Z",
+  "passed": true,
+  "objectCount": 26,
+  "relationshipCount": 30,
+  "requirementCount": 4,
+  "orphanCount": 0,
+  "orphans": [],
+  "cycleCount": 0,
+  "codeReferenceCount": 0,
+  "issueCount": 0,
+  "issues": []
+}

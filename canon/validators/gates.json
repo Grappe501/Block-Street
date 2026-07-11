@@ -1,0 +1,15 @@
+{
+  "version": "1.0.0",
+  "gates": [
+    { "id": 1, "name": "Identity", "rule": "valid_canon_id" },
+    { "id": 2, "name": "Ownership", "rule": "owner_and_steward" },
+    { "id": 3, "name": "Authority", "rule": "authority_reference" },
+    { "id": 4, "name": "Relationships", "rule": "documented_dependencies" },
+    { "id": 5, "name": "Documentation", "rule": "description_and_purpose" },
+    { "id": 6, "name": "Implementation", "rule": "implementation_linkage" },
+    { "id": 7, "name": "Testing", "rule": "test_linkage" },
+    { "id": 8, "name": "Security", "rule": "classification_defined" },
+    { "id": 9, "name": "Release", "rule": "release_evidence" },
+    { "id": 10, "name": "OperationalReadiness", "rule": "monitoring_ownership" }
+  ]
+}
