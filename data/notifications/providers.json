@@ -1,0 +1,8 @@
+{
+  "providers": [
+    { "id": "prov-email-primary", "type": "email", "name": "Mock Email Primary", "status": "operational", "is_primary": true },
+    { "id": "prov-email-fallback", "type": "email", "name": "Mock Email Fallback", "status": "operational", "is_primary": false },
+    { "id": "prov-sms-primary", "type": "sms", "name": "Mock SMS", "status": "operational", "is_primary": true },
+    { "id": "prov-inapp", "type": "in_app", "name": "Platform In-App", "status": "operational", "is_primary": true }
+  ]
+}

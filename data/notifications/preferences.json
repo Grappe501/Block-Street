@@ -1,0 +1,49 @@
+{
+  "preferences": [
+    {
+      "id": "pref-001",
+      "user_id": "usr-001",
+      "category": "mission",
+      "notification_type_optional": "mission.comment",
+      "channel": "in_app",
+      "enabled": true,
+      "delivery_mode": "immediate",
+      "quiet_hours_behavior": "hold",
+      "digest_frequency_optional": null,
+      "timezone": "America/Chicago",
+      "organization_id_optional": null,
+      "workspace_id_optional": null,
+      "updated_at": "2026-07-10T00:00:00Z"
+    },
+    {
+      "id": "pref-002",
+      "user_id": "usr-001",
+      "category": "mission",
+      "notification_type_optional": null,
+      "channel": "email",
+      "enabled": true,
+      "delivery_mode": "digest",
+      "quiet_hours_behavior": "hold",
+      "digest_frequency_optional": "daily",
+      "timezone": "America/Chicago",
+      "organization_id_optional": null,
+      "workspace_id_optional": null,
+      "updated_at": "2026-07-10T00:00:00Z"
+    },
+    {
+      "id": "pref-003",
+      "user_id": "usr-001",
+      "category": "security",
+      "notification_type_optional": null,
+      "channel": "email",
+      "enabled": true,
+      "delivery_mode": "immediate",
+      "quiet_hours_behavior": "override",
+      "digest_frequency_optional": null,
+      "timezone": "America/Chicago",
+      "organization_id_optional": null,
+      "workspace_id_optional": null,
+      "updated_at": "2026-07-10T00:00:00Z"
+    }
+  ]
+}

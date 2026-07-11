@@ -1,0 +1,19 @@
+{
+  "failures": [
+    {
+      "id": "fail-001",
+      "notification_id": "ntf-fail-001",
+      "delivery_id": "del-fail-001",
+      "channel": "email",
+      "recipient_user_id": "usr-legacy",
+      "destination_reference": "bounced@invalid.example",
+      "failure_code": "hard_bounce",
+      "failure_message": "Mailbox does not exist",
+      "attempt_count": 5,
+      "last_attempt_at": "2026-07-09T12:00:00Z",
+      "retry_eligible": false,
+      "source_system": "auth",
+      "status": "dead_letter"
+    }
+  ]
+}

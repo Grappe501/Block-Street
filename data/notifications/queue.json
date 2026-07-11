@@ -1,0 +1,17 @@
+{
+  "queue": [
+    {
+      "id": "q-001",
+      "notification_id": "ntf-pending-001",
+      "channel": "email",
+      "status": "queued",
+      "priority": "normal",
+      "source_system": "mission_board",
+      "recipient_user_id": "usr-002",
+      "queued_at": "2026-07-10T21:00:00Z",
+      "scheduled_for": "2026-07-11T07:00:00Z",
+      "reason": "quiet_hours_hold"
+    }
+  ],
+  "paused": false
+}

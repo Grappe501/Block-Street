@@ -1,0 +1,13 @@
+{
+  "quiet_hours": [
+    {
+      "user_id": "usr-001",
+      "enabled": true,
+      "start_time": "22:00",
+      "end_time": "07:00",
+      "timezone": "America/Chicago",
+      "weekend_behavior": "same",
+      "updated_at": "2026-07-10T00:00:00Z"
+    }
+  ]
+}

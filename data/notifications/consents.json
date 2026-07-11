@@ -1,0 +1,30 @@
+{
+  "consents": [
+    {
+      "id": "consent-001",
+      "user_id": "usr-001",
+      "channel": "sms",
+      "category": "transactional",
+      "status": "granted",
+      "source": "account_settings",
+      "granted_at": "2026-07-01T00:00:00Z",
+      "revoked_at": null,
+      "evidence_reference": "consent-form-v1",
+      "organization_id_optional": null,
+      "legal_basis_optional": "legitimate_interest"
+    },
+    {
+      "id": "consent-002",
+      "user_id": "usr-002",
+      "channel": "sms",
+      "category": "marketing",
+      "status": "denied",
+      "source": "onboarding",
+      "granted_at": null,
+      "revoked_at": null,
+      "evidence_reference": null,
+      "organization_id_optional": null,
+      "legal_basis_optional": null
+    }
+  ]
+}

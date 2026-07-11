@@ -1,0 +1,72 @@
+{
+  "deliveries": [
+    {
+      "id": "del-001",
+      "notification_id": "ntf-001",
+      "channel": "in_app",
+      "provider": "platform",
+      "destination_reference": "usr-001",
+      "status": "delivered",
+      "attempt_count": 1,
+      "queued_at": "2026-07-10T18:50:00Z",
+      "sent_at_optional": "2026-07-10T18:50:01Z",
+      "delivered_at_optional": "2026-07-10T18:50:01Z",
+      "opened_at_optional": null,
+      "clicked_at_optional": null,
+      "failed_at_optional": null,
+      "failure_code_optional": null,
+      "provider_message_id_optional": "inapp-001"
+    },
+    {
+      "id": "del-002",
+      "notification_id": "ntf-003",
+      "channel": "in_app",
+      "provider": "platform",
+      "destination_reference": "usr-001",
+      "status": "delivered",
+      "attempt_count": 1,
+      "queued_at": "2026-07-10T03:15:00Z",
+      "sent_at_optional": "2026-07-10T03:15:01Z",
+      "delivered_at_optional": "2026-07-10T03:15:01Z",
+      "opened_at_optional": null,
+      "clicked_at_optional": null,
+      "failed_at_optional": null,
+      "failure_code_optional": null,
+      "provider_message_id_optional": "inapp-003"
+    },
+    {
+      "id": "del-003",
+      "notification_id": "ntf-003",
+      "channel": "email",
+      "provider": "mock_email",
+      "destination_reference": "director@block-street.local",
+      "status": "delivered",
+      "attempt_count": 1,
+      "queued_at": "2026-07-10T03:15:00Z",
+      "sent_at_optional": "2026-07-10T03:15:02Z",
+      "delivered_at_optional": "2026-07-10T03:15:03Z",
+      "opened_at_optional": null,
+      "clicked_at_optional": null,
+      "failed_at_optional": null,
+      "failure_code_optional": null,
+      "provider_message_id_optional": "email-003"
+    },
+    {
+      "id": "del-004",
+      "notification_id": "ntf-002",
+      "channel": "in_app",
+      "provider": "platform",
+      "destination_reference": "usr-001",
+      "status": "delivered",
+      "attempt_count": 1,
+      "queued_at": "2026-07-10T16:00:00Z",
+      "sent_at_optional": "2026-07-10T16:00:01Z",
+      "delivered_at_optional": "2026-07-10T16:00:01Z",
+      "opened_at_optional": "2026-07-10T16:05:00Z",
+      "clicked_at_optional": null,
+      "failed_at_optional": null,
+      "failure_code_optional": null,
+      "provider_message_id_optional": "inapp-002"
+    }
+  ]
+}
