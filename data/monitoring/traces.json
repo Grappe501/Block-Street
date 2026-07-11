@@ -1,0 +1,8 @@
+{
+  "spans": [
+    { "trace_id": "trace-login-001", "span_id": "span-1", "service": "client", "operation": "login.submit", "duration_ms": 12, "status": "ok", "correlation_id": "corr-login-001", "started_at": "2026-07-11T03:55:00.000Z" },
+    { "trace_id": "trace-login-001", "span_id": "span-2", "parent_span_id": "span-1", "service": "auth", "operation": "auth.verify_credentials", "duration_ms": 45, "status": "ok", "correlation_id": "corr-login-001", "started_at": "2026-07-11T03:55:00.012Z" },
+    { "trace_id": "trace-login-001", "span_id": "span-3", "parent_span_id": "span-2", "service": "api_gateway", "operation": "session.create", "duration_ms": 18, "status": "ok", "correlation_id": "corr-login-001", "started_at": "2026-07-11T03:55:00.057Z" },
+    { "trace_id": "trace-login-001", "span_id": "span-4", "parent_span_id": "span-3", "service": "audit", "operation": "audit.log", "duration_ms": 8, "status": "ok", "correlation_id": "corr-login-001", "started_at": "2026-07-11T03:55:00.075Z" }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "definitions": [
+    { "id": "met-api-error", "metric_key": "api.error_rate", "name": "API Error Rate", "description": "Percentage of API requests returning 5xx", "owner": "platform-engineering", "category": "reliability", "unit": "percent", "aggregation": "avg_5m", "retention": "90d", "alert_policy": "warning>1 critical>5", "dashboard_group": "engineering" },
+    { "id": "met-api-latency", "metric_key": "api.p95_latency_ms", "name": "API P95 Latency", "description": "95th percentile API response time", "owner": "platform-engineering", "category": "performance", "unit": "milliseconds", "aggregation": "p95_5m", "retention": "90d", "alert_policy": "warning>500 critical>2000", "dashboard_group": "engineering" },
+    { "id": "met-auth-logins", "metric_key": "auth.logins", "name": "Authentication Logins", "description": "Successful login count", "owner": "identity", "category": "availability", "unit": "count", "aggregation": "sum_1h", "retention": "365d", "dashboard_group": "security" },
+    { "id": "met-auth-failures", "metric_key": "auth.login_failures", "name": "Login Failures", "description": "Failed login attempts", "owner": "identity", "category": "security", "unit": "count", "aggregation": "sum_1h", "retention": "365d", "alert_policy": "warning>50 critical>200", "dashboard_group": "security" },
+    { "id": "met-ntf-queue", "metric_key": "notifications.queue_depth", "name": "Notification Queue Depth", "description": "Pending notification deliveries", "owner": "notifications", "category": "capacity", "unit": "count", "aggregation": "max_5m", "retention": "30d", "alert_policy": "warning>100 critical>500", "dashboard_group": "notifications" },
+    { "id": "met-search-latency", "metric_key": "search.latency_ms", "name": "Search Latency", "description": "Average search query latency", "owner": "search", "category": "performance", "unit": "milliseconds", "aggregation": "avg_5m", "retention": "90d", "dashboard_group": "search" },
+    { "id": "met-ai-requests", "metric_key": "ai.requests", "name": "AI Requests", "description": "AI service request count", "owner": "ai", "category": "ai", "unit": "count", "aggregation": "sum_1h", "retention": "90d", "dashboard_group": "ai" },
+    { "id": "met-missions-completed", "metric_key": "missions.completed", "name": "Missions Completed", "description": "Mission completions per day", "owner": "missions", "category": "business", "unit": "count", "aggregation": "sum_1d", "retention": "365d", "dashboard_group": "operations" }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "values": [
+    { "metric_key": "api.error_rate", "value": 0.42, "recorded_at": "2026-07-11T04:00:00.000Z" },
+    { "metric_key": "api.p95_latency_ms", "value": 142, "recorded_at": "2026-07-11T04:00:00.000Z" },
+    { "metric_key": "auth.logins", "value": 128, "recorded_at": "2026-07-11T04:00:00.000Z" },
+    { "metric_key": "auth.login_failures", "value": 3, "recorded_at": "2026-07-11T04:00:00.000Z" },
+    { "metric_key": "notifications.queue_depth", "value": 24, "recorded_at": "2026-07-11T04:00:00.000Z" },
+    { "metric_key": "search.latency_ms", "value": 89, "recorded_at": "2026-07-11T04:00:00.000Z" },
+    { "metric_key": "ai.requests", "value": 56, "recorded_at": "2026-07-11T04:00:00.000Z" },
+    { "metric_key": "missions.completed", "value": 34, "recorded_at": "2026-07-11T04:00:00.000Z" }
+  ]
+}

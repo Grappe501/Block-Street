@@ -1,0 +1,20 @@
+{
+  "markers": [
+    {
+      "id": "dep-marker-042",
+      "release_version": "2.14.2",
+      "commit_sha": "9b2f91c",
+      "deployed_at": "2026-07-09T22:45:00.000Z",
+      "risk_level": "R2",
+      "services": ["api", "admin", "cms", "notifications"]
+    },
+    {
+      "id": "dep-marker-043",
+      "release_version": "2.14.3",
+      "commit_sha": "1db8b7d",
+      "deployed_at": "2026-07-11T04:30:00.000Z",
+      "risk_level": "R3",
+      "services": ["api", "admin", "deployment", "monitoring"]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "alerts": [
+    {
+      "id": "alert-search-latency-001",
+      "type": "search.latency_elevated",
+      "severity": "warning",
+      "status": "acknowledged",
+      "owner": "platform-director",
+      "service": "search",
+      "started_at": "2026-07-11T03:30:00.000Z",
+      "correlation_id": "corr-search-001",
+      "recommended_action": "Review search index freshness and query load",
+      "grouped_count": 2
+    }
+  ]
+}

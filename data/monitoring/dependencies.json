@@ -1,0 +1,10 @@
+{
+  "dependencies": [
+    { "id": "dep-db", "name": "database", "provider": "supabase", "state": "healthy", "latency_ms": 12, "last_checked_at": "2026-07-11T04:00:00.000Z" },
+    { "id": "dep-search-index", "name": "search_index", "provider": "local-index", "state": "healthy", "latency_ms": 45, "last_checked_at": "2026-07-11T04:00:00.000Z" },
+    { "id": "dep-email", "name": "email_provider", "provider": "sandbox", "state": "healthy", "latency_ms": 220, "last_checked_at": "2026-07-11T04:00:00.000Z" },
+    { "id": "dep-ntf-queue", "name": "notification_queue", "provider": "internal", "state": "healthy", "latency_ms": 8, "last_checked_at": "2026-07-11T04:00:00.000Z" },
+    { "id": "dep-ai", "name": "ai_provider", "provider": "sandbox", "state": "healthy", "latency_ms": 890, "last_checked_at": "2026-07-11T04:00:00.000Z" },
+    { "id": "dep-oauth", "name": "oauth_provider", "provider": "local-auth", "state": "healthy", "latency_ms": 35, "last_checked_at": "2026-07-11T04:00:00.000Z" }
+  ]
+}

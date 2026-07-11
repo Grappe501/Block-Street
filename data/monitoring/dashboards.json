@@ -1,0 +1,46 @@
+{
+  "dashboards": [
+    {
+      "id": "dash-executive",
+      "name": "Executive",
+      "audience": "leadership",
+      "widgets": [
+        { "label": "Platform Health", "value": "96%", "status": "healthy" },
+        { "label": "Daily Active Users", "value": 342 },
+        { "label": "Active Organizations", "value": 28 },
+        { "label": "Open Alerts", "value": 1, "status": "warning" }
+      ]
+    },
+    {
+      "id": "dash-engineering",
+      "name": "Engineering",
+      "audience": "engineering",
+      "widgets": [
+        { "label": "Error Rate", "value": "0.42%" },
+        { "label": "P95 Latency", "value": "142 ms" },
+        { "label": "Services Healthy", "value": "8/9" },
+        { "label": "Current Release", "value": "2.14.3" }
+      ]
+    },
+    {
+      "id": "dash-security",
+      "name": "Security",
+      "audience": "security",
+      "widgets": [
+        { "label": "Login Failures (24h)", "value": 3 },
+        { "label": "Auth Health", "value": "99%", "status": "healthy" },
+        { "label": "API Abuse Blocks", "value": 0 }
+      ]
+    },
+    {
+      "id": "dash-ai",
+      "name": "AI",
+      "audience": "ai-ops",
+      "widgets": [
+        { "label": "Requests (24h)", "value": 56 },
+        { "label": "Draft Acceptance", "value": "78%" },
+        { "label": "Safety Blocks", "value": 0 }
+      ]
+    }
+  ]
+}

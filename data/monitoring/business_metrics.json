@@ -1,0 +1,9 @@
+{
+  "metrics": [
+    { "id": "biz-dau", "name": "Daily Active Users", "value": 342, "unit": "users", "trend": "up", "period": "24h" },
+    { "id": "biz-missions-completed", "name": "Missions Completed", "value": 34, "unit": "missions", "trend": "stable", "period": "24h" },
+    { "id": "biz-orgs-active", "name": "Active Organizations", "value": 28, "unit": "organizations", "trend": "up", "period": "7d" },
+    { "id": "biz-search-queries", "name": "Search Queries", "value": 1240, "unit": "queries", "trend": "up", "period": "24h" },
+    { "id": "biz-ai-acceptance", "name": "AI Draft Acceptance", "value": 78, "unit": "percent", "trend": "stable", "period": "7d" }
+  ]
+}

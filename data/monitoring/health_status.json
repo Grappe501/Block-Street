@@ -1,0 +1,13 @@
+{
+  "statuses": [
+    { "id": "health-platform", "level": "platform", "name": "Block Street Platform", "state": "healthy", "score": 96, "message": "All critical services operational", "updated_at": "2026-07-11T04:00:00.000Z" },
+    { "id": "health-api", "level": "service", "name": "API Gateway", "state": "healthy", "score": 98, "updated_at": "2026-07-11T04:00:00.000Z" },
+    { "id": "health-auth", "level": "service", "name": "Authentication", "state": "healthy", "score": 99, "updated_at": "2026-07-11T04:00:00.000Z" },
+    { "id": "health-cms", "level": "service", "name": "CMS", "state": "healthy", "score": 97, "updated_at": "2026-07-11T04:00:00.000Z" },
+    { "id": "health-search", "level": "service", "name": "Search", "state": "degraded", "score": 88, "message": "Latency slightly elevated", "updated_at": "2026-07-11T04:00:00.000Z" },
+    { "id": "health-ntf", "level": "service", "name": "Notifications", "state": "healthy", "score": 95, "updated_at": "2026-07-11T04:00:00.000Z" },
+    { "id": "health-ai", "level": "service", "name": "AI Services", "state": "healthy", "score": 94, "updated_at": "2026-07-11T04:00:00.000Z" },
+    { "id": "health-missions", "level": "service", "name": "Mission Board", "state": "healthy", "score": 96, "updated_at": "2026-07-11T04:00:00.000Z" },
+    { "id": "health-deploy", "level": "service", "name": "Deployment", "state": "healthy", "score": 97, "updated_at": "2026-07-11T04:00:00.000Z" }
+  ]
+}
