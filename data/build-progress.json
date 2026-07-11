@@ -5,12 +5,13 @@
     "motto": "Connect Locally. Organize Statewide. Lead Together.",
     "tagline": "Your organizing home",
     "version": "0.7.0-volumes",
-    "currentPhase": 8,
-    "currentPhaseName": "Platform Services",
-    "currentDesignCycle": "Platform Services (Phase 8)",
+    "currentPhase": 9,
+    "currentPhaseName": "Institutional Launch",
+    "currentDesignCycle": "Institutional Launch (Phase 9)",
     "phase7Status": "complete",
-    "phase8Status": "in_progress",
-    "lastUpdated": "2026-07-10T23:30:00Z",
+    "phase8Status": "complete",
+    "phase9Status": "in_progress",
+    "lastUpdated": "2026-07-11T13:00:00Z",
     "deployUrl": "https://block-street.netlify.app/",
     "githubRepo": "https://github.com/Grappe501/Block-Street",
     "netlifyStatus": "live",
@@ -141,7 +142,7 @@
   "masterBuild": {
     "docPath": "docs/master/LIVING-SYSTEMS-ARCHITECTURE.md",
     "legacyModulePath": "docs/master/MASTER-BUILD-SEQUENCE.md",
-    "totalPhases": 9,
+    "totalPhases": 10,
     "volume0Path": "docs/master/MASTER_ARCHITECTURE_BIBLE.md",
     "volume0Requirement": "MAB-001",
     "implementationVolumesPath": "docs/master/VOLUMES-INDEX.md",
@@ -330,20 +331,40 @@
     },
     {
       "id": 9,
+      "name": "Institutional Launch",
+      "slug": "phase-09-institutional-launch",
+      "status": "in_progress",
+      "docPath": "docs/phase-09/PHASE_9_MASTER_SEQUENCE.md",
+      "registryPath": "data/institutional-launch/institutional-launch-operating-system.json",
+      "question": "Can institutions adopt and operate without the original builders?",
+      "requirementId": "ILS-001",
+      "steps": [
+        { "id": "9.1", "name": "Institutional Provisioning [PRV-001]", "status": "done", "notes": "Governed provisioning workflow, lifecycle transitions, configuration templates, launch APIs — AC-186" },
+        { "id": "9.2", "name": "Configuration and Organizational Modeling [ORG-001]", "status": "pending", "notes": "Institutional structure, templates, validation — AC-187" },
+        { "id": "9.3", "name": "Migration and Data Readiness [MIG-001]", "status": "pending", "notes": "Staging, validation, dry runs, data readiness reports — AC-188" },
+        { "id": "9.4", "name": "Guided Onboarding [ONB-001]", "status": "pending", "notes": "Role-based onboarding journeys, first meaningful action — AC-189" },
+        { "id": "9.5", "name": "Training and Certification [TRN-001]", "status": "pending", "notes": "Learning paths, practice environment, certification — AC-190" },
+        { "id": "9.6", "name": "Pilot and Acceptance Program [PLT-001]", "status": "pending", "notes": "Pilot phases, observation ledger, human-help metric — AC-191" },
+        { "id": "9.7", "name": "Support and Customer Success [SUP-001]", "status": "pending", "notes": "Support requests, knowledge base, success plans — AC-192" },
+        { "id": "9.8", "name": "Adoption, Replication, and Scale [SCL-001]", "status": "pending", "notes": "Adoption metrics, launch certification, replication kits — AC-193" }
+      ]
+    },
+    {
+      "id": 10,
       "name": "Experience Layer",
-      "slug": "phase-09-experience",
+      "slug": "phase-10-experience",
       "status": "deferred",
       "docPath": "docs/master/LIVING-SYSTEMS-ARCHITECTURE.md",
       "question": "How does it feel?",
-      "deferredUntil": "Volumes 1–6 expansion complete",
+      "deferredUntil": "Phase 9 institutional launch foundation complete",
       "steps": [
-        { "id": "9.1", "name": "Design system", "status": "pending", "notes": "" },
-        { "id": "9.2", "name": "Animation & motion", "status": "pending", "notes": "" },
-        { "id": "9.3", "name": "Accessibility [ED-MF]", "status": "pending", "notes": "" },
-        { "id": "9.4", "name": "Mobile optimization", "status": "pending", "notes": "" },
-        { "id": "9.5", "name": "Welcome UX", "status": "pending", "notes": "WBS-001 experience layer" },
-        { "id": "9.6", "name": "Storytelling & WHY/HOW/WHAT", "status": "pending", "notes": "Partial live" },
-        { "id": "9.7", "name": "Native mobile apps", "status": "pending", "notes": "" }
+        { "id": "10.1", "name": "Design system", "status": "pending", "notes": "" },
+        { "id": "10.2", "name": "Animation & motion", "status": "pending", "notes": "" },
+        { "id": "10.3", "name": "Accessibility [ED-MF]", "status": "pending", "notes": "" },
+        { "id": "10.4", "name": "Mobile optimization", "status": "pending", "notes": "" },
+        { "id": "10.5", "name": "Welcome UX", "status": "pending", "notes": "WBS-001 experience layer" },
+        { "id": "10.6", "name": "Storytelling & WHY/HOW/WHAT", "status": "pending", "notes": "Partial live" },
+        { "id": "10.7", "name": "Native mobile apps", "status": "pending", "notes": "" }
       ]
     }
   ],
@@ -882,8 +903,8 @@
     }
   ],
   "stats": {
-    "totalSteps": 122,
-    "doneSteps": 108,
+    "totalSteps": 123,
+    "doneSteps": 109,
     "inProgressSteps": 1,
     "pendingSteps": 14,
     "percentComplete": 89

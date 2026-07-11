@@ -1,0 +1,8 @@
+{
+  "journeys": [
+    { "id": "onb-admin", "role": "administrator", "name": "Administrator Onboarding", "status": "draft", "steps": 8 },
+    { "id": "onb-organizer", "role": "organizer", "name": "Organizer Onboarding", "status": "draft", "steps": 6 },
+    { "id": "onb-volunteer", "role": "volunteer", "name": "Volunteer Onboarding", "status": "draft", "steps": 5 },
+    { "id": "onb-student", "role": "student", "name": "Student Onboarding", "status": "draft", "steps": 7 }
+  ]
+}

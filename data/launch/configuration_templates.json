@@ -1,0 +1,9 @@
+{
+  "provisionings": [],
+  "templates": [
+    { "id": "tpl-single-campus", "name": "Single Campus Organization", "institution_type": "campus", "status": "draft" },
+    { "id": "tpl-multi-campus", "name": "Multi-Campus Network", "institution_type": "campus_network", "status": "draft" },
+    { "id": "tpl-statewide-county", "name": "Statewide County Structure", "institution_type": "statewide", "status": "draft" },
+    { "id": "tpl-campaign-hq", "name": "Campaign Headquarters", "institution_type": "campaign", "status": "draft" }
+  ]
+}

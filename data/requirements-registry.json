@@ -6209,6 +6209,68 @@
       "versionHistory": { "created": "2026-07-11", "implemented": "2026-07-11" }
     },
     {
+      "id": "ILS-001",
+      "title": "Institutional Launch, Adoption, and Scale — Phase 9",
+      "purpose": "Move the platform from technically capable to operationally adoptable for real institutions",
+      "description": "PHASE-009 — provisioning, configuration, migration, onboarding, training, pilots, support, adoption metrics, and replication at statewide scale",
+      "priority": "critical",
+      "principle": "OLB-001",
+      "dependencies": ["PSV-001", "SEC-PSV-001", "ADM-001", "AUTH-001"],
+      "related": ["PRV-001", "ORG-001", "MIG-001", "ONB-001", "TRN-001", "PLT-001", "SUP-001", "SCL-001"],
+      "acceptanceCriteria": [
+        "Institutions provisioned through repeatable governed workflow",
+        "Organizational structure configured without engineering changes",
+        "Data migrated through staging and validation",
+        "Role-based onboarding leads to first meaningful action",
+        "Elevated roles require training and certification",
+        "Pilot programs measure human-help count",
+        "Governed support and institutional success plans",
+        "Launch readiness scored and certified",
+        "Successful implementations become replication templates"
+      ],
+      "futureNotes": "Phase 9 master sequence AC-193. Registry ILS-001.",
+      "implementationStatus": "in_progress",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": null,
+        "api": "API-LAUNCH",
+        "frontend": "PAGE-ADMIN-ILS",
+        "test": "TEST-ILS-001",
+        "doc": "DOC-ILS-001"
+      },
+      "versionHistory": { "created": "2026-07-11", "implemented": null }
+    },
+    {
+      "id": "PRV-001",
+      "title": "Institutional Provisioning — Build 9.1",
+      "purpose": "Establish new institutions through one governed, auditable provisioning workflow",
+      "description": "BUILD-009.1 — provisioning lifecycle, owners, default package, configuration templates, launch APIs",
+      "priority": "critical",
+      "principle": "ILS-001",
+      "dependencies": ["ILS-001", "ADM-001", "AUTH-001", "SEC-PSV-001"],
+      "related": ["ORG-001"],
+      "acceptanceCriteria": [
+        "New institution created through governed workflow",
+        "Required owners and administrators assigned",
+        "Default security and access policies applied",
+        "Initial workspaces and services available",
+        "Provisioning status visible and auditable"
+      ],
+      "futureNotes": "AC-186. Registry PRV-001.",
+      "implementationStatus": "done",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": null,
+        "api": "API-LAUNCH-PRV",
+        "frontend": "PAGE-ADMIN-ILS",
+        "test": "TEST-PRV-001",
+        "doc": "DOC-PRV-001"
+      },
+      "versionHistory": { "created": "2026-07-11", "implemented": "2026-07-11" }
+    },
+    {
       "id": "PSI-014",
       "title": "Platform Operations, Governance & Lifecycle Architecture — Volume 5.13",
       "purpose": "Operate the platform as a governed institution — stewardship, certification, and decades-long evolution",

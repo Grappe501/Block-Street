@@ -26,9 +26,11 @@
 
     { "order": 7, "phase": 7, "name": "Intelligence Layer", "question": "How do we understand and guide?", "status": "complete", "requirement": "INT-001", "docPath": "docs/phase-07/PHASE_7_MASTER_SEQUENCE.md" },
 
-    { "order": 8, "phase": 8, "name": "Platform Services", "question": "How does it run?", "status": "deferred", "deferredUntil": "Volumes 1–6 expansion complete" },
+    { "order": 8, "phase": 8, "name": "Platform Services", "question": "How does it run?", "status": "complete", "requirement": "PSV-001", "docPath": "docs/phase-08/PHASE_8_MASTER_SEQUENCE.md" },
 
-    { "order": 9, "phase": 9, "name": "Experience Layer", "question": "How does it feel?", "status": "deferred", "deferredUntil": "Volumes 1–6 expansion complete" }
+    { "order": 9, "phase": 9, "name": "Institutional Launch", "question": "Can institutions adopt and operate?", "status": "in_progress", "requirement": "ILS-001", "docPath": "docs/phase-09/PHASE_9_MASTER_SEQUENCE.md" },
+
+    { "order": 10, "phase": 10, "name": "Experience Layer", "question": "How does it feel?", "status": "deferred", "deferredUntil": "Phase 9 institutional launch foundation complete" }
 
   ],
 

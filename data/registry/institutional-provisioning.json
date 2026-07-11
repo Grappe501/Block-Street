@@ -1,0 +1,28 @@
+{
+  "version": "1.0.0",
+  "documentId": "BUILD-009.1",
+  "requirementId": "PRV-001",
+  "buildArtifact": "INSTITUTIONAL_PROVISIONING",
+  "docPath": "docs/phase-09/INSTITUTIONAL_PROVISIONING.md",
+  "overviewDocPath": "docs/phase-09/INSTITUTIONAL_PROVISIONING.md",
+  "platformDocsPath": "docs/platform/launch/INSTITUTION_PROVISIONING_STANDARD.md",
+  "status": "canonical",
+  "priority": "critical",
+  "productName": "Institutional Provisioning",
+  "abbreviation": "PRV",
+  "guidingPrinciple": "Every institution enters through one governed, auditable workflow — not ad hoc setup.",
+  "buildsOn": ["SEC-PSV-001", "ADM-001", "AUTH-001", "PSV-001"],
+  "apiEndpoints": [
+    "GET /api/v1/launch/overview",
+    "GET /api/v1/launch/provisionings",
+    "POST /api/v1/launch/provisionings",
+    "GET /api/v1/launch/provisionings/{id}",
+    "POST /api/v1/launch/provisionings/{id}/transition",
+    "GET /api/v1/launch/configuration-templates",
+    "GET /api/admin/launch/overview",
+    "GET /api/admin/launch/provisionings",
+    "POST /api/admin/launch/provisionings"
+  ],
+  "acceptanceCriteria": "AC-186",
+  "acceptanceCriteriaMet": true
+}

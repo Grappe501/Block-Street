@@ -1,0 +1,9 @@
+{
+    "metrics": {
+    "activation_rate": 0,
+    "onboarding_completion": 0,
+    "training_completion": 0,
+    "human_help_count_avg": 2.3,
+    "launch_readiness_score": 76
+  }
+}

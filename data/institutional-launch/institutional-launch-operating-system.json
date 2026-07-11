@@ -1,0 +1,39 @@
+{
+  "version": "1.0.0",
+  "phase": 9,
+  "docPath": "docs/phase-09/PHASE_9_MASTER_SEQUENCE.md",
+  "requirementId": "ILS-001",
+  "productName": "Institutional Launch, Adoption, and Scale",
+  "phaseQuestion": "Can institutions adopt and operate without the original builders?",
+  "status": "in_progress",
+  "priority": "critical",
+  "readAfter": "PSV-001",
+  "guidingPrinciple": "The platform is not truly ready until it can successfully introduce, teach, support, and reproduce itself.",
+  "mission": "Move from technically capable to operationally adoptable — provisioning, configuration, migration, onboarding, training, pilots, support, and scale.",
+  "stepsComplete": 1,
+  "stepsTotal": 8,
+  "implementationOrder": ["9.1", "9.2", "9.3", "9.4", "9.5", "9.6", "9.7", "9.8"],
+  "approvalGates": [
+    "provisioning_approval",
+    "configuration_approval",
+    "data_readiness_approval",
+    "pilot_approval",
+    "launch_approval",
+    "expansion_approval"
+  ],
+  "primaryPilotMetric": "human_help_count_per_session",
+  "steps": [
+    { "id": "9.1", "name": "Institutional Provisioning", "requirement": "PRV-001", "artifact": "docs/phase-09/INSTITUTIONAL_PROVISIONING.md", "acceptanceCriteria": "AC-186", "status": "done" },
+    { "id": "9.2", "name": "Configuration and Organizational Modeling", "requirement": "ORG-001", "acceptanceCriteria": "AC-187", "status": "pending" },
+    { "id": "9.3", "name": "Migration and Data Readiness", "requirement": "MIG-001", "acceptanceCriteria": "AC-188", "status": "pending" },
+    { "id": "9.4", "name": "Guided Onboarding", "requirement": "ONB-001", "acceptanceCriteria": "AC-189", "status": "pending" },
+    { "id": "9.5", "name": "Training and Certification", "requirement": "TRN-001", "acceptanceCriteria": "AC-190", "status": "pending" },
+    { "id": "9.6", "name": "Pilot and Acceptance Program", "requirement": "PLT-001", "acceptanceCriteria": "AC-191", "status": "pending" },
+    { "id": "9.7", "name": "Support and Customer Success", "requirement": "SUP-001", "acceptanceCriteria": "AC-192", "status": "pending" },
+    { "id": "9.8", "name": "Adoption, Replication, and Scale", "requirement": "SCL-001", "acceptanceCriteria": "AC-193", "status": "pending" }
+  ],
+  "buildsOn": ["PSV-001", "AUTH-001", "ADM-001", "CMS-001", "NTF-001", "API-001", "DPL-001", "MON-001", "SEC-001"],
+  "governedBy": ["LIVING-SYSTEMS-ARCHITECTURE"],
+  "acceptanceCriteria": "AC-193",
+  "acceptanceCriteriaMet": false
+}

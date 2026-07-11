@@ -1,0 +1,7 @@
+{
+  "paths": [
+    { "id": "trn-platform-admin", "certification": "Organization Administrator", "required_lessons": 12, "status": "draft" },
+    { "id": "trn-data-steward", "certification": "Data Steward", "required_lessons": 8, "status": "draft" },
+    { "id": "trn-mission-coord", "certification": "Mission Coordinator", "required_lessons": 6, "status": "draft" }
+  ]
+}
