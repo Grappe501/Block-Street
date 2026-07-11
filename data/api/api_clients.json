@@ -1,0 +1,36 @@
+{
+  "clients": [
+    {
+      "id": "client-web-app",
+      "name": "Block Street Web Application",
+      "client_type": "internal_application",
+      "organization_id_optional": "org-statewide-campaign",
+      "workspace_id_optional": null,
+      "environment": "production",
+      "status": "active",
+      "owner_user_id": "usr-001",
+      "allowed_scopes": ["users.read", "missions.read", "missions.write", "content.read", "notifications.request", "analytics.read"],
+      "allowed_origins": ["https://block-street.local", "http://localhost:3000"],
+      "redirect_uris": [],
+      "created_at": "2026-07-01T00:00:00Z",
+      "last_used_at_optional": "2026-07-10T20:00:00Z",
+      "expires_at_optional": null
+    },
+    {
+      "id": "client-county-integration",
+      "name": "Washington County Event Sync",
+      "client_type": "organization_integration",
+      "organization_id_optional": "org-washington-county",
+      "workspace_id_optional": "ws-county",
+      "environment": "production",
+      "status": "active",
+      "owner_user_id": "usr-002",
+      "allowed_scopes": ["missions.read", "content.read", "webhooks.manage"],
+      "allowed_origins": [],
+      "redirect_uris": [],
+      "created_at": "2026-07-05T00:00:00Z",
+      "last_used_at_optional": "2026-07-10T18:00:00Z",
+      "expires_at_optional": null
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "deprecations": [
+    {
+      "id": "dep-api-missions-unversioned",
+      "endpoint": "/api/missions",
+      "method": "GET",
+      "version": "unversioned",
+      "replacement_endpoint": "/api/v1/missions",
+      "announced_at": "2026-07-10T00:00:00Z",
+      "deprecated_at": "2026-07-10T00:00:00Z",
+      "sunset_at": "2026-12-01T00:00:00Z",
+      "reason": "Unified v1 API gateway",
+      "migration_guide_reference": "docs/platform/api/API_MIGRATION_PLAN.md"
+    },
+    {
+      "id": "dep-api-content-unversioned",
+      "endpoint": "/api/content",
+      "method": "GET",
+      "version": "unversioned",
+      "replacement_endpoint": "/api/v1/public/content",
+      "announced_at": "2026-07-10T00:00:00Z",
+      "deprecated_at": "2026-07-10T00:00:00Z",
+      "sunset_at": "2026-12-01T00:00:00Z",
+      "reason": "Public content under v1 namespace",
+      "migration_guide_reference": "docs/platform/api/API_MIGRATION_PLAN.md"
+    }
+  ]
+}

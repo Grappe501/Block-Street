@@ -1,0 +1,13 @@
+{
+  "telemetry": {
+    "requests_today": 2418224,
+    "success_rate": 99.4,
+    "p95_latency_ms": 284,
+    "authentication_failures": 1842,
+    "permission_denials": 4218,
+    "rate_limited_requests": 612,
+    "webhook_failures": 14,
+    "deprecated_api_usage_percent": 2.1,
+    "critical_endpoint_status": "operational"
+  }
+}

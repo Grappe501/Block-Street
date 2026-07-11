@@ -1,0 +1,40 @@
+{
+  "tools": [
+    {
+      "id": "tool-search",
+      "name": "search_records",
+      "purpose": "Search platform records within user permissions",
+      "action_level": "read_only",
+      "required_permission": "analytics.read",
+      "data_classification": "internal",
+      "approval_required": false,
+      "audit_required": true,
+      "side_effect": "none",
+      "status": "active"
+    },
+    {
+      "id": "tool-mission-draft",
+      "name": "create_mission_draft",
+      "purpose": "Propose a mission draft for user approval",
+      "action_level": "draft_only",
+      "required_permission": "missions.write",
+      "data_classification": "internal",
+      "approval_required": true,
+      "audit_required": true,
+      "side_effect": "draft",
+      "status": "active"
+    },
+    {
+      "id": "tool-notification-draft",
+      "name": "draft_notification",
+      "purpose": "Draft notification content without sending",
+      "action_level": "draft_only",
+      "required_permission": "notifications.request",
+      "data_classification": "internal",
+      "approval_required": true,
+      "audit_required": true,
+      "side_effect": "draft",
+      "status": "active"
+    }
+  ]
+}

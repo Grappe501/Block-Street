@@ -1,0 +1,13 @@
+{
+  "scopes": [
+    { "key": "users.read", "description": "Read user profiles", "risk": "medium" },
+    { "key": "missions.read", "description": "Read missions", "risk": "low" },
+    { "key": "missions.write", "description": "Create and update missions", "risk": "high" },
+    { "key": "content.read", "description": "Read published content", "risk": "low" },
+    { "key": "content.publish", "description": "Publish content", "risk": "high" },
+    { "key": "notifications.request", "description": "Request notifications", "risk": "medium" },
+    { "key": "analytics.read", "description": "Read analytics", "risk": "medium" },
+    { "key": "webhooks.manage", "description": "Manage webhook subscriptions", "risk": "high" },
+    { "key": "data.export_restricted", "description": "Export restricted data", "risk": "critical" }
+  ]
+}

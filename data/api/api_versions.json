@@ -1,0 +1,13 @@
+{
+  "versions": [
+    {
+      "id": "api-v1",
+      "version": "v1",
+      "status": "active",
+      "released_at": "2026-07-10T00:00:00Z",
+      "deprecated_at_optional": null,
+      "sunset_at_optional": null,
+      "documentation_reference": "docs/platform/api/API_DESIGN_STANDARD.md"
+    }
+  ]
+}
