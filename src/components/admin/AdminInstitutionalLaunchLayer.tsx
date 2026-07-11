@@ -3,14 +3,16 @@
 import ilsOs from "../../../data/institutional-launch/institutional-launch-operating-system.json";
 import ils from "../../../data/registry/institutional-launch.json";
 import prv from "../../../data/registry/institutional-provisioning.json";
+import org from "../../../data/registry/organizational-modeling.json";
 import { AdminInstitutionalProvisioning } from "@/components/admin/AdminInstitutionalProvisioning";
+import { AdminInstitutionalOrganization } from "@/components/admin/AdminInstitutionalOrganization";
 
 const STEPS: Array<
-  | { step: typeof prv; label: string; accent: string; featured: boolean }
+  | { step: { productName: string; requirementId: string; acceptanceCriteria: string }; label: string; accent: string; featured: boolean }
   | { label: string; accent: string; featured: boolean; pending: string }
 > = [
-  { step: prv, label: "9.1 Institutional Provisioning", accent: "border-amber-500 bg-amber-100", featured: true },
-  { label: "9.2 Configuration & Org Modeling", accent: "border-slate-300 bg-slate-50", featured: false, pending: "ORG-001" },
+  { step: prv, label: "9.1 Institutional Provisioning", accent: "border-amber-500 bg-amber-100", featured: false },
+  { step: org, label: "9.2 Configuration & Org Modeling", accent: "border-indigo-500 bg-indigo-100", featured: true },
   { label: "9.3 Migration & Data Readiness", accent: "border-slate-300 bg-slate-50", featured: false, pending: "MIG-001" },
   { label: "9.4 Guided Onboarding", accent: "border-slate-300 bg-slate-50", featured: false, pending: "ONB-001" },
   { label: "9.5 Training & Certification", accent: "border-slate-300 bg-slate-50", featured: false, pending: "TRN-001" },
@@ -52,6 +54,7 @@ export function AdminInstitutionalLaunchLayer() {
         ))}
       </div>
 
+      <AdminInstitutionalOrganization />
       <AdminInstitutionalProvisioning />
     </div>
   );

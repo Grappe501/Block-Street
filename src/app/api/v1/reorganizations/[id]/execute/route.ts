@@ -1,0 +1,16 @@
+import { withApiGateway } from "@/lib/api/http";
+import { ApiError, apiSuccess } from "@/lib/api/errors";
+import { executeReorganization } from "@/lib/organization/engine";
+
+export const POST = withApiGateway(
+  async (ctx, request) => {
+    const id = request.nextUrl.pathname.split("/")[3] ?? "";
+    const body = (await request.json()) as { move_operations?: Array<{ unit_id: string; new_parent_id: string }> };
+    try {
+      return apiSuccess(executeReorganization(id, body.move_operations ?? [], ctx.actor_id ?? "system"), { request_id: ctx.request_id, correlation_id: ctx.correlation_id });
+    } catch (e) {
+      throw new ApiError("INVALID_REQUEST", e instanceof Error ? e.message : "Execute failed", 400);
+    }
+  },
+  { permission: "organization.manage", endpoint: "/api/v1/reorganizations/{id}/execute" }
+);
