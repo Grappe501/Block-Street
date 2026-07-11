@@ -1,0 +1,10 @@
+{
+  "content_types": [
+    { "id": "ctype-page", "name": "Page", "key": "page", "workflow_id": "standard", "default_audience": "public", "default_scope": "platform", "requires_review": true, "requires_accessibility_review": true, "requires_legal_review": false, "status": "active" },
+    { "id": "ctype-article", "name": "Article", "key": "article", "workflow_id": "standard", "default_audience": "public", "default_scope": "platform", "requires_review": true, "requires_accessibility_review": true, "requires_legal_review": false, "status": "active" },
+    { "id": "ctype-announcement", "name": "Announcement", "key": "announcement", "workflow_id": "simple", "default_audience": "authenticated", "default_scope": "organization", "requires_review": false, "requires_accessibility_review": false, "requires_legal_review": false, "status": "active" },
+    { "id": "ctype-help", "name": "Help Article", "key": "help_article", "workflow_id": "standard", "default_audience": "authenticated", "default_scope": "platform", "requires_review": true, "requires_accessibility_review": true, "requires_legal_review": false, "status": "active" },
+    { "id": "ctype-county", "name": "County Page", "key": "county_page", "workflow_id": "standard", "default_audience": "public", "default_scope": "county", "requires_review": true, "requires_accessibility_review": true, "requires_legal_review": false, "status": "active" },
+    { "id": "ctype-resource", "name": "Resource", "key": "resource", "workflow_id": "standard", "default_audience": "public", "default_scope": "platform", "requires_review": true, "requires_accessibility_review": true, "requires_legal_review": false, "status": "active" }
+  ]
+}

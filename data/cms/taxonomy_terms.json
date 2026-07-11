@@ -1,0 +1,13 @@
+{
+  "terms": [
+    { "id": "tax-topic-organizing", "taxonomy_type": "topic", "name": "Organizing", "slug": "organizing", "description": "Community and civic organizing", "parent_id": null, "organization_id_optional": null, "status": "active" },
+    { "id": "tax-topic-help", "taxonomy_type": "topic", "name": "Help", "slug": "help", "description": "Platform help content", "parent_id": null, "organization_id_optional": null, "status": "active" },
+    { "id": "tax-topic-volunteers", "taxonomy_type": "topic", "name": "Volunteers", "slug": "volunteers", "description": "Volunteer programs", "parent_id": null, "organization_id_optional": null, "status": "active" }
+  ],
+  "tags": [
+    { "id": "tag-youth", "name": "youth" },
+    { "id": "tag-statewide", "name": "statewide" },
+    { "id": "tag-onboarding", "name": "onboarding" },
+    { "id": "tag-county", "name": "county" }
+  ]
+}

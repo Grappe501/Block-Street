@@ -1,0 +1,18 @@
+{
+  "manifests": [
+    {
+      "id": "pubman-001",
+      "content_item_id": "cnt-001",
+      "content_version_id": "ver-001-2",
+      "channels": ["public_web", "ai_retrieval"],
+      "audiences": ["public"],
+      "scope_type": "platform",
+      "scope_id": "platform",
+      "published_by": "usr-001",
+      "approved_by": "usr-001",
+      "published_at": "2026-07-10T12:00:00Z",
+      "result": "success",
+      "rollback_reference": "ver-001-1"
+    }
+  ]
+}

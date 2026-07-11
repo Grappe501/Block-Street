@@ -1,0 +1,6 @@
+{
+  "assignments": [
+    { "user_id": "usr-001", "roles": ["author", "editor", "approver", "publisher", "content_administrator"] },
+    { "user_id": "usr-002", "roles": ["author", "editor", "publisher"] }
+  ]
+}

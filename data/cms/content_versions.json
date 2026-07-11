@@ -1,0 +1,93 @@
+{
+  "versions": [
+    {
+      "id": "ver-001-1",
+      "content_item_id": "cnt-001",
+      "version_number": 1,
+      "title": "Building a Statewide Youth Organizing Movement",
+      "summary": "Initial draft",
+      "body": "<p>Arkansas youth organizing begins at the county level.</p>",
+      "structured_body": { "blocks": [{ "type": "text", "content": "Arkansas youth organizing begins at the county level." }] },
+      "change_summary": "Initial draft",
+      "author_user_id": "usr-001",
+      "created_at": "2026-07-10T00:00:00Z",
+      "review_status": "approved",
+      "approval_status": "approved",
+      "approved_by": "usr-001",
+      "approved_at": "2026-07-10T06:00:00Z",
+      "accessibility_status": "approved"
+    },
+    {
+      "id": "ver-001-2",
+      "content_item_id": "cnt-001",
+      "version_number": 2,
+      "title": "Building a Statewide Youth Organizing Movement",
+      "summary": "How Block Street connects counties, campuses, and volunteers across Arkansas.",
+      "body": "<h2>One statewide network</h2><p>Block Street connects counties, campuses, and volunteers so local leadership stays local while statewide coordination remains possible.</p>",
+      "structured_body": {
+        "blocks": [
+          { "type": "hero", "headline": "One statewide network", "subheadline": "Local leadership, statewide coordination" },
+          { "type": "rich_text", "content": "<p>Block Street connects counties, campuses, and volunteers so local leadership stays local while statewide coordination remains possible.</p>" }
+        ]
+      },
+      "change_summary": "Editorial revision for publication",
+      "author_user_id": "usr-001",
+      "created_at": "2026-07-10T12:00:00Z",
+      "review_status": "approved",
+      "approval_status": "approved",
+      "approved_by": "usr-001",
+      "approved_at": "2026-07-10T12:00:00Z",
+      "accessibility_status": "approved",
+      "ai_assistance_metadata_optional": null
+    },
+    {
+      "id": "ver-002-1",
+      "content_item_id": "cnt-002",
+      "version_number": 1,
+      "title": "How to Switch Your Workspace Context",
+      "summary": "Change your active organization and workspace from the Security Center.",
+      "body": "<ol><li>Open the Security Center</li><li>Select your workspace under Workspace context</li><li>Confirm the active context banner</li></ol>",
+      "structured_body": { "blocks": [{ "type": "faq", "items": [{ "q": "Where is context shown?", "a": "Security Center and admin header" }] }] },
+      "change_summary": "Initial help article",
+      "author_user_id": "usr-001",
+      "created_at": "2026-07-10T10:00:00Z",
+      "review_status": "approved",
+      "approval_status": "approved",
+      "approved_by": "usr-001",
+      "approved_at": "2026-07-10T10:00:00Z",
+      "accessibility_status": "approved"
+    },
+    {
+      "id": "ver-003-1",
+      "content_item_id": "cnt-003",
+      "version_number": 1,
+      "title": "Washington County Field Team — Weekly Brief",
+      "summary": "Internal briefing for county organizers.",
+      "body": "<p>Priority missions this week: campus outreach and volunteer onboarding.</p>",
+      "structured_body": null,
+      "change_summary": "Weekly brief",
+      "author_user_id": "usr-002",
+      "created_at": "2026-07-10T11:00:00Z",
+      "review_status": "approved",
+      "approval_status": "approved",
+      "approved_by": "usr-002",
+      "approved_at": "2026-07-10T11:00:00Z",
+      "accessibility_status": "not_reviewed"
+    },
+    {
+      "id": "ver-004-1",
+      "content_item_id": "cnt-004",
+      "version_number": 1,
+      "title": "Volunteer Recruitment Playbook — Draft",
+      "summary": "Draft awaiting review",
+      "body": "<p>Draft content for county volunteer recruitment.</p>",
+      "structured_body": null,
+      "change_summary": "Initial draft",
+      "author_user_id": "usr-002",
+      "created_at": "2026-07-10T14:00:00Z",
+      "review_status": "pending",
+      "approval_status": "pending",
+      "accessibility_status": "review_required"
+    }
+  ]
+}

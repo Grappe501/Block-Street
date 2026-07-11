@@ -1,0 +1,24 @@
+{
+  "assets": [
+    {
+      "id": "media-001",
+      "filename": "statewide-organizing-hero.webp",
+      "original_filename": "statewide-organizing-hero.jpg",
+      "media_type": "image",
+      "mime_type": "image/webp",
+      "size": 245000,
+      "storage_reference": "/media/statewide-organizing-hero.webp",
+      "title": "Statewide organizing hero",
+      "description": "Youth organizers across Arkansas counties",
+      "alt_text": "Group of young organizers meeting around a map of Arkansas counties",
+      "caption": "Local leadership, statewide network",
+      "owner_user_id": "usr-001",
+      "organization_id_optional": "org-statewide-campaign",
+      "usage_rights": "organization_owned",
+      "license": "internal",
+      "review_status": "approved",
+      "publication_status": "published",
+      "created_at": "2026-07-10T00:00:00Z"
+    }
+  ]
+}
