@@ -1,0 +1,21 @@
+{
+  "approvals": [
+    {
+      "id": "appr-rc-20260710-001-technical",
+      "release_id": "rc-20260710-001",
+      "role": "technical",
+      "approver_id": "usr-director",
+      "approver_name": "Platform Director",
+      "status": "approved",
+      "approved_at": "2026-07-10T19:00:00.000Z"
+    },
+    {
+      "id": "appr-rc-20260710-001-operations",
+      "release_id": "rc-20260710-001",
+      "role": "operations",
+      "approver_id": "",
+      "approver_name": "",
+      "status": "pending"
+    }
+  ]
+}

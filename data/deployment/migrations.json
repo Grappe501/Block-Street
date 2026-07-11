@@ -1,0 +1,16 @@
+{
+  "migrations": [
+    {
+      "id": "mig-001",
+      "migration_key": "20260711_add_indexes",
+      "application_id": "app-block-street",
+      "version": "20260711",
+      "description": "Add mission board query indexes",
+      "risk_level": "R3",
+      "status": "staging_passed",
+      "created_by": "director@block-street.local",
+      "staging_result": "passed",
+      "verification_result": "indexes created, query plan verified"
+    }
+  ]
+}

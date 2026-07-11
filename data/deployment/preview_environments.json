@@ -1,0 +1,15 @@
+{
+  "previews": [
+    {
+      "id": "prev-pr-248",
+      "branch": "feature/deployment-governance",
+      "commit_sha": "54f33e6",
+      "pull_request": "PR-248",
+      "url": "https://deploy-preview-248--block-street.netlify.app",
+      "build_status": "ready",
+      "expires_at": "2026-07-17T00:00:00.000Z",
+      "environment": "preview",
+      "banner": "Preview Environment — Build PR-248 — No production data"
+    }
+  ]
+}

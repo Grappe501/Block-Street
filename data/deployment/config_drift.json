@@ -1,0 +1,13 @@
+{
+  "warnings": [
+    {
+      "id": "drift-001",
+      "environment_id": "env-staging",
+      "variable": "AUTH_SESSION_HOURS",
+      "documented": "24",
+      "actual": "48",
+      "severity": "warning",
+      "detected_at": "2026-07-10T12:00:00.000Z"
+    }
+  ]
+}

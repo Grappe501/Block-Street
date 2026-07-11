@@ -1,0 +1,22 @@
+{
+  "manifests": [
+    {
+      "id": "rel-20260709-042",
+      "release_version": "2.14.2",
+      "application_ids": ["app-block-street"],
+      "artifact_ids": ["art-001"],
+      "commit_shas": ["9b2f91c"],
+      "environment": "production",
+      "configuration_versions": ["cfg-v1"],
+      "database_migrations": [],
+      "feature_flags": {},
+      "change_summary": "Build 8.5 Unified API Layer — AC-182",
+      "risk_level": "R2",
+      "created_by": "director@block-street.local",
+      "approved_by": ["Technical Reviewer"],
+      "started_at": "2026-07-09T22:15:00.000Z",
+      "completed_at": "2026-07-09T22:45:00.000Z",
+      "status": "completed"
+    }
+  ]
+}

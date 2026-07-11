@@ -1,0 +1,61 @@
+{
+  "environments": [
+    {
+      "id": "env-local",
+      "name": "local",
+      "application_id": "app-block-street",
+      "region": "local",
+      "configuration_version": "cfg-v1",
+      "status": "operational",
+      "banner": "Local Development — No production credentials"
+    },
+    {
+      "id": "env-test",
+      "name": "test",
+      "application_id": "app-block-street",
+      "region": "ci",
+      "configuration_version": "cfg-v1",
+      "status": "operational",
+      "banner": "Test Environment — Synthetic data only"
+    },
+    {
+      "id": "env-preview",
+      "name": "preview",
+      "application_id": "app-block-street",
+      "url": "https://deploy-preview--block-street.netlify.app",
+      "region": "us-east-1",
+      "configuration_version": "cfg-v1",
+      "status": "operational",
+      "banner": "Preview Environment — No production data"
+    },
+    {
+      "id": "env-staging",
+      "name": "staging",
+      "application_id": "app-block-street",
+      "url": "https://staging--block-street.netlify.app",
+      "release_version": "2.14.3-rc1",
+      "commit_sha": "54f33e6",
+      "build_id": "build-staging-001",
+      "deployment_id": "dep-staging-001",
+      "deployed_at": "2026-07-10T18:00:00.000Z",
+      "region": "us-east-1",
+      "configuration_version": "cfg-v1",
+      "status": "operational",
+      "banner": "Staging — Production-like test environment"
+    },
+    {
+      "id": "env-production",
+      "name": "production",
+      "application_id": "app-block-street",
+      "url": "https://block-street.netlify.app",
+      "release_version": "2.14.2",
+      "commit_sha": "9b2f91c",
+      "build_id": "build-prod-042",
+      "deployment_id": "dep-prod-042",
+      "deployed_at": "2026-07-09T22:30:00.000Z",
+      "region": "us-east-1",
+      "configuration_version": "cfg-v1",
+      "status": "operational"
+    }
+  ]
+}

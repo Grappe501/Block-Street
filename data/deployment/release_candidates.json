@@ -1,0 +1,17 @@
+{
+  "candidates": [
+    {
+      "id": "rc-20260710-001",
+      "version": "2.14.3-rc1",
+      "commit_sha": "54f33e6",
+      "build_artifact_id": "art-002",
+      "configuration_version": "cfg-v1",
+      "database_migration_set": ["20260711_add_indexes"],
+      "feature_flags": { "DEPLOYMENT_PIPELINE_ENABLED": true },
+      "created_at": "2026-07-10T18:30:00.000Z",
+      "created_by": "director@block-street.local",
+      "status": "awaiting_approval",
+      "risk_level": "R3"
+    }
+  ]
+}
