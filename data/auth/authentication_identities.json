@@ -1,0 +1,30 @@
+{
+  "identities": [
+    {
+      "id": "authid-001",
+      "user_id": "usr-001",
+      "provider_type": "email_password",
+      "provider_subject": "director@block-street.local",
+      "provider_email": "director@block-street.local",
+      "provider_email_verified": true,
+      "provider_tenant_id": null,
+      "linked_at": "2026-07-10T00:00:00Z",
+      "last_used_at": null,
+      "status": "active",
+      "metadata_reference": null
+    },
+    {
+      "id": "authid-002",
+      "user_id": "usr-002",
+      "provider_type": "email_password",
+      "provider_subject": "organizer@block-street.local",
+      "provider_email": "organizer@block-street.local",
+      "provider_email_verified": true,
+      "provider_tenant_id": null,
+      "linked_at": "2026-07-10T00:00:00Z",
+      "last_used_at": null,
+      "status": "active",
+      "metadata_reference": null
+    }
+  ]
+}

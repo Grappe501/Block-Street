@@ -1,0 +1,20 @@
+{
+  "workspaces": [
+    {
+      "workspace_id": "ws-director",
+      "organization_id": "org-statewide-campaign",
+      "name": "Director Workbench",
+      "slug": "director",
+      "status": "active",
+      "created_at": "2026-07-10T00:00:00Z"
+    },
+    {
+      "workspace_id": "ws-county",
+      "organization_id": "org-washington-county",
+      "name": "County Workbench",
+      "slug": "county",
+      "status": "active",
+      "created_at": "2026-07-10T00:00:00Z"
+    }
+  ]
+}

@@ -1,12 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
-import { assertAuthenticated, getUserProfile } from "@/lib/auth/engine";
+import { assertAuthenticated, listMfaMethods } from "@/lib/auth/engine";
 import { authErrorResponse } from "@/lib/auth/http";
 
 export async function GET(request: NextRequest) {
   try {
     const session = assertAuthenticated(request.headers.get("cookie"));
-    const profile = getUserProfile(session.user_id, session);
-    return NextResponse.json({ profile });
+    return NextResponse.json({ methods: listMfaMethods(session.user_id) });
   } catch (e) {
     return authErrorResponse(e);
   }

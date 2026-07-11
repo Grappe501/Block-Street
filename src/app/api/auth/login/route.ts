@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
-import { login, SESSION_COOKIE } from "@/lib/auth/engine";
+import { login } from "@/lib/auth/engine";
+import { requestMeta, setSessionCookie } from "@/lib/auth/http";
 
 export async function POST(request: NextRequest) {
   const body = await request.json();
@@ -15,12 +16,6 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: "Invalid credentials" }, { status: 401 });
   }
   const res = NextResponse.json({ ok: true, session_id: session.session_id, expires_at: session.expires_at });
-  res.cookies.set(SESSION_COOKIE, session.session_id, {
-    httpOnly: true,
-    sameSite: "lax",
-    secure: process.env.NODE_ENV === "production",
-    path: "/",
-    expires: new Date(session.expires_at),
-  });
+  setSessionCookie(res, session);
   return res;
 }

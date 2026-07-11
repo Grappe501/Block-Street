@@ -1,63 +1,62 @@
-import { createHash, randomBytes } from "crypto";
-import { readFileSync, writeFileSync, appendFileSync, existsSync } from "fs";
-import { join } from "path";
-import type { AuthAuditEvent, Membership, Session, User, UserProfile } from "./types";
+import { randomBytes } from "crypto";
+import {
+  appendAudit,
+  loadFeatureFlags,
+  loadIdentities,
+  loadOrganizations,
+  loadSessions,
+  loadUsers,
+  loadWorkspaceMemberships,
+  loadWorkspaces,
+  persistSessions,
+  persistUsers,
+  persistWorkspaceMemberships,
+  readAuditEvents,
+} from "./data";
+import { hashPassword } from "./crypto";
+import {
+  SESSION_COOKIE,
+  getSession,
+  getSessionFromRequest,
+  issueSession,
+  listUserSessions,
+  logout,
+  logoutAll,
+  revokeSession,
+} from "./session";
+import type {
+  ActiveContext,
+  AuthAuditEvent,
+  AuthenticationIdentity,
+  Membership,
+  PlatformUser,
+  Session,
+  UserProfile,
+} from "./types";
 
-const DATA = join(process.cwd(), "data", "auth");
-const SESSION_COOKIE = "cos_session";
-const SESSION_HOURS = 24;
+export { hashPassword } from "./crypto";
 
-let userCache: User[] | null = null;
-let sessionCache: Session[] | null = null;
-
-/** Bootstrap dev credential — override via AUTH_BOOTSTRAP_PASSWORD env in production setup */
 const BOOTSTRAP_PASSWORD = process.env.AUTH_BOOTSTRAP_PASSWORD ?? "blockstreet-dev";
 
-export function hashPassword(password: string): string {
-  return createHash("sha256").update(`cos-v1:${password}`).digest("hex");
+function audit(event: Omit<AuthAuditEvent, "timestamp">) {
+  appendAudit({ event_type: event.action, ...event });
 }
 
-function loadUsers(): User[] {
-  if (userCache) return userCache;
-  const raw = JSON.parse(readFileSync(join(DATA, "users.json"), "utf8"));
-  userCache = raw.users as User[];
-  return userCache;
-}
-
-function loadSessions(): Session[] {
-  if (sessionCache) return sessionCache;
-  const raw = JSON.parse(readFileSync(join(DATA, "sessions.json"), "utf8"));
-  sessionCache = raw.sessions as Session[];
-  return sessionCache;
-}
-
-function persistSessions(sessions: Session[]) {
-  writeFileSync(join(DATA, "sessions.json"), JSON.stringify({ sessions }, null, 2));
-  sessionCache = sessions;
-}
-
-function loadMemberships(userId: string): Membership[] {
-  const raw = JSON.parse(readFileSync(join(DATA, "memberships.json"), "utf8"));
-  return (raw.memberships as Membership[]).filter((m) => m.user_id === userId && m.status === "active");
-}
-
-function appendAudit(event: Omit<AuthAuditEvent, "timestamp">) {
-  appendFileSync(
-    join(DATA, "audit_events.jsonl"),
-    JSON.stringify({ ...event, timestamp: new Date().toISOString() }) + "\n"
-  );
-}
-
-function verifyPassword(user: User, password: string): boolean {
+function verifyPassword(user: PlatformUser, password: string): boolean {
   const hash = hashPassword(password);
   if (user.password_hash) return user.password_hash === hash;
   return hash === hashPassword(BOOTSTRAP_PASSWORD);
 }
 
 export function login(email: string, password: string, meta?: { ip?: string; userAgent?: string }): Session | null {
-  const user = loadUsers().find((u) => u.primary_email === email && u.account_status === "active");
+  const flags = loadFeatureFlags();
+  if (!flags.AUTH_PASSWORD_ENABLED) return null;
+
+  const user = loadUsers().find(
+    (u) => u.primary_email === email && (u.account_status === "active" || u.account_status === "restricted")
+  );
   if (!user || !verifyPassword(user, password)) {
-    appendAudit({
+    audit({
       actor_type: "user",
       actor_id: email,
       action: "login_failed",
@@ -68,92 +67,198 @@ export function login(email: string, password: string, meta?: { ip?: string; use
     });
     return null;
   }
-  const now = new Date();
-  const expires = new Date(now.getTime() + SESSION_HOURS * 3600000);
-  const session: Session = {
-    session_id: `sess-${randomBytes(16).toString("hex")}`,
-    user_id: user.user_id,
-    created_at: now.toISOString(),
-    expires_at: expires.toISOString(),
-    ip_address: meta?.ip ?? null,
-    user_agent: meta?.userAgent ?? null,
-    revoked: false,
+  if (user.account_status === "suspended") return null;
+  return issueSession(user, { ...meta, authStrength: "ial2" });
+}
+
+export function register(
+  input: { email: string; password: string; display_name: string },
+  meta?: { ip?: string; userAgent?: string }
+): { user: PlatformUser; session: Session } | { error: string } {
+  const flags = loadFeatureFlags();
+  if (!flags.AUTH_SELF_REGISTRATION_ENABLED) return { error: "Self-registration is not enabled" };
+  if (flags.AUTH_INVITATION_ONLY_MODE) return { error: "Registration requires an invitation" };
+  if (!flags.AUTH_PASSWORD_ENABLED) return { error: "Password registration is not enabled" };
+
+  const existing = loadUsers().find((u) => u.primary_email === input.email);
+  if (existing) return { error: "An account with this email already exists" };
+
+  const now = new Date().toISOString();
+  const userId = `usr-${randomBytes(8).toString("hex")}`;
+  const user: PlatformUser = {
+    user_id: userId,
+    public_id: `pub-${userId}`,
+    primary_email: input.email,
+    verified_emails: [input.email],
+    display_name: input.display_name,
+    preferred_name: input.display_name.split(" ")[0] ?? input.display_name,
+    legal_name_optional: null,
+    avatar: null,
+    avatar_url: null,
+    phone_optional: null,
+    locale: "en-US",
+    timezone: "America/Chicago",
+    authentication_methods: ["email_password"],
+    account_status: "pending_verification",
+    password_hash: hashPassword(input.password),
+    mfa_enabled: false,
+    mfa_secret: null,
+    identity_assurance_level: "ial1",
+    security_state: "normal",
+    onboarding_status: "not_started",
+    terms_accepted_at: null,
+    privacy_policy_accepted_at: null,
+    created_at: now,
+    updated_at: now,
+    last_login_at: null,
+    last_active_at: null,
+    deleted_at: null,
   };
-  const sessions = loadSessions().filter((s) => !(s.user_id === user.user_id && s.revoked));
-  sessions.push(session);
-  persistSessions(sessions);
-  appendAudit({
-    actor_type: "user",
-    actor_id: user.user_id,
-    action: "login_success",
-    target_type: "session",
-    target_id: session.session_id,
-    result: "success",
-  });
-  return session;
+
+  const users = loadUsers();
+  users.push(user);
+  persistUsers(users);
+  audit({ actor_type: "user", actor_id: userId, action: "register", target_type: "user", target_id: userId, result: "success", user_id_optional: userId });
+  return { user, session: issueSession(user, { ...meta, authStrength: "ial1" }) };
 }
 
-export function getSession(sessionId: string): Session | null {
-  const session = loadSessions().find((s) => s.session_id === sessionId && !s.revoked);
-  if (!session) return null;
-  if (new Date(session.expires_at).getTime() < Date.now()) return null;
-  return session;
-}
+export { getSession, getSessionFromRequest, logout, logoutAll, listUserSessions, revokeSession };
 
-export function getUserById(userId: string): User | null {
+export function getUserById(userId: string): PlatformUser | null {
   return loadUsers().find((u) => u.user_id === userId) ?? null;
 }
 
-export function getUserProfile(userId: string): UserProfile | null {
+export function resolveMemberships(userId: string): Membership[] {
+  const orgs = loadOrganizations();
+  const workspaces = loadWorkspaces();
+  return loadWorkspaceMemberships()
+    .filter((m) => m.user_id === userId && m.status === "active")
+    .map((m) => {
+      const ws = workspaces.find((w) => w.workspace_id === m.workspace_id);
+      const org = orgs.find((o) => o.organization_id === ws?.organization_id);
+      return {
+        id: m.id,
+        user_id: m.user_id,
+        organization_id: org?.organization_id ?? "",
+        organization_name: org?.name ?? "",
+        workspace_id: m.workspace_id,
+        workspace_name: ws?.name ?? "",
+        roles: m.roles,
+        permissions: m.permissions,
+        status: m.status,
+      };
+    });
+}
+
+export function resolveActiveContext(session: Session): ActiveContext | null {
+  if (!session.active_organization_id || !session.active_workspace_id) return null;
+  const org = loadOrganizations().find((o) => o.organization_id === session.active_organization_id);
+  const ws = loadWorkspaces().find((w) => w.workspace_id === session.active_workspace_id);
+  const mem = loadWorkspaceMemberships().find(
+    (m) => m.user_id === session.user_id && m.workspace_id === session.active_workspace_id && m.status === "active"
+  );
+  if (!org || !ws || !mem) return null;
+  return {
+    organization_id: org.organization_id,
+    organization_name: org.name,
+    workspace_id: ws.workspace_id,
+    workspace_name: ws.name,
+    role_id: mem.role_id,
+    roles: mem.roles,
+    permissions: mem.permissions,
+  };
+}
+
+export function getUserProfile(userId: string, session?: Session | null): UserProfile | null {
   const user = getUserById(userId);
   if (!user) return null;
   const { password_hash: _, mfa_secret: __, ...profile } = user;
-  return { ...profile, memberships: loadMemberships(userId) };
+  return {
+    ...profile,
+    memberships: resolveMemberships(userId),
+    active_context: session ? resolveActiveContext(session) : null,
+    linked_providers: loadIdentities().filter((i) => i.user_id === userId && i.status === "active"),
+  };
 }
 
-export function logout(sessionId: string): boolean {
+export function setActiveContext(sessionId: string, organizationId: string, workspaceId: string): ActiveContext | null {
   const sessions = loadSessions();
-  const idx = sessions.findIndex((s) => s.session_id === sessionId);
-  if (idx < 0) return false;
-  sessions[idx] = { ...sessions[idx], revoked: true };
+  const idx = sessions.findIndex((s) => s.session_id === sessionId && !s.revoked);
+  if (idx < 0) return null;
+
+  const mem = loadWorkspaceMemberships().find(
+    (m) => m.user_id === sessions[idx].user_id && m.workspace_id === workspaceId && m.status === "active"
+  );
+  if (!mem) return null;
+
+  const ws = loadWorkspaces().find((w) => w.workspace_id === workspaceId && w.organization_id === organizationId);
+  const org = loadOrganizations().find((o) => o.organization_id === organizationId);
+  if (!ws || !org) return null;
+
+  sessions[idx] = {
+    ...sessions[idx],
+    active_organization_id: organizationId,
+    active_workspace_id: workspaceId,
+    last_seen_at: new Date().toISOString(),
+  };
   persistSessions(sessions);
-  appendAudit({
+  audit({
     actor_type: "user",
     actor_id: sessions[idx].user_id,
-    action: "logout",
-    target_type: "session",
-    target_id: sessionId,
+    action: "context_switch",
+    target_type: "workspace",
+    target_id: workspaceId,
     result: "success",
+    user_id_optional: sessions[idx].user_id,
+    organization_id_optional: organizationId,
+    workspace_id_optional: workspaceId,
   });
-  return true;
+  return resolveActiveContext(sessions[idx]);
 }
 
-export function listUserSessions(userId: string): Session[] {
-  return loadSessions().filter((s) => s.user_id === userId && !s.revoked);
+export function updateUserProfile(
+  userId: string,
+  patch: Partial<
+    Pick<
+      PlatformUser,
+      | "display_name"
+      | "preferred_name"
+      | "locale"
+      | "timezone"
+      | "onboarding_status"
+      | "terms_accepted_at"
+      | "privacy_policy_accepted_at"
+    >
+  >
+): PlatformUser | null {
+  const users = loadUsers();
+  const idx = users.findIndex((u) => u.user_id === userId);
+  if (idx < 0) return null;
+  users[idx] = { ...users[idx], ...patch, updated_at: new Date().toISOString() };
+  persistUsers(users);
+  audit({ actor_type: "user", actor_id: userId, action: "profile_updated", target_type: "user", target_id: userId, result: "success", user_id_optional: userId });
+  return users[idx];
 }
 
-export function revokeSession(sessionId: string, actorId: string): boolean {
-  const sessions = loadSessions();
-  const idx = sessions.findIndex((s) => s.session_id === sessionId);
+export function suspendMembership(userId: string, workspaceId: string, actorId: string): boolean {
+  const memberships = loadWorkspaceMemberships();
+  const idx = memberships.findIndex((m) => m.user_id === userId && m.workspace_id === workspaceId);
   if (idx < 0) return false;
-  sessions[idx] = { ...sessions[idx], revoked: true };
-  persistSessions(sessions);
-  appendAudit({
-    actor_type: "user",
-    actor_id: actorId,
-    action: "session_revoked",
-    target_type: "session",
-    target_id: sessionId,
-    result: "success",
-  });
+  memberships[idx] = { ...memberships[idx], status: "suspended" };
+  persistWorkspaceMemberships(memberships);
+  logoutAll(userId);
+  audit({ actor_type: "admin", actor_id: actorId, action: "membership_suspended", target_type: "workspace_membership", target_id: memberships[idx].id, result: "success", user_id_optional: userId, workspace_id_optional: workspaceId });
   return true;
 }
 
-export function getSessionFromRequest(cookieHeader: string | null): Session | null {
-  if (!cookieHeader) return null;
-  const match = cookieHeader.match(new RegExp(`${SESSION_COOKIE}=([^;]+)`));
-  if (!match) return null;
-  return getSession(match[1]);
+export function restoreMembership(userId: string, workspaceId: string, actorId: string): boolean {
+  const memberships = loadWorkspaceMemberships();
+  const idx = memberships.findIndex((m) => m.user_id === userId && m.workspace_id === workspaceId);
+  if (idx < 0) return false;
+  memberships[idx] = { ...memberships[idx], status: "active" };
+  persistWorkspaceMemberships(memberships);
+  audit({ actor_type: "admin", actor_id: actorId, action: "membership_restored", target_type: "workspace_membership", target_id: memberships[idx].id, result: "success", user_id_optional: userId, workspace_id_optional: workspaceId });
+  return true;
 }
 
 export function assertAuthenticated(cookieHeader: string | null): Session {
@@ -171,15 +276,16 @@ export class AuthError extends Error {
 }
 
 export function getAuditEvents(limit = 50): AuthAuditEvent[] {
-  const path = join(DATA, "audit_events.jsonl");
-  if (!existsSync(path)) return [];
-  return readFileSync(path, "utf8")
-    .split("\n")
-    .map((l) => l.trim())
-    .filter(Boolean)
-    .map((l) => JSON.parse(l) as AuthAuditEvent)
-    .slice(-limit)
-    .reverse();
+  return readAuditEvents(limit) as AuthAuditEvent[];
 }
 
-export { SESSION_COOKIE };
+export function getLinkedProviders(userId: string): AuthenticationIdentity[] {
+  return loadIdentities().filter((i) => i.user_id === userId && i.status === "active");
+}
+
+export { loadFeatureFlags };
+export { SESSION_COOKIE } from "./session";
+
+export { createInvitation, getInvitationByToken, acceptInvitation, revokeInvitation, listInvitations } from "./invitations";
+export { enrollMfa, verifyMfa, listMfaMethods, revokeMfaMethod, regenerateRecoveryCodes, verifyRecoveryCode } from "./mfa";
+export { requestPasswordlessLink, verifyPasswordlessToken, requestPasswordReset, completePasswordReset, getProviderStatus, linkProviderScaffold } from "./providers";

@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getSession, getUserProfile, logout, SESSION_COOKIE } from "@/lib/auth/engine";
+import { getSession, getUserProfile, logout } from "@/lib/auth/engine";
+import { clearSessionCookie } from "@/lib/auth/http";
+import { SESSION_COOKIE } from "@/lib/auth/session";
 
 export async function GET(request: NextRequest) {
   const sessionId = request.cookies.get(SESSION_COOKIE)?.value;
@@ -10,7 +12,7 @@ export async function GET(request: NextRequest) {
   if (!session) {
     return NextResponse.json({ authenticated: false }, { status: 401 });
   }
-  const profile = getUserProfile(session.user_id);
+  const profile = getUserProfile(session.user_id, session);
   return NextResponse.json({ authenticated: true, session, profile });
 }
 
@@ -18,6 +20,6 @@ export async function POST(request: NextRequest) {
   const sessionId = request.cookies.get(SESSION_COOKIE)?.value;
   if (sessionId) logout(sessionId);
   const res = NextResponse.json({ ok: true });
-  res.cookies.delete(SESSION_COOKIE);
+  clearSessionCookie(res);
   return res;
 }

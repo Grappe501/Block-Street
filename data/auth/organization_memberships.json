@@ -1,0 +1,49 @@
+{
+  "organization_memberships": [
+    {
+      "id": "orgmem-001",
+      "organization_id": "org-statewide-campaign",
+      "user_id": "usr-001",
+      "membership_status": "active",
+      "membership_type": "staff",
+      "joined_at": "2026-07-10T00:00:00Z",
+      "invited_at": null,
+      "invited_by": null,
+      "approved_at": "2026-07-10T00:00:00Z",
+      "approved_by": "system",
+      "primary_role_id": "platform_administrator",
+      "title_optional": "Campaign Director",
+      "department_optional": null
+    },
+    {
+      "id": "orgmem-002",
+      "organization_id": "org-washington-county",
+      "user_id": "usr-002",
+      "membership_status": "active",
+      "membership_type": "staff",
+      "joined_at": "2026-07-10T00:00:00Z",
+      "invited_at": null,
+      "invited_by": null,
+      "approved_at": "2026-07-10T00:00:00Z",
+      "approved_by": "system",
+      "primary_role_id": "organization_administrator",
+      "title_optional": "Field Organizer",
+      "department_optional": null
+    },
+    {
+      "id": "orgmem-003",
+      "organization_id": "org-washington-county",
+      "user_id": "usr-001",
+      "membership_status": "active",
+      "membership_type": "auditor",
+      "joined_at": "2026-07-10T00:00:00Z",
+      "invited_at": null,
+      "invited_by": null,
+      "approved_at": "2026-07-10T00:00:00Z",
+      "approved_by": "system",
+      "primary_role_id": "read_only_auditor",
+      "title_optional": null,
+      "department_optional": null
+    }
+  ]
+}
