@@ -304,7 +304,7 @@
         { "id": "7.2", "name": "Recommendation Intelligence Engine [RIE-001]", "status": "done", "notes": "RIE scoring model, daily briefing, feedback loop, /api/recommendations — AC-173" },
         { "id": "7.3", "name": "Campaign Analytics & Intelligence Platform [ANL-001]", "status": "done", "notes": "Executive dashboard, KPI library, forecasts, alerts, /api/analytics — AC-174" },
         { "id": "7.4", "name": "Live Mission Board [MBD-001]", "status": "done", "notes": "OIS-M16 operational command center, priority engine, /api/missions — AC-175" },
-        { "id": "7.5", "name": "Relationship Intelligence [RLI-001]", "status": "done", "notes": "Living graph, strength, influence, alerts — AC-170" },
+        { "id": "7.5", "name": "Relationship Intelligence Engine [RLI-001]", "status": "done", "notes": "Living graph, connectors, alerts, introductions, /api/relationships — AC-176" },
         { "id": "7.6", "name": "Future AI Assistance [IAS-001]", "status": "done", "notes": "KDG-M16 strategist, guardrails, audit — AC-171 · Phase 7 complete" }
       ]
     },

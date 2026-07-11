@@ -18,6 +18,23 @@
 
 ---
 
+## 2026-07-10 — Build 7.5 Relationship Intelligence Engine [RLI-001 · AC-176]
+
+**Document:** `docs/phase-07/RELATIONSHIP_INTELLIGENCE_ENGINE.md` · **Registry:** `data/registry/relationship-intelligence-engine.json`
+
+### What Changed
+
+- **Social nervous system** — living relationship graph with 15 nodes and 14 edges
+- **6 relationship profiles** — strength, trust, influence, health, timelines
+- **Scoring engines** — transparent strength, trust, and influence weights
+- **Community connectors** — bridge builders and high-influence leaders identified
+- **Alert engine** — dormant relationships and opportunities feed RIE/Mission Board
+- **Introduction intelligence** — suggested introductions with evidence
+- **API routes** — `/api/relationships`, `/graph`, `/network`, `/connectors`, `/health`, `/introduction`
+- Admin live relationship dashboard on Phase 7 tab
+
+---
+
 ## 2026-07-10 — Build 7.4 Live Mission Board [MBD-001 · AC-175]
 
 **Document:** `docs/phase-07/LIVE_MISSION_BOARD.md` · **Registry:** `data/registry/live-mission-board.json`

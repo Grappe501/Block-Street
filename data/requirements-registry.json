@@ -5860,19 +5860,34 @@
     },
     {
       "id": "RLI-001",
-      "title": "Relationship Intelligence — Phase 7.5",
-      "purpose": "Living relationship graph with strength, health, and influence",
-      "description": "PHASE-007.5 — relationship strength, health states, alerts, network analysis, influence mapping",
+      "title": "Relationship Intelligence Engine — Build 7.5",
+      "purpose": "Social nervous system — living map of human and organizational relationships",
+      "description": "BUILD-007.5 — permission-aware graph, strength/trust/influence scoring, connectors, alerts feeding RIE/Mission Board, introduction intelligence, /api/relationships",
       "priority": "critical",
       "principle": "CP-001",
-      "dependencies": ["INT-001", "PRN-001", "NISS-001", "DAB-001"],
-      "related": ["REL-001", "NISS-M17"],
-      "acceptanceCriteria": ["Relationship graph specified", "Strength and health calculation", "Relationship alerts", "Influence mapping explainable"],
-      "futureNotes": "Unifies with Community Knowledge Graph",
-      "implementationStatus": "pending",
+      "dependencies": ["INT-001", "MBD-001", "ANL-001", "PRN-001", "NISS-001", "DAB-001"],
+      "related": ["REL-001", "NISS-M17", "RIE-001"],
+      "acceptanceCriteria": [
+        "Permission-aware relationship graph for people and organizations",
+        "Complete historical timelines of interactions and collaborations",
+        "Transparent strength, health, influence, and trust scoring",
+        "Community connectors and bridge builders automatically identified",
+        "Alerts and introductions feed RIE and Mission Board",
+        "Geographic visualization and network analysis",
+        "Organizational memory with role-based privacy",
+        "Full API surface for dashboards and AI capabilities"
+      ],
+      "futureNotes": "Unifies with Community Knowledge Graph NISS-M17. AC-176.",
+      "implementationStatus": "in_progress",
       "testingStatus": "pending",
       "documentationStatus": "done",
-      "trace": { "database": null, "api": null, "frontend": null, "test": "TEST-RLI-001", "doc": "DOC-RLI-001" },
+      "trace": {
+        "database": null,
+        "api": "API-RELATIONSHIPS",
+        "frontend": "PAGE-ADMIN-RLIE",
+        "test": "TEST-RLI-001",
+        "doc": "DOC-RLI-001"
+      },
       "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
     },
     {
