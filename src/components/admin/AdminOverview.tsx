@@ -62,7 +62,7 @@ export function AdminOverview({
           <p className="mt-2 font-bold text-indigo-950">{progress.implementationVolumes.name}</p>
           <p className="mt-1 text-sm text-indigo-800">{progress.implementationVolumes.question}</p>
           <p className="mt-2 text-xs text-indigo-600">
-            Volumes 1–6 v1 · Phase 7 deferred
+            Volumes 1–6 v1 · Phase 7 architecturally complete
           </p>
         </div>
       )}

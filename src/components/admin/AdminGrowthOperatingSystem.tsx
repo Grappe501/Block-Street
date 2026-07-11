@@ -57,7 +57,7 @@ export function AdminGrowthOperatingSystem() {
           Engineering, data, UX, AI, operations, and experience bibles [IVS-001]
         </p>
         <p className="mt-1 font-mono text-xs text-indigo-700">docs/master/VOLUMES-INDEX.md</p>
-        <p className="mt-1 text-xs text-indigo-600">Phase 7 deferred until volumes expanded</p>
+        <p className="mt-1 text-xs text-indigo-600">Phase 7 Intelligence Layer architecturally complete [INT-001]</p>
       </div>
 
       <div className="card border-violet-200 bg-violet-50/50">
