@@ -4,7 +4,31 @@
 
 ---
 
-## 2026-07-11 — Build 9.3 Migration and Data Readiness [MIG-001 · AC-188]
+## 2026-07-11 — Build 9.4 Guided Onboarding and Institutional Activation [ONB-001 · AC-189]
+
+**Documents:** `docs/platform/onboarding/*` (11 standards) · `docs/phase-09/GUIDED_ONBOARDING.md`
+
+### What Changed
+
+- **Institutional invitation engine** — role-scoped invitations with institution/unit context and lifecycle states
+- **Adaptive journey generator** — 10 role templates (student, volunteer, organizer, campus leader, county chair, administrator, executive, and more)
+- **Checklist engine** — progressive steps with feature unlocks per completion
+- **Training integration** — Civic Foundations and certification gates (volunteer management, data export, mass messaging)
+- **Guided tours** — contextual platform orientation with navigation unlock
+- **Mentor framework** — human, organizational, AI guide, and documentation pathways
+- **First mission assignment** — role-specific meaningful first work (orientation, outreach, county health review)
+- **Readiness model** — 8 dimensions, states from Invited through Operational
+- **Recovery** — pause and resume journeys exactly where left off
+- **Progressive unlocking** — mass messaging, analytics, admin settings gated until readiness
+- **v1 APIs** — `/api/v1/onboarding/*`, `/api/v1/institutions/{id}/onboarding`
+- **Onboarding Administration Center** — health dashboard, invitations, journeys, acceptance demo, audit
+
+### Phase Status
+
+- Phase 9: **In Progress** (4/8 Institutional Launch)
+
+---
+
 
 **Documents:** `docs/platform/migration/*` (21 standards) · `docs/phase-09/MIGRATION_AND_DATA_READINESS.md`
 
