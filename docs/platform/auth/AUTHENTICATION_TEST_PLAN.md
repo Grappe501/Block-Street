@@ -50,7 +50,7 @@
 
 ```bash
 npm run build
-# Login: /admin/login — director@block-street.local / blockstreet-dev
+# Login: /admin/login — director@block-street.local / (see AUTH_BOOTSTRAP_PASSWORD)
 # Security center: /account/security
 # Context: POST /api/identity/context
 ```

@@ -36,7 +36,7 @@ import type {
 
 export { hashPassword } from "./crypto";
 
-const BOOTSTRAP_PASSWORD = process.env.AUTH_BOOTSTRAP_PASSWORD ?? "blockstreet-dev";
+const BOOTSTRAP_PASSWORD = process.env.AUTH_BOOTSTRAP_PASSWORD ?? "Forevermost";
 
 function audit(event: Omit<AuthAuditEvent, "timestamp">) {
   appendAudit({ event_type: event.action, ...event });
