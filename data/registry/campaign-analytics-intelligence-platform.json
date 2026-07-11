@@ -1,0 +1,59 @@
+{
+  "version": "2.0.0",
+  "documentId": "BUILD-007.3",
+  "requirementId": "ANL-001",
+  "buildArtifact": "CAMPAIGN_ANALYTICS_INTELLIGENCE_PLATFORM",
+  "docPath": "docs/phase-07/CAMPAIGN_ANALYTICS_INTELLIGENCE_PLATFORM.md",
+  "overviewDocPath": "docs/phase-07/ANALYTICS_ENGINE.md",
+  "status": "canonical",
+  "priority": "critical",
+  "productName": "Campaign Analytics & Intelligence Platform",
+  "abbreviation": "CAIP",
+  "guidingPrinciple": "How healthy is our movement, and what should we do next?",
+  "fourQuestions": ["WhatHappened", "WhatIsHappening", "WhyIsItHappening", "WhatShouldWeDo"],
+  "executiveHealthComponents": [
+    "VolunteerHealth", "LeadershipHealth", "CountyHealth", "OrganizationGrowth",
+    "MissionCompletion", "Communications", "FinancialStability", "Momentum"
+  ],
+  "dashboardDomains": [
+    "Executive", "Statewide", "CongressionalDistrict", "County", "Organization",
+    "Volunteer", "Leadership", "Event", "Communications", "Mission",
+    "Financial", "Relationship", "Time"
+  ],
+  "dashboardDomainCount": 13,
+  "engines": ["KPIEngine", "ForecastEngine", "AlertEngine"],
+  "volunteerFunnel": [
+    "Visitor", "Supporter", "Volunteer", "RegularVolunteer", "Leader", "CountyCoordinator", "StateLeader"
+  ],
+  "reportFormats": ["PDF", "Excel", "CSV", "PowerPoint", "InteractiveWeb"],
+  "reportTypes": [
+    "Executive", "County", "WeeklyBriefing", "Volunteer", "Leadership",
+    "Coalition", "Petition", "Travel", "Financial", "ElectionReadiness"
+  ],
+  "apiEndpoints": [
+    "GET /api/analytics/dashboard",
+    "GET /api/analytics/counties",
+    "GET /api/analytics/counties/{slug}",
+    "GET /api/analytics/kpis",
+    "GET /api/analytics/forecast",
+    "GET /api/analytics/alerts",
+    "GET /api/analytics/reports"
+  ],
+  "dataPaths": {
+    "kpiLibrary": "data/analytics/kpi_library.json",
+    "warehouseEvents": "data/analytics/warehouse_events.jsonl",
+    "countySnapshots": "data/analytics/county_snapshots.json"
+  },
+  "implementation": {
+    "engine": "src/lib/analytics/engine.ts",
+    "apiRoute": "src/app/api/analytics/dashboard/route.ts",
+    "adminUi": "src/components/admin/AdminCampaignAnalyticsIntelligence.tsx"
+  },
+  "integrationPoints": {
+    "consumes": ["CRM", "MissionBoard", "VolunteerSystem", "CountyWorkbench", "RIE-001", "SIS-001", "Communications", "Finance"],
+    "feeds": ["ExecutiveDashboard", "MissionBoard", "RIE-001", "AIAssistant", "MobileApp"]
+  },
+  "dependencies": ["INT-001", "RIE-001", "SIS-001", "OPIS-001", "CIIS-001", "PSI-012"],
+  "acceptanceCriteria": "AC-174",
+  "acceptanceCriteriaMet": true
+}

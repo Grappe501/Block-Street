@@ -1,0 +1,5 @@
+{"event_id":"wh-001","event_type":"volunteer_checked_in","source":"volunteer_system","county":"Washington County","entity_id":"person-sarah-johnson","timestamp":"2026-07-10T14:00:00Z","payload":{"hours":2}}
+{"event_id":"wh-002","event_type":"mission_completed","source":"mission_board","county":"Benton County","entity_id":"mission-recruit-benton","timestamp":"2026-07-10T15:30:00Z","payload":{"impact":"high"}}
+{"event_id":"wh-003","event_type":"county_registration_updated","source":"county_workbench","county":"Pulaski County","entity_id":"pulaski","timestamp":"2026-07-10T16:00:00Z","payload":{"registrationPercent":78}}
+{"event_id":"wh-004","event_type":"event_attendance","source":"events","county":"Craighead County","entity_id":"event-jonesboro-listening","timestamp":"2026-07-09T19:00:00Z","payload":{"attendance":142}}
+{"event_id":"wh-005","event_type":"partnership_created","source":"organizations","county":"Washington County","entity_id":"org-nwa-food-coalition","timestamp":"2026-07-08T11:00:00Z","payload":{"type":"coalition"}}

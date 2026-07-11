@@ -1,0 +1,71 @@
+{
+  "version": "1.0.0",
+  "kpis": [
+    {
+      "id": "kpi-campaign-health",
+      "name": "Campaign Health",
+      "definition": "Composite score of volunteer, leadership, county, mission, and momentum health",
+      "formula": "Weighted average of component health scores",
+      "owner": "Executive Operations",
+      "refreshRate": "hourly",
+      "thresholds": { "critical": 60, "warning": 75, "healthy": 85 },
+      "visualization": "gauge",
+      "relatedGoals": ["Election readiness", "Statewide coverage"]
+    },
+    {
+      "id": "kpi-volunteer-retention",
+      "name": "Volunteer Retention Rate",
+      "definition": "Percentage of volunteers active after 90 days",
+      "formula": "Retained Volunteers / Total Volunteers",
+      "owner": "Volunteer Operations",
+      "refreshRate": "hourly",
+      "thresholds": { "critical": 0.45, "warning": 0.6, "healthy": 0.75 },
+      "visualization": "line",
+      "relatedGoals": ["Grow volunteer base"]
+    },
+    {
+      "id": "kpi-county-coverage",
+      "name": "County Coverage",
+      "definition": "Counties with active organizing presence",
+      "formula": "Active Counties / 75",
+      "owner": "Statewide Organizing",
+      "refreshRate": "daily",
+      "thresholds": { "critical": 45, "warning": 60, "healthy": 68 },
+      "visualization": "progress",
+      "relatedGoals": ["Expand county coverage"]
+    },
+    {
+      "id": "kpi-mission-completion",
+      "name": "Mission Completion Rate",
+      "definition": "Percentage of missions completed on time",
+      "formula": "Completed On Time / Total Missions",
+      "owner": "Mission Operations",
+      "refreshRate": "hourly",
+      "thresholds": { "critical": 0.7, "warning": 0.85, "healthy": 0.92 },
+      "visualization": "bar",
+      "relatedGoals": ["Operational excellence"]
+    },
+    {
+      "id": "kpi-registration-goal",
+      "name": "Registration Goal Progress",
+      "definition": "Progress toward statewide voter registration target",
+      "formula": "Current Registrations / Target",
+      "owner": "Voter Engagement",
+      "refreshRate": "daily",
+      "thresholds": { "critical": 0.5, "warning": 0.65, "healthy": 0.74 },
+      "visualization": "progress",
+      "relatedGoals": ["Increase voter registration"]
+    },
+    {
+      "id": "kpi-petition-progress",
+      "name": "Petition Progress",
+      "definition": "Signatures collected toward ballot initiative goal",
+      "formula": "Signatures / Required Signatures",
+      "owner": "Ballot Initiative",
+      "refreshRate": "daily",
+      "thresholds": { "critical": 0.5, "warning": 0.7, "healthy": 0.81 },
+      "visualization": "progress",
+      "relatedGoals": ["Support ballot initiative"]
+    }
+  ]
+}
