@@ -1,0 +1,18 @@
+{
+  "invitations": [],
+  "journeys": [],
+  "checklist_items": [],
+  "training_requirements": [],
+  "mentor_assignments": [],
+  "readiness_assessments": [],
+  "audit_events": [],
+  "health": {
+    "invited": 0,
+    "in_progress": 0,
+    "completed": 0,
+    "blocked": 0,
+    "average_completion": 0,
+    "operational_ready": 0,
+    "average_time_to_first_mission_hours": 0
+  }
+}

@@ -1,0 +1,179 @@
+{
+  "templates": [
+    {
+      "id": "onb-tpl-student",
+      "role_key": "student",
+      "name": "Student Organizer Onboarding",
+      "status": "published",
+      "first_mission_key": "attend-orientation",
+      "mentor_type": "human",
+      "mentor_label": "Campus Mentor",
+      "tour_steps": 5,
+      "checklist": [
+        { "key": "verify_identity", "label": "Verify identity", "description": "Confirm your email and profile", "required": true },
+        { "key": "complete_profile", "label": "Complete profile", "description": "Add your name and campus details", "required": true },
+        { "key": "join_chapter", "label": "Join campus chapter", "description": "Confirm chapter membership", "required": true },
+        { "key": "platform_basics", "label": "Learn platform basics", "description": "Complete introductory module", "required": true, "unlocks_feature": "missions_basic" },
+        { "key": "meet_mentor", "label": "Meet mentor", "description": "Connect with your campus mentor", "required": true },
+        { "key": "first_meeting", "label": "Attend first meeting", "description": "Join your first chapter meeting", "required": false },
+        { "key": "first_mission", "label": "Complete first mission", "description": "Finish your orientation mission", "required": true, "unlocks_feature": "missions_full" },
+        { "key": "first_badge", "label": "Earn first badge", "description": "Receive your first achievement badge", "required": false }
+      ],
+      "training": [
+        { "key": "civic_foundations", "title": "Civic Foundations", "certification_gate": "volunteer_basics" }
+      ]
+    },
+    {
+      "id": "onb-tpl-volunteer",
+      "role_key": "volunteer",
+      "name": "Volunteer Onboarding",
+      "status": "published",
+      "first_mission_key": "first-outreach",
+      "mentor_type": "organizational",
+      "mentor_label": "Volunteer Coordinator",
+      "tour_steps": 4,
+      "checklist": [
+        { "key": "verify_identity", "label": "Verify identity", "description": "Confirm your account", "required": true },
+        { "key": "complete_profile", "label": "Complete profile", "description": "Add contact preferences", "required": true },
+        { "key": "volunteer_basics", "label": "Volunteer basics", "description": "Learn volunteer expectations", "required": true },
+        { "key": "first_outreach", "label": "Complete first outreach", "description": "Log your first volunteer activity", "required": true, "unlocks_feature": "missions_full" }
+      ],
+      "training": [
+        { "key": "volunteer_basics", "title": "Volunteer Basics", "certification_gate": "volunteer_management" }
+      ]
+    },
+    {
+      "id": "onb-tpl-county-chair",
+      "role_key": "county_chair",
+      "name": "County Chair Onboarding",
+      "status": "published",
+      "first_mission_key": "review-county-health",
+      "mentor_type": "human",
+      "mentor_label": "Regional Director",
+      "tour_steps": 6,
+      "checklist": [
+        { "key": "verify_identity", "label": "Verify identity", "description": "Confirm leadership credentials", "required": true },
+        { "key": "county_dashboard", "label": "Review county dashboard", "description": "Understand county metrics", "required": true, "unlocks_feature": "analytics_summary" },
+        { "key": "county_goals", "label": "Verify county goals", "description": "Review and confirm goals", "required": true },
+        { "key": "meet_regional", "label": "Meet regional director", "description": "Schedule intro with regional lead", "required": true },
+        { "key": "review_volunteers", "label": "Review volunteers", "description": "Survey volunteer roster", "required": true },
+        { "key": "configure_calendar", "label": "Configure calendar", "description": "Set up county calendar", "required": true },
+        { "key": "first_update", "label": "Publish first update", "description": "Send county status update", "required": true, "unlocks_feature": "mass_messaging" }
+      ],
+      "training": [
+        { "key": "county_leadership", "title": "County Leadership", "certification_gate": "county_admin" },
+        { "key": "privacy_cert", "title": "Privacy Certification", "certification_gate": "data_export" }
+      ]
+    },
+    {
+      "id": "onb-tpl-administrator",
+      "role_key": "administrator",
+      "name": "Administrator Onboarding",
+      "status": "published",
+      "first_mission_key": "approve-invitations",
+      "mentor_type": "documentation",
+      "mentor_label": "Admin Guide",
+      "tour_steps": 8,
+      "checklist": [
+        { "key": "verify_identity", "label": "Verify identity", "description": "Confirm admin credentials", "required": true },
+        { "key": "review_structure", "label": "Review org structure", "description": "Understand institutional hierarchy", "required": true },
+        { "key": "approve_invitations", "label": "Approve pending invitations", "description": "Process invitation queue", "required": true, "unlocks_feature": "admin_full" }
+      ],
+      "training": [
+        { "key": "admin_fundamentals", "title": "Administration Fundamentals", "certification_gate": "admin_settings" }
+      ]
+    },
+    {
+      "id": "onb-tpl-organizer",
+      "role_key": "organizer",
+      "name": "Organizer Onboarding",
+      "status": "published",
+      "first_mission_key": "plan-first-event",
+      "mentor_type": "human",
+      "mentor_label": "Lead Organizer",
+      "tour_steps": 5,
+      "checklist": [
+        { "key": "verify_identity", "label": "Verify identity", "description": "Confirm your account", "required": true },
+        { "key": "organizing_basics", "label": "Organizing basics", "description": "Learn core organizing tools", "required": true },
+        { "key": "first_event", "label": "Plan first event", "description": "Create your first event", "required": true, "unlocks_feature": "missions_full" }
+      ],
+      "training": [{ "key": "organizing_101", "title": "Organizing 101" }]
+    },
+    {
+      "id": "onb-tpl-campus-leader",
+      "role_key": "campus_leader",
+      "name": "Campus Leader Onboarding",
+      "status": "published",
+      "first_mission_key": "campus-health-review",
+      "mentor_type": "human",
+      "mentor_label": "Regional Organizer",
+      "tour_steps": 6,
+      "checklist": [
+        { "key": "verify_identity", "label": "Verify identity", "description": "Confirm leadership role", "required": true },
+        { "key": "campus_overview", "label": "Campus overview", "description": "Review campus dashboard", "required": true },
+        { "key": "team_roster", "label": "Review team roster", "description": "Meet your organizing team", "required": true }
+      ],
+      "training": [{ "key": "campus_leadership", "title": "Campus Leadership" }]
+    },
+    {
+      "id": "onb-tpl-executive",
+      "role_key": "executive",
+      "name": "Executive Onboarding",
+      "status": "published",
+      "first_mission_key": "institutional-readiness",
+      "mentor_type": "organizational",
+      "mentor_label": "Executive Office",
+      "tour_steps": 7,
+      "checklist": [
+        { "key": "verify_identity", "label": "Verify identity", "description": "Confirm executive credentials", "required": true },
+        { "key": "readiness_review", "label": "Review institutional readiness", "description": "Assess launch readiness", "required": true, "unlocks_feature": "executive_dashboard" }
+      ],
+      "training": [{ "key": "executive_briefing", "title": "Executive Briefing" }]
+    },
+    {
+      "id": "onb-tpl-regional-director",
+      "role_key": "regional_director",
+      "name": "Regional Director Onboarding",
+      "status": "published",
+      "first_mission_key": "regional-coverage",
+      "mentor_type": "human",
+      "mentor_label": "Statewide Operations",
+      "tour_steps": 6,
+      "checklist": [
+        { "key": "verify_identity", "label": "Verify identity", "description": "Confirm regional role", "required": true },
+        { "key": "regional_map", "label": "Review regional map", "description": "Understand geographic coverage", "required": true }
+      ],
+      "training": [{ "key": "regional_operations", "title": "Regional Operations" }]
+    },
+    {
+      "id": "onb-tpl-trainer",
+      "role_key": "trainer",
+      "name": "Trainer Onboarding",
+      "status": "published",
+      "first_mission_key": "facilitate-session",
+      "mentor_type": "documentation",
+      "mentor_label": "Training Guide",
+      "tour_steps": 5,
+      "checklist": [
+        { "key": "verify_identity", "label": "Verify identity", "description": "Confirm trainer credentials", "required": true },
+        { "key": "training_tools", "label": "Learn training tools", "description": "Review facilitation resources", "required": true }
+      ],
+      "training": [{ "key": "facilitation_basics", "title": "Facilitation Basics" }]
+    },
+    {
+      "id": "onb-tpl-mentor",
+      "role_key": "mentor",
+      "name": "Mentor Onboarding",
+      "status": "published",
+      "first_mission_key": "mentor-first-checkin",
+      "mentor_type": "organizational",
+      "mentor_label": "Mentor Program Lead",
+      "tour_steps": 4,
+      "checklist": [
+        { "key": "verify_identity", "label": "Verify identity", "description": "Confirm mentor role", "required": true },
+        { "key": "mentor_guide", "label": "Review mentor guide", "description": "Learn mentoring expectations", "required": true }
+      ],
+      "training": [{ "key": "mentoring_essentials", "title": "Mentoring Essentials" }]
+    }
+  ]
+}

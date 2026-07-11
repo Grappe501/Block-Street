@@ -1,0 +1,31 @@
+{
+  "version": "1.0.0",
+  "documentId": "BUILD-009.4",
+  "requirementId": "ONB-001",
+  "buildArtifact": "GUIDED_ONBOARDING",
+  "docPath": "docs/phase-09/GUIDED_ONBOARDING.md",
+  "platformDocsPath": "docs/platform/onboarding/",
+  "status": "canonical",
+  "priority": "critical",
+  "productName": "Guided Onboarding and Institutional Activation",
+  "abbreviation": "ONB",
+  "guidingPrinciple": "Every user should know exactly what to do next.",
+  "buildsOn": ["MIG-001", "ORG-001", "PRV-001", "AUTH-001", "ADM-001"],
+  "apiEndpoints": [
+    "POST /api/v1/onboarding/invitations",
+    "GET /api/v1/onboarding/invitations",
+    "GET /api/v1/onboarding/invitations/{token}",
+    "POST /api/v1/onboarding/invitations/{token}/accept",
+    "POST /api/v1/onboarding/journeys",
+    "GET /api/v1/onboarding/journeys/{journeyId}",
+    "POST /api/v1/onboarding/journeys/{journeyId}/checklist",
+    "POST /api/v1/onboarding/journeys/{journeyId}/training",
+    "POST /api/v1/onboarding/journeys/{journeyId}/tour",
+    "POST /api/v1/onboarding/journeys/{journeyId}/mission",
+    "POST /api/v1/onboarding/journeys/{journeyId}/resume",
+    "GET /api/v1/institutions/{institutionId}/onboarding",
+    "GET /api/admin/onboarding/overview"
+  ],
+  "acceptanceCriteria": "AC-189",
+  "acceptanceCriteriaMet": true
+}

@@ -10,7 +10,7 @@
   "readAfter": "PSV-001",
   "guidingPrinciple": "The platform is not truly ready until it can successfully introduce, teach, support, and reproduce itself.",
   "mission": "Move from technically capable to operationally adoptable — provisioning, configuration, migration, onboarding, training, pilots, support, and scale.",
-  "stepsComplete": 3,
+  "stepsComplete": 4,
   "stepsTotal": 8,
   "implementationOrder": ["9.1", "9.2", "9.3", "9.4", "9.5", "9.6", "9.7", "9.8"],
   "approvalGates": [
@@ -26,7 +26,7 @@
     { "id": "9.1", "name": "Institutional Provisioning", "requirement": "PRV-001", "artifact": "docs/phase-09/INSTITUTIONAL_PROVISIONING.md", "acceptanceCriteria": "AC-186", "status": "done" },
     { "id": "9.2", "name": "Configuration and Organizational Modeling", "requirement": "ORG-001", "artifact": "docs/phase-09/ORGANIZATIONAL_MODELING.md", "acceptanceCriteria": "AC-187", "status": "done" },
     { "id": "9.3", "name": "Migration and Data Readiness", "requirement": "MIG-001", "artifact": "docs/phase-09/MIGRATION_AND_DATA_READINESS.md", "acceptanceCriteria": "AC-188", "status": "done" },
-    { "id": "9.4", "name": "Guided Onboarding", "requirement": "ONB-001", "acceptanceCriteria": "AC-189", "status": "pending" },
+    { "id": "9.4", "name": "Guided Onboarding", "requirement": "ONB-001", "artifact": "docs/phase-09/GUIDED_ONBOARDING.md", "acceptanceCriteria": "AC-189", "status": "done" },
     { "id": "9.5", "name": "Training and Certification", "requirement": "TRN-001", "acceptanceCriteria": "AC-190", "status": "pending" },
     { "id": "9.6", "name": "Pilot and Acceptance Program", "requirement": "PLT-001", "acceptanceCriteria": "AC-191", "status": "pending" },
     { "id": "9.7", "name": "Support and Customer Success", "requirement": "SUP-001", "acceptanceCriteria": "AC-192", "status": "pending" },

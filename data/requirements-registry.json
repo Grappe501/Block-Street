@@ -6335,6 +6335,37 @@
       "versionHistory": { "created": "2026-07-11", "implemented": "2026-07-11" }
     },
     {
+      "id": "ONB-001",
+      "title": "Guided Onboarding and Institutional Activation — Build 9.4",
+      "purpose": "Transform verified people into confident, productive institutional participants through adaptive activation journeys",
+      "description": "BUILD-009.4 — invitations, identity activation, role-based journeys, checklists, tours, training gates, mentors, first missions, readiness tracking, progressive unlocking, recovery",
+      "priority": "critical",
+      "principle": "ILS-001",
+      "dependencies": ["MIG-001", "ORG-001", "AUTH-001", "ADM-001"],
+      "related": ["TRN-001"],
+      "acceptanceCriteria": [
+        "Every new user receives a personalized onboarding journey",
+        "Every role has a tailored activation path",
+        "Training integrates automatically with certification gates",
+        "Feature access unlocks progressively",
+        "First missions are assigned and tracked",
+        "Readiness is measurable and resumable",
+        "Administrators can monitor onboarding health"
+      ],
+      "futureNotes": "AC-189. Registry ONB-001.",
+      "implementationStatus": "done",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": null,
+        "api": "API-ONB",
+        "frontend": "PAGE-ADMIN-ILS",
+        "test": "TEST-ONB-001",
+        "doc": "DOC-ONB-001"
+      },
+      "versionHistory": { "created": "2026-07-11", "implemented": "2026-07-11" }
+    },
+    {
       "id": "PSI-014",
       "title": "Platform Operations, Governance & Lifecycle Architecture — Volume 5.13",
       "purpose": "Operate the platform as a governed institution — stewardship, certification, and decades-long evolution",
