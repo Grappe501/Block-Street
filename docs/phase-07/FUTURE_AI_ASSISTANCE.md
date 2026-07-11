@@ -8,7 +8,7 @@
 > The long-term AI layer — campaign strategist, not chatbot.
 
 **Implements:** [KDG-M16](../phase-03/KNOWLEDGE_DATA_GOVERNANCE.md) · **Governed by:** [KDG-001](../phase-03/KNOWLEDGE_DATA_GOVERNANCE.md) · [AIB-001](../master/AI_INTELLIGENCE_BIBLE.md) · [CKK-001](../canon/CANONICAL_KNOWLEDGE_KERNEL.md)  
-**Live spec:** `data/registry/future-ai-assistance.json`
+**Live spec:** `data/registry/executive-ai-intelligence-layer.json` · **Build:** [EXECUTIVE_AI_INTELLIGENCE_LAYER.md](EXECUTIVE_AI_INTELLIGENCE_LAYER.md) · **API:** `/api/ai`
 
 ---
 

@@ -74,7 +74,7 @@ Everything is: **Explainable** · **Transparent** · **Auditable** · **Confiden
 | 7.3 | [Campaign Analytics Platform](CAMPAIGN_ANALYTICS_INTELLIGENCE_PLATFORM.md) | ANL-001 | Executive nervous system |
 | 7.4 | [Live Mission Board](LIVE_MISSION_BOARD.md) | MBD-001 | Operational command center |
 | 7.5 | [Relationship Intelligence Engine](RELATIONSHIP_INTELLIGENCE_ENGINE.md) | RLI-001 | Social nervous system |
-| 7.6 | [Future AI Assistance](FUTURE_AI_ASSISTANCE.md) | IAS-001 | Explainable campaign strategist |
+| 7.6 | [Executive AI Intelligence Layer](EXECUTIVE_AI_INTELLIGENCE_LAYER.md) | IAS-001 | Phase 7 closeout |
 
 *Live master spec:* `data/intelligence/intelligence-operating-system.json`
 
