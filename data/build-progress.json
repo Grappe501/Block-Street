@@ -301,7 +301,7 @@
       "question": "How do we understand and guide?",
       "steps": [
         { "id": "7.1", "name": "Statewide Intelligence Search [SIS-001]", "status": "done", "notes": "SIS knowledge retrieval engine, /api/search, unified index, fuzzy ranking — AC-172" },
-        { "id": "7.2", "name": "Recommendation Engine [REC-001]", "status": "done", "notes": "Proactive advisor, confidence + reasons — AC-167" },
+        { "id": "7.2", "name": "Recommendation Intelligence Engine [RIE-001]", "status": "done", "notes": "RIE scoring model, daily briefing, feedback loop, /api/recommendations — AC-173" },
         { "id": "7.3", "name": "Analytics Engine [ANL-001]", "status": "done", "notes": "Executive dashboard, geographic analytics, forecasting — AC-168" },
         { "id": "7.4", "name": "Mission Board (Live) [MBD-001]", "status": "done", "notes": "OIS-M16 operational, AI-assisted missions — AC-169" },
         { "id": "7.5", "name": "Relationship Intelligence [RLI-001]", "status": "done", "notes": "Living graph, strength, influence, alerts — AC-170" },

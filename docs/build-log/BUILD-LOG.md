@@ -18,6 +18,21 @@
 
 ---
 
+## 2026-07-10 — Build 7.2 Recommendation Intelligence Engine [RIE-001 · AC-173]
+
+**Document:** `docs/phase-07/RECOMMENDATION_INTELLIGENCE_ENGINE.md` · **Registry:** `data/registry/recommendation-intelligence-engine.json`
+
+### What Changed
+
+- **RIE advisory engine** — 10 recommendation categories, weighted scoring model, explainable evidence
+- **Daily briefing API** — personalized priorities with campaign health metrics
+- **Feedback loop** — accept, dismiss, remind later; telemetry for learning
+- **11 bootstrap recommendations** across contact, county, org, event, mission, geographic
+- **API routes** — `/api/recommendations`, `/daily`, `/feedback`, `/explanations/{id}`, category routes
+- Admin live recommendations UI on Phase 7 tab · feeds Mission Board (7.4) architecture
+
+---
+
 ## 2026-07-10 — Build 7.1 Statewide Intelligence Search [SIS-001 · AC-172]
 
 **Document:** `docs/phase-07/STATEWIDE_INTELLIGENCE_SEARCH.md` · **Registry:** `data/registry/statewide-intelligence-search.json`

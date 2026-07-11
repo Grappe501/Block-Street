@@ -402,7 +402,11 @@
     },
     {
       "prefix": "REC",
-      "domain": "Recommendation engine — Phase 7.2"
+      "domain": "Recommendation engine — Phase 7.2 overview"
+    },
+    {
+      "prefix": "RIE",
+      "domain": "Recommendation Intelligence Engine — Build 7.2"
     },
     {
       "prefix": "MBD",
@@ -5666,7 +5670,7 @@
       "related": [
         "SRCH-001",
         "SIS-001",
-        "REC-001",
+        "RIE-001",
         "ANL-001",
         "MBD-001",
         "RLI-001",
@@ -5751,13 +5755,43 @@
       "priority": "critical",
       "principle": "CP-010",
       "dependencies": ["INT-001", "OBE-001", "CGIS-001", "NISS-001"],
-      "related": ["OIS-001", "MBD-001"],
+      "related": ["OIS-001", "MBD-001", "RIE-001", "SIS-001"],
       "acceptanceCriteria": ["Recommendation categories documented", "Confidence and reason on every recommendation", "Human overridable"],
-      "futureNotes": "Never magic — every reason field required",
-      "implementationStatus": "pending",
+      "futureNotes": "Build implementation: RIE-001 · never magic — every reason field required",
+      "implementationStatus": "in_progress",
       "testingStatus": "pending",
       "documentationStatus": "done",
-      "trace": { "database": null, "api": null, "frontend": null, "test": "TEST-REC-001", "doc": "DOC-REC-001" },
+      "trace": { "database": null, "api": "API-RECOMMENDATIONS", "frontend": "PAGE-ADMIN-RIE", "test": "TEST-REC-001", "doc": "DOC-REC-001" },
+      "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
+    },
+    {
+      "id": "RIE-001",
+      "title": "Recommendation Intelligence Engine — Build 7.2",
+      "purpose": "Active strategic partner surfacing explainable, actionable recommendations",
+      "description": "BUILD-007.2 — 10 categories, weighted scoring, daily briefing, feedback loop, geographic intelligence, Mission Board feed",
+      "priority": "critical",
+      "principle": "CP-010",
+      "dependencies": ["INT-001", "REC-001", "SIS-001", "OBE-001", "CGIS-001", "NISS-001"],
+      "related": ["MBD-001", "ANL-001", "RLI-001"],
+      "acceptanceCriteria": [
+        "Personalized daily recommendations",
+        "Recommendations across people, counties, orgs, events, missions",
+        "Confidence, evidence, and score breakdown on every recommendation",
+        "User feedback loop with telemetry",
+        "Configurable scoring weights aligned to campaign goals",
+        "API surface for dashboards and Mission Board"
+      ],
+      "futureNotes": "Advisory only — platform recommends, people decide. AC-173.",
+      "implementationStatus": "in_progress",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": null,
+        "api": "API-RECOMMENDATIONS",
+        "frontend": "PAGE-ADMIN-RIE",
+        "test": "TEST-RIE-001",
+        "doc": "DOC-RIE-001"
+      },
       "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
     },
     {
