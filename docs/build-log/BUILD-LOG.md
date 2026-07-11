@@ -4,7 +4,33 @@
 
 ---
 
-## 2026-07-11 — Build 9.2 Configuration and Organizational Modeling [ORG-001 · AC-187]
+## 2026-07-11 — Build 9.3 Migration and Data Readiness [MIG-001 · AC-188]
+
+**Documents:** `docs/platform/migration/*` (21 standards) · `docs/phase-09/MIGRATION_AND_DATA_READINESS.md`
+
+### What Changed
+
+- **Migration project model** — governed projects with M1–M4 risk classification and lifecycle states
+- **Source inventory and secure intake** — hashing, malware/secret detection, quarantine, institution scope
+- **Staging pipeline** — raw → normalized → mapped → validated → approved zones
+- **Identity and duplicate resolution** — verified email matches, name-only review required, duplicate candidates
+- **Organizational mapping** — campus alias standardization, unmapped unit review
+- **Consent migration** — transactional-only default for unknown outreach consent
+- **Dry-run engine** — full migration logic without canonical writes
+- **Exception workbench** — identity, duplicate, consent, and mapping review queues
+- **Approval workflow** — mapping, dry run, security, data owner, institution gates
+- **Canonical import** — idempotent, checkpointed batches with resume support
+- **Reconciliation** — record counts, placement, classification verification
+- **Data readiness assessment** — per-domain scores, conditions, certification
+- **v1 APIs** — `/api/v1/migrations/*`, `/api/v1/institutions/{id}/data-readiness`
+- **Migration Administration Center** — health, projects, workflow, readiness, audit in Phase 9 tab
+
+### Phase Status
+
+- Phase 9: **In Progress** (3/8 Institutional Launch)
+
+---
+
 
 **Documents:** `docs/platform/organization/*` (17 standards) · `docs/phase-09/ORGANIZATIONAL_MODELING.md`
 
