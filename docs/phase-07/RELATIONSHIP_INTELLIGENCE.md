@@ -8,7 +8,7 @@
 > Campaigns run on relationships. The platform should understand them.
 
 **Builds on:** [Personal Relationship Network PRN-001](../phase-03/PERSONAL_RELATIONSHIP_NETWORK.md) · [Community Knowledge Graph NISS-M17](../phase-06/NETWORK_INTELLIGENCE_STRATEGY_SYSTEM.md) · [DAB-004 Relationship Graph](../volume-02/MASTER_DATA_DICTIONARY.md)  
-**Live spec:** `data/registry/relationship-intelligence.json`
+**Live spec:** `data/registry/relationship-intelligence-engine.json` · **Build:** [RELATIONSHIP_INTELLIGENCE_ENGINE.md](RELATIONSHIP_INTELLIGENCE_ENGINE.md) · **API:** `/api/relationships`
 
 ---
 

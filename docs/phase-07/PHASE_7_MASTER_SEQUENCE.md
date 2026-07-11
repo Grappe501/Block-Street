@@ -73,7 +73,7 @@ Everything is: **Explainable** · **Transparent** · **Auditable** · **Confiden
 | 7.2 | [Recommendation Intelligence Engine](RECOMMENDATION_INTELLIGENCE_ENGINE.md) | RIE-001 | Active strategic partner |
 | 7.3 | [Campaign Analytics Platform](CAMPAIGN_ANALYTICS_INTELLIGENCE_PLATFORM.md) | ANL-001 | Executive nervous system |
 | 7.4 | [Live Mission Board](LIVE_MISSION_BOARD.md) | MBD-001 | Operational command center |
-| 7.5 | [Relationship Intelligence](RELATIONSHIP_INTELLIGENCE.md) | RLI-001 | Living relationship graph |
+| 7.5 | [Relationship Intelligence Engine](RELATIONSHIP_INTELLIGENCE_ENGINE.md) | RLI-001 | Social nervous system |
 | 7.6 | [Future AI Assistance](FUTURE_AI_ASSISTANCE.md) | IAS-001 | Explainable campaign strategist |
 
 *Live master spec:* `data/intelligence/intelligence-operating-system.json`
