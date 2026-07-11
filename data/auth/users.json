@@ -1,0 +1,38 @@
+{
+  "users": [
+    {
+      "user_id": "usr-001",
+      "primary_email": "director@block-street.local",
+      "verified_emails": ["director@block-street.local"],
+      "display_name": "Campaign Director",
+      "preferred_name": "Director",
+      "avatar": null,
+      "authentication_methods": ["email_password"],
+      "account_status": "active",
+      "password_hash": null,
+      "mfa_enabled": false,
+      "mfa_secret": null,
+      "identity_assurance_level": "ial2",
+      "security_state": "normal",
+      "created_at": "2026-07-10T00:00:00Z",
+      "last_login_at": null
+    },
+    {
+      "user_id": "usr-002",
+      "primary_email": "organizer@block-street.local",
+      "verified_emails": ["organizer@block-street.local"],
+      "display_name": "Field Organizer",
+      "preferred_name": "Organizer",
+      "avatar": null,
+      "authentication_methods": ["email_password"],
+      "account_status": "active",
+      "password_hash": null,
+      "mfa_enabled": false,
+      "mfa_secret": null,
+      "identity_assurance_level": "ial1",
+      "security_state": "normal",
+      "created_at": "2026-07-10T00:00:00Z",
+      "last_login_at": null
+    }
+  ]
+}

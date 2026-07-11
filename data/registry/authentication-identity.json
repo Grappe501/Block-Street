@@ -1,0 +1,46 @@
+{
+  "version": "2.0.0",
+  "documentId": "BUILD-008.1",
+  "requirementId": "AUTH-001",
+  "buildArtifact": "AUTHENTICATION_AND_IDENTITY",
+  "docPath": "docs/phase-08/AUTHENTICATION_AND_IDENTITY.md",
+  "overviewDocPath": "docs/phase-08/AUTHENTICATION_AND_IDENTITY.md",
+  "status": "canonical",
+  "priority": "critical",
+  "productName": "Authentication and Identity",
+  "abbreviation": "AUTH",
+  "guidingPrinciple": "One identity across the platform — roles vary by context.",
+  "replaces": "HonorSystemV1",
+  "authenticationMethods": {
+    "v1": ["EmailPassword", "SessionToken"],
+    "roadmap": ["PasswordlessEmail", "GoogleOAuth", "MicrosoftOAuth", "MFA", "SSO", "Passkeys"]
+  },
+  "accountLifecycle": ["Invited", "PendingVerification", "Active", "Restricted", "Suspended", "Archived", "Deleted"],
+  "membershipModel": ["User", "OrganizationMembership", "WorkspaceMembership", "RoleAssignment", "PermissionGrants"],
+  "apiEndpoints": [
+    "POST /api/auth/login",
+    "POST /api/auth/logout",
+    "GET /api/auth/session",
+    "GET /api/auth/me",
+    "GET /api/auth/sessions",
+    "DELETE /api/auth/sessions/{id}",
+    "POST /api/auth/mfa/enroll"
+  ],
+  "dataPaths": {
+    "users": "data/auth/users.json",
+    "sessions": "data/auth/sessions.json",
+    "memberships": "data/auth/memberships.json",
+    "auditEvents": "data/auth/audit_events.jsonl"
+  },
+  "implementation": {
+    "engine": "src/lib/auth/engine.ts",
+    "middleware": "src/middleware.ts",
+    "apiRoute": "src/app/api/auth/login/route.ts",
+    "adminUi": "src/components/admin/AdminAuthenticationIdentity.tsx",
+    "loginPage": "src/app/admin/login/page.tsx"
+  },
+  "protectedRoutes": ["/admin", "/api/analytics", "/api/missions", "/api/relationships", "/api/ai", "/api/recommendations"],
+  "dependencies": ["PSV-001", "ENG-006", "PRE-001", "KDG-001"],
+  "acceptanceCriteria": "AC-178",
+  "acceptanceCriteriaMet": true
+}
