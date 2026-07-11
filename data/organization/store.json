@@ -1,0 +1,27 @@
+{
+  "units": [],
+  "unit_owners": [],
+  "leadership_positions": [],
+  "leadership_assignments": [],
+  "memberships": [],
+  "role_assignments": [],
+  "workspace_mappings": [],
+  "jurisdictions": [],
+  "relationships": [],
+  "shared_services": [],
+  "approval_paths": [],
+  "escalation_paths": [],
+  "configuration_drafts": [],
+  "configuration_versions": [],
+  "reorganizations": [],
+  "validations": [],
+  "audit_events": [],
+  "health": {
+    "active_units": 0,
+    "ownerless_units": 0,
+    "leadership_vacancies": 0,
+    "configuration_warnings": 0,
+    "pending_reorganizations": 0,
+    "structure_validation": "not_run"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "types": [
+    { "id": "ut-executive", "key": "executive_office", "name": "Executive Office", "allowed_parent_types": ["institution"], "allowed_child_types": ["division", "department"], "requires_owner": true, "supports_geography": false, "status": "active" },
+    { "id": "ut-division", "key": "division", "name": "Division", "allowed_parent_types": ["executive_office", "institution"], "allowed_child_types": ["department", "program", "region"], "requires_owner": true, "supports_geography": true, "status": "active" },
+    { "id": "ut-department", "key": "department", "name": "Department", "allowed_parent_types": ["division", "executive_office"], "allowed_child_types": ["team", "committee"], "requires_owner": true, "supports_geography": false, "status": "active" },
+    { "id": "ut-program", "key": "program", "name": "Program", "allowed_parent_types": ["division", "department"], "allowed_child_types": ["cohort", "team"], "requires_owner": true, "supports_geography": true, "status": "active" },
+    { "id": "ut-region", "key": "region", "name": "Region", "allowed_parent_types": ["division", "institution"], "allowed_child_types": ["campus", "county", "team"], "requires_owner": true, "supports_geography": true, "status": "active" },
+    { "id": "ut-campus", "key": "campus", "name": "Campus", "allowed_parent_types": ["region", "division"], "allowed_child_types": ["chapter", "team"], "requires_owner": true, "supports_geography": true, "status": "active" },
+    { "id": "ut-county", "key": "county", "name": "County", "allowed_parent_types": ["region"], "allowed_child_types": ["team", "chapter"], "requires_owner": true, "supports_geography": true, "status": "active" },
+    { "id": "ut-chapter", "key": "chapter", "name": "Chapter", "allowed_parent_types": ["campus", "county"], "allowed_child_types": ["team"], "requires_owner": true, "supports_geography": true, "status": "active" },
+    { "id": "ut-committee", "key": "committee", "name": "Committee", "allowed_parent_types": ["division", "department", "executive_office"], "allowed_child_types": [], "requires_owner": true, "supports_geography": false, "status": "active" },
+    { "id": "ut-team", "key": "team", "name": "Team", "allowed_parent_types": ["chapter", "campus", "county", "department", "program"], "allowed_child_types": [], "requires_owner": true, "supports_geography": false, "status": "active" }
+  ]
+}

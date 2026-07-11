@@ -6271,6 +6271,38 @@
       "versionHistory": { "created": "2026-07-11", "implemented": "2026-07-11" }
     },
     {
+      "id": "ORG-001",
+      "title": "Configuration and Organizational Modeling — Build 9.2",
+      "purpose": "Convert provisioned institutions into living organizational systems with hierarchy, ownership, leadership, and governance",
+      "description": "BUILD-009.2 — canonical organizational units, templates, leadership, roles, workspace mapping, geography, shared services, approval/escalation paths, configuration versioning, reorganization, validation, org chart",
+      "priority": "critical",
+      "principle": "ILS-001",
+      "dependencies": ["PRV-001", "ADM-001", "AUTH-001"],
+      "related": ["MIG-001"],
+      "acceptanceCriteria": [
+        "Institutions model real structure without custom engineering",
+        "Every active unit has accountable ownership",
+        "Leadership positions, assignments, terms, and vacancies are visible",
+        "Users hold different roles across units with explicit inheritance",
+        "Workspaces map safely to organizational units",
+        "Structural configuration is drafted, validated, approved, and versioned",
+        "Reorganizations preserve historical truth",
+        "Organization chart, health views, and audit trail are available"
+      ],
+      "futureNotes": "AC-187. Registry ORG-001.",
+      "implementationStatus": "done",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": null,
+        "api": "API-ORG",
+        "frontend": "PAGE-ADMIN-ILS",
+        "test": "TEST-ORG-001",
+        "doc": "DOC-ORG-001"
+      },
+      "versionHistory": { "created": "2026-07-11", "implemented": "2026-07-11" }
+    },
+    {
       "id": "PSI-014",
       "title": "Platform Operations, Governance & Lifecycle Architecture — Volume 5.13",
       "purpose": "Operate the platform as a governed institution — stewardship, certification, and decades-long evolution",

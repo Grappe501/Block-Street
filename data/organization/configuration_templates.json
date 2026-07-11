@@ -1,0 +1,42 @@
+{
+  "templates": [
+    {
+      "id": "org-tpl-multi-campus-v1",
+      "name": "Multi-Campus Model",
+      "institution_type": "multi_campus_network",
+      "version": "1.0.0",
+      "status": "published",
+      "unit_structure": [
+        { "key": "central_admin", "unit_type": "executive_office", "name": "Central Administration", "parent_key": null },
+        { "key": "student_organizing", "unit_type": "division", "name": "Student Organizing", "parent_key": "central_admin" },
+        { "key": "training_dept", "unit_type": "department", "name": "Training", "parent_key": "central_admin" },
+        { "key": "support_dept", "unit_type": "department", "name": "Support", "parent_key": "central_admin" },
+        { "key": "security_dept", "unit_type": "department", "name": "Security", "parent_key": "central_admin" },
+        { "key": "region_nw", "unit_type": "region", "name": "Northwest Region", "parent_key": "student_organizing" },
+        { "key": "region_central", "unit_type": "region", "name": "Central Region", "parent_key": "student_organizing" },
+        { "key": "region_south", "unit_type": "region", "name": "South Region", "parent_key": "student_organizing" }
+      ],
+      "leadership_positions": [
+        { "unit_key": "campus", "position_key": "campus_president", "title": "Campus President", "requires_certification": true }
+      ],
+      "shared_services": [
+        { "provider_key": "training_dept", "service_type": "training", "recipient_scope": "all_campuses" }
+      ],
+      "validation_rules": ["all_active_units_have_owner", "no_circular_hierarchy", "approval_paths_complete"]
+    },
+    {
+      "id": "org-tpl-statewide-county-v1",
+      "name": "Statewide County Model",
+      "institution_type": "statewide_coalition",
+      "version": "1.0.0",
+      "status": "published",
+      "unit_structure": [
+        { "key": "executive", "unit_type": "executive_office", "name": "Executive Office", "parent_key": null },
+        { "key": "regions", "unit_type": "division", "name": "Regional Operations", "parent_key": "executive" }
+      ],
+      "leadership_positions": [],
+      "shared_services": [],
+      "validation_rules": ["all_active_units_have_owner"]
+    }
+  ]
+}
