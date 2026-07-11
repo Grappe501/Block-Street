@@ -1,0 +1,35 @@
+{
+  "nodes": [
+    { "id": "node-steve", "label": "Steve Martinez", "type": "person", "county": "Washington", "role": "County Coordinator" },
+    { "id": "node-kelly", "label": "Kelly Brooks", "type": "person", "county": "Washington", "role": "Volunteer Leader" },
+    { "id": "node-chair", "label": "James Wilson", "type": "person", "county": "Washington", "role": "County Chair" },
+    { "id": "node-naacp", "label": "NAACP Washington County", "type": "organization", "county": "Washington" },
+    { "id": "node-chamber", "label": "Fayetteville Chamber", "type": "organization", "county": "Washington" },
+    { "id": "node-foodbank", "label": "Northwest Arkansas Food Bank", "type": "organization", "county": "Washington" },
+    { "id": "node-pastor", "label": "Rev. Thomas Greene", "type": "person", "county": "Washington", "role": "Faith Leader" },
+    { "id": "node-superintendent", "label": "Dr. Lisa Harmon", "type": "person", "county": "Washington", "role": "School Superintendent" },
+    { "id": "node-newspaper", "label": "Northwest Arkansas Democrat-Gazette", "type": "organization", "county": "Washington" },
+    { "id": "node-sarah", "label": "Sarah Johnson", "type": "person", "county": "Pulaski", "role": "County Coordinator" },
+    { "id": "node-mike", "label": "Mike Torres", "type": "person", "county": "Benton", "role": "Field Organizer" },
+    { "id": "node-ualr", "label": "UA Little Rock Student Coalition", "type": "organization", "county": "Pulaski" },
+    { "id": "node-unitedway", "label": "United Way of Central Arkansas", "type": "organization", "county": "Pulaski" },
+    { "id": "node-school-district", "label": "Pulaski County Special School District", "type": "organization", "county": "Pulaski" },
+    { "id": "node-church-coalition", "label": "Central Arkansas Church Coalition", "type": "organization", "county": "Pulaski" }
+  ],
+  "edges": [
+    { "id": "edge-001", "source": "node-steve", "target": "node-kelly", "type": "volunteer", "strength": 0.88 },
+    { "id": "edge-002", "source": "node-steve", "target": "node-chair", "type": "leadership", "strength": 0.91 },
+    { "id": "edge-003", "source": "node-steve", "target": "node-naacp", "type": "coalition", "strength": 0.85 },
+    { "id": "edge-004", "source": "node-steve", "target": "node-chamber", "type": "business", "strength": 0.72 },
+    { "id": "edge-005", "source": "node-steve", "target": "node-foodbank", "type": "nonprofit", "strength": 0.90 },
+    { "id": "edge-006", "source": "node-steve", "target": "node-pastor", "type": "faith_community", "strength": 0.87 },
+    { "id": "edge-007", "source": "node-steve", "target": "node-superintendent", "type": "education", "strength": 0.78 },
+    { "id": "edge-008", "source": "node-steve", "target": "node-newspaper", "type": "media", "strength": 0.65 },
+    { "id": "edge-009", "source": "node-foodbank", "target": "node-school-district", "type": "coalition", "strength": 0.82 },
+    { "id": "edge-010", "source": "node-school-district", "target": "node-church-coalition", "type": "coalition", "strength": 0.76 },
+    { "id": "edge-011", "source": "node-church-coalition", "target": "node-unitedway", "type": "strategic_partner", "strength": 0.84 },
+    { "id": "edge-012", "source": "node-sarah", "target": "node-ualr", "type": "coalition", "strength": 0.89 },
+    { "id": "edge-013", "source": "node-sarah", "target": "node-mike", "type": "professional", "strength": 0.45 },
+    { "id": "edge-014", "source": "node-steve", "target": "node-sarah", "type": "cross_county", "strength": 0.70 }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "weights": {
+    "meetingFrequency": 0.14,
+    "sharedEvents": 0.12,
+    "missionCollaboration": 0.16,
+    "volunteerWork": 0.12,
+    "communication": 0.14,
+    "introductions": 0.10,
+    "jointOrganizations": 0.10,
+    "relationshipLength": 0.06,
+    "recentActivity": 0.04,
+    "consistency": 0.02
+  },
+  "trustWeights": {
+    "followThrough": 0.20,
+    "attendance": 0.18,
+    "reliability": 0.18,
+    "responsiveness": 0.14,
+    "completedCommitments": 0.15,
+    "repeatedCollaboration": 0.10,
+    "positiveEngagement": 0.03,
+    "longTermConsistency": 0.02
+  },
+  "influenceWeights": {
+    "volunteerRecruitment": 0.20,
+    "eventAttendanceDriven": 0.15,
+    "introductionsMade": 0.18,
+    "organizationsConnected": 0.15,
+    "successfulCollaborations": 0.12,
+    "leadershipRoles": 0.10,
+    "crossCommunityParticipation": 0.06,
+    "speakingEngagements": 0.04
+  }
+}

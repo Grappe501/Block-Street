@@ -1,0 +1,68 @@
+{
+  "version": "2.0.0",
+  "documentId": "BUILD-007.5",
+  "requirementId": "RLI-001",
+  "buildArtifact": "RELATIONSHIP_INTELLIGENCE_ENGINE",
+  "docPath": "docs/phase-07/RELATIONSHIP_INTELLIGENCE_ENGINE.md",
+  "overviewDocPath": "docs/phase-07/RELATIONSHIP_INTELLIGENCE.md",
+  "status": "canonical",
+  "priority": "critical",
+  "productName": "Relationship Intelligence Engine",
+  "abbreviation": "RLIE",
+  "guidingPrinciple": "Who should we strengthen, who connects communities, and where are the relationships that will move this campaign forward?",
+  "relationshipTypes": [
+    "Personal", "Professional", "Volunteer", "Leadership", "Mentorship", "Donor",
+    "Media", "Government", "FaithCommunity", "Education", "Business", "Healthcare",
+    "Nonprofit", "Coalition", "Vendor", "Political", "Neighborhood", "Advisory", "StrategicPartner"
+  ],
+  "healthStates": ["Healthy", "Growing", "Stable", "NeedsAttention", "Dormant", "Inactive"],
+  "engines": ["GraphBuilder", "TrustCalculator", "InfluenceEngine", "NetworkAnalysis", "OpportunityDetector"],
+  "strengthSignals": [
+    "MeetingFrequency", "SharedEvents", "MissionCollaboration", "VolunteerWork",
+    "Communication", "Introductions", "JointOrganizations", "RelationshipLength", "RecentActivity", "Consistency"
+  ],
+  "trustSignals": [
+    "FollowThrough", "Attendance", "Reliability", "Responsiveness",
+    "CompletedCommitments", "RepeatedCollaboration", "PositiveEngagement", "LongTermConsistency"
+  ],
+  "influenceIndicators": [
+    "VolunteerRecruitment", "EventAttendanceDriven", "IntroductionsMade",
+    "OrganizationsConnected", "SuccessfulCollaborations", "LeadershipRoles",
+    "CrossCommunityParticipation", "SpeakingEngagements"
+  ],
+  "connectorRoles": [
+    "BridgeBuilder", "CrossCountyConnector", "RegionalLeader", "SubjectMatterExpert",
+    "CoalitionBuilder", "Recruiter", "Mentor", "HighEngagementVolunteer"
+  ],
+  "apiEndpoints": [
+    "GET /api/relationships",
+    "GET /api/relationships/{id}",
+    "GET /api/relationships/graph",
+    "GET /api/relationships/network",
+    "GET /api/relationships/recommendations",
+    "GET /api/relationships/connectors",
+    "GET /api/relationships/organizations",
+    "GET /api/relationships/history",
+    "GET /api/relationships/health",
+    "POST /api/relationships/introduction"
+  ],
+  "dataPaths": {
+    "graph": "data/relationships/graph.json",
+    "profiles": "data/relationships/profiles.json",
+    "alerts": "data/relationships/alerts.json",
+    "introductions": "data/relationships/introductions.json",
+    "scoringWeights": "data/relationships/scoring_weights.json"
+  },
+  "implementation": {
+    "engine": "src/lib/relationships/engine.ts",
+    "apiRoute": "src/app/api/relationships/route.ts",
+    "adminUi": "src/components/admin/AdminRelationshipIntelligenceEngine.tsx"
+  },
+  "integrationPoints": {
+    "consumes": ["CRM", "Calendar", "Communications", "Events", "VolunteerSystem", "Missions", "Organizations"],
+    "feeds": ["RIE-001", "MBD-001", "ANL-001", "ExecutiveDashboard", "IAS-001"]
+  },
+  "dependencies": ["INT-001", "MBD-001", "ANL-001", "PRN-001", "NISS-001", "DAB-001"],
+  "acceptanceCriteria": "AC-176",
+  "acceptanceCriteriaMet": true
+}

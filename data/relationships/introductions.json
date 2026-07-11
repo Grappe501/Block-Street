@@ -1,0 +1,34 @@
+{
+  "introductions": [
+    {
+      "id": "intro-001",
+      "fromLabel": "County Judge — Washington",
+      "toLabel": "Food Security Coalition",
+      "reason": "Shared priorities on food access and voter registration",
+      "evidence": ["Three mutual relationships", "Upcoming town hall event", "Food Bank bridge connection"],
+      "confidencePercent": 86,
+      "mutualConnections": 3,
+      "status": "suggested"
+    },
+    {
+      "id": "intro-002",
+      "fromLabel": "Kelly Brooks",
+      "toLabel": "Dr. Lisa Harmon",
+      "reason": "Education initiative alignment — Kelly connected faith and school communities",
+      "evidence": ["Both attended Leadership Summit", "Shared volunteer recruitment goals"],
+      "confidencePercent": 82,
+      "mutualConnections": 2,
+      "status": "suggested"
+    },
+    {
+      "id": "intro-003",
+      "fromLabel": "Sarah Johnson",
+      "toLabel": "Mike Torres",
+      "reason": "Re-engage dormant cross-county relationship — Benton canvass coordination",
+      "evidence": ["94 days since last interaction", "Overlapping mission in Benton County"],
+      "confidencePercent": 78,
+      "mutualConnections": 1,
+      "status": "suggested"
+    }
+  ]
+}

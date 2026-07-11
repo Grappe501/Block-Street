@@ -1,0 +1,178 @@
+{
+  "profiles": [
+    {
+      "id": "rli-001",
+      "participants": ["Steve Martinez", "Kelly Brooks"],
+      "organizations": ["Washington County Democrats"],
+      "type": "volunteer",
+      "strengthPercent": 91,
+      "trustPercent": 88,
+      "influencePercent": 72,
+      "health": "healthy",
+      "lastInteraction": "2026-07-09T14:00:00Z",
+      "daysSinceInteraction": 1,
+      "sharedMissions": 18,
+      "sharedOrganizations": 4,
+      "sharedEvents": 24,
+      "county": "Washington",
+      "tags": ["volunteer-leader", "canvass", "mentor"],
+      "strengthSignals": {
+        "meetingFrequency": 0.92, "sharedEvents": 0.88, "missionCollaboration": 0.95,
+        "volunteerWork": 0.90, "communication": 0.85, "introductions": 0.70,
+        "jointOrganizations": 0.80, "relationshipLength": 0.75, "recentActivity": 0.95, "consistency": 0.88
+      },
+      "timeline": [
+        { "event": "Met at NAACP meeting", "at": "2024-03-15" },
+        { "event": "Volunteer Orientation", "at": "2024-06-01" },
+        { "event": "Town Hall co-organized", "at": "2024-09-20" },
+        { "event": "County Planning Session", "at": "2025-01-10" },
+        { "event": "Introduced Food Bank partnership", "at": "2025-04-05" },
+        { "event": "Leadership Summit", "at": "2026-06-15" }
+      ],
+      "feedsRecommendation": false
+    },
+    {
+      "id": "rli-002",
+      "participants": ["Sarah Johnson", "Mike Torres"],
+      "organizations": [],
+      "type": "professional",
+      "strengthPercent": 38,
+      "trustPercent": 55,
+      "influencePercent": 48,
+      "health": "dormant",
+      "lastInteraction": "2026-04-07T10:00:00Z",
+      "daysSinceInteraction": 94,
+      "sharedMissions": 2,
+      "sharedOrganizations": 0,
+      "sharedEvents": 1,
+      "county": "Pulaski",
+      "tags": ["cross-county"],
+      "strengthSignals": {
+        "meetingFrequency": 0.20, "sharedEvents": 0.15, "missionCollaboration": 0.25,
+        "volunteerWork": 0.30, "communication": 0.35, "introductions": 0.10,
+        "jointOrganizations": 0.0, "relationshipLength": 0.50, "recentActivity": 0.10, "consistency": 0.20
+      },
+      "timeline": [
+        { "event": "Met at statewide training", "at": "2025-08-12" },
+        { "event": "Joint canvass in Benton", "at": "2025-11-03" },
+        { "event": "Last phone call", "at": "2026-04-07" }
+      ],
+      "feedsRecommendation": true
+    },
+    {
+      "id": "rli-003",
+      "participants": ["Steve Martinez", "Northwest Arkansas Food Bank"],
+      "organizations": ["Northwest Arkansas Food Bank"],
+      "type": "coalition",
+      "strengthPercent": 90,
+      "trustPercent": 92,
+      "influencePercent": 85,
+      "health": "growing",
+      "lastInteraction": "2026-07-08T16:00:00Z",
+      "daysSinceInteraction": 2,
+      "sharedMissions": 6,
+      "sharedOrganizations": 2,
+      "sharedEvents": 8,
+      "county": "Washington",
+      "tags": ["food-security", "coalition", "bridge-organization"],
+      "strengthSignals": {
+        "meetingFrequency": 0.85, "sharedEvents": 0.90, "missionCollaboration": 0.88,
+        "volunteerWork": 0.92, "communication": 0.80, "introductions": 0.95,
+        "jointOrganizations": 0.85, "relationshipLength": 0.70, "recentActivity": 0.90, "consistency": 0.85
+      },
+      "timeline": [
+        { "event": "Initial partnership meeting", "at": "2024-11-20" },
+        { "event": "Joint food drive event", "at": "2025-03-15" },
+        { "event": "Introduced school district", "at": "2025-06-01" },
+        { "event": "Coalition expansion meeting", "at": "2026-07-08" }
+      ],
+      "feedsRecommendation": false
+    },
+    {
+      "id": "rli-004",
+      "participants": ["Dr. Lisa Harmon", "Washington County Democrats"],
+      "organizations": ["Springdale School District"],
+      "type": "education",
+      "strengthPercent": 78,
+      "trustPercent": 82,
+      "influencePercent": 91,
+      "health": "growing",
+      "lastInteraction": "2026-07-07T11:00:00Z",
+      "daysSinceInteraction": 3,
+      "sharedMissions": 3,
+      "sharedOrganizations": 1,
+      "sharedEvents": 5,
+      "county": "Washington",
+      "tags": ["education", "high-influence", "connector"],
+      "strengthSignals": {
+        "meetingFrequency": 0.70, "sharedEvents": 0.85, "missionCollaboration": 0.65,
+        "volunteerWork": 0.50, "communication": 0.75, "introductions": 0.90,
+        "jointOrganizations": 0.60, "relationshipLength": 0.55, "recentActivity": 0.88, "consistency": 0.70
+      },
+      "timeline": [
+        { "event": "School board introduction", "at": "2025-02-10" },
+        { "event": "Attended three recent campaign events", "at": "2026-06-20" },
+        { "event": "Voter registration partnership discussion", "at": "2026-07-07" }
+      ],
+      "feedsRecommendation": true
+    },
+    {
+      "id": "rli-005",
+      "participants": ["Northwest Arkansas Food Bank", "Pulaski County Special School District"],
+      "organizations": ["Northwest Arkansas Food Bank", "Pulaski County Special School District"],
+      "type": "organization",
+      "strengthPercent": 82,
+      "trustPercent": 86,
+      "influencePercent": 74,
+      "health": "stable",
+      "lastInteraction": "2026-06-28T09:00:00Z",
+      "daysSinceInteraction": 12,
+      "sharedMissions": 4,
+      "sharedOrganizations": 3,
+      "sharedEvents": 6,
+      "county": "Washington",
+      "tags": ["institutional", "food-security", "education"],
+      "strengthSignals": {
+        "meetingFrequency": 0.75, "sharedEvents": 0.80, "missionCollaboration": 0.78,
+        "volunteerWork": 0.70, "communication": 0.72, "introductions": 0.60,
+        "jointOrganizations": 0.90, "relationshipLength": 0.65, "recentActivity": 0.70, "consistency": 0.80
+      },
+      "timeline": [
+        { "event": "Partnership established via Steve introduction", "at": "2025-06-01" },
+        { "event": "Joint grant application", "at": "2025-11-15" },
+        { "event": "Quarterly review", "at": "2026-06-28" }
+      ],
+      "feedsRecommendation": false
+    },
+    {
+      "id": "rli-006",
+      "participants": ["Kelly Brooks"],
+      "organizations": [],
+      "type": "volunteer",
+      "strengthPercent": 85,
+      "trustPercent": 90,
+      "influencePercent": 87,
+      "health": "healthy",
+      "lastInteraction": "2026-07-10T08:00:00Z",
+      "daysSinceInteraction": 0,
+      "sharedMissions": 12,
+      "sharedOrganizations": 2,
+      "sharedEvents": 15,
+      "county": "Washington",
+      "tags": ["connector", "recruiter", "bridge-builder"],
+      "connectorRole": "BridgeBuilder",
+      "connectedCommunities": ["Education", "Faith", "Food Security", "Veterans"],
+      "strengthSignals": {
+        "meetingFrequency": 0.88, "sharedEvents": 0.90, "missionCollaboration": 0.85,
+        "volunteerWork": 0.95, "communication": 0.88, "introductions": 0.92,
+        "jointOrganizations": 0.75, "relationshipLength": 0.80, "recentActivity": 1.0, "consistency": 0.90
+      },
+      "timeline": [
+        { "event": "Identified as community connector", "at": "2025-09-01" },
+        { "event": "Recruited 14 volunteers in Q2", "at": "2026-06-30" },
+        { "event": "Cross-county collaboration with Pulaski", "at": "2026-07-10" }
+      ],
+      "feedsRecommendation": true
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "alerts": [
+    {
+      "id": "alert-rli-001",
+      "severity": "warning",
+      "title": "Dormant relationship — Sarah & Mike",
+      "message": "You have not spoken with Mike Torres in 94 days",
+      "relationshipId": "rli-002",
+      "category": "dormant",
+      "detectedAt": "2026-07-10T12:00:00Z",
+      "feedsRecommendation": true,
+      "feedsMissionBoard": true
+    },
+    {
+      "id": "alert-rli-002",
+      "severity": "info",
+      "title": "Growing influence — Dr. Lisa Harmon",
+      "message": "School superintendent attended three recent events — influence score rising",
+      "relationshipId": "rli-004",
+      "category": "influence",
+      "detectedAt": "2026-07-10T11:00:00Z",
+      "feedsRecommendation": true,
+      "feedsMissionBoard": false
+    },
+    {
+      "id": "alert-rli-003",
+      "severity": "info",
+      "title": "Independent coalition activity",
+      "message": "Food Bank and School District began collaborating independently — bridge opportunity",
+      "relationshipId": "rli-005",
+      "category": "opportunity",
+      "detectedAt": "2026-07-10T10:00:00Z",
+      "feedsRecommendation": true,
+      "feedsMissionBoard": true
+    },
+    {
+      "id": "alert-rli-004",
+      "severity": "warning",
+      "title": "County partnership inactive",
+      "message": "Craighead County coalition partnership has had no activity in 60 days",
+      "relationshipId": null,
+      "category": "county",
+      "detectedAt": "2026-07-10T09:00:00Z",
+      "feedsRecommendation": true,
+      "feedsMissionBoard": true
+    }
+  ]
+}
