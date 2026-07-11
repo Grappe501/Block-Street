@@ -4,6 +4,29 @@
 
 ---
 
+## 2026-07-11 — Build 9.7 Operational Launch, Adoption, and Continuous Improvement [OPS-001 · AC-192]
+
+**Documents:** `docs/platform/operations/*` (10 standards) · `docs/phase-09/OPERATIONAL_LAUNCH_ADOPTION.md`
+
+### What Changed
+
+- **Launch orchestration** — operational launch plans with approval, controlled rollout, and rollback
+- **Operational health** — explainable domain scoring across identity, training, missions, security, support
+- **Adoption analytics** — DAU/WAU/MAU, retention, mission participation, adoption stages
+- **Tiered support** — automatic classification and routing (Tier 0–4)
+- **Feedback engine** — intake with backlog mapping to product, UX, documentation, training
+- **Release governance** — deploy, monitor, and rollback with audit trail
+- **Institutional maturity** — Foundation through Institutional Excellence levels
+- **Executive dashboard** — real-time operational state for leaders
+- **v1 APIs** — `/api/v1/operations/*`, `/api/admin/operations/overview`
+- **Operations Administration Center** — health summary, launch plans, AC-192 acceptance demo, audit
+
+### Phase Status
+
+- Phase 9: **In Progress** (7/8 Institutional Launch)
+
+---
+
 ## 2026-07-11 — Build 9.6 Pilot, Observation, and Acceptance Program [PLT-001 · AC-191]
 
 **Documents:** `docs/platform/pilot/*` (16 standards) · `docs/phase-09/PILOT_AND_ACCEPTANCE.md`
