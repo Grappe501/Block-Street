@@ -1,71 +1,101 @@
-# Build 8.1 — Authentication and Identity
+# Build 8.1 — Authentication and Identity Foundation
 
 **Document ID:** BUILD-008.1 · **AUTH-001**  
 **Artifact:** `AUTHENTICATION_AND_IDENTITY.md`  
 **Status:** Canonical  
 **Phase:** 8 — Platform Services
 
-> Who is the user?
+> Who is attempting to enter? Who is this person? What context are they in?
 
 **Builds on:** [ENG-006](../volume-01/AUTHORIZATION_ARCHITECTURE.md) · [PRE-001](../volume-01/PERMISSION_RESOLUTION_ENGINE.md) · [KDG-M16](../phase-03/KNOWLEDGE_DATA_GOVERNANCE.md)  
-**Live spec:** `data/registry/authentication-identity.json` · **API:** `/api/auth`
+**Live spec:** `data/registry/authentication-identity.json` · **API:** `/api/auth`, `/api/identity`, `/api/invitations`  
+**Platform docs:** `docs/platform/auth/`
 
 ---
 
-## Purpose
+## Governing Principle
 
-**[AUTH-M01]** Replace honor-system V1 with production-grade identity and authentication supporting individuals, organizations, institutions, and multiple workspace memberships.
-
-**[AUTH-M01a]** Identity is separate from organizational roles. A person is not permanently defined as administrator, volunteer, or executive — those are contextual assignments.
+> Identity is permanent enough to establish continuity, but access is always contextual, limited, revocable, and auditable.
 
 ---
 
-## Canonical User Identity
+## Core Outcomes
 
-**[AUTH-M02]** `user_id` · `primary_email` · `verified_emails` · `display_name` · `authentication_methods` · `account_status` · `security_state` · `identity_assurance_level`
-
----
-
-## Membership Model
-
-**[AUTH-M03]** User → Organization Membership → Workspace Membership → Role Assignment → Permission Grants
-
----
-
-## Session Management
-
-**[AUTH-M04]** View active sessions · revoke sessions · login alerts · reauthentication for sensitive actions · configurable expiry
-
----
-
-## Account Lifecycle
-
-**[AUTH-M05]** Invited → Pending Verification → Active → Restricted → Suspended → Archived → Deleted/Anonymized. Every transition governed and logged.
+1. Canonical user identity (`PlatformUser`)
+2. Secure authentication (email/password, passwordless scaffold, OAuth scaffold)
+3. Verified login methods (`AuthenticationIdentity`)
+4. Session management (`UserSession`)
+5. Organization and workspace membership
+6. Invitation and onboarding flows
+7. Account lifecycle management
+8. MFA readiness
+9. Identity recovery foundation
+10. Authentication auditing
+11. Protected route enforcement
+12. Future SSO and passkey compatibility
 
 ---
 
-## Authentication Methods (Roadmap)
+## Five Layers
 
-**[AUTH-M06]** V1: email/password · session tokens. Roadmap: OAuth (Google, Microsoft), MFA, passwordless links, SSO.
+| Layer | Question |
+|-------|----------|
+| Person | Who is interacting? |
+| Authentication Method | How do they prove identity? |
+| Canonical Identity | What is their durable platform record? |
+| Membership | Where do they belong? |
+| Access Policy | What may they do? (Builds 8.2, 8.8) |
 
 ---
 
 ## APIs
 
-**[AUTH-M07]** `POST /api/auth/login` · `/logout` · `GET /api/auth/session` · `/me` · `/sessions` · `DELETE /api/auth/sessions/{id}`
+### Authentication
+
+`POST /api/auth/register` · `/login` · `/logout` · `/logout-all` · `/passwordless/request` · `/passwordless/verify` · `/password/reset-request` · `/password/reset` · `GET /session` · `/sessions` · `DELETE /sessions/{id}` · `/providers` · `/mfa` · `/recovery-codes/regenerate` · `/security-events`
+
+### Identity & Membership
+
+`GET/PATCH /api/identity/me` · `/memberships` · `POST /context` · `/api/invitations` · `/invitations/{token}` · `/accept` · `/revoke`
 
 ---
 
-## Acceptance Criteria
+## UI Surfaces
 
-**[AUTH-M08]** Build 8.1 is complete when:
+`/login` · `/register` · `/passwordless` · `/forgot-password` · `/reset-password` · `/mfa/setup` · `/mfa/challenge` · `/invitations/accept` · `/onboarding` · `/account/security` · `/select-organization` · `/select-workspace` · `/access-denied`
 
-- Honor-system access removed from protected areas
-- Users authenticate through secure verified identity flows
-- Sessions securely managed and revocable
-- MFA scaffolding available for elevated roles
-- Identity separated from role and organization membership
-- Account lifecycle events auditable
-- Protected routes cannot be reached through client-side bypasses
+---
+
+## Definition of Done
+
+- Every protected route requires server-verified session
+- Honor-system disabled for protected access (`AUTH_HONOR_SYSTEM_DISABLED`)
+- One canonical identity per person with provider linking
+- Multi-org/workspace membership with validated active context
+- Secure invitations create or attach memberships
+- Revocable sessions visible to users
+- MFA foundation for elevated roles
+- Governed account recovery scaffold
+- Privacy-safe audit events
+- Suspended users lose access immediately
 
 **Acceptance:** `AC-178`
+
+---
+
+## Related Documentation
+
+| Document | Path |
+|----------|------|
+| Architecture | `docs/platform/auth/AUTHENTICATION_ARCHITECTURE.md` |
+| Identity Model | `docs/platform/auth/CANONICAL_IDENTITY_MODEL.md` |
+| Sessions | `docs/platform/auth/SESSION_MANAGEMENT_POLICY.md` |
+| Lifecycle | `docs/platform/auth/ACCOUNT_LIFECYCLE_POLICY.md` |
+| Invitations | `docs/platform/auth/INVITATION_AND_ONBOARDING_FLOW.md` |
+| MFA & Recovery | `docs/platform/auth/MFA_AND_ACCOUNT_RECOVERY.md` |
+| Providers | `docs/platform/auth/AUTH_PROVIDER_CONFIGURATION.md` |
+| Migration | `docs/platform/auth/HONOR_SYSTEM_MIGRATION_PLAN.md` |
+| Test Plan | `docs/platform/auth/AUTHENTICATION_TEST_PLAN.md` |
+| Incident Runbook | `docs/platform/auth/AUTHENTICATION_INCIDENT_RUNBOOK.md` |
+| Inventory | `docs/platform/auth/AUTH_IDENTITY_INVENTORY.md` |
+| Data Model | `docs/platform/auth/AUTH_CANONICAL_DATA_MODEL.md` |
