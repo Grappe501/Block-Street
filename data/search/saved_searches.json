@@ -1,0 +1,43 @@
+{
+  "version": "1.0.0",
+  "savedSearches": [
+    {
+      "id": "ss-inactive-volunteers",
+      "name": "Inactive volunteers",
+      "query": "volunteer inactive",
+      "filters": { "entity_type": "Person", "tags": ["volunteer"] },
+      "owner": "platform",
+      "created_at": "2026-07-10T00:00:00Z"
+    },
+    {
+      "id": "ss-benton-county",
+      "name": "Organizations in Benton County",
+      "query": "benton",
+      "filters": { "county": "Benton County" },
+      "owner": "platform",
+      "created_at": "2026-07-10T00:00:00Z"
+    },
+    {
+      "id": "ss-county-chairs",
+      "name": "County chairs",
+      "query": "county leader chair",
+      "filters": { "entity_type": "Person" },
+      "owner": "platform",
+      "created_at": "2026-07-10T00:00:00Z"
+    }
+  ],
+  "collections": [
+    {
+      "id": "col-volunteer-leaders",
+      "name": "Volunteer Leaders",
+      "savedSearchId": "ss-county-chairs",
+      "dynamic": true
+    },
+    {
+      "id": "col-petition-locations",
+      "name": "Petition Locations",
+      "query": "petition county",
+      "dynamic": true
+    }
+  ]
+}

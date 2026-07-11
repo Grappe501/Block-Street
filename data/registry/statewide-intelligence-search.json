@@ -1,0 +1,79 @@
+{
+  "version": "2.0.0",
+  "documentId": "BUILD-007.1",
+  "requirementId": "SIS-001",
+  "supersedesBuildDetail": "SRCH-001",
+  "docPath": "docs/phase-07/STATEWIDE_INTELLIGENCE_SEARCH.md",
+  "status": "canonical",
+  "priority": "critical",
+  "productName": "Statewide Intelligence Search",
+  "abbreviation": "SIS",
+  "guidingPrinciple": "The platform must instantly find any piece of information stored anywhere in the ecosystem.",
+  "oneSearch": true,
+  "searchObjectFields": [
+    "search_id", "entity_type", "entity_id", "title", "subtitle", "summary", "full_text",
+    "keywords", "tags", "created_at", "updated_at", "county", "organization", "owner",
+    "permissions", "status", "latitude", "longitude", "importance_score", "popularity_score",
+    "relationship_score", "embedding_reference"
+  ],
+  "searchableEntityTypes": [
+    "Person", "Organization", "County", "Volunteer", "Task", "Meeting", "Email", "Event",
+    "Bill", "Document", "Video", "Podcast", "Image", "Grant", "Campaign", "Vendor",
+    "Partner", "Expense", "Conversation", "Notebook", "Mission", "CalendarItem", "Institution"
+  ],
+  "searchableEntityCount": 23,
+  "searchModes": ["Standard", "Fuzzy", "Semantic", "Geographic"],
+  "searchModesV1": ["Standard", "Fuzzy", "Filtered", "Geographic"],
+  "semanticReady": true,
+  "rankingFormula": {
+    "factors": [
+      "KeywordMatch", "SemanticSimilarity", "RelationshipScore", "Popularity",
+      "Freshness", "Importance", "UserBehavior", "CampaignPriority"
+    ],
+    "factorCount": 8,
+    "explainable": true
+  },
+  "filterDimensions": {
+    "entity": ["People", "Organizations", "Events", "Documents", "Tasks", "Media", "Legislation", "Mission", "County", "Volunteer", "Calendar"],
+    "geography": ["State", "CongressionalDistrict", "County", "City", "SchoolDistrict", "Precinct", "Ward", "ZIP", "Radius"],
+    "time": ["Today", "Week", "Month", "Quarter", "ElectionCycle", "Custom"],
+    "campaign": ["Active", "Archived", "Future", "Completed"],
+    "ownership": ["Mine", "MyTeam", "MyCounty", "EntireState"],
+    "status": ["Open", "Closed", "Pending", "Urgent", "Draft", "Published", "Hidden"],
+    "aiConfidence": ["Verified", "Estimated", "Generated", "PendingReview"]
+  },
+  "performanceTargets": {
+    "suggestionsMs": 100,
+    "keywordMs": 300,
+    "filteredMs": 500,
+    "semanticMs": 800,
+    "largeDocumentMs": 1000
+  },
+  "apiEndpoints": [
+    "GET /api/search",
+    "GET /api/search/suggestions",
+    "GET /api/search/saved",
+    "POST /api/search/save",
+    "GET /api/search/status"
+  ],
+  "indexPipeline": [
+    "NewRecord", "ChangeEvent", "IndexerQueue", "TextExtraction", "OCR",
+    "Metadata", "PermissionAssignment", "EmbeddingGeneration", "UnifiedSearchIndex"
+  ],
+  "dataPaths": {
+    "index": "data/search/search_objects.jsonl",
+    "savedSearches": "data/search/saved_searches.json",
+    "indexStatus": "data/search/index_status.json",
+    "schema": "data/search/search_object.schema.json"
+  },
+  "implementation": {
+    "searchEngine": "src/lib/search/engine.ts",
+    "apiRoute": "src/app/api/search/route.ts",
+    "adminUi": "src/components/admin/AdminStatewideIntelligenceSearch.tsx"
+  },
+  "dependencies": [
+    "CKK-001", "KDG-001", "PSI-007", "SRCH-001", "DAB-011", "ENG-010"
+  ],
+  "acceptanceCriteria": "AC-172",
+  "acceptanceCriteriaMet": true
+}

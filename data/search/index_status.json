@@ -1,0 +1,11 @@
+{
+  "indexedAt": "2026-07-10T23:45:00Z",
+  "objectCount": 0,
+  "note": "Live count served by GET /api/search/status from runtime index",
+  "queueBacklog": 0,
+  "failedJobs": 0,
+  "avgLatencyMs": 42,
+  "semanticLayerReady": false,
+  "embeddingServiceConnected": false,
+  "healthy": true
+}

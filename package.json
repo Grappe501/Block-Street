@@ -17,7 +17,8 @@
     "canon:readiness": "node scripts/canon/readiness.mjs",
     "canon:report": "node scripts/canon/report.mjs",
     "canon:sync": "node scripts/canon/sync.mjs",
-    "canon:gate": "node scripts/canon/gate.mjs"
+    "canon:gate": "node scripts/canon/gate.mjs",
+    "search:bootstrap": "node scripts/search/bootstrap-index.mjs"
   },
   "dependencies": {
     "next": "^15.1.0",

@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SearchObject",
+  "type": "object",
+  "required": ["search_id", "entity_type", "entity_id", "title", "permissions"],
+  "properties": {
+    "search_id": { "type": "string" },
+    "entity_type": { "type": "string" },
+    "entity_id": { "type": "string" },
+    "title": { "type": "string" },
+    "subtitle": { "type": "string" },
+    "summary": { "type": "string" },
+    "full_text": { "type": "string" },
+    "keywords": { "type": "array", "items": { "type": "string" } },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "created_at": { "type": "string" },
+    "updated_at": { "type": "string" },
+    "county": { "type": "string" },
+    "organization": { "type": "string" },
+    "owner": { "type": "string" },
+    "permissions": { "type": "array", "items": { "type": "string" } },
+    "status": { "type": "string" },
+    "latitude": { "type": "number" },
+    "longitude": { "type": "number" },
+    "importance_score": { "type": "number" },
+    "popularity_score": { "type": "number" },
+    "relationship_score": { "type": "number" },
+    "embedding_reference": { "type": ["string", "null"] }
+  }
+}
