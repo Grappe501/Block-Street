@@ -4,15 +4,17 @@ import psos from "../../../data/platform-services/platform-services-operating-sy
 import auth from "../../../data/registry/authentication-identity.json";
 import admin from "../../../data/registry/administration-platform.json";
 import cms from "../../../data/registry/content-services.json";
+import ntf from "../../../data/registry/notification-services.json";
 import { AdminAuthenticationIdentity } from "@/components/admin/AdminAuthenticationIdentity";
 import { AdminAdministrationPlatform } from "@/components/admin/AdminAdministrationPlatform";
 import { AdminContentServices } from "@/components/admin/AdminContentServices";
+import { AdminNotificationServices } from "@/components/admin/AdminNotificationServices";
 
 const STEPS = [
   { step: auth, label: "8.1 Authentication & Identity", accent: "border-blue-300 bg-blue-50", featured: false },
   { step: admin, label: "8.2 Administration Platform", accent: "border-slate-300 bg-slate-50", featured: false },
-  { step: cms, label: "8.3 CMS & Content", accent: "border-emerald-400 bg-emerald-100", featured: true },
-  { id: "8.4", label: "8.4 Notifications", accent: "border-slate-300 bg-slate-50", name: "Notification Services", requirementId: "NTF-001", acceptanceCriteria: "pending" },
+  { step: cms, label: "8.3 CMS & Content", accent: "border-emerald-300 bg-emerald-50", featured: false },
+  { step: ntf, label: "8.4 Notifications", accent: "border-violet-400 bg-violet-100", featured: true },
   { id: "8.5", label: "8.5 Unified API", accent: "border-slate-300 bg-slate-50", name: "API Layer", requirementId: "API-001", acceptanceCriteria: "pending" },
   { id: "8.6", label: "8.6 Deployment", accent: "border-slate-300 bg-slate-50", name: "Deployment & CI/CD", requirementId: "DEP-001", acceptanceCriteria: "pending" },
   { id: "8.7", label: "8.7 Monitoring", accent: "border-slate-300 bg-slate-50", name: "Monitoring", requirementId: "MON-001", acceptanceCriteria: "pending" },
@@ -50,6 +52,7 @@ export function AdminPlatformServicesLayer() {
         ))}
       </div>
 
+      <AdminNotificationServices />
       <AdminContentServices />
       <AdminAdministrationPlatform />
       <AdminAuthenticationIdentity />

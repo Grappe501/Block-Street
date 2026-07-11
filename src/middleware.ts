@@ -43,7 +43,7 @@ export function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
-  if (pathname.startsWith("/admin") || pathname.startsWith("/account")) {
+  if (pathname.startsWith("/admin") || pathname.startsWith("/account") || pathname.startsWith("/notifications")) {
     const session = request.cookies.get(SESSION_COOKIE)?.value;
     if (!session) {
       const login = new URL(pathname.startsWith("/admin") ? "/admin/login" : "/login", request.url);
@@ -66,5 +66,5 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/admin/:path*", "/account/:path*", "/api/:path*", "/login", "/register", "/passwordless", "/forgot-password", "/reset-password", "/invitations/:path*", "/onboarding", "/select-organization", "/select-workspace"],
+  matcher: ["/admin/:path*", "/account/:path*", "/notifications/:path*", "/api/:path*", "/login", "/register", "/passwordless", "/forgot-password", "/reset-password", "/invitations/:path*", "/onboarding", "/select-organization", "/select-workspace"],
 };

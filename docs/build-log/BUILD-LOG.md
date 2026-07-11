@@ -22,6 +22,26 @@
 
 ---
 
+## 2026-07-10 — Build 8.4 Notification and Messaging Services [NTF-001 · AC-181]
+
+**Documents:** `docs/phase-08/NOTIFICATION_AND_MESSAGING_SERVICES.md` · `docs/platform/notifications/*` · **Registry:** `data/registry/notification-services.json`
+
+### What Changed
+
+- **Unified notification service** — canonical model, policy engine, recipient resolution, channel selection
+- **In-app notification center** — `/notifications` with filtering, read/dismiss/archive actions
+- **Preference center** — category preferences, quiet hours, consent management
+- **Delivery foundation** — email/SMS provider abstraction, delivery records, retry/dead-letter scaffold
+- **Campaign workflow** — audience preview, approval, send with duplicate execution blocking
+- **Admin dashboard** — queue, failures, templates, health overview in Phase 8 tab
+- **API surface** — `/api/notifications/*` and `/api/admin/notifications/*`
+
+### Phase 8 Progress
+
+4/8 platform service steps complete (8.1 AUTH + 8.2 ADM + 8.3 CMS + 8.4 NTF)
+
+---
+
 ## 2026-07-10 — Build 8.3 CMS and Content Services [CMS-001 · AC-180]
 
 **Documents:** `docs/phase-08/CMS_AND_CONTENT_SERVICES.md` · `docs/platform/cms/*` · **Registry:** `data/registry/content-services.json`

@@ -6049,6 +6049,38 @@
       "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
     },
     {
+      "id": "NTF-001",
+      "title": "Notification and Messaging Services — Build 8.4",
+      "purpose": "Unified preference-aware notification platform for all modules",
+      "description": "BUILD-008.4 — canonical notification model, policy engine, in-app center, email/SMS delivery, preferences, quiet hours, deduplication, grouping, campaigns, /api/notifications",
+      "priority": "critical",
+      "principle": "ENG-006",
+      "dependencies": ["CMS-001", "ADM-001", "AUTH-001", "PSV-001"],
+      "related": ["API-001", "SEC-001"],
+      "acceptanceCriteria": [
+        "Modules request notifications through shared service",
+        "In-app notification center with read/dismiss/archive/snooze",
+        "User preferences, quiet hours, and consent enforcement",
+        "Security notifications override ordinary preferences",
+        "Deduplication and grouping reduce noise",
+        "Campaign approval workflow with audience preview",
+        "Delivery tracking, retry, and dead-letter foundation",
+        "Administrative notification health dashboard"
+      ],
+      "futureNotes": "Full push providers, marketing automation, voice. AC-181.",
+      "implementationStatus": "done",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": null,
+        "api": "API-NTF",
+        "frontend": "PAGE-NOTIFICATIONS",
+        "test": "TEST-NTF-001",
+        "doc": "DOC-NTF-001"
+      },
+      "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
+    },
+    {
       "id": "PSI-014",
       "title": "Platform Operations, Governance & Lifecycle Architecture — Volume 5.13",
       "purpose": "Operate the platform as a governed institution — stewardship, certification, and decades-long evolution",
