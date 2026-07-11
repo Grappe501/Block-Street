@@ -300,7 +300,7 @@
       "registryPath": "data/intelligence/intelligence-operating-system.json",
       "question": "How do we understand and guide?",
       "steps": [
-        { "id": "7.1", "name": "Statewide Search [SRCH-001]", "status": "done", "notes": "Universal indexed search, semantic retrieval, saved searches — AC-166" },
+        { "id": "7.1", "name": "Statewide Intelligence Search [SIS-001]", "status": "done", "notes": "SIS knowledge retrieval engine, /api/search, unified index, fuzzy ranking — AC-172" },
         { "id": "7.2", "name": "Recommendation Engine [REC-001]", "status": "done", "notes": "Proactive advisor, confidence + reasons — AC-167" },
         { "id": "7.3", "name": "Analytics Engine [ANL-001]", "status": "done", "notes": "Executive dashboard, geographic analytics, forecasting — AC-168" },
         { "id": "7.4", "name": "Mission Board (Live) [MBD-001]", "status": "done", "notes": "OIS-M16 operational, AI-assisted missions — AC-169" },

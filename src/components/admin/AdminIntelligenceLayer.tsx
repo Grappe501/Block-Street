@@ -1,20 +1,21 @@
 "use client";
 
 import ios from "../../../data/intelligence/intelligence-operating-system.json";
-import srch from "../../../data/registry/statewide-search.json";
+import sis from "../../../data/registry/statewide-intelligence-search.json";
 import rec from "../../../data/registry/recommendation-engine.json";
 import anl from "../../../data/registry/analytics-engine.json";
 import mbd from "../../../data/registry/mission-board-live.json";
 import rli from "../../../data/registry/relationship-intelligence.json";
 import ias from "../../../data/registry/future-ai-assistance.json";
+import { AdminStatewideIntelligenceSearch } from "@/components/admin/AdminStatewideIntelligenceSearch";
 
 const STEPS = [
-  { step: srch, label: "7.1 Statewide Search", accent: "border-sky-300 bg-sky-50" },
+  { step: sis, label: "7.1 Statewide Intelligence Search", accent: "border-sky-300 bg-sky-50", featured: true },
   { step: rec, label: "7.2 Recommendation Engine", accent: "border-violet-300 bg-violet-50" },
   { step: anl, label: "7.3 Analytics Engine", accent: "border-amber-300 bg-amber-50" },
   { step: mbd, label: "7.4 Mission Board (Live)", accent: "border-rose-300 bg-rose-50" },
   { step: rli, label: "7.5 Relationship Intelligence", accent: "border-teal-300 bg-teal-50" },
-  { step: ias, label: "7.6 Future AI Assistance", accent: "border-indigo-300 bg-indigo-50", featured: true },
+  { step: ias, label: "7.6 Future AI Assistance", accent: "border-indigo-300 bg-indigo-50" },
 ];
 
 export function AdminIntelligenceLayer() {
@@ -63,6 +64,8 @@ export function AdminIntelligenceLayer() {
         <p className="mt-1 text-xs text-purple-900">{ios.governedBy.join(" · ")}</p>
         <p className="mt-2 font-mono text-xs text-purple-700">{ios.docPath}</p>
       </div>
+
+      <AdminStatewideIntelligenceSearch />
     </div>
   );
 }

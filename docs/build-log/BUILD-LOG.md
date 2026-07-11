@@ -18,6 +18,20 @@
 
 ---
 
+## 2026-07-10 — Build 7.1 Statewide Intelligence Search [SIS-001 · AC-172]
+
+**Document:** `docs/phase-07/STATEWIDE_INTELLIGENCE_SEARCH.md` · **Registry:** `data/registry/statewide-intelligence-search.json`
+
+### What Changed
+
+- **SIS knowledge retrieval engine** — unified SearchObject model, keyword + fuzzy ranking, explainable scores
+- **Search API** — `GET /api/search`, `/suggestions`, `/saved`, `/status`
+- **Runtime index** — 75 counties + high schools + sample missions/people from registry data
+- **Admin live search** — Phase 7 tab interactive universal search with filters and saved searches
+- Permission-filtered results · semantic-ready architecture · AC-172
+
+---
+
 ## 2026-07-10 — Phase 7 Intelligence Layer [INT-001 · AC-171] · **PHASE 7 COMPLETE**
 
 **Document:** `docs/phase-07/PHASE_7_MASTER_SEQUENCE.md` · **Registry:** `data/intelligence/intelligence-operating-system.json`

@@ -394,7 +394,11 @@
     },
     {
       "prefix": "SRCH",
-      "domain": "Statewide universal search — Phase 7.1"
+      "domain": "Statewide universal search — Phase 7.1 overview"
+    },
+    {
+      "prefix": "SIS",
+      "domain": "Statewide Intelligence Search — Build 7.1"
     },
     {
       "prefix": "REC",
@@ -5661,6 +5665,7 @@
       ],
       "related": [
         "SRCH-001",
+        "SIS-001",
         "REC-001",
         "ANL-001",
         "MBD-001",
@@ -5698,13 +5703,44 @@
       "priority": "critical",
       "principle": "CP-010",
       "dependencies": ["INT-001", "PSI-007", "KDG-001"],
-      "related": ["KRF", "CKK-001"],
+      "related": ["KRF", "CKK-001", "SIS-001"],
       "acceptanceCriteria": ["Universal statewide indexed search specified", "Semantic and literal search modes", "Filters and saved searches"],
-      "futureNotes": "Extends Knowledge Retrieval Fabric PSI-007",
-      "implementationStatus": "pending",
+      "futureNotes": "Build implementation: SIS-001 · extends Knowledge Retrieval Fabric PSI-007",
+      "implementationStatus": "in_progress",
       "testingStatus": "pending",
       "documentationStatus": "done",
-      "trace": { "database": null, "api": null, "frontend": null, "test": "TEST-SRCH-001", "doc": "DOC-SRCH-001" },
+      "trace": { "database": null, "api": "API-SEARCH", "frontend": "PAGE-ADMIN-SIS", "test": "TEST-SRCH-001", "doc": "DOC-SRCH-001" },
+      "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
+    },
+    {
+      "id": "SIS-001",
+      "title": "Statewide Intelligence Search — Build 7.1",
+      "purpose": "Knowledge retrieval engine — instantly find any information in the ecosystem",
+      "description": "BUILD-007.1 — SearchObject model, unified index, keyword/fuzzy/geographic modes, explainable ranking, /api/search, permission filtering, semantic-ready pipeline",
+      "priority": "critical",
+      "principle": "CP-010",
+      "dependencies": ["INT-001", "SRCH-001", "PSI-007", "KDG-001", "CKK-001"],
+      "related": ["KRF", "DAB-011", "ENG-010"],
+      "acceptanceCriteria": [
+        "Single search bar queries every supported entity type",
+        "Explainable relevance ranking",
+        "Keyword, fuzzy, filtered, and geographic queries",
+        "Saved searches and collections",
+        "Permission-filtered results",
+        "Index pipeline and API surface",
+        "Semantic/vector ready without redesign"
+      ],
+      "futureNotes": "OCR and transcript pipelines extend index; embedding service optional v1",
+      "implementationStatus": "in_progress",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": null,
+        "api": "API-SEARCH",
+        "frontend": "PAGE-ADMIN-SIS",
+        "test": "TEST-SIS-001",
+        "doc": "DOC-SIS-001"
+      },
       "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
     },
     {

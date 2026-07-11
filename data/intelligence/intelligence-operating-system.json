@@ -31,7 +31,7 @@
     "layerCount": 5
   },
   "steps": [
-    { "id": "7.1", "name": "Statewide Search", "requirement": "SRCH-001", "artifact": "docs/phase-07/STATEWIDE_SEARCH.md", "registryPath": "data/registry/statewide-search.json", "acceptanceCriteria": "AC-166", "status": "done" },
+    { "id": "7.1", "name": "Statewide Intelligence Search", "requirement": "SIS-001", "artifact": "docs/phase-07/STATEWIDE_INTELLIGENCE_SEARCH.md", "registryPath": "data/registry/statewide-intelligence-search.json", "acceptanceCriteria": "AC-172", "status": "done" },
     { "id": "7.2", "name": "Recommendation Engine", "requirement": "REC-001", "artifact": "docs/phase-07/RECOMMENDATION_ENGINE.md", "registryPath": "data/registry/recommendation-engine.json", "acceptanceCriteria": "AC-167", "status": "done" },
     { "id": "7.3", "name": "Analytics Engine", "requirement": "ANL-001", "artifact": "docs/phase-07/ANALYTICS_ENGINE.md", "registryPath": "data/registry/analytics-engine.json", "acceptanceCriteria": "AC-168", "status": "done" },
     { "id": "7.4", "name": "Mission Board (Live)", "requirement": "MBD-001", "artifact": "docs/phase-07/MISSION_BOARD_LIVE.md", "registryPath": "data/registry/mission-board-live.json", "acceptanceCriteria": "AC-169", "status": "done" },
