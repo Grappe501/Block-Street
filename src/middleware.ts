@@ -29,6 +29,8 @@ function isPublicApi(pathname: string, method: string) {
   if (pathname.match(/^\/api\/invitations\/[^/]+$/) && !pathname.endsWith("/revoke")) return true;
   if (pathname.match(/^\/api\/invitations\/[^/]+\/accept$/)) return true;
   if (method === "GET" && pathname.startsWith("/api/content")) return true;
+  if (method === "GET" && pathname.startsWith("/api/v1/public")) return true;
+  if (method === "GET" && pathname === "/api/v1/health") return true;
   return false;
 }
 

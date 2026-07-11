@@ -10,7 +10,7 @@
   "readAfter": "INT-001",
   "guidingPrinciple": "Every platform capability must be secure, observable, governable, and recoverable.",
   "mission": "Create unified platform-services layer — identity, access, administration, content, notifications, APIs, deployment, monitoring, security.",
-  "stepsComplete": 4,
+  "stepsComplete": 5,
   "stepsTotal": 8,
   "servicePillars": [
     "Identity",
@@ -31,7 +31,7 @@
     { "id": "8.2", "name": "Administration Platform", "requirement": "ADM-001", "artifact": "docs/phase-08/ADMINISTRATION_PLATFORM.md", "registryPath": "data/registry/administration-platform.json", "acceptanceCriteria": "AC-179", "status": "done" },
     { "id": "8.3", "name": "CMS and Content Services", "requirement": "CMS-001", "artifact": "docs/phase-08/CMS_AND_CONTENT_SERVICES.md", "registryPath": "data/registry/content-services.json", "acceptanceCriteria": "AC-180", "status": "done" },
     { "id": "8.4", "name": "Notification and Messaging Services", "requirement": "NTF-001", "artifact": "docs/phase-08/NOTIFICATION_AND_MESSAGING_SERVICES.md", "registryPath": "data/registry/notification-services.json", "acceptanceCriteria": "AC-181", "status": "done" },
-    { "id": "8.5", "name": "Unified API Layer", "requirement": "API-001", "status": "pending" },
+    { "id": "8.5", "name": "Unified API Layer", "requirement": "API-001", "artifact": "docs/phase-08/UNIFIED_API_AND_INTEGRATION_LAYER.md", "registryPath": "data/registry/unified-api-layer.json", "acceptanceCriteria": "AC-182", "status": "done" },
     { "id": "8.6", "name": "Deployment and CI/CD", "requirement": "DEP-001", "status": "pending" },
     { "id": "8.7", "name": "Monitoring and Reliability", "requirement": "MON-001", "status": "pending" },
     { "id": "8.8", "name": "Security Platform", "requirement": "SEC-001", "status": "pending" }

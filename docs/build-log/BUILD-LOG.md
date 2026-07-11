@@ -22,6 +22,27 @@
 
 ---
 
+## 2026-07-10 — Build 8.5 Unified API and Integration Layer [API-001 · AC-182]
+
+**Documents:** `docs/phase-08/UNIFIED_API_AND_INTEGRATION_LAYER.md` · `docs/platform/api/*` · **Registry:** `data/registry/unified-api-layer.json`
+
+### What Changed
+
+- **API v1 gateway** — request context, correlation IDs, standard `{ data, meta }` envelope and error contract
+- **Public APIs** — `GET /api/v1/public/content`, `GET /api/v1/health` (unauthenticated)
+- **Protected v1 domains** — identity, missions (with idempotency), notifications, search
+- **Policy engine** — rate limiting, permission checks, API key authentication for integrations
+- **Credentials & webhooks** — API clients, scoped keys, webhook signing foundation
+- **Deprecation registry** — legacy route migration tracking with sunset dates
+- **AI tool registry** — governed tool definitions with action levels and approval requirements
+- **Admin dashboard** — clients, credentials, webhooks, telemetry, deprecations in Phase 8 tab
+
+### Phase 8 Progress
+
+5/8 platform service steps complete (8.1–8.5)
+
+---
+
 ## 2026-07-10 — Build 8.4 Notification and Messaging Services [NTF-001 · AC-181]
 
 **Documents:** `docs/phase-08/NOTIFICATION_AND_MESSAGING_SERVICES.md` · `docs/platform/notifications/*` · **Registry:** `data/registry/notification-services.json`

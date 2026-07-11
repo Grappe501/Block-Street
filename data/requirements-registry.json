@@ -6081,6 +6081,38 @@
       "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
     },
     {
+      "id": "API-001",
+      "title": "Unified API and Integration Layer — Build 8.5",
+      "purpose": "Governed versioned API platform for all platform services",
+      "description": "BUILD-008.5 — API gateway, v1 standards, request context, auth/authz, validation, standard errors, idempotency, rate limiting, webhooks, credentials, /api/v1",
+      "priority": "critical",
+      "principle": "ENG-006",
+      "dependencies": ["NTF-001", "CMS-001", "ADM-001", "AUTH-001", "PSV-001"],
+      "related": ["SEC-001", "DEP-001"],
+      "acceptanceCriteria": [
+        "Protected traffic passes through gateway with server-side context",
+        "v1 endpoints use standard envelope and error contract",
+        "Public APIs expose only approved data",
+        "Idempotency keys prevent duplicate creates",
+        "Rate limiting and scoped API credentials operational",
+        "Webhook subscriptions with signing foundation",
+        "Deprecation registry with migration paths",
+        "AI tool registry with permission governance"
+      ],
+      "futureNotes": "OpenAPI generation, developer portal, full GraphQL. AC-182.",
+      "implementationStatus": "done",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": null,
+        "api": "API-V1",
+        "frontend": "PAGE-ADMIN-API",
+        "test": "TEST-API-001",
+        "doc": "DOC-API-001"
+      },
+      "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
+    },
+    {
       "id": "PSI-014",
       "title": "Platform Operations, Governance & Lifecycle Architecture — Volume 5.13",
       "purpose": "Operate the platform as a governed institution — stewardship, certification, and decades-long evolution",
