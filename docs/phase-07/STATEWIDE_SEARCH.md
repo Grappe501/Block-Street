@@ -1,14 +1,14 @@
 # Statewide Search
 
 **Document ID:** PHASE-007.1  
-**Requirement:** SRCH-001  
+**Requirement:** SRCH-001 · **Build spec:** [SIS-001](STATEWIDE_INTELLIGENCE_SEARCH.md)  
 **Status:** Canonical  
 **Phase:** 7 — Intelligence Layer
 
 > Search everything. One search box.
 
 **Builds on:** [Search Architecture PSI-007](../volume-05/SEARCH_ARCHITECTURE.md) · [Knowledge Retrieval Fabric](../volume-05/SEARCH_ARCHITECTURE.md) · [KDG-001](../phase-03/KNOWLEDGE_DATA_GOVERNANCE.md)  
-**Live spec:** `data/registry/statewide-search.json`
+**Live spec:** `data/registry/statewide-intelligence-search.json` · **API:** `/api/search`
 
 ---
 

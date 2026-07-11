@@ -69,7 +69,7 @@ Everything is: **Explainable** · **Transparent** · **Auditable** · **Confiden
 
 | Step | Document | Requirement | Signature |
 |------|----------|-------------|-----------|
-| 7.1 | [Statewide Search](STATEWIDE_SEARCH.md) | SRCH-001 | Universal indexed search |
+| 7.1 | [Statewide Intelligence Search](STATEWIDE_INTELLIGENCE_SEARCH.md) | SIS-001 | Universal knowledge retrieval engine |
 | 7.2 | [Recommendation Engine](RECOMMENDATION_ENGINE.md) | REC-001 | Proactive strategic advisor |
 | 7.3 | [Analytics Engine](ANALYTICS_ENGINE.md) | ANL-001 | Executive campaign intelligence |
 | 7.4 | [Mission Board (Live)](MISSION_BOARD_LIVE.md) | MBD-001 | AI-assisted operational missions |
