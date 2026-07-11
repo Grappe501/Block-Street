@@ -18,6 +18,22 @@
 
 ---
 
+## 2026-07-10 — Canonical Knowledge Kernel [CKK-001 · AC-165] · **COS CANON RUNTIME MVP**
+
+**Document:** `docs/canon/CANONICAL_KNOWLEDGE_KERNEL.md` · **Registry:** `data/registry/canonical-knowledge-kernel.json`
+
+### What Changed
+
+- **Guiding principle:** *Every meaningful platform object must be known, connected, traceable, and governed.*
+- **COS-CKK-001** — ten kernel layers from Identity Registry through Readiness & Governance
+- **Stage 1 bootstrap** — 26 Canon objects, 30 relationships, Volumes 0–8 + COK + 13 orchestrated systems
+- **JSONL registries** in `data/canon/` · schemas in `canon/schemas/` · validation gates
+- **CLI commands** — `canon:validate`, `canon:index`, `canon:orphans`, `canon:readiness`, `canon:impact`, `canon:report`
+- **Canon Twin** (`COS-TWIN-000001`) · AI grounding interface specified
+- Admin **CKK** tab · PSI-015 COS Canon linked to CKK registry
+
+---
+
 ## 2026-07-10 — Volume 5.14 Platform Orchestrator & Unified Runtime Architecture [PSI-015 · AC-164] · **VOLUME 5 COMPLETE**
 
 **Document:** `docs/volume-05/PLATFORM_ORCHESTRATOR.md` · **Registry:** `data/registry/platform-orchestrator-volume5.json`

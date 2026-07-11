@@ -385,6 +385,10 @@
       "domain": "Platform services & integration bible — Volume 5"
     },
     {
+      "prefix": "CKK",
+      "domain": "Canonical Knowledge Kernel — COS Canon runtime"
+    },
+    {
       "prefix": "AIB",
       "domain": "AI & intelligence bible — Volume 6"
     },
@@ -5547,7 +5551,8 @@
       ],
       "related": [
         "PSI-001",
-        "AIB-001"
+        "AIB-001",
+        "CKK-001"
       ],
       "acceptanceCriteria": [
         "Platform orchestration philosophy documented",
@@ -5566,6 +5571,50 @@
         "frontend": "UI-SYSTEM",
         "test": "TEST-PSI-015",
         "doc": "DOC-PSI-015"
+      },
+      "versionHistory": {
+        "created": "2026-07-10",
+        "implemented": "2026-07-10"
+      }
+    },
+    {
+      "id": "CKK-001",
+      "title": "Canonical Knowledge Kernel — COS Canon Runtime",
+      "purpose": "Authoritative runtime for Canon identity, relationships, traceability, validation, change-impact, and readiness",
+      "description": "COS-CKK-001 — Ten kernel layers, JSONL bootstrap, CLI validators, Canon Twin, AI grounding interface, Stage 1 bootstrap for Volumes 0–5",
+      "priority": "constitutional_infrastructure",
+      "principle": "CP-012",
+      "dependencies": [
+        "PSI-015",
+        "PSI-014",
+        "MAB-001",
+        "PSI-001"
+      ],
+      "related": [
+        "PSI-015",
+        "AIB-001",
+        "ADM-001"
+      ],
+      "acceptanceCriteria": [
+        "Every governed object can receive a permanent Canon ID",
+        "Canon IDs cannot be reused",
+        "Standardized metadata envelope and relationship graph",
+        "Requirement traceability and orphan detection",
+        "Evidence-based readiness metrics",
+        "CLI validation and reporting commands",
+        "Stage 1 bootstrap registers Volumes 0–5 and Volume 5 orchestrated systems",
+        "Canon Twin and AI grounding interface specified"
+      ],
+      "futureNotes": "Guiding principle: Every meaningful platform object must be known, connected, traceable, and governed. Full CKK adds database, PR gates, and LocalBrain sync.",
+      "implementationStatus": "in_progress",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": null,
+        "api": null,
+        "frontend": "PAGE-ADMIN-CKK",
+        "test": "TEST-CKK-001",
+        "doc": "DOC-CKK-001"
       },
       "versionHistory": {
         "created": "2026-07-10",

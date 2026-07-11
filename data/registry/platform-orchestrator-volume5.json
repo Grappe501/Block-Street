@@ -134,6 +134,15 @@
   "cosCanon": {
     "name": "Community Operating System Canon",
     "abbreviation": "COS Canon",
+    "canonId": "COS-CAN-000001",
+    "canonicalKnowledgeKernel": {
+      "requirementId": "CKK-001",
+      "documentId": "COS-CKK-001",
+      "canonId": "COS-ARCH-000001",
+      "registryPath": "data/registry/canonical-knowledge-kernel.json",
+      "bootstrapStage": 1,
+      "status": "mvp"
+    },
     "masterIndexVolumes0Through5": true,
     "constitutionEncyclopediaTraceabilityMatrix": true,
     "includes": ["ArchitecturalObjects", "Engines", "Services", "Workflows", "DigitalTwins", "BusinessRules", "EventTypes", "APIContracts", "Integrations", "Documents", "RuntimeCapabilities", "AcceptanceCriteria"],

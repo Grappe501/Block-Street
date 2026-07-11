@@ -7,7 +7,17 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "canon:validate": "node scripts/canon/validate.mjs",
+    "canon:index": "node scripts/canon/index.mjs",
+    "canon:graph": "node scripts/canon/graph.mjs",
+    "canon:traceability": "node scripts/canon/traceability.mjs",
+    "canon:orphans": "node scripts/canon/orphans.mjs",
+    "canon:impact": "node scripts/canon/impact.mjs",
+    "canon:readiness": "node scripts/canon/readiness.mjs",
+    "canon:report": "node scripts/canon/report.mjs",
+    "canon:sync": "node scripts/canon/sync.mjs",
+    "canon:gate": "node scripts/canon/gate.mjs"
   },
   "dependencies": {
     "next": "^15.1.0",

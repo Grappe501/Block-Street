@@ -48,6 +48,7 @@ import { AdminDataArchitecture } from "@/components/admin/AdminDataArchitecture"
 import { AdminPlatformBehavior } from "@/components/admin/AdminPlatformBehavior";
 import { AdminUserExperience } from "@/components/admin/AdminUserExperience";
 import { AdminPlatformServices } from "@/components/admin/AdminPlatformServices";
+import { AdminCanonKnowledgeKernel } from "@/components/admin/AdminCanonKnowledgeKernel";
 
 const TABS = [
   { id: "overview", label: "Overview", icon: "📊" },
@@ -90,6 +91,7 @@ const TABS = [
   { id: "behavior", label: "Volume 3", icon: "⚡" },
   { id: "experience-ux", label: "Volume 4", icon: "✨" },
   { id: "platform-services", label: "Volume 5", icon: "🔌" },
+  { id: "canon-kernel", label: "CKK", icon: "🧠" },
   { id: "versions", label: "Versions", icon: "🔢" },
   { id: "build-log", label: "Build Log", icon: "📜" },
   { id: "deployment", label: "Deployment", icon: "🚀" },
@@ -208,6 +210,7 @@ export function AdminDashboard({ progress }: { progress: BuildProgress }) {
         {activeTab === "behavior" && <AdminPlatformBehavior />}
         {activeTab === "experience-ux" && <AdminUserExperience />}
         {activeTab === "platform-services" && <AdminPlatformServices />}
+        {activeTab === "canon-kernel" && <AdminCanonKnowledgeKernel />}
         {activeTab === "versions" && <AdminVersions progress={progress} />}
         {activeTab === "build-log" && <AdminBuildLog progress={progress} />}
         {activeTab === "deployment" && <AdminDeployment progress={progress} />}
