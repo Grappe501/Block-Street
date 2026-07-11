@@ -7,12 +7,14 @@ import cms from "../../../data/registry/content-services.json";
 import ntf from "../../../data/registry/notification-services.json";
 import api from "../../../data/registry/unified-api-layer.json";
 import dpl from "../../../data/registry/deployment-platform.json";
+import mon from "../../../data/registry/monitoring-platform.json";
 import { AdminAuthenticationIdentity } from "@/components/admin/AdminAuthenticationIdentity";
 import { AdminAdministrationPlatform } from "@/components/admin/AdminAdministrationPlatform";
 import { AdminContentServices } from "@/components/admin/AdminContentServices";
 import { AdminNotificationServices } from "@/components/admin/AdminNotificationServices";
 import { AdminUnifiedApiLayer } from "@/components/admin/AdminUnifiedApiLayer";
 import { AdminDeploymentPlatform } from "@/components/admin/AdminDeploymentPlatform";
+import { AdminMonitoringPlatform } from "@/components/admin/AdminMonitoringPlatform";
 
 const STEPS = [
   { step: auth, label: "8.1 Authentication & Identity", accent: "border-blue-300 bg-blue-50", featured: false },
@@ -20,8 +22,8 @@ const STEPS = [
   { step: cms, label: "8.3 CMS & Content", accent: "border-emerald-300 bg-emerald-50", featured: false },
   { step: ntf, label: "8.4 Notifications", accent: "border-violet-300 bg-violet-50", featured: false },
   { step: api, label: "8.5 Unified API", accent: "border-sky-300 bg-sky-50", featured: false },
-  { step: dpl, label: "8.6 Deployment", accent: "border-slate-500 bg-slate-200", featured: true },
-  { id: "8.7", label: "8.7 Monitoring", accent: "border-slate-300 bg-slate-50", name: "Monitoring", requirementId: "MON-001", acceptanceCriteria: "pending" },
+  { step: dpl, label: "8.6 Deployment", accent: "border-slate-400 bg-slate-100", featured: false },
+  { step: mon, label: "8.7 Monitoring", accent: "border-indigo-400 bg-indigo-100", featured: true },
   { id: "8.8", label: "8.8 Security", accent: "border-slate-300 bg-slate-50", name: "Security Platform", requirementId: "SEC-001", acceptanceCriteria: "pending" },
 ];
 
@@ -56,6 +58,7 @@ export function AdminPlatformServicesLayer() {
         ))}
       </div>
 
+      <AdminMonitoringPlatform />
       <AdminDeploymentPlatform />
       <AdminUnifiedApiLayer />
       <AdminNotificationServices />

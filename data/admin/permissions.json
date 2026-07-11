@@ -22,6 +22,8 @@
     { "id": "perm-deploy-approve", "key": "deployments.approve", "resource": "deployments", "action": "approve", "description": "Approve production releases", "risk_level": "high", "requires_mfa": true, "requires_approval": false, "is_system_permission": true },
     { "id": "perm-deploy-staging", "key": "deployments.deploy_staging", "resource": "deployments", "action": "deploy_staging", "description": "Deploy to staging", "risk_level": "moderate", "requires_mfa": false, "requires_approval": false, "is_system_permission": true },
     { "id": "perm-deploy-production", "key": "deployments.deploy_production", "resource": "deployments", "action": "deploy_production", "description": "Deploy to production", "risk_level": "critical", "requires_mfa": true, "requires_approval": true, "is_system_permission": true },
-    { "id": "perm-deploy-rollback", "key": "deployments.rollback", "resource": "deployments", "action": "rollback", "description": "Rollback production releases", "risk_level": "critical", "requires_mfa": true, "requires_approval": true, "is_system_permission": true }
+    { "id": "perm-deploy-rollback", "key": "deployments.rollback", "resource": "deployments", "action": "rollback", "description": "Rollback production releases", "risk_level": "critical", "requires_mfa": true, "requires_approval": true, "is_system_permission": true },
+    { "id": "perm-mon-view", "key": "monitoring.view", "resource": "monitoring", "action": "view", "description": "View monitoring dashboards and metrics", "risk_level": "low", "requires_mfa": false, "requires_approval": false, "is_system_permission": true },
+    { "id": "perm-mon-alerts", "key": "monitoring.manage_alerts", "resource": "monitoring", "action": "manage_alerts", "description": "Manage monitoring alerts", "risk_level": "moderate", "requires_mfa": false, "requires_approval": false, "is_system_permission": true }
   ]
 }

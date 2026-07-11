@@ -6146,6 +6146,37 @@
       "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
     },
     {
+      "id": "MON-001",
+      "title": "Monitoring, Observability, and Operational Intelligence — Build 8.7",
+      "purpose": "Unified observability platform measuring technical, operational, user, and organizational health",
+      "description": "BUILD-008.7 — metrics, logs, traces, events, dashboards, alerts, incident integration, deployment markers, business KPIs, self-diagnosis",
+      "priority": "critical",
+      "principle": "ENG-006",
+      "dependencies": ["DPL-001", "API-001", "ADM-001", "AUTH-001", "IAS-001", "PSV-001"],
+      "related": ["SEC-001"],
+      "acceptanceCriteria": [
+        "Standardized metrics, logs, traces, and events across major services",
+        "Correlation IDs follow requests across the platform",
+        "Dashboards for executive, operations, engineering, security, and AI",
+        "Actionable deduplicated alerts with incident integration",
+        "Deployment markers correlate with operational changes",
+        "Business workflow and user journey observability",
+        "Self-diagnosis provides likely causes and recommended actions"
+      ],
+      "futureNotes": "Enterprise SIEM, ML anomaly detection, multi-region federation. AC-184.",
+      "implementationStatus": "done",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": null,
+        "api": "API-MON",
+        "frontend": "PAGE-ADMIN-MON",
+        "test": "TEST-MON-001",
+        "doc": "DOC-MON-001"
+      },
+      "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-11" }
+    },
+    {
       "id": "PSI-014",
       "title": "Platform Operations, Governance & Lifecycle Architecture — Volume 5.13",
       "purpose": "Operate the platform as a governed institution — stewardship, certification, and decades-long evolution",

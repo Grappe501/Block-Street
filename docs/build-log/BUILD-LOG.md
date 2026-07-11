@@ -22,6 +22,28 @@
 
 ---
 
+## 2026-07-11 — Build 8.7 Monitoring, Observability, and Operational Intelligence [MON-001 · AC-184]
+
+**Documents:** `docs/phase-08/MONITORING_OBSERVABILITY.md` · `docs/platform/monitoring/*` · **Registry:** `data/registry/monitoring-platform.json`
+
+### What Changed
+
+- **Observability model** — metrics, logs, traces, events, and platform intelligence pillars
+- **Health hierarchy** — platform → service → dependency health with platform health score
+- **Metric registry** — canonical definitions for API, auth, search, notifications, AI, missions
+- **Alert engine** — deduplication, grouping, severity routing, automatic incident opening for critical alerts
+- **Dashboards** — Executive, Engineering, Security, AI with widget framework
+- **Deployment markers** — receives DPL-001 release events for correlation with error spikes
+- **Self-diagnosis** — operational recommendations explaining probable causes
+- **v1 APIs** — `/api/v1/monitoring/*` (health, dashboard, alerts, services, releases, metrics)
+- **Admin cockpit** — overview, dashboards, alerts, intelligence, traces in Phase 8 tab
+
+### Phase 8 Progress
+
+7/8 platform service steps complete (8.1–8.7)
+
+---
+
 ## 2026-07-10 — Build 8.6 Deployment, Release Engineering, and CI/CD [DPL-001 · AC-183]
 
 **Documents:** `docs/phase-08/DEPLOYMENT_RELEASE_ENGINEERING.md` · `docs/platform/deployment/*` · **Registry:** `data/registry/deployment-platform.json`

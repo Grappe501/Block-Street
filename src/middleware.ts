@@ -32,6 +32,7 @@ function isPublicApi(pathname: string, method: string) {
   if (method === "GET" && pathname.startsWith("/api/v1/public")) return true;
   if (method === "GET" && pathname === "/api/v1/health") return true;
   if (method === "GET" && pathname === "/api/v1/deployments/health") return true;
+  if (method === "GET" && pathname === "/api/v1/monitoring/health") return true;
   return false;
 }
 
