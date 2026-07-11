@@ -4,9 +4,32 @@
 
 ---
 
----
+## 2026-07-11 — Build 9.2 Configuration and Organizational Modeling [ORG-001 · AC-187]
+
+**Documents:** `docs/platform/organization/*` (17 standards) · `docs/phase-09/ORGANIZATIONAL_MODELING.md`
+
+### What Changed
+
+- **Canonical organizational unit model** — typed units, hierarchy, ownership, leadership, membership, role assignments
+- **Unit type registry** — executive office, division, department, program, region, campus, county, chapter, committee, team, and more
+- **Hierarchy and relationship engine** — parent-child structure, cross-unit relationships, circular-reference prevention, effective dating
+- **Leadership and ownership** — positions, assignments, terms, vacancies, succession states
+- **Workspace mapping** — one-to-one, shared, and cross-institution denial with audit
+- **Geography and jurisdiction** — campus, county, region models with overlap detection
+- **Shared services and programs** — provider/recipient relationships, program participation
+- **Approval and escalation paths** — unit-specific routing with eligible approver validation
+- **Configuration templates and versioning** — multi-campus and statewide county templates, draft → validate → approve → activate
+- **Reorganization support** — move, merge, split preview with historical integrity
+- **Validation engine** — blocking checks for ownerless units, circular hierarchy, unsafe inheritance
+- **v1 APIs** — `/api/v1/institutions/{id}/units`, `structure`, `configuration`, reorganizations; `/api/v1/organizational-units/*`
+- **Organization Administration Center** — health dashboard, org chart, template apply, config workflow, audit in Phase 9 tab
+
+### Phase Status
+
+- Phase 9: **In Progress** (2/8 Institutional Launch)
 
 ---
+
 
 ---
 
