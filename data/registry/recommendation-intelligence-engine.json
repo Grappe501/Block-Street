@@ -1,0 +1,80 @@
+{
+  "version": "2.0.0",
+  "documentId": "BUILD-007.2",
+  "requirementId": "RIE-001",
+  "supersedesBuildDetail": "REC-001",
+  "docPath": "docs/phase-07/RECOMMENDATION_INTELLIGENCE_ENGINE.md",
+  "status": "canonical",
+  "priority": "critical",
+  "productName": "Recommendation Intelligence Engine",
+  "abbreviation": "RIE",
+  "guidingPrinciple": "Never overwhelm the user. Surface the next best actions that are explainable, actionable, and measurable.",
+  "advisoryOnly": true,
+  "recommendationCategories": [
+    { "id": "daily", "name": "Daily Priorities" },
+    { "id": "contact", "name": "Contact Recommendations" },
+    { "id": "county", "name": "County Recommendations" },
+    { "id": "organization", "name": "Organization Recommendations" },
+    { "id": "event", "name": "Event Recommendations" },
+    { "id": "communication", "name": "Communication Recommendations" },
+    { "id": "leadership", "name": "Leadership Recommendations" },
+    { "id": "volunteer", "name": "Volunteer Recommendations" },
+    { "id": "mission", "name": "Mission Recommendations" },
+    { "id": "geographic", "name": "Geographic Intelligence" }
+  ],
+  "categoryCount": 10,
+  "scoringModel": {
+    "weights": {
+      "campaignPriority": 0.3,
+      "impactEstimate": 0.25,
+      "urgency": 0.15,
+      "relationshipStrength": 0.1,
+      "geographicEfficiency": 0.1,
+      "historicalSuccess": 0.05,
+      "userPreferences": 0.05
+    },
+    "configurable": true,
+    "explainable": true
+  },
+  "feedbackOptions": [
+    "accept",
+    "dismiss",
+    "not_relevant",
+    "already_done",
+    "remind_later",
+    "wrong_recommendation"
+  ],
+  "lifecycleStages": [
+    "DataChanges", "SignalsDetected", "OpportunityIdentified",
+    "RecommendationGenerated", "ConfidenceCalculated", "Displayed",
+    "UserResponse", "LearningFeedbackRecorded"
+  ],
+  "apiEndpoints": [
+    "GET /api/recommendations",
+    "GET /api/recommendations/daily",
+    "GET /api/recommendations/people",
+    "GET /api/recommendations/counties",
+    "GET /api/recommendations/events",
+    "GET /api/recommendations/organizations",
+    "GET /api/recommendations/missions",
+    "POST /api/recommendations/feedback",
+    "GET /api/recommendations/feedback",
+    "GET /api/recommendations/explanations/{id}"
+  ],
+  "integrationPoints": {
+    "consumes": ["SIS-001", "CRM", "VolunteerSystem", "CountyWorkbench", "Calendar", "AnalyticsEngine", "RelationshipGraph", "EventManagement"],
+    "produces": ["ExecutiveDashboard", "MissionBoard", "CountyDashboard", "VolunteerDashboard", "AIAssistant"]
+  },
+  "dataPaths": {
+    "scoringWeights": "data/recommendations/scoring_weights.json",
+    "feedback": "data/recommendations/feedback.json"
+  },
+  "implementation": {
+    "engine": "src/lib/recommendations/engine.ts",
+    "apiRoute": "src/app/api/recommendations/route.ts",
+    "adminUi": "src/components/admin/AdminRecommendationIntelligenceEngine.tsx"
+  },
+  "dependencies": ["INT-001", "REC-001", "SIS-001", "OBE-001", "CGIS-001", "NISS-001", "MBD-001"],
+  "acceptanceCriteria": "AC-173",
+  "acceptanceCriteriaMet": true
+}
