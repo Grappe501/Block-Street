@@ -1,0 +1,74 @@
+{
+  "version": "2.0.0",
+  "documentId": "BUILD-007.6",
+  "requirementId": "IAS-001",
+  "buildArtifact": "EXECUTIVE_AI_INTELLIGENCE_LAYER",
+  "docPath": "docs/phase-07/EXECUTIVE_AI_INTELLIGENCE_LAYER.md",
+  "overviewDocPath": "docs/phase-07/FUTURE_AI_ASSISTANCE.md",
+  "status": "canonical",
+  "priority": "critical",
+  "productName": "Executive AI Intelligence Layer",
+  "abbreviation": "EAIL",
+  "guidingPrinciple": "How can AI help people make better decisions without replacing their judgment?",
+  "implements": "KDG-M16",
+  "aiPrinciples": [
+    "ExplainEveryRecommendation",
+    "NeverFabricate",
+    "SeparateFactsFromPredictions",
+    "RequestApprovalBeforeConsequentialActions",
+    "LearnFromFeedback",
+    "MakeHumansMoreEffective"
+  ],
+  "architectureComponents": [
+    "ContextManager", "MemoryManager", "PlanningEngine", "ReasoningEngine",
+    "KnowledgeRetrieval", "ToolOrchestrator", "PermissionManager"
+  ],
+  "capabilityDomains": [
+    "ExecutiveStrategy", "Research", "Writing", "MeetingIntelligence",
+    "CalendarIntelligence", "RelationshipIntelligence", "MissionIntelligence",
+    "OrganizationalIntelligence", "CountyIntelligence", "AnalyticsIntelligence"
+  ],
+  "actionCategories": {
+    "advisory": ["Summaries", "Recommendations", "Research", "WritingAssistance", "Planning"],
+    "approvalRequired": ["CreateMissions", "EditRecords", "ScheduleMeetings", "SendCommunications", "DistributeReports"],
+    "restricted": ["FinancialTransactions", "DeleteRecords", "ChangePermissions", "PublishContent", "MassCommunications", "PolicyChanges"]
+  },
+  "specializedAgents": [
+    "CampaignDirectorAI", "VolunteerAI", "CommunicationsAI", "FinanceAI",
+    "CountyAI", "LegalResearchAI", "PolicyAI", "GrantAI", "FieldOperationsAI", "SchedulingAI"
+  ],
+  "apiEndpoints": [
+    "POST /api/ai/chat",
+    "POST /api/ai/plan",
+    "POST /api/ai/research",
+    "POST /api/ai/write",
+    "POST /api/ai/analyze",
+    "POST /api/ai/summarize",
+    "POST /api/ai/meeting",
+    "POST /api/ai/mission",
+    "POST /api/ai/calendar",
+    "GET /api/ai/history",
+    "GET /api/ai/memory",
+    "PATCH /api/ai/memory",
+    "DELETE /api/ai/memory"
+  ],
+  "dataPaths": {
+    "memory": "data/ai/memory.json",
+    "auditLog": "data/ai/audit_log.jsonl",
+    "capabilities": "data/ai/capabilities.json"
+  },
+  "implementation": {
+    "engine": "src/lib/ai/engine.ts",
+    "apiRoute": "src/app/api/ai/chat/route.ts",
+    "adminUi": "src/components/admin/AdminExecutiveAIIntelligence.tsx"
+  },
+  "integrationPoints": {
+    "consumes": ["SIS-001", "RIE-001", "ANL-001", "MBD-001", "RLI-001", "CRM", "Calendar", "CKK-001"],
+    "orchestrates": ["MissionBoard", "Analytics", "Relationships", "Recommendations", "Search", "CountyWorkbench"]
+  },
+  "governedBy": ["KDG-001", "CKK-001", "AIB-001"],
+  "dependencies": ["INT-001", "SIS-001", "RIE-001", "ANL-001", "MBD-001", "RLI-001", "KDG-001", "CKK-001"],
+  "phase7Closeout": true,
+  "acceptanceCriteria": "AC-177",
+  "acceptanceCriteriaMet": true
+}

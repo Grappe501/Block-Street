@@ -1,0 +1,32 @@
+{
+  "entries": [
+    {
+      "id": "mem-001",
+      "key": "current_objectives",
+      "value": "Q3 volunteer goal 10,000 · Registration push August · Petition 100K signatures",
+      "scope": "campaign",
+      "updatedAt": "2026-07-10T08:00:00Z"
+    },
+    {
+      "id": "mem-002",
+      "key": "active_projects",
+      "value": "Statewide tour planning · Craighead County recovery · Benton canvass weekend",
+      "scope": "campaign",
+      "updatedAt": "2026-07-10T09:00:00Z"
+    },
+    {
+      "id": "mem-003",
+      "key": "user_preference_briefing",
+      "value": "Morning brief at 7am · Evening summary enabled · County-first focus",
+      "scope": "user:admin",
+      "updatedAt": "2026-07-09T12:00:00Z"
+    },
+    {
+      "id": "mem-004",
+      "key": "recent_decision",
+      "value": "Approved Washington County town hall — pending speaker confirmation",
+      "scope": "campaign",
+      "updatedAt": "2026-07-10T14:00:00Z"
+    }
+  ]
+}

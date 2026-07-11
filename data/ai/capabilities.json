@@ -1,0 +1,16 @@
+{
+  "capabilities": [
+    { "id": "executive-strategy", "name": "Executive Strategy", "examples": ["Summarize campaign health", "Show biggest risks", "Weekly focus priorities"] },
+    { "id": "research", "name": "Research", "examples": ["Summarize legislation", "Find organizations by issue", "Compare turnout trends"] },
+    { "id": "writing", "name": "Writing", "examples": ["Press releases", "Volunteer newsletters", "Talking points", "Fundraising letters"] },
+    { "id": "meeting", "name": "Meeting Intelligence", "examples": ["Generate agendas", "Extract action items", "Create mission entries"] },
+    { "id": "calendar", "name": "Calendar Intelligence", "examples": ["Travel efficiency", "Suggested stops", "Conflict detection"] },
+    { "id": "relationship", "name": "Relationship Intelligence", "examples": ["Strongest partners", "Dormant contacts", "Introduction suggestions"] },
+    { "id": "mission", "name": "Mission Intelligence", "examples": ["Create missions", "Estimate timelines", "Predict completion risk"] },
+    { "id": "analytics", "name": "Analytics Intelligence", "examples": ["Explain health score", "Forecast growth", "Plain-language KPIs"] }
+  ],
+  "tools": [
+    "analytics/dashboard", "recommendations/daily", "missions/today",
+    "relationships/health", "search", "county_snapshots"
+  ]
+}
