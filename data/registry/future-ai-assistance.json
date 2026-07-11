@@ -1,0 +1,33 @@
+{
+  "version": "2.0.0",
+  "documentId": "PHASE-007.6",
+  "requirementId": "IAS-001",
+  "docPath": "docs/phase-07/FUTURE_AI_ASSISTANCE.md",
+  "status": "canonical",
+  "priority": "critical",
+  "productName": "Future AI Assistance",
+  "guidingPrinciple": "Campaign strategist, not chatbot.",
+  "implements": "KDG-M16",
+  "exampleCapabilities": [
+    "County slowdown analysis",
+    "Organization discovery by issue",
+    "Volunteer plan generation",
+    "Agenda preparation",
+    "Follow-up email drafting",
+    "Legislation impact analysis",
+    "County flip probability mapping"
+  ],
+  "contextDomains": ["CRM", "Calendar", "Relationships", "Campaigns", "Organizations", "Goals", "Events", "History", "Notes", "Documents", "Analytics", "Legislation", "News", "Geography", "VolunteerHistory"],
+  "guardrails": [
+    "ExplainRecommendations",
+    "CiteDataSources",
+    "DistinguishFactsFromPredictions",
+    "NoAutonomousSendOrPublish",
+    "CompleteAuditLog",
+    "UserInspectableMemory"
+  ],
+  "governedBy": ["KDG-001", "CKK-001", "AIB-001"],
+  "phase7Closeout": true,
+  "acceptanceCriteria": "AC-171",
+  "acceptanceCriteriaMet": true
+}

@@ -1,0 +1,19 @@
+{
+  "version": "2.0.0",
+  "documentId": "PHASE-007.1",
+  "requirementId": "SRCH-001",
+  "docPath": "docs/phase-07/STATEWIDE_SEARCH.md",
+  "status": "canonical",
+  "priority": "critical",
+  "productName": "Statewide Universal Search",
+  "guidingPrinciple": "Search everything. One search box.",
+  "indexedEntityCount": 18,
+  "indexedEntities": ["People", "Organizations", "Events", "Tasks", "Emails", "Notes", "Conversations", "Legislation", "Media", "Counties", "Volunteers", "Voters", "Projects", "Campaigns", "Documents", "Resources", "News"],
+  "searchModes": ["Literal", "Semantic", "Metadata", "OCR", "Transcript"],
+  "filterCount": 15,
+  "rankingFactors": ["RecentActivity", "RelationshipStrength", "CampaignPriority", "Frequency", "GeographicProximity", "UserPreferences", "OrganizationRelevance"],
+  "savedSearchExamples": ["My volunteers", "Hot counties", "New supporters", "Unanswered emails", "Media contacts", "Potential donors"],
+  "buildsOn": ["PSI-007", "KDG-001", "KRF"],
+  "acceptanceCriteria": "AC-166",
+  "acceptanceCriteriaMet": true
+}

@@ -1,0 +1,24 @@
+{
+  "version": "2.0.0",
+  "documentId": "PHASE-007.5",
+  "requirementId": "RLI-001",
+  "docPath": "docs/phase-07/RELATIONSHIP_INTELLIGENCE.md",
+  "status": "canonical",
+  "priority": "critical",
+  "productName": "Relationship Intelligence",
+  "guidingPrinciple": "Campaigns run on relationships.",
+  "strengthSignals": ["Meetings", "Emails", "Texts", "Calls", "Events", "VolunteerWork", "SharedOrganizations", "Projects", "Recommendations", "MutualContacts"],
+  "healthStates": ["Healthy", "Growing", "Weakening", "Inactive", "Conflict", "Dormant"],
+  "alertExamples": [
+    "You haven't spoken in 120 days",
+    "Organization became highly active",
+    "County chair becoming disengaged",
+    "Donor relationship cooling"
+  ],
+  "networkAnalysis": ["Connectors", "Influencers", "HiddenLeaders", "IsolatedVolunteers", "BridgeOrganizations"],
+  "influenceMapping": true,
+  "unifiesWith": "NISS-M17",
+  "buildsOn": ["PRN-001", "DAB-004", "NISS-001"],
+  "acceptanceCriteria": "AC-170",
+  "acceptanceCriteriaMet": true
+}

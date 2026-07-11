@@ -1,0 +1,19 @@
+{
+  "version": "2.0.0",
+  "documentId": "PHASE-007.4",
+  "requirementId": "MBD-001",
+  "docPath": "docs/phase-07/MISSION_BOARD_LIVE.md",
+  "status": "canonical",
+  "priority": "critical",
+  "productName": "Mission Board (Live)",
+  "guidingPrinciple": "Missions, not tasks — the operational heartbeat.",
+  "implements": "OIS-M16",
+  "extends": "OIS-001",
+  "missionCategories": ["Today", "ThisWeek", "Urgent", "Campaign", "County", "Volunteer", "Organization", "Legislation", "Personal"],
+  "missionCardFields": ["category", "reason", "actionLabel", "priority", "impact", "estimatedTime", "expiresAt"],
+  "missionSources": ["Analytics", "Calendar", "Deadlines", "Relationships", "Events", "Email", "SMS", "VolunteerShortages", "CountyNeeds", "Goals"],
+  "prioritizationFactors": ["Impact", "Urgency", "Difficulty", "Deadline", "Dependencies", "Travel", "Availability"],
+  "completionAnalytics": ["SuccessRate", "CompletionTime", "LeadershipGrowth", "VolunteerGrowth", "CountyImpact"],
+  "acceptanceCriteria": "AC-169",
+  "acceptanceCriteriaMet": true
+}

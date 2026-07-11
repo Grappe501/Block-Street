@@ -1,0 +1,19 @@
+{
+  "version": "2.0.0",
+  "documentId": "PHASE-007.3",
+  "requirementId": "ANL-001",
+  "docPath": "docs/phase-07/ANALYTICS_ENGINE.md",
+  "status": "canonical",
+  "priority": "critical",
+  "productName": "Analytics Engine",
+  "guidingPrinciple": "Campaign intelligence dashboard.",
+  "executiveMetrics": ["CampaignHealth", "VolunteerGrowth", "CountyProgress", "Events", "NewContacts", "LeadershipPipeline"],
+  "geographicAnalytics": ["HeatMaps", "TurnoutMaps", "VolunteerMaps", "DonorMaps", "IssueMaps", "PetitionMaps", "OrganizationDensity", "TravelMaps"],
+  "trendDomains": ["Growth", "Decline", "VolunteerRetention", "Fundraising", "Events", "Engagement", "Media", "PublicInterest"],
+  "leadershipFunnel": ["Viewed", "Registered", "Volunteer", "Leader", "Organizer", "CountyChair", "CampaignStaff"],
+  "predictiveForecasts": ["VolunteerGrowth", "Fundraising", "Attendance", "PetitionCompletion", "CountyReadiness", "ElectionReadiness", "CoalitionExpansion"],
+  "reportCadences": ["Weekly", "Monthly", "Quarterly"],
+  "buildsOn": ["OPIS-001", "CIIS-001", "PSI-012"],
+  "acceptanceCriteria": "AC-168",
+  "acceptanceCriteriaMet": true
+}

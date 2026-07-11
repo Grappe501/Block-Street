@@ -1,0 +1,45 @@
+{
+  "version": "2.0.0",
+  "phase": 7,
+  "docPath": "docs/phase-07/PHASE_7_MASTER_SEQUENCE.md",
+  "masterSequencePath": "docs/phase-07/PHASE_7_MASTER_SEQUENCE.md",
+  "requirementId": "INT-001",
+  "productName": "Intelligence Layer",
+  "phaseQuestion": "How do we understand and guide?",
+  "status": "complete",
+  "priority": "critical",
+  "readAfter": "GOS-001",
+  "guidingPrinciple": "The platform should never replace human judgment. It should continuously improve human judgment.",
+  "mission": "Transform the Community Operating System from a record system into a living intelligence platform.",
+  "stepsComplete": 6,
+  "stepsTotal": 6,
+  "intelligencePrinciples": [
+    "Explainable",
+    "Transparent",
+    "Auditable",
+    "ConfidenceScored",
+    "HumanOverridable"
+  ],
+  "intelligenceArchitecture": {
+    "layers": [
+      "SearchEngine",
+      "RecommendationAI",
+      "AnalyticsEngine",
+      "RelationshipIntelligence",
+      "FutureAIAssistant"
+    ],
+    "layerCount": 5
+  },
+  "steps": [
+    { "id": "7.1", "name": "Statewide Search", "requirement": "SRCH-001", "artifact": "docs/phase-07/STATEWIDE_SEARCH.md", "registryPath": "data/registry/statewide-search.json", "acceptanceCriteria": "AC-166", "status": "done" },
+    { "id": "7.2", "name": "Recommendation Engine", "requirement": "REC-001", "artifact": "docs/phase-07/RECOMMENDATION_ENGINE.md", "registryPath": "data/registry/recommendation-engine.json", "acceptanceCriteria": "AC-167", "status": "done" },
+    { "id": "7.3", "name": "Analytics Engine", "requirement": "ANL-001", "artifact": "docs/phase-07/ANALYTICS_ENGINE.md", "registryPath": "data/registry/analytics-engine.json", "acceptanceCriteria": "AC-168", "status": "done" },
+    { "id": "7.4", "name": "Mission Board (Live)", "requirement": "MBD-001", "artifact": "docs/phase-07/MISSION_BOARD_LIVE.md", "registryPath": "data/registry/mission-board-live.json", "acceptanceCriteria": "AC-169", "status": "done" },
+    { "id": "7.5", "name": "Relationship Intelligence", "requirement": "RLI-001", "artifact": "docs/phase-07/RELATIONSHIP_INTELLIGENCE.md", "registryPath": "data/registry/relationship-intelligence.json", "acceptanceCriteria": "AC-170", "status": "done" },
+    { "id": "7.6", "name": "Future AI Assistance", "requirement": "IAS-001", "artifact": "docs/phase-07/FUTURE_AI_ASSISTANCE.md", "registryPath": "data/registry/future-ai-assistance.json", "acceptanceCriteria": "AC-171", "status": "done" }
+  ],
+  "governedBy": ["KDG-001", "CKK-001", "AIB-001"],
+  "buildsOn": ["GOS-001", "NISS-001", "OIS-001", "PSI-007", "OPIS-001"],
+  "acceptanceCriteria": "AC-171",
+  "acceptanceCriteriaMet": true
+}

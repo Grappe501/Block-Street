@@ -1,0 +1,22 @@
+{
+  "version": "2.0.0",
+  "documentId": "PHASE-007.2",
+  "requirementId": "REC-001",
+  "docPath": "docs/phase-07/RECOMMENDATION_ENGINE.md",
+  "status": "canonical",
+  "priority": "critical",
+  "productName": "Recommendation Engine",
+  "guidingPrinciple": "Continuously suggests. Never decides.",
+  "recommendationCategories": [
+    { "id": "contact", "name": "Contact Recommendations", "examples": ["People to call", "Inactive volunteers", "Likely leaders", "Donors", "Media"] },
+    { "id": "county", "name": "County Recommendations", "examples": ["Focus counties", "Improving counties", "Declining counties", "Opportunity counties"] },
+    { "id": "organization", "name": "Organizational Recommendations", "examples": ["Likely partners", "Shared members", "Potential conflicts"] },
+    { "id": "event", "name": "Event Recommendations", "examples": ["Promotion needs", "Location changes", "Volunteer shortages", "Weather concerns"] }
+  ],
+  "confidenceRequired": true,
+  "reasonRequired": true,
+  "humanOverridable": true,
+  "buildsOn": ["OBE-001", "CGIS-001", "NISS-001"],
+  "acceptanceCriteria": "AC-167",
+  "acceptanceCriteriaMet": true
+}
