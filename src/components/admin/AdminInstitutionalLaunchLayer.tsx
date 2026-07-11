@@ -4,16 +4,18 @@ import ilsOs from "../../../data/institutional-launch/institutional-launch-opera
 import ils from "../../../data/registry/institutional-launch.json";
 import prv from "../../../data/registry/institutional-provisioning.json";
 import org from "../../../data/registry/organizational-modeling.json";
+import mig from "../../../data/registry/data-migration.json";
 import { AdminInstitutionalProvisioning } from "@/components/admin/AdminInstitutionalProvisioning";
 import { AdminInstitutionalOrganization } from "@/components/admin/AdminInstitutionalOrganization";
+import { AdminInstitutionalMigration } from "@/components/admin/AdminInstitutionalMigration";
 
 const STEPS: Array<
   | { step: { productName: string; requirementId: string; acceptanceCriteria: string }; label: string; accent: string; featured: boolean }
   | { label: string; accent: string; featured: boolean; pending: string }
 > = [
   { step: prv, label: "9.1 Institutional Provisioning", accent: "border-amber-500 bg-amber-100", featured: false },
-  { step: org, label: "9.2 Configuration & Org Modeling", accent: "border-indigo-500 bg-indigo-100", featured: true },
-  { label: "9.3 Migration & Data Readiness", accent: "border-slate-300 bg-slate-50", featured: false, pending: "MIG-001" },
+  { step: org, label: "9.2 Configuration & Org Modeling", accent: "border-indigo-500 bg-indigo-100", featured: false },
+  { step: mig, label: "9.3 Migration & Data Readiness", accent: "border-slate-500 bg-slate-100", featured: true },
   { label: "9.4 Guided Onboarding", accent: "border-slate-300 bg-slate-50", featured: false, pending: "ONB-001" },
   { label: "9.5 Training & Certification", accent: "border-slate-300 bg-slate-50", featured: false, pending: "TRN-001" },
   { label: "9.6 Pilot & Acceptance", accent: "border-slate-300 bg-slate-50", featured: false, pending: "PLT-001" },
@@ -54,6 +56,7 @@ export function AdminInstitutionalLaunchLayer() {
         ))}
       </div>
 
+      <AdminInstitutionalMigration />
       <AdminInstitutionalOrganization />
       <AdminInstitutionalProvisioning />
     </div>
