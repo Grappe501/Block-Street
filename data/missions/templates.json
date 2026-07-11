@@ -1,0 +1,39 @@
+{
+  "templates": [
+    {
+      "id": "tpl-volunteer-recruitment",
+      "name": "Volunteer Recruitment Drive",
+      "type": "county",
+      "estimatedHours": 4,
+      "checklist": ["Recruit venue", "Create flyer", "Send invitations", "Recruit volunteers", "Prepare materials", "Conduct event", "Collect feedback", "Follow-up"]
+    },
+    {
+      "id": "tpl-town-hall",
+      "name": "Town Hall",
+      "type": "team",
+      "estimatedHours": 8,
+      "checklist": ["Reserve venue", "Confirm speakers", "Assign volunteers", "Marketing complete", "Conduct event", "Media follow-up", "Measure outcomes"]
+    },
+    {
+      "id": "tpl-petition-event",
+      "name": "Petition Event",
+      "type": "county",
+      "estimatedHours": 3,
+      "checklist": ["Select location", "Print materials", "Brief volunteers", "Collect signatures", "Submit batch", "Report progress"]
+    },
+    {
+      "id": "tpl-coalition-meeting",
+      "name": "Coalition Meeting",
+      "type": "organization",
+      "estimatedHours": 2,
+      "checklist": ["Send invites", "Prepare agenda", "Share resources", "Document decisions", "Assign follow-up missions"]
+    },
+    {
+      "id": "tpl-canvass",
+      "name": "Canvass",
+      "type": "team",
+      "estimatedHours": 3,
+      "checklist": ["Print walk lists", "Brief team", "Execute route", "Log contacts", "Debrief"]
+    }
+  ]
+}

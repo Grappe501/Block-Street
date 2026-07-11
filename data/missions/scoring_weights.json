@@ -1,0 +1,11 @@
+{
+  "weights": {
+    "campaignImpact": 0.22,
+    "urgency": 0.18,
+    "deadline": 0.16,
+    "dependencies": 0.12,
+    "countyNeed": 0.14,
+    "leadershipPriority": 0.10,
+    "resourceAvailability": 0.08
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "version": "2.0.0",
+  "documentId": "BUILD-007.4",
+  "requirementId": "MBD-001",
+  "buildArtifact": "LIVE_MISSION_BOARD",
+  "docPath": "docs/phase-07/LIVE_MISSION_BOARD.md",
+  "overviewDocPath": "docs/phase-07/MISSION_BOARD_LIVE.md",
+  "status": "canonical",
+  "priority": "critical",
+  "productName": "Live Mission Board",
+  "abbreviation": "LMB",
+  "guidingPrinciple": "What is the most important thing I should do next?",
+  "implements": "OIS-M16",
+  "missionHierarchy": ["Campaign", "StrategicObjective", "Program", "Mission", "Milestone", "Task", "Checklist", "ActivityLog"],
+  "missionTypes": ["Personal", "Team", "County", "Organization", "Campaign", "Executive"],
+  "missionScopes": ["My", "Team", "County", "Organization", "Campaign", "Statewide"],
+  "lifecycleStates": ["Created", "Assigned", "Accepted", "InProgress", "Blocked", "Review", "Completed", "Archived"],
+  "missionSources": [
+    "RecommendationEngine", "AnalyticsAlerts", "CalendarDeadlines", "ManualCreation",
+    "ExecutiveAssignment", "VolunteerRequest", "CountyRequest", "OrganizationRequest",
+    "AISuggestion", "SystemAutomation"
+  ],
+  "prioritizationFactors": [
+    "CampaignImpact", "Urgency", "Deadline", "Dependencies",
+    "CountyNeed", "LeadershipPriority", "ResourceAvailability"
+  ],
+  "dashboardSections": [
+    "Today", "ThisWeek", "Overdue", "Waiting", "Assigned", "Completed",
+    "Suggested", "Strategic", "County", "Organization", "Personal", "Pinned", "RecentlyUpdated"
+  ],
+  "missionCardFields": [
+    "title", "priorityStars", "priorityLabel", "impact", "county", "owner",
+    "estimatedHours", "dueAt", "progressPercent", "healthPercent", "risk"
+  ],
+  "templateLibrary": [
+    "VolunteerRecruitment", "TownHall", "CountyVisit", "SchoolVisit", "PetitionEvent",
+    "Fundraiser", "ListeningSession", "MediaInterview", "CoalitionMeeting",
+    "LegislativeVisit", "Canvass", "PhoneBank", "TrainingSession", "DisasterResponse"
+  ],
+  "apiEndpoints": [
+    "GET /api/missions",
+    "GET /api/missions/today",
+    "GET /api/missions/assigned",
+    "GET /api/missions/recommended",
+    "GET /api/missions/templates",
+    "POST /api/missions",
+    "PATCH /api/missions/{id}",
+    "POST /api/missions/{id}/assign",
+    "POST /api/missions/{id}/complete",
+    "GET /api/missions/{id}/timeline",
+    "GET /api/missions/{id}/analytics"
+  ],
+  "dataPaths": {
+    "missions": "data/missions/missions.json",
+    "templates": "data/missions/templates.json",
+    "scoringWeights": "data/missions/scoring_weights.json"
+  },
+  "implementation": {
+    "engine": "src/lib/missions/engine.ts",
+    "apiRoute": "src/app/api/missions/route.ts",
+    "adminUi": "src/components/admin/AdminLiveMissionBoard.tsx"
+  },
+  "integrationPoints": {
+    "consumes": ["RIE-001", "ANL-001", "Calendar", "CRM", "CountyWorkbench", "VolunteerSystem", "OrganizationRegistry", "Communications"],
+    "feeds": ["ANL-001", "ExecutiveDashboard", "MobileApp", "VolunteerDashboard", "LeadershipDashboard", "CountyDashboards"]
+  },
+  "dependencies": ["INT-001", "RIE-001", "ANL-001", "OIS-001", "AOS-001"],
+  "acceptanceCriteria": "AC-175",
+  "acceptanceCriteriaMet": true
+}
