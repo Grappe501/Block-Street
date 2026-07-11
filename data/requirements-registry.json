@@ -5892,25 +5892,34 @@
     },
     {
       "id": "IAS-001",
-      "title": "Future AI Assistance — Phase 7.6",
-      "purpose": "Explainable campaign strategist AI layer",
-      "description": "PHASE-007.6 — implements KDG-M16, full context, memory, guardrails, audit log — Phase 7 closeout",
+      "title": "Executive AI Intelligence Layer — Build 7.6",
+      "purpose": "Operating intelligence above every CampaignOS module — Phase 7 closeout",
+      "description": "BUILD-007.6 — KDG-M16 executive AI, grounded reasoning, memory, tool orchestration, governance tiers, audit trail, /api/ai",
       "priority": "critical",
       "principle": "CP-010",
-      "dependencies": ["INT-001", "KDG-001", "CKK-001", "AIB-001"],
-      "related": ["KDG-M16", "IAS-001"],
+      "dependencies": ["INT-001", "SIS-001", "RIE-001", "ANL-001", "MBD-001", "RLI-001", "KDG-001", "CKK-001"],
+      "related": ["KDG-M16", "AIB-001"],
       "acceptanceCriteria": [
-        "AI strategist capabilities specified",
-        "Context and memory model",
-        "Guardrails — no autonomous send/publish",
-        "Complete audit log",
-        "Phase 7 completion criteria met"
+        "Unified Executive AI answers questions using cross-system campaign data",
+        "Grounded reasoning distinguishes facts, assumptions, forecasts, recommendations",
+        "Inspectable, editable, permission-aware memory",
+        "Tool orchestration presents single coherent experience",
+        "Evidence and confidence on every recommendation",
+        "Approval required for data-modifying actions with audit records",
+        "Multi-agent architecture framework under common governance",
+        "Administrative controls for capabilities, memory, auditing, safety"
       ],
-      "futureNotes": "Campaign strategist not chatbot. AC-171 Phase 7 complete.",
-      "implementationStatus": "pending",
+      "futureNotes": "Campaign strategist not chatbot. AC-177 · Phase 7 complete.",
+      "implementationStatus": "in_progress",
       "testingStatus": "pending",
       "documentationStatus": "done",
-      "trace": { "database": null, "api": null, "frontend": null, "test": "TEST-IAS-001", "doc": "DOC-IAS-001" },
+      "trace": {
+        "database": null,
+        "api": "API-AI",
+        "frontend": "PAGE-ADMIN-EAIL",
+        "test": "TEST-IAS-001",
+        "doc": "DOC-IAS-001"
+      },
       "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
     },
     {

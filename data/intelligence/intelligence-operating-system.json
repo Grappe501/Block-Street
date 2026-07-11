@@ -36,7 +36,7 @@
     { "id": "7.3", "name": "Campaign Analytics Platform", "requirement": "ANL-001", "artifact": "docs/phase-07/CAMPAIGN_ANALYTICS_INTELLIGENCE_PLATFORM.md", "registryPath": "data/registry/campaign-analytics-intelligence-platform.json", "acceptanceCriteria": "AC-174", "status": "done" },
     { "id": "7.4", "name": "Live Mission Board", "requirement": "MBD-001", "artifact": "docs/phase-07/LIVE_MISSION_BOARD.md", "registryPath": "data/registry/live-mission-board.json", "acceptanceCriteria": "AC-175", "status": "done" },
     { "id": "7.5", "name": "Relationship Intelligence Engine", "requirement": "RLI-001", "artifact": "docs/phase-07/RELATIONSHIP_INTELLIGENCE_ENGINE.md", "registryPath": "data/registry/relationship-intelligence-engine.json", "acceptanceCriteria": "AC-176", "status": "done" },
-    { "id": "7.6", "name": "Future AI Assistance", "requirement": "IAS-001", "artifact": "docs/phase-07/FUTURE_AI_ASSISTANCE.md", "registryPath": "data/registry/future-ai-assistance.json", "acceptanceCriteria": "AC-171", "status": "done" }
+    { "id": "7.6", "name": "Executive AI Intelligence Layer", "requirement": "IAS-001", "artifact": "docs/phase-07/EXECUTIVE_AI_INTELLIGENCE_LAYER.md", "registryPath": "data/registry/executive-ai-intelligence-layer.json", "acceptanceCriteria": "AC-177", "status": "done" }
   ],
   "governedBy": ["KDG-001", "CKK-001", "AIB-001"],
   "buildsOn": ["GOS-001", "NISS-001", "OIS-001", "PSI-007", "OPIS-001"],

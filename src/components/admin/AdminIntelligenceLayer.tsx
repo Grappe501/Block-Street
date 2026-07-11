@@ -6,20 +6,21 @@ import rie from "../../../data/registry/recommendation-intelligence-engine.json"
 import caip from "../../../data/registry/campaign-analytics-intelligence-platform.json";
 import lmb from "../../../data/registry/live-mission-board.json";
 import rlie from "../../../data/registry/relationship-intelligence-engine.json";
-import ias from "../../../data/registry/future-ai-assistance.json";
+import eail from "../../../data/registry/executive-ai-intelligence-layer.json";
 import { AdminStatewideIntelligenceSearch } from "@/components/admin/AdminStatewideIntelligenceSearch";
 import { AdminRecommendationIntelligenceEngine } from "@/components/admin/AdminRecommendationIntelligenceEngine";
 import { AdminCampaignAnalyticsIntelligence } from "@/components/admin/AdminCampaignAnalyticsIntelligence";
 import { AdminLiveMissionBoard } from "@/components/admin/AdminLiveMissionBoard";
 import { AdminRelationshipIntelligenceEngine } from "@/components/admin/AdminRelationshipIntelligenceEngine";
+import { AdminExecutiveAIIntelligence } from "@/components/admin/AdminExecutiveAIIntelligence";
 
 const STEPS = [
   { step: sis, label: "7.1 Statewide Intelligence Search", accent: "border-sky-300 bg-sky-50" },
   { step: rie, label: "7.2 Recommendation Intelligence Engine", accent: "border-violet-300 bg-violet-50" },
   { step: caip, label: "7.3 Campaign Analytics Platform", accent: "border-amber-300 bg-amber-50" },
   { step: lmb, label: "7.4 Live Mission Board", accent: "border-rose-300 bg-rose-50" },
-  { step: rlie, label: "7.5 Relationship Intelligence", accent: "border-teal-300 bg-teal-50", featured: true },
-  { step: ias, label: "7.6 Future AI Assistance", accent: "border-indigo-300 bg-indigo-50" },
+  { step: rlie, label: "7.5 Relationship Intelligence", accent: "border-teal-300 bg-teal-50" },
+  { step: eail, label: "7.6 Executive AI Intelligence", accent: "border-indigo-300 bg-indigo-50", featured: true },
 ];
 
 export function AdminIntelligenceLayer() {
@@ -74,6 +75,7 @@ export function AdminIntelligenceLayer() {
       <AdminCampaignAnalyticsIntelligence />
       <AdminLiveMissionBoard />
       <AdminRelationshipIntelligenceEngine />
+      <AdminExecutiveAIIntelligence />
     </div>
   );
 }
