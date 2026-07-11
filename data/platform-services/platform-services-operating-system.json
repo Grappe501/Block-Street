@@ -1,0 +1,43 @@
+{
+  "version": "2.0.0",
+  "phase": 8,
+  "docPath": "docs/phase-08/PHASE_8_MASTER_SEQUENCE.md",
+  "requirementId": "PSV-001",
+  "productName": "Platform Services",
+  "phaseQuestion": "How does it run?",
+  "status": "in_progress",
+  "priority": "critical",
+  "readAfter": "INT-001",
+  "guidingPrinciple": "Every platform capability must be secure, observable, governable, and recoverable.",
+  "mission": "Create unified platform-services layer — identity, access, administration, content, notifications, APIs, deployment, monitoring, security.",
+  "stepsComplete": 1,
+  "stepsTotal": 8,
+  "servicePillars": [
+    "Identity",
+    "Access",
+    "Administration",
+    "Content",
+    "Notifications",
+    "APIs",
+    "Deployment",
+    "Monitoring",
+    "Security",
+    "Audit",
+    "Recovery"
+  ],
+  "implementationOrder": ["8.1", "8.8", "8.2", "8.5", "8.3", "8.4", "8.6", "8.7"],
+  "steps": [
+    { "id": "8.1", "name": "Authentication and Identity", "requirement": "AUTH-001", "artifact": "docs/phase-08/AUTHENTICATION_AND_IDENTITY.md", "registryPath": "data/registry/authentication-identity.json", "acceptanceCriteria": "AC-178", "status": "done" },
+    { "id": "8.2", "name": "Administration Platform", "requirement": "ADM-001", "artifact": "docs/phase-08/ADMINISTRATION_PLATFORM.md", "status": "pending" },
+    { "id": "8.3", "name": "CMS and Content Services", "requirement": "CMS-001", "status": "pending" },
+    { "id": "8.4", "name": "Notification Services", "requirement": "NTF-001", "status": "pending" },
+    { "id": "8.5", "name": "Unified API Layer", "requirement": "API-001", "status": "pending" },
+    { "id": "8.6", "name": "Deployment and CI/CD", "requirement": "DEP-001", "status": "pending" },
+    { "id": "8.7", "name": "Monitoring and Reliability", "requirement": "MON-001", "status": "pending" },
+    { "id": "8.8", "name": "Security Platform", "requirement": "SEC-001", "status": "pending" }
+  ],
+  "governedBy": ["ENG-006", "PRE-001", "KDG-001", "SEC-001"],
+  "buildsOn": ["IAS-001", "PSI-002", "ENG-006"],
+  "acceptanceCriteria": "AC-179",
+  "acceptanceCriteriaMet": false
+}
