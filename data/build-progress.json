@@ -344,7 +344,7 @@
         { "id": "9.3", "name": "Migration and Data Readiness [MIG-001]", "status": "done", "notes": "Staging, validation, dry runs, data readiness reports — AC-188" },
         { "id": "9.4", "name": "Guided Onboarding [ONB-001]", "status": "done", "notes": "Role-based onboarding journeys, first meaningful action — AC-189" },
         { "id": "9.5", "name": "Training and Certification [TRN-001]", "status": "done", "notes": "Learning paths, practice workspaces, assessments, certification eligibility gates — AC-190" },
-        { "id": "9.6", "name": "Pilot and Acceptance Program [PLT-001]", "status": "pending", "notes": "Pilot phases, observation ledger, human-help metric — AC-191" },
+        { "id": "9.6", "name": "Pilot and Acceptance Program [PLT-001]", "status": "done", "notes": "Phased pilots, observation ledger, human-help count, acceptance gates — AC-191" },
         { "id": "9.7", "name": "Support and Customer Success [SUP-001]", "status": "pending", "notes": "Support requests, knowledge base, success plans — AC-192" },
         { "id": "9.8", "name": "Adoption, Replication, and Scale [SCL-001]", "status": "pending", "notes": "Adoption metrics, launch certification, replication kits — AC-193" }
       ]

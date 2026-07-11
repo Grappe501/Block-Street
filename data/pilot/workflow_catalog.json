@@ -1,0 +1,12 @@
+{
+  "workflows": [
+    { "name": "Accept Invitation", "description": "Accept institutional invitation and activate account", "target_role": "student", "category": "onboarding", "critical": true, "acceptance_threshold_human_help": 1.0, "acceptance_threshold_success_rate": 85, "version": 1 },
+    { "name": "Complete Onboarding", "description": "Finish guided onboarding journey to operational readiness", "target_role": "student", "category": "onboarding", "critical": true, "acceptance_threshold_human_help": 1.0, "acceptance_threshold_success_rate": 85, "version": 1 },
+    { "name": "Join Workspace", "description": "Find and join correct workspace", "target_role": "volunteer", "category": "membership", "critical": false, "acceptance_threshold_human_help": 1.0, "acceptance_threshold_success_rate": 85, "version": 1 },
+    { "name": "Complete Mission", "description": "Find assigned mission and mark complete", "target_role": "organizer", "category": "mission", "critical": true, "acceptance_threshold_human_help": 1.0, "acceptance_threshold_success_rate": 85, "version": 1 },
+    { "name": "Create Event", "description": "Create and publish calendar event", "target_role": "organizer", "category": "calendar", "critical": false, "acceptance_threshold_human_help": 1.0, "acceptance_threshold_success_rate": 85, "version": 1 },
+    { "name": "Publish Content", "description": "Submit content through editorial workflow", "target_role": "content_publisher", "category": "content", "critical": true, "acceptance_threshold_human_help": 1.0, "acceptance_threshold_success_rate": 85, "version": 1 },
+    { "name": "Resolve Notification", "description": "Review and act on priority notification", "target_role": "volunteer", "category": "notifications", "critical": false, "acceptance_threshold_human_help": 1.0, "acceptance_threshold_success_rate": 85, "version": 1 },
+    { "name": "Approve Role Assignment", "description": "Review and approve role assignment request", "target_role": "workspace_administrator", "category": "administration", "critical": true, "acceptance_threshold_human_help": 1.0, "acceptance_threshold_success_rate": 85, "version": 1 }
+  ]
+}

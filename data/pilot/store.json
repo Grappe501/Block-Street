@@ -1,0 +1,27 @@
+{
+  "programs": [],
+  "workflows": [],
+  "cohorts": [],
+  "participants": [],
+  "sessions": [],
+  "help_events": [],
+  "observations": [],
+  "issues": [],
+  "corrective_actions": [],
+  "retests": [],
+  "gates": [],
+  "launch_recommendations": [],
+  "audit_events": [],
+  "health": {
+    "active_programs": 0,
+    "sessions_today": 0,
+    "workflow_success_rate": 0,
+    "average_human_help": 0,
+    "h4_takeovers": 0,
+    "p0_issues": 0,
+    "p1_issues": 0,
+    "retests_pending": 0,
+    "engineering_interventions": 0,
+    "launch_recommendations_pending": 0
+  }
+}

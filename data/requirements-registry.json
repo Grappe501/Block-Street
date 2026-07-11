@@ -6396,6 +6396,36 @@
       "versionHistory": { "created": "2026-07-11", "implemented": "2026-07-11" }
     },
     {
+      "id": "PLT-001",
+      "title": "Pilot, Observation, and Acceptance Program — Build 9.6",
+      "purpose": "Test whether real users can complete meaningful institutional work with minimal human assistance under realistic conditions",
+      "description": "BUILD-009.6 — phased pilots, workflow acceptance catalog, observation protocol, human-help count, hesitation tracking, issue classification, corrective action, retesting, acceptance gates, launch recommendation",
+      "priority": "critical",
+      "principle": "ILS-001",
+      "dependencies": ["TRN-001", "ONB-001", "ADM-001", "MON-001"],
+      "related": ["SUP-001"],
+      "acceptanceCriteria": [
+        "Phased pilots A through D with distinct gates",
+        "Human-help count captured consistently",
+        "Issues classified by severity and root cause",
+        "P0 stop conditions pause pilot",
+        "Corrective actions link to retests",
+        "Launch recommendation includes scope and conditions"
+      ],
+      "futureNotes": "AC-191. Registry PLT-001.",
+      "implementationStatus": "done",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": null,
+        "api": "API-PLT",
+        "frontend": "PAGE-ADMIN-ILS",
+        "test": "TEST-PLT-001",
+        "doc": "DOC-PLT-001"
+      },
+      "versionHistory": { "created": "2026-07-11", "implemented": "2026-07-11" }
+    },
+    {
       "id": "PSI-014",
       "title": "Platform Operations, Governance & Lifecycle Architecture — Volume 5.13",
       "purpose": "Operate the platform as a governed institution — stewardship, certification, and decades-long evolution",
