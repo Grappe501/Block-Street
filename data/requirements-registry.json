@@ -5828,19 +5828,34 @@
     },
     {
       "id": "MBD-001",
-      "title": "Mission Board (Live) — Phase 7.4",
-      "purpose": "AI-assisted operational mission system",
-      "description": "PHASE-007.4 — implements OIS-M16, mission cards, auto-creation from signals, prioritization analytics",
+      "title": "Live Mission Board — Build 7.4",
+      "purpose": "Operational command center — where work actually happens",
+      "description": "BUILD-007.4 — OIS-M16 mission cards, hierarchy, prioritization engine, auto-generation from RIE/ANL, templates, lifecycle, /api/missions",
       "priority": "critical",
       "principle": "LS-P7",
-      "dependencies": ["INT-001", "OIS-001", "AOS-001"],
-      "related": ["OBE-001", "OIS-M16"],
-      "acceptanceCriteria": ["Mission Board live architecture", "Mission card structure OIS-M16", "Mission intelligence sources", "Completion analytics"],
-      "futureNotes": "Missions not tasks — operational heartbeat",
-      "implementationStatus": "pending",
+      "dependencies": ["INT-001", "RIE-001", "ANL-001", "OIS-001", "AOS-001"],
+      "related": ["OBE-001", "OIS-M16", "REC-001"],
+      "acceptanceCriteria": [
+        "Unified mission hierarchy with purpose, outcome, priority, owner, timeline, impact, dependencies",
+        "Manual and auto-generated missions from recommendations, analytics, deadlines, and system events",
+        "Dynamic prioritization engine with configurable scoring criteria",
+        "Standardized mission cards with progress, health, dependencies, and context",
+        "Integration with calendars, CRM, organizations, counties, communications, analytics",
+        "Collaboration, audit history, and mission lifecycle tracking",
+        "Mobile-ready field execution workflows",
+        "Mission templates, analytics, notifications, and gamification hooks"
+      ],
+      "futureNotes": "Missions not tasks — operational heartbeat. AC-175.",
+      "implementationStatus": "in_progress",
       "testingStatus": "pending",
       "documentationStatus": "done",
-      "trace": { "database": null, "api": null, "frontend": null, "test": "TEST-MBD-001", "doc": "DOC-MBD-001" },
+      "trace": {
+        "database": null,
+        "api": "API-MISSIONS",
+        "frontend": "PAGE-ADMIN-LMB",
+        "test": "TEST-MBD-001",
+        "doc": "DOC-MBD-001"
+      },
       "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
     },
     {

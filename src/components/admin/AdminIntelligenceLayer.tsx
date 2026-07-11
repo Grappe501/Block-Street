@@ -4,18 +4,19 @@ import ios from "../../../data/intelligence/intelligence-operating-system.json";
 import sis from "../../../data/registry/statewide-intelligence-search.json";
 import rie from "../../../data/registry/recommendation-intelligence-engine.json";
 import caip from "../../../data/registry/campaign-analytics-intelligence-platform.json";
-import mbd from "../../../data/registry/mission-board-live.json";
+import lmb from "../../../data/registry/live-mission-board.json";
 import rli from "../../../data/registry/relationship-intelligence.json";
 import ias from "../../../data/registry/future-ai-assistance.json";
 import { AdminStatewideIntelligenceSearch } from "@/components/admin/AdminStatewideIntelligenceSearch";
 import { AdminRecommendationIntelligenceEngine } from "@/components/admin/AdminRecommendationIntelligenceEngine";
 import { AdminCampaignAnalyticsIntelligence } from "@/components/admin/AdminCampaignAnalyticsIntelligence";
+import { AdminLiveMissionBoard } from "@/components/admin/AdminLiveMissionBoard";
 
 const STEPS = [
   { step: sis, label: "7.1 Statewide Intelligence Search", accent: "border-sky-300 bg-sky-50" },
   { step: rie, label: "7.2 Recommendation Intelligence Engine", accent: "border-violet-300 bg-violet-50" },
-  { step: caip, label: "7.3 Campaign Analytics Platform", accent: "border-amber-300 bg-amber-50", featured: true },
-  { step: mbd, label: "7.4 Mission Board (Live)", accent: "border-rose-300 bg-rose-50" },
+  { step: caip, label: "7.3 Campaign Analytics Platform", accent: "border-amber-300 bg-amber-50" },
+  { step: lmb, label: "7.4 Live Mission Board", accent: "border-rose-300 bg-rose-50", featured: true },
   { step: rli, label: "7.5 Relationship Intelligence", accent: "border-teal-300 bg-teal-50" },
   { step: ias, label: "7.6 Future AI Assistance", accent: "border-indigo-300 bg-indigo-50" },
 ];
@@ -70,6 +71,7 @@ export function AdminIntelligenceLayer() {
       <AdminStatewideIntelligenceSearch />
       <AdminRecommendationIntelligenceEngine />
       <AdminCampaignAnalyticsIntelligence />
+      <AdminLiveMissionBoard />
     </div>
   );
 }

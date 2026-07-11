@@ -18,6 +18,23 @@
 
 ---
 
+## 2026-07-10 — Build 7.4 Live Mission Board [MBD-001 · AC-175]
+
+**Document:** `docs/phase-07/LIVE_MISSION_BOARD.md` · **Registry:** `data/registry/live-mission-board.json`
+
+### What Changed
+
+- **OIS-M16 operational command center** — mission cards with priority, impact, health, dependencies
+- **12 bootstrap missions** — personal, team, county, organization, campaign, executive scopes
+- **Prioritization engine** — weighted scoring across 7 factors, dynamic priority labels
+- **Auto-generation** — missions from analytics alerts and RIE recommendations
+- **Mission templates** — volunteer drive, town hall, petition, coalition, canvass
+- **Lifecycle tracking** — created → assigned → in progress → blocked → completed with audit timeline
+- **API routes** — `/api/missions`, `/today`, `/assigned`, `/recommended`, `/templates`, assign, complete, timeline, analytics
+- Admin live Mission Board on Phase 7 tab
+
+---
+
 ## 2026-07-10 — Build 7.3 Campaign Analytics & Intelligence Platform [ANL-001 · AC-174]
 
 **Document:** `docs/phase-07/CAMPAIGN_ANALYTICS_INTELLIGENCE_PLATFORM.md` · **Registry:** `data/registry/campaign-analytics-intelligence-platform.json`
