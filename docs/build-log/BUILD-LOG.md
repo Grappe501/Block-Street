@@ -18,6 +18,30 @@
 
 ---
 
+---
+
+## 2026-07-10 — Build 8.1 Expanded · Authentication and Identity Foundation [AUTH-001 · AC-178]
+
+**Documents:** `docs/phase-08/AUTHENTICATION_AND_IDENTITY.md` · `docs/platform/auth/*` · **Registry:** `data/registry/authentication-identity.json`
+
+### What Changed
+
+- **Full platform auth documentation** — architecture, identity model, sessions, lifecycle, invitations, MFA, providers, migration, test plan, incident runbook
+- **Canonical data model** — PlatformUser, AuthenticationIdentity, Organization/Workspace memberships, invitations, MFA, recovery codes, feature flags
+- **Auth engine modules** — `engine.ts`, `session.ts`, `invitations.ts`, `mfa.ts`, `providers.ts`, `crypto.ts`, `data.ts`
+- **API surface** — register, logout-all, passwordless, password reset, providers, MFA, recovery codes, identity/me, context, invitations
+- **UI surfaces** — `/login`, `/register`, `/passwordless`, `/account/security`, `/onboarding`, `/mfa/setup`, `/invitations/accept`
+- **Security Center** — sessions, context switcher, linked providers, audit events
+- **Middleware** — protects `/admin`, `/account`, protected APIs; public auth routes exempt
+
+### Scaffold vs Production
+
+- Google/Microsoft OAuth: schema + API scaffold (feature-flagged)
+- MFA TOTP: foundation enrollment/verify
+- Email delivery for passwordless/reset: dev tokens in non-production
+
+---
+
 ## 2026-07-10 — Build 8.1 Authentication and Identity [AUTH-001 · AC-178]
 
 **Document:** `docs/phase-08/AUTHENTICATION_AND_IDENTITY.md` · **Registry:** `data/registry/authentication-identity.json`

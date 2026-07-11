@@ -318,7 +318,7 @@
       "registryPath": "data/platform-services/platform-services-operating-system.json",
       "question": "How does it run?",
       "steps": [
-        { "id": "8.1", "name": "Authentication and Identity [AUTH-001]", "status": "done", "notes": "Production identity, sessions, middleware, /api/auth — AC-178 · honor system removed" },
+        { "id": "8.1", "name": "Authentication and Identity [AUTH-001]", "status": "done", "notes": "Full identity foundation: canonical model, sessions, MFA, invitations, context, security center, platform auth docs — AC-178" },
         { "id": "8.2", "name": "Administration [ADM-001]", "status": "pending", "notes": "Partial — workbench live" },
         { "id": "8.3", "name": "CMS & content", "status": "pending", "notes": "" },
         { "id": "8.4", "name": "Notifications", "status": "pending", "notes": "" },
