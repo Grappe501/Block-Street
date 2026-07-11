@@ -8,7 +8,7 @@
 > The operational heartbeat — missions, not tasks.
 
 **Implements:** [OIS-M16](../phase-02/STATEWIDE_OUTREACH_INTELLIGENCE.md) · **Extends:** [OIS-001](../phase-02/STATEWIDE_OUTREACH_INTELLIGENCE.md) · [Action OS](../phase-05/ACTION_CONSTITUTION.md)  
-**Live spec:** `data/registry/mission-board-live.json`
+**Live spec:** `data/registry/live-mission-board.json` · **Build:** [LIVE_MISSION_BOARD.md](LIVE_MISSION_BOARD.md) · **API:** `/api/missions`
 
 ---
 
