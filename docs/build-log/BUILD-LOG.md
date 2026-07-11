@@ -22,6 +22,24 @@
 
 ---
 
+## 2026-07-11 — Build 9.1 Institutional Provisioning [PRV-001 · AC-186] — Full Specification
+
+**Documents:** `docs/platform/provisioning/*` (13 standards) · `docs/phase-09/INSTITUTIONAL_PROVISIONING.md`
+
+### What Changed
+
+- **Institution canonical model** — Institution, ProvisioningRequest, RiskAssessment, OwnerAssignment, Workspace, Module, SecurityProfile, DeploymentProfile, Validation, Audit
+- **Institution type registry** — 6 types (college, multi-campus, statewide, campaign, civic education, volunteer network)
+- **Request workflow** — draft → submitted → under_review → approved/rejected with P1–P4 risk classification
+- **Versioned provisioning templates** — Multi-Campus v1.3 with 6 default workspaces, module gating, feature flags
+- **Automated provisioning run** — owners, security baseline, deployment profile, workspaces, modules, checkpoint
+- **Validation engine** — blocking checks for owners, workspace ownership, training/pilot workspaces, restricted AI
+- **Attention queue & health dashboard** — missing owners, ownerless workspaces, baseline failures
+- **v1 APIs** — `/api/v1/institutions/*` (requests, provision, validate, templates, owners, modules, workspaces, health)
+- **Provisioning Administration Center** — health, requests, templates, attention queue, audit in Phase 9 tab
+
+---
+
 ## 2026-07-11 — Build 9.1 Institutional Provisioning [PRV-001 · AC-186] · **PHASE 9 OPEN**
 
 **Documents:** `docs/phase-09/INSTITUTIONAL_PROVISIONING.md` · `docs/platform/launch/*` · **Registry:** `data/registry/institutional-provisioning.json`
