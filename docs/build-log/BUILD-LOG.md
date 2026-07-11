@@ -4,6 +4,29 @@
 
 ---
 
+## 2026-07-11 — Build 9.6 Pilot, Observation, and Acceptance Program [PLT-001 · AC-191]
+
+**Documents:** `docs/platform/pilot/*` (16 standards) · `docs/phase-09/PILOT_AND_ACCEPTANCE.md`
+
+### What Changed
+
+- **Pilot program model** — phased programs A through D with risk levels and readiness gates
+- **Workflow acceptance catalog** — 8 end-to-end institutional workflows with thresholds
+- **Session and observation engine** — think-aloud protocol, hesitation tracking, evidence capture
+- **Human-help count** — H1–H4 severity classification as primary pilot metric
+- **Issue classification** — P0–P4 severity with root-cause and corrective-action workflow
+- **Retest workflow** — before-and-after comparison for P0–P2 issues
+- **Acceptance gates** — phase gates with configurable thresholds and conditions
+- **Launch recommendation** — scoped launch with conditions, accepted risks, and restrictions
+- **v1 APIs** — `/api/v1/pilots/*`, `/api/admin/pilot/overview`
+- **Pilot Administration Center** — health dashboard, programs, AC-191 acceptance demo, audit
+
+### Phase Status
+
+- Phase 9: **In Progress** (6/8 Institutional Launch)
+
+---
+
 ## 2026-07-11 — Build 9.5 Training, Practice, and Certification [TRN-001 · AC-190]
 
 **Documents:** `docs/platform/training/*` (17 standards) · `docs/phase-09/TRAINING_AND_CERTIFICATION.md`
