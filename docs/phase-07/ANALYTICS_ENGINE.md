@@ -8,7 +8,7 @@
 > Campaign intelligence dashboard — enterprise analytics for statewide organizing.
 
 **Builds on:** [Operational Intelligence OPIS-001](../phase-05/OPERATIONAL_INTELLIGENCE_SYSTEM.md) · [Community Impact Intelligence CIIS-001](../phase-05/COMMUNITY_IMPACT_INTELLIGENCE_SYSTEM.md) · [OIG PSI-012](../volume-05/OBSERVABILITY_ARCHITECTURE.md)  
-**Live spec:** `data/registry/analytics-engine.json`
+**Live spec:** `data/registry/campaign-analytics-intelligence-platform.json` · **Build:** [CAMPAIGN_ANALYTICS_INTELLIGENCE_PLATFORM.md](CAMPAIGN_ANALYTICS_INTELLIGENCE_PLATFORM.md) · **API:** `/api/analytics`
 
 ---
 

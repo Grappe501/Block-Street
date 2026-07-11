@@ -71,7 +71,7 @@ Everything is: **Explainable** · **Transparent** · **Auditable** · **Confiden
 |------|----------|-------------|-----------|
 | 7.1 | [Statewide Intelligence Search](STATEWIDE_INTELLIGENCE_SEARCH.md) | SIS-001 | Universal knowledge retrieval engine |
 | 7.2 | [Recommendation Intelligence Engine](RECOMMENDATION_INTELLIGENCE_ENGINE.md) | RIE-001 | Active strategic partner |
-| 7.3 | [Analytics Engine](ANALYTICS_ENGINE.md) | ANL-001 | Executive campaign intelligence |
+| 7.3 | [Campaign Analytics Platform](CAMPAIGN_ANALYTICS_INTELLIGENCE_PLATFORM.md) | ANL-001 | Executive nervous system |
 | 7.4 | [Mission Board (Live)](MISSION_BOARD_LIVE.md) | MBD-001 | AI-assisted operational missions |
 | 7.5 | [Relationship Intelligence](RELATIONSHIP_INTELLIGENCE.md) | RLI-001 | Living relationship graph |
 | 7.6 | [Future AI Assistance](FUTURE_AI_ASSISTANCE.md) | IAS-001 | Explainable campaign strategist |
