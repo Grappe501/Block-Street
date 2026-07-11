@@ -1,0 +1,14 @@
+{
+  "reviews": [
+    {
+      "id": "ar-001",
+      "scope": "platform-administrators",
+      "review_type": "quarterly",
+      "started_at": "2026-07-01T00:00:00.000Z",
+      "reviewer": "platform-director",
+      "assignments_reviewed": 12,
+      "assignments_removed": 0,
+      "status": "in_progress"
+    }
+  ]
+}

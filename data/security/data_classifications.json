@@ -1,0 +1,9 @@
+{
+  "classifications": [
+    { "id": "cls-public", "classification_key": "public", "name": "Public", "description": "Approved for public release", "level": "public", "access_requirements": "none", "encryption_requirements": "transit", "export_requirements": "unrestricted", "retention_requirements": "standard" },
+    { "id": "cls-internal", "classification_key": "internal", "name": "Internal", "description": "Authenticated platform use", "level": "internal", "access_requirements": "authenticated", "encryption_requirements": "transit", "export_requirements": "logged", "retention_requirements": "standard" },
+    { "id": "cls-confidential", "classification_key": "confidential", "name": "Confidential", "description": "Limited organizational access", "level": "confidential", "access_requirements": "role-based", "encryption_requirements": "transit+rest", "export_requirements": "approval", "retention_requirements": "org-policy" },
+    { "id": "cls-restricted", "classification_key": "restricted", "name": "Restricted", "description": "Sensitive personal or operational data", "level": "restricted", "access_requirements": "role+mfa", "encryption_requirements": "transit+rest", "export_requirements": "approval+watermark", "retention_requirements": "limited" },
+    { "id": "cls-highly-restricted", "classification_key": "highly_restricted", "name": "Highly Restricted", "description": "Security, identity, protected student data", "level": "highly_restricted", "access_requirements": "break-glass or security-admin", "encryption_requirements": "application-level", "export_requirements": "prohibited without security approval", "retention_requirements": "minimum necessary" }
+  ]
+}

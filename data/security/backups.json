@@ -1,0 +1,7 @@
+{
+  "backups": [
+    { "id": "bak-db", "system": "database", "frequency": "daily", "retention": "30d", "encrypted": true, "last_success_at": "2026-07-11T03:00:00.000Z", "status": "healthy", "rpo_hours": 24, "rto_hours": 4 },
+    { "id": "bak-content", "system": "cms", "frequency": "daily", "retention": "90d", "encrypted": true, "last_success_at": "2026-07-11T03:00:00.000Z", "status": "healthy", "rpo_hours": 24, "rto_hours": 2 },
+    { "id": "bak-audit", "system": "audit", "frequency": "hourly", "retention": "365d", "encrypted": true, "last_success_at": "2026-07-11T04:00:00.000Z", "status": "healthy", "rpo_hours": 1, "rto_hours": 1 }
+  ]
+}

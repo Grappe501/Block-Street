@@ -1,0 +1,30 @@
+{
+  "models": [
+    {
+      "id": "tm-auth",
+      "system": "authentication",
+      "scope": "login, MFA, sessions, recovery",
+      "assets": ["credentials", "sessions", "MFA secrets"],
+      "trust_boundaries": ["client", "auth service", "session store"],
+      "threats": ["credential stuffing", "session hijacking", "MFA bypass"],
+      "controls": ["rate limiting", "secure cookies", "MFA", "session rotation"],
+      "open_risks": [],
+      "owner": "identity",
+      "reviewed_at": "2026-07-01",
+      "next_review_at": "2026-10-01"
+    },
+    {
+      "id": "tm-api",
+      "system": "api_gateway",
+      "scope": "v1 APIs, credentials, webhooks",
+      "assets": ["API keys", "user context", "webhook secrets"],
+      "trust_boundaries": ["client", "gateway", "services"],
+      "threats": ["BOLA", "BFLA", "token replay", "webhook forgery"],
+      "controls": ["permission checks", "rate limits", "webhook signing", "idempotency"],
+      "open_risks": [],
+      "owner": "platform-engineering",
+      "reviewed_at": "2026-07-05",
+      "next_review_at": "2026-10-05"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "events": [
+    {
+      "id": "sec-evt-001",
+      "event_type": "security.cross_scope_access_denied",
+      "severity": "moderate",
+      "actor_id": "usr-test",
+      "organization_id": "org-a",
+      "source": "api_gateway",
+      "target": "org-b/missions",
+      "detected_at": "2026-07-11T02:00:00.000Z",
+      "status": "resolved",
+      "correlation_id": "corr-deny-001"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "assets": [
+    { "id": "asset-users", "name": "User Profiles", "domain": "identity", "owner": "identity", "classification": "restricted", "purpose": "Authentication and profile management", "retention_policy": "account-lifetime" },
+    { "id": "asset-missions", "name": "Mission Records", "domain": "missions", "owner": "missions", "classification": "confidential", "purpose": "Operational mission execution", "retention_policy": "7-years" },
+    { "id": "asset-volunteer", "name": "Volunteer Contact Data", "domain": "people", "owner": "organizations", "classification": "restricted", "purpose": "Volunteer coordination", "retention_policy": "org-policy" },
+    { "id": "asset-auth-secrets", "name": "Authentication Secrets", "domain": "security", "owner": "platform-security", "classification": "highly_restricted", "purpose": "Session and credential protection", "retention_policy": "minimum-necessary" }
+  ]
+}

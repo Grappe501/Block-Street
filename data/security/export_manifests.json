@@ -1,0 +1,17 @@
+{
+  "exports": [
+    {
+      "id": "exp-001",
+      "requested_by": "director@block-street.local",
+      "organization_id": "org-block-street",
+      "resource_type": "users",
+      "classification": "restricted",
+      "reason": "Quarterly membership report",
+      "approval_id": "appr-exp-001",
+      "generated_at": "2026-07-10T12:00:00.000Z",
+      "expires_at": "2026-07-11T12:00:00.000Z",
+      "download_count": 1,
+      "status": "completed"
+    }
+  ]
+}

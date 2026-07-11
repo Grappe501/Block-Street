@@ -1,0 +1,16 @@
+{
+  "vulnerabilities": [
+    {
+      "id": "vuln-001",
+      "source": "dependency-scan",
+      "component": "npm:example-package",
+      "severity": "moderate",
+      "description": "Example moderate dependency finding — patched in next release",
+      "detected_at": "2026-07-08T00:00:00.000Z",
+      "owner": "platform-engineering",
+      "status": "open",
+      "due_at": "2026-07-22T00:00:00.000Z",
+      "mitigation": "Update dependency in next patch release"
+    }
+  ]
+}

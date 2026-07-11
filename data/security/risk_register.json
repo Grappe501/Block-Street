@@ -1,0 +1,33 @@
+{
+  "risks": [
+    {
+      "id": "risk-001",
+      "title": "Cross-organization data access",
+      "description": "User accesses another organization's records via API",
+      "risk_domain": "authorization",
+      "likelihood": "moderate",
+      "impact": "high",
+      "inherent_risk": "high",
+      "controls": ["server-side context", "organization scoping", "audit logging"],
+      "residual_risk": "moderate",
+      "owner": "platform-security",
+      "status": "mitigated",
+      "review_date": "2026-10-01",
+      "mitigation_plan": "Enforce context on all v1 APIs"
+    },
+    {
+      "id": "risk-002",
+      "title": "AI prompt injection via uploaded documents",
+      "description": "Untrusted document content overrides AI policy",
+      "risk_domain": "ai_security",
+      "likelihood": "moderate",
+      "impact": "high",
+      "inherent_risk": "high",
+      "controls": ["tool gateway", "untrusted content separation", "approval gates"],
+      "residual_risk": "moderate",
+      "owner": "ai-security",
+      "status": "mitigated",
+      "review_date": "2026-10-01"
+    }
+  ]
+}
