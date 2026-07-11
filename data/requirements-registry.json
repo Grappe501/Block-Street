@@ -5796,19 +5796,34 @@
     },
     {
       "id": "ANL-001",
-      "title": "Analytics Engine — Phase 7.3",
-      "purpose": "Enterprise campaign intelligence dashboard",
-      "description": "PHASE-007.3 — executive metrics, geographic analytics, trends, funnels, predictive forecasting, reports",
+      "title": "Campaign Analytics & Intelligence Platform — Build 7.3",
+      "purpose": "Executive nervous system — measure campaign health and drive decisions",
+      "description": "BUILD-007.3 — append-only warehouse, KPI library, executive/county dashboards, forecasts with confidence, alert engine, drill-down navigation, /api/analytics",
       "priority": "critical",
       "principle": "CP-010",
-      "dependencies": ["INT-001", "OPIS-001", "CIIS-001", "PSI-012"],
-      "related": ["OIS-001", "NISS-001"],
-      "acceptanceCriteria": ["Executive dashboard specified", "Geographic and trend analytics", "Predictive analytics with confidence", "Executive report cadences"],
-      "futureNotes": "Distinct from CIS community intelligence — campaign-wide analytics",
-      "implementationStatus": "pending",
+      "dependencies": ["INT-001", "RIE-001", "OPIS-001", "CIIS-001", "PSI-012"],
+      "related": ["OIS-001", "NISS-001", "MBD-001", "REC-001"],
+      "acceptanceCriteria": [
+        "Centralized analytics warehouse aggregates operational events",
+        "Executive, county, organization, volunteer, financial, communications, and mission dashboards with role-based access",
+        "KPI library with definition, formula, owner, thresholds, and refresh schedule",
+        "Drill-down navigation from summaries to individual records",
+        "Predictive forecasts with confidence ranges and contributing factors",
+        "Alert engine feeds RIE and Mission Board",
+        "Reporting supports scheduled and on-demand exports",
+        "Event-driven append-only architecture"
+      ],
+      "futureNotes": "Distinct from CIS community intelligence — campaign-wide analytics. AC-174.",
+      "implementationStatus": "in_progress",
       "testingStatus": "pending",
       "documentationStatus": "done",
-      "trace": { "database": null, "api": null, "frontend": null, "test": "TEST-ANL-001", "doc": "DOC-ANL-001" },
+      "trace": {
+        "database": null,
+        "api": "API-ANALYTICS",
+        "frontend": "PAGE-ADMIN-CAIP",
+        "test": "TEST-ANL-001",
+        "doc": "DOC-ANL-001"
+      },
       "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
     },
     {
