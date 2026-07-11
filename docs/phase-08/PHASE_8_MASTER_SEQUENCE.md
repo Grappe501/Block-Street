@@ -49,7 +49,7 @@ Identity & Access · Administration · Security · CMS · Notifications · API L
 | 8.3 | CMS & Content Services | CMS-001 | Shared editorial content system |
 | 8.4 | Notification Services | NTF-001 | Unified delivery service |
 | 8.5 | Unified API Layer | API-001 | Governed API gateway |
-| 8.6 | Deployment & CI/CD | DEP-001 | Reliable delivery pipeline |
+| 8.6 | Deployment & CI/CD | DPL-001 | Reliable delivery pipeline | AC-183 |
 | 8.7 | Monitoring & Reliability | MON-001 | Observable operations |
 | 8.8 | Security Platform | SEC-001 | Comprehensive security foundation |
 
