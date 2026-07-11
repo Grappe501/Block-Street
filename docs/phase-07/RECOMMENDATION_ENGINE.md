@@ -1,14 +1,14 @@
 # Recommendation Engine
 
 **Document ID:** PHASE-007.2  
-**Requirement:** REC-001  
+**Requirement:** REC-001 · **Build spec:** [RIE-001](RECOMMENDATION_INTELLIGENCE_ENGINE.md)  
 **Status:** Canonical  
 **Phase:** 7 — Intelligence Layer
 
 > The platform's strategic advisor — continuously suggests, never decides.
 
-**Builds on:** [Opportunity Belonging Engine OBE-001](../phase-03/OPPORTUNITY_BELONGING_ENGINE.md) · [Community Growth Intelligence CGIS-001](../phase-06/COMMUNITY_GROWTH_INTELLIGENCE_SYSTEM.md) · [NISS-001](../phase-06/NETWORK_INTELLIGENCE_STRATEGY_SYSTEM.md)  
-**Live spec:** `data/registry/recommendation-engine.json`
+**Builds on:** [Opportunity Belonging Engine OBE-001](../phase-03/OPPORTUNITY_BELONGING_ENGINE.md) · [Community Growth Intelligence CGIS-001](../phase-06/COMMUNITY_GROWTH_INTELLIGENCE_SYSTEM.md) · [NISS-001](../phase-06/NETWORK_INTELLIGENCE_STRATEGY_SYSTEM.md) · [SIS-001](STATEWIDE_INTELLIGENCE_SEARCH.md)  
+**Live spec:** `data/registry/recommendation-intelligence-engine.json` · **API:** `/api/recommendations`
 
 ---
 
