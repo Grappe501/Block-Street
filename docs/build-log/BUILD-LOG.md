@@ -4,6 +4,30 @@
 
 ---
 
+## 2026-07-11 — Build 9.5 Training, Practice, and Certification [TRN-001 · AC-190]
+
+**Documents:** `docs/platform/training/*` (17 standards) · `docs/phase-09/TRAINING_AND_CERTIFICATION.md`
+
+### What Changed
+
+- **Training catalog** — learning paths for Workspace Administrator, Content Publisher, Data Steward, Campus Organizer
+- **Competency framework** — role competency requirements with evidence and assessment methods
+- **Practice workspace engine** — isolated synthetic environments with reset and training banner
+- **Scenario engine** — guided and independent practice with action capture and human-help count
+- **Assessment engine** — practical demonstrations, attempt limits, human evaluation, rubric scoring
+- **Evaluator qualifications** — conflict checks and qualified evaluator requirement
+- **Certification issuance** — evidence-linked awards with renewal, suspension, and revocation
+- **Eligibility gating** — certification makes users eligible for roles/permissions; does not grant access directly
+- **Remediation paths** — targeted practice after failed assessments
+- **v1 APIs** — `/api/v1/training/*`, `/api/admin/training/overview`
+- **Training Administration Center** — health dashboard, learning paths, AC-190 acceptance demo, audit
+
+### Phase Status
+
+- Phase 9: **In Progress** (5/8 Institutional Launch)
+
+---
+
 ## 2026-07-11 — Build 9.4 Guided Onboarding and Institutional Activation [ONB-001 · AC-189]
 
 **Documents:** `docs/platform/onboarding/*` (11 standards) · `docs/phase-09/GUIDED_ONBOARDING.md`
