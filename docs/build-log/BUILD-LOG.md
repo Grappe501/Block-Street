@@ -22,6 +22,26 @@
 
 ---
 
+## 2026-07-10 — Build 8.3 CMS and Content Services [CMS-001 · AC-180]
+
+**Documents:** `docs/phase-08/CMS_AND_CONTENT_SERVICES.md` · `docs/platform/cms/*` · **Registry:** `data/registry/content-services.json`
+
+### What Changed
+
+- **Canonical content model** — ContentItem, ContentVersion, content types, visibility, scope, ownership
+- **Editorial workflow engine** — draft, review, approve, publish, schedule, archive with role permissions
+- **Content delivery APIs** — public `GET /api/content` (unauthenticated for public content), slug and search endpoints
+- **Authoring APIs** — `/api/cms/content`, workflow actions, media, taxonomy, audit
+- **Media library foundation** — assets with alt text, rights, review status
+- **Search integration** — published content indexed to statewide search on publish
+- **CMS workspace UI** — overview, content queue, media, taxonomy, audit in Phase 8 tab
+
+### Phase 8 Progress
+
+3/8 platform service steps complete (8.1 AUTH + 8.2 ADM + 8.3 CMS)
+
+---
+
 ## 2026-07-10 — Build 8.2 Administration Platform [ADM-001 · AC-179]
 
 **Documents:** `docs/phase-08/ADMINISTRATION_PLATFORM.md` · `docs/platform/admin/*` · **Registry:** `data/registry/administration-platform.json`

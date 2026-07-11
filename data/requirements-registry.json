@@ -6017,6 +6017,38 @@
       "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
     },
     {
+      "id": "CMS-001",
+      "title": "CMS and Content Services — Build 8.3",
+      "purpose": "Shared governed content platform separating content from presentation",
+      "description": "BUILD-008.3 — canonical content model, versioning, editorial workflows, media library, taxonomy, delivery APIs, search integration, /api/content and /api/cms",
+      "priority": "critical",
+      "principle": "ENG-006",
+      "dependencies": ["ADM-001", "AUTH-001", "PSV-001", "SIS-001"],
+      "related": ["NTF-001", "API-001"],
+      "acceptanceCriteria": [
+        "Canonical content repository with version history",
+        "Editorial workflow with role-based permissions",
+        "Permission-aware public and authenticated delivery APIs",
+        "Media library with accessibility and rights metadata",
+        "Taxonomy and tagging foundation",
+        "Search indexing for published content",
+        "Publication manifests and audit trail",
+        "Content workspace in Administration Center"
+      ],
+      "futureNotes": "Full block editor, translation publishing, scheduled job runner. AC-180.",
+      "implementationStatus": "done",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": null,
+        "api": "API-CMS",
+        "frontend": "PAGE-ADMIN-CMS",
+        "test": "TEST-CMS-001",
+        "doc": "DOC-CMS-001"
+      },
+      "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
+    },
+    {
       "id": "PSI-014",
       "title": "Platform Operations, Governance & Lifecycle Architecture — Volume 5.13",
       "purpose": "Operate the platform as a governed institution — stewardship, certification, and decades-long evolution",

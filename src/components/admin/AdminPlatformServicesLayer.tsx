@@ -3,13 +3,15 @@
 import psos from "../../../data/platform-services/platform-services-operating-system.json";
 import auth from "../../../data/registry/authentication-identity.json";
 import admin from "../../../data/registry/administration-platform.json";
+import cms from "../../../data/registry/content-services.json";
 import { AdminAuthenticationIdentity } from "@/components/admin/AdminAuthenticationIdentity";
 import { AdminAdministrationPlatform } from "@/components/admin/AdminAdministrationPlatform";
+import { AdminContentServices } from "@/components/admin/AdminContentServices";
 
 const STEPS = [
   { step: auth, label: "8.1 Authentication & Identity", accent: "border-blue-300 bg-blue-50", featured: false },
-  { step: admin, label: "8.2 Administration Platform", accent: "border-slate-400 bg-slate-100", featured: true },
-  { id: "8.3", label: "8.3 CMS & Content", accent: "border-slate-300 bg-slate-50", name: "CMS and Content", requirementId: "CMS-001", acceptanceCriteria: "pending" },
+  { step: admin, label: "8.2 Administration Platform", accent: "border-slate-300 bg-slate-50", featured: false },
+  { step: cms, label: "8.3 CMS & Content", accent: "border-emerald-400 bg-emerald-100", featured: true },
   { id: "8.4", label: "8.4 Notifications", accent: "border-slate-300 bg-slate-50", name: "Notification Services", requirementId: "NTF-001", acceptanceCriteria: "pending" },
   { id: "8.5", label: "8.5 Unified API", accent: "border-slate-300 bg-slate-50", name: "API Layer", requirementId: "API-001", acceptanceCriteria: "pending" },
   { id: "8.6", label: "8.6 Deployment", accent: "border-slate-300 bg-slate-50", name: "Deployment & CI/CD", requirementId: "DEP-001", acceptanceCriteria: "pending" },
@@ -48,6 +50,7 @@ export function AdminPlatformServicesLayer() {
         ))}
       </div>
 
+      <AdminContentServices />
       <AdminAdministrationPlatform />
       <AdminAuthenticationIdentity />
     </div>

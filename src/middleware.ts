@@ -24,10 +24,11 @@ const PUBLIC_PAGE_PREFIXES = [
   "/account-restricted",
 ];
 
-function isPublicApi(pathname: string) {
+function isPublicApi(pathname: string, method: string) {
   if (PUBLIC_API_PREFIXES.some((p) => pathname.startsWith(p))) return true;
   if (pathname.match(/^\/api\/invitations\/[^/]+$/) && !pathname.endsWith("/revoke")) return true;
   if (pathname.match(/^\/api\/invitations\/[^/]+\/accept$/)) return true;
+  if (method === "GET" && pathname.startsWith("/api/content")) return true;
   return false;
 }
 
@@ -53,7 +54,7 @@ export function middleware(request: NextRequest) {
   }
 
   if (pathname.startsWith("/api/")) {
-    if (!isPublicApi(pathname)) {
+    if (!isPublicApi(pathname, request.method)) {
       const session = request.cookies.get(SESSION_COOKIE)?.value;
       if (!session) {
         return NextResponse.json({ error: "Authentication required" }, { status: 401 });

@@ -320,7 +320,7 @@
       "steps": [
         { "id": "8.1", "name": "Authentication and Identity [AUTH-001]", "status": "done", "notes": "Full identity foundation: canonical model, sessions, MFA, invitations, context, security center, platform auth docs — AC-178" },
         { "id": "8.2", "name": "Administration Platform [ADM-001]", "status": "done", "notes": "Unified Administration Center, roles/permissions, scope enforcement, approvals, audit — AC-179" },
-        { "id": "8.3", "name": "CMS & content", "status": "pending", "notes": "" },
+        { "id": "8.3", "name": "CMS & Content Services [CMS-001]", "status": "done", "notes": "Canonical content model, editorial workflow, media library, delivery APIs, search integration — AC-180" },
         { "id": "8.4", "name": "Notifications", "status": "pending", "notes": "" },
         { "id": "8.5", "name": "API layer [API-*]", "status": "pending", "notes": "" },
         { "id": "8.6", "name": "Deployment & CI/CD", "status": "pending", "notes": "Netlify live" },
