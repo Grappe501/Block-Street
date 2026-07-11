@@ -1,0 +1,49 @@
+{
+  "baselines": [
+    {
+      "id": "baseline-standard",
+      "version": "1.0.0",
+      "mfa_policy": "required_elevated_roles",
+      "session_policy": "protected_sessions",
+      "export_policy": "approval_required_restricted",
+      "integration_policy": "disabled_by_default",
+      "ai_policy": "draft_only",
+      "file_policy": "safe_upload_defaults",
+      "audit_policy": "retention_365_days",
+      "incident_policy": "escalate_security_owner",
+      "mass_messaging": "disabled_until_approval",
+      "public_publishing": "disabled_until_workflow",
+      "break_glass": "disabled_until_configured"
+    },
+    {
+      "id": "baseline-managed",
+      "version": "1.0.0",
+      "mfa_policy": "required_all_admins",
+      "session_policy": "protected_sessions_short_idle",
+      "export_policy": "approval_required_all_restricted",
+      "integration_policy": "disabled_by_default",
+      "ai_policy": "draft_only",
+      "file_policy": "safe_upload_defaults",
+      "audit_policy": "retention_730_days",
+      "incident_policy": "escalate_security_owner_immediate",
+      "mass_messaging": "disabled_until_approval",
+      "public_publishing": "disabled_until_workflow",
+      "break_glass": "disabled_until_configured"
+    },
+    {
+      "id": "baseline-high-governance",
+      "version": "1.0.0",
+      "mfa_policy": "required_all_elevated",
+      "session_policy": "protected_sessions_reauth_sensitive",
+      "export_policy": "approval_required_dual_control",
+      "integration_policy": "disabled_by_default",
+      "ai_policy": "draft_only_governance_review",
+      "file_policy": "classification_required",
+      "audit_policy": "retention_1095_days",
+      "incident_policy": "escalate_security_owner_immediate",
+      "mass_messaging": "disabled_until_approval",
+      "public_publishing": "disabled_until_workflow",
+      "break_glass": "disabled_until_configured"
+    }
+  ]
+}

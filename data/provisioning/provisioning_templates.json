@@ -1,0 +1,76 @@
+{
+  "templates": [
+    {
+      "id": "tpl-multi-campus-v1",
+      "name": "Multi-Campus Network",
+      "institution_type": "multi_campus_network",
+      "version": "1.3.0",
+      "description": "Central administration with campus shell workspaces",
+      "status": "published",
+      "default_roles": ["institution_executive", "institution_administrator", "security_administrator", "data_steward", "support_lead", "training_lead", "workspace_administrator", "member", "auditor"],
+      "default_permissions": { "least_privilege": true, "mfa_elevated": true, "temporary_roles_expire": true },
+      "default_workspaces": [
+        { "key": "executive_office", "name": "Executive Office", "type": "executive", "purpose": "Strategic oversight", "owner_role": "institution_executive" },
+        { "key": "administration", "name": "Administration", "type": "admin", "purpose": "Platform governance", "owner_role": "institution_administrator" },
+        { "key": "security", "name": "Security", "type": "security", "purpose": "Access and incident response", "owner_role": "security_administrator" },
+        { "key": "training", "name": "Training", "type": "training", "purpose": "Safe practice environment", "owner_role": "training_lead" },
+        { "key": "pilot", "name": "Pilot", "type": "pilot", "purpose": "Controlled operational pilot", "owner_role": "support_lead" },
+        { "key": "central_operations", "name": "Central Operations", "type": "operations", "purpose": "Cross-campus coordination", "owner_role": "institution_administrator" }
+      ],
+      "default_modules": [
+        { "key": "missions", "status": "provisioned" },
+        { "key": "search", "status": "provisioned" },
+        { "key": "calendar", "status": "provisioned" },
+        { "key": "cms", "status": "provisioned" },
+        { "key": "notifications", "status": "pilot_only" },
+        { "key": "analytics", "status": "provisioned" },
+        { "key": "training", "status": "provisioned" },
+        { "key": "volunteer", "status": "provisioned" },
+        { "key": "ai_assistance", "status": "restricted" },
+        { "key": "public_site", "status": "not_requested" }
+      ],
+      "default_feature_flags": {
+        "mass_notifications": "disabled",
+        "restricted_data_export": "approval_gated",
+        "ai_actions": "draft_only",
+        "external_api_access": "disabled",
+        "public_publishing": "disabled"
+      },
+      "default_security_policy": "baseline-managed",
+      "default_notification_policy": "standard_with_quiet_hours",
+      "default_retention_policy": "institutional_standard",
+      "default_training_paths": ["organization_administrator", "campus_organizer"],
+      "default_dashboards": ["institution_launch", "provisioning_progress"],
+      "default_support_model": "assigned_owner"
+    },
+    {
+      "id": "tpl-college-organizing-v1",
+      "name": "College Organizing Institution",
+      "institution_type": "college_organizing",
+      "version": "1.0.0",
+      "description": "Single or primary campus organizing program",
+      "status": "published",
+      "default_roles": ["institution_executive", "institution_administrator", "security_administrator", "data_steward", "support_lead", "member"],
+      "default_permissions": { "least_privilege": true, "mfa_elevated": true },
+      "default_workspaces": [
+        { "key": "executive_office", "name": "Executive Office", "type": "executive", "purpose": "Leadership", "owner_role": "institution_executive" },
+        { "key": "administration", "name": "Administration", "type": "admin", "purpose": "Governance", "owner_role": "institution_administrator" },
+        { "key": "training", "name": "Training", "type": "training", "purpose": "Practice", "owner_role": "institution_administrator" },
+        { "key": "pilot", "name": "Pilot", "type": "pilot", "purpose": "Pilot operations", "owner_role": "support_lead" }
+      ],
+      "default_modules": [
+        { "key": "missions", "status": "provisioned" },
+        { "key": "cms", "status": "provisioned" },
+        { "key": "notifications", "status": "pilot_only" },
+        { "key": "training", "status": "provisioned" }
+      ],
+      "default_feature_flags": { "mass_notifications": "disabled", "ai_actions": "draft_only", "public_publishing": "disabled" },
+      "default_security_policy": "baseline-standard",
+      "default_notification_policy": "standard",
+      "default_retention_policy": "institutional_standard",
+      "default_training_paths": ["platform_member"],
+      "default_dashboards": ["institution_launch"],
+      "default_support_model": "assigned_owner"
+    }
+  ]
+}

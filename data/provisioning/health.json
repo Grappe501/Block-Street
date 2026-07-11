@@ -1,0 +1,10 @@
+{
+  "requests_under_review": 0,
+  "active_provisioning_jobs": 0,
+  "average_provisioning_time_minutes": 18,
+  "blocked_institutions": 0,
+  "validation_success_rate": 94,
+  "manual_interventions": 0,
+  "template_coverage_percent": 87,
+  "security_baseline_failures": 0
+}

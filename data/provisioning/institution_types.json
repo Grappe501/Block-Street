@@ -1,0 +1,76 @@
+{
+  "types": [
+    {
+      "id": "type-college-organizing",
+      "key": "college_organizing",
+      "name": "College Organizing Institution",
+      "description": "Campus-based organizing and leadership development",
+      "default_template_id": "tpl-college-organizing-v1",
+      "default_security_profile": "baseline-standard",
+      "default_module_set": ["missions", "search", "calendar", "cms", "notifications", "training", "volunteer", "civic_profile"],
+      "default_workspace_pattern": "campus",
+      "default_training_requirements": ["platform_member", "campus_organizer"],
+      "status": "active"
+    },
+    {
+      "id": "type-multi-campus",
+      "key": "multi_campus_network",
+      "name": "Multi-Campus Network",
+      "description": "Institutions operating across several campuses",
+      "default_template_id": "tpl-multi-campus-v1",
+      "default_security_profile": "baseline-managed",
+      "default_module_set": ["missions", "search", "calendar", "cms", "notifications", "analytics", "training", "volunteer", "campus_structure"],
+      "default_workspace_pattern": "multi_campus",
+      "default_training_requirements": ["organization_administrator", "campus_organizer"],
+      "status": "active"
+    },
+    {
+      "id": "type-statewide",
+      "key": "statewide_coalition",
+      "name": "Statewide Coalition",
+      "description": "Statewide organizing and coalition activity",
+      "default_template_id": "tpl-statewide-v1",
+      "default_security_profile": "baseline-high-governance",
+      "default_module_set": ["missions", "search", "calendar", "cms", "notifications", "analytics", "relationships", "county_structure", "registry"],
+      "default_workspace_pattern": "statewide",
+      "default_training_requirements": ["organization_administrator", "data_steward", "security_administrator"],
+      "status": "active"
+    },
+    {
+      "id": "type-campaign",
+      "key": "campaign_organization",
+      "name": "Campaign Organization",
+      "description": "Electoral or issue campaign operations",
+      "default_template_id": "tpl-campaign-v1",
+      "default_security_profile": "baseline-managed",
+      "default_module_set": ["missions", "volunteer", "notifications", "calendar", "analytics", "cms"],
+      "default_workspace_pattern": "campaign",
+      "default_training_requirements": ["mission_coordinator", "organization_administrator"],
+      "status": "active"
+    },
+    {
+      "id": "type-civic-education",
+      "key": "civic_education",
+      "name": "Civic Education Institution",
+      "description": "Course, cohort, and learning delivery",
+      "default_template_id": "tpl-civic-education-v1",
+      "default_security_profile": "baseline-managed",
+      "default_module_set": ["training", "cms", "calendar", "notifications", "assessments", "certifications"],
+      "default_workspace_pattern": "education",
+      "default_training_requirements": ["instructor", "organization_administrator"],
+      "status": "active"
+    },
+    {
+      "id": "type-volunteer-network",
+      "key": "volunteer_network",
+      "name": "Volunteer Network",
+      "description": "Distributed volunteer coordination",
+      "default_template_id": "tpl-volunteer-v1",
+      "default_security_profile": "baseline-standard",
+      "default_module_set": ["volunteer", "missions", "events", "training", "notifications", "recognition"],
+      "default_workspace_pattern": "volunteer",
+      "default_training_requirements": ["mission_coordinator", "platform_member"],
+      "status": "active"
+    }
+  ]
+}
