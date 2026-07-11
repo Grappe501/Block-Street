@@ -74,7 +74,11 @@ Platform                Phase 8 — How does it run?
 
         ↓
 
-Experience              Phase 9 — How does it feel?
+Institutional Launch    Phase 9 — Can institutions adopt and operate?
+
+        ↓
+
+Experience              Phase 10 — How does it feel?
 
 ```
 
@@ -104,11 +108,13 @@ Experience              Phase 9 — How does it feel?
 
 | **6** | **Growth Operating System** | ***How does the platform grow itself?*** | 🚀 **Active** |
 
-| **7** | Intelligence Layer | *How do we understand and guide?* | Pending |
+| **7** | Intelligence Layer | *How do we understand and guide?* | ✅ Complete |
 
-| **8** | Platform Services | *How does it run?* | Pending |
+| **8** | Platform Services | *How does it run?* | ✅ Complete |
 
-| **9** | Experience Layer | *How does it feel?* | Pending |
+| **9** | Institutional Launch | *Can institutions adopt and operate?* | 🚀 **Active** |
+
+| **10** | Experience Layer | *How does it feel?* | Pending |
 
 
 
@@ -318,7 +324,17 @@ Authentication · Administration · CMS · Notifications · API · Deployment ·
 
 
 
-## Phase 9 — Experience Layer
+## Phase 9 — Institutional Launch, Adoption, and Scale
+
+Provisioning · Configuration · Migration · Onboarding · Training · Pilot · Support · Adoption
+
+*Moves the platform from technically capable to operationally adoptable — institutions can enter, configure, train, pilot, and scale without constant engineering intervention.*
+
+**Requirement:** ILS-001 · **Doc:** `docs/phase-09/PHASE_9_MASTER_SEQUENCE.md`
+
+---
+
+## Phase 10 — Experience Layer
 
 
 
@@ -382,7 +398,9 @@ Every feature should help someone move **one step forward** on the [Participant 
 
 | Auth, API, deployment | Phase 8 Platform |
 
-| Design system, mobile | Phase 9 Experience |
+| Institutional launch, adoption | Phase 9 Institutional Launch |
+
+| Design system, mobile | Phase 10 Experience |
 
 
 

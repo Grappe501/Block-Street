@@ -22,6 +22,26 @@
 
 ---
 
+## 2026-07-11 — Build 9.1 Institutional Provisioning [PRV-001 · AC-186] · **PHASE 9 OPEN**
+
+**Documents:** `docs/phase-09/INSTITUTIONAL_PROVISIONING.md` · `docs/platform/launch/*` · **Registry:** `data/registry/institutional-provisioning.json`
+
+### What Changed
+
+- **Phase 9 foundation** — ILS-001 master sequence, institutional launch architecture, 14 platform launch standards
+- **Institutional provisioning workflow** — governed lifecycle from requested through active with audit trail
+- **Configuration templates** — reusable institution models (campus, statewide, campaign)
+- **Launch engine** — `src/lib/launch/` provisioning, overview, transitions
+- **v1 APIs** — `/api/v1/launch/*` (overview, provisionings, templates, transitions)
+- **Institutional Launch Center** — Phase 9 admin tab with launch dashboard and provisioning requests
+
+### Phase Status
+
+- Phase 8: **Complete** (8/8 Platform Services)
+- Phase 9: **In Progress** (1/8 Institutional Launch)
+
+---
+
 ## 2026-07-11 — Build 8.8 Security, Privacy, and Resilience Platform [SEC-001 · AC-185] · **PHASE 8 COMPLETE**
 
 **Documents:** `docs/phase-08/SECURITY_PRIVACY_RESILIENCE.md` · `docs/platform/security/*` · **Registry:** `data/registry/security-platform.json`
