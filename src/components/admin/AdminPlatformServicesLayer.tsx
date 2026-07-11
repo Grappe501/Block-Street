@@ -8,6 +8,7 @@ import ntf from "../../../data/registry/notification-services.json";
 import api from "../../../data/registry/unified-api-layer.json";
 import dpl from "../../../data/registry/deployment-platform.json";
 import mon from "../../../data/registry/monitoring-platform.json";
+import sec from "../../../data/registry/security-platform.json";
 import { AdminAuthenticationIdentity } from "@/components/admin/AdminAuthenticationIdentity";
 import { AdminAdministrationPlatform } from "@/components/admin/AdminAdministrationPlatform";
 import { AdminContentServices } from "@/components/admin/AdminContentServices";
@@ -15,6 +16,7 @@ import { AdminNotificationServices } from "@/components/admin/AdminNotificationS
 import { AdminUnifiedApiLayer } from "@/components/admin/AdminUnifiedApiLayer";
 import { AdminDeploymentPlatform } from "@/components/admin/AdminDeploymentPlatform";
 import { AdminMonitoringPlatform } from "@/components/admin/AdminMonitoringPlatform";
+import { AdminSecurityPlatform } from "@/components/admin/AdminSecurityPlatform";
 
 const STEPS = [
   { step: auth, label: "8.1 Authentication & Identity", accent: "border-blue-300 bg-blue-50", featured: false },
@@ -23,8 +25,8 @@ const STEPS = [
   { step: ntf, label: "8.4 Notifications", accent: "border-violet-300 bg-violet-50", featured: false },
   { step: api, label: "8.5 Unified API", accent: "border-sky-300 bg-sky-50", featured: false },
   { step: dpl, label: "8.6 Deployment", accent: "border-slate-400 bg-slate-100", featured: false },
-  { step: mon, label: "8.7 Monitoring", accent: "border-indigo-400 bg-indigo-100", featured: true },
-  { id: "8.8", label: "8.8 Security", accent: "border-slate-300 bg-slate-50", name: "Security Platform", requirementId: "SEC-001", acceptanceCriteria: "pending" },
+  { step: mon, label: "8.7 Monitoring", accent: "border-indigo-300 bg-indigo-50", featured: false },
+  { step: sec, label: "8.8 Security", accent: "border-red-500 bg-red-100", featured: true },
 ];
 
 export function AdminPlatformServicesLayer() {
@@ -46,18 +48,15 @@ export function AdminPlatformServicesLayer() {
             className={`card border-l-4 ${item.accent} ${"featured" in item && item.featured ? "ring-2 ring-slate-400" : ""}`}
           >
             <p className="text-xs font-semibold text-slate-800">{item.label}</p>
-            <h3 className="mt-1 font-bold text-slate-950">
-              {"step" in item && item.step ? item.step.productName : item.name}
-            </h3>
+            <h3 className="mt-1 font-bold text-slate-950">{item.step.productName}</h3>
             <p className="mt-2 font-mono text-xs text-slate-700">
-              {"step" in item && item.step
-                ? `${item.step.requirementId} · ${item.step.acceptanceCriteria}`
-                : `${item.requirementId} · ${item.acceptanceCriteria}`}
+              {item.step.requirementId} · {item.step.acceptanceCriteria}
             </p>
           </div>
         ))}
       </div>
 
+      <AdminSecurityPlatform />
       <AdminMonitoringPlatform />
       <AdminDeploymentPlatform />
       <AdminUnifiedApiLayer />

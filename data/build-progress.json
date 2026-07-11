@@ -313,7 +313,7 @@
       "id": 8,
       "name": "Platform Services",
       "slug": "phase-08-platform",
-      "status": "in_progress",
+      "status": "complete",
       "docPath": "docs/phase-08/PHASE_8_MASTER_SEQUENCE.md",
       "registryPath": "data/platform-services/platform-services-operating-system.json",
       "question": "How does it run?",
@@ -325,7 +325,7 @@
         { "id": "8.5", "name": "Unified API Layer [API-001]", "status": "done", "notes": "v1 gateway, standard errors, context, idempotency, rate limits, credentials, webhooks, public APIs — AC-182" },
         { "id": "8.6", "name": "Deployment & CI/CD [DPL-001]", "status": "done", "notes": "Release governance, CI workflow, environments, approvals, migrations, smoke tests, deployment APIs — AC-183" },
         { "id": "8.7", "name": "Monitoring & Reliability [MON-001]", "status": "done", "notes": "Unified observability, metrics, alerts, dashboards, deployment markers, self-diagnosis, operational intelligence — AC-184" },
-        { "id": "8.8", "name": "Security [SEC-001]", "status": "pending", "notes": "" }
+        { "id": "8.8", "name": "Security Platform [SEC-001]", "status": "done", "notes": "Defense-in-depth security, data classification, vulnerabilities, incidents, privacy, backup/recovery — AC-185 · Phase 8 complete" }
       ]
     },
     {

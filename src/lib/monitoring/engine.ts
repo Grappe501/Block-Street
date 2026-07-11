@@ -111,7 +111,7 @@ export function listReleases() {
 
 export function getDashboards(): DashboardSummary[] {
   const overview = getMonitoringOverview();
-  const dashboards = loadDashboards() as DashboardSummary[];
+  const dashboards = loadDashboards() as unknown as DashboardSummary[];
   if (dashboards.length) return dashboards;
 
   return [

@@ -6177,6 +6177,38 @@
       "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-11" }
     },
     {
+      "id": "SEC-PSV-001",
+      "title": "Security, Privacy, and Resilience Platform — Build 8.8",
+      "purpose": "Defense-in-depth security platform protecting identity, access, data, AI, privacy, and recovery",
+      "description": "BUILD-008.8 — security governance, threat models, data classification, vulnerabilities, incidents, privacy, backup/recovery — completes Phase 8",
+      "priority": "critical",
+      "principle": "ENG-006",
+      "dependencies": ["MON-001", "DPL-001", "API-001", "ADM-001", "AUTH-001", "PSV-001"],
+      "related": ["SEC-001"],
+      "acceptanceCriteria": [
+        "Documented security architecture and risk register",
+        "Server-side authentication and authorization on all protected capabilities",
+        "Data classification with export and retention rules",
+        "Vulnerability tracking and incident response lifecycle",
+        "Privacy requests and governed exports",
+        "Encrypted backups with restore testing",
+        "Security monitoring integrated with MON-001",
+        "Security administration center in Phase 8 tab"
+      ],
+      "futureNotes": "Formal certification, enterprise SOC, penetration testing contracts. AC-185. Registry SEC-001 (Phase 8).",
+      "implementationStatus": "done",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": null,
+        "api": "API-SEC",
+        "frontend": "PAGE-ADMIN-SEC",
+        "test": "TEST-SEC-PSV-001",
+        "doc": "DOC-SEC-PSV-001"
+      },
+      "versionHistory": { "created": "2026-07-11", "implemented": "2026-07-11" }
+    },
+    {
       "id": "PSI-014",
       "title": "Platform Operations, Governance & Lifecycle Architecture — Volume 5.13",
       "purpose": "Operate the platform as a governed institution — stewardship, certification, and decades-long evolution",

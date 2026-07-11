@@ -5,12 +5,12 @@
   "requirementId": "PSV-001",
   "productName": "Platform Services",
   "phaseQuestion": "How does it run?",
-  "status": "in_progress",
+  "status": "complete",
   "priority": "critical",
   "readAfter": "INT-001",
   "guidingPrinciple": "Every platform capability must be secure, observable, governable, and recoverable.",
   "mission": "Create unified platform-services layer — identity, access, administration, content, notifications, APIs, deployment, monitoring, security.",
-  "stepsComplete": 7,
+  "stepsComplete": 8,
   "stepsTotal": 8,
   "servicePillars": [
     "Identity",
@@ -34,10 +34,10 @@
     { "id": "8.5", "name": "Unified API Layer", "requirement": "API-001", "artifact": "docs/phase-08/UNIFIED_API_AND_INTEGRATION_LAYER.md", "registryPath": "data/registry/unified-api-layer.json", "acceptanceCriteria": "AC-182", "status": "done" },
     { "id": "8.6", "name": "Deployment and CI/CD", "requirement": "DPL-001", "artifact": "docs/phase-08/DEPLOYMENT_RELEASE_ENGINEERING.md", "registryPath": "data/registry/deployment-platform.json", "acceptanceCriteria": "AC-183", "status": "done" },
     { "id": "8.7", "name": "Monitoring and Reliability", "requirement": "MON-001", "artifact": "docs/phase-08/MONITORING_OBSERVABILITY.md", "registryPath": "data/registry/monitoring-platform.json", "acceptanceCriteria": "AC-184", "status": "done" },
-    { "id": "8.8", "name": "Security Platform", "requirement": "SEC-001", "status": "pending" }
+    { "id": "8.8", "name": "Security Platform", "requirement": "SEC-001", "artifact": "docs/phase-08/SECURITY_PRIVACY_RESILIENCE.md", "registryPath": "data/registry/security-platform.json", "acceptanceCriteria": "AC-185", "status": "done" }
   ],
   "governedBy": ["ENG-006", "PRE-001", "KDG-001", "SEC-001"],
   "buildsOn": ["IAS-001", "PSI-002", "ENG-006"],
   "acceptanceCriteria": "AC-179",
-  "acceptanceCriteriaMet": false
+  "acceptanceCriteriaMet": true
 }

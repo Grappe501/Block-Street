@@ -22,6 +22,28 @@
 
 ---
 
+## 2026-07-11 — Build 8.8 Security, Privacy, and Resilience Platform [SEC-001 · AC-185] · **PHASE 8 COMPLETE**
+
+**Documents:** `docs/phase-08/SECURITY_PRIVACY_RESILIENCE.md` · `docs/platform/security/*` · **Registry:** `data/registry/security-platform.json`
+
+### What Changed
+
+- **Security governance** — risk register, threat models, policy hierarchy, zero-trust principles
+- **Data classification** — Public through Highly Restricted with access, export, and retention rules
+- **Security posture score** — MFA coverage, vulnerabilities, backups, access reviews, incidents
+- **Incident lifecycle** — detect, contain, investigate, recover, close with audit trail
+- **Vulnerability registry** — tracking, remediation, verification workflow
+- **Privacy & exports** — privacy requests, export manifests, approval requirements
+- **Backup & recovery** — encrypted backups, RPO/RTO, restore testing
+- **v1 APIs** — `/api/v1/security/*` (posture, events, incidents, vulnerabilities, privacy, recovery)
+- **Security Administration Center** — posture, events, incidents, vulnerabilities, audit in Phase 8 tab
+
+### Phase 8 Progress
+
+**8/8 platform service steps complete — Phase 8 is institutionally operable.**
+
+---
+
 ## 2026-07-11 — Build 8.7 Monitoring, Observability, and Operational Intelligence [MON-001 · AC-184]
 
 **Documents:** `docs/phase-08/MONITORING_OBSERVABILITY.md` · `docs/platform/monitoring/*` · **Registry:** `data/registry/monitoring-platform.json`
