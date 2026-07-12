@@ -8,12 +8,14 @@ import mig from "../../../data/registry/data-migration.json";
 import onb from "../../../data/registry/guided-onboarding.json";
 import trn from "../../../data/registry/training-certification.json";
 import plt from "../../../data/registry/pilot-acceptance.json";
+import ops from "../../../data/registry/operational-operations.json";
 import { AdminInstitutionalProvisioning } from "@/components/admin/AdminInstitutionalProvisioning";
 import { AdminInstitutionalOrganization } from "@/components/admin/AdminInstitutionalOrganization";
 import { AdminInstitutionalMigration } from "@/components/admin/AdminInstitutionalMigration";
 import { AdminInstitutionalOnboarding } from "@/components/admin/AdminInstitutionalOnboarding";
 import { AdminInstitutionalTraining } from "@/components/admin/AdminInstitutionalTraining";
 import { AdminInstitutionalPilot } from "@/components/admin/AdminInstitutionalPilot";
+import { AdminInstitutionalOperations } from "@/components/admin/AdminInstitutionalOperations";
 
 const STEPS: Array<
   | { step: { productName: string; requirementId: string; acceptanceCriteria: string }; label: string; accent: string; featured: boolean }
@@ -24,8 +26,8 @@ const STEPS: Array<
   { step: mig, label: "9.3 Migration & Data Readiness", accent: "border-slate-500 bg-slate-100", featured: false },
   { step: onb, label: "9.4 Guided Onboarding", accent: "border-emerald-500 bg-emerald-100", featured: false },
   { step: trn, label: "9.5 Training & Certification", accent: "border-violet-500 bg-violet-100", featured: false },
-  { step: plt, label: "9.6 Pilot & Acceptance", accent: "border-rose-500 bg-rose-100", featured: true },
-  { label: "9.7 Support & Success", accent: "border-slate-300 bg-slate-50", featured: false, pending: "SUP-001" },
+  { step: plt, label: "9.6 Pilot & Acceptance", accent: "border-rose-500 bg-rose-100", featured: false },
+  { step: ops, label: "9.7 Operational Launch", accent: "border-teal-500 bg-teal-100", featured: true },
   { label: "9.8 Adoption & Scale", accent: "border-slate-300 bg-slate-50", featured: false, pending: "SCL-001" },
 ];
 
@@ -62,6 +64,7 @@ export function AdminInstitutionalLaunchLayer() {
         ))}
       </div>
 
+      <AdminInstitutionalOperations />
       <AdminInstitutionalPilot />
       <AdminInstitutionalTraining />
       <AdminInstitutionalOnboarding />
