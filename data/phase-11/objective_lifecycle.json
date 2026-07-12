@@ -1,0 +1,20 @@
+{
+  "system_id": "OBJ-001",
+  "wave": "11.2-W1",
+  "states": [
+    {"key": "draft", "name": "Draft", "description": "Objective being authored; no execution authority."},
+    {"key": "proposed", "name": "Proposed", "description": "Submitted for review; awaiting approval."},
+    {"key": "approved", "name": "Approved", "description": "Governance approved; not yet ready for execution."},
+    {"key": "ready", "name": "Ready", "description": "Prerequisites met; awaiting activation."},
+    {"key": "active", "name": "Active", "description": "Execution authorized; work may be assigned."},
+    {"key": "on_track", "name": "On Track", "description": "Active with healthy progress signals."},
+    {"key": "needs_attention", "name": "Needs Attention", "description": "Active but requires Human review."},
+    {"key": "at_risk", "name": "At Risk", "description": "Material risk to achieving desired state."},
+    {"key": "completed", "name": "Completed", "description": "Desired state achieved per governed closeout."},
+    {"key": "partially_achieved", "name": "Partially Achieved", "description": "Honest partial success recorded."},
+    {"key": "superseded", "name": "Superseded", "description": "Replaced by a successor Objective with lineage."},
+    {"key": "archived", "name": "Archived", "description": "Read-only institutional memory; searchable."}
+  ],
+  "parent_initiative_gate": "Objectives may not become active until parent Initiative is active.",
+  "enforcement": "planned_w3"
+}

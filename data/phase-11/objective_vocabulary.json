@@ -1,0 +1,29 @@
+{
+  "system_id": "OBJ-001",
+  "wave": "11.2-W1",
+  "status": "canonical",
+  "terms": [
+    {"term": "objective", "definition": "The future state the institution intends to create.", "canonical": true, "prohibited_uses": ["task", "meeting", "checklist"], "spanish_term": "Objetivo", "status": "active"},
+    {"term": "key_result", "definition": "A measurable indicator of Objective progress.", "canonical": true, "prohibited_uses": ["purpose statement"], "spanish_term": "Resultado Clave", "status": "active"},
+    {"term": "workstream", "definition": "A major line of execution under one primary Objective.", "canonical": true, "prohibited_uses": ["orphan container"], "spanish_term": "Línea de Trabajo", "status": "active"},
+    {"term": "mission", "definition": "The smallest independently meaningful piece of work.", "canonical": true, "prohibited_uses": ["initiative synonym"], "spanish_term": "Misión", "status": "active"},
+    {"term": "milestone", "definition": "A meaningful checkpoint marking progress.", "canonical": true, "prohibited_uses": ["deliverable synonym"], "spanish_term": "Hito", "status": "active"},
+    {"term": "deliverable", "definition": "A tangible output produced by a Mission.", "canonical": true, "prohibited_uses": ["milestone synonym"], "spanish_term": "Entregable", "status": "active"},
+    {"term": "task", "definition": "An executable action within a Mission.", "canonical": true, "prohibited_uses": ["objective", "orphan work"], "spanish_term": "Tarea", "status": "active"},
+    {"term": "activity", "definition": "Recorded work performed toward a Task.", "canonical": true, "prohibited_uses": [], "spanish_term": "Actividad", "status": "active"},
+    {"term": "evidence", "definition": "Proof that work occurred or outcomes were achieved.", "canonical": true, "prohibited_uses": ["anecdote without record"], "spanish_term": "Evidencia", "status": "active"},
+    {"term": "outcome", "definition": "The evaluated result of an Objective at closeout.", "canonical": true, "prohibited_uses": ["binary pass/fail only"], "spanish_term": "Resultado", "status": "active"},
+    {"term": "lessons_learned", "definition": "Institutional memory captured after execution.", "canonical": true, "prohibited_uses": [], "spanish_term": "Lecciones Aprendidas", "status": "active"},
+    {"term": "traceability", "definition": "The ability to answer why any work item exists.", "canonical": true, "prohibited_uses": [], "spanish_term": "Trazabilidad", "status": "active"},
+    {"term": "orphan_work", "definition": "Execution artifact without Objective ancestry.", "canonical": true, "prohibited_uses": ["allowed pattern"], "spanish_term": "Trabajo Huérfano", "status": "active"},
+    {"term": "executive_owner", "definition": "Human accountable for Objective legitimacy and outcome acceptance.", "canonical": true, "prohibited_uses": ["service identity"], "spanish_term": "Responsable Ejecutivo", "status": "active"},
+    {"term": "operational_owner", "definition": "Human accountable for day-to-day Objective execution.", "canonical": true, "prohibited_uses": ["AI assistant"], "spanish_term": "Responsable de Operaciones", "status": "active"},
+    {"term": "review_authority", "definition": "Human or body authorized to conduct Objective reviews.", "canonical": true, "prohibited_uses": [], "spanish_term": "Autoridad de Revisión", "status": "active"},
+    {"term": "contributor", "definition": "Human performing work toward the Objective.", "canonical": true, "prohibited_uses": [], "spanish_term": "Colaborador", "status": "active"},
+    {"term": "observer", "definition": "Human with read access without execution authority.", "canonical": true, "prohibited_uses": [], "spanish_term": "Observador", "status": "active"},
+    {"term": "review_rhythm", "definition": "Declared cadence for Objective progress reviews.", "canonical": true, "prohibited_uses": [], "spanish_term": "Ritmo de Revisión", "status": "active"},
+    {"term": "desired_state", "definition": "The future condition the Objective intends to create.", "canonical": true, "prohibited_uses": ["task list"], "spanish_term": "Estado Deseado", "status": "active"},
+    {"term": "current_state", "definition": "The baseline condition before Objective execution.", "canonical": true, "prohibited_uses": [], "spanish_term": "Estado Actual", "status": "active"},
+    {"term": "success_measurement", "definition": "How the institution will know the Objective succeeded.", "canonical": true, "prohibited_uses": ["vanity metric only"], "spanish_term": "Medición del Éxito", "status": "active"}
+  ]
+}

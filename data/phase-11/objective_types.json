@@ -1,0 +1,20 @@
+{
+  "system_id": "OBJ-001",
+  "wave": "11.2-W1",
+  "classification_rule": "One primary type per objective; types influence recommendations but do not change governance.",
+  "types": [
+    {"key": "strategic", "name": "Strategic Objective", "description": "Long-horizon institutional direction tied to mission outcomes.", "status": "active"},
+    {"key": "operational", "name": "Operational Objective", "description": "Day-to-day execution outcomes supporting active Initiatives.", "status": "active"},
+    {"key": "community", "name": "Community Objective", "description": "Community-facing change the institution intends to create.", "status": "active"},
+    {"key": "legislative", "name": "Legislative Objective", "description": "Policy or civic outcomes requiring governed advocacy.", "status": "active"},
+    {"key": "educational", "name": "Educational Objective", "description": "Learning, training, or certification outcomes.", "status": "active"},
+    {"key": "campaign", "name": "Campaign Objective", "description": "Time-bounded mobilization targets with measurable reach.", "status": "active"},
+    {"key": "technology", "name": "Technology Objective", "description": "Platform, tooling, or data outcomes.", "status": "active"},
+    {"key": "financial", "name": "Financial Objective", "description": "Funding, budget, or resource sustainability outcomes.", "status": "active"},
+    {"key": "volunteer", "name": "Volunteer Objective", "description": "Volunteer recruitment, retention, or capacity outcomes.", "status": "active"},
+    {"key": "membership", "name": "Membership Objective", "description": "Membership growth, engagement, or retention outcomes.", "status": "active"},
+    {"key": "training", "name": "Training Objective", "description": "Skill development and readiness outcomes.", "status": "active"},
+    {"key": "research", "name": "Research Objective", "description": "Evidence, findings, or analysis outcomes.", "status": "active"},
+    {"key": "emergency", "name": "Emergency Objective", "description": "Short-horizon urgent outcomes under emergency governance.", "status": "active"}
+  ]
+}
