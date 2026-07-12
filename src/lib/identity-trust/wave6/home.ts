@@ -7,10 +7,10 @@ import { loadHumanHelpEvents, persistHumanHelpEvents } from "./data";
 
 const ASSURANCE_EXPLANATIONS: Record<string, string> = {
   sponsored: "You have entered through a sponsor invitation. Independent verification may still be required.",
-  verified: "The platform has received sufficient independent confirmation of your identity.",
-  trusted: "You have established trusted standing within your institution.",
+  verified: "The platform has received sufficient independent confirmation of our identity.",
+  trusted: "You have established trusted standing within our institution.",
   federation_trusted: "You have federation-trusted standing with portable assurance recognized across institutions.",
-  provisional: "Your identity is provisional while verification or local requirements are completed.",
+  provisional: "Our identity is provisional while verification or local requirements are completed.",
 };
 
 export function getIdentityHome(humanId: string): IdentityHomeView | null {
@@ -33,7 +33,7 @@ export function getIdentityHome(humanId: string): IdentityHomeView | null {
     global_human_id: identity.global_human_id,
     public_name: identity.public_name,
     assurance_state: identity.trust_label,
-    assurance_explanation: ASSURANCE_EXPLANATIONS[identity.trust_label] ?? "Your identity status is being evaluated.",
+    assurance_explanation: ASSURANCE_EXPLANATIONS[identity.trust_label] ?? "Our identity status is being evaluated.",
     memberships: memberships.map((m) => ({
       institution_id: m.institution_id,
       status: m.membership_status,
@@ -57,17 +57,17 @@ function computeNextAction(
   openCases: number
 ): IdentityHomeView["next_action"] {
   if (openCases > 0) {
-    return { action: "Respond to your open identity case before the deadline.", deadline: null, priority: "high" };
+    return { action: "Respond to our open identity case before the deadline.", deadline: null, priority: "high" };
   }
   if (trustLabel === "sponsored" && verificationCount < 2) {
     return {
-      action: "Ask one more person who knows you to verify your identity.",
+      action: "Ask one more person who knows you to verify our identity.",
       deadline: null,
       priority: "high",
     };
   }
   if (trustLabel === "provisional") {
-    return { action: "Complete local verification requirements for your institution membership.", deadline: null, priority: "medium" };
+    return { action: "Complete local verification requirements for our institution membership.", deadline: null, priority: "medium" };
   }
   return null;
 }

@@ -18,7 +18,7 @@
     "buildsStrongerCommunitiesNotDependency": true
   },
   "traditionalAIPrompt": "Ask me anything.",
-  "communityOSAIPrompt": "How can I help you accomplish your mission today?",
+  "communityOSAIPrompt": "How can I help us accomplish our mission today?",
   "aiOperationalModel": {
     "layers": [
       "Context",

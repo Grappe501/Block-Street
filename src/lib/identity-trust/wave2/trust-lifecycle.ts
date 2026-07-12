@@ -330,7 +330,7 @@ export function getVerificationStatusView(humanId: string): VerificationStatusVi
   }
 
   const state = assurance?.state ?? "sponsored";
-  let nextAction = "Ask someone who personally knows you to confirm your identity.";
+  let nextAction = "Ask someone who personally knows you to confirm our identity.";
   if (state === "verified" || state === "strongly_verified") {
     nextAction = "Identity verification complete. Continue accountable participation.";
   } else if (state === "restricted") {

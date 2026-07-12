@@ -6,7 +6,7 @@
   "purpose": "Central operating space combining identity, relationships, organizing activity, leadership development, and opportunities — the page participants visit most often.",
   "terminology": {
     "avoid": ["profile page", "account dashboard", "edit profile", "user settings"],
-    "use": ["Personal Headquarters", "organizing home", "update your mission", "privacy & preferences"]
+    "use": ["Personal Headquarters", "organizing home", "update our mission", "privacy & preferences"]
   },
   "loginQuestions": [
     "What has changed since I was here last?",
@@ -16,8 +16,8 @@
   "homeScreenMessages": [
     "Welcome back",
     "Here's what's happening",
-    "Here's your progress",
-    "Here's what needs your attention",
+    "Here's our progress",
+    "Here's what needs our attention",
     "Here's how you can help today"
   ],
   "participantQuestions": [

@@ -157,11 +157,11 @@
     "maxItems": 7,
     "orchestrator": "assembleMorningBrief(participantId, lastVisitAt)",
     "exampleItems": [
-      "Three new students joined your campus yesterday.",
-      "Your county needs volunteers for an event this weekend.",
-      "One friend accepted your invitation.",
+      "Three new students joined our campus yesterday.",
+      "Our county needs volunteers for an event this weekend.",
+      "One friend accepted our invitation.",
       "A new leadership lesson is available.",
-      "Your committee meets tomorrow.",
+      "Our committee meets tomorrow.",
       "You're one milestone away from becoming a Mentor."
     ],
     "reinforces": [

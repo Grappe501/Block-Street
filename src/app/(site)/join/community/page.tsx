@@ -23,7 +23,7 @@ export default async function JoinCommunityPage({
           ← Back to counties
         </Link>
         <h1 className="mt-4 text-3xl font-bold text-slate-900">
-          Choose Your School in {county?.name ?? countySlug}
+          Choose Our School in {county?.name ?? countySlug}
         </h1>
         <p className="mt-2 text-slate-600">
           Every school has equal standing. Don&apos;t see yours? More schools added as students onboard.
@@ -64,9 +64,9 @@ export default async function JoinCommunityPage({
     return (
       <div className="mx-auto max-w-4xl px-4 py-12">
         <Link href="/join/community" className="text-sm text-brand-600 hover:underline">← Back</Link>
-        <h1 className="mt-4 text-3xl font-bold text-slate-900">Step 1: Pick Your County</h1>
+        <h1 className="mt-4 text-3xl font-bold text-slate-900">Step 1: Pick Our County</h1>
         <p className="mt-2 text-slate-600">
-          Choose the county where your school is located. (Honor system — we trust you.)
+          Choose the county where our school is located. (Honor system — we trust you.)
         </p>
         <div className="mt-8 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
           {counties.map((county) => {
@@ -93,9 +93,9 @@ export default async function JoinCommunityPage({
     return (
       <div className="mx-auto max-w-4xl px-4 py-12">
         <Link href="/join/community" className="text-sm text-brand-600 hover:underline">← Back</Link>
-        <h1 className="mt-4 text-3xl font-bold text-slate-900">Choose Your County</h1>
+        <h1 className="mt-4 text-3xl font-bold text-slate-900">Choose Our County</h1>
         <p className="mt-2 text-slate-600">
-          For young adults ages 16–24 not currently in school. Your county is your organizing home.
+          For young adults ages 16–24 not currently in school. Our county is our organizing home.
         </p>
         <div className="mt-8 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
           {counties.map((county) => (
@@ -121,7 +121,7 @@ export default async function JoinCommunityPage({
         <Link href="/join/community?path=student" className="card group text-center transition hover:border-brand-300 hover:shadow-md">
           <div className="text-4xl">🎓</div>
           <h2 className="mt-4 text-xl font-bold group-hover:text-brand-700">I&apos;m in School</h2>
-          <p className="mt-2 text-sm text-slate-600">County → School → Your network</p>
+          <p className="mt-2 text-sm text-slate-600">County → School → Our network</p>
         </Link>
         <Link href="/join/community?path=county" className="card group text-center transition hover:border-brand-300 hover:shadow-md">
           <div className="text-4xl">📍</div>

@@ -229,7 +229,7 @@ What happened · Why · What comes next
 
 **[UXB-DLS19]** Every empty state should encourage progress:
 
-*"No missions yet."* → *"Your first mission starts your community's story."*
+*"No missions yet."* → *"Our first mission starts our community's story."*
 
 **[UXB-DLS19a]** **Empty states become invitations.**
 

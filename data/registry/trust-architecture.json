@@ -17,7 +17,7 @@
     "trustTreatedAsInfrastructure": true
   },
   "traditionalSoftwareSays": "The system has determined...",
-  "communityOSSays": "Here's what happened, why it happened, the information considered, and what your options are.",
+  "communityOSSays": "Here's what happened, why it happened, the information considered, and what our options are.",
   "trustModel": {
     "layers": [
       "Action",

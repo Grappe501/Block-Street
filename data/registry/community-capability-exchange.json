@@ -90,8 +90,8 @@
   "recognition": {
     "appreciationWhenOthersBenefit": true,
     "examples": [
-      "Your event template has helped five campuses",
-      "Your volunteer guide was reused statewide"
+      "Our event template has helped five campuses",
+      "Our volunteer guide was reused statewide"
     ],
     "encouragesGenerosityNotOwnership": true,
     "integrates": "CRA-001"

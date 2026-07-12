@@ -50,7 +50,7 @@ export function AccountSecurityCenter() {
         <div>
           <Link href="/" className="text-sm text-blue-700 underline">Block Street</Link>
           <h1 className="mt-2 text-2xl font-bold text-blue-950">Security Center</h1>
-          <p className="text-sm text-blue-800">Manage your identity, sessions, and active workspace context</p>
+          <p className="text-sm text-blue-800">Manage our identity, sessions, and active workspace context</p>
         </div>
 
         {profile && (

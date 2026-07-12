@@ -16,7 +16,7 @@ export function AdminMission() {
         <div className="mt-4 space-y-4">
           <div className="rounded-lg bg-red-50 p-4 border border-red-100">
             <p className="font-bold text-red-900">WHY — Emotional Call to Action</p>
-            <p className="mt-1 text-sm text-red-800">Your generation decides Arkansas&apos;s future. We become impossible to ignore when we organize.</p>
+            <p className="mt-1 text-sm text-red-800">Our generation decides Arkansas&apos;s future. We become impossible to ignore when we organize.</p>
           </div>
           <div className="rounded-lg bg-amber-50 p-4 border border-amber-100">
             <p className="font-bold text-amber-900">HOW — Build Power</p>

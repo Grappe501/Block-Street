@@ -58,7 +58,7 @@ export default function VerificationPage() {
 
       <form onSubmit={requestVerification} className="space-y-3 rounded border border-slate-200 p-4 text-sm">
         <p className="font-medium">{t("verification.request")}</p>
-        <p className="text-xs text-slate-600">One independent Human who knows you must confirm your identity.</p>
+        <p className="text-xs text-slate-600">One independent Human who knows you must confirm our identity.</p>
         <label className="block">
           Verifier (Human ID)
           <input className="mt-1 w-full rounded border px-3 py-2" value={verifierId} onChange={(e) => setVerifierId(e.target.value)} required />

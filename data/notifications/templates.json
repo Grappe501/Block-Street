@@ -26,7 +26,7 @@
       "channel": "in_app",
       "language": "en",
       "title_template": "New comment on {{mission.title}}",
-      "body_template": "{{actor.name}} commented on your mission.",
+      "body_template": "{{actor.name}} commented on our mission.",
       "summary_template": "New mission comment",
       "action_label_template": "View mission",
       "default_priority": "normal",

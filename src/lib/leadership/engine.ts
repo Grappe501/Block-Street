@@ -575,7 +575,7 @@ export function getLeadershipInsights(userId: string, institutionId: string): Le
       user_id: userId,
       insight_type: "coaching",
       title: `Develop ${profile.growth_areas[0]}`,
-      message: `Your development plan suggests focusing on ${profile.growth_areas[0]} through practice opportunities and mentorship.`,
+      message: `Our development plan suggests focusing on ${profile.growth_areas[0]} through practice opportunities and mentorship.`,
       advisory_only: true,
       generated_at: now(),
     });

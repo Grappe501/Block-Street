@@ -190,11 +190,15 @@
   "feedbackExplains": ["WhatHappened", "Why", "WhatComesNext"],
   "emptyStatePattern": {
     "example": "No missions yet.",
-    "invitation": "Your first mission starts your community's story."
+    "invitation": "Our first mission starts our community's story."
   },
   "errorLanguagePattern": {
     "avoid": "You entered invalid information.",
     "prefer": "We couldn't verify that information. Let's try again."
+  },
+  "voiceGuidance": {
+    "collectivePossession": "Use our/we for community, organizing, institution, mission, and shared civic work.",
+    "personalExceptions": "Keep your for email, password, account security, authenticator apps, invitation tokens, and personally assigned share links."
   },
   "celebrationTargets": [
     "CommunityGrowth",

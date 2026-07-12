@@ -12,7 +12,7 @@ export default function RegisterPage() {
           sponsor.
         </p>
         <p className="rounded border border-indigo-200 bg-indigo-50 p-3 text-indigo-950">
-          If you received an invitation, open the link in your email to declare your public name and connect your
+          If you received an invitation, open the link in your email to declare our public name and connect our
           authentication method.
         </p>
         <p>

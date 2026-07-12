@@ -71,7 +71,7 @@ export default function InvitationAcceptClient() {
   }
 
   return (
-    <AuthPageShell title="Accept invitation" subtitle="Declare your public human identity">
+    <AuthPageShell title="Accept invitation" subtitle="Declare our public human identity">
       {error && (
         <p className="text-sm text-red-800" role="alert">
           {error}

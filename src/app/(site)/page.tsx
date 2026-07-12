@@ -13,11 +13,11 @@ export default function HomePage() {
             Why We Gather
           </p>
           <h1 className="max-w-3xl text-4xl font-bold leading-tight md:text-5xl">
-            Your generation will decide the future of Arkansas
+            Our generation will decide the future of Arkansas
           </h1>
           <div className="mt-8 max-w-2xl space-y-4 text-lg text-brand-100">
             <p>
-              Decisions are being made about your schools, your jobs, your communities, your rights —
+              Decisions are being made about our schools, our jobs, our communities, our rights —
               and most young people aren&apos;t at the table. Not because you don&apos;t care.
               Because nobody showed you how to sit down together.
             </p>
@@ -47,14 +47,14 @@ export default function HomePage() {
           <p className="text-sm font-semibold uppercase tracking-wider text-brand-600">How We Build Power</p>
           <h2 className="mt-2 text-3xl font-bold text-slate-900">One campus is a whisper. All of Arkansas is a force.</h2>
           <p className="mt-4 max-w-3xl text-lg text-slate-600">
-            Power comes from numbers. Numbers come from relationships. When you invite your friends,
+            Power comes from numbers. Numbers come from relationships. When we invite our friends,
             and they invite theirs, you&apos;re building a <strong>voting block</strong> — a collective voice
             that politicians cannot ignore.
           </p>
           <div className="mt-8 grid gap-4 sm:grid-cols-3">
             {[
-              { step: "1", title: "Find Your Home", desc: "Pick your county and school — or join your county as a young worker." },
-              { step: "2", title: "Recruit Your People", desc: "Get your share link and QR code. Invite everyone you know." },
+              { step: "1", title: "Find Our Home", desc: "Pick our county and school — or join our county as a young worker." },
+              { step: "2", title: "Recruit Our People", desc: "Get your share link and QR code. Invite everyone you know." },
               { step: "3", title: "Build Together", desc: "Form committees, register voters, decide collectively." },
             ].map((item) => (
               <div key={item.step} className="card">
@@ -78,17 +78,17 @@ export default function HomePage() {
             <div className="mb-3 text-3xl">🎓</div>
             <h3 className="text-xl font-bold group-hover:text-brand-700">I&apos;m Connected to a School</h3>
             <p className="mt-2 text-slate-600">
-              Pick your county, then your college or university. Every school has equal standing.
+              Pick our county, then our college or university. Every school has equal standing.
             </p>
-            <span className="mt-4 inline-block text-sm font-semibold text-brand-600">Find your school →</span>
+            <span className="mt-4 inline-block text-sm font-semibold text-brand-600">Find our school →</span>
           </Link>
           <Link href="/join?path=county" className="card group transition hover:border-brand-300 hover:shadow-md">
             <div className="mb-3 text-3xl">📍</div>
             <h3 className="text-xl font-bold group-hover:text-brand-700">I&apos;m Not in School</h3>
             <p className="mt-2 text-slate-600">
-              Working, between jobs, or not enrolled? Join your county youth hub. 75 counties, all welcome.
+              Working, between jobs, or not enrolled? Join our county youth hub. 75 counties, all welcome.
             </p>
-            <span className="mt-4 inline-block text-sm font-semibold text-brand-600">Find your county →</span>
+            <span className="mt-4 inline-block text-sm font-semibold text-brand-600">Find our county →</span>
           </Link>
         </div>
       </section>
@@ -121,14 +121,14 @@ export default function HomePage() {
 
       {/* WHAT — Coming Tools */}
       <section className="mx-auto max-w-6xl px-4 py-16">
-        <p className="text-sm font-semibold uppercase tracking-wider text-brand-600">What You Get</p>
-        <h2 className="mt-2 text-2xl font-bold text-slate-900">Your own organizing network</h2>
+        <p className="text-sm font-semibold uppercase tracking-wider text-brand-600">What We Get</p>
+        <h2 className="mt-2 text-2xl font-bold text-slate-900">Our organizing network</h2>
         <p className="mt-4 max-w-2xl text-slate-600">
-          Every person gets a share link, QR code, and network board. Recruit your people.
+          Every person gets a share link, QR code, and network board. Recruit our people.
           They get their own networks. The graph grows one trusted relationship at a time.
         </p>
         <Link href="/join" className="mt-6 inline-block btn-primary">
-          Start Building Your Network
+          Start Building Our Network
         </Link>
       </section>
     </div>

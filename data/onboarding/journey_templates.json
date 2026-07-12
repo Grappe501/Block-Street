@@ -14,10 +14,10 @@
         { "key": "complete_profile", "label": "Complete profile", "description": "Add your name and campus details", "required": true },
         { "key": "join_chapter", "label": "Join campus chapter", "description": "Confirm chapter membership", "required": true },
         { "key": "platform_basics", "label": "Learn platform basics", "description": "Complete introductory module", "required": true, "unlocks_feature": "missions_basic" },
-        { "key": "meet_mentor", "label": "Meet mentor", "description": "Connect with your campus mentor", "required": true },
-        { "key": "first_meeting", "label": "Attend first meeting", "description": "Join your first chapter meeting", "required": false },
-        { "key": "first_mission", "label": "Complete first mission", "description": "Finish your orientation mission", "required": true, "unlocks_feature": "missions_full" },
-        { "key": "first_badge", "label": "Earn first badge", "description": "Receive your first achievement badge", "required": false }
+        { "key": "meet_mentor", "label": "Meet mentor", "description": "Connect with our campus mentor", "required": true },
+        { "key": "first_meeting", "label": "Attend first meeting", "description": "Join our first chapter meeting", "required": false },
+        { "key": "first_mission", "label": "Complete first mission", "description": "Finish our orientation mission", "required": true, "unlocks_feature": "missions_full" },
+        { "key": "first_badge", "label": "Earn first badge", "description": "Receive our first achievement badge", "required": false }
       ],
       "training": [
         { "key": "civic_foundations", "title": "Civic Foundations", "certification_gate": "volunteer_basics" }
@@ -36,7 +36,7 @@
         { "key": "verify_identity", "label": "Verify identity", "description": "Confirm your account", "required": true },
         { "key": "complete_profile", "label": "Complete profile", "description": "Add contact preferences", "required": true },
         { "key": "volunteer_basics", "label": "Volunteer basics", "description": "Learn volunteer expectations", "required": true },
-        { "key": "first_outreach", "label": "Complete first outreach", "description": "Log your first volunteer activity", "required": true, "unlocks_feature": "missions_full" }
+        { "key": "first_outreach", "label": "Complete first outreach", "description": "Log our first volunteer activity", "required": true, "unlocks_feature": "missions_full" }
       ],
       "training": [
         { "key": "volunteer_basics", "title": "Volunteer Basics", "certification_gate": "volunteer_management" }
@@ -95,7 +95,7 @@
       "checklist": [
         { "key": "verify_identity", "label": "Verify identity", "description": "Confirm your account", "required": true },
         { "key": "organizing_basics", "label": "Organizing basics", "description": "Learn core organizing tools", "required": true },
-        { "key": "first_event", "label": "Plan first event", "description": "Create your first event", "required": true, "unlocks_feature": "missions_full" }
+        { "key": "first_event", "label": "Plan first event", "description": "Create our first event", "required": true, "unlocks_feature": "missions_full" }
       ],
       "training": [{ "key": "organizing_101", "title": "Organizing 101" }]
     },
@@ -111,7 +111,7 @@
       "checklist": [
         { "key": "verify_identity", "label": "Verify identity", "description": "Confirm leadership role", "required": true },
         { "key": "campus_overview", "label": "Campus overview", "description": "Review campus dashboard", "required": true },
-        { "key": "team_roster", "label": "Review team roster", "description": "Meet your organizing team", "required": true }
+        { "key": "team_roster", "label": "Review team roster", "description": "Meet our organizing team", "required": true }
       ],
       "training": [{ "key": "campus_leadership", "title": "Campus Leadership" }]
     },

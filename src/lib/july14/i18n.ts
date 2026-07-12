@@ -35,7 +35,7 @@ export const IDENTITY_STRINGS: Strings = {
     es: "Usa el nombre por el que te conocen públicamente — no un usuario ni un eslogan.",
   },
   "invite.activate": { en: "Activate identity", es: "Activar identidad" },
-  "identity.home": { en: "Your identity", es: "Tu identidad" },
+  "identity.home": { en: "Our identity", es: "Nuestra identidad" },
   "identity.verified_human": { en: "Verified Human", es: "Persona verificada" },
   "identity.sponsored": { en: "Sponsored", es: "Patrocinada" },
   "identity.next_action": { en: "My next action", es: "Mi siguiente paso" },

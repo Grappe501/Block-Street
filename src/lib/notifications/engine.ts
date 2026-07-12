@@ -149,7 +149,7 @@ export function requestNotification(actorId: string, request: NotificationReques
     const count = (existing.group_count ?? 1) + 1;
     items[idx] = {
       ...items[idx],
-      title: `${count} new comments on ${request.template_variables?.["mission.title"] ?? "your mission"}`,
+      title: `${count} new comments on ${request.template_variables?.["mission.title"] ?? "our mission"}`,
       body: `${count} new updates were grouped.`,
       group_count: count,
       read: false,

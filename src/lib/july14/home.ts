@@ -67,7 +67,7 @@ export function getJuly14MeetingContext(humanId: string) {
       { q: "How am I verified?", a: home?.assurance_explanation ?? "—" },
       { q: "Which institution am I in?", a: activeMembership?.institution_name ?? "—" },
       { q: "What can I do here?", a: "Enter meeting workspace, ask questions, invite when authorized" },
-      { q: "What is my next action?", a: home?.next_action?.action ?? "Explore your identity home" },
+      { q: "What is my next action?", a: home?.next_action?.action ?? "Explore our identity home" },
     ],
   };
 }

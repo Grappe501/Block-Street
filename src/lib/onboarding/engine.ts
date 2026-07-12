@@ -155,8 +155,8 @@ export function generateJourney(input: GenerateJourneyInput): OnboardingJourney 
 
   if (!template) throw new Error(`No journey template for role ${input.role_key}.`);
 
-  const unitName = input.unit_name ?? "your organization";
-  const institutionName = input.institution_name ?? "your institution";
+  const unitName = input.unit_name ?? "our organization";
+  const institutionName = input.institution_name ?? "our institution";
 
   const journey: OnboardingJourney = {
     id: id("journey"),

@@ -28,7 +28,7 @@ export default function July14MeetingPage() {
   const systemStatus = (ctx?.system_status as { name: string; mode: ImplementationMode; note?: string }[]) ?? [];
 
   function submitForm(type: "feedback" | "question") {
-    setSubmitted(type === "feedback" ? "Thank you — your feedback was recorded." : "Your question was submitted to meeting hosts.");
+    setSubmitted(type === "feedback" ? "Thank you — our feedback was recorded." : "Our question was submitted to meeting hosts.");
   }
 
   return (
@@ -40,7 +40,7 @@ export default function July14MeetingPage() {
           </p>
           <p className="text-sm text-indigo-900">
             {t("july14.entering_as")} <strong>{String(human.public_badge ?? human.assurance_state)}</strong> in{" "}
-            <strong>{String(ctx?.institution_name ?? "your institution")}</strong>.
+            <strong>{String(ctx?.institution_name ?? "our institution")}</strong>.
           </p>
           <p className="mt-1 text-xs text-indigo-800">Global Human ID: {String(human.global_human_id_masked ?? human.global_human_id)}</p>
         </div>

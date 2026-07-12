@@ -31,7 +31,7 @@ export default function LoginClient() {
   }
 
   return (
-    <AuthPageShell title="Sign in" subtitle="Verify your identity to continue">
+    <AuthPageShell title="Sign in" subtitle="Verify our identity to continue">
       <form onSubmit={handleSubmit} className="space-y-4">
         {error && <p className="rounded bg-red-50 p-2 text-sm text-red-800" role="alert">{error}</p>}
         <label className="block text-sm font-medium text-blue-950">

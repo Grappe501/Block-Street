@@ -99,7 +99,7 @@ export const PLATFORM = {
   workingName: "ASYON",
   fullName: "Arkansas Student & Youth Organizing Network",
   motto: "Connect Locally. Organize Statewide. Lead Together.",
-  tagline: "Your organizing home",
+  tagline: "Our organizing home",
 } as const;
 
 /** @deprecated Use PLATFORM.workingName — kept for backward compatibility */

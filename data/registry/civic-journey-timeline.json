@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "docPath": "docs/phase-03/CIVIC_JOURNEY_TIMELINE.md",
-  "motto": "Every act of service becomes part of your story.",
+  "motto": "Every act of service becomes part of our story.",
   "principle": "Help participants understand their story — not just what's happening today.",
   "purpose": "Preserve growth, relationships, leadership, and community contributions as a lifelong narrative in the Civic Passport.",
   "philosophyQuestions": [
@@ -56,8 +56,8 @@
     }
   ],
   "experienceExamples": [
-    "Today you welcomed your first new participant.",
-    "Two years ago you organized your first campus event.",
+    "Today we welcomed our first new participant.",
+    "Two years ago we organized our first campus event.",
     "You have now mentored five organizers.",
     "The committee you helped launch is celebrating its third anniversary."
   ],
@@ -102,10 +102,10 @@
     "signatureFeature": true,
     "orchestrator": "surfaceMemoryMoments(participantId, asOfDate)",
     "examples": [
-      "One year ago today you welcomed your first new member.",
+      "One year ago today we welcomed our first new member.",
       "Three years ago you helped launch the Pulaski County community.",
-      "Remember your first volunteer event?",
-      "Today marks two years since you organized your first campus meeting."
+      "Remember our first volunteer event?",
+      "Today marks two years since we organized our first campus meeting."
     ],
     "delivery": {
       "priority": "inspirational",

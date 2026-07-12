@@ -109,10 +109,10 @@
     "parallelTo": "Community Companion [PEL-M01] for individuals",
     "doesNotMakeDecisions": true,
     "exampleMessages": [
-      "Your volunteer participation has been steadily growing over the last three months.",
+      "Our volunteer participation has been steadily growing over the last three months.",
       "You have several experienced members who may be ready to mentor newer organizers.",
       "Three nearby campuses recently completed similar projects. Would you like to see their playbooks?",
-      "Your annual leadership transition is approaching. Consider documenting meeting notes and assigning successors.",
+      "Our annual leadership transition is approaching. Consider documenting meeting notes and assigning successors.",
       "You've welcomed many new participants this semester. This may be a good time to schedule an orientation event."
     ],
     "drawsFrom": ["healthReport", "trendAnalysis", "opportunityIntelligence", "capabilityGraph", "communityBrain", "growthGraph", "relationshipGraph"],

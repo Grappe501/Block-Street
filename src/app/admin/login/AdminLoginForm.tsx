@@ -36,7 +36,7 @@ export default function AdminLoginForm() {
       <div className="w-full max-w-md rounded-xl border border-slate-200 bg-white p-8 shadow-sm">
         <p className="text-xs font-semibold uppercase text-brand-600">Build 8.1 · Authentication</p>
         <h1 className="mt-2 text-2xl font-bold text-slate-900">Director Workbench</h1>
-        <p className="mt-1 text-sm text-slate-600">Sign in with your platform identity</p>
+        <p className="mt-1 text-sm text-slate-600">Sign in with our platform identity</p>
         <form onSubmit={handleSubmit} className="mt-6 space-y-4">
           <div>
             <label className="text-xs font-medium text-slate-700">Email</label>

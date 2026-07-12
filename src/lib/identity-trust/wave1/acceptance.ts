@@ -62,7 +62,7 @@ export function completeWave1Activation(
     return {
       requires_existing_human_confirmation: true,
       matched_human_id: dup.matched_human_id,
-      message: "An existing human record was found. Confirm to link this invitation to your existing identity.",
+      message: "An existing human record was found. Confirm to link this invitation to our existing identity.",
     };
   }
 
