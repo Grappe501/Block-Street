@@ -38,7 +38,7 @@ export function AdminKnowledgeGovernance() {
           The platform remembers <em>why</em> it believes something is true — not just the value.
         </p>
         <div className="mt-3 rounded-lg border border-brand-200 bg-white p-4 font-mono text-xs text-slate-700">
-          <p className="text-slate-500">// Example: enrollment field</p>
+          <p className="text-slate-500">{"// Example: enrollment field"}</p>
           <pre className="mt-2 overflow-x-auto whitespace-pre-wrap">
             {JSON.stringify(governance.provenanceExample, null, 2)}
           </pre>

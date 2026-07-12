@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 type BuildBar = { id: string; name: string; system_id: string; percent: number; current_wave: string | null };
@@ -64,8 +65,8 @@ export function AdminCivicActionLayer() {
         </p>
         <div className="mt-3 flex flex-wrap gap-2">
           <button type="button" onClick={runCert} className="rounded bg-orange-700 px-3 py-1 text-xs text-white">Run CAE certification</button>
-          <a href="/operations" className="rounded border border-orange-400 px-3 py-1 text-xs text-orange-900">Operations Center</a>
-          <a href="/initiative/ini-youth-civic-2026" className="rounded border border-orange-400 px-3 py-1 text-xs text-orange-900">Youth Civic Initiative</a>
+          <Link href="/operations" className="rounded border border-orange-400 px-3 py-1 text-xs text-orange-900">Operations Center</Link>
+          <Link href="/initiative/ini-youth-civic-2026" className="rounded border border-orange-400 px-3 py-1 text-xs text-orange-900">Youth Civic Initiative</Link>
         </div>
       </div>
 

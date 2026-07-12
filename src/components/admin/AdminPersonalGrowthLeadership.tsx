@@ -18,7 +18,7 @@ export function AdminPersonalGrowthLeadership() {
       <div className="card border-brand-200 bg-brand-50">
         <h2 className="text-lg font-bold text-brand-950">Growth Graph [PGL-M13]</h2>
         <p className="mt-1 text-sm text-brand-800">{pgl.growthGraph.description}</p>
-        <p className="mt-2 text-sm italic text-brand-900">"{pgl.growthGraph.coreQuestion}"</p>
+        <p className="mt-2 text-sm italic text-brand-900">&ldquo;{pgl.growthGraph.coreQuestion}&rdquo;</p>
         <p className="mt-2 font-mono text-xs text-brand-700">{pgl.growthGraph.orchestrator}</p>
         <div className="mt-3 space-y-1 text-xs text-brand-900">
           {pgl.growthGraph.exampleChain.map((step, i) => (
