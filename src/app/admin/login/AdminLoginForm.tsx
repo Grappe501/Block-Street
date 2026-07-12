@@ -22,7 +22,8 @@ export default function AdminLoginForm() {
       body: JSON.stringify({ email, password }),
     });
     if (!res.ok) {
-      setError("Invalid credentials");
+      const data = await res.json().catch(() => ({}));
+      setError((data as { error?: string }).error ?? "Invalid credentials");
       setLoading(false);
       return;
     }
@@ -67,7 +68,7 @@ export default function AdminLoginForm() {
           </button>
         </form>
         <p className="mt-4 text-xs text-slate-500">
-          Bootstrap: director@block-street.local · Set AUTH_BOOTSTRAP_PASSWORD in production
+          Bootstrap: director@block-street.local · Password: Forevermost (or AUTH_BOOTSTRAP_PASSWORD env)
         </p>
       </div>
     </div>

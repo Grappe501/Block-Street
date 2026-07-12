@@ -9,6 +9,7 @@ import onb from "../../../data/registry/guided-onboarding.json";
 import trn from "../../../data/registry/training-certification.json";
 import plt from "../../../data/registry/pilot-acceptance.json";
 import ops from "../../../data/registry/operational-operations.json";
+import fed from "../../../data/registry/institutional-federation.json";
 import { AdminInstitutionalProvisioning } from "@/components/admin/AdminInstitutionalProvisioning";
 import { AdminInstitutionalOrganization } from "@/components/admin/AdminInstitutionalOrganization";
 import { AdminInstitutionalMigration } from "@/components/admin/AdminInstitutionalMigration";
@@ -16,6 +17,7 @@ import { AdminInstitutionalOnboarding } from "@/components/admin/AdminInstitutio
 import { AdminInstitutionalTraining } from "@/components/admin/AdminInstitutionalTraining";
 import { AdminInstitutionalPilot } from "@/components/admin/AdminInstitutionalPilot";
 import { AdminInstitutionalOperations } from "@/components/admin/AdminInstitutionalOperations";
+import { AdminInstitutionalFederation } from "@/components/admin/AdminInstitutionalFederation";
 
 const STEPS: Array<
   | { step: { productName: string; requirementId: string; acceptanceCriteria: string }; label: string; accent: string; featured: boolean }
@@ -27,8 +29,8 @@ const STEPS: Array<
   { step: onb, label: "9.4 Guided Onboarding", accent: "border-emerald-500 bg-emerald-100", featured: false },
   { step: trn, label: "9.5 Training & Certification", accent: "border-violet-500 bg-violet-100", featured: false },
   { step: plt, label: "9.6 Pilot & Acceptance", accent: "border-rose-500 bg-rose-100", featured: false },
-  { step: ops, label: "9.7 Operational Launch", accent: "border-teal-500 bg-teal-100", featured: true },
-  { label: "9.8 Adoption & Scale", accent: "border-slate-300 bg-slate-50", featured: false, pending: "SCL-001" },
+  { step: ops, label: "9.7 Operational Launch", accent: "border-teal-500 bg-teal-100", featured: false },
+  { step: fed, label: "9.8 Federation & Replication", accent: "border-sky-500 bg-sky-100", featured: true },
 ];
 
 export function AdminInstitutionalLaunchLayer() {
@@ -64,6 +66,7 @@ export function AdminInstitutionalLaunchLayer() {
         ))}
       </div>
 
+      <AdminInstitutionalFederation />
       <AdminInstitutionalOperations />
       <AdminInstitutionalPilot />
       <AdminInstitutionalTraining />

@@ -1,6 +1,7 @@
 import { randomBytes } from "crypto";
 import { appendAudit, loadSessions, loadUsers, loadWorkspaceMemberships, loadWorkspaces, persistSessions, persistUsers } from "./data";
 import { hashSecret } from "./crypto";
+import { signSessionToken, verifySignedSessionToken } from "./signed-session";
 import type { AuthAuditEvent, PlatformUser, Session } from "./types";
 
 export const SESSION_COOKIE = "cos_session";
@@ -53,23 +54,71 @@ export function createSessionRecord(user: PlatformUser, meta?: { ip?: string; us
   };
 }
 
+function sessionFromSignedPayload(payload: ReturnType<typeof verifySignedSessionToken>): Session | null {
+  if (!payload) return null;
+  const user = loadUsers().find((u) => u.user_id === payload.user_id);
+  if (!user || user.account_status === "suspended") return null;
+  return {
+    session_id: payload.session_id,
+    user_id: payload.user_id,
+    session_hash: hashSecret(payload.session_id),
+    created_at: payload.expires_at,
+    last_seen_at: new Date().toISOString(),
+    expires_at: payload.expires_at,
+    ip_address: null,
+    user_agent: null,
+    revoked: false,
+    revocation_reason: null,
+    device_type: "unknown",
+    browser: null,
+    operating_system: null,
+    authentication_strength: payload.authentication_strength,
+    active_organization_id: payload.active_organization_id,
+    active_workspace_id: payload.active_workspace_id,
+    risk_state: payload.risk_state,
+  };
+}
+
 export function issueSession(user: PlatformUser, meta?: { ip?: string; userAgent?: string; authStrength?: string }): Session {
   const session = createSessionRecord(user, meta);
-  const sessions = loadSessions();
-  sessions.push(session);
-  persistSessions(sessions);
-  const users = loadUsers();
-  const idx = users.findIndex((u) => u.user_id === user.user_id);
-  if (idx >= 0) {
-    users[idx] = { ...users[idx], last_login_at: session.created_at, last_active_at: session.created_at, updated_at: session.created_at };
-    persistUsers(users);
+  try {
+    const sessions = loadSessions();
+    sessions.push(session);
+    persistSessions(sessions);
+  } catch {
+    // Serverless runtimes may not persist sessions.json; signed cookie remains authoritative.
+  }
+  try {
+    const users = loadUsers();
+    const idx = users.findIndex((u) => u.user_id === user.user_id);
+    if (idx >= 0) {
+      users[idx] = { ...users[idx], last_login_at: session.created_at, last_active_at: session.created_at, updated_at: session.created_at };
+      persistUsers(users);
+    }
+  } catch {
+    // Best-effort profile touch; login must still succeed.
   }
   audit({ actor_type: "user", actor_id: user.user_id, action: "login_success", target_type: "session", target_id: session.session_id, result: "success", user_id_optional: user.user_id });
   return session;
 }
 
-export function getSession(sessionId: string): Session | null {
-  const session = loadSessions().find((s) => s.session_id === sessionId && !s.revoked);
+export function sessionCookieValue(session: Session): string {
+  return signSessionToken({
+    session_id: session.session_id,
+    user_id: session.user_id,
+    expires_at: session.expires_at,
+    active_organization_id: session.active_organization_id,
+    active_workspace_id: session.active_workspace_id,
+    authentication_strength: session.authentication_strength,
+    risk_state: session.risk_state,
+  });
+}
+
+export function getSession(sessionToken: string): Session | null {
+  const signed = verifySignedSessionToken(sessionToken);
+  if (signed) return sessionFromSignedPayload(signed);
+
+  const session = loadSessions().find((s) => s.session_id === sessionToken && !s.revoked);
   if (!session) return null;
   if (new Date(session.expires_at).getTime() < Date.now()) return null;
   const user = loadUsers().find((u) => u.user_id === session.user_id);

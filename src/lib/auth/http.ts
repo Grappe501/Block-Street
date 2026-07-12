@@ -1,10 +1,10 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
-import { SESSION_COOKIE } from "@/lib/auth/session";
+import { SESSION_COOKIE, sessionCookieValue } from "@/lib/auth/session";
 import type { Session } from "@/lib/auth/types";
 
 export function setSessionCookie(response: NextResponse, session: Session) {
-  response.cookies.set(SESSION_COOKIE, session.session_id, {
+  response.cookies.set(SESSION_COOKIE, sessionCookieValue(session), {
     httpOnly: true,
     sameSite: "lax",
     secure: process.env.NODE_ENV === "production",
