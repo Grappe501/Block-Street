@@ -20,6 +20,7 @@ const NAV_KEYS = [
   { key: "charter", path: "/charter" },
   { key: "people", path: "/people" },
   { key: "readiness", path: "/readiness" },
+  { key: "intelligence", path: "/intelligence" },
   { key: "dependencies", path: "/dependencies" },
   { key: "reviews", path: "/reviews" },
   { key: "history", path: "/history" },

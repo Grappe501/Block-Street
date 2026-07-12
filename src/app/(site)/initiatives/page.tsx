@@ -4,6 +4,7 @@ import {
   DEFAULT_INITIATIVE_EXPERIENCE_CONTEXT,
 } from "@/lib/civic-action/builds/11.1/ux";
 import { InitiativeCard } from "@/features/initiatives/components/InitiativeCard";
+import { ExecutiveBriefCard } from "@/features/initiatives/components/ExecutiveBriefCard";
 
 export default async function InitiativesPortfolioPage({
   searchParams,
@@ -27,6 +28,10 @@ export default async function InitiativesPortfolioPage({
         <Link href="/initiatives/new" className="btn-primary">
           Propose an Initiative
         </Link>
+      </div>
+
+      <div className="mt-8">
+        <ExecutiveBriefCard />
       </div>
 
       <div className="mt-6 flex flex-wrap gap-2 text-sm">
