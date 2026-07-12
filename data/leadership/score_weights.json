@@ -1,0 +1,11 @@
+{
+  "components": [
+    { "key": "participation", "weight": 0.25 },
+    { "key": "reliability", "weight": 0.2 },
+    { "key": "competencies", "weight": 0.2 },
+    { "key": "mentoring", "weight": 0.1 },
+    { "key": "training", "weight": 0.1 },
+    { "key": "community_contribution", "weight": 0.1 },
+    { "key": "collaboration", "weight": 0.05 }
+  ]
+}
