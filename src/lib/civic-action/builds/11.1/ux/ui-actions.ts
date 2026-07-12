@@ -107,7 +107,7 @@ export function resolveLifecycleActions(
       requires_confirmation: def.requires_confirmation ?? true,
       requires_step_up_authentication: def.command === "ActivateInitiativeCommand" || def.command === "ApproveInitiativeCommand",
       impact_summary: def.impact,
-      endpoint_or_command: "/api/v1/civic-action/initiatives/commands",
+      endpoint_or_command: "/api/v1/initiatives/commands",
       permission_key: INITIATIVE_PERMISSIONS[def.command],
       requirement_ids: ["CAE-11.1-W4-UX-004", "CAE-11.1-W4-LIF-001"],
     };

@@ -1,0 +1,32 @@
+{
+  "catalog_version": "11.1-w5.1",
+  "subsystem": "INI-EVT-001",
+  "events": [
+    {"event_type": "initiative.draft_created", "version": 1, "description": "A new Initiative draft was created.", "producer": "INI-SVC-001", "consumers": ["search", "analytics", "audit"], "privacy_classification": "internal", "status": "active"},
+    {"event_type": "initiative.draft_updated", "version": 1, "description": "Non-lifecycle draft fields were updated.", "producer": "INI-SVC-001", "consumers": ["search"], "privacy_classification": "internal", "status": "active"},
+    {"event_type": "initiative.submitted_for_review", "version": 1, "description": "Initiative submitted for institutional review.", "producer": "INI-SVC-001", "consumers": ["notifications", "calendar", "audit"], "privacy_classification": "internal", "status": "active"},
+    {"event_type": "initiative.returned_for_revision", "version": 1, "description": "Initiative returned for charter revision.", "producer": "INI-SVC-001", "consumers": ["notifications", "audit"], "privacy_classification": "internal", "status": "active"},
+    {"event_type": "initiative.approved", "version": 1, "description": "Initiative approved.", "producer": "INI-SVC-001", "consumers": ["notifications", "readiness", "audit"], "privacy_classification": "internal", "status": "active"},
+    {"event_type": "initiative.approved_with_conditions", "version": 1, "description": "Initiative approved with conditions.", "producer": "INI-SVC-001", "consumers": ["notifications", "readiness"], "privacy_classification": "internal", "status": "active"},
+    {"event_type": "initiative.preparation_started", "version": 1, "description": "Initiative entered preparation.", "producer": "INI-SVC-001", "consumers": ["notifications", "missions"], "privacy_classification": "internal", "status": "active"},
+    {"event_type": "initiative.activated", "version": 1, "description": "Initiative activated for execution.", "producer": "INI-SVC-001", "consumers": ["search", "notifications", "calendar", "objectives", "missions", "analytics"], "privacy_classification": "internal", "status": "active"},
+    {"event_type": "initiative.marked_at_risk", "version": 1, "description": "Initiative marked at risk.", "producer": "INI-SVC-001", "consumers": ["notifications", "analytics"], "privacy_classification": "internal", "status": "active"},
+    {"event_type": "initiative.risk_cleared", "version": 1, "description": "Initiative risk cleared.", "producer": "INI-SVC-001", "consumers": ["notifications"], "privacy_classification": "internal", "status": "active"},
+    {"event_type": "initiative.paused", "version": 1, "description": "Initiative paused.", "producer": "INI-SVC-001", "consumers": ["notifications", "missions"], "privacy_classification": "internal", "status": "active"},
+    {"event_type": "initiative.resumed", "version": 1, "description": "Initiative resumed.", "producer": "INI-SVC-001", "consumers": ["notifications", "missions"], "privacy_classification": "internal", "status": "active"},
+    {"event_type": "initiative.owner_proposed", "version": 1, "description": "Ownership proposal created.", "producer": "INI-SVC-001", "consumers": ["notifications"], "privacy_classification": "restricted", "status": "active"},
+    {"event_type": "initiative.owner_assigned", "version": 1, "description": "Operational owner assigned.", "producer": "INI-SVC-001", "consumers": ["notifications", "analytics"], "privacy_classification": "restricted", "status": "active"},
+    {"event_type": "initiative.owner_became_ineligible", "version": 1, "description": "Owner became ineligible.", "producer": "INI-SVC-001", "consumers": ["notifications"], "privacy_classification": "restricted", "status": "active"},
+    {"event_type": "initiative.owner_transferred", "version": 1, "description": "Ownership transferred.", "producer": "INI-SVC-001", "consumers": ["notifications", "audit"], "privacy_classification": "restricted", "status": "active"},
+    {"event_type": "initiative.scope_change_requested", "version": 1, "description": "Scope change requested.", "producer": "INI-SVC-001", "consumers": ["notifications", "audit"], "privacy_classification": "internal", "status": "active"},
+    {"event_type": "initiative.dependency_added", "version": 1, "description": "Dependency added.", "producer": "INI-SVC-001", "consumers": ["readiness"], "privacy_classification": "internal", "status": "active"},
+    {"event_type": "initiative.dependency_removed", "version": 1, "description": "Dependency removed or deactivated.", "producer": "INI-SVC-001", "consumers": ["readiness"], "privacy_classification": "internal", "status": "active"},
+    {"event_type": "initiative.review_due", "version": 1, "description": "Scheduled review is due.", "producer": "INI-SVC-001", "consumers": ["notifications", "calendar"], "privacy_classification": "internal", "status": "active"},
+    {"event_type": "initiative.closeout_started", "version": 1, "description": "Closeout process started.", "producer": "INI-SVC-001", "consumers": ["notifications", "calendar"], "privacy_classification": "internal", "status": "active"},
+    {"event_type": "initiative.cancelled", "version": 1, "description": "Initiative cancelled.", "producer": "INI-SVC-001", "consumers": ["notifications", "audit"], "privacy_classification": "internal", "status": "active"},
+    {"event_type": "initiative.completed", "version": 1, "description": "Initiative completed.", "producer": "INI-SVC-001", "consumers": ["search", "notifications", "analytics", "cms"], "privacy_classification": "internal", "status": "active"},
+    {"event_type": "initiative.archived", "version": 1, "description": "Initiative archived.", "producer": "INI-SVC-001", "consumers": ["search", "audit"], "privacy_classification": "internal", "status": "active"},
+    {"event_type": "initiative.successor_created", "version": 1, "description": "Successor Initiative draft created.", "producer": "INI-SVC-001", "consumers": ["lineage", "audit"], "privacy_classification": "internal", "status": "active"},
+    {"event_type": "initiative.restoration_requested", "version": 1, "description": "Restoration requested.", "producer": "INI-SVC-001", "consumers": ["notifications", "audit"], "privacy_classification": "internal", "status": "active"}
+  ]
+}

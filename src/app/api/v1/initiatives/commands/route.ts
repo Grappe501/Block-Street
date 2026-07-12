@@ -4,7 +4,6 @@ import { executeInitiativeCommand } from "@/lib/civic-action/builds/11.1/api";
 import { withInitiativeApi } from "@/lib/civic-action/builds/11.1/api/http-helpers";
 import type { InitiativeCommandType } from "@/lib/civic-action/builds/11.1/services/commands";
 
-/** Legacy W4 path — delegates to W5 command service */
 export const POST = withApiGateway(
   async (ctx, request) =>
     withInitiativeApi(
@@ -20,5 +19,5 @@ export const POST = withApiGateway(
       },
       { requireAuth: true }
     ),
-  { permission: "civic_action.manage", endpoint: "/api/v1/civic-action/initiatives/commands" }
+  { permission: "civic_action.manage", endpoint: "/api/v1/initiatives/commands" }
 );
