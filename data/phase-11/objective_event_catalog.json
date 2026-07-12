@@ -1,0 +1,21 @@
+{
+  "catalog_id": "OBJ-EVT-001",
+  "protocol": "11.2-W2",
+  "events": [
+    {"event_type": "ObjectiveCreated", "entity": "Objective", "version": "1.0"},
+    {"event_type": "ObjectiveApproved", "entity": "Objective", "version": "1.0"},
+    {"event_type": "ObjectiveActivated", "entity": "Objective", "version": "1.0"},
+    {"event_type": "ObjectiveArchived", "entity": "Objective", "version": "1.0"},
+    {"event_type": "KeyResultUpdated", "entity": "KeyResult", "version": "1.0"},
+    {"event_type": "WorkstreamCreated", "entity": "Workstream", "version": "1.0"},
+    {"event_type": "MissionStarted", "entity": "Mission", "version": "1.0"},
+    {"event_type": "MissionCompleted", "entity": "Mission", "version": "1.0"},
+    {"event_type": "TaskAssigned", "entity": "Task", "version": "1.0"},
+    {"event_type": "TaskCompleted", "entity": "Task", "version": "1.0"},
+    {"event_type": "EvidenceAdded", "entity": "Evidence", "version": "1.0"},
+    {"event_type": "ReviewCompleted", "entity": "Review", "version": "1.0"},
+    {"event_type": "OutcomeRecorded", "entity": "Outcome", "version": "1.0"},
+    {"event_type": "LessonLearnedCaptured", "entity": "LessonLearned", "version": "1.0"},
+    {"event_type": "ExecutionVersionCreated", "entity": "*", "version": "1.0"}
+  ]
+}

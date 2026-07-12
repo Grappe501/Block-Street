@@ -1,0 +1,22 @@
+{
+  "matrix_id": "OBJ-REL-001",
+  "protocol": "11.2-W2",
+  "parent_child": {
+    "Objective": "Initiative",
+    "KeyResult": "Objective",
+    "Workstream": "Objective",
+    "Mission": "Workstream",
+    "Milestone": "Mission",
+    "Deliverable": "Mission",
+    "Task": "Mission"
+  },
+  "cross_links": [
+    {"types": ["Objective", "Objective"], "relationship": "related_to"},
+    {"types": ["Mission", "Mission"], "relationship": "depends_on"},
+    {"types": ["Task", "Task"], "relationship": "blocks"},
+    {"types": ["Evidence", "*"], "relationship": "supports"},
+    {"types": ["Risk", "*"], "relationship": "threatens"},
+    {"types": ["DecisionReference", "*"], "relationship": "governs"}
+  ],
+  "reverse_inheritance": "prohibited"
+}

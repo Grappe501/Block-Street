@@ -1,0 +1,25 @@
+{
+  "contract_id": "OBJ-DB-001",
+  "protocol": "11.2-W2",
+  "system_id": "OBJ-001",
+  "principle": "One canonical record per canonical_id; soft archive only; immutable history and versions; no orphan execution",
+  "tables": [
+    {"name": "objectives", "primary_key": "canonical_id", "foreign_keys": [{"initiative_id": "initiatives.initiative_id"}], "required_fields": ["canonical_id", "institution_id", "initiative_id", "display_name", "purpose", "desired_future_state", "executive_owner_human_id", "operational_owner_human_id", "lifecycle_state", "current_version"], "constraints": ["one_initiative", "no_service_identity_owner"]},
+    {"name": "key_results", "primary_key": "canonical_id", "foreign_keys": [{"objective_id": "objectives.canonical_id"}]},
+    {"name": "workstreams", "primary_key": "canonical_id", "foreign_keys": [{"objective_id": "objectives.canonical_id"}]},
+    {"name": "missions", "primary_key": "canonical_id", "foreign_keys": [{"workstream_id": "workstreams.canonical_id"}, {"objective_id": "objectives.canonical_id"}]},
+    {"name": "milestones", "primary_key": "canonical_id", "foreign_keys": [{"mission_id": "missions.canonical_id"}]},
+    {"name": "deliverables", "primary_key": "canonical_id", "foreign_keys": [{"mission_id": "missions.canonical_id"}]},
+    {"name": "tasks", "primary_key": "canonical_id", "foreign_keys": [{"mission_id": "missions.canonical_id"}], "constraints": ["no_orphan_task"]},
+    {"name": "evidence", "primary_key": "canonical_id", "polymorphic_link": true},
+    {"name": "outcomes", "primary_key": "canonical_id", "foreign_keys": [{"objective_id": "objectives.canonical_id"}]},
+    {"name": "reviews", "primary_key": "canonical_id", "foreign_keys": [{"objective_id": "objectives.canonical_id"}]},
+    {"name": "lessons_learned", "primary_key": "canonical_id", "foreign_keys": [{"objective_id": "objectives.canonical_id"}]},
+    {"name": "execution_dependencies", "primary_key": "dependency_id"},
+    {"name": "execution_risks", "primary_key": "risk_id"},
+    {"name": "execution_decisions", "primary_key": "decision_id"},
+    {"name": "execution_versions", "primary_key": "version_id", "immutable": true},
+    {"name": "execution_history_events", "primary_key": "event_id", "immutable": true, "append_only": true},
+    {"name": "execution_relationships", "primary_key": "relationship_id"}
+  ]
+}

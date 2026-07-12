@@ -1,0 +1,21 @@
+{
+  "protocol": "11.2-W2",
+  "entities": {
+    "Objective": {
+      "states": ["draft", "proposed", "approved", "ready", "active", "on_track", "needs_attention", "at_risk", "completed", "partially_achieved", "superseded", "archived"]
+    },
+    "Mission": {
+      "states": ["planned", "ready", "active", "paused", "completed", "cancelled", "archived"]
+    },
+    "Task": {
+      "states": ["draft", "assigned", "active", "blocked", "completed", "cancelled", "archived"]
+    }
+  },
+  "illegal_child_parent": [
+    {"child": "Task", "child_state": "active", "parent": "Mission", "parent_state": "draft", "reason": "Task cannot be Active if Mission remains Draft"},
+    {"child": "Task", "child_state": "active", "parent": "Mission", "parent_state": "planned", "reason": "Task cannot be Active if Mission is only Planned"},
+    {"child": "Mission", "child_state": "active", "parent": "Objective", "parent_state": "draft", "reason": "Mission cannot be Active if Objective is Draft"},
+    {"child": "Objective", "child_state": "active", "parent": "Initiative", "parent_state": "inactive", "reason": "Objective cannot be Active until parent Initiative is Active"}
+  ],
+  "principle": "Children cannot exceed parent lifecycle"
+}

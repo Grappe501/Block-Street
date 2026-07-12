@@ -1,0 +1,15 @@
+{
+  "schema_id": "OBJ-ENTITY-001",
+  "protocol": "11.2-W2",
+  "base_metadata": [
+    "canonical_id", "public_id", "display_name", "canonical_slug", "institution_id", "initiative_id",
+    "parent_object_id", "parent_object_type", "object_type", "visibility", "governance_classification",
+    "executive_owner_human_id", "operational_owner_human_id", "current_responsible_human_id",
+    "created_by", "last_modified_by", "created_at", "updated_at", "current_version", "lifecycle_state", "tags"
+  ],
+  "entities": ["Objective", "KeyResult", "Workstream", "Mission", "Milestone", "Deliverable", "Task", "Evidence", "Outcome", "Review", "LessonLearned", "Dependency", "Risk", "DecisionReference"],
+  "identity_rules": {
+    "canonical_id_never_recycles": true,
+    "names_may_change": true
+  }
+}
