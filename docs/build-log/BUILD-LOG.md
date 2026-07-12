@@ -4,6 +4,28 @@
 
 ---
 
+## 2026-07-12 — Build 10.1 Civic Participation Engine [CIV-001 · AC-194]
+
+**Documents:** `docs/platform/civic/*` (7 standards) · `docs/phase-10/*` · Phase 10 master sequence
+
+### What Changed
+
+- **Phase 10 launched** — Civic Growth, Engagement, and Societal Impact (CGI-001)
+- **Civic Participation Engine** — weighted participation scoring across 6 dimensions
+- **Participation events** — volunteer shifts, attendance, missions, membership, habits
+- **Engagement trends** — 30-day index with rising/stable/declining direction
+- **Participation forecasting** — 90-day projections with confidence and opportunities
+- **v1 APIs** — `/api/v1/civic/*`, `/api/admin/civic/overview`
+- **Civic Intelligence Center** — Phase 10 tab in Director Workbench, AC-194 acceptance demo
+- **Experience Layer** renumbered to Phase 11 (deferred)
+
+### Phase Status
+
+- Phase 9: **Complete** (8/8)
+- Phase 10: **In Progress** (1/8 Civic Intelligence)
+
+---
+
 ## 2026-07-11 — Build 9.8 Institutional Replication, Federation, and Ecosystem Growth [FED-001 · AC-193]
 
 **Documents:** `docs/platform/federation/*` (10 standards) · `docs/phase-09/INSTITUTIONAL_REPLICATION_FEDERATION.md`
