@@ -361,7 +361,7 @@
       "requirementId": "CGI-001",
       "steps": [
         { "id": "10.1", "name": "Civic Participation Engine [CIV-001]", "status": "done", "notes": "Participation scoring, engagement trends, forecasting — AC-194" },
-        { "id": "10.2", "name": "Leadership Development Engine [LDR-001]", "status": "pending", "notes": "Leadership pipeline, mentors, succession — AC-195" },
+        { "id": "10.2", "name": "Leadership Development Engine [LDR-001]", "status": "done", "notes": "Profiles, evidence, mentorship, cohorts, succession, analytics — AC-195" },
         { "id": "10.3", "name": "Community Relationship Graph [REL-001]", "status": "pending", "notes": "People, orgs, schools, coalitions relationship map — AC-196" },
         { "id": "10.4", "name": "Community Health Dashboard [CHD-001]", "status": "pending", "notes": "Community health scores, retention, collaboration — AC-197" },
         { "id": "10.5", "name": "Civic Outcomes Engine [OUT-001]", "status": "pending", "notes": "Real-world outcome tracking — AC-198" },

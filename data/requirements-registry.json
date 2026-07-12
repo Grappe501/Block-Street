@@ -6550,6 +6550,40 @@
       "versionHistory": { "created": "2026-07-12", "implemented": "2026-07-12" }
     },
     {
+      "id": "LDR-001",
+      "title": "Leadership Development Engine — Build 10.2",
+      "purpose": "Discover, develop, mentor, and prepare future leaders before leadership gaps appear",
+      "description": "BUILD-010.2 — leadership profiles, competency model, evidence ledger, emerging leader identification, mentorship, development plans, cohorts, succession planning, analytics, AI coach",
+      "priority": "critical",
+      "principle": "CGI-001",
+      "dependencies": ["CIV-001", "FED-001", "TRN-001", "AUTH-001"],
+      "related": ["CIV-001", "REL-001", "CHD-001", "OUT-001"],
+      "acceptanceCriteria": [
+        "Leadership profiles built on verified evidence rather than titles",
+        "Explainable competency progression and leadership score",
+        "Emerging leader identification without automatic promotion",
+        "Mentorship relationships and development plans",
+        "Leadership cohorts with curriculum and assessments",
+        "Succession plans with readiness indicators and risk levels",
+        "Executive dashboards for pipeline health and succession",
+        "AI coaching remains advisory only",
+        "Privacy controls for evaluations and public milestones",
+        "16-step acceptance test validates full leadership lifecycle"
+      ],
+      "futureNotes": "AC-195. Registry LDR-001. Second build of Phase 10.",
+      "implementationStatus": "done",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": null,
+        "api": "API-LDR",
+        "frontend": "PAGE-ADMIN-LDR",
+        "test": "TEST-LDR-001",
+        "doc": "DOC-LDR-001"
+      },
+      "versionHistory": { "created": "2026-07-12", "implemented": "2026-07-12" }
+    },
+    {
       "id": "PSI-014",
       "title": "Platform Operations, Governance & Lifecycle Architecture — Volume 5.13",
       "purpose": "Operate the platform as a governed institution — stewardship, certification, and decades-long evolution",

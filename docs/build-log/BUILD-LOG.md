@@ -4,6 +4,28 @@
 
 ---
 
+## 2026-07-12 — Build 10.2 Leadership Development Engine [LDR-001 · AC-195]
+
+**Documents:** `docs/platform/leadership/*` (10 standards per LDR-001 spec) · `docs/phase-10/LEADERSHIP_DEVELOPMENT.md`
+
+### What Changed
+
+- **Leadership profiles** — lifecycle stages, readiness levels, strengths and growth areas
+- **Competency model** — 15 competencies with 6 progression levels
+- **Evidence ledger** — verified leadership evidence with impact scoring
+- **Emerging leader detection** — advisory identification from participation signals
+- **Mentorship framework** — mentor assignment, profiles, active mentee tracking
+- **Development plans** — target stages, competencies, training, and missions
+- **Leadership cohorts** — county, executive, student, and community organizer cohorts
+- **Succession planning** — candidate readiness, risk levels, development actions
+- **Explainable scoring** — 7 weighted components (25/20/20/10/10/10/5)
+- **Executive dashboards** — pipeline health, mentor capacity, succession risk
+- **AI leadership coach** — advisory recommendations only, no appointments
+- **Privacy controls** — public milestones vs private evaluations
+- **16-step acceptance demo** — full AC-195 validation path
+
+---
+
 ## 2026-07-12 — Build 10.1 Civic Participation Engine [CIV-001 · AC-194] (expanded)
 
 **Documents:** `docs/platform/civic/*` (10 standards per CIV-001 spec)

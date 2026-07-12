@@ -1,0 +1,31 @@
+{
+  "version": "1.0.0",
+  "documentId": "BUILD-010.2",
+  "requirementId": "LDR-001",
+  "buildArtifact": "LEADERSHIP_DEVELOPMENT",
+  "docPath": "docs/phase-10/LEADERSHIP_DEVELOPMENT.md",
+  "platformDocsPath": "docs/platform/leadership/",
+  "status": "canonical",
+  "priority": "critical",
+  "productName": "Leadership Development Engine",
+  "abbreviation": "LDR",
+  "guidingPrinciple": "Leadership is earned through demonstrated service, trust, competence, and sustained contribution—not simply appointment or title.",
+  "buildsOn": ["CIV-001", "TRN-001", "FED-001", "ADM-001"],
+  "apiEndpoints": [
+    "GET /api/v1/leadership/profiles",
+    "POST /api/v1/leadership/profiles",
+    "GET /api/v1/leadership/evidence",
+    "POST /api/v1/leadership/evidence",
+    "POST /api/v1/leadership/mentorship",
+    "POST /api/v1/leadership/development-plans",
+    "GET /api/v1/leadership/cohorts",
+    "POST /api/v1/leadership/cohorts",
+    "GET /api/v1/leadership/succession",
+    "POST /api/v1/leadership/succession",
+    "GET /api/v1/leadership/analytics",
+    "GET /api/v1/leadership/insights",
+    "GET /api/admin/leadership/overview"
+  ],
+  "acceptanceCriteria": "AC-195",
+  "acceptanceCriteriaMet": true
+}

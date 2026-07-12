@@ -11,7 +11,7 @@ The first nine phases built the platform. Phase 10 measures whether the platform
 | Build | Name | Requirement | AC | Status |
 |-------|------|-------------|-----|--------|
 | 10.1 | Civic Participation Engine | CIV-001 | AC-194 | done |
-| 10.2 | Leadership Development Engine | LDR-001 | AC-195 | pending |
+| 10.2 | Leadership Development Engine | LDR-001 | AC-195 | done |
 | 10.3 | Community Relationship Graph | REL-001 | AC-196 | pending |
 | 10.4 | Community Health Dashboard | CHD-001 | AC-197 | pending |
 | 10.5 | Civic Outcomes Engine | OUT-001 | AC-198 | pending |
