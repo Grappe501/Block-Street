@@ -9,3 +9,5 @@ export * from "./legacy-adapter";
 export * from "./w2";
 export * from "./services";
 export * from "./w3";
+export * from "./ux";
+export * from "./w4";

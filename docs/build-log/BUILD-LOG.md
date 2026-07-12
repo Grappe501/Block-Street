@@ -4,6 +4,23 @@
 
 ---
 
+## 2026-07-12 — Build 11.1 Wave 4 [CAE-11.1-W4 · INI-UX-001]
+
+**Documents:** `docs/phase-11/11.1-initiatives/04_UI_AND_WORKFLOWS.md` · `INITIATIVE_EXPERIENCE_CONSTITUTION.md` · `WAVE_5_API_HANDOFF.md`
+
+### What Changed
+
+- **INI-UX-001** — Human workflow layer on W3 engine: view models, human messages, UI action contracts
+- **Routes** — `/initiatives`, `/initiatives/new`, `/initiatives/[id]/*` with workspace shell
+- **API** — portfolio, detail views, command execution with human-blocked responses
+- **Creation wizard** — 8-step proposal flow (Concept only, no activate from wizard)
+- **Charter, readiness, people, manage, history** workbenches
+- **Spanish path** — core strings in `ux/locale.ts`
+- **Legacy redirect** — `/initiative/[id]` → `/initiatives/[id]`
+- **Certification** — `npm run phase11:11.1:w4` + 20 W4 requirements
+
+---
+
 ## 2026-07-12 — County & Institution Workspace System [CIWS-001 · 0.7.1-ciws]
 
 **Documents:** `docs/phase-04/COUNTY_INSTITUTION_WORKSPACE_UPGRADE.md` · `data/registry/county-institution-workspace.json`

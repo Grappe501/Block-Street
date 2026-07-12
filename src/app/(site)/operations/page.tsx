@@ -24,7 +24,7 @@ export default function OperationsCenterPage() {
           <h1 className="text-2xl font-bold text-slate-900">Operations Command Center</h1>
           <p className="text-sm text-slate-600">CAE-001 · OCC-001 — live operational view</p>
         </div>
-        <Link href="/initiative/ini-youth-civic-2026" className="rounded bg-orange-700 px-3 py-2 text-sm text-white">
+        <Link href="/initiatives" className="rounded bg-orange-700 px-3 py-2 text-sm text-white">
           Youth Civic Initiative
         </Link>
       </div>

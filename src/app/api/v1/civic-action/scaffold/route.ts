@@ -4,6 +4,7 @@ import { getScaffoldProgress } from "@/lib/civic-action/scaffold/ledger";
 import { getIniW1Overview, runIniW1Certification } from "@/lib/civic-action/builds/11.1";
 import { getIniW2Overview } from "@/lib/civic-action/builds/11.1/w2";
 import { getIniW3Overview } from "@/lib/civic-action/builds/11.1/w3";
+import { getIniW4Overview } from "@/lib/civic-action/builds/11.1/w4";
 
 export const GET = withApiGateway(
   async (ctx, request) => {
@@ -19,6 +20,13 @@ export const GET = withApiGateway(
 
     if (build === "11.1" && wave === "w2") {
       return apiSuccess(getIniW2Overview(), {
+        request_id: ctx.request_id,
+        correlation_id: ctx.correlation_id,
+      });
+    }
+
+    if (build === "11.1" && wave === "w4") {
+      return apiSuccess(getIniW4Overview(), {
         request_id: ctx.request_id,
         correlation_id: ctx.correlation_id,
       });

@@ -1,6 +1,6 @@
 {
   "name": "block-street",
-  "version": "0.7.1-ciws",
+  "version": "0.7.2-ini-w4",
   "private": true,
   "description": "Arkansas youth & student organizing platform",
   "scripts": {
@@ -20,7 +20,9 @@
     "phase11:11.1:w2": "node scripts/phase11/11.1-w2.mjs",
     "phase11:11.1:w3": "node scripts/phase11/11.1-w3.mjs",
     "phase11:11.1:w3:all": "npm run typecheck && npm run phase11:11.1:w3",
-    "phase11:gate": "npm run phase11:validate && npm run phase11:11.1:w1 && npm run phase11:11.1:w2 && npm run phase11:11.1:w3 && npm run phase11:traceability",
+    "phase11:11.1:w4": "node scripts/phase11/11.1-w4.mjs",
+    "phase11:11.1:w4:all": "npm run typecheck && npm run phase11:11.1:w4",
+    "phase11:gate": "npm run phase11:validate && npm run phase11:11.1:w1 && npm run phase11:11.1:w2 && npm run phase11:11.1:w3 && npm run phase11:11.1:w4 && npm run phase11:traceability",
     "phase11:traceability": "node scripts/phase11/traceability.mjs",
     "phase11:all": "npm run typecheck && npm run lint && npm run test:civic-action && npm run phase11:gate",
     "canon:validate": "node scripts/canon/validate.mjs",
