@@ -9,6 +9,7 @@ import {
   STATUS_LABELS,
   PLATFORM_DISCLAIMER,
 } from "@/lib/data";
+import { SignupButton } from "@/components/community/SignupButton";
 
 export default async function PrivateCharterSchoolPage({
   params,
@@ -95,9 +96,7 @@ export default async function PrivateCharterSchoolPage({
               <span key={i.id} className="badge bg-slate-100 text-slate-600">{i.label}</span>
             ))}
           </div>
-          <button disabled className="mt-6 btn-primary cursor-not-allowed opacity-60">
-            Sign Up — Launching July 14
-          </button>
+          <SignupButton county={school.county} school={school.slug} />
         </div>
 
         <p className="mt-6 text-xs text-slate-400">

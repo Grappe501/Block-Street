@@ -9,6 +9,7 @@ import {
   INTERESTS,
   PLATFORM_DISCLAIMER,
 } from "@/lib/data";
+import { SignupButton } from "@/components/community/SignupButton";
 
 export default async function CountyPage({
   params,
@@ -165,9 +166,7 @@ export default async function CountyPage({
             <span key={i.id} className="badge bg-slate-100 text-slate-600">{i.label}</span>
           ))}
         </div>
-        <button disabled className="mt-6 btn-primary cursor-not-allowed opacity-60">
-          Sign Up — Launching July 14
-        </button>
+        <SignupButton county={slug} label="Sign Up for County Hub" />
       </div>
 
       <p className="mt-6 text-xs text-slate-400">{PLATFORM_DISCLAIMER}</p>

@@ -270,3 +270,27 @@ export const STATUS_COLORS: Record<RepresentationStatus, string> = {
   building: "bg-amber-100 text-amber-800",
   active: "bg-green-100 text-green-800",
 };
+
+export type JoinPlace =
+  | { kind: "county"; county: County }
+  | { kind: "school"; county: County; school: Institution | HighSchool | PrivateCharterSchool };
+
+/** Active signup entry from a county or school dashboard. */
+export function buildSignupHref(opts: { county: string; school?: string }): string {
+  const params = new URLSearchParams({ county: opts.county });
+  if (opts.school) params.set("school", opts.school);
+  return `/join?${params.toString()}`;
+}
+
+export function resolveJoinPlace(countySlug?: string | null, schoolSlug?: string | null): JoinPlace | null {
+  if (!countySlug) return null;
+  const county = getCountyBySlug(countySlug);
+  if (!county) return null;
+  if (!schoolSlug) return { kind: "county", county };
+  const school =
+    getInstitutionBySlug(schoolSlug) ??
+    getHighSchoolBySlug(schoolSlug) ??
+    getPrivateCharterSchoolBySlug(schoolSlug);
+  if (!school) return { kind: "county", county };
+  return { kind: "school", county, school };
+}

@@ -1,12 +1,34 @@
 "use client";
 
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { AuthPageShell } from "@/components/auth/AuthPageShell";
 import { LanguageToggle, useIdentityLocale } from "@/components/identity/LanguageToggle";
 import { ModeBadge } from "@/components/identity/ModeBadge";
+import { resolveJoinPlace } from "@/lib/data";
 
-export default function JoinIdentityPage() {
+function JoinPlaceBanner() {
+  const searchParams = useSearchParams();
+  const place = resolveJoinPlace(searchParams.get("county"), searchParams.get("school"));
+  if (!place) return null;
+
+  const title =
+    place.kind === "school"
+      ? `${place.school.shortName ?? place.school.name} · ${place.county.name} County`
+      : `${place.county.name} County Hub`;
+
+  return (
+    <div className="mb-4 rounded border border-brand-200 bg-brand-50 p-3 text-sm text-brand-950">
+      <p className="font-semibold">Signing up from {title}</p>
+      <p className="mt-1 text-xs text-brand-800">
+        Use your invitation token below, or sign in if you already have an account.
+      </p>
+    </div>
+  );
+}
+
+function JoinIdentityContent() {
   const { t } = useIdentityLocale();
   const [token, setToken] = useState("");
 
@@ -15,6 +37,10 @@ export default function JoinIdentityPage() {
       <div className="mb-4 flex justify-end">
         <LanguageToggle />
       </div>
+
+      <Suspense fallback={null}>
+        <JoinPlaceBanner />
+      </Suspense>
 
       <p className="text-sm text-blue-900">{t("join.body")}</p>
 
@@ -66,5 +92,13 @@ export default function JoinIdentityPage() {
         <Link href="/join/community" className="underline">County &amp; school pathways</Link>
       </p>
     </AuthPageShell>
+  );
+}
+
+export default function JoinIdentityPage() {
+  return (
+    <Suspense fallback={null}>
+      <JoinIdentityContent />
+    </Suspense>
   );
 }
