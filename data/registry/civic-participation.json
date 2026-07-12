@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "documentId": "BUILD-010.1",
   "requirementId": "CIV-001",
   "buildArtifact": "CIVIC_PARTICIPATION",
@@ -9,13 +9,19 @@
   "priority": "critical",
   "productName": "Civic Participation Engine",
   "abbreviation": "CIV",
-  "guidingPrinciple": "The purpose of the platform is not to create activity. The purpose is to create stronger communities.",
+  "guidingPrinciple": "Participation is measured by meaningful contribution—not by login counts.",
   "buildsOn": ["FED-001", "OPS-001", "TRN-001", "AUTH-001", "ADM-001"],
   "apiEndpoints": [
     "GET /api/v1/civic/participation",
     "POST /api/v1/civic/participation",
+    "GET /api/v1/civic/timeline",
+    "GET /api/v1/civic/volunteer",
     "GET /api/v1/civic/engagement",
     "GET /api/v1/civic/forecast",
+    "GET /api/v1/civic/dashboard",
+    "GET /api/v1/civic/privacy",
+    "POST /api/v1/civic/privacy",
+    "GET /api/v1/civic/insights",
     "GET /api/admin/civic/overview"
   ],
   "acceptanceCriteria": "AC-194",

@@ -1,0 +1,19 @@
+{
+  "weights": {
+    "attend_meeting": 1,
+    "volunteer_shift": 3,
+    "lead_event": 5,
+    "recruit_volunteer": 4,
+    "mentor_member": 6,
+    "complete_major_project": 8
+  },
+  "score_components": [
+    { "key": "participation_frequency", "name": "Participation Frequency", "weight": 0.28 },
+    { "key": "volunteer_activity", "name": "Volunteer Activity", "weight": 0.22 },
+    { "key": "mission_completion", "name": "Mission Completion", "weight": 0.18 },
+    { "key": "leadership", "name": "Leadership", "weight": 0.12 },
+    { "key": "learning", "name": "Learning", "weight": 0.08 },
+    { "key": "mentoring", "name": "Mentoring", "weight": 0.07 },
+    { "key": "community_projects", "name": "Community Projects", "weight": 0.05 }
+  ]
+}

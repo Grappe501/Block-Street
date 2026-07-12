@@ -1,0 +1,12 @@
+{
+  "milestones": [
+    { "key": "first_volunteer_hour", "title": "First Volunteer Hour", "description": "Logged first hour of community service", "trigger": "volunteer_hours>=1" },
+    { "key": "ten_meetings", "title": "10 Meetings Attended", "description": "Consistent meeting participation", "trigger": "meetings>=10" },
+    { "key": "first_event_organized", "title": "First Event Organized", "description": "Led a community event", "trigger": "event_leadership>=1" },
+    { "key": "first_mentee", "title": "First Mentee", "description": "Began mentoring a new member", "trigger": "mentoring>=1" },
+    { "key": "first_community_project", "title": "First Community Project", "description": "Completed a community project", "trigger": "community_project>=1" },
+    { "key": "hundred_volunteer_hours", "title": "100 Volunteer Hours", "description": "Century of service", "trigger": "volunteer_hours>=100" },
+    { "key": "orientation_complete", "title": "Orientation Complete", "description": "Completed institutional onboarding", "trigger": "training>=1" },
+    { "key": "first_mission", "title": "First Mission Completed", "description": "Completed first civic mission", "trigger": "missions>=1" }
+  ]
+}

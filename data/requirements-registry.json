@@ -6520,17 +6520,21 @@
     {
       "id": "CIV-001",
       "title": "Civic Participation Engine — Build 10.1",
-      "purpose": "Measure participation, volunteer activity, attendance, membership growth, and civic habits",
-      "description": "BUILD-010.1 — participation events, Civic Participation Score, engagement trends, 90-day forecasting",
+      "purpose": "Measure meaningful civic participation across individuals, organizations, communities, and federation",
+      "description": "BUILD-010.1 — participation ledger, verification, civic journey, milestones, explainable scoring, volunteer tracking, dashboards, privacy, AI insights",
       "priority": "critical",
       "principle": "CGI-001",
       "dependencies": ["FED-001", "OPS-001", "TRN-001", "AUTH-001"],
-      "related": ["LDR-001", "CHD-001"],
+      "related": ["LDR-001", "CHD-001", "REL-001"],
       "acceptanceCriteria": [
-        "Participation events are recorded across civic activity types",
-        "Civic Participation Score is computed with explainable weighted factors",
-        "Engagement trends show direction with retention metrics",
-        "90-day participation forecasts include confidence and opportunities"
+        "Canonical participation events with verification and privacy levels",
+        "Lifelong civic timeline and milestone engine",
+        "Volunteer hours tracked with leader verification",
+        "Explainable 7-component Civic Participation Score",
+        "Organization, county, and federation dashboards",
+        "Privacy controls including milestone-badges-only mode",
+        "AI participation insights remain advisory only",
+        "16-step acceptance test validates full participation lifecycle"
       ],
       "futureNotes": "AC-194. Registry CIV-001. First build of Phase 10.",
       "implementationStatus": "done",

@@ -7,12 +7,18 @@
     "membership_growth_rate": 0,
     "declining_communities": 0,
     "rising_communities": 0,
+    "counties_tracked": 0,
     "updated_at": "2026-07-12T00:00:00Z"
   },
   "participation_events": [],
   "participation_scores": [],
+  "user_participation_scores": [],
   "engagement_trends": [],
   "participation_forecasts": [],
   "civic_habits": [],
+  "civic_timeline": [],
+  "civic_milestones": [],
+  "volunteer_records": [],
+  "privacy_settings": [],
   "audit_events": []
 }
