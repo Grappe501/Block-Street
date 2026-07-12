@@ -34,6 +34,15 @@ export default async function InitiativesPortfolioPage({
         <ExecutiveBriefCard />
       </div>
 
+      <div className="mt-4">
+        <Link
+          href="/initiatives/optimization"
+          className="inline-flex items-center rounded-lg border border-violet-200 bg-violet-50 px-4 py-2 text-sm font-medium text-violet-900 hover:bg-violet-100"
+        >
+          Open optimization dashboard →
+        </Link>
+      </div>
+
       <div className="mt-6 flex flex-wrap gap-2 text-sm">
         {["institution", "needs_attention", "active", "drafts"].map((m) => (
           <Link

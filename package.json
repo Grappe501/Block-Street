@@ -1,6 +1,6 @@
 {
   "name": "block-street",
-  "version": "0.7.4-ini-w6",
+  "version": "0.7.5-ini-w7",
   "private": true,
   "description": "Arkansas youth & student organizing platform",
   "scripts": {
@@ -26,7 +26,9 @@
     "phase11:11.1:w5:all": "npm run typecheck && npm run phase11:11.1:w5",
     "phase11:11.1:w6": "node scripts/phase11/11.1-w6.mjs",
     "phase11:11.1:w6:all": "npm run typecheck && npm run phase11:11.1:w6",
-    "phase11:gate": "npm run phase11:validate && npm run phase11:11.1:w1 && npm run phase11:11.1:w2 && npm run phase11:11.1:w3 && npm run phase11:11.1:w4 && npm run phase11:11.1:w5 && npm run phase11:11.1:w6 && npm run phase11:traceability",
+    "phase11:11.1:w7": "node scripts/phase11/11.1-w7.mjs",
+    "phase11:11.1:w7:all": "npm run typecheck && npm run phase11:11.1:w7",
+    "phase11:gate": "npm run phase11:validate && npm run phase11:11.1:w1 && npm run phase11:11.1:w2 && npm run phase11:11.1:w3 && npm run phase11:11.1:w4 && npm run phase11:11.1:w5 && npm run phase11:11.1:w6 && npm run phase11:11.1:w7 && npm run phase11:traceability",
     "phase11:traceability": "node scripts/phase11/traceability.mjs",
     "phase11:all": "npm run typecheck && npm run lint && npm run test:civic-action && npm run phase11:gate",
     "canon:validate": "node scripts/canon/validate.mjs",
