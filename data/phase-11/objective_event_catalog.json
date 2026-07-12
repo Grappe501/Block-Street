@@ -1,21 +1,20 @@
 {
-  "catalog_id": "OBJ-EVT-001",
-  "protocol": "11.2-W2",
+  "catalog_version": "11.2-w5.1",
+  "subsystem": "OBJ-EVT-001",
   "events": [
-    {"event_type": "ObjectiveCreated", "entity": "Objective", "version": "1.0"},
-    {"event_type": "ObjectiveApproved", "entity": "Objective", "version": "1.0"},
-    {"event_type": "ObjectiveActivated", "entity": "Objective", "version": "1.0"},
-    {"event_type": "ObjectiveArchived", "entity": "Objective", "version": "1.0"},
-    {"event_type": "KeyResultUpdated", "entity": "KeyResult", "version": "1.0"},
-    {"event_type": "WorkstreamCreated", "entity": "Workstream", "version": "1.0"},
-    {"event_type": "MissionStarted", "entity": "Mission", "version": "1.0"},
-    {"event_type": "MissionCompleted", "entity": "Mission", "version": "1.0"},
-    {"event_type": "TaskAssigned", "entity": "Task", "version": "1.0"},
-    {"event_type": "TaskCompleted", "entity": "Task", "version": "1.0"},
-    {"event_type": "EvidenceAdded", "entity": "Evidence", "version": "1.0"},
-    {"event_type": "ReviewCompleted", "entity": "Review", "version": "1.0"},
-    {"event_type": "OutcomeRecorded", "entity": "Outcome", "version": "1.0"},
-    {"event_type": "LessonLearnedCaptured", "entity": "LessonLearned", "version": "1.0"},
-    {"event_type": "ExecutionVersionCreated", "entity": "*", "version": "1.0"}
+    {"event_type": "execution.objective_created", "version": 1, "description": "A new Objective was created.", "producer": "OBJ-SVC-001", "consumers": ["search", "analytics", "audit"], "privacy_classification": "internal", "status": "active"},
+    {"event_type": "execution.objective_proposed", "version": 1, "description": "Objective submitted for institutional review.", "producer": "OBJ-SVC-001", "consumers": ["notifications", "calendar", "audit"], "privacy_classification": "internal", "status": "active"},
+    {"event_type": "execution.objective_approved", "version": 1, "description": "Objective approved for execution planning.", "producer": "OBJ-SVC-001", "consumers": ["notifications", "audit"], "privacy_classification": "internal", "status": "active"},
+    {"event_type": "execution.objective_activated", "version": 1, "description": "Objective activated for execution.", "producer": "OBJ-SVC-001", "consumers": ["search", "notifications", "calendar", "analytics"], "privacy_classification": "internal", "status": "active"},
+    {"event_type": "execution.objective_archived", "version": 1, "description": "Objective archived.", "producer": "OBJ-SVC-001", "consumers": ["search", "audit"], "privacy_classification": "internal", "status": "active"},
+    {"event_type": "execution.mission_created", "version": 1, "description": "Mission created under Objective.", "producer": "OBJ-SVC-001", "consumers": ["search", "notifications"], "privacy_classification": "internal", "status": "active"},
+    {"event_type": "execution.mission_assigned", "version": 1, "description": "Mission assigned to operational lead.", "producer": "OBJ-SVC-001", "consumers": ["notifications"], "privacy_classification": "internal", "status": "active"},
+    {"event_type": "execution.mission_started", "version": 1, "description": "Mission execution started.", "producer": "OBJ-SVC-001", "consumers": ["notifications", "calendar"], "privacy_classification": "internal", "status": "active"},
+    {"event_type": "execution.mission_completed", "version": 1, "description": "Mission completed.", "producer": "OBJ-SVC-001", "consumers": ["notifications", "analytics", "webhooks"], "privacy_classification": "internal", "status": "active"},
+    {"event_type": "execution.task_created", "version": 1, "description": "Task created under Mission.", "producer": "OBJ-SVC-001", "consumers": ["search"], "privacy_classification": "internal", "status": "active"},
+    {"event_type": "execution.task_assigned", "version": 1, "description": "Task assigned to contributor.", "producer": "OBJ-SVC-001", "consumers": ["notifications"], "privacy_classification": "internal", "status": "active"},
+    {"event_type": "execution.task_completed", "version": 1, "description": "Task completed.", "producer": "OBJ-SVC-001", "consumers": ["notifications", "analytics"], "privacy_classification": "internal", "status": "active"},
+    {"event_type": "execution.evidence_attached", "version": 1, "description": "Evidence attached to execution work.", "producer": "OBJ-SVC-001", "consumers": ["audit"], "privacy_classification": "internal", "status": "active"},
+    {"event_type": "execution.outcome_recorded", "version": 1, "description": "Outcome recorded for Objective.", "producer": "OBJ-SVC-001", "consumers": ["analytics", "audit"], "privacy_classification": "internal", "status": "active"}
   ]
 }

@@ -55,7 +55,7 @@ export function resolveObjectiveLifecycleActions(
       available: allowed && permitted,
       blocked_reason_optional: !allowed ? "Lifecycle step not available" : !permitted ? "You do not have authority" : undefined,
       requires_confirmation: true,
-      endpoint_or_command: "/api/v1/civic-action/objectives/commands",
+      endpoint_or_command: "/api/v1/objectives/commands",
       permission_key: EXECUTION_PERMISSIONS[def.command],
     };
   });

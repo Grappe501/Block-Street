@@ -34,6 +34,10 @@ export class ObjectiveApplicationService {
     );
   }
 
+  listAllObjectives(): ObjectiveRecord[] {
+    return readStoreSlice<ObjectiveRecord>(EXECUTION_STORE_KEYS.objectives);
+  }
+
   listWorkstreams(objectiveId: string): WorkstreamRecord[] {
     return readStoreSlice<WorkstreamRecord>(EXECUTION_STORE_KEYS.workstreams).filter(
       (w) => w.objective_id === objectiveId
