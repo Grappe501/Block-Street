@@ -1,0 +1,10 @@
+{
+  "playbooks": [
+    { "key": "new_campus_launch", "name": "New Campus Launch", "description": "Controlled rollout for a new campus chapter" },
+    { "key": "county_expansion", "name": "County Expansion", "description": "Regional rollout across county units" },
+    { "key": "incident_response", "name": "Incident Response", "description": "Operational incident escalation and recovery" },
+    { "key": "security_event", "name": "Security Event", "description": "Security incident operational playbook" },
+    { "key": "major_release", "name": "Major Release", "description": "Governed release with training and rollback" },
+    { "key": "disaster_recovery", "name": "Disaster Recovery", "description": "Recovery and continuity operations" }
+  ]
+}

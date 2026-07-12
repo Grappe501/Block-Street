@@ -1,0 +1,19 @@
+{
+  "launch_plans": [],
+  "health_records": [],
+  "adoption_records": [],
+  "support_requests": [],
+  "feedback_items": [],
+  "releases": [],
+  "maturity_scores": [],
+  "audit_events": [],
+  "health_summary": {
+    "active_launch_plans": 0,
+    "operational_institutions": 0,
+    "average_health_score": 0,
+    "open_support_tickets": 0,
+    "pending_feedback": 0,
+    "releases_this_month": 0,
+    "institutions_at_operational_maturity": 0
+  }
+}

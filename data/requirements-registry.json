@@ -6426,6 +6426,36 @@
       "versionHistory": { "created": "2026-07-11", "implemented": "2026-07-11" }
     },
     {
+      "id": "OPS-001",
+      "title": "Operational Launch, Adoption, and Continuous Improvement — Build 9.7",
+      "purpose": "Govern production rollout, adoption, operational health, support, feedback, releases, and long-term institutional success after pilot",
+      "description": "BUILD-009.7 — launch orchestration, controlled rollout, health scoring, adoption analytics, tiered support, feedback engine, release governance, maturity scoring, executive dashboards",
+      "priority": "critical",
+      "principle": "ILS-001",
+      "dependencies": ["PLT-001", "TRN-001", "MON-001", "DPL-001", "ADM-001"],
+      "related": ["SCL-001", "SUP-001"],
+      "acceptanceCriteria": [
+        "Institutions launch in controlled incremental stages",
+        "Operational health is continuously measured with explainable scores",
+        "Adoption metrics are visible and drive decisions",
+        "Support requests auto-classify and route by tier",
+        "Feedback flows into structured product backlog",
+        "Releases follow governed workflows with rollback"
+      ],
+      "futureNotes": "AC-192. Registry OPS-001. Supersedes planned SUP-001 scope for Build 9.7.",
+      "implementationStatus": "done",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": null,
+        "api": "API-OPS",
+        "frontend": "PAGE-ADMIN-ILS",
+        "test": "TEST-OPS-001",
+        "doc": "DOC-OPS-001"
+      },
+      "versionHistory": { "created": "2026-07-11", "implemented": "2026-07-11" }
+    },
+    {
       "id": "PSI-014",
       "title": "Platform Operations, Governance & Lifecycle Architecture — Volume 5.13",
       "purpose": "Operate the platform as a governed institution — stewardship, certification, and decades-long evolution",
