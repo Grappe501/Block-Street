@@ -34,12 +34,18 @@ export default async function InitiativesPortfolioPage({
         <ExecutiveBriefCard />
       </div>
 
-      <div className="mt-4">
+      <div className="mt-4 flex flex-wrap gap-3">
         <Link
           href="/initiatives/optimization"
           className="inline-flex items-center rounded-lg border border-violet-200 bg-violet-50 px-4 py-2 text-sm font-medium text-violet-900 hover:bg-violet-100"
         >
-          Open optimization dashboard →
+          Optimization dashboard →
+        </Link>
+        <Link
+          href="/initiatives/launch"
+          className="inline-flex items-center rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-2 text-sm font-medium text-emerald-900 hover:bg-emerald-100"
+        >
+          Launch control center →
         </Link>
       </div>
 

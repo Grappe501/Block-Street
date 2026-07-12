@@ -1,0 +1,77 @@
+{
+  "manifest_id": "INI-PRD-MANIFEST-001",
+  "build": "11.1",
+  "wave": "W8",
+  "version": "1.0.0",
+  "initiative_feature_flags": {
+    "INITIATIVE_ENGINE_ENABLED": true,
+    "INITIATIVE_INTELLIGENCE_ENABLED": true,
+    "INITIATIVE_OPTIMIZATION_ENABLED": true,
+    "INITIATIVE_PRODUCTION_GATES_ENABLED": true
+  },
+  "rollback_strategy": {
+    "documented": true,
+    "summary": "Revert deployment via Netlify rollback; restore initiative store from backup snapshot; replay event outbox from last known good offset.",
+    "procedure_path": "docs/phase-11/11.1-initiatives/08_PRODUCTION_READINESS.md#rollback"
+  },
+  "migration": {
+    "readiness": "ready",
+    "notes": "File-backed store suitable for pilot; plan Postgres migration before multi-organization scale."
+  },
+  "bootstrap": {
+    "institution_seed": true,
+    "institution_seed_path": "data/registry/institutions.json",
+    "template_seeds": true,
+    "template_seeds_path": "data/phase-11/initiative_types.json",
+    "governance_defaults": true,
+    "governance_defaults_path": "data/civic-action/requirements_registry.json",
+    "identity_bootstrap": true,
+    "identity_bootstrap_path": "data/registry/institutional-provisioning.json",
+    "invitation_bootstrap": true,
+    "invitation_bootstrap_path": "data/registry/institutional-federation.json"
+  },
+  "operations": {
+    "backup_procedures": {
+      "configured": true,
+      "summary": "Daily snapshot of data/civic-action/store.json and requirements registry"
+    },
+    "disaster_recovery": {
+      "configured": true,
+      "summary": "Restore from backup + replay W5 event outbox; RTO 4h target for pilot"
+    },
+    "audit_verification": {
+      "configured": true,
+      "summary": "Initiative history + domain events provide authoritative audit trail"
+    },
+    "monitoring": {
+      "configured": true,
+      "summary": "Production health API + deployment engine overview"
+    },
+    "alerting": {
+      "configured": true,
+      "summary": "Alert on failed blocking readiness checks and launch no_go decision"
+    },
+    "logging": {
+      "configured": true,
+      "summary": "Structured API errors + request correlation via W5 command envelope"
+    },
+    "health_checks": {
+      "configured": true,
+      "summary": "GET /api/v1/production/health"
+    }
+  },
+  "operator_training": {
+    "modules": []
+  },
+  "support_documentation": [
+    { "doc_id": "constitution", "title": "Initiative Constitution", "path": "docs/phase-11/11.1-initiatives/01_CONSTITUTION.md" },
+    { "doc_id": "lifecycle", "title": "Lifecycle Engine", "path": "docs/phase-11/11.1-initiatives/INITIATIVE_LIFECYCLE_ENGINE.md" },
+    { "doc_id": "api", "title": "API Constitution", "path": "docs/phase-11/11.1-initiatives/INITIATIVE_API_CONSTITUTION.md" },
+    { "doc_id": "intelligence", "title": "Intelligence Layer", "path": "docs/phase-11/11.1-initiatives/06_INTELLIGENCE_LAYER.md" },
+    { "doc_id": "optimization", "title": "Optimization Layer", "path": "docs/phase-11/11.1-initiatives/07_OPTIMIZATION_LAYER.md" },
+    { "doc_id": "production", "title": "Production Readiness", "path": "docs/phase-11/11.1-initiatives/08_PRODUCTION_READINESS.md" }
+  ],
+  "continuous_verification": {
+    "schedules": []
+  }
+}
