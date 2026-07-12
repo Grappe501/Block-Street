@@ -6216,7 +6216,7 @@
       "priority": "critical",
       "principle": "OLB-001",
       "dependencies": ["PSV-001", "SEC-PSV-001", "ADM-001", "AUTH-001"],
-      "related": ["PRV-001", "ORG-001", "MIG-001", "ONB-001", "TRN-001", "PLT-001", "SUP-001", "SCL-001"],
+      "related": ["PRV-001", "ORG-001", "MIG-001", "ONB-001", "TRN-001", "PLT-001", "OPS-001", "FED-001"],
       "acceptanceCriteria": [
         "Institutions provisioned through repeatable governed workflow",
         "Organizational structure configured without engineering changes",
@@ -6229,7 +6229,7 @@
         "Successful implementations become replication templates"
       ],
       "futureNotes": "Phase 9 master sequence AC-193. Registry ILS-001.",
-      "implementationStatus": "in_progress",
+      "implementationStatus": "done",
       "testingStatus": "pending",
       "documentationStatus": "done",
       "trace": {
@@ -6433,7 +6433,7 @@
       "priority": "critical",
       "principle": "ILS-001",
       "dependencies": ["PLT-001", "TRN-001", "MON-001", "DPL-001", "ADM-001"],
-      "related": ["SCL-001", "SUP-001"],
+      "related": ["FED-001"],
       "acceptanceCriteria": [
         "Institutions launch in controlled incremental stages",
         "Operational health is continuously measured with explainable scores",
@@ -6452,6 +6452,36 @@
         "frontend": "PAGE-ADMIN-ILS",
         "test": "TEST-OPS-001",
         "doc": "DOC-OPS-001"
+      },
+      "versionHistory": { "created": "2026-07-11", "implemented": "2026-07-11" }
+    },
+    {
+      "id": "FED-001",
+      "title": "Institutional Replication, Federation, and Ecosystem Growth — Build 9.8",
+      "purpose": "Enable institutions to replicate proven models, collaborate selectively, exchange knowledge, and participate in a governed ecosystem without surrendering autonomy",
+      "description": "BUILD-009.8 — institutional templates, replication engine, federation membership, shared resources, knowledge exchange, benchmarking, marketplace foundation, federation governance",
+      "priority": "critical",
+      "principle": "ILS-001",
+      "dependencies": ["OPS-001", "PLT-001", "TRN-001", "PRV-001", "ADM-001"],
+      "related": ["ILS-001"],
+      "acceptanceCriteria": [
+        "Institutions replicate from governed templates without inheriting private data",
+        "Federation membership is optional and permission-based",
+        "Shared resources retain ownership and lineage",
+        "Benchmarking preserves privacy with anonymous aggregates",
+        "Marketplace foundations exist with governance approval",
+        "Security audit confirms complete institutional isolation"
+      ],
+      "futureNotes": "AC-193. Registry FED-001. Supersedes planned SCL-001 scope for Build 9.8. Phase 9 completion.",
+      "implementationStatus": "done",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": null,
+        "api": "API-FED",
+        "frontend": "PAGE-ADMIN-ILS",
+        "test": "TEST-FED-001",
+        "doc": "DOC-FED-001"
       },
       "versionHistory": { "created": "2026-07-11", "implemented": "2026-07-11" }
     },

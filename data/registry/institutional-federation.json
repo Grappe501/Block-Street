@@ -1,0 +1,32 @@
+{
+  "version": "1.0.0",
+  "documentId": "BUILD-009.8",
+  "requirementId": "FED-001",
+  "buildArtifact": "INSTITUTIONAL_REPLICATION_FEDERATION",
+  "docPath": "docs/phase-09/INSTITUTIONAL_REPLICATION_FEDERATION.md",
+  "platformDocsPath": "docs/platform/federation/",
+  "status": "canonical",
+  "priority": "critical",
+  "productName": "Institutional Replication, Federation, and Ecosystem Growth",
+  "abbreviation": "FED",
+  "guidingPrinciple": "Every institution should own itself, while benefiting from shared knowledge, shared infrastructure, and shared learning.",
+  "buildsOn": ["OPS-001", "PLT-001", "TRN-001", "PRV-001", "ADM-001"],
+  "apiEndpoints": [
+    "GET /api/v1/federation/templates",
+    "POST /api/v1/federation/templates",
+    "POST /api/v1/federation/replicate",
+    "GET /api/v1/federation/membership",
+    "POST /api/v1/federation/membership",
+    "GET /api/v1/federation/resources",
+    "POST /api/v1/federation/resources",
+    "GET /api/v1/federation/benchmarks",
+    "GET /api/v1/federation/knowledge",
+    "POST /api/v1/federation/knowledge",
+    "GET /api/v1/federation/marketplace",
+    "POST /api/v1/federation/marketplace",
+    "GET /api/v1/federation/analytics",
+    "GET /api/admin/federation/overview"
+  ],
+  "acceptanceCriteria": "AC-193",
+  "acceptanceCriteriaMet": true
+}

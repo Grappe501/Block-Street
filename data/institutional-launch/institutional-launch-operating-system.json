@@ -5,12 +5,12 @@
   "requirementId": "ILS-001",
   "productName": "Institutional Launch, Adoption, and Scale",
   "phaseQuestion": "Can institutions adopt and operate without the original builders?",
-  "status": "in_progress",
+  "status": "complete",
   "priority": "critical",
   "readAfter": "PSV-001",
   "guidingPrinciple": "The platform is not truly ready until it can successfully introduce, teach, support, and reproduce itself.",
   "mission": "Move from technically capable to operationally adoptable — provisioning, configuration, migration, onboarding, training, pilots, support, and scale.",
-  "stepsComplete": 7,
+  "stepsComplete": 8,
   "stepsTotal": 8,
   "implementationOrder": ["9.1", "9.2", "9.3", "9.4", "9.5", "9.6", "9.7", "9.8"],
   "approvalGates": [
@@ -30,10 +30,10 @@
     { "id": "9.5", "name": "Training and Certification", "requirement": "TRN-001", "artifact": "docs/phase-09/TRAINING_AND_CERTIFICATION.md", "acceptanceCriteria": "AC-190", "status": "done" },
     { "id": "9.6", "name": "Pilot and Acceptance Program", "requirement": "PLT-001", "artifact": "docs/phase-09/PILOT_AND_ACCEPTANCE.md", "acceptanceCriteria": "AC-191", "status": "done" },
     { "id": "9.7", "name": "Operational Launch, Adoption, and Continuous Improvement", "requirement": "OPS-001", "artifact": "docs/phase-09/OPERATIONAL_LAUNCH_ADOPTION.md", "acceptanceCriteria": "AC-192", "status": "done" },
-    { "id": "9.8", "name": "Adoption, Replication, and Scale", "requirement": "SCL-001", "acceptanceCriteria": "AC-193", "status": "pending" }
+    { "id": "9.8", "name": "Institutional Replication, Federation, and Ecosystem Growth", "requirement": "FED-001", "artifact": "docs/phase-09/INSTITUTIONAL_REPLICATION_FEDERATION.md", "acceptanceCriteria": "AC-193", "status": "done" }
   ],
   "buildsOn": ["PSV-001", "AUTH-001", "ADM-001", "CMS-001", "NTF-001", "API-001", "DPL-001", "MON-001", "SEC-001"],
   "governedBy": ["LIVING-SYSTEMS-ARCHITECTURE"],
   "acceptanceCriteria": "AC-193",
-  "acceptanceCriteriaMet": false
+  "acceptanceCriteriaMet": true
 }

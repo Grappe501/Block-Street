@@ -1,0 +1,50 @@
+{
+  "templates": [
+    {
+      "name": "Campus Organization Model",
+      "description": "Multi-campus organizing structure with roles, training paths, and mission dashboards",
+      "version": "1.0.0",
+      "template_type": "campus_organization",
+      "supported_modules": ["provisioning", "organization", "onboarding", "training", "pilot", "operations"],
+      "organization_model": {
+        "units": ["institution", "region", "campus", "team"],
+        "default_roles": ["director", "campus_lead", "organizer", "volunteer"]
+      },
+      "training_model": {
+        "paths": ["campus_launch", "volunteer_onboarding", "organizer_certification"],
+        "certifications": ["campus_lead", "field_organizer"]
+      },
+      "playbooks": ["campus_launch", "volunteer_recruitment", "event_planning"],
+      "workflows": ["onboard_campus", "assign_missions", "track_volunteers"],
+      "permissions": ["institutions.view", "organization.manage", "training.manage", "pilot.manage"],
+      "default_dashboards": ["executive", "campus_health", "mission_board"],
+      "recommended_settings": {
+        "pilot_metric": "human_help_count_per_session",
+        "launch_strategy": "single_campus"
+      }
+    },
+    {
+      "name": "County Coalition Model",
+      "description": "County-wide coalition with shared playbooks and federated resource library",
+      "version": "1.0.0",
+      "template_type": "coalition",
+      "supported_modules": ["provisioning", "organization", "training", "operations", "federation"],
+      "organization_model": {
+        "units": ["coalition", "county", "chapter", "team"],
+        "default_roles": ["coalition_director", "county_lead", "chapter_lead", "member"]
+      },
+      "training_model": {
+        "paths": ["coalition_formation", "legislative_response"],
+        "certifications": ["coalition_steward"]
+      },
+      "playbooks": ["coalition_formation", "legislative_response", "crisis_communications"],
+      "workflows": ["coordinate_campaign", "share_resources"],
+      "permissions": ["federation.view", "federation.publish", "operations.view"],
+      "default_dashboards": ["coalition_health", "federation_overview"],
+      "recommended_settings": {
+        "federation_trust": "shared_assets",
+        "benchmarking": "anonymous_aggregate"
+      }
+    }
+  ]
+}

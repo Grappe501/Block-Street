@@ -1,0 +1,21 @@
+{
+  "health_summary": {
+    "member_count": 0,
+    "published_templates": 0,
+    "shared_resources": 0,
+    "knowledge_contributions": 0,
+    "marketplace_assets": 0,
+    "collaboration_events": 0,
+    "isolation_verified": false,
+    "updated_at": "2026-07-11T00:00:00Z"
+  },
+  "templates": [],
+  "replicated_institutions": [],
+  "federation_members": [],
+  "federation_agreements": [],
+  "shared_resources": [],
+  "knowledge_contributions": [],
+  "benchmark_snapshots": [],
+  "marketplace_assets": [],
+  "audit_events": []
+}

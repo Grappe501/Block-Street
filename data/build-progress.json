@@ -333,7 +333,7 @@
       "id": 9,
       "name": "Institutional Launch",
       "slug": "phase-09-institutional-launch",
-      "status": "in_progress",
+      "status": "done",
       "docPath": "docs/phase-09/PHASE_9_MASTER_SEQUENCE.md",
       "registryPath": "data/institutional-launch/institutional-launch-operating-system.json",
       "question": "Can institutions adopt and operate without the original builders?",
@@ -346,7 +346,7 @@
         { "id": "9.5", "name": "Training and Certification [TRN-001]", "status": "done", "notes": "Learning paths, practice workspaces, assessments, certification eligibility gates — AC-190" },
         { "id": "9.6", "name": "Pilot and Acceptance Program [PLT-001]", "status": "done", "notes": "Phased pilots, observation ledger, human-help count, acceptance gates — AC-191" },
         { "id": "9.7", "name": "Operational Launch, Adoption, and Continuous Improvement [OPS-001]", "status": "done", "notes": "Launch orchestration, health, adoption, support, feedback, releases, maturity — AC-192" },
-        { "id": "9.8", "name": "Adoption, Replication, and Scale [SCL-001]", "status": "pending", "notes": "Adoption metrics, launch certification, replication kits — AC-193" }
+        { "id": "9.8", "name": "Institutional Replication, Federation, and Ecosystem Growth [FED-001]", "status": "done", "notes": "Templates, replication, federation, shared resources, benchmarking, marketplace — AC-193" }
       ]
     },
     {
