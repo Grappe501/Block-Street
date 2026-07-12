@@ -1,0 +1,43 @@
+{
+  "schema_id": "INI-ENTITY-001",
+  "wave": "11.1-W2",
+  "entities": [
+    "InitiativeRecord",
+    "InitiativeCharterRecord",
+    "InitiativeScopeRecord",
+    "InitiativeTimelineRecord",
+    "InitiativeMembershipRecord",
+    "InitiativeVersionRecord",
+    "InitiativeDependencyRecord",
+    "InitiativeReviewRecord",
+    "InitiativeHistoryEvent",
+    "InitiativeCloseoutRecord",
+    "InitiativeAggregate"
+  ],
+  "typescript_source": "src/lib/civic-action/builds/11.1/data-model.ts",
+  "store_keys": {
+    "initiatives": "canonical_initiatives",
+    "charters": "initiative_charters",
+    "scopes": "initiative_scopes",
+    "timelines": "initiative_timelines",
+    "memberships": "initiative_memberships",
+    "versions": "initiative_versions",
+    "dependencies": "initiative_dependencies",
+    "reviews": "initiative_reviews",
+    "history": "initiative_history_events",
+    "closeouts": "initiative_closeouts"
+  },
+  "relationships": {
+    "institution_to_initiatives": "one_to_many",
+    "initiative_to_charter": "one_to_many_versions_one_active",
+    "initiative_to_scope": "one_to_many_versions",
+    "initiative_to_timeline": "one_to_one",
+    "initiative_to_memberships": "one_to_many",
+    "initiative_to_objectives": "one_to_many",
+    "initiative_to_workstreams": "one_to_many",
+    "initiative_to_versions": "one_to_many",
+    "initiative_to_dependencies": "one_to_many",
+    "initiative_to_reviews": "one_to_many",
+    "initiative_to_history": "one_to_many_append_only"
+  }
+}

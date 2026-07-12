@@ -10,6 +10,7 @@ import dpl from "../../../data/registry/deployment-platform.json";
 import mon from "../../../data/registry/monitoring-platform.json";
 import sec from "../../../data/registry/security-platform.json";
 import { AdminAuthenticationIdentity } from "@/components/admin/AdminAuthenticationIdentity";
+import { AdminIdentityTrustLayer } from "@/components/admin/AdminIdentityTrustLayer";
 import { AdminAdministrationPlatform } from "@/components/admin/AdminAdministrationPlatform";
 import { AdminContentServices } from "@/components/admin/AdminContentServices";
 import { AdminNotificationServices } from "@/components/admin/AdminNotificationServices";
@@ -63,6 +64,7 @@ export function AdminPlatformServicesLayer() {
       <AdminNotificationServices />
       <AdminContentServices />
       <AdminAdministrationPlatform />
+      <AdminIdentityTrustLayer />
       <AdminAuthenticationIdentity />
     </div>
   );

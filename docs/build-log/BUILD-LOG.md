@@ -4,6 +4,148 @@
 
 ---
 
+## 2026-07-12 — ITL Wave 1 [ITL-W1-001] Human Registry, Invitation Network, Sponsor Accountability
+
+**Documents:** `docs/platform/identity/WAVE_1_IMPLEMENTATION_PLAN.md` + wave 1 standards
+
+### What Changed
+
+- **Wave 1 engine** — `src/lib/identity-trust/wave1/` (12 build steps W1.1–W1.12)
+- **Entry gate** — public registration blocked; `/register` shows invitation-only message
+- **Canonical Human** — `hum_*` Global Human ID, public identity versions, provisional membership default
+- **Invitation lifecycle** — full Wave1Invitation model, attestation, token hashing, expiration, revocation
+- **Sponsor accountability** — privilege limits, education, relationship basis (private)
+- **Duplicate screening** — email/name signals, review routing (no silent merge)
+- **Founding seed** — closed founding path with immutable audit record
+- **User routes** — `/identity`, `/identity/invitations`, `/identity/sponsor`
+- **Admin** — `GET /api/admin/identity/overview`
+- **Certification** — 7 gates + invariant checks
+
+---
+
+## 2026-07-12 — Phase 10.6A Identity Trust Layer [ITF-001 · ITL-001 · AC-ITF-001]
+
+**Documents:** `docs/phase-10/IDENTITY_TRUST_LAYER.md` · `docs/platform/identity-trust/*` (16 standards)
+
+### What Changed
+
+- **10 constitutional subsystems** — HIR, INV, SPN, VER, TRU, GOV, FED, INT, OPS, CERT (ITL-HIR-001 through ITL-CERT-001)
+- **Global Human ID (GHID)** — permanent identifier; never deleted, only archived
+- **Immutable identity history ledger** — all trust changes, invitations, verifications recorded
+- **Trust lifecycle** — Pending → Sponsored → Verified → Trusted → Leader → Federation Trusted
+- **Federation identity** — one human, many institutions, independent permissions
+- **Identity governance** — reviews, appeals, AI advisory-only constraints
+- **Identity intelligence** — duplicate detection, fraud rings, mass invitation alerts
+- **14-point launch certification** — `GET /api/v1/identity-trust/certification`
+- **20 API endpoints** — trust, appeals, federation, analytics, timeline, search, operations
+- **Phase 10 integration** — Build 10.6A in Civic Growth OS (7/9 steps complete)
+
+---
+
+## 2026-07-12 — Identity Trust Framework & Layer [ITF-001 · ITL-001 · AC-ITF-001]
+
+**Documents:** `docs/constitutional/IDENTITY_TRUST_LAYER.md` · `docs/platform/identity-trust/*` (7 standards)
+
+### What Changed
+
+- **Constitutional Identity Trust Layer** — root of trust above AUTH-001; every account represents one accountable human
+- **Invitation-only entry** — `POST /api/v1/identity-trust/register`; public signup disabled; sponsor agreement required
+- **Trust levels** — Pending → Sponsored → Verified → Trusted → Leader (not a social score)
+- **Verification ≠ reputation** — independent verifications unlock Trusted; review instead of auto-removal
+- **Human Identity Registry** — legal (optional), public (required), display (optional); real name policy
+- **Invite tree & audit lineage** — permanent sponsor link; bad-actor sponsor detection
+- **Privacy** — verification records private; public badges only
+- **Admin UI** — `AdminIdentityTrustLayer` wired in Platform Services Phase 8
+- **Permissions** — `identity_trust.view`, `identity_trust.manage`
+
+---
+
+## 2026-07-12 — Build 10.6 Civic Strategic Intelligence & Decision Support Engine [INT-002 · AC-199]
+
+**Documents:** `docs/platform/strategic-intelligence/*` (10 standards per INT-002 spec) · `docs/phase-10/STRATEGIC_INTELLIGENCE.md`
+
+### What Changed
+
+- **Strategic insights** — opportunity, risk, trend detection from all Phase 10 engines
+- **Early warning system** — informational through critical with explainable evidence
+- **Strategic recommendations** — advisory only, human approval required
+- **Scenario planning** — what-if modeling with assumption transparency
+- **Probability forecasts** — leadership, volunteer, participation, resilience (advisory)
+- **Decision Support Center** — evidence, confidence, alternatives, tradeoffs
+- **Decision audit** — approval, implementation, outcome, lessons learned
+- **Institutional Learning Engine** — successful interventions become reusable knowledge
+- **Executive planning workbench** — opportunities, risks, forecasts, priorities
+- **Federation intelligence** — aggregated best practices without confidential data
+- **Explainable AI advisor** — why, evidence, confidence, alternatives—never directives
+- **15-step acceptance demo** — full AC-199 validation path
+
+---
+
+## 2026-07-12 — Build 10.5 Civic Outcomes & Impact Measurement Engine [OUT-001 · AC-198]
+
+**Documents:** `docs/platform/civic-outcomes/*` (10 standards per OUT-001 spec) · `docs/phase-10/CIVIC_OUTCOMES.md`
+
+### What Changed
+
+- **Canonical outcomes model** — outputs, outcomes, and impact clearly distinguished
+- **Outcomes ledger** — baseline measurement, targets, longitudinal timeline
+- **Theory of Change** — resources through long-term impact per program
+- **Evidence repository** — verified evidence with 5 verification levels
+- **Attribution engine** — correlation through direct attribution with confidence display
+- **Program evaluation** — did it work, why, for whom, conditions, recommendations
+- **Civic Return on Participation** — volunteer hours to long-term impact chain
+- **Advisory CROI** — never presents speculative numbers as fact
+- **Impact dashboards** — organization and executive views with trend tracking
+- **AI impact advisor** — evidence gap detection, never fabricates evidence
+- **Privacy-aware reports** — aggregated annual and community impact reports
+- **Federation analytics** — aggregate impact trends only
+- **12-step acceptance demo** — full AC-198 validation path
+
+---
+
+## 2026-07-12 — Build 10.4 Community Health & Civic Resilience Engine [CHD-001 · AC-197]
+
+**Documents:** `docs/platform/community-health/*` (10 standards per CHD-001 spec) · `docs/phase-10/COMMUNITY_HEALTH.md`
+
+### What Changed
+
+- **Community Health Profile** — canonical profile with explainable 11-domain Health Index
+- **Civic resilience framework** — 6 resilience states from fragile to model community
+- **Capacity analytics** — volunteer, leadership, mentor, and organizational readiness
+- **Organizational ecosystem** — collaboration density and partnership strength
+- **Risk detection** — leadership shortage, burnout, isolation, mentorship gaps
+- **Opportunity mapping** — advisory recommendations for partnerships and growth
+- **Geographic health maps** — neighborhood, city, county views (permission-aware)
+- **Longitudinal trends** — month-over-month health tracking
+- **Anonymous benchmarking** — peer comparison without exposing identities
+- **Community reports** — annual, county, regional (aggregated only)
+- **Federation analytics** — aggregate health without institution-specific data
+- **AI community advisor** — advisory capacity recommendations only
+- **15-step acceptance demo** — full AC-197 validation path
+
+---
+
+## 2026-07-12 — Build 10.3 Community Relationship Intelligence Engine [REL-001 · AC-196]
+
+**Documents:** `docs/platform/community-relationship/*` (10 standards per REL-001 spec) · `docs/phase-10/COMMUNITY_RELATIONSHIP_INTELLIGENCE.md`
+
+### What Changed
+
+- **Canonical relationship graph** — nodes, edges, lifecycle stages, verification levels
+- **Relationship ledger** — verified interaction events with explainable strength factors
+- **Mentorship graph** — first-class mentor/mentee edges with load analytics
+- **Collaboration analytics** — missions, cross-team, cross-org, volunteer, committee metrics
+- **Community connectors** — bridge-builders across organizations and counties
+- **Isolation detection** — early intervention for disconnected teams, volunteers, orgs
+- **Network resilience** — redundancy, connector concentration, single-point dependencies
+- **Partnership intelligence** — organizational maps and advisory recommendations
+- **Privacy controls** — mentorship visibility, collaboration history, federation aggregates only
+- **Federation analytics** — aggregated collaboration trends without private relationships
+- **AI relationship advisor** — advisory recommendations only, no hidden trust scores
+- **15-step acceptance demo** — full AC-196 validation path
+
+---
+
 ## 2026-07-12 — Build 10.2 Leadership Development Engine [LDR-001 · AC-195]
 
 **Documents:** `docs/platform/leadership/*` (10 standards per LDR-001 spec) · `docs/phase-10/LEADERSHIP_DEVELOPMENT.md`

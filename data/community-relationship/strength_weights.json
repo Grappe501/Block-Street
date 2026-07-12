@@ -1,0 +1,17 @@
+{
+  "weights": {
+    "frequency": 0.2,
+    "duration_months": 0.1,
+    "collaboration_count": 0.2,
+    "shared_projects": 0.2,
+    "mentoring_sessions": 0.15,
+    "participation_score": 0.15
+  },
+  "status_thresholds": {
+    "strong": 75,
+    "active": 55,
+    "growing": 35,
+    "new": 15,
+    "dormant": 5
+  }
+}

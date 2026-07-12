@@ -1,0 +1,61 @@
+{
+  "wave_id": "ITL-W3-001",
+  "default_response_days_routine": 7,
+  "default_response_days_serious": 14,
+  "default_appeal_deadline_days": 30,
+  "default_containment_days": 14,
+  "duplicate_merge_required_approvals": 2,
+  "fraud_decision_standard": "clear_and_convincing",
+  "ordinary_decision_standard": "reasonable_assurance",
+  "invariants": [
+    "ITL-W3-INV-001",
+    "ITL-W3-INV-002",
+    "ITL-W3-INV-003",
+    "ITL-W3-INV-004",
+    "ITL-W3-INV-005",
+    "ITL-W3-INV-006",
+    "ITL-W3-INV-007",
+    "ITL-W3-INV-008",
+    "ITL-W3-INV-009",
+    "ITL-W3-INV-010",
+    "ITL-W3-INV-011",
+    "ITL-W3-INV-012",
+    "ITL-W3-INV-013",
+    "ITL-W3-INV-014"
+  ],
+  "boards": [
+    {
+      "id": "board-inst-block-street",
+      "board_type": "institution",
+      "institution_id": "inst-block-street",
+      "name": "Block Street Institution Identity Review Panel",
+      "jurisdiction": "institution",
+      "minimum_panel_size": 1,
+      "quorum_rule": "one_qualified_reviewer",
+      "decision_rule": "majority",
+      "status": "active"
+    },
+    {
+      "id": "board-platform",
+      "board_type": "platform",
+      "institution_id": null,
+      "name": "Platform Identity Review Board",
+      "jurisdiction": "platform",
+      "minimum_panel_size": 2,
+      "quorum_rule": "two_qualified_reviewers",
+      "decision_rule": "majority",
+      "status": "active"
+    },
+    {
+      "id": "board-appeal",
+      "board_type": "appeal",
+      "institution_id": null,
+      "name": "Independent Appeal Panel",
+      "jurisdiction": "platform",
+      "minimum_panel_size": 3,
+      "quorum_rule": "three_independent_reviewers",
+      "decision_rule": "majority",
+      "status": "active"
+    }
+  ]
+}

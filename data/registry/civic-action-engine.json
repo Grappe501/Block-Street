@@ -1,0 +1,33 @@
+{
+  "id": "CAE-001",
+  "name": "Civic Action Engine",
+  "phase": 11,
+  "guidingPrinciple": "Every action should have a clear purpose, an accountable Human, an authorized institution, a defined timeline, and a measurable result.",
+  "components": [
+    { "id": "INI-001", "name": "Initiative and Program Architecture" },
+    { "id": "OBJ-001", "name": "Strategic Planning and Objective Engine" },
+    { "id": "MSN-002", "name": "Mission and Workstream Execution" },
+    { "id": "RSP-001", "name": "Team, Role, and Responsibility Coordination" },
+    { "id": "TIM-001", "name": "Calendar, Timing, and Operational Rhythm" },
+    { "id": "CAP-001", "name": "Resource, Capacity, and Logistics Management" },
+    { "id": "COM-002", "name": "Communications and Mobilization Operations" },
+    { "id": "FLD-001", "name": "Field Operations and Geographic Execution" },
+    { "id": "COL-001", "name": "Coalition and Cross-Institution Coordination" },
+    { "id": "DEC-001", "name": "Decision, Approval, and Escalation System" },
+    { "id": "OCC-001", "name": "Live Operations Command Center" },
+    { "id": "ADP-001", "name": "Adaptive Execution and Continuous Learning" },
+    { "id": "EVD-001", "name": "Action Evidence and Outcome Attribution" },
+    { "id": "PLY-001", "name": "Replication, Playbooks, and Execution Templates" },
+    { "id": "SAFE-001", "name": "Operational Safety, Compliance, and Resilience" },
+    { "id": "CAE-CERT-001", "name": "Phase 11 Certification and Launch" }
+  ],
+  "dataPaths": ["data/civic-action/store.json", "data/civic-action/cae_flags.json"],
+  "apiEndpoints": [
+    "/api/v1/civic-action/overview",
+    "/api/v1/civic-action/initiatives",
+    "/api/v1/civic-action/missions",
+    "/api/v1/civic-action/command-center"
+  ],
+  "siteRoutes": ["/operations", "/initiative/[id]", "/initiative/[id]/command"],
+  "implementation": "implemented"
+}

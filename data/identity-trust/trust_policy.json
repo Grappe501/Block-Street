@@ -1,0 +1,26 @@
+{
+  "core_principle": "Every account represents one real human being.",
+  "sponsor_responsibility": "I reasonably believe this person is who they claim to be — not a guarantee of every future action.",
+  "sponsor_agreement_text": "I personally know this individual or have verified their identity sufficiently to believe they are who they claim to be.",
+  "real_name_policy": "The default identity is the name you are publicly known by — not anonymous handles.",
+  "verification_for_trusted": 2,
+  "review_period_days": 90,
+  "dormancy_days": 180,
+  "invite_limits": {
+    "pending_invitation": 0,
+    "sponsored": 0,
+    "verified": 0,
+    "trusted": 5,
+    "institution_leader": -1,
+    "federation_trusted": -1
+  },
+  "constitutional_principles": [
+    "One Human · One Identity · One Accountability Chain",
+    "There is only ONE way to enter the platform: Invitation",
+    "Every invitation creates permanent lineage",
+    "Identity is built through trust, not passwords",
+    "Trust grows over time — it is never purchased",
+    "Verification protects the community — it does not exclude people",
+    "Every important action is attributable to a real human"
+  ]
+}

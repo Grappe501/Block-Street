@@ -1,0 +1,92 @@
+{
+  "contract_id": "INI-DB-001",
+  "wave": "11.1-W2",
+  "system_id": "INI-001",
+  "principle": "One canonical initiative per initiative_id; soft archive only; immutable history and versions",
+  "tables": [
+    {
+      "name": "initiatives",
+      "primary_key": "initiative_id",
+      "unique": ["initiative_slug", "institution_id"],
+      "required_fields": [
+        "initiative_id", "institution_id", "initiative_type", "initiative_name", "initiative_slug",
+        "executive_owner_human_id", "operational_owner_human_id", "status", "governance_class",
+        "visibility", "created_at", "created_by", "updated_at", "updated_by", "current_version", "is_archived"
+      ],
+      "constraints": [
+        "one_governing_institution",
+        "one_operational_owner",
+        "one_executive_owner",
+        "no_service_identity_owner"
+      ]
+    },
+    {
+      "name": "initiative_charters",
+      "primary_key": "charter_id",
+      "foreign_keys": [{ "initiative_id": "initiatives.initiative_id" }],
+      "required_fields": [
+        "charter_id", "initiative_id", "problem_statement", "purpose", "institution_alignment",
+        "success_definition", "in_scope", "out_of_scope", "review_frequency", "closeout_basis",
+        "charter_status", "version"
+      ]
+    },
+    {
+      "name": "initiative_scopes",
+      "primary_key": "scope_id",
+      "foreign_keys": [{ "initiative_id": "initiatives.initiative_id" }],
+      "versioned": true
+    },
+    {
+      "name": "initiative_timelines",
+      "primary_key": "timeline_id",
+      "foreign_keys": [{ "initiative_id": "initiatives.initiative_id" }],
+      "one_per_initiative": true
+    },
+    {
+      "name": "initiative_memberships",
+      "primary_key": "membership_id",
+      "foreign_keys": [
+        { "initiative_id": "initiatives.initiative_id" },
+        { "institution_membership_id": "institution_memberships.id" }
+      ],
+      "constraints": ["at_most_one_active_operational_owner"]
+    },
+    {
+      "name": "initiative_versions",
+      "primary_key": "initiative_version_id",
+      "foreign_keys": [{ "initiative_id": "initiatives.initiative_id" }],
+      "immutable": true
+    },
+    {
+      "name": "initiative_dependencies",
+      "primary_key": "initiative_dependency_id",
+      "foreign_keys": [{ "initiative_id": "initiatives.initiative_id" }],
+      "constraints": ["no_circular_initiative_dependencies"]
+    },
+    {
+      "name": "initiative_reviews",
+      "primary_key": "review_id",
+      "foreign_keys": [{ "initiative_id": "initiatives.initiative_id" }]
+    },
+    {
+      "name": "initiative_history_events",
+      "primary_key": "initiative_event_id",
+      "foreign_keys": [{ "initiative_id": "initiatives.initiative_id" }],
+      "immutable": true,
+      "append_only": true
+    },
+    {
+      "name": "initiative_closeouts",
+      "primary_key": "closeout_id",
+      "foreign_keys": [{ "initiative_id": "initiatives.initiative_id" }],
+      "one_per_terminal_initiative": true
+    }
+  ],
+  "deletion_policy": "soft_archive_only",
+  "id_policy": "immutable_uuid",
+  "cross_institution": {
+    "governing_institution": "single",
+    "participating_institutions": "via_membership_and_COL_001",
+    "host_authority_leakage": "prohibited"
+  }
+}

@@ -103,6 +103,8 @@ export function resolveApiContext(request: NextRequest): ApiRequestContext {
   apiScopes.add("users.read");
   apiScopes.add("missions.read");
   apiScopes.add("missions.write");
+  apiScopes.add("civic_action.view");
+  apiScopes.add("civic_action.manage");
   apiScopes.add("content.read");
   apiScopes.add("notifications.request");
   apiScopes.add("analytics.read");

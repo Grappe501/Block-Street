@@ -1,0 +1,97 @@
+{
+  "wave_id": "ITL-W2-001",
+  "default_provisional_days": 30,
+  "provisional_reminder_days": [7, 21, 29],
+  "verification_request_expiry_days": 14,
+  "required_independent_confirmations": 1,
+  "required_total_confirmations": 2,
+  "verifier_education_version": "w2-edu-v1",
+  "verifier_responsibility_statement": "I know this person directly or have independently confirmed their identity through an approved method. I believe this account represents the real human named here.",
+  "verification_methods": [
+    {
+      "id": "vm-personal",
+      "key": "personal_knowledge",
+      "name": "Personal Knowledge",
+      "description": "Verifier directly knows the person.",
+      "assurance_weight": "high",
+      "requires_live_interaction": false,
+      "requires_existing_relationship": true,
+      "requires_evidence": false,
+      "status": "active",
+      "version": "1"
+    },
+    {
+      "id": "vm-institutional",
+      "key": "institutional_knowledge",
+      "name": "Institutional Knowledge",
+      "description": "Authorized institutional representative confirms relationship.",
+      "assurance_weight": "high",
+      "requires_live_interaction": false,
+      "requires_existing_relationship": true,
+      "requires_evidence": false,
+      "status": "active",
+      "version": "1"
+    },
+    {
+      "id": "vm-live",
+      "key": "live_human_confirmation",
+      "name": "Live Human Confirmation",
+      "description": "Real-time human interaction confirms identity.",
+      "assurance_weight": "high",
+      "requires_live_interaction": true,
+      "requires_existing_relationship": false,
+      "requires_evidence": false,
+      "status": "active",
+      "version": "1"
+    },
+    {
+      "id": "vm-existing-trusted",
+      "key": "existing_trusted_relationship",
+      "name": "Existing Trusted Relationship",
+      "description": "Subject already verified in another institution.",
+      "assurance_weight": "high",
+      "requires_live_interaction": false,
+      "requires_existing_relationship": true,
+      "requires_evidence": false,
+      "status": "active",
+      "version": "1"
+    },
+    {
+      "id": "vm-document",
+      "key": "document_assisted",
+      "name": "Document-Assisted Verification",
+      "description": "Restricted document-assisted review.",
+      "assurance_weight": "high",
+      "requires_live_interaction": false,
+      "requires_existing_relationship": false,
+      "requires_evidence": true,
+      "status": "active",
+      "version": "1"
+    }
+  ],
+  "capability_matrix": {
+    "complete_onboarding": { "sponsored": true, "verified": true, "trusted": true, "leader": true },
+    "view_member_content": { "sponsored": "limited", "verified": true, "trusted": true, "leader": true },
+    "low_risk_missions": { "sponsored": "limited", "verified": true, "trusted": true, "leader": true },
+    "invite_human": { "sponsored": false, "verified": "policy_limited", "trusted": true, "leader": true },
+    "verify_human": { "sponsored": false, "verified": "if_qualified", "trusted": "if_qualified", "leader": "if_qualified" },
+    "export_restricted_data": { "sponsored": false, "verified": false, "trusted": "approval", "leader": "approval" },
+    "manage_institution_roles": { "sponsored": false, "verified": false, "trusted": false, "leader": "role_required" },
+    "mass_communication": { "sponsored": false, "verified": false, "trusted": "approval", "leader": "approval" },
+    "access_identity_evidence": { "sponsored": false, "verified": false, "trusted": false, "leader": "identity_role" }
+  },
+  "invariants": [
+    "ITL-W2-INV-001",
+    "ITL-W2-INV-002",
+    "ITL-W2-INV-003",
+    "ITL-W2-INV-004",
+    "ITL-W2-INV-005",
+    "ITL-W2-INV-006",
+    "ITL-W2-INV-007",
+    "ITL-W2-INV-008",
+    "ITL-W2-INV-009",
+    "ITL-W2-INV-010",
+    "ITL-W2-INV-011",
+    "ITL-W2-INV-012"
+  ]
+}

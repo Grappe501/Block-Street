@@ -1,0 +1,52 @@
+{
+  "version": "1.0.0",
+  "documentId": "BUILD-010.3",
+  "requirementId": "REL-001",
+  "buildArtifact": "COMMUNITY_RELATIONSHIP_INTELLIGENCE",
+  "docPath": "docs/phase-10/COMMUNITY_RELATIONSHIP_INTELLIGENCE.md",
+  "platformDocsPath": "docs/platform/community-relationship/",
+  "status": "canonical",
+  "priority": "critical",
+  "productName": "Community Relationship Intelligence Engine",
+  "abbreviation": "REL",
+  "guidingPrinciple": "Communities grow stronger when relationships become healthier, more diverse, and more resilient—not when individuals become more monitored.",
+  "buildsOn": ["CIV-001", "LDR-001", "FED-001", "RLI-001", "ADM-001"],
+  "dataPaths": [
+    "data/community-relationship/store.json",
+    "data/community-relationship/feature_flags.json",
+    "data/community-relationship/relationship_types.json",
+    "data/community-relationship/strength_weights.json"
+  ],
+  "implementation": {
+    "engine": "src/lib/community-relationship/engine.ts",
+    "types": "src/lib/community-relationship/types.ts",
+    "data": "src/lib/community-relationship/data.ts",
+    "audit": "src/lib/community-relationship/audit.ts",
+    "adminUi": "src/components/admin/AdminCommunityRelationshipIntelligence.tsx"
+  },
+  "apiEndpoints": [
+    "GET /api/v1/community-relationship/nodes",
+    "POST /api/v1/community-relationship/nodes",
+    "GET /api/v1/community-relationship/edges",
+    "POST /api/v1/community-relationship/edges",
+    "GET /api/v1/community-relationship/events",
+    "POST /api/v1/community-relationship/events",
+    "GET /api/v1/community-relationship/graph",
+    "GET /api/v1/community-relationship/mentorship",
+    "POST /api/v1/community-relationship/mentorship",
+    "GET /api/v1/community-relationship/collaboration",
+    "GET /api/v1/community-relationship/connectors",
+    "GET /api/v1/community-relationship/isolation",
+    "GET /api/v1/community-relationship/resilience",
+    "GET /api/v1/community-relationship/recommendations",
+    "GET /api/v1/community-relationship/privacy",
+    "POST /api/v1/community-relationship/privacy",
+    "GET /api/v1/community-relationship/dashboard",
+    "GET /api/v1/community-relationship/analytics",
+    "GET /api/v1/community-relationship/insights",
+    "GET /api/v1/community-relationship/federation",
+    "GET /api/admin/community-relationship/overview"
+  ],
+  "acceptanceCriteria": "AC-196",
+  "acceptanceCriteriaMet": true
+}

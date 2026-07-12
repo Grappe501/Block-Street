@@ -1445,42 +1445,53 @@
     },
     {
       "id": "REL-001",
-      "title": "Arkansas Relationship Graph",
-      "purpose": "Connect all Registry entities via explicit typed relationships — organizing intelligence system",
-      "description": "PHASE-002.4 graph model, geographic/educational/organizing/network intelligence, discovery engine",
+      "title": "Community Relationship Intelligence Engine — Build 10.3",
+      "purpose": "Map and strengthen civic relationships among people, organizations, and communities while preserving privacy and consent",
+      "description": "BUILD-010.3 — canonical relationship graph, ledger, mentorship graph, collaboration analytics, partnership intelligence, community connectors, network resilience, privacy controls, federation aggregates, AI advisor",
       "priority": "critical",
       "principle": "CP-008",
       "dependencies": [
         "CNTY-002",
-        "INST-003"
+        "INST-003",
+        "CIV-001",
+        "LDR-001",
+        "RLI-001",
+        "FED-001"
       ],
       "related": [
         "REG-001",
         "REG-002",
         "NET-001",
         "REL-M02",
-        "SCN-001"
+        "SCN-001",
+        "CHD-001",
+        "CGI-001"
       ],
       "acceptanceCriteria": [
-        "Canonical relationship types defined",
-        "V1 edge scope documented",
-        "Entity vs relationship separation",
-        "Discovery and intelligence concepts established"
+        "Canonical relationship graph connecting people, teams, organizations, and communities",
+        "Relationship history preserved through verified events and explainable strength",
+        "Mentorship, collaboration, and partnership networks as first-class types",
+        "Organizations visualize collaboration and identify isolated groups",
+        "AI provides advisory recommendations without hidden trust scores",
+        "Privacy and consent govern every relationship",
+        "Accessible dashboards and APIs for users, organizations, counties, and federations",
+        "Network resilience analytics identify gaps and bridge-builders",
+        "15-step acceptance test validates full relationship lifecycle"
       ],
-      "futureNotes": "Graph queries, AI recommendations, adjacent counties",
+      "futureNotes": "AC-196. Registry community-relationship-intelligence.json. Third build of Phase 10. Builds on Phase 2 graph model and Phase 7 RLI-001.",
       "implementationStatus": "done",
       "testingStatus": "pending",
       "documentationStatus": "done",
       "trace": {
         "database": "DB-RELATIONSHIPS",
-        "api": null,
-        "frontend": null,
+        "api": "API-REL",
+        "frontend": "PAGE-ADMIN-REL",
         "test": "TEST-REL-001",
         "doc": "DOC-REL-001"
       },
       "versionHistory": {
         "created": "2026-07-10",
-        "implemented": "2026-07-10"
+        "implemented": "2026-07-12"
       }
     },
     {
@@ -6580,6 +6591,138 @@
         "frontend": "PAGE-ADMIN-LDR",
         "test": "TEST-LDR-001",
         "doc": "DOC-LDR-001"
+      },
+      "versionHistory": { "created": "2026-07-12", "implemented": "2026-07-12" }
+    },
+    {
+      "id": "CHD-001",
+      "title": "Community Health & Civic Resilience Engine — Build 10.4",
+      "purpose": "Measure community health and civic resilience through transparent, explainable indicators",
+      "description": "BUILD-010.4 — health profiles, capacity analytics, resilience framework, risk detection, opportunity mapping, geographic maps, benchmarking, reports, federation aggregates",
+      "priority": "critical",
+      "principle": "CGI-001",
+      "dependencies": ["CIV-001", "LDR-001", "REL-001", "FED-001"],
+      "related": ["OUT-001", "INT-002", "CIA-001", "CGI-001"],
+      "acceptanceCriteria": [
+        "Canonical Community Health Profile with explainable Health Index",
+        "Health measured through participation, leadership, volunteer capacity, and relationships",
+        "Leadership shortages and volunteer burnout risks detected early",
+        "Geographic dashboards with permission-aware privacy",
+        "AI advisory recommendations without autonomous decisions",
+        "Community reports and benchmarking use aggregated data only",
+        "Federation analytics operate on authorized aggregates",
+        "15-step acceptance test validates full community health lifecycle"
+      ],
+      "futureNotes": "AC-197. Registry CHD-001. Fourth build of Phase 10.",
+      "implementationStatus": "done",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": null,
+        "api": "API-CHD",
+        "frontend": "PAGE-ADMIN-CHD",
+        "test": "TEST-CHD-001",
+        "doc": "DOC-CHD-001"
+      },
+      "versionHistory": { "created": "2026-07-12", "implemented": "2026-07-12" }
+    },
+    {
+      "id": "OUT-001",
+      "title": "Civic Outcomes & Impact Measurement Engine — Build 10.5",
+      "purpose": "Connect institutional activity to measurable community outcomes with transparent evidence and attribution",
+      "description": "BUILD-010.5 — outcomes ledger, theory of change, evidence repository, attribution engine, program evaluation, CROP, impact reports, federation aggregates",
+      "priority": "critical",
+      "principle": "CGI-001",
+      "dependencies": ["CIV-001", "LDR-001", "REL-001", "CHD-001", "FED-001"],
+      "related": ["INT-002", "CIA-001", "CGI-001"],
+      "acceptanceCriteria": [
+        "Measurable outcomes with documented baselines",
+        "Outputs, outcomes, and impact clearly distinguished",
+        "Verified evidence with transparent confidence levels",
+        "Explainable attribution from correlation to direct attribution",
+        "Program evaluation with longitudinal measurement",
+        "AI assists evaluation without fabricating evidence",
+        "Privacy-aware aggregated impact reports",
+        "Federation analytics on authorized aggregates only",
+        "12-step acceptance test validates full outcomes lifecycle"
+      ],
+      "futureNotes": "AC-198. Registry OUT-001. Fifth build of Phase 10.",
+      "implementationStatus": "done",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": null,
+        "api": "API-OUT",
+        "frontend": "PAGE-ADMIN-OUT",
+        "test": "TEST-OUT-001",
+        "doc": "DOC-OUT-001"
+      },
+      "versionHistory": { "created": "2026-07-12", "implemented": "2026-07-12" }
+    },
+    {
+      "id": "INT-002",
+      "title": "Civic Strategic Intelligence & Decision Support Engine — Build 10.6",
+      "purpose": "Analyze civic systems to detect opportunities and risks, model scenarios, and support explainable human decisions",
+      "description": "BUILD-010.6 — strategic insights, early warnings, scenario planning, forecasting, recommendations, decision support, institutional learning, federation intelligence",
+      "priority": "critical",
+      "principle": "CGI-001",
+      "dependencies": ["CIV-001", "LDR-001", "REL-001", "CHD-001", "OUT-001", "FED-001"],
+      "related": ["RPL-001", "CIA-001", "CGI-001"],
+      "acceptanceCriteria": [
+        "Strategic insights generated from explainable cross-engine evidence",
+        "Opportunities and risks identified without opaque scoring",
+        "Early warnings surface trends before operational problems",
+        "Scenario planning and probability-based forecasts remain advisory",
+        "AI recommendations distinguish evidence, confidence, and alternatives",
+        "Decision support preserves human authority with complete audit trails",
+        "Institutional learning improves future recommendations",
+        "Federation intelligence uses authorized aggregates only",
+        "15-step acceptance test validates full strategic intelligence lifecycle"
+      ],
+      "futureNotes": "AC-199. Registry INT-002. Sixth build of Phase 10.",
+      "implementationStatus": "done",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": null,
+        "api": "API-INT",
+        "frontend": "PAGE-ADMIN-INT",
+        "test": "TEST-INT-002",
+        "doc": "DOC-INT-002"
+      },
+      "versionHistory": { "created": "2026-07-12", "implemented": "2026-07-12" }
+    },
+    {
+      "id": "ITF-001",
+      "title": "Identity Trust Framework & Layer — Phase 10.6A Constitutional",
+      "purpose": "Replace traditional registration with institutional-grade relationship-based identity — every account is one accountable human",
+      "description": "ITL-001 — 10 subsystems: Human Identity Registry, Invitation Network, Sponsor Accountability, Verification Engine, Trust Lifecycle, Identity Governance, Federation Identity, Identity Intelligence, Identity Operations, Certification",
+      "priority": "constitutional",
+      "principle": "CP-007",
+      "dependencies": ["AUTH-001", "SEC-001", "ADM-001"],
+      "related": ["ONB-001", "CP-001", "ICS-001"],
+      "acceptanceCriteria": [
+        "Invitation-only account creation — no public signup",
+        "Sponsor agreement required before every invitation",
+        "Trust levels separate identity verification from reputation",
+        "Two independent verifications unlock Trusted progression",
+        "Verification records private; public badges only",
+        "Permanent invite chain and audit lineage",
+        "Identity review replaces automatic removal for unverified accounts",
+        "Real public name policy with approved alias exception",
+        "Sponsor accountability and bad-actor detection",
+        "AC-ITF-001 acceptance demo validates full lifecycle"
+      ],
+      "futureNotes": "AC-ITF-001. Registry ITF-001 / ITL-001. Constitutional trust layer above AUTH-001.",
+      "implementationStatus": "done",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": null,
+        "api": "API-ITL",
+        "frontend": "PAGE-ADMIN-ITL",
+        "test": "TEST-ITF-001",
+        "doc": "DOC-ITF-001"
       },
       "versionHistory": { "created": "2026-07-12", "implemented": "2026-07-12" }
     },

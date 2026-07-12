@@ -1,0 +1,47 @@
+{
+  "version": "1.0.0",
+  "documentId": "BUILD-010.4",
+  "requirementId": "CHD-001",
+  "buildArtifact": "COMMUNITY_HEALTH_RESILIENCE",
+  "docPath": "docs/phase-10/COMMUNITY_HEALTH.md",
+  "platformDocsPath": "docs/platform/community-health/",
+  "status": "canonical",
+  "priority": "critical",
+  "productName": "Community Health & Civic Resilience Engine",
+  "abbreviation": "CHD",
+  "guidingPrinciple": "Healthy communities are defined by resilient relationships, sustained participation, capable leadership, trusted institutions, and the ability to solve problems together.",
+  "buildsOn": ["CIV-001", "LDR-001", "REL-001", "FED-001", "ADM-001"],
+  "dataPaths": [
+    "data/community-health/store.json",
+    "data/community-health/feature_flags.json",
+    "data/community-health/health_weights.json"
+  ],
+  "implementation": {
+    "engine": "src/lib/community-health/engine.ts",
+    "types": "src/lib/community-health/types.ts",
+    "data": "src/lib/community-health/data.ts",
+    "audit": "src/lib/community-health/audit.ts",
+    "adminUi": "src/components/admin/AdminCommunityHealth.tsx"
+  },
+  "apiEndpoints": [
+    "GET /api/v1/community-health/profiles",
+    "POST /api/v1/community-health/profiles",
+    "GET /api/v1/community-health/capacity",
+    "GET /api/v1/community-health/resilience",
+    "GET /api/v1/community-health/risks",
+    "GET /api/v1/community-health/opportunities",
+    "GET /api/v1/community-health/ecosystem",
+    "POST /api/v1/community-health/projects",
+    "GET /api/v1/community-health/geographic",
+    "GET /api/v1/community-health/trends",
+    "GET /api/v1/community-health/benchmark",
+    "GET /api/v1/community-health/dashboard",
+    "GET /api/v1/community-health/analytics",
+    "GET /api/v1/community-health/insights",
+    "POST /api/v1/community-health/reports",
+    "GET /api/v1/community-health/federation",
+    "GET /api/admin/community-health/overview"
+  ],
+  "acceptanceCriteria": "AC-197",
+  "acceptanceCriteriaMet": true
+}

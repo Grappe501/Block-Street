@@ -1,0 +1,50 @@
+{
+  "version": "1.0.0",
+  "documentId": "BUILD-010.6",
+  "requirementId": "INT-002",
+  "buildArtifact": "STRATEGIC_INTELLIGENCE",
+  "docPath": "docs/phase-10/STRATEGIC_INTELLIGENCE.md",
+  "platformDocsPath": "docs/platform/strategic-intelligence/",
+  "status": "canonical",
+  "priority": "critical",
+  "productName": "Civic Strategic Intelligence & Decision Support Engine",
+  "abbreviation": "INT",
+  "guidingPrinciple": "The platform informs decisions. It never replaces responsible human leadership.",
+  "buildsOn": ["CIV-001", "LDR-001", "REL-001", "CHD-001", "OUT-001", "FED-001", "ADM-001"],
+  "dataPaths": [
+    "data/strategic-intelligence/store.json",
+    "data/strategic-intelligence/feature_flags.json"
+  ],
+  "implementation": {
+    "engine": "src/lib/strategic-intelligence/engine.ts",
+    "types": "src/lib/strategic-intelligence/types.ts",
+    "data": "src/lib/strategic-intelligence/data.ts",
+    "audit": "src/lib/strategic-intelligence/audit.ts",
+    "adminUi": "src/components/admin/AdminStrategicIntelligence.tsx"
+  },
+  "apiEndpoints": [
+    "GET /api/v1/strategic-intelligence/insights",
+    "POST /api/v1/strategic-intelligence/insights",
+    "GET /api/v1/strategic-intelligence/warnings",
+    "GET /api/v1/strategic-intelligence/recommendations",
+    "POST /api/v1/strategic-intelligence/recommendations",
+    "GET /api/v1/strategic-intelligence/scenarios",
+    "POST /api/v1/strategic-intelligence/scenarios",
+    "GET /api/v1/strategic-intelligence/scenarios/compare",
+    "GET /api/v1/strategic-intelligence/forecasts",
+    "POST /api/v1/strategic-intelligence/forecasts",
+    "GET /api/v1/strategic-intelligence/decisions",
+    "POST /api/v1/strategic-intelligence/decisions",
+    "POST /api/v1/strategic-intelligence/decisions/outcome",
+    "GET /api/v1/strategic-intelligence/decision-support",
+    "GET /api/v1/strategic-intelligence/dashboard",
+    "GET /api/v1/strategic-intelligence/analytics",
+    "GET /api/v1/strategic-intelligence/advisor",
+    "GET /api/v1/strategic-intelligence/learning",
+    "GET /api/v1/strategic-intelligence/federation",
+    "POST /api/v1/strategic-intelligence/cycle",
+    "GET /api/admin/strategic-intelligence/overview"
+  ],
+  "acceptanceCriteria": "AC-199",
+  "acceptanceCriteriaMet": true
+}

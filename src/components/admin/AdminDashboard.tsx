@@ -53,6 +53,7 @@ import { AdminIntelligenceLayer } from "@/components/admin/AdminIntelligenceLaye
 import { AdminPlatformServicesLayer } from "@/components/admin/AdminPlatformServicesLayer";
 import { AdminInstitutionalLaunchLayer } from "@/components/admin/AdminInstitutionalLaunchLayer";
 import { AdminCivicGrowthLayer } from "@/components/admin/AdminCivicGrowthLayer";
+import { AdminCivicActionLayer } from "@/components/admin/AdminCivicActionLayer";
 
 const TABS = [
   { id: "overview", label: "Overview", icon: "📊" },
@@ -100,6 +101,7 @@ const TABS = [
   { id: "platform-phase8", label: "Phase 8", icon: "🔐" },
   { id: "platform-phase9", label: "Phase 9", icon: "🏛️" },
   { id: "platform-phase10", label: "Phase 10", icon: "🌱" },
+  { id: "platform-phase11", label: "Phase 11", icon: "⚡" },
   { id: "versions", label: "Versions", icon: "🔢" },
   { id: "build-log", label: "Build Log", icon: "📜" },
   { id: "deployment", label: "Deployment", icon: "🚀" },
@@ -223,6 +225,7 @@ export function AdminDashboard({ progress }: { progress: BuildProgress }) {
         {activeTab === "platform-phase8" && <AdminPlatformServicesLayer />}
         {activeTab === "platform-phase9" && <AdminInstitutionalLaunchLayer />}
         {activeTab === "platform-phase10" && <AdminCivicGrowthLayer />}
+        {activeTab === "platform-phase11" && <AdminCivicActionLayer />}
         {activeTab === "versions" && <AdminVersions progress={progress} />}
         {activeTab === "build-log" && <AdminBuildLog progress={progress} />}
         {activeTab === "deployment" && <AdminDeployment progress={progress} />}

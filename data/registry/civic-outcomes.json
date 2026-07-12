@@ -1,0 +1,51 @@
+{
+  "version": "1.0.0",
+  "documentId": "BUILD-010.5",
+  "requirementId": "OUT-001",
+  "buildArtifact": "CIVIC_OUTCOMES_IMPACT",
+  "docPath": "docs/phase-10/CIVIC_OUTCOMES.md",
+  "platformDocsPath": "docs/platform/civic-outcomes/",
+  "status": "canonical",
+  "priority": "critical",
+  "productName": "Civic Outcomes & Impact Measurement Engine",
+  "abbreviation": "OUT",
+  "guidingPrinciple": "Measure real-world impact, not platform activity.",
+  "buildsOn": ["CIV-001", "LDR-001", "REL-001", "CHD-001", "FED-001", "ADM-001"],
+  "dataPaths": [
+    "data/civic-outcomes/store.json",
+    "data/civic-outcomes/feature_flags.json",
+    "data/civic-outcomes/indicator_catalog.json"
+  ],
+  "implementation": {
+    "engine": "src/lib/civic-outcomes/engine.ts",
+    "types": "src/lib/civic-outcomes/types.ts",
+    "data": "src/lib/civic-outcomes/data.ts",
+    "audit": "src/lib/civic-outcomes/audit.ts",
+    "adminUi": "src/components/admin/AdminCivicOutcomes.tsx"
+  },
+  "apiEndpoints": [
+    "GET /api/v1/civic-outcomes/outcomes",
+    "POST /api/v1/civic-outcomes/outcomes",
+    "GET /api/v1/civic-outcomes/evidence",
+    "POST /api/v1/civic-outcomes/evidence",
+    "GET /api/v1/civic-outcomes/outputs",
+    "POST /api/v1/civic-outcomes/outputs",
+    "GET /api/v1/civic-outcomes/attribution",
+    "GET /api/v1/civic-outcomes/theory-of-change",
+    "POST /api/v1/civic-outcomes/theory-of-change",
+    "POST /api/v1/civic-outcomes/evaluations",
+    "GET /api/v1/civic-outcomes/timeline",
+    "GET /api/v1/civic-outcomes/benchmark",
+    "GET /api/v1/civic-outcomes/crop",
+    "GET /api/v1/civic-outcomes/croi",
+    "GET /api/v1/civic-outcomes/dashboard",
+    "GET /api/v1/civic-outcomes/analytics",
+    "GET /api/v1/civic-outcomes/insights",
+    "POST /api/v1/civic-outcomes/reports",
+    "GET /api/v1/civic-outcomes/federation",
+    "POST /api/v1/civic-outcomes/sync",
+    "GET /api/admin/civic-outcomes/overview"
+  ],
+  "acceptanceCriteria": "AC-198",
+  "acceptanceCriteriaMet": true
+}

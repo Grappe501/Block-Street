@@ -1,0 +1,15 @@
+{
+  "domains": [
+    { "key": "participation", "weight": 0.18 },
+    { "key": "leadership", "weight": 0.16 },
+    { "key": "volunteer_capacity", "weight": 0.14 },
+    { "key": "relationship_density", "weight": 0.14 },
+    { "key": "organizational_health", "weight": 0.12 },
+    { "key": "community_collaboration", "weight": 0.08 },
+    { "key": "mentorship", "weight": 0.08 },
+    { "key": "community_projects", "weight": 0.08 },
+    { "key": "education", "weight": 0.05 },
+    { "key": "resilience", "weight": 0.05 },
+    { "key": "institutional_stability", "weight": 0.02 }
+  ]
+}

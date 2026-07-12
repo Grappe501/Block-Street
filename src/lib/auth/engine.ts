@@ -13,6 +13,7 @@ import {
   persistWorkspaceMemberships,
   readAuditEvents,
 } from "./data";
+import { loadWave1Flags } from "@/lib/identity-trust/wave1/data";
 import { hashPassword } from "./crypto";
 import {
   SESSION_COOKIE,
@@ -75,6 +76,14 @@ export function register(
   input: { email: string; password: string; display_name: string },
   meta?: { ip?: string; userAgent?: string }
 ): { user: PlatformUser; session: Session } | { error: string } {
+  const w1 = loadWave1Flags();
+  if (w1.INVITATION_ONLY_ENTRY_REQUIRED || w1.PUBLIC_REGISTRATION_DISABLED || w1.LEGACY_ACCOUNT_CREATION_DISABLED) {
+    return {
+      error:
+        "This platform is invitation-only. Your authentication was successful, but no active invitation is associated with this identity.",
+    };
+  }
+
   const flags = loadFeatureFlags();
   if (!flags.AUTH_SELF_REGISTRATION_ENABLED) return { error: "Self-registration is not enabled" };
   if (flags.AUTH_INVITATION_ONLY_MODE) return { error: "Registration requires an invitation" };

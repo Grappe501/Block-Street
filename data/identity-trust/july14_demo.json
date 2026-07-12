@@ -1,0 +1,125 @@
+{
+  "meeting": {
+    "title": "July 14 Organizing Platform Launch",
+    "date": "2026-07-14",
+    "time": "10:00 AM CT",
+    "host": "Campaign Director",
+    "institution_id": "inst-block-street",
+    "participant_count": 24,
+    "agenda": [
+      "Welcome and identity foundation overview",
+      "Live invitation acceptance demonstration",
+      "Independent verification walkthrough",
+      "Institution context switching",
+      "Audit lineage and accountability",
+      "Q&A and feedback"
+    ]
+  },
+  "institutions": {
+    "inst-block-street": {
+      "name": "Arkansas Civic University",
+      "short_name": "ACU"
+    },
+    "inst-pulaski-youth": {
+      "name": "Pulaski County Youth Network",
+      "short_name": "PCYN"
+    }
+  },
+  "demo_humans": [
+    {
+      "id": "demo-001",
+      "label": "Demonstration Record",
+      "role": "Founding Human and administrator",
+      "public_name": "Steve Grappe",
+      "user_id": "usr-001",
+      "trust_label": "institution_leader",
+      "mode": "live"
+    },
+    {
+      "id": "demo-002",
+      "label": "Demonstration Record",
+      "role": "Sponsored and awaiting independent verification",
+      "public_name": "Maria Santos",
+      "user_id": "demo-sponsored-001",
+      "trust_label": "sponsored",
+      "mode": "demo"
+    },
+    {
+      "id": "demo-003",
+      "label": "Demonstration Record",
+      "role": "Verified Human and sponsor",
+      "public_name": "Field Organizer",
+      "user_id": "usr-002",
+      "trust_label": "verified",
+      "mode": "live"
+    },
+    {
+      "id": "demo-004",
+      "label": "Demonstration Record",
+      "role": "Verifier",
+      "public_name": "Jordan Lee",
+      "user_id": "demo-verifier-001",
+      "trust_label": "verified",
+      "mode": "demo"
+    },
+    {
+      "id": "demo-005",
+      "label": "Demonstration Record",
+      "role": "Multi-institution Human",
+      "public_name": "Alex Chen",
+      "user_id": "demo-multi-001",
+      "trust_label": "verified",
+      "mode": "demo"
+    },
+    {
+      "id": "demo-006",
+      "label": "Demonstration Record",
+      "role": "Duplicate candidate",
+      "public_name": "Alex Chen (candidate)",
+      "user_id": "demo-duplicate-001",
+      "trust_label": "sponsored",
+      "mode": "demo"
+    },
+    {
+      "id": "demo-007",
+      "label": "Demonstration Record",
+      "role": "Appeal case",
+      "public_name": "Taylor Brooks",
+      "user_id": "demo-appeal-001",
+      "trust_label": "restricted",
+      "mode": "demo"
+    }
+  ],
+  "system_status": [
+    { "name": "Identity Foundation", "mode": "live" },
+    { "name": "Invitation System", "mode": "live" },
+    { "name": "Human Verification", "mode": "live" },
+    { "name": "Cross-Institution Context", "mode": "demo" },
+    { "name": "Identity Intelligence", "mode": "locked", "note": "Coming after Wave 5 certification" }
+  ],
+  "audit_lineage_demo": [
+    { "step": 1, "event": "Sponsor issued invitation", "actor": "Steve Grappe", "at": "2026-07-10T09:00:00Z" },
+    { "step": 2, "event": "Invitation delivered securely", "actor": "system", "at": "2026-07-10T09:01:00Z" },
+    { "step": 3, "event": "Recipient accepted invitation", "actor": "Maria Santos", "at": "2026-07-10T10:15:00Z" },
+    { "step": 4, "event": "Canonical Human created", "actor": "system", "at": "2026-07-10T10:15:30Z" },
+    { "step": 5, "event": "Authentication connected", "actor": "Maria Santos", "at": "2026-07-10T10:16:00Z" },
+    { "step": 6, "event": "Provisional membership activated", "actor": "system", "at": "2026-07-10T10:16:30Z" },
+    { "step": 7, "event": "Verification requested", "actor": "Maria Santos", "at": "2026-07-10T11:00:00Z" },
+    { "step": 8, "event": "Independent verification confirmed", "actor": "Jordan Lee", "at": "2026-07-10T14:30:00Z" },
+    { "step": 9, "event": "Identity promoted to Verified", "actor": "system", "at": "2026-07-10T14:30:15Z" },
+    { "step": 10, "event": "July 14 workspace entered", "actor": "Maria Santos", "at": "2026-07-14T10:05:00Z" }
+  ],
+  "admin_overview_demo": {
+    "total_humans": 7,
+    "sponsored": 2,
+    "verified": 3,
+    "provisional": 1,
+    "invitations_pending": 1,
+    "verification_requests": 1,
+    "memberships": 8,
+    "identity_cases": 1,
+    "duplicate_candidates": 1,
+    "federation_memberships": 2,
+    "audit_health": "healthy"
+  }
+}

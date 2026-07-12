@@ -1,0 +1,14 @@
+{
+  "indicators": [
+    "volunteer_retention",
+    "leadership_growth",
+    "mission_completion",
+    "community_participation",
+    "partnership_creation",
+    "organizational_stability",
+    "civic_education_completion",
+    "mentor_availability",
+    "event_attendance",
+    "coalition_participation"
+  ]
+}

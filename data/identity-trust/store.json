@@ -1,0 +1,276 @@
+{
+  "human_identities": [
+    {
+      "id": "hid-usr-001",
+      "global_human_id": "hum_blockstreetfounder01",
+      "user_id": "usr-001",
+      "legal_name": null,
+      "public_name": "Campaign Director",
+      "preferred_name": "Director",
+      "display_name": "Director",
+      "known_alias_approved": false,
+      "aliases": [],
+      "identity_status": "active",
+      "trust_level": 4,
+      "trust_label": "institution_leader",
+      "public_badge": "Leader",
+      "primary_sponsor_id": null,
+      "invitation_id": null,
+      "institution_id": "inst-block-street",
+      "organization_id": "org-block-street",
+      "intended_role": "institution_leader",
+      "invite_quota": -1,
+      "invites_sent": 1,
+      "independent_verification_count": 2,
+      "institution_leader": true,
+      "federation_trusted": false,
+      "review_required": false,
+      "last_active_at": "2026-07-12T00:00:00Z",
+      "created_at": "2026-07-10T00:00:00Z",
+      "updated_at": "2026-07-12T00:00:00Z",
+      "trust_established_at": "2026-07-10T00:00:00Z",
+      "archived_at": null
+    },
+    {
+      "id": "hid-usr-002",
+      "global_human_id": "GHID-block-street-organizer",
+      "user_id": "usr-002",
+      "legal_name": null,
+      "public_name": "Field Organizer",
+      "preferred_name": "Organizer",
+      "display_name": "Organizer",
+      "known_alias_approved": false,
+      "aliases": [],
+      "identity_status": "active",
+      "trust_level": 2,
+      "trust_label": "verified",
+      "public_badge": "Verified Human",
+      "primary_sponsor_id": "usr-001",
+      "invitation_id": "bootstrap",
+      "institution_id": "inst-block-street",
+      "organization_id": "org-block-street",
+      "intended_role": "organizer",
+      "invite_quota": 0,
+      "invites_sent": 0,
+      "independent_verification_count": 1,
+      "institution_leader": false,
+      "federation_trusted": false,
+      "review_required": false,
+      "last_active_at": "2026-07-12T00:00:00Z",
+      "created_at": "2026-07-10T00:00:00Z",
+      "updated_at": "2026-07-12T00:00:00Z",
+      "trust_established_at": "2026-07-11T00:00:00Z",
+      "archived_at": null
+    }
+  ],
+  "trust_invitations": [],
+  "verifications": [
+    {
+      "id": "ver-001",
+      "subject_user_id": "usr-002",
+      "verifier_user_id": "usr-001",
+      "relationship": "colleague",
+      "verification_method": "known_personally",
+      "confidence": "high",
+      "notes_private": "Field organizer for Pulaski County",
+      "independent": true,
+      "verified_at": "2026-07-10T12:00:00Z"
+    },
+    {
+      "id": "ver-002",
+      "subject_user_id": "usr-002",
+      "verifier_user_id": "usr-001",
+      "relationship": "organization_leader",
+      "verification_method": "institution_verification",
+      "confidence": "high",
+      "notes_private": "Institution onboarding verification",
+      "independent": false,
+      "verified_at": "2026-07-11T00:00:00Z"
+    }
+  ],
+  "identity_reviews": [],
+  "appeals": [],
+  "sponsor_flags": [],
+  "sponsor_relationships": [
+    {
+      "id": "srel-001",
+      "sponsor_id": "usr-001",
+      "sponsored_user_id": "usr-002",
+      "invitation_id": "bootstrap",
+      "institution_id": "inst-block-street",
+      "organization_id": "org-block-street",
+      "created_at": "2026-07-10T00:00:00Z",
+      "permanent": true
+    }
+  ],
+  "identity_history": [
+    {
+      "id": "ihist-001",
+      "global_human_id": "hum_blockstreetfounder01",
+      "user_id": "usr-001",
+      "event_type": "identity_created",
+      "actor_id": "system",
+      "summary": "Bootstrap institution leader identity",
+      "details": {},
+      "timestamp": "2026-07-10T00:00:00Z",
+      "immutable": true
+    },
+    {
+      "id": "ihist-002",
+      "global_human_id": "GHID-block-street-organizer",
+      "user_id": "usr-002",
+      "event_type": "invitation_accepted",
+      "actor_id": "usr-001",
+      "summary": "Sponsored by Campaign Director",
+      "details": { "sponsor_id": "usr-001" },
+      "timestamp": "2026-07-10T00:00:00Z",
+      "immutable": true
+    }
+  ],
+  "trust_promotions": [],
+  "trust_demotions": [],
+  "federation_memberships": [
+    {
+      "id": "imem-001",
+      "global_human_id": "hum_blockstreetfounder01",
+      "user_id": "usr-001",
+      "institution_id": "inst-block-street",
+      "organization_id": "org-block-street",
+      "role": "institution_leader",
+      "permissions": ["identity_trust.manage", "identity_trust.view"],
+      "joined_at": "2026-07-10T00:00:00Z",
+      "status": "active"
+    },
+    {
+      "id": "imem-002",
+      "global_human_id": "GHID-block-street-organizer",
+      "user_id": "usr-002",
+      "institution_id": "inst-block-street",
+      "organization_id": "org-block-street",
+      "role": "organizer",
+      "permissions": ["identity_trust.view"],
+      "joined_at": "2026-07-10T00:00:00Z",
+      "status": "active"
+    }
+  ],
+  "intelligence_alerts": [],
+  "audit_events": [],
+  "founding_identity_record": {
+    "id": "founding-001",
+    "human_id": "usr-001",
+    "global_human_id": "hum_blockstreetfounder01",
+    "public_name": "Campaign Director",
+    "installation_authority": "platform-bootstrap",
+    "certified_at": "2026-07-10T00:00:00Z",
+    "founding_path_closed_at": "2026-07-10T00:00:00Z",
+    "immutable": true
+  },
+  "human_public_identities": [
+    {
+      "id": "hpi-001",
+      "human_id": "usr-001",
+      "global_human_id": "hum_blockstreetfounder01",
+      "public_name": "Campaign Director",
+      "preferred_short_name": "Director",
+      "identity_basis": "everyday_public_name",
+      "effective_at": "2026-07-10T00:00:00Z",
+      "superseded_at": null,
+      "approved_by": null,
+      "status": "active"
+    },
+    {
+      "id": "hpi-002",
+      "human_id": "usr-002",
+      "global_human_id": "GHID-block-street-organizer",
+      "public_name": "Field Organizer",
+      "preferred_short_name": "Organizer",
+      "identity_basis": "everyday_public_name",
+      "effective_at": "2026-07-10T00:00:00Z",
+      "superseded_at": null,
+      "approved_by": null,
+      "status": "active"
+    }
+  ],
+  "wave1_invitations": [],
+  "sponsor_attestations": [],
+  "sponsor_privileges": [
+    {
+      "human_id": "usr-001",
+      "global_human_id": "hum_blockstreetfounder01",
+      "status": "eligible",
+      "active_invitation_limit": 999,
+      "active_invitations": 0,
+      "invitations_created_today": 0,
+      "sponsor_education_version": "1.0.0",
+      "sponsor_education_completed_at": "2026-07-10T00:00:00Z",
+      "updated_at": "2026-07-12T00:00:00Z"
+    },
+    {
+      "human_id": "usr-002",
+      "global_human_id": "GHID-block-street-organizer",
+      "status": "limited",
+      "active_invitation_limit": 0,
+      "active_invitations": 0,
+      "invitations_created_today": 0,
+      "sponsor_education_version": null,
+      "sponsor_education_completed_at": null,
+      "updated_at": "2026-07-12T00:00:00Z"
+    }
+  ],
+  "alias_requests": [],
+  "duplicate_candidates": [],
+  "wave1_memberships": [
+    {
+      "id": "wmem-001",
+      "human_id": "usr-001",
+      "global_human_id": "hum_blockstreetfounder01",
+      "institution_id": "inst-block-street",
+      "originating_invitation_id": "founding-seed",
+      "membership_type": "institution_leader",
+      "status": "active",
+      "primary_unit_id": "org-block-street",
+      "proposed_role_id": "institution_leader",
+      "activated_role_id": "institution_leader",
+      "joined_at": "2026-07-10T00:00:00Z",
+      "provisional_until": null,
+      "ended_at": null,
+      "created_by_sponsor_human_id": "founding-seed"
+    },
+    {
+      "id": "wmem-002",
+      "human_id": "usr-002",
+      "global_human_id": "GHID-block-street-organizer",
+      "institution_id": "inst-block-street",
+      "originating_invitation_id": "bootstrap",
+      "membership_type": "basic_member",
+      "status": "provisional",
+      "primary_unit_id": "org-block-street",
+      "proposed_role_id": "organizer",
+      "activated_role_id": "member",
+      "joined_at": "2026-07-10T00:00:00Z",
+      "provisional_until": "2026-10-10T00:00:00Z",
+      "ended_at": null,
+      "created_by_sponsor_human_id": "usr-001"
+    }
+  ],
+  "invitation_acceptance_attempts": [],
+  "wave1_audit_events": [
+    {
+      "id": "w1-audit-bootstrap",
+      "event_type": "identity.founding_seed_created",
+      "actor_human_id": "usr-001",
+      "subject_human_id": "usr-001",
+      "institution_id": null,
+      "invitation_id": null,
+      "sponsor_relationship_id": null,
+      "action": "founding_seed_created",
+      "previous_state": null,
+      "new_state": "active",
+      "reason": "platform-bootstrap",
+      "timestamp": "2026-07-10T00:00:00Z",
+      "request_id": null,
+      "correlation_id": "bootstrap",
+      "result": "success"
+    }
+  ]
+}

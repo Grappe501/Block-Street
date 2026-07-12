@@ -1,0 +1,27 @@
+{
+  "system_id": "INI-001",
+  "wave": "11.1-W1",
+  "status": "canonical",
+  "terms": [
+    {"term": "initiative", "definition": "The root container for coordinated action.", "canonical": true, "aliases": [], "prohibited_uses": ["generic task list", "unowned project page"], "spanish_term": "Iniciativa", "status": "active"},
+    {"term": "program", "definition": "A recurring or continuing initiative delivering ongoing value.", "canonical": true, "aliases": ["ongoing program"], "prohibited_uses": ["synonym for any initiative"], "spanish_term": "Programa", "status": "active"},
+    {"term": "campaign", "definition": "A time-bounded effort pursuing a defined target.", "canonical": true, "aliases": [], "prohibited_uses": ["root container replacing initiative"], "spanish_term": "Campaña", "status": "active"},
+    {"term": "project", "definition": "A bounded effort producing a defined deliverable.", "canonical": true, "aliases": [], "prohibited_uses": ["root governance container"], "spanish_term": "Proyecto", "status": "active"},
+    {"term": "operation", "definition": "A coordinated execution effort, often time-sensitive.", "canonical": true, "aliases": ["live operation"], "prohibited_uses": [], "spanish_term": "Operación", "status": "active"},
+    {"term": "pilot", "definition": "A limited initiative designed to test and learn.", "canonical": true, "aliases": ["pilot program"], "prohibited_uses": ["permanent scope without review"], "spanish_term": "Programa Piloto", "status": "active"},
+    {"term": "charter", "definition": "The governed statement of purpose, ownership, scope, and authority.", "canonical": true, "aliases": ["initiative charter"], "prohibited_uses": ["informal notes only"], "spanish_term": "Carta de la Iniciativa", "status": "active"},
+    {"term": "executive_owner", "definition": "The Human accountable for institutional legitimacy and strategic outcome.", "canonical": true, "aliases": ["executive sponsor"], "prohibited_uses": ["service identity", "AI assistant"], "spanish_term": "Responsable Ejecutivo", "status": "active"},
+    {"term": "operational_owner", "definition": "The Human accountable for day-to-day initiative execution.", "canonical": true, "aliases": ["initiative lead"], "prohibited_uses": ["shared login", "department account"], "spanish_term": "Responsable de Operaciones", "status": "active"},
+    {"term": "backup_owner", "definition": "The Human authorized to assume responsibility when the primary operational owner is unavailable.", "canonical": true, "aliases": ["succession owner"], "prohibited_uses": [], "spanish_term": "Responsable Suplente", "status": "active"},
+    {"term": "sponsoring_authority", "definition": "The Human or body authorizing the initiative.", "canonical": true, "aliases": ["sponsor"], "prohibited_uses": [], "spanish_term": "Autoridad Patrocinadora", "status": "active"},
+    {"term": "scope", "definition": "The defined boundary of included authority, work, geography, Humans, data, resources, and time.", "canonical": true, "aliases": [], "prohibited_uses": ["vague mission statement only"], "spanish_term": "Alcance", "status": "active"},
+    {"term": "lifecycle", "definition": "The governed sequence from concept through archive.", "canonical": true, "aliases": ["initiative lifecycle"], "prohibited_uses": [], "spanish_term": "Ciclo de Vida", "status": "active"},
+    {"term": "dependency", "definition": "A required relationship to another initiative, authority, resource, or condition.", "canonical": true, "aliases": [], "prohibited_uses": ["implicit assumption"], "spanish_term": "Dependencia", "status": "active"},
+    {"term": "portfolio", "definition": "The institution's complete set of initiatives.", "canonical": true, "aliases": ["initiative portfolio"], "prohibited_uses": [], "spanish_term": "Portafolio", "status": "active"},
+    {"term": "closeout", "definition": "The governed process of ending active execution and preserving results.", "canonical": true, "aliases": ["initiative closeout"], "prohibited_uses": ["silent deletion"], "spanish_term": "Cierre", "status": "active"},
+    {"term": "successor_initiative", "definition": "A new initiative that continues or replaces prior work.", "canonical": true, "aliases": ["successor"], "prohibited_uses": ["undeclared reopening"], "spanish_term": "Iniciativa Sucesora", "status": "active"},
+    {"term": "workstream", "definition": "One major line of work inside an initiative.", "canonical": true, "aliases": [], "prohibited_uses": ["root container"], "spanish_term": "Línea de Trabajo", "status": "active"},
+    {"term": "mission", "definition": "A specific executable unit of action inside a workstream.", "canonical": true, "aliases": ["execution mission"], "prohibited_uses": ["initiative synonym"], "spanish_term": "Misión", "status": "active"},
+    {"term": "owner_required", "definition": "Operational exception state when no eligible operational owner exists.", "canonical": true, "aliases": ["ownerless state"], "prohibited_uses": [], "spanish_term": "Responsable Requerido", "status": "active"}
+  ]
+}

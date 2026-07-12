@@ -11,18 +11,20 @@ export function SiteHeader() {
           </span>
           <div>
             <div className="text-lg font-bold text-slate-900">{PLATFORM.workingName}</div>
-            <div className="text-xs text-slate-500 hidden sm:block">{PLATFORM.fullName}</div>
+            <div className="hidden text-xs text-slate-500 sm:block">{PLATFORM.fullName}</div>
           </div>
         </Link>
-        <nav className="hidden items-center gap-6 text-sm font-medium text-slate-600 md:flex">
+        <nav className="hidden items-center gap-4 text-sm font-medium text-slate-600 md:flex">
+          <Link href="/july-14" className="rounded bg-indigo-700 px-3 py-1.5 text-white hover:bg-indigo-800">
+            July 14
+          </Link>
+          <Link href="/operations" className="hover:text-brand-600">Operations</Link>
+          <Link href="/identity" className="hover:text-brand-600">My Identity</Link>
           <Link href="/map" className="hover:text-brand-600">Map</Link>
-          <Link href="/schools" className="hover:text-brand-600">Colleges</Link>
-          <Link href="/high-schools" className="hover:text-brand-600">High Schools</Link>
-          <Link href="/private-schools" className="hover:text-brand-600">Private &amp; Charter</Link>
           <Link href="/join" className="hover:text-brand-600">Join</Link>
           <Link href="/admin" className="hover:text-brand-600">Director</Link>
         </nav>
-        <Link href="/join" className="btn-primary md:hidden">Join</Link>
+        <Link href="/july-14" className="btn-primary md:hidden">July 14</Link>
       </div>
     </header>
   );

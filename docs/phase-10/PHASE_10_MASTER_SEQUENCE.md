@@ -12,11 +12,14 @@ The first nine phases built the platform. Phase 10 measures whether the platform
 |-------|------|-------------|-----|--------|
 | 10.1 | Civic Participation Engine | CIV-001 | AC-194 | done |
 | 10.2 | Leadership Development Engine | LDR-001 | AC-195 | done |
-| 10.3 | Community Relationship Graph | REL-001 | AC-196 | pending |
-| 10.4 | Community Health Dashboard | CHD-001 | AC-197 | pending |
-| 10.5 | Civic Outcomes Engine | OUT-001 | AC-198 | pending |
-| 10.6 | Strategic Intelligence | INT-002 | AC-199 | pending |
+| 10.3 | Community Relationship Intelligence Engine | REL-001 | AC-196 | done |
+| 10.4 | Community Health & Civic Resilience Engine | CHD-001 | AC-197 | done |
+| 10.5 | Civic Outcomes & Impact Measurement Engine | OUT-001 | AC-198 | done |
+| 10.6 | Civic Strategic Intelligence & Decision Support Engine | INT-002 | AC-199 | done |
+| **10.6A** | **Identity Trust Layer (Constitutional)** | **ITF-001** | **AC-ITF-001** | **done** |
 | 10.7 | Research & Policy Lab | RPL-001 | AC-200 | pending |
 | 10.8 | Civic Impact Analytics | CIA-001 | AC-201 | pending |
+
+**Progress:** 7 of 9 steps complete (includes constitutional 10.6A).
 
 **Registry:** `data/civic-growth/civic-growth-operating-system.json`

@@ -1,0 +1,1527 @@
+{
+  "initiative_history_events": [
+    {
+      "initiative_event_id": "ihe-mrhwff7m-3k1y",
+      "initiative_id": "ini-mrhwff7l-lsga",
+      "institution_id": "inst-block-street",
+      "event_type": "initiative_created",
+      "actor_human_id": "usr-001",
+      "previous_state": null,
+      "new_state": {
+        "status": "concept"
+      },
+      "reason": null,
+      "correlation_id": "cor-mrhwff7k-a4x0",
+      "request_id": "req-mrhwff7k-r70f",
+      "occurred_at": "2026-07-12T14:38:45.442Z"
+    },
+    {
+      "initiative_event_id": "ihe-mrhwg7fx-v9nu",
+      "initiative_id": "ini-mrhwg7fx-nzen",
+      "institution_id": "inst-block-street",
+      "event_type": "initiative_created",
+      "actor_human_id": "usr-001",
+      "previous_state": null,
+      "new_state": {
+        "status": "concept"
+      },
+      "reason": null,
+      "correlation_id": "cor-mrhwg7fw-zpf0",
+      "request_id": "req-mrhwg7fw-0cei",
+      "occurred_at": "2026-07-12T14:39:22.029Z"
+    },
+    {
+      "initiative_event_id": "ihe-mrhwg7gj-y3md",
+      "initiative_id": "ini-mrhwg7fx-nzen",
+      "institution_id": "inst-block-street",
+      "event_type": "status_changed",
+      "actor_human_id": "usr-001",
+      "previous_state": {
+        "status": "concept",
+        "version": 1
+      },
+      "new_state": {
+        "status": "discovery"
+      },
+      "reason": null,
+      "correlation_id": "cor-mrhwg7gi-qx1n",
+      "request_id": "req-mrhwg7gi-yl7q",
+      "occurred_at": "2026-07-12T14:39:22.051Z"
+    },
+    {
+      "initiative_event_id": "ihe-mrhwg7gj-920k",
+      "initiative_id": "ini-mrhwg7fx-nzen",
+      "institution_id": "inst-block-street",
+      "event_type": "status_changed",
+      "actor_human_id": "usr-001",
+      "previous_state": {
+        "status": "discovery",
+        "version": 1
+      },
+      "new_state": {
+        "status": "design"
+      },
+      "reason": null,
+      "correlation_id": "cor-mrhwg7gi-qx1n",
+      "request_id": "req-mrhwg7gi-yl7q",
+      "occurred_at": "2026-07-12T14:39:22.051Z"
+    },
+    {
+      "initiative_event_id": "ihe-mrhwg7gl-1e7u",
+      "initiative_id": "ini-mrhwg7fx-nzen",
+      "institution_id": "inst-block-street",
+      "event_type": "status_changed",
+      "actor_human_id": "usr-001",
+      "previous_state": {
+        "status": "design",
+        "version": 1
+      },
+      "new_state": {
+        "status": "approval_pending"
+      },
+      "reason": null,
+      "correlation_id": "cor-mrhwg7gi-qx1n",
+      "request_id": "req-mrhwg7gi-yl7q",
+      "occurred_at": "2026-07-12T14:39:22.053Z"
+    },
+    {
+      "initiative_event_id": "ihe-mrhwg7gy-s16f",
+      "initiative_id": "ini-mrhwg7fx-nzen",
+      "institution_id": "inst-block-street",
+      "event_type": "charter_approved",
+      "actor_human_id": "usr-001",
+      "previous_state": {
+        "status": "approval_pending",
+        "version": 1
+      },
+      "new_state": {
+        "status": "approved"
+      },
+      "reason": null,
+      "correlation_id": "cor-mrhwg7gy-n70m",
+      "request_id": "req-mrhwg7gy-zo3v",
+      "occurred_at": "2026-07-12T14:39:22.066Z"
+    },
+    {
+      "initiative_event_id": "ihe-mrhwg7h9-n03v",
+      "initiative_id": "ini-mrhwg7fx-nzen",
+      "institution_id": "inst-block-street",
+      "event_type": "status_changed",
+      "actor_human_id": "usr-001",
+      "previous_state": {
+        "status": "approved",
+        "version": 1
+      },
+      "new_state": {
+        "status": "preparation"
+      },
+      "reason": null,
+      "correlation_id": "cor-mrhwg7h9-haa5",
+      "request_id": "req-mrhwg7h9-66m5",
+      "occurred_at": "2026-07-12T14:39:22.077Z"
+    },
+    {
+      "initiative_event_id": "ihe-mrhwg7hj-5aj0",
+      "initiative_id": "ini-mrhwg7fx-nzen",
+      "institution_id": "inst-block-street",
+      "event_type": "activated",
+      "actor_human_id": "usr-001",
+      "previous_state": {
+        "status": "preparation",
+        "version": 1
+      },
+      "new_state": {
+        "status": "active"
+      },
+      "reason": null,
+      "correlation_id": "cor-mrhwg7hi-7hgo",
+      "request_id": "req-mrhwg7hi-wash",
+      "occurred_at": "2026-07-12T14:39:22.087Z"
+    },
+    {
+      "initiative_event_id": "ihe-mrhwg7hw-hm0z",
+      "initiative_id": "ini-mrhwg7fx-nzen",
+      "institution_id": "inst-block-street",
+      "event_type": "status_changed",
+      "actor_human_id": "usr-001",
+      "previous_state": {
+        "status": "active",
+        "version": 1
+      },
+      "new_state": {
+        "status": "paused"
+      },
+      "reason": null,
+      "correlation_id": "cor-mrhwg7hv-wn0r",
+      "request_id": "req-mrhwg7hv-m5d6",
+      "occurred_at": "2026-07-12T14:39:22.100Z"
+    },
+    {
+      "initiative_event_id": "ihe-mrhwkeyi-yo6j",
+      "initiative_id": "ini-mrhwkeyi-q9qe",
+      "institution_id": "inst-block-street",
+      "event_type": "initiative_created",
+      "actor_human_id": "usr-001",
+      "previous_state": null,
+      "new_state": {
+        "status": "concept"
+      },
+      "reason": null,
+      "correlation_id": "cor-mrhwkeyh-eob9",
+      "request_id": "req-mrhwkeyh-6hi0",
+      "occurred_at": "2026-07-12T14:42:38.395Z"
+    },
+    {
+      "initiative_event_id": "ihe-mrhwkez7-d1n7",
+      "initiative_id": "ini-mrhwkeyi-q9qe",
+      "institution_id": "inst-block-street",
+      "event_type": "status_changed",
+      "actor_human_id": "usr-001",
+      "previous_state": {
+        "status": "concept",
+        "version": 1
+      },
+      "new_state": {
+        "status": "discovery"
+      },
+      "reason": null,
+      "correlation_id": "cor-mrhwkez5-p1bv",
+      "request_id": "req-mrhwkez5-gom5",
+      "occurred_at": "2026-07-12T14:42:38.419Z"
+    },
+    {
+      "initiative_event_id": "ihe-mrhwkez7-z11w",
+      "initiative_id": "ini-mrhwkeyi-q9qe",
+      "institution_id": "inst-block-street",
+      "event_type": "status_changed",
+      "actor_human_id": "usr-001",
+      "previous_state": {
+        "status": "discovery",
+        "version": 1
+      },
+      "new_state": {
+        "status": "design"
+      },
+      "reason": null,
+      "correlation_id": "cor-mrhwkez5-p1bv",
+      "request_id": "req-mrhwkez5-gom5",
+      "occurred_at": "2026-07-12T14:42:38.419Z"
+    },
+    {
+      "initiative_event_id": "ihe-mrhwkez8-plqk",
+      "initiative_id": "ini-mrhwkeyi-q9qe",
+      "institution_id": "inst-block-street",
+      "event_type": "status_changed",
+      "actor_human_id": "usr-001",
+      "previous_state": {
+        "status": "design",
+        "version": 1
+      },
+      "new_state": {
+        "status": "approval_pending"
+      },
+      "reason": null,
+      "correlation_id": "cor-mrhwkez5-p1bv",
+      "request_id": "req-mrhwkez5-gom5",
+      "occurred_at": "2026-07-12T14:42:38.420Z"
+    },
+    {
+      "initiative_event_id": "ihe-mrhwkezm-w9pn",
+      "initiative_id": "ini-mrhwkeyi-q9qe",
+      "institution_id": "inst-block-street",
+      "event_type": "charter_approved",
+      "actor_human_id": "usr-001",
+      "previous_state": {
+        "status": "approval_pending",
+        "version": 1
+      },
+      "new_state": {
+        "status": "approved"
+      },
+      "reason": null,
+      "correlation_id": "cor-mrhwkezl-zxig",
+      "request_id": "req-mrhwkezl-rsbm",
+      "occurred_at": "2026-07-12T14:42:38.434Z"
+    },
+    {
+      "initiative_event_id": "ihe-mrhwkezx-w6zz",
+      "initiative_id": "ini-mrhwkeyi-q9qe",
+      "institution_id": "inst-block-street",
+      "event_type": "status_changed",
+      "actor_human_id": "usr-001",
+      "previous_state": {
+        "status": "approved",
+        "version": 1
+      },
+      "new_state": {
+        "status": "preparation"
+      },
+      "reason": null,
+      "correlation_id": "cor-mrhwkezx-btj5",
+      "request_id": "req-mrhwkezx-5oy3",
+      "occurred_at": "2026-07-12T14:42:38.445Z"
+    },
+    {
+      "initiative_event_id": "ihe-mrhwzm6m-8z5g",
+      "initiative_id": "ini-mrhwzm6m-eg63",
+      "institution_id": "inst-block-street",
+      "event_type": "initiative_created",
+      "actor_human_id": "usr-001",
+      "previous_state": null,
+      "new_state": {
+        "status": "concept"
+      },
+      "reason": null,
+      "correlation_id": "cor-mrhwzm6l-iln7",
+      "request_id": "req-mrhwzm6l-q6u3",
+      "occurred_at": "2026-07-12T14:54:27.598Z"
+    },
+    {
+      "initiative_event_id": "ihe-mrhwzm7d-xgbv",
+      "initiative_id": "ini-mrhwzm6m-eg63",
+      "institution_id": "inst-block-street",
+      "event_type": "status_changed",
+      "actor_human_id": "usr-001",
+      "previous_state": {
+        "status": "concept",
+        "version": 1
+      },
+      "new_state": {
+        "status": "discovery"
+      },
+      "reason": null,
+      "correlation_id": "cor-mrhwzm7b-tiga",
+      "request_id": "req-mrhwzm7b-ssrp",
+      "occurred_at": "2026-07-12T14:54:27.625Z"
+    },
+    {
+      "initiative_event_id": "ihe-mrhwzm7d-bkj8",
+      "initiative_id": "ini-mrhwzm6m-eg63",
+      "institution_id": "inst-block-street",
+      "event_type": "status_changed",
+      "actor_human_id": "usr-001",
+      "previous_state": {
+        "status": "discovery",
+        "version": 1
+      },
+      "new_state": {
+        "status": "design"
+      },
+      "reason": null,
+      "correlation_id": "cor-mrhwzm7b-tiga",
+      "request_id": "req-mrhwzm7b-ssrp",
+      "occurred_at": "2026-07-12T14:54:27.625Z"
+    },
+    {
+      "initiative_event_id": "ihe-mrhwzm7e-d1og",
+      "initiative_id": "ini-mrhwzm6m-eg63",
+      "institution_id": "inst-block-street",
+      "event_type": "status_changed",
+      "actor_human_id": "usr-001",
+      "previous_state": {
+        "status": "design",
+        "version": 1
+      },
+      "new_state": {
+        "status": "approval_pending"
+      },
+      "reason": null,
+      "correlation_id": "cor-mrhwzm7b-tiga",
+      "request_id": "req-mrhwzm7b-ssrp",
+      "occurred_at": "2026-07-12T14:54:27.626Z"
+    },
+    {
+      "initiative_event_id": "ihe-mrhwzm7u-6kf1",
+      "initiative_id": "ini-mrhwzm6m-eg63",
+      "institution_id": "inst-block-street",
+      "event_type": "charter_approved",
+      "actor_human_id": "usr-001",
+      "previous_state": {
+        "status": "approval_pending",
+        "version": 1
+      },
+      "new_state": {
+        "status": "approved"
+      },
+      "reason": null,
+      "correlation_id": "cor-mrhwzm7u-wbfo",
+      "request_id": "req-mrhwzm7u-kprd",
+      "occurred_at": "2026-07-12T14:54:27.642Z"
+    },
+    {
+      "initiative_event_id": "ihe-mrhwzm87-3zdu",
+      "initiative_id": "ini-mrhwzm6m-eg63",
+      "institution_id": "inst-block-street",
+      "event_type": "status_changed",
+      "actor_human_id": "usr-001",
+      "previous_state": {
+        "status": "approved",
+        "version": 1
+      },
+      "new_state": {
+        "status": "preparation"
+      },
+      "reason": null,
+      "correlation_id": "cor-mrhwzm87-9jrp",
+      "request_id": "req-mrhwzm87-wmbd",
+      "occurred_at": "2026-07-12T14:54:27.655Z"
+    },
+    {
+      "initiative_event_id": "ihe-mrhx01in-fmwb",
+      "initiative_id": "ini-mrhx01in-rgy5",
+      "institution_id": "inst-block-street",
+      "event_type": "initiative_created",
+      "actor_human_id": "usr-001",
+      "previous_state": null,
+      "new_state": {
+        "status": "concept"
+      },
+      "reason": null,
+      "correlation_id": "cor-mrhx01il-85ti",
+      "request_id": "req-mrhx01il-x7vu",
+      "occurred_at": "2026-07-12T14:54:47.471Z"
+    },
+    {
+      "initiative_event_id": "ihe-mrhx01ji-70jd",
+      "initiative_id": "ini-mrhx01in-rgy5",
+      "institution_id": "inst-block-street",
+      "event_type": "status_changed",
+      "actor_human_id": "usr-001",
+      "previous_state": {
+        "status": "concept",
+        "version": 1
+      },
+      "new_state": {
+        "status": "discovery"
+      },
+      "reason": null,
+      "correlation_id": "cor-mrhx01jg-8un5",
+      "request_id": "req-mrhx01jg-pwql",
+      "occurred_at": "2026-07-12T14:54:47.502Z"
+    },
+    {
+      "initiative_event_id": "ihe-mrhx01ji-egq0",
+      "initiative_id": "ini-mrhx01in-rgy5",
+      "institution_id": "inst-block-street",
+      "event_type": "status_changed",
+      "actor_human_id": "usr-001",
+      "previous_state": {
+        "status": "discovery",
+        "version": 1
+      },
+      "new_state": {
+        "status": "design"
+      },
+      "reason": null,
+      "correlation_id": "cor-mrhx01jg-8un5",
+      "request_id": "req-mrhx01jg-pwql",
+      "occurred_at": "2026-07-12T14:54:47.502Z"
+    },
+    {
+      "initiative_event_id": "ihe-mrhx01jj-wnm6",
+      "initiative_id": "ini-mrhx01in-rgy5",
+      "institution_id": "inst-block-street",
+      "event_type": "status_changed",
+      "actor_human_id": "usr-001",
+      "previous_state": {
+        "status": "design",
+        "version": 1
+      },
+      "new_state": {
+        "status": "approval_pending"
+      },
+      "reason": null,
+      "correlation_id": "cor-mrhx01jg-8un5",
+      "request_id": "req-mrhx01jg-pwql",
+      "occurred_at": "2026-07-12T14:54:47.503Z"
+    },
+    {
+      "initiative_event_id": "ihe-mrhx01k2-red6",
+      "initiative_id": "ini-mrhx01in-rgy5",
+      "institution_id": "inst-block-street",
+      "event_type": "charter_approved",
+      "actor_human_id": "usr-001",
+      "previous_state": {
+        "status": "approval_pending",
+        "version": 1
+      },
+      "new_state": {
+        "status": "approved"
+      },
+      "reason": null,
+      "correlation_id": "cor-mrhx01k1-o4xy",
+      "request_id": "req-mrhx01k1-sv82",
+      "occurred_at": "2026-07-12T14:54:47.522Z"
+    },
+    {
+      "initiative_event_id": "ihe-mrhx01kk-szlb",
+      "initiative_id": "ini-mrhx01in-rgy5",
+      "institution_id": "inst-block-street",
+      "event_type": "status_changed",
+      "actor_human_id": "usr-001",
+      "previous_state": {
+        "status": "approved",
+        "version": 1
+      },
+      "new_state": {
+        "status": "preparation"
+      },
+      "reason": null,
+      "correlation_id": "cor-mrhx01kk-753c",
+      "request_id": "req-mrhx01kk-1kd0",
+      "occurred_at": "2026-07-12T14:54:47.540Z"
+    },
+    {
+      "initiative_event_id": "ihe-mrhx34ap-qr3x",
+      "initiative_id": "ini-mrhx34ap-e06t",
+      "institution_id": "inst-block-street",
+      "event_type": "initiative_created",
+      "actor_human_id": "usr-001",
+      "previous_state": null,
+      "new_state": {
+        "status": "concept"
+      },
+      "reason": null,
+      "correlation_id": "cor-mrhx34an-euih",
+      "request_id": "req-mrhx34an-mpz8",
+      "occurred_at": "2026-07-12T14:57:11.041Z"
+    },
+    {
+      "initiative_event_id": "ihe-mrhx34bl-65z2",
+      "initiative_id": "ini-mrhx34ap-e06t",
+      "institution_id": "inst-block-street",
+      "event_type": "status_changed",
+      "actor_human_id": "usr-001",
+      "previous_state": {
+        "status": "concept",
+        "version": 1
+      },
+      "new_state": {
+        "status": "discovery"
+      },
+      "reason": null,
+      "correlation_id": "cor-mrhx34bk-go4q",
+      "request_id": "req-mrhx34bk-g6nl",
+      "occurred_at": "2026-07-12T14:57:11.073Z"
+    },
+    {
+      "initiative_event_id": "ihe-mrhx34bm-2af0",
+      "initiative_id": "ini-mrhx34ap-e06t",
+      "institution_id": "inst-block-street",
+      "event_type": "status_changed",
+      "actor_human_id": "usr-001",
+      "previous_state": {
+        "status": "discovery",
+        "version": 1
+      },
+      "new_state": {
+        "status": "design"
+      },
+      "reason": null,
+      "correlation_id": "cor-mrhx34bk-go4q",
+      "request_id": "req-mrhx34bk-g6nl",
+      "occurred_at": "2026-07-12T14:57:11.074Z"
+    },
+    {
+      "initiative_event_id": "ihe-mrhx34bn-wxxf",
+      "initiative_id": "ini-mrhx34ap-e06t",
+      "institution_id": "inst-block-street",
+      "event_type": "status_changed",
+      "actor_human_id": "usr-001",
+      "previous_state": {
+        "status": "design",
+        "version": 1
+      },
+      "new_state": {
+        "status": "approval_pending"
+      },
+      "reason": null,
+      "correlation_id": "cor-mrhx34bk-go4q",
+      "request_id": "req-mrhx34bk-g6nl",
+      "occurred_at": "2026-07-12T14:57:11.075Z"
+    },
+    {
+      "initiative_event_id": "ihe-mrhx34c5-d3nm",
+      "initiative_id": "ini-mrhx34ap-e06t",
+      "institution_id": "inst-block-street",
+      "event_type": "charter_approved",
+      "actor_human_id": "usr-001",
+      "previous_state": {
+        "status": "approval_pending",
+        "version": 1
+      },
+      "new_state": {
+        "status": "approved"
+      },
+      "reason": null,
+      "correlation_id": "cor-mrhx34c5-y1dm",
+      "request_id": "req-mrhx34c5-im6m",
+      "occurred_at": "2026-07-12T14:57:11.093Z"
+    },
+    {
+      "initiative_event_id": "ihe-mrhx34ck-vy10",
+      "initiative_id": "ini-mrhx34ap-e06t",
+      "institution_id": "inst-block-street",
+      "event_type": "status_changed",
+      "actor_human_id": "usr-001",
+      "previous_state": {
+        "status": "approved",
+        "version": 1
+      },
+      "new_state": {
+        "status": "preparation"
+      },
+      "reason": null,
+      "correlation_id": "cor-mrhx34cj-pnuk",
+      "request_id": "req-mrhx34cj-6zkl",
+      "occurred_at": "2026-07-12T14:57:11.108Z"
+    }
+  ],
+  "canonical_initiatives": [
+    {
+      "initiative_id": "ini-mrhwff7l-lsga",
+      "institution_id": "inst-block-street",
+      "initiative_type": "program",
+      "initiative_name": "W3 Test Initiative 1783867125439",
+      "initiative_slug": "w3-test-initiative-1783867125439",
+      "public_name": null,
+      "executive_owner_human_id": "usr-001",
+      "operational_owner_human_id": "usr-002",
+      "backup_owner_human_id": null,
+      "status": "archived",
+      "governance_class": 2,
+      "visibility": "institution_internal",
+      "strategic_priority_id": null,
+      "portfolio_category": null,
+      "current_version": 1,
+      "is_archived": true,
+      "created_at": "2026-07-12T14:38:45.441Z",
+      "created_by": "usr-001",
+      "updated_at": "2026-07-12T14:38:45.441Z",
+      "updated_by": "usr-001"
+    },
+    {
+      "initiative_id": "ini-mrhwg7fx-nzen",
+      "institution_id": "inst-block-street",
+      "initiative_type": "program",
+      "initiative_name": "W3 Test Initiative 1783867162028",
+      "initiative_slug": "w3-test-initiative-1783867162028",
+      "public_name": null,
+      "executive_owner_human_id": "usr-001",
+      "operational_owner_human_id": "usr-002",
+      "backup_owner_human_id": null,
+      "status": "archived",
+      "governance_class": 2,
+      "visibility": "institution_internal",
+      "strategic_priority_id": null,
+      "portfolio_category": null,
+      "current_version": 1,
+      "is_archived": true,
+      "created_at": "2026-07-12T14:39:22.029Z",
+      "created_by": "usr-001",
+      "updated_at": "2026-07-12T14:39:22.100Z",
+      "updated_by": "usr-001"
+    },
+    {
+      "initiative_id": "ini-mrhwkeyi-q9qe",
+      "institution_id": "inst-block-street",
+      "initiative_type": "program",
+      "initiative_name": "W3 Test Initiative 1783867358393",
+      "initiative_slug": "w3-test-initiative-1783867358393",
+      "public_name": null,
+      "executive_owner_human_id": "usr-001",
+      "operational_owner_human_id": "usr-002",
+      "backup_owner_human_id": null,
+      "status": "archived",
+      "governance_class": 2,
+      "visibility": "institution_internal",
+      "strategic_priority_id": null,
+      "portfolio_category": null,
+      "current_version": 1,
+      "is_archived": true,
+      "created_at": "2026-07-12T14:42:38.394Z",
+      "created_by": "usr-001",
+      "updated_at": "2026-07-12T14:42:38.445Z",
+      "updated_by": "usr-001"
+    },
+    {
+      "initiative_id": "ini-mrhwzm6m-eg63",
+      "institution_id": "inst-block-street",
+      "initiative_type": "program",
+      "initiative_name": "W3 Test Initiative 1783868067597",
+      "initiative_slug": "w3-test-initiative-1783868067597",
+      "public_name": null,
+      "executive_owner_human_id": "usr-001",
+      "operational_owner_human_id": "usr-002",
+      "backup_owner_human_id": null,
+      "status": "archived",
+      "governance_class": 2,
+      "visibility": "institution_internal",
+      "strategic_priority_id": null,
+      "portfolio_category": null,
+      "current_version": 1,
+      "is_archived": true,
+      "created_at": "2026-07-12T14:54:27.598Z",
+      "created_by": "usr-001",
+      "updated_at": "2026-07-12T14:54:27.655Z",
+      "updated_by": "usr-001"
+    },
+    {
+      "initiative_id": "ini-mrhx01in-rgy5",
+      "institution_id": "inst-block-street",
+      "initiative_type": "program",
+      "initiative_name": "W3 Test Initiative 1783868087469",
+      "initiative_slug": "w3-test-initiative-1783868087469",
+      "public_name": null,
+      "executive_owner_human_id": "usr-001",
+      "operational_owner_human_id": "usr-002",
+      "backup_owner_human_id": null,
+      "status": "archived",
+      "governance_class": 2,
+      "visibility": "institution_internal",
+      "strategic_priority_id": null,
+      "portfolio_category": null,
+      "current_version": 1,
+      "is_archived": true,
+      "created_at": "2026-07-12T14:54:47.471Z",
+      "created_by": "usr-001",
+      "updated_at": "2026-07-12T14:54:47.540Z",
+      "updated_by": "usr-001"
+    },
+    {
+      "initiative_id": "ini-mrhx34ap-e06t",
+      "institution_id": "inst-block-street",
+      "initiative_type": "program",
+      "initiative_name": "W3 Test Initiative 1783868231039",
+      "initiative_slug": "w3-test-initiative-1783868231039",
+      "public_name": null,
+      "executive_owner_human_id": "usr-001",
+      "operational_owner_human_id": "usr-002",
+      "backup_owner_human_id": null,
+      "status": "archived",
+      "governance_class": 2,
+      "visibility": "institution_internal",
+      "strategic_priority_id": null,
+      "portfolio_category": null,
+      "current_version": 1,
+      "is_archived": true,
+      "created_at": "2026-07-12T14:57:11.041Z",
+      "created_by": "usr-001",
+      "updated_at": "2026-07-12T14:57:11.108Z",
+      "updated_by": "usr-001"
+    }
+  ],
+  "initiative_charters": [
+    {
+      "charter_id": "chr-mrhwff7m-98xd",
+      "initiative_id": "ini-mrhwff7l-lsga",
+      "problem_statement": "County organizers use disconnected tools",
+      "opportunity_statement": null,
+      "purpose": "Develop youth civic leadership",
+      "institution_alignment": "Institutional mission",
+      "success_definition": "Increased participation",
+      "in_scope": "Pilot counties",
+      "out_of_scope": "Statewide rollout",
+      "public_description": null,
+      "review_frequency": "quarterly",
+      "closeout_basis": "objective_completed",
+      "charter_status": "draft",
+      "version": 1,
+      "approved_at": null,
+      "approved_by": null,
+      "created_at": "2026-07-12T14:38:45.441Z",
+      "created_by": "usr-001",
+      "updated_at": "2026-07-12T14:38:45.441Z",
+      "updated_by": "usr-001"
+    },
+    {
+      "charter_id": "chr-mrhwg7fx-6z5q",
+      "initiative_id": "ini-mrhwg7fx-nzen",
+      "problem_statement": "County organizers use disconnected tools",
+      "opportunity_statement": null,
+      "purpose": "Develop youth civic leadership",
+      "institution_alignment": "Institutional mission",
+      "success_definition": "Increased participation",
+      "in_scope": "Pilot counties",
+      "out_of_scope": "Statewide rollout",
+      "public_description": null,
+      "review_frequency": "quarterly",
+      "closeout_basis": "objective_completed",
+      "charter_status": "active_version",
+      "version": 1,
+      "approved_at": "2026-07-12T14:39:22.066Z",
+      "approved_by": "usr-001",
+      "created_at": "2026-07-12T14:39:22.029Z",
+      "created_by": "usr-001",
+      "updated_at": "2026-07-12T14:39:22.029Z",
+      "updated_by": "usr-001"
+    },
+    {
+      "charter_id": "chr-mrhwkeyi-w5w2",
+      "initiative_id": "ini-mrhwkeyi-q9qe",
+      "problem_statement": "County organizers use disconnected tools",
+      "opportunity_statement": null,
+      "purpose": "Develop youth civic leadership",
+      "institution_alignment": "Institutional mission",
+      "success_definition": "Increased participation",
+      "in_scope": "Pilot counties",
+      "out_of_scope": "Statewide rollout",
+      "public_description": null,
+      "review_frequency": "quarterly",
+      "closeout_basis": "objective_completed",
+      "charter_status": "approved",
+      "version": 1,
+      "approved_at": "2026-07-12T14:42:38.434Z",
+      "approved_by": "usr-001",
+      "created_at": "2026-07-12T14:42:38.394Z",
+      "created_by": "usr-001",
+      "updated_at": "2026-07-12T14:42:38.394Z",
+      "updated_by": "usr-001"
+    },
+    {
+      "charter_id": "chr-mrhwzm6m-5x7n",
+      "initiative_id": "ini-mrhwzm6m-eg63",
+      "problem_statement": "County organizers use disconnected tools",
+      "opportunity_statement": null,
+      "purpose": "Develop youth civic leadership",
+      "institution_alignment": "Institutional mission",
+      "success_definition": "Increased participation",
+      "in_scope": "Pilot counties",
+      "out_of_scope": "Statewide rollout",
+      "public_description": null,
+      "review_frequency": "quarterly",
+      "closeout_basis": "objective_completed",
+      "charter_status": "approved",
+      "version": 1,
+      "approved_at": "2026-07-12T14:54:27.643Z",
+      "approved_by": "usr-001",
+      "created_at": "2026-07-12T14:54:27.598Z",
+      "created_by": "usr-001",
+      "updated_at": "2026-07-12T14:54:27.598Z",
+      "updated_by": "usr-001"
+    },
+    {
+      "charter_id": "chr-mrhx01in-ujgo",
+      "initiative_id": "ini-mrhx01in-rgy5",
+      "problem_statement": "County organizers use disconnected tools",
+      "opportunity_statement": null,
+      "purpose": "Develop youth civic leadership",
+      "institution_alignment": "Institutional mission",
+      "success_definition": "Increased participation",
+      "in_scope": "Pilot counties",
+      "out_of_scope": "Statewide rollout",
+      "public_description": null,
+      "review_frequency": "quarterly",
+      "closeout_basis": "objective_completed",
+      "charter_status": "approved",
+      "version": 1,
+      "approved_at": "2026-07-12T14:54:47.522Z",
+      "approved_by": "usr-001",
+      "created_at": "2026-07-12T14:54:47.471Z",
+      "created_by": "usr-001",
+      "updated_at": "2026-07-12T14:54:47.471Z",
+      "updated_by": "usr-001"
+    },
+    {
+      "charter_id": "chr-mrhx34ap-nhy9",
+      "initiative_id": "ini-mrhx34ap-e06t",
+      "problem_statement": "County organizers use disconnected tools",
+      "opportunity_statement": null,
+      "purpose": "Develop youth civic leadership",
+      "institution_alignment": "Institutional mission",
+      "success_definition": "Increased participation",
+      "in_scope": "Pilot counties",
+      "out_of_scope": "Statewide rollout",
+      "public_description": null,
+      "review_frequency": "quarterly",
+      "closeout_basis": "objective_completed",
+      "charter_status": "approved",
+      "version": 1,
+      "approved_at": "2026-07-12T14:57:11.094Z",
+      "approved_by": "usr-001",
+      "created_at": "2026-07-12T14:57:11.041Z",
+      "created_by": "usr-001",
+      "updated_at": "2026-07-12T14:57:11.041Z",
+      "updated_by": "usr-001"
+    }
+  ],
+  "initiative_scopes": [
+    {
+      "scope_id": "scp-mrhwff7m-ufda",
+      "initiative_id": "ini-mrhwff7l-lsga",
+      "geographic_scope": "",
+      "population_scope": "",
+      "institution_scope": "inst-block-street",
+      "functional_scope": "Youth leadership program",
+      "resource_scope": "",
+      "visibility_scope": "institution_internal",
+      "data_scope": "institution_governed",
+      "version": 1,
+      "created_at": "2026-07-12T14:38:45.441Z",
+      "updated_at": "2026-07-12T14:38:45.441Z"
+    },
+    {
+      "scope_id": "scp-mrhwg7fx-qoqp",
+      "initiative_id": "ini-mrhwg7fx-nzen",
+      "geographic_scope": "",
+      "population_scope": "",
+      "institution_scope": "inst-block-street",
+      "functional_scope": "Youth leadership program",
+      "resource_scope": "",
+      "visibility_scope": "institution_internal",
+      "data_scope": "institution_governed",
+      "version": 1,
+      "created_at": "2026-07-12T14:39:22.029Z",
+      "updated_at": "2026-07-12T14:39:22.029Z"
+    },
+    {
+      "scope_id": "scp-mrhwkeyi-xkwt",
+      "initiative_id": "ini-mrhwkeyi-q9qe",
+      "geographic_scope": "",
+      "population_scope": "",
+      "institution_scope": "inst-block-street",
+      "functional_scope": "Youth leadership program",
+      "resource_scope": "",
+      "visibility_scope": "institution_internal",
+      "data_scope": "institution_governed",
+      "version": 1,
+      "created_at": "2026-07-12T14:42:38.394Z",
+      "updated_at": "2026-07-12T14:42:38.394Z"
+    },
+    {
+      "scope_id": "scp-mrhwzm6m-7uq1",
+      "initiative_id": "ini-mrhwzm6m-eg63",
+      "geographic_scope": "",
+      "population_scope": "",
+      "institution_scope": "inst-block-street",
+      "functional_scope": "Youth leadership program",
+      "resource_scope": "",
+      "visibility_scope": "institution_internal",
+      "data_scope": "institution_governed",
+      "version": 1,
+      "created_at": "2026-07-12T14:54:27.598Z",
+      "updated_at": "2026-07-12T14:54:27.598Z"
+    },
+    {
+      "scope_id": "scp-mrhx01in-hlab",
+      "initiative_id": "ini-mrhx01in-rgy5",
+      "geographic_scope": "",
+      "population_scope": "",
+      "institution_scope": "inst-block-street",
+      "functional_scope": "Youth leadership program",
+      "resource_scope": "",
+      "visibility_scope": "institution_internal",
+      "data_scope": "institution_governed",
+      "version": 1,
+      "created_at": "2026-07-12T14:54:47.471Z",
+      "updated_at": "2026-07-12T14:54:47.471Z"
+    },
+    {
+      "scope_id": "scp-mrhx34ap-0sy6",
+      "initiative_id": "ini-mrhx34ap-e06t",
+      "geographic_scope": "",
+      "population_scope": "",
+      "institution_scope": "inst-block-street",
+      "functional_scope": "Youth leadership program",
+      "resource_scope": "",
+      "visibility_scope": "institution_internal",
+      "data_scope": "institution_governed",
+      "version": 1,
+      "created_at": "2026-07-12T14:57:11.041Z",
+      "updated_at": "2026-07-12T14:57:11.041Z"
+    }
+  ],
+  "initiative_timelines": [
+    {
+      "timeline_id": "tl-mrhwff7m-k6tw",
+      "initiative_id": "ini-mrhwff7l-lsga",
+      "concept_date": "2026-07-12T14:38:45.441Z",
+      "discovery_date": null,
+      "design_date": null,
+      "approval_date": null,
+      "preparation_date": null,
+      "activation_date": null,
+      "target_completion_date": null,
+      "completion_date": null,
+      "archive_date": null,
+      "next_review_date": null
+    },
+    {
+      "timeline_id": "tl-mrhwg7fx-m9b6",
+      "initiative_id": "ini-mrhwg7fx-nzen",
+      "concept_date": "2026-07-12T14:39:22.029Z",
+      "discovery_date": "2026-07-12T14:39:22.051Z",
+      "design_date": "2026-07-12T14:39:22.053Z",
+      "approval_date": null,
+      "preparation_date": null,
+      "activation_date": "2026-07-12T14:39:22.088Z",
+      "target_completion_date": null,
+      "completion_date": null,
+      "archive_date": null,
+      "next_review_date": null
+    },
+    {
+      "timeline_id": "tl-mrhwkeyi-ajfa",
+      "initiative_id": "ini-mrhwkeyi-q9qe",
+      "concept_date": "2026-07-12T14:42:38.394Z",
+      "discovery_date": "2026-07-12T14:42:38.419Z",
+      "design_date": "2026-07-12T14:42:38.420Z",
+      "approval_date": null,
+      "preparation_date": null,
+      "activation_date": null,
+      "target_completion_date": null,
+      "completion_date": null,
+      "archive_date": null,
+      "next_review_date": null
+    },
+    {
+      "timeline_id": "tl-mrhwzm6m-w88e",
+      "initiative_id": "ini-mrhwzm6m-eg63",
+      "concept_date": "2026-07-12T14:54:27.598Z",
+      "discovery_date": "2026-07-12T14:54:27.625Z",
+      "design_date": "2026-07-12T14:54:27.626Z",
+      "approval_date": null,
+      "preparation_date": null,
+      "activation_date": null,
+      "target_completion_date": null,
+      "completion_date": null,
+      "archive_date": null,
+      "next_review_date": null
+    },
+    {
+      "timeline_id": "tl-mrhx01in-uvlp",
+      "initiative_id": "ini-mrhx01in-rgy5",
+      "concept_date": "2026-07-12T14:54:47.471Z",
+      "discovery_date": "2026-07-12T14:54:47.502Z",
+      "design_date": "2026-07-12T14:54:47.503Z",
+      "approval_date": null,
+      "preparation_date": null,
+      "activation_date": null,
+      "target_completion_date": null,
+      "completion_date": null,
+      "archive_date": null,
+      "next_review_date": null
+    },
+    {
+      "timeline_id": "tl-mrhx34ap-vc62",
+      "initiative_id": "ini-mrhx34ap-e06t",
+      "concept_date": "2026-07-12T14:57:11.041Z",
+      "discovery_date": "2026-07-12T14:57:11.074Z",
+      "design_date": "2026-07-12T14:57:11.075Z",
+      "approval_date": null,
+      "preparation_date": null,
+      "activation_date": null,
+      "target_completion_date": null,
+      "completion_date": null,
+      "archive_date": null,
+      "next_review_date": null
+    }
+  ],
+  "initiative_memberships": [
+    {
+      "membership_id": "mem-mrhwff7m-7iv0",
+      "initiative_id": "ini-mrhwff7l-lsga",
+      "human_id": "usr-001",
+      "institution_membership_id": "mem-001",
+      "institution_id": "inst-block-street",
+      "role": "creator",
+      "authority_level": "contributor",
+      "status": "active",
+      "assigned_at": "2026-07-12T14:38:45.441Z",
+      "ended_at": null
+    },
+    {
+      "membership_id": "mem-mrhwg7fx-r82e",
+      "initiative_id": "ini-mrhwg7fx-nzen",
+      "human_id": "usr-001",
+      "institution_membership_id": "mem-001",
+      "institution_id": "inst-block-street",
+      "role": "creator",
+      "authority_level": "contributor",
+      "status": "active",
+      "assigned_at": "2026-07-12T14:39:22.029Z",
+      "ended_at": null
+    },
+    {
+      "membership_id": "mem-mrhwkeyi-7abo",
+      "initiative_id": "ini-mrhwkeyi-q9qe",
+      "human_id": "usr-001",
+      "institution_membership_id": "mem-001",
+      "institution_id": "inst-block-street",
+      "role": "creator",
+      "authority_level": "contributor",
+      "status": "active",
+      "assigned_at": "2026-07-12T14:42:38.394Z",
+      "ended_at": null
+    },
+    {
+      "membership_id": "mem-mrhwzm6m-lyfg",
+      "initiative_id": "ini-mrhwzm6m-eg63",
+      "human_id": "usr-001",
+      "institution_membership_id": "mem-001",
+      "institution_id": "inst-block-street",
+      "role": "creator",
+      "authority_level": "contributor",
+      "status": "active",
+      "assigned_at": "2026-07-12T14:54:27.598Z",
+      "ended_at": null
+    },
+    {
+      "membership_id": "mem-mrhx01in-ilxy",
+      "initiative_id": "ini-mrhx01in-rgy5",
+      "human_id": "usr-001",
+      "institution_membership_id": "mem-001",
+      "institution_id": "inst-block-street",
+      "role": "creator",
+      "authority_level": "contributor",
+      "status": "active",
+      "assigned_at": "2026-07-12T14:54:47.471Z",
+      "ended_at": null
+    },
+    {
+      "membership_id": "mem-mrhx34ap-b1wi",
+      "initiative_id": "ini-mrhx34ap-e06t",
+      "human_id": "usr-001",
+      "institution_membership_id": "mem-001",
+      "institution_id": "inst-block-street",
+      "role": "creator",
+      "authority_level": "contributor",
+      "status": "active",
+      "assigned_at": "2026-07-12T14:57:11.041Z",
+      "ended_at": null
+    }
+  ],
+  "initiative_versions": [
+    {
+      "initiative_version_id": "ver-mrhwff7m-qgqb",
+      "initiative_id": "ini-mrhwff7l-lsga",
+      "version_number": 1,
+      "change_summary": "Initial draft",
+      "trigger": "draft_created",
+      "charter_id": "chr-mrhwff7m-98xd",
+      "scope_id": "scp-mrhwff7m-ufda",
+      "created_at": "2026-07-12T14:38:45.441Z",
+      "created_by": "usr-001"
+    },
+    {
+      "initiative_version_id": "ver-mrhwg7fx-g2fi",
+      "initiative_id": "ini-mrhwg7fx-nzen",
+      "version_number": 1,
+      "change_summary": "Initial draft",
+      "trigger": "draft_created",
+      "charter_id": "chr-mrhwg7fx-6z5q",
+      "scope_id": "scp-mrhwg7fx-qoqp",
+      "created_at": "2026-07-12T14:39:22.029Z",
+      "created_by": "usr-001"
+    },
+    {
+      "initiative_version_id": "ver-mrhwkeyi-x1md",
+      "initiative_id": "ini-mrhwkeyi-q9qe",
+      "version_number": 1,
+      "change_summary": "Initial draft",
+      "trigger": "draft_created",
+      "charter_id": "chr-mrhwkeyi-w5w2",
+      "scope_id": "scp-mrhwkeyi-xkwt",
+      "created_at": "2026-07-12T14:42:38.394Z",
+      "created_by": "usr-001"
+    },
+    {
+      "initiative_version_id": "ver-mrhwzm6m-s0ra",
+      "initiative_id": "ini-mrhwzm6m-eg63",
+      "version_number": 1,
+      "change_summary": "Initial draft",
+      "trigger": "draft_created",
+      "charter_id": "chr-mrhwzm6m-5x7n",
+      "scope_id": "scp-mrhwzm6m-7uq1",
+      "created_at": "2026-07-12T14:54:27.598Z",
+      "created_by": "usr-001"
+    },
+    {
+      "initiative_version_id": "ver-mrhx01in-onvm",
+      "initiative_id": "ini-mrhx01in-rgy5",
+      "version_number": 1,
+      "change_summary": "Initial draft",
+      "trigger": "draft_created",
+      "charter_id": "chr-mrhx01in-ujgo",
+      "scope_id": "scp-mrhx01in-hlab",
+      "created_at": "2026-07-12T14:54:47.471Z",
+      "created_by": "usr-001"
+    },
+    {
+      "initiative_version_id": "ver-mrhx34ap-g53q",
+      "initiative_id": "ini-mrhx34ap-e06t",
+      "version_number": 1,
+      "change_summary": "Initial draft",
+      "trigger": "draft_created",
+      "charter_id": "chr-mrhx34ap-nhy9",
+      "scope_id": "scp-mrhx34ap-0sy6",
+      "created_at": "2026-07-12T14:57:11.041Z",
+      "created_by": "usr-001"
+    }
+  ],
+  "initiative_dependencies": [],
+  "initiative_reviews": [],
+  "initiative_closeouts": [],
+  "initiative_event_outbox": [
+    {
+      "event_id": "iev-mrhwff85-37tg",
+      "initiative_id": "ini-mrhwff7l-lsga",
+      "event_type": "initiative.draft_created",
+      "payload": {
+        "initiative_name": "W3 Test Initiative 1783867125439",
+        "initiative_version": 1
+      },
+      "occurred_at": "2026-07-12T14:38:45.461Z",
+      "published_at": null,
+      "attempt_count": 0,
+      "status": "pending"
+    },
+    {
+      "event_id": "iev-mrhwg7g7-iba8",
+      "initiative_id": "ini-mrhwg7fx-nzen",
+      "event_type": "initiative.draft_created",
+      "payload": {
+        "initiative_name": "W3 Test Initiative 1783867162028",
+        "initiative_version": 1
+      },
+      "occurred_at": "2026-07-12T14:39:22.039Z",
+      "published_at": null,
+      "attempt_count": 0,
+      "status": "pending"
+    },
+    {
+      "event_id": "iev-mrhwg7gv-e2gr",
+      "initiative_id": "ini-mrhwg7fx-nzen",
+      "event_type": "initiative.submitted_for_review",
+      "payload": {
+        "initiative_version": 1
+      },
+      "occurred_at": "2026-07-12T14:39:22.063Z",
+      "published_at": null,
+      "attempt_count": 0,
+      "status": "pending"
+    },
+    {
+      "event_id": "iev-mrhwg7ht-vc8x",
+      "initiative_id": "ini-mrhwg7fx-nzen",
+      "event_type": "initiative.activated",
+      "payload": {
+        "initiative_version": 1
+      },
+      "occurred_at": "2026-07-12T14:39:22.097Z",
+      "published_at": null,
+      "attempt_count": 0,
+      "status": "pending"
+    },
+    {
+      "event_id": "iev-mrhwkeyu-t6v1",
+      "initiative_id": "ini-mrhwkeyi-q9qe",
+      "event_type": "initiative.draft_created",
+      "payload": {
+        "initiative_name": "W3 Test Initiative 1783867358393",
+        "initiative_version": 1
+      },
+      "occurred_at": "2026-07-12T14:42:38.406Z",
+      "published_at": null,
+      "attempt_count": 0,
+      "status": "pending"
+    },
+    {
+      "event_id": "iev-mrhwkezj-88ci",
+      "initiative_id": "ini-mrhwkeyi-q9qe",
+      "event_type": "initiative.submitted_for_review",
+      "payload": {
+        "initiative_version": 1
+      },
+      "occurred_at": "2026-07-12T14:42:38.431Z",
+      "published_at": null,
+      "attempt_count": 0,
+      "status": "pending"
+    },
+    {
+      "event_id": "iev-mrhwzm6y-q9bk",
+      "initiative_id": "ini-mrhwzm6m-eg63",
+      "event_type": "initiative.draft_created",
+      "payload": {
+        "initiative_name": "W3 Test Initiative 1783868067597",
+        "initiative_version": 1
+      },
+      "occurred_at": "2026-07-12T14:54:27.610Z",
+      "published_at": null,
+      "attempt_count": 0,
+      "status": "pending"
+    },
+    {
+      "event_id": "iev-mrhwzm7r-imq5",
+      "initiative_id": "ini-mrhwzm6m-eg63",
+      "event_type": "initiative.submitted_for_review",
+      "payload": {
+        "initiative_version": 1
+      },
+      "occurred_at": "2026-07-12T14:54:27.639Z",
+      "published_at": null,
+      "attempt_count": 0,
+      "status": "pending"
+    },
+    {
+      "event_id": "iev-mrhx01j3-uo2k",
+      "initiative_id": "ini-mrhx01in-rgy5",
+      "event_type": "initiative.draft_created",
+      "payload": {
+        "initiative_name": "W3 Test Initiative 1783868087469",
+        "initiative_version": 1
+      },
+      "occurred_at": "2026-07-12T14:54:47.487Z",
+      "published_at": null,
+      "attempt_count": 0,
+      "status": "pending"
+    },
+    {
+      "event_id": "iev-mrhx01jx-cn7m",
+      "initiative_id": "ini-mrhx01in-rgy5",
+      "event_type": "initiative.submitted_for_review",
+      "payload": {
+        "initiative_version": 1
+      },
+      "occurred_at": "2026-07-12T14:54:47.517Z",
+      "published_at": null,
+      "attempt_count": 0,
+      "status": "pending"
+    },
+    {
+      "event_id": "iev-mrhx34b2-kbpo",
+      "initiative_id": "ini-mrhx34ap-e06t",
+      "event_type": "initiative.draft_created",
+      "payload": {
+        "initiative_name": "W3 Test Initiative 1783868231039",
+        "initiative_version": 1
+      },
+      "occurred_at": "2026-07-12T14:57:11.054Z",
+      "published_at": null,
+      "attempt_count": 0,
+      "status": "pending"
+    },
+    {
+      "event_id": "iev-mrhx34c1-nyuk",
+      "initiative_id": "ini-mrhx34ap-e06t",
+      "event_type": "initiative.submitted_for_review",
+      "payload": {
+        "initiative_version": 1
+      },
+      "occurred_at": "2026-07-12T14:57:11.089Z",
+      "published_at": null,
+      "attempt_count": 0,
+      "status": "pending"
+    }
+  ],
+  "initiative_domain_events": [
+    {
+      "event_type": "initiative.draft_created",
+      "initiative_id": "ini-mrhwff7l-lsga",
+      "institution_id": "inst-block-street",
+      "actor_human_id_optional": "usr-001",
+      "service_identity_id_optional": null,
+      "source_command_id": "cmd-mrhwff7j-byyj",
+      "request_id": "req-mrhwff7k-r70f",
+      "correlation_id": "cor-mrhwff7k-a4x0",
+      "initiative_version": 1,
+      "payload": {
+        "initiative_name": "W3 Test Initiative 1783867125439"
+      },
+      "event_id": "iev-mrhwff85-37tg",
+      "event_version": 1,
+      "occurred_at": "2026-07-12T14:38:45.461Z"
+    },
+    {
+      "event_type": "initiative.draft_created",
+      "initiative_id": "ini-mrhwg7fx-nzen",
+      "institution_id": "inst-block-street",
+      "actor_human_id_optional": "usr-001",
+      "service_identity_id_optional": null,
+      "source_command_id": "cmd-mrhwg7fw-rho9",
+      "request_id": "req-mrhwg7fw-0cei",
+      "correlation_id": "cor-mrhwg7fw-zpf0",
+      "initiative_version": 1,
+      "payload": {
+        "initiative_name": "W3 Test Initiative 1783867162028"
+      },
+      "event_id": "iev-mrhwg7g7-iba8",
+      "event_version": 1,
+      "occurred_at": "2026-07-12T14:39:22.039Z"
+    },
+    {
+      "event_type": "initiative.submitted_for_review",
+      "initiative_id": "ini-mrhwg7fx-nzen",
+      "institution_id": "inst-block-street",
+      "actor_human_id_optional": "usr-001",
+      "service_identity_id_optional": null,
+      "source_command_id": "cmd-mrhwg7gi-25up",
+      "request_id": "req-mrhwg7gi-yl7q",
+      "correlation_id": "cor-mrhwg7gi-qx1n",
+      "initiative_version": 1,
+      "payload": {},
+      "event_id": "iev-mrhwg7gv-e2gr",
+      "event_version": 1,
+      "occurred_at": "2026-07-12T14:39:22.063Z"
+    },
+    {
+      "event_type": "initiative.activated",
+      "initiative_id": "ini-mrhwg7fx-nzen",
+      "institution_id": "inst-block-street",
+      "actor_human_id_optional": "usr-001",
+      "service_identity_id_optional": null,
+      "source_command_id": "cmd-mrhwg7hi-y6nc",
+      "request_id": "req-mrhwg7hi-wash",
+      "correlation_id": "cor-mrhwg7hi-7hgo",
+      "initiative_version": 1,
+      "payload": {},
+      "event_id": "iev-mrhwg7ht-vc8x",
+      "event_version": 1,
+      "occurred_at": "2026-07-12T14:39:22.097Z"
+    },
+    {
+      "event_type": "initiative.draft_created",
+      "initiative_id": "ini-mrhwkeyi-q9qe",
+      "institution_id": "inst-block-street",
+      "actor_human_id_optional": "usr-001",
+      "service_identity_id_optional": null,
+      "source_command_id": "cmd-mrhwkeyh-0q81",
+      "request_id": "req-mrhwkeyh-6hi0",
+      "correlation_id": "cor-mrhwkeyh-eob9",
+      "initiative_version": 1,
+      "payload": {
+        "initiative_name": "W3 Test Initiative 1783867358393"
+      },
+      "event_id": "iev-mrhwkeyu-t6v1",
+      "event_version": 1,
+      "occurred_at": "2026-07-12T14:42:38.406Z"
+    },
+    {
+      "event_type": "initiative.submitted_for_review",
+      "initiative_id": "ini-mrhwkeyi-q9qe",
+      "institution_id": "inst-block-street",
+      "actor_human_id_optional": "usr-001",
+      "service_identity_id_optional": null,
+      "source_command_id": "cmd-mrhwkez5-8iv5",
+      "request_id": "req-mrhwkez5-gom5",
+      "correlation_id": "cor-mrhwkez5-p1bv",
+      "initiative_version": 1,
+      "payload": {},
+      "event_id": "iev-mrhwkezj-88ci",
+      "event_version": 1,
+      "occurred_at": "2026-07-12T14:42:38.431Z"
+    },
+    {
+      "event_type": "initiative.draft_created",
+      "initiative_id": "ini-mrhwzm6m-eg63",
+      "institution_id": "inst-block-street",
+      "actor_human_id_optional": "usr-001",
+      "service_identity_id_optional": null,
+      "source_command_id": "cmd-mrhwzm6l-92qb",
+      "request_id": "req-mrhwzm6l-q6u3",
+      "correlation_id": "cor-mrhwzm6l-iln7",
+      "initiative_version": 1,
+      "payload": {
+        "initiative_name": "W3 Test Initiative 1783868067597"
+      },
+      "event_id": "iev-mrhwzm6y-q9bk",
+      "event_version": 1,
+      "occurred_at": "2026-07-12T14:54:27.610Z"
+    },
+    {
+      "event_type": "initiative.submitted_for_review",
+      "initiative_id": "ini-mrhwzm6m-eg63",
+      "institution_id": "inst-block-street",
+      "actor_human_id_optional": "usr-001",
+      "service_identity_id_optional": null,
+      "source_command_id": "cmd-mrhwzm7b-vn5s",
+      "request_id": "req-mrhwzm7b-ssrp",
+      "correlation_id": "cor-mrhwzm7b-tiga",
+      "initiative_version": 1,
+      "payload": {},
+      "event_id": "iev-mrhwzm7r-imq5",
+      "event_version": 1,
+      "occurred_at": "2026-07-12T14:54:27.639Z"
+    },
+    {
+      "event_type": "initiative.draft_created",
+      "initiative_id": "ini-mrhx01in-rgy5",
+      "institution_id": "inst-block-street",
+      "actor_human_id_optional": "usr-001",
+      "service_identity_id_optional": null,
+      "source_command_id": "cmd-mrhx01il-dxyk",
+      "request_id": "req-mrhx01il-x7vu",
+      "correlation_id": "cor-mrhx01il-85ti",
+      "initiative_version": 1,
+      "payload": {
+        "initiative_name": "W3 Test Initiative 1783868087469"
+      },
+      "event_id": "iev-mrhx01j3-uo2k",
+      "event_version": 1,
+      "occurred_at": "2026-07-12T14:54:47.487Z"
+    },
+    {
+      "event_type": "initiative.submitted_for_review",
+      "initiative_id": "ini-mrhx01in-rgy5",
+      "institution_id": "inst-block-street",
+      "actor_human_id_optional": "usr-001",
+      "service_identity_id_optional": null,
+      "source_command_id": "cmd-mrhx01jg-eigj",
+      "request_id": "req-mrhx01jg-pwql",
+      "correlation_id": "cor-mrhx01jg-8un5",
+      "initiative_version": 1,
+      "payload": {},
+      "event_id": "iev-mrhx01jx-cn7m",
+      "event_version": 1,
+      "occurred_at": "2026-07-12T14:54:47.517Z"
+    },
+    {
+      "event_type": "initiative.draft_created",
+      "initiative_id": "ini-mrhx34ap-e06t",
+      "institution_id": "inst-block-street",
+      "actor_human_id_optional": "usr-001",
+      "service_identity_id_optional": null,
+      "source_command_id": "cmd-mrhx34an-b5ph",
+      "request_id": "req-mrhx34an-mpz8",
+      "correlation_id": "cor-mrhx34an-euih",
+      "initiative_version": 1,
+      "payload": {
+        "initiative_name": "W3 Test Initiative 1783868231039"
+      },
+      "event_id": "iev-mrhx34b2-kbpo",
+      "event_version": 1,
+      "occurred_at": "2026-07-12T14:57:11.054Z"
+    },
+    {
+      "event_type": "initiative.submitted_for_review",
+      "initiative_id": "ini-mrhx34ap-e06t",
+      "institution_id": "inst-block-street",
+      "actor_human_id_optional": "usr-001",
+      "service_identity_id_optional": null,
+      "source_command_id": "cmd-mrhx34bk-wtr9",
+      "request_id": "req-mrhx34bk-g6nl",
+      "correlation_id": "cor-mrhx34bk-go4q",
+      "initiative_version": 1,
+      "payload": {},
+      "event_id": "iev-mrhx34c1-nyuk",
+      "event_version": 1,
+      "occurred_at": "2026-07-12T14:57:11.089Z"
+    }
+  ],
+  "initiative_idempotency": {
+    "idem-1783867162099": {
+      "result": {
+        "success": true,
+        "initiative_id": "ini-mrhwg7fx-nzen",
+        "previous_status_optional": "active",
+        "new_status_optional": "paused",
+        "version": 1,
+        "events": [],
+        "warnings": [],
+        "next_required_actions": [],
+        "validation_errors": []
+      },
+      "payload_hash": "efca3afbd146bd3c"
+    }
+  }
+}

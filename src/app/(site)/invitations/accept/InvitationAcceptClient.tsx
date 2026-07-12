@@ -8,50 +8,134 @@ export default function InvitationAcceptClient() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const token = searchParams.get("token");
-  const [preview, setPreview] = useState<{ organization_name?: string; workspace_name?: string; email?: string } | null>(null);
+  const [gateMessage, setGateMessage] = useState("");
+  const [canProceed, setCanProceed] = useState(false);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [publicName, setPublicName] = useState("");
+  const [preferredName, setPreferredName] = useState("");
 
   useEffect(() => {
     if (!token) return;
-    fetch(`/api/invitations/${token}`).then(async (res) => {
-      if (!res.ok) {
-        setError("This invitation is invalid, expired, or has already been used.");
-        return;
-      }
-      const data = await res.json();
-      setPreview(data.invitation);
-    });
+    fetch("/api/v1/invitations/wave1/accept", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ action: "acceptance_start", token }),
+    })
+      .then((r) => r.json())
+      .then((d) => {
+        const gate = d.data?.gate ?? d.gate;
+        if (!gate) {
+          setError("This invitation is invalid, expired, or has already been used.");
+          return;
+        }
+        setGateMessage(gate.message);
+        setCanProceed(gate.activation_decision === "proceed" || gate.activation_decision === "identity_review_required");
+        const inv = d.data?.invitation;
+        if (inv?.recipient_contact_reference) setEmail(inv.recipient_contact_reference);
+        if (inv?.intended_recipient_name) setPublicName(inv.intended_recipient_name);
+      })
+      .catch(() => setError("Unable to verify invitation."));
   }, [token]);
 
-  async function accept() {
+  async function acceptNewHuman(e: React.FormEvent) {
+    e.preventDefault();
     if (!token) return;
     setLoading(true);
-    const res = await fetch(`/api/invitations/${token}/accept`, { method: "POST" });
+    setError("");
+    const res = await fetch("/api/v1/invitations/wave1/accept", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        action: "accept",
+        token,
+        email,
+        password,
+        public_name: publicName,
+        preferred_short_name: preferredName || undefined,
+      }),
+    });
+    const data = await res.json();
     setLoading(false);
     if (!res.ok) {
-      const data = await res.json();
-      setError(data.error ?? "Unable to accept invitation. Sign in with the invited email first.");
+      setError(data.error?.message ?? data.error ?? "Activation failed");
+      return;
+    }
+    if (data.data?.requires_existing_human_confirmation) {
+      setError(data.data.message);
       return;
     }
     router.push("/onboarding");
   }
 
   return (
-    <AuthPageShell title="Accept invitation" subtitle="Join your organization on Block Street">
-      {error && <p className="text-sm text-red-800" role="alert">{error}</p>}
-      {preview && (
-        <div className="space-y-4 text-sm text-blue-900">
-          <p>You are invited to <strong>{preview.organization_name}</strong>{preview.workspace_name ? ` · ${preview.workspace_name}` : ""}.</p>
-          <p className="text-xs text-blue-700">Invitation sent to: {preview.email}</p>
-          <p className="text-xs">Sign in with that email, then accept below.</p>
-          <div className="flex gap-2">
-            <a href={`/login?next=/invitations/accept?token=${token}`} className="rounded border border-blue-300 px-3 py-2 text-blue-800">Sign in</a>
-            <button type="button" disabled={loading} onClick={accept} className="rounded bg-blue-700 px-3 py-2 text-white">{loading ? "Accepting…" : "Accept invitation"}</button>
-          </div>
-        </div>
+    <AuthPageShell title="Accept invitation" subtitle="Declare your public human identity">
+      {error && (
+        <p className="text-sm text-red-800" role="alert">
+          {error}
+        </p>
       )}
-      {!preview && !error && <p className="text-sm text-blue-800">Loading invitation…</p>}
+      {gateMessage && <p className="text-sm text-blue-900">{gateMessage}</p>}
+
+      {canProceed && token && (
+        <form onSubmit={acceptNewHuman} className="mt-4 space-y-4 text-sm text-blue-950">
+          <p className="text-xs text-blue-800">
+            Use the name you are publicly known by — not a username or slogan.
+          </p>
+          <label className="block font-medium">
+            Public name
+            <input
+              required
+              className="mt-1 w-full rounded border border-blue-200 px-3 py-2"
+              value={publicName}
+              onChange={(e) => setPublicName(e.target.value)}
+            />
+          </label>
+          <label className="block font-medium">
+            Preferred short name (optional)
+            <input
+              className="mt-1 w-full rounded border border-blue-200 px-3 py-2"
+              value={preferredName}
+              onChange={(e) => setPreferredName(e.target.value)}
+            />
+          </label>
+          <label className="block font-medium">
+            Email
+            <input
+              type="email"
+              required
+              readOnly
+              className="mt-1 w-full rounded border border-blue-200 bg-blue-50 px-3 py-2"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </label>
+          <label className="block font-medium">
+            Password
+            <input
+              type="password"
+              required
+              minLength={8}
+              className="mt-1 w-full rounded border border-blue-200 px-3 py-2"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </label>
+          <button type="submit" disabled={loading} className="w-full rounded bg-blue-700 px-4 py-2 text-white">
+            {loading ? "Activating…" : "Activate identity"}
+          </button>
+          <p className="text-center text-xs text-blue-700">
+            Already have an account?{" "}
+            <a href={`/login?next=/invitations/accept?token=${token}`} className="underline">
+              Sign in first
+            </a>
+          </p>
+        </form>
+      )}
+
+      {!gateMessage && !error && <p className="text-sm text-blue-800">Verifying invitation…</p>}
     </AuthPageShell>
   );
 }

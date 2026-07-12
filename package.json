@@ -11,6 +11,18 @@
     "typecheck": "tsc --noEmit",
     "validate:release": "node scripts/deployment/validate-release.mjs",
     "smoke:test": "node scripts/deployment/smoke-test.mjs",
+    "test:july14": "node scripts/identity-trust/july14-smoke.mjs",
+    "test:civic-action": "node scripts/civic-action/cae-smoke.mjs",
+    "july14:all": "npm run typecheck && npm run lint && npm run test:july14 && node scripts/identity-trust/wave7-smoke.mjs",
+    "cae:all": "npm run typecheck && npm run lint && npm run test:civic-action",
+    "phase11:validate": "node scripts/phase11/validate.mjs",
+    "phase11:11.1:w1": "node scripts/phase11/11.1-w1.mjs",
+    "phase11:11.1:w2": "node scripts/phase11/11.1-w2.mjs",
+    "phase11:11.1:w3": "node scripts/phase11/11.1-w3.mjs",
+    "phase11:11.1:w3:all": "npm run typecheck && npm run phase11:11.1:w3",
+    "phase11:gate": "npm run phase11:validate && npm run phase11:11.1:w1 && npm run phase11:11.1:w2 && npm run phase11:11.1:w3 && npm run phase11:traceability",
+    "phase11:traceability": "node scripts/phase11/traceability.mjs",
+    "phase11:all": "npm run typecheck && npm run lint && npm run test:civic-action && npm run phase11:gate",
     "canon:validate": "node scripts/canon/validate.mjs",
     "canon:index": "node scripts/canon/index.mjs",
     "canon:graph": "node scripts/canon/graph.mjs",
@@ -36,6 +48,7 @@
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.17",
+    "tsx": "^4.23.0",
     "typescript": "^5.7.2"
   }
 }

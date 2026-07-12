@@ -1,0 +1,18 @@
+{
+  "types": [
+    "volunteer_together",
+    "mentor",
+    "mentee",
+    "supervisor",
+    "team_member",
+    "committee_member",
+    "partner_organization",
+    "project_collaborator",
+    "trainer",
+    "student",
+    "advisor",
+    "coalition_partner",
+    "community_contact",
+    "neighbor_organization"
+  ]
+}

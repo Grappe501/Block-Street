@@ -362,10 +362,10 @@
       "steps": [
         { "id": "10.1", "name": "Civic Participation Engine [CIV-001]", "status": "done", "notes": "Participation scoring, engagement trends, forecasting — AC-194" },
         { "id": "10.2", "name": "Leadership Development Engine [LDR-001]", "status": "done", "notes": "Profiles, evidence, mentorship, cohorts, succession, analytics — AC-195" },
-        { "id": "10.3", "name": "Community Relationship Graph [REL-001]", "status": "pending", "notes": "People, orgs, schools, coalitions relationship map — AC-196" },
-        { "id": "10.4", "name": "Community Health Dashboard [CHD-001]", "status": "pending", "notes": "Community health scores, retention, collaboration — AC-197" },
-        { "id": "10.5", "name": "Civic Outcomes Engine [OUT-001]", "status": "pending", "notes": "Real-world outcome tracking — AC-198" },
-        { "id": "10.6", "name": "Strategic Intelligence [INT-002]", "status": "pending", "notes": "Trend detection, gaps, capacity forecasting — AC-199" },
+        { "id": "10.3", "name": "Community Relationship Intelligence Engine [REL-001]", "status": "done", "notes": "Canonical graph, ledger, mentorship, collaboration analytics, connectors, privacy, federation aggregates — AC-196" },
+        { "id": "10.4", "name": "Community Health & Civic Resilience Engine [CHD-001]", "status": "done", "notes": "Health index, capacity, resilience, risks, geographic maps, reports, federation aggregates — AC-197" },
+        { "id": "10.5", "name": "Civic Outcomes & Impact Measurement Engine [OUT-001]", "status": "done", "notes": "Outcomes ledger, evidence, attribution, theory of change, CROP, reports, federation aggregates — AC-198" },
+        { "id": "10.6", "name": "Civic Strategic Intelligence & Decision Support Engine [INT-002]", "status": "done", "notes": "Insights, warnings, scenarios, forecasts, decision support, institutional learning — AC-199" },
         { "id": "10.7", "name": "Research & Policy Lab [RPL-001]", "status": "pending", "notes": "Privacy-protected civic research — AC-200" },
         { "id": "10.8", "name": "Civic Impact Analytics [CIA-001]", "status": "pending", "notes": "Combined impact, resilience, social capital — AC-201" }
       ]

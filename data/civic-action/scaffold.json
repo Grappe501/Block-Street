@@ -1,0 +1,55 @@
+{
+  "scaffold_id": "CAE-SCAFFOLD-001",
+  "phase_id": "CAE-001",
+  "total_builds": 16,
+  "waves_per_build": 8,
+  "total_planned_waves": 128,
+  "phase_overall_percent": 2.34,
+  "current_wave": "11.1-W4",
+  "recommended_next_wave": "11.1-W4",
+  "builds": {
+    "11.1": { "name": "Initiative and Program Architecture", "system_id": "INI-001", "percent": 37.5, "current_wave": "W4", "waves_completed": ["W1", "W2", "W3"] },
+    "11.2": { "name": "Strategic Planning and Objective Engine", "system_id": "OBJ-001", "percent": 0, "current_wave": null, "waves_completed": [] },
+    "11.3": { "name": "Mission and Workstream Execution", "system_id": "MSN-002", "percent": 0, "current_wave": null, "waves_completed": [] },
+    "11.4": { "name": "Team, Role, and Responsibility Coordination", "system_id": "RSP-001", "percent": 0, "current_wave": null, "waves_completed": [] },
+    "11.5": { "name": "Calendar, Timing, and Operational Rhythm", "system_id": "TIM-001", "percent": 0, "current_wave": null, "waves_completed": [] },
+    "11.6": { "name": "Resource, Capacity, and Logistics Management", "system_id": "CAP-001", "percent": 0, "current_wave": null, "waves_completed": [] },
+    "11.7": { "name": "Communications and Mobilization Operations", "system_id": "COM-002", "percent": 0, "current_wave": null, "waves_completed": [] },
+    "11.8": { "name": "Field Operations and Geographic Execution", "system_id": "FLD-001", "percent": 0, "current_wave": null, "waves_completed": [] },
+    "11.9": { "name": "Coalition and Cross-Institution Coordination", "system_id": "COL-001", "percent": 0, "current_wave": null, "waves_completed": [] },
+    "11.10": { "name": "Decision, Approval, and Escalation System", "system_id": "DEC-001", "percent": 0, "current_wave": null, "waves_completed": [] },
+    "11.11": { "name": "Live Operations Command Center", "system_id": "OCC-001", "percent": 0, "current_wave": null, "waves_completed": [] },
+    "11.12": { "name": "Adaptive Execution and Continuous Learning", "system_id": "ADP-001", "percent": 0, "current_wave": null, "waves_completed": [] },
+    "11.13": { "name": "Action Evidence and Outcome Attribution", "system_id": "EVD-001", "percent": 0, "current_wave": null, "waves_completed": [] },
+    "11.14": { "name": "Replication, Playbooks, and Execution Templates", "system_id": "PLY-001", "percent": 0, "current_wave": null, "waves_completed": [] },
+    "11.15": { "name": "Operational Safety, Compliance, and Resilience", "system_id": "SAFE-001", "percent": 0, "current_wave": null, "waves_completed": [] },
+    "11.16": { "name": "Phase 11 Certification and Controlled Launch", "system_id": "CAE-CERT-001", "percent": 0, "current_wave": null, "waves_completed": [] }
+  },
+  "wave_history": [
+    {
+      "wave_id": "11.1-W1",
+      "build": "11.1",
+      "name": "Initiative Constitution and Domain Definition",
+      "completed_at": "2026-07-12T00:00:00Z",
+      "status": "completed",
+      "delivery": "documentation_and_contracts"
+    },
+    {
+      "wave_id": "11.1-W2",
+      "build": "11.1",
+      "name": "Initiative Canonical Data Model and Lifecycle Architecture",
+      "completed_at": "2026-07-12T12:00:00Z",
+      "status": "completed",
+      "delivery": "documentation_and_contracts"
+    },
+    {
+      "wave_id": "11.1-W3",
+      "build": "11.1",
+      "name": "Initiative Core Services and Lifecycle Engine",
+      "completed_at": "2026-07-12T14:45:00Z",
+      "status": "completed",
+      "delivery": "service_engine_and_tests"
+    }
+  ]
+}
+

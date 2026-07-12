@@ -1,0 +1,37 @@
+{
+  "contract_id": "INI-SM-001",
+  "wave": "11.1-W2",
+  "system_id": "INI-001",
+  "states": [
+    "concept", "discovery", "design", "approval_pending", "approved", "preparation",
+    "active", "paused", "at_risk", "owner_required", "closing", "completed", "cancelled", "archived"
+  ],
+  "single_active_status": true,
+  "allowed_transitions": {
+    "concept": ["discovery", "cancelled"],
+    "discovery": ["design", "concept", "cancelled"],
+    "design": ["approval_pending", "discovery", "cancelled"],
+    "approval_pending": ["approved", "design", "cancelled"],
+    "approved": ["preparation", "approval_pending", "cancelled"],
+    "preparation": ["active", "approved", "cancelled"],
+    "active": ["paused", "at_risk", "closing", "owner_required", "cancelled"],
+    "paused": ["active", "closing", "cancelled"],
+    "at_risk": ["active", "paused", "closing", "cancelled"],
+    "owner_required": ["active", "paused", "closing", "cancelled"],
+    "closing": ["completed", "cancelled"],
+    "completed": ["archived"],
+    "cancelled": ["archived"],
+    "archived": []
+  },
+  "illegal_transitions": [
+    { "from": "concept", "to": "completed", "reason": "Cannot complete without governed lifecycle" },
+    { "from": "concept", "to": "active", "reason": "Cannot activate from concept" },
+    { "from": "cancelled", "to": "active", "reason": "Requires restoration workflow" },
+    { "from": "archived", "to": "active", "reason": "Requires restoration or successor" },
+    { "from": "completed", "to": "active", "reason": "Requires restoration workflow" }
+  ],
+  "activation_requires": ["institution_id", "executive_owner_human_id", "operational_owner_human_id", "approved_charter", "scope_record", "status_in_preparation_or_approved"],
+  "legacy_status_map": {
+    "approval": "approval_pending"
+  }
+}
