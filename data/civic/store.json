@@ -1,0 +1,18 @@
+{
+  "health_summary": {
+    "communities_tracked": 0,
+    "average_participation_score": 0,
+    "active_participants": 0,
+    "volunteer_hours_month": 0,
+    "membership_growth_rate": 0,
+    "declining_communities": 0,
+    "rising_communities": 0,
+    "updated_at": "2026-07-12T00:00:00Z"
+  },
+  "participation_events": [],
+  "participation_scores": [],
+  "engagement_trends": [],
+  "participation_forecasts": [],
+  "civic_habits": [],
+  "audit_events": []
+}

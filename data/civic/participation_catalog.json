@@ -1,0 +1,10 @@
+{
+  "metrics": [
+    { "key": "volunteer_activity", "name": "Volunteer Activity", "weight": 0.2, "description": "Volunteer shifts and outreach actions" },
+    { "key": "attendance_rate", "name": "Attendance", "weight": 0.15, "description": "Event and meeting attendance" },
+    { "key": "membership_growth", "name": "Membership Growth", "weight": 0.15, "description": "New members joining communities" },
+    { "key": "mission_completion", "name": "Mission Completion", "weight": 0.2, "description": "Completed civic missions" },
+    { "key": "community_involvement", "name": "Community Involvement", "weight": 0.15, "description": "Training and community actions" },
+    { "key": "civic_habits", "name": "Civic Habits", "weight": 0.15, "description": "Sustained weekly civic participation habits" }
+  ]
+}

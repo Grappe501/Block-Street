@@ -1,0 +1,30 @@
+{
+  "version": "1.0.0",
+  "phase": 10,
+  "docPath": "docs/phase-10/PHASE_10_MASTER_SEQUENCE.md",
+  "requirementId": "CGI-001",
+  "productName": "Civic Growth, Engagement, and Societal Impact",
+  "phaseQuestion": "Are communities becoming stronger because institutions are operating?",
+  "status": "in_progress",
+  "priority": "critical",
+  "readAfter": "ILS-001",
+  "guidingPrinciple": "The purpose of the platform is not to create activity. The purpose is to create stronger communities.",
+  "mission": "Create the Civic Intelligence Layer that connects platform activity with measurable community outcomes.",
+  "stepsComplete": 1,
+  "stepsTotal": 8,
+  "implementationOrder": ["10.1", "10.2", "10.3", "10.4", "10.5", "10.6", "10.7", "10.8"],
+  "steps": [
+    { "id": "10.1", "name": "Civic Participation Engine", "requirement": "CIV-001", "artifact": "docs/phase-10/CIVIC_PARTICIPATION.md", "acceptanceCriteria": "AC-194", "status": "done" },
+    { "id": "10.2", "name": "Leadership Development Engine", "requirement": "LDR-001", "artifact": "docs/phase-10/LEADERSHIP_DEVELOPMENT.md", "acceptanceCriteria": "AC-195", "status": "pending" },
+    { "id": "10.3", "name": "Community Relationship Graph", "requirement": "REL-001", "artifact": "docs/phase-10/COMMUNITY_RELATIONSHIP_GRAPH.md", "acceptanceCriteria": "AC-196", "status": "pending" },
+    { "id": "10.4", "name": "Community Health Dashboard", "requirement": "CHD-001", "artifact": "docs/phase-10/COMMUNITY_HEALTH.md", "acceptanceCriteria": "AC-197", "status": "pending" },
+    { "id": "10.5", "name": "Civic Outcomes Engine", "requirement": "OUT-001", "artifact": "docs/phase-10/CIVIC_OUTCOMES.md", "acceptanceCriteria": "AC-198", "status": "pending" },
+    { "id": "10.6", "name": "Strategic Intelligence", "requirement": "INT-002", "artifact": "docs/phase-10/STRATEGIC_INTELLIGENCE.md", "acceptanceCriteria": "AC-199", "status": "pending" },
+    { "id": "10.7", "name": "Research & Policy Lab", "requirement": "RPL-001", "artifact": "docs/phase-10/RESEARCH_POLICY_LAB.md", "acceptanceCriteria": "AC-200", "status": "pending" },
+    { "id": "10.8", "name": "Civic Impact Analytics", "requirement": "CIA-001", "artifact": "docs/phase-10/CIVIC_IMPACT_ANALYTICS.md", "acceptanceCriteria": "AC-201", "status": "pending" }
+  ],
+  "buildsOn": ["FED-001", "OPS-001", "TRN-001", "AUTH-001", "ADM-001", "MON-001"],
+  "governedBy": ["LIVING-SYSTEMS-ARCHITECTURE"],
+  "acceptanceCriteria": "AC-201",
+  "acceptanceCriteriaMet": false
+}

@@ -6463,7 +6463,7 @@
       "priority": "critical",
       "principle": "ILS-001",
       "dependencies": ["OPS-001", "PLT-001", "TRN-001", "PRV-001", "ADM-001"],
-      "related": ["ILS-001"],
+      "related": ["CGI-001"],
       "acceptanceCriteria": [
         "Institutions replicate from governed templates without inheriting private data",
         "Federation membership is optional and permission-based",
@@ -6484,6 +6484,66 @@
         "doc": "DOC-FED-001"
       },
       "versionHistory": { "created": "2026-07-11", "implemented": "2026-07-11" }
+    },
+    {
+      "id": "CGI-001",
+      "title": "Civic Growth, Engagement, and Societal Impact — Phase 10",
+      "purpose": "Measure whether communities are becoming stronger because institutions are operating",
+      "description": "PHASE-010 — Civic Intelligence Layer connecting platform activity with measurable community outcomes",
+      "priority": "critical",
+      "principle": "OLB-001",
+      "dependencies": ["ILS-001", "FED-001", "OPS-001", "AUTH-001", "ADM-001"],
+      "related": ["CIV-001", "LDR-001", "REL-001", "CHD-001", "OUT-001", "INT-002", "RPL-001", "CIA-001"],
+      "acceptanceCriteria": [
+        "Civic participation is measured with explainable scores",
+        "Leadership pipelines and succession are tracked",
+        "Community relationships are mapped",
+        "Community health is scored and visible",
+        "Real-world civic outcomes are tracked",
+        "Strategic intelligence supports executives",
+        "Research operates with privacy protection",
+        "Combined civic impact analytics demonstrate societal benefit"
+      ],
+      "futureNotes": "Phase 10 master sequence AC-201. Registry CGI-001.",
+      "implementationStatus": "in_progress",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": null,
+        "api": "API-CIV",
+        "frontend": "PAGE-ADMIN-CGI",
+        "test": "TEST-CGI-001",
+        "doc": "DOC-CGI-001"
+      },
+      "versionHistory": { "created": "2026-07-12" }
+    },
+    {
+      "id": "CIV-001",
+      "title": "Civic Participation Engine — Build 10.1",
+      "purpose": "Measure participation, volunteer activity, attendance, membership growth, and civic habits",
+      "description": "BUILD-010.1 — participation events, Civic Participation Score, engagement trends, 90-day forecasting",
+      "priority": "critical",
+      "principle": "CGI-001",
+      "dependencies": ["FED-001", "OPS-001", "TRN-001", "AUTH-001"],
+      "related": ["LDR-001", "CHD-001"],
+      "acceptanceCriteria": [
+        "Participation events are recorded across civic activity types",
+        "Civic Participation Score is computed with explainable weighted factors",
+        "Engagement trends show direction with retention metrics",
+        "90-day participation forecasts include confidence and opportunities"
+      ],
+      "futureNotes": "AC-194. Registry CIV-001. First build of Phase 10.",
+      "implementationStatus": "done",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": null,
+        "api": "API-CIV",
+        "frontend": "PAGE-ADMIN-CGI",
+        "test": "TEST-CIV-001",
+        "doc": "DOC-CIV-001"
+      },
+      "versionHistory": { "created": "2026-07-12", "implemented": "2026-07-12" }
     },
     {
       "id": "PSI-014",
