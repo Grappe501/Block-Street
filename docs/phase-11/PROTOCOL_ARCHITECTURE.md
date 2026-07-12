@@ -44,7 +44,7 @@ Example: CAE-11.2-W2 = Objective Canonical Data Model Protocol
 | CAE-11.2-W1 | Objective Protocol | Complete |
 | CAE-11.2-W2 | Canonical Model Protocol | Complete |
 | CAE-11.2-W3 | Domain Services Protocol | Complete |
-| CAE-11.2-W4 | Human Experience Protocol | Planned |
+| CAE-11.2-W4 | Human Experience Protocol | Complete |
 | CAE-11.2-W5 | API Protocol | Planned |
 | CAE-11.2-W6 | Intelligence Protocol | Planned |
 | CAE-11.2-W7 | Optimization Protocol | Planned |

@@ -17,6 +17,7 @@ import type {
 
 const NAV_KEYS = [
   { key: "overview", path: "" },
+  { key: "objectives", path: "/objectives" },
   { key: "charter", path: "/charter" },
   { key: "people", path: "/people" },
   { key: "readiness", path: "/readiness" },
@@ -154,6 +155,8 @@ export function assembleInitiativeOverview(
         key: "objectives",
         title: t(ctx.locale, "card.objectives"),
         body: t(ctx.locale, "card.objectives.body"),
+        action_label: "Open Objectives",
+        action_href: `/initiatives/${initiativeId}/objectives`,
       },
       {
         key: "workstreams",

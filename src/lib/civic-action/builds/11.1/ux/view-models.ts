@@ -97,7 +97,7 @@ export type InitiativeOverviewView = {
   last_lifecycle_change: string | null;
   ownership_summary: string;
   readiness_or_health: string | null;
-  integration_cards: { key: string; title: string; body: string; action_label?: string }[];
+  integration_cards: { key: string; title: string; body: string; action_label?: string; action_href?: string }[];
   activity_feed: { id: string; when: string; text: string }[];
   lifecycle_actions: InitiativeUiAction[];
 };

@@ -56,6 +56,11 @@ export default async function InitiativeOverviewPage({
           <div key={card.key} className="card border-dashed">
             <h3 className="font-semibold text-slate-900">{card.title}</h3>
             <p className="mt-2 text-sm text-slate-600">{card.body}</p>
+            {"action_href" in card && card.action_href && (
+              <a href={card.action_href as string} className="mt-2 inline-block text-sm font-semibold text-orange-800 underline">
+                {"action_label" in card ? (card.action_label as string) : "Open →"}
+              </a>
+            )}
           </div>
         ))}
       </div>
