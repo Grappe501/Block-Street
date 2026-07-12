@@ -2,15 +2,23 @@
 
 **System ID:** CIV-001 · AC-194
 
-## Acceptance Test
+## Acceptance Test (16 steps)
 
-1. Record volunteer shift with duration and participants
-2. Record meeting attendance
-3. Record mission completion
-4. Record membership growth
-5. Track civic habit streak
-6. Compute Civic Participation Score with explainable factors
-7. Verify engagement trend direction
-8. Generate 90-day participation forecast
+1. New volunteer joins institution
+2. Completes onboarding orientation meeting
+3. Verified ParticipationEvent created
+4. Completes training and logs 2-hour service project
+5. Service project leader-verified
+6. Volunteer hours increase
+7. Civic timeline records milestone
+8. Additional missions over several weeks
+9. Healthy participation streak established
+10. Civic Participation Score updates with explainable breakdown
+11. Organization dashboard reflects increased engagement
+12. County dashboard aggregates participation
+13. AI recommends leadership workshop (advisory)
+14. User sets milestone-badges-only privacy
+15. Federation analytics show anonymous trend only
+16. Full audit trail recorded
 
-Run via **Civic Participation Center → Acceptance Demo**.
+Run via **Phase 10 → Acceptance Demo**.

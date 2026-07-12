@@ -4,25 +4,20 @@
 
 ---
 
-## 2026-07-12 — Build 10.1 Civic Participation Engine [CIV-001 · AC-194]
+## 2026-07-12 — Build 10.1 Civic Participation Engine [CIV-001 · AC-194] (expanded)
 
-**Documents:** `docs/platform/civic/*` (7 standards) · `docs/phase-10/*` · Phase 10 master sequence
+**Documents:** `docs/platform/civic/*` (10 standards per CIV-001 spec)
 
-### What Changed
+### What Changed (full spec)
 
-- **Phase 10 launched** — Civic Growth, Engagement, and Societal Impact (CGI-001)
-- **Civic Participation Engine** — weighted participation scoring across 6 dimensions
-- **Participation events** — volunteer shifts, attendance, missions, membership, habits
-- **Engagement trends** — 30-day index with rising/stable/declining direction
-- **Participation forecasting** — 90-day projections with confidence and opportunities
-- **v1 APIs** — `/api/v1/civic/*`, `/api/admin/civic/overview`
-- **Civic Intelligence Center** — Phase 10 tab in Director Workbench, AC-194 acceptance demo
-- **Experience Layer** renumbered to Phase 11 (deferred)
-
-### Phase Status
-
-- Phase 9: **Complete** (8/8)
-- Phase 10: **In Progress** (1/8 Civic Intelligence)
+- **Participation ledger** — canonical events with verification, impact weights, privacy levels
+- **Civic journey** — 9 lifecycle stages, lifelong timeline, milestone engine
+- **Volunteer tracking** — total/verified hours, projects, skills, leadership roles
+- **Explainable scoring** — 7 weighted components (28/22/18/12/8/7/5), momentum states
+- **Dashboards** — user, organization, county, federation (privacy-aware)
+- **Privacy controls** — milestone-badges-only, visibility governance
+- **AI insights** — advisory leadership recommendations and interventions
+- **16-step acceptance demo** — full AC-194 validation path
 
 ---
 
