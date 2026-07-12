@@ -4,7 +4,21 @@
 
 ---
 
-## 2026-07-12 — ITL Wave 1 [ITL-W1-001] Human Registry, Invitation Network, Sponsor Accountability
+## 2026-07-12 — County & Institution Workspace System [CIWS-001 · 0.7.1-ciws]
+
+**Documents:** `docs/phase-04/COUNTY_INSTITUTION_WORKSPACE_UPGRADE.md` · `data/registry/county-institution-workspace.json`
+
+### What Changed
+
+- **CIWS spec** — two-layer workspace model, home-community gate, functional leadership lattice, registration/vote goals, social meetup hub
+- **Workspace engine** — `src/lib/community-workspace/` with `assembleCommunityWorkspace()` and seeded data
+- **UI components** — Pulse, Goals, Leadership, Social Meetups, Functional Lanes, People directory gate
+- **Page integration** — county, post-secondary, high school, and private/charter pages use unified `CommunityWorkspace`
+- **API** — `GET /api/v1/community-workspace?community_id=county:pulaski`
+
+---
+
+## 2026-07-12 — Active signup buttons on county and school dashboards
 
 **Documents:** `docs/platform/identity/WAVE_1_IMPLEMENTATION_PLAN.md` + wave 1 standards
 

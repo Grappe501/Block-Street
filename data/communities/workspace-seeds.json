@@ -1,0 +1,124 @@
+{
+  "version": "0.1.0",
+  "releaseVersion": "0.7.1-ciws",
+  "defaultGoalTargets": {
+    "county": {
+      "registration": 250,
+      "vote_participation": 180
+    },
+    "institution": {
+      "registrationPercentOfEnrollment": 0.05,
+      "voteParticipationPercentOfRegistration": 0.75
+    },
+    "high_school": {
+      "registration": 75,
+      "vote_participation": 50
+    },
+    "private_charter": {
+      "registration": 50,
+      "vote_participation": 35
+    }
+  },
+  "seeds": {
+    "county:pulaski": {
+      "goals": {
+        "registration": { "target": 1200, "current": 412, "deadline": "2026-10-15" },
+        "vote_participation": { "target": 800, "current": 96, "deadline": "2026-11-03" }
+      },
+      "roles": [
+        { "role": "community_lead", "holderName": "Jordan L.", "status": "active" },
+        { "role": "social_lead", "holderName": null, "status": "open" },
+        { "role": "event_lead", "holderName": "Maya R.", "status": "active" },
+        { "role": "registration_lead", "holderName": null, "status": "open" },
+        { "role": "canvass_lead", "holderName": "Chris T.", "status": "interim" },
+        { "role": "phone_bank_lead", "holderName": null, "status": "open" },
+        { "role": "postcard_lead", "holderName": null, "status": "open" }
+      ],
+      "meetup": {
+        "status": "needs_social_lead",
+        "title": "First Pulaski County social",
+        "theme": "Meet organizers, bring a friend",
+        "wherePublic": "Little Rock area — venue TBA",
+        "rhythm": null
+      },
+      "lanes": {
+        "registration": { "nextActivation": "Fall tabling push — needs Registration Lead" },
+        "canvass": { "nextActivation": "Weekend turf planning with Chris T." }
+      }
+    },
+    "county:faulkner": {
+      "goals": {
+        "registration": { "target": 400, "current": 118, "deadline": "2026-10-15" },
+        "vote_participation": { "target": 280, "current": 42, "deadline": "2026-11-03" }
+      },
+      "roles": [
+        { "role": "community_lead", "holderName": null, "status": "open" },
+        { "role": "social_lead", "holderName": "Sam K.", "status": "active" },
+        { "role": "event_lead", "holderName": null, "status": "open" },
+        { "role": "registration_lead", "holderName": "Alex P.", "status": "interim" },
+        { "role": "canvass_lead", "holderName": null, "status": "open" },
+        { "role": "phone_bank_lead", "holderName": null, "status": "open" },
+        { "role": "postcard_lead", "holderName": null, "status": "open" }
+      ],
+      "meetup": {
+        "status": "scheduled",
+        "title": "Conway young organizers social",
+        "theme": "Pizza, introductions, and fall planning",
+        "when": "2026-07-17T18:00:00-05:00",
+        "wherePublic": "Conway — downtown",
+        "rhythm": "Every other Thursday, 6pm",
+        "rsvpCount": 14
+      }
+    },
+    "school:uca": {
+      "goals": {
+        "registration": { "target": 490, "current": 87, "deadline": "2026-10-15" },
+        "vote_participation": { "target": 350, "current": 31, "deadline": "2026-11-03" }
+      },
+      "roles": [
+        { "role": "community_lead", "holderName": null, "status": "open" },
+        { "role": "social_lead", "holderName": null, "status": "open" },
+        { "role": "event_lead", "holderName": "Taylor W.", "status": "interim" },
+        { "role": "registration_lead", "holderName": null, "status": "open" },
+        { "role": "canvass_lead", "holderName": null, "status": "open" },
+        { "role": "phone_bank_lead", "holderName": null, "status": "open" },
+        { "role": "postcard_lead", "holderName": null, "status": "open" }
+      ],
+      "meetup": {
+        "status": "needs_social_lead",
+        "title": "First UCA campus social",
+        "theme": "Find our people before fall semester",
+        "wherePublic": "UCA campus — location TBA",
+        "rhythm": null
+      }
+    },
+    "school:ualr": {
+      "goals": {
+        "registration": { "target": 520, "current": 203, "deadline": "2026-10-15" },
+        "vote_participation": { "target": 380, "current": 67, "deadline": "2026-11-03" }
+      },
+      "roles": [
+        { "role": "community_lead", "holderName": "Priya N.", "status": "active" },
+        { "role": "social_lead", "holderName": "Devon H.", "status": "active" },
+        { "role": "event_lead", "holderName": "Priya N.", "status": "active" },
+        { "role": "registration_lead", "holderName": "Kim S.", "status": "active" },
+        { "role": "canvass_lead", "holderName": null, "status": "open" },
+        { "role": "phone_bank_lead", "holderName": null, "status": "open" },
+        { "role": "postcard_lead", "holderName": "Riley J.", "status": "interim" }
+      ],
+      "meetup": {
+        "status": "scheduled",
+        "title": "UALR Thursday social",
+        "theme": "Campus walk-through + registration planning",
+        "when": "2026-07-17T17:30:00-05:00",
+        "wherePublic": "UALR campus — student center lawn",
+        "rhythm": "Every Thursday, 5:30pm",
+        "rsvpCount": 22
+      },
+      "lanes": {
+        "registration": { "nextActivation": "Tabling at student center — Jul 17" },
+        "social": { "nextActivation": "Thursday social — Jul 17" }
+      }
+    }
+  }
+}

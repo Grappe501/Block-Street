@@ -6,6 +6,7 @@ After Phase 6 launch, rapid feature versioning begins.
 
 | Version | Feature | Description | Status |
 |---------|---------|-------------|--------|
+| **0.7.1-ciws** | **County & Institution Workspaces** | Community Command Center shell on county/school pages — goals, leadership lattice, social meetups, functional lanes | **Done** |
 | v1.1 | Committees | Create/join local + cross-campus/county committees | Pending |
 | v1.2 | Events / Calendar | Campus, county, and statewide events | Pending |
 | v1.3 | Messaging / Email Export | Communication + outreach tools | Pending |

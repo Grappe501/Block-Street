@@ -1,0 +1,76 @@
+{
+  "version": "0.1.0",
+  "releaseVersion": "0.7.1-ciws",
+  "documentId": "PHASE-004.3.1",
+  "requirementId": "CIWS-001",
+  "docPath": "docs/phase-04/COUNTY_INSTITUTION_WORKSPACE_UPGRADE.md",
+  "productName": "County & Institution Workspace System",
+  "status": "canonical",
+  "priority": "critical",
+  "lastUpdated": "2026-07-12",
+  "guidingPrinciple": "You build your network in the community where you belong.",
+  "organizingSpine": "Social meetups — Social Lead is first among equals operationally",
+  "communityKinds": ["county", "institution", "high_school", "private_charter"],
+  "communityIdFormats": {
+    "county": "county:{slug}",
+    "institution": "school:{slug}",
+    "high_school": "high_school:{slug}",
+    "private_charter": "private_charter:{slug}"
+  },
+  "functionalRoles": [
+    { "id": "community_lead", "countyLabel": "County Lead", "institutionLabel": "College Lead", "priority": 1 },
+    { "id": "social_lead", "countyLabel": "Social Lead", "institutionLabel": "Social Lead", "priority": 2, "organizingSpine": true },
+    { "id": "event_lead", "countyLabel": "Event Lead", "institutionLabel": "Event Lead", "priority": 3 },
+    { "id": "registration_lead", "countyLabel": "Registration Lead", "institutionLabel": "Registration Lead", "priority": 4 },
+    { "id": "canvass_lead", "countyLabel": "Canvass Lead", "institutionLabel": "Canvass Lead", "priority": 5 },
+    { "id": "phone_bank_lead", "countyLabel": "Phone Bank Lead", "institutionLabel": "Phone Bank Lead", "priority": 6 },
+    { "id": "postcard_lead", "countyLabel": "Postcard Lead", "institutionLabel": "Postcard Lead", "priority": 7 }
+  ],
+  "goalKinds": [
+    { "id": "registration", "label": "Registration Goal", "kpiId": "kpi-registration-goal", "nonpartisan": true },
+    { "id": "vote_participation", "label": "Vote Participation Goal", "nonpartisan": true }
+  ],
+  "functionalLanes": [
+    { "id": "social", "label": "Social Meetups", "leadRole": "social_lead" },
+    { "id": "events", "label": "Events", "leadRole": "event_lead" },
+    { "id": "registration", "label": "Voter Registration", "leadRole": "registration_lead" },
+    { "id": "canvass", "label": "Canvassing", "leadRole": "canvass_lead" },
+    { "id": "phone_bank", "label": "Phone Bank", "leadRole": "phone_bank_lead" },
+    { "id": "postcards", "label": "Postcards", "leadRole": "postcard_lead" }
+  ],
+  "twoLayerModel": {
+    "publicLayer": ["pulse", "goals", "leadership", "meetup", "lanes", "signup"],
+    "memberLayer": ["peopleSearch", "connect", "shiftSignup", "fullMeetupDetails"],
+    "phase0": "publicLayer",
+    "phase1": "memberLayer"
+  },
+  "homeCommunityGate": {
+    "searchScopedToHome": true,
+    "browseOtherReadOnly": true,
+    "setAtJoinFromQueryParams": true
+  },
+  "orchestrators": {
+    "workspace": "assembleCommunityWorkspace(communityId)",
+    "pulse": "assembleCommunityPulse(communityId)"
+  },
+  "routes": {
+    "county": "/county/[slug]",
+    "institution": "/schools/[slug]",
+    "highSchool": "/high-schools/[slug]",
+    "privateCharter": "/private-schools/[slug]",
+    "api": "/api/v1/community-workspace"
+  },
+  "phase0": {
+    "status": "done",
+    "deliverables": [
+      "spec",
+      "registry",
+      "engine",
+      "seededData",
+      "uiComponents",
+      "pageIntegration",
+      "apiRoute"
+    ]
+  },
+  "buildsOn": ["CCC-001", "CNTY-M11", "UXB-008", "TWG-001", "CLD-001"]
+}
