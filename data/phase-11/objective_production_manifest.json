@@ -1,0 +1,77 @@
+{
+  "manifest_id": "OBJ-PRD-MANIFEST-001",
+  "build": "11.2",
+  "wave": "W8",
+  "version": "1.0.0",
+  "objective_feature_flags": {
+    "OBJECTIVE_ENGINE_ENABLED": true,
+    "OBJECTIVE_INTELLIGENCE_ENABLED": true,
+    "OBJECTIVE_OPTIMIZATION_ENABLED": true,
+    "OBJECTIVE_PRODUCTION_GATES_ENABLED": true
+  },
+  "rollback_strategy": {
+    "documented": true,
+    "summary": "Revert deployment via Netlify rollback; restore civic-action store from backup snapshot; replay execution event outbox from last known good offset.",
+    "procedure_path": "docs/phase-11/11.2-objectives/08_PRODUCTION_READINESS.md#rollback"
+  },
+  "migration": {
+    "readiness": "ready",
+    "notes": "File-backed execution store suitable for pilot; plan Postgres migration before multi-organization scale."
+  },
+  "bootstrap": {
+    "institution_seed": true,
+    "institution_seed_path": "data/registry/institutions.json",
+    "objective_type_seeds": true,
+    "objective_type_seeds_path": "data/phase-11/objective_types.json",
+    "governance_defaults": true,
+    "governance_defaults_path": "data/civic-action/requirements_registry.json",
+    "identity_bootstrap": true,
+    "identity_bootstrap_path": "data/registry/institutional-provisioning.json",
+    "invitation_bootstrap": true,
+    "invitation_bootstrap_path": "data/registry/institutional-federation.json"
+  },
+  "operations": {
+    "backup_procedures": {
+      "configured": true,
+      "summary": "Daily snapshot of data/civic-action/store.json and requirements registry"
+    },
+    "disaster_recovery": {
+      "configured": true,
+      "summary": "Restore from backup + replay W5 execution event outbox; RTO 4h target for pilot"
+    },
+    "audit_verification": {
+      "configured": true,
+      "summary": "Execution history + domain events provide authoritative audit trail"
+    },
+    "monitoring": {
+      "configured": true,
+      "summary": "Objective production health API + deployment engine overview"
+    },
+    "alerting": {
+      "configured": true,
+      "summary": "Alert on failed blocking readiness checks and launch no_go decision"
+    },
+    "logging": {
+      "configured": true,
+      "summary": "Structured API errors + request correlation via W5 command envelope"
+    },
+    "health_checks": {
+      "configured": true,
+      "summary": "GET /api/v1/objectives/production/health"
+    }
+  },
+  "operator_training": {
+    "modules": []
+  },
+  "support_documentation": [
+    { "doc_id": "constitution", "title": "Objective Constitution", "path": "docs/phase-11/11.2-objectives/01_CONSTITUTION.md" },
+    { "doc_id": "execution-engine", "title": "Execution Engine", "path": "docs/phase-11/11.2-objectives/EXECUTION_ENGINE_PROTOCOL.md" },
+    { "doc_id": "api", "title": "Objective API Protocol", "path": "docs/phase-11/11.2-objectives/OBJECTIVE_API_PROTOCOL.md" },
+    { "doc_id": "intelligence", "title": "Intelligence Layer", "path": "docs/phase-11/11.2-objectives/06_INTELLIGENCE_LAYER.md" },
+    { "doc_id": "optimization", "title": "Optimization Layer", "path": "docs/phase-11/11.2-objectives/07_OPTIMIZATION_LAYER.md" },
+    { "doc_id": "production", "title": "Production Readiness", "path": "docs/phase-11/11.2-objectives/08_PRODUCTION_READINESS.md" }
+  ],
+  "continuous_verification": {
+    "schedules": []
+  }
+}
