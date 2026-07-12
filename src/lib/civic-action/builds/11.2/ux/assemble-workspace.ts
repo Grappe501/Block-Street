@@ -15,6 +15,7 @@ const NAV_KEYS = [
   { key: "today", path: "/today" },
   { key: "workstreams", path: "/workstreams" },
   { key: "progress", path: "/progress" },
+  { key: "intelligence", path: "/intelligence" },
   { key: "evidence", path: "/evidence" },
   { key: "reviews", path: "/reviews" },
   { key: "outcomes", path: "/outcomes" },
