@@ -3,11 +3,15 @@ import { join } from "path";
 import type {
   CivicAuditEvent,
   CivicHabitRecord,
+  CivicMilestone,
   CivicParticipationScore,
+  CivicTimelineEntry,
   EngagementTrend,
   ParticipationEvent,
   ParticipationForecast,
   ParticipationHealthSummary,
+  ParticipationPrivacySettings,
+  VolunteerRecord,
 } from "./types";
 
 export const CIVIC_DATA = join(process.cwd(), "data", "civic");
@@ -44,6 +48,18 @@ export function loadParticipationCatalog() {
   ).metrics;
 }
 
+export function loadParticipationWeights() {
+  return readJsonFile<{ weights: Record<string, number>; score_components: { key: string; weight: number }[] }>(
+    "participation_weights.json"
+  );
+}
+
+export function loadMilestoneCatalog() {
+  return readJsonFile<{ milestones: { key: string; title: string; description: string; trigger: string }[] }>(
+    "milestone_catalog.json"
+  ).milestones;
+}
+
 function getKey<K extends string>(key: K): unknown[] {
   return (readStore()[key] as unknown[]) ?? [];
 }
@@ -58,12 +74,22 @@ export const loadParticipationEvents = () => getKey("participation_events") as P
 export const persistParticipationEvents = (items: ParticipationEvent[]) => setKey("participation_events", items);
 export const loadParticipationScores = () => getKey("participation_scores") as CivicParticipationScore[];
 export const persistParticipationScores = (items: CivicParticipationScore[]) => setKey("participation_scores", items);
+export const loadUserParticipationScores = () => getKey("user_participation_scores") as CivicParticipationScore[];
+export const persistUserParticipationScores = (items: CivicParticipationScore[]) => setKey("user_participation_scores", items);
 export const loadEngagementTrends = () => getKey("engagement_trends") as EngagementTrend[];
 export const persistEngagementTrends = (items: EngagementTrend[]) => setKey("engagement_trends", items);
 export const loadParticipationForecasts = () => getKey("participation_forecasts") as ParticipationForecast[];
 export const persistParticipationForecasts = (items: ParticipationForecast[]) => setKey("participation_forecasts", items);
 export const loadCivicHabits = () => getKey("civic_habits") as CivicHabitRecord[];
 export const persistCivicHabits = (items: CivicHabitRecord[]) => setKey("civic_habits", items);
+export const loadCivicTimeline = () => getKey("civic_timeline") as CivicTimelineEntry[];
+export const persistCivicTimeline = (items: CivicTimelineEntry[]) => setKey("civic_timeline", items);
+export const loadCivicMilestones = () => getKey("civic_milestones") as CivicMilestone[];
+export const persistCivicMilestones = (items: CivicMilestone[]) => setKey("civic_milestones", items);
+export const loadVolunteerRecords = () => getKey("volunteer_records") as VolunteerRecord[];
+export const persistVolunteerRecords = (items: VolunteerRecord[]) => setKey("volunteer_records", items);
+export const loadPrivacySettings = () => getKey("privacy_settings") as ParticipationPrivacySettings[];
+export const persistPrivacySettings = (items: ParticipationPrivacySettings[]) => setKey("privacy_settings", items);
 export const loadAuditEvents = () => getKey("audit_events") as CivicAuditEvent[];
 export const persistAuditEvents = (items: CivicAuditEvent[]) => setKey("audit_events", items);
 export const loadHealthSummary = () => readStore().health_summary as ParticipationHealthSummary;
