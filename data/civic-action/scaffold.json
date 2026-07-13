@@ -4,9 +4,9 @@
   "total_builds": 16,
   "waves_per_build": 8,
   "total_planned_waves": 128,
-  "phase_overall_percent": 19.5,
-  "current_wave": "11.3-W1",
-  "recommended_next_wave": "11.3-W1",
+  "phase_overall_percent": 21.1,
+  "current_wave": "11.12-W8",
+  "recommended_next_wave": "11.12-W8",
   "builds": {
     "11.1": { "name": "Initiative and Program Architecture", "system_id": "INI-001", "percent": 100, "current_wave": "W8", "waves_completed": ["W1", "W2", "W3", "W4", "W5", "W6", "W7", "W8"] },
     "11.2": { "name": "Objective Execution System", "system_id": "OBJ-001", "percent": 100, "current_wave": "W8", "waves_completed": ["W1", "W2", "W3", "W4", "W5", "W6", "W7", "W8"] },
@@ -19,7 +19,7 @@
     "11.9": { "name": "Coalition and Cross-Institution Coordination", "system_id": "COL-001", "percent": 0, "current_wave": null, "waves_completed": [] },
     "11.10": { "name": "Decision, Approval, and Escalation System", "system_id": "DEC-001", "percent": 0, "current_wave": null, "waves_completed": [] },
     "11.11": { "name": "Live Operations Command Center", "system_id": "OCC-001", "percent": 0, "current_wave": null, "waves_completed": [] },
-    "11.12": { "name": "Adaptive Execution and Continuous Learning", "system_id": "ADP-001", "percent": 37.5, "current_wave": "W3", "waves_completed": ["W1", "W2", "W3"] },
+    "11.12": { "name": "Adaptive Execution and Continuous Learning", "system_id": "ADP-001", "percent": 75, "current_wave": "W8", "waves_completed": ["W1", "W2", "W3", "W5", "W6", "W7"] },
     "11.13": { "name": "Action Evidence and Outcome Attribution", "system_id": "EVD-001", "percent": 0, "current_wave": null, "waves_completed": [] },
     "11.14": { "name": "Replication, Playbooks, and Execution Templates", "system_id": "PLY-001", "percent": 0, "current_wave": null, "waves_completed": [] },
     "11.15": { "name": "Operational Safety, Compliance, and Resilience", "system_id": "SAFE-001", "percent": 0, "current_wave": null, "waves_completed": [] },
@@ -185,6 +185,30 @@
       "completed_at": "2026-07-12T20:30:00Z",
       "status": "completed",
       "delivery": "service_engine_and_tests"
+    },
+    {
+      "protocol_id": "11.12-W5",
+      "build": "11.12",
+      "name": "Knowledge APIs, Events, Integrations & Automation Protocol",
+      "completed_at": "2026-07-13T02:30:00Z",
+      "status": "completed",
+      "delivery": "api_events_integrations"
+    },
+    {
+      "protocol_id": "11.12-W6",
+      "build": "11.12",
+      "name": "Knowledge Intelligence, Adaptive Learning & Explainable AI Protocol",
+      "completed_at": "2026-07-13T04:00:00Z",
+      "status": "completed",
+      "delivery": "intelligence_layer"
+    },
+    {
+      "protocol_id": "11.12-W7",
+      "build": "11.12",
+      "name": "Knowledge Evolution, Institutional Wisdom & Continuous Improvement Protocol",
+      "completed_at": "2026-07-13T06:00:00Z",
+      "status": "completed",
+      "delivery": "optimization_layer"
     }
   ]
 }

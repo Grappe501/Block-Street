@@ -18,7 +18,9 @@
 1. `01_CONSTITUTION.md` — CAE-11.12-W1 ✓
 2. `02_CANONICAL_MODEL_PROTOCOL.md` — CAE-11.12-W2 ✓
 3. `03_DOMAIN_SERVICES.md` — CAE-11.12-W3 ✓
-4. W4–W8 — not yet on disk
+4. `05_API_EVENTS_INTEGRATIONS.md` — CAE-11.12-W5 ✓
+5. `06_KNOWLEDGE_INTELLIGENCE_ADAPTIVE_LEARNING.md` — CAE-11.12-W6 ✓
+6. W4, W7–W8 — pending
 
 ## Certification
 
@@ -26,4 +28,6 @@
 npm run phase11:11.12:w1:all   # W1 constitution gates
 npm run phase11:11.12:w2:all   # W2 canonical data model gates
 npm run phase11:11.12:w3:all   # W3 domain services gates
+npm run phase11:11.12:w5:all   # W5 API/events/integration gates
+npm run phase11:11.12:w6:all   # W6 intelligence/adaptive learning gates
 ```

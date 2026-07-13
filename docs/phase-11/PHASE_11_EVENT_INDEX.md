@@ -1,6 +1,6 @@
 # Phase 11 Event Index — Knowledge Domain (ADP-001)
 
-**Build:** 11.12 · **Protocol:** W3 · **Catalog:** `data/phase-11/knowledge_event_catalog.json`
+**Build:** 11.12 · **Protocols:** W3 (domain events) + W5 (catalog registry) · **Catalog:** `data/phase-11/knowledge_event_catalog.json` (v `11.12-w5.1`, 25 events)
 
 ## Knowledge artifact events
 
@@ -48,4 +48,4 @@
 - `knowledge.correction_reported`
 - `knowledge.conflict_identified`
 
-**Publisher:** `publishKnowledgeEvent()` · **Outbox:** `knowledge_event_outbox`
+**Publisher:** `publishKnowledgeEvent()` · **Outbox:** `knowledge_event_outbox` · **W5 dispatcher:** `events/outbox-publisher.ts`

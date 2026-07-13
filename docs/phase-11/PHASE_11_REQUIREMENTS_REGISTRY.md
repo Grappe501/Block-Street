@@ -74,6 +74,24 @@ Key invariants: CAE-11.12-W2-DATA-001 through DATA-024. Constitutional overlap b
 | SVC, VAL, LIF, POL, EVT, AI, CMD, CERT, TRN, ERR, HIS, REP, CAT, OVR | 42 | implemented | `builds/11.12/services/` + `w3-tests.ts` |
 | **Total** | **42** | **implemented** | `npm run phase11:11.12:w3:all` |
 
+## Wave 11.12-W5 Summary (ADP-001)
+
+| Domain | Count | Doc Status | Tech Status |
+|--------|-------|------------|-------------|
+| API, EVT, INT, WHK, AUT, EXT, PUB | 27 | implemented | `builds/11.12/api/` + integrations + routes |
+| **Total** | **27** | **implemented** | `npm run phase11:11.12:w5:all` |
+
+Key surfaces: `knowledge_api_registry.json`, `knowledge_event_catalog.json` (25 events), versioned routes under `/api/v1/knowledge`, `/learning`, `/competencies`, `/certifications`, `/knowledge-ai`, public `/api/public/v1/credentials/verify`.
+
+## Wave 11.12-W6 Summary (ADP-001)
+
+| Domain | Count | Doc Status | Tech Status |
+|--------|-------|------------|-------------|
+| INT, KG, RET, QLT, GAP, ADP, CAP, CRT, TUT, PRV, EVL | 18 | implemented | `builds/11.12/intelligence/` + routes |
+| **Total** | **18** | **implemented** | `npm run phase11:11.12:w6:all` |
+
+Key surfaces: `knowledge_intelligence_registry.json` (14 capabilities), `/api/v1/intelligence/knowledge/*`, `/learning/*`, `/capability/*`, `/certification/readiness`, `/tutor/turns`, `/api/v1/ai/knowledge/query`.
+
 ## Traceability
 
 [PHASE_11_TRACEABILITY_MATRIX.md](PHASE_11_TRACEABILITY_MATRIX.md)

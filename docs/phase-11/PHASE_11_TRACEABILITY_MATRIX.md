@@ -200,4 +200,48 @@ W2 requirements are **documented** with model-level validation. Service enforcem
 | Other | 13 | implemented | repository, errors, audit |
 | **Total** | **42** | **implemented** | ADP-001 domain services |
 
-**Next update:** 11.12-W4 adds human experience workbench on stable domain services.
+**Next update:** 11.12-W8 certifies production readiness for the complete Knowledge and Learning Engine.
+
+## Wave 11.12-W7 Summary (ADP-001)
+
+| Requirement | Domain | Status | Enforcement | Test |
+|-------------|--------|--------|-------------|------|
+| CAE-11.12-W7-EVO-001 | EVO | implemented | improvement-governance.ts | candidate evidence |
+| CAE-11.12-W7-EVO-002 | EVO | implemented | improvement-implementation.ts | W3 boundary |
+| CAE-11.12-W7-EVO-004 | EVO | implemented | improvement-governance.ts | pilot isolation |
+| CAE-11.12-W7-GOV-001 | GOV | implemented | improvement-governance.ts | lifecycle |
+| CAE-11.12-W7-AI-001 | AI | implemented | ai-improvement.ts | no auto deploy |
+| CAE-11.12-W7-MAT-001 | MAT | implemented | maturity.ts | institution only |
+| **Total** | **18** | **implemented** | KNW-OPT-001 | w7-tests.ts |
+
+## Wave 11.12-W5 Summary (ADP-001)
+
+| Requirement | Domain | Status | Enforcement | Test |
+|-------------|--------|--------|-------------|------|
+| CAE-11.12-W5-API-001 | API | implemented | command-service.ts | command route |
+| CAE-11.12-W5-API-003 | API | implemented | api/context.ts | context resolver |
+| CAE-11.12-W5-API-009 | API | implemented | stripUntrustedIdentityFields | strip test |
+| CAE-11.12-W5-API-013 | API | implemented | query-service.ts | institution filter |
+| CAE-11.12-W5-API-018 | API | implemented | tutor-service.ts | exam refusal |
+| CAE-11.12-W5-EVT-004 | EVT | implemented | consumer-receipts.ts | idempotent receipt |
+| CAE-11.12-W5-EVT-006 | EVT | implemented | knowledge_event_catalog.json | catalog gate |
+| CAE-11.12-W5-INT-001 | INT | implemented | search-projection.ts | visibility scope |
+| CAE-11.12-W5-INT-007 | INT | implemented | mission-adapter.ts | evidence candidate |
+| CAE-11.12-W5-WHK-002 | WHK | implemented | webhook-delivery.ts | signature test |
+| CAE-11.12-W5-PUB-001 | PUB | implemented | credentials/verify route | public projection |
+
+Full W5 matrix: 27 requirements in `requirements_registry.json` · validation: `npm run phase11:11.12:w5:all`
+
+## Wave 11.12-W6 Summary (ADP-001)
+
+| Requirement | Domain | Status | Enforcement | Test |
+|-------------|--------|--------|-------------|------|
+| CAE-11.12-W6-INT-001 | INT | implemented | evidence-ledger.ts | orchestrator |
+| CAE-11.12-W6-INT-002 | INT | implemented | semantic-retrieval.ts | pre-filter |
+| CAE-11.12-W6-INT-005 | INT | implemented | copilot.ts | prohibited |
+| CAE-11.12-W6-INT-007 | INT | implemented | competency-intelligence.ts | no ranking |
+| CAE-11.12-W6-TUT-001 | TUT | implemented | tutor-orchestrator.ts | exam block |
+| CAE-11.12-W6-CRT-001 | CRT | implemented | certification-readiness.ts | can_award false |
+| CAE-11.12-W6-EVL-001 | EVL | implemented | evaluation-suite.ts | zero leakage |
+
+Full W6 matrix: 18 requirements · validation: `npm run phase11:11.12:w6:all` · [PHASE_11_AI_CAPABILITY_INDEX.md](PHASE_11_AI_CAPABILITY_INDEX.md)

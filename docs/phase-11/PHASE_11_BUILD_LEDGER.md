@@ -1,16 +1,16 @@
 # Phase 11 Build Ledger
 
-**Updated:** 2026-07-12  
+**Updated:** 2026-07-13  
 **Scaffold:** CAE-SCAFFOLD-001
 
 ## Progress Summary
 
 | Metric | Value |
 |--------|-------|
-| Waves completed | 25 / 128 |
-| Phase overall | 19.5% |
-| Current wave | 11.3-W1 (recommended) |
-| Build 11.12 | 37.5% (W1–W3 complete) |
+| Waves completed | 28 / 128 |
+| Phase overall | 21.9% |
+| Current wave | 11.12-W8 (recommended) |
+| Build 11.12 | 75% (W1–W3, W5–W7 complete; W4 pending) |
 
 ## Build 11.1 — Initiative Architecture
 
@@ -43,7 +43,11 @@
 | W1 | Knowledge Constitution | **Complete** |
 | W2 | Canonical Data Model | **Complete** |
 | W3 | Domain Services | **Complete** |
-| W4 | Human Experience Workbench | Next |
+| W4 | Human Experience Workbench | Pending |
+| W5 | APIs, Events, Integrations | **Complete** |
+| W6 | Knowledge Intelligence | **Complete** |
+| W7 | Institutional Evolution | **Complete** |
+| W8 | Production Certification | Next |
 
 ## Live Ledger
 

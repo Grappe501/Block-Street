@@ -1,0 +1,103 @@
+{
+  "registry_version": "11.12-w7.1",
+  "subsystem": "KNW-OPT-001",
+  "canonical_mutation_allowed": false,
+  "improvement_types": [
+    {
+      "improvement_type": "knowledge_revision",
+      "source_types": ["knowledge_health", "contradiction", "correction_report", "mission_lesson"],
+      "affected_domains": ["knowledge"],
+      "required_review": ["knowledge_steward", "subject_expert"],
+      "approval_authority": "Knowledge steward",
+      "pilot_policy": "optional",
+      "domain_commands": ["CreateKnowledgeArtifact", "ValidateKnowledgeArtifact"],
+      "outcome_metrics": ["knowledge_accuracy", "knowledge_freshness"],
+      "rollback_required": true,
+      "status": "active"
+    },
+    {
+      "improvement_type": "course_revision",
+      "source_types": ["course_feedback", "assessment_analysis", "mission_lesson"],
+      "affected_domains": ["learning"],
+      "required_review": ["course_owner", "instructional_reviewer", "accessibility"],
+      "approval_authority": "Course owner",
+      "pilot_policy": "required_for_standards",
+      "domain_commands": ["PublishCourseVersion"],
+      "outcome_metrics": ["learner_understanding", "course_completion"],
+      "rollback_required": true,
+      "status": "active"
+    },
+    {
+      "improvement_type": "competency_revision",
+      "source_types": ["competency_gap", "mission_lesson"],
+      "affected_domains": ["capability"],
+      "required_review": ["competency_authority"],
+      "approval_authority": "Competency authority",
+      "pilot_policy": "optional",
+      "domain_commands": [],
+      "outcome_metrics": ["competency_demonstration"],
+      "rollback_required": true,
+      "status": "active"
+    },
+    {
+      "improvement_type": "assessment_revision",
+      "source_types": ["assessment_analysis"],
+      "affected_domains": ["assessment"],
+      "required_review": ["assessment_governance"],
+      "approval_authority": "Assessment governance authority",
+      "pilot_policy": "required",
+      "domain_commands": [],
+      "outcome_metrics": ["assessment_quality", "fairness"],
+      "rollback_required": true,
+      "status": "active"
+    },
+    {
+      "improvement_type": "certification_revision",
+      "source_types": ["certification_risk"],
+      "affected_domains": ["certification"],
+      "required_review": ["issuing_authority", "legal"],
+      "approval_authority": "Issuing authority",
+      "pilot_policy": "transition_required",
+      "domain_commands": [],
+      "outcome_metrics": ["certification_readiness"],
+      "rollback_required": true,
+      "status": "active"
+    },
+    {
+      "improvement_type": "sop_revision",
+      "source_types": ["mission_lesson", "safety_incident"],
+      "affected_domains": ["practice"],
+      "required_review": ["safety_authority", "operational_authority"],
+      "approval_authority": "Safety authority",
+      "pilot_policy": "required",
+      "domain_commands": ["CreateKnowledgeArtifact"],
+      "outcome_metrics": ["mission_performance", "institutional_risk"],
+      "rollback_required": true,
+      "status": "active"
+    },
+    {
+      "improvement_type": "ai_improvement",
+      "source_types": ["ai_tutor_feedback"],
+      "affected_domains": ["ai"],
+      "required_review": ["ai_governance", "regression_suite"],
+      "approval_authority": "AI change approver",
+      "pilot_policy": "evaluation_required",
+      "domain_commands": [],
+      "outcome_metrics": ["tutor_helpfulness"],
+      "rollback_required": true,
+      "status": "active"
+    },
+    {
+      "improvement_type": "research_priority",
+      "source_types": ["research_finding", "knowledge_gap"],
+      "affected_domains": ["research"],
+      "required_review": ["research_governance"],
+      "approval_authority": "Research board",
+      "pilot_policy": "replication_may_be_required",
+      "domain_commands": [],
+      "outcome_metrics": ["research_adoption"],
+      "rollback_required": false,
+      "status": "active"
+    }
+  ]
+}
