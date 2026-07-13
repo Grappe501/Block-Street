@@ -12,6 +12,8 @@ import { organizationService } from "./organization/services/organization-servic
 import { seedOrganizationIfEmpty } from "./organization/services/seed";
 import { resourceService } from "./resources/services/resource-service";
 import { seedResourcesIfEmpty } from "./resources/services/seed";
+import { calendarEngineService } from "./calendar/services/calendar-service";
+import { seedCalendarIfEmpty } from "./calendar/services/seed";
 
 let opsDataSeeded = false;
 
@@ -22,6 +24,7 @@ function ensureOpsDataSeeded() {
   seedWorkforceIfEmpty();
   seedOrganizationIfEmpty();
   seedResourcesIfEmpty();
+  seedCalendarIfEmpty();
   opsDataSeeded = true;
 }
 
@@ -279,6 +282,61 @@ export class OperationsApplicationService {
   getResourceDashboard(institutionId: string) {
     this.boot();
     return resourceService.executiveDashboard.build(institutionId);
+  }
+
+  getCanonicalCalendar(institutionId: string) {
+    this.boot();
+    return calendarEngineService.calendar.get(institutionId);
+  }
+
+  listCalendarEvents(institutionId: string, filters?: Parameters<typeof calendarEngineService.events.list>[1]) {
+    this.boot();
+    return calendarEngineService.events.list(institutionId, filters);
+  }
+
+  createCalendarEvent(input: Parameters<typeof calendarEngineService.events.create>[0]) {
+    this.boot();
+    return calendarEngineService.events.create(input);
+  }
+
+  getCalendarAgenda(institutionId: string, humanId: string) {
+    this.boot();
+    return calendarEngineService.timeline.agenda(institutionId, humanId);
+  }
+
+  getCalendarTimeline(institutionId: string, from?: string, to?: string) {
+    this.boot();
+    return calendarEngineService.timeline.build(institutionId, from, to);
+  }
+
+  detectCalendarConflicts(institutionId: string) {
+    this.boot();
+    return calendarEngineService.conflicts.detect(institutionId);
+  }
+
+  getHumanAvailability(institutionId: string, humanId: string, from: string, to: string) {
+    this.boot();
+    return calendarEngineService.availability.compute(institutionId, humanId, from, to);
+  }
+
+  reserveOnCalendar(input: Parameters<typeof calendarEngineService.reservations.reserve>[0]) {
+    this.boot();
+    return calendarEngineService.reservations.reserve(input);
+  }
+
+  syncExternalCalendar(input: Parameters<typeof calendarEngineService.externalSync.sync>[0]) {
+    this.boot();
+    return calendarEngineService.externalSync.sync(input);
+  }
+
+  calculateTravel(input: Parameters<typeof calendarEngineService.travel.calculate>[0]) {
+    this.boot();
+    return calendarEngineService.travel.calculate(input);
+  }
+
+  getCalendarIntelligence(institutionId: string) {
+    this.boot();
+    return calendarEngineService.intelligence.analyze(institutionId);
   }
 }
 

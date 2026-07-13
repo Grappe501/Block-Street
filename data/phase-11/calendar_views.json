@@ -1,0 +1,7 @@
+{
+  "protocol_id": "CAE-11.6-W6",
+  "views": [
+    "agenda", "day", "week", "month", "quarter", "year", "timeline",
+    "mission", "team", "department", "organization", "resource", "map", "executive", "ai_focus"
+  ]
+}

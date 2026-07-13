@@ -1,0 +1,24 @@
+{
+  "protocol_id": "CAE-11.6-W6",
+  "terms": [
+    { "key": "canonical_calendar", "name": "Canonical Calendar", "definition": "One authoritative time engine per institution" },
+    { "key": "calendar_event", "name": "Calendar Event", "definition": "Scheduled occurrence on the institutional timeline" },
+    { "key": "projection", "name": "Projection", "definition": "Filtered view of the canonical calendar" },
+    { "key": "availability", "name": "Availability", "definition": "Continuously recalculated human time capacity" },
+    { "key": "scheduling", "name": "Scheduling", "definition": "Recommendation engine for optimal timing" },
+    { "key": "conflict", "name": "Conflict", "definition": "Detectable overlap in time, resources, or travel" },
+    { "key": "reservation", "name": "Reservation", "definition": "Time-bound resource allocation on canonical calendar" },
+    { "key": "recurring_series", "name": "Recurring Series", "definition": "Pattern-based repeating events with versioned exceptions" },
+    { "key": "reminder", "name": "Reminder", "definition": "Configurable notification before an event" },
+    { "key": "deadline", "name": "Deadline", "definition": "Time-bound obligation influencing mission health" },
+    { "key": "travel_window", "name": "Travel Window", "definition": "Computed travel, buffer, and preparation time" },
+    { "key": "time_zone", "name": "Time Zone", "definition": "Institution, human, and event temporal context" },
+    { "key": "external_sync", "name": "External Sync", "definition": "Bidirectional projection to external calendar systems" },
+    { "key": "timeline", "name": "Timeline", "definition": "Searchable institutional operational history" },
+    { "key": "time_intelligence", "name": "Time Intelligence", "definition": "Predictive analysis of schedule and deadline risk" },
+    { "key": "time_block", "name": "Time Block", "definition": "Reserved period for focused work or recovery" },
+    { "key": "agenda", "name": "Agenda", "definition": "Chronological upcoming event projection" },
+    { "key": "mission_calendar", "name": "Mission Calendar", "definition": "Mission-filtered projection of canonical events" },
+    { "key": "executive_view", "name": "Executive View", "definition": "High-priority summary projection" }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "protocol_id": "CAE-11.6-W6",
+  "stages": [
+    { "stage": "draft", "order": 1 },
+    { "stage": "awaiting_approval", "order": 2 },
+    { "stage": "scheduled", "order": 3 },
+    { "stage": "confirmed", "order": 4 },
+    { "stage": "active", "order": 5 },
+    { "stage": "completed", "order": 6 },
+    { "stage": "cancelled", "order": 7 },
+    { "stage": "archived", "order": 8 }
+  ]
+}

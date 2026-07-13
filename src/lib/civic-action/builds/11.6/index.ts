@@ -27,3 +27,8 @@ export { getResourceConstitution, OPS_RESOURCE_PRINCIPLE } from "./resources/con
 export { runOpsW5Certification, isOpsW5Complete } from "./resources/w5";
 export { runOpsW5ResourceTests, allOpsW5TestsPassed } from "./resources/w5-tests";
 export { RESOURCE_EVENT_CATALOG } from "./resources/events/catalog";
+export { calendarEngineService } from "./calendar/services/calendar-service";
+export { getCalendarConstitution, OPS_CALENDAR_PRINCIPLE } from "./calendar/constitution";
+export { runOpsW6Certification, isOpsW6Complete } from "./calendar/w6";
+export { runOpsW6CalendarTests, allOpsW6TestsPassed } from "./calendar/w6-tests";
+export { CALENDAR_EVENT_CATALOG } from "./calendar/events/catalog";
