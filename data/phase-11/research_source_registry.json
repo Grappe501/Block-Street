@@ -1,0 +1,28 @@
+{
+  "version": "1.0.0",
+  "protocol_id": "CAE-11.7-W5",
+  "description": "Research source registry seed data for LocalBrain Research Network",
+  "sources": [
+    {
+      "name": "County Public Records Portal",
+      "owner": "County Clerk",
+      "jurisdiction": "local-county",
+      "domain": "public_records",
+      "collection_method": "authorized_api"
+    },
+    {
+      "name": "State Legislature Bill Tracker",
+      "owner": "State Legislature",
+      "jurisdiction": "state",
+      "domain": "legislation",
+      "collection_method": "official_feed"
+    },
+    {
+      "name": "Federal Grants Database",
+      "owner": "Grants.gov",
+      "jurisdiction": "federal",
+      "domain": "grants",
+      "collection_method": "authorized_api"
+    }
+  ]
+}

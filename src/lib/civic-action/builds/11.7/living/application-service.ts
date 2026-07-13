@@ -9,6 +9,8 @@ import { executiveAssistantRuntime } from "./executive-assistant/services/execut
 import { seedExecutiveIfEmpty } from "./executive-assistant/services/seed";
 import { organizerRuntime } from "./organizer/services/organizer-service";
 import { seedOrganizerIfEmpty } from "./organizer/services/seed";
+import { researchRuntime } from "./research/services/research-network-service";
+import { seedResearchIfEmpty } from "./research/services/seed";
 
 let livingDataSeeded = false;
 
@@ -18,6 +20,7 @@ function ensureLivingDataSeeded() {
   seedContextIfEmpty();
   seedExecutiveIfEmpty();
   seedOrganizerIfEmpty();
+  seedResearchIfEmpty();
   livingDataSeeded = true;
 }
 
@@ -269,6 +272,61 @@ export class LivingIntelligenceApplicationService {
   createOrganizerRecommendation(input: Parameters<typeof organizerRuntime.organizer.recommend>[0]) {
     this.boot();
     return organizerRuntime.organizer.recommend(input);
+  }
+
+  getResearchDashboard(input: { human_id: string; institution_id: string }) {
+    this.boot();
+    return researchRuntime.research.dashboard(input);
+  }
+
+  listResearchItems(humanId: string) {
+    this.boot();
+    return researchRuntime.acquisition.list(humanId);
+  }
+
+  listResearchSources() {
+    this.boot();
+    return researchRuntime.sources.list();
+  }
+
+  searchResearch(input: Parameters<typeof researchRuntime.acquisition.search>[0]) {
+    this.boot();
+    return researchRuntime.acquisition.search(input);
+  }
+
+  listResearchBriefs(humanId: string) {
+    this.boot();
+    return researchRuntime.briefs.list(humanId);
+  }
+
+  generateResearchBrief(input: Parameters<typeof researchRuntime.briefs.generate>[0]) {
+    this.boot();
+    return researchRuntime.briefs.generate(input);
+  }
+
+  listResearchChanges(institutionId: string) {
+    this.boot();
+    return researchRuntime.changes.list(institutionId);
+  }
+
+  listResearchOpportunities(institutionId: string) {
+    this.boot();
+    return researchRuntime.opportunities.list(institutionId);
+  }
+
+  listResearchThreats(institutionId: string) {
+    this.boot();
+    return researchRuntime.threats.list(institutionId);
+  }
+
+  startResearchMonitor(input: Parameters<typeof researchRuntime.monitoring.start>[0]) {
+    this.boot();
+    return researchRuntime.monitoring.start(input);
+  }
+
+  requestResearchPromotion(input: Parameters<typeof researchRuntime.promotion.request>[0]) {
+    this.boot();
+    return researchRuntime.promotion.request(input);
   }
 }
 
