@@ -1,0 +1,10 @@
+{
+  "terminal.integrated.env.windows": {
+    "TEMP": "H:\\Block-Street\\.tmp",
+    "TMP": "H:\\Block-Street\\.tmp",
+    "TMPDIR": "H:\\Block-Street\\.tmp",
+    "npm_config_cache": "H:\\Block-Street\\.npm-cache",
+    "npm_config_tmp": "H:\\Block-Street\\.tmp",
+    "NEXT_TELEMETRY_DISABLED": "1"
+  }
+}

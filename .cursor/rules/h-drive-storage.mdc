@@ -1,0 +1,40 @@
+---
+description: Never write temp, cache, or scratch files to C: — use H: repo paths only
+alwaysApply: true
+---
+
+# H: Drive Storage Only — C: Is Off Limits
+
+The C: drive is full. **Never write temporary, cache, scratch, or output files to C:.**
+
+## Required paths (Block-Street repo on H:)
+
+| Purpose | Path |
+|---------|------|
+| Temp / scratch | `H:\Block-Street\.tmp` |
+| npm cache | `H:\Block-Street\.npm-cache` |
+| Build output | `H:\Block-Street\.next` |
+| Project files | `H:\Block-Street\` (workspace root) |
+
+## Shell commands
+
+Before running npm, node, tsc, next, or other tools in PowerShell, set:
+
+```powershell
+$env:TEMP = 'H:\Block-Street\.tmp'
+$env:TMP = 'H:\Block-Street\.tmp'
+$env:npm_config_cache = 'H:\Block-Street\.npm-cache'
+```
+
+Prefer: `node scripts/run-with-h-env.mjs <command>` which applies env automatically.
+
+## Forbidden
+
+- Do not use `C:\Users\...\AppData\Local\Temp` for scratch files
+- Do not create temp files on `C:\` anywhere
+- Do not redirect output to `C:\` paths
+- Do not use `Travel-Expense` temp paths — use `H:\Block-Street\.tmp` only
+
+## Scripts
+
+Phase 11 and deployment scripts must `import '../h-drive-env.mjs'` (or `./h-drive-env.mjs`) before spawning child processes.

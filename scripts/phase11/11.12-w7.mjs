@@ -2,11 +2,13 @@
 /**
  * CAE-11.12-W7 — Knowledge evolution validation
  */
+import "../h-drive-env.mjs";
 import { existsSync, readFileSync } from "fs";
 import { join } from "path";
 import { spawnSync } from "child_process";
+import { hDriveEnv, REPO_ROOT } from "../h-drive-env.mjs";
 
-const root = process.cwd();
+const root = REPO_ROOT;
 let failed = 0;
 
 function fail(msg) {
@@ -44,6 +46,7 @@ const testRun = spawnSync("node", [join(root, "scripts/phase11/invoke-w7-tests-1
   cwd: root,
   stdio: "inherit",
   shell: process.platform === "win32",
+  env: hDriveEnv(),
 });
 if (testRun.status !== 0) fail("W7 optimization tests failed");
 
