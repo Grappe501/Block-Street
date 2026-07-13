@@ -13,6 +13,7 @@ export const RESOURCES_API_CONTRACT_VERSION = "11.6-w5.1";
 export const CALENDAR_API_CONTRACT_VERSION = "11.6-w6.1";
 export const COMMUNICATIONS_API_CONTRACT_VERSION = "11.6-w7.1";
 export const EXECUTIVE_API_CONTRACT_VERSION = "11.6-w8.1";
+export const WORKFLOWS_API_CONTRACT_VERSION = "11.6-w9.1";
 
 export type StrategyApiContext = {
   institution_id: string;
@@ -113,6 +114,15 @@ export function executiveMeta(apiCtx: StrategyApiContext, extra?: Record<string,
   };
 }
 
+export function workflowsMeta(apiCtx: StrategyApiContext, extra?: Record<string, unknown>) {
+  return {
+    request_id: apiCtx.request_id,
+    correlation_id: apiCtx.correlation_id,
+    contract_version: WORKFLOWS_API_CONTRACT_VERSION,
+    ...extra,
+  };
+}
+
 export async function withOrganizationApi<T>(
   ctx: ApiRequestContext,
   request: NextRequest,
@@ -161,6 +171,22 @@ export async function withExecutiveApi<T>(
   const apiCtx = resolveStrategyApiContext(ctx, request);
   const data = await fn(apiCtx);
   return apiSuccess(data, executiveMeta(apiCtx));
+}
+
+export async function withWorkflowsApi<T>(
+  ctx: ApiRequestContext,
+  request: NextRequest,
+  fn: (apiCtx: StrategyApiContext) => T | Promise<T>
+) {
+  const apiCtx = resolveStrategyApiContext(ctx, request);
+  const data = await fn(apiCtx);
+  return apiSuccess(data, workflowsMeta(apiCtx));
+}
+
+export function workflowIdFromPath(request: NextRequest): string {
+  const parts = request.nextUrl.pathname.split("/");
+  const idx = parts.indexOf("workflows");
+  return parts[idx + 1] ?? "";
 }
 
 export function opsInstitutionIdFromPath(request: NextRequest): string {

@@ -1,0 +1,10 @@
+{
+  "protocol_id": "CAE-11.6-W9",
+  "levels": [
+    { "level": 0, "name": "suggestion_only", "description": "AI or automation suggests only" },
+    { "level": 1, "name": "human_initiates", "description": "Human must start execution" },
+    { "level": 2, "name": "automation_executes", "description": "Automation runs with audit trail" },
+    { "level": 3, "name": "automation_after_approval", "description": "Runs after Human approval gate" },
+    { "level": 4, "name": "fully_automatic_low_risk", "description": "Fully automatic for low-risk workflows only" }
+  ]
+}

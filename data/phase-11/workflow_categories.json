@@ -1,0 +1,9 @@
+{
+  "protocol_id": "CAE-11.6-W9",
+  "categories": [
+    "mission", "volunteer", "training", "communications", "finance", "approval",
+    "calendar", "resource", "procurement", "incident", "compliance", "governance",
+    "membership", "certification", "research", "campaign", "election", "emergency",
+    "technology", "custom"
+  ]
+}

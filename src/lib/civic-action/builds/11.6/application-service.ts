@@ -18,6 +18,8 @@ import { communicationsService } from "./communications/services/communications-
 import { seedCommunicationsIfEmpty } from "./communications/services/seed";
 import { executiveService } from "./executive/services/executive-service";
 import { seedExecutiveIfEmpty } from "./executive/services/seed";
+import { workflowOrchestrationService } from "./workflows/services/workflow-service";
+import { seedWorkflowsIfEmpty } from "./workflows/services/seed";
 
 let opsDataSeeded = false;
 
@@ -31,6 +33,7 @@ function ensureOpsDataSeeded() {
   seedCalendarIfEmpty();
   seedCommunicationsIfEmpty();
   seedExecutiveIfEmpty();
+  seedWorkflowsIfEmpty();
   opsDataSeeded = true;
 }
 
@@ -496,6 +499,83 @@ export class OperationsApplicationService {
   askExecutiveAdvisor(institutionId: string, question: string) {
     this.boot();
     return executiveService.ai.answer(institutionId, question);
+  }
+
+  listWorkflows(institutionId: string, status?: Parameters<typeof workflowOrchestrationService.workflows.list>[1]) {
+    this.boot();
+    return workflowOrchestrationService.workflows.list(institutionId, status);
+  }
+
+  getWorkflow(workflowId: string) {
+    this.boot();
+    return workflowOrchestrationService.workflows.get(workflowId);
+  }
+
+  createWorkflow(input: Parameters<typeof workflowOrchestrationService.workflows.create>[0]) {
+    this.boot();
+    return workflowOrchestrationService.workflows.create(input);
+  }
+
+  publishWorkflow(workflowId: string, publishedBy: string) {
+    this.boot();
+    return workflowOrchestrationService.workflows.publish(workflowId, publishedBy);
+  }
+
+  pauseWorkflow(workflowId: string, actor: string) {
+    this.boot();
+    return workflowOrchestrationService.workflows.pause(workflowId, actor);
+  }
+
+  resumeWorkflow(workflowId: string, actor: string) {
+    this.boot();
+    return workflowOrchestrationService.workflows.resume(workflowId, actor);
+  }
+
+  archiveWorkflow(workflowId: string, actor: string) {
+    this.boot();
+    return workflowOrchestrationService.workflows.archive(workflowId, actor);
+  }
+
+  executeWorkflow(workflowId: string, input: Parameters<typeof workflowOrchestrationService.execution.execute>[1]) {
+    this.boot();
+    return workflowOrchestrationService.execution.execute(workflowId, input);
+  }
+
+  listRunningWorkflows(institutionId: string) {
+    this.boot();
+    return workflowOrchestrationService.execution.listRunning(institutionId);
+  }
+
+  approveWorkflowStep(approvalId: string, approvedBy: string) {
+    this.boot();
+    return workflowOrchestrationService.approvals.approve(approvalId, approvedBy);
+  }
+
+  rejectWorkflowStep(approvalId: string, rejectedBy: string) {
+    this.boot();
+    return workflowOrchestrationService.approvals.reject(approvalId, rejectedBy);
+  }
+
+  rollbackWorkflow(executionId: string, actor: string) {
+    this.boot();
+    return workflowOrchestrationService.recovery.rollback(executionId, actor);
+  }
+
+  getWorkflowMonitoring(institutionId: string) {
+    this.boot();
+    return workflowOrchestrationService.monitoring.status(institutionId);
+  }
+
+  getWorkflowAnalytics(institutionId: string) {
+    this.boot();
+    return workflowOrchestrationService.analytics.analyze(institutionId);
+  }
+
+  getWorkflowAudit(institutionId: string, workflowId?: string) {
+    this.boot();
+    return workflowId
+      ? workflowOrchestrationService.audit.forWorkflow(institutionId, workflowId)
+      : workflowOrchestrationService.audit.list(institutionId);
   }
 }
 

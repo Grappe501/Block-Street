@@ -1,0 +1,24 @@
+{
+  "protocol_id": "CAE-11.6-W9",
+  "terms": [
+    { "key": "workflow", "name": "Workflow", "definition": "Governed institutional process with versioning and audit history" },
+    { "key": "trigger", "name": "Trigger", "definition": "Event or schedule that initiates workflow execution" },
+    { "key": "condition", "name": "Condition", "definition": "Human-readable rule evaluated before execution" },
+    { "key": "approval_gate", "name": "Approval Gate", "definition": "Human review checkpoint that automation cannot bypass" },
+    { "key": "automation_step", "name": "Automation Step", "definition": "Governed action executed by the workflow engine" },
+    { "key": "workflow_execution", "name": "Workflow Execution", "definition": "Running instance with full evidence trail" },
+    { "key": "automation_level", "name": "Automation Level", "definition": "Degree of automation from suggestion-only to fully automatic" },
+    { "key": "escalation", "name": "Escalation", "definition": "Automatic notification when workflow requires Human attention" },
+    { "key": "workflow_template", "name": "Workflow Template", "definition": "Reusable pattern for common institutional processes" },
+    { "key": "workflow_evidence", "name": "Workflow Evidence", "definition": "Permanent record of trigger, actions, and outcomes" },
+    { "key": "failure_recovery", "name": "Failure Recovery", "definition": "Retry, rollback, or manual intervention path" },
+    { "key": "connector", "name": "Connector", "definition": "Governed outbound integration to external systems" },
+    { "key": "ai_workflow_coordinator", "name": "AI Workflow Coordinator", "definition": "Advisory AI for design, optimization, and explanation" },
+    { "key": "workflow_monitoring", "name": "Workflow Monitoring", "definition": "Institution-wide automation health observability" },
+    { "key": "workflow_audit", "name": "Workflow Audit", "definition": "Immutable audit trail for every workflow event" },
+    { "key": "textual_representation", "name": "Textual Representation", "definition": "Human-readable workflow description for auditability" },
+    { "key": "long_running_workflow", "name": "Long-Running Workflow", "definition": "Workflow that may pause, wait, or resume across time" },
+    { "key": "institutional_memory", "name": "Institutional Memory", "definition": "Automation history contributing to organizational learning" },
+    { "key": "workflow_security", "name": "Workflow Security", "definition": "Permission, role, and rate-limit enforcement per workflow" }
+  ]
+}
