@@ -21,6 +21,8 @@ import { agentRuntime } from "./agents/services/agent-service";
 import { seedAgentsIfEmpty } from "./agents/services/seed";
 import { partnershipRuntime } from "./partnership/services/partnership-service";
 import { seedPartnershipIfEmpty } from "./partnership/services/seed";
+import { federationRuntime } from "./federation/services/federation-service";
+import { seedFederationIfEmpty } from "./federation/services/seed";
 
 let livingDataSeeded = false;
 
@@ -36,6 +38,7 @@ function ensureLivingDataSeeded() {
   seedPredictionIfEmpty();
   seedAgentsIfEmpty();
   seedPartnershipIfEmpty();
+  seedFederationIfEmpty();
   livingDataSeeded = true;
 }
 
@@ -620,6 +623,61 @@ export class LivingIntelligenceApplicationService {
   recordInstitutionalReflection(input: Parameters<typeof partnershipRuntime.learning.recordReflection>[0]) {
     this.boot();
     return partnershipRuntime.learning.recordReflection(input);
+  }
+
+  getFederationDashboard(input: { human_id: string; institution_id: string }) {
+    this.boot();
+    return federationRuntime.federation.dashboard(input);
+  }
+
+  listFederationInstitutions() {
+    this.boot();
+    return federationRuntime.institutions.list();
+  }
+
+  listFederationCoalitions() {
+    this.boot();
+    return federationRuntime.coalitions.list();
+  }
+
+  listSharedMissions() {
+    this.boot();
+    return federationRuntime.missions.list();
+  }
+
+  listSharedKnowledge(ownerInstitutionId?: string) {
+    this.boot();
+    return federationRuntime.knowledge.list(ownerInstitutionId);
+  }
+
+  listFederationPartners(institutionId: string) {
+    this.boot();
+    return federationRuntime.trust.listPartners(institutionId);
+  }
+
+  joinFederation(input: Parameters<typeof federationRuntime.federation.join>[0]) {
+    this.boot();
+    return federationRuntime.federation.join(input);
+  }
+
+  shareFederationResource(input: Parameters<typeof federationRuntime.resources.share>[0]) {
+    this.boot();
+    return federationRuntime.resources.share(input);
+  }
+
+  createFederationCoalition(input: Parameters<typeof federationRuntime.coalitions.create>[0]) {
+    this.boot();
+    return federationRuntime.coalitions.create(input);
+  }
+
+  updateFederationTrust(input: Parameters<typeof federationRuntime.trust.update>[0]) {
+    this.boot();
+    return federationRuntime.trust.update(input);
+  }
+
+  publishFederationKnowledge(input: Parameters<typeof federationRuntime.knowledge.publish>[0]) {
+    this.boot();
+    return federationRuntime.knowledge.publish(input);
   }
 }
 
