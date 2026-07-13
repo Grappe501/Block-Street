@@ -11,6 +11,8 @@ import { organizerRuntime } from "./organizer/services/organizer-service";
 import { seedOrganizerIfEmpty } from "./organizer/services/seed";
 import { researchRuntime } from "./research/services/research-network-service";
 import { seedResearchIfEmpty } from "./research/services/seed";
+import { conversationRuntime } from "./conversation/services/conversation-service";
+import { seedConversationIfEmpty } from "./conversation/services/seed";
 
 let livingDataSeeded = false;
 
@@ -21,6 +23,7 @@ function ensureLivingDataSeeded() {
   seedExecutiveIfEmpty();
   seedOrganizerIfEmpty();
   seedResearchIfEmpty();
+  seedConversationIfEmpty();
   livingDataSeeded = true;
 }
 
@@ -327,6 +330,71 @@ export class LivingIntelligenceApplicationService {
   requestResearchPromotion(input: Parameters<typeof researchRuntime.promotion.request>[0]) {
     this.boot();
     return researchRuntime.promotion.request(input);
+  }
+
+  getConversationDashboard(input: { human_id: string; institution_id: string }) {
+    this.boot();
+    return conversationRuntime.conversation.dashboard(input);
+  }
+
+  listConversations(humanId: string) {
+    this.boot();
+    return conversationRuntime.conversations.list(humanId);
+  }
+
+  importConversation(input: Parameters<typeof conversationRuntime.conversations.import>[0]) {
+    this.boot();
+    return conversationRuntime.conversations.import(input);
+  }
+
+  listMeetingMemory(humanId: string) {
+    this.boot();
+    return conversationRuntime.meetings.list(humanId);
+  }
+
+  listTranscripts(humanId: string, conversationId?: string) {
+    this.boot();
+    if (!conversationId) {
+      return conversationRuntime.conversations.list(humanId).flatMap((c) =>
+        conversationRuntime.transcription.list(c.conversation_id)
+      );
+    }
+    return conversationRuntime.transcription.list(conversationId);
+  }
+
+  transcribeConversation(input: Parameters<typeof conversationRuntime.transcription.generate>[0]) {
+    this.boot();
+    return conversationRuntime.transcription.generate(input);
+  }
+
+  listConversationDecisions(institutionId: string) {
+    this.boot();
+    return conversationRuntime.decisions.list(institutionId);
+  }
+
+  listConversationCommitments(humanId: string) {
+    this.boot();
+    return conversationRuntime.commitments.list(humanId);
+  }
+
+  getDialogueGraph(institutionId: string) {
+    this.boot();
+    return conversationRuntime.dialogue.list(institutionId);
+  }
+
+  searchConversations(input: Parameters<typeof conversationRuntime.search.search>[0]) {
+    this.boot();
+    return conversationRuntime.search.search(input);
+  }
+
+  summarizeConversation(conversationId: string, humanId: string) {
+    this.boot();
+    return conversationRuntime.conversation.summarize(conversationId, humanId);
+  }
+
+  promoteConversation(input: Parameters<typeof conversationRuntime.conversation.promote>[0]) {
+    this.boot();
+    return conversationRuntime.conversation.promote(input);
   }
 }
 

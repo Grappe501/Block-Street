@@ -68,9 +68,10 @@
 | W3 | AI Executive Assistant, Briefing & Decision Preparation | **Complete** |
 | W4 | AI Organizer, Daily Operations & Mission Coordination | **Complete** |
 | W5 | AI Research Network, Continuous Knowledge Acquisition | **Complete** |
-| W6–W16 | Conversation intelligence, autonomous assistance, production | Pending |
+| W6 | AI Conversation Intelligence, Meeting Memory & Dialogue | **Complete** |
+| W7–W16 | Learning runtime, autonomous assistance, production | Pending |
 
-**Validation:** `npm run phase11:11.7:w1` · `npm run phase11:11.7:w2` · `npm run phase11:11.7:w3` · `npm run phase11:11.7:w4` · `npm run phase11:11.7:w5`  
+**Validation:** `npm run phase11:11.7:w1` · `npm run phase11:11.7:w2` · `npm run phase11:11.7:w3` · `npm run phase11:11.7:w4` · `npm run phase11:11.7:w5` · `npm run phase11:11.7:w6`  
 **Code:** `src/lib/civic-action/builds/11.7/living/`  
 **APIs:** `/api/v1/localbrain/*`
 
