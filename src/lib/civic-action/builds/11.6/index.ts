@@ -22,3 +22,8 @@ export { getOrganizationConstitution, OPS_ORGANIZATION_PRINCIPLE } from "./organ
 export { runOpsW4Certification, isOpsW4Complete } from "./organization/w4";
 export { runOpsW4OrganizationTests, allOpsW4TestsPassed } from "./organization/w4-tests";
 export { ORGANIZATION_EVENT_CATALOG } from "./organization/events/catalog";
+export { resourceService } from "./resources/services/resource-service";
+export { getResourceConstitution, OPS_RESOURCE_PRINCIPLE } from "./resources/constitution";
+export { runOpsW5Certification, isOpsW5Complete } from "./resources/w5";
+export { runOpsW5ResourceTests, allOpsW5TestsPassed } from "./resources/w5-tests";
+export { RESOURCE_EVENT_CATALOG } from "./resources/events/catalog";

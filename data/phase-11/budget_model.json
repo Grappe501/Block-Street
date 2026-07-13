@@ -1,0 +1,15 @@
+{
+  "protocol_id": "CAE-11.6-W5",
+  "scopes": [
+    { "scope": "institution", "name": "Institution" },
+    { "scope": "department", "name": "Department" },
+    { "scope": "program", "name": "Program" },
+    { "scope": "project", "name": "Project" },
+    { "scope": "mission", "name": "Mission" },
+    { "scope": "grant", "name": "Grant" },
+    { "scope": "campaign", "name": "Campaign" }
+  ],
+  "funding_sources": [
+    "general_fund", "grant", "donation", "campaign_funds", "membership_fees", "program_income", "restricted_funds", "emergency_funds", "custom"
+  ]
+}

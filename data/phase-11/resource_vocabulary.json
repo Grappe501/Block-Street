@@ -1,0 +1,28 @@
+{
+  "protocol_id": "CAE-11.6-W5",
+  "terms": [
+    { "key": "resource", "name": "Resource", "definition": "Any physical, digital, or financial asset governed by the institution" },
+    { "key": "asset", "name": "Asset", "definition": "A tracked institutional resource with lifecycle and stewardship" },
+    { "key": "steward", "name": "Steward", "definition": "Human responsible for resource care and mission alignment" },
+    { "key": "custodian", "name": "Custodian", "definition": "Human currently using or holding the resource" },
+    { "key": "facility", "name": "Facility", "definition": "Physical location containing governed spaces" },
+    { "key": "space", "name": "Space", "definition": "Reservable area within a facility" },
+    { "key": "reservation", "name": "Reservation", "definition": "Time-bound allocation of a resource to a human or mission" },
+    { "key": "inventory", "name": "Inventory", "definition": "Consumable or quantity-tracked resources" },
+    { "key": "consumable", "name": "Consumable", "definition": "Resource depleted through use" },
+    { "key": "procurement", "name": "Procurement", "definition": "Governed purchase workflow from need to audit" },
+    { "key": "budget", "name": "Budget", "definition": "Allocated funds with committed, spent, and remaining tracking" },
+    { "key": "expense", "name": "Expense", "definition": "Recorded expenditure with mission and budget context" },
+    { "key": "funding_source", "name": "Funding Source", "definition": "Origin of funds with restriction enforcement" },
+    { "key": "vendor", "name": "Vendor", "definition": "External organization providing goods or services" },
+    { "key": "contract", "name": "Contract", "definition": "Formal agreement with renewal and compliance tracking" },
+    { "key": "maintenance", "name": "Maintenance", "definition": "Scheduled or completed service on maintainable assets" },
+    { "key": "fleet", "name": "Fleet", "definition": "Institutional vehicle resources with mission history" },
+    { "key": "digital_asset", "name": "Digital Asset", "definition": "Documents, media, and brand assets with version history" },
+    { "key": "resource_health", "name": "Resource Health", "definition": "Planning metrics for condition, utilization, and risk" },
+    { "key": "lifecycle", "name": "Lifecycle", "definition": "Audited stages from request through retirement" },
+    { "key": "ownership_type", "name": "Ownership Type", "definition": "Governance classification of resource ownership" },
+    { "key": "mission_assignment", "name": "Mission Assignment", "definition": "Link between resource and operational mission" },
+    { "key": "stewardship", "name": "Stewardship", "definition": "Responsible care of resources for mission accomplishment" }
+  ]
+}

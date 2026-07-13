@@ -9,6 +9,7 @@ export const STRATEGY_API_CONTRACT_VERSION = "11.6-w1.1";
 export const OPERATIONS_API_CONTRACT_VERSION = "11.6-w2.1";
 export const WORKFORCE_API_CONTRACT_VERSION = "11.6-w3.1";
 export const ORGANIZATION_API_CONTRACT_VERSION = "11.6-w4.1";
+export const RESOURCES_API_CONTRACT_VERSION = "11.6-w5.1";
 
 export type StrategyApiContext = {
   institution_id: string;
@@ -73,6 +74,15 @@ export function organizationMeta(apiCtx: StrategyApiContext, extra?: Record<stri
   };
 }
 
+export function resourcesMeta(apiCtx: StrategyApiContext, extra?: Record<string, unknown>) {
+  return {
+    request_id: apiCtx.request_id,
+    correlation_id: apiCtx.correlation_id,
+    contract_version: RESOURCES_API_CONTRACT_VERSION,
+    ...extra,
+  };
+}
+
 export async function withOrganizationApi<T>(
   ctx: ApiRequestContext,
   request: NextRequest,
@@ -81,6 +91,16 @@ export async function withOrganizationApi<T>(
   const apiCtx = resolveStrategyApiContext(ctx, request);
   const data = await fn(apiCtx);
   return apiSuccess(data, organizationMeta(apiCtx));
+}
+
+export async function withResourcesApi<T>(
+  ctx: ApiRequestContext,
+  request: NextRequest,
+  fn: (apiCtx: StrategyApiContext) => T | Promise<T>
+) {
+  const apiCtx = resolveStrategyApiContext(ctx, request);
+  const data = await fn(apiCtx);
+  return apiSuccess(data, resourcesMeta(apiCtx));
 }
 
 export function opsInstitutionIdFromPath(request: NextRequest): string {

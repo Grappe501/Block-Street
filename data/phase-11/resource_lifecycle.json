@@ -1,0 +1,20 @@
+{
+  "protocol_id": "CAE-11.6-W5",
+  "stages": [
+    { "stage": "requested", "order": 1 },
+    { "stage": "approved", "order": 2 },
+    { "stage": "purchased", "order": 3 },
+    { "stage": "received", "order": 4 },
+    { "stage": "in_service", "order": 5 },
+    { "stage": "reserved", "order": 6 },
+    { "stage": "assigned", "order": 7 },
+    { "stage": "maintenance", "order": 8 },
+    { "stage": "repair", "order": 9 },
+    { "stage": "retired", "order": 10 },
+    { "stage": "disposed", "order": 11 },
+    { "stage": "archived", "order": 12 }
+  ],
+  "statuses": [
+    "available", "reserved", "assigned", "in_transit", "maintenance", "out_of_service", "lost", "retired"
+  ]
+}

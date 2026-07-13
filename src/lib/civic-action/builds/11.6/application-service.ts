@@ -10,6 +10,8 @@ import { seedWorkforceIfEmpty } from "./workforce/services/seed";
 
 import { organizationService } from "./organization/services/organization-service";
 import { seedOrganizationIfEmpty } from "./organization/services/seed";
+import { resourceService } from "./resources/services/resource-service";
+import { seedResourcesIfEmpty } from "./resources/services/seed";
 
 let opsDataSeeded = false;
 
@@ -19,6 +21,7 @@ function ensureOpsDataSeeded() {
   seedOperationalMissionsIfEmpty();
   seedWorkforceIfEmpty();
   seedOrganizationIfEmpty();
+  seedResourcesIfEmpty();
   opsDataSeeded = true;
 }
 
@@ -211,6 +214,71 @@ export class OperationsApplicationService {
   getFederationDashboard(federationId: string) {
     this.boot();
     return organizationService.federationDashboard.build(federationId);
+  }
+
+  getResourceSummary(institutionId: string) {
+    this.boot();
+    return resourceService.executiveDashboard.build(institutionId);
+  }
+
+  listAssets(institutionId: string, missionId?: string) {
+    this.boot();
+    return resourceService.assets.list(institutionId, missionId);
+  }
+
+  createAsset(input: Parameters<typeof resourceService.assets.create>[0]) {
+    this.boot();
+    return resourceService.assets.create(input);
+  }
+
+  listInventory(institutionId: string) {
+    this.boot();
+    return resourceService.inventory.list(institutionId);
+  }
+
+  adjustInventory(input: Parameters<typeof resourceService.inventory.adjust>[0]) {
+    this.boot();
+    return resourceService.inventory.adjust(input);
+  }
+
+  listFacilities(institutionId: string) {
+    this.boot();
+    return resourceService.facilities.list(institutionId);
+  }
+
+  listSpaces(institutionId: string) {
+    this.boot();
+    return resourceService.spaces.list(institutionId);
+  }
+
+  listBudgets(institutionId: string, scopeId?: string) {
+    this.boot();
+    return resourceService.budgets.list(institutionId, scopeId);
+  }
+
+  listExpenses(institutionId: string, missionId?: string) {
+    this.boot();
+    return resourceService.expenses.list(institutionId, missionId);
+  }
+
+  reserveAsset(input: Parameters<typeof resourceService.reservations.reserve>[0]) {
+    this.boot();
+    return resourceService.reservations.reserve(input);
+  }
+
+  requestPurchase(input: Parameters<typeof resourceService.procurement.request>[0]) {
+    this.boot();
+    return resourceService.procurement.request(input);
+  }
+
+  scheduleMaintenance(input: Parameters<typeof resourceService.maintenance.schedule>[0]) {
+    this.boot();
+    return resourceService.maintenance.schedule(input);
+  }
+
+  getResourceDashboard(institutionId: string) {
+    this.boot();
+    return resourceService.executiveDashboard.build(institutionId);
   }
 }
 
