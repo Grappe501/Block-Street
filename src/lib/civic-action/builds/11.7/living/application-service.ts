@@ -17,6 +17,8 @@ import { learningRuntime } from "./learning/services/learning-service";
 import { seedLearningIfEmpty } from "./learning/services/seed";
 import { predictionRuntime } from "./prediction/services/prediction-service";
 import { seedPredictionIfEmpty } from "./prediction/services/seed";
+import { agentRuntime } from "./agents/services/agent-service";
+import { seedAgentsIfEmpty } from "./agents/services/seed";
 
 let livingDataSeeded = false;
 
@@ -30,6 +32,7 @@ function ensureLivingDataSeeded() {
   seedConversationIfEmpty();
   seedLearningIfEmpty();
   seedPredictionIfEmpty();
+  seedAgentsIfEmpty();
   livingDataSeeded = true;
 }
 
@@ -516,6 +519,51 @@ export class LivingIntelligenceApplicationService {
   runPredictionSimulation(input: Parameters<typeof predictionRuntime.simulations.run>[0]) {
     this.boot();
     return predictionRuntime.simulations.run(input);
+  }
+
+  getAgentDashboard(input: { human_id: string; institution_id: string }) {
+    this.boot();
+    return agentRuntime.agents.dashboard(input);
+  }
+
+  listAgentRegistry(institutionId: string) {
+    this.boot();
+    return agentRuntime.registry.list(institutionId);
+  }
+
+  listAgentTasks(humanId: string) {
+    this.boot();
+    return agentRuntime.orchestrator.listTasks(humanId);
+  }
+
+  listAgentEvidence(taskId?: string) {
+    this.boot();
+    return agentRuntime.evidence.list(taskId);
+  }
+
+  listAgentConflicts(institutionId: string) {
+    this.boot();
+    return agentRuntime.conflicts.list(institutionId);
+  }
+
+  runAgentOrchestration(input: Parameters<typeof agentRuntime.orchestrator.run>[0]) {
+    this.boot();
+    return agentRuntime.orchestrator.run(input);
+  }
+
+  installAgent(input: Parameters<typeof agentRuntime.marketplace.install>[0]) {
+    this.boot();
+    return agentRuntime.marketplace.install(input);
+  }
+
+  retireAgent(agentId: string) {
+    this.boot();
+    return agentRuntime.registry.retire(agentId);
+  }
+
+  determineAgentConsensus(input: Parameters<typeof agentRuntime.consensus.determine>[0]) {
+    this.boot();
+    return agentRuntime.consensus.determine(input);
   }
 }
 
