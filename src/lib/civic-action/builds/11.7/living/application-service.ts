@@ -25,6 +25,8 @@ import { federationRuntime } from "./federation/services/federation-service";
 import { seedFederationIfEmpty } from "./federation/services/seed";
 import { automationRuntime } from "./automation/services/automation-service";
 import { seedAutomationIfEmpty } from "./automation/services/seed";
+import { factoryRuntime } from "./factory/services/factory-service";
+import { seedFactoryIfEmpty } from "./factory/services/seed";
 
 let livingDataSeeded = false;
 
@@ -42,6 +44,7 @@ function ensureLivingDataSeeded() {
   seedPartnershipIfEmpty();
   seedFederationIfEmpty();
   seedAutomationIfEmpty();
+  seedFactoryIfEmpty();
   livingDataSeeded = true;
 }
 
@@ -731,6 +734,57 @@ export class LivingIntelligenceApplicationService {
   approveWorkflow(approvalId: string, institutionId: string, humanId: string) {
     this.boot();
     return automationRuntime.approvals.grant(approvalId, institutionId, humanId);
+  }
+
+  getFactoryDashboard(input: { human_id: string; institution_id: string }) {
+    this.boot();
+    return factoryRuntime.factory.dashboard(input);
+  }
+
+  listFactoryCapabilities(institutionId: string) {
+    this.boot();
+    return factoryRuntime.registry.list(institutionId);
+  }
+
+  listFactoryExtensions(institutionId: string) {
+    this.boot();
+    return factoryRuntime.marketplace.list(institutionId);
+  }
+
+  listFactoryDeployments(institutionId: string) {
+    this.boot();
+    return factoryRuntime.deployment.list(institutionId);
+  }
+
+  getFactoryObservatory(institutionId: string) {
+    this.boot();
+    const records = factoryRuntime.observatory.list(institutionId);
+    return records.length > 0 ? records[records.length - 1] : factoryRuntime.observatory.measure({ institution_id: institutionId }).observatory;
+  }
+
+  proposeCapability(input: Parameters<typeof factoryRuntime.registry.register>[0]) {
+    this.boot();
+    return factoryRuntime.registry.register(input);
+  }
+
+  buildCapability(input: Parameters<typeof factoryRuntime.build.build>[0]) {
+    this.boot();
+    return factoryRuntime.build.build(input);
+  }
+
+  startDeployment(input: Parameters<typeof factoryRuntime.deployment.start>[0]) {
+    this.boot();
+    return factoryRuntime.deployment.start(input);
+  }
+
+  rollbackDeployment(input: Parameters<typeof factoryRuntime.rollback.execute>[0]) {
+    this.boot();
+    return factoryRuntime.rollback.execute(input);
+  }
+
+  publishExtension(input: Parameters<typeof factoryRuntime.marketplace.publish>[0]) {
+    this.boot();
+    return factoryRuntime.marketplace.publish(input);
   }
 }
 
