@@ -16,6 +16,8 @@ import { calendarEngineService } from "./calendar/services/calendar-service";
 import { seedCalendarIfEmpty } from "./calendar/services/seed";
 import { communicationsService } from "./communications/services/communications-service";
 import { seedCommunicationsIfEmpty } from "./communications/services/seed";
+import { executiveService } from "./executive/services/executive-service";
+import { seedExecutiveIfEmpty } from "./executive/services/seed";
 
 let opsDataSeeded = false;
 
@@ -28,6 +30,7 @@ function ensureOpsDataSeeded() {
   seedResourcesIfEmpty();
   seedCalendarIfEmpty();
   seedCommunicationsIfEmpty();
+  seedExecutiveIfEmpty();
   opsDataSeeded = true;
 }
 
@@ -415,6 +418,84 @@ export class OperationsApplicationService {
   getCommunicationsIntelligence(institutionId: string) {
     this.boot();
     return communicationsService.ai.analyze(institutionId);
+  }
+
+  getExecutiveDashboard(institutionId: string, executiveRole?: string) {
+    this.boot();
+    return executiveService.dashboard.build(institutionId, executiveRole);
+  }
+
+  listExecutiveBriefings(institutionId: string) {
+    this.boot();
+    return executiveService.briefing.list(institutionId);
+  }
+
+  generateExecutiveBriefing(input: Parameters<typeof executiveService.briefing.generate>[0]) {
+    this.boot();
+    return executiveService.briefing.generate(input);
+  }
+
+  listExecutiveAlerts(institutionId: string) {
+    this.boot();
+    return executiveService.alerts.list(institutionId, false);
+  }
+
+  listExecutiveDecisions(institutionId: string, status?: Parameters<typeof executiveService.decisions.list>[1]) {
+    this.boot();
+    return executiveService.decisions.list(institutionId, status);
+  }
+
+  approveExecutiveDecision(decisionId: string, approvedBy: string) {
+    this.boot();
+    return executiveService.decisions.approve(decisionId, approvedBy);
+  }
+
+  getInstitutionHealth(institutionId: string) {
+    this.boot();
+    return executiveService.health.compute(institutionId);
+  }
+
+  listExecutiveScenarios(institutionId: string) {
+    this.boot();
+    return executiveService.scenarios.list(institutionId);
+  }
+
+  createExecutiveScenario(input: Parameters<typeof executiveService.scenarios.create>[0]) {
+    this.boot();
+    return executiveService.scenarios.create(input);
+  }
+
+  analyzeExecutiveScenario(scenarioId: string, institutionId: string) {
+    this.boot();
+    return executiveService.scenarios.analyze(scenarioId, institutionId);
+  }
+
+  openWarRoom(input: Parameters<typeof executiveService.warRoom.open>[0]) {
+    this.boot();
+    return executiveService.warRoom.open(input);
+  }
+
+  getExecutiveTimeline(institutionId: string) {
+    this.boot();
+    return executiveService.timeline.build(institutionId);
+  }
+
+  getExecutiveIntelligence(institutionId: string) {
+    this.boot();
+    return {
+      missions: executiveService.missions.analyze(institutionId),
+      workforce: executiveService.workforce.analyze(institutionId),
+      financial: executiveService.financial.analyze(institutionId),
+      resources: executiveService.resources.analyze(institutionId),
+      organization: executiveService.organization.analyze(institutionId),
+      communications: executiveService.communications.analyze(institutionId),
+      risks: executiveService.risks.analyze(institutionId),
+    };
+  }
+
+  askExecutiveAdvisor(institutionId: string, question: string) {
+    this.boot();
+    return executiveService.ai.answer(institutionId, question);
   }
 }
 

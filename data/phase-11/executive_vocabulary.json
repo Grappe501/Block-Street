@@ -1,0 +1,24 @@
+{
+  "protocol_id": "CAE-11.6-W8",
+  "terms": [
+    { "key": "executive_workspace", "name": "Executive Workspace", "definition": "Role-personalized command center from canonical institutional data" },
+    { "key": "executive_briefing", "name": "Executive Briefing", "definition": "Continuous synthesis of what leadership needs to know" },
+    { "key": "executive_alert", "name": "Executive Alert", "definition": "Priority notification with evidence and recommended actions" },
+    { "key": "decision_queue", "name": "Decision Queue", "definition": "Approvals and governance items awaiting executive action" },
+    { "key": "decision_workspace", "name": "Decision Workspace", "definition": "Evidence-backed decision context with human approval required" },
+    { "key": "operational_health", "name": "Operational Health", "definition": "Self-explaining institution readiness metrics" },
+    { "key": "mission_intelligence", "name": "Mission Intelligence", "definition": "Critical, delayed, and blocked mission situational awareness" },
+    { "key": "workforce_intelligence", "name": "Workforce Intelligence", "definition": "Aggregate capacity and staffing intelligence" },
+    { "key": "financial_intelligence", "name": "Financial Intelligence", "definition": "Budget health integrated with mission execution" },
+    { "key": "resource_intelligence", "name": "Resource Intelligence", "definition": "Fleet, facilities, inventory, and procurement awareness" },
+    { "key": "organization_intelligence", "name": "Organization Intelligence", "definition": "Department health, governance, and leadership coverage" },
+    { "key": "communication_intelligence", "name": "Communication Intelligence", "definition": "Organizational communication analysis—not personal scoring" },
+    { "key": "risk_intelligence", "name": "Risk Intelligence", "definition": "Strategic, mission, financial, and operational risks" },
+    { "key": "war_room", "name": "War Room", "definition": "Temporary executive command center for crises and campaigns" },
+    { "key": "scenario_planning", "name": "Scenario Planning", "definition": "What-if analysis that never alters live data until approved" },
+    { "key": "executive_timeline", "name": "Executive Timeline", "definition": "Institutional memory of major decisions and milestones" },
+    { "key": "ai_executive_advisor", "name": "AI Executive Advisor", "definition": "Advisory synthesis without executive authority" },
+    { "key": "institution_health", "name": "Institution Health", "definition": "Unified operational health scorecard" },
+    { "key": "executive_security", "name": "Executive Security", "definition": "Need-to-know filtering and audit trails for sensitive data" }
+  ]
+}

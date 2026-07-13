@@ -37,3 +37,9 @@ export { getCommunicationsConstitution, OPS_COMMUNICATIONS_PRINCIPLE } from "./c
 export { runOpsW7Certification, isOpsW7Complete } from "./communications/w7";
 export { runOpsW7CommunicationsTests, allOpsW7TestsPassed } from "./communications/w7-tests";
 export { COMMUNICATIONS_EVENT_CATALOG } from "./communications/events/catalog";
+export { executiveService } from "./executive/services/executive-service";
+export { getExecutiveConstitution, OPS_EXECUTIVE_PRINCIPLE } from "./executive/constitution";
+export { runOpsW8Certification, isOpsW8Complete } from "./executive/w8";
+export { runOpsW8ExecutiveTests, allOpsW8TestsPassed } from "./executive/w8-tests";
+export { EXECUTIVE_EVENT_CATALOG } from "./executive/events/catalog";
+export { explainExecutiveInsight } from "./executive/traceability";

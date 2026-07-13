@@ -1,0 +1,20 @@
+{
+  "protocol_id": "CAE-11.6-W8",
+  "roles": [
+    { "key": "chair", "name": "Chair" },
+    { "key": "president", "name": "President" },
+    { "key": "ceo", "name": "CEO" },
+    { "key": "executive_director", "name": "Executive Director" },
+    { "key": "coo", "name": "Chief Operating Officer" },
+    { "key": "cfo", "name": "Chief Financial Officer" },
+    { "key": "cto", "name": "Chief Technology Officer" },
+    { "key": "campaign_manager", "name": "Campaign Manager" },
+    { "key": "county_director", "name": "County Director" },
+    { "key": "regional_director", "name": "Regional Director" },
+    { "key": "department_director", "name": "Department Director" },
+    { "key": "committee_chair", "name": "Committee Chair" },
+    { "key": "board_member", "name": "Board Member" },
+    { "key": "chief_of_staff", "name": "Chief of Staff" },
+    { "key": "custom", "name": "Custom Executive Role" }
+  ]
+}

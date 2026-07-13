@@ -1,0 +1,11 @@
+{
+  "protocol_id": "CAE-11.6-W8",
+  "priorities": [
+    { "key": "critical", "name": "Critical", "order": 1 },
+    { "key": "immediate", "name": "Immediate", "order": 2 },
+    { "key": "high", "name": "High", "order": 3 },
+    { "key": "medium", "name": "Medium", "order": 4 },
+    { "key": "low", "name": "Low", "order": 5 },
+    { "key": "informational", "name": "Informational", "order": 6 }
+  ]
+}
