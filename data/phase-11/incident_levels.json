@@ -1,0 +1,10 @@
+{
+  "protocol_id": "CAE-11.6-W11",
+  "levels": [
+    { "level": 1, "name": "minor", "description": "Minor disruption" },
+    { "level": 2, "name": "operational", "description": "Operational impact" },
+    { "level": 3, "name": "major", "description": "Major incident" },
+    { "level": 4, "name": "critical", "description": "Critical incident" },
+    { "level": 5, "name": "institution_wide_emergency", "description": "Institution-wide emergency" }
+  ]
+}

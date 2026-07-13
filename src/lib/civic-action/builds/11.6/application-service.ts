@@ -22,6 +22,8 @@ import { workflowOrchestrationService } from "./workflows/services/workflow-serv
 import { seedWorkflowsIfEmpty } from "./workflows/services/seed";
 import { institutionalIntelligenceService } from "./intelligence/services/intelligence-service";
 import { seedIntelligenceIfEmpty } from "./intelligence/services/seed";
+import { resilienceService } from "./resilience/services/resilience-service";
+import { seedResilienceIfEmpty } from "./resilience/services/seed";
 
 let opsDataSeeded = false;
 
@@ -37,6 +39,7 @@ function ensureOpsDataSeeded() {
   seedExecutiveIfEmpty();
   seedWorkflowsIfEmpty();
   seedIntelligenceIfEmpty();
+  seedResilienceIfEmpty();
   opsDataSeeded = true;
 }
 
@@ -652,6 +655,86 @@ export class OperationsApplicationService {
   getExecutiveForecastWorkspace(institutionId: string) {
     this.boot();
     return institutionalIntelligenceService.insights.executiveWorkspace(institutionId);
+  }
+
+  listContinuityPlans(institutionId: string) {
+    this.boot();
+    return resilienceService.continuity.list(institutionId);
+  }
+
+  createContinuityPlan(input: Parameters<typeof resilienceService.continuity.create>[0]) {
+    this.boot();
+    return resilienceService.continuity.create(input);
+  }
+
+  listIncidents(institutionId: string, status?: Parameters<typeof resilienceService.incidents.list>[1]) {
+    this.boot();
+    return resilienceService.incidents.list(institutionId, status);
+  }
+
+  activateIncident(input: Parameters<typeof resilienceService.incidents.activate>[0]) {
+    this.boot();
+    return resilienceService.incidents.activate(input);
+  }
+
+  openEmergencyOperationsCenter(input: Parameters<typeof resilienceService.eoc.open>[0]) {
+    this.boot();
+    return resilienceService.eoc.open(input);
+  }
+
+  listRecoveryOperations(institutionId: string) {
+    this.boot();
+    return resilienceService.recovery.list(institutionId);
+  }
+
+  activateRecovery(input: Parameters<typeof resilienceService.recovery.activate>[0]) {
+    this.boot();
+    return resilienceService.recovery.activate(input);
+  }
+
+  requestMutualAid(input: Parameters<typeof resilienceService.mutualAid.request>[0]) {
+    this.boot();
+    return resilienceService.mutualAid.request(input);
+  }
+
+  listResilienceExercises(institutionId: string) {
+    this.boot();
+    return resilienceService.exercises.list(institutionId);
+  }
+
+  runResilienceExercise(input: Parameters<typeof resilienceService.exercises.run>[0]) {
+    this.boot();
+    return resilienceService.exercises.run(input);
+  }
+
+  assessReadiness(institutionId: string) {
+    this.boot();
+    return resilienceService.readiness.assess(institutionId);
+  }
+
+  getReadinessAssessment(institutionId: string) {
+    this.boot();
+    return resilienceService.readiness.get(institutionId) ?? resilienceService.readiness.assess(institutionId);
+  }
+
+  getResilienceDashboard(institutionId: string) {
+    this.boot();
+    return resilienceService.readiness.dashboard(institutionId);
+  }
+
+  verifyBackups(institutionId: string, verifiedBy: string) {
+    this.boot();
+    return resilienceService.backups.verify(institutionId, verifiedBy);
+  }
+
+  recordLessonLearned(input: Parameters<typeof resilienceService.lessons.record>[0]) {
+    this.boot();
+    return resilienceService.lessons.record(input);
+  }
+
+  getCrisisBriefing(institutionId: string, incidentId?: string) {
+    this.boot();
+    return resilienceService.ai.brief(institutionId, incidentId);
   }
 }
 

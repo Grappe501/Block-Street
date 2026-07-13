@@ -1,0 +1,24 @@
+{
+  "protocol_id": "CAE-11.6-W11",
+  "terms": [
+    { "key": "continuity_plan", "name": "Continuity Plan", "definition": "Version-controlled plan for critical function recovery" },
+    { "key": "critical_function", "name": "Critical Function", "definition": "Essential institutional capability requiring continuity" },
+    { "key": "incident", "name": "Incident", "definition": "Adverse event requiring governed response" },
+    { "key": "incident_level", "name": "Incident Level", "definition": "Severity classification from minor to institution-wide emergency" },
+    { "key": "emergency_operations_center", "name": "Emergency Operations Center", "definition": "Temporary command center during major incidents" },
+    { "key": "dependency_mapping", "name": "Dependency Mapping", "definition": "Visible mapping of critical function dependencies" },
+    { "key": "alternate_personnel", "name": "Alternate Personnel", "definition": "Documented backup holders for critical roles" },
+    { "key": "alternate_resources", "name": "Alternate Resources", "definition": "Backup facilities, channels, and equipment" },
+    { "key": "recovery_phase", "name": "Recovery Phase", "definition": "Staged restoration from stabilization to full operations" },
+    { "key": "mutual_aid", "name": "Mutual Aid", "definition": "Governed cross-institution assistance" },
+    { "key": "resilience_exercise", "name": "Resilience Exercise", "definition": "Tabletop, drill, or simulation validating preparedness" },
+    { "key": "backup_verification", "name": "Backup Verification", "definition": "Continuous integrity verification of institutional backups" },
+    { "key": "readiness_index", "name": "Readiness Index", "definition": "Composite preparedness indicator for planning only" },
+    { "key": "lessons_learned", "name": "Lessons Learned", "definition": "Institutional knowledge from incidents and exercises" },
+    { "key": "ai_crisis_advisor", "name": "AI Crisis Advisor", "definition": "Advisory crisis support without operational command" },
+    { "key": "offline_operations", "name": "Offline Operations", "definition": "Continued operations during connectivity loss" },
+    { "key": "leadership_continuity", "name": "Leadership Continuity", "definition": "Succession and emergency delegation governance" },
+    { "key": "crisis_decision_workspace", "name": "Crisis Decision Workspace", "definition": "Evidence-backed emergency decision package" },
+    { "key": "situation_awareness", "name": "Situation Awareness", "definition": "Real-time incident operational picture" }
+  ]
+}

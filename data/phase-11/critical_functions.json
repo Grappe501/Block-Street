@@ -1,0 +1,8 @@
+{
+  "protocol_id": "CAE-11.6-W11",
+  "functions": [
+    "executive_leadership", "volunteer_operations", "mission_execution", "communications",
+    "financial_operations", "technology", "election_operations", "facilities", "transportation",
+    "training", "knowledge_management", "community_services", "compliance", "membership", "fundraising"
+  ]
+}
