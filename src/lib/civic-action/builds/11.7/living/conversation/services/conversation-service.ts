@@ -349,7 +349,7 @@ export const decisionDetectionService = {
       summary: input.summary,
       evidence: input.evidence ?? ["Meeting transcript excerpt"],
       confidence: 0.8,
-      human_confirmed: false as const,
+      human_confirmed: false,
       canonical: false as const,
       detected_at: nowIso(),
     };
@@ -365,7 +365,7 @@ export const decisionDetectionService = {
     const decisions = listDecisions(institutionId);
     const existing = decisions.find((d) => d.decision_id === decisionId);
     if (!existing) throw new ConversationError("DECISION_NOT_FOUND", "Decision not found");
-    const updated = { ...existing, human_confirmed: true as const };
+    const updated = { ...existing, human_confirmed: true };
     saveDecision(updated);
     return { decision: updated, canonical: false, executive_package_ready: true };
   },
@@ -393,7 +393,7 @@ export const commitmentDetectionService = {
       deadline: input.deadline ?? null,
       evidence: input.evidence ?? ["Verbatim quote from transcript"],
       confidence: 0.82,
-      human_confirmed: false as const,
+      human_confirmed: false,
       canonical: false as const,
       detected_at: nowIso(),
     };
@@ -408,7 +408,7 @@ export const commitmentDetectionService = {
     const commitments = listCommitments(humanId);
     const existing = commitments.find((c) => c.commitment_id === commitmentId);
     if (!existing) throw new ConversationError("COMMITMENT_NOT_FOUND", "Commitment not found");
-    const updated = { ...existing, human_confirmed: true as const };
+    const updated = { ...existing, human_confirmed: true };
     saveCommitment(updated);
     return {
       commitment: updated,
