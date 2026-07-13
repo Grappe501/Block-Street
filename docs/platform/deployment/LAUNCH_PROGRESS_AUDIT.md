@@ -3,7 +3,7 @@
 **Updated:** 2026-07-13 (post-push)  
 **Deploy target:** https://block-street.netlify.app  
 **GitHub:** https://github.com/Grappe501/Block-Street (branch `main`)  
-**Latest commit:** `d0beaa4` — Communications 11.7, Knowledge 11.12 W1–W3, Netlify build fix
+**Latest commit:** `3cc4923` — serverless API/auth fix + Director login fix
 
 ## Deployment status
 
