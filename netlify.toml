@@ -7,3 +7,5 @@
 
 [build.environment]
   NODE_VERSION = "22"
+  # Set in Netlify UI for production: AUTH_SESSION_SECRET (required for signed cookies)
+  # Optional override: AUTH_BOOTSTRAP_PASSWORD (default bootstrap: Forevermost)

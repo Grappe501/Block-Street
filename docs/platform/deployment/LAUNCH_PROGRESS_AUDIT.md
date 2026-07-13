@@ -1,17 +1,19 @@
 # Launch Progress Audit
 
-**Updated:** 2026-07-13  
+**Updated:** 2026-07-13 (post-push)  
 **Deploy target:** https://block-street.netlify.app  
-**GitHub:** https://github.com/Grappe501/Block-Street (branch `main`)
+**GitHub:** https://github.com/Grappe501/Block-Street (branch `main`)  
+**Latest commit:** `d0beaa4` — Communications 11.7, Knowledge 11.12 W1–W3, Netlify build fix
 
-## Deployment blocker (resolved locally)
+## Deployment status
 
 | Issue | Status |
 |-------|--------|
-| Netlify behind local `main` (remote at 11.2-w6, local at 11.2-w8+) | **Push required** |
+| Netlify behind local `main` | **Resolved** — pushed `58eaa5e..d0beaa4` |
 | Production build failed on `/communications/optimization` | **Fixed** — client simulation via API |
-| ~200+ untracked Phase 11 files (11.7, 11.12) | **Commit required** |
+| ~200+ untracked Phase 11 files (11.7, 11.12) | **Committed** in `d0beaa4` |
 | `store.json` test bloat (7MB) | **Reverted** — not committed |
+| Director login stuck on "Loading…" | **Fixed** — server passes `next`, no `useSearchParams` Suspense |
 
 ## Phase 11 Civic Action Engine
 
@@ -19,7 +21,7 @@
 |-------|--------|----------|-------|
 | 11.1 | INI-001 Initiative | **100%** | W1–W8 |
 | 11.2 | OBJ-001 Objectives | **100%** | W1–W8 |
-| 11.7 | COM-002 Communications | **100%** | W1–W8 (local, pending push) |
+| 11.7 | COM-002 Communications | **100%** | W1–W8 (shipped `d0beaa4`) |
 | 11.12 | ADP-001 Knowledge/Learning | **37.5%** | W1–W3 |
 | 11.3–11.6, 11.8–11.16 | — | 0% | Not started |
 

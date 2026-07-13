@@ -1,11 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { useSearchParams } from "next/navigation";
 
-export default function AdminLoginForm() {
-  const searchParams = useSearchParams();
-  const next = searchParams.get("next") ?? "/admin";
+export default function AdminLoginForm({ next = "/admin" }: { next?: string }) {
   const [email, setEmail] = useState("director@block-street.local");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
