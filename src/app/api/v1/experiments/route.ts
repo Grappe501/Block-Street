@@ -6,14 +6,16 @@ export const POST = withApiGateway(
   async (ctx, request) =>
     withImprovementApi(ctx, request, async (apiCtx) => {
       const body = (await request.json()) as {
-        observation: string;
-        recommendation: string;
+        title: string;
+        hypothesis: string;
+        method: string;
       };
-      return operationsApplicationService.recommendImprovement({
+      return operationsApplicationService.launchExperiment({
         institution_id: apiCtx.institution_id,
-        observation: body.observation,
-        recommendation: body.recommendation,
+        title: body.title,
+        hypothesis: body.hypothesis,
+        method: body.method,
       });
     }),
-  { permission: "improvement.manage", endpoint: "/api/v1/improvements" }
+  { permission: "improvement.manage", endpoint: "/api/v1/experiments" }
 );

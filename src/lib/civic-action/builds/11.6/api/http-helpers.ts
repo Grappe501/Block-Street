@@ -17,6 +17,7 @@ export const WORKFLOWS_API_CONTRACT_VERSION = "11.6-w9.1";
 export const OPS_INTELLIGENCE_API_CONTRACT_VERSION = "11.6-w10.1";
 export const RESILIENCE_API_CONTRACT_VERSION = "11.6-w11.1";
 export const FEDERATION_API_CONTRACT_VERSION = "11.6-w12.1";
+export const IMPROVEMENT_API_CONTRACT_VERSION = "11.6-w13.1";
 
 export type StrategyApiContext = {
   institution_id: string;
@@ -162,6 +163,25 @@ export async function withFederationApi<T>(
   const apiCtx = resolveStrategyApiContext(ctx, request);
   const data = await fn(apiCtx);
   return apiSuccess(data, federationMeta(apiCtx));
+}
+
+export function improvementMeta(apiCtx: StrategyApiContext, extra?: Record<string, unknown>) {
+  return {
+    request_id: apiCtx.request_id,
+    correlation_id: apiCtx.correlation_id,
+    contract_version: IMPROVEMENT_API_CONTRACT_VERSION,
+    ...extra,
+  };
+}
+
+export async function withImprovementApi<T>(
+  ctx: ApiRequestContext,
+  request: NextRequest,
+  fn: (apiCtx: StrategyApiContext) => T | Promise<T>
+) {
+  const apiCtx = resolveStrategyApiContext(ctx, request);
+  const data = await fn(apiCtx);
+  return apiSuccess(data, improvementMeta(apiCtx));
 }
 
 export async function withOrganizationApi<T>(

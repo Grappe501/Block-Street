@@ -1,0 +1,25 @@
+{
+  "protocol_id": "CAE-11.6-W13",
+  "categories": [
+    { "key": "strategic", "name": "Strategic" },
+    { "key": "mission", "name": "Mission" },
+    { "key": "program", "name": "Program" },
+    { "key": "project", "name": "Project" },
+    { "key": "department", "name": "Department" },
+    { "key": "organization", "name": "Organization" },
+    { "key": "volunteer", "name": "Volunteer" },
+    { "key": "training", "name": "Training" },
+    { "key": "financial", "name": "Financial" },
+    { "key": "resource", "name": "Resource" },
+    { "key": "technology", "name": "Technology" },
+    { "key": "community", "name": "Community" },
+    { "key": "governance", "name": "Governance" },
+    { "key": "communications", "name": "Communications" },
+    { "key": "knowledge", "name": "Knowledge" },
+    { "key": "learning", "name": "Learning" },
+    { "key": "election", "name": "Election" },
+    { "key": "campaign", "name": "Campaign" },
+    { "key": "federation", "name": "Federation" },
+    { "key": "custom", "name": "Custom" }
+  ]
+}

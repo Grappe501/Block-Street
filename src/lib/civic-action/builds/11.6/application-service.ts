@@ -26,6 +26,8 @@ import { resilienceService } from "./resilience/services/resilience-service";
 import { seedResilienceIfEmpty } from "./resilience/services/seed";
 import { federationOpsService } from "./federation/services/federation-ops-service";
 import { seedFederationIfEmpty } from "./federation/services/seed";
+import { improvementService } from "./improvement/services/improvement-service";
+import { seedImprovementIfEmpty } from "./improvement/services/seed";
 
 let opsDataSeeded = false;
 
@@ -43,6 +45,7 @@ function ensureOpsDataSeeded() {
   seedIntelligenceIfEmpty();
   seedResilienceIfEmpty();
   seedFederationIfEmpty();
+  seedImprovementIfEmpty();
   opsDataSeeded = true;
 }
 
@@ -819,6 +822,86 @@ export class OperationsApplicationService {
   publishFederationBriefing(federationId: string) {
     this.boot();
     return federationOpsService.ai.briefing(federationId);
+  }
+
+  listMeasurements(institutionId: string) {
+    this.boot();
+    return improvementService.measurements.list(institutionId);
+  }
+
+  createMeasurement(input: Parameters<typeof improvementService.measurements.create>[0]) {
+    this.boot();
+    return improvementService.measurements.create(input);
+  }
+
+  listKPIs(institutionId: string) {
+    this.boot();
+    return improvementService.kpis.list(institutionId);
+  }
+
+  listOutcomes(institutionId: string) {
+    this.boot();
+    return improvementService.outcomes.list(institutionId);
+  }
+
+  recordOutcome(input: Parameters<typeof improvementService.outcomes.record>[0]) {
+    this.boot();
+    return improvementService.outcomes.record(input);
+  }
+
+  listBenchmarks(institutionId: string) {
+    this.boot();
+    return improvementService.benchmarks.list(institutionId);
+  }
+
+  runBenchmark(input: Parameters<typeof improvementService.benchmarks.run>[0]) {
+    this.boot();
+    return improvementService.benchmarks.run(input);
+  }
+
+  listMaturityAssessments(institutionId: string) {
+    this.boot();
+    return improvementService.maturity.list(institutionId);
+  }
+
+  assessMaturity(input: Parameters<typeof improvementService.maturity.assess>[0]) {
+    this.boot();
+    return improvementService.maturity.assess(input);
+  }
+
+  recommendImprovement(input: Parameters<typeof improvementService.continuousImprovement.recommend>[0]) {
+    this.boot();
+    return improvementService.continuousImprovement.recommend(input);
+  }
+
+  approveImprovementPlan(backlogId: string, approvedBy: string) {
+    this.boot();
+    return improvementService.backlog.approve(backlogId, approvedBy);
+  }
+
+  conductRootCauseAnalysis(input: Parameters<typeof improvementService.rootCause.conduct>[0]) {
+    this.boot();
+    return improvementService.rootCause.conduct(input);
+  }
+
+  registerBestPractice(input: Parameters<typeof improvementService.bestPractices.register>[0]) {
+    this.boot();
+    return improvementService.bestPractices.register(input);
+  }
+
+  launchExperiment(input: Parameters<typeof improvementService.experiments.launch>[0]) {
+    this.boot();
+    return improvementService.experiments.launch(input);
+  }
+
+  recordInnovation(input: Parameters<typeof improvementService.innovations.record>[0]) {
+    this.boot();
+    return improvementService.innovations.record(input);
+  }
+
+  getImprovementDashboard(institutionId: string) {
+    this.boot();
+    return improvementService.executiveDashboard(institutionId);
   }
 }
 

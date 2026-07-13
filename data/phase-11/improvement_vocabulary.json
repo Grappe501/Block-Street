@@ -1,0 +1,25 @@
+{
+  "protocol_id": "CAE-11.6-W13",
+  "terms": [
+    { "key": "measurement", "name": "Measurement", "definition": "Outcome-based metric tracing to strategic objectives" },
+    { "key": "kpi", "name": "KPI", "definition": "Version-controlled key performance indicator with formula and historical trend" },
+    { "key": "outcome", "name": "Outcome", "definition": "Mission or community impact result measured with evidence" },
+    { "key": "benchmark", "name": "Benchmark", "definition": "Contextual performance comparison against targets or peers" },
+    { "key": "continuous_improvement", "name": "Continuous Improvement", "definition": "Permanent observe-measure-analyze-implement cycle" },
+    { "key": "root_cause_analysis", "name": "Root Cause Analysis", "definition": "Structured investigation identifying causes not symptoms" },
+    { "key": "best_practice", "name": "Best Practice", "definition": "Reusable institutional asset from successful operations" },
+    { "key": "experiment", "name": "Experiment", "definition": "Hypothesis-driven pilot with recorded results and lessons" },
+    { "key": "innovation", "name": "Innovation", "definition": "Searchable institutional idea, pilot, or implementation" },
+    { "key": "maturity_model", "name": "Maturity Model", "definition": "Independent capability progression across institutional domains" },
+    { "key": "operational_excellence", "name": "Operational Excellence", "definition": "Quality, consistency, stewardship, and impact evaluation" },
+    { "key": "community_impact", "name": "Community Impact", "definition": "Institutional impact on citizens, communities, and programs" },
+    { "key": "quality_assurance", "name": "Quality Assurance", "definition": "Searchable evidence from mission, workflow, and governance reviews" },
+    { "key": "improvement_backlog", "name": "Improvement Backlog", "definition": "Prioritized recommendations converted to actionable initiatives" },
+    { "key": "scorecard", "name": "Scorecard", "definition": "Institutional performance view—not individual ranking" },
+    { "key": "institutional_learning", "name": "Institutional Learning", "definition": "Accumulated knowledge growth and competency development" },
+    { "key": "ai_improvement_advisor", "name": "AI Improvement Advisor", "definition": "Advisory analysis without autonomous approval authority" },
+    { "key": "evolution_timeline", "name": "Evolution Timeline", "definition": "Explainable history of institutional improvements" },
+    { "key": "mission_impact", "name": "Mission Impact", "definition": "Outcome-focused measure of mission success" },
+    { "key": "federation_benchmarking", "name": "Federation Benchmarking", "definition": "Cross-institution comparison with autonomy protection" }
+  ]
+}

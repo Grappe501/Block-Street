@@ -1,0 +1,15 @@
+{
+  "protocol_id": "CAE-11.6-W13",
+  "types": [
+    { "key": "mission_success", "name": "Mission Success" },
+    { "key": "community_impact", "name": "Community Impact" },
+    { "key": "knowledge_growth", "name": "Knowledge Growth" },
+    { "key": "volunteer_growth", "name": "Volunteer Growth" },
+    { "key": "training_effectiveness", "name": "Training Effectiveness" },
+    { "key": "leadership_development", "name": "Leadership Development" },
+    { "key": "operational_readiness", "name": "Operational Readiness" },
+    { "key": "financial_stewardship", "name": "Financial Stewardship" },
+    { "key": "technology_reliability", "name": "Technology Reliability" },
+    { "key": "institutional_resilience", "name": "Institutional Resilience" }
+  ]
+}
