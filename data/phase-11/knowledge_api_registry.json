@@ -1,0 +1,21 @@
+{
+  "registry_version": "11.12-w5.1",
+  "subsystem": "KNW-API-001",
+  "routes": [
+    {"route": "/api/v1/knowledge", "method": "GET", "api_version": "11.12-w5.1", "audience": "internal", "authentication": "required", "permission": "civic_action.view", "domain_command_optional": null, "status": "active"},
+    {"route": "/api/v1/knowledge", "method": "POST", "api_version": "11.12-w5.1", "audience": "internal", "authentication": "required", "permission": "civic_action.manage", "domain_command_optional": "CreateKnowledgeArtifact", "status": "active"},
+    {"route": "/api/v1/knowledge/commands", "method": "POST", "api_version": "11.12-w5.1", "audience": "internal", "authentication": "required", "permission": "civic_action.manage", "domain_command_optional": "typed", "status": "active"},
+    {"route": "/api/v1/knowledge/search", "method": "GET", "api_version": "11.12-w5.1", "audience": "internal", "authentication": "required", "permission": "civic_action.view", "domain_command_optional": null, "status": "active"},
+    {"route": "/api/v1/knowledge/{id}/actions/{action}", "method": "POST", "api_version": "11.12-w5.1", "audience": "internal", "authentication": "required", "permission": "civic_action.manage", "domain_command_optional": "lifecycle", "status": "active"},
+    {"route": "/api/v1/learning/courses", "method": "GET", "api_version": "11.12-w5.1", "audience": "internal", "authentication": "required", "permission": "training.view", "domain_command_optional": null, "status": "active"},
+    {"route": "/api/v1/learning/workspace", "method": "GET", "api_version": "11.12-w5.1", "audience": "internal", "authentication": "required", "permission": "training.view", "domain_command_optional": null, "status": "active"},
+    {"route": "/api/v1/learning/commands", "method": "POST", "api_version": "11.12-w5.1", "audience": "internal", "authentication": "required", "permission": "civic_action.manage", "domain_command_optional": "typed", "status": "active"},
+    {"route": "/api/v1/competencies/my-profile", "method": "GET", "api_version": "11.12-w5.1", "audience": "internal", "authentication": "required", "permission": "training.view", "domain_command_optional": null, "status": "active"},
+    {"route": "/api/v1/certifications/eligibility", "method": "GET", "api_version": "11.12-w5.1", "audience": "internal", "authentication": "required", "permission": "training.view", "domain_command_optional": null, "status": "active"},
+    {"route": "/api/v1/certifications/commands", "method": "POST", "api_version": "11.12-w5.1", "audience": "internal", "authentication": "required", "permission": "civic_action.manage", "domain_command_optional": "typed", "status": "active"},
+    {"route": "/api/v1/knowledge-ai/tutor/turns", "method": "POST", "api_version": "11.12-w5.1", "audience": "internal", "authentication": "required", "permission": "training.view", "domain_command_optional": null, "status": "active"},
+    {"route": "/api/public/v1/credentials/verify/{code}", "method": "GET", "api_version": "11.12-w5.1", "audience": "public", "authentication": "none", "permission": "public", "domain_command_optional": null, "status": "active"},
+    {"route": "/api/v1/knowledge/events/outbox", "method": "POST", "api_version": "11.12-w5.1", "audience": "internal", "authentication": "required", "permission": "civic_action.manage", "domain_command_optional": null, "status": "active"},
+    {"route": "/api/v1/knowledge/webhooks", "method": "GET|POST", "api_version": "11.12-w5.1", "audience": "internal", "authentication": "required", "permission": "civic_action.manage", "domain_command_optional": null, "status": "active"}
+  ]
+}
