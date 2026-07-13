@@ -1,0 +1,25 @@
+{
+  "protocol_id": "CAE-11.7-W1",
+  "terms": [
+    { "key": "localbrain", "name": "LocalBrain", "definition": "Permanent operational companion for one verified Human" },
+    { "key": "working_memory", "name": "Working Memory", "definition": "Continuously updated current mission, meeting, and task context" },
+    { "key": "long_term_memory", "name": "Long-Term Memory", "definition": "Lessons, missions, training, and leadership history preserved over years" },
+    { "key": "temporary_memory", "name": "Temporary Memory", "definition": "Scratch notes and prep that auto-expire unless promoted" },
+    { "key": "memory_promotion", "name": "Memory Promotion", "definition": "Governed movement between memory tiers" },
+    { "key": "context_runtime", "name": "Context Runtime", "definition": "Continuous understanding of current operational situation" },
+    { "key": "personal_timeline", "name": "Personal Timeline", "definition": "Explainable history across today, week, month, and career" },
+    { "key": "personal_knowledge_graph", "name": "Personal Knowledge Graph", "definition": "Interconnected relationships, topics, projects, and skills" },
+    { "key": "institution_connection", "name": "Institution Connection", "definition": "Governed link between LocalBrain and an organization" },
+    { "key": "workspace_memory", "name": "Workspace Memory", "definition": "Pinned missions, dashboards, and layout preferences" },
+    { "key": "relationship_memory", "name": "Relationship Memory", "definition": "Collaboration history with mentors, teams, and committees" },
+    { "key": "calendar_memory", "name": "Calendar Memory", "definition": "Habits, buffers, and scheduling preferences" },
+    { "key": "learning_memory", "name": "Learning Memory", "definition": "Courses, competencies, certifications, and knowledge gaps" },
+    { "key": "privacy_domain", "name": "Privacy Domain", "definition": "Private, shared, institution, or federation classification" },
+    { "key": "synchronization", "name": "Synchronization", "definition": "Encrypted cross-device LocalBrain sync" },
+    { "key": "identity_layer", "name": "Identity Layer", "definition": "References canonical identity without duplication" },
+    { "key": "local_knowledge_cache", "name": "Local Knowledge Cache", "definition": "Offline-capable knowledge for intelligent operation" },
+    { "key": "ai_runtime", "name": "AI Runtime", "definition": "Hosted reasoning, planning, and preparation engines" },
+    { "key": "one_human_one_brain", "name": "One Human One Brain", "definition": "Exactly one LocalBrain per verified Human identity" },
+    { "key": "human_centered", "name": "Human Centered", "definition": "LocalBrain augments but never replaces the Human" }
+  ]
+}

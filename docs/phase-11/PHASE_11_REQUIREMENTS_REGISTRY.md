@@ -92,6 +92,31 @@ Key surfaces: `knowledge_api_registry.json`, `knowledge_event_catalog.json` (25 
 
 Key surfaces: `knowledge_intelligence_registry.json` (14 capabilities), `/api/v1/intelligence/knowledge/*`, `/learning/*`, `/capability/*`, `/certification/readiness`, `/tutor/turns`, `/api/v1/ai/knowledge/query`.
 
+## Build 11.7-lix — Wave W1 (LocalBrain)
+
+| Domain | Count | Registry Status | Enforcement |
+|--------|-------|-----------------|-------------|
+| CON, MEM, PRV, SYN, TIM | 25+ | implemented | `builds/11.7/living/localbrain/` |
+| **Total** | **25** | **implemented** | `npm run phase11:11.7:w1` |
+
+## Build 11.7-lix — Wave W2 (Context Intelligence)
+
+| Domain | Count | Registry Status | Enforcement |
+|--------|-------|-----------------|-------------|
+| CON, REG, ACT, SIG, RES, HUM, COR, INS, MIS, ATT, FOC, NXT, PRV | 30 | implemented | `builds/11.7/living/context/` |
+| **Total** | **30** | **implemented** | `npm run phase11:11.7:w2` |
+
+Key surfaces: `context_registry.json`, `/api/v1/localbrain/context/*`, `/attention`, `/next-actions`, `/focus-sessions`.
+
+## Build 11.7-lix — Wave W3 (Executive Assistant)
+
+| Domain | Count | Registry Status | Enforcement |
+|--------|-------|-----------------|-------------|
+| CON, REG, ORC, ROL, BRF, MTG, DEC, EVD, CMT, DRF, DLG, INQ, PRV | 33 | implemented | `builds/11.7/living/executive-assistant/` |
+| **Total** | **33** | **implemented** | `npm run phase11:11.7:w3` |
+
+Key surfaces: `executive_capability_registry.json`, `/api/v1/localbrain/executive-assistant`, `/briefings`, `/decisions`, `/commitments`, `/executive-inquiry`.
+
 ## Traceability
 
 [PHASE_11_TRACEABILITY_MATRIX.md](PHASE_11_TRACEABILITY_MATRIX.md)

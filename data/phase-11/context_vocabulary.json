@@ -1,0 +1,25 @@
+{
+  "protocol_id": "CAE-11.7-W2",
+  "terms": [
+    { "key": "context_runtime", "name": "Context Runtime", "definition": "Permission-aware understanding of present operational situation" },
+    { "key": "active_context", "name": "Active Context", "definition": "Primary and secondary context stack for current work" },
+    { "key": "context_signal", "name": "Context Signal", "definition": "Short-lived observation from approved source" },
+    { "key": "context_resolution", "name": "Context Resolution", "definition": "Ranking and conflict detection across signals" },
+    { "key": "human_declared", "name": "Human Declared", "definition": "Context explicitly selected by Human overrides inference" },
+    { "key": "institution_isolation", "name": "Institution Isolation", "definition": "Context scoped and refreshed on institution switch" },
+    { "key": "mission_context", "name": "Mission Context", "definition": "Work linked to mission, objective, and decision authority" },
+    { "key": "calendar_context", "name": "Calendar Context", "definition": "Temporal awareness before, during, and after events" },
+    { "key": "meeting_context", "name": "Meeting Context", "definition": "Agenda and decisions without unauthorized recording" },
+    { "key": "location_context", "name": "Location Context", "definition": "Optional purpose-limited place awareness" },
+    { "key": "travel_context", "name": "Travel Context", "definition": "Advisory travel estimates without continuous tracking" },
+    { "key": "device_context", "name": "Device Context", "definition": "Presentation adaptation with shared-device safeguards" },
+    { "key": "attention_intelligence", "name": "Attention Intelligence", "definition": "Explainable priority without fake urgency" },
+    { "key": "focus_session", "name": "Focus Session", "definition": "Protected work period with interruption policy" },
+    { "key": "quiet_time", "name": "Quiet Time", "definition": "Human-defined periods suppressing ordinary interruptions" },
+    { "key": "next_action", "name": "Next Action", "definition": "Contextual dismissible recommendation that does not mutate records" },
+    { "key": "context_correction", "name": "Context Correction", "definition": "Human feedback improving future resolution" },
+    { "key": "inference_pause", "name": "Inference Pause", "definition": "Human control to pause context inference" },
+    { "key": "context_retention", "name": "Context Retention", "definition": "Expiration of stale signals and context" },
+    { "key": "situational_awareness", "name": "Situational Awareness", "definition": "Understanding enough to be useful without surveillance" }
+  ]
+}

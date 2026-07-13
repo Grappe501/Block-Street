@@ -1,0 +1,11 @@
+{
+  "protocol_id": "CAE-11.6-W16",
+  "layers": [
+    { "key": "constitution", "name": "Constitution", "evolution": "explicit_governance_only" },
+    { "key": "policy", "name": "Policy", "evolution": "governed" },
+    { "key": "procedure", "name": "Procedure", "evolution": "frequent" },
+    { "key": "implementation", "name": "Implementation", "evolution": "frequent" },
+    { "key": "configuration", "name": "Configuration", "evolution": "frequent" },
+    { "key": "presentation", "name": "Presentation", "evolution": "frequent" }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "protocol_id": "CAE-11.7-W1",
+  "domains": [
+    { "key": "private", "default": true, "auto_share": false },
+    { "key": "shared", "default": false, "requires_consent": true },
+    { "key": "institution", "default": false, "requires_approval": true },
+    { "key": "federation", "default": false, "requires_approval": true }
+  ]
+}

@@ -49,3 +49,73 @@
 - `knowledge.conflict_identified`
 
 **Publisher:** `publishKnowledgeEvent()` · **Outbox:** `knowledge_event_outbox` · **W5 dispatcher:** `events/outbox-publisher.ts`
+
+---
+
+## Context Intelligence (LIX-002) — Build 11.7-lix W2
+
+**Catalog:** `src/lib/civic-action/builds/11.7/living/context/events/catalog.ts` (16 events)
+
+### Context lifecycle
+
+- `context.signal_received`
+- `context.resolved`
+- `context.changed`
+- `context.confirmation_requested`
+- `context.confirmed`
+- `context.corrected`
+- `context.expired`
+- `context.inference_paused`
+
+### Attention & focus
+
+- `attention.priority_recommended`
+- `attention.interruption_deferred`
+- `focus.session_started`
+- `focus.session_completed`
+
+### Next actions
+
+- `next_action.recommended`
+- `next_action.accepted`
+- `next_action.dismissed`
+
+### Institution
+
+- `institution.context_switched`
+
+---
+
+## Executive Assistant (LIX-003) — Build 11.7-lix W3
+
+**Catalog:** `src/lib/civic-action/builds/11.7/living/executive-assistant/events/catalog.ts` (18 events)
+
+### Executive lifecycle
+
+- `executive_assistant.requested`
+- `executive_assistant.response_generated`
+- `briefing.generated`
+- `briefing.refreshed`
+- `briefing.expired`
+
+### Decisions & commitments
+
+- `meeting.preparation_generated`
+- `decision.package_generated`
+- `decision.more_evidence_required`
+- `commitment.suggested`
+- `commitment.confirmed`
+- `commitment.completed`
+- `commitment.overdue`
+
+### Drafting & delegation
+
+- `executive_draft.created`
+- `delegation.recommended`
+- `handoff.package_created`
+
+### Risk & audit
+
+- `executive.risk_escalated`
+- `executive.opportunity_identified`
+- `executive_output.reported`

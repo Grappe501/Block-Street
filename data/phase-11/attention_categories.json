@@ -1,0 +1,13 @@
+{
+  "protocol_id": "CAE-11.7-W2",
+  "categories": [
+    { "key": "act_now", "name": "Act Now" },
+    { "key": "prepare_today", "name": "Prepare Today" },
+    { "key": "review_soon", "name": "Review Soon" },
+    { "key": "waiting_on_others", "name": "Waiting on Others" },
+    { "key": "monitor", "name": "Monitor" },
+    { "key": "optional", "name": "Optional" },
+    { "key": "dismissed", "name": "Dismissed" },
+    { "key": "deferred", "name": "Deferred" }
+  ]
+}

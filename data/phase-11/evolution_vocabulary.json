@@ -1,0 +1,25 @@
+{
+  "protocol_id": "CAE-11.6-W16",
+  "terms": [
+    { "key": "canonforge", "name": "CanonForge", "definition": "Permanent constitutional engine for architecture, schemas, APIs, and build packages" },
+    { "key": "evolution_proposal", "name": "Evolution Proposal", "definition": "Evidence-backed proposal for institutional improvement under Human governance" },
+    { "key": "constitutional_impact", "name": "Constitutional Impact", "definition": "Classification of whether evolution affects constitution, policy, or implementation only" },
+    { "key": "canon_registry", "name": "Canon Registry", "definition": "Authoritative registry where nothing exists outside Canon" },
+    { "key": "build_genome", "name": "Build Genome", "definition": "Institution blueprint storing architecture, schemas, APIs, and platform DNA" },
+    { "key": "drift_detection", "name": "Drift Detection", "definition": "Continuous monitoring for documentation, schema, API, and policy divergence" },
+    { "key": "architecture_review", "name": "Architecture Review", "definition": "Measurable evaluation of complexity, coupling, security, and maintainability" },
+    { "key": "digital_twin", "name": "Digital Twin", "definition": "Simulation of institution load, growth, and restructuring for planning" },
+    { "key": "future_build_queue", "name": "Future Build Queue", "definition": "Structured queue of approved ideas, debt, and innovation for future builds" },
+    { "key": "factory_engine", "name": "Factory Engine", "definition": "Generates certified deployment packages from Canon" },
+    { "key": "institution_cloning", "name": "Institution Cloning", "definition": "Generation of new institutions from certified Canon foundation" },
+    { "key": "living_documentation", "name": "Living Documentation", "definition": "Documentation synchronized with schemas, APIs, events, and services" },
+    { "key": "global_traceability", "name": "Global Traceability", "definition": "Backward why and forward dependency analysis for every object" },
+    { "key": "canon_versioning", "name": "Canon Versioning", "definition": "Major, minor, patch, experimental, and federation extension versions" },
+    { "key": "platform_dna", "name": "Platform DNA", "definition": "Permanent record of purpose, principles, philosophy, and trust model" },
+    { "key": "ai_evolution_advisor", "name": "AI Evolution Advisor", "definition": "Advisory AI that proposes improvements while Humans govern constitutional decisions" },
+    { "key": "research_engine", "name": "Research Engine", "definition": "Tracks academic, community, industry, and legal research feeding Canon evolution" },
+    { "key": "canon_quality_gates", "name": "Canon Quality Gates", "definition": "Evidence, review, testing, documentation, and approval required for every Canon change" },
+    { "key": "federation_evolution", "name": "Federation Evolution", "definition": "Shared standards and architecture without forcing institutional uniformity" },
+    { "key": "localbrain", "name": "LocalBrain", "definition": "Portable institutional node with memory, calendar, knowledge, and AI context" }
+  ]
+}

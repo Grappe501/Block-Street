@@ -1,0 +1,16 @@
+{
+  "protocol_id": "CAE-11.7-W1",
+  "categories": [
+    { "key": "personal", "tier_default": "long_term" },
+    { "key": "institutional", "tier_default": "institutional" },
+    { "key": "mission", "tier_default": "working" },
+    { "key": "learning", "tier_default": "long_term" },
+    { "key": "calendar", "tier_default": "working" },
+    { "key": "relationships", "tier_default": "long_term" },
+    { "key": "communications", "tier_default": "working" },
+    { "key": "knowledge", "tier_default": "long_term" },
+    { "key": "executive", "tier_default": "working" },
+    { "key": "temporary", "tier_default": "temporary" },
+    { "key": "archived", "tier_default": "long_term" }
+  ]
+}

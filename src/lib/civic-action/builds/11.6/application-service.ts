@@ -32,6 +32,8 @@ import { experienceService } from "./experience/services/experience-service";
 import { seedExperienceIfEmpty } from "./experience/services/seed";
 import { opsCertificationService } from "./certification/services/certification-service";
 import { seedCertificationIfEmpty } from "./certification/services/seed";
+import { opsEvolutionService } from "./evolution/services/evolution-service";
+import { seedEvolutionIfEmpty } from "./evolution/services/seed";
 
 let opsDataSeeded = false;
 
@@ -52,6 +54,7 @@ function ensureOpsDataSeeded() {
   seedImprovementIfEmpty();
   seedExperienceIfEmpty();
   seedCertificationIfEmpty();
+  seedEvolutionIfEmpty();
   opsDataSeeded = true;
 }
 
@@ -1022,6 +1025,81 @@ export class OperationsApplicationService {
   approveOpsLaunch(institutionId: string, approvedBy: string) {
     this.boot();
     return opsCertificationService.executive.approveLaunch(institutionId, approvedBy);
+  }
+
+  listOpsEvolutionProposals(institutionId: string) {
+    this.boot();
+    return opsEvolutionService.evolution.list(institutionId);
+  }
+
+  createOpsEvolutionProposal(input: Parameters<typeof opsEvolutionService.evolution.propose>[0]) {
+    this.boot();
+    return opsEvolutionService.evolution.propose(input);
+  }
+
+  approveOpsEvolution(evolutionId: string, approvedBy: string) {
+    this.boot();
+    return opsEvolutionService.evolution.approve(evolutionId, approvedBy);
+  }
+
+  getOpsCanon(institutionId: string) {
+    this.boot();
+    return opsEvolutionService.canonForge.list(institutionId);
+  }
+
+  auditOpsCanon(institutionId: string) {
+    this.boot();
+    return opsEvolutionService.canonForge.audit(institutionId);
+  }
+
+  reviewOpsArchitecture(input: Parameters<typeof opsEvolutionService.architectureReview.review>[0]) {
+    this.boot();
+    return opsEvolutionService.architectureReview.review(input);
+  }
+
+  detectOpsDrift(institutionId: string) {
+    this.boot();
+    return opsEvolutionService.driftDetection.detect(institutionId);
+  }
+
+  getOpsBuildGenome(institutionId: string) {
+    this.boot();
+    return opsEvolutionService.buildGenome.forInstitution(institutionId);
+  }
+
+  listOpsFutureBuilds(institutionId: string) {
+    this.boot();
+    return opsEvolutionService.futureBuilds.list(institutionId);
+  }
+
+  queueOpsFutureBuild(input: Parameters<typeof opsEvolutionService.futureBuilds.queue>[0]) {
+    this.boot();
+    return opsEvolutionService.futureBuilds.queue(input);
+  }
+
+  generateOpsFactoryPackage(institutionId: string) {
+    this.boot();
+    return opsEvolutionService.factory.generate(institutionId);
+  }
+
+  generateOpsDocumentation(institutionId: string) {
+    this.boot();
+    return opsEvolutionService.documentation.generate(institutionId);
+  }
+
+  runOpsDigitalTwin(input: Parameters<typeof opsEvolutionService.digitalTwin.run>[0]) {
+    this.boot();
+    return opsEvolutionService.digitalTwin.run(input);
+  }
+
+  getOpsEvolutionDashboard(institutionId: string) {
+    this.boot();
+    return opsEvolutionService.analytics.dashboard(institutionId);
+  }
+
+  publishOpsCanon(canonId: string, approvedBy: string) {
+    this.boot();
+    return opsEvolutionService.canonForge.publish(canonId, approvedBy);
   }
 }
 

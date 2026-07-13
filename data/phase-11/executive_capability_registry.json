@@ -1,0 +1,17 @@
+{
+  "protocol_id": "CAE-11.7-W3",
+  "version": "11.7-w3.1",
+  "capabilities": [
+    { "capability_id": "cap-observe", "name": "Observe", "risk_class": "low", "human_review_required": false, "send_or_mutation_allowed": false },
+    { "capability_id": "cap-retrieve", "name": "Retrieve", "risk_class": "low", "human_review_required": false, "send_or_mutation_allowed": false },
+    { "capability_id": "cap-summarize", "name": "Summarize", "risk_class": "low", "human_review_required": false, "send_or_mutation_allowed": false },
+    { "capability_id": "cap-compare", "name": "Compare", "risk_class": "moderate", "human_review_required": false, "send_or_mutation_allowed": false },
+    { "capability_id": "cap-prepare", "name": "Prepare", "risk_class": "moderate", "human_review_required": true, "send_or_mutation_allowed": false },
+    { "capability_id": "cap-draft", "name": "Draft", "risk_class": "high", "human_review_required": true, "send_or_mutation_allowed": false },
+    { "capability_id": "cap-recommend", "name": "Recommend", "risk_class": "moderate", "human_review_required": true, "send_or_mutation_allowed": false },
+    { "capability_id": "cap-track", "name": "Track", "risk_class": "moderate", "human_review_required": true, "send_or_mutation_allowed": false },
+    { "capability_id": "cap-remind", "name": "Remind", "risk_class": "low", "human_review_required": false, "send_or_mutation_allowed": false },
+    { "capability_id": "cap-escalate", "name": "Escalate for Human Attention", "risk_class": "high", "human_review_required": true, "send_or_mutation_allowed": false }
+  ],
+  "prohibited_actions": ["approve", "reject", "publish", "send", "assign", "spend", "contract", "vote", "certify", "change_governance", "exercise_emergency_authority"]
+}

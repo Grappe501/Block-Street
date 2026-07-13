@@ -245,3 +245,36 @@ Full W5 matrix: 27 requirements in `requirements_registry.json` · validation: `
 | CAE-11.12-W6-EVL-001 | EVL | implemented | evaluation-suite.ts | zero leakage |
 
 Full W6 matrix: 18 requirements · validation: `npm run phase11:11.12:w6:all` · [PHASE_11_AI_CAPABILITY_INDEX.md](PHASE_11_AI_CAPABILITY_INDEX.md)
+
+## Build 11.7-lix — Wave W2 (Context Intelligence)
+
+| Requirement ID | Domain | Doc Status | Enforcement Layer | Test |
+|----------------|--------|------------|-------------------|------|
+| CAE-11.7-LIX-W2-CON-001 | CON | implemented | context/constitution.ts | context principle |
+| CAE-11.7-LIX-W2-REG-001 | REG | implemented | contextRegistryService | context registry |
+| CAE-11.7-LIX-W2-ACT-001 | ACT | implemented | activeContextService | context assembly |
+| CAE-11.7-LIX-W2-RES-001 | RES | implemented | contextResolutionService | context resolution |
+| CAE-11.7-LIX-W2-HUM-001 | HUM | implemented | activeContextService.select | human override selection |
+| CAE-11.7-LIX-W2-INS-001 | INS | implemented | institutionContextService | institution isolation |
+| CAE-11.7-LIX-W2-MIS-001 | MIS | implemented | missionContextService | mission context traceability |
+| CAE-11.7-LIX-W2-LOC-001 | LOC | implemented | locationContextService | location permission required |
+| CAE-11.7-LIX-W2-ATT-001 | ATT | implemented | attentionContextService | attention explainable |
+| CAE-11.7-LIX-W2-FOC-001 | FOC | implemented | focusSessionService | focus interruption control |
+| CAE-11.7-LIX-W2-NXT-001 | NXT | implemented | nextActionService | next action nonauthoritative |
+
+Full W2 matrix: 30 requirements in `requirements_registry.json` · validation: `npm run phase11:11.7:w2` · [11.7-living-intelligence/WAVE_2_CERTIFICATION.md](11.7-living-intelligence/WAVE_2_CERTIFICATION.md)
+
+## Build 11.7-lix — Wave W3 (Executive Assistant)
+
+| Requirement ID | Domain | Doc Status | Enforcement Layer | Test |
+|----------------|--------|------------|-------------------|------|
+| CAE-11.7-LIX-W3-CON-001 | CON | implemented | executive-assistant/constitution.ts | executive principle |
+| CAE-11.7-LIX-W3-ORC-001 | ORC | implemented | executiveAssistantOrchestrator | orchestrator context |
+| CAE-11.7-LIX-W3-BRF-001 | BRF | implemented | executiveBriefingService | morning briefing |
+| CAE-11.7-LIX-W3-DEC-001 | DEC | implemented | decisionPackageService | decision package balance |
+| CAE-11.7-LIX-W3-CMT-001 | CMT | implemented | executiveCommitmentService | commitment requires confirmation |
+| CAE-11.7-LIX-W3-DRF-001 | DRF | implemented | executiveDraftingService | draft labeling |
+| CAE-11.7-LIX-W3-SND-001 | SND | implemented | executiveAuthorityBoundaryService | send prohibition |
+| CAE-11.7-LIX-W3-ISO-001 | ISO | implemented | executivePrivacyService | cross institution isolation |
+
+Full W3 matrix: 33 requirements in `requirements_registry.json` · validation: `npm run phase11:11.7:w3` · [11.7-living-intelligence/WAVE_3_CERTIFICATION.md](11.7-living-intelligence/WAVE_3_CERTIFICATION.md)

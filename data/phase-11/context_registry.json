@@ -1,0 +1,23 @@
+{
+  "protocol_id": "CAE-11.7-W2",
+  "types": [
+    { "key": "human", "authority": "human_declared" },
+    { "key": "institution", "authority": "canonical" },
+    { "key": "organization", "authority": "canonical" },
+    { "key": "role", "authority": "canonical" },
+    { "key": "mission", "authority": "canonical" },
+    { "key": "objective", "authority": "canonical" },
+    { "key": "task", "authority": "system_observed" },
+    { "key": "calendar", "authority": "system_observed" },
+    { "key": "meeting", "authority": "system_observed" },
+    { "key": "conversation", "authority": "system_observed" },
+    { "key": "knowledge", "authority": "system_observed" },
+    { "key": "learning", "authority": "system_observed" },
+    { "key": "resource", "authority": "system_observed" },
+    { "key": "location", "authority": "human_declared" },
+    { "key": "travel", "authority": "human_declared" },
+    { "key": "device", "authority": "system_observed" },
+    { "key": "attention", "authority": "system_inferred" },
+    { "key": "emergency", "authority": "canonical" }
+  ]
+}

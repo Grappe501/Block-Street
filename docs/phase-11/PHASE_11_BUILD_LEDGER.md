@@ -59,6 +59,20 @@
 | W4 | Organization, Governance & Federation | **Complete** |
 | W5–W16 | Scheduling, communications, automation | Pending |
 
+## Build 11.7-lix — Living Intelligence, LocalBrain & Autonomous Assistance (LIX-001)
+
+| Wave | Name | Status |
+|------|------|--------|
+| W1 | LocalBrain & Memory Runtime | **Complete** |
+| W2 | Context Intelligence, Situational Awareness & Attention | **Complete** |
+| W3 | AI Executive Assistant, Briefing & Decision Preparation | **Complete** |
+| W4 | AI Organizer, Daily Operations & Mission Coordination | **Complete** |
+| W5–W16 | Research network, autonomous assistance, production | Pending |
+
+**Validation:** `npm run phase11:11.7:w1` · `npm run phase11:11.7:w2` · `npm run phase11:11.7:w3` · `npm run phase11:11.7:w4`  
+**Code:** `src/lib/civic-action/builds/11.7/living/`  
+**APIs:** `/api/v1/localbrain/*`
+
 ## Live Ledger
 
 `data/civic-action/scaffold.json`

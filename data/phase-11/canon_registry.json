@@ -1,0 +1,19 @@
+{
+  "protocol_id": "CAE-11.6-W16",
+  "objects": [
+    { "key": "identity", "name": "Identity" },
+    { "key": "mission", "name": "Mission" },
+    { "key": "knowledge", "name": "Knowledge" },
+    { "key": "calendar", "name": "Calendar" },
+    { "key": "resource", "name": "Resource" },
+    { "key": "conversation", "name": "Conversation" },
+    { "key": "institution", "name": "Institution" },
+    { "key": "federation", "name": "Federation" },
+    { "key": "automation", "name": "Automation" },
+    { "key": "prediction", "name": "Prediction" },
+    { "key": "certification", "name": "Certification" },
+    { "key": "improvement", "name": "Improvement" },
+    { "key": "experience", "name": "Experience" },
+    { "key": "evolution", "name": "Evolution" }
+  ]
+}
