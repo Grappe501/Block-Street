@@ -1,0 +1,18 @@
+{
+  "contract_id": "OPS-ORG-HIERARCHY-001",
+  "build": "11.6",
+  "wave": "W4",
+  "levels": [
+    { "level": 1, "name": "federation" },
+    { "level": 2, "name": "institution" },
+    { "level": 3, "name": "division" },
+    { "level": 4, "name": "region" },
+    { "level": 5, "name": "department" },
+    { "level": 6, "name": "office" },
+    { "level": 7, "name": "team" },
+    { "level": 8, "name": "working_group" },
+    { "level": 9, "name": "committee" },
+    { "level": 10, "name": "mission_team" },
+    { "level": 11, "name": "human" }
+  ]
+}

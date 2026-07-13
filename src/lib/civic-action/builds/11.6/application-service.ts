@@ -8,18 +8,32 @@ import { seedOperationalMissionsIfEmpty } from "./execution/services/seed";
 import { workforceManagementService } from "./workforce/services/workforce-service";
 import { seedWorkforceIfEmpty } from "./workforce/services/seed";
 
+import { organizationService } from "./organization/services/organization-service";
+import { seedOrganizationIfEmpty } from "./organization/services/seed";
+
+let opsDataSeeded = false;
+
+function ensureOpsDataSeeded() {
+  if (opsDataSeeded) return;
+  seedStrategicPlanningIfEmpty();
+  seedOperationalMissionsIfEmpty();
+  seedWorkforceIfEmpty();
+  seedOrganizationIfEmpty();
+  opsDataSeeded = true;
+}
+
 export class OperationsApplicationService {
-  constructor() {
-    seedStrategicPlanningIfEmpty();
-    seedOperationalMissionsIfEmpty();
-    seedWorkforceIfEmpty();
+  private boot() {
+    ensureOpsDataSeeded();
   }
 
   getDashboard(institutionId: string) {
+    this.boot();
     return strategicPlanningService.dashboard.build(institutionId);
   }
 
   getVision(institutionId: string) {
+    this.boot();
     return strategicPlanningService.vision.getActive(institutionId);
   }
 
@@ -140,7 +154,63 @@ export class OperationsApplicationService {
   }
 
   recordRecognition(input: Parameters<typeof workforceManagementService.recognition.award>[0]) {
+    this.boot();
     return workforceManagementService.recognition.award(input);
+  }
+
+  listOpsInstitutions(federationId?: string) {
+    this.boot();
+    return organizationService.institutions.list(federationId);
+  }
+
+  getOpsInstitution(institutionId: string) {
+    this.boot();
+    return organizationService.institutions.get(institutionId);
+  }
+
+  createOpsInstitution(input: Parameters<typeof organizationService.institutions.create>[0]) {
+    this.boot();
+    return organizationService.institutions.create(input);
+  }
+
+  listOrganizationUnits(institutionId: string) {
+    this.boot();
+    return organizationService.units.list(institutionId);
+  }
+
+  getOrganizationTree(institutionId: string) {
+    this.boot();
+    return organizationService.units.tree(institutionId);
+  }
+
+  createOrganizationUnit(input: Parameters<typeof organizationService.units.create>[0]) {
+    this.boot();
+    return organizationService.units.create(input);
+  }
+
+  listGovernanceDecisions(institutionId: string) {
+    this.boot();
+    return organizationService.governance.listDecisions(institutionId);
+  }
+
+  recordGovernanceDecision(input: Parameters<typeof organizationService.governance.recordDecision>[0]) {
+    this.boot();
+    return organizationService.governance.recordDecision(input);
+  }
+
+  listOrgMemberships(institutionId: string, humanId?: string) {
+    this.boot();
+    return organizationService.membership.list(institutionId, humanId);
+  }
+
+  joinFederation(input: Parameters<typeof organizationService.federation.join>[0]) {
+    this.boot();
+    return organizationService.federation.join(input);
+  }
+
+  getFederationDashboard(federationId: string) {
+    this.boot();
+    return organizationService.federationDashboard.build(federationId);
   }
 }
 

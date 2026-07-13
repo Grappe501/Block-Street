@@ -20,9 +20,21 @@ function ensureStore() {
 function readStore(): Record<string, unknown> {
   if (cache.has("store")) return cache.get("store") as Record<string, unknown>;
   ensureStore();
-  const raw = JSON.parse(readFileSync(STORE_PATH, "utf8"));
-  cache.set("store", raw);
-  return raw;
+  const content = readFileSync(STORE_PATH, "utf8").trim();
+  if (!content) {
+    const empty: Record<string, unknown> = {};
+    cache.set("store", empty);
+    return empty;
+  }
+  try {
+    const raw = JSON.parse(content) as Record<string, unknown>;
+    cache.set("store", raw);
+    return raw;
+  } catch {
+    const empty: Record<string, unknown> = {};
+    cache.set("store", empty);
+    return empty;
+  }
 }
 
 function writeStore(store: Record<string, unknown>) {

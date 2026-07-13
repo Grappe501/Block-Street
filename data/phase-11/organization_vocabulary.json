@@ -1,0 +1,27 @@
+{
+  "contract_id": "OPS-ORG-VOCAB-001",
+  "build": "11.6",
+  "wave": "W4",
+  "terms": [
+    { "term": "federation", "definition": "Multi-institution collaboration preserving autonomy" },
+    { "term": "institution", "definition": "Canonical organizational identity with governance" },
+    { "term": "organization_unit", "definition": "Node in unlimited-depth organizational tree" },
+    { "term": "governance_model", "definition": "Configured authority structure for decisions" },
+    { "term": "authority", "definition": "Explicit modeled decision authority never implied" },
+    { "term": "membership", "definition": "Many-to-many Human to unit relationship" },
+    { "term": "reporting_relationship", "definition": "Separate from permissions—mentorship and coordination" },
+    { "term": "collaboration", "definition": "Governed inter-institution relationship" },
+    { "term": "shared_mission", "definition": "Mission jointly owned by multiple institutions" },
+    { "term": "governance_decision", "definition": "Permanent auditable institutional memory" },
+    { "term": "organization_health", "definition": "Planning metrics—not Human evaluation" },
+    { "term": "succession_planning", "definition": "Critical role and backup leader tracking" },
+    { "term": "branding", "definition": "Institution-controlled visual identity layer" },
+    { "term": "visibility", "definition": "Independent from permission model" },
+    { "term": "leadership_role", "definition": "Configurable institutional leadership position" },
+    { "term": "mission_team", "definition": "Cross-functional team for mission execution" },
+    { "term": "committee", "definition": "Governed decision-making body" },
+    { "term": "working_group", "definition": "Temporary or ongoing collaborative unit" },
+    { "term": "ai_organization_advisor", "definition": "Advisory organizational insights without structural changes" },
+    { "term": "federation_dashboard", "definition": "Cross-institution coordination view" }
+  ]
+}

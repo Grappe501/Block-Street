@@ -1,0 +1,7 @@
+{
+  "contract_id": "OPS-GOVERNANCE-MODELS-001",
+  "build": "11.6",
+  "wave": "W4",
+  "models": ["executive", "board", "committee", "consensus", "hybrid", "delegated", "representative", "custom"],
+  "vote_types": ["simple_majority", "super_majority", "consensus", "weighted", "board", "committee", "custom"]
+}

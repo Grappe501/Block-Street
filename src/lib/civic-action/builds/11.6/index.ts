@@ -17,3 +17,8 @@ export { runOpsW3Certification, isOpsW3Complete } from "./workforce/w3";
 export { runOpsW3WorkforceTests, allOpsW3TestsPassed } from "./workforce/w3-tests";
 export { validateAssignmentTraceability } from "./workforce/traceability";
 export { WORKFORCE_EVENT_CATALOG } from "./workforce/events/catalog";
+export { organizationService } from "./organization/services/organization-service";
+export { getOrganizationConstitution, OPS_ORGANIZATION_PRINCIPLE } from "./organization/constitution";
+export { runOpsW4Certification, isOpsW4Complete } from "./organization/w4";
+export { runOpsW4OrganizationTests, allOpsW4TestsPassed } from "./organization/w4-tests";
+export { ORGANIZATION_EVENT_CATALOG } from "./organization/events/catalog";
