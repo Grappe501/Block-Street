@@ -15,6 +15,8 @@ import { conversationRuntime } from "./conversation/services/conversation-servic
 import { seedConversationIfEmpty } from "./conversation/services/seed";
 import { learningRuntime } from "./learning/services/learning-service";
 import { seedLearningIfEmpty } from "./learning/services/seed";
+import { predictionRuntime } from "./prediction/services/prediction-service";
+import { seedPredictionIfEmpty } from "./prediction/services/seed";
 
 let livingDataSeeded = false;
 
@@ -27,6 +29,7 @@ function ensureLivingDataSeeded() {
   seedResearchIfEmpty();
   seedConversationIfEmpty();
   seedLearningIfEmpty();
+  seedPredictionIfEmpty();
   livingDataSeeded = true;
 }
 
@@ -458,6 +461,61 @@ export class LivingIntelligenceApplicationService {
   promoteLearningExperience(input: Parameters<typeof learningRuntime.learning.promote>[0]) {
     this.boot();
     return learningRuntime.learning.promote(input);
+  }
+
+  getPredictionDashboard(input: { human_id: string; institution_id: string }) {
+    this.boot();
+    return predictionRuntime.prediction.dashboard(input);
+  }
+
+  listForecasts(humanId: string) {
+    this.boot();
+    return predictionRuntime.forecasts.list(humanId);
+  }
+
+  runForecast(input: Parameters<typeof predictionRuntime.forecasts.run>[0]) {
+    this.boot();
+    return predictionRuntime.forecasts.run(input);
+  }
+
+  listScenarios(humanId: string) {
+    this.boot();
+    return predictionRuntime.scenarios.list(humanId);
+  }
+
+  createScenario(input: Parameters<typeof predictionRuntime.scenarios.create>[0]) {
+    this.boot();
+    return predictionRuntime.scenarios.create(input);
+  }
+
+  listPredictionTrends(institutionId: string) {
+    this.boot();
+    return predictionRuntime.trends.list(institutionId);
+  }
+
+  listPredictionRisks(institutionId: string) {
+    this.boot();
+    return predictionRuntime.risks.list(institutionId);
+  }
+
+  listPredictionOpportunities(institutionId: string) {
+    this.boot();
+    return predictionRuntime.opportunities.list(institutionId);
+  }
+
+  listStrategicPlanning(institutionId: string) {
+    this.boot();
+    return predictionRuntime.planning.list(institutionId);
+  }
+
+  updatePredictionAssumption(input: Parameters<typeof predictionRuntime.assumptions.update>[0]) {
+    this.boot();
+    return predictionRuntime.assumptions.update(input);
+  }
+
+  runPredictionSimulation(input: Parameters<typeof predictionRuntime.simulations.run>[0]) {
+    this.boot();
+    return predictionRuntime.simulations.run(input);
   }
 }
 
