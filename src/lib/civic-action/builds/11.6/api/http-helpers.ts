@@ -7,6 +7,7 @@ import type { ApiRequestContext } from "@/lib/api/types";
 
 export const STRATEGY_API_CONTRACT_VERSION = "11.6-w1.1";
 export const OPERATIONS_API_CONTRACT_VERSION = "11.6-w2.1";
+export const WORKFORCE_API_CONTRACT_VERSION = "11.6-w3.1";
 
 export type StrategyApiContext = {
   institution_id: string;
@@ -51,6 +52,25 @@ export function operationsMeta(apiCtx: StrategyApiContext, extra?: Record<string
     contract_version: OPERATIONS_API_CONTRACT_VERSION,
     ...extra,
   };
+}
+
+export function workforceMeta(apiCtx: StrategyApiContext, extra?: Record<string, unknown>) {
+  return {
+    request_id: apiCtx.request_id,
+    correlation_id: apiCtx.correlation_id,
+    contract_version: WORKFORCE_API_CONTRACT_VERSION,
+    ...extra,
+  };
+}
+
+export async function withWorkforceApi<T>(
+  ctx: ApiRequestContext,
+  request: NextRequest,
+  fn: (apiCtx: StrategyApiContext) => T | Promise<T>
+) {
+  const apiCtx = resolveStrategyApiContext(ctx, request);
+  const data = await fn(apiCtx);
+  return apiSuccess(data, workforceMeta(apiCtx));
 }
 
 export async function withOperationsApi<T>(

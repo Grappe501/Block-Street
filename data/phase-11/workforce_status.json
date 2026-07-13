@@ -1,0 +1,16 @@
+{
+  "contract_id": "OPS-WORKFORCE-STATUS-001",
+  "build": "11.6",
+  "wave": "W3",
+  "statuses": [
+    "available",
+    "limited_availability",
+    "busy",
+    "training",
+    "vacation",
+    "leave",
+    "inactive",
+    "emergency_only"
+  ],
+  "workload_levels": ["very_light", "balanced", "busy", "heavy", "critical"]
+}

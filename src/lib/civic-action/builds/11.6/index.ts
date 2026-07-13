@@ -11,3 +11,9 @@ export { explainWhyWeAreDoingThis, validateTraceabilityComplete } from "./tracea
 export { explainMissionPurpose, validateMissionTraceability } from "./execution/traceability";
 export { STRATEGY_EVENT_CATALOG } from "./events/catalog";
 export { MISSION_EVENT_CATALOG } from "./execution/events/catalog";
+export { workforceManagementService } from "./workforce/services/workforce-service";
+export { getWorkforceConstitution, OPS_WORKFORCE_PRINCIPLE } from "./workforce/constitution";
+export { runOpsW3Certification, isOpsW3Complete } from "./workforce/w3";
+export { runOpsW3WorkforceTests, allOpsW3TestsPassed } from "./workforce/w3-tests";
+export { validateAssignmentTraceability } from "./workforce/traceability";
+export { WORKFORCE_EVENT_CATALOG } from "./workforce/events/catalog";

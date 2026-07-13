@@ -55,7 +55,8 @@
 |------|------|--------|
 | W1 | Mission, Vision & Strategic Planning | **Complete** |
 | W2 | Mission Execution Engine | **Complete** |
-| W3–W16 | Execution, scheduling, communications, automation | Pending |
+| W3 | Human Work Management & Workforce Intelligence | **Complete** |
+| W4–W16 | Scheduling, communications, automation | Pending |
 
 ## Live Ledger
 

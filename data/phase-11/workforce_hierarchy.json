@@ -1,0 +1,19 @@
+{
+  "contract_id": "OPS-WORKFORCE-HIERARCHY-001",
+  "build": "11.6",
+  "wave": "W3",
+  "levels": [
+    { "level": 1, "name": "institution" },
+    { "level": 2, "name": "organization" },
+    { "level": 3, "name": "department" },
+    { "level": 4, "name": "team" },
+    { "level": 5, "name": "role" },
+    { "level": 6, "name": "human" },
+    { "level": 7, "name": "capabilities" },
+    { "level": 8, "name": "availability" },
+    { "level": 9, "name": "assignments" },
+    { "level": 10, "name": "mission_work" },
+    { "level": 11, "name": "growth" },
+    { "level": 12, "name": "institutional_learning" }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "contract_id": "OPS-WORKFORCE-VOCAB-001",
+  "build": "11.6",
+  "wave": "W3",
+  "terms": [
+    { "term": "human_work_profile", "definition": "Operational extension of Human identity for workforce coordination" },
+    { "term": "workforce_status", "definition": "Operational availability state influencing recommendations" },
+    { "term": "capacity", "definition": "Estimated workload from missions, tasks, and calendar" },
+    { "term": "workload_level", "definition": "very_light through critical capacity band" },
+    { "term": "work_assignment", "definition": "Governed link between Human and mission work" },
+    { "term": "assignment_type", "definition": "Role Human plays on a mission assignment" },
+    { "term": "skills_matching", "definition": "Competency and certification eligibility check" },
+    { "term": "personal_work_center", "definition": "Unified Human workspace answering what to work on next" },
+    { "term": "team_work_center", "definition": "Leader view of team capacity and mission distribution" },
+    { "term": "executive_workforce_dashboard", "definition": "Organization capacity without personal ranking" },
+    { "term": "volunteer_profile", "definition": "Extended fields for volunteer service preferences" },
+    { "term": "availability_profile", "definition": "Schedule and calendar-synced availability" },
+    { "term": "delegation", "definition": "Governed transfer of assignment authority" },
+    { "term": "work_queue", "definition": "Filtered assignment states for Humans and leaders" },
+    { "term": "priority_engine", "definition": "Transparent explainable work priority" },
+    { "term": "burnout_indicator", "definition": "Private advisory workload warning" },
+    { "term": "recognition", "definition": "Celebration of contribution without competitive scoring" },
+    { "term": "succession_planning", "definition": "Critical role and backup personnel analysis" },
+    { "term": "growth_goal", "definition": "Human-approved development objective" },
+    { "term": "ai_workforce_advisor", "definition": "Advisory recommendations requiring Human approval" }
+  ]
+}

@@ -5,11 +5,14 @@ import { strategicPlanningService } from "./services/strategic-planning-service"
 import { seedStrategicPlanningIfEmpty } from "./services/seed";
 import { missionExecutionService } from "./execution/services/mission-execution-service";
 import { seedOperationalMissionsIfEmpty } from "./execution/services/seed";
+import { workforceManagementService } from "./workforce/services/workforce-service";
+import { seedWorkforceIfEmpty } from "./workforce/services/seed";
 
 export class OperationsApplicationService {
   constructor() {
     seedStrategicPlanningIfEmpty();
     seedOperationalMissionsIfEmpty();
+    seedWorkforceIfEmpty();
   }
 
   getDashboard(institutionId: string) {
@@ -98,6 +101,46 @@ export class OperationsApplicationService {
 
   getMissionIntelligence(missionId: string) {
     return missionExecutionService.intelligence.analyze(missionId);
+  }
+
+  getWorkforceDashboard(institutionId: string) {
+    return {
+      personal: workforceManagementService.workforce.getPersonalWorkCenter("usr-001", institutionId),
+      executive: workforceManagementService.executiveDashboard.build(institutionId),
+      team: workforceManagementService.teamDashboard.build("Field Operations", institutionId),
+    };
+  }
+
+  getWorkforceCapacity(institutionId: string) {
+    return workforceManagementService.capacity.getOrganizationCapacity(institutionId);
+  }
+
+  listWorkforceAssignments(institutionId: string, humanId?: string) {
+    return workforceManagementService.assignments.list(institutionId, humanId);
+  }
+
+  getTeamWorkCenter(team: string, institutionId: string) {
+    return workforceManagementService.teamDashboard.build(team, institutionId);
+  }
+
+  listAvailability(institutionId: string, humanId?: string) {
+    return workforceManagementService.availability.list(institutionId, humanId);
+  }
+
+  createAssignment(input: Parameters<typeof workforceManagementService.assignments.assign>[0]) {
+    return workforceManagementService.assignments.assign(input);
+  }
+
+  delegateAssignment(input: Parameters<typeof workforceManagementService.delegation.delegate>[0]) {
+    return workforceManagementService.delegation.delegate(input);
+  }
+
+  updateAvailability(input: Parameters<typeof workforceManagementService.availability.update>[0]) {
+    return workforceManagementService.availability.update(input);
+  }
+
+  recordRecognition(input: Parameters<typeof workforceManagementService.recognition.award>[0]) {
+    return workforceManagementService.recognition.award(input);
   }
 }
 
