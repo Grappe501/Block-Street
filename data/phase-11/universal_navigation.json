@@ -1,0 +1,18 @@
+{
+  "protocol_id": "CAE-11.6-W14",
+  "items": [
+    { "key": "home", "name": "Home" },
+    { "key": "workspace", "name": "Workspace" },
+    { "key": "missions", "name": "Missions" },
+    { "key": "calendar", "name": "Calendar" },
+    { "key": "communications", "name": "Communications" },
+    { "key": "knowledge", "name": "Knowledge" },
+    { "key": "learning", "name": "Learning" },
+    { "key": "organizations", "name": "Organizations" },
+    { "key": "resources", "name": "Resources" },
+    { "key": "reports", "name": "Reports" },
+    { "key": "search", "name": "Search" },
+    { "key": "ai", "name": "AI" },
+    { "key": "profile", "name": "Profile" }
+  ]
+}

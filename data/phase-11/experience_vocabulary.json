@@ -1,0 +1,25 @@
+{
+  "protocol_id": "CAE-11.6-W14",
+  "terms": [
+    { "key": "workspace", "name": "Workspace", "definition": "Real-time operational home adapted to role, mission, and context" },
+    { "key": "living_workspace", "name": "Living Workspace", "definition": "Dynamically generated interface based on current Human context" },
+    { "key": "context_engine", "name": "Context Engine", "definition": "Continuous understanding of mission, meeting, team, and workload" },
+    { "key": "adaptive_dashboard", "name": "Adaptive Dashboard", "definition": "Home page answering what requires attention now" },
+    { "key": "universal_navigation", "name": "Universal Navigation", "definition": "Consistent navigation philosophy across all institutions" },
+    { "key": "command_palette", "name": "Command Palette", "definition": "Keyboard-first unified command interface" },
+    { "key": "universal_search", "name": "Universal Search", "definition": "Permission-respecting search across all institutional domains" },
+    { "key": "ai_command_center", "name": "AI Command Center", "definition": "Always-available advisory AI with explained sources" },
+    { "key": "activity_stream", "name": "Activity Stream", "definition": "Relevance-filtered view of assigned and institutional activity" },
+    { "key": "smart_notifications", "name": "Smart Notifications", "definition": "Intelligently grouped notifications minimizing fatigue" },
+    { "key": "adaptive_cards", "name": "Adaptive Cards", "definition": "Context-relevant dashboard cards" },
+    { "key": "role_awareness", "name": "Role Awareness", "definition": "Interface adapts to volunteer, executive, instructor roles automatically" },
+    { "key": "device_adaptation", "name": "Device Adaptation", "definition": "Optimized presentation for phone through command center displays" },
+    { "key": "accessibility_first", "name": "Accessibility First", "definition": "Keyboard, screen reader, and contrast support in every screen" },
+    { "key": "conversational_spanish", "name": "Conversational Spanish", "definition": "Human-reviewed governance translations, never machine-feel" },
+    { "key": "experience_memory", "name": "Experience Memory", "definition": "Human-owned workspace preferences and recent activity" },
+    { "key": "institutional_personalization", "name": "Institutional Personalization", "definition": "Brand, theme, and terminology without changing navigation" },
+    { "key": "offline_workspace", "name": "Offline Workspace", "definition": "Mission execution and knowledge access without connectivity" },
+    { "key": "federation_experience", "name": "Federation Experience", "definition": "Seamless institution switching with canonical identity" },
+    { "key": "experience_analytics", "name": "Experience Analytics", "definition": "Interface improvement metrics—not Human evaluation" }
+  ]
+}

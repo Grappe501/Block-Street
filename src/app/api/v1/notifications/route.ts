@@ -2,9 +2,16 @@ import { NextRequest } from "next/server";
 import { withApiGateway } from "@/lib/api/http";
 import { apiSuccess } from "@/lib/api/errors";
 import { getV1Notifications, paginate } from "@/lib/api/gateway";
+import { operationsApplicationService } from "@/lib/civic-action/builds/11.6/application-service";
+import { withExperienceApi } from "@/lib/civic-action/builds/11.6/api/http-helpers";
 
 export const GET = withApiGateway(
-  (ctx, request: NextRequest) => {
+  async (ctx, request: NextRequest) => {
+    if (request.nextUrl.searchParams.get("grouped") === "experience") {
+      return withExperienceApi(ctx, request, (apiCtx) => ({
+        notifications: operationsApplicationService.getGroupedNotifications(apiCtx.actor_human_id),
+      }));
+    }
     const unread = request.nextUrl.searchParams.get("unread") === "true";
     const limit = Math.min(parseInt(request.nextUrl.searchParams.get("limit") || "25", 10), 100);
     const cursor = request.nextUrl.searchParams.get("cursor");

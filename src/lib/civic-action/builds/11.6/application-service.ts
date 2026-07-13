@@ -28,6 +28,8 @@ import { federationOpsService } from "./federation/services/federation-ops-servi
 import { seedFederationIfEmpty } from "./federation/services/seed";
 import { improvementService } from "./improvement/services/improvement-service";
 import { seedImprovementIfEmpty } from "./improvement/services/seed";
+import { experienceService } from "./experience/services/experience-service";
+import { seedExperienceIfEmpty } from "./experience/services/seed";
 
 let opsDataSeeded = false;
 
@@ -46,6 +48,7 @@ function ensureOpsDataSeeded() {
   seedResilienceIfEmpty();
   seedFederationIfEmpty();
   seedImprovementIfEmpty();
+  seedExperienceIfEmpty();
   opsDataSeeded = true;
 }
 
@@ -902,6 +905,55 @@ export class OperationsApplicationService {
   getImprovementDashboard(institutionId: string) {
     this.boot();
     return improvementService.executiveDashboard(institutionId);
+  }
+
+  getWorkspace(humanId: string, institutionId: string) {
+    this.boot();
+    const workspaces = experienceService.workspace.list(humanId);
+    return workspaces.find((w) => w.institution_id === institutionId) ?? experienceService.workspace.open({
+      human_id: humanId,
+      institution_id: institutionId,
+    }).workspace;
+  }
+
+  getExperienceDashboard(humanId: string, institutionId: string) {
+    this.boot();
+    return experienceService.dashboard.build({ human_id: humanId, institution_id: institutionId });
+  }
+
+  getExperienceContext(humanId: string, institutionId: string) {
+    this.boot();
+    return experienceService.context.resolve({ human_id: humanId, institution_id: institutionId });
+  }
+
+  searchEverything(input: Parameters<typeof experienceService.search.search>[0]) {
+    this.boot();
+    return experienceService.search.search(input);
+  }
+
+  getGroupedNotifications(humanId: string) {
+    this.boot();
+    return experienceService.notifications.group(humanId);
+  }
+
+  customizeWorkspace(input: Parameters<typeof experienceService.dashboard.customize>[0]) {
+    this.boot();
+    return experienceService.dashboard.customize(input);
+  }
+
+  launchAIAssistant(input: Parameters<typeof experienceService.ai.assist>[0]) {
+    this.boot();
+    return experienceService.ai.assist(input);
+  }
+
+  syncOfflineWorkspace(input: Parameters<typeof experienceService.offline.sync>[0]) {
+    this.boot();
+    return experienceService.offline.sync(input);
+  }
+
+  getUnifiedHome(humanId: string, institutionId: string, role?: string) {
+    this.boot();
+    return experienceService.unifiedHome({ human_id: humanId, institution_id: institutionId, role });
   }
 }
 

@@ -1,0 +1,20 @@
+{
+  "protocol_id": "CAE-11.6-W14",
+  "types": [
+    { "key": "volunteer", "name": "Volunteer Workspace" },
+    { "key": "organizer", "name": "Organizer Workspace" },
+    { "key": "campaign", "name": "Campaign Workspace" },
+    { "key": "executive", "name": "Executive Workspace" },
+    { "key": "training", "name": "Training Workspace" },
+    { "key": "research", "name": "Research Workspace" },
+    { "key": "field", "name": "Field Workspace" },
+    { "key": "committee", "name": "Committee Workspace" },
+    { "key": "instructor", "name": "Instructor Workspace" },
+    { "key": "student", "name": "Student Workspace" },
+    { "key": "partner", "name": "Partner Workspace" },
+    { "key": "guest", "name": "Guest Workspace" },
+    { "key": "emergency", "name": "Emergency Workspace" },
+    { "key": "administrator", "name": "Administrator Workspace" },
+    { "key": "developer", "name": "Developer Workspace" }
+  ]
+}
