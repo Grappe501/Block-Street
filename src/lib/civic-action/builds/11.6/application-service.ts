@@ -20,6 +20,8 @@ import { executiveService } from "./executive/services/executive-service";
 import { seedExecutiveIfEmpty } from "./executive/services/seed";
 import { workflowOrchestrationService } from "./workflows/services/workflow-service";
 import { seedWorkflowsIfEmpty } from "./workflows/services/seed";
+import { institutionalIntelligenceService } from "./intelligence/services/intelligence-service";
+import { seedIntelligenceIfEmpty } from "./intelligence/services/seed";
 
 let opsDataSeeded = false;
 
@@ -34,6 +36,7 @@ function ensureOpsDataSeeded() {
   seedCommunicationsIfEmpty();
   seedExecutiveIfEmpty();
   seedWorkflowsIfEmpty();
+  seedIntelligenceIfEmpty();
   opsDataSeeded = true;
 }
 
@@ -576,6 +579,79 @@ export class OperationsApplicationService {
     return workflowId
       ? workflowOrchestrationService.audit.forWorkflow(institutionId, workflowId)
       : workflowOrchestrationService.audit.list(institutionId);
+  }
+
+  listInstitutionalInsights(institutionId: string) {
+    this.boot();
+    return institutionalIntelligenceService.insights.list(institutionId);
+  }
+
+  listInstitutionalForecasts(institutionId: string) {
+    this.boot();
+    return institutionalIntelligenceService.forecasts.list(institutionId);
+  }
+
+  generateInstitutionalForecast(input: Parameters<typeof institutionalIntelligenceService.forecasts.generate>[0]) {
+    this.boot();
+    return institutionalIntelligenceService.forecasts.generate(input);
+  }
+
+  listInstitutionalScenarios(institutionId: string) {
+    this.boot();
+    return institutionalIntelligenceService.scenarios.list(institutionId);
+  }
+
+  createInstitutionalScenario(input: Parameters<typeof institutionalIntelligenceService.scenarios.create>[0]) {
+    this.boot();
+    return institutionalIntelligenceService.scenarios.create(input);
+  }
+
+  analyzeInstitutionalTrends(
+    institutionId: string,
+    window?: Parameters<typeof institutionalIntelligenceService.trends.analyze>[1]
+  ) {
+    this.boot();
+    return institutionalIntelligenceService.trends.analyze(institutionId, window);
+  }
+
+  runInstitutionalSimulation(input: Parameters<typeof institutionalIntelligenceService.simulations.run>[0]) {
+    this.boot();
+    return institutionalIntelligenceService.simulations.run(input);
+  }
+
+  evaluateInstitutionalPrediction(input: Parameters<typeof institutionalIntelligenceService.predictions.evaluate>[0]) {
+    this.boot();
+    return institutionalIntelligenceService.learning.record(input);
+  }
+
+  getInstitutionalRecommendations(institutionId: string) {
+    this.boot();
+    return institutionalIntelligenceService.recommendations.recommend(institutionId);
+  }
+
+  getInstitutionalHealthIndex(institutionId: string) {
+    this.boot();
+    return institutionalIntelligenceService.health.compute(institutionId);
+  }
+
+  detectInstitutionalPatterns(institutionId: string) {
+    this.boot();
+    return institutionalIntelligenceService.patterns.detect(institutionId);
+  }
+
+  predictInstitutionalRisks(institutionId: string) {
+    this.boot();
+    return institutionalIntelligenceService.risks.predict(institutionId);
+  }
+
+  askInstitutionalIntelligence(institutionId: string, question: string) {
+    this.boot();
+    return institutionalIntelligenceService.ai.answer(institutionId, question);
+  }
+
+  getExecutiveForecastWorkspace(institutionId: string) {
+    this.boot();
+    return institutionalIntelligenceService.insights.executiveWorkspace(institutionId);
   }
 }
 

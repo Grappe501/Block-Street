@@ -1,0 +1,8 @@
+{
+  "protocol_id": "CAE-11.6-W10",
+  "types": [
+    "mission_completion", "volunteer_availability", "budget_burn", "resource_utilization",
+    "training_demand", "leadership_capacity", "meeting_load", "election_readiness",
+    "campaign_growth", "grant_needs", "membership_trends", "communication_volume"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "protocol_id": "CAE-11.6-W10",
+  "terms": [
+    { "key": "institutional_insight", "name": "Institutional Insight", "definition": "Evidence-backed foresight with confidence scoring" },
+    { "key": "forecast", "name": "Forecast", "definition": "Prediction with confidence intervals" },
+    { "key": "pattern", "name": "Pattern", "definition": "Detected operational recurrence with evidence" },
+    { "key": "risk_prediction", "name": "Risk Prediction", "definition": "Forecasted risk with likelihood, impact, and mitigation" },
+    { "key": "opportunity", "name": "Opportunity", "definition": "AI-identified institutional opportunity with evidence" },
+    { "key": "scenario", "name": "Scenario", "definition": "What-if analysis without live data modification" },
+    { "key": "simulation", "name": "Simulation", "definition": "Isolated operational model run" },
+    { "key": "recommendation", "name": "Recommendation", "definition": "Advisory action with why, evidence, and expected benefit" },
+    { "key": "institutional_health_index", "name": "Institutional Health Index", "definition": "Composite operational planning indicator" },
+    { "key": "trend_analysis", "name": "Trend Analysis", "definition": "Historical comparison across time windows" },
+    { "key": "bottleneck", "name": "Bottleneck", "definition": "Detected operational friction point" },
+    { "key": "executive_forecast_workspace", "name": "Executive Forecast Workspace", "definition": "Proactive executive situational awareness" },
+    { "key": "ai_confidence_framework", "name": "AI Confidence Framework", "definition": "Transparent AI output with known unknowns" },
+    { "key": "learning_feedback", "name": "Learning Feedback", "definition": "Prediction vs outcome comparison for model improvement" },
+    { "key": "federation_intelligence", "name": "Federation Intelligence", "definition": "Cross-institution comparison without exposing restricted data" },
+    { "key": "knowledge_analytics", "name": "Knowledge Analytics", "definition": "Knowledge graph integration for predictions" },
+    { "key": "continuous_learning_loop", "name": "Continuous Learning Loop", "definition": "Observe, analyze, predict, compare, learn, improve" },
+    { "key": "advisory_only", "name": "Advisory Only", "definition": "Predictions inform but never replace Human judgment" },
+    { "key": "evidence_backed", "name": "Evidence Backed", "definition": "Every prediction links to authoritative data" }
+  ]
+}
