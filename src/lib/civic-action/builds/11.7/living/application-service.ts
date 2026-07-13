@@ -23,6 +23,8 @@ import { partnershipRuntime } from "./partnership/services/partnership-service";
 import { seedPartnershipIfEmpty } from "./partnership/services/seed";
 import { federationRuntime } from "./federation/services/federation-service";
 import { seedFederationIfEmpty } from "./federation/services/seed";
+import { automationRuntime } from "./automation/services/automation-service";
+import { seedAutomationIfEmpty } from "./automation/services/seed";
 
 let livingDataSeeded = false;
 
@@ -39,6 +41,7 @@ function ensureLivingDataSeeded() {
   seedAgentsIfEmpty();
   seedPartnershipIfEmpty();
   seedFederationIfEmpty();
+  seedAutomationIfEmpty();
   livingDataSeeded = true;
 }
 
@@ -678,6 +681,56 @@ export class LivingIntelligenceApplicationService {
   publishFederationKnowledge(input: Parameters<typeof federationRuntime.knowledge.publish>[0]) {
     this.boot();
     return federationRuntime.knowledge.publish(input);
+  }
+
+  getAutomationDashboard(input: { human_id: string; institution_id: string }) {
+    this.boot();
+    return automationRuntime.automation.dashboard(input);
+  }
+
+  listAutomationWorkflows(institutionId: string) {
+    this.boot();
+    return automationRuntime.registry.list(institutionId);
+  }
+
+  listAutomationApprovals(institutionId: string) {
+    this.boot();
+    return automationRuntime.approvals.list(institutionId);
+  }
+
+  listAutomationOperations(institutionId: string) {
+    this.boot();
+    return automationRuntime.engine.listRuns(institutionId);
+  }
+
+  listAutomationPlaybooks(institutionId: string) {
+    this.boot();
+    return automationRuntime.playbooks.list(institutionId);
+  }
+
+  startWorkflow(input: Parameters<typeof automationRuntime.engine.start>[0]) {
+    this.boot();
+    return automationRuntime.engine.start(input);
+  }
+
+  pauseWorkflow(runId: string, institutionId: string, humanId: string) {
+    this.boot();
+    return automationRuntime.engine.pause(runId, institutionId, humanId);
+  }
+
+  resumeWorkflow(runId: string, institutionId: string, humanId: string) {
+    this.boot();
+    return automationRuntime.engine.resume(runId, institutionId, humanId);
+  }
+
+  cancelWorkflow(runId: string, institutionId: string, humanId: string) {
+    this.boot();
+    return automationRuntime.engine.cancel(runId, institutionId, humanId);
+  }
+
+  approveWorkflow(approvalId: string, institutionId: string, humanId: string) {
+    this.boot();
+    return automationRuntime.approvals.grant(approvalId, institutionId, humanId);
   }
 }
 
