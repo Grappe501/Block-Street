@@ -1,0 +1,15 @@
+{
+  "protocol_id": "CAE-11.6-W12",
+  "types": [
+    { "key": "knowledge_sharing", "name": "Knowledge Sharing" },
+    { "key": "resource_sharing", "name": "Resource Sharing" },
+    { "key": "personnel_sharing", "name": "Personnel Sharing" },
+    { "key": "financial_cooperation", "name": "Financial Cooperation" },
+    { "key": "joint_missions", "name": "Joint Missions" },
+    { "key": "technology", "name": "Technology" },
+    { "key": "emergency_support", "name": "Emergency Support" },
+    { "key": "training", "name": "Training" },
+    { "key": "research", "name": "Research" },
+    { "key": "custom", "name": "Custom" }
+  ]
+}

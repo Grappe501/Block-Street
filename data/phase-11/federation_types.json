@@ -1,0 +1,20 @@
+{
+  "protocol_id": "CAE-11.6-W12",
+  "types": [
+    { "key": "coalition", "name": "Coalition" },
+    { "key": "alliance", "name": "Alliance" },
+    { "key": "campaign", "name": "Campaign" },
+    { "key": "consortium", "name": "Consortium" },
+    { "key": "association", "name": "Association" },
+    { "key": "trade_organization", "name": "Trade Organization" },
+    { "key": "regional_network", "name": "Regional Network" },
+    { "key": "government_partnership", "name": "Government Partnership" },
+    { "key": "education_network", "name": "Education Network" },
+    { "key": "faith_network", "name": "Faith Network" },
+    { "key": "volunteer_network", "name": "Volunteer Network" },
+    { "key": "business_group", "name": "Business Group" },
+    { "key": "research_consortium", "name": "Research Consortium" },
+    { "key": "emergency_mutual_aid", "name": "Emergency Mutual Aid" },
+    { "key": "custom", "name": "Custom" }
+  ]
+}

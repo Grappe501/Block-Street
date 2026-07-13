@@ -1,0 +1,25 @@
+{
+  "protocol_id": "CAE-11.6-W12",
+  "terms": [
+    { "key": "federation", "name": "Federation", "definition": "Governed network of independent institutions collaborating through explicit agreements" },
+    { "key": "federation_charter", "name": "Federation Charter", "definition": "Living constitutional document defining mission, governance, and membership rules" },
+    { "key": "federation_membership", "name": "Federation Membership", "definition": "Explicit institution participation with authority level and sharing permissions" },
+    { "key": "federation_agreement", "name": "Federation Agreement", "definition": "Versioned, signed agreement governing cross-institution collaboration" },
+    { "key": "shared_mission", "name": "Shared Mission", "definition": "Joint mission with lead institution, supporting institutions, and decision authority" },
+    { "key": "shared_objective", "name": "Shared Objective", "definition": "Federation-level goal mapped to institutional objectives" },
+    { "key": "cross_institution_team", "name": "Cross-Institution Team", "definition": "Governed team with members from multiple institutions" },
+    { "key": "shared_knowledge", "name": "Shared Knowledge", "definition": "Knowledge shared with explicit federation permissions" },
+    { "key": "resource_exchange", "name": "Resource Exchange", "definition": "Policy-driven sharing of equipment, facilities, and expertise" },
+    { "key": "federation_mutual_aid", "name": "Federation Mutual Aid", "definition": "Auditable cross-institution assistance requests" },
+    { "key": "federation_governance", "name": "Federation Governance", "definition": "Representative, consensus, or weighted voting governance models" },
+    { "key": "federation_voting", "name": "Federation Voting", "definition": "Auditable voting framework with institutional memory" },
+    { "key": "cross_institution_identity", "name": "Cross-Institution Identity", "definition": "One verified Human identity across multiple governed institutional roles" },
+    { "key": "federation_directory", "name": "Federation Directory", "definition": "Policy-controlled directory of institutions, capabilities, and contacts" },
+    { "key": "capability_registry", "name": "Capability Registry", "definition": "Institution-advertised competencies, resources, and expertise" },
+    { "key": "federation_analytics", "name": "Federation Analytics", "definition": "Participation and impact metrics respecting institutional boundaries" },
+    { "key": "federation_security", "name": "Federation Security", "definition": "Verified institutions, signed agreements, and permission mapping" },
+    { "key": "ai_federation_advisor", "name": "AI Federation Advisor", "definition": "Advisory coordination support without negotiating agreements" },
+    { "key": "network_operating_system", "name": "Network Operating System", "definition": "Platform evolution from single institution to multi-institution coordination" },
+    { "key": "institutional_sovereignty", "name": "Institutional Sovereignty", "definition": "Every institution retains identity, governance, and data ownership" }
+  ]
+}

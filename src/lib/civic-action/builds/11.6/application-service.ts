@@ -24,6 +24,8 @@ import { institutionalIntelligenceService } from "./intelligence/services/intell
 import { seedIntelligenceIfEmpty } from "./intelligence/services/seed";
 import { resilienceService } from "./resilience/services/resilience-service";
 import { seedResilienceIfEmpty } from "./resilience/services/seed";
+import { federationOpsService } from "./federation/services/federation-ops-service";
+import { seedFederationIfEmpty } from "./federation/services/seed";
 
 let opsDataSeeded = false;
 
@@ -40,6 +42,7 @@ function ensureOpsDataSeeded() {
   seedWorkflowsIfEmpty();
   seedIntelligenceIfEmpty();
   seedResilienceIfEmpty();
+  seedFederationIfEmpty();
   opsDataSeeded = true;
 }
 
@@ -224,9 +227,9 @@ export class OperationsApplicationService {
     return organizationService.membership.list(institutionId, humanId);
   }
 
-  joinFederation(input: Parameters<typeof organizationService.federation.join>[0]) {
+  joinFederation(input: Parameters<typeof federationOpsService.membership.join>[0]) {
     this.boot();
-    return organizationService.federation.join(input);
+    return federationOpsService.membership.join(input);
   }
 
   getFederationDashboard(federationId: string) {
@@ -735,6 +738,87 @@ export class OperationsApplicationService {
   getCrisisBriefing(institutionId: string, incidentId?: string) {
     this.boot();
     return resilienceService.ai.brief(institutionId, incidentId);
+  }
+
+  listFederations() {
+    this.boot();
+    return federationOpsService.federation.list();
+  }
+
+  getFederation(federationId: string) {
+    this.boot();
+    return federationOpsService.federation.get(federationId);
+  }
+
+  createFederation(input: Parameters<typeof federationOpsService.federation.create>[0]) {
+    this.boot();
+    return federationOpsService.federation.create(input);
+  }
+
+  leaveFederation(input: Parameters<typeof federationOpsService.membership.leave>[0]) {
+    this.boot();
+    return federationOpsService.membership.leave(input);
+  }
+
+  listFederationMembers(federationId: string) {
+    this.boot();
+    return federationOpsService.membership.list(federationId);
+  }
+
+  listFederationAgreements(federationId: string) {
+    this.boot();
+    return federationOpsService.agreements.list(federationId);
+  }
+
+  createFederationAgreement(
+    input: Parameters<typeof federationOpsService.agreements.create>[0] & { signed_by?: string }
+  ) {
+    this.boot();
+    const created = federationOpsService.agreements.create(input);
+    if (input.signed_by) {
+      return federationOpsService.agreements.approve(created.agreement.agreement_id, input.signed_by);
+    }
+    return created;
+  }
+
+  listFederationSharedMissions(federationId: string) {
+    this.boot();
+    return federationOpsService.sharedMissions.list(federationId);
+  }
+
+  createFederationSharedMission(input: Parameters<typeof federationOpsService.sharedMissions.create>[0]) {
+    this.boot();
+    return federationOpsService.sharedMissions.create(input);
+  }
+
+  shareFederationKnowledge(input: Parameters<typeof federationOpsService.knowledge.share>[0]) {
+    this.boot();
+    return federationOpsService.knowledge.share(input);
+  }
+
+  requestFederationMutualAid(input: Parameters<typeof federationOpsService.mutualAid.request>[0]) {
+    this.boot();
+    return federationOpsService.mutualAid.request(input);
+  }
+
+  getFederationAnalytics(federationId: string) {
+    this.boot();
+    return federationOpsService.analytics.compute(federationId);
+  }
+
+  getFederationDirectory(federationId: string) {
+    this.boot();
+    return federationOpsService.directory.build(federationId);
+  }
+
+  getFederationExecutiveDashboard(federationId: string) {
+    this.boot();
+    return federationOpsService.executiveDashboard(federationId);
+  }
+
+  publishFederationBriefing(federationId: string) {
+    this.boot();
+    return federationOpsService.ai.briefing(federationId);
   }
 }
 
