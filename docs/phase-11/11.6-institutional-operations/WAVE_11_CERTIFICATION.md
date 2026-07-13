@@ -6,7 +6,7 @@ npm run resilience:validate
 npm run continuity:test
 npm run incidents:test
 npm run recovery:test
-npm run readiness:test
+npm run resilience:readiness
 npm run resilience:exercise
 npm run backups:verify
 npm run resilience:traceability

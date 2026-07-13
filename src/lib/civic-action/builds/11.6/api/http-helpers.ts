@@ -19,6 +19,7 @@ export const RESILIENCE_API_CONTRACT_VERSION = "11.6-w11.1";
 export const FEDERATION_API_CONTRACT_VERSION = "11.6-w12.1";
 export const IMPROVEMENT_API_CONTRACT_VERSION = "11.6-w13.1";
 export const EXPERIENCE_API_CONTRACT_VERSION = "11.6-w14.1";
+export const CERTIFICATION_API_CONTRACT_VERSION = "11.6-w15.1";
 
 export type StrategyApiContext = {
   institution_id: string;
@@ -202,6 +203,25 @@ export async function withExperienceApi<T>(
   const apiCtx = resolveStrategyApiContext(ctx, request);
   const data = await fn(apiCtx);
   return apiSuccess(data, experienceMeta(apiCtx));
+}
+
+export function certificationMeta(apiCtx: StrategyApiContext, extra?: Record<string, unknown>) {
+  return {
+    request_id: apiCtx.request_id,
+    correlation_id: apiCtx.correlation_id,
+    contract_version: CERTIFICATION_API_CONTRACT_VERSION,
+    ...extra,
+  };
+}
+
+export async function withCertificationApi<T>(
+  ctx: ApiRequestContext,
+  request: NextRequest,
+  fn: (apiCtx: StrategyApiContext) => T | Promise<T>
+) {
+  const apiCtx = resolveStrategyApiContext(ctx, request);
+  const data = await fn(apiCtx);
+  return apiSuccess(data, certificationMeta(apiCtx));
 }
 
 export async function withOrganizationApi<T>(

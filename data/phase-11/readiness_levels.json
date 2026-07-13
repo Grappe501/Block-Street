@@ -1,0 +1,11 @@
+{
+  "protocol_id": "CAE-11.6-W15",
+  "levels": [
+    { "key": "not_started", "name": "Level 0 — Not Started", "level": 0 },
+    { "key": "planning", "name": "Level 1 — Planning", "level": 1 },
+    { "key": "implemented", "name": "Level 2 — Implemented", "level": 2 },
+    { "key": "validated", "name": "Level 3 — Validated", "level": 3 },
+    { "key": "certified", "name": "Level 4 — Certified", "level": 4 },
+    { "key": "operational_excellence", "name": "Level 5 — Operational Excellence", "level": 5 }
+  ]
+}

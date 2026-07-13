@@ -78187,6 +78187,126 @@
       "language": "en",
       "published_version_id": null,
       "evidence_status": "none"
+    },
+    {
+      "canonical_id": "knw-mrjd0cs2-fa40",
+      "public_id": "KNW-2-FA40",
+      "display_name": "W3 Knowledge Test 1783955442097",
+      "canonical_slug": "w3-knowledge-test-1783955442097",
+      "institution_id": "inst-block-street",
+      "initiative_id": "ini-knw-test",
+      "parent_object_id": "col-w3-test",
+      "parent_object_type": "KnowledgeCollection",
+      "object_type": "KnowledgeArtifact",
+      "visibility": "institution_internal",
+      "governance_classification": 3,
+      "steward_human_id": "usr-001",
+      "created_by": "usr-001",
+      "last_modified_by": "usr-001",
+      "created_at": "2026-07-13T15:10:42.098Z",
+      "updated_at": "2026-07-13T15:10:44.194Z",
+      "current_version": 6,
+      "lifecycle_state": "published",
+      "tags": [],
+      "confidence_level": "medium",
+      "content_origin": "human",
+      "is_ai_generated": false,
+      "collection_id": "col-w3-test",
+      "domain_id": "dom-w3-test",
+      "artifact_type": "knowledge_article",
+      "body": "Bump version to stale translation.",
+      "summary": "W3 Knowledge Test 1783955442097",
+      "language": "en",
+      "published_version_id": "ver-5",
+      "evidence_status": "none"
+    },
+    {
+      "canonical_id": "knw-mrjd0fji-3jo3",
+      "public_id": "KNW-I-3JO3",
+      "display_name": "W3 Knowledge Test 1783955445678",
+      "canonical_slug": "w3-knowledge-test-1783955445678",
+      "institution_id": "inst-block-street",
+      "initiative_id": "ini-knw-test",
+      "parent_object_id": "col-w3-test",
+      "parent_object_type": "KnowledgeCollection",
+      "object_type": "KnowledgeArtifact",
+      "visibility": "institution_internal",
+      "governance_classification": 3,
+      "steward_human_id": "usr-001",
+      "created_by": "usr-001",
+      "last_modified_by": "usr-001",
+      "created_at": "2026-07-13T15:10:45.678Z",
+      "updated_at": "2026-07-13T15:10:47.734Z",
+      "current_version": 6,
+      "lifecycle_state": "published",
+      "tags": [],
+      "confidence_level": "medium",
+      "content_origin": "human",
+      "is_ai_generated": false,
+      "collection_id": "col-w3-test",
+      "domain_id": "dom-w3-test",
+      "artifact_type": "knowledge_article",
+      "body": "Bump version to stale translation.",
+      "summary": "W3 Knowledge Test 1783955445678",
+      "language": "en",
+      "published_version_id": "ver-5",
+      "evidence_status": "none"
+    },
+    {
+      "canonical_id": "knw-mrjd0js4-h9a4",
+      "public_id": "KNW-4-H9A4",
+      "display_name": "Revise safety claim",
+      "canonical_slug": "revise-safety-claim",
+      "institution_id": "inst-block-street",
+      "initiative_id": null,
+      "parent_object_type": "KnowledgeCollection",
+      "object_type": "KnowledgeArtifact",
+      "visibility": "institution_internal",
+      "governance_classification": 3,
+      "steward_human_id": "usr-001",
+      "created_by": "usr-001",
+      "last_modified_by": "usr-001",
+      "created_at": "2026-07-13T15:10:51.172Z",
+      "updated_at": "2026-07-13T15:10:51.172Z",
+      "current_version": 1,
+      "lifecycle_state": "draft",
+      "tags": [],
+      "confidence_level": "medium",
+      "content_origin": "human",
+      "is_ai_generated": false,
+      "artifact_type": "knowledge_article",
+      "summary": "Revise safety claim",
+      "language": "en",
+      "published_version_id": null,
+      "evidence_status": "none"
+    },
+    {
+      "canonical_id": "knw-mrjd0l6v-goge",
+      "public_id": "KNW-V-GOGE",
+      "display_name": "Revise safety claim",
+      "canonical_slug": "revise-safety-claim",
+      "institution_id": "inst-block-street",
+      "initiative_id": null,
+      "parent_object_type": "KnowledgeCollection",
+      "object_type": "KnowledgeArtifact",
+      "visibility": "institution_internal",
+      "governance_classification": 3,
+      "steward_human_id": "usr-001",
+      "created_by": "usr-001",
+      "last_modified_by": "usr-001",
+      "created_at": "2026-07-13T15:10:52.999Z",
+      "updated_at": "2026-07-13T15:10:52.999Z",
+      "current_version": 1,
+      "lifecycle_state": "draft",
+      "tags": [],
+      "confidence_level": "medium",
+      "content_origin": "human",
+      "is_ai_generated": false,
+      "artifact_type": "knowledge_article",
+      "summary": "Revise safety claim",
+      "language": "en",
+      "published_version_id": null,
+      "evidence_status": "none"
     }
   ],
   "knowledge_event_outbox": [
@@ -79589,6 +79709,474 @@
         "entity_version": 1
       },
       "occurred_at": "2026-07-13T14:56:59.424Z",
+      "published_at": null,
+      "attempt_count": 0,
+      "status": "pending",
+      "notification_requested": true
+    },
+    {
+      "event_id": "knw-mrjd0csq-e4r1",
+      "entity_id": "knw-mrjd0cs2-fa40",
+      "entity_type": "KnowledgeArtifact",
+      "event_type": "knowledge.artifact_created",
+      "payload": {
+        "display_name": "W3 Knowledge Test 1783955442097",
+        "lifecycle_state": "draft",
+        "entity_version": 1
+      },
+      "occurred_at": "2026-07-13T15:10:42.122Z",
+      "published_at": null,
+      "attempt_count": 0,
+      "status": "pending",
+      "notification_requested": true
+    },
+    {
+      "event_id": "knw-mrjd0d30-j181",
+      "entity_id": "knw-mrjd0cs2-fa40",
+      "entity_type": "KnowledgeArtifact",
+      "event_type": "knowledge.artifact_edited",
+      "payload": {
+        "from": "draft",
+        "entity_version": 2
+      },
+      "occurred_at": "2026-07-13T15:10:42.492Z",
+      "published_at": null,
+      "attempt_count": 0,
+      "status": "pending",
+      "notification_requested": true
+    },
+    {
+      "event_id": "knw-mrjd0d7b-b6si",
+      "entity_id": "knw-mrjd0d6j-o33q",
+      "entity_type": "KnowledgeTranslation",
+      "event_type": "knowledge.translation_draft_created",
+      "payload": {
+        "source_version": 2,
+        "target_language": "es",
+        "entity_version": 1
+      },
+      "occurred_at": "2026-07-13T15:10:42.647Z",
+      "published_at": null,
+      "attempt_count": 0,
+      "status": "pending",
+      "notification_requested": true
+    },
+    {
+      "event_id": "knw-mrjd0dg3-e9v2",
+      "entity_id": "knw-mrjd0cs2-fa40",
+      "entity_type": "KnowledgeArtifact",
+      "event_type": "knowledge.artifact_edited",
+      "payload": {
+        "from": "draft",
+        "entity_version": 3
+      },
+      "occurred_at": "2026-07-13T15:10:42.963Z",
+      "published_at": null,
+      "attempt_count": 0,
+      "status": "pending",
+      "notification_requested": true
+    },
+    {
+      "event_id": "knw-mrjd0dp3-9ahz",
+      "entity_id": "knw-mrjd0cs2-fa40",
+      "entity_type": "KnowledgeArtifact",
+      "event_type": "knowledge.artifact_submitted_for_review",
+      "payload": {
+        "from": "draft",
+        "to": "review",
+        "review_id": "krv-mrjd0dna-wsjk",
+        "entity_version": 4
+      },
+      "occurred_at": "2026-07-13T15:10:43.287Z",
+      "published_at": null,
+      "attempt_count": 0,
+      "status": "pending",
+      "notification_requested": true
+    },
+    {
+      "event_id": "knw-mrjd0dtz-27yf",
+      "entity_id": "knw-mrjd0cs2-fa40",
+      "entity_type": "KnowledgeArtifact",
+      "event_type": "knowledge.artifact_review_completed",
+      "payload": {
+        "review_id": "krv-mrjd0dna-wsjk",
+        "entity_version": 4
+      },
+      "occurred_at": "2026-07-13T15:10:43.463Z",
+      "published_at": null,
+      "attempt_count": 0,
+      "status": "pending",
+      "notification_requested": true
+    },
+    {
+      "event_id": "knw-mrjd0e4h-nm24",
+      "entity_id": "knw-mrjd0cs2-fa40",
+      "entity_type": "KnowledgeArtifact",
+      "event_type": "knowledge.artifact_validated",
+      "payload": {
+        "from": "review",
+        "to": "validated",
+        "entity_version": 5
+      },
+      "occurred_at": "2026-07-13T15:10:43.841Z",
+      "published_at": null,
+      "attempt_count": 0,
+      "status": "pending",
+      "notification_requested": true
+    },
+    {
+      "event_id": "knw-mrjd0e9a-fh4e",
+      "entity_id": "knw-mrjd0cs2-fa40",
+      "entity_type": "KnowledgeArtifact",
+      "event_type": "knowledge.artifact_approved",
+      "payload": {
+        "approval_id": "kap-mrjd0e8l-hpqc",
+        "entity_version": 5
+      },
+      "occurred_at": "2026-07-13T15:10:44.014Z",
+      "published_at": null,
+      "attempt_count": 0,
+      "status": "pending",
+      "notification_requested": true
+    },
+    {
+      "event_id": "knw-mrjd0eg1-1ahj",
+      "entity_id": "knw-mrjd0cs2-fa40",
+      "entity_type": "KnowledgeArtifact",
+      "event_type": "knowledge.artifact_published",
+      "payload": {
+        "from": "validated",
+        "to": "published",
+        "entity_version": 6
+      },
+      "occurred_at": "2026-07-13T15:10:44.257Z",
+      "published_at": null,
+      "attempt_count": 0,
+      "status": "pending",
+      "notification_requested": true
+    },
+    {
+      "event_id": "knw-mrjd0el4-c7js",
+      "entity_id": "knw-mrjd0ekc-vblj",
+      "entity_type": "Course",
+      "event_type": "knowledge.course_created",
+      "payload": {
+        "display_name": "Field canvassing fundamentals",
+        "entity_version": 1
+      },
+      "occurred_at": "2026-07-13T15:10:44.440Z",
+      "published_at": null,
+      "attempt_count": 0,
+      "status": "pending",
+      "notification_requested": true
+    },
+    {
+      "event_id": "knw-mrjd0ets-pzfg",
+      "entity_id": "knw-mrjd0ekc-vblj",
+      "entity_type": "Course",
+      "event_type": "knowledge.course_version_published",
+      "payload": {
+        "published_version": 2,
+        "entity_version": 3
+      },
+      "occurred_at": "2026-07-13T15:10:44.752Z",
+      "published_at": null,
+      "attempt_count": 0,
+      "status": "pending",
+      "notification_requested": true
+    },
+    {
+      "event_id": "knw-mrjd0eyw-je3y",
+      "entity_id": "knw-mrjd0exz-14gv",
+      "entity_type": "LearningCompletion",
+      "event_type": "knowledge.learning_completed",
+      "payload": {
+        "bound_course_version": 2,
+        "bound_artifact_version": 3,
+        "human_id": "usr-002",
+        "entity_version": 1
+      },
+      "occurred_at": "2026-07-13T15:10:44.936Z",
+      "published_at": null,
+      "attempt_count": 0,
+      "status": "pending",
+      "notification_requested": true
+    },
+    {
+      "event_id": "knw-mrjd0f7x-v45o",
+      "entity_id": "knw-mrjd0f77-9d9t",
+      "entity_type": "AIKnowledgeSuggestion",
+      "event_type": "knowledge.ai_suggestion_created",
+      "payload": {
+        "does_not_create_truth": true,
+        "entity_version": 1
+      },
+      "occurred_at": "2026-07-13T15:10:45.261Z",
+      "published_at": null,
+      "attempt_count": 0,
+      "status": "pending",
+      "notification_requested": true
+    },
+    {
+      "event_id": "knw-mrjd0fdw-1gfi",
+      "entity_id": "knw-mrjd0fdb-kk6v",
+      "entity_type": "KnowledgeClaim",
+      "event_type": "knowledge.claim_created",
+      "payload": {
+        "artifact_id": "knw-mrjd0cs2-fa40",
+        "entity_version": 1
+      },
+      "occurred_at": "2026-07-13T15:10:45.476Z",
+      "published_at": null,
+      "attempt_count": 0,
+      "status": "pending",
+      "notification_requested": true
+    },
+    {
+      "event_id": "knw-mrjd0fl3-f6df",
+      "entity_id": "knw-mrjd0fji-3jo3",
+      "entity_type": "KnowledgeArtifact",
+      "event_type": "knowledge.artifact_created",
+      "payload": {
+        "display_name": "W3 Knowledge Test 1783955445678",
+        "lifecycle_state": "draft",
+        "entity_version": 1
+      },
+      "occurred_at": "2026-07-13T15:10:45.735Z",
+      "published_at": null,
+      "attempt_count": 0,
+      "status": "pending",
+      "notification_requested": true
+    },
+    {
+      "event_id": "knw-mrjd0fvx-uwba",
+      "entity_id": "knw-mrjd0fji-3jo3",
+      "entity_type": "KnowledgeArtifact",
+      "event_type": "knowledge.artifact_edited",
+      "payload": {
+        "from": "draft",
+        "entity_version": 2
+      },
+      "occurred_at": "2026-07-13T15:10:46.125Z",
+      "published_at": null,
+      "attempt_count": 0,
+      "status": "pending",
+      "notification_requested": true
+    },
+    {
+      "event_id": "knw-mrjd0fzz-7mmt",
+      "entity_id": "knw-mrjd0fz7-307l",
+      "entity_type": "KnowledgeTranslation",
+      "event_type": "knowledge.translation_draft_created",
+      "payload": {
+        "source_version": 2,
+        "target_language": "es",
+        "entity_version": 1
+      },
+      "occurred_at": "2026-07-13T15:10:46.271Z",
+      "published_at": null,
+      "attempt_count": 0,
+      "status": "pending",
+      "notification_requested": true
+    },
+    {
+      "event_id": "knw-mrjd0g84-wcpy",
+      "entity_id": "knw-mrjd0fji-3jo3",
+      "entity_type": "KnowledgeArtifact",
+      "event_type": "knowledge.artifact_edited",
+      "payload": {
+        "from": "draft",
+        "entity_version": 3
+      },
+      "occurred_at": "2026-07-13T15:10:46.564Z",
+      "published_at": null,
+      "attempt_count": 0,
+      "status": "pending",
+      "notification_requested": true
+    },
+    {
+      "event_id": "knw-mrjd0gg5-d629",
+      "entity_id": "knw-mrjd0fji-3jo3",
+      "entity_type": "KnowledgeArtifact",
+      "event_type": "knowledge.artifact_submitted_for_review",
+      "payload": {
+        "from": "draft",
+        "to": "review",
+        "review_id": "krv-mrjd0gei-dimd",
+        "entity_version": 4
+      },
+      "occurred_at": "2026-07-13T15:10:46.853Z",
+      "published_at": null,
+      "attempt_count": 0,
+      "status": "pending",
+      "notification_requested": true
+    },
+    {
+      "event_id": "knw-mrjd0gnm-rxnh",
+      "entity_id": "knw-mrjd0fji-3jo3",
+      "entity_type": "KnowledgeArtifact",
+      "event_type": "knowledge.artifact_review_completed",
+      "payload": {
+        "review_id": "krv-mrjd0gei-dimd",
+        "entity_version": 4
+      },
+      "occurred_at": "2026-07-13T15:10:47.122Z",
+      "published_at": null,
+      "attempt_count": 0,
+      "status": "pending",
+      "notification_requested": true
+    },
+    {
+      "event_id": "knw-mrjd0gv1-z219",
+      "entity_id": "knw-mrjd0fji-3jo3",
+      "entity_type": "KnowledgeArtifact",
+      "event_type": "knowledge.artifact_validated",
+      "payload": {
+        "from": "review",
+        "to": "validated",
+        "entity_version": 5
+      },
+      "occurred_at": "2026-07-13T15:10:47.389Z",
+      "published_at": null,
+      "attempt_count": 0,
+      "status": "pending",
+      "notification_requested": true
+    },
+    {
+      "event_id": "knw-mrjd0gzx-m9zv",
+      "entity_id": "knw-mrjd0fji-3jo3",
+      "entity_type": "KnowledgeArtifact",
+      "event_type": "knowledge.artifact_approved",
+      "payload": {
+        "approval_id": "kap-mrjd0gz5-ykxc",
+        "entity_version": 5
+      },
+      "occurred_at": "2026-07-13T15:10:47.565Z",
+      "published_at": null,
+      "attempt_count": 0,
+      "status": "pending",
+      "notification_requested": true
+    },
+    {
+      "event_id": "knw-mrjd0h64-f433",
+      "entity_id": "knw-mrjd0fji-3jo3",
+      "entity_type": "KnowledgeArtifact",
+      "event_type": "knowledge.artifact_published",
+      "payload": {
+        "from": "validated",
+        "to": "published",
+        "entity_version": 6
+      },
+      "occurred_at": "2026-07-13T15:10:47.788Z",
+      "published_at": null,
+      "attempt_count": 0,
+      "status": "pending",
+      "notification_requested": true
+    },
+    {
+      "event_id": "knw-mrjd0hav-eyr2",
+      "entity_id": "knw-mrjd0ha1-a3tc",
+      "entity_type": "Course",
+      "event_type": "knowledge.course_created",
+      "payload": {
+        "display_name": "Field canvassing fundamentals",
+        "entity_version": 1
+      },
+      "occurred_at": "2026-07-13T15:10:47.959Z",
+      "published_at": null,
+      "attempt_count": 0,
+      "status": "pending",
+      "notification_requested": true
+    },
+    {
+      "event_id": "knw-mrjd0hiq-ilfs",
+      "entity_id": "knw-mrjd0ha1-a3tc",
+      "entity_type": "Course",
+      "event_type": "knowledge.course_version_published",
+      "payload": {
+        "published_version": 2,
+        "entity_version": 3
+      },
+      "occurred_at": "2026-07-13T15:10:48.242Z",
+      "published_at": null,
+      "attempt_count": 0,
+      "status": "pending",
+      "notification_requested": true
+    },
+    {
+      "event_id": "knw-mrjd0hnp-nehb",
+      "entity_id": "knw-mrjd0hmx-3ufl",
+      "entity_type": "LearningCompletion",
+      "event_type": "knowledge.learning_completed",
+      "payload": {
+        "bound_course_version": 2,
+        "bound_artifact_version": 3,
+        "human_id": "usr-002",
+        "entity_version": 1
+      },
+      "occurred_at": "2026-07-13T15:10:48.421Z",
+      "published_at": null,
+      "attempt_count": 0,
+      "status": "pending",
+      "notification_requested": true
+    },
+    {
+      "event_id": "knw-mrjd0hvt-p30z",
+      "entity_id": "knw-mrjd0huy-rf75",
+      "entity_type": "AIKnowledgeSuggestion",
+      "event_type": "knowledge.ai_suggestion_created",
+      "payload": {
+        "does_not_create_truth": true,
+        "entity_version": 1
+      },
+      "occurred_at": "2026-07-13T15:10:48.713Z",
+      "published_at": null,
+      "attempt_count": 0,
+      "status": "pending",
+      "notification_requested": true
+    },
+    {
+      "event_id": "knw-mrjd0i1v-vc3a",
+      "entity_id": "knw-mrjd0i0u-6kht",
+      "entity_type": "KnowledgeClaim",
+      "event_type": "knowledge.claim_created",
+      "payload": {
+        "artifact_id": "knw-mrjd0fji-3jo3",
+        "entity_version": 1
+      },
+      "occurred_at": "2026-07-13T15:10:48.931Z",
+      "published_at": null,
+      "attempt_count": 0,
+      "status": "pending",
+      "notification_requested": true
+    },
+    {
+      "event_id": "knw-mrjd0jtt-kd07",
+      "entity_id": "knw-mrjd0js4-h9a4",
+      "entity_type": "KnowledgeArtifact",
+      "event_type": "knowledge.artifact_created",
+      "payload": {
+        "display_name": "Revise safety claim",
+        "lifecycle_state": "draft",
+        "entity_version": 1
+      },
+      "occurred_at": "2026-07-13T15:10:51.233Z",
+      "published_at": null,
+      "attempt_count": 0,
+      "status": "pending",
+      "notification_requested": true
+    },
+    {
+      "event_id": "knw-mrjd0l8j-iok1",
+      "entity_id": "knw-mrjd0l6v-goge",
+      "entity_type": "KnowledgeArtifact",
+      "event_type": "knowledge.artifact_created",
+      "payload": {
+        "display_name": "Revise safety claim",
+        "lifecycle_state": "draft",
+        "entity_version": 1
+      },
+      "occurred_at": "2026-07-13T15:10:53.059Z",
       "published_at": null,
       "attempt_count": 0,
       "status": "pending",
@@ -81359,6 +81947,594 @@
       "event_id": "knw-mrjciq00-gls4",
       "event_version": 1,
       "occurred_at": "2026-07-13T14:56:59.424Z"
+    },
+    {
+      "event_type": "knowledge.artifact_created",
+      "entity_id": "knw-mrjd0cs2-fa40",
+      "entity_type": "KnowledgeArtifact",
+      "institution_id": "inst-block-street",
+      "initiative_id_optional": "ini-knw-test",
+      "actor_human_id_optional": "usr-001",
+      "service_identity_id_optional": null,
+      "source_command_id": "cmd-mrjd0cs1-e70z",
+      "request_id": "req-mrjd0cs1-hocz",
+      "correlation_id": "cor-mrjd0cs1-u472",
+      "entity_version": 1,
+      "payload": {
+        "display_name": "W3 Knowledge Test 1783955442097",
+        "lifecycle_state": "draft"
+      },
+      "event_id": "knw-mrjd0csq-e4r1",
+      "event_version": 1,
+      "occurred_at": "2026-07-13T15:10:42.122Z"
+    },
+    {
+      "event_type": "knowledge.artifact_edited",
+      "entity_id": "knw-mrjd0cs2-fa40",
+      "entity_type": "KnowledgeArtifact",
+      "institution_id": "inst-block-street",
+      "initiative_id_optional": "ini-knw-test",
+      "actor_human_id_optional": "usr-001",
+      "service_identity_id_optional": null,
+      "source_command_id": "cmd-mrjd0czj-yu4f",
+      "request_id": "req-mrjd0czj-uc01",
+      "correlation_id": "cor-mrjd0czk-xume",
+      "entity_version": 2,
+      "payload": {
+        "from": "draft"
+      },
+      "event_id": "knw-mrjd0d30-j181",
+      "event_version": 1,
+      "occurred_at": "2026-07-13T15:10:42.492Z"
+    },
+    {
+      "event_type": "knowledge.translation_draft_created",
+      "entity_id": "knw-mrjd0d6j-o33q",
+      "entity_type": "KnowledgeTranslation",
+      "institution_id": "inst-block-street",
+      "initiative_id_optional": "ini-knw-test",
+      "actor_human_id_optional": "usr-001",
+      "service_identity_id_optional": null,
+      "source_command_id": "cmd-mrjd0d6j-jqvw",
+      "request_id": "req-mrjd0d6j-3wtj",
+      "correlation_id": "cor-mrjd0d6j-7sgg",
+      "entity_version": 1,
+      "payload": {
+        "source_version": 2,
+        "target_language": "es"
+      },
+      "event_id": "knw-mrjd0d7b-b6si",
+      "event_version": 1,
+      "occurred_at": "2026-07-13T15:10:42.647Z"
+    },
+    {
+      "event_type": "knowledge.artifact_edited",
+      "entity_id": "knw-mrjd0cs2-fa40",
+      "entity_type": "KnowledgeArtifact",
+      "institution_id": "inst-block-street",
+      "initiative_id_optional": "ini-knw-test",
+      "actor_human_id_optional": "usr-001",
+      "service_identity_id_optional": null,
+      "source_command_id": "cmd-mrjd0daw-7742",
+      "request_id": "req-mrjd0daw-uz7n",
+      "correlation_id": "cor-mrjd0daw-euyh",
+      "entity_version": 3,
+      "payload": {
+        "from": "draft"
+      },
+      "event_id": "knw-mrjd0dg3-e9v2",
+      "event_version": 1,
+      "occurred_at": "2026-07-13T15:10:42.963Z"
+    },
+    {
+      "event_type": "knowledge.artifact_submitted_for_review",
+      "entity_id": "knw-mrjd0cs2-fa40",
+      "entity_type": "KnowledgeArtifact",
+      "institution_id": "inst-block-street",
+      "initiative_id_optional": "ini-knw-test",
+      "actor_human_id_optional": "usr-001",
+      "service_identity_id_optional": null,
+      "source_command_id": "cmd-mrjd0djp-sp1a",
+      "request_id": "req-mrjd0djp-9oeh",
+      "correlation_id": "cor-mrjd0djp-t382",
+      "entity_version": 4,
+      "payload": {
+        "from": "draft",
+        "to": "review",
+        "review_id": "krv-mrjd0dna-wsjk"
+      },
+      "event_id": "knw-mrjd0dp3-9ahz",
+      "event_version": 1,
+      "occurred_at": "2026-07-13T15:10:43.287Z"
+    },
+    {
+      "event_type": "knowledge.artifact_review_completed",
+      "entity_id": "knw-mrjd0cs2-fa40",
+      "entity_type": "KnowledgeArtifact",
+      "institution_id": "inst-block-street",
+      "initiative_id_optional": "ini-knw-test",
+      "actor_human_id_optional": "usr-001",
+      "service_identity_id_optional": null,
+      "source_command_id": "cmd-mrjd0dt6-v5i0",
+      "request_id": "req-mrjd0dt6-xr4x",
+      "correlation_id": "cor-mrjd0dt6-83nz",
+      "entity_version": 4,
+      "payload": {
+        "review_id": "krv-mrjd0dna-wsjk"
+      },
+      "event_id": "knw-mrjd0dtz-27yf",
+      "event_version": 1,
+      "occurred_at": "2026-07-13T15:10:43.463Z"
+    },
+    {
+      "event_type": "knowledge.artifact_validated",
+      "entity_id": "knw-mrjd0cs2-fa40",
+      "entity_type": "KnowledgeArtifact",
+      "institution_id": "inst-block-street",
+      "initiative_id_optional": "ini-knw-test",
+      "actor_human_id_optional": "usr-001",
+      "service_identity_id_optional": null,
+      "source_command_id": "cmd-mrjd0e15-lbdm",
+      "request_id": "req-mrjd0e15-xw7m",
+      "correlation_id": "cor-mrjd0e15-slyw",
+      "entity_version": 5,
+      "payload": {
+        "from": "review",
+        "to": "validated"
+      },
+      "event_id": "knw-mrjd0e4h-nm24",
+      "event_version": 1,
+      "occurred_at": "2026-07-13T15:10:43.841Z"
+    },
+    {
+      "event_type": "knowledge.artifact_approved",
+      "entity_id": "knw-mrjd0cs2-fa40",
+      "entity_type": "KnowledgeArtifact",
+      "institution_id": "inst-block-street",
+      "initiative_id_optional": "ini-knw-test",
+      "actor_human_id_optional": "usr-001",
+      "service_identity_id_optional": null,
+      "source_command_id": "cmd-mrjd0e7r-smp2",
+      "request_id": "req-mrjd0e7r-aewv",
+      "correlation_id": "cor-mrjd0e7r-wpz6",
+      "entity_version": 5,
+      "payload": {
+        "approval_id": "kap-mrjd0e8l-hpqc"
+      },
+      "event_id": "knw-mrjd0e9a-fh4e",
+      "event_version": 1,
+      "occurred_at": "2026-07-13T15:10:44.014Z"
+    },
+    {
+      "event_type": "knowledge.artifact_published",
+      "entity_id": "knw-mrjd0cs2-fa40",
+      "entity_type": "KnowledgeArtifact",
+      "institution_id": "inst-block-street",
+      "initiative_id_optional": "ini-knw-test",
+      "actor_human_id_optional": "usr-001",
+      "service_identity_id_optional": null,
+      "source_command_id": "cmd-mrjd0ecg-7l0n",
+      "request_id": "req-mrjd0ech-5nsf",
+      "correlation_id": "cor-mrjd0ech-m1nr",
+      "entity_version": 6,
+      "payload": {
+        "from": "validated",
+        "to": "published"
+      },
+      "event_id": "knw-mrjd0eg1-1ahj",
+      "event_version": 1,
+      "occurred_at": "2026-07-13T15:10:44.257Z"
+    },
+    {
+      "event_type": "knowledge.course_created",
+      "entity_id": "knw-mrjd0ekc-vblj",
+      "entity_type": "Course",
+      "institution_id": "inst-block-street",
+      "initiative_id_optional": "ini-knw-test",
+      "actor_human_id_optional": "usr-001",
+      "service_identity_id_optional": null,
+      "source_command_id": "cmd-mrjd0ekc-tb7g",
+      "request_id": "req-mrjd0ekc-evcb",
+      "correlation_id": "cor-mrjd0ekc-fq84",
+      "entity_version": 1,
+      "payload": {
+        "display_name": "Field canvassing fundamentals"
+      },
+      "event_id": "knw-mrjd0el4-c7js",
+      "event_version": 1,
+      "occurred_at": "2026-07-13T15:10:44.440Z"
+    },
+    {
+      "event_type": "knowledge.course_version_published",
+      "entity_id": "knw-mrjd0ekc-vblj",
+      "entity_type": "Course",
+      "institution_id": "inst-block-street",
+      "initiative_id_optional": "ini-knw-test",
+      "actor_human_id_optional": "usr-001",
+      "service_identity_id_optional": null,
+      "source_command_id": "cmd-mrjd0eon-bdxp",
+      "request_id": "req-mrjd0eon-kuwi",
+      "correlation_id": "cor-mrjd0eon-x9gd",
+      "entity_version": 3,
+      "payload": {
+        "published_version": 2
+      },
+      "event_id": "knw-mrjd0ets-pzfg",
+      "event_version": 1,
+      "occurred_at": "2026-07-13T15:10:44.752Z"
+    },
+    {
+      "event_type": "knowledge.learning_completed",
+      "entity_id": "knw-mrjd0exz-14gv",
+      "entity_type": "LearningCompletion",
+      "institution_id": "inst-block-street",
+      "initiative_id_optional": "ini-knw-test",
+      "actor_human_id_optional": "usr-001",
+      "service_identity_id_optional": null,
+      "source_command_id": "cmd-mrjd0ex3-at2z",
+      "request_id": "req-mrjd0ex3-uuoo",
+      "correlation_id": "cor-mrjd0ex3-sjtd",
+      "entity_version": 1,
+      "payload": {
+        "bound_course_version": 2,
+        "bound_artifact_version": 3,
+        "human_id": "usr-002"
+      },
+      "event_id": "knw-mrjd0eyw-je3y",
+      "event_version": 1,
+      "occurred_at": "2026-07-13T15:10:44.936Z"
+    },
+    {
+      "event_type": "knowledge.ai_suggestion_created",
+      "entity_id": "knw-mrjd0f77-9d9t",
+      "entity_type": "AIKnowledgeSuggestion",
+      "institution_id": "inst-block-street",
+      "initiative_id_optional": "ini-knw-test",
+      "actor_human_id_optional": "usr-001",
+      "service_identity_id_optional": "svc-ai-knw-001",
+      "source_command_id": "cmd-mrjd0f77-m9ki",
+      "request_id": "req-mrjd0f77-9rya",
+      "correlation_id": "cor-mrjd0f77-9yt7",
+      "entity_version": 1,
+      "payload": {
+        "does_not_create_truth": true
+      },
+      "event_id": "knw-mrjd0f7x-v45o",
+      "event_version": 1,
+      "occurred_at": "2026-07-13T15:10:45.261Z"
+    },
+    {
+      "event_type": "knowledge.claim_created",
+      "entity_id": "knw-mrjd0fdb-kk6v",
+      "entity_type": "KnowledgeClaim",
+      "institution_id": "inst-block-street",
+      "initiative_id_optional": "ini-knw-test",
+      "actor_human_id_optional": "usr-001",
+      "service_identity_id_optional": null,
+      "source_command_id": "cmd-mrjd0fc7-31yc",
+      "request_id": "req-mrjd0fc7-56c8",
+      "correlation_id": "cor-mrjd0fc7-7psi",
+      "entity_version": 1,
+      "payload": {
+        "artifact_id": "knw-mrjd0cs2-fa40"
+      },
+      "event_id": "knw-mrjd0fdw-1gfi",
+      "event_version": 1,
+      "occurred_at": "2026-07-13T15:10:45.476Z"
+    },
+    {
+      "event_type": "knowledge.artifact_created",
+      "entity_id": "knw-mrjd0fji-3jo3",
+      "entity_type": "KnowledgeArtifact",
+      "institution_id": "inst-block-street",
+      "initiative_id_optional": "ini-knw-test",
+      "actor_human_id_optional": "usr-001",
+      "service_identity_id_optional": null,
+      "source_command_id": "cmd-mrjd0fji-x05c",
+      "request_id": "req-mrjd0fji-tpv3",
+      "correlation_id": "cor-mrjd0fji-el75",
+      "entity_version": 1,
+      "payload": {
+        "display_name": "W3 Knowledge Test 1783955445678",
+        "lifecycle_state": "draft"
+      },
+      "event_id": "knw-mrjd0fl3-f6df",
+      "event_version": 1,
+      "occurred_at": "2026-07-13T15:10:45.735Z"
+    },
+    {
+      "event_type": "knowledge.artifact_edited",
+      "entity_id": "knw-mrjd0fji-3jo3",
+      "entity_type": "KnowledgeArtifact",
+      "institution_id": "inst-block-street",
+      "initiative_id_optional": "ini-knw-test",
+      "actor_human_id_optional": "usr-001",
+      "service_identity_id_optional": null,
+      "source_command_id": "cmd-mrjd0fsd-114w",
+      "request_id": "req-mrjd0fsd-mvcq",
+      "correlation_id": "cor-mrjd0fsd-xjm8",
+      "entity_version": 2,
+      "payload": {
+        "from": "draft"
+      },
+      "event_id": "knw-mrjd0fvx-uwba",
+      "event_version": 1,
+      "occurred_at": "2026-07-13T15:10:46.125Z"
+    },
+    {
+      "event_type": "knowledge.translation_draft_created",
+      "entity_id": "knw-mrjd0fz7-307l",
+      "entity_type": "KnowledgeTranslation",
+      "institution_id": "inst-block-street",
+      "initiative_id_optional": "ini-knw-test",
+      "actor_human_id_optional": "usr-001",
+      "service_identity_id_optional": null,
+      "source_command_id": "cmd-mrjd0fz7-lg2v",
+      "request_id": "req-mrjd0fz7-4l3l",
+      "correlation_id": "cor-mrjd0fz7-o2o8",
+      "entity_version": 1,
+      "payload": {
+        "source_version": 2,
+        "target_language": "es"
+      },
+      "event_id": "knw-mrjd0fzz-7mmt",
+      "event_version": 1,
+      "occurred_at": "2026-07-13T15:10:46.271Z"
+    },
+    {
+      "event_type": "knowledge.artifact_edited",
+      "entity_id": "knw-mrjd0fji-3jo3",
+      "entity_type": "KnowledgeArtifact",
+      "institution_id": "inst-block-street",
+      "initiative_id_optional": "ini-knw-test",
+      "actor_human_id_optional": "usr-001",
+      "service_identity_id_optional": null,
+      "source_command_id": "cmd-mrjd0g36-f1pw",
+      "request_id": "req-mrjd0g36-qv3k",
+      "correlation_id": "cor-mrjd0g36-njs6",
+      "entity_version": 3,
+      "payload": {
+        "from": "draft"
+      },
+      "event_id": "knw-mrjd0g84-wcpy",
+      "event_version": 1,
+      "occurred_at": "2026-07-13T15:10:46.564Z"
+    },
+    {
+      "event_type": "knowledge.artifact_submitted_for_review",
+      "entity_id": "knw-mrjd0fji-3jo3",
+      "entity_type": "KnowledgeArtifact",
+      "institution_id": "inst-block-street",
+      "initiative_id_optional": "ini-knw-test",
+      "actor_human_id_optional": "usr-001",
+      "service_identity_id_optional": null,
+      "source_command_id": "cmd-mrjd0gba-zzve",
+      "request_id": "req-mrjd0gba-rc8r",
+      "correlation_id": "cor-mrjd0gba-y9k0",
+      "entity_version": 4,
+      "payload": {
+        "from": "draft",
+        "to": "review",
+        "review_id": "krv-mrjd0gei-dimd"
+      },
+      "event_id": "knw-mrjd0gg5-d629",
+      "event_version": 1,
+      "occurred_at": "2026-07-13T15:10:46.853Z"
+    },
+    {
+      "event_type": "knowledge.artifact_review_completed",
+      "entity_id": "knw-mrjd0fji-3jo3",
+      "entity_type": "KnowledgeArtifact",
+      "institution_id": "inst-block-street",
+      "initiative_id_optional": "ini-knw-test",
+      "actor_human_id_optional": "usr-001",
+      "service_identity_id_optional": null,
+      "source_command_id": "cmd-mrjd0gmu-ml1d",
+      "request_id": "req-mrjd0gmu-bbu3",
+      "correlation_id": "cor-mrjd0gmu-s5f3",
+      "entity_version": 4,
+      "payload": {
+        "review_id": "krv-mrjd0gei-dimd"
+      },
+      "event_id": "knw-mrjd0gnm-rxnh",
+      "event_version": 1,
+      "occurred_at": "2026-07-13T15:10:47.122Z"
+    },
+    {
+      "event_type": "knowledge.artifact_validated",
+      "entity_id": "knw-mrjd0fji-3jo3",
+      "entity_type": "KnowledgeArtifact",
+      "institution_id": "inst-block-street",
+      "initiative_id_optional": "ini-knw-test",
+      "actor_human_id_optional": "usr-001",
+      "service_identity_id_optional": null,
+      "source_command_id": "cmd-mrjd0grs-cdn4",
+      "request_id": "req-mrjd0grs-vna6",
+      "correlation_id": "cor-mrjd0grs-3ufx",
+      "entity_version": 5,
+      "payload": {
+        "from": "review",
+        "to": "validated"
+      },
+      "event_id": "knw-mrjd0gv1-z219",
+      "event_version": 1,
+      "occurred_at": "2026-07-13T15:10:47.389Z"
+    },
+    {
+      "event_type": "knowledge.artifact_approved",
+      "entity_id": "knw-mrjd0fji-3jo3",
+      "entity_type": "KnowledgeArtifact",
+      "institution_id": "inst-block-street",
+      "initiative_id_optional": "ini-knw-test",
+      "actor_human_id_optional": "usr-001",
+      "service_identity_id_optional": null,
+      "source_command_id": "cmd-mrjd0gya-oaza",
+      "request_id": "req-mrjd0gya-prvx",
+      "correlation_id": "cor-mrjd0gya-0owa",
+      "entity_version": 5,
+      "payload": {
+        "approval_id": "kap-mrjd0gz5-ykxc"
+      },
+      "event_id": "knw-mrjd0gzx-m9zv",
+      "event_version": 1,
+      "occurred_at": "2026-07-13T15:10:47.565Z"
+    },
+    {
+      "event_type": "knowledge.artifact_published",
+      "entity_id": "knw-mrjd0fji-3jo3",
+      "entity_type": "KnowledgeArtifact",
+      "institution_id": "inst-block-street",
+      "initiative_id_optional": "ini-knw-test",
+      "actor_human_id_optional": "usr-001",
+      "service_identity_id_optional": null,
+      "source_command_id": "cmd-mrjd0h35-oexy",
+      "request_id": "req-mrjd0h35-turq",
+      "correlation_id": "cor-mrjd0h35-fzz5",
+      "entity_version": 6,
+      "payload": {
+        "from": "validated",
+        "to": "published"
+      },
+      "event_id": "knw-mrjd0h64-f433",
+      "event_version": 1,
+      "occurred_at": "2026-07-13T15:10:47.788Z"
+    },
+    {
+      "event_type": "knowledge.course_created",
+      "entity_id": "knw-mrjd0ha1-a3tc",
+      "entity_type": "Course",
+      "institution_id": "inst-block-street",
+      "initiative_id_optional": "ini-knw-test",
+      "actor_human_id_optional": "usr-001",
+      "service_identity_id_optional": null,
+      "source_command_id": "cmd-mrjd0ha1-08bj",
+      "request_id": "req-mrjd0ha1-1jzi",
+      "correlation_id": "cor-mrjd0ha1-hyy0",
+      "entity_version": 1,
+      "payload": {
+        "display_name": "Field canvassing fundamentals"
+      },
+      "event_id": "knw-mrjd0hav-eyr2",
+      "event_version": 1,
+      "occurred_at": "2026-07-13T15:10:47.959Z"
+    },
+    {
+      "event_type": "knowledge.course_version_published",
+      "entity_id": "knw-mrjd0ha1-a3tc",
+      "entity_type": "Course",
+      "institution_id": "inst-block-street",
+      "initiative_id_optional": "ini-knw-test",
+      "actor_human_id_optional": "usr-001",
+      "service_identity_id_optional": null,
+      "source_command_id": "cmd-mrjd0hdu-zgls",
+      "request_id": "req-mrjd0hdu-cf6c",
+      "correlation_id": "cor-mrjd0hdu-h2nb",
+      "entity_version": 3,
+      "payload": {
+        "published_version": 2
+      },
+      "event_id": "knw-mrjd0hiq-ilfs",
+      "event_version": 1,
+      "occurred_at": "2026-07-13T15:10:48.242Z"
+    },
+    {
+      "event_type": "knowledge.learning_completed",
+      "entity_id": "knw-mrjd0hmx-3ufl",
+      "entity_type": "LearningCompletion",
+      "institution_id": "inst-block-street",
+      "initiative_id_optional": "ini-knw-test",
+      "actor_human_id_optional": "usr-001",
+      "service_identity_id_optional": null,
+      "source_command_id": "cmd-mrjd0hlz-1ckt",
+      "request_id": "req-mrjd0hlz-sj3h",
+      "correlation_id": "cor-mrjd0hlz-6m7p",
+      "entity_version": 1,
+      "payload": {
+        "bound_course_version": 2,
+        "bound_artifact_version": 3,
+        "human_id": "usr-002"
+      },
+      "event_id": "knw-mrjd0hnp-nehb",
+      "event_version": 1,
+      "occurred_at": "2026-07-13T15:10:48.421Z"
+    },
+    {
+      "event_type": "knowledge.ai_suggestion_created",
+      "entity_id": "knw-mrjd0huy-rf75",
+      "entity_type": "AIKnowledgeSuggestion",
+      "institution_id": "inst-block-street",
+      "initiative_id_optional": "ini-knw-test",
+      "actor_human_id_optional": "usr-001",
+      "service_identity_id_optional": "svc-ai-knw-001",
+      "source_command_id": "cmd-mrjd0huy-xvcl",
+      "request_id": "req-mrjd0huy-rfxf",
+      "correlation_id": "cor-mrjd0huy-65yc",
+      "entity_version": 1,
+      "payload": {
+        "does_not_create_truth": true
+      },
+      "event_id": "knw-mrjd0hvt-p30z",
+      "event_version": 1,
+      "occurred_at": "2026-07-13T15:10:48.713Z"
+    },
+    {
+      "event_type": "knowledge.claim_created",
+      "entity_id": "knw-mrjd0i0u-6kht",
+      "entity_type": "KnowledgeClaim",
+      "institution_id": "inst-block-street",
+      "initiative_id_optional": "ini-knw-test",
+      "actor_human_id_optional": "usr-001",
+      "service_identity_id_optional": null,
+      "source_command_id": "cmd-mrjd0i00-49zf",
+      "request_id": "req-mrjd0i00-d4rt",
+      "correlation_id": "cor-mrjd0i00-lmps",
+      "entity_version": 1,
+      "payload": {
+        "artifact_id": "knw-mrjd0fji-3jo3"
+      },
+      "event_id": "knw-mrjd0i1v-vc3a",
+      "event_version": 1,
+      "occurred_at": "2026-07-13T15:10:48.931Z"
+    },
+    {
+      "event_type": "knowledge.artifact_created",
+      "entity_id": "knw-mrjd0js4-h9a4",
+      "entity_type": "KnowledgeArtifact",
+      "institution_id": "inst-block-street",
+      "initiative_id_optional": null,
+      "actor_human_id_optional": "usr-001",
+      "service_identity_id_optional": null,
+      "source_command_id": "cmd-impl-ipr-mrjd0jc2-6hs3",
+      "request_id": "req-impl-ipr-mrjd0jc2-6hs3",
+      "correlation_id": "corr-impl-ipr-mrjd0jc2-6hs3",
+      "entity_version": 1,
+      "payload": {
+        "display_name": "Revise safety claim",
+        "lifecycle_state": "draft"
+      },
+      "event_id": "knw-mrjd0jtt-kd07",
+      "event_version": 1,
+      "occurred_at": "2026-07-13T15:10:51.233Z"
+    },
+    {
+      "event_type": "knowledge.artifact_created",
+      "entity_id": "knw-mrjd0l6v-goge",
+      "entity_type": "KnowledgeArtifact",
+      "institution_id": "inst-block-street",
+      "initiative_id_optional": null,
+      "actor_human_id_optional": "usr-001",
+      "service_identity_id_optional": null,
+      "source_command_id": "cmd-impl-ipr-mrjd0krr-oc2v",
+      "request_id": "req-impl-ipr-mrjd0krr-oc2v",
+      "correlation_id": "corr-impl-ipr-mrjd0krr-oc2v",
+      "entity_version": 1,
+      "payload": {
+        "display_name": "Revise safety claim",
+        "lifecycle_state": "draft"
+      },
+      "event_id": "knw-mrjd0l8j-iok1",
+      "event_version": 1,
+      "occurred_at": "2026-07-13T15:10:53.059Z"
     }
   ],
   "knowledge_audit_entries": [
@@ -81529,6 +82705,62 @@
       "request_source": "human",
       "audit_id": "kaud-mrjciq31-wh3i",
       "when": "2026-07-13T14:56:59.533Z"
+    },
+    {
+      "who": "usr-001",
+      "what": "CreateKnowledgeArtifact",
+      "where": "inst-block-street",
+      "previous_state": null,
+      "new_state": {
+        "lifecycle_state": "draft"
+      },
+      "reason": null,
+      "authority": "knowledge.artifact.create",
+      "request_source": "human",
+      "audit_id": "kaud-mrjd0cvt-4w4u",
+      "when": "2026-07-13T15:10:42.233Z"
+    },
+    {
+      "who": "usr-001",
+      "what": "CreateKnowledgeArtifact",
+      "where": "inst-block-street",
+      "previous_state": null,
+      "new_state": {
+        "lifecycle_state": "draft"
+      },
+      "reason": null,
+      "authority": "knowledge.artifact.create",
+      "request_source": "human",
+      "audit_id": "kaud-mrjd0fod-le4e",
+      "when": "2026-07-13T15:10:45.853Z"
+    },
+    {
+      "who": "usr-001",
+      "what": "CreateKnowledgeArtifact",
+      "where": "inst-block-street",
+      "previous_state": null,
+      "new_state": {
+        "lifecycle_state": "draft"
+      },
+      "reason": "Broken source",
+      "authority": "knowledge.artifact.create",
+      "request_source": "human",
+      "audit_id": "kaud-mrjd0jx4-r3cp",
+      "when": "2026-07-13T15:10:51.352Z"
+    },
+    {
+      "who": "usr-001",
+      "what": "CreateKnowledgeArtifact",
+      "where": "inst-block-street",
+      "previous_state": null,
+      "new_state": {
+        "lifecycle_state": "draft"
+      },
+      "reason": "Broken source",
+      "authority": "knowledge.artifact.create",
+      "request_source": "human",
+      "audit_id": "kaud-mrjd0lby-05ta",
+      "when": "2026-07-13T15:10:53.182Z"
     }
   ],
   "knowledge_history_events": [
@@ -81672,6 +82904,54 @@
       "institution_id": "inst-block-street",
       "actor_human_id": "usr-001",
       "occurred_at": "2026-07-13T14:56:59.590Z",
+      "payload": {
+        "lifecycle_state": "draft"
+      }
+    },
+    {
+      "event_id": "khx-mrjd0cx6-18pl",
+      "entity_id": "knw-mrjd0cs2-fa40",
+      "entity_type": "KnowledgeArtifact",
+      "event_type": "artifact_created",
+      "institution_id": "inst-block-street",
+      "actor_human_id": "usr-001",
+      "occurred_at": "2026-07-13T15:10:42.282Z",
+      "payload": {
+        "lifecycle_state": "draft"
+      }
+    },
+    {
+      "event_id": "khx-mrjd0fpx-ek5u",
+      "entity_id": "knw-mrjd0fji-3jo3",
+      "entity_type": "KnowledgeArtifact",
+      "event_type": "artifact_created",
+      "institution_id": "inst-block-street",
+      "actor_human_id": "usr-001",
+      "occurred_at": "2026-07-13T15:10:45.909Z",
+      "payload": {
+        "lifecycle_state": "draft"
+      }
+    },
+    {
+      "event_id": "khx-mrjd0jyt-7604",
+      "entity_id": "knw-mrjd0js4-h9a4",
+      "entity_type": "KnowledgeArtifact",
+      "event_type": "artifact_created",
+      "institution_id": "inst-block-street",
+      "actor_human_id": "usr-001",
+      "occurred_at": "2026-07-13T15:10:51.413Z",
+      "payload": {
+        "lifecycle_state": "draft"
+      }
+    },
+    {
+      "event_id": "khx-mrjd0ldk-r1p6",
+      "entity_id": "knw-mrjd0l6v-goge",
+      "entity_type": "KnowledgeArtifact",
+      "event_type": "artifact_created",
+      "institution_id": "inst-block-street",
+      "actor_human_id": "usr-001",
+      "occurred_at": "2026-07-13T15:10:53.240Z",
       "payload": {
         "lifecycle_state": "draft"
       }
@@ -83555,6 +84835,632 @@
         "published_version": 2
       },
       "immutable": true
+    },
+    {
+      "version_id": "kver-mrjd0czk-2llj",
+      "artifact_id": "knw-mrjd0cs2-fa40",
+      "version_number": 2,
+      "changed_by": "usr-001",
+      "changed_at": "2026-07-13T15:10:42.368Z",
+      "reason": "Edit draft artifact",
+      "affected_fields": [
+        "body",
+        "summary",
+        "display_name"
+      ],
+      "previous_version_id": null,
+      "snapshot": {
+        "canonical_id": "knw-mrjd0cs2-fa40",
+        "public_id": "KNW-2-FA40",
+        "display_name": "W3 Knowledge Test 1783955442097",
+        "canonical_slug": "w3-knowledge-test-1783955442097",
+        "institution_id": "inst-block-street",
+        "initiative_id": "ini-knw-test",
+        "parent_object_id": "col-w3-test",
+        "parent_object_type": "KnowledgeCollection",
+        "object_type": "KnowledgeArtifact",
+        "visibility": "institution_internal",
+        "governance_classification": 3,
+        "steward_human_id": "usr-001",
+        "created_by": "usr-001",
+        "last_modified_by": "usr-001",
+        "created_at": "2026-07-13T15:10:42.098Z",
+        "updated_at": "2026-07-13T15:10:42.098Z",
+        "current_version": 1,
+        "lifecycle_state": "draft",
+        "tags": [],
+        "confidence_level": "medium",
+        "content_origin": "human",
+        "is_ai_generated": false,
+        "collection_id": "col-w3-test",
+        "domain_id": "dom-w3-test",
+        "artifact_type": "knowledge_article",
+        "body": "Revised outreach content.",
+        "summary": "W3 Knowledge Test 1783955442097",
+        "language": "en",
+        "published_version_id": null,
+        "evidence_status": "none"
+      },
+      "immutable": true
+    },
+    {
+      "version_id": "kver-mrjd0dbr-sgmu",
+      "artifact_id": "knw-mrjd0cs2-fa40",
+      "version_number": 3,
+      "changed_by": "usr-001",
+      "changed_at": "2026-07-13T15:10:42.807Z",
+      "reason": "Edit draft artifact",
+      "affected_fields": [
+        "body",
+        "summary",
+        "display_name"
+      ],
+      "previous_version_id": null,
+      "snapshot": {
+        "canonical_id": "knw-mrjd0cs2-fa40",
+        "public_id": "KNW-2-FA40",
+        "display_name": "W3 Knowledge Test 1783955442097",
+        "canonical_slug": "w3-knowledge-test-1783955442097",
+        "institution_id": "inst-block-street",
+        "initiative_id": "ini-knw-test",
+        "parent_object_id": "col-w3-test",
+        "parent_object_type": "KnowledgeCollection",
+        "object_type": "KnowledgeArtifact",
+        "visibility": "institution_internal",
+        "governance_classification": 3,
+        "steward_human_id": "usr-001",
+        "created_by": "usr-001",
+        "last_modified_by": "usr-001",
+        "created_at": "2026-07-13T15:10:42.098Z",
+        "updated_at": "2026-07-13T15:10:42.396Z",
+        "current_version": 2,
+        "lifecycle_state": "draft",
+        "tags": [],
+        "confidence_level": "medium",
+        "content_origin": "human",
+        "is_ai_generated": false,
+        "collection_id": "col-w3-test",
+        "domain_id": "dom-w3-test",
+        "artifact_type": "knowledge_article",
+        "body": "Bump version to stale translation.",
+        "summary": "W3 Knowledge Test 1783955442097",
+        "language": "en",
+        "published_version_id": null,
+        "evidence_status": "none"
+      },
+      "immutable": true
+    },
+    {
+      "version_id": "kver-mrjd0dkm-g6kf",
+      "artifact_id": "knw-mrjd0cs2-fa40",
+      "version_number": 4,
+      "changed_by": "usr-001",
+      "changed_at": "2026-07-13T15:10:43.126Z",
+      "reason": "Submit for review",
+      "affected_fields": [
+        "lifecycle_state"
+      ],
+      "previous_version_id": null,
+      "snapshot": {
+        "canonical_id": "knw-mrjd0cs2-fa40",
+        "public_id": "KNW-2-FA40",
+        "display_name": "W3 Knowledge Test 1783955442097",
+        "canonical_slug": "w3-knowledge-test-1783955442097",
+        "institution_id": "inst-block-street",
+        "initiative_id": "ini-knw-test",
+        "parent_object_id": "col-w3-test",
+        "parent_object_type": "KnowledgeCollection",
+        "object_type": "KnowledgeArtifact",
+        "visibility": "institution_internal",
+        "governance_classification": 3,
+        "steward_human_id": "usr-001",
+        "created_by": "usr-001",
+        "last_modified_by": "usr-001",
+        "created_at": "2026-07-13T15:10:42.098Z",
+        "updated_at": "2026-07-13T15:10:42.832Z",
+        "current_version": 3,
+        "lifecycle_state": "review",
+        "tags": [],
+        "confidence_level": "medium",
+        "content_origin": "human",
+        "is_ai_generated": false,
+        "collection_id": "col-w3-test",
+        "domain_id": "dom-w3-test",
+        "artifact_type": "knowledge_article",
+        "body": "Bump version to stale translation.",
+        "summary": "W3 Knowledge Test 1783955442097",
+        "language": "en",
+        "published_version_id": null,
+        "evidence_status": "none"
+      },
+      "immutable": true
+    },
+    {
+      "version_id": "kver-mrjd0e21-vroj",
+      "artifact_id": "knw-mrjd0cs2-fa40",
+      "version_number": 5,
+      "changed_by": "usr-001",
+      "changed_at": "2026-07-13T15:10:43.753Z",
+      "reason": "Validate artifact",
+      "affected_fields": [
+        "lifecycle_state"
+      ],
+      "previous_version_id": null,
+      "snapshot": {
+        "canonical_id": "knw-mrjd0cs2-fa40",
+        "public_id": "KNW-2-FA40",
+        "display_name": "W3 Knowledge Test 1783955442097",
+        "canonical_slug": "w3-knowledge-test-1783955442097",
+        "institution_id": "inst-block-street",
+        "initiative_id": "ini-knw-test",
+        "parent_object_id": "col-w3-test",
+        "parent_object_type": "KnowledgeCollection",
+        "object_type": "KnowledgeArtifact",
+        "visibility": "institution_internal",
+        "governance_classification": 3,
+        "steward_human_id": "usr-001",
+        "created_by": "usr-001",
+        "last_modified_by": "usr-001",
+        "created_at": "2026-07-13T15:10:42.098Z",
+        "updated_at": "2026-07-13T15:10:43.154Z",
+        "current_version": 4,
+        "lifecycle_state": "validated",
+        "tags": [],
+        "confidence_level": "medium",
+        "content_origin": "human",
+        "is_ai_generated": false,
+        "collection_id": "col-w3-test",
+        "domain_id": "dom-w3-test",
+        "artifact_type": "knowledge_article",
+        "body": "Bump version to stale translation.",
+        "summary": "W3 Knowledge Test 1783955442097",
+        "language": "en",
+        "published_version_id": null,
+        "evidence_status": "none"
+      },
+      "immutable": true
+    },
+    {
+      "version_id": "kver-mrjd0edd-bxxh",
+      "artifact_id": "knw-mrjd0cs2-fa40",
+      "version_number": 6,
+      "changed_by": "usr-001",
+      "changed_at": "2026-07-13T15:10:44.161Z",
+      "reason": "Publish artifact",
+      "affected_fields": [
+        "lifecycle_state",
+        "published_version_id"
+      ],
+      "previous_version_id": null,
+      "snapshot": {
+        "canonical_id": "knw-mrjd0cs2-fa40",
+        "public_id": "KNW-2-FA40",
+        "display_name": "W3 Knowledge Test 1783955442097",
+        "canonical_slug": "w3-knowledge-test-1783955442097",
+        "institution_id": "inst-block-street",
+        "initiative_id": "ini-knw-test",
+        "parent_object_id": "col-w3-test",
+        "parent_object_type": "KnowledgeCollection",
+        "object_type": "KnowledgeArtifact",
+        "visibility": "institution_internal",
+        "governance_classification": 3,
+        "steward_human_id": "usr-001",
+        "created_by": "usr-001",
+        "last_modified_by": "usr-001",
+        "created_at": "2026-07-13T15:10:42.098Z",
+        "updated_at": "2026-07-13T15:10:43.780Z",
+        "current_version": 5,
+        "lifecycle_state": "published",
+        "tags": [],
+        "confidence_level": "medium",
+        "content_origin": "human",
+        "is_ai_generated": false,
+        "collection_id": "col-w3-test",
+        "domain_id": "dom-w3-test",
+        "artifact_type": "knowledge_article",
+        "body": "Bump version to stale translation.",
+        "summary": "W3 Knowledge Test 1783955442097",
+        "language": "en",
+        "published_version_id": "ver-5",
+        "evidence_status": "none"
+      },
+      "immutable": true
+    },
+    {
+      "version_id": "kver-mrjd0epn-q8ss",
+      "artifact_id": "knw-mrjd0ekc-vblj",
+      "version_number": 2,
+      "changed_by": "usr-001",
+      "changed_at": "2026-07-13T15:10:44.603Z",
+      "reason": "Move to review",
+      "affected_fields": [
+        "lifecycle_state"
+      ],
+      "previous_version_id": null,
+      "snapshot": {
+        "canonical_id": "knw-mrjd0ekc-vblj",
+        "public_id": "KNW-C-VBLJ",
+        "display_name": "Field canvassing fundamentals",
+        "canonical_slug": "field-canvassing-fundamentals",
+        "institution_id": "inst-block-street",
+        "initiative_id": "ini-knw-test",
+        "parent_object_id": "dom-w3-test",
+        "parent_object_type": "KnowledgeDomain",
+        "object_type": "Course",
+        "visibility": "institution_internal",
+        "governance_classification": 3,
+        "steward_human_id": "usr-001",
+        "created_by": "usr-001",
+        "last_modified_by": "usr-001",
+        "created_at": "2026-07-13T15:10:44.412Z",
+        "updated_at": "2026-07-13T15:10:44.412Z",
+        "current_version": 1,
+        "lifecycle_state": "review",
+        "tags": [],
+        "confidence_level": "medium",
+        "content_origin": "human",
+        "is_ai_generated": false,
+        "domain_id": "dom-w3-test",
+        "description": "Core canvassing skills",
+        "estimated_hours": 1,
+        "published_version": null
+      },
+      "immutable": true
+    },
+    {
+      "version_id": "kver-mrjd0eqg-kzib",
+      "artifact_id": "knw-mrjd0ekc-vblj",
+      "version_number": 3,
+      "changed_by": "usr-001",
+      "changed_at": "2026-07-13T15:10:44.632Z",
+      "reason": "Publish course version",
+      "affected_fields": [
+        "lifecycle_state",
+        "published_version"
+      ],
+      "previous_version_id": null,
+      "snapshot": {
+        "canonical_id": "knw-mrjd0ekc-vblj",
+        "public_id": "KNW-C-VBLJ",
+        "display_name": "Field canvassing fundamentals",
+        "canonical_slug": "field-canvassing-fundamentals",
+        "institution_id": "inst-block-street",
+        "initiative_id": "ini-knw-test",
+        "parent_object_id": "dom-w3-test",
+        "parent_object_type": "KnowledgeDomain",
+        "object_type": "Course",
+        "visibility": "institution_internal",
+        "governance_classification": 3,
+        "steward_human_id": "usr-001",
+        "created_by": "usr-001",
+        "last_modified_by": "usr-001",
+        "created_at": "2026-07-13T15:10:44.412Z",
+        "updated_at": "2026-07-13T15:10:44.632Z",
+        "current_version": 2,
+        "lifecycle_state": "published",
+        "tags": [],
+        "confidence_level": "medium",
+        "content_origin": "human",
+        "is_ai_generated": false,
+        "domain_id": "dom-w3-test",
+        "description": "Core canvassing skills",
+        "estimated_hours": 1,
+        "published_version": 2
+      },
+      "immutable": true
+    },
+    {
+      "version_id": "kver-mrjd0fsd-kt65",
+      "artifact_id": "knw-mrjd0fji-3jo3",
+      "version_number": 2,
+      "changed_by": "usr-001",
+      "changed_at": "2026-07-13T15:10:45.997Z",
+      "reason": "Edit draft artifact",
+      "affected_fields": [
+        "body",
+        "summary",
+        "display_name"
+      ],
+      "previous_version_id": null,
+      "snapshot": {
+        "canonical_id": "knw-mrjd0fji-3jo3",
+        "public_id": "KNW-I-3JO3",
+        "display_name": "W3 Knowledge Test 1783955445678",
+        "canonical_slug": "w3-knowledge-test-1783955445678",
+        "institution_id": "inst-block-street",
+        "initiative_id": "ini-knw-test",
+        "parent_object_id": "col-w3-test",
+        "parent_object_type": "KnowledgeCollection",
+        "object_type": "KnowledgeArtifact",
+        "visibility": "institution_internal",
+        "governance_classification": 3,
+        "steward_human_id": "usr-001",
+        "created_by": "usr-001",
+        "last_modified_by": "usr-001",
+        "created_at": "2026-07-13T15:10:45.678Z",
+        "updated_at": "2026-07-13T15:10:45.678Z",
+        "current_version": 1,
+        "lifecycle_state": "draft",
+        "tags": [],
+        "confidence_level": "medium",
+        "content_origin": "human",
+        "is_ai_generated": false,
+        "collection_id": "col-w3-test",
+        "domain_id": "dom-w3-test",
+        "artifact_type": "knowledge_article",
+        "body": "Revised outreach content.",
+        "summary": "W3 Knowledge Test 1783955445678",
+        "language": "en",
+        "published_version_id": null,
+        "evidence_status": "none"
+      },
+      "immutable": true
+    },
+    {
+      "version_id": "kver-mrjd0g46-reln",
+      "artifact_id": "knw-mrjd0fji-3jo3",
+      "version_number": 3,
+      "changed_by": "usr-001",
+      "changed_at": "2026-07-13T15:10:46.422Z",
+      "reason": "Edit draft artifact",
+      "affected_fields": [
+        "body",
+        "summary",
+        "display_name"
+      ],
+      "previous_version_id": null,
+      "snapshot": {
+        "canonical_id": "knw-mrjd0fji-3jo3",
+        "public_id": "KNW-I-3JO3",
+        "display_name": "W3 Knowledge Test 1783955445678",
+        "canonical_slug": "w3-knowledge-test-1783955445678",
+        "institution_id": "inst-block-street",
+        "initiative_id": "ini-knw-test",
+        "parent_object_id": "col-w3-test",
+        "parent_object_type": "KnowledgeCollection",
+        "object_type": "KnowledgeArtifact",
+        "visibility": "institution_internal",
+        "governance_classification": 3,
+        "steward_human_id": "usr-001",
+        "created_by": "usr-001",
+        "last_modified_by": "usr-001",
+        "created_at": "2026-07-13T15:10:45.678Z",
+        "updated_at": "2026-07-13T15:10:46.028Z",
+        "current_version": 2,
+        "lifecycle_state": "draft",
+        "tags": [],
+        "confidence_level": "medium",
+        "content_origin": "human",
+        "is_ai_generated": false,
+        "collection_id": "col-w3-test",
+        "domain_id": "dom-w3-test",
+        "artifact_type": "knowledge_article",
+        "body": "Bump version to stale translation.",
+        "summary": "W3 Knowledge Test 1783955445678",
+        "language": "en",
+        "published_version_id": null,
+        "evidence_status": "none"
+      },
+      "immutable": true
+    },
+    {
+      "version_id": "kver-mrjd0gc4-jdev",
+      "artifact_id": "knw-mrjd0fji-3jo3",
+      "version_number": 4,
+      "changed_by": "usr-001",
+      "changed_at": "2026-07-13T15:10:46.708Z",
+      "reason": "Submit for review",
+      "affected_fields": [
+        "lifecycle_state"
+      ],
+      "previous_version_id": null,
+      "snapshot": {
+        "canonical_id": "knw-mrjd0fji-3jo3",
+        "public_id": "KNW-I-3JO3",
+        "display_name": "W3 Knowledge Test 1783955445678",
+        "canonical_slug": "w3-knowledge-test-1783955445678",
+        "institution_id": "inst-block-street",
+        "initiative_id": "ini-knw-test",
+        "parent_object_id": "col-w3-test",
+        "parent_object_type": "KnowledgeCollection",
+        "object_type": "KnowledgeArtifact",
+        "visibility": "institution_internal",
+        "governance_classification": 3,
+        "steward_human_id": "usr-001",
+        "created_by": "usr-001",
+        "last_modified_by": "usr-001",
+        "created_at": "2026-07-13T15:10:45.678Z",
+        "updated_at": "2026-07-13T15:10:46.449Z",
+        "current_version": 3,
+        "lifecycle_state": "review",
+        "tags": [],
+        "confidence_level": "medium",
+        "content_origin": "human",
+        "is_ai_generated": false,
+        "collection_id": "col-w3-test",
+        "domain_id": "dom-w3-test",
+        "artifact_type": "knowledge_article",
+        "body": "Bump version to stale translation.",
+        "summary": "W3 Knowledge Test 1783955445678",
+        "language": "en",
+        "published_version_id": null,
+        "evidence_status": "none"
+      },
+      "immutable": true
+    },
+    {
+      "version_id": "kver-mrjd0gsq-vd7k",
+      "artifact_id": "knw-mrjd0fji-3jo3",
+      "version_number": 5,
+      "changed_by": "usr-001",
+      "changed_at": "2026-07-13T15:10:47.306Z",
+      "reason": "Validate artifact",
+      "affected_fields": [
+        "lifecycle_state"
+      ],
+      "previous_version_id": null,
+      "snapshot": {
+        "canonical_id": "knw-mrjd0fji-3jo3",
+        "public_id": "KNW-I-3JO3",
+        "display_name": "W3 Knowledge Test 1783955445678",
+        "canonical_slug": "w3-knowledge-test-1783955445678",
+        "institution_id": "inst-block-street",
+        "initiative_id": "ini-knw-test",
+        "parent_object_id": "col-w3-test",
+        "parent_object_type": "KnowledgeCollection",
+        "object_type": "KnowledgeArtifact",
+        "visibility": "institution_internal",
+        "governance_classification": 3,
+        "steward_human_id": "usr-001",
+        "created_by": "usr-001",
+        "last_modified_by": "usr-001",
+        "created_at": "2026-07-13T15:10:45.678Z",
+        "updated_at": "2026-07-13T15:10:46.735Z",
+        "current_version": 4,
+        "lifecycle_state": "validated",
+        "tags": [],
+        "confidence_level": "medium",
+        "content_origin": "human",
+        "is_ai_generated": false,
+        "collection_id": "col-w3-test",
+        "domain_id": "dom-w3-test",
+        "artifact_type": "knowledge_article",
+        "body": "Bump version to stale translation.",
+        "summary": "W3 Knowledge Test 1783955445678",
+        "language": "en",
+        "published_version_id": null,
+        "evidence_status": "none"
+      },
+      "immutable": true
+    },
+    {
+      "version_id": "kver-mrjd0h3y-9o99",
+      "artifact_id": "knw-mrjd0fji-3jo3",
+      "version_number": 6,
+      "changed_by": "usr-001",
+      "changed_at": "2026-07-13T15:10:47.710Z",
+      "reason": "Publish artifact",
+      "affected_fields": [
+        "lifecycle_state",
+        "published_version_id"
+      ],
+      "previous_version_id": null,
+      "snapshot": {
+        "canonical_id": "knw-mrjd0fji-3jo3",
+        "public_id": "KNW-I-3JO3",
+        "display_name": "W3 Knowledge Test 1783955445678",
+        "canonical_slug": "w3-knowledge-test-1783955445678",
+        "institution_id": "inst-block-street",
+        "initiative_id": "ini-knw-test",
+        "parent_object_id": "col-w3-test",
+        "parent_object_type": "KnowledgeCollection",
+        "object_type": "KnowledgeArtifact",
+        "visibility": "institution_internal",
+        "governance_classification": 3,
+        "steward_human_id": "usr-001",
+        "created_by": "usr-001",
+        "last_modified_by": "usr-001",
+        "created_at": "2026-07-13T15:10:45.678Z",
+        "updated_at": "2026-07-13T15:10:47.332Z",
+        "current_version": 5,
+        "lifecycle_state": "published",
+        "tags": [],
+        "confidence_level": "medium",
+        "content_origin": "human",
+        "is_ai_generated": false,
+        "collection_id": "col-w3-test",
+        "domain_id": "dom-w3-test",
+        "artifact_type": "knowledge_article",
+        "body": "Bump version to stale translation.",
+        "summary": "W3 Knowledge Test 1783955445678",
+        "language": "en",
+        "published_version_id": "ver-5",
+        "evidence_status": "none"
+      },
+      "immutable": true
+    },
+    {
+      "version_id": "kver-mrjd0heo-jppc",
+      "artifact_id": "knw-mrjd0ha1-a3tc",
+      "version_number": 2,
+      "changed_by": "usr-001",
+      "changed_at": "2026-07-13T15:10:48.096Z",
+      "reason": "Move to review",
+      "affected_fields": [
+        "lifecycle_state"
+      ],
+      "previous_version_id": null,
+      "snapshot": {
+        "canonical_id": "knw-mrjd0ha1-a3tc",
+        "public_id": "KNW-1-A3TC",
+        "display_name": "Field canvassing fundamentals",
+        "canonical_slug": "field-canvassing-fundamentals",
+        "institution_id": "inst-block-street",
+        "initiative_id": "ini-knw-test",
+        "parent_object_id": "dom-w3-test",
+        "parent_object_type": "KnowledgeDomain",
+        "object_type": "Course",
+        "visibility": "institution_internal",
+        "governance_classification": 3,
+        "steward_human_id": "usr-001",
+        "created_by": "usr-001",
+        "last_modified_by": "usr-001",
+        "created_at": "2026-07-13T15:10:47.929Z",
+        "updated_at": "2026-07-13T15:10:47.929Z",
+        "current_version": 1,
+        "lifecycle_state": "review",
+        "tags": [],
+        "confidence_level": "medium",
+        "content_origin": "human",
+        "is_ai_generated": false,
+        "domain_id": "dom-w3-test",
+        "description": "Core canvassing skills",
+        "estimated_hours": 1,
+        "published_version": null
+      },
+      "immutable": true
+    },
+    {
+      "version_id": "kver-mrjd0hfg-1spg",
+      "artifact_id": "knw-mrjd0ha1-a3tc",
+      "version_number": 3,
+      "changed_by": "usr-001",
+      "changed_at": "2026-07-13T15:10:48.124Z",
+      "reason": "Publish course version",
+      "affected_fields": [
+        "lifecycle_state",
+        "published_version"
+      ],
+      "previous_version_id": null,
+      "snapshot": {
+        "canonical_id": "knw-mrjd0ha1-a3tc",
+        "public_id": "KNW-1-A3TC",
+        "display_name": "Field canvassing fundamentals",
+        "canonical_slug": "field-canvassing-fundamentals",
+        "institution_id": "inst-block-street",
+        "initiative_id": "ini-knw-test",
+        "parent_object_id": "dom-w3-test",
+        "parent_object_type": "KnowledgeDomain",
+        "object_type": "Course",
+        "visibility": "institution_internal",
+        "governance_classification": 3,
+        "steward_human_id": "usr-001",
+        "created_by": "usr-001",
+        "last_modified_by": "usr-001",
+        "created_at": "2026-07-13T15:10:47.929Z",
+        "updated_at": "2026-07-13T15:10:48.124Z",
+        "current_version": 2,
+        "lifecycle_state": "published",
+        "tags": [],
+        "confidence_level": "medium",
+        "content_origin": "human",
+        "is_ai_generated": false,
+        "domain_id": "dom-w3-test",
+        "description": "Core canvassing skills",
+        "estimated_hours": 1,
+        "published_version": 2
+      },
+      "immutable": true
     }
   ],
   "knowledge_translations": [
@@ -83737,6 +85643,66 @@
       "translator_human_id": "usr-001",
       "source_version": 2,
       "is_stale": true
+    },
+    {
+      "canonical_id": "knw-mrjd0d6j-o33q",
+      "public_id": "KNW-J-O33Q",
+      "display_name": "Translation es",
+      "canonical_slug": "translation-es",
+      "institution_id": "inst-block-street",
+      "initiative_id": "ini-knw-test",
+      "parent_object_id": "knw-mrjd0cs2-fa40",
+      "parent_object_type": "KnowledgeArtifact",
+      "object_type": "KnowledgeTranslation",
+      "visibility": "institution_internal",
+      "governance_classification": 3,
+      "steward_human_id": "usr-001",
+      "created_by": "usr-001",
+      "last_modified_by": "usr-001",
+      "created_at": "2026-07-13T15:10:42.619Z",
+      "updated_at": "2026-07-13T15:10:42.619Z",
+      "current_version": 1,
+      "lifecycle_state": "draft",
+      "tags": [],
+      "confidence_level": "medium",
+      "content_origin": "human",
+      "is_ai_generated": false,
+      "source_artifact_id": "knw-mrjd0cs2-fa40",
+      "target_language": "es",
+      "translated_body": "Contenido de divulgación revisado.",
+      "translator_human_id": "usr-001",
+      "source_version": 2,
+      "is_stale": true
+    },
+    {
+      "canonical_id": "knw-mrjd0fz7-307l",
+      "public_id": "KNW-7-307L",
+      "display_name": "Translation es",
+      "canonical_slug": "translation-es",
+      "institution_id": "inst-block-street",
+      "initiative_id": "ini-knw-test",
+      "parent_object_id": "knw-mrjd0fji-3jo3",
+      "parent_object_type": "KnowledgeArtifact",
+      "object_type": "KnowledgeTranslation",
+      "visibility": "institution_internal",
+      "governance_classification": 3,
+      "steward_human_id": "usr-001",
+      "created_by": "usr-001",
+      "last_modified_by": "usr-001",
+      "created_at": "2026-07-13T15:10:46.243Z",
+      "updated_at": "2026-07-13T15:10:46.243Z",
+      "current_version": 1,
+      "lifecycle_state": "draft",
+      "tags": [],
+      "confidence_level": "medium",
+      "content_origin": "human",
+      "is_ai_generated": false,
+      "source_artifact_id": "knw-mrjd0fji-3jo3",
+      "target_language": "es",
+      "translated_body": "Contenido de divulgación revisado.",
+      "translator_human_id": "usr-001",
+      "source_version": 2,
+      "is_stale": true
     }
   ],
   "knowledge_reviews": [
@@ -83913,6 +85879,64 @@
       "review_type": "peer",
       "findings": "Ready for validation",
       "completed_at": "2026-07-13T14:56:53.604Z"
+    },
+    {
+      "canonical_id": "krv-mrjd0dna-wsjk",
+      "public_id": "KNW-A-AEJT",
+      "display_name": "Review",
+      "canonical_slug": "review",
+      "institution_id": "inst-block-street",
+      "initiative_id": "ini-knw-test",
+      "parent_object_id": "knw-mrjd0cs2-fa40",
+      "parent_object_type": "KnowledgeArtifact",
+      "object_type": "KnowledgeReview",
+      "visibility": "institution_internal",
+      "governance_classification": 3,
+      "steward_human_id": "usr-001",
+      "created_by": "usr-001",
+      "last_modified_by": "usr-001",
+      "created_at": "2026-07-13T15:10:43.222Z",
+      "updated_at": "2026-07-13T15:10:43.222Z",
+      "current_version": 1,
+      "lifecycle_state": "validated",
+      "tags": [],
+      "confidence_level": "medium",
+      "content_origin": "human",
+      "is_ai_generated": false,
+      "artifact_id": "knw-mrjd0cs2-fa40",
+      "reviewer_human_id": "usr-001",
+      "review_type": "peer",
+      "findings": "Ready for validation",
+      "completed_at": "2026-07-13T15:10:43.434Z"
+    },
+    {
+      "canonical_id": "krv-mrjd0gei-dimd",
+      "public_id": "KNW-I-PI6B",
+      "display_name": "Review",
+      "canonical_slug": "review",
+      "institution_id": "inst-block-street",
+      "initiative_id": "ini-knw-test",
+      "parent_object_id": "knw-mrjd0fji-3jo3",
+      "parent_object_type": "KnowledgeArtifact",
+      "object_type": "KnowledgeReview",
+      "visibility": "institution_internal",
+      "governance_classification": 3,
+      "steward_human_id": "usr-001",
+      "created_by": "usr-001",
+      "last_modified_by": "usr-001",
+      "created_at": "2026-07-13T15:10:46.794Z",
+      "updated_at": "2026-07-13T15:10:46.794Z",
+      "current_version": 1,
+      "lifecycle_state": "validated",
+      "tags": [],
+      "confidence_level": "medium",
+      "content_origin": "human",
+      "is_ai_generated": false,
+      "artifact_id": "knw-mrjd0fji-3jo3",
+      "reviewer_human_id": "usr-001",
+      "review_type": "peer",
+      "findings": "Ready for validation",
+      "completed_at": "2026-07-13T15:10:47.094Z"
     }
   ],
   "knowledge_approvals": [
@@ -84083,6 +86107,62 @@
       "approver_human_id": "usr-001",
       "approval_type": "steward",
       "approved_at": "2026-07-13T14:56:53.997Z"
+    },
+    {
+      "canonical_id": "kap-mrjd0e8l-hpqc",
+      "public_id": "KNW-L-X5GW",
+      "display_name": "Approval",
+      "canonical_slug": "approval",
+      "institution_id": "inst-block-street",
+      "initiative_id": "ini-knw-test",
+      "parent_object_id": "knw-mrjd0cs2-fa40",
+      "parent_object_type": "KnowledgeArtifact",
+      "object_type": "KnowledgeApproval",
+      "visibility": "institution_internal",
+      "governance_classification": 3,
+      "steward_human_id": "usr-001",
+      "created_by": "usr-001",
+      "last_modified_by": "usr-001",
+      "created_at": "2026-07-13T15:10:43.989Z",
+      "updated_at": "2026-07-13T15:10:43.989Z",
+      "current_version": 1,
+      "lifecycle_state": "validated",
+      "tags": [],
+      "confidence_level": "medium",
+      "content_origin": "human",
+      "is_ai_generated": false,
+      "artifact_id": "knw-mrjd0cs2-fa40",
+      "approver_human_id": "usr-001",
+      "approval_type": "steward",
+      "approved_at": "2026-07-13T15:10:43.989Z"
+    },
+    {
+      "canonical_id": "kap-mrjd0gz5-ykxc",
+      "public_id": "KNW-5-YOXC",
+      "display_name": "Approval",
+      "canonical_slug": "approval",
+      "institution_id": "inst-block-street",
+      "initiative_id": "ini-knw-test",
+      "parent_object_id": "knw-mrjd0fji-3jo3",
+      "parent_object_type": "KnowledgeArtifact",
+      "object_type": "KnowledgeApproval",
+      "visibility": "institution_internal",
+      "governance_classification": 3,
+      "steward_human_id": "usr-001",
+      "created_by": "usr-001",
+      "last_modified_by": "usr-001",
+      "created_at": "2026-07-13T15:10:47.537Z",
+      "updated_at": "2026-07-13T15:10:47.537Z",
+      "current_version": 1,
+      "lifecycle_state": "validated",
+      "tags": [],
+      "confidence_level": "medium",
+      "content_origin": "human",
+      "is_ai_generated": false,
+      "artifact_id": "knw-mrjd0fji-3jo3",
+      "approver_human_id": "usr-001",
+      "approval_type": "steward",
+      "approved_at": "2026-07-13T15:10:47.537Z"
     }
   ],
   "knowledge_courses": [
@@ -84243,6 +86323,62 @@
       "last_modified_by": "usr-001",
       "created_at": "2026-07-13T14:56:54.381Z",
       "updated_at": "2026-07-13T14:56:54.633Z",
+      "current_version": 3,
+      "lifecycle_state": "published",
+      "tags": [],
+      "confidence_level": "medium",
+      "content_origin": "human",
+      "is_ai_generated": false,
+      "domain_id": "dom-w3-test",
+      "description": "Core canvassing skills",
+      "estimated_hours": 1,
+      "published_version": 2
+    },
+    {
+      "canonical_id": "knw-mrjd0ekc-vblj",
+      "public_id": "KNW-C-VBLJ",
+      "display_name": "Field canvassing fundamentals",
+      "canonical_slug": "field-canvassing-fundamentals",
+      "institution_id": "inst-block-street",
+      "initiative_id": "ini-knw-test",
+      "parent_object_id": "dom-w3-test",
+      "parent_object_type": "KnowledgeDomain",
+      "object_type": "Course",
+      "visibility": "institution_internal",
+      "governance_classification": 3,
+      "steward_human_id": "usr-001",
+      "created_by": "usr-001",
+      "last_modified_by": "usr-001",
+      "created_at": "2026-07-13T15:10:44.412Z",
+      "updated_at": "2026-07-13T15:10:44.694Z",
+      "current_version": 3,
+      "lifecycle_state": "published",
+      "tags": [],
+      "confidence_level": "medium",
+      "content_origin": "human",
+      "is_ai_generated": false,
+      "domain_id": "dom-w3-test",
+      "description": "Core canvassing skills",
+      "estimated_hours": 1,
+      "published_version": 2
+    },
+    {
+      "canonical_id": "knw-mrjd0ha1-a3tc",
+      "public_id": "KNW-1-A3TC",
+      "display_name": "Field canvassing fundamentals",
+      "canonical_slug": "field-canvassing-fundamentals",
+      "institution_id": "inst-block-street",
+      "initiative_id": "ini-knw-test",
+      "parent_object_id": "dom-w3-test",
+      "parent_object_type": "KnowledgeDomain",
+      "object_type": "Course",
+      "visibility": "institution_internal",
+      "governance_classification": 3,
+      "steward_human_id": "usr-001",
+      "created_by": "usr-001",
+      "last_modified_by": "usr-001",
+      "created_at": "2026-07-13T15:10:47.929Z",
+      "updated_at": "2026-07-13T15:10:48.183Z",
       "current_version": 3,
       "lifecycle_state": "published",
       "tags": [],
@@ -84429,6 +86565,64 @@
       "completed_at": "2026-07-13T14:56:54.825Z",
       "bound_artifact_version": 3,
       "bound_course_version": 2
+    },
+    {
+      "canonical_id": "knw-mrjd0exz-14gv",
+      "public_id": "KNW-Z-14GV",
+      "display_name": "Completion usr-002",
+      "canonical_slug": "completion-usr-002",
+      "institution_id": "inst-block-street",
+      "initiative_id": "ini-knw-test",
+      "parent_object_id": "knw-mrjd0ekc-vblj",
+      "parent_object_type": "Course",
+      "object_type": "LearningCompletion",
+      "visibility": "institution_internal",
+      "governance_classification": 3,
+      "steward_human_id": "usr-001",
+      "created_by": "usr-001",
+      "last_modified_by": "usr-001",
+      "created_at": "2026-07-13T15:10:44.903Z",
+      "updated_at": "2026-07-13T15:10:44.903Z",
+      "current_version": 1,
+      "lifecycle_state": "completed",
+      "tags": [],
+      "confidence_level": "medium",
+      "content_origin": "human",
+      "is_ai_generated": false,
+      "human_id": "usr-002",
+      "course_id": "knw-mrjd0ekc-vblj",
+      "completed_at": "2026-07-13T15:10:44.903Z",
+      "bound_artifact_version": 3,
+      "bound_course_version": 2
+    },
+    {
+      "canonical_id": "knw-mrjd0hmx-3ufl",
+      "public_id": "KNW-X-3UFL",
+      "display_name": "Completion usr-002",
+      "canonical_slug": "completion-usr-002",
+      "institution_id": "inst-block-street",
+      "initiative_id": "ini-knw-test",
+      "parent_object_id": "knw-mrjd0ha1-a3tc",
+      "parent_object_type": "Course",
+      "object_type": "LearningCompletion",
+      "visibility": "institution_internal",
+      "governance_classification": 3,
+      "steward_human_id": "usr-001",
+      "created_by": "usr-001",
+      "last_modified_by": "usr-001",
+      "created_at": "2026-07-13T15:10:48.393Z",
+      "updated_at": "2026-07-13T15:10:48.393Z",
+      "current_version": 1,
+      "lifecycle_state": "completed",
+      "tags": [],
+      "confidence_level": "medium",
+      "content_origin": "human",
+      "is_ai_generated": false,
+      "human_id": "usr-002",
+      "course_id": "knw-mrjd0ha1-a3tc",
+      "completed_at": "2026-07-13T15:10:48.393Z",
+      "bound_artifact_version": 3,
+      "bound_course_version": 2
     }
   ],
   "knowledge_competencies": [
@@ -84584,6 +86778,60 @@
       "last_modified_by": "usr-001",
       "created_at": "2026-07-13T14:56:54.990Z",
       "updated_at": "2026-07-13T14:56:54.990Z",
+      "current_version": 1,
+      "lifecycle_state": "active",
+      "tags": [],
+      "confidence_level": "medium",
+      "content_origin": "human",
+      "is_ai_generated": false,
+      "description": "Canvassing competency",
+      "skill_ids": [],
+      "assessment_required": true
+    },
+    {
+      "canonical_id": "cmp-mrjd0f3c-e408",
+      "public_id": "CMP-TEST",
+      "display_name": "Door knock competency",
+      "canonical_slug": "door-knock",
+      "institution_id": "inst-block-street",
+      "initiative_id": "ini-knw-test",
+      "parent_object_id": "dom-w3-test",
+      "parent_object_type": "KnowledgeDomain",
+      "object_type": "Competency",
+      "visibility": "institution_internal",
+      "governance_classification": 3,
+      "steward_human_id": "usr-001",
+      "created_by": "usr-001",
+      "last_modified_by": "usr-001",
+      "created_at": "2026-07-13T15:10:45.096Z",
+      "updated_at": "2026-07-13T15:10:45.096Z",
+      "current_version": 1,
+      "lifecycle_state": "active",
+      "tags": [],
+      "confidence_level": "medium",
+      "content_origin": "human",
+      "is_ai_generated": false,
+      "description": "Canvassing competency",
+      "skill_ids": [],
+      "assessment_required": true
+    },
+    {
+      "canonical_id": "cmp-mrjd0hrp-tiji",
+      "public_id": "CMP-TEST",
+      "display_name": "Door knock competency",
+      "canonical_slug": "door-knock",
+      "institution_id": "inst-block-street",
+      "initiative_id": "ini-knw-test",
+      "parent_object_id": "dom-w3-test",
+      "parent_object_type": "KnowledgeDomain",
+      "object_type": "Competency",
+      "visibility": "institution_internal",
+      "governance_classification": 3,
+      "steward_human_id": "usr-001",
+      "created_by": "usr-001",
+      "last_modified_by": "usr-001",
+      "created_at": "2026-07-13T15:10:48.565Z",
+      "updated_at": "2026-07-13T15:10:48.565Z",
       "current_version": 1,
       "lifecycle_state": "active",
       "tags": [],
@@ -84811,6 +87059,78 @@
       ],
       "expiration_months": 12,
       "issuing_authority_human_id": "usr-001"
+    },
+    {
+      "canonical_id": "crt-mrjd0f5d-9ji8",
+      "public_id": "CERT-TEST",
+      "display_name": "Field lead certification",
+      "canonical_slug": "field-lead",
+      "institution_id": "inst-block-street",
+      "initiative_id": "ini-knw-test",
+      "parent_object_id": "dom-w3-test",
+      "parent_object_type": "KnowledgeDomain",
+      "object_type": "Certification",
+      "visibility": "institution_internal",
+      "governance_classification": 3,
+      "steward_human_id": "usr-001",
+      "created_by": "usr-001",
+      "last_modified_by": "usr-001",
+      "created_at": "2026-07-13T15:10:45.169Z",
+      "updated_at": "2026-07-13T15:10:45.169Z",
+      "current_version": 1,
+      "lifecycle_state": "active",
+      "tags": [],
+      "confidence_level": "medium",
+      "content_origin": "human",
+      "is_ai_generated": false,
+      "description": "Requires course + competency",
+      "competency_ids": [
+        "cmp-mrjd0f3c-e408"
+      ],
+      "course_ids": [
+        "knw-mrjd0ekc-vblj"
+      ],
+      "requirement_ids": [
+        "req-001"
+      ],
+      "expiration_months": 12,
+      "issuing_authority_human_id": "usr-001"
+    },
+    {
+      "canonical_id": "crt-mrjd0ht7-1ibh",
+      "public_id": "CERT-TEST",
+      "display_name": "Field lead certification",
+      "canonical_slug": "field-lead",
+      "institution_id": "inst-block-street",
+      "initiative_id": "ini-knw-test",
+      "parent_object_id": "dom-w3-test",
+      "parent_object_type": "KnowledgeDomain",
+      "object_type": "Certification",
+      "visibility": "institution_internal",
+      "governance_classification": 3,
+      "steward_human_id": "usr-001",
+      "created_by": "usr-001",
+      "last_modified_by": "usr-001",
+      "created_at": "2026-07-13T15:10:48.620Z",
+      "updated_at": "2026-07-13T15:10:48.620Z",
+      "current_version": 1,
+      "lifecycle_state": "active",
+      "tags": [],
+      "confidence_level": "medium",
+      "content_origin": "human",
+      "is_ai_generated": false,
+      "description": "Requires course + competency",
+      "competency_ids": [
+        "cmp-mrjd0hrp-tiji"
+      ],
+      "course_ids": [
+        "knw-mrjd0ha1-a3tc"
+      ],
+      "requirement_ids": [
+        "req-001"
+      ],
+      "expiration_months": 12,
+      "issuing_authority_human_id": "usr-001"
     }
   ],
   "knowledge_ai_suggestions": [
@@ -84976,6 +87296,64 @@
       "last_modified_by": "usr-001",
       "created_at": "2026-07-13T14:56:55.104Z",
       "updated_at": "2026-07-13T14:56:55.104Z",
+      "current_version": 1,
+      "lifecycle_state": "pending",
+      "tags": [],
+      "confidence_level": "medium",
+      "content_origin": "ai_generated",
+      "is_ai_generated": true,
+      "artifact_id_optional": null,
+      "suggestion_text": "Add section on bilingual outreach.",
+      "generated_by_service_id": "svc-ai-knw-001",
+      "reviewed_by_human_id": null,
+      "does_not_create_truth": true
+    },
+    {
+      "canonical_id": "knw-mrjd0f77-9d9t",
+      "public_id": "KNW-7-9D9T",
+      "display_name": "AI Suggestion",
+      "canonical_slug": "ai-suggestion",
+      "institution_id": "inst-block-street",
+      "initiative_id": "ini-knw-test",
+      "parent_object_id": null,
+      "parent_object_type": null,
+      "object_type": "AIKnowledgeSuggestion",
+      "visibility": "institution_internal",
+      "governance_classification": 3,
+      "steward_human_id": "usr-001",
+      "created_by": "usr-001",
+      "last_modified_by": "usr-001",
+      "created_at": "2026-07-13T15:10:45.235Z",
+      "updated_at": "2026-07-13T15:10:45.235Z",
+      "current_version": 1,
+      "lifecycle_state": "pending",
+      "tags": [],
+      "confidence_level": "medium",
+      "content_origin": "ai_generated",
+      "is_ai_generated": true,
+      "artifact_id_optional": null,
+      "suggestion_text": "Add section on bilingual outreach.",
+      "generated_by_service_id": "svc-ai-knw-001",
+      "reviewed_by_human_id": null,
+      "does_not_create_truth": true
+    },
+    {
+      "canonical_id": "knw-mrjd0huy-rf75",
+      "public_id": "KNW-Y-RF75",
+      "display_name": "AI Suggestion",
+      "canonical_slug": "ai-suggestion",
+      "institution_id": "inst-block-street",
+      "initiative_id": "ini-knw-test",
+      "parent_object_id": null,
+      "parent_object_type": null,
+      "object_type": "AIKnowledgeSuggestion",
+      "visibility": "institution_internal",
+      "governance_classification": 3,
+      "steward_human_id": "usr-001",
+      "created_by": "usr-001",
+      "last_modified_by": "usr-001",
+      "created_at": "2026-07-13T15:10:48.682Z",
+      "updated_at": "2026-07-13T15:10:48.682Z",
       "current_version": 1,
       "lifecycle_state": "pending",
       "tags": [],
@@ -85154,6 +87532,62 @@
       "content_origin": "human",
       "is_ai_generated": false,
       "artifact_id": "knw-mrjcikiw-iysg",
+      "claim_text": "Outreach increased turnout.",
+      "evidence_status": "none",
+      "requires_evidence": true
+    },
+    {
+      "canonical_id": "knw-mrjd0fdb-kk6v",
+      "public_id": "KNW-B-KK6V",
+      "display_name": "Outreach increased turnout.",
+      "canonical_slug": "outreach-increased-turnout",
+      "institution_id": "inst-block-street",
+      "initiative_id": "ini-knw-test",
+      "parent_object_id": "knw-mrjd0cs2-fa40",
+      "parent_object_type": "KnowledgeArtifact",
+      "object_type": "KnowledgeClaim",
+      "visibility": "institution_internal",
+      "governance_classification": 3,
+      "steward_human_id": "usr-001",
+      "created_by": "usr-001",
+      "last_modified_by": "usr-001",
+      "created_at": "2026-07-13T15:10:45.455Z",
+      "updated_at": "2026-07-13T15:10:45.455Z",
+      "current_version": 1,
+      "lifecycle_state": "draft",
+      "tags": [],
+      "confidence_level": "low",
+      "content_origin": "human",
+      "is_ai_generated": false,
+      "artifact_id": "knw-mrjd0cs2-fa40",
+      "claim_text": "Outreach increased turnout.",
+      "evidence_status": "none",
+      "requires_evidence": true
+    },
+    {
+      "canonical_id": "knw-mrjd0i0u-6kht",
+      "public_id": "KNW-U-6KHT",
+      "display_name": "Outreach increased turnout.",
+      "canonical_slug": "outreach-increased-turnout",
+      "institution_id": "inst-block-street",
+      "initiative_id": "ini-knw-test",
+      "parent_object_id": "knw-mrjd0fji-3jo3",
+      "parent_object_type": "KnowledgeArtifact",
+      "object_type": "KnowledgeClaim",
+      "visibility": "institution_internal",
+      "governance_classification": 3,
+      "steward_human_id": "usr-001",
+      "created_by": "usr-001",
+      "last_modified_by": "usr-001",
+      "created_at": "2026-07-13T15:10:48.894Z",
+      "updated_at": "2026-07-13T15:10:48.894Z",
+      "current_version": 1,
+      "lifecycle_state": "draft",
+      "tags": [],
+      "confidence_level": "low",
+      "content_origin": "human",
+      "is_ai_generated": false,
+      "artifact_id": "knw-mrjd0fji-3jo3",
       "claim_text": "Outreach increased turnout.",
       "evidence_status": "none",
       "requires_evidence": true
@@ -85375,6 +87809,78 @@
         "audit_id_optional": "kaud-mrjciq31-wh3i"
       },
       "payload_hash": "075355c75cd3bbb4"
+    },
+    "idem-mrjd0fc7-8slt": {
+      "result": {
+        "success": true,
+        "entity_id": "knw-mrjd0fdb-kk6v",
+        "entity_type": "KnowledgeClaim",
+        "previous_status_optional": null,
+        "new_status_optional": "draft",
+        "version": 1,
+        "events": [
+          "knw-mrjd0fdw-1gfi"
+        ],
+        "warnings": [],
+        "next_required_actions": [],
+        "validation_errors": [],
+        "audit_id_optional": null
+      },
+      "payload_hash": "9a46805c62e311f4"
+    },
+    "idem-mrjd0i00-mc17": {
+      "result": {
+        "success": true,
+        "entity_id": "knw-mrjd0i0u-6kht",
+        "entity_type": "KnowledgeClaim",
+        "previous_status_optional": null,
+        "new_status_optional": "draft",
+        "version": 1,
+        "events": [
+          "knw-mrjd0i1v-vc3a"
+        ],
+        "warnings": [],
+        "next_required_actions": [],
+        "validation_errors": [],
+        "audit_id_optional": null
+      },
+      "payload_hash": "c702456af27fa8c5"
+    },
+    "impl-ipr-mrjd0jc2-6hs3": {
+      "result": {
+        "success": true,
+        "entity_id": "knw-mrjd0js4-h9a4",
+        "entity_type": "KnowledgeArtifact",
+        "previous_status_optional": null,
+        "new_status_optional": "draft",
+        "version": 1,
+        "events": [
+          "knw-mrjd0jtt-kd07"
+        ],
+        "warnings": [],
+        "next_required_actions": [],
+        "validation_errors": [],
+        "audit_id_optional": "kaud-mrjd0jx4-r3cp"
+      },
+      "payload_hash": "581d7e4eba88a138"
+    },
+    "impl-ipr-mrjd0krr-oc2v": {
+      "result": {
+        "success": true,
+        "entity_id": "knw-mrjd0l6v-goge",
+        "entity_type": "KnowledgeArtifact",
+        "previous_status_optional": null,
+        "new_status_optional": "draft",
+        "version": 1,
+        "events": [
+          "knw-mrjd0l8j-iok1"
+        ],
+        "warnings": [],
+        "next_required_actions": [],
+        "validation_errors": [],
+        "audit_id_optional": "kaud-mrjd0lby-05ta"
+      },
+      "payload_hash": "b9b8dfd5556594ec"
     }
   },
   "knowledge_consumer_receipts": [
@@ -85451,6 +87957,28 @@
       "source_event_id": "evt-mission-knw",
       "created_at": "2026-07-13T14:56:55.740Z",
       "auto_verified": false
+    },
+    {
+      "candidate_id": "kec-mrjd0i8t-xc3g",
+      "mission_id": "msn-test-001",
+      "human_id": "usr-001",
+      "institution_id": "inst-block-street",
+      "evidence_type": "field_practice",
+      "status": "pending_review",
+      "source_event_id": "evt-mission-knw",
+      "created_at": "2026-07-13T15:10:49.181Z",
+      "auto_verified": false
+    },
+    {
+      "candidate_id": "kec-mrjd0ie3-93kv",
+      "mission_id": "msn-test-001",
+      "human_id": "usr-001",
+      "institution_id": "inst-block-street",
+      "evidence_type": "field_practice",
+      "status": "pending_review",
+      "source_event_id": "evt-mission-knw",
+      "created_at": "2026-07-13T15:10:49.371Z",
+      "auto_verified": false
     }
   ],
   "knowledge_calendar_entries": [
@@ -85501,6 +88029,24 @@
     },
     {
       "entry_id": "kcal-mrjcin6d-ue4r",
+      "institution_id": "inst-block-street",
+      "event_type": "knowledge.course_version_published",
+      "title": "Safety Workshop",
+      "scheduled_at": "2026-07-15T10:00:00Z",
+      "source_event_id": "evt-cal-knw",
+      "lifecycle_mutation_allowed": false
+    },
+    {
+      "entry_id": "kcal-mrjd0i9m-buo8",
+      "institution_id": "inst-block-street",
+      "event_type": "knowledge.course_version_published",
+      "title": "Safety Workshop",
+      "scheduled_at": "2026-07-15T10:00:00Z",
+      "source_event_id": "evt-cal-knw",
+      "lifecycle_mutation_allowed": false
+    },
+    {
+      "entry_id": "kcal-mrjd0ieu-wa5f",
       "institution_id": "inst-block-street",
       "event_type": "knowledge.course_version_published",
       "title": "Safety Workshop",
@@ -85663,6 +88209,54 @@
     {
       "review_id": "irq-mrjcipc9-70to",
       "intelligence_result_id": "int-mrjcipc9-ud8b",
+      "reason": "Policy threshold or conflicting evidence",
+      "priority": "medium",
+      "status": "pending",
+      "institution_id": "opt"
+    },
+    {
+      "review_id": "irq-mrjd0ijb-yv56",
+      "intelligence_result_id": "int-mrjd0ijb-glme",
+      "reason": "Policy threshold or conflicting evidence",
+      "priority": "medium",
+      "status": "pending",
+      "institution_id": "req_w6_test"
+    },
+    {
+      "review_id": "irq-mrjd0iq7-no2h",
+      "intelligence_result_id": "int-mrjd0iq7-dijy",
+      "reason": "Policy threshold or conflicting evidence",
+      "priority": "medium",
+      "status": "pending",
+      "institution_id": "req_w6_test"
+    },
+    {
+      "review_id": "irq-mrjd0iy7-bdf4",
+      "intelligence_result_id": "int-mrjd0iy7-9vua",
+      "reason": "Policy threshold or conflicting evidence",
+      "priority": "medium",
+      "status": "pending",
+      "institution_id": "opt"
+    },
+    {
+      "review_id": "irq-mrjd0j57-u5f5",
+      "intelligence_result_id": "int-mrjd0j57-wwt1",
+      "reason": "Policy threshold or conflicting evidence",
+      "priority": "medium",
+      "status": "pending",
+      "institution_id": "opt"
+    },
+    {
+      "review_id": "irq-mrjd0ke1-ytqe",
+      "intelligence_result_id": "int-mrjd0ke1-9n8x",
+      "reason": "Policy threshold or conflicting evidence",
+      "priority": "medium",
+      "status": "pending",
+      "institution_id": "opt"
+    },
+    {
+      "review_id": "irq-mrjd0kkp-9uxe",
+      "intelligence_result_id": "int-mrjd0kkp-6s1l",
       "reason": "Policy threshold or conflicting evidence",
       "priority": "medium",
       "status": "pending",
@@ -86155,6 +88749,168 @@
       "policy_version": "11.12-w6.1",
       "model_reference_optional": "deterministic-rules-v1",
       "recorded_at": "2026-07-13T14:56:58.594Z"
+    },
+    {
+      "ledger_id": "kel-mrjd0ik3-30tu",
+      "intelligence_result_id": "int-mrjd0ijb-glme",
+      "request": {
+        "intelligence_request_id": "int-req-req_w6_test",
+        "request_type": "knowledge_query",
+        "institution_id": "inst-block-street",
+        "requesting_human_id": "usr-001",
+        "purpose": "test_query",
+        "target_entity_type_optional": null,
+        "target_entity_id_optional": null,
+        "course_id_optional": null,
+        "lesson_id_optional": null,
+        "competency_id_optional": null,
+        "language": "en",
+        "requested_depth": "standard",
+        "query_optional": "guidance",
+        "request_id": "req_w6_test",
+        "correlation_id": "corr_w6_test",
+        "created_at": "2026-07-13T15:10:49.559Z"
+      },
+      "evidence_references": [],
+      "canonical_versions": [],
+      "policy_version": "11.12-w6.1",
+      "model_reference_optional": "deterministic-rules-v1",
+      "recorded_at": "2026-07-13T15:10:49.587Z"
+    },
+    {
+      "ledger_id": "kel-mrjd0iqy-77l2",
+      "intelligence_result_id": "int-mrjd0iq7-dijy",
+      "request": {
+        "intelligence_request_id": "int-req-req_w6_test",
+        "request_type": "knowledge_query",
+        "institution_id": "inst-block-street",
+        "requesting_human_id": "usr-001",
+        "purpose": "test_query",
+        "target_entity_type_optional": null,
+        "target_entity_id_optional": null,
+        "course_id_optional": null,
+        "lesson_id_optional": null,
+        "competency_id_optional": null,
+        "language": "en",
+        "requested_depth": "standard",
+        "query_optional": "guidance",
+        "request_id": "req_w6_test",
+        "correlation_id": "corr_w6_test",
+        "created_at": "2026-07-13T15:10:49.807Z"
+      },
+      "evidence_references": [],
+      "canonical_versions": [],
+      "policy_version": "11.12-w6.1",
+      "model_reference_optional": "deterministic-rules-v1",
+      "recorded_at": "2026-07-13T15:10:49.834Z"
+    },
+    {
+      "ledger_id": "kel-mrjd0iz1-aob5",
+      "intelligence_result_id": "int-mrjd0iy7-9vua",
+      "request": {
+        "intelligence_request_id": "int-req-opt-continuous",
+        "request_type": "knowledge_query",
+        "institution_id": "inst-block-street",
+        "requesting_human_id": "usr-001",
+        "purpose": "contradiction_scan",
+        "target_entity_type_optional": null,
+        "target_entity_id_optional": null,
+        "course_id_optional": null,
+        "lesson_id_optional": null,
+        "competency_id_optional": null,
+        "language": "en",
+        "requested_depth": "standard",
+        "query_optional": "conflict",
+        "request_id": "opt-continuous",
+        "correlation_id": "opt-continuous",
+        "created_at": "2026-07-13T15:10:50.095Z"
+      },
+      "evidence_references": [],
+      "canonical_versions": [],
+      "policy_version": "11.12-w6.1",
+      "model_reference_optional": "deterministic-rules-v1",
+      "recorded_at": "2026-07-13T15:10:50.125Z"
+    },
+    {
+      "ledger_id": "kel-mrjd0j5w-3thz",
+      "intelligence_result_id": "int-mrjd0j57-wwt1",
+      "request": {
+        "intelligence_request_id": "int-req-opt-continuous",
+        "request_type": "knowledge_query",
+        "institution_id": "inst-block-street",
+        "requesting_human_id": "usr-001",
+        "purpose": "contradiction_scan",
+        "target_entity_type_optional": null,
+        "target_entity_id_optional": null,
+        "course_id_optional": null,
+        "lesson_id_optional": null,
+        "competency_id_optional": null,
+        "language": "en",
+        "requested_depth": "standard",
+        "query_optional": "conflict",
+        "request_id": "opt-continuous",
+        "correlation_id": "opt-continuous",
+        "created_at": "2026-07-13T15:10:50.347Z"
+      },
+      "evidence_references": [],
+      "canonical_versions": [],
+      "policy_version": "11.12-w6.1",
+      "model_reference_optional": "deterministic-rules-v1",
+      "recorded_at": "2026-07-13T15:10:50.372Z"
+    },
+    {
+      "ledger_id": "kel-mrjd0kep-18ux",
+      "intelligence_result_id": "int-mrjd0ke1-9n8x",
+      "request": {
+        "intelligence_request_id": "int-req-opt-continuous",
+        "request_type": "knowledge_query",
+        "institution_id": "inst-block-street",
+        "requesting_human_id": "usr-001",
+        "purpose": "contradiction_scan",
+        "target_entity_type_optional": null,
+        "target_entity_id_optional": null,
+        "course_id_optional": null,
+        "lesson_id_optional": null,
+        "competency_id_optional": null,
+        "language": "en",
+        "requested_depth": "standard",
+        "query_optional": "conflict",
+        "request_id": "opt-continuous",
+        "correlation_id": "opt-continuous",
+        "created_at": "2026-07-13T15:10:51.961Z"
+      },
+      "evidence_references": [],
+      "canonical_versions": [],
+      "policy_version": "11.12-w6.1",
+      "model_reference_optional": "deterministic-rules-v1",
+      "recorded_at": "2026-07-13T15:10:51.985Z"
+    },
+    {
+      "ledger_id": "kel-mrjd0kle-8drq",
+      "intelligence_result_id": "int-mrjd0kkp-6s1l",
+      "request": {
+        "intelligence_request_id": "int-req-opt-continuous",
+        "request_type": "knowledge_query",
+        "institution_id": "inst-block-street",
+        "requesting_human_id": "usr-001",
+        "purpose": "contradiction_scan",
+        "target_entity_type_optional": null,
+        "target_entity_id_optional": null,
+        "course_id_optional": null,
+        "lesson_id_optional": null,
+        "competency_id_optional": null,
+        "language": "en",
+        "requested_depth": "standard",
+        "query_optional": "conflict",
+        "request_id": "opt-continuous",
+        "correlation_id": "opt-continuous",
+        "created_at": "2026-07-13T15:10:52.201Z"
+      },
+      "evidence_references": [],
+      "canonical_versions": [],
+      "policy_version": "11.12-w6.1",
+      "model_reference_optional": "deterministic-rules-v1",
+      "recorded_at": "2026-07-13T15:10:52.226Z"
     }
   ],
   "knowledge_ai_provenance": [
@@ -86319,6 +89075,60 @@
       "retrieval_query_optional": "conflict",
       "canonical_versions": [],
       "generated_at": "2026-07-13T14:56:58.652Z"
+    },
+    {
+      "provenance_id": "prv-mrjd0ilu-2syk",
+      "intelligence_result_id": "int-mrjd0ijb-glme",
+      "model_or_rule_version": "deterministic-rules-v1",
+      "policy_version": "11.12-w6.1",
+      "retrieval_query_optional": "guidance",
+      "canonical_versions": [],
+      "generated_at": "2026-07-13T15:10:49.650Z"
+    },
+    {
+      "provenance_id": "prv-mrjd0isk-a4gp",
+      "intelligence_result_id": "int-mrjd0iq7-dijy",
+      "model_or_rule_version": "deterministic-rules-v1",
+      "policy_version": "11.12-w6.1",
+      "retrieval_query_optional": "guidance",
+      "canonical_versions": [],
+      "generated_at": "2026-07-13T15:10:49.892Z"
+    },
+    {
+      "provenance_id": "prv-mrjd0j0y-gknz",
+      "intelligence_result_id": "int-mrjd0iy7-9vua",
+      "model_or_rule_version": "deterministic-rules-v1",
+      "policy_version": "11.12-w6.1",
+      "retrieval_query_optional": "conflict",
+      "canonical_versions": [],
+      "generated_at": "2026-07-13T15:10:50.194Z"
+    },
+    {
+      "provenance_id": "prv-mrjd0j7d-441n",
+      "intelligence_result_id": "int-mrjd0j57-wwt1",
+      "model_or_rule_version": "deterministic-rules-v1",
+      "policy_version": "11.12-w6.1",
+      "retrieval_query_optional": "conflict",
+      "canonical_versions": [],
+      "generated_at": "2026-07-13T15:10:50.425Z"
+    },
+    {
+      "provenance_id": "prv-mrjd0kgb-dlv4",
+      "intelligence_result_id": "int-mrjd0ke1-9n8x",
+      "model_or_rule_version": "deterministic-rules-v1",
+      "policy_version": "11.12-w6.1",
+      "retrieval_query_optional": "conflict",
+      "canonical_versions": [],
+      "generated_at": "2026-07-13T15:10:52.044Z"
+    },
+    {
+      "provenance_id": "prv-mrjd0kn1-mde2",
+      "intelligence_result_id": "int-mrjd0kkp-6s1l",
+      "model_or_rule_version": "deterministic-rules-v1",
+      "policy_version": "11.12-w6.1",
+      "retrieval_query_optional": "conflict",
+      "canonical_versions": [],
+      "generated_at": "2026-07-13T15:10:52.285Z"
     }
   ],
   "knowledge_intelligence_feedback": [
@@ -86369,6 +89179,22 @@
       "actor_human_id": "usr-001",
       "institution_id": "inst-block-street",
       "recorded_at": "2026-07-13T14:56:56.278Z"
+    },
+    {
+      "feedback_id": "kfb-mrjd0ina-jdyn",
+      "recommendation_id": "rec-knw-test-dismiss",
+      "action": "dismissed",
+      "actor_human_id": "usr-001",
+      "institution_id": "inst-block-street",
+      "recorded_at": "2026-07-13T15:10:49.702Z"
+    },
+    {
+      "feedback_id": "kfb-mrjd0iu7-k49b",
+      "recommendation_id": "rec-knw-test-dismiss",
+      "action": "dismissed",
+      "actor_human_id": "usr-001",
+      "institution_id": "inst-block-street",
+      "recorded_at": "2026-07-13T15:10:49.951Z"
     }
   ],
   "knowledge_optimization_feedback": [
@@ -86419,6 +89245,22 @@
       "actor_human_id": "usr-001",
       "institution_id": "inst-block-street",
       "recorded_at": "2026-07-13T14:56:58.745Z"
+    },
+    {
+      "feedback_id": "kofb-mrjd0j9u-gwc0",
+      "optimization_id": "opt-knw-test-reject",
+      "action": "rejected",
+      "actor_human_id": "usr-001",
+      "institution_id": "inst-block-street",
+      "recorded_at": "2026-07-13T15:10:50.514Z"
+    },
+    {
+      "feedback_id": "kofb-mrjd0kpf-5za2",
+      "optimization_id": "opt-knw-test-reject",
+      "action": "rejected",
+      "actor_human_id": "usr-001",
+      "institution_id": "inst-block-street",
+      "recorded_at": "2026-07-13T15:10:52.371Z"
     }
   ],
   "knowledge_improvement_candidates": [
@@ -86837,6 +89679,162 @@
       "triage_status": "pending",
       "created_at": "2026-07-13T14:56:58.797Z",
       "advisory_only": true
+    },
+    {
+      "improvement_candidate_id": "icd-mrjd0iwi-6yp0",
+      "institution_id": "inst-block-street",
+      "candidate_type": "knowledge_revision",
+      "source_type": "knowledge_health",
+      "source_id": "khs-mrjd0iwi-8rzp",
+      "title": "Knowledge health review required",
+      "problem_statement": "Knowledge health band is at_risk",
+      "evidence_references": [
+        {
+          "signal_id": "khs-mrjd0iwi-8rzp",
+          "source": "health",
+          "summary": "at_risk"
+        }
+      ],
+      "affected_entity_types": [],
+      "affected_entity_ids": [],
+      "estimated_impact": "medium",
+      "urgency": "medium",
+      "confidence": "medium",
+      "identified_by_human_id_optional": null,
+      "identified_by_service_optional": "KNW-OPT-001",
+      "triage_status": "pending",
+      "created_at": "2026-07-13T15:10:50.034Z",
+      "advisory_only": true
+    },
+    {
+      "improvement_candidate_id": "icd-mrjd0j3l-g2qq",
+      "institution_id": "inst-block-street",
+      "candidate_type": "knowledge_revision",
+      "source_type": "knowledge_health",
+      "source_id": "khs-mrjd0j3l-0fab",
+      "title": "Knowledge health review required",
+      "problem_statement": "Knowledge health band is at_risk",
+      "evidence_references": [
+        {
+          "signal_id": "khs-mrjd0j3l-0fab",
+          "source": "health",
+          "summary": "at_risk"
+        }
+      ],
+      "affected_entity_types": [],
+      "affected_entity_ids": [],
+      "estimated_impact": "medium",
+      "urgency": "medium",
+      "confidence": "medium",
+      "identified_by_human_id_optional": null,
+      "identified_by_service_optional": "KNW-OPT-001",
+      "triage_status": "pending",
+      "created_at": "2026-07-13T15:10:50.289Z",
+      "advisory_only": true
+    },
+    {
+      "improvement_candidate_id": "icd-mrjd0jbd-rxwh",
+      "institution_id": "inst-block-street",
+      "candidate_type": "knowledge_revision",
+      "source_type": "human_suggestion",
+      "source_id": "test-source",
+      "title": "Test candidate",
+      "problem_statement": "Test problem",
+      "evidence_references": [
+        {
+          "signal_id": "sig-1",
+          "source": "test",
+          "summary": "evidence"
+        }
+      ],
+      "affected_entity_types": [],
+      "affected_entity_ids": [],
+      "estimated_impact": "medium",
+      "urgency": "medium",
+      "confidence": "medium",
+      "identified_by_human_id_optional": "usr-001",
+      "identified_by_service_optional": null,
+      "triage_status": "pending",
+      "created_at": "2026-07-13T15:10:50.569Z",
+      "advisory_only": true
+    },
+    {
+      "improvement_candidate_id": "icd-mrjd0kci-ljbn",
+      "institution_id": "inst-block-street",
+      "candidate_type": "knowledge_revision",
+      "source_type": "knowledge_health",
+      "source_id": "khs-mrjd0kci-zojg",
+      "title": "Knowledge health review required",
+      "problem_statement": "Knowledge health band is at_risk",
+      "evidence_references": [
+        {
+          "signal_id": "khs-mrjd0kci-zojg",
+          "source": "health",
+          "summary": "at_risk"
+        }
+      ],
+      "affected_entity_types": [],
+      "affected_entity_ids": [],
+      "estimated_impact": "medium",
+      "urgency": "medium",
+      "confidence": "medium",
+      "identified_by_human_id_optional": null,
+      "identified_by_service_optional": "KNW-OPT-001",
+      "triage_status": "pending",
+      "created_at": "2026-07-13T15:10:51.906Z",
+      "advisory_only": true
+    },
+    {
+      "improvement_candidate_id": "icd-mrjd0kiw-ruvk",
+      "institution_id": "inst-block-street",
+      "candidate_type": "knowledge_revision",
+      "source_type": "knowledge_health",
+      "source_id": "khs-mrjd0kiw-p5pk",
+      "title": "Knowledge health review required",
+      "problem_statement": "Knowledge health band is at_risk",
+      "evidence_references": [
+        {
+          "signal_id": "khs-mrjd0kiw-p5pk",
+          "source": "health",
+          "summary": "at_risk"
+        }
+      ],
+      "affected_entity_types": [],
+      "affected_entity_ids": [],
+      "estimated_impact": "medium",
+      "urgency": "medium",
+      "confidence": "medium",
+      "identified_by_human_id_optional": null,
+      "identified_by_service_optional": "KNW-OPT-001",
+      "triage_status": "pending",
+      "created_at": "2026-07-13T15:10:52.136Z",
+      "advisory_only": true
+    },
+    {
+      "improvement_candidate_id": "icd-mrjd0kr2-pbx3",
+      "institution_id": "inst-block-street",
+      "candidate_type": "knowledge_revision",
+      "source_type": "human_suggestion",
+      "source_id": "test-source",
+      "title": "Test candidate",
+      "problem_statement": "Test problem",
+      "evidence_references": [
+        {
+          "signal_id": "sig-1",
+          "source": "test",
+          "summary": "evidence"
+        }
+      ],
+      "affected_entity_types": [],
+      "affected_entity_ids": [],
+      "estimated_impact": "medium",
+      "urgency": "medium",
+      "confidence": "medium",
+      "identified_by_human_id_optional": "usr-001",
+      "identified_by_service_optional": null,
+      "triage_status": "pending",
+      "created_at": "2026-07-13T15:10:52.430Z",
+      "advisory_only": true
     }
   ],
   "knowledge_improvement_proposals": [
@@ -86971,6 +89969,50 @@
       "domain_command_optional": "CreateKnowledgeArtifact",
       "created_at": "2026-07-13T14:56:58.819Z",
       "advisory_only": true
+    },
+    {
+      "improvement_proposal_id": "ipr-mrjd0jc2-6hs3",
+      "candidate_id": "icd-mrjd0jbd-rxwh",
+      "institution_id": "inst-block-street",
+      "proposal_type": "knowledge_revision",
+      "proposed_change": "Revise safety claim",
+      "change_rationale": "Broken source",
+      "expected_benefit": "Accurate guidance",
+      "possible_harms": [],
+      "affected_humans": [],
+      "affected_operations": [],
+      "pilot_required": false,
+      "measurement_plan": "Compare error rate",
+      "rollback_plan": "Restore prior version",
+      "steward_human_id": "usr-001",
+      "approval_authority": "Knowledge steward",
+      "status": "institutionalized",
+      "current_version": 1,
+      "domain_command_optional": "CreateKnowledgeArtifact",
+      "created_at": "2026-07-13T15:10:50.594Z",
+      "advisory_only": true
+    },
+    {
+      "improvement_proposal_id": "ipr-mrjd0krr-oc2v",
+      "candidate_id": "icd-mrjd0kr2-pbx3",
+      "institution_id": "inst-block-street",
+      "proposal_type": "knowledge_revision",
+      "proposed_change": "Revise safety claim",
+      "change_rationale": "Broken source",
+      "expected_benefit": "Accurate guidance",
+      "possible_harms": [],
+      "affected_humans": [],
+      "affected_operations": [],
+      "pilot_required": false,
+      "measurement_plan": "Compare error rate",
+      "rollback_plan": "Restore prior version",
+      "steward_human_id": "usr-001",
+      "approval_authority": "Knowledge steward",
+      "status": "institutionalized",
+      "current_version": 1,
+      "domain_command_optional": "CreateKnowledgeArtifact",
+      "created_at": "2026-07-13T15:10:52.455Z",
+      "advisory_only": true
     }
   ],
   "knowledge_improvement_pilots": [
@@ -87099,6 +90141,48 @@
       "started_at": "2026-07-13T14:56:59.028Z",
       "ended_at": "2026-07-13T14:56:59.145Z",
       "advisory_only": true
+    },
+    {
+      "pilot_id": "ipl-mrjd0jdq-9xtz",
+      "improvement_proposal_id": "ipr-mrjd0jc2-6hs3",
+      "institution_id": "inst-block-street",
+      "pilot_type": "course_pilot",
+      "scope": "Limited learner cohort",
+      "success_metrics": [
+        "understanding"
+      ],
+      "harm_metrics": [
+        "accessibility"
+      ],
+      "stop_conditions": [
+        "accessibility worsens"
+      ],
+      "status": "failed",
+      "production_isolated": true,
+      "started_at": "2026-07-13T15:10:50.809Z",
+      "ended_at": "2026-07-13T15:10:50.946Z",
+      "advisory_only": true
+    },
+    {
+      "pilot_id": "ipl-mrjd0ktd-q6vc",
+      "improvement_proposal_id": "ipr-mrjd0krr-oc2v",
+      "institution_id": "inst-block-street",
+      "pilot_type": "course_pilot",
+      "scope": "Limited learner cohort",
+      "success_metrics": [
+        "understanding"
+      ],
+      "harm_metrics": [
+        "accessibility"
+      ],
+      "stop_conditions": [
+        "accessibility worsens"
+      ],
+      "status": "failed",
+      "production_isolated": true,
+      "started_at": "2026-07-13T15:10:52.663Z",
+      "ended_at": "2026-07-13T15:10:52.784Z",
+      "advisory_only": true
     }
   ],
   "knowledge_improvement_outcomes": [
@@ -87173,6 +90257,30 @@
       "rollback_recommended": false,
       "recorded_at": "2026-07-13T14:56:59.757Z",
       "advisory_only": true
+    },
+    {
+      "outcome_id": "iou-mrjd0k3p-z086",
+      "improvement_proposal_id": "ipr-mrjd0jc2-6hs3",
+      "institution_id": "inst-block-street",
+      "outcome_category": "improved",
+      "expected_benefit": "Safer guidance",
+      "observed_outcome": "Fewer safety errors",
+      "unintended_effects": [],
+      "rollback_recommended": false,
+      "recorded_at": "2026-07-13T15:10:51.589Z",
+      "advisory_only": true
+    },
+    {
+      "outcome_id": "iou-mrjd0lik-cas7",
+      "improvement_proposal_id": "ipr-mrjd0krr-oc2v",
+      "institution_id": "inst-block-street",
+      "outcome_category": "improved",
+      "expected_benefit": "Safer guidance",
+      "observed_outcome": "Fewer safety errors",
+      "unintended_effects": [],
+      "rollback_recommended": false,
+      "recorded_at": "2026-07-13T15:10:53.420Z",
+      "advisory_only": true
     }
   ],
   "knowledge_ai_improvement_proposals": [
@@ -87243,6 +90351,32 @@
     },
     {
       "proposal_id": "aip-mrjciqde-m71m",
+      "institution_id": "inst-block-street",
+      "current_config": "deterministic-rules-v1",
+      "observed_failure": "Weak safe refusal",
+      "proposed_change": "Adjust prompt template",
+      "evaluation_plan": "Run intelligence evaluation suite including protected assessment cases",
+      "rollback_plan": "Restore prior configuration snapshot",
+      "status": "approved",
+      "regression_passed": true,
+      "human_approver_required": true,
+      "auto_deploy_forbidden": true
+    },
+    {
+      "proposal_id": "aip-mrjd0k81-qnlo",
+      "institution_id": "inst-block-street",
+      "current_config": "deterministic-rules-v1",
+      "observed_failure": "Weak safe refusal",
+      "proposed_change": "Adjust prompt template",
+      "evaluation_plan": "Run intelligence evaluation suite including protected assessment cases",
+      "rollback_plan": "Restore prior configuration snapshot",
+      "status": "approved",
+      "regression_passed": true,
+      "human_approver_required": true,
+      "auto_deploy_forbidden": true
+    },
+    {
+      "proposal_id": "aip-mrjd0lml-6v6s",
       "institution_id": "inst-block-street",
       "current_config": "deterministic-rules-v1",
       "observed_failure": "Weak safe refusal",
@@ -88179,6 +91313,577 @@
       "ai_usefulness_score": 0.82,
       "improves_interface_not_humans": true,
       "computed_at": "2026-07-13T14:51:08.870Z"
+    }
+  ],
+  "ops_certification_records": [
+    {
+      "certification_id": "crt-block-street-001",
+      "institution_id": "inst-block-street",
+      "certification_type": "operations",
+      "subject": "Institutional Operations Certification",
+      "standard": "CAE-11.6-W15 Operations Readiness Standard v1",
+      "status": "issued",
+      "owner": "usr-001",
+      "review_cycle": "annual",
+      "evidence": [
+        "evd-block-street-001"
+      ],
+      "expiration_date": "2027-07-13T15:02:50.133Z",
+      "renewal_required": true,
+      "version": 1,
+      "issued_at": "2026-07-13T15:02:50.085Z",
+      "created_at": "2026-07-13T15:02:50.085Z",
+      "updated_at": "2026-07-13T15:02:50.085Z"
+    },
+    {
+      "certification_id": "crt-mrjcq8q7-am7t",
+      "institution_id": "inst-block-street",
+      "certification_type": "security",
+      "subject": "Security Operations Certification",
+      "standard": "CAE-11.6 Security Standard v1",
+      "status": "issued",
+      "owner": "usr-001",
+      "review_cycle": "annual",
+      "evidence": [
+        "evd-mrjcq8qs-xt5h"
+      ],
+      "expiration_date": "2027-07-13T15:02:50.393Z",
+      "renewal_required": true,
+      "version": 1,
+      "issued_at": "2026-07-13T15:02:50.393Z",
+      "created_at": "2026-07-13T15:02:50.287Z",
+      "updated_at": "2026-07-13T15:02:50.393Z"
+    },
+    {
+      "certification_id": "crt-mrjcr1zs-is4t",
+      "institution_id": "inst-block-street",
+      "certification_type": "security",
+      "subject": "Security Operations Certification",
+      "standard": "CAE-11.6 Security Standard v1",
+      "status": "issued",
+      "owner": "usr-001",
+      "review_cycle": "annual",
+      "evidence": [
+        "evd-mrjcr209-yw1p"
+      ],
+      "expiration_date": "2027-07-13T15:03:28.294Z",
+      "renewal_required": true,
+      "version": 1,
+      "issued_at": "2026-07-13T15:03:28.294Z",
+      "created_at": "2026-07-13T15:03:28.216Z",
+      "updated_at": "2026-07-13T15:03:28.294Z"
+    },
+    {
+      "certification_id": "crt-mrjcrnvx-dilv",
+      "institution_id": "inst-block-street",
+      "certification_type": "security",
+      "subject": "Security Operations Certification",
+      "standard": "CAE-11.6 Security Standard v1",
+      "status": "issued",
+      "owner": "usr-001",
+      "review_cycle": "annual",
+      "evidence": [
+        "evd-mrjcrnwf-35wb"
+      ],
+      "expiration_date": "2027-07-13T15:03:56.668Z",
+      "renewal_required": true,
+      "version": 1,
+      "issued_at": "2026-07-13T15:03:56.668Z",
+      "created_at": "2026-07-13T15:03:56.589Z",
+      "updated_at": "2026-07-13T15:03:56.668Z"
+    }
+  ],
+  "ops_certification_evidence": [
+    {
+      "evidence_id": "evd-block-street-001",
+      "institution_id": "inst-block-street",
+      "certification_id": "crt-block-street-001",
+      "evidence_type": "system_test",
+      "title": "W1-W14 Integration Test Results",
+      "reference": "test-report-w14-2026",
+      "recorded_by": "usr-001",
+      "recorded_at": "2026-07-13T15:02:50.085Z"
+    },
+    {
+      "evidence_id": "evd-mrjcq8qs-xt5h",
+      "institution_id": "inst-block-street",
+      "certification_id": "crt-mrjcq8q7-am7t",
+      "evidence_type": "system_test",
+      "title": "Security Penetration Test Report",
+      "reference": "sec-test-2026-q1",
+      "recorded_by": "usr-001",
+      "recorded_at": "2026-07-13T15:02:50.308Z"
+    },
+    {
+      "evidence_id": "evd-mrjcr209-yw1p",
+      "institution_id": "inst-block-street",
+      "certification_id": "crt-mrjcr1zs-is4t",
+      "evidence_type": "system_test",
+      "title": "Security Penetration Test Report",
+      "reference": "sec-test-2026-q1",
+      "recorded_by": "usr-001",
+      "recorded_at": "2026-07-13T15:03:28.233Z"
+    },
+    {
+      "evidence_id": "evd-mrjcrnwf-35wb",
+      "institution_id": "inst-block-street",
+      "certification_id": "crt-mrjcrnvx-dilv",
+      "evidence_type": "system_test",
+      "title": "Security Penetration Test Report",
+      "reference": "sec-test-2026-q1",
+      "recorded_by": "usr-001",
+      "recorded_at": "2026-07-13T15:03:56.607Z"
+    }
+  ],
+  "ops_certification_compliance": [
+    {
+      "compliance_id": "cmp-block-street-001",
+      "institution_id": "inst-block-street",
+      "policy": "Institutional Operations Policy",
+      "standard": "CAE-11.6-W15",
+      "status": "compliant",
+      "evidence_refs": [
+        "evd-block-street-001"
+      ],
+      "last_verified_at": "2026-07-13T15:02:50.085Z"
+    },
+    {
+      "compliance_id": "cmp-mrjcq8xr-s706",
+      "institution_id": "inst-block-street",
+      "policy": "Institutional Operations Policy",
+      "standard": "CAE-11.6-W15",
+      "status": "compliant",
+      "evidence_refs": [
+        "evd-block-street-001",
+        "evd-mrjcq8qs-xt5h"
+      ],
+      "last_verified_at": "2026-07-13T15:02:50.559Z"
+    },
+    {
+      "compliance_id": "cmp-mrjcq9k0-wb64",
+      "institution_id": "inst-block-street",
+      "policy": "Institutional Operations Policy",
+      "standard": "CAE-11.6-W15",
+      "status": "compliant",
+      "evidence_refs": [
+        "evd-block-street-001",
+        "evd-mrjcq8qs-xt5h"
+      ],
+      "last_verified_at": "2026-07-13T15:02:51.360Z"
+    },
+    {
+      "compliance_id": "cmp-mrjcr25b-fht9",
+      "institution_id": "inst-block-street",
+      "policy": "Institutional Operations Policy",
+      "standard": "CAE-11.6-W15",
+      "status": "compliant",
+      "evidence_refs": [
+        "evd-block-street-001",
+        "evd-mrjcq8qs-xt5h",
+        "evd-mrjcr209-yw1p"
+      ],
+      "last_verified_at": "2026-07-13T15:03:28.415Z"
+    },
+    {
+      "compliance_id": "cmp-mrjcr2c0-m0g2",
+      "institution_id": "inst-block-street",
+      "policy": "Institutional Operations Policy",
+      "standard": "CAE-11.6-W15",
+      "status": "compliant",
+      "evidence_refs": [
+        "evd-block-street-001",
+        "evd-mrjcq8qs-xt5h",
+        "evd-mrjcr209-yw1p"
+      ],
+      "last_verified_at": "2026-07-13T15:03:28.656Z"
+    },
+    {
+      "compliance_id": "cmp-mrjcro1i-1e3v",
+      "institution_id": "inst-block-street",
+      "policy": "Institutional Operations Policy",
+      "standard": "CAE-11.6-W15",
+      "status": "compliant",
+      "evidence_refs": [
+        "evd-block-street-001",
+        "evd-mrjcq8qs-xt5h",
+        "evd-mrjcr209-yw1p",
+        "evd-mrjcrnwf-35wb"
+      ],
+      "last_verified_at": "2026-07-13T15:03:56.790Z"
+    },
+    {
+      "compliance_id": "cmp-mrjcrojm-xfln",
+      "institution_id": "inst-block-street",
+      "policy": "Institutional Operations Policy",
+      "standard": "CAE-11.6-W15",
+      "status": "compliant",
+      "evidence_refs": [
+        "evd-block-street-001",
+        "evd-mrjcq8qs-xt5h",
+        "evd-mrjcr209-yw1p",
+        "evd-mrjcrnwf-35wb"
+      ],
+      "last_verified_at": "2026-07-13T15:03:57.442Z"
+    }
+  ],
+  "ops_certification_validations": [
+    {
+      "validation_id": "val-mrjcq8tr-q2dl",
+      "institution_id": "inst-block-street",
+      "certification_id": "crt-mrjcq8q7-am7t",
+      "method": "automated",
+      "requirement": "Security controls implemented",
+      "passed": true,
+      "validated_by": "usr-001",
+      "validated_at": "2026-07-13T15:02:50.415Z"
+    },
+    {
+      "validation_id": "val-mrjcr22f-ua5g",
+      "institution_id": "inst-block-street",
+      "certification_id": "crt-mrjcr1zs-is4t",
+      "method": "automated",
+      "requirement": "Security controls implemented",
+      "passed": true,
+      "validated_by": "usr-001",
+      "validated_at": "2026-07-13T15:03:28.311Z"
+    },
+    {
+      "validation_id": "val-mrjcrnyo-3m73",
+      "institution_id": "inst-block-street",
+      "certification_id": "crt-mrjcrnvx-dilv",
+      "method": "automated",
+      "requirement": "Security controls implemented",
+      "passed": true,
+      "validated_by": "usr-001",
+      "validated_at": "2026-07-13T15:03:56.688Z"
+    }
+  ],
+  "ops_certification_readiness": [
+    {
+      "assessment_id": "rdy-mrjcq8vb-aexb",
+      "institution_id": "inst-block-street",
+      "domain_scores": {
+        "leadership": "implemented",
+        "people": "implemented",
+        "knowledge": "validated",
+        "training": "implemented",
+        "technology": "validated",
+        "resources": "implemented",
+        "facilities": "planning",
+        "communications": "validated",
+        "calendar": "implemented",
+        "governance": "validated",
+        "automation": "planning",
+        "analytics": "implemented",
+        "resilience": "certified",
+        "federation": "planning"
+      },
+      "overall_level": "implemented",
+      "assessed_by": "usr-001",
+      "assessed_at": "2026-07-13T15:02:50.471Z"
+    },
+    {
+      "assessment_id": "rdy-mrjcr23k-6vcv",
+      "institution_id": "inst-block-street",
+      "domain_scores": {
+        "leadership": "implemented",
+        "people": "implemented",
+        "knowledge": "validated",
+        "training": "implemented",
+        "technology": "validated",
+        "resources": "implemented",
+        "facilities": "planning",
+        "communications": "validated",
+        "calendar": "implemented",
+        "governance": "validated",
+        "automation": "planning",
+        "analytics": "implemented",
+        "resilience": "certified",
+        "federation": "planning"
+      },
+      "overall_level": "implemented",
+      "assessed_by": "usr-001",
+      "assessed_at": "2026-07-13T15:03:28.352Z"
+    },
+    {
+      "assessment_id": "rdy-mrjcrnzs-3mxq",
+      "institution_id": "inst-block-street",
+      "domain_scores": {
+        "leadership": "implemented",
+        "people": "implemented",
+        "knowledge": "validated",
+        "training": "implemented",
+        "technology": "validated",
+        "resources": "implemented",
+        "facilities": "planning",
+        "communications": "validated",
+        "calendar": "implemented",
+        "governance": "validated",
+        "automation": "planning",
+        "analytics": "implemented",
+        "resilience": "certified",
+        "federation": "planning"
+      },
+      "overall_level": "implemented",
+      "assessed_by": "usr-001",
+      "assessed_at": "2026-07-13T15:03:56.728Z"
+    }
+  ],
+  "ops_certification_audits": [
+    {
+      "audit_id": "aud-mrjcq90e-ew5w",
+      "institution_id": "inst-block-street",
+      "audit_type": "operational",
+      "subject": "Q1 Operational Audit",
+      "findings": [
+        "Process documented",
+        "Minor training gap identified"
+      ],
+      "status": "completed",
+      "conducted_by": "usr-001",
+      "completed_at": "2026-07-13T15:02:50.654Z",
+      "created_at": "2026-07-13T15:02:50.654Z"
+    },
+    {
+      "audit_id": "aud-mrjcr25s-7ox4",
+      "institution_id": "inst-block-street",
+      "audit_type": "operational",
+      "subject": "Q1 Operational Audit",
+      "findings": [
+        "Process documented",
+        "Minor training gap identified"
+      ],
+      "status": "completed",
+      "conducted_by": "usr-001",
+      "completed_at": "2026-07-13T15:03:28.432Z",
+      "created_at": "2026-07-13T15:03:28.432Z"
+    },
+    {
+      "audit_id": "aud-mrjcro22-1xwo",
+      "institution_id": "inst-block-street",
+      "audit_type": "operational",
+      "subject": "Q1 Operational Audit",
+      "findings": [
+        "Process documented",
+        "Minor training gap identified"
+      ],
+      "status": "completed",
+      "conducted_by": "usr-001",
+      "completed_at": "2026-07-13T15:03:56.810Z",
+      "created_at": "2026-07-13T15:03:56.810Z"
+    }
+  ],
+  "ops_certification_renewals": [
+    {
+      "renewal_id": "rnw-mrjcq9e3-kptb",
+      "certification_id": "crt-mrjcq8q7-am7t",
+      "institution_id": "inst-block-street",
+      "status": "completed",
+      "reminder_sent": false,
+      "revalidated_at": "2026-07-13T15:02:51.211Z",
+      "approved_by": "usr-001"
+    },
+    {
+      "renewal_id": "rnw-mrjcr27l-6j5n",
+      "certification_id": "crt-mrjcr1zs-is4t",
+      "institution_id": "inst-block-street",
+      "status": "completed",
+      "reminder_sent": false,
+      "revalidated_at": "2026-07-13T15:03:28.535Z",
+      "approved_by": "usr-001"
+    },
+    {
+      "renewal_id": "rnw-mrjcro8o-4isy",
+      "certification_id": "crt-mrjcrnvx-dilv",
+      "institution_id": "inst-block-street",
+      "status": "completed",
+      "reminder_sent": false,
+      "revalidated_at": "2026-07-13T15:03:57.089Z",
+      "approved_by": "usr-001"
+    }
+  ],
+  "ops_certification_confidence": [
+    {
+      "confidence_id": "oci-mrjcq9h9-4kex",
+      "institution_id": "inst-block-street",
+      "readiness": 0.75,
+      "certification": 0.8,
+      "compliance": 1,
+      "evidence": 0.4,
+      "training": 0.7,
+      "governance": 0.75,
+      "index_score": 0.7333333333333333,
+      "informs_leadership": true,
+      "computed_at": "2026-07-13T15:02:51.261Z"
+    },
+    {
+      "confidence_id": "oci-mrjcq9lu-4a0h",
+      "institution_id": "inst-block-street",
+      "readiness": 0.75,
+      "certification": 0.8,
+      "compliance": 1,
+      "evidence": 0.4,
+      "training": 0.7,
+      "governance": 0.75,
+      "index_score": 0.7333333333333333,
+      "informs_leadership": true,
+      "computed_at": "2026-07-13T15:02:51.426Z"
+    },
+    {
+      "confidence_id": "oci-mrjcr29r-hq4c",
+      "institution_id": "inst-block-street",
+      "readiness": 0.75,
+      "certification": 0.8,
+      "compliance": 1,
+      "evidence": 0.6,
+      "training": 0.7,
+      "governance": 0.75,
+      "index_score": 0.7666666666666666,
+      "informs_leadership": true,
+      "computed_at": "2026-07-13T15:03:28.575Z"
+    },
+    {
+      "confidence_id": "oci-mrjcr2d5-ozqp",
+      "institution_id": "inst-block-street",
+      "readiness": 0.75,
+      "certification": 0.8,
+      "compliance": 1,
+      "evidence": 0.6,
+      "training": 0.7,
+      "governance": 0.75,
+      "index_score": 0.7666666666666666,
+      "informs_leadership": true,
+      "computed_at": "2026-07-13T15:03:28.697Z"
+    },
+    {
+      "confidence_id": "oci-mrjcrohe-d16j",
+      "institution_id": "inst-block-street",
+      "readiness": 0.75,
+      "certification": 0.8,
+      "compliance": 1,
+      "evidence": 0.8,
+      "training": 0.7,
+      "governance": 0.75,
+      "index_score": 0.7999999999999999,
+      "informs_leadership": true,
+      "computed_at": "2026-07-13T15:03:57.362Z"
+    },
+    {
+      "confidence_id": "oci-mrjcrokp-rk6t",
+      "institution_id": "inst-block-street",
+      "readiness": 0.75,
+      "certification": 0.8,
+      "compliance": 1,
+      "evidence": 0.8,
+      "training": 0.7,
+      "governance": 0.75,
+      "index_score": 0.7999999999999999,
+      "informs_leadership": true,
+      "computed_at": "2026-07-13T15:03:57.481Z"
+    }
+  ],
+  "ops_certification_launch": [
+    {
+      "launch_id": "lch-mrjcq9ir-cn2l",
+      "institution_id": "inst-block-street",
+      "checklist": [
+        {
+          "item": "Critical bugs resolved",
+          "passed": true
+        },
+        {
+          "item": "Security certified",
+          "passed": true
+        },
+        {
+          "item": "Training complete",
+          "passed": true
+        },
+        {
+          "item": "Documentation ready",
+          "passed": true
+        },
+        {
+          "item": "Recovery plans tested",
+          "passed": true
+        },
+        {
+          "item": "Executive approval",
+          "passed": true
+        }
+      ],
+      "status": "approved",
+      "approved_by": "usr-001",
+      "approved_at": "2026-07-13T15:02:51.315Z",
+      "created_at": "2026-07-13T15:02:51.315Z"
+    },
+    {
+      "launch_id": "lch-mrjcr2au-avnb",
+      "institution_id": "inst-block-street",
+      "checklist": [
+        {
+          "item": "Critical bugs resolved",
+          "passed": true
+        },
+        {
+          "item": "Security certified",
+          "passed": true
+        },
+        {
+          "item": "Training complete",
+          "passed": true
+        },
+        {
+          "item": "Documentation ready",
+          "passed": true
+        },
+        {
+          "item": "Recovery plans tested",
+          "passed": true
+        },
+        {
+          "item": "Executive approval",
+          "passed": true
+        }
+      ],
+      "status": "approved",
+      "approved_by": "usr-001",
+      "approved_at": "2026-07-13T15:03:28.614Z",
+      "created_at": "2026-07-13T15:03:28.614Z"
+    },
+    {
+      "launch_id": "lch-mrjcroih-n64k",
+      "institution_id": "inst-block-street",
+      "checklist": [
+        {
+          "item": "Critical bugs resolved",
+          "passed": true
+        },
+        {
+          "item": "Security certified",
+          "passed": true
+        },
+        {
+          "item": "Training complete",
+          "passed": true
+        },
+        {
+          "item": "Documentation ready",
+          "passed": true
+        },
+        {
+          "item": "Recovery plans tested",
+          "passed": true
+        },
+        {
+          "item": "Executive approval",
+          "passed": true
+        }
+      ],
+      "status": "approved",
+      "approved_by": "usr-001",
+      "approved_at": "2026-07-13T15:03:57.401Z",
+      "created_at": "2026-07-13T15:03:57.401Z"
     }
   ]
 }

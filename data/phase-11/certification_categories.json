@@ -1,0 +1,27 @@
+{
+  "protocol_id": "CAE-11.6-W15",
+  "categories": [
+    { "key": "mission", "name": "Mission" },
+    { "key": "technology", "name": "Technology" },
+    { "key": "security", "name": "Security" },
+    { "key": "governance", "name": "Governance" },
+    { "key": "training", "name": "Training" },
+    { "key": "knowledge", "name": "Knowledge" },
+    { "key": "operations", "name": "Operations" },
+    { "key": "communications", "name": "Communications" },
+    { "key": "finance", "name": "Finance" },
+    { "key": "resource_stewardship", "name": "Resource Stewardship" },
+    { "key": "election_readiness", "name": "Election Readiness" },
+    { "key": "campaign_readiness", "name": "Campaign Readiness" },
+    { "key": "volunteer_readiness", "name": "Volunteer Readiness" },
+    { "key": "executive_readiness", "name": "Executive Readiness" },
+    { "key": "resilience", "name": "Resilience" },
+    { "key": "federation", "name": "Federation" },
+    { "key": "compliance", "name": "Compliance" },
+    { "key": "quality", "name": "Quality" },
+    { "key": "accessibility", "name": "Accessibility" },
+    { "key": "localization", "name": "Localization" },
+    { "key": "ai_governance", "name": "AI Governance" },
+    { "key": "custom", "name": "Custom" }
+  ]
+}

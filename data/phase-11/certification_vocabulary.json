@@ -1,0 +1,25 @@
+{
+  "protocol_id": "CAE-11.6-W15",
+  "terms": [
+    { "key": "certification", "name": "Certification", "definition": "Evidence-backed verification of institutional capability" },
+    { "key": "operational_readiness", "name": "Operational Readiness", "definition": "Demonstrated preparedness across institutional domains" },
+    { "key": "compliance", "name": "Compliance", "definition": "Continuous evidence-based adherence to policies and standards" },
+    { "key": "evidence_registry", "name": "Evidence Registry", "definition": "Immutable record of documents, tests, and approvals" },
+    { "key": "validation", "name": "Validation", "definition": "Repeatable verification of certification requirements" },
+    { "key": "audit", "name": "Audit", "definition": "Structured review becoming institutional memory" },
+    { "key": "trust_framework", "name": "Trust Framework", "definition": "Explainable trust based on verified entities and evidence" },
+    { "key": "renewal", "name": "Renewal", "definition": "Scheduled revalidation with historical archive" },
+    { "key": "quality_gate", "name": "Quality Gate", "definition": "Deployment checkpoint with no bypass without authorization" },
+    { "key": "launch_readiness", "name": "Launch Readiness", "definition": "Governed checklist before production deployment" },
+    { "key": "security_certification", "name": "Security Certification", "definition": "Renewable security controls verification" },
+    { "key": "accessibility_certification", "name": "Accessibility Certification", "definition": "Measurable accessibility compliance" },
+    { "key": "localization_certification", "name": "Localization Certification", "definition": "Reviewable translation and terminology quality" },
+    { "key": "ai_governance", "name": "AI Governance", "definition": "Human oversight and source attribution for AI capabilities" },
+    { "key": "operational_confidence", "name": "Operational Confidence Index", "definition": "Leadership index from readiness, compliance, and evidence" },
+    { "key": "federation_certification", "name": "Federation Certification", "definition": "Coalition readiness with independent institution certification" },
+    { "key": "continuous_compliance", "name": "Continuous Compliance", "definition": "Ongoing monitoring rather than annual reviews" },
+    { "key": "certification_standard", "name": "Certification Standard", "definition": "Version-controlled requirements and validation procedures" },
+    { "key": "ai_certification_advisor", "name": "AI Certification Advisor", "definition": "Advisory gap analysis without self-certification authority" },
+    { "key": "executive_readiness", "name": "Executive Readiness Dashboard", "definition": "Comprehensive operational readiness for leadership decisions" }
+  ]
+}

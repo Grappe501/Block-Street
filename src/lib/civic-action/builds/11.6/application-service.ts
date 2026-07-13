@@ -30,6 +30,8 @@ import { improvementService } from "./improvement/services/improvement-service";
 import { seedImprovementIfEmpty } from "./improvement/services/seed";
 import { experienceService } from "./experience/services/experience-service";
 import { seedExperienceIfEmpty } from "./experience/services/seed";
+import { opsCertificationService } from "./certification/services/certification-service";
+import { seedCertificationIfEmpty } from "./certification/services/seed";
 
 let opsDataSeeded = false;
 
@@ -49,6 +51,7 @@ function ensureOpsDataSeeded() {
   seedFederationIfEmpty();
   seedImprovementIfEmpty();
   seedExperienceIfEmpty();
+  seedCertificationIfEmpty();
   opsDataSeeded = true;
 }
 
@@ -954,6 +957,71 @@ export class OperationsApplicationService {
   getUnifiedHome(humanId: string, institutionId: string, role?: string) {
     this.boot();
     return experienceService.unifiedHome({ human_id: humanId, institution_id: institutionId, role });
+  }
+
+  listOpsCertifications(institutionId: string) {
+    this.boot();
+    return opsCertificationService.certification.list(institutionId);
+  }
+
+  createOpsCertification(input: Parameters<typeof opsCertificationService.certification.create>[0]) {
+    this.boot();
+    return opsCertificationService.certification.create(input);
+  }
+
+  listOpsReadinessAssessments(institutionId: string) {
+    this.boot();
+    return opsCertificationService.readiness.list(institutionId);
+  }
+
+  assessOpsReadiness(input: Parameters<typeof opsCertificationService.readiness.assess>[0]) {
+    this.boot();
+    return opsCertificationService.readiness.assess(input);
+  }
+
+  verifyOpsCompliance(institutionId: string) {
+    this.boot();
+    return opsCertificationService.compliance.verify(institutionId);
+  }
+
+  validateOpsCompliance(input: Parameters<typeof opsCertificationService.compliance.validate>[0]) {
+    this.boot();
+    return opsCertificationService.compliance.validate(input);
+  }
+
+  listOpsAudits(institutionId: string) {
+    this.boot();
+    return opsCertificationService.audit.list(institutionId);
+  }
+
+  runOpsAudit(input: Parameters<typeof opsCertificationService.audit.run>[0]) {
+    this.boot();
+    return opsCertificationService.audit.run(input);
+  }
+
+  listOpsEvidence(institutionId: string) {
+    this.boot();
+    return opsCertificationService.evidence.list(institutionId);
+  }
+
+  recordOpsEvidence(input: Parameters<typeof opsCertificationService.evidence.record>[0]) {
+    this.boot();
+    return opsCertificationService.evidence.record(input);
+  }
+
+  getOperationalConfidenceIndex(institutionId: string) {
+    this.boot();
+    return opsCertificationService.confidence.compute(institutionId);
+  }
+
+  getExecutiveReadinessDashboard(institutionId: string) {
+    this.boot();
+    return opsCertificationService.executive.dashboard(institutionId);
+  }
+
+  approveOpsLaunch(institutionId: string, approvedBy: string) {
+    this.boot();
+    return opsCertificationService.executive.approveLaunch(institutionId, approvedBy);
   }
 }
 
