@@ -72,6 +72,8 @@
     "phase11:11.12:w2:all": "npm run typecheck && npm run phase11:11.12:w2",
     "phase11:11.12:w3": "node scripts/phase11/11.12-w3.mjs",
     "phase11:11.12:w3:all": "npm run typecheck && npm run phase11:11.12:w3",
+    "phase11:11.12:w4": "node scripts/phase11/11.12-w4.mjs",
+    "phase11:11.12:w4:all": "npm run typecheck && npm run phase11:11.12:w4",
     "phase11:11.12:w5": "node scripts/phase11/11.12-w5.mjs",
     "phase11:11.12:w5:all": "npm run typecheck && npm run phase11:11.12:w5",
     "phase11:11.12:w6": "node scripts/phase11/11.12-w6.mjs",

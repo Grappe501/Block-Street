@@ -7,6 +7,7 @@ import type {
   AssessmentRecord,
   CertificationAwardRecord,
   CertificationRecord,
+  CompetencyRecord,
   CourseRecord,
   HumanCompetencyRecord,
   KnowledgeArtifactRecord,
@@ -52,6 +53,11 @@ export const knowledgeApplicationService = {
     if (institutionId) items = items.filter((r) => r.institution_id === institutionId);
     if (humanId) items = items.filter((r) => r.human_id === humanId);
     return items;
+  },
+
+  listCompetencies(institutionId?: string): CompetencyRecord[] {
+    const items = readStoreSlice<CompetencyRecord>(KNOWLEDGE_STORE_KEYS.competencies);
+    return institutionId ? items.filter((c) => c.institution_id === institutionId) : items;
   },
 
   listAssessments(institutionId?: string): AssessmentRecord[] {

@@ -19,7 +19,7 @@
     "11.9": { "name": "Coalition and Cross-Institution Coordination", "system_id": "COL-001", "percent": 0, "current_wave": null, "waves_completed": [] },
     "11.10": { "name": "Decision, Approval, and Escalation System", "system_id": "DEC-001", "percent": 0, "current_wave": null, "waves_completed": [] },
     "11.11": { "name": "Live Operations Command Center", "system_id": "OCC-001", "percent": 0, "current_wave": null, "waves_completed": [] },
-    "11.12": { "name": "Adaptive Execution and Continuous Learning", "system_id": "ADP-001", "percent": 75, "current_wave": "W8", "waves_completed": ["W1", "W2", "W3", "W5", "W6", "W7"] },
+    "11.12": { "name": "Adaptive Execution and Continuous Learning", "system_id": "ADP-001", "percent": 87.5, "current_wave": "W8", "waves_completed": ["W1", "W2", "W3", "W4", "W5", "W6", "W7"] },
     "11.13": { "name": "Action Evidence and Outcome Attribution", "system_id": "EVD-001", "percent": 0, "current_wave": null, "waves_completed": [] },
     "11.14": { "name": "Replication, Playbooks, and Execution Templates", "system_id": "PLY-001", "percent": 0, "current_wave": null, "waves_completed": [] },
     "11.15": { "name": "Operational Safety, Compliance, and Resilience", "system_id": "SAFE-001", "percent": 0, "current_wave": null, "waves_completed": [] },
@@ -209,6 +209,14 @@
       "completed_at": "2026-07-13T06:00:00Z",
       "status": "completed",
       "delivery": "optimization_layer"
+    },
+    {
+      "protocol_id": "11.12-W4",
+      "build": "11.12",
+      "name": "Human Experience, Learning Journey & Institutional Workspace Protocol",
+      "completed_at": "2026-07-13T08:00:00Z",
+      "status": "completed",
+      "delivery": "human_experience_and_ui"
     }
   ]
 }
