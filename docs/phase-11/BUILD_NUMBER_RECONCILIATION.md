@@ -34,6 +34,25 @@ When a recovery blob uses a different build number than the live scaffold, **the
 | Phase 11.4 Communications overview | `docs/phase-11/11.7-communications/00_COMMUNICATIONS_OVERVIEW.md` |
 | CAE-11.4-W1 Constitution | `docs/phase-11/11.7-communications/01_CONSTITUTION.md` (`CAE-11.7-W1`) |
 | CAE-11.4-W2 Canonical Model | `docs/phase-11/11.7-communications/02_CANONICAL_MODEL_PROTOCOL.md` (`CAE-11.7-W2`) |
+| CAE-11.4-W3 Domain Services | `docs/phase-11/11.7-communications/03_DOMAIN_SERVICES_PROTOCOL.md` (`CAE-11.7-W3`) |
+| CAE-11.4-W4 Human Experience | `docs/phase-11/11.7-communications/04_HUMAN_EXPERIENCE_PROTOCOL.md` (`CAE-11.7-W4`) |
+| CAE-11.4-W5 APIs & Events | `docs/phase-11/11.7-communications/05_API_EVENTS_INTEGRATIONS.md` (`CAE-11.7-W5`) |
+| CAE-11.4-W6 Intelligence | `docs/phase-11/11.7-communications/06_INTELLIGENCE_LAYER.md` (`CAE-11.7-W6`) |
+| CAE-11.4-W7 Optimization | `docs/phase-11/11.7-communications/07_OPTIMIZATION_LAYER.md` (`CAE-11.7-W7`) |
+| CAE-11.4-W8 Production | `docs/phase-11/11.7-communications/08_PRODUCTION_READINESS.md` (`CAE-11.7-W8`) |
+
+## Knowledge & Learning content mapping
+
+| Blob label | Correct repo location | System ID |
+|------------|----------------------|-----------|
+| Phase 11.5 Knowledge overview | `docs/phase-11/11.12-adaptive-learning/00_KNOWLEDGE_ENGINE_OVERVIEW.md` | **ADP-001** |
+| CAE-11.5-W1–W8 (when pasted) | `docs/phase-11/11.12-adaptive-learning/` (`CAE-11.12-W*`) | ADP-001 |
+| CAE-11.12-W1 Constitution | `docs/phase-11/11.12-adaptive-learning/01_CONSTITUTION.md` | ADP-001 ✓ |
+| CAE-11.12-W2 Canonical Model | `docs/phase-11/11.12-adaptive-learning/02_CANONICAL_MODEL_PROTOCOL.md` | ADP-001 ✓ |
+
+**Note:** Blob architecture lists Communications as 11.4 and Knowledge as 11.5. Repository uses **11.7** for Communications and **11.12** for Adaptive Execution & Continuous Learning (Institutional Brain / LMS). Repository **11.5** remains **TIM-001** (Calendar).
+
+Partial knowledge capabilities already exist in **11.7 COM-002** (knowledge graph, capture, explorer, institutional memory). **11.12 ADP-001** owns the full Learning Academy, courses, skills, certifications, and AI tutor stack.
 
 ## Mission Operations content mapping
 
@@ -45,8 +64,10 @@ When a recovery blob uses a different build number than the live scaffold, **the
 ## Implementation order (constitutional)
 
 ```text
-11.2 W7 commit → 11.2 W8 complete → 11.3 W1–W8 → 11.4 RSP-001 → … → 11.7 COM-002
+11.2 complete → 11.3 W1–W8 → 11.4 RSP-001 → 11.5 TIM-001 → … → 11.7 COM-002 complete ✓ → … → 11.12 ADP-001
 ```
+
+**Out-of-order note:** Build 11.7 was implemented before 11.3 per recovery blob sequence. Mission Operations (11.3) remains the scaffold-recommended next build.
 
 ## Overlap notes
 

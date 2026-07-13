@@ -58,6 +58,22 @@
 
 See `data/civic-action/requirements_registry.json` for full text, risk level, enforcement_layer, and planned_test per requirement.
 
+## Wave 11.12-W2 Summary (ADP-001)
+
+| Domain | Count | Doc Status | Tech Status |
+|--------|-------|------------|-------------|
+| DATA | 24 | documented | Model + validation in `builds/11.12/` |
+| **Total** | **24** | **documented** | W3 service enforcement planned |
+
+Key invariants: CAE-11.12-W2-DATA-001 through DATA-024. Constitutional overlap boundary with COM-002: DATA-019.
+
+## Wave 11.12-W3 Summary (ADP-001)
+
+| Domain | Count | Doc Status | Tech Status |
+|--------|-------|------------|-------------|
+| SVC, VAL, LIF, POL, EVT, AI, CMD, CERT, TRN, ERR, HIS, REP, CAT, OVR | 42 | implemented | `builds/11.12/services/` + `w3-tests.ts` |
+| **Total** | **42** | **implemented** | `npm run phase11:11.12:w3:all` |
+
 ## Traceability
 
 [PHASE_11_TRACEABILITY_MATRIX.md](PHASE_11_TRACEABILITY_MATRIX.md)

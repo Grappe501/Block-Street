@@ -1,0 +1,26 @@
+{
+  "catalog_version": "11.12-w2.1",
+  "subsystem": "KNW-EVT-001",
+  "events": [
+    {"event_type": "knowledge.artifact_created", "version": 1, "description": "A new knowledge artifact was created.", "producer": "KNW-SVC-001", "consumers": ["search", "audit"], "privacy_classification": "internal", "status": "active"},
+    {"event_type": "knowledge.artifact_published", "version": 1, "description": "Knowledge artifact published for institutional use.", "producer": "KNW-SVC-001", "consumers": ["search", "notifications"], "privacy_classification": "internal", "status": "active"},
+    {"event_type": "knowledge.artifact_archived", "version": 1, "description": "Knowledge artifact archived.", "producer": "KNW-SVC-001", "consumers": ["search", "audit"], "privacy_classification": "internal", "status": "active"},
+    {"event_type": "knowledge.claim_validated", "version": 1, "description": "Knowledge claim validated with evidence.", "producer": "KNW-SVC-001", "consumers": ["audit", "analytics"], "privacy_classification": "internal", "status": "active"},
+    {"event_type": "knowledge.claim_disputed", "version": 1, "description": "Knowledge claim entered dispute resolution.", "producer": "KNW-SVC-001", "consumers": ["notifications", "audit"], "privacy_classification": "internal", "status": "active"},
+    {"event_type": "knowledge.version_created", "version": 1, "description": "New immutable knowledge version recorded.", "producer": "KNW-SVC-001", "consumers": ["audit"], "privacy_classification": "internal", "status": "active"},
+    {"event_type": "knowledge.gap_identified", "version": 1, "description": "Knowledge gap identified in domain.", "producer": "KNW-SVC-001", "consumers": ["analytics"], "privacy_classification": "internal", "status": "active"},
+    {"event_type": "learning.course_published", "version": 1, "description": "Course published to learning catalog.", "producer": "KNW-SVC-001", "consumers": ["search", "notifications"], "privacy_classification": "internal", "status": "active"},
+    {"event_type": "learning.enrollment_created", "version": 1, "description": "Human enrolled in course or learning path.", "producer": "KNW-SVC-001", "consumers": ["notifications"], "privacy_classification": "internal", "status": "active"},
+    {"event_type": "learning.completion_recorded", "version": 1, "description": "Learning completion recorded with version binding.", "producer": "KNW-SVC-001", "consumers": ["analytics", "audit"], "privacy_classification": "internal", "status": "active"},
+    {"event_type": "learning.assessment_submitted", "version": 1, "description": "Assessment attempt submitted for grading.", "producer": "KNW-SVC-001", "consumers": ["notifications"], "privacy_classification": "internal", "status": "active"},
+    {"event_type": "competency.defined", "version": 1, "description": "Competency defined with criteria.", "producer": "KNW-SVC-001", "consumers": ["search"], "privacy_classification": "internal", "status": "active"},
+    {"event_type": "competency.demonstrated", "version": 1, "description": "Human demonstrated competency with evidence.", "producer": "KNW-SVC-001", "consumers": ["audit", "analytics"], "privacy_classification": "internal", "status": "active"},
+    {"event_type": "competency.verified", "version": 1, "description": "Human competency verified by authority.", "producer": "KNW-SVC-001", "consumers": ["audit"], "privacy_classification": "internal", "status": "active"},
+    {"event_type": "certification.awarded", "version": 1, "description": "Certification awarded after requirements met.", "producer": "KNW-SVC-001", "consumers": ["notifications", "audit"], "privacy_classification": "internal", "status": "active"},
+    {"event_type": "certification.expired", "version": 1, "description": "Certification award expired.", "producer": "KNW-SVC-001", "consumers": ["notifications"], "privacy_classification": "internal", "status": "active"},
+    {"event_type": "certification.revoked", "version": 1, "description": "Certification award revoked by authority.", "producer": "KNW-SVC-001", "consumers": ["audit", "notifications"], "privacy_classification": "internal", "status": "active"},
+    {"event_type": "ai.suggestion_generated", "version": 1, "description": "AI generated knowledge suggestion pending human review.", "producer": "KNW-AI-001", "consumers": ["notifications"], "privacy_classification": "internal", "status": "active"},
+    {"event_type": "ai.tutor_session_started", "version": 1, "description": "AI tutor conversation started.", "producer": "KNW-AI-001", "consumers": ["audit"], "privacy_classification": "internal", "status": "active"},
+    {"event_type": "ai.suggestion_rejected", "version": 1, "description": "Human rejected AI knowledge suggestion.", "producer": "KNW-SVC-001", "consumers": ["audit"], "privacy_classification": "internal", "status": "active"}
+  ]
+}

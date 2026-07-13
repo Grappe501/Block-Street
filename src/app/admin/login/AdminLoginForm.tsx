@@ -1,10 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 
 export default function AdminLoginForm() {
-  const router = useRouter();
   const searchParams = useSearchParams();
   const next = searchParams.get("next") ?? "/admin";
   const [email, setEmail] = useState("director@block-street.local");
@@ -19,6 +18,7 @@ export default function AdminLoginForm() {
     const res = await fetch("/api/auth/login", {
       method: "POST",
       headers: { "content-type": "application/json" },
+      credentials: "same-origin",
       body: JSON.stringify({ email, password }),
     });
     if (!res.ok) {
@@ -27,8 +27,7 @@ export default function AdminLoginForm() {
       setLoading(false);
       return;
     }
-    router.push(next);
-    router.refresh();
+    window.location.assign(next);
   }
 
   return (

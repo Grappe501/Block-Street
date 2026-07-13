@@ -1,0 +1,18 @@
+{
+  "catalog_version": "11.7-w5.1",
+  "subsystem": "COM-EVT-001",
+  "events": [
+    {"event_type": "communication.conversation_created", "version": 1, "description": "A new Conversation was created.", "producer": "COM-SVC-001", "consumers": ["search", "notifications", "mission", "knowledge"], "privacy_classification": "internal", "status": "active"},
+    {"event_type": "communication.thread_opened", "version": 1, "description": "A Thread was opened in a Conversation.", "producer": "COM-SVC-001", "consumers": ["search", "notifications"], "privacy_classification": "internal", "status": "active"},
+    {"event_type": "communication.message_posted", "version": 1, "description": "A Message was posted.", "producer": "COM-SVC-001", "consumers": ["search", "notifications", "analytics"], "privacy_classification": "internal", "status": "active"},
+    {"event_type": "communication.message_edited", "version": 1, "description": "A Message was edited.", "producer": "COM-SVC-001", "consumers": ["search", "audit"], "privacy_classification": "internal", "status": "active"},
+    {"event_type": "communication.decision_recorded", "version": 1, "description": "An institutional Decision was recorded.", "producer": "COM-SVC-001", "consumers": ["search", "notifications", "analytics", "knowledge"], "privacy_classification": "internal", "status": "active"},
+    {"event_type": "communication.meeting_created", "version": 1, "description": "A Meeting was scheduled.", "producer": "COM-SVC-001", "consumers": ["notifications", "calendar"], "privacy_classification": "internal", "status": "active"},
+    {"event_type": "communication.announcement_published", "version": 1, "description": "An Announcement was published.", "producer": "COM-SVC-001", "consumers": ["notifications", "search"], "privacy_classification": "internal", "status": "active"},
+    {"event_type": "communication.document_created", "version": 1, "description": "A collaborative Document was created.", "producer": "COM-SVC-001", "consumers": ["search", "knowledge"], "privacy_classification": "internal", "status": "active"},
+    {"event_type": "communication.conversation_archived", "version": 1, "description": "A Conversation was archived.", "producer": "COM-SVC-001", "consumers": ["search", "audit"], "privacy_classification": "internal", "status": "active"},
+    {"event_type": "communication.ai_summary_generated", "version": 1, "description": "An AI summary was generated (read-only artifact).", "producer": "COM-SVC-001", "consumers": ["analytics"], "privacy_classification": "internal", "status": "active"},
+    {"event_type": "communication.action_item_created", "version": 1, "description": "An Action Item was created for Mission sync.", "producer": "COM-SVC-001", "consumers": ["notifications", "mission", "analytics"], "privacy_classification": "internal", "status": "active"},
+    {"event_type": "communication.thread_resolved", "version": 1, "description": "A Thread was resolved.", "producer": "COM-SVC-001", "consumers": ["search", "notifications"], "privacy_classification": "internal", "status": "active"}
+  ]
+}

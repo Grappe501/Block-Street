@@ -50,6 +50,19 @@ Example: CAE-11.2-W2 = Objective Canonical Data Model Protocol
 | CAE-11.2-W7 | Optimization Protocol | Complete |
 | CAE-11.2-W8 | Production Protocol | Complete |
 
+## Build 11.7 protocols (COM-002)
+
+| Protocol | Name | Status |
+|----------|------|--------|
+| CAE-11.7-W1 | Communications Constitution Protocol | Complete |
+| CAE-11.7-W2 | Canonical Model Protocol | Complete |
+| CAE-11.7-W3 | Domain Services Protocol | Complete |
+| CAE-11.7-W4 | Human Experience Protocol | Complete |
+| CAE-11.7-W5 | API Protocol | Complete |
+| CAE-11.7-W6 | Intelligence Protocol | Complete |
+| CAE-11.7-W7 | Optimization Protocol | Complete |
+| CAE-11.7-W8 | Production Protocol | Complete |
+
 ## Relationship to Build 11.1
 
 INI-001 (Build 11.1) governs Initiatives. OBJ-001 (Build 11.2) governs execution beneath Initiatives. Protocol numbering aligns across builds for traceability.

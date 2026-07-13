@@ -155,4 +155,49 @@ W2 technical enforcement: **Planned for 11.1-W3**.
 
 W1/W2 remain **documented** until UI/API layers enforce remaining cross-cutting rules.
 
-**Next update:** 11.1-W4 adds Human workflows and UI on stable service commands.
+## Build 11.12 — Wave 2 (ADP-001)
+
+| Requirement ID | Domain | Doc Status | Enforcement Layer | Test |
+|----------------|--------|------------|-------------------|------|
+| CAE-11.12-W2-DATA-001 | DATA | documented | entity-registry.ts | entity registry (54 entities) |
+| CAE-11.12-W2-DATA-002 | DATA | documented | data-model.ts KnowledgeEntityBase | base fields |
+| CAE-11.12-W2-DATA-003 | DATA | documented | 11.12-W3 service | id immutability |
+| CAE-11.12-W2-DATA-004 | DATA | documented | data-model.ts | institution + metadata |
+| CAE-11.12-W2-DATA-005 | DATA | documented | data-model.ts | artifact validation |
+| CAE-11.12-W2-DATA-006 | DATA | documented | data-validation.ts | claim/citation integrity |
+| CAE-11.12-W2-DATA-007 | DATA | documented | data-model.ts | course hierarchy |
+| CAE-11.12-W2-DATA-008 | DATA | documented | data-model.ts | competency record |
+| CAE-11.12-W2-DATA-009 | DATA | documented | data-validation.ts | award validation |
+| CAE-11.12-W2-DATA-010 | DATA | documented | knowledge_relationship_matrix.json | relationship matrix |
+| CAE-11.12-W2-DATA-011 | DATA | documented | knowledge_state_machines.json | state machines |
+| CAE-11.12-W2-DATA-012 | DATA | documented | state-machines.ts | childExceedsParent |
+| CAE-11.12-W2-DATA-013 | DATA | documented | versioning.ts | version triggers |
+| CAE-11.12-W2-DATA-014 | DATA | documented | data-validation.ts | completion binding |
+| CAE-11.12-W2-DATA-015 | DATA | documented | knowledge_event_catalog.json | event catalog |
+| CAE-11.12-W2-DATA-016 | DATA | documented | traceability.ts | traceability chain |
+| CAE-11.12-W2-DATA-017 | DATA | documented | data-validation.ts | orphan prohibition |
+| CAE-11.12-W2-DATA-018 | DATA | documented | data-validation.ts | AI labeling |
+| CAE-11.12-W2-DATA-019 | DATA | documented | KNOWLEDGE_OVERLAP_AUDIT.md | COM-002 boundary |
+| CAE-11.12-W2-DATA-020 | DATA | documented | knowledge_database_contract.json | 46 tables |
+| CAE-11.12-W2-DATA-021 | DATA | documented | data-model.ts KNOWLEDGE_STORE_KEYS | store keys |
+| CAE-11.12-W2-DATA-022 | DATA | documented | entity-registry.ts | repository registry |
+| CAE-11.12-W2-DATA-023 | DATA | documented | contracts.ts | contract manifest |
+| CAE-11.12-W2-DATA-024 | DATA | documented | versioning.ts | immutable stores |
+
+W2 requirements are **documented** with model-level validation. Service enforcement is **11.12-W3**.
+
+## Wave 11.12-W3 Summary (ADP-001)
+
+| Domain | Count | Status | Enforcement |
+|--------|-------|--------|-------------|
+| SVC | 5 | implemented | knowledge-engine.ts |
+| VAL | 3 | implemented | validation-pipeline.ts |
+| LIF | 5 | implemented | state-machines + engine |
+| POL | 4 | implemented | knowledge-engine.ts |
+| EVT | 3 | implemented | events.ts |
+| AI | 4 | implemented | policy.ts |
+| CMD | 5 | implemented | command handlers |
+| Other | 13 | implemented | repository, errors, audit |
+| **Total** | **42** | **implemented** | ADP-001 domain services |
+
+**Next update:** 11.12-W4 adds human experience workbench on stable domain services.

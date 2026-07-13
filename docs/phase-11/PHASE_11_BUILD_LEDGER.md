@@ -7,10 +7,10 @@
 
 | Metric | Value |
 |--------|-------|
-| Waves completed | 3 / 128 |
-| Phase overall | 2.34% |
-| Current wave | 11.1-W4 (next) |
-| Build 11.1 | 37.5% |
+| Waves completed | 25 / 128 |
+| Phase overall | 19.5% |
+| Current wave | 11.3-W1 (recommended) |
+| Build 11.12 | 37.5% (W1–W3 complete) |
 
 ## Build 11.1 — Initiative Architecture
 
@@ -35,6 +35,15 @@
 - W1: 44 requirements, status **documented**
 - W2: 22 requirements, status **documented**
 - W3: 42 requirements, status **implemented** (INI-SVC-001)
+
+## Build 11.12 — Adaptive Execution and Continuous Learning (ADP-001)
+
+| Wave | Name | Status |
+|------|------|--------|
+| W1 | Knowledge Constitution | **Complete** |
+| W2 | Canonical Data Model | **Complete** |
+| W3 | Domain Services | **Complete** |
+| W4 | Human Experience Workbench | Next |
 
 ## Live Ledger
 

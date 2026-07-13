@@ -4,7 +4,7 @@
   "total_builds": 16,
   "waves_per_build": 8,
   "total_planned_waves": 128,
-  "phase_overall_percent": 12.5,
+  "phase_overall_percent": 19.5,
   "current_wave": "11.3-W1",
   "recommended_next_wave": "11.3-W1",
   "builds": {
@@ -14,12 +14,12 @@
     "11.4": { "name": "Team, Role, and Responsibility Coordination", "system_id": "RSP-001", "percent": 0, "current_wave": null, "waves_completed": [] },
     "11.5": { "name": "Calendar, Timing, and Operational Rhythm", "system_id": "TIM-001", "percent": 0, "current_wave": null, "waves_completed": [] },
     "11.6": { "name": "Resource, Capacity, and Logistics Management", "system_id": "CAP-001", "percent": 0, "current_wave": null, "waves_completed": [] },
-    "11.7": { "name": "Communications and Mobilization Operations", "system_id": "COM-002", "percent": 0, "current_wave": null, "waves_completed": [] },
+    "11.7": { "name": "Communications and Mobilization Operations", "system_id": "COM-002", "percent": 100, "current_wave": "W8", "waves_completed": ["W1", "W2", "W3", "W4", "W5", "W6", "W7", "W8"] },
     "11.8": { "name": "Field Operations and Geographic Execution", "system_id": "FLD-001", "percent": 0, "current_wave": null, "waves_completed": [] },
     "11.9": { "name": "Coalition and Cross-Institution Coordination", "system_id": "COL-001", "percent": 0, "current_wave": null, "waves_completed": [] },
     "11.10": { "name": "Decision, Approval, and Escalation System", "system_id": "DEC-001", "percent": 0, "current_wave": null, "waves_completed": [] },
     "11.11": { "name": "Live Operations Command Center", "system_id": "OCC-001", "percent": 0, "current_wave": null, "waves_completed": [] },
-    "11.12": { "name": "Adaptive Execution and Continuous Learning", "system_id": "ADP-001", "percent": 0, "current_wave": null, "waves_completed": [] },
+    "11.12": { "name": "Adaptive Execution and Continuous Learning", "system_id": "ADP-001", "percent": 37.5, "current_wave": "W3", "waves_completed": ["W1", "W2", "W3"] },
     "11.13": { "name": "Action Evidence and Outcome Attribution", "system_id": "EVD-001", "percent": 0, "current_wave": null, "waves_completed": [] },
     "11.14": { "name": "Replication, Playbooks, and Execution Templates", "system_id": "PLY-001", "percent": 0, "current_wave": null, "waves_completed": [] },
     "11.15": { "name": "Operational Safety, Compliance, and Resilience", "system_id": "SAFE-001", "percent": 0, "current_wave": null, "waves_completed": [] },
@@ -113,6 +113,78 @@
       "completed_at": "2026-07-13T00:30:00Z",
       "status": "completed",
       "delivery": "production_layer"
+    },
+    {
+      "protocol_id": "11.7-W3",
+      "build": "11.7",
+      "name": "Communications Domain Services Protocol",
+      "completed_at": "2026-07-12T21:00:00Z",
+      "status": "completed",
+      "delivery": "service_engine_and_tests"
+    },
+    {
+      "protocol_id": "11.7-W4",
+      "build": "11.7",
+      "name": "Communications Human Experience & Collaboration Workbench Protocol",
+      "completed_at": "2026-07-12T23:30:00Z",
+      "status": "completed",
+      "delivery": "ux_layer_and_components"
+    },
+    {
+      "protocol_id": "11.7-W5",
+      "build": "11.7",
+      "name": "Communications APIs, Events, Integration & Automation Protocol",
+      "completed_at": "2026-07-13T01:00:00Z",
+      "status": "completed",
+      "delivery": "api_events_integrations"
+    },
+    {
+      "protocol_id": "11.7-W6",
+      "build": "11.7",
+      "name": "Communications Intelligence, Knowledge Graph & Decision Support Protocol",
+      "completed_at": "2026-07-13T02:00:00Z",
+      "status": "completed",
+      "delivery": "intelligence_layer"
+    },
+    {
+      "protocol_id": "11.7-W7",
+      "build": "11.7",
+      "name": "Communications Continuous Improvement & Optimization Protocol",
+      "completed_at": "2026-07-13T03:00:00Z",
+      "status": "completed",
+      "delivery": "optimization_layer"
+    },
+    {
+      "protocol_id": "11.7-W8",
+      "build": "11.7",
+      "name": "Communications Production Readiness, Operational Certification, and Launch",
+      "completed_at": "2026-07-13T04:00:00Z",
+      "status": "completed",
+      "delivery": "production_layer"
+    },
+    {
+      "protocol_id": "11.12-W1",
+      "build": "11.12",
+      "name": "Knowledge Constitution and Learning Doctrine Protocol",
+      "completed_at": "2026-07-12T18:00:00Z",
+      "status": "completed",
+      "delivery": "documentation_and_contracts"
+    },
+    {
+      "protocol_id": "11.12-W2",
+      "build": "11.12",
+      "name": "Knowledge Canonical Data Model Protocol",
+      "completed_at": "2026-07-12T19:30:00Z",
+      "status": "completed",
+      "delivery": "documentation_and_contracts"
+    },
+    {
+      "protocol_id": "11.12-W3",
+      "build": "11.12",
+      "name": "Knowledge Domain Services Protocol",
+      "completed_at": "2026-07-12T20:30:00Z",
+      "status": "completed",
+      "delivery": "service_engine_and_tests"
     }
   ]
 }

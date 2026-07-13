@@ -1,0 +1,68 @@
+{
+  "protocol": "11.12-W2",
+  "system_id": "ADP-001",
+  "entities": {
+    "KnowledgeArtifact": {
+      "states": ["draft", "review", "validated", "published", "operational", "historical", "archived"],
+      "transitions": {
+        "draft": ["review", "archived"],
+        "review": ["validated", "draft", "archived"],
+        "validated": ["published", "review", "archived"],
+        "published": ["operational", "historical", "archived"],
+        "operational": ["historical", "archived"],
+        "historical": ["archived"],
+        "archived": []
+      }
+    },
+    "Course": {
+      "states": ["draft", "review", "published", "active", "retired", "archived"],
+      "transitions": {
+        "draft": ["review", "archived"],
+        "review": ["published", "draft", "archived"],
+        "published": ["active", "retired", "archived"],
+        "active": ["retired", "archived"],
+        "retired": ["archived"],
+        "archived": []
+      }
+    },
+    "Certification": {
+      "states": ["draft", "review", "active", "suspended", "expired", "archived"],
+      "transitions": {
+        "draft": ["review", "archived"],
+        "review": ["active", "draft", "archived"],
+        "active": ["suspended", "expired", "archived"],
+        "suspended": ["active", "expired", "archived"],
+        "expired": ["archived"],
+        "archived": []
+      }
+    },
+    "Competency": {
+      "states": ["draft", "defined", "active", "deprecated", "archived"],
+      "transitions": {
+        "draft": ["defined", "archived"],
+        "defined": ["active", "draft", "archived"],
+        "active": ["deprecated", "archived"],
+        "deprecated": ["archived"],
+        "archived": []
+      }
+    },
+    "KnowledgeClaim": {
+      "states": ["draft", "pending_evidence", "evidence_attached", "validated", "disputed", "retracted", "archived"],
+      "transitions": {
+        "draft": ["pending_evidence", "archived"],
+        "pending_evidence": ["evidence_attached", "archived"],
+        "evidence_attached": ["validated", "disputed", "archived"],
+        "validated": ["disputed", "retracted", "archived"],
+        "disputed": ["validated", "retracted", "archived"],
+        "retracted": ["archived"],
+        "archived": []
+      }
+    }
+  },
+  "illegal_child_parent": [
+    {"child": "Lesson", "child_state": "active", "parent": "Course", "parent_state": "draft", "reason": "Lesson cannot be Active if Course remains Draft"},
+    {"child": "KnowledgeClaim", "child_state": "validated", "parent": "KnowledgeArtifact", "parent_state": "draft", "reason": "Claim cannot be Validated if Artifact is Draft"},
+    {"child": "CertificationAward", "child_state": "awarded", "parent": "Certification", "parent_state": "draft", "reason": "Award cannot be granted if Certification is Draft"},
+    {"child": "LearningCompletion", "child_state": "completed", "parent": "Course", "parent_state": "draft", "reason": "Completion cannot bind to Draft Course"}
+  ]
+}

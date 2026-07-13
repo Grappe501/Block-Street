@@ -1,0 +1,42 @@
+{
+  "protocol": "11.12-W2",
+  "system_id": "ADP-001",
+  "parent_child": {
+    "KnowledgeDomain": "Institution",
+    "KnowledgeCollection": "KnowledgeDomain",
+    "KnowledgeArtifact": "KnowledgeCollection",
+    "KnowledgeVersion": "KnowledgeArtifact",
+    "KnowledgeClaim": "KnowledgeArtifact",
+    "Citation": "KnowledgeClaim",
+    "EvidenceReference": "KnowledgeClaim",
+    "Course": "KnowledgeDomain",
+    "Module": "Course",
+    "Lesson": "Module",
+    "LearningObject": "Lesson",
+    "LearningPath": "KnowledgeDomain",
+    "LearningEnrollment": "Course",
+    "LearningCompletion": "Course",
+    "Competency": "Skill",
+    "CompetencyLevel": "Competency",
+    "HumanCompetencyRecord": "Competency",
+    "Assessment": "Competency",
+    "Certification": "Competency",
+    "CertificationAward": "Certification",
+    "Playbook": "KnowledgeArtifact",
+    "ResearchFinding": "ResearchProject",
+    "InstitutionalLesson": "KnowledgeDomain",
+    "KnowledgeTranslation": "KnowledgeArtifact",
+    "TutorConversation": "Course",
+    "AIKnowledgeSuggestion": "KnowledgeArtifact",
+    "KnowledgeCorrection": "KnowledgeArtifact"
+  },
+  "cross_links": [
+    "KnowledgeArtifact ↔ Course",
+    "KnowledgeClaim ↔ EvidenceReference",
+    "Competency ↔ Certification",
+    "InstitutionalLesson ↔ Objective",
+    "ResearchFinding ↔ KnowledgeClaim",
+    "COM-002 ConversationKnowledge → ADP-001 InstitutionalLesson (reference only)"
+  ],
+  "com_002_boundary": "COM-002 owns conversation-derived knowledge capture; ADP-001 owns canonical learning, competency, and certification models"
+}
