@@ -32,3 +32,8 @@ export { getCalendarConstitution, OPS_CALENDAR_PRINCIPLE } from "./calendar/cons
 export { runOpsW6Certification, isOpsW6Complete } from "./calendar/w6";
 export { runOpsW6CalendarTests, allOpsW6TestsPassed } from "./calendar/w6-tests";
 export { CALENDAR_EVENT_CATALOG } from "./calendar/events/catalog";
+export { communicationsService } from "./communications/services/communications-service";
+export { getCommunicationsConstitution, OPS_COMMUNICATIONS_PRINCIPLE } from "./communications/constitution";
+export { runOpsW7Certification, isOpsW7Complete } from "./communications/w7";
+export { runOpsW7CommunicationsTests, allOpsW7TestsPassed } from "./communications/w7-tests";
+export { COMMUNICATIONS_EVENT_CATALOG } from "./communications/events/catalog";

@@ -1,0 +1,23 @@
+{
+  "protocol_id": "CAE-11.6-W7",
+  "terms": [
+    { "key": "conversation", "name": "Conversation", "definition": "Governed institutional communication space" },
+    { "key": "thread", "name": "Thread", "definition": "Topic-focused discussion within a conversation" },
+    { "key": "message", "name": "Message", "definition": "Immutable-history communication unit with edit versions" },
+    { "key": "mission_room", "name": "Mission Room", "definition": "Automatic collaboration space per mission" },
+    { "key": "decision", "name": "Decision", "definition": "Captured institutional choice with reason and evidence" },
+    { "key": "action_item", "name": "Action Item", "definition": "Work extracted from conversation requiring approval" },
+    { "key": "announcement", "name": "Announcement", "definition": "Institutional broadcast with optional acknowledgment" },
+    { "key": "broadcast", "name": "Broadcast", "definition": "Multi-channel message delivery" },
+    { "key": "meeting_workspace", "name": "Meeting Workspace", "definition": "Searchable meeting record with agenda and minutes" },
+    { "key": "decision_ledger", "name": "Decision Ledger", "definition": "Institution-wide searchable decision history" },
+    { "key": "knowledge_candidate", "name": "Knowledge Candidate", "definition": "Thread flagged for institutional memory" },
+    { "key": "translation", "name": "Translation", "definition": "On-demand message translation preserving original" },
+    { "key": "retention", "name": "Retention", "definition": "Governed conversation lifecycle through disposal" },
+    { "key": "federation_communications", "name": "Federation Communications", "definition": "Cross-institution collaboration with strict permissions" },
+    { "key": "communication_timeline", "name": "Communication Timeline", "definition": "Unified history of institutional communication" },
+    { "key": "ai_summary", "name": "AI Summary", "definition": "Advisory conversation summary—not organizational authority" },
+    { "key": "direct_message", "name": "Direct Message", "definition": "Private governed one-to-one communication" },
+    { "key": "institutional_memory", "name": "Institutional Memory", "definition": "Permanent knowledge from important conversations" }
+  ]
+}

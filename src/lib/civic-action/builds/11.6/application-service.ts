@@ -14,6 +14,8 @@ import { resourceService } from "./resources/services/resource-service";
 import { seedResourcesIfEmpty } from "./resources/services/seed";
 import { calendarEngineService } from "./calendar/services/calendar-service";
 import { seedCalendarIfEmpty } from "./calendar/services/seed";
+import { communicationsService } from "./communications/services/communications-service";
+import { seedCommunicationsIfEmpty } from "./communications/services/seed";
 
 let opsDataSeeded = false;
 
@@ -25,6 +27,7 @@ function ensureOpsDataSeeded() {
   seedOrganizationIfEmpty();
   seedResourcesIfEmpty();
   seedCalendarIfEmpty();
+  seedCommunicationsIfEmpty();
   opsDataSeeded = true;
 }
 
@@ -337,6 +340,81 @@ export class OperationsApplicationService {
   getCalendarIntelligence(institutionId: string) {
     this.boot();
     return calendarEngineService.intelligence.analyze(institutionId);
+  }
+
+  listConversations(institutionId: string, missionId?: string) {
+    this.boot();
+    return communicationsService.conversations.list(institutionId, missionId ? { missionId } : undefined);
+  }
+
+  getConversation(conversationId: string) {
+    this.boot();
+    return communicationsService.conversations.get(conversationId);
+  }
+
+  createConversation(input: Parameters<typeof communicationsService.conversations.create>[0]) {
+    this.boot();
+    return communicationsService.conversations.create(input);
+  }
+
+  listThreads(institutionId: string, conversationId?: string) {
+    this.boot();
+    return communicationsService.threads.list(institutionId, conversationId);
+  }
+
+  listMessages(institutionId: string, filters?: { threadId?: string; conversationId?: string }) {
+    this.boot();
+    return communicationsService.messages.list(institutionId, filters);
+  }
+
+  postMessage(input: Parameters<typeof communicationsService.messages.post>[0]) {
+    this.boot();
+    return communicationsService.messages.post(input);
+  }
+
+  listAnnouncements(institutionId: string) {
+    this.boot();
+    return communicationsService.announcements.list(institutionId);
+  }
+
+  createAnnouncement(input: Parameters<typeof communicationsService.announcements.create>[0]) {
+    this.boot();
+    return communicationsService.announcements.create(input);
+  }
+
+  listMeetings(institutionId: string) {
+    this.boot();
+    return communicationsService.meetings.list(institutionId);
+  }
+
+  createMeetingWorkspace(input: Parameters<typeof communicationsService.meetings.create>[0]) {
+    this.boot();
+    return communicationsService.meetings.create(input);
+  }
+
+  sendBroadcast(input: Parameters<typeof communicationsService.broadcasts.send>[0]) {
+    this.boot();
+    return communicationsService.broadcasts.send(input);
+  }
+
+  getMissionRoom(missionId: string, institutionId: string) {
+    this.boot();
+    return communicationsService.missionRooms.build(missionId, institutionId);
+  }
+
+  listDecisions(institutionId: string, missionId?: string) {
+    this.boot();
+    return communicationsService.decisions.list(institutionId, missionId);
+  }
+
+  summarizeConversation(conversationId: string) {
+    this.boot();
+    return communicationsService.ai.summarize(conversationId);
+  }
+
+  getCommunicationsIntelligence(institutionId: string) {
+    this.boot();
+    return communicationsService.ai.analyze(institutionId);
   }
 }
 

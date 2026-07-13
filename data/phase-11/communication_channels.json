@@ -1,0 +1,8 @@
+{
+  "protocol_id": "CAE-11.6-W7",
+  "channels": [
+    "real_time_chat", "announcements", "direct_messaging", "group_messaging", "mission_rooms",
+    "discussion_boards", "comments", "meeting_chat", "voice_notes", "video_references",
+    "broadcasts", "system_messages", "ai_conversations"
+  ]
+}

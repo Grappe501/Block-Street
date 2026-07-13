@@ -1,0 +1,10 @@
+{
+  "protocol_id": "CAE-11.6-W7",
+  "types": [
+    "mission_room", "team_room", "department_room", "committee_room", "executive_room",
+    "project_room", "program_room", "volunteer_room", "training_room", "community_discussion",
+    "direct_message", "group_message", "announcement_channel", "support_desk", "incident_room",
+    "emergency_operations", "knowledge_review", "research_collaboration", "custom"
+  ],
+  "lifecycle": ["created", "active", "muted", "archived", "locked", "retained", "disposed"]
+}
