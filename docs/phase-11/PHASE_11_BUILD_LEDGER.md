@@ -49,6 +49,13 @@
 | W7 | Institutional Evolution | **Complete** |
 | W8 | Production Certification | **Complete** |
 
+## Build 11.6 — Institutional Operations & Mission Execution (OPS-001)
+
+| Wave | Name | Status |
+|------|------|--------|
+| W1 | Mission, Vision & Strategic Planning | **Complete** |
+| W2–W16 | Execution, scheduling, communications, automation | Pending |
+
 ## Live Ledger
 
 `data/civic-action/scaffold.json`

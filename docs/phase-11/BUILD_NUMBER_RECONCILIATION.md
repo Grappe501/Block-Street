@@ -15,7 +15,7 @@ When a recovery blob uses a different build number than the live scaffold, **the
 | 11.3 | Mission and Workstream Execution | MSN-002 | Blob matches repo ✓ |
 | **11.4** | **Team, Role, and Responsibility Coordination** | **RSP-001** | Blob labeled "Communications" — **wrong build number** |
 | 11.5 | Calendar, Timing, and Operational Rhythm | TIM-001 | — |
-| 11.6 | Resource, Capacity, and Logistics Management | CAP-001 | — |
+| 11.6 | Institutional Operations & Mission Execution | OPS-001 | Blob "Strategic Planning / Mission Execution" → **OPS-001** (16 waves); supersedes prior CAP-001 label |
 | **11.7** | **Communications and Mobilization Operations** | **COM-002** | Blob "Communications" content → **save as 11.7** |
 | 11.8 | Field Operations and Geographic Execution | FLD-001 | — |
 | 11.9 | Coalition and Cross-Institution Coordination | COL-001 | — |
@@ -53,6 +53,15 @@ When a recovery blob uses a different build number than the live scaffold, **the
 **Note:** Blob architecture lists Communications as 11.4 and Knowledge as 11.5. Repository uses **11.7** for Communications and **11.12** for Adaptive Execution & Continuous Learning (Institutional Brain / LMS). Repository **11.5** remains **TIM-001** (Calendar).
 
 Partial knowledge capabilities already exist in **11.7 COM-002** (knowledge graph, capture, explorer, institutional memory). **11.12 ADP-001** owns the full Learning Academy, courses, skills, certifications, and AI tutor stack.
+
+## Institutional Operations content mapping
+
+| Blob label | Correct repo location | System ID |
+|------------|----------------------|-----------|
+| CAE-11.6-W1 Strategic Planning | `docs/phase-11/11.6-institutional-operations/` (`CAE-11.6-W*`) | **OPS-001** |
+| Strategic APIs | `/api/v1/strategy/*` (not `/api/v1/objectives` — owned by 11.2 OBJ-001) | OPS-001 |
+
+**Note:** User blob labels Build 11.6 as Institutional Operations & Mission Execution Engine (16 waves). Repository **11.6** is **OPS-001**. Prior scaffold label CAP-001 (Resource/Capacity) is deferred or re-homed in a future build.
 
 ## Mission Operations content mapping
 
