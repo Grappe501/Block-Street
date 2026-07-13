@@ -1,0 +1,20 @@
+{
+  "contract_id": "OPS-MISSION-HIERARCHY-001",
+  "build": "11.6",
+  "wave": "W2",
+  "levels": [
+    { "level": 1, "name": "vision" },
+    { "level": 2, "name": "mission_statement" },
+    { "level": 3, "name": "strategic_pillar" },
+    { "level": 4, "name": "strategic_goal" },
+    { "level": 5, "name": "objective" },
+    { "level": 6, "name": "key_result" },
+    { "level": 7, "name": "program" },
+    { "level": 8, "name": "project" },
+    { "level": 9, "name": "operational_mission" },
+    { "level": 10, "name": "mission_phase" },
+    { "level": 11, "name": "mission_activity" },
+    { "level": 12, "name": "task" },
+    { "level": 13, "name": "checklist_item" }
+  ]
+}

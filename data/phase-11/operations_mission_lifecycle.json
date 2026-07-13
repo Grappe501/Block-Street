@@ -1,0 +1,22 @@
+{
+  "contract_id": "OPS-MISSION-LIFECYCLE-001",
+  "build": "11.6",
+  "wave": "W2",
+  "states": [
+    "draft",
+    "planning",
+    "awaiting_approval",
+    "approved",
+    "scheduled",
+    "ready",
+    "in_progress",
+    "paused",
+    "blocked",
+    "escalated",
+    "review",
+    "completed",
+    "archived"
+  ],
+  "health_states": ["healthy", "watch", "at_risk", "critical"],
+  "illegal_transition_policy": "reject_and_audit"
+}

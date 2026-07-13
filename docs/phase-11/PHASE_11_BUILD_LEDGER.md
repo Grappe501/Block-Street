@@ -54,7 +54,8 @@
 | Wave | Name | Status |
 |------|------|--------|
 | W1 | Mission, Vision & Strategic Planning | **Complete** |
-| W2–W16 | Execution, scheduling, communications, automation | Pending |
+| W2 | Mission Execution Engine | **Complete** |
+| W3–W16 | Execution, scheduling, communications, automation | Pending |
 
 ## Live Ledger
 

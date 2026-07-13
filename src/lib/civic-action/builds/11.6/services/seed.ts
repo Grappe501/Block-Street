@@ -11,9 +11,10 @@ import {
   saveVision,
   writeStoreSlice,
 } from "./repository";
-import { STRATEGY_STORE_KEYS } from "../data-model";
 import type {
   CoreValueRecord,
+  ProgramRecord,
+  ProjectRecord,
   StrategicGoalRecord,
   StrategicKeyResultRecord,
   StrategicObjectiveRecord,
@@ -22,6 +23,7 @@ import type {
   PurposeRecord,
   VisionRecord,
 } from "../data-model";
+import { STRATEGY_STORE_KEYS } from "../data-model";
 import { readStoreSlice } from "./repository";
 
 const INSTITUTION = "inst-block-street";
@@ -114,6 +116,32 @@ export function seedStrategicPlanningIfEmpty() {
     confidence: 0.75,
   };
   saveKeyResult(kr);
+
+  const program: ProgramRecord = {
+    ...base("program-001", "Volunteer Development Program"),
+    object_type: "Program",
+    title: "Volunteer Development Program",
+    description: "Governed volunteer training and certification",
+    owning_objective_id: objective.canonical_id,
+    executive_owner_human_id: "usr-001",
+    budget_optional: null,
+    timeline_start: NOW,
+    timeline_end: NOW,
+  };
+  writeStoreSlice(STRATEGY_STORE_KEYS.programs, [program]);
+
+  const project: ProjectRecord = {
+    ...base("project-001", "Training Launch Project"),
+    object_type: "Project",
+    program_id: program.canonical_id,
+    title: "Training Launch Project",
+    scope: "Deploy volunteer training missions",
+    owner_human_id: "usr-001",
+    budget_optional: null,
+    timeline_start: NOW,
+    timeline_end: NOW,
+  };
+  writeStoreSlice(STRATEGY_STORE_KEYS.projects, [project]);
 
   const values: CoreValueRecord[] = [
     {

@@ -1,0 +1,27 @@
+{
+  "contract_id": "OPS-MISSION-VOCAB-001",
+  "build": "11.6",
+  "wave": "W2",
+  "terms": [
+    { "term": "operational_mission", "definition": "Governed container for institutional work with traceability to strategy" },
+    { "term": "mission_phase", "definition": "Major stage within a large mission" },
+    { "term": "mission_activity", "definition": "Grouped work within a phase" },
+    { "term": "task", "definition": "Smallest operational work unit; always belongs to a mission" },
+    { "term": "checklist_item", "definition": "Repeatable verification step within a mission" },
+    { "term": "mission_health", "definition": "Computed operational status: healthy, watch, at_risk, critical" },
+    { "term": "mission_evidence", "definition": "Recorded proof of execution" },
+    { "term": "decision_log", "definition": "Governed record of mission decisions and rationale" },
+    { "term": "lessons_learned", "definition": "Post-mission institutional knowledge capture" },
+    { "term": "mission_template", "definition": "Reusable operational plan for recurring efforts" },
+    { "term": "mission_dependency", "definition": "Relationship between missions affecting schedule" },
+    { "term": "mission_escalation", "definition": "Leadership notification for blocked or at-risk missions" },
+    { "term": "completion_rules", "definition": "Governed criteria required before mission completion" },
+    { "term": "traceability", "definition": "Upward link from mission to vision and purpose" },
+    { "term": "mission_owner", "definition": "Human accountable for mission delivery" },
+    { "term": "executive_owner", "definition": "Leadership sponsor with escalation visibility" },
+    { "term": "mission_intelligence", "definition": "AI advisory analysis without autonomous state changes" },
+    { "term": "deliverable", "definition": "Mission output linked to institutional memory" },
+    { "term": "mission_calendar", "definition": "Integrated timeline of tasks, milestones, and reviews" },
+    { "term": "resource_planning", "definition": "People, equipment, budget assigned to mission" }
+  ]
+}

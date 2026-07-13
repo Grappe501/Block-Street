@@ -1,7 +1,13 @@
 export { operationsApplicationService } from "./application-service";
 export { strategicPlanningService } from "./services/strategic-planning-service";
+export { missionExecutionService } from "./execution/services/mission-execution-service";
 export { getOperationsConstitution, OPS_GOVERNING_PRINCIPLE } from "./constitution";
+export { getMissionExecutionConstitution, OPS_EXECUTION_PRINCIPLE } from "./execution/constitution";
 export { runOpsW1Certification, getOpsW1Overview, isOpsW1Complete } from "./w1";
+export { runOpsW2Certification, isOpsW2Complete } from "./execution/w2";
 export { runOpsW1StrategyTests, allOpsW1TestsPassed } from "./w1-tests";
+export { runOpsW2MissionTests, allOpsW2TestsPassed } from "./execution/w2-tests";
 export { explainWhyWeAreDoingThis, validateTraceabilityComplete } from "./traceability";
+export { explainMissionPurpose, validateMissionTraceability } from "./execution/traceability";
 export { STRATEGY_EVENT_CATALOG } from "./events/catalog";
+export { MISSION_EVENT_CATALOG } from "./execution/events/catalog";

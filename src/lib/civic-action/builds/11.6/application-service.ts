@@ -1,12 +1,15 @@
 /**
- * CAE-11.6-W1 — Operations application facade
+ * CAE-11.6 — Operations application facade
  */
 import { strategicPlanningService } from "./services/strategic-planning-service";
 import { seedStrategicPlanningIfEmpty } from "./services/seed";
+import { missionExecutionService } from "./execution/services/mission-execution-service";
+import { seedOperationalMissionsIfEmpty } from "./execution/services/seed";
 
 export class OperationsApplicationService {
   constructor() {
     seedStrategicPlanningIfEmpty();
+    seedOperationalMissionsIfEmpty();
   }
 
   getDashboard(institutionId: string) {
@@ -17,7 +20,7 @@ export class OperationsApplicationService {
     return strategicPlanningService.vision.getActive(institutionId);
   }
 
-  getMission(institutionId: string) {
+  getMissionStatement(institutionId: string) {
     return strategicPlanningService.mission.getActive(institutionId);
   }
 
@@ -51,6 +54,50 @@ export class OperationsApplicationService {
 
   explainWork(trace: Parameters<typeof strategicPlanningService.ai.explainContribution>[0]) {
     return strategicPlanningService.ai.explainContribution(trace);
+  }
+
+  listMissions(institutionId: string) {
+    return missionExecutionService.missions.list(institutionId);
+  }
+
+  getOperationalMission(missionId: string) {
+    return missionExecutionService.missions.get(missionId);
+  }
+
+  createMission(input: Parameters<typeof missionExecutionService.missions.create>[0]) {
+    return missionExecutionService.missions.create(input);
+  }
+
+  updateMission(missionId: string, fields: Parameters<typeof missionExecutionService.missions.update>[1]) {
+    return missionExecutionService.missions.update(missionId, fields);
+  }
+
+  getMissionHealth(missionId: string) {
+    return missionExecutionService.health.buildDashboard(missionId);
+  }
+
+  getMissionTimeline(missionId: string) {
+    return missionExecutionService.calendar.timeline(missionId);
+  }
+
+  getMissionCommunications(missionId: string) {
+    return missionExecutionService.communications.list(missionId);
+  }
+
+  createMissionTask(input: Parameters<typeof missionExecutionService.tasks.create>[0]) {
+    return missionExecutionService.tasks.create(input);
+  }
+
+  recordMissionEvidence(input: Parameters<typeof missionExecutionService.evidence.record>[0]) {
+    return missionExecutionService.evidence.record(input);
+  }
+
+  completeMission(missionId: string, actorId: string) {
+    return missionExecutionService.lifecycle.complete(missionId, actorId);
+  }
+
+  getMissionIntelligence(missionId: string) {
+    return missionExecutionService.intelligence.analyze(missionId);
   }
 }
 

@@ -40,7 +40,7 @@ export function runOpsW1StrategyTests(): OpsW1TestResult[] {
   });
 
   const vision = operationsApplicationService.getVision(institutionId);
-  const mission = operationsApplicationService.getMission(institutionId);
+  const mission = operationsApplicationService.getMissionStatement(institutionId);
   results.push({
     name: "vision_and_mission",
     passed: !!vision && !!mission,

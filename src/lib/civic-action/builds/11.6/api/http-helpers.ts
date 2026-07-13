@@ -6,6 +6,7 @@ import { apiSuccess } from "@/lib/api/errors";
 import type { ApiRequestContext } from "@/lib/api/types";
 
 export const STRATEGY_API_CONTRACT_VERSION = "11.6-w1.1";
+export const OPERATIONS_API_CONTRACT_VERSION = "11.6-w2.1";
 
 export type StrategyApiContext = {
   institution_id: string;
@@ -13,6 +14,12 @@ export type StrategyApiContext = {
   request_id: string;
   correlation_id: string;
 };
+
+export function operationalMissionIdFromPath(request: NextRequest): string {
+  const parts = request.nextUrl.pathname.split("/");
+  const idx = parts.indexOf("missions");
+  return parts[idx + 1] ?? "";
+}
 
 export function resolveStrategyApiContext(ctx: ApiRequestContext, request: NextRequest): StrategyApiContext {
   const institutionId =
@@ -35,6 +42,25 @@ export function strategyMeta(apiCtx: StrategyApiContext, extra?: Record<string, 
     contract_version: STRATEGY_API_CONTRACT_VERSION,
     ...extra,
   };
+}
+
+export function operationsMeta(apiCtx: StrategyApiContext, extra?: Record<string, unknown>) {
+  return {
+    request_id: apiCtx.request_id,
+    correlation_id: apiCtx.correlation_id,
+    contract_version: OPERATIONS_API_CONTRACT_VERSION,
+    ...extra,
+  };
+}
+
+export async function withOperationsApi<T>(
+  ctx: ApiRequestContext,
+  request: NextRequest,
+  fn: (apiCtx: StrategyApiContext) => T | Promise<T>
+) {
+  const apiCtx = resolveStrategyApiContext(ctx, request);
+  const data = await fn(apiCtx);
+  return apiSuccess(data, operationsMeta(apiCtx));
 }
 
 export async function withStrategyApi<T>(
