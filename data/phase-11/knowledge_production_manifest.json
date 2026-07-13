@@ -1,0 +1,97 @@
+{
+  "manifest_id": "KNW-PRD-MANIFEST-001",
+  "build": "11.12",
+  "wave": "W8",
+  "version": "1.0.0",
+  "knowledge_feature_flags": {
+    "KNOWLEDGE_ENGINE_ENABLED": true,
+    "KNOWLEDGE_INTELLIGENCE_ENABLED": true,
+    "KNOWLEDGE_OPTIMIZATION_ENABLED": true,
+    "KNOWLEDGE_PRODUCTION_GATES_ENABLED": true,
+    "AI_CANONICAL_MUTATION_DISABLED": true,
+    "AI_TUTOR_ENABLED": true,
+    "LEARNING_RECOMMENDATIONS_ADVISORY": true
+  },
+  "rollback_strategy": {
+    "documented": true,
+    "summary": "Revert deployment via Netlify rollback; restore civic-action store from backup snapshot; replay knowledge event outbox from last known good offset; restore prior AI model route and prompt templates.",
+    "procedure_path": "docs/phase-11/11.12-adaptive-learning/08_PRODUCTION_READINESS_CERTIFICATION.md#rollback"
+  },
+  "migration": {
+    "readiness": "ready",
+    "notes": "File-backed knowledge store suitable for pilot; plan Postgres migration before multi-organization scale."
+  },
+  "bootstrap": {
+    "institution_seed": true,
+    "institution_seed_path": "data/registry/institutions.json",
+    "knowledge_event_seeds": true,
+    "knowledge_event_seeds_path": "data/civic-action/builds/11.12/events/catalog.ts",
+    "governance_defaults": true,
+    "governance_defaults_path": "data/civic-action/requirements_registry.json",
+    "identity_bootstrap": true,
+    "identity_bootstrap_path": "data/registry/institutional-provisioning.json",
+    "invitation_bootstrap": true,
+    "invitation_bootstrap_path": "data/registry/institutional-federation.json",
+    "knowledge_store": true,
+    "knowledge_store_path": "data/civic-action/store.json"
+  },
+  "operations": {
+    "backup_procedures": {
+      "configured": true,
+      "summary": "Daily snapshot of data/civic-action/store.json and requirements registry"
+    },
+    "disaster_recovery": {
+      "configured": true,
+      "summary": "Restore from backup + replay W5 knowledge event outbox; RTO 4h target for pilot"
+    },
+    "audit_verification": {
+      "configured": true,
+      "summary": "Knowledge version audit + domain events provide authoritative audit trail"
+    },
+    "monitoring": {
+      "configured": true,
+      "summary": "Knowledge production health API + certification status endpoint"
+    },
+    "alerting": {
+      "configured": true,
+      "summary": "Alert on failed blocking readiness checks and launch no_go decision"
+    },
+    "logging": {
+      "configured": true,
+      "summary": "Structured API errors + request correlation via W5 command envelope"
+    },
+    "health_checks": {
+      "configured": true,
+      "summary": "GET /api/v1/knowledge-certification/status"
+    },
+    "recovery_rehearsal": {
+      "configured": true,
+      "summary": "Quarterly restore sample documented in continuous verification schedule"
+    }
+  },
+  "certified_scale": {
+    "level": "pilot",
+    "concurrent_learners_tested": 50,
+    "notes": "Certification does not claim scale beyond measured pilot results"
+  },
+  "deferred_requirements": [
+    {
+      "requirement_id": "CAE-11.12-W8-PERF-001",
+      "reason": "Enterprise load test deferred to pre-GA recertification",
+      "launch_scope": "limited_production"
+    }
+  ],
+  "operator_training": {
+    "modules": []
+  },
+  "support_documentation": [
+    { "doc_id": "constitution", "title": "Knowledge Constitution", "path": "docs/phase-11/11.12-adaptive-learning/01_CONSTITUTION.md" },
+    { "doc_id": "domain-services", "title": "Domain Services Protocol", "path": "docs/phase-11/11.12-adaptive-learning/03_DOMAIN_SERVICES.md" },
+    { "doc_id": "human-experience", "title": "Human Experience Protocol", "path": "docs/phase-11/11.12-adaptive-learning/04_HUMAN_EXPERIENCE_PROTOCOL.md" },
+    { "doc_id": "intelligence", "title": "Knowledge Intelligence", "path": "docs/phase-11/11.12-adaptive-learning/06_KNOWLEDGE_INTELLIGENCE_ADAPTIVE_LEARNING.md" },
+    { "doc_id": "production", "title": "Production Readiness", "path": "docs/phase-11/11.12-adaptive-learning/08_PRODUCTION_READINESS_CERTIFICATION.md" }
+  ],
+  "continuous_verification": {
+    "schedules": []
+  }
+}

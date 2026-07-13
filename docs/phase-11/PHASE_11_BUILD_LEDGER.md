@@ -9,8 +9,8 @@
 |--------|-------|
 | Waves completed | 28 / 128 |
 | Phase overall | 21.9% |
-| Current wave | 11.12-W8 (recommended) |
-| Build 11.12 | 87.5% (W1–W7 complete; W8 next) |
+| Current wave | 11.6 (recommended) |
+| Build 11.12 | 100% (W1–W8 complete) |
 
 ## Build 11.1 — Initiative Architecture
 
@@ -47,7 +47,7 @@
 | W5 | APIs, Events, Integrations | **Complete** |
 | W6 | Knowledge Intelligence | **Complete** |
 | W7 | Institutional Evolution | **Complete** |
-| W8 | Production Certification | Next |
+| W8 | Production Certification | **Complete** |
 
 ## Live Ledger
 
