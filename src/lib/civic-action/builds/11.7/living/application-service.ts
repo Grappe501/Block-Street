@@ -13,6 +13,8 @@ import { researchRuntime } from "./research/services/research-network-service";
 import { seedResearchIfEmpty } from "./research/services/seed";
 import { conversationRuntime } from "./conversation/services/conversation-service";
 import { seedConversationIfEmpty } from "./conversation/services/seed";
+import { learningRuntime } from "./learning/services/learning-service";
+import { seedLearningIfEmpty } from "./learning/services/seed";
 
 let livingDataSeeded = false;
 
@@ -24,6 +26,7 @@ function ensureLivingDataSeeded() {
   seedOrganizerIfEmpty();
   seedResearchIfEmpty();
   seedConversationIfEmpty();
+  seedLearningIfEmpty();
   livingDataSeeded = true;
 }
 
@@ -395,6 +398,66 @@ export class LivingIntelligenceApplicationService {
   promoteConversation(input: Parameters<typeof conversationRuntime.conversation.promote>[0]) {
     this.boot();
     return conversationRuntime.conversation.promote(input);
+  }
+
+  getLearningDashboard(input: { human_id: string; institution_id: string }) {
+    this.boot();
+    return learningRuntime.learning.dashboard(input);
+  }
+
+  listLearningCourses(institutionId: string) {
+    this.boot();
+    return learningRuntime.curriculum.listCourses(institutionId);
+  }
+
+  createLearningCourse(input: Parameters<typeof learningRuntime.curriculum.createCourse>[0]) {
+    this.boot();
+    return learningRuntime.curriculum.createCourse(input);
+  }
+
+  listLearningCurriculum(institutionId: string) {
+    this.boot();
+    return learningRuntime.curriculum.listCurricula(institutionId);
+  }
+
+  listCompetencies(institutionId: string) {
+    this.boot();
+    return learningRuntime.competencies.list(institutionId);
+  }
+
+  listLearningCertifications(humanId: string) {
+    this.boot();
+    return learningRuntime.certifications.list(humanId);
+  }
+
+  listMentorRecommendations(humanId: string) {
+    this.boot();
+    return learningRuntime.mentors.list(humanId);
+  }
+
+  getLearningAnalytics(input: { institution_id: string; human_id?: string }) {
+    this.boot();
+    return learningRuntime.analytics.compute(input);
+  }
+
+  createLearningPlan(input: Parameters<typeof learningRuntime.plans.create>[0]) {
+    this.boot();
+    return learningRuntime.plans.create(input);
+  }
+
+  submitLearningAssessment(input: Parameters<typeof learningRuntime.governance.assess>[0]) {
+    this.boot();
+    return learningRuntime.governance.assess(input);
+  }
+
+  startLearningSimulation(input: Parameters<typeof learningRuntime.simulations.start>[0]) {
+    this.boot();
+    return learningRuntime.simulations.start(input);
+  }
+
+  promoteLearningExperience(input: Parameters<typeof learningRuntime.learning.promote>[0]) {
+    this.boot();
+    return learningRuntime.learning.promote(input);
   }
 }
 
