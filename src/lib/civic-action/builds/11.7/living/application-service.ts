@@ -19,6 +19,8 @@ import { predictionRuntime } from "./prediction/services/prediction-service";
 import { seedPredictionIfEmpty } from "./prediction/services/seed";
 import { agentRuntime } from "./agents/services/agent-service";
 import { seedAgentsIfEmpty } from "./agents/services/seed";
+import { partnershipRuntime } from "./partnership/services/partnership-service";
+import { seedPartnershipIfEmpty } from "./partnership/services/seed";
 
 let livingDataSeeded = false;
 
@@ -33,6 +35,7 @@ function ensureLivingDataSeeded() {
   seedLearningIfEmpty();
   seedPredictionIfEmpty();
   seedAgentsIfEmpty();
+  seedPartnershipIfEmpty();
   livingDataSeeded = true;
 }
 
@@ -564,6 +567,59 @@ export class LivingIntelligenceApplicationService {
   determineAgentConsensus(input: Parameters<typeof agentRuntime.consensus.determine>[0]) {
     this.boot();
     return agentRuntime.consensus.determine(input);
+  }
+
+  getPartnershipDashboard(input: { human_id: string; institution_id: string }) {
+    this.boot();
+    return partnershipRuntime.partnership.dashboard(input);
+  }
+
+  getLivingInstitution(input: { human_id: string; institution_id: string }) {
+    this.boot();
+    const dashboard = partnershipRuntime.partnership.dashboard(input);
+    const health = partnershipRuntime.health.measure(input.institution_id);
+    const wisdom = partnershipRuntime.wisdom.list(input.institution_id);
+    return { ...dashboard, health: health.health, wisdom_count: wisdom.length, living_institution: true };
+  }
+
+  listTrustCalibrations(institutionId: string) {
+    this.boot();
+    return partnershipRuntime.trust.list(institutionId);
+  }
+
+  recalculateTrust(input: Parameters<typeof partnershipRuntime.trust.recalculate>[0]) {
+    this.boot();
+    return partnershipRuntime.trust.recalculate(input);
+  }
+
+  listInstitutionalWisdom(institutionId: string) {
+    this.boot();
+    return partnershipRuntime.wisdom.list(institutionId);
+  }
+
+  listPartnershipFeedback(humanId: string) {
+    this.boot();
+    return partnershipRuntime.feedback.list(humanId);
+  }
+
+  submitPartnershipFeedback(input: Parameters<typeof partnershipRuntime.feedback.submit>[0]) {
+    this.boot();
+    return partnershipRuntime.feedback.submit(input);
+  }
+
+  listDecisionOutcomes(institutionId: string) {
+    this.boot();
+    return partnershipRuntime.outcomes.list(institutionId);
+  }
+
+  recordDecisionOutcome(input: Parameters<typeof partnershipRuntime.outcomes.record>[0]) {
+    this.boot();
+    return partnershipRuntime.outcomes.record(input);
+  }
+
+  recordInstitutionalReflection(input: Parameters<typeof partnershipRuntime.learning.recordReflection>[0]) {
+    this.boot();
+    return partnershipRuntime.learning.recordReflection(input);
   }
 }
 
