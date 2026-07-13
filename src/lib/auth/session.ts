@@ -127,11 +127,15 @@ export function getSession(sessionToken: string): Session | null {
 }
 
 export function touchSession(sessionId: string): void {
-  const sessions = loadSessions();
-  const idx = sessions.findIndex((s) => s.session_id === sessionId && !s.revoked);
-  if (idx < 0) return;
-  sessions[idx] = { ...sessions[idx], last_seen_at: new Date().toISOString() };
-  persistSessions(sessions);
+  try {
+    const sessions = loadSessions();
+    const idx = sessions.findIndex((s) => s.session_id === sessionId && !s.revoked);
+    if (idx < 0) return;
+    sessions[idx] = { ...sessions[idx], last_seen_at: new Date().toISOString() };
+    persistSessions(sessions);
+  } catch {
+    // Signed cookie sessions do not require durable session store updates.
+  }
 }
 
 export function logout(sessionId: string): boolean {

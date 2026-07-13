@@ -81,10 +81,14 @@ export function loadApiVersions() {
 }
 
 export function appendApiAudit(event: Record<string, unknown>) {
-  appendFileSync(
-    join(API_DATA, "audit_events.jsonl"),
-    JSON.stringify({ ...event, timestamp: new Date().toISOString() }) + "\n"
-  );
+  try {
+    appendFileSync(
+      join(API_DATA, "audit_events.jsonl"),
+      JSON.stringify({ ...event, timestamp: new Date().toISOString() }) + "\n"
+    );
+  } catch {
+    // Netlify/serverless runtimes are read-only; audit must not break API responses.
+  }
 }
 
 export function readApiAudit(limit = 50) {

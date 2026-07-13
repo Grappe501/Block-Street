@@ -14,6 +14,7 @@
 | ~200+ untracked Phase 11 files (11.7, 11.12) | **Committed** in `d0beaa4` |
 | `store.json` test bloat (7MB) | **Reverted** — not committed |
 | Director login stuck on "Loading…" | **Fixed** — server passes `next`, no `useSearchParams` Suspense |
+| Health APIs return 500 on Netlify | **Fixed** — audit append wrapped for read-only serverless FS |
 
 ## Phase 11 Civic Action Engine
 

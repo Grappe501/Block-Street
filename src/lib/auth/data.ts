@@ -123,10 +123,14 @@ export function loadFeatureFlags(): FeatureFlags {
 }
 
 export function appendAudit(event: Record<string, unknown>) {
-  appendFileSync(
-    join(DATA_DIR, "audit_events.jsonl"),
-    JSON.stringify({ ...event, timestamp: new Date().toISOString() }) + "\n"
-  );
+  try {
+    appendFileSync(
+      join(DATA_DIR, "audit_events.jsonl"),
+      JSON.stringify({ ...event, timestamp: new Date().toISOString() }) + "\n"
+    );
+  } catch {
+    // Serverless runtimes may not allow writes; auth flows must still succeed.
+  }
 }
 
 export function readAuditEvents(limit = 50) {
