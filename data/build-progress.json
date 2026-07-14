@@ -12,7 +12,7 @@
     "phase8Status": "complete",
     "phase9Status": "complete",
     "phase10Status": "in_progress",
-    "lastUpdated": "2026-07-14T07:50:00Z",
+    "lastUpdated": "2026-07-14T07:58:38.231Z",
     "deployUrl": "https://block-street.netlify.app/",
     "githubRepo": "https://github.com/Grappe501/Block-Street",
     "netlifyStatus": "live",
@@ -673,8 +673,8 @@
       "id": 3,
       "name": "People & Relationship System",
       "slug": "phase-03-people",
-      "status": "in_progress",
-      "docPath": "docs/phase-03/PHASE_3_MASTER_SEQUENCE.md",
+      "status": "done",
+      "docPath": "docs/phase-03/PHASE_3_PEOPLE_SYSTEM_BUILD_BIBLE.md",
       "question": "Who is this person, how do they grow, and how do they connect to others?",
       "steps": [
         {
@@ -763,9 +763,9 @@
         },
         {
           "id": "3.15",
-          "name": "Phase 3 Build Bible",
-          "status": "pending",
-          "notes": "People System closeout"
+          "name": "Phase 3 Build Bible [PHASE-003.15]",
+          "status": "done",
+          "notes": "People System closeout — PHASE_3_PEOPLE_SYSTEM_BUILD_BIBLE.md · locks + V1 path + transition · 2026-07-14"
         }
       ]
     },
@@ -1393,6 +1393,12 @@
   "buildLog": [
     {
       "date": "2026-07-14",
+      "title": "PHASE-003.15 Phase 3 Build Bible — People System Complete",
+      "phase": 3,
+      "summary": "All 15 steps closed · architectural locks · registry map · V1 critical path · transition to Phase 4 / Phase 11 / V1 Certification — AC closeout"
+    },
+    {
+      "date": "2026-07-14",
       "title": "LIVE LAUNCH — Steve bootstrap, place-lock, Netlify Blobs, push main@4c8bfbc",
       "phase": 11,
       "summary": "grappe4arkansas@gmail.com admin · /start invite chain · /choose-place then hide map · durable auth/ITL writes · session cookie on invite accept · progressive LaunchChrome"
@@ -1946,10 +1952,10 @@
   ],
   "stats": {
     "totalSteps": 114,
-    "doneSteps": 110,
+    "doneSteps": 111,
     "inProgressSteps": 1,
-    "pendingSteps": 3,
-    "percentComplete": 96,
+    "pendingSteps": 2,
+    "percentComplete": 97,
     "note": "Percent from phase steps only. Architecture Complete ≠ product CERTIFIED PRESENT (Pass 1)."
   }
 }

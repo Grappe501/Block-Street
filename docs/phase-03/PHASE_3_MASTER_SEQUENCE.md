@@ -49,9 +49,14 @@ When complete, every participant receives:
 | 3.12 | [Personal Digital Twin](PERSONAL_DIGITAL_TWIN.md) | Context Engine — living model | ✅ |
 | 3.13 | [Opportunity & Belonging Engine](OPPORTUNITY_BELONGING_ENGINE.md) | Community Marketplace — belonging | ✅ |
 | 3.14 | [Participant Experience & Lifecycle Design](PARTICIPANT_EXPERIENCE_LIFECYCLE.md) | Community Companion — emotional lifecycle | ✅ |
-| 3.15 | Phase 3 Build Bible | Complete People System closeout | Pending |
+| 3.15 | [Phase 3 Build Bible](PHASE_3_PEOPLE_SYSTEM_BUILD_BIBLE.md) | Complete People System closeout | ✅ |
 
 ---
+
+## Phase status
+
+**COMPLETE** — 2026-07-14 · All 15 steps closed.  
+Closeout: [PHASE_3_PEOPLE_SYSTEM_BUILD_BIBLE.md](PHASE_3_PEOPLE_SYSTEM_BUILD_BIBLE.md)
 
 ## 3.3 — Personal Headquarters & Profile System
 
@@ -244,9 +249,13 @@ The most important **trust document** in the project — trust as infrastructure
 
 ## 3.15 — Phase 3 Build Bible
 
+**COMPLETE** — [PHASE_3_PEOPLE_SYSTEM_BUILD_BIBLE.md](PHASE_3_PEOPLE_SYSTEM_BUILD_BIBLE.md)
+
 Closeout index — everything Burt needs:
 
 Identity · Journey · Profiles · Networks · Recruitment · Recognition · Privacy · Leadership · Recommendations · Timeline · Relationship Graph · Personal Mission
+
+Architectural locks, registry map, V1 critical path, and transition to Phase 4 / Phase 11 / V1 Certification.
 
 ---
 
@@ -259,9 +268,12 @@ Identity · Journey · Profiles · Networks · Recruitment · Recognition · Pri
 | 3.4–3.5 | Invite URL + QR + referral |
 | 3.6 | Command Center core | ✅ design |
 | 3.7 | Basic privacy + Trust Center | ✅ design |
+| 3.15 | Build Bible closeout | ✅ 2026-07-14 |
 
-Step 3.15: Build Bible closeout only. Steps 3.8–3.14 design complete — Phase 3 heart locked at 3.14.
+Steps 3.8–3.14 design complete — Phase 3 heart locked at 3.14. Phase closed at 3.15.
 
 ---
 
-*Prior phase:* [Digital Arkansas Build Bible](../phase-02/PHASE_2_DIGITAL_ARKANSAS_BUILD_BIBLE.md)
+*Prior phase:* [Digital Arkansas Build Bible](../phase-02/PHASE_2_DIGITAL_ARKANSAS_BUILD_BIBLE.md)  
+*This phase closeout:* [Phase 3 People System Build Bible](PHASE_3_PEOPLE_SYSTEM_BUILD_BIBLE.md)  
+*Next phase:* [Community OS Build Bible](../phase-04/PHASE_4_COMMUNITY_OS_BUILD_BIBLE.md)
