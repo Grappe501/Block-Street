@@ -31,6 +31,15 @@ export default function EventsBoardPage() {
       <CommandSection title="Actions">
         <div className="grid gap-3 sm:grid-cols-2">
           <CommandCard href={board.campaignHref} title="Campaign events lane" note="Statewide events board" accent />
+          <CommandCard href="/command/events/calendar" title="Event board calendar" note="Month, list, and drill-downs" />
+          <CommandCard href="/command/events/pending" title="Pending proposals" note="Awaiting Carol Eagan review" />
+          <CommandCard href="/command/events/staffing" title="Staffing gaps" note="Open volunteer slots" />
+          <CommandCard href="/command/events/kelly-requests" title="Kelly requests" note="Candidate visit windows" />
+          <CommandCard href="/command/events/conflicts" title="Conflicts" note="Scheduling overlaps" />
+          <CommandCard href="/command/events/approvals" title="Approvals queue" note="Command approval shell" />
+          <CommandCard href="/command/events/volunteer-needs" title="Volunteer needs" note="Command-wide gaps" />
+          <CommandCard href="/command/events/completed" title="Completed events" note="Past events" />
+          <CommandCard href="/calendar/month" title="Public calendar" note="Public month view (soft beta)" />
           <CommandCard href={board.signupHref} title="Sign up — Event Lead" note="Interest form (soft beta)" />
           <CommandCard href={board.lane.position_href} title="Event Lead role page" note={board.meeting?.primaryContribution} />
           <CommandCard href="/command/managers" title="CM / ACM oversight" note="Managers over both sides" />

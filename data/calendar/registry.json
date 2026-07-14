@@ -1,0 +1,28 @@
+{
+  "version": "1.0.0",
+  "status": "soft_beta",
+  "principle": "An event exists once. Calendars reference it according to scope, audience, geography, organization, and permissions.",
+  "schema_path": "src/lib/calendar/types.ts",
+  "catalog_path": "src/lib/calendar/seed.ts",
+  "city_dashboards_active": false,
+  "city_schema_ready": true,
+  "owner": {
+    "event_board": "Carol Eagan",
+    "role": "Volunteer Manager"
+  },
+  "routes": {
+    "universal": "/calendar",
+    "college": "/college/:collegeSlug/calendar",
+    "county": "/county/:countySlug/calendar",
+    "city_future": "/city/:citySlug/calendar",
+    "event_board": "/command/events",
+    "ics_universal": "/calendar/export.ics",
+    "ics_kelly_public": "/calendar/kelly.ics"
+  },
+  "honesty": {
+    "persistence": "seed catalog + session-local proposals",
+    "rbac": "modeled / soft beta",
+    "external_writes": "disabled",
+    "automatic_notifications": "disabled"
+  }
+}

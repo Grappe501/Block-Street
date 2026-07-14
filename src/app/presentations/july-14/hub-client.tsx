@@ -38,6 +38,12 @@ export function July14HubClient() {
             Campaign & campus boards
           </Link>
           <Link
+            href="/calendar"
+            className="rounded-xl border border-field-wheat/40 bg-black/25 px-5 py-4 font-fieldSans text-sm font-semibold text-white"
+          >
+            Universal calendar
+          </Link>
+          <Link
             href="/command/events"
             className="rounded-xl border border-field-wheat/40 bg-black/25 px-5 py-4 font-fieldSans text-sm font-semibold text-white"
           >

@@ -20,6 +20,7 @@ export function CollegeChrome({
     ["positions", "Positions"],
     ["voter-registration", "Voter registration"],
     ["social-event", "Networking event"],
+    ["calendar", "Calendar"],
     ["power-of-5", "Power of 5"],
     ["recruit", "Recruit"],
     ["people", "People"],

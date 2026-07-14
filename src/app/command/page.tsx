@@ -1,10 +1,12 @@
 import Link from "next/link";
 import { CommandCard, CommandChrome, CommandSection } from "@/components/command/CommandChrome";
+import { CalendarWidget } from "@/components/calendar/CalendarWidget";
 import {
   COMMAND_BOARD,
   listCommandLanes,
   listJobSignupLinks,
 } from "@/lib/command/board";
+import { listEventsForScope, listPendingApprovals, listVolunteerNeeds } from "@/lib/calendar";
 
 export const metadata = { title: "Command boards · soft beta" };
 
@@ -14,6 +16,9 @@ export default function CommandHubPage() {
   const vm = COMMAND_BOARD.oversight.volunteer_manager;
   const cm = COMMAND_BOARD.oversight.campaign_manager;
   const acm = COMMAND_BOARD.oversight.assistant_campaign_manager;
+  const weekEvents = listEventsForScope({ kind: "command" }).slice(0, 5);
+  const pending = listPendingApprovals().length;
+  const gaps = listVolunteerNeeds({ kind: "volunteer" }).length;
 
   return (
     <CommandChrome
@@ -22,7 +27,15 @@ export default function CommandHubPage() {
       backHref="/presentations/july-14"
       backLabel="July 14 hub"
     >
-      <div className="grid gap-3 sm:grid-cols-2">
+      <div className="mb-6 grid gap-3 sm:grid-cols-3">
+        <CommandCard href="/command/calendar" accent title="Command calendar" note="Universal campaign view" />
+        <CommandCard href="/command/events/pending" title={`Pending approvals (${pending})`} note="Event Board queue" />
+        <CommandCard href="/command/events/volunteer-needs" title={`Volunteer gaps (${gaps})`} note="Staffing attention" />
+      </div>
+
+      <CalendarWidget title="This week’s attention" events={weekEvents} moreHref="/command/events/calendar" />
+
+      <div className="mt-8 grid gap-3 sm:grid-cols-2">
         <CommandCard
           href="/command/managers"
           accent
@@ -44,10 +57,7 @@ export default function CommandHubPage() {
       <CommandSection title="Lanes (campaign ↔ campus)">
         <div className="grid gap-3">
           {lanes.map((lane) => (
-            <div
-              key={lane.id}
-              className="rounded-xl border border-field-ink/15 bg-white p-4 shadow-sm"
-            >
+            <div key={lane.id} className="rounded-xl border border-field-ink/15 bg-white p-4 shadow-sm">
               <div className="flex flex-wrap items-start justify-between gap-2">
                 <div>
                   <p className="font-fieldSans text-sm font-bold text-field-ink">{lane.label}</p>
@@ -97,7 +107,9 @@ export default function CommandHubPage() {
             </li>
           ))}
         </ul>
-        <p className="mt-2 font-fieldSans text-xs text-field-ink/60">Interest ≠ appointment. Soft-beta local save until personnel persistence ships.</p>
+        <p className="mt-2 font-fieldSans text-xs text-field-ink/60">
+          Interest ≠ appointment. Soft-beta local save until personnel persistence ships.
+        </p>
       </CommandSection>
     </CommandChrome>
   );
