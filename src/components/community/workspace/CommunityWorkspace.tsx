@@ -10,6 +10,7 @@ import { FunctionalLanes } from "./FunctionalLanes";
 import { PeopleDirectoryGate } from "./PeopleDirectoryGate";
 import { CommitPlaceButton } from "@/components/launch/CommitPlaceButton";
 import { InspectBanner } from "./InspectBanner";
+import { FieldManualNavTab } from "@/components/field-strategy/FieldManualNavTab";
 
 type CommunityWorkspaceProps = {
   kind: CommunityKind;
@@ -56,6 +57,7 @@ export function CommunityWorkspace({
               {workspace.openRoleCount} open role{workspace.openRoleCount === 1 ? "" : "s"}
             </span>
           )}
+          <FieldManualNavTab variant="header" />
         </div>
         <h1 className="mt-4 text-3xl font-bold md:text-4xl">{workspace.name}</h1>
         <p className="mt-2 text-lg text-white/90">
@@ -76,6 +78,7 @@ export function CommunityWorkspace({
         {backLabel}
       </Link>
       <div className="mt-4 flex flex-wrap items-center gap-2">
+        <FieldManualNavTab variant="workspace" />
         <span className={`badge ${STATUS_COLORS[workspace.representationStatus]}`}>
           {STATUS_LABELS[workspace.representationStatus]}
         </span>

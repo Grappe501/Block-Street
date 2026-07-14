@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { buildLeaderDashboard } from "@/lib/volunteer-command/dashboard";
+import { FieldManualNavTab } from "@/components/field-strategy/FieldManualNavTab";
 
 type Dash = ReturnType<typeof buildLeaderDashboard>;
 
@@ -18,7 +19,8 @@ export function LeaderDashboardShell({
         </p>
         <h1 className="mt-2 text-2xl font-bold">Assignment {dashboard.assignment_id}</h1>
         <p className="mt-2 text-sm text-white/80">{dashboard.note}</p>
-        <div className="mt-3 flex flex-wrap gap-3 text-sm">
+        <div className="mt-3 flex flex-wrap items-center gap-3 text-sm">
+          <FieldManualNavTab variant="header" />
           <Link href="/admin/volunteer-command" className="underline">
             Volunteer Command
           </Link>

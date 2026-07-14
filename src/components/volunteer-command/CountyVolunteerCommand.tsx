@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { buildCountyVolunteerCommand } from "@/lib/volunteer-command/dashboard";
+import { FieldManualNavTab } from "@/components/field-strategy/FieldManualNavTab";
 
 type Dash = ReturnType<typeof buildCountyVolunteerCommand>;
 
@@ -12,9 +13,12 @@ export function CountyVolunteerCommandView({ dashboard }: { dashboard: Dash }) {
         </p>
         <h1 className="mt-2 text-3xl font-bold">{dashboard.header.title}</h1>
         <p className="mt-2 text-sm text-white/85">{dashboard.header.subtitle}</p>
-        <Link href={dashboard.header.parent} className="mt-3 inline-block text-sm underline">
-          ← County list in Volunteer Command
-        </Link>
+        <div className="mt-3 flex flex-wrap items-center gap-3">
+          <FieldManualNavTab variant="header" />
+          <Link href={dashboard.header.parent} className="text-sm underline">
+            ← County list in Volunteer Command
+          </Link>
+        </div>
       </div>
       <div className="mx-auto max-w-4xl space-y-4 px-4 py-8">
         <div className="rounded-2xl border border-slate-200 bg-white p-4 text-sm text-slate-800">

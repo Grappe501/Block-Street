@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { buildVolunteerCommandDashboard } from "@/lib/volunteer-command/dashboard";
+import { FieldManualNavTab } from "@/components/field-strategy/FieldManualNavTab";
 
 type Dash = ReturnType<typeof buildVolunteerCommandDashboard>;
 
@@ -49,6 +50,7 @@ export function VolunteerCommandWorkbench({ dashboard }: { dashboard: Dash }) {
 
       <div className="border-b border-slate-200 bg-white">
         <nav className="mx-auto flex max-w-7xl gap-1 overflow-x-auto px-4 py-2 text-xs font-semibold">
+          <FieldManualNavTab variant="nav" className="!bg-amber-50 !text-amber-950 !ring-amber-300" />
           {dashboard.nav.map((item) => (
             <Link
               key={item.label}

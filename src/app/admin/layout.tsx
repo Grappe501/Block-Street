@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { FieldManualNavTab } from "@/components/field-strategy/FieldManualNavTab";
 
 export default function AdminLayout({
   children,
@@ -7,11 +8,14 @@ export default function AdminLayout({
 }) {
   return (
     <div className="min-h-screen">
-      <div className="border-b border-slate-200 bg-slate-900 px-4 py-2 pr-40 text-center text-xs text-slate-400 sm:pr-52">
-        Director Workbench —{" "}
-        <Link href="/" className="text-brand-400 hover:underline">
-          ← Back to public site
-        </Link>
+      <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 border-b border-slate-200 bg-slate-900 px-4 py-2 pr-40 text-center text-xs text-slate-400 sm:pr-52">
+        <span>
+          Director Workbench —{" "}
+          <Link href="/" className="text-brand-400 hover:underline">
+            ← Back to public site
+          </Link>
+        </span>
+        <FieldManualNavTab variant="admin-bar" />
       </div>
       {children}
     </div>

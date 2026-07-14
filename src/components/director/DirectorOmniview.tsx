@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
+import { FieldManualNavTab } from "@/components/field-strategy/FieldManualNavTab";
 
 const SURFACES = [
   { id: "participant", label: "View as participant", href: "/network" },
@@ -29,6 +30,9 @@ export function DirectorOmniview() {
             Read-only by default. Does not replace the inspected person’s session, preferences, or notifications.
             Opens labeled inspection surfaces.
           </p>
+          <div className="mt-4">
+            <FieldManualNavTab variant="header" />
+          </div>
         </div>
       </div>
 

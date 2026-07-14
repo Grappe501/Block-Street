@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import Link from "next/link";
 import type { EducationInstitutionRow } from "@/lib/college-command/dashboard";
 import { EducationContactPanel } from "@/components/college-command/EducationContactPanel";
+import { FieldManualNavTab } from "@/components/field-strategy/FieldManualNavTab";
 
 type Dash = ReturnType<typeof import("@/lib/college-command/dashboard").buildCollegeCommandDashboard>;
 
@@ -40,7 +41,8 @@ export function CollegeCommandWorkbench({ dashboard }: { dashboard: Dash }) {
             Education organizing command beneath Volunteer Command — colleges, high schools, enrollment-share
             campus goals (registration + VCI). Not a participant landing page.
           </p>
-          <div className="mt-4 flex flex-wrap gap-3 text-sm">
+          <div className="mt-4 flex flex-wrap items-center gap-3 text-sm">
+            <FieldManualNavTab variant="header" />
             <Link href={dashboard.parentCommand.href} className="underline text-white/90">
               ↑ {dashboard.parentCommand.label}
             </Link>

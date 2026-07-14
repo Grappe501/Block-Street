@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { fieldPlanPlaceholderCopy } from "@/lib/volunteer-command/roles";
+import { FieldManualNavTab } from "@/components/field-strategy/FieldManualNavTab";
 
 export default async function AdminCommitteePage({
   params,
@@ -9,7 +10,10 @@ export default async function AdminCommitteePage({
   const { committeeId } = await params;
   return (
     <div className="mx-auto max-w-3xl space-y-4 px-4 py-10">
-      <p className="text-xs font-semibold uppercase tracking-wide text-slate-600">Committee board scaffold</p>
+      <div className="flex flex-wrap items-center justify-between gap-3">
+        <p className="text-xs font-semibold uppercase tracking-wide text-slate-600">Committee board scaffold</p>
+        <FieldManualNavTab variant="workspace" />
+      </div>
       <h1 className="text-2xl font-bold text-slate-950">{decodeURIComponent(committeeId)}</h1>
       <p className="text-sm text-slate-700">
         Committee = all active leads + volunteers on the same position and scope. Co-leads allowed.
