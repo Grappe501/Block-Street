@@ -1,0 +1,32 @@
+{
+  "version": "1.0.0",
+  "documentId": "BUILD-010.7",
+  "requirementId": "RPL-001",
+  "buildArtifact": "RESEARCH_POLICY_LAB",
+  "docPath": "docs/phase-10/RESEARCH_POLICY_LAB.md",
+  "status": "canonical",
+  "priority": "critical",
+  "productName": "Research & Policy Lab",
+  "abbreviation": "RPL",
+  "guidingPrinciple": "Research serves communities. It never extracts from them without consent, aggregation, and audit.",
+  "buildsOn": ["OUT-001", "INT-002", "CHD-001", "CIV-001", "SEC-001", "CGI-001"],
+  "dataPaths": [
+    "data/research-policy-lab/store.json",
+    "data/research-policy-lab/feature_flags.json"
+  ],
+  "implementation": {
+    "engine": "src/lib/research-policy-lab/engine.ts",
+    "types": "src/lib/research-policy-lab/types.ts",
+    "data": "src/lib/research-policy-lab/data.ts",
+    "adminUi": "src/components/admin/AdminResearchPolicyLab.tsx"
+  },
+  "apiEndpoints": [
+    "GET /api/admin/research-policy-lab/overview",
+    "POST /api/v1/research-policy-lab/workspaces",
+    "POST /api/v1/research-policy-lab/dataset-requests",
+    "POST /api/v1/research-policy-lab/briefs",
+    "POST /api/v1/research-policy-lab/reviews"
+  ],
+  "acceptanceCriteria": "AC-200",
+  "acceptanceCriteriaMet": true
+}

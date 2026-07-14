@@ -5717,15 +5717,36 @@
       "description": "PHASE-007.1 — universal index, semantic search, filters, ranking explainability, saved searches",
       "priority": "critical",
       "principle": "CP-010",
-      "dependencies": ["INT-001", "PSI-007", "KDG-001"],
-      "related": ["KRF", "CKK-001", "SIS-001"],
-      "acceptanceCriteria": ["Universal statewide indexed search specified", "Semantic and literal search modes", "Filters and saved searches"],
+      "dependencies": [
+        "INT-001",
+        "PSI-007",
+        "KDG-001"
+      ],
+      "related": [
+        "KRF",
+        "CKK-001",
+        "SIS-001"
+      ],
+      "acceptanceCriteria": [
+        "Universal statewide indexed search specified",
+        "Semantic and literal search modes",
+        "Filters and saved searches"
+      ],
       "futureNotes": "Build implementation: SIS-001 · extends Knowledge Retrieval Fabric PSI-007",
       "implementationStatus": "in_progress",
       "testingStatus": "pending",
       "documentationStatus": "done",
-      "trace": { "database": null, "api": "API-SEARCH", "frontend": "PAGE-ADMIN-SIS", "test": "TEST-SRCH-001", "doc": "DOC-SRCH-001" },
-      "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
+      "trace": {
+        "database": null,
+        "api": "API-SEARCH",
+        "frontend": "PAGE-ADMIN-SIS",
+        "test": "TEST-SRCH-001",
+        "doc": "DOC-SRCH-001"
+      },
+      "versionHistory": {
+        "created": "2026-07-10",
+        "implemented": "2026-07-10"
+      }
     },
     {
       "id": "SIS-001",
@@ -5734,8 +5755,18 @@
       "description": "BUILD-007.1 — SearchObject model, unified index, keyword/fuzzy/geographic modes, explainable ranking, /api/search, permission filtering, semantic-ready pipeline",
       "priority": "critical",
       "principle": "CP-010",
-      "dependencies": ["INT-001", "SRCH-001", "PSI-007", "KDG-001", "CKK-001"],
-      "related": ["KRF", "DAB-011", "ENG-010"],
+      "dependencies": [
+        "INT-001",
+        "SRCH-001",
+        "PSI-007",
+        "KDG-001",
+        "CKK-001"
+      ],
+      "related": [
+        "KRF",
+        "DAB-011",
+        "ENG-010"
+      ],
       "acceptanceCriteria": [
         "Single search bar queries every supported entity type",
         "Explainable relevance ranking",
@@ -5756,7 +5787,10 @@
         "test": "TEST-SIS-001",
         "doc": "DOC-SIS-001"
       },
-      "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
+      "versionHistory": {
+        "created": "2026-07-10",
+        "implemented": "2026-07-10"
+      }
     },
     {
       "id": "REC-001",
@@ -5765,15 +5799,38 @@
       "description": "PHASE-007.2 — daily recommendations, contact/county/org/event categories, confidence and reasons required",
       "priority": "critical",
       "principle": "CP-010",
-      "dependencies": ["INT-001", "OBE-001", "CGIS-001", "NISS-001"],
-      "related": ["OIS-001", "MBD-001", "RIE-001", "SIS-001"],
-      "acceptanceCriteria": ["Recommendation categories documented", "Confidence and reason on every recommendation", "Human overridable"],
+      "dependencies": [
+        "INT-001",
+        "OBE-001",
+        "CGIS-001",
+        "NISS-001"
+      ],
+      "related": [
+        "OIS-001",
+        "MBD-001",
+        "RIE-001",
+        "SIS-001"
+      ],
+      "acceptanceCriteria": [
+        "Recommendation categories documented",
+        "Confidence and reason on every recommendation",
+        "Human overridable"
+      ],
       "futureNotes": "Build implementation: RIE-001 · never magic — every reason field required",
       "implementationStatus": "in_progress",
       "testingStatus": "pending",
       "documentationStatus": "done",
-      "trace": { "database": null, "api": "API-RECOMMENDATIONS", "frontend": "PAGE-ADMIN-RIE", "test": "TEST-REC-001", "doc": "DOC-REC-001" },
-      "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
+      "trace": {
+        "database": null,
+        "api": "API-RECOMMENDATIONS",
+        "frontend": "PAGE-ADMIN-RIE",
+        "test": "TEST-REC-001",
+        "doc": "DOC-REC-001"
+      },
+      "versionHistory": {
+        "created": "2026-07-10",
+        "implemented": "2026-07-10"
+      }
     },
     {
       "id": "RIE-001",
@@ -5782,8 +5839,19 @@
       "description": "BUILD-007.2 — 10 categories, weighted scoring, daily briefing, feedback loop, geographic intelligence, Mission Board feed",
       "priority": "critical",
       "principle": "CP-010",
-      "dependencies": ["INT-001", "REC-001", "SIS-001", "OBE-001", "CGIS-001", "NISS-001"],
-      "related": ["MBD-001", "ANL-001", "RLI-001"],
+      "dependencies": [
+        "INT-001",
+        "REC-001",
+        "SIS-001",
+        "OBE-001",
+        "CGIS-001",
+        "NISS-001"
+      ],
+      "related": [
+        "MBD-001",
+        "ANL-001",
+        "RLI-001"
+      ],
       "acceptanceCriteria": [
         "Personalized daily recommendations",
         "Recommendations across people, counties, orgs, events, missions",
@@ -5803,7 +5871,10 @@
         "test": "TEST-RIE-001",
         "doc": "DOC-RIE-001"
       },
-      "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
+      "versionHistory": {
+        "created": "2026-07-10",
+        "implemented": "2026-07-10"
+      }
     },
     {
       "id": "ANL-001",
@@ -5812,8 +5883,19 @@
       "description": "BUILD-007.3 — append-only warehouse, KPI library, executive/county dashboards, forecasts with confidence, alert engine, drill-down navigation, /api/analytics",
       "priority": "critical",
       "principle": "CP-010",
-      "dependencies": ["INT-001", "RIE-001", "OPIS-001", "CIIS-001", "PSI-012"],
-      "related": ["OIS-001", "NISS-001", "MBD-001", "REC-001"],
+      "dependencies": [
+        "INT-001",
+        "RIE-001",
+        "OPIS-001",
+        "CIIS-001",
+        "PSI-012"
+      ],
+      "related": [
+        "OIS-001",
+        "NISS-001",
+        "MBD-001",
+        "REC-001"
+      ],
       "acceptanceCriteria": [
         "Centralized analytics warehouse aggregates operational events",
         "Executive, county, organization, volunteer, financial, communications, and mission dashboards with role-based access",
@@ -5835,7 +5917,10 @@
         "test": "TEST-ANL-001",
         "doc": "DOC-ANL-001"
       },
-      "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
+      "versionHistory": {
+        "created": "2026-07-10",
+        "implemented": "2026-07-10"
+      }
     },
     {
       "id": "MBD-001",
@@ -5844,8 +5929,18 @@
       "description": "BUILD-007.4 — OIS-M16 mission cards, hierarchy, prioritization engine, auto-generation from RIE/ANL, templates, lifecycle, /api/missions",
       "priority": "critical",
       "principle": "LS-P7",
-      "dependencies": ["INT-001", "RIE-001", "ANL-001", "OIS-001", "AOS-001"],
-      "related": ["OBE-001", "OIS-M16", "REC-001"],
+      "dependencies": [
+        "INT-001",
+        "RIE-001",
+        "ANL-001",
+        "OIS-001",
+        "AOS-001"
+      ],
+      "related": [
+        "OBE-001",
+        "OIS-M16",
+        "REC-001"
+      ],
       "acceptanceCriteria": [
         "Unified mission hierarchy with purpose, outcome, priority, owner, timeline, impact, dependencies",
         "Manual and auto-generated missions from recommendations, analytics, deadlines, and system events",
@@ -5867,7 +5962,10 @@
         "test": "TEST-MBD-001",
         "doc": "DOC-MBD-001"
       },
-      "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
+      "versionHistory": {
+        "created": "2026-07-10",
+        "implemented": "2026-07-10"
+      }
     },
     {
       "id": "RLI-001",
@@ -5876,8 +5974,19 @@
       "description": "BUILD-007.5 — permission-aware graph, strength/trust/influence scoring, connectors, alerts feeding RIE/Mission Board, introduction intelligence, /api/relationships",
       "priority": "critical",
       "principle": "CP-001",
-      "dependencies": ["INT-001", "MBD-001", "ANL-001", "PRN-001", "NISS-001", "DAB-001"],
-      "related": ["REL-001", "NISS-M17", "RIE-001"],
+      "dependencies": [
+        "INT-001",
+        "MBD-001",
+        "ANL-001",
+        "PRN-001",
+        "NISS-001",
+        "DAB-001"
+      ],
+      "related": [
+        "REL-001",
+        "NISS-M17",
+        "RIE-001"
+      ],
       "acceptanceCriteria": [
         "Permission-aware relationship graph for people and organizations",
         "Complete historical timelines of interactions and collaborations",
@@ -5899,7 +6008,10 @@
         "test": "TEST-RLI-001",
         "doc": "DOC-RLI-001"
       },
-      "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
+      "versionHistory": {
+        "created": "2026-07-10",
+        "implemented": "2026-07-10"
+      }
     },
     {
       "id": "IAS-001",
@@ -5908,8 +6020,20 @@
       "description": "BUILD-007.6 — KDG-M16 executive AI, grounded reasoning, memory, tool orchestration, governance tiers, audit trail, /api/ai",
       "priority": "critical",
       "principle": "CP-010",
-      "dependencies": ["INT-001", "SIS-001", "RIE-001", "ANL-001", "MBD-001", "RLI-001", "KDG-001", "CKK-001"],
-      "related": ["KDG-M16", "AIB-001"],
+      "dependencies": [
+        "INT-001",
+        "SIS-001",
+        "RIE-001",
+        "ANL-001",
+        "MBD-001",
+        "RLI-001",
+        "KDG-001",
+        "CKK-001"
+      ],
+      "related": [
+        "KDG-M16",
+        "AIB-001"
+      ],
       "acceptanceCriteria": [
         "Unified Executive AI answers questions using cross-system campaign data",
         "Grounded reasoning distinguishes facts, assumptions, forecasts, recommendations",
@@ -5931,7 +6055,10 @@
         "test": "TEST-IAS-001",
         "doc": "DOC-IAS-001"
       },
-      "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
+      "versionHistory": {
+        "created": "2026-07-10",
+        "implemented": "2026-07-10"
+      }
     },
     {
       "id": "PSV-001",
@@ -5940,8 +6067,17 @@
       "description": "PHASE-008 — identity, access, administration, content, notifications, APIs, deployment, monitoring, security",
       "priority": "critical",
       "principle": "ENG-006",
-      "dependencies": ["IAS-001", "ENG-006", "PSI-002", "ADM-001"],
-      "related": ["AUTH-001", "SEC-001", "API-001"],
+      "dependencies": [
+        "IAS-001",
+        "ENG-006",
+        "PSI-002",
+        "ADM-001"
+      ],
+      "related": [
+        "AUTH-001",
+        "SEC-001",
+        "API-001"
+      ],
       "acceptanceCriteria": [
         "Production-grade authentication across protected areas",
         "Governed administration center",
@@ -5963,7 +6099,10 @@
         "test": "TEST-PSV-001",
         "doc": "DOC-PSV-001"
       },
-      "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
+      "versionHistory": {
+        "created": "2026-07-10",
+        "implemented": "2026-07-10"
+      }
     },
     {
       "id": "AUTH-001",
@@ -5972,8 +6111,16 @@
       "description": "BUILD-008.1 — canonical user identity, membership model, sessions, middleware protection, account lifecycle audit, /api/auth",
       "priority": "critical",
       "principle": "ENG-006",
-      "dependencies": ["PSV-001", "ENG-006", "PRE-001", "KDG-001"],
-      "related": ["ADM-001", "SEC-001"],
+      "dependencies": [
+        "PSV-001",
+        "ENG-006",
+        "PRE-001",
+        "KDG-001"
+      ],
+      "related": [
+        "ADM-001",
+        "SEC-001"
+      ],
       "acceptanceCriteria": [
         "Honor-system access removed from protected areas",
         "Secure verified identity flows",
@@ -5994,7 +6141,10 @@
         "test": "TEST-AUTH-001",
         "doc": "DOC-AUTH-001"
       },
-      "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
+      "versionHistory": {
+        "created": "2026-07-10",
+        "implemented": "2026-07-10"
+      }
     },
     {
       "id": "ADM-001-PLATFORM",
@@ -6003,8 +6153,16 @@
       "description": "BUILD-008.2 — Administration Center, roles, permissions, scope enforcement, approvals, audit explorer, /api/admin",
       "priority": "critical",
       "principle": "ENG-006",
-      "dependencies": ["AUTH-001", "PSV-001", "ENG-006", "PRE-001"],
-      "related": ["SEC-001", "API-001"],
+      "dependencies": [
+        "AUTH-001",
+        "PSV-001",
+        "ENG-006",
+        "PRE-001"
+      ],
+      "related": [
+        "SEC-001",
+        "API-001"
+      ],
       "acceptanceCriteria": [
         "Unified Administration Center with scoped authority",
         "Role and permission management with simulation",
@@ -6025,7 +6183,10 @@
         "test": "TEST-ADM-001",
         "doc": "DOC-ADM-001"
       },
-      "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
+      "versionHistory": {
+        "created": "2026-07-10",
+        "implemented": "2026-07-10"
+      }
     },
     {
       "id": "CMS-001",
@@ -6034,8 +6195,16 @@
       "description": "BUILD-008.3 — canonical content model, versioning, editorial workflows, media library, taxonomy, delivery APIs, search integration, /api/content and /api/cms",
       "priority": "critical",
       "principle": "ENG-006",
-      "dependencies": ["ADM-001", "AUTH-001", "PSV-001", "SIS-001"],
-      "related": ["NTF-001", "API-001"],
+      "dependencies": [
+        "ADM-001",
+        "AUTH-001",
+        "PSV-001",
+        "SIS-001"
+      ],
+      "related": [
+        "NTF-001",
+        "API-001"
+      ],
       "acceptanceCriteria": [
         "Canonical content repository with version history",
         "Editorial workflow with role-based permissions",
@@ -6057,7 +6226,10 @@
         "test": "TEST-CMS-001",
         "doc": "DOC-CMS-001"
       },
-      "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
+      "versionHistory": {
+        "created": "2026-07-10",
+        "implemented": "2026-07-10"
+      }
     },
     {
       "id": "NTF-001",
@@ -6066,8 +6238,16 @@
       "description": "BUILD-008.4 — canonical notification model, policy engine, in-app center, email/SMS delivery, preferences, quiet hours, deduplication, grouping, campaigns, /api/notifications",
       "priority": "critical",
       "principle": "ENG-006",
-      "dependencies": ["CMS-001", "ADM-001", "AUTH-001", "PSV-001"],
-      "related": ["API-001", "SEC-001"],
+      "dependencies": [
+        "CMS-001",
+        "ADM-001",
+        "AUTH-001",
+        "PSV-001"
+      ],
+      "related": [
+        "API-001",
+        "SEC-001"
+      ],
       "acceptanceCriteria": [
         "Modules request notifications through shared service",
         "In-app notification center with read/dismiss/archive/snooze",
@@ -6089,7 +6269,10 @@
         "test": "TEST-NTF-001",
         "doc": "DOC-NTF-001"
       },
-      "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
+      "versionHistory": {
+        "created": "2026-07-10",
+        "implemented": "2026-07-10"
+      }
     },
     {
       "id": "API-001",
@@ -6098,8 +6281,17 @@
       "description": "BUILD-008.5 — API gateway, v1 standards, request context, auth/authz, validation, standard errors, idempotency, rate limiting, webhooks, credentials, /api/v1",
       "priority": "critical",
       "principle": "ENG-006",
-      "dependencies": ["NTF-001", "CMS-001", "ADM-001", "AUTH-001", "PSV-001"],
-      "related": ["SEC-001", "DPL-001"],
+      "dependencies": [
+        "NTF-001",
+        "CMS-001",
+        "ADM-001",
+        "AUTH-001",
+        "PSV-001"
+      ],
+      "related": [
+        "SEC-001",
+        "DPL-001"
+      ],
       "acceptanceCriteria": [
         "Protected traffic passes through gateway with server-side context",
         "v1 endpoints use standard envelope and error contract",
@@ -6121,7 +6313,10 @@
         "test": "TEST-API-001",
         "doc": "DOC-API-001"
       },
-      "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
+      "versionHistory": {
+        "created": "2026-07-10",
+        "implemented": "2026-07-10"
+      }
     },
     {
       "id": "DPL-001",
@@ -6130,8 +6325,17 @@
       "description": "BUILD-008.6 — environment model, CI pipeline, preview/staging, release candidates, approval gates, migration governance, secrets, smoke tests, rollback, hotfixes, deployment audit",
       "priority": "critical",
       "principle": "ENG-006",
-      "dependencies": ["API-001", "ADM-001", "AUTH-001", "PSV-001", "ENG-014"],
-      "related": ["MON-001", "SEC-001"],
+      "dependencies": [
+        "API-001",
+        "ADM-001",
+        "AUTH-001",
+        "PSV-001",
+        "ENG-014"
+      ],
+      "related": [
+        "MON-001",
+        "SEC-001"
+      ],
       "acceptanceCriteria": [
         "Canonical environment model with isolated secrets and data boundaries",
         "CI pipeline blocks unsafe merges with lint, typecheck, and build gates",
@@ -6154,7 +6358,10 @@
         "test": "TEST-DPL-001",
         "doc": "DOC-DPL-001"
       },
-      "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-10" }
+      "versionHistory": {
+        "created": "2026-07-10",
+        "implemented": "2026-07-10"
+      }
     },
     {
       "id": "MON-001",
@@ -6163,8 +6370,17 @@
       "description": "BUILD-008.7 — metrics, logs, traces, events, dashboards, alerts, incident integration, deployment markers, business KPIs, self-diagnosis",
       "priority": "critical",
       "principle": "ENG-006",
-      "dependencies": ["DPL-001", "API-001", "ADM-001", "AUTH-001", "IAS-001", "PSV-001"],
-      "related": ["SEC-001"],
+      "dependencies": [
+        "DPL-001",
+        "API-001",
+        "ADM-001",
+        "AUTH-001",
+        "IAS-001",
+        "PSV-001"
+      ],
+      "related": [
+        "SEC-001"
+      ],
       "acceptanceCriteria": [
         "Standardized metrics, logs, traces, and events across major services",
         "Correlation IDs follow requests across the platform",
@@ -6185,7 +6401,10 @@
         "test": "TEST-MON-001",
         "doc": "DOC-MON-001"
       },
-      "versionHistory": { "created": "2026-07-10", "implemented": "2026-07-11" }
+      "versionHistory": {
+        "created": "2026-07-10",
+        "implemented": "2026-07-11"
+      }
     },
     {
       "id": "SEC-PSV-001",
@@ -6194,8 +6413,17 @@
       "description": "BUILD-008.8 — security governance, threat models, data classification, vulnerabilities, incidents, privacy, backup/recovery — completes Phase 8",
       "priority": "critical",
       "principle": "ENG-006",
-      "dependencies": ["MON-001", "DPL-001", "API-001", "ADM-001", "AUTH-001", "PSV-001"],
-      "related": ["SEC-001"],
+      "dependencies": [
+        "MON-001",
+        "DPL-001",
+        "API-001",
+        "ADM-001",
+        "AUTH-001",
+        "PSV-001"
+      ],
+      "related": [
+        "SEC-001"
+      ],
       "acceptanceCriteria": [
         "Documented security architecture and risk register",
         "Server-side authentication and authorization on all protected capabilities",
@@ -6217,7 +6445,10 @@
         "test": "TEST-SEC-PSV-001",
         "doc": "DOC-SEC-PSV-001"
       },
-      "versionHistory": { "created": "2026-07-11", "implemented": "2026-07-11" }
+      "versionHistory": {
+        "created": "2026-07-11",
+        "implemented": "2026-07-11"
+      }
     },
     {
       "id": "ILS-001",
@@ -6226,8 +6457,22 @@
       "description": "PHASE-009 — provisioning, configuration, migration, onboarding, training, pilots, support, adoption metrics, and replication at statewide scale",
       "priority": "critical",
       "principle": "OLB-001",
-      "dependencies": ["PSV-001", "SEC-PSV-001", "ADM-001", "AUTH-001"],
-      "related": ["PRV-001", "ORG-001", "MIG-001", "ONB-001", "TRN-001", "PLT-001", "OPS-001", "FED-001"],
+      "dependencies": [
+        "PSV-001",
+        "SEC-PSV-001",
+        "ADM-001",
+        "AUTH-001"
+      ],
+      "related": [
+        "PRV-001",
+        "ORG-001",
+        "MIG-001",
+        "ONB-001",
+        "TRN-001",
+        "PLT-001",
+        "OPS-001",
+        "FED-001"
+      ],
       "acceptanceCriteria": [
         "Institutions provisioned through repeatable governed workflow",
         "Organizational structure configured without engineering changes",
@@ -6250,7 +6495,10 @@
         "test": "TEST-ILS-001",
         "doc": "DOC-ILS-001"
       },
-      "versionHistory": { "created": "2026-07-11", "implemented": null }
+      "versionHistory": {
+        "created": "2026-07-11",
+        "implemented": null
+      }
     },
     {
       "id": "PRV-001",
@@ -6259,8 +6507,15 @@
       "description": "BUILD-009.1 — provisioning lifecycle, owners, default package, configuration templates, launch APIs",
       "priority": "critical",
       "principle": "ILS-001",
-      "dependencies": ["ILS-001", "ADM-001", "AUTH-001", "SEC-PSV-001"],
-      "related": ["ORG-001"],
+      "dependencies": [
+        "ILS-001",
+        "ADM-001",
+        "AUTH-001",
+        "SEC-PSV-001"
+      ],
+      "related": [
+        "ORG-001"
+      ],
       "acceptanceCriteria": [
         "New institution created through governed workflow",
         "Required owners and administrators assigned",
@@ -6279,7 +6534,10 @@
         "test": "TEST-PRV-001",
         "doc": "DOC-PRV-001"
       },
-      "versionHistory": { "created": "2026-07-11", "implemented": "2026-07-11" }
+      "versionHistory": {
+        "created": "2026-07-11",
+        "implemented": "2026-07-11"
+      }
     },
     {
       "id": "ORG-001",
@@ -6288,8 +6546,14 @@
       "description": "BUILD-009.2 — canonical organizational units, templates, leadership, roles, workspace mapping, geography, shared services, approval/escalation paths, configuration versioning, reorganization, validation, org chart",
       "priority": "critical",
       "principle": "ILS-001",
-      "dependencies": ["PRV-001", "ADM-001", "AUTH-001"],
-      "related": ["MIG-001"],
+      "dependencies": [
+        "PRV-001",
+        "ADM-001",
+        "AUTH-001"
+      ],
+      "related": [
+        "MIG-001"
+      ],
       "acceptanceCriteria": [
         "Institutions model real structure without custom engineering",
         "Every active unit has accountable ownership",
@@ -6311,7 +6575,10 @@
         "test": "TEST-ORG-001",
         "doc": "DOC-ORG-001"
       },
-      "versionHistory": { "created": "2026-07-11", "implemented": "2026-07-11" }
+      "versionHistory": {
+        "created": "2026-07-11",
+        "implemented": "2026-07-11"
+      }
     },
     {
       "id": "MIG-001",
@@ -6320,8 +6587,16 @@
       "description": "BUILD-009.3 — migration projects, secure intake, staging, profiling, mapping, identity resolution, duplicate handling, dry runs, approvals, canonical import, reconciliation, data readiness",
       "priority": "critical",
       "principle": "ILS-001",
-      "dependencies": ["ORG-001", "PRV-001", "ADM-001", "AUTH-001", "SEC-001"],
-      "related": ["ONB-001"],
+      "dependencies": [
+        "ORG-001",
+        "PRV-001",
+        "ADM-001",
+        "AUTH-001",
+        "SEC-001"
+      ],
+      "related": [
+        "ONB-001"
+      ],
       "acceptanceCriteria": [
         "Every migration is a governed project with owners and risk classification",
         "Sources are inventoried, scanned, and institution-scoped before staging",
@@ -6343,7 +6618,10 @@
         "test": "TEST-MIG-001",
         "doc": "DOC-MIG-001"
       },
-      "versionHistory": { "created": "2026-07-11", "implemented": "2026-07-11" }
+      "versionHistory": {
+        "created": "2026-07-11",
+        "implemented": "2026-07-11"
+      }
     },
     {
       "id": "ONB-001",
@@ -6352,8 +6630,15 @@
       "description": "BUILD-009.4 — invitations, identity activation, role-based journeys, checklists, tours, training gates, mentors, first missions, readiness tracking, progressive unlocking, recovery",
       "priority": "critical",
       "principle": "ILS-001",
-      "dependencies": ["MIG-001", "ORG-001", "AUTH-001", "ADM-001"],
-      "related": ["TRN-001"],
+      "dependencies": [
+        "MIG-001",
+        "ORG-001",
+        "AUTH-001",
+        "ADM-001"
+      ],
+      "related": [
+        "TRN-001"
+      ],
       "acceptanceCriteria": [
         "Every new user receives a personalized onboarding journey",
         "Every role has a tailored activation path",
@@ -6374,7 +6659,10 @@
         "test": "TEST-ONB-001",
         "doc": "DOC-ONB-001"
       },
-      "versionHistory": { "created": "2026-07-11", "implemented": "2026-07-11" }
+      "versionHistory": {
+        "created": "2026-07-11",
+        "implemented": "2026-07-11"
+      }
     },
     {
       "id": "TRN-001",
@@ -6383,8 +6671,15 @@
       "description": "BUILD-009.5 — learning paths, competencies, practice workspaces, scenarios, assessments, evaluator framework, certification issuance, eligibility gating, renewal, remediation, cohorts, analytics",
       "priority": "critical",
       "principle": "ILS-001",
-      "dependencies": ["ONB-001", "CMS-001", "ADM-001", "AUTH-001"],
-      "related": ["PLT-001"],
+      "dependencies": [
+        "ONB-001",
+        "CMS-001",
+        "ADM-001",
+        "AUTH-001"
+      ],
+      "related": [
+        "PLT-001"
+      ],
       "acceptanceCriteria": [
         "Elevated roles declare required learning and certification",
         "Practice environments are isolated from production",
@@ -6404,7 +6699,10 @@
         "test": "TEST-TRN-001",
         "doc": "DOC-TRN-001"
       },
-      "versionHistory": { "created": "2026-07-11", "implemented": "2026-07-11" }
+      "versionHistory": {
+        "created": "2026-07-11",
+        "implemented": "2026-07-11"
+      }
     },
     {
       "id": "PLT-001",
@@ -6413,8 +6711,15 @@
       "description": "BUILD-009.6 — phased pilots, workflow acceptance catalog, observation protocol, human-help count, hesitation tracking, issue classification, corrective action, retesting, acceptance gates, launch recommendation",
       "priority": "critical",
       "principle": "ILS-001",
-      "dependencies": ["TRN-001", "ONB-001", "ADM-001", "MON-001"],
-      "related": ["SUP-001"],
+      "dependencies": [
+        "TRN-001",
+        "ONB-001",
+        "ADM-001",
+        "MON-001"
+      ],
+      "related": [
+        "SUP-001"
+      ],
       "acceptanceCriteria": [
         "Phased pilots A through D with distinct gates",
         "Human-help count captured consistently",
@@ -6434,7 +6739,10 @@
         "test": "TEST-PLT-001",
         "doc": "DOC-PLT-001"
       },
-      "versionHistory": { "created": "2026-07-11", "implemented": "2026-07-11" }
+      "versionHistory": {
+        "created": "2026-07-11",
+        "implemented": "2026-07-11"
+      }
     },
     {
       "id": "OPS-001",
@@ -6443,8 +6751,16 @@
       "description": "BUILD-009.7 — launch orchestration, controlled rollout, health scoring, adoption analytics, tiered support, feedback engine, release governance, maturity scoring, executive dashboards",
       "priority": "critical",
       "principle": "ILS-001",
-      "dependencies": ["PLT-001", "TRN-001", "MON-001", "DPL-001", "ADM-001"],
-      "related": ["FED-001"],
+      "dependencies": [
+        "PLT-001",
+        "TRN-001",
+        "MON-001",
+        "DPL-001",
+        "ADM-001"
+      ],
+      "related": [
+        "FED-001"
+      ],
       "acceptanceCriteria": [
         "Institutions launch in controlled incremental stages",
         "Operational health is continuously measured with explainable scores",
@@ -6464,7 +6780,10 @@
         "test": "TEST-OPS-001",
         "doc": "DOC-OPS-001"
       },
-      "versionHistory": { "created": "2026-07-11", "implemented": "2026-07-11" }
+      "versionHistory": {
+        "created": "2026-07-11",
+        "implemented": "2026-07-11"
+      }
     },
     {
       "id": "FED-001",
@@ -6473,8 +6792,16 @@
       "description": "BUILD-009.8 — institutional templates, replication engine, federation membership, shared resources, knowledge exchange, benchmarking, marketplace foundation, federation governance",
       "priority": "critical",
       "principle": "ILS-001",
-      "dependencies": ["OPS-001", "PLT-001", "TRN-001", "PRV-001", "ADM-001"],
-      "related": ["CGI-001"],
+      "dependencies": [
+        "OPS-001",
+        "PLT-001",
+        "TRN-001",
+        "PRV-001",
+        "ADM-001"
+      ],
+      "related": [
+        "CGI-001"
+      ],
       "acceptanceCriteria": [
         "Institutions replicate from governed templates without inheriting private data",
         "Federation membership is optional and permission-based",
@@ -6494,7 +6821,10 @@
         "test": "TEST-FED-001",
         "doc": "DOC-FED-001"
       },
-      "versionHistory": { "created": "2026-07-11", "implemented": "2026-07-11" }
+      "versionHistory": {
+        "created": "2026-07-11",
+        "implemented": "2026-07-11"
+      }
     },
     {
       "id": "CGI-001",
@@ -6503,8 +6833,23 @@
       "description": "PHASE-010 — Civic Intelligence Layer connecting platform activity with measurable community outcomes",
       "priority": "critical",
       "principle": "OLB-001",
-      "dependencies": ["ILS-001", "FED-001", "OPS-001", "AUTH-001", "ADM-001"],
-      "related": ["CIV-001", "LDR-001", "REL-001", "CHD-001", "OUT-001", "INT-002", "RPL-001", "CIA-001"],
+      "dependencies": [
+        "ILS-001",
+        "FED-001",
+        "OPS-001",
+        "AUTH-001",
+        "ADM-001"
+      ],
+      "related": [
+        "CIV-001",
+        "LDR-001",
+        "REL-001",
+        "CHD-001",
+        "OUT-001",
+        "INT-002",
+        "RPL-001",
+        "CIA-001"
+      ],
       "acceptanceCriteria": [
         "Civic participation is measured with explainable scores",
         "Leadership pipelines and succession are tracked",
@@ -6515,8 +6860,8 @@
         "Research operates with privacy protection",
         "Combined civic impact analytics demonstrate societal benefit"
       ],
-      "futureNotes": "Phase 10 master sequence AC-201. Registry CGI-001.",
-      "implementationStatus": "in_progress",
+      "futureNotes": "Phase 10 complete AC-201. Registry CGI-001.",
+      "implementationStatus": "done",
       "testingStatus": "pending",
       "documentationStatus": "done",
       "trace": {
@@ -6526,7 +6871,10 @@
         "test": "TEST-CGI-001",
         "doc": "DOC-CGI-001"
       },
-      "versionHistory": { "created": "2026-07-12" }
+      "versionHistory": {
+        "created": "2026-07-12",
+        "implemented": "2026-07-14"
+      }
     },
     {
       "id": "CIV-001",
@@ -6535,8 +6883,17 @@
       "description": "BUILD-010.1 — participation ledger, verification, civic journey, milestones, explainable scoring, volunteer tracking, dashboards, privacy, AI insights",
       "priority": "critical",
       "principle": "CGI-001",
-      "dependencies": ["FED-001", "OPS-001", "TRN-001", "AUTH-001"],
-      "related": ["LDR-001", "CHD-001", "REL-001"],
+      "dependencies": [
+        "FED-001",
+        "OPS-001",
+        "TRN-001",
+        "AUTH-001"
+      ],
+      "related": [
+        "LDR-001",
+        "CHD-001",
+        "REL-001"
+      ],
       "acceptanceCriteria": [
         "Canonical participation events with verification and privacy levels",
         "Lifelong civic timeline and milestone engine",
@@ -6558,7 +6915,10 @@
         "test": "TEST-CIV-001",
         "doc": "DOC-CIV-001"
       },
-      "versionHistory": { "created": "2026-07-12", "implemented": "2026-07-12" }
+      "versionHistory": {
+        "created": "2026-07-12",
+        "implemented": "2026-07-12"
+      }
     },
     {
       "id": "LDR-001",
@@ -6567,8 +6927,18 @@
       "description": "BUILD-010.2 — leadership profiles, competency model, evidence ledger, emerging leader identification, mentorship, development plans, cohorts, succession planning, analytics, AI coach",
       "priority": "critical",
       "principle": "CGI-001",
-      "dependencies": ["CIV-001", "FED-001", "TRN-001", "AUTH-001"],
-      "related": ["CIV-001", "REL-001", "CHD-001", "OUT-001"],
+      "dependencies": [
+        "CIV-001",
+        "FED-001",
+        "TRN-001",
+        "AUTH-001"
+      ],
+      "related": [
+        "CIV-001",
+        "REL-001",
+        "CHD-001",
+        "OUT-001"
+      ],
       "acceptanceCriteria": [
         "Leadership profiles built on verified evidence rather than titles",
         "Explainable competency progression and leadership score",
@@ -6592,7 +6962,10 @@
         "test": "TEST-LDR-001",
         "doc": "DOC-LDR-001"
       },
-      "versionHistory": { "created": "2026-07-12", "implemented": "2026-07-12" }
+      "versionHistory": {
+        "created": "2026-07-12",
+        "implemented": "2026-07-12"
+      }
     },
     {
       "id": "CHD-001",
@@ -6601,8 +6974,18 @@
       "description": "BUILD-010.4 — health profiles, capacity analytics, resilience framework, risk detection, opportunity mapping, geographic maps, benchmarking, reports, federation aggregates",
       "priority": "critical",
       "principle": "CGI-001",
-      "dependencies": ["CIV-001", "LDR-001", "REL-001", "FED-001"],
-      "related": ["OUT-001", "INT-002", "CIA-001", "CGI-001"],
+      "dependencies": [
+        "CIV-001",
+        "LDR-001",
+        "REL-001",
+        "FED-001"
+      ],
+      "related": [
+        "OUT-001",
+        "INT-002",
+        "CIA-001",
+        "CGI-001"
+      ],
       "acceptanceCriteria": [
         "Canonical Community Health Profile with explainable Health Index",
         "Health measured through participation, leadership, volunteer capacity, and relationships",
@@ -6624,7 +7007,10 @@
         "test": "TEST-CHD-001",
         "doc": "DOC-CHD-001"
       },
-      "versionHistory": { "created": "2026-07-12", "implemented": "2026-07-12" }
+      "versionHistory": {
+        "created": "2026-07-12",
+        "implemented": "2026-07-12"
+      }
     },
     {
       "id": "OUT-001",
@@ -6633,8 +7019,18 @@
       "description": "BUILD-010.5 — outcomes ledger, theory of change, evidence repository, attribution engine, program evaluation, CROP, impact reports, federation aggregates",
       "priority": "critical",
       "principle": "CGI-001",
-      "dependencies": ["CIV-001", "LDR-001", "REL-001", "CHD-001", "FED-001"],
-      "related": ["INT-002", "CIA-001", "CGI-001"],
+      "dependencies": [
+        "CIV-001",
+        "LDR-001",
+        "REL-001",
+        "CHD-001",
+        "FED-001"
+      ],
+      "related": [
+        "INT-002",
+        "CIA-001",
+        "CGI-001"
+      ],
       "acceptanceCriteria": [
         "Measurable outcomes with documented baselines",
         "Outputs, outcomes, and impact clearly distinguished",
@@ -6657,7 +7053,10 @@
         "test": "TEST-OUT-001",
         "doc": "DOC-OUT-001"
       },
-      "versionHistory": { "created": "2026-07-12", "implemented": "2026-07-12" }
+      "versionHistory": {
+        "created": "2026-07-12",
+        "implemented": "2026-07-12"
+      }
     },
     {
       "id": "INT-002",
@@ -6666,8 +7065,19 @@
       "description": "BUILD-010.6 — strategic insights, early warnings, scenario planning, forecasting, recommendations, decision support, institutional learning, federation intelligence",
       "priority": "critical",
       "principle": "CGI-001",
-      "dependencies": ["CIV-001", "LDR-001", "REL-001", "CHD-001", "OUT-001", "FED-001"],
-      "related": ["RPL-001", "CIA-001", "CGI-001"],
+      "dependencies": [
+        "CIV-001",
+        "LDR-001",
+        "REL-001",
+        "CHD-001",
+        "OUT-001",
+        "FED-001"
+      ],
+      "related": [
+        "RPL-001",
+        "CIA-001",
+        "CGI-001"
+      ],
       "acceptanceCriteria": [
         "Strategic insights generated from explainable cross-engine evidence",
         "Opportunities and risks identified without opaque scoring",
@@ -6690,7 +7100,10 @@
         "test": "TEST-INT-002",
         "doc": "DOC-INT-002"
       },
-      "versionHistory": { "created": "2026-07-12", "implemented": "2026-07-12" }
+      "versionHistory": {
+        "created": "2026-07-12",
+        "implemented": "2026-07-12"
+      }
     },
     {
       "id": "ITF-001",
@@ -6699,8 +7112,16 @@
       "description": "ITL-001 — 10 subsystems: Human Identity Registry, Invitation Network, Sponsor Accountability, Verification Engine, Trust Lifecycle, Identity Governance, Federation Identity, Identity Intelligence, Identity Operations, Certification",
       "priority": "constitutional",
       "principle": "CP-007",
-      "dependencies": ["AUTH-001", "SEC-001", "ADM-001"],
-      "related": ["ONB-001", "CP-001", "ICS-001"],
+      "dependencies": [
+        "AUTH-001",
+        "SEC-001",
+        "ADM-001"
+      ],
+      "related": [
+        "ONB-001",
+        "CP-001",
+        "ICS-001"
+      ],
       "acceptanceCriteria": [
         "Invitation-only account creation — no public signup",
         "Sponsor agreement required before every invitation",
@@ -6724,7 +7145,10 @@
         "test": "TEST-ITF-001",
         "doc": "DOC-ITF-001"
       },
-      "versionHistory": { "created": "2026-07-12", "implemented": "2026-07-12" }
+      "versionHistory": {
+        "created": "2026-07-12",
+        "implemented": "2026-07-12"
+      }
     },
     {
       "id": "PSI-014",
@@ -9762,6 +10186,91 @@
       "versionHistory": {
         "created": "2026-07-10",
         "implemented": "2026-07-10"
+      }
+    },
+    {
+      "id": "RPL-001",
+      "title": "Research & Policy Lab — Phase 10.7",
+      "purpose": "Privacy-protected civic research that informs policy without exposing individuals",
+      "description": "Research workspaces, aggregate-only datasets, k-anonymity floor, policy briefs with review gates, audit ledger",
+      "priority": "critical",
+      "principle": "CP-007",
+      "dependencies": [
+        "OUT-001",
+        "INT-002",
+        "CHD-001",
+        "CIV-001",
+        "SEC-001"
+      ],
+      "related": [
+        "CIA-001",
+        "CGI-001"
+      ],
+      "acceptanceCriteria": [
+        "Research workspaces require purpose and sponsor",
+        "Individual-level PII export prohibited",
+        "Minimum cohort size and suppression enforced",
+        "Policy briefs require human review before release",
+        "Full research audit ledger",
+        "AC-200 acceptance demo validates lifecycle"
+      ],
+      "futureNotes": "AC-200. Registry RPL-001. Seventh build of Phase 10.",
+      "implementationStatus": "done",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": null,
+        "api": "API-RPL",
+        "frontend": "PAGE-ADMIN-RPL",
+        "test": "TEST-RPL-001",
+        "doc": "DOC-RPL-001"
+      },
+      "versionHistory": {
+        "created": "2026-07-14",
+        "implemented": "2026-07-14"
+      }
+    },
+    {
+      "id": "CIA-001",
+      "title": "Civic Impact Analytics — Phase 10.8",
+      "purpose": "Combined impact, resilience, and social capital analytics answering community strength",
+      "description": "Multi-dimensional Civic Impact Index composing CIV/OUT/CHD/REL/LDR — vanity metrics forbidden",
+      "priority": "critical",
+      "principle": "CP-001",
+      "dependencies": [
+        "CIV-001",
+        "OUT-001",
+        "CHD-001",
+        "REL-001",
+        "LDR-001",
+        "RPL-001"
+      ],
+      "related": [
+        "CGI-001",
+        "INT-002"
+      ],
+      "acceptanceCriteria": [
+        "Composite index with explainable dimensions",
+        "Resilience and social capital scores published",
+        "No single vanity metric is authoritative",
+        "CIA composes sibling engines rather than duplicating stores",
+        "Executive narrative on every scorecard",
+        "AC-201 acceptance cycle validates lifecycle"
+      ],
+      "futureNotes": "AC-201. Registry CIA-001. Eighth build and Phase 10 closeout.",
+      "implementationStatus": "done",
+      "testingStatus": "pending",
+      "documentationStatus": "done",
+      "trace": {
+        "database": null,
+        "api": "API-CIA",
+        "frontend": "PAGE-ADMIN-CIA",
+        "test": "TEST-CIA-001",
+        "doc": "DOC-CIA-001"
+      },
+      "versionHistory": {
+        "created": "2026-07-14",
+        "implemented": "2026-07-14"
       }
     }
   ],

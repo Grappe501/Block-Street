@@ -11,8 +11,8 @@
     "phase7Status": "complete",
     "phase8Status": "complete",
     "phase9Status": "complete",
-    "phase10Status": "in_progress",
-    "lastUpdated": "2026-07-14T07:58:38.231Z",
+    "phase10Status": "complete",
+    "lastUpdated": "2026-07-14T08:02:28.768Z",
     "deployUrl": "https://block-street.netlify.app/",
     "githubRepo": "https://github.com/Grappe501/Block-Street",
     "netlifyStatus": "live",
@@ -1221,7 +1221,7 @@
       "id": 10,
       "name": "Civic Growth",
       "slug": "phase-10-civic-growth",
-      "status": "in_progress",
+      "status": "done",
       "docPath": "docs/phase-10/PHASE_10_MASTER_SEQUENCE.md",
       "registryPath": "data/civic-growth/civic-growth-operating-system.json",
       "question": "Are communities becoming stronger because institutions are operating?",
@@ -1266,17 +1266,17 @@
         {
           "id": "10.7",
           "name": "Research & Policy Lab [RPL-001]",
-          "status": "pending",
-          "notes": "Privacy-protected civic research — AC-200"
+          "status": "done",
+          "notes": "Privacy-protected civic research — AC-200 · src/lib/research-policy-lab"
         },
         {
           "id": "10.8",
           "name": "Civic Impact Analytics [CIA-001]",
-          "status": "pending",
-          "notes": "Combined impact, resilience, social capital — AC-201"
+          "status": "done",
+          "notes": "Combined impact, resilience, social capital — AC-201 · src/lib/civic-impact-analytics"
         }
       ],
-      "notes": "Core civic intelligence engines delivered (10.1–10.6). 10.7–10.8 deferred behind V1 launch + certification."
+      "notes": "All engines delivered including Research & Policy Lab and Civic Impact Analytics (AC-200/AC-201)."
     },
     {
       "id": 11,
@@ -1391,6 +1391,12 @@
     }
   ],
   "buildLog": [
+    {
+      "date": "2026-07-14",
+      "title": "PHASE-010.7–10.8 Research & Policy Lab + Civic Impact Analytics — Phase 10 Complete",
+      "phase": 10,
+      "summary": "RPL-001 AC-200 privacy-safe research workspaces · CIA-001 AC-201 multi-dimensional impact/resilience/social capital analytics · CGI-001 acceptanceCriteriaMet"
+    },
     {
       "date": "2026-07-14",
       "title": "PHASE-003.15 Phase 3 Build Bible — People System Complete",
@@ -1952,10 +1958,10 @@
   ],
   "stats": {
     "totalSteps": 114,
-    "doneSteps": 111,
+    "doneSteps": 113,
     "inProgressSteps": 1,
-    "pendingSteps": 2,
-    "percentComplete": 97,
+    "pendingSteps": 0,
+    "percentComplete": 99,
     "note": "Percent from phase steps only. Architecture Complete ≠ product CERTIFIED PRESENT (Pass 1)."
   }
 }

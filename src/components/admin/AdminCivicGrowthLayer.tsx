@@ -8,6 +8,8 @@ import chd from "../../../data/registry/community-health.json";
 import out from "../../../data/registry/civic-outcomes.json";
 import intel from "../../../data/registry/strategic-intelligence.json";
 import itl from "../../../data/registry/identity-trust-framework.json";
+import rpl from "../../../data/registry/research-policy-lab.json";
+import cia from "../../../data/registry/civic-impact-analytics.json";
 import { AdminIdentityTrustLayer } from "@/components/admin/AdminIdentityTrustLayer";
 import { AdminCivicParticipation } from "@/components/admin/AdminCivicParticipation";
 import { AdminLeadershipDevelopment } from "@/components/admin/AdminLeadershipDevelopment";
@@ -15,11 +17,8 @@ import { AdminCommunityRelationshipIntelligence } from "@/components/admin/Admin
 import { AdminCommunityHealth } from "@/components/admin/AdminCommunityHealth";
 import { AdminCivicOutcomes } from "@/components/admin/AdminCivicOutcomes";
 import { AdminStrategicIntelligence } from "@/components/admin/AdminStrategicIntelligence";
-
-const PENDING_BUILDS = [
-  { id: "10.7", label: "Research & Policy Lab", req: "RPL-001", ac: "AC-200" },
-  { id: "10.8", label: "Civic Impact Analytics", req: "CIA-001", ac: "AC-201" },
-];
+import { AdminResearchPolicyLab } from "@/components/admin/AdminResearchPolicyLab";
+import { AdminCivicImpactAnalytics } from "@/components/admin/AdminCivicImpactAnalytics";
 
 export function AdminCivicGrowthLayer() {
   return (
@@ -31,6 +30,7 @@ export function AdminCivicGrowthLayer() {
         <p className="mt-2 text-xs font-semibold text-emerald-900">
           {cgiOs.requirementId} · {cgiOs.stepsComplete}/{cgiOs.stepsTotal} steps · {cgiOs.phaseQuestion}
         </p>
+        <p className="mt-1 text-xs font-semibold uppercase text-emerald-800">Status: {cgiOs.status}</p>
       </div>
 
       <div className="grid gap-4 md:grid-cols-2">
@@ -69,14 +69,20 @@ export function AdminCivicGrowthLayer() {
           <h3 className="mt-1 font-bold text-slate-950">{intel.productName}</h3>
           <p className="mt-2 font-mono text-xs text-slate-700">{intel.requirementId} · {intel.acceptanceCriteria}</p>
         </div>
-        {PENDING_BUILDS.map((b) => (
-          <div key={b.id} className="card border-l-4 border-slate-300 bg-slate-50">
-            <p className="text-xs font-semibold text-slate-800">{b.id} {b.label}</p>
-            <p className="mt-2 font-mono text-xs text-slate-600">{b.req} · {b.ac} · pending</p>
-          </div>
-        ))}
+        <div className="card border-l-4 border-teal-500 bg-teal-50">
+          <p className="text-xs font-semibold text-slate-800">10.7 Research & Policy Lab</p>
+          <h3 className="mt-1 font-bold text-slate-950">{rpl.productName}</h3>
+          <p className="mt-2 font-mono text-xs text-slate-700">{rpl.requirementId} · {rpl.acceptanceCriteria} · done</p>
+        </div>
+        <div className="card border-l-4 border-fuchsia-500 bg-fuchsia-50">
+          <p className="text-xs font-semibold text-slate-800">10.8 Civic Impact Analytics</p>
+          <h3 className="mt-1 font-bold text-slate-950">{cia.productName}</h3>
+          <p className="mt-2 font-mono text-xs text-slate-700">{cia.requirementId} · {cia.acceptanceCriteria} · done</p>
+        </div>
       </div>
 
+      <AdminCivicImpactAnalytics />
+      <AdminResearchPolicyLab />
       <AdminIdentityTrustLayer />
       <AdminStrategicIntelligence />
       <AdminCivicOutcomes />

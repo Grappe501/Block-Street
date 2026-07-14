@@ -1,0 +1,31 @@
+{
+  "version": "1.0.0",
+  "documentId": "BUILD-010.8",
+  "requirementId": "CIA-001",
+  "buildArtifact": "CIVIC_IMPACT_ANALYTICS",
+  "docPath": "docs/phase-10/CIVIC_IMPACT_ANALYTICS.md",
+  "status": "canonical",
+  "priority": "critical",
+  "productName": "Civic Impact Analytics",
+  "abbreviation": "CIA",
+  "guidingPrinciple": "Impact is multi-dimensional. Single vanity metrics are forbidden.",
+  "buildsOn": ["CIV-001", "LDR-001", "REL-001", "CHD-001", "OUT-001", "INT-002", "RPL-001", "CGI-001"],
+  "dataPaths": [
+    "data/civic-impact-analytics/store.json",
+    "data/civic-impact-analytics/feature_flags.json"
+  ],
+  "implementation": {
+    "engine": "src/lib/civic-impact-analytics/engine.ts",
+    "types": "src/lib/civic-impact-analytics/types.ts",
+    "data": "src/lib/civic-impact-analytics/data.ts",
+    "adminUi": "src/components/admin/AdminCivicImpactAnalytics.tsx"
+  },
+  "apiEndpoints": [
+    "GET /api/admin/civic-impact-analytics/overview",
+    "POST /api/v1/civic-impact-analytics/scorecard",
+    "GET /api/v1/civic-impact-analytics/trends",
+    "POST /api/v1/civic-impact-analytics/cycle"
+  ],
+  "acceptanceCriteria": "AC-201",
+  "acceptanceCriteriaMet": true
+}
