@@ -1,12 +1,14 @@
 import { buildCollegeCommandDashboard } from "@/lib/college-command/dashboard";
-import { listCountyFieldGoals, CAMPUS_GOAL_FORMULA_VERSION, SUPERSEDED_FLAT_25_RULE } from "@/lib/field-goals";
+import { listCountyFieldGoals, CAMPUS_GOAL_FORMULA_VERSION, INSTITUTION_SUB_GOAL_RULE } from "@/lib/field-goals";
 import { loadPositionStore } from "@/lib/position-participation/store";
 import persistAudit from "../../../data/v2/production-persistence-forensic-audit.json";
+import chainOfCommand from "../../../data/volunteer-command/chain-of-command.json";
 import {
   dashboardSectionsForRole,
   fieldPlanPlaceholderCopy,
   getDashboardConfig,
   getFieldPlanScaffold,
+  getLeadershipRole,
   listStatewideFunctions,
   roleIsUnderVolunteerManager,
 } from "./roles";
@@ -84,9 +86,11 @@ export function buildVolunteerCommandDashboard(input?: { section?: VolunteerComm
   return {
     header: {
       title: "VOLUNTEER COMMAND",
-      subtitle: "Statewide personnel, leadership, placement, and readiness",
+      subtitle:
+        "Statewide grassroots personnel command — all volunteers and volunteer leaders (counties + colleges + high schools)",
       role: "Volunteer Manager",
       scope: "Statewide volunteer workforce",
+      staffing_model: "grassroots_volunteer_only",
       refreshed_at: new Date().toISOString(),
       persistence_backend: persistAudit.canonical_persistence_backend,
       postgres_active: persistAudit.netlify_database_postgres_active,
@@ -103,9 +107,13 @@ export function buildVolunteerCommandDashboard(input?: { section?: VolunteerComm
     }),
     hierarchy: {
       volunteer_manager_parent: "director",
-      subordinate_commands: ["county_volunteer_command", "education_volunteer_command", "statewide_functional", "intake_development"],
+      subordinate_commands: chainOfCommand.subordinate_commands_of_volunteer_manager,
       college_leader_under_vm: roleIsUnderVolunteerManager("college_leader"),
       county_lead_under_vm: roleIsUnderVolunteerManager("county_volunteer_lead"),
+      doctrine: chainOfCommand.doctrine,
+      unity_of_command: chainOfCommand.unity_of_command,
+      need_to_know: chainOfCommand.need_to_know_dashboards,
+      nodes: chainOfCommand.nodes,
     },
     personnel: {
       unique_confirmed_volunteers: uniquePeople.size,
@@ -138,8 +146,10 @@ export function buildVolunteerCommandDashboard(input?: { section?: VolunteerComm
       relationship: "subordinate_to_volunteer_manager",
       summary: college.summary,
       campus_goal_formula_version: CAMPUS_GOAL_FORMULA_VERSION,
-      institution_sub_goal_rule: SUPERSEDED_FLAT_25_RULE,
+      institution_sub_goal_rule: INSTITUTION_SUB_GOAL_RULE,
+      leaderboards_under_vm: true,
     },
+    area_campaign_leader: chainOfCommand.area_campaign_leader_dashboard,
     attention: [
       {
         id: "invite-chain",
@@ -237,12 +247,39 @@ export function buildFunctionalLeaderDashboard(functionKey: string, scopeLabel: 
 export function buildLeaderDashboard(assignmentId: string) {
   const sections = (getDashboardConfig("campaign_leader")?.navigation_sections ??
     dashboardSectionsForRole("functional_lead")) as string[];
+  const scaffold = getFieldPlanScaffold();
+  const hook = chainOfCommand.area_campaign_leader_dashboard;
   return {
     assignment_id: assignmentId,
+    title: "Area Campaign Leader Dashboard",
+    audience: "holder_of_this_leadership_assignment_only",
     sections,
+    reports_to_command: "/admin/volunteer-command",
+    parent_dashboard: hook.parent_dashboard,
     field_plan_placeholder: fieldPlanPlaceholderCopy(),
     field_plan_content_status: "placeholder" as const,
+    field_plan_bind: hook.field_plan_bind,
+    field_plan_hook: {
+      status: hook.status,
+      hierarchy: scaffold.hierarchy,
+      operational_phases: scaffold.operational_phases,
+      responsibility_fields: scaffold.position_responsibility_fields,
+      doctrine: scaffold.doctrine,
+    },
+    need_to_know:
+      "This dashboard shows only what is pertinent to this leadership assignment — not statewide personnel chrome.",
     persistence: "static_scaffold",
-    note: "Registry-driven shell — responsibilities populate when Field Plan is uploaded.",
+    note: "Registry-driven shell — responsibilities, tasks, and KPIs populate when Field Plan drill-down is uploaded.",
+  };
+}
+
+export function buildChainOfCommandView() {
+  return {
+    doctrine: chainOfCommand.doctrine,
+    staffing_model: chainOfCommand.staffing_model,
+    nodes: chainOfCommand.nodes,
+    volunteer_manager: getLeadershipRole("volunteer_manager"),
+    college_leader: getLeadershipRole("college_leader"),
+    county_volunteer_lead: getLeadershipRole("county_volunteer_lead"),
   };
 }

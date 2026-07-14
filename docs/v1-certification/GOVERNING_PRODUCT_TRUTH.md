@@ -14,8 +14,9 @@
 | 4 | [`PRODUCT_CERTIFICATION_REGISTRY.md`](./PRODUCT_CERTIFICATION_REGISTRY.md) | Master ledger of all human journeys |
 | 5 | [`../v2/V2_ADDITIVE_PROGRAM.md`](../v2/V2_ADDITIVE_PROGRAM.md) | V2 execution order (additive only) |
 | 6 | [`../v2/AUDIENCE_SECTIONING_DOCTRINE.md`](../v2/AUDIENCE_SECTIONING_DOCTRINE.md) | Permanent pillar — who sees what |
-| 7 | [`../v2/FEATURE_DISCOVERY_REGISTRY.md`](../v2/FEATURE_DISCOVERY_REGISTRY.md) | Capability discovery registry |
-| 8 | [`../v2/V2_A_OPERATOR_COMMAND.md`](../v2/V2_A_OPERATOR_COMMAND.md) | Operator coherence surface |
+| 7 | [`../v2/CHAIN_OF_COMMAND_DOCTRINE.md`](../v2/CHAIN_OF_COMMAND_DOCTRINE.md) | Volunteer personnel chain (VM → County / College) |
+| 8 | [`../v2/FEATURE_DISCOVERY_REGISTRY.md`](../v2/FEATURE_DISCOVERY_REGISTRY.md) | Capability discovery registry |
+| 9 | [`../v2/V2_A_OPERATOR_COMMAND.md`](../v2/V2_A_OPERATOR_COMMAND.md) | Operator coherence surface |
 
 ## Certification hierarchy (locked — not the reverse)
 

@@ -22,12 +22,15 @@ export function VolunteerCommandWorkbench({ dashboard }: { dashboard: Dash }) {
     <div className="min-h-screen bg-slate-100">
       <div className="border-b border-slate-200 bg-gradient-to-r from-slate-900 via-brand-900 to-slate-900 text-white">
         <div className="mx-auto max-w-7xl px-4 py-8">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-100">Volunteer Command</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-100">
+            Volunteer Command · Grassroots personnel
+          </p>
           <h1 className="mt-2 text-3xl font-bold tracking-tight">{h.title}</h1>
           <p className="mt-2 max-w-3xl text-sm text-white/85">{h.subtitle}</p>
           <div className="mt-4 flex flex-wrap gap-x-4 gap-y-1 text-xs text-white/80">
             <span>Role: {h.role}</span>
             <span>Scope: {h.scope}</span>
+            <span>Staffing: {h.staffing_model?.replace(/_/g, " ")}</span>
             <span>Refresh: {h.refreshed_at}</span>
             <span>
               Persistence: {String(h.persistence_backend)} · Postgres: {String(h.postgres_active)}
@@ -36,13 +39,16 @@ export function VolunteerCommandWorkbench({ dashboard }: { dashboard: Dash }) {
           </div>
           <div className="mt-4 flex flex-wrap gap-3 text-sm">
             <Link href={dashboard.links.operator_command} className="underline text-white/90">
-              Return to Operator Command
+              Operator Command
             </Link>
             <Link href={dashboard.links.director} className="underline text-white/90">
               Director Omniview
             </Link>
             <Link href={dashboard.links.college_command} className="underline text-white/90">
               Education Command (subordinate)
+            </Link>
+            <Link href="/leader/demo-committee-canvass" className="underline text-white/90">
+              Area leader shell demo
             </Link>
           </div>
         </div>
@@ -67,9 +73,54 @@ export function VolunteerCommandWorkbench({ dashboard }: { dashboard: Dash }) {
 
       <div className="mx-auto max-w-7xl space-y-6 px-4 py-8">
         <div className="rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-950">
-          <strong>Shell status:</strong> Structural workbench. Sensitive personnel actions stay disabled until
-          durable persistence is proven. Field Plan copy remains placeholder. Canonical people counts only.
+          <strong>Shell status:</strong> Volunteer Manager owns statewide personnel. Sensitive actions stay disabled
+          until durable persistence is proven. Field Plan drill-down is next phase — placeholders only. No paid staff
+          language — this is a volunteer chain of command.
         </div>
+
+        {(dashboard.section === "command" || dashboard.section === "leadership") && (
+          <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+            <h2 className="text-sm font-bold uppercase tracking-wide text-slate-700">Chain of command</h2>
+            <p className="mt-1 text-sm text-slate-700">
+              Unity of command · need-to-know dashboards · College and County systems report here.{" "}
+              <Link href={dashboard.hierarchy.doctrine} className="font-semibold text-brand-800 underline">
+                Doctrine
+              </Link>
+            </p>
+            <ol className="mt-4 space-y-2 border-l-4 border-brand-600 pl-4 text-sm text-slate-800">
+              <li>
+                <strong>Campaign Director</strong> — inspect / final authority
+              </li>
+              <li>
+                <strong>Volunteer Manager (you)</strong> — overall personnel for counties + education
+              </li>
+              <li className="grid gap-2 sm:grid-cols-2">
+                <span>
+                  <strong>County Volunteer Lead</strong> — one county only →{" "}
+                  <Link href="/admin/volunteer-command/counties" className="text-brand-800 underline">
+                    County Command
+                  </Link>
+                </span>
+                <span>
+                  <strong>College Leader</strong> — all colleges &amp; HS →{" "}
+                  <Link href="/admin/college-command" className="text-brand-800 underline">
+                    Education Command
+                  </Link>
+                </span>
+              </li>
+              <li>
+                <strong>Institution / Functional / Co-Leads</strong> → Area Campaign Leader Dashboard (
+                <code>/leader/{"{assignment}"}</code>)
+              </li>
+              <li>
+                <strong>General Volunteers</strong> — member of committees; participant surfaces
+              </li>
+            </ol>
+            <p className="mt-3 text-xs text-slate-600">
+              Subordinate commands: {dashboard.hierarchy.subordinate_commands.join(" · ")}
+            </p>
+          </section>
+        )}
 
         {dashboard.section === "command" || dashboard.section === "coverage" ? (
           <>
@@ -83,7 +134,7 @@ export function VolunteerCommandWorkbench({ dashboard }: { dashboard: Dash }) {
               </div>
               <p className="mt-2 text-xs text-slate-600">{p.counting_rule}</p>
               <p className="mt-1 text-xs text-slate-500">
-                Intake / orientation / placement / retention counts: scaffold — Last recorded (no Live signal)
+                Intake / orientation / placement / retention: scaffold — Last recorded (no Live signal)
               </p>
             </section>
 
@@ -108,7 +159,7 @@ export function VolunteerCommandWorkbench({ dashboard }: { dashboard: Dash }) {
                       href={`/admin/leader/function-${f.function_key}`}
                       className="mt-1 inline-block text-xs font-semibold text-brand-800 underline"
                     >
-                      Open functional scaffold
+                      Open functional area leader shell
                     </Link>
                   </div>
                 ))}
@@ -119,19 +170,17 @@ export function VolunteerCommandWorkbench({ dashboard }: { dashboard: Dash }) {
 
         {dashboard.section === "education" || dashboard.section === "command" ? (
           <section className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-            <h2 className="text-sm font-bold text-slate-950">Education Volunteer Command</h2>
+            <h2 className="text-sm font-bold text-slate-950">Education Volunteer Command (subordinate)</h2>
             <p className="mt-1 text-sm text-slate-700">
-              College Leader / Education Organizing Lead sits under Volunteer Manager. College Command remains the
-              specialized education workbench — not a peer of Volunteer Command.
+              College Leader / Education Organizing Lead sits <strong>under</strong> Volunteer Manager. College
+              Command and education leaderboards are not a peer of Volunteer Command.
             </p>
             <ul className="mt-3 list-disc space-y-1 pl-5 text-xs text-slate-700">
-              <li>
-                Hierarchy: Volunteer Manager → College Leader → Institution Leads → Committees → Volunteers
-              </li>
+              <li>Chain: Volunteer Manager → College Leader → Institution Leads → Committees → Volunteers</li>
               <li>
                 Campus formula: <code>{dashboard.education_command.campus_goal_formula_version}</code>
               </li>
-              <li className="text-slate-500">{dashboard.education_command.superseded_flat_25}</li>
+              <li>{dashboard.education_command.institution_sub_goal_rule}</li>
               <li>
                 Institutions: {dashboard.education_command.summary.totalInstitutions} · without lead:{" "}
                 {dashboard.education_command.summary.withoutLead}
@@ -148,9 +197,9 @@ export function VolunteerCommandWorkbench({ dashboard }: { dashboard: Dash }) {
 
         {dashboard.section === "counties" || dashboard.section === "command" ? (
           <section className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-            <h2 className="text-sm font-bold text-slate-950">County Volunteer Command</h2>
+            <h2 className="text-sm font-bold text-slate-950">County Volunteer Command (subordinate)</h2>
             <p className="mt-1 text-sm text-slate-700">
-              County Volunteer Leads operate in parallel under Volunteer Manager — scoped to their county only.
+              County Volunteer Leads operate in parallel under Volunteer Manager — each sees their county only.
             </p>
             <div className="mt-3 flex flex-wrap gap-2 text-xs">
               {["clark", "pulaski", "benton", "washington"].map((slug) => (
@@ -165,6 +214,32 @@ export function VolunteerCommandWorkbench({ dashboard }: { dashboard: Dash }) {
             </div>
           </section>
         ) : null}
+
+        {(dashboard.section === "command" || dashboard.section === "leadership") && (
+          <section className="rounded-2xl border border-brand-200 bg-brand-50/40 p-4 shadow-sm">
+            <h2 className="text-sm font-bold text-slate-950">Area Campaign Leader Dashboard (scaffold)</h2>
+            <p className="mt-1 text-sm text-slate-700">
+              When a volunteer holds a leadership seat, they get a position-scoped dashboard — not the statewide VM
+              chrome. Field Plan binds next.
+            </p>
+            <ul className="mt-3 list-disc pl-5 text-xs text-slate-700">
+              <li>
+                Public: <code>{dashboard.area_campaign_leader.route_public}</code>
+              </li>
+              <li>
+                Admin inspect: <code>{dashboard.area_campaign_leader.route_admin_inspect}</code>
+              </li>
+              <li>Status: {dashboard.area_campaign_leader.status}</li>
+              <li>Sections: {dashboard.area_campaign_leader.sections.join(" · ")}</li>
+            </ul>
+            <Link
+              href="/leader/demo-institution-henderson-events"
+              className="mt-3 inline-block text-sm font-semibold text-brand-800 underline"
+            >
+              Open demo area leader shell
+            </Link>
+          </section>
+        )}
 
         {dashboard.section === "people" ||
         dashboard.section === "leadership" ||
@@ -209,14 +284,14 @@ export function VolunteerCommandWorkbench({ dashboard }: { dashboard: Dash }) {
         </section>
 
         <section className="rounded-2xl border border-brand-200 bg-white p-4 text-sm text-slate-800 shadow-sm">
-          <h2 className="text-sm font-bold text-slate-950">Field Plan · 30,000 feet</h2>
+          <h2 className="text-sm font-bold text-slate-950">Field Plan hook · next phase</h2>
           <p className="mt-1 text-xs uppercase tracking-wide text-brand-800">
             Status: {dashboard.field_plan.status} · {dashboard.field_plan.authority}
           </p>
           <p className="mt-3 font-medium text-slate-950">{dashboard.field_plan.doctrine}</p>
-          <p className="mt-2 text-xs text-slate-600">
-            Event is the catalyst. Success = infrastructure left behind (volunteers, leaders, registrations, Power of
-            Five teams) — not attendance alone.
+          <p className="mt-2 text-xs text-slate-700">
+            Hook path: Field Plan position key → leadership assignment → Area Campaign Leader Dashboard → committee /
+            phase responsibilities → tasks / KPIs / evidence.
           </p>
           <p className="mt-3 text-xs text-slate-700">
             Ingested role keys: {dashboard.field_plan.ingested_role_keys.join(", ")}
@@ -226,15 +301,8 @@ export function VolunteerCommandWorkbench({ dashboard }: { dashboard: Dash }) {
               <li key={name}>{name}</li>
             ))}
           </ol>
-          <p className="mt-3 text-[11px] text-slate-500">
-            County/city drill-down next. Media Lead and Logistics Lead remain Field Plan–tracked until CIWS cards
-            expand deliberately. No parallel ops system.
-          </p>
-          <Link
-            href="/field-strategy"
-            className="mt-4 inline-block text-sm font-semibold text-brand-800 underline"
-          >
-            Open Field Strategy Manual (presentation site) →
+          <Link href="/field-strategy" className="mt-4 inline-block text-sm font-semibold text-brand-800 underline">
+            Open Field Strategy Manual (presentation) →
           </Link>
         </section>
       </div>

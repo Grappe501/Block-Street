@@ -1,0 +1,88 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-07-14T17:20:00.000Z",
+  "doctrine": "docs/v2/CHAIN_OF_COMMAND_DOCTRINE.md",
+  "staffing_model": "grassroots_volunteer_only",
+  "unity_of_command": true,
+  "need_to_know_dashboards": true,
+  "nodes": [
+    {
+      "role_key": "director",
+      "rank_order": 0,
+      "reports_to": null,
+      "dashboard": "/admin/director",
+      "scope": "statewide_inspect"
+    },
+    {
+      "role_key": "volunteer_manager",
+      "rank_order": 1,
+      "reports_to": "director",
+      "dashboard": "/admin/volunteer-command",
+      "scope": "statewide_personnel",
+      "mission": "Overall personnel management — all volunteers and volunteer leaders statewide"
+    },
+    {
+      "role_key": "county_volunteer_lead",
+      "rank_order": 2,
+      "reports_to": "volunteer_manager",
+      "dashboard": "/admin/counties/:countySlug/volunteer-command",
+      "scope": "assigned_county_only"
+    },
+    {
+      "role_key": "college_leader",
+      "rank_order": 2,
+      "reports_to": "volunteer_manager",
+      "dashboard": "/admin/college-command",
+      "scope": "education_statewide",
+      "note": "College Leader Workbench + education leaderboards fall under Volunteer Manager"
+    },
+    {
+      "role_key": "institution_lead",
+      "rank_order": 3,
+      "reports_to": "college_leader",
+      "dashboard": "/leader/:leadershipAssignmentId",
+      "scope": "assigned_institution"
+    },
+    {
+      "role_key": "functional_lead",
+      "rank_order": 3,
+      "reports_to": ["volunteer_manager", "county_volunteer_lead", "college_leader"],
+      "dashboard": "/leader/:leadershipAssignmentId",
+      "scope": "function_and_assignment_scope"
+    },
+    {
+      "role_key": "general_volunteer",
+      "rank_order": 4,
+      "reports_to": "assignment_lead",
+      "dashboard": "participant_surfaces",
+      "scope": "own_memberships"
+    }
+  ],
+  "subordinate_commands_of_volunteer_manager": [
+    "county_volunteer_command",
+    "college_command",
+    "statewide_functional",
+    "intake_development"
+  ],
+  "area_campaign_leader_dashboard": {
+    "route_public": "/leader/:leadershipAssignmentId",
+    "route_admin_inspect": "/admin/leader/:leadershipAssignmentId",
+    "parent_dashboard": "volunteer_command",
+    "parent_command": "volunteer_command",
+    "field_plan_bind": "by_position_key",
+    "sections": [
+      "Command",
+      "People",
+      "Committee",
+      "Goals",
+      "Events",
+      "Tasks",
+      "Communications",
+      "Field Plan",
+      "Progress",
+      "Risks",
+      "Reports"
+    ],
+    "status": "shell_ready_awaiting_field_plan"
+  }
+}
