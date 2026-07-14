@@ -1,5 +1,6 @@
 import { readFileSync, writeFileSync } from "fs";
 import { join } from "path";
+import { hydrateNamespace, readDurableText, writeDurableText, clearDurableMemory } from "@/lib/persist/durable-json";
 import type {
   Appeal,
   HumanIdentityRecord,
@@ -16,27 +17,40 @@ import type {
 } from "./types";
 
 export const ITL_DATA = join(process.cwd(), "data", "identity-trust");
+const NS = "identity-trust";
+const STORE_KEY = "store.json";
+
+export async function hydrateIdentityTrustStore(): Promise<void> {
+  await hydrateNamespace(NS, [STORE_KEY, "feature_flags.json", "trust_policy.json", "wave1_flags.json"], (key) =>
+    join(ITL_DATA, key)
+  );
+}
 
 const cache = new Map<string, unknown>();
 
 function readStore(): Record<string, unknown> {
   if (cache.has("store")) return cache.get("store") as Record<string, unknown>;
-  const raw = JSON.parse(readFileSync(join(ITL_DATA, "store.json"), "utf8"));
+  const raw = JSON.parse(readDurableText(NS, STORE_KEY, join(ITL_DATA, STORE_KEY)));
   cache.set("store", raw);
   return raw;
 }
 
 function writeStore(store: Record<string, unknown>) {
-  writeFileSync(join(ITL_DATA, "store.json"), JSON.stringify(store, null, 2));
+  writeDurableText(NS, STORE_KEY, JSON.stringify(store, null, 2), join(ITL_DATA, STORE_KEY));
   cache.clear();
 }
 
 function readJsonFile<T>(file: string): T {
   const ck = `obj:${file}`;
   if (cache.has(ck)) return cache.get(ck) as T;
-  const raw = JSON.parse(readFileSync(join(ITL_DATA, file), "utf8"));
+  const raw = JSON.parse(readDurableText(NS, file, join(ITL_DATA, file)));
   cache.set(ck, raw);
   return raw;
+}
+
+export function clearIdentityTrustCache() {
+  cache.clear();
+  clearDurableMemory(NS);
 }
 
 export function loadFeatureFlags() {

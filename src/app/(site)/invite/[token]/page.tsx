@@ -69,7 +69,7 @@ export default function InviteTokenPage() {
       setError(data.error?.message ?? data.error ?? "Activation failed");
       return;
     }
-    router.push("/identity");
+    router.push("/choose-place");
   }
 
   return (

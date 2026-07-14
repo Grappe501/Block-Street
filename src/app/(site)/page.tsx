@@ -31,11 +31,11 @@ export default function HomePage() {
             </p>
           </div>
           <div className="mt-10 flex flex-wrap gap-4">
-            <Link href="/join" className="rounded-lg bg-white px-6 py-3 text-sm font-semibold text-brand-700 shadow hover:bg-brand-50">
-              Join the Network
+            <Link href="/start" className="rounded-lg bg-white px-6 py-3 text-sm font-semibold text-brand-700 shadow hover:bg-brand-50">
+              I&apos;m Steve — start here
             </Link>
-            <Link href="/map" className="rounded-lg border border-white/30 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10">
-              See the Arkansas Map
+            <Link href="/join" className="rounded-lg border border-white/30 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10">
+              I have an invitation
             </Link>
           </div>
         </div>

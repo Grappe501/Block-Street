@@ -1,5 +1,11 @@
-import { readFileSync, writeFileSync, appendFileSync, existsSync } from "fs";
+import { appendFileSync, existsSync, readFileSync } from "fs";
 import { join } from "path";
+import {
+  clearDurableMemory,
+  hydrateNamespace,
+  readDurableText,
+  writeDurableText,
+} from "@/lib/persist/durable-json";
 import type {
   AuthenticationIdentity,
   FeatureFlags,
@@ -16,25 +22,39 @@ import type {
 } from "./types";
 
 export const DATA_DIR = join(process.cwd(), "data", "auth");
+const NS = "auth";
 
-const caches = new Map<string, unknown>();
+const AUTH_BLOB_KEYS = [
+  "users.json",
+  "sessions.json",
+  "organizations.json",
+  "workspaces.json",
+  "organization_memberships.json",
+  "workspace_memberships.json",
+  "authentication_identities.json",
+  "invitations.json",
+  "mfa_methods.json",
+  "recovery_codes.json",
+  "passwordless_tokens.json",
+  "home_places.json",
+  "feature_flags.json",
+];
+
+export async function hydrateAuthStore(): Promise<void> {
+  await hydrateNamespace(NS, AUTH_BLOB_KEYS, (key) => join(DATA_DIR, key));
+}
 
 function readJson<T>(filename: string, key: string): T[] {
-  const cacheKey = `${filename}:${key}`;
-  if (caches.has(cacheKey)) return caches.get(cacheKey) as T[];
-  const raw = JSON.parse(readFileSync(join(DATA_DIR, filename), "utf8"));
-  const items = raw[key] as T[];
-  caches.set(cacheKey, items);
-  return items;
+  const raw = JSON.parse(readDurableText(NS, filename, join(DATA_DIR, filename)));
+  return (raw[key] as T[]) ?? [];
 }
 
 function writeJson<T>(filename: string, key: string, items: T[]) {
-  writeFileSync(join(DATA_DIR, filename), JSON.stringify({ [key]: items }, null, 2));
-  caches.set(`${filename}:${key}`, items);
+  writeDurableText(NS, filename, JSON.stringify({ [key]: items }, null, 2), join(DATA_DIR, filename));
 }
 
 export function clearAuthCache() {
-  caches.clear();
+  clearDurableMemory(NS);
 }
 
 export function loadUsers(): PlatformUser[] {
@@ -118,8 +138,39 @@ export function persistPasswordlessTokens(tokens: PasswordlessToken[]) {
 }
 
 export function loadFeatureFlags(): FeatureFlags {
-  const raw = JSON.parse(readFileSync(join(DATA_DIR, "feature_flags.json"), "utf8"));
+  const raw = JSON.parse(readDurableText(NS, "feature_flags.json", join(DATA_DIR, "feature_flags.json")));
   return raw.feature_flags as FeatureFlags;
+}
+
+export type HomePlace = {
+  user_id: string;
+  kind: "county" | "school" | "high-school" | "private-school";
+  slug: string;
+  name: string;
+  county_slug?: string;
+  committed_at: string;
+};
+
+export function loadHomePlaces(): HomePlace[] {
+  try {
+    return readJson<HomePlace>("home_places.json", "places");
+  } catch {
+    return [];
+  }
+}
+
+export function persistHomePlaces(places: HomePlace[]) {
+  writeJson("home_places.json", "places", places);
+}
+
+export function getHomePlaceForUser(userId: string): HomePlace | null {
+  return loadHomePlaces().find((p) => p.user_id === userId) ?? null;
+}
+
+export function setHomePlaceForUser(place: HomePlace) {
+  const all = loadHomePlaces().filter((p) => p.user_id !== place.user_id);
+  all.push(place);
+  persistHomePlaces(all);
 }
 
 export function appendAudit(event: Record<string, unknown>) {

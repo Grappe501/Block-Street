@@ -180,7 +180,8 @@ export function getSessionFromRequest(cookieHeader: string | null): Session | nu
   if (!cookieHeader) return null;
   const match = cookieHeader.match(new RegExp(`${SESSION_COOKIE}=([^;]+)`));
   if (!match) return null;
-  const session = getSession(match[1]);
+  const raw = decodeURIComponent(match[1]);
+  const session = getSession(raw);
   if (session) touchSession(session.session_id);
   return session;
 }

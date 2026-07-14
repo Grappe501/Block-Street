@@ -1,5 +1,5 @@
-import { readFileSync, writeFileSync } from "fs";
 import { join } from "path";
+import { readDurableText, writeDurableText, clearDurableMemory } from "@/lib/persist/durable-json";
 import type {
   AliasRequest,
   FoundingIdentityRecord,
@@ -14,26 +14,33 @@ import type {
 } from "./types";
 
 const ITL_DATA = join(process.cwd(), "data", "identity-trust");
+const NS = "identity-trust";
+const STORE_KEY = "store.json";
 const cache = new Map<string, unknown>();
 
 function readStore(): Record<string, unknown> {
   if (cache.has("store")) return cache.get("store") as Record<string, unknown>;
-  const raw = JSON.parse(readFileSync(join(ITL_DATA, "store.json"), "utf8"));
+  const raw = JSON.parse(readDurableText(NS, STORE_KEY, join(ITL_DATA, STORE_KEY)));
   cache.set("store", raw);
   return raw;
 }
 
 function writeStore(store: Record<string, unknown>) {
-  writeFileSync(join(ITL_DATA, "store.json"), JSON.stringify(store, null, 2));
+  writeDurableText(NS, STORE_KEY, JSON.stringify(store, null, 2), join(ITL_DATA, STORE_KEY));
   cache.clear();
 }
 
 function readJson<T>(file: string): T {
   const k = `json:${file}`;
   if (cache.has(k)) return cache.get(k) as T;
-  const raw = JSON.parse(readFileSync(join(ITL_DATA, file), "utf8"));
+  const raw = JSON.parse(readDurableText(NS, file, join(ITL_DATA, file)));
   cache.set(k, raw);
   return raw;
+}
+
+export function clearWave1Cache() {
+  cache.clear();
+  clearDurableMemory(NS);
 }
 
 export function loadWave1Flags() {

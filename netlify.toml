@@ -7,5 +7,8 @@
 
 [build.environment]
   NODE_VERSION = "22"
-  # Set in Netlify UI for production: AUTH_SESSION_SECRET (required for signed cookies)
-  # Optional override: AUTH_BOOTSTRAP_PASSWORD (default bootstrap: Forevermost)
+  # Production (Netlify UI):
+  #   AUTH_SESSION_SECRET — required for signed cookies
+  #   AUTH_BOOTSTRAP_PASSWORD — Steve/admin password (default Forevermost if unset)
+  # Auth + identity-trust writes use Netlify Blobs when NETLIFY runtime is detected.
+

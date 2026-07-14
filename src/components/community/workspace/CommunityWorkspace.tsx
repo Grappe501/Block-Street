@@ -8,6 +8,7 @@ import { LeadershipLattice } from "./LeadershipLattice";
 import { SocialMeetupHub } from "./SocialMeetupHub";
 import { FunctionalLanes } from "./FunctionalLanes";
 import { PeopleDirectoryGate } from "./PeopleDirectoryGate";
+import { CommitPlaceButton } from "@/components/launch/CommitPlaceButton";
 
 type CommunityWorkspaceProps = {
   kind: CommunityKind;
@@ -97,6 +98,20 @@ export function CommunityWorkspace({
         schoolSlug={workspace.signupSchool}
       />
       <FunctionalLanes lanes={workspace.lanes} />
+      <CommitPlaceButton
+        kind={
+          workspace.kind === "county"
+            ? "county"
+            : workspace.kind === "high_school"
+              ? "high-school"
+              : workspace.kind === "private_charter"
+                ? "private-school"
+                : "school"
+        }
+        slug={slug}
+        name={workspace.name}
+        countySlug={workspace.countySlug}
+      />
       <PeopleDirectoryGate workspace={workspace} />
       <div className="card">
         <h2 className="text-lg font-bold text-slate-900">Join Our Network</h2>

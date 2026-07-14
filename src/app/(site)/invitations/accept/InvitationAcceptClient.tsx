@@ -67,7 +67,7 @@ export default function InvitationAcceptClient() {
       setError(data.data.message);
       return;
     }
-    router.push("/onboarding");
+    router.push("/choose-place");
   }
 
   return (
