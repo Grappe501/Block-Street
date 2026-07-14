@@ -1,8 +1,9 @@
 # Field Plan Depth Layers (L0 → L4)
 
-**Status:** L0–L1 present · L2–L3 missing · L4 blocked  
+**Status:** L0–L1 present · L2 Benton skeleton (WP-03) · L3 missing · L4 blocked  
 **Machine twin:** `data/field-plan/depth-layers.json`  
-**Rule:** Do not invent doctrine. Fill only from the campaign Field Plan / Victory Field Framework.
+**WP-03:** [`WP03_BENTON_L2_GEOGRAPHIC_DEPTH.md`](./WP03_BENTON_L2_GEOGRAPHIC_DEPTH.md) · `data/field-plan/depth/l2-geographic-playbooks/benton.json`  
+**Rule:** Do not invent doctrine or Benton organizing zones. Fill only from the campaign Field Plan / Victory Field Framework.
 
 ## Layers
 
@@ -20,7 +21,7 @@ L2–L4 are the “about three more levels” Steve asked for.
 
 1. Upload/maintain L2 JSON under `data/field-plan/depth/l2-geographic-playbooks/{county}.json` with required fields from the twin.
 2. Promote L3 packs per position×phase×scope; bind into Area Campaign Leader shell (`/leader/:id`) — still scaffolds until content lands.
-3. Unlock L4 only after invite-chain **CERTIFIED PRESENT** + Postgres/RBAC — templates already frozen in V2-B.5.
+3. Unlock L4 only after invite-chain WP-01 **CERTIFIED** + Postgres/RBAC — templates already frozen in V2-B.5. V2-B.5 does not prove leader activation.
 
 ## Related
 

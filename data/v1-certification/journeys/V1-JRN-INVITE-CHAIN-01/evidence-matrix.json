@@ -1,0 +1,146 @@
+{
+  "version": "1.0.0",
+  "journey_id": "V1-JRN-INVITE-CHAIN-01",
+  "work_package": "WP-01",
+  "updated": "2026-07-14T19:30:00.000Z",
+  "authority": [
+    "docs/v2/WP01_INVITE_EVIDENCE_CERTIFICATION.md",
+    "docs/v1-certification/V1_INVITE_CHAIN_CERTIFICATION_GATE.md"
+  ],
+  "certification_states": ["ABSENT", "PRESENT", "TESTED", "CERTIFIED"],
+  "state_definitions": {
+    "ABSENT": "No code, UI, or durable evidence for this row",
+    "PRESENT": "Code or UI exists; not yet proven by controlled test",
+    "TESTED": "Automated or controlled tests passed for this row",
+    "CERTIFIED": "Full production-like evidence chain inspected and documented"
+  },
+  "package_status": "PRESENT",
+  "package_status_note": "Invite routes and accept UX exist; sandbox create→accept smoke passed locally. Not CERTIFIED: no production-like evidence pack, persistence still netlify_blobs + static_seed, Postgres/RBAC not live. Must not promote to CERTIFIED on static seed or temporary browser state alone.",
+  "certification_path": [
+    "Authorized leader initiates invitation",
+    "Invitation receives stable identity",
+    "Intended role is preserved",
+    "County / institution / command scope is preserved",
+    "Recipient opens valid invitation",
+    "Recipient understands the position",
+    "Recipient accepts or declines",
+    "Acceptance persists",
+    "User identity binds to the intended role",
+    "Reporting hierarchy updates",
+    "Correct dashboard becomes available",
+    "Duplicate, expired, revoked, and reused links are rejected",
+    "Operator can inspect the complete audit trail"
+  ],
+  "evidence_matrix": [
+    {
+      "id": "creation",
+      "evidence": "Creation",
+      "required_proof": "Invitation record and stable invite ID",
+      "status": "PRESENT",
+      "notes": "Invite create APIs and durable invite records exist for soft-beta path"
+    },
+    {
+      "id": "authority",
+      "evidence": "Authority",
+      "required_proof": "Inviter was permitted to invite that role",
+      "status": "PRESENT",
+      "notes": "Role/permission checks exist in soft-beta form; not production RBAC-certified"
+    },
+    {
+      "id": "scope",
+      "evidence": "Scope",
+      "required_proof": "County, institution, command, and position remain intact",
+      "status": "PRESENT",
+      "notes": "Scope fields carried on invite; full command-scope matrix not evidenced end-to-end"
+    },
+    {
+      "id": "delivery",
+      "evidence": "Delivery",
+      "required_proof": "Recipient receives or can open the intended invitation",
+      "status": "TESTED",
+      "notes": "Sandbox open/accept path exercised; production delivery evidence pack not filed"
+    },
+    {
+      "id": "expiration",
+      "evidence": "Expiration",
+      "required_proof": "Expired links fail safely",
+      "status": "PRESENT",
+      "notes": "Failure messaging hardened; controlled expired-token evidence not filed"
+    },
+    {
+      "id": "revocation",
+      "evidence": "Revocation",
+      "required_proof": "Revoked invitations cannot be accepted",
+      "status": "PRESENT",
+      "notes": "Revoke semantics exist in model; production-like revocation proof not filed"
+    },
+    {
+      "id": "duplication",
+      "evidence": "Duplication",
+      "required_proof": "Repeat acceptance does not create duplicate assignments",
+      "status": "PRESENT",
+      "notes": "Already-accepted UX present; duplicate-assignment proof not filed"
+    },
+    {
+      "id": "identity_binding",
+      "evidence": "Identity binding",
+      "required_proof": "Accepted recipient becomes the correct user/leader",
+      "status": "PRESENT",
+      "notes": "Accept binds session user; leader-seat binding incomplete without durable hierarchy"
+    },
+    {
+      "id": "hierarchy_binding",
+      "evidence": "Hierarchy binding",
+      "required_proof": "Supervisor and command relationships update correctly",
+      "status": "ABSENT",
+      "notes": "Reporting hierarchy update not proven for real leader seats"
+    },
+    {
+      "id": "dashboard_routing",
+      "evidence": "Dashboard routing",
+      "required_proof": "Recipient reaches the correct role experience",
+      "status": "PRESENT",
+      "notes": "Post-accept routing to choose-place/network; role dashboards (/leader, VM, County) still largely shells"
+    },
+    {
+      "id": "persistence",
+      "evidence": "Persistence",
+      "required_proof": "State survives restart, rebuild, and redeployment",
+      "status": "PRESENT",
+      "notes": "Blobs + static_seed soft-beta persistence; not certified across redeploy for personnel binding"
+    },
+    {
+      "id": "auditability",
+      "evidence": "Auditability",
+      "required_proof": "Operator can inspect creation, delivery, acceptance, and failure events",
+      "status": "PRESENT",
+      "notes": "Partial ops visibility; complete audited trail not certified"
+    },
+    {
+      "id": "security",
+      "evidence": "Security",
+      "required_proof": "Invite token cannot expose sensitive personnel data",
+      "status": "PRESENT",
+      "notes": "Tokenized links; sensitive personnel mutation controls disabled pending Postgres/RBAC"
+    },
+    {
+      "id": "separation",
+      "evidence": "Separation",
+      "required_proof": "Registration, VCI, and launch-team goals remain distinct",
+      "status": "PRESENT",
+      "notes": "Canonical enrollment_share formula; flat 25% removed; invite path must not conflate goal lanes"
+    }
+  ],
+  "hard_rules": [
+    "WP-01 must not become CERTIFIED while it depends only on static seed data or temporary browser state",
+    "A route that renders is PRESENT at best, never CERTIFIED by itself",
+    "Sandbox PASS is evidence toward TESTED, not package CERTIFIED",
+    "Package CERTIFIED requires the full evidence chain filed under this journey folder"
+  ],
+  "artifacts_required_for_certified": [
+    "run.json",
+    "evidence-matrix.json (all rows CERTIFIED or documented waivers — none expected)",
+    "operator audit notes or log IDs for create/accept/fail cases",
+    "production tip SHA and environment URLs"
+  ]
+}

@@ -1,24 +1,32 @@
 {
-  "version": "1.1.0",
-  "updated": "2026-07-14T19:05:00.000Z",
+  "version": "1.2.0",
+  "updated": "2026-07-14T19:30:00.000Z",
   "authority": "docs/v1-certification/PRODUCT_CERTIFICATION_REGISTRY.md",
   "launchDoctrine": {
     "phase001_7": "complete",
+    "softBeta": "credible",
+    "launchReadiness": "not_certified",
     "inviteChainCertification": "pending",
+    "inviteChainPackageStatus": "PRESENT",
     "inviteChainIsNamedLaunchBlocker": true,
+    "inviteCertStates": ["ABSENT", "PRESENT", "TESTED", "CERTIFIED"],
     "production": "soft_beta_only",
     "largeScaleLaunch": "not_approved",
+    "v2b5DoesNotProveLeaderActivation": true,
     "v2bFieldPlanOperationalCompleteRequiresInviteCert": true
   },
-  "activeBuildLane": "V2-B.5",
+  "activeBuildLane": "WP-01 + WP-03",
   "journeys": [
     {
       "id": "V1-JRN-INVITE-CHAIN-01",
       "name": "Invite Chain",
       "status": "pending",
+      "workPackage": "WP-01",
+      "packageStatus": "PRESENT",
       "launchBlocker": true,
       "gate": "docs/v1-certification/V1_INVITE_CHAIN_CERTIFICATION_GATE.md",
-      "note": "Named launch blocker — CERTIFIED PRESENT required before Field Plan / V2-B considered operationally complete"
+      "evidenceMatrix": "data/v1-certification/journeys/V1-JRN-INVITE-CHAIN-01/evidence-matrix.json",
+      "note": "Named launch blocker — package CERTIFIED required (production-like evidence); not on static seed or browser-only state"
     },
     { "id": "V1-JRN-ONBOARDING-01", "name": "New User", "status": "not_started" },
     { "id": "V1-JRN-SHARE-01", "name": "Network Sharing", "status": "not_started" },

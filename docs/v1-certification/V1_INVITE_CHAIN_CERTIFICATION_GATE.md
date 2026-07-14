@@ -1,15 +1,21 @@
 # V1 Invite-Chain Certification Gate
 
 **Journey ID:** `V1-JRN-INVITE-CHAIN-01`  
-**Target status:** CERTIFIED PRESENT (six-axis)  
+**Work package:** WP-01  
+**Target status:** CERTIFIED (evidence matrix + six-axis)  
+**Ledger states:** ABSENT | PRESENT | TESTED | CERTIFIED  
 **Environment:** Production — https://block-street.netlify.app/  
+**Evidence twin:** `data/v1-certification/journeys/V1-JRN-INVITE-CHAIN-01/evidence-matrix.json`  
+**Docs:** [`docs/v2/WP01_INVITE_EVIDENCE_CERTIFICATION.md`](../v2/WP01_INVITE_EVIDENCE_CERTIFICATION.md)  
 **Prerequisite:** Invite Wave1 + Blobs flush fix on `main` (at/after `180c503`)
 
 ## Intent
 
-Before expanding the product beyond the narrow PHASE-001.7 path, prove that a real invite-only leader-chain works end-to-end for Humans on production — not only that Build Control shows phase complete.
+Before expanding the product beyond the narrow PHASE-001.7 path, prove that a real invite-only leader-chain works end-to-end for Humans on production — not only that Build Control shows phase complete. Soft beta credible ≠ launch readiness certified. Do not mark CERTIFIED on static seed or temporary browser state alone.
 
 ## Exact journey under test
+
+Human soft-beta path (six-axis smoke):
 
 ```text
 Steve sends invite
@@ -22,6 +28,24 @@ Steve sends invite
 → state persists after refresh and return
 → mobile journey passes
 → failures are visible and recoverable
+```
+
+Launch-critical chain (WP-01 matrix — also required for CERTIFIED):
+
+```text
+Authorized leader initiates invitation
+→ invitation receives stable identity
+→ intended role is preserved
+→ county/institution/command scope is preserved
+→ recipient opens valid invitation
+→ recipient understands the position
+→ recipient accepts or declines
+→ acceptance persists
+→ user identity binds to the intended role
+→ reporting hierarchy updates
+→ correct dashboard becomes available
+→ duplicate, expired, revoked, and reused links are rejected
+→ operator can inspect the complete audit trail
 ```
 
 ## Six-axis evidence checklist
@@ -53,8 +77,8 @@ Record pass/fail with timestamp, actor, URL, screenshot or log ID for each axis.
 
 ## Pass / fail
 
-- **PASS → CERTIFIED PRESENT** for `V1-JRN-INVITE-CHAIN-01` only (not the whole platform).
-- **FAIL** → record defect; fix additively; re-run full journey; do not claim beta expansion.
+- **PASS → CERTIFIED** for `V1-JRN-INVITE-CHAIN-01` / WP-01 only (not the whole platform), after both six-axis smoke and evidence-matrix rows are inspected on production-like persistence.
+- **FAIL** → record defect; fix additively; re-run full journey; do not claim launch readiness.
 
 ## Explicit non-claims
 

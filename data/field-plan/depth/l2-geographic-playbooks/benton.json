@@ -1,19 +1,75 @@
 {
-  "version": "0.1.0",
+  "version": "0.2.0",
   "layer": "L2",
+  "work_package": "WP-03",
   "county_slug": "benton",
+  "county_identity": {
+    "name": "Benton County",
+    "slug": "benton",
+    "status": "awaiting_field_plan_source"
+  },
   "status": "awaiting_field_plan_source",
-  "content_status": "placeholder",
-  "note": "Skeleton only — do not invent venues, partners, or seats. Fill from campaign Field Plan.",
-  "priority_communities": [],
-  "venue_candidates": [],
-  "partner_orgs": [],
-  "media_targets": [],
-  "open_leadership_seats": [],
-  "first_trigger_event_window": null,
+  "content_status": "skeleton",
+  "review_and_approval_state": {
+    "state": "not_submitted",
+    "approved_by": null,
+    "approved_at": null,
+    "source_citation": null
+  },
+  "note": "Skeleton only — do not invent organizing zones, leadership assignments, or task completions. Fill exclusively from the campaign Field Plan / approved doctrine.",
+  "geographic_operating_areas": [],
+  "leadership_requirements": [],
+  "goal_allocations": {
+    "registration": [],
+    "vci": [],
+    "launch_team": [],
+    "separation_rule": "Registration, VCI, and launch-team goals remain distinct. Do not restore flat 25% campus allocation."
+  },
+  "field_plan_responsibilities": [],
+  "task_template_references": [],
+  "kpi_references": [],
+  "evidence_expectations": [],
+  "director_inspect": [],
+  "volunteer_manager_actions": [],
+  "local_leader_today": [],
+  "legacy_skeleton_fields": {
+    "priority_communities": [],
+    "venue_candidates": [],
+    "partner_orgs": [],
+    "media_targets": [],
+    "open_leadership_seats": [],
+    "first_trigger_event_window": null
+  },
+  "area_item_schema": {
+    "area_id": "stable id",
+    "approved_name": "string",
+    "area_type": "city|campus|precinct_group|community|operating_area",
+    "included_places": [],
+    "parent_command": "command id or path",
+    "source_citation": "Field Plan citation required"
+  },
+  "leadership_requirement_schema": {
+    "required_position": "canonical position key",
+    "reporting_relationship": "supervisor / command path",
+    "vacancy_state": "vacant|filled|unknown",
+    "invite_readiness": "not_ready|ready|blocked",
+    "source_citation": "Field Plan citation required",
+    "personnel_rule": "Do not fabricate assignments; placeholder people are not real"
+  },
   "source_reference": null,
   "inherits_from": [
     "data/field-plan/victory-field-framework.json",
-    "data/field-plan/responsibility-library.json"
+    "data/field-plan/responsibility-library.json",
+    "data/field-plan/kpi-binding-registry.json"
+  ],
+  "guardrails": [
+    "no_invented_zones",
+    "no_inferred_political_doctrine",
+    "no_fabricated_leadership_assignments",
+    "no_placeholder_as_real_people",
+    "no_l4_activation",
+    "no_fake_task_completions",
+    "no_flat_25_percent_formula",
+    "no_shell_as_operational_board"
   ]
 }

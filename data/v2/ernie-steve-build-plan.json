@@ -1,26 +1,90 @@
 {
-  "version": "1.0.0",
-  "updated": "2026-07-14T19:05:00.000Z",
-  "audience": ["ernie", "steve"],
+  "version": "1.1.0",
+  "updated": "2026-07-14T19:30:00.000Z",
+  "audience": ["ernie", "steve", "burt"],
   "authority": "docs/v2/ERNIE_STEVE_FORENSIC_BUILD_BRIEF.md",
-  "production_tip": "fdf1430",
-  "active_program": "V2-B.5 Field Plan durability prep",
+  "forensic_baseline_tip_cited": "58593da",
+  "production_tip": "eeae582",
+  "production_url": "https://block-street.netlify.app/",
+  "governing_truth": {
+    "soft_beta": "credible",
+    "launch_readiness": "not_certified",
+    "v2b5_scope": "Freezes Field Plan ingestion foundation; does not prove safe recruit, bind, permission, and activate of real leaders",
+    "invite_chain": "PENDING",
+    "build_percent": "implementation_progress_not_launch_certificate",
+    "persistence": "netlify_blobs + static_seed",
+    "postgres_rbac": "not_active",
+    "campus_formula": "enrollment_share_of_county_vap_v1",
+    "flat_25_percent": "retired"
+  },
+  "operational_truth": {
+    "genuinely_operational": [
+      "Operator Command reflects live system truth",
+      "Director is a real inspection and oversight hub",
+      "College Command contains the strongest working KPI implementation",
+      "Enrollment-share formula is canonical",
+      "Flat 25% allocation removed",
+      "Field Plan structure frozen through V2-B.5",
+      "Twelve modular work packages define remaining build"
+    ],
+    "must_not_overstate": [
+      "Volunteer Manager is largely a shell",
+      "County Volunteer Command is largely a shell",
+      "/leader/:id is largely a shell",
+      "Most command boards are not complete work environments",
+      "Invite-chain remains PENDING, not certified",
+      "Postgres and production RBAC are not active",
+      "L4 execution is not real until identity, invitations, persistence, permissions, and auditability are proven"
+    ]
+  },
+  "certification_states": ["ABSENT", "PRESENT", "TESTED", "CERTIFIED"],
+  "active_program": "WP-01 Invite Evidence + WP-03 Benton L2 (parallel)",
+  "next_meaningful_threshold": "WP-01 + WP-03 together: a real person safely bound to a real position inside a real geographic command",
   "non_negotiables": [
     "Vision → Product Truth → Journey Certification → Implementation → Deployment",
     "Build % is not launch",
-    "Invite-chain CERTIFIED PRESENT is named launch blocker",
+    "Soft beta credible ≠ launch readiness certified",
+    "Invite-chain WP-01 CERTIFIED is named launch blocker",
+    "WP-01 must not be CERTIFIED on static seed or temporary browser state alone",
     "Persistence remains netlify_blobs + static_seed until dual-write proven",
-    "Do not invent Field Plan doctrine",
+    "Do not invent Field Plan doctrine or Benton organizing zones",
     "No personnel assign until Postgres + RBAC",
-    "Commit and push after every ship interaction"
+    "Registration, VCI, and launch-team goals remain distinct",
+    "Commit and push after every ship interaction",
+    "Authoritative Burt artifacts are markdown/JSON twins; local Cursor canvas is not required"
   ],
+  "hard_guardrails": [
+    "Do not invent Benton County organizing zones",
+    "Do not infer political doctrine from geography",
+    "Do not fabricate leadership assignments",
+    "Do not treat placeholder personnel as real people",
+    "Do not activate L4 execution",
+    "Do not create fake task completion data",
+    "Do not restore the superseded 25% formula",
+    "Do not present a shell as an operational command board",
+    "Do not mark invitations certified because a route renders",
+    "Do not enable sensitive personnel controls without production persistence and RBAC"
+  ],
+  "parallel_build": {
+    "WP-01": "Who may enter, how they are assigned, whether assignment can be trusted",
+    "WP-03": "Where the organization operates, which positions are needed, what Field Plan requires",
+    "together": "Safe bind of a real person to a real position inside a real geographic command"
+  },
   "work_packages": [
     {
       "id": "WP-01",
       "owner": "steve",
-      "title": "Invite-chain six-axis evidence on production",
+      "title": "Invite Evidence and Certification",
       "priority": 1,
-      "acceptance": "data/v1-certification/journeys/V1-JRN-INVITE-CHAIN-01/run.json exists; ledger CERTIFIED PRESENT or recorded fail"
+      "status": "PRESENT",
+      "docs": [
+        "docs/v2/WP01_INVITE_EVIDENCE_CERTIFICATION.md",
+        "docs/v1-certification/V1_INVITE_CHAIN_CERTIFICATION_GATE.md"
+      ],
+      "twins": [
+        "data/v1-certification/journeys/V1-JRN-INVITE-CHAIN-01/evidence-matrix.json"
+      ],
+      "acceptance": "Evidence matrix filed; package status CERTIFIED only after production-like chain inspected — not on seed or browser-only state"
     },
     {
       "id": "WP-02",
@@ -32,9 +96,12 @@
     {
       "id": "WP-03",
       "owner": "ernie+steve",
-      "title": "Field Plan L2 Benton (geographic playbook)",
+      "title": "Benton County L2 Geographic Depth",
       "priority": 3,
-      "acceptance": "benton L2 JSON filled from real Field Plan; venues/partners/seats/source_reference present"
+      "status": "awaiting_field_plan_source",
+      "docs": ["docs/v2/WP03_BENTON_L2_GEOGRAPHIC_DEPTH.md"],
+      "twins": ["data/field-plan/depth/l2-geographic-playbooks/benton.json"],
+      "acceptance": "Benton L2 contract filled from real Field Plan only; areas, leadership requirements, separate goal lanes, source citations; vacancy honest; no invented zones"
     },
     {
       "id": "WP-04",
@@ -83,7 +150,7 @@
       "owner": "ernie",
       "title": "Postgres dual-write design (no cutover)",
       "priority": 10,
-      "acceptance": "Entity list + fail-closed plan for invite/place/network; cutover blocked until WP-01"
+      "acceptance": "Entity list + fail-closed plan for invite/place/network; cutover blocked until WP-01 CERTIFIED"
     },
     {
       "id": "WP-11",
