@@ -75,7 +75,7 @@ export function LaunchHeader() {
 
   return (
     <header className="border-b border-slate-200 bg-white">
-      <div className="mx-auto flex max-w-3xl items-center justify-between px-4 py-3">
+      <div className="mx-auto flex max-w-3xl items-center justify-between gap-3 px-4 py-3 pr-36 sm:pr-48">
         <Link href={stage === "guest" ? "/" : "/app"} className="flex items-center gap-2">
           <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-brand-600 text-xs font-bold text-white">
             {PLATFORM.workingName.slice(0, 2)}
@@ -83,7 +83,7 @@ export function LaunchHeader() {
           <span className="text-base font-bold text-slate-900">{PLATFORM.workingName}</span>
         </Link>
         <nav className="flex items-center gap-2 text-sm font-medium">
-          {name && <span className="hidden text-slate-500 sm:inline">{name}</span>}
+          {name && <span className="hidden text-slate-500 lg:inline">{name}</span>}
           {items.map((item) => (
             <Link
               key={item.href}

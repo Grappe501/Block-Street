@@ -19,7 +19,7 @@ export function IdentityShell({
   nav?: ReactNode;
 }) {
   return (
-    <div className="mx-auto max-w-2xl space-y-4 p-4 sm:p-6">
+    <div className="mx-auto max-w-2xl space-y-4 p-4 pr-36 sm:p-6 sm:pr-48">
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div>
           <Link href="/july-14" className="text-xs font-semibold text-indigo-700 hover:underline">
