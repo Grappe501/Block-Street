@@ -1,0 +1,26 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-07-14T08:45:00.000Z",
+  "authority": "docs/v1-certification/PRODUCT_CERTIFICATION_REGISTRY.md",
+  "launchDoctrine": {
+    "phase001_7": "complete",
+    "inviteChainCertification": "pending",
+    "production": "soft_beta_only",
+    "largeScaleLaunch": "not_approved"
+  },
+  "journeys": [
+    {
+      "id": "V1-JRN-INVITE-CHAIN-01",
+      "name": "Invite Chain",
+      "status": "pending",
+      "gate": "docs/v1-certification/V1_INVITE_CHAIN_CERTIFICATION_GATE.md"
+    },
+    { "id": "V1-JRN-ONBOARDING-01", "name": "New User", "status": "not_started" },
+    { "id": "V1-JRN-SHARE-01", "name": "Network Sharing", "status": "not_started" },
+    { "id": "V1-JRN-RETURN-01", "name": "Returning Member", "status": "not_started" },
+    { "id": "V1-JRN-COMMUNITY-01", "name": "Community Room", "status": "not_started", "lane": "V2-C" },
+    { "id": "V1-JRN-LOCALBRAIN-01", "name": "LocalBrain", "status": "not_started", "lane": "V2-D" },
+    { "id": "V1-JRN-OPERATOR-01", "name": "Operator Command", "status": "not_started", "lane": "V2-A" },
+    { "id": "V1-JRN-ASSURANCE-01", "name": "Assurance Dashboard", "status": "not_started", "lane": "V2-F" }
+  ]
+}

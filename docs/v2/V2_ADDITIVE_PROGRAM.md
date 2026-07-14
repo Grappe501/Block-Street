@@ -19,6 +19,9 @@
 
 `V1-JRN-INVITE-CHAIN-01` must reach **CERTIFIED PRESENT** (or fail with recorded defects) before marketing expansion beyond invite-only soft beta. V2-A operator/docs prep may proceed in parallel; participant-facing claim expansion may not.
 
+Journey ledger: [`../v1-certification/PRODUCT_CERTIFICATION_REGISTRY.md`](../v1-certification/PRODUCT_CERTIFICATION_REGISTRY.md)  
+Audience bands (Field Plan): [`AUDIENCE_SECTIONING_DOCTRINE.md`](./AUDIENCE_SECTIONING_DOCTRINE.md)
+
 ## Closeout
 
 Every lane shipment follows `.cursor/rules/netlify-deploy-closeout.mdc`: validate → commit → `git push origin HEAD`.

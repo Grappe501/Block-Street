@@ -7,12 +7,12 @@
     "version": "1.0.0-launch",
     "currentPhase": 11,
     "currentPhaseName": "Living Intelligence & V1 Launch",
-    "currentDesignCycle": "Governing truth accepted · V1 invite-chain CERT gate · V2-A next",
+    "currentDesignCycle": "Human Certification > Build % · Audience sectioning for Field Plan",
     "phase7Status": "complete",
     "phase8Status": "complete",
     "phase9Status": "complete",
     "phase10Status": "complete",
-    "lastUpdated": "2026-07-14T08:37:57.611Z",
+    "lastUpdated": "2026-07-14T08:43:26.648Z",
     "deployUrl": "https://block-street.netlify.app/",
     "githubRepo": "https://github.com/Grappe501/Block-Street",
     "netlifyStatus": "live",
@@ -21,7 +21,7 @@
     "launchCallDate": "2026-07-14",
     "leaderTestingDate": "2026-07-12",
     "phase11Status": "complete",
-    "activeProgram": "GOVERNING: forensic packet over Build % · Gate V1-JRN-INVITE-CHAIN-01 · V2-A Operator Command next",
+    "activeProgram": "Certification registry live · Invite chain PENDING · Soft beta only · V2-A next · Field plan sectioning doctrine",
     "productionCommit": "83889dd"
   },
   "constitutionalLayer": {
@@ -36,7 +36,7 @@
     "launchReady": true,
     "launchChecklistComplete": 10,
     "launchChecklistTotal": 10,
-    "notes": "PHASE-001.7 Launch Ready on Blobs. Product-launch claims require CERTIFIED PRESENT journeys. Large-scale launch = no. Invite-only soft beta after invite-chain gate."
+    "notes": "PRODUCT_CERTIFICATION_REGISTRY is executive readiness view. PHASE-001.7 complete as implementation. Invite chain CERTIFIED PRESENT required before public expansion."
   },
   "volume0": {
     "id": 0,
@@ -1392,6 +1392,12 @@
     }
   ],
   "buildLog": [
+    {
+      "date": "2026-07-14",
+      "title": "GOV — Product Certification Registry + audience sectioning doctrine",
+      "phase": 11,
+      "summary": "Hierarchy locked. Journey ledger + JSON registry. Soft beta only until V1-JRN-INVITE-CHAIN-01. Field Plan audience bands prepared additively."
+    },
     {
       "date": "2026-07-14",
       "title": "GOVERNING TRUTH ACCEPTED — invite-chain CERT gate + V2 order locked",

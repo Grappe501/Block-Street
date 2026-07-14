@@ -12,10 +12,13 @@
 |----------|------|
 | Governing product truth | [GOVERNING_PRODUCT_TRUTH.md](./GOVERNING_PRODUCT_TRUTH.md) |
 | Forensic audit (baseline packet) | [FORENSIC_PLATFORM_AUDIT_2026-07-14.md](./FORENSIC_PLATFORM_AUDIT_2026-07-14.md) |
+| **Product certification registry** | [PRODUCT_CERTIFICATION_REGISTRY.md](./PRODUCT_CERTIFICATION_REGISTRY.md) |
 | Invite-chain certification gate | [V1_INVITE_CHAIN_CERTIFICATION_GATE.md](./V1_INVITE_CHAIN_CERTIFICATION_GATE.md) |
 | V2 additive program | [../v2/V2_ADDITIVE_PROGRAM.md](../v2/V2_ADDITIVE_PROGRAM.md) |
+| Audience sectioning (Field Plan prep) | [../v2/AUDIENCE_SECTIONING_DOCTRINE.md](../v2/AUDIENCE_SECTIONING_DOCTRINE.md) |
 
-**Rule:** Build Control “100%” measures artifacts. Product-launch claims require **CERTIFIED PRESENT** journeys.
+**Rule:** Build Control “100%” measures artifacts. Product-launch claims require **CERTIFIED PRESENT** journeys.  
+Machine ledger: `data/v1-certification/product-certification-registry.json`
 
 ## Pass 1 (complete — reference)
 
