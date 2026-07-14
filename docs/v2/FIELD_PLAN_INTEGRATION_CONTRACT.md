@@ -1,26 +1,21 @@
 # Field Plan Integration Contract
 
-**Status:** 30,000-foot framework ingested — county/city drill-down pending  
-**Doctrine:** `docs/v2/ARKANSAS_VICTORY_FIELD_FRAMEWORK.md`  
-**Twins:**
+**Status:** Scaffold ready · awaiting Field Plan upload  
+**Machine twin:** `data/volunteer-command/field-plan-position-contract.json`
 
-- `data/volunteer-command/field-plan-position-contract.json`
-- `data/field-plan/victory-field-framework.json`
-- `data/field-plan/position-content.json`
+## Hierarchy
 
-## Current rule
+```text
+Field Plan → Campaign Domain → Leadership Position → Committee
+  → Operational Phase → Responsibility → Task Template → KPI → Evidence
+```
 
-Role cards resolve Field Plan content by **role key** (e.g. `event_lead`) from `position-content.json`.  
-Scope-specific overrides may appear under `positions` later without route changes.
+## Position responsibility fields
 
-Where content is still missing, show:
+See twin `position_responsibility_fields`. Content statuses: `placeholder` | `ingested` | `under_review` | `approved` | `superseded`.
+
+## Placeholder (until upload)
 
 > Detailed responsibilities will be populated from the campaign Field Plan.
 
-## Do not
-
-- Rebuild Volunteer Command / College Command for Field Plan
-- Invent county-level venue databases in this slice
-- Add new CIWS role cards for Media/Logistics until drill-down requests them
-
-Hierarchy: Field Plan → Domain → Leadership Position → Committee → Phase → Responsibility → Task Template → KPI → Evidence.
+Do not invent doctrine. Binding path: Field Plan position key → leadership assignment → Area Campaign Leader Dashboard → phase sections.

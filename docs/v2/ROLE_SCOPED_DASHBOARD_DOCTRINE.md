@@ -1,11 +1,23 @@
 # Role-Scoped Dashboard Doctrine
 
-Every dashboard answers: **what does this person need to know and do because of their position?**
+**Accepted:** V2-A.3
 
-- Higher roles see subordinate rollups.
-- Lower roles do not see unrelated higher-level data.
-- Sections are registry-driven (`dashboard-config-registry.json` + role registry).
-- College Leader: education only.
-- County Volunteer Lead: assigned county only.
-- Volunteer Manager: statewide volunteer workforce.
-- Director: complete platform, inspection read-only by default.
+> What does this person need to know and do because of the position they hold?
+
+## Rules
+
+1. Compose navigation and widgets from `data/volunteer-command/dashboard-config-registry.json` + role registry.
+2. Higher roles may see rollups from subordinate commands.
+3. Lower roles never receive unrelated or statewide personnel chrome by default.
+4. Architecture / Build Control / Engineer surfaces stay out of Volunteer Command nav.
+5. Director inspection is labeled, read-only by default, and non-impersonating.
+
+## Examples
+
+| Role | Sees |
+|------|------|
+| General volunteer | Own assignments and campus/county opportunities |
+| Campus / functional lead | Committee, goals, events for that assignment |
+| College Leader | All colleges and high schools |
+| Volunteer Manager | County + education + functional people systems |
+| Director | Complete platform (inspect) |

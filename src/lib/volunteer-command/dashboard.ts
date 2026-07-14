@@ -1,5 +1,9 @@
 import { buildCollegeCommandDashboard } from "@/lib/college-command/dashboard";
-import { listCountyFieldGoals, CAMPUS_GOAL_FORMULA_VERSION, INSTITUTION_SUB_GOAL_RULE } from "@/lib/field-goals";
+import {
+  listCountyFieldGoals,
+  CAMPUS_GOAL_FORMULA_VERSION,
+  SUPERSEDED_FLAT_25_RULE,
+} from "@/lib/field-goals";
 import { loadPositionStore } from "@/lib/position-participation/store";
 import persistAudit from "../../../data/v2/production-persistence-forensic-audit.json";
 import chainOfCommand from "../../../data/volunteer-command/chain-of-command.json";
@@ -146,7 +150,8 @@ export function buildVolunteerCommandDashboard(input?: { section?: VolunteerComm
       relationship: "subordinate_to_volunteer_manager",
       summary: college.summary,
       campus_goal_formula_version: CAMPUS_GOAL_FORMULA_VERSION,
-      institution_sub_goal_rule: INSTITUTION_SUB_GOAL_RULE,
+      institution_sub_goal_rule: SUPERSEDED_FLAT_25_RULE,
+      superseded_flat_25: SUPERSEDED_FLAT_25_RULE,
       leaderboards_under_vm: true,
     },
     area_campaign_leader: chainOfCommand.area_campaign_leader_dashboard,

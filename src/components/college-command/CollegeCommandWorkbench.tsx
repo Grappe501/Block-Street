@@ -40,9 +40,8 @@ export function CollegeCommandWorkbench({ dashboard }: { dashboard: Dash }) {
           </p>
           <h1 className="mt-2 text-3xl font-bold">College Leader Workbench</h1>
           <p className="mt-2 max-w-3xl text-sm text-white/85">
-            Statewide education command — every college and high school, RedDirt-backed county goals with a flat
-            25% education sub-goal (identical for all schools in a county), progress, board/network inspect, and
-            relay contact.
+            Specialized education command under Volunteer Manager — every college and high school, RedDirt-backed
+            goals with enrollment-share campus sub-goals, progress, board/network inspect, and relay contact.
           </p>
           <div className="mt-4 flex flex-wrap items-center gap-3 text-sm">
             <FieldManualNavTab variant="header" />
@@ -88,13 +87,14 @@ export function CollegeCommandWorkbench({ dashboard }: { dashboard: Dash }) {
             {dashboard.meta.campus_goal_formula}
           </p>
           <p className="mt-1 text-[11px] text-slate-500">
-            Source: RedDirt Victory Plan JSON ingest → <code>data/field-goals/county-field-goals.json</code>.{" "}
+            Source: RedDirt Victory Plan JSON ingest → <code>data/field-goals/county-field-goals.json</code>. Campus
+            share uses estimated county VAP until ACS loads. Flat 25% rule is superseded.{" "}
             {dashboard.meta.reddirt_db_warning
-              ? "RedDirt DB warning present on chapter-05 artifact (Lane-2 allocation fallback) — still the official RedDirt file Burt reads."
-              : "No RedDirt dbWarning on current snapshot."}
+              ? "RedDirt DB warning present on chapter-05 artifact (Lane-2 allocation fallback)."
+              : null}
           </p>
           <p className="mt-1 text-[11px] text-slate-500">
-            Displayed campus sub-goal sum across rows (illustrative, do not add to 50k):{" "}
+            Sum of campus registration sub-goals in table (illustrative — do not add on top of county totals):{" "}
             {kpiCampusGoals.toLocaleString()}
           </p>
         </div>
@@ -140,8 +140,8 @@ export function CollegeCommandWorkbench({ dashboard }: { dashboard: Dash }) {
                   "County",
                   "County reg",
                   "County VCI",
-                  "Ed sub-goal (25%)",
-                  "Ed VCI (25%)",
+                  "Campus reg goal",
+                  "Campus VCI goal",
                   "Participants",
                   "Leads",
                   "Vols",

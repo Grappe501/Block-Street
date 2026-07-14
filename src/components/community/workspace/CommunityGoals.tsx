@@ -76,7 +76,7 @@ export function CommunityGoals({
         <h2 className="mt-1 text-xl font-bold text-slate-950">Truthful targets</h2>
         <p className="mt-1 max-w-2xl text-sm text-slate-700">
           {isCampus
-            ? "Campus registration and VCI targets are 25% of the county RedDirt goals — the same number for every college and high school in that county. Sub-goals sit inside the county total (not additive)."
+            ? "Campus goals scale like a city inside the county: enrollment ÷ estimated county VAP × county RedDirt goals. Sub-goals sit inside the county total (not additive). Launch-team goal stays separate."
             : "County registration goal and VCI come from the RedDirt Victory Plan snapshot on H:/SOSWebsite/RedDirt."}
         </p>
       </div>
@@ -120,7 +120,9 @@ export function CommunityGoals({
             value={metrics.registration_target.toLocaleString()}
             hint={
               isCampus
-                ? "ceil(county registration goal × 25%) — same for every education institution in this county"
+                ? metrics.campus_share_of_county_vap != null
+                  ? `${(metrics.campus_share_of_county_vap * 100).toFixed(2)}% of county VAP × county registration goal`
+                  : "Enrollment-share formula (missing enrollment/VAP)"
                 : "Canonical county total from RedDirt Victory Plan snapshot"
             }
             accent="brand"
@@ -134,7 +136,7 @@ export function CommunityGoals({
             ).toLocaleString()}
             hint={
               isCampus
-                ? "ceil(county VCI × 25%) — same for every education institution in this county"
+                ? "Enrollment share of county VCI — separate from launch-team and registration"
                 : "Victory Contribution Index — county parent goal from RedDirt"
             }
             accent="sky"
@@ -144,9 +146,12 @@ export function CommunityGoals({
         <div className="rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm text-slate-800">
           {isCampus ? (
             <p>
-              Campus registration and VCI goals equal <strong>25% of the county RedDirt goals</strong>. Every
-              college and high school in the county shares that same organizing sub-goal —{" "}
-              <strong>not</strong> added on top of the county total.
+              Campus registration and VCI goals equal the county goals times{" "}
+              <strong>campus enrollment ÷ county VAP</strong>. They are organizing sub-goals within the county
+              total — <strong>not</strong> added on top.{" "}
+              {metrics.vap_is_estimate
+                ? "County VAP is currently estimated (not official ACS)."
+                : null}
             </p>
           ) : (
             <p>

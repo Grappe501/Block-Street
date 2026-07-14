@@ -2,6 +2,8 @@
   "version": "1.0.0",
   "updated": "2026-07-14T11:00:00.000Z",
   "phase": "V2-A.3",
+  "campus_goal_formula_version": "enrollment_share_of_county_vap_v1",
+  "superseded_institution_rule": "flat_0.25_of_county",
   "roles": [
     {
       "role_key": "director",

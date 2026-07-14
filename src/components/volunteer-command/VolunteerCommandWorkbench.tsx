@@ -73,36 +73,41 @@ export function VolunteerCommandWorkbench({ dashboard }: { dashboard: Dash }) {
 
       <div className="mx-auto max-w-7xl space-y-6 px-4 py-8">
         <div className="rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-950">
-          <strong>Shell status:</strong> Volunteer Manager owns statewide personnel. Sensitive actions stay disabled
-          until durable persistence is proven. Field Plan drill-down is next phase — placeholders only. No paid staff
-          language — this is a volunteer chain of command.
+          <strong>Shell status:</strong> Volunteer Manager is the campaign’s overall personnel lead (grassroots — no
+          paid field staff). Sensitive actions stay disabled until durable persistence is proven. Field Plan
+          drill-down is next — placeholders only. Structure is clear and disciplined; the experience stays
+          welcoming and relational.
         </div>
 
         {(dashboard.section === "command" || dashboard.section === "leadership") && (
           <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-            <h2 className="text-sm font-bold uppercase tracking-wide text-slate-700">Chain of command</h2>
+            <h2 className="text-sm font-bold uppercase tracking-wide text-slate-700">
+              Leadership support structure
+            </h2>
             <p className="mt-1 text-sm text-slate-700">
-              Unity of command · need-to-know dashboards · College and County systems report here.{" "}
+              Clear responsibility · need-to-know dashboards · shared leadership · County and Education systems
+              supported from here.{" "}
               <Link href={dashboard.hierarchy.doctrine} className="font-semibold text-brand-800 underline">
                 Doctrine
               </Link>
             </p>
             <ol className="mt-4 space-y-2 border-l-4 border-brand-600 pl-4 text-sm text-slate-800">
               <li>
-                <strong>Campaign Director</strong> — inspect / final authority
+                <strong>Campaign Director</strong> — may inspect any surface; supports the whole campaign
               </li>
               <li>
-                <strong>Volunteer Manager (you)</strong> — overall personnel for counties + education
+                <strong>Volunteer Manager (you)</strong> — overall people system for counties + education +
+                functions
               </li>
               <li className="grid gap-2 sm:grid-cols-2">
                 <span>
-                  <strong>County Volunteer Lead</strong> — one county only →{" "}
+                  <strong>County Volunteer Lead</strong> — their county only →{" "}
                   <Link href="/admin/volunteer-command/counties" className="text-brand-800 underline">
                     County Command
                   </Link>
                 </span>
                 <span>
-                  <strong>College Leader</strong> — all colleges &amp; HS →{" "}
+                  <strong>College Leader</strong> — colleges &amp; high schools →{" "}
                   <Link href="/admin/college-command" className="text-brand-800 underline">
                     Education Command
                   </Link>
@@ -113,7 +118,7 @@ export function VolunteerCommandWorkbench({ dashboard }: { dashboard: Dash }) {
                 <code>/leader/{"{assignment}"}</code>)
               </li>
               <li>
-                <strong>General Volunteers</strong> — member of committees; participant surfaces
+                <strong>General Volunteers</strong> — committee members · participant surfaces
               </li>
             </ol>
             <p className="mt-3 text-xs text-slate-600">
@@ -178,9 +183,10 @@ export function VolunteerCommandWorkbench({ dashboard }: { dashboard: Dash }) {
             <ul className="mt-3 list-disc space-y-1 pl-5 text-xs text-slate-700">
               <li>Chain: Volunteer Manager → College Leader → Institution Leads → Committees → Volunteers</li>
               <li>
-                Campus formula: <code>{dashboard.education_command.campus_goal_formula_version}</code>
+                Campus formula (active): <code>{dashboard.education_command.campus_goal_formula_version}</code> —
+                enrollment ÷ county VAP
               </li>
-              <li>{dashboard.education_command.institution_sub_goal_rule}</li>
+              <li className="text-slate-500">{dashboard.education_command.superseded_flat_25}</li>
               <li>
                 Institutions: {dashboard.education_command.summary.totalInstitutions} · without lead:{" "}
                 {dashboard.education_command.summary.withoutLead}

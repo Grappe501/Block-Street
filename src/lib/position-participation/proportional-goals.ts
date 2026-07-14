@@ -1,6 +1,6 @@
 /**
- * Campus civic goals — flat 25% of RedDirt county goals.
- * Same for every college and high school in the county (sub_goal_within_parent).
+ * Campus civic goals — enrollment share of estimated county VAP (V2-A.3).
+ * Flat 25% institution sub-goal is superseded.
  */
 import {
   computeCampusCivicGoals,

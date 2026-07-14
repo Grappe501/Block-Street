@@ -140,8 +140,8 @@ export function AdminOperatorCommand() {
           </li>
           <li>
             Campus formula (canonical): <code>{CAMPUS_GOAL_FORMULA_VERSION}</code> —{" "}
-            {getFieldGoalsMeta().campus_goal_formula}. Same sub-goal for every college/HS in a county; does{" "}
-            <strong>not</strong> add on top of the county total.
+            {getFieldGoalsMeta().campus_goal_formula}. Flat 25% <strong>superseded</strong>. Sub-goals stay inside
+            county totals. County VAP estimated until ACS.
           </li>
           <li>
             Field Plan: 30K-ft Victory Field Framework <strong>ingested</strong> — role content live via role keys;
@@ -186,6 +186,26 @@ export function AdminOperatorCommand() {
           </li>
           <li>V2-B: deferred — readiness map prepared, no blind cutover</li>
           <li>Product Run buttons: {(runAudit.participant_run_buttons ?? []).length} · Cursor IDE Run ≠ product</li>
+        </ul>
+      </div>
+
+      <div className="card border-slate-200 bg-white p-4">
+        <h3 className="text-sm font-bold text-slate-950">V2-A.3 Volunteer Command (honest status)</h3>
+        <ul className="mt-3 space-y-1.5 text-xs text-slate-800">
+          <li>
+            Volunteer Command shell: <strong>implemented</strong> ·{" "}
+            <Link className="text-brand-800 underline" href="/admin/volunteer-command">
+              /admin/volunteer-command
+            </Link>
+          </li>
+          <li>College Command: subordinate to Volunteer Manager (education statewide)</li>
+          <li>County Volunteer Command: subordinate · assigned county only</li>
+          <li>Functional / Area Leader scaffold: /leader/:id · Field Plan bind ready</li>
+          <li>
+            Campus formula: <code>{CAMPUS_GOAL_FORMULA_VERSION}</code> · flat 25% superseded · VAP estimated
+          </li>
+          <li>Persistence: Blobs + seed · Postgres not active · sensitive personnel actions disabled</li>
+          <li>Invite-chain certification: still PENDING — shell ≠ CERTIFIED PRESENT</li>
         </ul>
       </div>
 

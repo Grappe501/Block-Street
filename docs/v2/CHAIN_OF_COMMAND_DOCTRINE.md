@@ -1,8 +1,10 @@
 # Chain of Command Doctrine — Volunteer System
 
-**Status:** Scaffold locked 2026-07-14  
+**Status:** Scaffold locked 2026-07-14 · V2-A.3  
+**Also:** [`GRASSROOTS_LEADERSHIP_CHAIN_OF_COMMAND.md`](./GRASSROOTS_LEADERSHIP_CHAIN_OF_COMMAND.md)  
 **Audience first:** Every dashboard answers *Who is this built for?* before *What feature is this?*  
-**Staffing:** Purely grassroots — no paid campaign staff. Volunteer Manager is the statewide personnel lead.
+**Staffing:** Purely grassroots — no paid campaign staff. Volunteer Manager is the statewide personnel lead.  
+**Tone:** Structure may be disciplined; UI language emphasizes service, responsibility, support, teamwork, and shared leadership — not militaristic imagery.
 
 ## Military-style chain (personnel)
 

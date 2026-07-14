@@ -1,11 +1,28 @@
 # Grassroots Leadership Chain of Command
 
-The campaign has no paid field staff. All operational positions are volunteer-led.
+**Status:** V2-A.3 scaffold  
+**Tone:** Disciplined structure · welcoming service language (not militaristic chrome)
 
-Discipline without militaristic UX language:
+See also: [`CHAIN_OF_COMMAND_DOCTRINE.md`](./CHAIN_OF_COMMAND_DOCTRINE.md) · twin `data/volunteer-command/chain-of-command.json`
 
-- Service, responsibility, support, accountability, teamwork, shared leadership.
-- Multiple co-leads allowed; exclusive single-leader seats are not required.
-- Committee = all active leads + volunteers on the same position and scope.
+## Structure
 
-Escalation rises to Volunteer Manager, then Director.
+```text
+Campaign Director
+│
+├── Volunteer Manager          ← overall personnel (no paid field staff)
+│   ├── County Volunteer Command
+│   ├── Education Volunteer Command (College Leader)
+│   ├── Statewide Functional Volunteer Commands
+│   └── Volunteer Intake and Development
+│
+└── Other Campaign Directorates (future)
+```
+
+## Principles
+
+- Shared leadership / co-leads welcome.
+- Leads + volunteers on a position form that committee.
+- Need-to-know dashboards.
+- Escalation upward; support downward.
+- Service, responsibility, teamwork — not social ranking.
