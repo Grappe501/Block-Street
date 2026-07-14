@@ -70,5 +70,5 @@ Domain 16 — Production, Quality, and Launch Systems  █░░░░░░░�
 33. **Commands executed:** `npm run v1:cert:pass1` (this run)
 34. **Validation results:** Matrix generated; typecheck/lint/build not required for inventory gate — optional follow-up
 35. **Visual inspection:** `npm run dev` → http://localhost:3000/invite/[token], /login, /communications/brief, /learning, /operations, /initiatives — **no** /localbrain, **no** /calendar
-36. **Commit hash:** _(set after commit)_ · artifact fingerprint `cb0ac6264d9f`
+36. **Commit hash:** `da0734081772872aa9cb2dbc1e3d4419676e3437` · artifact fingerprint `cb0ac6264d9f`
 37. **Pass 2 readiness:** **NOT YET** — awaiting Steve acceptance of Pass 1
