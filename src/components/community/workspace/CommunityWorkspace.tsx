@@ -88,48 +88,61 @@ export function CommunityWorkspace({
   );
 
   const body = (
-    <div className="mx-auto max-w-4xl space-y-6 px-4 py-8">
-      <CommunityPulse items={workspace.pulse} />
-      <CommunityGoals goals={workspace.goals} metrics={workspace.participationMetrics} />
-      <PositionCards
-        cards={workspace.positionCards}
-        countySlug={workspace.countySlug}
-        schoolSlug={workspace.signupSchool}
-      />
-      <SocialMeetupHub
-        meetup={workspace.meetup}
-        countySlug={workspace.countySlug}
-        schoolSlug={workspace.signupSchool}
-      />
-      <FunctionalLanes lanes={workspace.lanes} />
-      <CommitPlaceButton
-        kind={
-          workspace.kind === "county"
-            ? "county"
-            : workspace.kind === "high_school"
-              ? "high-school"
-              : workspace.kind === "private_charter"
-                ? "private-school"
-                : "school"
-        }
-        slug={slug}
-        name={workspace.name}
-        countySlug={workspace.countySlug}
-      />
-      <PeopleDirectoryGate workspace={workspace} />
-      <div className="card">
-        <h2 className="text-lg font-bold text-slate-900">Join Our Network</h2>
-        <p className="mt-2 text-slate-600">
-          Sign up with an invitation, get your share link, and help build {workspace.shortName}.
-        </p>
-        <SignupButton
-          county={workspace.signupCounty}
-          school={workspace.signupSchool}
-          label={workspace.kind === "county" ? "Sign Up for County Hub" : "Sign Up"}
+    <div
+      className="relative"
+      style={{
+        background:
+          "radial-gradient(1200px 400px at 10% -10%, rgba(13,148,136,0.08), transparent 55%), radial-gradient(900px 360px at 100% 0%, rgba(15,23,42,0.04), transparent 50%), #f8fafc",
+      }}
+    >
+      <div className="mx-auto max-w-4xl space-y-6 px-4 py-8">
+        <CommunityPulse items={workspace.pulse} />
+        <CommunityGoals
+          goals={workspace.goals}
+          metrics={workspace.participationMetrics}
+          primaryColor={workspace.primaryColor}
         />
+        <PositionCards
+          cards={workspace.positionCards}
+          countySlug={workspace.countySlug}
+          schoolSlug={workspace.signupSchool}
+          primaryColor={workspace.primaryColor}
+        />
+        <SocialMeetupHub
+          meetup={workspace.meetup}
+          countySlug={workspace.countySlug}
+          schoolSlug={workspace.signupSchool}
+        />
+        <FunctionalLanes lanes={workspace.lanes} primaryColor={workspace.primaryColor} />
+        <CommitPlaceButton
+          kind={
+            workspace.kind === "county"
+              ? "county"
+              : workspace.kind === "high_school"
+                ? "high-school"
+                : workspace.kind === "private_charter"
+                  ? "private-school"
+                  : "school"
+          }
+          slug={slug}
+          name={workspace.name}
+          countySlug={workspace.countySlug}
+        />
+        <PeopleDirectoryGate workspace={workspace} />
+        <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+          <h2 className="text-xl font-bold text-slate-950">Join our network</h2>
+          <p className="mt-2 text-slate-700">
+            Sign up with an invitation, get your share link, and help build {workspace.shortName}.
+          </p>
+          <SignupButton
+            county={workspace.signupCounty}
+            school={workspace.signupSchool}
+            label={workspace.kind === "county" ? "Sign Up for County Hub" : "Sign Up"}
+          />
+        </div>
+        {children}
+        <p className="text-xs text-slate-500">{PLATFORM_DISCLAIMER}</p>
       </div>
-      {children}
-      <p className="text-xs text-slate-400">{PLATFORM_DISCLAIMER}</p>
     </div>
   );
 
