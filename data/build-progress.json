@@ -12,7 +12,7 @@
     "phase8Status": "complete",
     "phase9Status": "complete",
     "phase10Status": "complete",
-    "lastUpdated": "2026-07-14T08:19:03.936Z",
+    "lastUpdated": "2026-07-14T08:29:33.601Z",
     "deployUrl": "https://block-street.netlify.app/",
     "githubRepo": "https://github.com/Grappe501/Block-Street",
     "netlifyStatus": "live",
@@ -21,7 +21,7 @@
     "launchCallDate": "2026-07-14",
     "leaderTestingDate": "2026-07-12",
     "phase11Status": "complete",
-    "activeProgram": "V1 Launch Ready · PHASE-001.7 10/10 @71adf56",
+    "activeProgram": "Forensic audit published · V1 narrow Launch Ready · Cert 20.2% · V2 additive lanes",
     "productionCommit": "71adf56"
   },
   "constitutionalLayer": {
@@ -1392,6 +1392,12 @@
     }
   ],
   "buildLog": [
+    {
+      "date": "2026-07-14",
+      "title": "FORENSIC AUDIT — Mission vs build vs Cert Pass 1 + V2 additive lanes",
+      "phase": 11,
+      "summary": "Dual readiness published: PHASE-001.7 Launch Ready vs Cert 20.2%/0 CERTIFIED. UI 4.5/10 overall. Not large-scale ready. Deploy closeout protocol + Ernie packet in docs/v1-certification/FORENSIC_PLATFORM_AUDIT_2026-07-14.md"
+    },
     {
       "date": "2026-07-14",
       "title": "PHASE-001.7 — V1 Launch Ready (network board, share/QR, directory, admin)",

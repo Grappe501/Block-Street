@@ -1,0 +1,21 @@
+# Netlify Deploy Closeout — Additive Ship Protocol
+
+Every completed product/docs/build interaction that changes the repository **ends with a full push to `origin`** so Netlify auto-deploys and Build Control / production stay current.
+
+## Rules
+
+1. **Additive only** — do not silently remove or break live participant UX (`/start`, invite, choose-place, `/network`, `/s/*`, hubs). Deprecate via flags or parallel lanes.
+2. **Wave/phase updates go live through git** — GitHub commit → push → Netlify production (no manual bypass as default).
+3. **Before push:** typecheck critical paths when code changed; exclude secrets and noisy local stores (e.g. do not commit accidental `data/civic-action/store.json` churn unless intentional).
+4. **Stamp trackers** when status changes: `data/build-progress.json`, `data/launch-readiness.json`, phase ledgers.
+5. **Always close with:**
+   ```powershell
+   $env:TEMP = 'H:\Block-Street\.tmp'
+   $env:TMP = 'H:\Block-Street\.tmp'
+   git push origin HEAD
+   ```
+6. Confirm tip SHA and that Netlify will build; tell the operator the deploy URL: https://block-street.netlify.app/
+
+## Exception
+
+Only skip push when the user explicitly requests no push / local-only work.
