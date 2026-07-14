@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updated": "2026-07-14T18:05:00.000Z",
+  "updated": "2026-07-14T18:15:44.570Z",
   "entries": [
     {
       "at": "2026-07-14T18:05:00.000Z",
@@ -9,6 +9,40 @@
         "data/field-plan/source-contract.json",
         "data/field-plan/ingestion/spine-state.json"
       ],
+      "broad_ingest": false
+    },
+    {
+      "at": "2026-07-14T18:14:57.640Z",
+      "event": "v2b2_position_mapping_run",
+      "artifacts": [
+        "data/field-plan/position-mapping-registry.json",
+        "data/field-plan/ingestion/review-queue.json",
+        "data/field-plan/ingestion/conflict-queue.json"
+      ],
+      "summary": {
+        "mapped": 12,
+        "unmapped": 3,
+        "conflicts": 1,
+        "deferred_central": 16,
+        "total_considered": 32
+      },
+      "broad_ingest": false
+    },
+    {
+      "at": "2026-07-14T18:15:44.570Z",
+      "event": "v2b2_position_mapping_run",
+      "artifacts": [
+        "data/field-plan/position-mapping-registry.json",
+        "data/field-plan/ingestion/review-queue.json",
+        "data/field-plan/ingestion/conflict-queue.json"
+      ],
+      "summary": {
+        "mapped": 13,
+        "unmapped": 2,
+        "conflicts": 1,
+        "deferred_central": 16,
+        "total_considered": 32
+      },
       "broad_ingest": false
     }
   ]

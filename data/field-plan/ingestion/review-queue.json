@@ -1,5 +1,277 @@
 {
   "version": "1.0.0",
-  "updated": "2026-07-14T18:05:00.000Z",
-  "items": []
+  "updated": "2026-07-14T18:15:44.570Z",
+  "phase": "V2-B.2",
+  "items": [
+    {
+      "stable_id": "FP-position-media_lead",
+      "title": "Media Lead",
+      "reason": "CIWS card deferred — Field Plan tracked; no hierarchy seat yet",
+      "status": "unmapped",
+      "mapping_answers": {
+        "where_does_position_sit": null,
+        "who_supervises": null,
+        "geography_or_institution": "",
+        "eventual_permissions": null,
+        "dashboard_owner": null,
+        "vacancy_behavior": "open_recruitment_ask"
+      },
+      "queued_at": "2026-07-14T18:15:44.570Z"
+    },
+    {
+      "stable_id": "FP-position-logistics_lead",
+      "title": "Logistics Lead",
+      "reason": "CIWS card deferred — Field Plan tracked; no hierarchy seat yet",
+      "status": "unmapped",
+      "mapping_answers": {
+        "where_does_position_sit": null,
+        "who_supervises": null,
+        "geography_or_institution": "",
+        "eventual_permissions": null,
+        "dashboard_owner": null,
+        "vacancy_behavior": "open_recruitment_ask"
+      },
+      "queued_at": "2026-07-14T18:15:44.570Z"
+    },
+    {
+      "stable_id": "FP-central-field_director",
+      "title": "field director",
+      "reason": "queue_for_review_as_other_directorates_not_volunteer_hierarchy",
+      "status": "deferred_central",
+      "mapping_answers": {
+        "where_does_position_sit": "other_campaign_directorates",
+        "who_supervises": "director",
+        "geography_or_institution": "statewide",
+        "eventual_permissions": null,
+        "dashboard_owner": null,
+        "vacancy_behavior": "director_appointment_required"
+      },
+      "queued_at": "2026-07-14T18:15:44.570Z"
+    },
+    {
+      "stable_id": "FP-central-volunteer_management",
+      "title": "volunteer management",
+      "reason": "queue_for_review_as_other_directorates_not_volunteer_hierarchy",
+      "status": "deferred_central",
+      "mapping_answers": {
+        "where_does_position_sit": "other_campaign_directorates",
+        "who_supervises": "director",
+        "geography_or_institution": "statewide",
+        "eventual_permissions": null,
+        "dashboard_owner": null,
+        "vacancy_behavior": "director_appointment_required"
+      },
+      "queued_at": "2026-07-14T18:15:44.570Z"
+    },
+    {
+      "stable_id": "FP-central-central_social",
+      "title": "central social",
+      "reason": "queue_for_review_as_other_directorates_not_volunteer_hierarchy",
+      "status": "deferred_central",
+      "mapping_answers": {
+        "where_does_position_sit": "other_campaign_directorates",
+        "who_supervises": "director",
+        "geography_or_institution": "statewide",
+        "eventual_permissions": null,
+        "dashboard_owner": null,
+        "vacancy_behavior": "director_appointment_required"
+      },
+      "queued_at": "2026-07-14T18:15:44.570Z"
+    },
+    {
+      "stable_id": "FP-central-graphic_design",
+      "title": "graphic design",
+      "reason": "queue_for_review_as_other_directorates_not_volunteer_hierarchy",
+      "status": "deferred_central",
+      "mapping_answers": {
+        "where_does_position_sit": "other_campaign_directorates",
+        "who_supervises": "director",
+        "geography_or_institution": "statewide",
+        "eventual_permissions": null,
+        "dashboard_owner": null,
+        "vacancy_behavior": "director_appointment_required"
+      },
+      "queued_at": "2026-07-14T18:15:44.570Z"
+    },
+    {
+      "stable_id": "FP-central-email_team",
+      "title": "email team",
+      "reason": "queue_for_review_as_other_directorates_not_volunteer_hierarchy",
+      "status": "deferred_central",
+      "mapping_answers": {
+        "where_does_position_sit": "other_campaign_directorates",
+        "who_supervises": "director",
+        "geography_or_institution": "statewide",
+        "eventual_permissions": null,
+        "dashboard_owner": null,
+        "vacancy_behavior": "director_appointment_required"
+      },
+      "queued_at": "2026-07-14T18:15:44.570Z"
+    },
+    {
+      "stable_id": "FP-central-phone_bank",
+      "title": "phone bank",
+      "reason": "queue_for_review_as_other_directorates_not_volunteer_hierarchy",
+      "status": "deferred_central",
+      "mapping_answers": {
+        "where_does_position_sit": "other_campaign_directorates",
+        "who_supervises": "director",
+        "geography_or_institution": "statewide",
+        "eventual_permissions": null,
+        "dashboard_owner": null,
+        "vacancy_behavior": "director_appointment_required"
+      },
+      "queued_at": "2026-07-14T18:15:44.570Z"
+    },
+    {
+      "stable_id": "FP-central-text_bank",
+      "title": "text bank",
+      "reason": "queue_for_review_as_other_directorates_not_volunteer_hierarchy",
+      "status": "deferred_central",
+      "mapping_answers": {
+        "where_does_position_sit": "other_campaign_directorates",
+        "who_supervises": "director",
+        "geography_or_institution": "statewide",
+        "eventual_permissions": null,
+        "dashboard_owner": null,
+        "vacancy_behavior": "director_appointment_required"
+      },
+      "queued_at": "2026-07-14T18:15:44.570Z"
+    },
+    {
+      "stable_id": "FP-central-postcard_team",
+      "title": "postcard team",
+      "reason": "queue_for_review_as_other_directorates_not_volunteer_hierarchy",
+      "status": "deferred_central",
+      "mapping_answers": {
+        "where_does_position_sit": "other_campaign_directorates",
+        "who_supervises": "director",
+        "geography_or_institution": "statewide",
+        "eventual_permissions": null,
+        "dashboard_owner": null,
+        "vacancy_behavior": "director_appointment_required"
+      },
+      "queued_at": "2026-07-14T18:15:44.570Z"
+    },
+    {
+      "stable_id": "FP-central-young_adult_team",
+      "title": "young adult team",
+      "reason": "queue_for_review_as_other_directorates_not_volunteer_hierarchy",
+      "status": "deferred_central",
+      "mapping_answers": {
+        "where_does_position_sit": "other_campaign_directorates",
+        "who_supervises": "director",
+        "geography_or_institution": "statewide",
+        "eventual_permissions": null,
+        "dashboard_owner": null,
+        "vacancy_behavior": "director_appointment_required"
+      },
+      "queued_at": "2026-07-14T18:15:44.570Z"
+    },
+    {
+      "stable_id": "FP-central-county_strike_team",
+      "title": "county strike team",
+      "reason": "queue_for_review_as_other_directorates_not_volunteer_hierarchy",
+      "status": "deferred_central",
+      "mapping_answers": {
+        "where_does_position_sit": "other_campaign_directorates",
+        "who_supervises": "director",
+        "geography_or_institution": "statewide",
+        "eventual_permissions": null,
+        "dashboard_owner": null,
+        "vacancy_behavior": "director_appointment_required"
+      },
+      "queued_at": "2026-07-14T18:15:44.570Z"
+    },
+    {
+      "stable_id": "FP-central-communications_director",
+      "title": "communications director",
+      "reason": "queue_for_review_as_other_directorates_not_volunteer_hierarchy",
+      "status": "deferred_central",
+      "mapping_answers": {
+        "where_does_position_sit": "other_campaign_directorates",
+        "who_supervises": "director",
+        "geography_or_institution": "statewide",
+        "eventual_permissions": null,
+        "dashboard_owner": null,
+        "vacancy_behavior": "director_appointment_required"
+      },
+      "queued_at": "2026-07-14T18:15:44.570Z"
+    },
+    {
+      "stable_id": "FP-central-press_office",
+      "title": "press office",
+      "reason": "queue_for_review_as_other_directorates_not_volunteer_hierarchy",
+      "status": "deferred_central",
+      "mapping_answers": {
+        "where_does_position_sit": "other_campaign_directorates",
+        "who_supervises": "director",
+        "geography_or_institution": "statewide",
+        "eventual_permissions": null,
+        "dashboard_owner": null,
+        "vacancy_behavior": "director_appointment_required"
+      },
+      "queued_at": "2026-07-14T18:15:44.570Z"
+    },
+    {
+      "stable_id": "FP-central-data_team",
+      "title": "data team",
+      "reason": "queue_for_review_as_other_directorates_not_volunteer_hierarchy",
+      "status": "deferred_central",
+      "mapping_answers": {
+        "where_does_position_sit": "other_campaign_directorates",
+        "who_supervises": "director",
+        "geography_or_institution": "statewide",
+        "eventual_permissions": null,
+        "dashboard_owner": null,
+        "vacancy_behavior": "director_appointment_required"
+      },
+      "queued_at": "2026-07-14T18:15:44.570Z"
+    },
+    {
+      "stable_id": "FP-central-voter_registration_director",
+      "title": "voter registration director",
+      "reason": "queue_for_review_as_other_directorates_not_volunteer_hierarchy",
+      "status": "deferred_central",
+      "mapping_answers": {
+        "where_does_position_sit": "other_campaign_directorates",
+        "who_supervises": "director",
+        "geography_or_institution": "statewide",
+        "eventual_permissions": null,
+        "dashboard_owner": null,
+        "vacancy_behavior": "director_appointment_required"
+      },
+      "queued_at": "2026-07-14T18:15:44.570Z"
+    },
+    {
+      "stable_id": "FP-central-fundraising",
+      "title": "fundraising",
+      "reason": "queue_for_review_as_other_directorates_not_volunteer_hierarchy",
+      "status": "deferred_central",
+      "mapping_answers": {
+        "where_does_position_sit": "other_campaign_directorates",
+        "who_supervises": "director",
+        "geography_or_institution": "statewide",
+        "eventual_permissions": null,
+        "dashboard_owner": null,
+        "vacancy_behavior": "director_appointment_required"
+      },
+      "queued_at": "2026-07-14T18:15:44.570Z"
+    },
+    {
+      "stable_id": "FP-central-operations",
+      "title": "operations",
+      "reason": "queue_for_review_as_other_directorates_not_volunteer_hierarchy",
+      "status": "deferred_central",
+      "mapping_answers": {
+        "where_does_position_sit": "other_campaign_directorates",
+        "who_supervises": "director",
+        "geography_or_institution": "statewide",
+        "eventual_permissions": null,
+        "dashboard_owner": null,
+        "vacancy_behavior": "director_appointment_required"
+      },
+      "queued_at": "2026-07-14T18:15:44.570Z"
+    }
+  ]
 }

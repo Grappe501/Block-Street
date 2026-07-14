@@ -1,5 +1,22 @@
 {
   "version": "1.0.0",
-  "updated": "2026-07-14T18:05:00.000Z",
-  "items": []
+  "updated": "2026-07-14T18:15:44.570Z",
+  "phase": "V2-B.2",
+  "items": [
+    {
+      "stable_id": "FP-conflict-community-outreach-lane",
+      "title": "Community outreach lane — multiple Field Plan positions",
+      "reason": "community_lead and community_social_lead both use function_key community_outreach — keep distinct; do not merge identities",
+      "status": "conflict",
+      "mapping_answers": {
+        "where_does_position_sit": "committee",
+        "who_supervises": "county_volunteer_lead, institution_lead",
+        "geography_or_institution": "county, institution, community",
+        "eventual_permissions": null,
+        "dashboard_owner": "/leader/:leadershipAssignmentId",
+        "vacancy_behavior": "open_recruitment_ask"
+      },
+      "queued_at": "2026-07-14T18:15:44.570Z"
+    }
+  ]
 }

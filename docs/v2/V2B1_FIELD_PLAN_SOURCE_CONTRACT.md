@@ -70,3 +70,7 @@ npm run field-plan:validate-contract
 npm run field-plan:assert-no-flat-25
 npm run test:v2b1-field-plan-spine
 ```
+
+## Next
+
+**V2-B.2** Position mapping — see [`V2B2_POSITION_MAPPING.md`](./V2B2_POSITION_MAPPING.md).

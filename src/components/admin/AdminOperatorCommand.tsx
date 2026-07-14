@@ -9,6 +9,9 @@ import goalForensic from "../../../data/v2/participation-goal-forensic-report.js
 import runAudit from "../../../data/v2/run-button-audit.json";
 import fieldMeta from "../../../data/field-goals/ingestion-manifest.json";
 import persistAudit from "../../../data/v2/production-persistence-forensic-audit.json";
+import positionMapping from "../../../data/field-plan/position-mapping-registry.json";
+import reviewQueue from "../../../data/field-plan/ingestion/review-queue.json";
+import conflictQueue from "../../../data/field-plan/ingestion/conflict-queue.json";
 import { getCountyFieldGoal, getFieldGoalsMeta, CAMPUS_GOAL_FORMULA_VERSION } from "@/lib/field-goals";
 
 type Attention = { id: string; severity: "high" | "medium" | "low"; title: string; next: string };
@@ -46,6 +49,16 @@ function buildAttention(): Attention[] {
       severity: "medium",
       title: "Postgres not connected",
       next: "V2-B Blobs→Postgres only after invite cert + Operator Command slice are solid",
+    });
+  }
+  const reviewCount = (reviewQueue.items ?? []).length;
+  const conflictCount = (conflictQueue.items ?? []).length;
+  if (reviewCount + conflictCount > 0) {
+    attention.push({
+      id: "attn-fp-queues",
+      severity: conflictCount > 0 ? "high" : "medium",
+      title: `Field Plan mapping queues: ${reviewCount} review · ${conflictCount} conflict`,
+      next: "Resolve V2-B.2 review/conflict queues before broad Field Plan ingest",
     });
   }
   const pendingFeatures = (featureDiscovery.features ?? []).filter((f) => f.certification === "pending_cert");
@@ -198,12 +211,38 @@ export function AdminOperatorCommand() {
           <li>
             Contract: <code>data/field-plan/source-contract.json</code> · docs/v2/V2B1_FIELD_PLAN_SOURCE_CONTRACT.md
           </li>
-          <li>Conflict / review queues empty and ready · no silent position assignment</li>
           <li>
             Campus formula preserved: <code>{CAMPUS_GOAL_FORMULA_VERSION}</code> · flat 25% superseded lineage only
           </li>
           <li>Sensitive personnel mutations: still disabled · Postgres not active</li>
           <li>Invite-chain CERTIFIED PRESENT: named launch blocker (parallel track)</li>
+        </ul>
+      </div>
+
+      <div className="card border-slate-200 bg-white p-4">
+        <h3 className="text-sm font-bold text-slate-950">V2-B.2 Position mapping</h3>
+        <ul className="mt-3 space-y-1.5 text-xs text-slate-800">
+          <li>
+            Registry:{" "}
+            <strong>
+              {(positionMapping.summary as { mapped?: number })?.mapped ?? 0} mapped
+            </strong>{" "}
+            · {(positionMapping.summary as { unmapped?: number })?.unmapped ?? 0} unmapped ·{" "}
+            {(positionMapping.summary as { conflicts?: number })?.conflicts ?? 0} conflicts ·{" "}
+            {(positionMapping.summary as { deferred_central?: number })?.deferred_central ?? 0}{" "}
+            central deferred
+          </li>
+          <li>
+            Queues: {(reviewQueue.items ?? []).length} review · {(conflictQueue.items ?? []).length}{" "}
+            conflict — no silent assign
+          </li>
+          <li>
+            Explicit unmapped: media_lead · logistics_lead (CIWS deferred) · docs/v2/V2B2_POSITION_MAPPING.md
+          </li>
+          <li>
+            Hierarchy preserved: V2-A.3 · campus <code>{CAMPUS_GOAL_FORMULA_VERSION}</code> · next V2-B.3
+            responsibility library
+          </li>
         </ul>
       </div>
 

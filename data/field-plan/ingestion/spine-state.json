@@ -1,8 +1,8 @@
 {
   "version": "1.0.0",
-  "phase": "V2-B.1",
-  "updated": "2026-07-14T18:05:00.000Z",
-  "status": "spine_ready",
+  "phase": "V2-B.2",
+  "updated": "2026-07-14T18:15:44.570Z",
+  "status": "position_mapping_complete_awaiting_operator_review",
   "broad_ingest": "blocked_until_gates_pass",
   "source_contract": "data/field-plan/source-contract.json",
   "review_queue": "data/field-plan/ingestion/review-queue.json",
@@ -13,6 +13,9 @@
   "notes": [
     "V2-B.1 establishes schema and gates only.",
     "Do not assign generated task templates to real personnel until Postgres + RBAC gates exist.",
-    "Invite-chain CERTIFIED PRESENT remains a named launch blocker in parallel."
-  ]
+    "Invite-chain CERTIFIED PRESENT remains a named launch blocker in parallel.",
+    "V2-B.2 mapping: 12 mapped · 3 unmapped · 1 conflicts · 16 central deferred",
+    "V2-B.2 mapping: 13 mapped · 2 unmapped · 1 conflicts · 16 central deferred"
+  ],
+  "position_mapping_registry": "data/field-plan/position-mapping-registry.json"
 }

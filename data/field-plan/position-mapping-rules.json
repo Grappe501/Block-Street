@@ -1,0 +1,154 @@
+{
+  "version": "1.0.0",
+  "phase": "V2-B.2",
+  "updated": "2026-07-14T18:15:00.000Z",
+  "authority": "docs/v2/V2B2_POSITION_MAPPING.md",
+  "hierarchy_authority": "V2-A.3",
+  "vacancy_default": "open_recruitment_ask",
+  "aliases": {
+    "social_media_lead": "social_lead",
+    "recruitment_lead": "community_lead",
+    "canvass_lead": "canvass_lead",
+    "registration_lead": "registration_lead",
+    "event_lead": "event_lead",
+    "community_social_lead": "community_social_lead"
+  },
+  "canonical_bindings": {
+    "event_lead": {
+      "hierarchy_role": "functional_lead",
+      "command_level": "committee",
+      "supervises_via": ["county_volunteer_lead", "institution_lead"],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "scope_types": ["county", "institution", "city", "community"],
+      "permissions_deferred": ["assign_function", "contact_function"],
+      "function_key": "events",
+      "vacancy_behavior": "open_recruitment_ask"
+    },
+    "social_lead": {
+      "hierarchy_role": "functional_lead",
+      "command_level": "committee",
+      "supervises_via": ["county_volunteer_lead", "institution_lead"],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "scope_types": ["county", "institution"],
+      "permissions_deferred": ["assign_function", "contact_function"],
+      "function_key": "social_media",
+      "vacancy_behavior": "open_recruitment_ask"
+    },
+    "community_social_lead": {
+      "hierarchy_role": "functional_lead",
+      "command_level": "committee",
+      "supervises_via": ["county_volunteer_lead", "institution_lead"],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "scope_types": ["county", "institution", "community"],
+      "permissions_deferred": ["assign_function", "contact_function"],
+      "function_key": "community_outreach",
+      "vacancy_behavior": "open_recruitment_ask",
+      "note": "Distinct from social_lead — orgs/churches/influencers; keep separate identity"
+    },
+    "canvass_lead": {
+      "hierarchy_role": "functional_lead",
+      "command_level": "committee",
+      "supervises_via": ["county_volunteer_lead", "institution_lead"],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "scope_types": ["county", "institution"],
+      "permissions_deferred": ["assign_function", "contact_function"],
+      "function_key": "canvassing",
+      "vacancy_behavior": "open_recruitment_ask"
+    },
+    "community_lead": {
+      "hierarchy_role": "functional_lead",
+      "command_level": "committee",
+      "supervises_via": ["county_volunteer_lead", "volunteer_manager"],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "scope_types": ["county", "institution", "community"],
+      "permissions_deferred": ["assign_function", "contact_function"],
+      "function_key": "community_outreach",
+      "vacancy_behavior": "open_recruitment_ask"
+    },
+    "registration_lead": {
+      "hierarchy_role": "functional_lead",
+      "command_level": "committee",
+      "supervises_via": ["county_volunteer_lead", "institution_lead"],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "scope_types": ["county", "institution"],
+      "permissions_deferred": ["assign_function", "contact_function"],
+      "function_key": "voter_registration",
+      "vacancy_behavior": "open_recruitment_ask"
+    },
+    "phone_bank_lead": {
+      "hierarchy_role": "functional_lead",
+      "command_level": "committee",
+      "supervises_via": ["volunteer_manager", "county_volunteer_lead"],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "scope_types": ["county", "statewide"],
+      "permissions_deferred": ["assign_function", "contact_function"],
+      "function_key": "phone_text",
+      "vacancy_behavior": "open_recruitment_ask"
+    },
+    "postcard_lead": {
+      "hierarchy_role": "functional_lead",
+      "command_level": "committee",
+      "supervises_via": ["volunteer_manager", "county_volunteer_lead"],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "scope_types": ["county", "statewide"],
+      "permissions_deferred": ["assign_function", "contact_function"],
+      "function_key": "postcards",
+      "vacancy_behavior": "open_recruitment_ask"
+    },
+    "volunteer_manager": {
+      "hierarchy_role": "volunteer_manager",
+      "command_level": "volunteer_manager",
+      "supervises_via": ["director"],
+      "dashboard_owner": "/admin/volunteer-command",
+      "scope_types": ["statewide"],
+      "permissions_deferred": ["contact", "assign", "promote"],
+      "function_key": null,
+      "vacancy_behavior": "director_appointment_required"
+    },
+    "college_leader": {
+      "hierarchy_role": "college_leader",
+      "command_level": "education_volunteer_command",
+      "supervises_via": ["volunteer_manager"],
+      "dashboard_owner": "/admin/college-command",
+      "scope_types": ["education_statewide"],
+      "permissions_deferred": ["contact_education", "assign_education"],
+      "function_key": null,
+      "vacancy_behavior": "open_recruitment_ask"
+    },
+    "county_volunteer_lead": {
+      "hierarchy_role": "county_volunteer_lead",
+      "command_level": "county_volunteer_command",
+      "supervises_via": ["volunteer_manager"],
+      "dashboard_owner": "/admin/counties/:countySlug/volunteer-command",
+      "scope_types": ["county"],
+      "permissions_deferred": ["contact_county", "assign_county"],
+      "function_key": null,
+      "vacancy_behavior": "open_recruitment_ask"
+    },
+    "institution_lead": {
+      "hierarchy_role": "institution_lead",
+      "command_level": "institution",
+      "supervises_via": ["college_leader"],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "scope_types": ["institution", "high_school"],
+      "permissions_deferred": ["contact_institution", "assign_institution"],
+      "function_key": null,
+      "vacancy_behavior": "open_recruitment_ask"
+    },
+    "campaign_director": {
+      "hierarchy_role": "director",
+      "command_level": "director",
+      "supervises_via": [],
+      "dashboard_owner": "/admin/director",
+      "scope_types": ["statewide"],
+      "permissions_deferred": ["inspect_all", "appoint_volunteer_manager"],
+      "function_key": null,
+      "vacancy_behavior": "constitutional_appointment_required"
+    }
+  },
+  "explicit_unmapped": {
+    "media_lead": "CIWS card deferred — Field Plan tracked; no hierarchy seat yet",
+    "logistics_lead": "CIWS card deferred — Field Plan tracked; no hierarchy seat yet"
+  },
+  "central_activation_policy": "queue_for_review_as_other_directorates_not_volunteer_hierarchy"
+}

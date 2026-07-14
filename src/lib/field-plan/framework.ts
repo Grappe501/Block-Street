@@ -12,6 +12,8 @@ export {
   missingRequiredRecordFields,
 } from "./source-contract";
 
+export { mapFieldPlanPositions, mappingAnswersFor } from "./position-mapper";
+
 export function getVictoryFieldFramework() {
   return framework;
 }

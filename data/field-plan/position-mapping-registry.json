@@ -1,0 +1,776 @@
+{
+  "version": "1.0.0",
+  "phase": "V2-B.2",
+  "generated_at": "2026-07-14T18:15:44.570Z",
+  "authority": "docs/v2/V2B2_POSITION_MAPPING.md",
+  "rules": "data/field-plan/position-mapping-rules.json",
+  "summary": {
+    "mapped": 13,
+    "unmapped": 2,
+    "conflicts": 1,
+    "deferred_central": 16,
+    "total_considered": 32
+  },
+  "mapped": [
+    {
+      "stable_id": "FP-position-event_lead",
+      "field_plan_key": "event_lead",
+      "canonical_key": "event_lead",
+      "title": "Event Lead",
+      "source_reference": "victory-field-framework.local_event_committee:event_lead",
+      "status": "mapped",
+      "where_it_sits": "committee",
+      "who_supervises": [
+        "county_volunteer_lead",
+        "institution_lead"
+      ],
+      "geography_or_institution": [
+        "county",
+        "institution",
+        "city",
+        "community"
+      ],
+      "permissions_eventually": [
+        "assign_function",
+        "contact_function"
+      ],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "vacancy_behavior": "open_recruitment_ask",
+      "hierarchy_role": "functional_lead",
+      "function_key": "events",
+      "review_required": false
+    },
+    {
+      "stable_id": "FP-position-social_media_lead",
+      "field_plan_key": "social_media_lead",
+      "canonical_key": "social_lead",
+      "title": "Social Media Lead",
+      "source_reference": "victory-field-framework.local_event_committee:social_media_lead",
+      "status": "mapped",
+      "where_it_sits": "committee",
+      "who_supervises": [
+        "county_volunteer_lead",
+        "institution_lead"
+      ],
+      "geography_or_institution": [
+        "county",
+        "institution"
+      ],
+      "permissions_eventually": [
+        "assign_function",
+        "contact_function"
+      ],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "vacancy_behavior": "open_recruitment_ask",
+      "hierarchy_role": "functional_lead",
+      "function_key": "social_media",
+      "review_required": false
+    },
+    {
+      "stable_id": "FP-position-canvass_lead",
+      "field_plan_key": "canvass_lead",
+      "canonical_key": "canvass_lead",
+      "title": "Canvassing Lead",
+      "source_reference": "victory-field-framework.local_event_committee:canvass_lead",
+      "status": "mapped",
+      "where_it_sits": "committee",
+      "who_supervises": [
+        "county_volunteer_lead",
+        "institution_lead"
+      ],
+      "geography_or_institution": [
+        "county",
+        "institution"
+      ],
+      "permissions_eventually": [
+        "assign_function",
+        "contact_function"
+      ],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "vacancy_behavior": "open_recruitment_ask",
+      "hierarchy_role": "functional_lead",
+      "function_key": "canvassing",
+      "review_required": false
+    },
+    {
+      "stable_id": "FP-position-recruitment_lead",
+      "field_plan_key": "recruitment_lead",
+      "canonical_key": "community_lead",
+      "title": "Volunteer Recruitment Lead",
+      "source_reference": "victory-field-framework.local_event_committee:recruitment_lead",
+      "status": "mapped",
+      "where_it_sits": "committee",
+      "who_supervises": [
+        "county_volunteer_lead",
+        "volunteer_manager"
+      ],
+      "geography_or_institution": [
+        "county",
+        "institution",
+        "community"
+      ],
+      "permissions_eventually": [
+        "assign_function",
+        "contact_function"
+      ],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "vacancy_behavior": "open_recruitment_ask",
+      "hierarchy_role": "functional_lead",
+      "function_key": "community_outreach",
+      "review_required": false
+    },
+    {
+      "stable_id": "FP-position-community_social_lead",
+      "field_plan_key": "community_social_lead",
+      "canonical_key": "community_social_lead",
+      "title": "Community/Social Lead",
+      "source_reference": "victory-field-framework.local_event_committee:community_social_lead",
+      "status": "mapped",
+      "where_it_sits": "committee",
+      "who_supervises": [
+        "county_volunteer_lead",
+        "institution_lead"
+      ],
+      "geography_or_institution": [
+        "county",
+        "institution",
+        "community"
+      ],
+      "permissions_eventually": [
+        "assign_function",
+        "contact_function"
+      ],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "vacancy_behavior": "open_recruitment_ask",
+      "hierarchy_role": "functional_lead",
+      "function_key": "community_outreach",
+      "reason": "Distinct from social_lead — orgs/churches/influencers; keep separate identity",
+      "review_required": false
+    },
+    {
+      "stable_id": "FP-position-registration_lead",
+      "field_plan_key": "registration_lead",
+      "canonical_key": "registration_lead",
+      "title": "Voter Registration Lead",
+      "source_reference": "victory-field-framework.local_event_committee:registration_lead",
+      "status": "mapped",
+      "where_it_sits": "committee",
+      "who_supervises": [
+        "county_volunteer_lead",
+        "institution_lead"
+      ],
+      "geography_or_institution": [
+        "county",
+        "institution"
+      ],
+      "permissions_eventually": [
+        "assign_function",
+        "contact_function"
+      ],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "vacancy_behavior": "open_recruitment_ask",
+      "hierarchy_role": "functional_lead",
+      "function_key": "voter_registration",
+      "review_required": false
+    },
+    {
+      "stable_id": "FP-position-phone_bank_lead",
+      "field_plan_key": "phone_bank_lead",
+      "canonical_key": "phone_bank_lead",
+      "title": "phone bank lead",
+      "source_reference": "Arkansas Victory Field Framework · Phase 4",
+      "status": "mapped",
+      "where_it_sits": "committee",
+      "who_supervises": [
+        "volunteer_manager",
+        "county_volunteer_lead"
+      ],
+      "geography_or_institution": [
+        "county",
+        "statewide"
+      ],
+      "permissions_eventually": [
+        "assign_function",
+        "contact_function"
+      ],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "vacancy_behavior": "open_recruitment_ask",
+      "hierarchy_role": "functional_lead",
+      "function_key": "phone_text",
+      "review_required": false
+    },
+    {
+      "stable_id": "FP-position-postcard_lead",
+      "field_plan_key": "postcard_lead",
+      "canonical_key": "postcard_lead",
+      "title": "postcard lead",
+      "source_reference": "Arkansas Victory Field Framework · Phase 4",
+      "status": "mapped",
+      "where_it_sits": "committee",
+      "who_supervises": [
+        "volunteer_manager",
+        "county_volunteer_lead"
+      ],
+      "geography_or_institution": [
+        "county",
+        "statewide"
+      ],
+      "permissions_eventually": [
+        "assign_function",
+        "contact_function"
+      ],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "vacancy_behavior": "open_recruitment_ask",
+      "hierarchy_role": "functional_lead",
+      "function_key": "postcards",
+      "review_required": false
+    },
+    {
+      "stable_id": "FP-position-campaign_director",
+      "field_plan_key": "campaign_director",
+      "canonical_key": "campaign_director",
+      "title": "Campaign Director",
+      "source_reference": "leadership-role-registry:director",
+      "status": "mapped",
+      "where_it_sits": "director",
+      "who_supervises": [],
+      "geography_or_institution": [
+        "statewide"
+      ],
+      "permissions_eventually": [
+        "inspect_all",
+        "appoint_volunteer_manager"
+      ],
+      "dashboard_owner": "/admin/director",
+      "vacancy_behavior": "constitutional_appointment_required",
+      "hierarchy_role": "director",
+      "function_key": null,
+      "review_required": false
+    },
+    {
+      "stable_id": "FP-position-volunteer_manager",
+      "field_plan_key": "volunteer_manager",
+      "canonical_key": "volunteer_manager",
+      "title": "Volunteer Manager",
+      "source_reference": "leadership-role-registry:volunteer_manager",
+      "status": "mapped",
+      "where_it_sits": "volunteer_manager",
+      "who_supervises": [
+        "director"
+      ],
+      "geography_or_institution": [
+        "statewide"
+      ],
+      "permissions_eventually": [
+        "contact",
+        "assign",
+        "promote"
+      ],
+      "dashboard_owner": "/admin/volunteer-command",
+      "vacancy_behavior": "director_appointment_required",
+      "hierarchy_role": "volunteer_manager",
+      "function_key": null,
+      "review_required": false
+    },
+    {
+      "stable_id": "FP-position-college_leader",
+      "field_plan_key": "college_leader",
+      "canonical_key": "college_leader",
+      "title": "College Leader / Education Organizing Lead",
+      "source_reference": "leadership-role-registry:college_leader",
+      "status": "mapped",
+      "where_it_sits": "education_volunteer_command",
+      "who_supervises": [
+        "volunteer_manager"
+      ],
+      "geography_or_institution": [
+        "education_statewide"
+      ],
+      "permissions_eventually": [
+        "contact_education",
+        "assign_education"
+      ],
+      "dashboard_owner": "/admin/college-command",
+      "vacancy_behavior": "open_recruitment_ask",
+      "hierarchy_role": "college_leader",
+      "function_key": null,
+      "review_required": false
+    },
+    {
+      "stable_id": "FP-position-county_volunteer_lead",
+      "field_plan_key": "county_volunteer_lead",
+      "canonical_key": "county_volunteer_lead",
+      "title": "County Volunteer Lead",
+      "source_reference": "leadership-role-registry:county_volunteer_lead",
+      "status": "mapped",
+      "where_it_sits": "county_volunteer_command",
+      "who_supervises": [
+        "volunteer_manager"
+      ],
+      "geography_or_institution": [
+        "county"
+      ],
+      "permissions_eventually": [
+        "contact_county",
+        "assign_county"
+      ],
+      "dashboard_owner": "/admin/counties/:countySlug/volunteer-command",
+      "vacancy_behavior": "open_recruitment_ask",
+      "hierarchy_role": "county_volunteer_lead",
+      "function_key": null,
+      "review_required": false
+    },
+    {
+      "stable_id": "FP-position-institution_lead",
+      "field_plan_key": "institution_lead",
+      "canonical_key": "institution_lead",
+      "title": "Institution Lead",
+      "source_reference": "leadership-role-registry:institution_lead",
+      "status": "mapped",
+      "where_it_sits": "institution",
+      "who_supervises": [
+        "college_leader"
+      ],
+      "geography_or_institution": [
+        "institution",
+        "high_school"
+      ],
+      "permissions_eventually": [
+        "contact_institution",
+        "assign_institution"
+      ],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "vacancy_behavior": "open_recruitment_ask",
+      "hierarchy_role": "institution_lead",
+      "function_key": null,
+      "review_required": false
+    }
+  ],
+  "unmapped": [
+    {
+      "stable_id": "FP-position-media_lead",
+      "field_plan_key": "media_lead",
+      "canonical_key": "media_lead",
+      "title": "Media Lead",
+      "source_reference": "victory-field-framework.local_event_committee:media_lead",
+      "status": "unmapped",
+      "where_it_sits": null,
+      "who_supervises": null,
+      "geography_or_institution": [],
+      "permissions_eventually": [],
+      "dashboard_owner": null,
+      "vacancy_behavior": "open_recruitment_ask",
+      "hierarchy_role": null,
+      "function_key": null,
+      "reason": "CIWS card deferred — Field Plan tracked; no hierarchy seat yet",
+      "review_required": true
+    },
+    {
+      "stable_id": "FP-position-logistics_lead",
+      "field_plan_key": "logistics_lead",
+      "canonical_key": "logistics_lead",
+      "title": "Logistics Lead",
+      "source_reference": "victory-field-framework.local_event_committee:logistics_lead",
+      "status": "unmapped",
+      "where_it_sits": null,
+      "who_supervises": null,
+      "geography_or_institution": [],
+      "permissions_eventually": [],
+      "dashboard_owner": null,
+      "vacancy_behavior": "open_recruitment_ask",
+      "hierarchy_role": null,
+      "function_key": null,
+      "reason": "CIWS card deferred — Field Plan tracked; no hierarchy seat yet",
+      "review_required": true
+    }
+  ],
+  "conflicts": [
+    {
+      "stable_id": "FP-conflict-community-outreach-lane",
+      "field_plan_key": "recruitment_lead+community_social_lead",
+      "canonical_key": "community_outreach_lane",
+      "title": "Community outreach lane — multiple Field Plan positions",
+      "source_reference": "position-mapper:function_key_collision_check",
+      "status": "conflict",
+      "where_it_sits": "committee",
+      "who_supervises": [
+        "county_volunteer_lead",
+        "institution_lead"
+      ],
+      "geography_or_institution": [
+        "county",
+        "institution",
+        "community"
+      ],
+      "permissions_eventually": [],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "vacancy_behavior": "open_recruitment_ask",
+      "hierarchy_role": "functional_lead",
+      "function_key": "community_outreach",
+      "reason": "community_lead and community_social_lead both use function_key community_outreach — keep distinct; do not merge identities",
+      "review_required": true
+    }
+  ],
+  "deferred_central": [
+    {
+      "stable_id": "FP-central-field_director",
+      "field_plan_key": "field_director",
+      "canonical_key": "field_director",
+      "title": "field director",
+      "source_reference": "victory-field-framework.central_activation",
+      "status": "deferred_central",
+      "where_it_sits": "other_campaign_directorates",
+      "who_supervises": [
+        "director"
+      ],
+      "geography_or_institution": [
+        "statewide"
+      ],
+      "permissions_eventually": [],
+      "dashboard_owner": null,
+      "vacancy_behavior": "director_appointment_required",
+      "hierarchy_role": null,
+      "function_key": null,
+      "reason": "queue_for_review_as_other_directorates_not_volunteer_hierarchy",
+      "review_required": true
+    },
+    {
+      "stable_id": "FP-central-volunteer_management",
+      "field_plan_key": "volunteer_management",
+      "canonical_key": "volunteer_management",
+      "title": "volunteer management",
+      "source_reference": "victory-field-framework.central_activation",
+      "status": "deferred_central",
+      "where_it_sits": "other_campaign_directorates",
+      "who_supervises": [
+        "director"
+      ],
+      "geography_or_institution": [
+        "statewide"
+      ],
+      "permissions_eventually": [],
+      "dashboard_owner": null,
+      "vacancy_behavior": "director_appointment_required",
+      "hierarchy_role": null,
+      "function_key": null,
+      "reason": "queue_for_review_as_other_directorates_not_volunteer_hierarchy",
+      "review_required": true
+    },
+    {
+      "stable_id": "FP-central-central_social",
+      "field_plan_key": "central_social",
+      "canonical_key": "central_social",
+      "title": "central social",
+      "source_reference": "victory-field-framework.central_activation",
+      "status": "deferred_central",
+      "where_it_sits": "other_campaign_directorates",
+      "who_supervises": [
+        "director"
+      ],
+      "geography_or_institution": [
+        "statewide"
+      ],
+      "permissions_eventually": [],
+      "dashboard_owner": null,
+      "vacancy_behavior": "director_appointment_required",
+      "hierarchy_role": null,
+      "function_key": null,
+      "reason": "queue_for_review_as_other_directorates_not_volunteer_hierarchy",
+      "review_required": true
+    },
+    {
+      "stable_id": "FP-central-graphic_design",
+      "field_plan_key": "graphic_design",
+      "canonical_key": "graphic_design",
+      "title": "graphic design",
+      "source_reference": "victory-field-framework.central_activation",
+      "status": "deferred_central",
+      "where_it_sits": "other_campaign_directorates",
+      "who_supervises": [
+        "director"
+      ],
+      "geography_or_institution": [
+        "statewide"
+      ],
+      "permissions_eventually": [],
+      "dashboard_owner": null,
+      "vacancy_behavior": "director_appointment_required",
+      "hierarchy_role": null,
+      "function_key": null,
+      "reason": "queue_for_review_as_other_directorates_not_volunteer_hierarchy",
+      "review_required": true
+    },
+    {
+      "stable_id": "FP-central-email_team",
+      "field_plan_key": "email_team",
+      "canonical_key": "email_team",
+      "title": "email team",
+      "source_reference": "victory-field-framework.central_activation",
+      "status": "deferred_central",
+      "where_it_sits": "other_campaign_directorates",
+      "who_supervises": [
+        "director"
+      ],
+      "geography_or_institution": [
+        "statewide"
+      ],
+      "permissions_eventually": [],
+      "dashboard_owner": null,
+      "vacancy_behavior": "director_appointment_required",
+      "hierarchy_role": null,
+      "function_key": null,
+      "reason": "queue_for_review_as_other_directorates_not_volunteer_hierarchy",
+      "review_required": true
+    },
+    {
+      "stable_id": "FP-central-phone_bank",
+      "field_plan_key": "phone_bank",
+      "canonical_key": "phone_bank",
+      "title": "phone bank",
+      "source_reference": "victory-field-framework.central_activation",
+      "status": "deferred_central",
+      "where_it_sits": "other_campaign_directorates",
+      "who_supervises": [
+        "director"
+      ],
+      "geography_or_institution": [
+        "statewide"
+      ],
+      "permissions_eventually": [],
+      "dashboard_owner": null,
+      "vacancy_behavior": "director_appointment_required",
+      "hierarchy_role": null,
+      "function_key": null,
+      "reason": "queue_for_review_as_other_directorates_not_volunteer_hierarchy",
+      "review_required": true
+    },
+    {
+      "stable_id": "FP-central-text_bank",
+      "field_plan_key": "text_bank",
+      "canonical_key": "text_bank",
+      "title": "text bank",
+      "source_reference": "victory-field-framework.central_activation",
+      "status": "deferred_central",
+      "where_it_sits": "other_campaign_directorates",
+      "who_supervises": [
+        "director"
+      ],
+      "geography_or_institution": [
+        "statewide"
+      ],
+      "permissions_eventually": [],
+      "dashboard_owner": null,
+      "vacancy_behavior": "director_appointment_required",
+      "hierarchy_role": null,
+      "function_key": null,
+      "reason": "queue_for_review_as_other_directorates_not_volunteer_hierarchy",
+      "review_required": true
+    },
+    {
+      "stable_id": "FP-central-postcard_team",
+      "field_plan_key": "postcard_team",
+      "canonical_key": "postcard_team",
+      "title": "postcard team",
+      "source_reference": "victory-field-framework.central_activation",
+      "status": "deferred_central",
+      "where_it_sits": "other_campaign_directorates",
+      "who_supervises": [
+        "director"
+      ],
+      "geography_or_institution": [
+        "statewide"
+      ],
+      "permissions_eventually": [],
+      "dashboard_owner": null,
+      "vacancy_behavior": "director_appointment_required",
+      "hierarchy_role": null,
+      "function_key": null,
+      "reason": "queue_for_review_as_other_directorates_not_volunteer_hierarchy",
+      "review_required": true
+    },
+    {
+      "stable_id": "FP-central-young_adult_team",
+      "field_plan_key": "young_adult_team",
+      "canonical_key": "young_adult_team",
+      "title": "young adult team",
+      "source_reference": "victory-field-framework.central_activation",
+      "status": "deferred_central",
+      "where_it_sits": "other_campaign_directorates",
+      "who_supervises": [
+        "director"
+      ],
+      "geography_or_institution": [
+        "statewide"
+      ],
+      "permissions_eventually": [],
+      "dashboard_owner": null,
+      "vacancy_behavior": "director_appointment_required",
+      "hierarchy_role": null,
+      "function_key": null,
+      "reason": "queue_for_review_as_other_directorates_not_volunteer_hierarchy",
+      "review_required": true
+    },
+    {
+      "stable_id": "FP-central-county_strike_team",
+      "field_plan_key": "county_strike_team",
+      "canonical_key": "county_strike_team",
+      "title": "county strike team",
+      "source_reference": "victory-field-framework.central_activation",
+      "status": "deferred_central",
+      "where_it_sits": "other_campaign_directorates",
+      "who_supervises": [
+        "director"
+      ],
+      "geography_or_institution": [
+        "statewide"
+      ],
+      "permissions_eventually": [],
+      "dashboard_owner": null,
+      "vacancy_behavior": "director_appointment_required",
+      "hierarchy_role": null,
+      "function_key": null,
+      "reason": "queue_for_review_as_other_directorates_not_volunteer_hierarchy",
+      "review_required": true
+    },
+    {
+      "stable_id": "FP-central-communications_director",
+      "field_plan_key": "communications_director",
+      "canonical_key": "communications_director",
+      "title": "communications director",
+      "source_reference": "victory-field-framework.central_activation",
+      "status": "deferred_central",
+      "where_it_sits": "other_campaign_directorates",
+      "who_supervises": [
+        "director"
+      ],
+      "geography_or_institution": [
+        "statewide"
+      ],
+      "permissions_eventually": [],
+      "dashboard_owner": null,
+      "vacancy_behavior": "director_appointment_required",
+      "hierarchy_role": null,
+      "function_key": null,
+      "reason": "queue_for_review_as_other_directorates_not_volunteer_hierarchy",
+      "review_required": true
+    },
+    {
+      "stable_id": "FP-central-press_office",
+      "field_plan_key": "press_office",
+      "canonical_key": "press_office",
+      "title": "press office",
+      "source_reference": "victory-field-framework.central_activation",
+      "status": "deferred_central",
+      "where_it_sits": "other_campaign_directorates",
+      "who_supervises": [
+        "director"
+      ],
+      "geography_or_institution": [
+        "statewide"
+      ],
+      "permissions_eventually": [],
+      "dashboard_owner": null,
+      "vacancy_behavior": "director_appointment_required",
+      "hierarchy_role": null,
+      "function_key": null,
+      "reason": "queue_for_review_as_other_directorates_not_volunteer_hierarchy",
+      "review_required": true
+    },
+    {
+      "stable_id": "FP-central-data_team",
+      "field_plan_key": "data_team",
+      "canonical_key": "data_team",
+      "title": "data team",
+      "source_reference": "victory-field-framework.central_activation",
+      "status": "deferred_central",
+      "where_it_sits": "other_campaign_directorates",
+      "who_supervises": [
+        "director"
+      ],
+      "geography_or_institution": [
+        "statewide"
+      ],
+      "permissions_eventually": [],
+      "dashboard_owner": null,
+      "vacancy_behavior": "director_appointment_required",
+      "hierarchy_role": null,
+      "function_key": null,
+      "reason": "queue_for_review_as_other_directorates_not_volunteer_hierarchy",
+      "review_required": true
+    },
+    {
+      "stable_id": "FP-central-voter_registration_director",
+      "field_plan_key": "voter_registration_director",
+      "canonical_key": "voter_registration_director",
+      "title": "voter registration director",
+      "source_reference": "victory-field-framework.central_activation",
+      "status": "deferred_central",
+      "where_it_sits": "other_campaign_directorates",
+      "who_supervises": [
+        "director"
+      ],
+      "geography_or_institution": [
+        "statewide"
+      ],
+      "permissions_eventually": [],
+      "dashboard_owner": null,
+      "vacancy_behavior": "director_appointment_required",
+      "hierarchy_role": null,
+      "function_key": null,
+      "reason": "queue_for_review_as_other_directorates_not_volunteer_hierarchy",
+      "review_required": true
+    },
+    {
+      "stable_id": "FP-central-fundraising",
+      "field_plan_key": "fundraising",
+      "canonical_key": "fundraising",
+      "title": "fundraising",
+      "source_reference": "victory-field-framework.central_activation",
+      "status": "deferred_central",
+      "where_it_sits": "other_campaign_directorates",
+      "who_supervises": [
+        "director"
+      ],
+      "geography_or_institution": [
+        "statewide"
+      ],
+      "permissions_eventually": [],
+      "dashboard_owner": null,
+      "vacancy_behavior": "director_appointment_required",
+      "hierarchy_role": null,
+      "function_key": null,
+      "reason": "queue_for_review_as_other_directorates_not_volunteer_hierarchy",
+      "review_required": true
+    },
+    {
+      "stable_id": "FP-central-operations",
+      "field_plan_key": "operations",
+      "canonical_key": "operations",
+      "title": "operations",
+      "source_reference": "victory-field-framework.central_activation",
+      "status": "deferred_central",
+      "where_it_sits": "other_campaign_directorates",
+      "who_supervises": [
+        "director"
+      ],
+      "geography_or_institution": [
+        "statewide"
+      ],
+      "permissions_eventually": [],
+      "dashboard_owner": null,
+      "vacancy_behavior": "director_appointment_required",
+      "hierarchy_role": null,
+      "function_key": null,
+      "reason": "queue_for_review_as_other_directorates_not_volunteer_hierarchy",
+      "review_required": true
+    }
+  ],
+  "mapping_questions": [
+    "where_does_position_sit",
+    "who_supervises",
+    "geography_or_institution",
+    "eventual_permissions",
+    "dashboard_owner",
+    "vacancy_behavior"
+  ]
+}
