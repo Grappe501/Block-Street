@@ -12,7 +12,7 @@
     "phase8Status": "complete",
     "phase9Status": "complete",
     "phase10Status": "complete",
-    "lastUpdated": "2026-07-14T08:02:28.768Z",
+    "lastUpdated": "2026-07-14T08:06:09.720Z",
     "deployUrl": "https://block-street.netlify.app/",
     "githubRepo": "https://github.com/Grappe501/Block-Street",
     "netlifyStatus": "live",
@@ -20,8 +20,8 @@
     "electionDate": "2026-11-03",
     "launchCallDate": "2026-07-14",
     "leaderTestingDate": "2026-07-12",
-    "phase11Status": "in_progress",
-    "activeProgram": "V1-CERT-PASS-01 complete · Launch first-run live on main@4c8bfbc",
+    "phase11Status": "complete",
+    "activeProgram": "Phase 11 complete · first-run live · V1 Cert continuity (Pass 2+)",
     "productionCommit": "4c8bfbc"
   },
   "constitutionalLayer": {
@@ -36,7 +36,7 @@
     "launchReady": false,
     "launchChecklistComplete": 6,
     "launchChecklistTotal": 10,
-    "notes": "Invite-chain + choose-place live; production DB still pending; CERTIFIED PRESENT = 0 until later passes"
+    "notes": "First-run invite-chain live (/start · choose-place · map lock · Netlify Blobs). Full LSA checklist still pending DB; CERTIFIED PRESENT = 0 until later passes."
   },
   "volume0": {
     "id": 0,
@@ -1282,7 +1282,7 @@
       "id": 11,
       "name": "Living Intelligence & V1 Launch",
       "slug": "phase-11-living-intelligence",
-      "status": "in_progress",
+      "status": "done",
       "docPath": "docs/phase-11/PHASE_11_BUILD_LEDGER.md",
       "registryPath": "docs/v1-certification/README.md",
       "question": "Did we build the Living Intelligence platform — and can Humans enter it tonight?",
@@ -1334,10 +1334,11 @@
         {
           "id": "11.LAUNCH",
           "name": "Live first-run launch path",
-          "status": "in_progress",
-          "notes": "Steve bootstrap /start · durable Netlify Blobs · choose-place · map lock · session on invite accept · pushed main@4c8bfbc"
+          "status": "done",
+          "notes": "Steve bootstrap /start · Netlify Blobs · choose-place · map lock · invite session · docs/phase-11/11.LAUNCH_FIRST_RUN.md"
         }
-      ]
+      ],
+      "notes": "All 8 steps closed: INI/OBJ/OPS/LIX/COM/ADP + Cert Pass 1 + Launch first-run."
     }
   ],
   "versions": [
@@ -1380,7 +1381,7 @@
     {
       "version": "1.0.0-launch",
       "name": "July 14 live invite-chain launch",
-      "status": "in_progress",
+      "status": "done",
       "date": "2026-07-14"
     },
     {
@@ -1391,6 +1392,12 @@
     }
   ],
   "buildLog": [
+    {
+      "date": "2026-07-14",
+      "title": "PHASE-011.LAUNCH — Live first-run path closed · Phase 11 Complete",
+      "phase": 11,
+      "summary": "8/8 ledger steps done · /start invite chain · choose-place map lock · durable Blobs · Pass 1 retained · next program = V1 Cert Pass 2+"
+    },
     {
       "date": "2026-07-14",
       "title": "PHASE-010.7–10.8 Research & Policy Lab + Civic Impact Analytics — Phase 10 Complete",
@@ -1958,10 +1965,10 @@
   ],
   "stats": {
     "totalSteps": 114,
-    "doneSteps": 113,
-    "inProgressSteps": 1,
+    "doneSteps": 114,
+    "inProgressSteps": 0,
     "pendingSteps": 0,
-    "percentComplete": 99,
-    "note": "Percent from phase steps only. Architecture Complete ≠ product CERTIFIED PRESENT (Pass 1)."
+    "percentComplete": 100,
+    "note": "All phase steps closed. Architecture Complete ≠ product CERTIFIED PRESENT (Pass 1: 20.2%)."
   }
 }

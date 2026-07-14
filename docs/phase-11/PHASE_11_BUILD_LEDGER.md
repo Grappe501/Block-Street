@@ -7,12 +7,14 @@
 
 | Metric | Value |
 |--------|-------|
+| **Phase 11 status** | **Complete** (8/8 ledger steps) |
 | Build 11.7 Living Intelligence | **Architecture Complete** (W1–W16) |
-| Active program | **Version 1.0 Certification — Pass 1** (`V1-CERT-PASS-01`) |
+| Build 11.12 | 100% (W1–W8 complete) |
+| V1 Certification Pass 1 | **Complete** (`V1-CERT-PASS-01`) |
 | Pass 1 overall vision fulfillment | **20.2%** (matrix-computed; see `docs/v1-certification/PASS_01_EXECUTIVE_SUMMARY.md`) |
 | CERTIFIED PRESENT capabilities | **0** (six-axis gate; journey/production proof deferred to later passes) |
-| Build 11.12 | 100% (W1–W8 complete) |
-| Current focus | Product Review Board — **no product repairs** until Steve accepts Pass 1 |
+| **11.LAUNCH** | **Complete** — live first-run path (`docs/phase-11/11.LAUNCH_FIRST_RUN.md`) |
+| Active program | Continuity: Certification Passes 2+ / Review Board — **no product repairs** until Steve accepts Pass 1 |
 
 ## Build 11.1 — Initiative Architecture
 
@@ -95,6 +97,19 @@ Downstream work is **Version 1.0 Certification** (`docs/v1-certification/`):
 - Canonical artifact: `docs/v1-certification/V1_CERTIFICATION_MATRIX.md`
 - Pass 1 Vision Audit seeded: protocol-complete ≠ product-complete
 - Do not open Build 11.8 conceptual layers until Certification Passes 1–9 complete
+
+## Build 11.LAUNCH — Live First-Run Path
+
+| Item | Status |
+|------|--------|
+| `/start` Steve bootstrap + invite creation | **Complete** |
+| Durable Netlify Blobs persistence | **Complete** |
+| `/choose-place` + home-place cookie | **Complete** |
+| Map lock / progressive LaunchChrome | **Complete** |
+| Session cookie on invite accept | **Complete** |
+
+**Closeout:** `docs/phase-11/11.LAUNCH_FIRST_RUN.md`  
+**Phase 11:** **Done** — Living Intelligence architecture + Pass 1 + first-run invite chain shipped. Further V1 certification passes continue outside this ledger’s 8 steps.
 
 ## Live Ledger
 
