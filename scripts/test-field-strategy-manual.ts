@@ -19,6 +19,12 @@ assert.ok(existsSync(join(process.cwd(), "src/app/field-strategy/presentation/pa
 assert.ok(existsSync(join(process.cwd(), "src/app/field-strategy/[section]/page.tsx")));
 assert.ok(existsSync(join(process.cwd(), "src/components/field-strategy/FieldManualNavTab.tsx")));
 assert.ok(existsSync(join(process.cwd(), "src/lib/field-strategy/open-manual-window.ts")));
+const openManual = require("fs").readFileSync(
+  join(process.cwd(), "src/lib/field-strategy/open-manual-window.ts"),
+  "utf8",
+);
+assert.ok(openManual.includes("FIELD_PLATFORM_URL"));
+assert.ok(openManual.includes("openFieldPlatformWindow"));
 
 const adminLayout = require("fs").readFileSync(
   join(process.cwd(), "src/app/admin/layout.tsx"),
