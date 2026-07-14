@@ -9,6 +9,7 @@ export function CommandChrome({
   children,
   backHref = "/command",
   backLabel = "Command hub",
+  nav,
 }: {
   title: string;
   subtitle?: string;
@@ -16,6 +17,7 @@ export function CommandChrome({
   children: ReactNode;
   backHref?: string;
   backLabel?: string;
+  nav?: ReactNode;
 }) {
   return (
     <div className="min-h-screen bg-field-paper text-field-ink">
@@ -33,6 +35,7 @@ export function CommandChrome({
           {subtitle ? (
             <p className="mt-3 max-w-2xl font-fieldSans text-base leading-relaxed text-field-mist/90">{subtitle}</p>
           ) : null}
+          {nav ? <div className="mt-4">{nav}</div> : null}
         </div>
       </header>
       <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6">{children}</div>
