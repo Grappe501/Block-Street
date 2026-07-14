@@ -4,17 +4,21 @@
   "defaultGoalTargets": {
     "county": {
       "registration": 250,
-      "vote_participation": 180
+      "vote_participation": 180,
+      "registrationRateOfVap": 0.015,
+      "vciShareOfRegistration": 0.75
     },
     "institution": {
-      "registrationPercentOfEnrollment": 0.05,
-      "voteParticipationPercentOfRegistration": 0.75
+      "method": "proportional_to_county_vap",
+      "note": "campus_goal = county_goal × (enrollment ÷ county_voting_age_population)"
     },
     "high_school": {
+      "method": "proportional_to_county_vap",
       "registration": 75,
       "vote_participation": 50
     },
     "private_charter": {
+      "method": "proportional_to_county_vap",
       "registration": 50,
       "vote_participation": 35
     }

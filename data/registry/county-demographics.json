@@ -1,0 +1,384 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-07-14T09:11:31.390Z",
+  "source": "approx_census_2020_totals_vap_share_0.76",
+  "estimate": true,
+  "note": "voting_age_population is an estimate (76% of total) until ACS VAP is loaded.",
+  "counties": {
+    "arkansas": {
+      "population": 19019,
+      "voting_age_population": 14454,
+      "vap_method": "estimate_share_0.76"
+    },
+    "ashley": {
+      "population": 19062,
+      "voting_age_population": 14487,
+      "vap_method": "estimate_share_0.76"
+    },
+    "baxter": {
+      "population": 41627,
+      "voting_age_population": 31637,
+      "vap_method": "estimate_share_0.76"
+    },
+    "benton": {
+      "population": 284333,
+      "voting_age_population": 216093,
+      "vap_method": "estimate_share_0.76"
+    },
+    "boone": {
+      "population": 37432,
+      "voting_age_population": 28448,
+      "vap_method": "estimate_share_0.76"
+    },
+    "bradley": {
+      "population": 10545,
+      "voting_age_population": 8014,
+      "vap_method": "estimate_share_0.76"
+    },
+    "calhoun": {
+      "population": 4726,
+      "voting_age_population": 3592,
+      "vap_method": "estimate_share_0.76"
+    },
+    "carroll": {
+      "population": 28260,
+      "voting_age_population": 21478,
+      "vap_method": "estimate_share_0.76"
+    },
+    "chicot": {
+      "population": 10208,
+      "voting_age_population": 7758,
+      "vap_method": "estimate_share_0.76"
+    },
+    "clark": {
+      "population": 21446,
+      "voting_age_population": 16299,
+      "vap_method": "estimate_share_0.76"
+    },
+    "clay": {
+      "population": 14564,
+      "voting_age_population": 11069,
+      "vap_method": "estimate_share_0.76"
+    },
+    "cleburne": {
+      "population": 24711,
+      "voting_age_population": 18780,
+      "vap_method": "estimate_share_0.76"
+    },
+    "cleveland": {
+      "population": 7550,
+      "voting_age_population": 5738,
+      "vap_method": "estimate_share_0.76"
+    },
+    "columbia": {
+      "population": 22800,
+      "voting_age_population": 17328,
+      "vap_method": "estimate_share_0.76"
+    },
+    "conway": {
+      "population": 20826,
+      "voting_age_population": 15828,
+      "vap_method": "estimate_share_0.76"
+    },
+    "craighead": {
+      "population": 111231,
+      "voting_age_population": 84536,
+      "vap_method": "estimate_share_0.76"
+    },
+    "crawford": {
+      "population": 60133,
+      "voting_age_population": 45701,
+      "vap_method": "estimate_share_0.76"
+    },
+    "crittenden": {
+      "population": 48163,
+      "voting_age_population": 36604,
+      "vap_method": "estimate_share_0.76"
+    },
+    "cross": {
+      "population": 16833,
+      "voting_age_population": 12793,
+      "vap_method": "estimate_share_0.76"
+    },
+    "dallas": {
+      "population": 6482,
+      "voting_age_population": 4926,
+      "vap_method": "estimate_share_0.76"
+    },
+    "desha": {
+      "population": 11395,
+      "voting_age_population": 8660,
+      "vap_method": "estimate_share_0.76"
+    },
+    "drew": {
+      "population": 17460,
+      "voting_age_population": 13270,
+      "vap_method": "estimate_share_0.76"
+    },
+    "faulkner": {
+      "population": 123498,
+      "voting_age_population": 93858,
+      "vap_method": "estimate_share_0.76"
+    },
+    "franklin": {
+      "population": 17097,
+      "voting_age_population": 12994,
+      "vap_method": "estimate_share_0.76"
+    },
+    "fulton": {
+      "population": 12075,
+      "voting_age_population": 9177,
+      "vap_method": "estimate_share_0.76"
+    },
+    "garland": {
+      "population": 100180,
+      "voting_age_population": 76137,
+      "vap_method": "estimate_share_0.76"
+    },
+    "grant": {
+      "population": 17958,
+      "voting_age_population": 13648,
+      "vap_method": "estimate_share_0.76"
+    },
+    "greene": {
+      "population": 45885,
+      "voting_age_population": 34873,
+      "vap_method": "estimate_share_0.76"
+    },
+    "hempstead": {
+      "population": 20128,
+      "voting_age_population": 15297,
+      "vap_method": "estimate_share_0.76"
+    },
+    "hot-spring": {
+      "population": 33040,
+      "voting_age_population": 25110,
+      "vap_method": "estimate_share_0.76"
+    },
+    "howard": {
+      "population": 12821,
+      "voting_age_population": 9744,
+      "vap_method": "estimate_share_0.76"
+    },
+    "independence": {
+      "population": 37938,
+      "voting_age_population": 28833,
+      "vap_method": "estimate_share_0.76"
+    },
+    "izard": {
+      "population": 13577,
+      "voting_age_population": 10319,
+      "vap_method": "estimate_share_0.76"
+    },
+    "jackson": {
+      "population": 16755,
+      "voting_age_population": 12734,
+      "vap_method": "estimate_share_0.76"
+    },
+    "jefferson": {
+      "population": 67260,
+      "voting_age_population": 51118,
+      "vap_method": "estimate_share_0.76"
+    },
+    "johnson": {
+      "population": 25789,
+      "voting_age_population": 19600,
+      "vap_method": "estimate_share_0.76"
+    },
+    "lafayette": {
+      "population": 6306,
+      "voting_age_population": 4793,
+      "vap_method": "estimate_share_0.76"
+    },
+    "lawrence": {
+      "population": 16220,
+      "voting_age_population": 12327,
+      "vap_method": "estimate_share_0.76"
+    },
+    "lee": {
+      "population": 8615,
+      "voting_age_population": 6547,
+      "vap_method": "estimate_share_0.76"
+    },
+    "lincoln": {
+      "population": 12941,
+      "voting_age_population": 9835,
+      "vap_method": "estimate_share_0.76"
+    },
+    "little-river": {
+      "population": 12026,
+      "voting_age_population": 9140,
+      "vap_method": "estimate_share_0.76"
+    },
+    "logan": {
+      "population": 21131,
+      "voting_age_population": 16060,
+      "vap_method": "estimate_share_0.76"
+    },
+    "lonoke": {
+      "population": 74015,
+      "voting_age_population": 56251,
+      "vap_method": "estimate_share_0.76"
+    },
+    "madison": {
+      "population": 16576,
+      "voting_age_population": 12598,
+      "vap_method": "estimate_share_0.76"
+    },
+    "marion": {
+      "population": 16826,
+      "voting_age_population": 12788,
+      "vap_method": "estimate_share_0.76"
+    },
+    "miller": {
+      "population": 42600,
+      "voting_age_population": 32376,
+      "vap_method": "estimate_share_0.76"
+    },
+    "mississippi": {
+      "population": 40685,
+      "voting_age_population": 30921,
+      "vap_method": "estimate_share_0.76"
+    },
+    "monroe": {
+      "population": 6799,
+      "voting_age_population": 5167,
+      "vap_method": "estimate_share_0.76"
+    },
+    "montgomery": {
+      "population": 8984,
+      "voting_age_population": 6828,
+      "vap_method": "estimate_share_0.76"
+    },
+    "nevada": {
+      "population": 8310,
+      "voting_age_population": 6316,
+      "vap_method": "estimate_share_0.76"
+    },
+    "newton": {
+      "population": 7225,
+      "voting_age_population": 5491,
+      "vap_method": "estimate_share_0.76"
+    },
+    "ouachita": {
+      "population": 22650,
+      "voting_age_population": 17214,
+      "vap_method": "estimate_share_0.76"
+    },
+    "perry": {
+      "population": 10019,
+      "voting_age_population": 7614,
+      "vap_method": "estimate_share_0.76"
+    },
+    "phillips": {
+      "population": 16568,
+      "voting_age_population": 12592,
+      "vap_method": "estimate_share_0.76"
+    },
+    "pike": {
+      "population": 10171,
+      "voting_age_population": 7730,
+      "vap_method": "estimate_share_0.76"
+    },
+    "poinsett": {
+      "population": 22965,
+      "voting_age_population": 17453,
+      "vap_method": "estimate_share_0.76"
+    },
+    "polk": {
+      "population": 19221,
+      "voting_age_population": 14608,
+      "vap_method": "estimate_share_0.76"
+    },
+    "pope": {
+      "population": 63381,
+      "voting_age_population": 48170,
+      "vap_method": "estimate_share_0.76"
+    },
+    "prairie": {
+      "population": 8283,
+      "voting_age_population": 6295,
+      "vap_method": "estimate_share_0.76"
+    },
+    "pulaski": {
+      "population": 399125,
+      "voting_age_population": 303335,
+      "vap_method": "estimate_share_0.76"
+    },
+    "randolph": {
+      "population": 18648,
+      "voting_age_population": 14172,
+      "vap_method": "estimate_share_0.76"
+    },
+    "st-francis": {
+      "population": 23090,
+      "voting_age_population": 17548,
+      "vap_method": "estimate_share_0.76"
+    },
+    "saline": {
+      "population": 123416,
+      "voting_age_population": 93796,
+      "vap_method": "estimate_share_0.76"
+    },
+    "scott": {
+      "population": 9836,
+      "voting_age_population": 7475,
+      "vap_method": "estimate_share_0.76"
+    },
+    "searcy": {
+      "population": 7868,
+      "voting_age_population": 5980,
+      "vap_method": "estimate_share_0.76"
+    },
+    "sebastian": {
+      "population": 127799,
+      "voting_age_population": 97127,
+      "vap_method": "estimate_share_0.76"
+    },
+    "sevier": {
+      "population": 15839,
+      "voting_age_population": 12038,
+      "vap_method": "estimate_share_0.76"
+    },
+    "sharp": {
+      "population": 17555,
+      "voting_age_population": 13342,
+      "vap_method": "estimate_share_0.76"
+    },
+    "stone": {
+      "population": 12559,
+      "voting_age_population": 9545,
+      "vap_method": "estimate_share_0.76"
+    },
+    "union": {
+      "population": 39054,
+      "voting_age_population": 29681,
+      "vap_method": "estimate_share_0.76"
+    },
+    "van-buren": {
+      "population": 15809,
+      "voting_age_population": 12015,
+      "vap_method": "estimate_share_0.76"
+    },
+    "washington": {
+      "population": 245565,
+      "voting_age_population": 186629,
+      "vap_method": "estimate_share_0.76"
+    },
+    "white": {
+      "population": 76786,
+      "voting_age_population": 58357,
+      "vap_method": "estimate_share_0.76"
+    },
+    "woodruff": {
+      "population": 6269,
+      "voting_age_population": 4764,
+      "vap_method": "estimate_share_0.76"
+    },
+    "yell": {
+      "population": 20263,
+      "voting_age_population": 15400,
+      "vap_method": "estimate_share_0.76"
+    }
+  }
+}

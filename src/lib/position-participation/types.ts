@@ -99,9 +99,14 @@ export type HonestParticipationMetrics = {
   participation_goal: number;
   remaining_need: number;
   goal_calculation: GoalCalculation;
-  /** Legacy registration / vote targets (honest current = confirmed_participants, never mock %) */
+  /** Civic targets — campus uses county-VAP proportional formula */
   registration_target: number;
   vote_participation_target: number;
+  civic_goal_explanation?: string[];
+  civic_goal_formula?: string;
+  campus_share_of_county_vap?: number | null;
+  county_voting_age_population?: number | null;
+  campus_enrollment?: number | null;
 };
 
 export type PositionCardView = {

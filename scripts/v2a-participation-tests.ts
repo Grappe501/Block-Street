@@ -42,12 +42,34 @@ function testCanonicalDedup() {
 }
 
 function testHendersonMetrics() {
-  const m = getScopeMetrics({ kind: "institution", slug: "henderson-state", enrollment: 3190 });
+  const m = getScopeMetrics({
+    kind: "institution",
+    slug: "henderson-state",
+    enrollment: 3190,
+    countySlug: "clark",
+  });
   assert.strictEqual(m.confirmed_people, 1);
   assert.strictEqual(m.confirmed_participants, 1);
   assert.strictEqual(m.system_identities, 2);
   assert.strictEqual(m.participation_goal, 6);
   assert.strictEqual(m.remaining_need, 5);
+}
+
+function testHendersonProportionalCivic() {
+  const m = getScopeMetrics({
+    kind: "institution",
+    slug: "henderson-state",
+    enrollment: 3190,
+    countySlug: "clark",
+  });
+  assert.ok(m.campus_enrollment === 3190);
+  assert.ok((m.county_voting_age_population ?? 0) > 10000);
+  assert.ok((m.campus_share_of_county_vap ?? 0) > 0.1);
+  assert.ok(m.registration_target >= 15);
+  assert.ok(m.vote_participation_target >= 10);
+  assert.ok(m.civic_goal_formula?.includes("county_voting_age_population"));
+  // Proportional: not the old 5%-of-enrollment invention (160)
+  assert.ok(m.registration_target < 160);
 }
 
 function testLegacySixForensic() {
@@ -143,6 +165,7 @@ try {
   testLabels();
   testCanonicalDedup();
   testHendersonMetrics();
+  testHendersonProportionalCivic();
   testLegacySixForensic();
   testMembershipCoLeads();
   testGoalNotFromMembership();

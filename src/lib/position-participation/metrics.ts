@@ -1,14 +1,18 @@
 import workspaceSeeds from "../../../data/communities/workspace-seeds.json";
 import { loadPositionStore, resolveCanonicalPersonId } from "./store";
+import {
+  computeCampusProportionalCivicGoals,
+  resolveCountyCivicGoals,
+} from "./proportional-goals";
 import type { GoalCalculation, HonestParticipationMetrics, ScopeType } from "./types";
+import { toCommunityId } from "@/lib/community-workspace/roles";
 
 const PLACEHOLDER_FIELD_PLAN = "Detailed responsibilities will be added from the campaign Field Plan.";
 
 export { PLACEHOLDER_FIELD_PLAN };
 
 /**
- * Strategic participation goal — never equal to "how many accounts exist now".
- * participation_goal = max(manual, population×rate when applicable, minimum_launch_team)
+ * Strategic participation (launch-team) goal — never equal to "how many accounts exist now".
  */
 export function computeParticipationGoal(input: {
   scopeId: string;
@@ -18,45 +22,28 @@ export function computeParticipationGoal(input: {
   const store = loadPositionStore();
   const minimum_launch_team = store.minimum_launch_team ?? 6;
   const manual = store.manual_goals[input.scopeId]?.launch_team ?? null;
-  const defaults = workspaceSeeds.defaultGoalTargets;
 
-  let eligible_population: number | null = null;
-  let participation_rate: number | null = null;
-  let derivedFromPop = 0;
-
-  if (input.kind === "institution" && input.enrollment) {
-    eligible_population = input.enrollment;
-    participation_rate = defaults.institution.registrationPercentOfEnrollment;
-    // Launch-team formula uses a soft floor; long-term enrollment target is separate (registration_target).
-    derivedFromPop = 0;
-  }
-
-  const computed_goal = Math.max(
-    manual ?? 0,
-    derivedFromPop,
-    minimum_launch_team
-  );
+  const computed_goal = Math.max(manual ?? 0, minimum_launch_team);
 
   const explanation = [
     `minimum_launch_team = ${minimum_launch_team}`,
     manual != null ? `configured_manual_goal = ${manual}` : "configured_manual_goal = (none)",
-    `computed = max(manual, population×rate for launch, minimum) = ${computed_goal}`,
+    `computed = max(manual, minimum_launch_team) = ${computed_goal}`,
+    "Launch-team goal is separate from voter registration / VCI civic targets.",
     "This is a strategic TARGET, not a count of people already participating.",
   ];
 
   return {
     kind: "launch_team",
-    formula: "max(configured_manual_goal, eligible_population × participation_rate, minimum_launch_team)",
+    formula: "max(configured_manual_goal, minimum_launch_team)",
     inputs: {
       minimum_launch_team,
       configured_manual_goal: manual,
-      eligible_population,
-      participation_rate,
       enrollment: input.enrollment ?? null,
     },
     configured_manual_goal: manual,
-    eligible_population,
-    participation_rate,
+    eligible_population: input.enrollment ?? null,
+    participation_rate: null,
     minimum_launch_team,
     computed_goal,
     explanation,
@@ -68,6 +55,7 @@ export function computeHonestMetrics(input: {
   scopeType: ScopeType;
   kind: "county" | "institution" | "high_school" | "private_charter";
   enrollment?: number | null;
+  countySlug: string;
 }): HonestParticipationMetrics {
   const store = loadPositionStore();
   const peopleInScope = store.persons.filter((p) => p.scopes.includes(input.scopeId));
@@ -77,14 +65,11 @@ export function computeHonestMetrics(input: {
     (m) => m.scope_id === input.scopeId && m.status === "active"
   );
   const participantIds = activeMemberships.map((m) => m.canonical_person_id);
-  // Confirmed participants = unique people who joined OR are explicitly scoped as connected people
   const confirmedSet = new Set<string>([
     ...peopleInScope.map((p) => p.canonical_person_id),
     ...participantIds.map((id) => resolveCanonicalPersonId(id, store)),
   ]);
-  // Soft-beta truth for Henderson: scoped persons count as confirmed people/participants when present
   const confirmed_participants = confirmedSet.size;
-
   const system_identities = peopleInScope.reduce((n, p) => n + (p.system_identity_ids?.length ?? 0), 0);
 
   const goalCalc = computeParticipationGoal({
@@ -93,26 +78,44 @@ export function computeHonestMetrics(input: {
     kind: input.kind,
   });
 
-  const defaults = workspaceSeeds.defaultGoalTargets;
+  const countyCommunityId = toCommunityId("county", input.countySlug);
+  const countySeed = (workspaceSeeds.seeds as Record<string, { goals?: { registration?: { target?: number }; vote_participation?: { target?: number } } }>)[
+    countyCommunityId
+  ]?.goals;
+
   let registration_target: number;
   let vote_participation_target: number;
+  let civic_goal_explanation: string[] | undefined;
+  let civic_goal_formula: string | undefined;
+  let campus_share_of_county_vap: number | null = null;
+  let county_voting_age_population: number | null = null;
+  let campus_enrollment: number | null = null;
+
   if (input.kind === "county") {
-    registration_target = defaults.county.registration;
-    vote_participation_target = defaults.county.vote_participation;
-  } else if (input.kind === "institution" && input.enrollment) {
-    registration_target = Math.max(
-      50,
-      Math.round(input.enrollment * defaults.institution.registrationPercentOfEnrollment)
-    );
-    vote_participation_target = Math.round(
-      registration_target * defaults.institution.voteParticipationPercentOfRegistration
-    );
-  } else if (input.kind === "high_school") {
-    registration_target = defaults.high_school.registration;
-    vote_participation_target = defaults.high_school.vote_participation;
+    const county = resolveCountyCivicGoals(input.countySlug, countySeed);
+    registration_target = county.registration;
+    vote_participation_target = county.vci;
+    county_voting_age_population = county.vap;
+    civic_goal_formula = "county_goal = max(default_floor, round(county_vap × registration_rate)) · VCI = registration × share";
+    civic_goal_explanation = [
+      `County voting-age population${county.estimate ? " (estimate)" : ""}: ${county.vap.toLocaleString()}`,
+      `Voter registration goal: ${county.registration.toLocaleString()}`,
+      `VCI goal: ${county.vci.toLocaleString()}`,
+    ];
   } else {
-    registration_target = defaults.private_charter.registration;
-    vote_participation_target = defaults.private_charter.vote_participation;
+    const enrollment = input.enrollment ?? 0;
+    const proportional = computeCampusProportionalCivicGoals({
+      countySlug: input.countySlug,
+      enrollment,
+      countySeed,
+    });
+    registration_target = proportional.registration_goal;
+    vote_participation_target = proportional.vci_goal;
+    civic_goal_explanation = proportional.explanation;
+    civic_goal_formula = proportional.formula;
+    campus_share_of_county_vap = proportional.share_of_county_vap;
+    county_voting_age_population = proportional.county_voting_age_population;
+    campus_enrollment = proportional.enrollment;
   }
 
   const manualReg = store.manual_goals[input.scopeId]?.registration;
@@ -131,6 +134,11 @@ export function computeHonestMetrics(input: {
     goal_calculation: goalCalc,
     registration_target,
     vote_participation_target,
+    civic_goal_explanation,
+    civic_goal_formula,
+    campus_share_of_county_vap,
+    county_voting_age_population,
+    campus_enrollment,
   };
 }
 

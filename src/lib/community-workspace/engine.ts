@@ -24,8 +24,8 @@ import type {
 type SeedFile = typeof workspaceSeeds;
 
 const GOAL_LABELS: Record<GoalKind, string> = {
-  registration: "Registration Goal",
-  vote_participation: "Vote Participation Goal",
+  registration: "Voter Registration Goal",
+  vote_participation: "VCI Goal",
 };
 
 const DEFAULT_DEADLINES: Record<GoalKind, string> = {
@@ -114,6 +114,7 @@ function defaultGoals(ctx: CommunityContext, confirmedParticipants: number): Com
     kind: ctx.kind,
     slug: ctx.slug,
     enrollment: ctx.enrollment,
+    countySlug: ctx.countySlug,
   });
 
   const regTarget = metrics.registration_target;
@@ -121,9 +122,16 @@ function defaultGoals(ctx: CommunityContext, confirmedParticipants: number): Com
 
   // Never invent people via percentage floors. Current = confirmed participants only
   // (or explicit seed.current when operators have published verified tallies).
+  // Campus registration / VCI targets always come from county-VAP proportional metrics
+  // (school seed targets are not used — county seed targets feed the proportional base).
   return (["registration", "vote_participation"] as GoalKind[]).map((kind) => {
     const seeded = seed?.goals?.[kind];
-    const target = seeded?.target ?? (kind === "registration" ? regTarget : voteTarget);
+    const useSeedTarget = ctx.kind === "county" && typeof seeded?.target === "number";
+    const target = useSeedTarget
+      ? (seeded!.target as number)
+      : kind === "registration"
+        ? regTarget
+        : voteTarget;
     const current =
       typeof seeded?.current === "number" ? seeded.current : confirmedParticipants;
     const deadline = seeded?.deadline ?? DEFAULT_DEADLINES[kind];
@@ -266,7 +274,7 @@ export function assembleCommunityWorkspace(kind: CommunityKind, slug: string): C
   const communityId = toCommunityId(kind, slug);
   const seed = (workspaceSeeds.seeds as Record<string, WorkspaceSeed>)[communityId];
   const county = getCountyBySlug(ctx.countySlug);
-  const metrics = getScopeMetrics({ kind: ctx.kind, slug: ctx.slug, enrollment: ctx.enrollment });
+  const metrics = getScopeMetrics({ kind: ctx.kind, slug: ctx.slug, enrollment: ctx.enrollment, countySlug: ctx.countySlug });
   const goals = defaultGoals(ctx, metrics.confirmed_participants);
   const roles = defaultRoles(ctx);
   const meetup = defaultMeetup(ctx, roles);

@@ -78,6 +78,7 @@ export function CommunityGoals({
   primaryColor?: string;
 }) {
   const [showCalc, setShowCalc] = useState(false);
+  const [showCivic, setShowCivic] = useState(false);
   const calc = metrics.goal_calculation;
   const accent = primaryColor ?? "#0d9488";
 
@@ -152,10 +153,47 @@ export function CommunityGoals({
         )}
 
         <div className="border-t border-slate-100 pt-5">
-          <h3 className="text-sm font-bold text-slate-950">Long-horizon civic targets</h3>
+          <h3 className="text-sm font-bold text-slate-950">Civic targets — registration &amp; VCI</h3>
           <p className="mt-1 text-xs text-slate-600">
-            Progress uses confirmed participants only — never mock membership floors.
+            {metrics.campus_enrollment != null
+              ? "Campus treated like a city: goals scale with enrollment ÷ county voting-age population."
+              : "County targets use voting-age population rates (or seeded county goals)."}{" "}
+            Progress “current” uses confirmed participants only.
           </p>
+          {metrics.civic_goal_formula && (
+            <>
+              <button
+                type="button"
+                className="mt-3 inline-flex items-center gap-1 rounded-lg border border-slate-200 bg-slate-50 px-3 py-1.5 text-xs font-semibold text-slate-800 transition hover:border-brand-300 hover:bg-brand-50 hover:text-brand-950"
+                aria-expanded={showCivic}
+                onClick={() => setShowCivic((v) => !v)}
+              >
+                How are registration &amp; VCI calculated?{" "}
+                <span aria-hidden className="text-slate-500">
+                  {showCivic ? "▴" : "▾"}
+                </span>
+              </button>
+              {showCivic && (
+                <div className="mt-2 space-y-2 rounded-xl border border-slate-200 bg-slate-50 p-4 text-xs text-slate-800">
+                  <p className="rounded-md bg-white px-2 py-1.5 font-mono text-[11px] text-slate-900 ring-1 ring-slate-200">
+                    {metrics.civic_goal_formula}
+                  </p>
+                  {metrics.campus_enrollment != null && (
+                    <p className="text-slate-700">
+                      Enrollment {metrics.campus_enrollment.toLocaleString()} · County VAP{" "}
+                      {(metrics.county_voting_age_population ?? 0).toLocaleString()} · Share{" "}
+                      {((metrics.campus_share_of_county_vap ?? 0) * 100).toFixed(2)}%
+                    </p>
+                  )}
+                  <ul className="list-disc space-y-1 pl-4 text-slate-700">
+                    {(metrics.civic_goal_explanation ?? []).map((line) => (
+                      <li key={line}>{line}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </>
+          )}
           <div className="mt-3 space-y-3">
             {goals.map((goal) => (
               <GoalBar key={goal.kind} goal={goal} />

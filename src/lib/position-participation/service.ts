@@ -127,12 +127,14 @@ export function getScopeMetrics(input: {
   kind: "county" | "institution" | "high_school" | "private_charter";
   slug: string;
   enrollment?: number | null;
+  countySlug: string;
 }) {
   return computeHonestMetrics({
     scopeId: toCommunityId(input.kind, input.slug),
     scopeType: communityKindToScopeType(input.kind),
     kind: input.kind,
     enrollment: input.enrollment,
+    countySlug: input.countySlug,
   });
 }
 

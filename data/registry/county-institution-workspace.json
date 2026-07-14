@@ -27,8 +27,8 @@
     { "id": "postcard_lead", "countyLabel": "Postcard Lead", "institutionLabel": "Postcard Lead", "priority": 7 }
   ],
   "goalKinds": [
-    { "id": "registration", "label": "Registration Goal", "kpiId": "kpi-registration-goal", "nonpartisan": true },
-    { "id": "vote_participation", "label": "Vote Participation Goal", "nonpartisan": true }
+    { "id": "registration", "label": "Voter Registration Goal", "kpiId": "kpi-registration-goal", "nonpartisan": true },
+    { "id": "vote_participation", "label": "VCI Goal", "nonpartisan": true, "fullName": "Vote Civic Involvement" }
   ],
   "functionalLanes": [
     { "id": "social", "label": "Social Meetups", "leadRole": "social_lead" },
