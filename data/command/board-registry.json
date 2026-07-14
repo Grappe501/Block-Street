@@ -1,0 +1,224 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-07-14",
+  "status": "soft_beta",
+  "honesty": {
+    "working_now": [
+      "Lane boards for campaign and campus sides",
+      "Job interest signup (local soft beta)",
+      "Event board owned by Volunteer Manager",
+      "Independent campus pages bridged to same-lane campaign boards"
+    ],
+    "still_being_completed": [
+      "Durable role appointments",
+      "Postgres personnel persistence",
+      "Certified invite-chain binding",
+      "Production RBAC"
+    ]
+  },
+  "oversight": {
+    "campaign_manager": {
+      "role_key": "campaign_manager",
+      "display_name": "Campaign Manager",
+      "person": null,
+      "status": "open",
+      "scope": "Oversees both campaign-lane boards and campus-lane boards",
+      "reports_to": "Campaign Director"
+    },
+    "assistant_campaign_manager": {
+      "role_key": "assistant_campaign_manager",
+      "display_name": "Assistant Campaign Manager",
+      "person": null,
+      "status": "open",
+      "scope": "Supports Campaign Manager across both campaign and campus boards",
+      "reports_to": "Campaign Manager"
+    },
+    "volunteer_manager": {
+      "role_key": "volunteer_manager",
+      "display_name": "Volunteer Manager",
+      "person": "Carol Eagan",
+      "status": "named",
+      "scope": "Volunteer system; owns the Event Board",
+      "reports_to": "Campaign Director",
+      "owns": ["events_board"]
+    }
+  },
+  "lanes": [
+    {
+      "id": "social",
+      "label": "Social / Media",
+      "campaign_role": "social_lead",
+      "campus_team_id": "social-media",
+      "meeting_position_id": "college-social-media-lead",
+      "signup_href": "/join/interest?position=college-social-media-lead",
+      "position_href": "/positions/college-social-media-lead",
+      "goal": "Grow the campus and statewide network with clear, honest posts.",
+      "under_events_board": false
+    },
+    {
+      "id": "events",
+      "label": "Events",
+      "campaign_role": "event_lead",
+      "campus_team_id": "social-events",
+      "meeting_position_id": "college-event-lead",
+      "signup_href": "/join/interest?position=college-event-lead",
+      "position_href": "/positions/college-event-lead",
+      "goal": "Plan welcoming gatherings that turn strangers into teammates.",
+      "under_events_board": true,
+      "board_owner": "Carol Eagan"
+    },
+    {
+      "id": "registration",
+      "label": "Voter Registration",
+      "campaign_role": "registration_lead",
+      "campus_team_id": "voter-registration",
+      "meeting_position_id": "college-voter-registration-lead",
+      "signup_href": "/join/interest?position=college-voter-registration-lead",
+      "position_href": "/positions/college-voter-registration-lead",
+      "goal": "Help peers register and stay ready to vote — separate from VCI and launch-team counts.",
+      "under_events_board": false
+    },
+    {
+      "id": "canvass",
+      "label": "Outreach / Canvass",
+      "campaign_role": "canvass_lead",
+      "campus_team_id": "outreach",
+      "meeting_position_id": "college-canvass-outreach-lead",
+      "signup_href": "/join/interest?position=college-canvass-outreach-lead",
+      "position_href": "/positions/college-canvass-outreach-lead",
+      "goal": "Expand the network through relationships first — no pressure pitches.",
+      "under_events_board": false
+    },
+    {
+      "id": "community",
+      "label": "Campus Coordination",
+      "campaign_role": "community_lead",
+      "campus_team_id": "operations",
+      "meeting_position_id": "college-community-lead",
+      "signup_href": "/join/interest?position=college-community-lead",
+      "position_href": "/positions/college-community-lead",
+      "goal": "Coordinate local teams so every seat has a clear next step.",
+      "under_events_board": false,
+      "supporting_campus_teams": ["volunteer-support", "data-follow-up"]
+    }
+  ],
+  "goals": [
+    {
+      "id": "goal-network",
+      "title": "Statewide youth network (16–24)",
+      "agenda_items": ["21", "27"],
+      "owner_lane": "community",
+      "explain": "Build a social network of young people across Arkansas who can engage locally and stay connected after the meeting."
+    },
+    {
+      "id": "goal-fun",
+      "title": "Make politics feel welcoming",
+      "agenda_items": ["22"],
+      "owner_lane": "events",
+      "explain": "Gatherings should feel social and useful — not like a long lecture."
+    },
+    {
+      "id": "goal-power-of-5",
+      "title": "Power of 5",
+      "agenda_items": ["23"],
+      "owner_lane": "canvass",
+      "explain": "Each person starts with five trusted relationships and one useful next ask."
+    },
+    {
+      "id": "goal-future-candidates",
+      "title": "Foundation for future candidates",
+      "agenda_items": ["24"],
+      "owner_lane": "community",
+      "explain": "Practice coordinating now so young leaders can run later — without inventing appointments tonight."
+    },
+    {
+      "id": "goal-soft-power",
+      "title": "Local soft power",
+      "agenda_items": ["25"],
+      "owner_lane": "social",
+      "explain": "Presence and relationships influence local politics more than one viral post."
+    },
+    {
+      "id": "goal-ballot",
+      "title": "Ballot and lawmaking readiness",
+      "agenda_items": ["26"],
+      "owner_lane": "registration",
+      "explain": "Young people can matter on ballot initiatives and lawmaking when the network is real."
+    },
+    {
+      "id": "goal-collective",
+      "title": "Collective power",
+      "agenda_items": ["28"],
+      "owner_lane": "community",
+      "explain": "Change happens together — seats, follow-up, and honest counting."
+    }
+  ],
+  "drilldowns": [
+    {
+      "slug": "why-cusp",
+      "agenda_items": ["07"],
+      "title": "Why the 2026–2028 cusp matters",
+      "summary": "Near-term elections can still be shaped by organized young voters — if we start now.",
+      "bullets": [
+        "Organization takes months; waiting until fall loses the summer window.",
+        "Seats, conversation, and registration habits compound.",
+        "This is not a guarantee — it is a chance with work attached."
+      ]
+    },
+    {
+      "slug": "why-colleges",
+      "agenda_items": ["08"],
+      "title": "Why Arkansas colleges are the opening",
+      "summary": "Colleges concentrate peers who already share routines, friends, and calendars.",
+      "bullets": [
+        "Campus is a natural team: same place, same pressures, shared schedule.",
+        "Steve’s point: campus organization at this scale is rare here — rare is still possible.",
+        "Each campus keeps its own page; lane leaders still report into the matching campaign board."
+      ]
+    },
+    {
+      "slug": "why-young-voters",
+      "agenda_items": ["09", "10"],
+      "title": "Why young voters matter",
+      "summary": "Young voters are decisive when they show up together — and underrepresented when they don’t.",
+      "bullets": [
+        "Politicians notice organized presence.",
+        "Rules and culture lag who the population actually is.",
+        "Registration and turnout are separate metrics — keep them labeled honestly."
+      ]
+    },
+    {
+      "slug": "ballot-power",
+      "agenda_items": ["11"],
+      "title": "Ballot initiatives and lawmaking",
+      "summary": "Beyond candidate races, young networks can show up on ballot work and civic process.",
+      "bullets": [
+        "Start with registration readiness and relationship networks.",
+        "Do not invent Field Plan doctrine on this page.",
+        "Follow published materials when they land."
+      ]
+    },
+    {
+      "slug": "after-election",
+      "agenda_items": ["12", "13"],
+      "title": "After the election — lift each other",
+      "summary": "Tonight’s seats are practice for a longer leadership pipeline.",
+      "bullets": [
+        "Swing cycles matter — and so does who stays organized afterward.",
+        "Uplifting peers into future leadership starts with real roles and honest follow-up.",
+        "Interest tonight is not an appointment."
+      ]
+    },
+    {
+      "slug": "campus-unique",
+      "agenda_items": ["14", "20"],
+      "title": "Every campus is different",
+      "summary": "We give a shared lane structure; each campus fills it in its own way.",
+      "bullets": [
+        "Use your college page for local calendar and teams.",
+        "Same-lane campaign boards stay aligned statewide.",
+        "Summer is quieter — use it."
+      ]
+    }
+  ]
+}

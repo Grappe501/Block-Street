@@ -19,6 +19,7 @@
     "smoke:test": "node scripts/deployment/smoke-test.mjs",
     "test:july14": "node scripts/identity-trust/july14-smoke.mjs",
     "test:july14-meeting-path": "node scripts/run-with-h-env.mjs node scripts/phase11/test-july14-meeting-path.mjs",
+    "sandbox:july14-command": "node scripts/run-with-h-env.mjs node scripts/phase11/sandbox-july14-command.mjs",
     "test:v2a-participation": "node scripts/run-with-h-env.mjs npx tsx scripts/v2a-participation-tests.ts",
     "test:field-goals": "node scripts/run-with-h-env.mjs npx tsx scripts/test-field-goals.ts && node scripts/field-goals/validate-field-goals.mjs",
     "test:college-command": "node scripts/run-with-h-env.mjs npx tsx scripts/test-college-command.ts",

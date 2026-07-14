@@ -40,18 +40,20 @@ export function MeetingChrome({
   mode?: string;
 }) {
   return (
-    <div className="min-h-[70vh] bg-slate-50 text-slate-900">
+    <div className="min-h-[70vh] bg-field-paper text-field-ink">
       <Suspense fallback={null}>
         <ReturnBanner fromItem={fromItem} mode={mode} />
       </Suspense>
-      <header className="border-b border-slate-200 bg-white">
+      <header className="border-b border-field-ink/10 bg-field-dusk text-field-mist">
         <div className="mx-auto max-w-3xl px-4 py-8 sm:px-6">
-          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-brand-700">{eyebrow}</p>
-          <h1 className="mt-2 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">{title}</h1>
-          {subtitle ? <p className="mt-3 max-w-2xl text-base leading-relaxed text-slate-600">{subtitle}</p> : null}
+          <p className="font-fieldSans text-xs font-semibold uppercase tracking-[0.16em] text-field-wheat">{eyebrow}</p>
+          <h1 className="mt-2 font-fieldDisplay text-3xl tracking-tight text-white sm:text-4xl">{title}</h1>
+          {subtitle ? (
+            <p className="mt-3 max-w-2xl font-fieldSans text-base leading-relaxed text-field-mist/90">{subtitle}</p>
+          ) : null}
         </div>
       </header>
-      <div className="mx-auto max-w-3xl px-4 py-8 sm:px-6">{children}</div>
+      <div className="mx-auto max-w-3xl px-4 py-8 sm:px-6 text-field-ink">{children}</div>
     </div>
   );
 }
@@ -67,10 +69,10 @@ export function MeetingLinkList({
         <li key={item.href}>
           <Link
             href={item.href}
-            className="flex flex-col rounded-lg border border-slate-200 bg-white px-4 py-3 transition hover:border-brand-300 hover:bg-brand-50/40"
+            className="flex flex-col rounded-lg border border-field-ink/15 bg-white px-4 py-3 transition hover:border-field-pine/40"
           >
-            <span className="font-semibold text-slate-950">{item.label}</span>
-            {item.note ? <span className="mt-1 text-sm text-slate-600">{item.note}</span> : null}
+            <span className="font-semibold text-field-ink">{item.label}</span>
+            {item.note ? <span className="mt-1 text-sm text-field-ink/70">{item.note}</span> : null}
           </Link>
         </li>
       ))}

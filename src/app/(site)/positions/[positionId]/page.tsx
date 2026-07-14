@@ -3,7 +3,12 @@ import { notFound } from "next/navigation";
 import { Suspense } from "react";
 import { MeetingChrome } from "@/components/meeting/MeetingChrome";
 import { HonestyPanel } from "@/components/meeting/HonestyPanel";
+import { listCommandLanes } from "@/lib/command/board";
 import { getCollegePosition, withMeetingReturn } from "@/lib/meeting/positions-catalog";
+
+function laneForPosition(positionId: string) {
+  return listCommandLanes().find((l) => l.meeting_position_id === positionId) ?? null;
+}
 
 export function generateStaticParams() {
   return [
@@ -34,6 +39,7 @@ export default async function PositionDetailPage({
   if (!position) notFound();
 
   const interestHref = withMeetingReturn(`/join/interest?position=${position.id}`, from, item);
+  const lane = laneForPosition(position.id);
 
   return (
     <Suspense fallback={null}>
@@ -43,10 +49,37 @@ export default async function PositionDetailPage({
         eyebrow={`${position.command} · ${position.status} · soft beta`}
       >
         <p className="mb-6 text-sm">
-          <Link href="/positions/college" className="font-semibold text-brand-800 underline-offset-2 hover:underline">
+          <Link href="/positions/college" className="font-semibold text-field-pine underline-offset-2 hover:underline">
             ← College Team
           </Link>
         </p>
+
+        {lane ? (
+          <section className="mb-8 rounded-xl border border-field-ink/15 bg-white p-4 shadow-sm">
+            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-field-pine">Leader boards</p>
+            <p className="mt-2 text-sm text-field-ink/80">
+              This seat sits on the <strong>{lane.label}</strong> lane. Campus leaders on the same lane connect to the
+              campaign board. CM and ACM oversee both sides
+              {lane.under_events_board ? "; Event Board is under Volunteer Manager Carol Eagan" : ""}.
+            </p>
+            <div className="mt-3 flex flex-wrap gap-3 text-sm font-semibold">
+              <Link href={`/command/campaign/${lane.id}`} className="text-field-pine underline">
+                Campaign board
+              </Link>
+              <Link href="/command/campus" className="text-field-pine underline">
+                Campus boards
+              </Link>
+              {lane.under_events_board ? (
+                <Link href="/command/events" className="text-field-pine underline">
+                  Event Board
+                </Link>
+              ) : null}
+              <Link href="/command/managers" className="text-field-pine underline">
+                CM / ACM
+              </Link>
+            </div>
+          </section>
+        ) : null}
 
         <section className="space-y-2 text-sm text-slate-700">
           <p>
