@@ -143,7 +143,10 @@ export function AdminOperatorCommand() {
             {getFieldGoalsMeta().campus_goal_formula}) — enrollment ÷ estimated county VAP · flat 25%{" "}
             <strong>superseded</strong>
           </li>
-          <li>Field Plan readiness: scaffold placeholders only — awaiting canonical upload</li>
+          <li>
+            Field Plan: 30K-ft Victory Field Framework <strong>ingested</strong> — role content live via role keys;
+            county/city drill-down pending
+          </li>
           <li>
             Persistence: <strong>{String(persistAudit.canonical_persistence_backend)}</strong> · Postgres active?{" "}
             <strong>{String(persistAudit.netlify_database_postgres_active)}</strong> · personnel writes mostly

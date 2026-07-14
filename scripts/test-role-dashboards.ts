@@ -7,13 +7,12 @@ import {
   buildLeaderDashboard,
   buildVolunteerCommandDashboard,
 } from "../src/lib/volunteer-command/dashboard";
-import { dashboardSectionsForRole, getDashboardConfig } from "../src/lib/volunteer-command/roles";
-import { fieldPlanPlaceholderCopy } from "../src/lib/volunteer-command/roles";
+import { dashboardSectionsForRole, getDashboardConfig, fieldPlanPlaceholderCopy } from "../src/lib/volunteer-command/roles";
 
-const vc = getDashboardConfig("volunteer_command");
-assert.ok(vc);
-assert.ok(vc!.navigation_sections.includes("People"));
-assert.ok(vc!.navigation_sections.includes("Education"));
+const dashConfig = getDashboardConfig("volunteer_command");
+assert.ok(dashConfig);
+assert.ok(dashConfig!.navigation_sections.includes("People"));
+assert.ok(dashConfig!.navigation_sections.includes("Education"));
 
 const sections = dashboardSectionsForRole("functional_lead");
 assert.ok(sections.includes("Field Plan"));
@@ -34,5 +33,9 @@ assert.strictEqual(people.section, "people");
 
 assert.ok(fieldPlanPlaceholderCopy().toLowerCase().includes("field plan"));
 assert.ok(!fieldPlanPlaceholderCopy().toLowerCase().includes("must canvass precinct 12"));
+
+const command = buildVolunteerCommandDashboard({ section: "command" });
+assert.strictEqual(command.field_plan.status, "ingested");
+assert.ok(command.field_plan.phases.length >= 13);
 
 console.log("role-dashboards tests passed");

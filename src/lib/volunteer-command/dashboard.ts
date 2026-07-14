@@ -10,6 +10,12 @@ import {
   listStatewideFunctions,
   roleIsUnderVolunteerManager,
 } from "./roles";
+import {
+  fieldPlanDoctrine,
+  fieldPlanFrameworkStatus,
+  listFieldPlanPhases,
+  listIngestedRoleKeys,
+} from "@/lib/field-plan/framework";
 
 export type VolunteerCommandSection =
   | "command"
@@ -162,9 +168,14 @@ export function buildVolunteerCommandDashboard(input?: { section?: VolunteerComm
       items: [] as Array<{ at: string; summary: string }>,
     },
     field_plan: {
-      status: getFieldPlanScaffold().status,
+      status: fieldPlanFrameworkStatus(),
+      contract_status: getFieldPlanScaffold().status,
+      doctrine: fieldPlanDoctrine(),
       placeholder: fieldPlanPlaceholderCopy(),
-      phases: getFieldPlanScaffold().operational_phases,
+      phases: listFieldPlanPhases().map((p) => p.name),
+      contract_phases: getFieldPlanScaffold().operational_phases,
+      ingested_role_keys: listIngestedRoleKeys(),
+      authority: "docs/v2/ARKANSAS_VICTORY_FIELD_FRAMEWORK.md",
     },
     persistence: {
       backend: persistAudit.canonical_persistence_backend,

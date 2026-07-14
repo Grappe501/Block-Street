@@ -1,7 +1,10 @@
 {
-  "version": "1.0.0",
-  "updated": "2026-07-14T11:00:00.000Z",
-  "status": "scaffold_awaiting_upload",
+  "version": "1.1.0",
+  "updated": "2026-07-14T15:30:00.000Z",
+  "status": "framework_ingested_awaiting_county_drilldown",
+  "authority": "docs/v2/ARKANSAS_VICTORY_FIELD_FRAMEWORK.md",
+  "framework_twin": "data/field-plan/victory-field-framework.json",
+  "role_content": "data/field-plan/position-content.json",
   "hierarchy": [
     "Field Plan",
     "Campaign Domain",
@@ -29,6 +32,8 @@
   ],
   "content_statuses": ["placeholder", "ingested", "under_review", "approved", "superseded"],
   "placeholder_copy": "Detailed responsibilities will be populated from the campaign Field Plan.",
+  "doctrine": "Every campaign event must leave behind more volunteers, more leaders, more voter registrations, more neighborhood teams, and stronger local infrastructure than existed before the event.",
+  "altitude": "30000_feet",
   "position_responsibility_fields": [
     "position_key",
     "title",
@@ -56,6 +61,5 @@
     "source_reference",
     "content_status",
     "version"
-  ],
-  "doctrine": "Do not invent Field Plan responsibilities before canonical plan upload."
+  ]
 }

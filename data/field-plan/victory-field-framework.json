@@ -1,0 +1,170 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-07-14T15:30:00.000Z",
+  "status": "ingested",
+  "altitude": "30000_feet",
+  "title": "Arkansas Victory Field Framework",
+  "doctrine": "Every campaign event must leave behind more volunteers, more leaders, more voter registrations, more neighborhood teams, and stronger local infrastructure than existed before the event.",
+  "catalyst": "Campaign schedules an event — software and teams generate timeline, assignments, communications, and success metrics from that decision.",
+  "authority": "docs/v2/ARKANSAS_VICTORY_FIELD_FRAMEWORK.md",
+  "integrates_with": [
+    "Volunteer Command",
+    "College Command / Education Volunteer Command",
+    "County Volunteer Command",
+    "position-participation Field Plan bindings",
+    "County Campaign Command (operational dashboard layer)"
+  ],
+  "not_in_scope_yet": [
+    "Per-county venue databases",
+    "Automated email/SMS senders",
+    "Full GOTV poll assignment system",
+    "New CIWS role cards beyond existing FunctionalRoleId set"
+  ],
+  "local_event_committee": [
+    { "key": "event_lead", "maps_to_functional_role": "event_lead", "title": "Event Lead" },
+    { "key": "social_media_lead", "maps_to_functional_role": "social_lead", "title": "Social Media Lead" },
+    { "key": "canvass_lead", "maps_to_functional_role": "canvass_lead", "title": "Canvassing Lead" },
+    { "key": "recruitment_lead", "maps_to_functional_role": "community_lead", "title": "Volunteer Recruitment Lead", "note": "Works with Central Volunteer Management / Field Manager" },
+    { "key": "community_social_lead", "maps_to_functional_role": "social_lead", "title": "Community/Social Lead", "note": "Clubs, churches, orgs, businesses, influencers; after-event social" },
+    { "key": "registration_lead", "maps_to_functional_role": "registration_lead", "title": "Voter Registration Lead" },
+    { "key": "media_lead", "maps_to_functional_role": null, "title": "Media Lead", "note": "Newspaper/radio — tracked in Field Plan; CIWS card deferred" },
+    { "key": "logistics_lead", "maps_to_functional_role": null, "title": "Logistics Lead", "note": "Venue/permits — tracked in Field Plan; CIWS card deferred" }
+  ],
+  "central_activation": [
+    "field_director",
+    "volunteer_management",
+    "central_social",
+    "graphic_design",
+    "email_team",
+    "phone_bank",
+    "text_bank",
+    "postcard_team",
+    "young_adult_team",
+    "county_strike_team",
+    "communications_director",
+    "press_office",
+    "data_team",
+    "voter_registration_director",
+    "fundraising",
+    "operations"
+  ],
+  "phases": [
+    {
+      "id": "phase_1_event_activation",
+      "name": "Event Activation",
+      "summary": "On event approval, activate local event committee and central campaign counterparts."
+    },
+    {
+      "id": "phase_2_local_intelligence",
+      "name": "Local Intelligence",
+      "summary": "Venue, parking, weather backup, demographics, orgs, media, influencers, coalition partners — before outreach."
+    },
+    {
+      "id": "phase_3_communications_launch",
+      "name": "Communications Launch",
+      "summary": "Waves: announcement/Kelly-is-coming/save-the-date; local media & community calendars; reminder cascade to event day."
+    },
+    {
+      "id": "phase_4_field_operation",
+      "name": "Field Operation",
+      "summary": "Saturday-prior door hangers; phone/text banks; postcards; literature and org visits."
+    },
+    {
+      "id": "phase_5_earned_media",
+      "name": "Earned Media",
+      "summary": "Two weeks out: newspaper ads, radio where budget allows, LTEs, interviews, advisories."
+    },
+    {
+      "id": "phase_6_event_experience",
+      "name": "Event Experience Funnel",
+      "summary": "Arrival → sign-in → registration check → Meet Kelly → Power of 5 invite → role choice → training → follow-up. Nobody leaves without a next step."
+    },
+    {
+      "id": "phase_7_power_of_five",
+      "name": "Power of Five Launch",
+      "summary": "Primary outcome of every event: launch neighborhood teams (5×5×5) with training, materials, schedule, channel, recognition."
+    },
+    {
+      "id": "phase_8_volunteer_funnel",
+      "name": "Volunteer Leadership Ladder",
+      "summary": "Interested → attended → P5 → volunteer → reliable → neighborhood → precinct → city → county → regional."
+    },
+    {
+      "id": "phase_9_voter_registration",
+      "name": "Voter Registration Operation",
+      "summary": "Goals by county/city/campus/neighborhood; events, campuses, doors, faith, markets."
+    },
+    {
+      "id": "phase_10_community_partnerships",
+      "name": "Community Partnerships",
+      "summary": "Leave working relationships (Dem/Lib where appropriate, civic, NAACP, colleges, faith, labor, business)."
+    },
+    {
+      "id": "phase_11_strike_team",
+      "name": "October Strike Team Saturdays",
+      "summary": "County-wide canvass + community cookout staging; synergy with local candidates."
+    },
+    {
+      "id": "phase_12_election_operations",
+      "name": "Election Operations",
+      "summary": "Every poll covered: observer, greeter, signs, relief, supply, escalation, county/regional/state command."
+    },
+    {
+      "id": "phase_13_post_event_continuity",
+      "name": "Post-Event Continuity",
+      "summary": "24h thanks + P5 invites; 1 week orientation; 1 month metrics and next activity."
+    }
+  ],
+  "communication_waves": {
+    "wave_one": ["announcement", "kelly_is_coming", "save_the_date", "website", "calendar", "social_graphics", "press_advisory", "email_1"],
+    "wave_two": ["newspaper", "radio", "community_calendars", "facebook_groups", "nextdoor", "orgs", "church_bulletins", "flyers", "partners"],
+    "wave_three": ["one_week", "three_days", "24_hours", "morning_of", "live_updates"]
+  },
+  "event_funnel": [
+    "arrival",
+    "greeting",
+    "sign_in",
+    "voter_registration_check",
+    "meet_volunteers",
+    "meet_kelly",
+    "hear_campaign",
+    "ask_questions",
+    "join_power_of_five",
+    "choose_volunteer_role",
+    "training_invitation",
+    "follow_up"
+  ],
+  "success_metrics": [
+    "attendance",
+    "first_time_attendees",
+    "volunteer_signups",
+    "power_of_five_teams_launched",
+    "new_neighborhood_captains",
+    "new_precinct_captains",
+    "voter_registrations_completed",
+    "doors_knocked",
+    "phone_calls_made",
+    "texts_sent",
+    "emails_opened",
+    "social_reach_engagement",
+    "earned_media_placements",
+    "community_organizations_engaged",
+    "returning_volunteers",
+    "follow_up_meeting_attendance"
+  ],
+  "county_campaign_command": {
+    "purpose": "Operational dashboard watching the county in real time — not a new social rank.",
+    "watches": [
+      "events_on_schedule",
+      "committees_behind",
+      "unfilled_volunteer_positions",
+      "registration_pace",
+      "earned_media_secured",
+      "power_of_five_launched",
+      "follow_up_complete",
+      "strike_team_support_needed"
+    ],
+    "route_hint": "/admin/counties/:countySlug/volunteer-command"
+  },
+  "next_drill_down": "County and city playbooks inherit this framework; plug in venues, demographics, orgs, media, leaders, and priorities without rebuilding the hierarchy."
+}

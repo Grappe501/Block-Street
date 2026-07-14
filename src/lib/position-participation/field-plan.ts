@@ -1,5 +1,5 @@
 import type { FunctionalRoleId } from "@/lib/community-workspace/types";
-import type { PositionDefinition, PositionFieldPlanContent } from "./types";
+import type { PositionDefinition, PositionFieldPlanContent, FieldPlanContentStatus } from "./types";
 import { FIELD_PLAN_PLACEHOLDER } from "./labels";
 import fieldPlanSeed from "../../../data/field-plan/position-content.json";
 
@@ -13,13 +13,15 @@ const PURPOSES: Record<FunctionalRoleId, string> = {
   postcard_lead: "Runs handwritten outreach that reminds people they matter to this community.",
 };
 
+type SeedRow = Partial<PositionFieldPlanContent> & { content_status?: FieldPlanContentStatus | "ingested" | "draft" };
+
 export function positionIdForRole(scopeId: string, role: FunctionalRoleId): string {
   return `${scopeId}::${role}`;
 }
 
 export function positionsForScope(
   scopeId: string,
-  roles: Array<{ id: FunctionalRoleId; label: string }>
+  roles: Array<{ id: FunctionalRoleId; label: string }>,
 ): PositionDefinition[] {
   return roles.map((r) => ({
     id: positionIdForRole(scopeId, r.id),
@@ -29,13 +31,39 @@ export function positionsForScope(
   }));
 }
 
+function roleKeyFromPositionId(positionId: string): string {
+  const parts = positionId.split("::");
+  return parts.length > 1 ? parts[parts.length - 1]! : positionId;
+}
+
+function lookupSeed(positionId: string): SeedRow | undefined {
+  const byPosition = (fieldPlanSeed.positions as Record<string, SeedRow | undefined>)[positionId];
+  if (byPosition) return byPosition;
+  const roleKey = roleKeyFromPositionId(positionId);
+  const byRole = (fieldPlanSeed.by_role_key as Record<string, SeedRow | undefined> | undefined)?.[roleKey];
+  return byRole;
+}
+
+function normalizeStatus(status: string | undefined): FieldPlanContentStatus {
+  if (
+    status === "approved" ||
+    status === "superseded" ||
+    status === "placeholder" ||
+    status === "ingested" ||
+    status === "under_review" ||
+    status === "draft"
+  ) {
+    return status;
+  }
+  return "placeholder";
+}
+
 export function fieldPlanForPosition(positionId: string, purpose: string): PositionFieldPlanContent {
-  const fromSeed = (fieldPlanSeed.positions as Record<string, Partial<PositionFieldPlanContent> | undefined>)[
-    positionId
-  ];
-  const status = fromSeed?.content_status ?? "placeholder";
+  const fromSeed = lookupSeed(positionId);
+  const status = normalizeStatus(fromSeed?.content_status);
   const placeholder = FIELD_PLAN_PLACEHOLDER;
-  if (status === "placeholder" || !fromSeed) {
+
+  if (!fromSeed || status === "placeholder") {
     return {
       position_id: positionId,
       summary: purpose,
@@ -53,6 +81,7 @@ export function fieldPlanForPosition(positionId: string, purpose: string): Posit
       content_status: "placeholder",
     };
   }
+
   return {
     position_id: positionId,
     summary: fromSeed.summary ?? purpose,
@@ -66,7 +95,7 @@ export function fieldPlanForPosition(positionId: string, purpose: string): Posit
     helpful_skills: fromSeed.helpful_skills ?? placeholder,
     central_counterpart: fromSeed.central_counterpart ?? placeholder,
     local_needs: fromSeed.local_needs ?? placeholder,
-    source_reference: fromSeed.source_reference ?? "Field Plan",
-    content_status: fromSeed.content_status ?? "draft",
+    source_reference: fromSeed.source_reference ?? "Arkansas Victory Field Framework",
+    content_status: status,
   };
 }

@@ -204,7 +204,30 @@ export function VolunteerCommandWorkbench({ dashboard }: { dashboard: Dash }) {
           <p className="mt-1">
             Label: <strong>{dashboard.activity.label}</strong> — {dashboard.activity.note}
           </p>
-          <p className="mt-2">{dashboard.field_plan.placeholder}</p>
+        </section>
+
+        <section className="rounded-2xl border border-brand-200 bg-white p-4 text-sm text-slate-800 shadow-sm">
+          <h2 className="text-sm font-bold text-slate-950">Field Plan · 30,000 feet</h2>
+          <p className="mt-1 text-xs uppercase tracking-wide text-brand-800">
+            Status: {dashboard.field_plan.status} · {dashboard.field_plan.authority}
+          </p>
+          <p className="mt-3 font-medium text-slate-950">{dashboard.field_plan.doctrine}</p>
+          <p className="mt-2 text-xs text-slate-600">
+            Event is the catalyst. Success = infrastructure left behind (volunteers, leaders, registrations, Power of
+            Five teams) — not attendance alone.
+          </p>
+          <p className="mt-3 text-xs text-slate-700">
+            Ingested role keys: {dashboard.field_plan.ingested_role_keys.join(", ")}
+          </p>
+          <ol className="mt-3 grid list-decimal gap-1 pl-5 text-xs text-slate-700 sm:grid-cols-2">
+            {dashboard.field_plan.phases.map((name) => (
+              <li key={name}>{name}</li>
+            ))}
+          </ol>
+          <p className="mt-3 text-[11px] text-slate-500">
+            County/city drill-down next. Media Lead and Logistics Lead remain Field Plan–tracked until CIWS cards
+            expand deliberately. No parallel ops system.
+          </p>
         </section>
       </div>
     </div>

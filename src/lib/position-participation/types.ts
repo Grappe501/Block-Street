@@ -57,7 +57,13 @@ export type CanonicalPerson = {
   scopes: string[];
 };
 
-export type FieldPlanContentStatus = "placeholder" | "draft" | "approved" | "superseded";
+export type FieldPlanContentStatus =
+  | "placeholder"
+  | "draft"
+  | "ingested"
+  | "under_review"
+  | "approved"
+  | "superseded";
 
 export type PositionFieldPlanContent = {
   position_id: string;
