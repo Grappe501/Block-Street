@@ -228,6 +228,12 @@ export function VolunteerCommandWorkbench({ dashboard }: { dashboard: Dash }) {
             County/city drill-down next. Media Lead and Logistics Lead remain Field Plan–tracked until CIWS cards
             expand deliberately. No parallel ops system.
           </p>
+          <Link
+            href="/field-strategy"
+            className="mt-4 inline-block text-sm font-semibold text-brand-800 underline"
+          >
+            Open Field Strategy Manual (presentation site) →
+          </Link>
         </section>
       </div>
     </div>

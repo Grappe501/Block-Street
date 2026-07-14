@@ -21,6 +21,7 @@ function navFor(stage: "guest" | "choose" | "member" | "admin"): NavItem[] {
   if (stage === "admin") {
     return [
       { href: "/network", label: "Network", primary: true },
+      { href: "/field-strategy", label: "Field Manual" },
       { href: "/start", label: "Invite" },
       { href: "/july-14", label: "Tonight" },
     ];

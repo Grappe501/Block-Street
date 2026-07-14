@@ -148,6 +148,16 @@ export function AdminOperatorCommand() {
             county/city drill-down pending
           </li>
           <li>
+            Field Strategy Manual (static presentation):{" "}
+            <Link className="text-brand-800 underline" href="/field-strategy">
+              /field-strategy
+            </Link>{" "}
+            · Benton:{" "}
+            <Link className="text-brand-800 underline" href="/field-strategy/benton">
+              /field-strategy/benton
+            </Link>
+          </li>
+          <li>
             Persistence: <strong>{String(persistAudit.canonical_persistence_backend)}</strong> · Postgres active?{" "}
             <strong>{String(persistAudit.netlify_database_postgres_active)}</strong> · personnel writes mostly
             scaffold

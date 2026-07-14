@@ -389,6 +389,23 @@
       "owner": "operator"
     },
     {
+      "id": "FEAT-FIELD-STRATEGY-MANUAL",
+      "title": "Kelly Grappe Field Strategy Manual",
+      "audience": "field_lead",
+      "journey": [],
+      "product": "Field Strategy Manual",
+      "phase": "V2-A.3",
+      "certification": "implemented",
+      "status": "static_presentation",
+      "nav": "/field-strategy",
+      "navigation_location": "Field Strategy Manual",
+      "data_source": "src/lib/field-strategy/content.ts",
+      "dependsOn": ["FEAT-VICTORY-FIELD-FRAMEWORK"],
+      "field_plan_dependency": false,
+      "keywords": ["presentation", "benton", "regnat populus", "event engine", "manual"],
+      "owner": "operator"
+    },
+    {
       "id": "FEAT-LEADERSHIP-RELATIONSHIP-REGISTRY",
       "title": "Leadership Relationship Registry",
       "audience": "architect",
