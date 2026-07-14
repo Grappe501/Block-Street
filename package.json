@@ -22,6 +22,7 @@
     "sandbox:july14-command": "node scripts/run-with-h-env.mjs node scripts/phase11/sandbox-july14-command.mjs",
     "test:calendar": "node scripts/run-with-h-env.mjs node scripts/phase11/test-calendar-system.mjs",
     "test:calendar:persistence": "node scripts/run-with-h-env.mjs node scripts/phase11/test-calendar-persistence.mjs",
+    "test:calendar:rbac": "node scripts/run-with-h-env.mjs node scripts/phase11/test-calendar-rbac-design.mjs",
     "calendar:db:probe": "node scripts/run-with-h-env.mjs node scripts/phase11/calendar-p1-tool.mjs probe",
     "calendar:db:migrate": "node scripts/run-with-h-env.mjs node scripts/phase11/calendar-p1-tool.mjs migrate",
     "calendar:seed-import": "node scripts/run-with-h-env.mjs node scripts/phase11/calendar-p1-tool.mjs seed-import",
