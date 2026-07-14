@@ -70,7 +70,8 @@ assert(/enrollment_share_of_county_vap_v1/.test(positions), "canonical formula m
 
 const i18n = readFileSync(join(root, "src/lib/july14/i18n.ts"), "utf8");
 assert(i18n.includes("Chance and Xay"), "canonical i18n source must remain");
-assert(agenda.items.find((i) => i.item_number === "04").title.includes("Chance and Xay"), "item 04 must preserve Chance and Xay language");
+assert(agenda.items.find((i) => i.item_number === "03").title.includes("Chance and Xay"), "item 03 must preserve Chance and Xay language");
+assert(agenda.items.find((i) => i.item_number === "06").title.includes("Why This Matters"), "item 06 must be Why This Matters after intros");
 
 const slides = readFileSync(join(root, "src/lib/presentations/july14-agenda.ts"), "utf8");
 assert(slides.includes("JULY14_AGENDA_SLIDES"), "classic slide spine must remain");

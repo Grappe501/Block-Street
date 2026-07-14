@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "meeting": "July 14 College Team / ASYON launch",
-  "updated": "2026-07-14T19:34:16.522Z",
+  "updated": "2026-07-14T21:28:41.945Z",
   "production_baseline_cited": "938ac14",
   "canonical_sources": [
     "src/lib/july14/i18n.ts (agenda.* keys)",
@@ -12,7 +12,7 @@
   "finding": {
     "requested_range": "04–034",
     "status": "mapped_from_existing_language",
-    "note": "No pre-existing agenda IDs 04–034 existed in the repository as keyed agenda items. Items 01–34 freeze exact English language from Identity i18n and the July 14 presentation twin without inventing replacement titles or reordering meeting sections. Item 34 also resolves alias 034 for deep links. Content leaves in the requested emphasis band begin at item 04 (Chance and Xay)."
+    "note": "No pre-existing agenda IDs 04–034 existed in the repository as keyed agenda items. Items 01–34 freeze exact English language from Identity i18n and the July 14 presentation twin without inventing replacement titles. Meeting flow places Introductions (people) before Why This Matters: item 03 Chance and Xay → 04 guests → 05 name/school → 06 Why This Matters. Item 34 also resolves alias 034 for deep links."
   },
   "total_meeting_minutes_target": 45,
   "total_leaf_duration_minutes": 40,
@@ -92,31 +92,6 @@
       "item_number": "03",
       "aliases": [],
       "sequence": 3,
-      "title": "2. Why This Matters",
-      "duration_minutes": 1,
-      "section": "s2",
-      "source_reference": "agenda.s2.title",
-      "presenter_content": [
-        "We’re at a perfect political cusp. 2026–2028 can be decided by young voters — if we organize now."
-      ],
-      "participant_content": [
-        "We’re at a perfect political cusp. 2026–2028 can be decided by young voters — if we organize now."
-      ],
-      "current_route": "/presentations/july-14?slide=2",
-      "item_route": "/presentations/july-14/items/03",
-      "supporting_module": "/how-it-works",
-      "drill_down_route": "/how-it-works",
-      "primary_action": "Open How Block Street works",
-      "position_id": null,
-      "family": "B",
-      "slide_id": "urgency",
-      "status": "live",
-      "notes": []
-    },
-    {
-      "item_number": "04",
-      "aliases": [],
-      "sequence": 4,
       "title": "Chance and Xay (Youth Leaders): Share vision, experience, and passion for organizing young people in politics.",
       "duration_minutes": 2,
       "section": "s1",
@@ -128,7 +103,7 @@
         "Chance and Xay (Youth Leaders): Share vision, experience, and passion for organizing young people in politics."
       ],
       "current_route": "/presentations/july-14?slide=1",
-      "item_route": "/presentations/july-14/items/04",
+      "item_route": "/presentations/july-14/items/03",
       "supporting_module": "/admin/college-command/meeting/july-14",
       "drill_down_route": "/admin/college-command/meeting/july-14",
       "primary_action": "Hear youth leaders",
@@ -139,9 +114,9 @@
       "notes": []
     },
     {
-      "item_number": "05",
+      "item_number": "04",
       "aliases": [],
-      "sequence": 5,
+      "sequence": 4,
       "title": "Politician Guests: Briefly introduce them and their role in supporting this effort.",
       "duration_minutes": 1,
       "section": "s1",
@@ -153,7 +128,7 @@
         "Politician Guests: Briefly introduce them and their role in supporting this effort."
       ],
       "current_route": "/presentations/july-14?slide=1",
-      "item_route": "/presentations/july-14/items/05",
+      "item_route": "/presentations/july-14/items/04",
       "supporting_module": "/admin/college-command/meeting/july-14",
       "drill_down_route": "/admin/college-command/meeting/july-14",
       "primary_action": "Welcome guests",
@@ -164,9 +139,9 @@
       "notes": []
     },
     {
-      "item_number": "06",
+      "item_number": "05",
       "aliases": [],
-      "sequence": 6,
+      "sequence": 5,
       "title": "Quick Name and School: Each participant introduces themselves with their name & school (e.g., “Alex, University of Arkansas”).",
       "duration_minutes": 2,
       "section": "s1",
@@ -178,13 +153,38 @@
         "Quick Name and School: Each participant introduces themselves with their name & school (e.g., “Alex, University of Arkansas”)."
       ],
       "current_route": "/presentations/july-14?slide=1",
-      "item_route": "/presentations/july-14/items/06",
+      "item_route": "/presentations/july-14/items/05",
       "supporting_module": "/admin/college-command/meeting/july-14",
       "drill_down_route": "/admin/college-command/meeting/july-14",
       "primary_action": "Everyone introduces",
       "position_id": null,
       "family": "A",
       "slide_id": "intro",
+      "status": "live",
+      "notes": []
+    },
+    {
+      "item_number": "06",
+      "aliases": [],
+      "sequence": 6,
+      "title": "2. Why This Matters",
+      "duration_minutes": 1,
+      "section": "s2",
+      "source_reference": "agenda.s2.title",
+      "presenter_content": [
+        "We’re at a perfect political cusp. 2026–2028 can be decided by young voters — if we organize now."
+      ],
+      "participant_content": [
+        "We’re at a perfect political cusp. 2026–2028 can be decided by young voters — if we organize now."
+      ],
+      "current_route": "/presentations/july-14?slide=2",
+      "item_route": "/presentations/july-14/items/06",
+      "supporting_module": "/how-it-works",
+      "drill_down_route": "/how-it-works",
+      "primary_action": "Open How Block Street works",
+      "position_id": null,
+      "family": "B",
+      "slide_id": "urgency",
       "status": "live",
       "notes": []
     },
