@@ -228,6 +228,39 @@ export const SECTIONS: Record<ManualSectionId, ManualSection> = {
       },
     ],
     success: ["Local committee named", "Central support requested", "Outreach wave starts", "Follow-up owner assigned"],
+    nextHref: "/field-strategy/field-teams",
+    nextLabel: "See Field Teams",
+  },
+  "field-teams": {
+    id: "field-teams",
+    eyebrow: "Level 2 · People who make it real",
+    headline: "Local Leaders + Central Force Multipliers",
+    oneLiner: "Communities execute. The campaign multiplies. You never invent the whole thing alone.",
+    levelNote: "Feel: Belonging",
+    overview: [
+      "Eight local leads surround every event. Central Campaign rings them with templates, graphics, scripts, data, and specialized teams.",
+      "Open Local Teams for the neighborhood seats. Open Central Campaign for the statewide support ring.",
+    ],
+    tabs: [
+      {
+        id: "split",
+        label: "Two rings",
+        body: [
+          "Local teams adapt the playbook to their community.",
+          "Central teams supply the system so every county starts from the same disciplined platform.",
+        ],
+        bullets: [
+          "Local: Event · Social · Canvass · Recruitment · Community · Registration · Media · Logistics",
+          "Central: Field · Volunteer Management · Social/Graphics · Email/Phone/Text/Postcard · VR · Communications · Data · Operations",
+        ],
+      },
+      {
+        id: "pick-a-seat",
+        label: "Pick a seat",
+        body: ["Start with a local role if you are place-based. Staff a central specialty if you can multiply across counties."],
+      },
+    ],
+    success: ["Audience can name one local seat and one central support path"],
     nextHref: "/field-strategy/local-teams",
     nextLabel: "Meet Local Teams",
   },
@@ -691,6 +724,37 @@ export const SECTIONS: Record<ManualSectionId, ManualSection> = {
       },
     ],
     success: ["Leadership map has names or open asks", "First trigger event window agreed"],
+    nextHref: "/field-strategy/join",
+    nextLabel: "Join Us",
+  },
+  join: {
+    id: "join",
+    eyebrow: "Call to action",
+    headline: "Let's Build Benton County Together",
+    oneLiner: "Strategy without commitment is a slideshow. Take a seat.",
+    levelNote: "Feel: Ownership",
+    overview: [
+      "Current needs are concrete. Raise your hand. Recruit one peer. Bring five.",
+      "Volunteer intent routing into live ops software comes next — tonight is about commitment, not bureaucracy.",
+    ],
+    tabs: [
+      {
+        id: "needs",
+        label: "Current needs",
+        body: ["These seats need owners now."],
+        bullets: JOIN_NEEDS,
+      },
+      {
+        id: "next-seven-days",
+        label: "Next seven days",
+        body: [
+          "Declare a seat before you leave the room.",
+          "Tell one person who else should be in the County Command conversation.",
+          "Return with a name, a venue idea, or a Power of 5 commitment.",
+        ],
+      },
+    ],
+    success: ["At least one named commitment and one recruitment ask"],
     nextHref: "/field-strategy/presentation",
     nextLabel: "Run Presentation Mode",
   },
