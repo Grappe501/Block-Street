@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import type { NetworkBoard } from "@/lib/network/types";
+import { copyTextToClipboard } from "@/lib/browser/copy-text";
 
 export default function NetworkBoardPage() {
   const router = useRouter();
@@ -42,7 +43,11 @@ export default function NetworkBoardPage() {
 
   async function copyLink() {
     if (!shareUrl) return;
-    await navigator.clipboard.writeText(shareUrl);
+    const ok = await copyTextToClipboard(shareUrl);
+    if (!ok) {
+      setError("Clipboard blocked — select the share link and press Ctrl+C.");
+      return;
+    }
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   }

@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { copyTextToClipboard } from "@/lib/browser/copy-text";
 
 export default function StartPage() {
   const router = useRouter();
@@ -12,6 +13,7 @@ export default function StartPage() {
   const [reason, setReason] = useState("Personally known — launching Block Street together");
   const [inviteUrl, setInviteUrl] = useState("");
   const [error, setError] = useState("");
+  const [copyState, setCopyState] = useState<"idle" | "copied" | "failed">("idle");
   const [loading, setLoading] = useState(false);
   const [loginEmail, setLoginEmail] = useState("grappe4arkansas@gmail.com");
   const [loginPassword, setLoginPassword] = useState("");
@@ -69,6 +71,16 @@ export default function StartPage() {
     const origin = typeof window !== "undefined" ? window.location.origin : "";
     const path = d.accept_url?.startsWith("http") ? d.accept_url : `${origin}${d.accept_url}`;
     setInviteUrl(path);
+    setCopyState("idle");
+  }
+
+  async function copyInviteLink() {
+    if (!inviteUrl) return;
+    const ok = await copyTextToClipboard(inviteUrl);
+    setCopyState(ok ? "copied" : "failed");
+    if (ok) {
+      window.setTimeout(() => setCopyState("idle"), 2500);
+    }
   }
 
   if (!ready) {
@@ -167,14 +179,26 @@ export default function StartPage() {
       {inviteUrl && (
         <div className="mt-4 rounded-xl border border-emerald-200 bg-emerald-50 p-4">
           <p className="text-sm font-semibold text-emerald-900">Copy and send this link</p>
-          <p className="mt-2 break-all text-sm text-emerald-800">{inviteUrl}</p>
+          <input
+            readOnly
+            value={inviteUrl}
+            aria-label="Invitation link"
+            className="mt-2 w-full rounded-lg border border-emerald-300 bg-white px-3 py-2 text-sm text-emerald-900"
+            onFocus={(e) => e.currentTarget.select()}
+            onClick={(e) => e.currentTarget.select()}
+          />
           <button
             type="button"
-            className="mt-3 rounded-lg bg-emerald-700 px-3 py-2 text-sm font-semibold text-white"
-            onClick={() => void navigator.clipboard.writeText(inviteUrl)}
+            className="mt-3 rounded-lg bg-emerald-700 px-3 py-2 text-sm font-semibold text-white hover:bg-emerald-800"
+            onClick={() => void copyInviteLink()}
           >
-            Copy link
+            {copyState === "copied" ? "Copied!" : "Copy link"}
           </button>
+          {copyState === "failed" && (
+            <p className="mt-2 text-sm text-amber-800" role="alert">
+              Clipboard blocked — click the link field above and press Ctrl+C.
+            </p>
+          )}
         </div>
       )}
 
