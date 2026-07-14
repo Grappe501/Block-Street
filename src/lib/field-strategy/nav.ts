@@ -73,24 +73,119 @@ export const SECTION_MAP_MODE: Partial<Record<ManualSectionId, MapMode>> = {
   join: "benton",
 };
 
-export const PRESENTATION_SLIDES: Array<{
+export type PresentationSlide = {
   id: string;
   title: string;
   feel: string;
-  section: ManualSectionId | "presentation-close";
-}> = [
-  { id: "s1", title: "We Aren't Building Events", feel: "Hope", section: "overview" },
-  { id: "s2", title: "This Is How It Works", feel: "Clarity", section: "strategy" },
-  { id: "s3", title: "One Decision Sets Everything in Motion", feel: "Organized", section: "event-engine" },
-  { id: "s4", title: "Local Leaders Make It Real", feel: "Belonging", section: "local-teams" },
-  { id: "s5", title: "Central Campaign Brings the Force Multiplier", feel: "Support", section: "central-campaign" },
-  { id: "s6", title: "Wear The Mission", feel: "Pride", section: "regnat-populus" },
-  { id: "s7", title: "Five People Can Change a Neighborhood", feel: "Agency", section: "power-of-5" },
-  { id: "s8", title: "Campaign Work Should Feel Like Community", feel: "Joy", section: "strike-teams" },
-  { id: "s9", title: "Every County Needs an Operational Home", feel: "Confidence", section: "county-command" },
-  { id: "s10", title: "Election Day Is Built Month by Month", feel: "Resolve", section: "election-operations" },
-  { id: "s11", title: "We Measure What We Build", feel: "Focus", section: "success-measures" },
-  { id: "s12", title: "Benton County Can Build the Model", feel: "Ownership", section: "benton" },
-  { id: "s13", title: "Who Will Help Lead It?", feel: "Ownership", section: "benton" },
-  { id: "s14", title: "Let's Build Benton County Together", feel: "Call to action", section: "join" },
+  /** Manual section that owns the drill-down page */
+  section: ManualSectionId;
+  /** Override drill-down href when it is not `/field-strategy/{section}` */
+  drillHref?: string;
+  drillLabel?: string;
+};
+
+export function fieldStrategyHref(section: ManualSectionId): string {
+  return section === "overview" ? "/field-strategy" : `/field-strategy/${section}`;
+}
+
+export const PRESENTATION_SLIDES: PresentationSlide[] = [
+  {
+    id: "s1",
+    title: "We Aren't Building Events",
+    feel: "Hope",
+    section: "overview",
+    drillLabel: "Open the mission overview →",
+  },
+  {
+    id: "s2",
+    title: "This Is How It Works",
+    feel: "Clarity",
+    section: "strategy",
+    drillLabel: "Drill into the strategy board →",
+  },
+  {
+    id: "s3",
+    title: "One Decision Sets Everything in Motion",
+    feel: "Organized",
+    section: "event-engine",
+    drillLabel: "Open the Event Engine →",
+  },
+  {
+    id: "s4",
+    title: "Local Leaders Make It Real",
+    feel: "Belonging",
+    section: "local-teams",
+    drillLabel: "Meet the local team seats →",
+  },
+  {
+    id: "s5",
+    title: "Central Campaign Brings the Force Multiplier",
+    feel: "Support",
+    section: "central-campaign",
+    drillLabel: "Open central campaign support →",
+  },
+  {
+    id: "s6",
+    title: "Wear The Mission",
+    feel: "Pride",
+    section: "regnat-populus",
+    drillLabel: "Open Regnat Populus →",
+  },
+  {
+    id: "s7",
+    title: "Five People Can Change a Neighborhood",
+    feel: "Agency",
+    section: "power-of-5",
+    drillLabel: "Open Power of 5 →",
+  },
+  {
+    id: "s8",
+    title: "Campaign Work Should Feel Like Community",
+    feel: "Joy",
+    section: "strike-teams",
+    drillLabel: "Open Strike Saturdays →",
+  },
+  {
+    id: "s9",
+    title: "Every County Needs an Operational Home",
+    feel: "Confidence",
+    section: "county-command",
+    drillLabel: "Open County Command →",
+  },
+  {
+    id: "s10",
+    title: "Election Day Is Built Month by Month",
+    feel: "Resolve",
+    section: "election-operations",
+    drillLabel: "Open Election Operations →",
+  },
+  {
+    id: "s11",
+    title: "We Measure What We Build",
+    feel: "Focus",
+    section: "success-measures",
+    drillLabel: "Open success measures →",
+  },
+  {
+    id: "s12",
+    title: "Benton County Can Build the Model",
+    feel: "Ownership",
+    section: "benton",
+    drillLabel: "Open Benton County playbook →",
+  },
+  {
+    id: "s13",
+    title: "Who Will Help Lead It?",
+    feel: "Ownership",
+    section: "benton",
+    drillHref: "/field-strategy/benton",
+    drillLabel: "Open Benton leadership map →",
+  },
+  {
+    id: "s14",
+    title: "Let's Build Benton County Together",
+    feel: "Call to action",
+    section: "join",
+    drillLabel: "Open Join Us →",
+  },
 ];

@@ -2,10 +2,13 @@ import { notFound } from "next/navigation";
 import { ManualNav } from "@/components/field-strategy/ManualNav";
 import { SectionView } from "@/components/field-strategy/SectionView";
 import { SECTIONS } from "@/lib/field-strategy/content";
-import { MANUAL_NAV, type ManualSectionId } from "@/lib/field-strategy/nav";
+import type { ManualSectionId } from "@/lib/field-strategy/nav";
 
+/** Every manual section with content gets a drill-down page (not only top-nav items). */
 export function generateStaticParams() {
-  return MANUAL_NAV.filter((n) => n.id !== "overview").map((n) => ({ section: n.id }));
+  return (Object.keys(SECTIONS) as ManualSectionId[])
+    .filter((id) => id !== "overview")
+    .map((section) => ({ section }));
 }
 
 export default async function FieldStrategySectionPage({
