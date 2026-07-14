@@ -1,0 +1,2564 @@
+{
+  "protocol_id": "V1-CERT-PASS-01",
+  "audited_at": "2026-07-14T07:28:34.285Z",
+  "audited_by": "burt-pass01-audit-runner",
+  "commit_placeholder": "SET_ON_COMMIT",
+  "repository": {
+    "root": "H:/Block-Street",
+    "package": "block-street",
+    "version": "1.0.0-com-complete",
+    "lanes": [
+      "(site)",
+      "admin",
+      "api"
+    ],
+    "remotes": "origin https://github.com/Grappe501/Block-Street.git",
+    "branch": "main"
+  },
+  "totals": {
+    "capabilities_audited": 444,
+    "overall_vision_fulfillment_pct": 20.2,
+    "by_status": {
+      "PARTIALLY IMPLEMENTED": 83,
+      "SCAFFOLDED ONLY": 217,
+      "MISSING": 132,
+      "DOCUMENTED ONLY": 11,
+      "IMPLEMENTED DIFFERENTLY": 1
+    }
+  },
+  "track_scores": {
+    "A": {
+      "count": 28,
+      "fulfillment_pct": 28.3,
+      "by_status": {
+        "PARTIALLY IMPLEMENTED": 6,
+        "SCAFFOLDED ONLY": 18,
+        "MISSING": 4,
+        "DOCUMENTED ONLY": 0,
+        "IMPLEMENTED DIFFERENTLY": 0
+      }
+    },
+    "B": {
+      "count": 71,
+      "fulfillment_pct": 33.1,
+      "by_status": {
+        "PARTIALLY IMPLEMENTED": 27,
+        "SCAFFOLDED ONLY": 41,
+        "MISSING": 2,
+        "DOCUMENTED ONLY": 1,
+        "IMPLEMENTED DIFFERENTLY": 0
+      }
+    },
+    "C": {
+      "count": 52,
+      "fulfillment_pct": 26.7,
+      "by_status": {
+        "PARTIALLY IMPLEMENTED": 8,
+        "SCAFFOLDED ONLY": 33,
+        "MISSING": 9,
+        "DOCUMENTED ONLY": 1,
+        "IMPLEMENTED DIFFERENTLY": 1
+      }
+    },
+    "D": {
+      "count": 50,
+      "fulfillment_pct": 10.6,
+      "by_status": {
+        "PARTIALLY IMPLEMENTED": 4,
+        "SCAFFOLDED ONLY": 21,
+        "MISSING": 25,
+        "DOCUMENTED ONLY": 0,
+        "IMPLEMENTED DIFFERENTLY": 0
+      }
+    },
+    "E": {
+      "count": 88,
+      "fulfillment_pct": 20,
+      "by_status": {
+        "PARTIALLY IMPLEMENTED": 14,
+        "SCAFFOLDED ONLY": 53,
+        "MISSING": 20,
+        "DOCUMENTED ONLY": 1,
+        "IMPLEMENTED DIFFERENTLY": 0
+      }
+    },
+    "F": {
+      "count": 56,
+      "fulfillment_pct": 13.6,
+      "by_status": {
+        "PARTIALLY IMPLEMENTED": 9,
+        "SCAFFOLDED ONLY": 20,
+        "MISSING": 27,
+        "DOCUMENTED ONLY": 0,
+        "IMPLEMENTED DIFFERENTLY": 0
+      }
+    },
+    "G": {
+      "count": 32,
+      "fulfillment_pct": 21.6,
+      "by_status": {
+        "PARTIALLY IMPLEMENTED": 7,
+        "SCAFFOLDED ONLY": 16,
+        "MISSING": 8,
+        "DOCUMENTED ONLY": 1,
+        "IMPLEMENTED DIFFERENTLY": 0
+      }
+    },
+    "H": {
+      "count": 31,
+      "fulfillment_pct": 15.3,
+      "by_status": {
+        "PARTIALLY IMPLEMENTED": 6,
+        "SCAFFOLDED ONLY": 10,
+        "MISSING": 15,
+        "DOCUMENTED ONLY": 0,
+        "IMPLEMENTED DIFFERENTLY": 0
+      }
+    },
+    "I": {
+      "count": 30,
+      "fulfillment_pct": 5.3,
+      "by_status": {
+        "PARTIALLY IMPLEMENTED": 2,
+        "SCAFFOLDED ONLY": 2,
+        "MISSING": 20,
+        "DOCUMENTED ONLY": 6,
+        "IMPLEMENTED DIFFERENTLY": 0
+      }
+    },
+    "J": {
+      "count": 6,
+      "fulfillment_pct": 9.7,
+      "by_status": {
+        "PARTIALLY IMPLEMENTED": 0,
+        "SCAFFOLDED ONLY": 3,
+        "MISSING": 2,
+        "DOCUMENTED ONLY": 1,
+        "IMPLEMENTED DIFFERENTLY": 0
+      }
+    }
+  },
+  "domain_scores": [
+    {
+      "domain_id": 1,
+      "domain": "Access, Invitation, and Verified Identity",
+      "count": 28,
+      "fulfillment_pct": 42.8
+    },
+    {
+      "domain_id": 2,
+      "domain": "LocalBrain and Personal Context",
+      "count": 23,
+      "fulfillment_pct": 34.9
+    },
+    {
+      "domain_id": 3,
+      "domain": "Onboarding and First-Run Experience",
+      "count": 20,
+      "fulfillment_pct": 17.5
+    },
+    {
+      "domain_id": 4,
+      "domain": "Daily Workspace and Navigation",
+      "count": 25,
+      "fulfillment_pct": 23.3
+    },
+    {
+      "domain_id": 5,
+      "domain": "Calendar and Time",
+      "count": 27,
+      "fulfillment_pct": 29.8
+    },
+    {
+      "domain_id": 6,
+      "domain": "Teams, Collaboration, and Human Coordination",
+      "count": 23,
+      "fulfillment_pct": 12.9
+    },
+    {
+      "domain_id": 7,
+      "domain": "Missions, Projects, and Execution",
+      "count": 32,
+      "fulfillment_pct": 19.8
+    },
+    {
+      "domain_id": 8,
+      "domain": "Knowledge, Memory, and Search",
+      "count": 34,
+      "fulfillment_pct": 17.6
+    },
+    {
+      "domain_id": 9,
+      "domain": "AI and Intelligent Assistance",
+      "count": 29,
+      "fulfillment_pct": 28.3
+    },
+    {
+      "domain_id": 10,
+      "domain": "Communications and Engagement",
+      "count": 32,
+      "fulfillment_pct": 21.6
+    },
+    {
+      "domain_id": 11,
+      "domain": "People, Relationships, and Volunteer Experience",
+      "count": 27,
+      "fulfillment_pct": 8.6
+    },
+    {
+      "domain_id": 12,
+      "domain": "Learning and Competency",
+      "count": 25,
+      "fulfillment_pct": 13.7
+    },
+    {
+      "domain_id": 13,
+      "domain": "Resources, Facilities, and Financial Stewardship",
+      "count": 24,
+      "fulfillment_pct": 5.4
+    },
+    {
+      "domain_id": 14,
+      "domain": "Administration and Governance",
+      "count": 31,
+      "fulfillment_pct": 15.3
+    },
+    {
+      "domain_id": 15,
+      "domain": "Federation and Multi-Organization Operation",
+      "count": 20,
+      "fulfillment_pct": 31.9
+    },
+    {
+      "domain_id": 16,
+      "domain": "Production, Quality, and Launch Systems",
+      "count": 30,
+      "fulfillment_pct": 5.3
+    },
+    {
+      "domain_id": 0,
+      "domain": "Platform Foundation",
+      "count": 8,
+      "fulfillment_pct": 19.3
+    },
+    {
+      "domain_id": 0,
+      "domain": "Beta, Adoption, Launch, and Continuous Growth",
+      "count": 6,
+      "fulfillment_pct": 9.7
+    }
+  ],
+  "certified_present": [],
+  "p0": [
+    {
+      "capability_id": "B-02-LB-016",
+      "name": "Cross-Institution isolation",
+      "status": "SCAFFOLDED ONLY",
+      "severity": "P0",
+      "launch_impact": "Launch blocker",
+      "affected_humans": [
+        "Human",
+        "Administrator"
+      ],
+      "affected_journeys": [
+        "Org A memory hidden in Org B"
+      ],
+      "known_gaps": [
+        "No usable Human interface found for intended journey",
+        "Not verified as production-backed (JSON civic-action / local store)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "B-02-LB-019",
+      "name": "LocalBrain workspace integration",
+      "status": "SCAFFOLDED ONLY",
+      "severity": "P0",
+      "launch_impact": "Launch blocker",
+      "affected_humans": [
+        "Human"
+      ],
+      "affected_journeys": [
+        "Open LocalBrain in workspace"
+      ],
+      "known_gaps": [
+        "No usable Human interface found for intended journey",
+        "Not verified as production-backed (JSON civic-action / local store)",
+        "No /localbrain product page"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "B-03-ONB-020",
+      "name": "Time to first success",
+      "status": "SCAFFOLDED ONLY",
+      "severity": "P0",
+      "launch_impact": "Launch blocker",
+      "affected_humans": [
+        "Invited Human"
+      ],
+      "affected_journeys": [
+        "Invite→success"
+      ],
+      "known_gaps": [
+        "UI path matched without clear service/API backing"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "C-05-CAL-001",
+      "name": "Canonical Calendar",
+      "status": "SCAFFOLDED ONLY",
+      "severity": "P0",
+      "launch_impact": "Launch blocker",
+      "affected_humans": [
+        "Human",
+        "Organizer"
+      ],
+      "affected_journeys": [
+        "Open calendar"
+      ],
+      "known_gaps": [
+        "No usable Human interface found for intended journey",
+        "Not verified as production-backed (JSON civic-action / local store)",
+        "Calendar APIs exist; no calendar page.tsx"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "H-14-ADM-011",
+      "name": "RBAC",
+      "status": "SCAFFOLDED ONLY",
+      "severity": "P0",
+      "launch_impact": "Launch blocker",
+      "affected_humans": [
+        "Administrator"
+      ],
+      "affected_journeys": [
+        "RBAC"
+      ],
+      "known_gaps": [
+        "No usable Human interface found for intended journey",
+        "Not verified as production-backed (JSON civic-action / local store)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "A-15-FED-020",
+      "name": "No cross-tenant leakage",
+      "status": "SCAFFOLDED ONLY",
+      "severity": "P0",
+      "launch_impact": "Launch blocker",
+      "affected_humans": [
+        "Administrator"
+      ],
+      "affected_journeys": [
+        "Isolation test"
+      ],
+      "known_gaps": [
+        "No usable Human interface found for intended journey",
+        "Not verified as production-backed (JSON civic-action / local store)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "A-00-FOU-006",
+      "name": "Production database",
+      "status": "MISSING",
+      "severity": "P0",
+      "launch_impact": "Launch blocker",
+      "affected_humans": [
+        "Developer",
+        "Administrator"
+      ],
+      "affected_journeys": [
+        "Prod persist"
+      ],
+      "known_gaps": [
+        "No prisma/drizzle/supabase production database found"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    }
+  ],
+  "p1": [
+    {
+      "capability_id": "B-01-INV-001",
+      "name": "Invitation-only entry",
+      "status": "PARTIALLY IMPLEMENTED",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Guest",
+        "Invited Human"
+      ],
+      "affected_journeys": [
+        "Invite link → land → create"
+      ],
+      "known_gaps": [
+        "UI surface found; Pass 1 did not certify full journey / persistence / permissions",
+        "Persistence mode: Local-only / Development-backed civic-action JSON (no production DB evidence)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p1-or-p0-gap"
+    },
+    {
+      "capability_id": "B-01-INV-002",
+      "name": "Invite-code ownership",
+      "status": "PARTIALLY IMPLEMENTED",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Administrator",
+        "Sponsor"
+      ],
+      "affected_journeys": [
+        "Sponsor creates invite"
+      ],
+      "known_gaps": [
+        "UI surface found; Pass 1 did not certify full journey / persistence / permissions",
+        "Persistence mode: Local-only / Development-backed civic-action JSON (no production DB evidence)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p1-or-p0-gap"
+    },
+    {
+      "capability_id": "B-01-INV-003",
+      "name": "Referrer attribution",
+      "status": "PARTIALLY IMPLEMENTED",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Administrator",
+        "Sponsored Human"
+      ],
+      "affected_journeys": [
+        "Accept → lineage"
+      ],
+      "known_gaps": [
+        "UI surface found; Pass 1 did not certify full journey / persistence / permissions",
+        "Persistence mode: Local-only / Development-backed civic-action JSON (no production DB evidence)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p1-or-p0-gap"
+    },
+    {
+      "capability_id": "B-01-INV-004",
+      "name": "Human identity verification",
+      "status": "PARTIALLY IMPLEMENTED",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Invited Human",
+        "Administrator"
+      ],
+      "affected_journeys": [
+        "Verification flow"
+      ],
+      "known_gaps": [
+        "UI surface found; Pass 1 did not certify full journey / persistence / permissions",
+        "Persistence mode: Local-only / Development-backed civic-action JSON (no production DB evidence)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p1-or-p0-gap"
+    },
+    {
+      "capability_id": "B-01-INV-005",
+      "name": "Public Human name enforcement",
+      "status": "PARTIALLY IMPLEMENTED",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Invited Human"
+      ],
+      "affected_journeys": [
+        "Profile name rules"
+      ],
+      "known_gaps": [
+        "UI surface found; Pass 1 did not certify full journey / persistence / permissions",
+        "Persistence mode: Local-only / Development-backed civic-action JSON (no production DB evidence)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p1-or-p0-gap"
+    },
+    {
+      "capability_id": "B-01-INV-006",
+      "name": "Alias governance",
+      "status": "PARTIALLY IMPLEMENTED",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Invited Human",
+        "Administrator"
+      ],
+      "affected_journeys": [
+        "Alias set/review"
+      ],
+      "known_gaps": [
+        "UI surface found; Pass 1 did not certify full journey / persistence / permissions",
+        "Persistence mode: Local-only / Development-backed civic-action JSON (no production DB evidence)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p1-or-p0-gap"
+    },
+    {
+      "capability_id": "B-01-INV-007",
+      "name": "Secondary verification",
+      "status": "PARTIALLY IMPLEMENTED",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Administrator",
+        "Invited Human"
+      ],
+      "affected_journeys": [
+        "Secondary verify"
+      ],
+      "known_gaps": [
+        "UI surface found; Pass 1 did not certify full journey / persistence / permissions",
+        "Persistence mode: Local-only / Development-backed civic-action JSON (no production DB evidence)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p1-or-p0-gap"
+    },
+    {
+      "capability_id": "B-01-INV-008",
+      "name": "Removal or review pathway",
+      "status": "PARTIALLY IMPLEMENTED",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Administrator",
+        "Human"
+      ],
+      "affected_journeys": [
+        "Appeal/review"
+      ],
+      "known_gaps": [
+        "UI surface found; Pass 1 did not certify full journey / persistence / permissions",
+        "Persistence mode: Local-only / Development-backed civic-action JSON (no production DB evidence)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p1-or-p0-gap"
+    },
+    {
+      "capability_id": "B-01-INV-009",
+      "name": "Invitation expiration",
+      "status": "PARTIALLY IMPLEMENTED",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Administrator",
+        "Sponsored Human"
+      ],
+      "affected_journeys": [
+        "Expired invite denied"
+      ],
+      "known_gaps": [
+        "UI surface found; Pass 1 did not certify full journey / persistence / permissions",
+        "Persistence mode: Local-only / Development-backed civic-action JSON (no production DB evidence)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p1-or-p0-gap"
+    },
+    {
+      "capability_id": "B-01-INV-010",
+      "name": "Invitation revocation",
+      "status": "PARTIALLY IMPLEMENTED",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Administrator",
+        "Sponsor"
+      ],
+      "affected_journeys": [
+        "Revoke invite"
+      ],
+      "known_gaps": [
+        "UI surface found; Pass 1 did not certify full journey / persistence / permissions",
+        "Persistence mode: Local-only / Development-backed civic-action JSON (no production DB evidence)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p1-or-p0-gap"
+    },
+    {
+      "capability_id": "B-01-INV-011",
+      "name": "Invite abuse controls",
+      "status": "SCAFFOLDED ONLY",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Administrator"
+      ],
+      "affected_journeys": [
+        "Rate/abuse checks"
+      ],
+      "known_gaps": [
+        "No usable Human interface found for intended journey",
+        "Not verified as production-backed (JSON civic-action / local store)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "B-01-INV-012",
+      "name": "User lineage and sponsor traceability",
+      "status": "PARTIALLY IMPLEMENTED",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Administrator",
+        "Human"
+      ],
+      "affected_journeys": [
+        "Trace sponsor"
+      ],
+      "known_gaps": [
+        "UI surface found; Pass 1 did not certify full journey / persistence / permissions",
+        "Persistence mode: Local-only / Development-backed civic-action JSON (no production DB evidence)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p1-or-p0-gap"
+    },
+    {
+      "capability_id": "B-01-INV-013",
+      "name": "Organization-specific invitations",
+      "status": "PARTIALLY IMPLEMENTED",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Administrator",
+        "Sponsor"
+      ],
+      "affected_journeys": [
+        "Org invite"
+      ],
+      "known_gaps": [
+        "UI surface found; Pass 1 did not certify full journey / persistence / permissions",
+        "Persistence mode: Local-only / Development-backed civic-action JSON (no production DB evidence)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p1-or-p0-gap"
+    },
+    {
+      "capability_id": "B-01-INV-014",
+      "name": "Team and Mission invitations",
+      "status": "PARTIALLY IMPLEMENTED",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Team Lead",
+        "Organizer"
+      ],
+      "affected_journeys": [
+        "Mission/team invite"
+      ],
+      "known_gaps": [
+        "UI surface found; Pass 1 did not certify full journey / persistence / permissions",
+        "Persistence mode: Local-only / Development-backed civic-action JSON (no production DB evidence)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p1-or-p0-gap"
+    },
+    {
+      "capability_id": "B-01-INV-015",
+      "name": "Email invitation",
+      "status": "PARTIALLY IMPLEMENTED",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Sponsor"
+      ],
+      "affected_journeys": [
+        "Send email invite"
+      ],
+      "known_gaps": [
+        "UI surface found; Pass 1 did not certify full journey / persistence / permissions",
+        "Persistence mode: Local-only / Development-backed civic-action JSON (no production DB evidence)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p1-or-p0-gap"
+    },
+    {
+      "capability_id": "B-01-INV-016",
+      "name": "SMS invitation",
+      "status": "SCAFFOLDED ONLY",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Sponsor"
+      ],
+      "affected_journeys": [
+        "Send SMS invite"
+      ],
+      "known_gaps": [
+        "No usable Human interface found for intended journey",
+        "Not verified as production-backed (JSON civic-action / local store)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "B-01-INV-017",
+      "name": "QR invitation",
+      "status": "SCAFFOLDED ONLY",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Sponsor",
+        "Guest"
+      ],
+      "affected_journeys": [
+        "Scan QR → invite"
+      ],
+      "known_gaps": [
+        "No usable Human interface found for intended journey",
+        "Not verified as production-backed (JSON civic-action / local store)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "B-01-INV-018",
+      "name": "Shareable invitation link",
+      "status": "PARTIALLY IMPLEMENTED",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Sponsor",
+        "Guest"
+      ],
+      "affected_journeys": [
+        "Copy link → accept"
+      ],
+      "known_gaps": [
+        "UI surface found; Pass 1 did not certify full journey / persistence / permissions",
+        "Persistence mode: Local-only / Development-backed civic-action JSON (no production DB evidence)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p1-or-p0-gap"
+    },
+    {
+      "capability_id": "B-01-INV-019",
+      "name": "Invitation acceptance tracking",
+      "status": "PARTIALLY IMPLEMENTED",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Administrator",
+        "Sponsor"
+      ],
+      "affected_journeys": [
+        "View accept status"
+      ],
+      "known_gaps": [
+        "UI surface found; Pass 1 did not certify full journey / persistence / permissions",
+        "Persistence mode: Local-only / Development-backed civic-action JSON (no production DB evidence)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p1-or-p0-gap"
+    },
+    {
+      "capability_id": "B-01-INV-020",
+      "name": "Invitation conversion analytics",
+      "status": "SCAFFOLDED ONLY",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Administrator"
+      ],
+      "affected_journeys": [
+        "Analytics view"
+      ],
+      "known_gaps": [
+        "No usable Human interface found for intended journey",
+        "Not verified as production-backed (JSON civic-action / local store)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "B-01-INV-021",
+      "name": "Duplicate identity prevention",
+      "status": "PARTIALLY IMPLEMENTED",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Administrator"
+      ],
+      "affected_journeys": [
+        "Dedupe check"
+      ],
+      "known_gaps": [
+        "UI surface found; Pass 1 did not certify full journey / persistence / permissions",
+        "Persistence mode: Local-only / Development-backed civic-action JSON (no production DB evidence)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p1-or-p0-gap"
+    },
+    {
+      "capability_id": "B-01-INV-022",
+      "name": "Account recovery",
+      "status": "PARTIALLY IMPLEMENTED",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Human"
+      ],
+      "affected_journeys": [
+        "Forgot password/recovery"
+      ],
+      "known_gaps": [
+        "UI surface found; Pass 1 did not certify full journey / persistence / permissions",
+        "Persistence mode: Local-only / Development-backed civic-action JSON (no production DB evidence)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p1-or-p0-gap"
+    },
+    {
+      "capability_id": "B-01-INV-023",
+      "name": "Session recovery",
+      "status": "SCAFFOLDED ONLY",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Human"
+      ],
+      "affected_journeys": [
+        "Return visit resumes"
+      ],
+      "known_gaps": [
+        "No usable Human interface found for intended journey",
+        "Not verified as production-backed (JSON civic-action / local store)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "B-01-INV-024",
+      "name": "Device management",
+      "status": "PARTIALLY IMPLEMENTED",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Human"
+      ],
+      "affected_journeys": [
+        "Manage devices"
+      ],
+      "known_gaps": [
+        "UI surface found; Pass 1 did not certify full journey / persistence / permissions",
+        "Persistence mode: Local-only / Development-backed civic-action JSON (no production DB evidence)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p1-or-p0-gap"
+    },
+    {
+      "capability_id": "B-01-INV-025",
+      "name": "Multi-organization identity",
+      "status": "SCAFFOLDED ONLY",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Human",
+        "Administrator"
+      ],
+      "affected_journeys": [
+        "Select org / switch"
+      ],
+      "known_gaps": [
+        "No usable Human interface found for intended journey",
+        "Not verified as production-backed (JSON civic-action / local store)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "B-01-INV-026",
+      "name": "Password login/register",
+      "status": "PARTIALLY IMPLEMENTED",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Human"
+      ],
+      "affected_journeys": [
+        "Login/register"
+      ],
+      "known_gaps": [
+        "UI surface found; Pass 1 did not certify full journey / persistence / permissions",
+        "Persistence mode: Local-only / Development-backed civic-action JSON (no production DB evidence)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p1-or-p0-gap"
+    },
+    {
+      "capability_id": "B-01-INV-027",
+      "name": "Passwordless login",
+      "status": "PARTIALLY IMPLEMENTED",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Human"
+      ],
+      "affected_journeys": [
+        "Passwordless"
+      ],
+      "known_gaps": [
+        "UI surface found; Pass 1 did not certify full journey / persistence / permissions",
+        "Persistence mode: Local-only / Development-backed civic-action JSON (no production DB evidence)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p1-or-p0-gap"
+    },
+    {
+      "capability_id": "B-01-INV-028",
+      "name": "MFA setup",
+      "status": "PARTIALLY IMPLEMENTED",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Human"
+      ],
+      "affected_journeys": [
+        "MFA setup"
+      ],
+      "known_gaps": [
+        "UI surface found; Pass 1 did not certify full journey / persistence / permissions",
+        "Persistence mode: Local-only / Development-backed civic-action JSON (no production DB evidence)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p1-or-p0-gap"
+    },
+    {
+      "capability_id": "B-02-LB-001",
+      "name": "One Human / one LocalBrain",
+      "status": "SCAFFOLDED ONLY",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Human"
+      ],
+      "affected_journeys": [
+        "Identity → LocalBrain"
+      ],
+      "known_gaps": [
+        "No usable Human interface found for intended journey",
+        "Not verified as production-backed (JSON civic-action / local store)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "B-02-LB-002",
+      "name": "LocalBrain creation",
+      "status": "SCAFFOLDED ONLY",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Human"
+      ],
+      "affected_journeys": [
+        "First-run create"
+      ],
+      "known_gaps": [
+        "No usable Human interface found for intended journey",
+        "Not verified as production-backed (JSON civic-action / local store)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "B-02-LB-003",
+      "name": "Personal memory",
+      "status": "SCAFFOLDED ONLY",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Human"
+      ],
+      "affected_journeys": [
+        "Remember preference/fact"
+      ],
+      "known_gaps": [
+        "No usable Human interface found for intended journey",
+        "Not verified as production-backed (JSON civic-action / local store)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "B-02-LB-004",
+      "name": "Working memory",
+      "status": "SCAFFOLDED ONLY",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Human"
+      ],
+      "affected_journeys": [
+        "Session working set"
+      ],
+      "known_gaps": [
+        "No usable Human interface found for intended journey",
+        "Not verified as production-backed (JSON civic-action / local store)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "B-02-LB-005",
+      "name": "Temporary memory",
+      "status": "SCAFFOLDED ONLY",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Human"
+      ],
+      "affected_journeys": [
+        "Ephemeral memory"
+      ],
+      "known_gaps": [
+        "No usable Human interface found for intended journey",
+        "Not verified as production-backed (JSON civic-action / local store)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "B-02-LB-006",
+      "name": "Long-term memory",
+      "status": "SCAFFOLDED ONLY",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Human"
+      ],
+      "affected_journeys": [
+        "Persist long-term"
+      ],
+      "known_gaps": [
+        "No usable Human interface found for intended journey",
+        "Not verified as production-backed (JSON civic-action / local store)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "B-02-LB-007",
+      "name": "Memory promotion",
+      "status": "SCAFFOLDED ONLY",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Human",
+        "Administrator"
+      ],
+      "affected_journeys": [
+        "Promote memory"
+      ],
+      "known_gaps": [
+        "No usable Human interface found for intended journey",
+        "Not verified as production-backed (JSON civic-action / local store)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "B-02-LB-008",
+      "name": "Memory correction",
+      "status": "SCAFFOLDED ONLY",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Human"
+      ],
+      "affected_journeys": [
+        "Edit memory"
+      ],
+      "known_gaps": [
+        "No usable Human interface found for intended journey",
+        "Not verified as production-backed (JSON civic-action / local store)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "B-02-LB-009",
+      "name": "Memory retention controls",
+      "status": "SCAFFOLDED ONLY",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Human"
+      ],
+      "affected_journeys": [
+        "Delete memory"
+      ],
+      "known_gaps": [
+        "No usable Human interface found for intended journey",
+        "Not verified as production-backed (JSON civic-action / local store)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "B-02-LB-010",
+      "name": "Active Institution context",
+      "status": "SCAFFOLDED ONLY",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Human"
+      ],
+      "affected_journeys": [
+        "Switch org refreshes context"
+      ],
+      "known_gaps": [
+        "No usable Human interface found for intended journey",
+        "Not verified as production-backed (JSON civic-action / local store)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "B-02-LB-011",
+      "name": "Active Mission context",
+      "status": "SCAFFOLDED ONLY",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Human",
+        "Organizer"
+      ],
+      "affected_journeys": [
+        "Mission context load"
+      ],
+      "known_gaps": [
+        "No usable Human interface found for intended journey",
+        "Not verified as production-backed (JSON civic-action / local store)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "B-02-LB-012",
+      "name": "Calendar context",
+      "status": "SCAFFOLDED ONLY",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Human"
+      ],
+      "affected_journeys": [
+        "Day context from calendar"
+      ],
+      "known_gaps": [
+        "No usable Human interface found for intended journey",
+        "Not verified as production-backed (JSON civic-action / local store)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "B-02-LB-013",
+      "name": "Meeting context",
+      "status": "SCAFFOLDED ONLY",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Human"
+      ],
+      "affected_journeys": [
+        "Meeting prep context"
+      ],
+      "known_gaps": [
+        "No usable Human interface found for intended journey",
+        "Not verified as production-backed (JSON civic-action / local store)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "B-02-LB-014",
+      "name": "Role context",
+      "status": "SCAFFOLDED ONLY",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Human"
+      ],
+      "affected_journeys": [
+        "Role context"
+      ],
+      "known_gaps": [
+        "No usable Human interface found for intended journey",
+        "Not verified as production-backed (JSON civic-action / local store)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "B-02-LB-015",
+      "name": "Privacy boundaries",
+      "status": "SCAFFOLDED ONLY",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Human"
+      ],
+      "affected_journeys": [
+        "Private vs shared"
+      ],
+      "known_gaps": [
+        "No usable Human interface found for intended journey",
+        "Not verified as production-backed (JSON civic-action / local store)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "B-02-LB-017",
+      "name": "Context correction",
+      "status": "SCAFFOLDED ONLY",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Human"
+      ],
+      "affected_journeys": [
+        "Correct context"
+      ],
+      "known_gaps": [
+        "No usable Human interface found for intended journey",
+        "Not verified as production-backed (JSON civic-action / local store)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "B-02-LB-018",
+      "name": "Human override",
+      "status": "SCAFFOLDED ONLY",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Human"
+      ],
+      "affected_journeys": [
+        "Override suggestion"
+      ],
+      "known_gaps": [
+        "No usable Human interface found for intended journey",
+        "Not verified as production-backed (JSON civic-action / local store)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "B-02-LB-020",
+      "name": "Personal preference storage",
+      "status": "PARTIALLY IMPLEMENTED",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Human"
+      ],
+      "affected_journeys": [
+        "Save preferences"
+      ],
+      "known_gaps": [
+        "UI surface found; Pass 1 did not certify full journey / persistence / permissions",
+        "Persistence mode: Local-only / Development-backed civic-action JSON (no production DB evidence)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p1-or-p0-gap"
+    },
+    {
+      "capability_id": "B-02-LB-021",
+      "name": "Conversational Spanish",
+      "status": "SCAFFOLDED ONLY",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Human"
+      ],
+      "affected_journeys": [
+        "Speak Spanish with LB"
+      ],
+      "known_gaps": [
+        "No usable Human interface found for intended journey",
+        "Not verified as production-backed (JSON civic-action / local store)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "B-02-LB-022",
+      "name": "Accessibility preferences",
+      "status": "SCAFFOLDED ONLY",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Human"
+      ],
+      "affected_journeys": [
+        "Set a11y prefs"
+      ],
+      "known_gaps": [
+        "No usable Human interface found for intended journey",
+        "Not verified as production-backed (JSON civic-action / local store)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "B-02-LB-023",
+      "name": "LocalBrain timeline",
+      "status": "SCAFFOLDED ONLY",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Human"
+      ],
+      "affected_journeys": [
+        "View timeline"
+      ],
+      "known_gaps": [
+        "No usable Human interface found for intended journey",
+        "Not verified as production-backed (JSON civic-action / local store)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "B-03-ONB-001",
+      "name": "Invitation landing page",
+      "status": "PARTIALLY IMPLEMENTED",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Invited Human"
+      ],
+      "affected_journeys": [
+        "Open invite URL"
+      ],
+      "known_gaps": [
+        "UI surface found; Pass 1 did not certify full journey / persistence / permissions",
+        "Persistence mode: Local-only / Development-backed civic-action JSON (no production DB evidence)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p1-or-p0-gap"
+    },
+    {
+      "capability_id": "B-03-ONB-002",
+      "name": "Inviter identity on landing",
+      "status": "PARTIALLY IMPLEMENTED",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Invited Human"
+      ],
+      "affected_journeys": [
+        "See inviter"
+      ],
+      "known_gaps": [
+        "UI surface found; Pass 1 did not certify full journey / persistence / permissions",
+        "Persistence mode: Local-only / Development-backed civic-action JSON (no production DB evidence)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p1-or-p0-gap"
+    },
+    {
+      "capability_id": "B-03-ONB-003",
+      "name": "Reason for invitation",
+      "status": "SCAFFOLDED ONLY",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Invited Human"
+      ],
+      "affected_journeys": [
+        "See reason"
+      ],
+      "known_gaps": [
+        "UI path matched without clear service/API backing"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "B-03-ONB-004",
+      "name": "Account creation",
+      "status": "PARTIALLY IMPLEMENTED",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Invited Human"
+      ],
+      "affected_journeys": [
+        "Register"
+      ],
+      "known_gaps": [
+        "UI surface found; Pass 1 did not certify full journey / persistence / permissions",
+        "Persistence mode: Local-only / Development-backed civic-action JSON (no production DB evidence)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p1-or-p0-gap"
+    },
+    {
+      "capability_id": "B-03-ONB-005",
+      "name": "Identity setup",
+      "status": "SCAFFOLDED ONLY",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Invited Human"
+      ],
+      "affected_journeys": [
+        "Setup identity"
+      ],
+      "known_gaps": [
+        "UI path matched without clear service/API backing"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "B-03-ONB-006",
+      "name": "Organization introduction",
+      "status": "SCAFFOLDED ONLY",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Invited Human"
+      ],
+      "affected_journeys": [
+        "Meet org"
+      ],
+      "known_gaps": [
+        "UI path matched without clear service/API backing"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "B-03-ONB-007",
+      "name": "Role explanation",
+      "status": "SCAFFOLDED ONLY",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Invited Human"
+      ],
+      "affected_journeys": [
+        "Understand role"
+      ],
+      "known_gaps": [
+        "UI path matched without clear service/API backing"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "B-03-ONB-008",
+      "name": "Team introduction",
+      "status": "SCAFFOLDED ONLY",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Invited Human"
+      ],
+      "affected_journeys": [
+        "Meet team"
+      ],
+      "known_gaps": [
+        "UI path matched without clear service/API backing"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "B-03-ONB-009",
+      "name": "LocalBrain introduction",
+      "status": "PARTIALLY IMPLEMENTED",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Invited Human"
+      ],
+      "affected_journeys": [
+        "Meet LocalBrain"
+      ],
+      "known_gaps": [
+        "UI surface found; Pass 1 did not certify full journey / persistence / permissions",
+        "Persistence mode: Local-only / Development-backed civic-action JSON (no production DB evidence)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p1-or-p0-gap"
+    },
+    {
+      "capability_id": "B-03-ONB-010",
+      "name": "Workspace initialization",
+      "status": "SCAFFOLDED ONLY",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Invited Human"
+      ],
+      "affected_journeys": [
+        "Land in workspace"
+      ],
+      "known_gaps": [
+        "UI path matched without clear service/API backing"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "B-03-ONB-011",
+      "name": "First meaningful action",
+      "status": "SCAFFOLDED ONLY",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Invited Human"
+      ],
+      "affected_journeys": [
+        "Complete first task"
+      ],
+      "known_gaps": [
+        "UI path matched without clear service/API backing"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "B-03-ONB-012",
+      "name": "Guided first session",
+      "status": "SCAFFOLDED ONLY",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Invited Human"
+      ],
+      "affected_journeys": [
+        "Guided tour"
+      ],
+      "known_gaps": [
+        "UI path matched without clear service/API backing"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "B-03-ONB-013",
+      "name": "First-day follow-up",
+      "status": "MISSING",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Invited Human"
+      ],
+      "affected_journeys": [
+        "Day-1 nudge"
+      ],
+      "known_gaps": [],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "B-03-ONB-014",
+      "name": "First-week journey",
+      "status": "MISSING",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Invited Human"
+      ],
+      "affected_journeys": [
+        "Week-1 path"
+      ],
+      "known_gaps": [],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "B-03-ONB-015",
+      "name": "Drop-off recovery",
+      "status": "SCAFFOLDED ONLY",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Invited Human"
+      ],
+      "affected_journeys": [
+        "Resume onboarding"
+      ],
+      "known_gaps": [
+        "UI path matched without clear service/API backing"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "B-03-ONB-016",
+      "name": "Mobile onboarding",
+      "status": "SCAFFOLDED ONLY",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Invited Human"
+      ],
+      "affected_journeys": [
+        "Onboard on phone"
+      ],
+      "known_gaps": [
+        "UI path matched without clear service/API backing"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "B-03-ONB-017",
+      "name": "Tablet onboarding",
+      "status": "SCAFFOLDED ONLY",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Invited Human"
+      ],
+      "affected_journeys": [
+        "Onboard on tablet"
+      ],
+      "known_gaps": [
+        "UI path matched without clear service/API backing"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "B-03-ONB-018",
+      "name": "Spanish onboarding",
+      "status": "DOCUMENTED ONLY",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Invited Human"
+      ],
+      "affected_journeys": [
+        "Onboard in ES"
+      ],
+      "known_gaps": [
+        "Documented without runtime implementation evidence"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "B-03-ONB-019",
+      "name": "Accessibility path",
+      "status": "SCAFFOLDED ONLY",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Invited Human"
+      ],
+      "affected_journeys": [
+        "A11y onboard"
+      ],
+      "known_gaps": [
+        "UI path matched without clear service/API backing"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "C-04-DAY-001",
+      "name": "Daily briefing",
+      "status": "IMPLEMENTED DIFFERENTLY",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Executive",
+        "Organizer",
+        "Human"
+      ],
+      "affected_journeys": [
+        "Open briefing"
+      ],
+      "known_gaps": [
+        "UI surface found; Pass 1 did not certify full journey / persistence / permissions",
+        "Persistence mode: Local-only / Development-backed civic-action JSON (no production DB evidence)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "gap-register"
+    },
+    {
+      "capability_id": "C-04-DAY-002",
+      "name": "Today view",
+      "status": "PARTIALLY IMPLEMENTED",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Human",
+        "Organizer"
+      ],
+      "affected_journeys": [
+        "Open today"
+      ],
+      "known_gaps": [
+        "UI surface found; Pass 1 did not certify full journey / persistence / permissions",
+        "Persistence mode: Local-only / Development-backed civic-action JSON (no production DB evidence)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p1-or-p0-gap"
+    },
+    {
+      "capability_id": "C-04-DAY-003",
+      "name": "My Day timeline",
+      "status": "SCAFFOLDED ONLY",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Human"
+      ],
+      "affected_journeys": [
+        "View My Day"
+      ],
+      "known_gaps": [
+        "No usable Human interface found for intended journey",
+        "Not verified as production-backed (JSON civic-action / local store)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "C-04-DAY-004",
+      "name": "Current priorities",
+      "status": "PARTIALLY IMPLEMENTED",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Human",
+        "Executive"
+      ],
+      "affected_journeys": [
+        "See priorities"
+      ],
+      "known_gaps": [
+        "UI surface found; Pass 1 did not certify full journey / persistence / permissions",
+        "Persistence mode: Local-only / Development-backed civic-action JSON (no production DB evidence)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p1-or-p0-gap"
+    },
+    {
+      "capability_id": "C-04-DAY-005",
+      "name": "Upcoming meetings",
+      "status": "PARTIALLY IMPLEMENTED",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Human"
+      ],
+      "affected_journeys": [
+        "See meetings"
+      ],
+      "known_gaps": [
+        "UI surface found; Pass 1 did not certify full journey / persistence / permissions",
+        "Persistence mode: Local-only / Development-backed civic-action JSON (no production DB evidence)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p1-or-p0-gap"
+    },
+    {
+      "capability_id": "C-04-DAY-006",
+      "name": "Active Missions",
+      "status": "PARTIALLY IMPLEMENTED",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Organizer",
+        "Human"
+      ],
+      "affected_journeys": [
+        "See active missions"
+      ],
+      "known_gaps": [
+        "UI surface found; Pass 1 did not certify full journey / persistence / permissions",
+        "Persistence mode: Local-only / Development-backed civic-action JSON (no production DB evidence)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p1-or-p0-gap"
+    },
+    {
+      "capability_id": "C-04-DAY-007",
+      "name": "Waiting-on items",
+      "status": "SCAFFOLDED ONLY",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Human",
+        "Executive"
+      ],
+      "affected_journeys": [
+        "See waiting-on"
+      ],
+      "known_gaps": [
+        "No usable Human interface found for intended journey",
+        "Not verified as production-backed (JSON civic-action / local store)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "C-04-DAY-008",
+      "name": "Decisions awaiting action",
+      "status": "PARTIALLY IMPLEMENTED",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Executive",
+        "Human"
+      ],
+      "affected_journeys": [
+        "Act on decision"
+      ],
+      "known_gaps": [
+        "UI surface found; Pass 1 did not certify full journey / persistence / permissions",
+        "Persistence mode: Local-only / Development-backed civic-action JSON (no production DB evidence)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p1-or-p0-gap"
+    },
+    {
+      "capability_id": "C-04-DAY-009",
+      "name": "Announcements",
+      "status": "PARTIALLY IMPLEMENTED",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Human"
+      ],
+      "affected_journeys": [
+        "Read announcement"
+      ],
+      "known_gaps": [
+        "UI surface found; Pass 1 did not certify full journey / persistence / permissions",
+        "Persistence mode: Local-only / Development-backed civic-action JSON (no production DB evidence)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p1-or-p0-gap"
+    },
+    {
+      "capability_id": "C-04-DAY-010",
+      "name": "Notifications",
+      "status": "PARTIALLY IMPLEMENTED",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Human"
+      ],
+      "affected_journeys": [
+        "Open notifications"
+      ],
+      "known_gaps": [
+        "UI surface found; Pass 1 did not certify full journey / persistence / permissions",
+        "Persistence mode: Local-only / Development-backed civic-action JSON (no production DB evidence)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p1-or-p0-gap"
+    },
+    {
+      "capability_id": "C-04-DAY-011",
+      "name": "Search",
+      "status": "PARTIALLY IMPLEMENTED",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Human"
+      ],
+      "affected_journeys": [
+        "Search"
+      ],
+      "known_gaps": [
+        "UI surface found; Pass 1 did not certify full journey / persistence / permissions",
+        "Persistence mode: Local-only / Development-backed civic-action JSON (no production DB evidence)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p1-or-p0-gap"
+    },
+    {
+      "capability_id": "C-04-DAY-012",
+      "name": "Command palette",
+      "status": "MISSING",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Human"
+      ],
+      "affected_journeys": [
+        "Cmd-K actions"
+      ],
+      "known_gaps": [],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "C-04-DAY-013",
+      "name": "Recent work",
+      "status": "MISSING",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Human"
+      ],
+      "affected_journeys": [
+        "Resume recent"
+      ],
+      "known_gaps": [],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "C-04-DAY-014",
+      "name": "Bookmarks",
+      "status": "MISSING",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Human"
+      ],
+      "affected_journeys": [
+        "Bookmark item"
+      ],
+      "known_gaps": [],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "C-04-DAY-015",
+      "name": "Notes",
+      "status": "MISSING",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Human"
+      ],
+      "affected_journeys": [
+        "Write note"
+      ],
+      "known_gaps": [],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "C-04-DAY-016",
+      "name": "Focus mode",
+      "status": "SCAFFOLDED ONLY",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Human"
+      ],
+      "affected_journeys": [
+        "Enter focus"
+      ],
+      "known_gaps": [
+        "No usable Human interface found for intended journey",
+        "Not verified as production-backed (JSON civic-action / local store)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "C-04-DAY-017",
+      "name": "End-of-day review",
+      "status": "SCAFFOLDED ONLY",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Human"
+      ],
+      "affected_journeys": [
+        "EOD review"
+      ],
+      "known_gaps": [
+        "No usable Human interface found for intended journey",
+        "Not verified as production-backed (JSON civic-action / local store)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "C-04-DAY-018",
+      "name": "Tomorrow preparation",
+      "status": "SCAFFOLDED ONLY",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Human"
+      ],
+      "affected_journeys": [
+        "Prep tomorrow"
+      ],
+      "known_gaps": [
+        "No usable Human interface found for intended journey",
+        "Not verified as production-backed (JSON civic-action / local store)"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "C-04-DAY-019",
+      "name": "Mobile workspace",
+      "status": "MISSING",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Human"
+      ],
+      "affected_journeys": [
+        "Use on mobile"
+      ],
+      "known_gaps": [],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "C-04-DAY-020",
+      "name": "Tablet workspace",
+      "status": "MISSING",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Human"
+      ],
+      "affected_journeys": [
+        "Use on tablet"
+      ],
+      "known_gaps": [],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "C-04-DAY-021",
+      "name": "Large-display mode",
+      "status": "MISSING",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Executive"
+      ],
+      "affected_journeys": [
+        "Wall/TV mode"
+      ],
+      "known_gaps": [],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "C-04-DAY-022",
+      "name": "Consistent global navigation",
+      "status": "DOCUMENTED ONLY",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Human"
+      ],
+      "affected_journeys": [
+        "Navigate product"
+      ],
+      "known_gaps": [
+        "Documented without runtime implementation evidence"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "C-04-DAY-023",
+      "name": "Empty states",
+      "status": "MISSING",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Human"
+      ],
+      "affected_journeys": [
+        "Empty inbox/state"
+      ],
+      "known_gaps": [],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "C-04-DAY-024",
+      "name": "Loading states",
+      "status": "MISSING",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Human"
+      ],
+      "affected_journeys": [
+        "See loading"
+      ],
+      "known_gaps": [],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "C-04-DAY-025",
+      "name": "Error recovery",
+      "status": "SCAFFOLDED ONLY",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Human"
+      ],
+      "affected_journeys": [
+        "Recover from error"
+      ],
+      "known_gaps": [
+        "UI path matched without clear service/API backing"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "C-05-CAL-002",
+      "name": "Personal calendar view",
+      "status": "SCAFFOLDED ONLY",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Human"
+      ],
+      "affected_journeys": [
+        "Personal calendar"
+      ],
+      "known_gaps": [
+        "No usable Human interface found for intended journey",
+        "Not verified as production-backed (JSON civic-action / local store)",
+        "Calendar APIs exist; no calendar page.tsx"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "C-05-CAL-003",
+      "name": "Team calendar view",
+      "status": "SCAFFOLDED ONLY",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Team Lead",
+        "Human"
+      ],
+      "affected_journeys": [
+        "Team calendar"
+      ],
+      "known_gaps": [
+        "No usable Human interface found for intended journey",
+        "Not verified as production-backed (JSON civic-action / local store)",
+        "Calendar APIs exist; no calendar page.tsx"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "C-05-CAL-004",
+      "name": "Mission calendar view",
+      "status": "SCAFFOLDED ONLY",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Organizer"
+      ],
+      "affected_journeys": [
+        "Mission calendar"
+      ],
+      "known_gaps": [
+        "No usable Human interface found for intended journey",
+        "Not verified as production-backed (JSON civic-action / local store)",
+        "Calendar APIs exist; no calendar page.tsx"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "C-05-CAL-005",
+      "name": "Organization calendar view",
+      "status": "SCAFFOLDED ONLY",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Administrator",
+        "Human"
+      ],
+      "affected_journeys": [
+        "Org calendar"
+      ],
+      "known_gaps": [
+        "No usable Human interface found for intended journey",
+        "Not verified as production-backed (JSON civic-action / local store)",
+        "Calendar APIs exist; no calendar page.tsx"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "C-05-CAL-006",
+      "name": "Resource calendar view",
+      "status": "SCAFFOLDED ONLY",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Administrator"
+      ],
+      "affected_journeys": [
+        "Resource calendar"
+      ],
+      "known_gaps": [
+        "No usable Human interface found for intended journey",
+        "Not verified as production-backed (JSON civic-action / local store)",
+        "Calendar APIs exist; no calendar page.tsx"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "C-05-CAL-007",
+      "name": "Executive calendar view",
+      "status": "SCAFFOLDED ONLY",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Executive"
+      ],
+      "affected_journeys": [
+        "Exec calendar"
+      ],
+      "known_gaps": [
+        "No usable Human interface found for intended journey",
+        "Not verified as production-backed (JSON civic-action / local store)",
+        "Calendar APIs exist; no calendar page.tsx"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    },
+    {
+      "capability_id": "C-05-CAL-008",
+      "name": "Event creation",
+      "status": "SCAFFOLDED ONLY",
+      "severity": "P1",
+      "launch_impact": "Required before broad beta",
+      "affected_humans": [
+        "Human"
+      ],
+      "affected_journeys": [
+        "Create event"
+      ],
+      "known_gaps": [
+        "No usable Human interface found for intended journey",
+        "Not verified as production-backed (JSON civic-action / local store)",
+        "Calendar APIs exist; no calendar page.tsx"
+      ],
+      "recommended_next_pass": "Repair planning after Pass 1 acceptance; UX detail in Pass 2",
+      "recommended_disposition": "p0-or-p1-gap"
+    }
+  ],
+  "p1_count": 267,
+  "duplicates": [
+    {
+      "id": "DUP-001",
+      "systems": [
+        "Communications Daily Brief (11.7-COM)",
+        "LocalBrain briefings API (11.7-LIX W3)"
+      ],
+      "classification": "DUPLICATED OR CONFLICTING",
+      "canonical_candidate": "Unresolved — needs Pass 4",
+      "evidence": [
+        "src/app/(site)/communications/brief/page.tsx",
+        "src/app/api/v1/localbrain/briefings"
+      ]
+    },
+    {
+      "id": "DUP-002",
+      "systems": [
+        "Communications UX",
+        "LocalBrain conversations API (W6)"
+      ],
+      "classification": "DUPLICATED OR CONFLICTING",
+      "canonical_candidate": "Unresolved — needs Pass 4",
+      "evidence": [
+        "src/app/(site)/communications/",
+        "src/app/api/v1/localbrain/conversations"
+      ]
+    },
+    {
+      "id": "DUP-003",
+      "systems": [
+        "Learning 11.12 UX",
+        "LocalBrain learning API (W7)"
+      ],
+      "classification": "DUPLICATED OR CONFLICTING",
+      "canonical_candidate": "Unresolved — needs Pass 4",
+      "evidence": [
+        "src/app/(site)/learning/",
+        "src/app/api/v1/localbrain/learning"
+      ]
+    },
+    {
+      "id": "DUP-004",
+      "systems": [
+        "api/v1/calendar",
+        "api/v1/workspace/calendar",
+        "LocalBrain organizer time surfaces"
+      ],
+      "classification": "DUPLICATED OR CONFLICTING",
+      "canonical_candidate": "Unresolved — no calendar UI; Pass 4",
+      "evidence": [
+        "src/app/api/v1/calendar"
+      ]
+    },
+    {
+      "id": "DUP-005",
+      "systems": [
+        "notifications under /api/notifications",
+        "communications/notifications",
+        "site/notifications"
+      ],
+      "classification": "DUPLICATED OR CONFLICTING",
+      "canonical_candidate": "Unresolved — Pass 4",
+      "evidence": [
+        "src/app/(site)/communications/notifications/page.tsx",
+        "src/app/(site)/notifications/page.tsx",
+        "src/app/(site)/notifications/preferences/page.tsx",
+        "src/app/api/admin/notifications/failures/route.ts",
+        "src/app/api/admin/notifications/overview/route.ts",
+        "src/app/api/admin/notifications/queue/route.ts",
+        "src/app/api/admin/notifications/templates/route.ts",
+        "src/app/api/notifications/batch-request/route.ts"
+      ]
+    },
+    {
+      "id": "DUP-006",
+      "systems": [
+        "Multiple dashboard shells: admin, operations, learning, communications, initiatives"
+      ],
+      "classification": "DUPLICATED OR CONFLICTING",
+      "canonical_candidate": "Unresolved — Pass 4 / Pass 5",
+      "evidence": [
+        "admin",
+        "operations",
+        "learning",
+        "communications",
+        "initiatives"
+      ]
+    }
+  ],
+  "false_completeness_marker_files": 29,
+  "false_completeness_sample": [
+    {
+      "file": "src/lib/civic-action/builds/11.1/optimization/digital-twin.ts",
+      "hits": 1,
+      "samples": [
+        "simulated"
+      ]
+    },
+    {
+      "file": "src/lib/civic-action/builds/11.12/ux/assemble-universal-search.ts",
+      "hits": 2,
+      "samples": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "src/lib/civic-action/builds/11.12/ux/locale.ts",
+      "hits": 2,
+      "samples": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "src/lib/civic-action/builds/11.12/ux/view-models.ts",
+      "hits": 1,
+      "samples": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "src/lib/civic-action/builds/11.2/optimization/digital-twin.ts",
+      "hits": 2,
+      "samples": [
+        "simulated"
+      ]
+    },
+    {
+      "file": "src/lib/civic-action/builds/11.6/intelligence/services/intelligence-service.ts",
+      "hits": 1,
+      "samples": [
+        "simulated"
+      ]
+    },
+    {
+      "file": "src/lib/civic-action/builds/11.6/resilience/w11-tests.ts",
+      "hits": 1,
+      "samples": [
+        "simulated"
+      ]
+    },
+    {
+      "file": "src/lib/civic-action/builds/11.7/integrations/mission-adapter.ts",
+      "hits": 4,
+      "samples": [
+        "stub"
+      ]
+    },
+    {
+      "file": "src/lib/civic-action/builds/11.7/intelligence/meeting-analysis.ts",
+      "hits": 1,
+      "samples": [
+        "todo"
+      ]
+    },
+    {
+      "file": "src/lib/civic-action/builds/11.7/living/context/constitution.ts",
+      "hits": 1,
+      "samples": [
+        "fake"
+      ]
+    },
+    {
+      "file": "src/lib/civic-action/builds/11.7/living/kernel/data-model.ts",
+      "hits": 2,
+      "samples": [
+        "simulated"
+      ]
+    },
+    {
+      "file": "src/lib/civic-action/builds/11.7/living/kernel/services/kernel-service.ts",
+      "hits": 4,
+      "samples": [
+        "simulated"
+      ]
+    },
+    {
+      "file": "src/lib/civic-action/builds/11.7/living/kernel/w15-tests.ts",
+      "hits": 2,
+      "samples": [
+        "simulated"
+      ]
+    },
+    {
+      "file": "src/lib/civic-action/builds/11.7/living/twin/services/twin-service.ts",
+      "hits": 1,
+      "samples": [
+        "simulated"
+      ]
+    },
+    {
+      "file": "src/lib/civic-action/builds/11.7/services/mission-sync.ts",
+      "hits": 1,
+      "samples": [
+        "stub"
+      ]
+    },
+    {
+      "file": "src/lib/civic-action/builds/11.7/ux/assemble-offline-cache.ts",
+      "hits": 1,
+      "samples": [
+        "stub"
+      ]
+    },
+    {
+      "file": "src/lib/civic-action/builds/11.7/ux/assemble-search.ts",
+      "hits": 5,
+      "samples": [
+        "stub",
+        "placeholder"
+      ]
+    },
+    {
+      "file": "src/lib/civic-action/builds/11.7/ux/locale.ts",
+      "hits": 2,
+      "samples": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "src/lib/civic-action/builds/11.7/ux/view-models.ts",
+      "hits": 1,
+      "samples": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "src/lib/civic-action/builds/11.7/w3.ts",
+      "hits": 1,
+      "samples": [
+        "stub"
+      ]
+    },
+    {
+      "file": "src/lib/civic-action/builds/11.7/w4.ts",
+      "hits": 1,
+      "samples": [
+        "stub"
+      ]
+    },
+    {
+      "file": "src/lib/civic-action/builds/11.7/w5.ts",
+      "hits": 1,
+      "samples": [
+        "stub"
+      ]
+    },
+    {
+      "file": "src/app/(site)/admin/identity/audit/page.tsx",
+      "hits": 1,
+      "samples": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "src/app/(site)/communications/search/page.tsx",
+      "hits": 3,
+      "samples": [
+        "placeholder"
+      ]
+    },
+    {
+      "file": "src/app/(site)/identity/appeals/page.tsx",
+      "hits": 3,
+      "samples": [
+        "placeholder"
+      ]
+    }
+  ],
+  "persistence_finding": {
+    "mode": "Local-only / Development-backed JSON file store",
+    "primary_store": "data/civic-action/store.json",
+    "orm": null,
+    "prisma": false,
+    "drizzle": false,
+    "supabase": false,
+    "production_database_evidence": false
+  },
+  "pass2_ready": false,
+  "pass2_recommendation": "NOT READY until Steve reviews P0/P1, duplicates, documented/scaffolded lists and accepts Pass 1 record.",
+  "method_limitations": [
+    "Classifications use static inventory matching (routes, libs, docs, scripts), not live browser journeys.",
+    "CERTIFIED PRESENT threshold almost never met without Pass 2 journey + Pass 8 production proof — by design.",
+    "Works/Verified operational scores deliberately conservative.",
+    "No product repairs performed."
+  ]
+}

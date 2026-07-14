@@ -1,16 +1,18 @@
 # Phase 11 Build Ledger
 
-**Updated:** 2026-07-13  
+**Updated:** 2026-07-14  
 **Scaffold:** CAE-SCAFFOLD-001
 
 ## Progress Summary
 
 | Metric | Value |
 |--------|-------|
-| Waves completed | 28 / 128 |
-| Phase overall | 21.9% |
-| Current wave | 11.6 (recommended) |
+| Build 11.7 Living Intelligence | **Architecture Complete** (W1–W16) |
+| Active program | **Version 1.0 Certification — Pass 1** (`V1-CERT-PASS-01`) |
+| Pass 1 overall vision fulfillment | **20.2%** (matrix-computed; see `docs/v1-certification/PASS_01_EXECUTIVE_SUMMARY.md`) |
+| CERTIFIED PRESENT capabilities | **0** (six-axis gate; journey/production proof deferred to later passes) |
 | Build 11.12 | 100% (W1–W8 complete) |
+| Current focus | Product Review Board — **no product repairs** until Steve accepts Pass 1 |
 
 ## Build 11.1 — Initiative Architecture
 
@@ -81,9 +83,18 @@
 | W16 | Living Civilization Runtime & Canonical Genesis Framework | **Complete** |
 
 **Validation:** `npm run phase11:11.7:w1` · `…` · `npm run phase11:11.7:w15` · `npm run phase11:11.7:w16`  
-**Status:** Build 11.7 Living Intelligence — **all 16 waves complete**  
+**Status:** Build 11.7 Living Intelligence — **Architecture Complete** (all 16 waves)  
 **Code:** `src/lib/civic-action/builds/11.7/living/`  
-**APIs:** `/api/v1/localbrain/*`
+**APIs:** `/api/v1/localbrain/*`  
+
+### Certification handover (2026-07-14)
+
+Architecture expansion for Living Intelligence is **closed**.  
+Downstream work is **Version 1.0 Certification** (`docs/v1-certification/`):
+
+- Canonical artifact: `docs/v1-certification/V1_CERTIFICATION_MATRIX.md`
+- Pass 1 Vision Audit seeded: protocol-complete ≠ product-complete
+- Do not open Build 11.8 conceptual layers until Certification Passes 1–9 complete
 
 ## Live Ledger
 
