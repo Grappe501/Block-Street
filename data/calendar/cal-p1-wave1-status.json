@@ -4,8 +4,15 @@
   "subphases": ["CAL-P1.0", "CAL-P1.1"],
   "architecture_state": "PRESENT",
   "certification_state": "ABSENT",
+  "gate_a": {
+    "verdict": "OPEN",
+    "evidence": "data/calendar/certification/CAL-P1/gate-a/",
+    "report": "docs/calendar/CAL_P1_GATE_A_SHADOW_PERSISTENCE_REPORT.md"
+  },
   "authority": "not_production_scheduling_authority",
   "baseline_soft_beta_content": "dd2841c",
+  "wave1_content_commit": "f63c8b1",
+  "wave1_deploy_stamp": "666af01",
   "persistence_modes": ["seed_only", "session_soft_beta", "postgres_shadow", "postgres_primary"],
   "safe_defaults": {
     "CALENDAR_PERSISTENCE_MODE": "session_soft_beta",
@@ -19,12 +26,14 @@
   "repository": "src/lib/calendar/persistence/repository.ts",
   "docs": [
     "docs/calendar/CAL_P1_DURABILITY_ARCHITECTURE.md",
-    "docs/calendar/CAL_P1_MIGRATION_AND_ROLLBACK_PLAN.md"
+    "docs/calendar/CAL_P1_MIGRATION_AND_ROLLBACK_PLAN.md",
+    "docs/calendar/CAL_P1_GATE_A_SHADOW_PERSISTENCE_REPORT.md"
   ],
   "gates": {
     "A_shadow": "open_until_database_url_and_compare_pass",
     "B_primary": "blocked",
     "C_rbac_enforced": "blocked",
     "F_certified": "blocked"
-  }
+  },
+  "governing_statement": "The durable architecture is present. The database authority is not yet proven, writes are disabled by default, and Block Street remains on the soft-beta scheduling path."
 }
