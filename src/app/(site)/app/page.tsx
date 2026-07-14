@@ -58,6 +58,12 @@ export default function AppHomePage() {
 
       <div className="mt-8 space-y-3">
         <Link
+          href="/network"
+          className="block rounded-xl bg-brand-700 px-4 py-4 text-center font-semibold text-white hover:bg-brand-800"
+        >
+          My Network
+        </Link>
+        <Link
           href="/july-14"
           className="block rounded-xl bg-indigo-700 px-4 py-4 text-center font-semibold text-white hover:bg-indigo-800"
         >

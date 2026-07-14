@@ -20,6 +20,11 @@ export default function MapPage() {
         75 counties · {stats.v1Institutions} post-secondary schools · {stats.totalHighSchools} public high schools · {stats.totalPrivateCharterSchools} private &amp; charter.
         Fill the map — build every school, reach every county.
       </p>
+      <p className="mt-4">
+        <Link href="/directory" className="font-semibold text-brand-700 hover:underline">
+          Search the statewide directory →
+        </Link>
+      </p>
 
       <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
         {[

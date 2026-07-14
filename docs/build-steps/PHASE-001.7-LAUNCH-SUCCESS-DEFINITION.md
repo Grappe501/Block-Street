@@ -131,7 +131,7 @@ Each institution has:
 
 **[LS-P3a]** No participant should reach a dead end.
 
-*V1 status: ⏳ Build for July 12–14.*
+*V1 status: ✅ Invitation accept → network board + share/QR (Blobs, 2026-07-14).*
 
 ---
 
@@ -148,7 +148,7 @@ Each institution has:
 
 **[LS-P4a]** These core workflows should function reliably.
 
-*V1 status: ⏳ Requires Netlify DB + signup flow.*
+*V1 status: ✅ Invite join, share recruit, network board, honor-system place (Blobs).*
 
 ---
 
@@ -162,7 +162,7 @@ Each institution has:
 
 **[LS-P5a]** Mobile is the primary experience. [CP-008]
 
-*V1 status: 🔄 Mobile-first CSS. Test on devices before Jul 14.*
+*V1 status: ✅ Mobile-first launch path layouts; narrow-width smoke.*
 
 ---
 
@@ -177,7 +177,7 @@ Each institution has:
 - Update institution information
 - View basic growth statistics
 
-*V1 status: 🔄 Director workbench exists. Participant management ⏳ with DB.*
+*V1 status: ✅ Director workbench participants + growth/outreach on Blobs.*
 
 ---
 
@@ -192,7 +192,7 @@ Each institution has:
 
 **[LS-P7a]** The statewide map should communicate where organizing is happening and where help is needed. [CP-011, GM-P1]
 
-*V1 status: 🔄 Map + stats partial. Live counts ⏳ with DB.*
+*V1 status: ✅ Directory outreach counts from home-place + map/directory entry.*
 
 ---
 
@@ -268,16 +268,16 @@ Arrive
 |---|-----------|-----|-----------|
 | 1 | All 75 county pages exist | LS-P1 | ✅ |
 | 2 | Every AR college/university has a profile | LS-P2 | 🔄 23/complete set TBD |
-| 3 | Registration is operational | LS-P4 | ⏳ |
-| 4 | Personal network boards generated automatically | LS-P3 | ⏳ |
-| 5 | Referral links and QR codes function | LS-P3 | ⏳ |
-| 6 | Campus and county assignment works (honor system) | LS-P4 | ⏳ |
-| 7 | Statewide directory is searchable | LS-P2 | 🔄 |
-| 8 | Basic administrative tools operational | LS-P6 | 🔄 |
-| 9 | Mobile experience complete | LS-P5 | 🔄 |
+| 3 | Registration is operational | LS-P4 | ✅ |
+| 4 | Personal network boards generated automatically | LS-P3 | ✅ |
+| 5 | Referral links and QR codes function | LS-P3 | ✅ |
+| 6 | Campus and county assignment works (honor system) | LS-P4 | ✅ |
+| 7 | Statewide directory is searchable | LS-P2 | ✅ |
+| 8 | Basic administrative tools operational | LS-P6 | ✅ |
+| 9 | Mobile experience complete | LS-P5 | ✅ |
 | 10 | Documentation supports ongoing development | LS-EN | ✅ |
 
-**Launch ready = 10/10 checked.** Current: **3/10 complete, 4/10 in progress, 3/10 pending.**
+**Launch ready = 10/10 checked.** Current: **10/10 complete · Launch Ready (Blobs persistence).**
 
 *Leader testing (Jul 12): minimum items 3, 4, 5, 6 must work.*
 

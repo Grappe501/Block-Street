@@ -29,6 +29,8 @@ const PUBLIC_PAGE_PREFIXES = [
   "/account-restricted",
   "/join",
   "/start",
+  "/s/",
+  "/directory",
 ];
 
 function isPublicApi(pathname: string, method: string) {
@@ -57,7 +59,7 @@ export function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
-  // After a place is committed, hide map / browse entry points
+  // After a place is committed, hide map / browse entry points (directory search stays available)
   if (session && hasPlace) {
     if (
       pathname === "/map" ||
@@ -66,11 +68,18 @@ export function middleware(request: NextRequest) {
       pathname === "/high-schools" ||
       pathname === "/private-schools"
     ) {
-      return NextResponse.redirect(new URL("/app", request.url));
+      return NextResponse.redirect(new URL("/network", request.url));
     }
   }
 
-  if (pathname.startsWith("/admin") || pathname.startsWith("/account") || pathname.startsWith("/notifications") || pathname.startsWith("/app") || pathname.startsWith("/choose-place")) {
+  if (
+    pathname.startsWith("/admin") ||
+    pathname.startsWith("/account") ||
+    pathname.startsWith("/notifications") ||
+    pathname.startsWith("/app") ||
+    pathname.startsWith("/network") ||
+    pathname.startsWith("/choose-place")
+  ) {
     if (!session) {
       const login = new URL(pathname.startsWith("/admin") ? "/admin/login" : "/login", request.url);
       login.searchParams.set("next", pathname);
@@ -112,6 +121,9 @@ export const config = {
     "/high-schools",
     "/private-schools",
     "/app",
+    "/network",
+    "/directory",
+    "/s/:path*",
     "/choose-place",
     "/start",
     "/july-14",

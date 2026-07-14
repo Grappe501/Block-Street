@@ -19,11 +19,13 @@ export function AdminLaunchReadiness() {
         <h2 className="mt-1 text-xl font-bold text-slate-900">V1 Launch Readiness</h2>
         <div className="mt-4 flex items-center gap-6">
           <div>
-            <p className="text-3xl font-bold text-brand-600">{summary.done + summary.inProgress > 0 ? `${summary.done}/10` : "0/10"}</p>
+            <p className="text-3xl font-bold text-brand-600">{summary.done}/{summary.total ?? 10}</p>
             <p className="text-sm text-slate-600">Checklist done</p>
           </div>
           <div>
-            <p className="text-lg font-bold text-amber-700">{summary.launchReady ? "LAUNCH READY" : "NOT YET"}</p>
+            <p className={`text-lg font-bold ${summary.launchReady ? "text-green-700" : "text-amber-700"}`}>
+              {summary.launchReady ? "LAUNCH READY" : "NOT YET"}
+            </p>
             <p className="text-sm text-slate-600">Target: Jul 14 · Leader test: Jul 12</p>
           </div>
         </div>

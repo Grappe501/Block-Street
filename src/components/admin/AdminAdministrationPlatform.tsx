@@ -12,6 +12,8 @@ export function AdminAdministrationPlatform() {
   const [overview, setOverview] = useState<AdminOverview | null>(null);
   const [attention, setAttention] = useState<AttentionItem[]>([]);
   const [users, setUsers] = useState<Record<string, unknown>[]>([]);
+  const [growth, setGrowth] = useState<Record<string, unknown> | null>(null);
+  const [userQuery, setUserQuery] = useState("");
   const [roles, setRoles] = useState<Record<string, unknown>[]>([]);
   const [organizations, setOrganizations] = useState<Record<string, unknown>[]>([]);
   const [approvals, setApprovals] = useState<Record<string, unknown>[]>([]);
@@ -34,7 +36,13 @@ export function AdminAdministrationPlatform() {
   }, []);
 
   useEffect(() => {
-    if (tab === "users") fetch("/api/admin/users").then((r) => r.json()).then((d) => setUsers(d.users ?? []));
+    if (tab === "users")
+      fetch("/api/admin/users")
+        .then((r) => r.json())
+        .then((d) => {
+          setUsers(d.users ?? []);
+          setGrowth(d.growth ?? null);
+        });
     if (tab === "roles") fetch("/api/admin/roles").then((r) => r.json()).then((d) => setRoles(d.roles ?? []));
     if (tab === "organizations") fetch("/api/admin/organizations").then((r) => r.json()).then((d) => setOrganizations(d.organizations ?? []));
     if (tab === "approvals") fetch("/api/admin/approvals").then((r) => r.json()).then((d) => setApprovals(d.approvals ?? []));
@@ -119,13 +127,44 @@ export function AdminAdministrationPlatform() {
 
       {tab === "users" && (
         <div className="card border-slate-200 bg-white p-4">
-          <h3 className="text-sm font-bold text-slate-950">Users</h3>
+          <h3 className="text-sm font-bold text-slate-950">Participants</h3>
+          {growth && (
+            <div className="mt-2 flex flex-wrap gap-3 text-xs text-slate-700">
+              <span>Total: {String(growth.total_participants)}</span>
+              <span>With home: {String(growth.with_home_place)}</span>
+              <span>Share slugs: {String(growth.with_share_slug)}</span>
+              <span>Pending invites: {String(growth.pending_invitations)}</span>
+              <span>Counties represented: {String(growth.represented_counties)}</span>
+            </div>
+          )}
+          <input
+            type="search"
+            value={userQuery}
+            onChange={(e) => setUserQuery(e.target.value)}
+            placeholder="Filter name or email…"
+            className="mt-3 w-full rounded border border-slate-200 px-2 py-1.5 text-xs"
+          />
           <ul className="mt-2 space-y-1 text-xs">
-            {users.map((u) => (
-              <li key={String(u.user_id)} className="rounded border border-slate-100 p-2">
-                <strong>{String(u.display_name)}</strong> · {String(u.primary_email)} · {String(u.account_status)}
-              </li>
-            ))}
+            {users
+              .filter((u) => {
+                if (!userQuery.trim()) return true;
+                const needle = userQuery.toLowerCase();
+                return (
+                  String(u.display_name).toLowerCase().includes(needle) ||
+                  String(u.primary_email).toLowerCase().includes(needle) ||
+                  String(u.share_slug ?? "").includes(needle)
+                );
+              })
+              .map((u) => {
+                const place = u.home_place as { name?: string } | null;
+                return (
+                  <li key={String(u.user_id)} className="rounded border border-slate-100 p-2">
+                    <strong>{String(u.display_name)}</strong> · {String(u.primary_email)} · {String(u.account_status)}
+                    {u.share_slug ? ` · /s/${String(u.share_slug)}` : ""}
+                    {place?.name ? ` · home: ${place.name}` : " · no home yet"}
+                  </li>
+                );
+              })}
           </ul>
         </div>
       )}

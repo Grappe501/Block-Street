@@ -178,8 +178,8 @@ export default function StartPage() {
       )}
 
       <div className="mt-8 flex flex-wrap gap-3 text-sm">
-        <Link href="/app" className="text-brand-700 underline">
-          My home
+        <Link href="/network" className="text-brand-700 underline">
+          My network
         </Link>
         <Link href="/july-14" className="text-brand-700 underline">
           Tonight

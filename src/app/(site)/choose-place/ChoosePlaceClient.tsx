@@ -32,7 +32,7 @@ export default function ChoosePlaceClient() {
     fetch("/api/launch/home-place")
       .then((r) => r.json())
       .then((d) => {
-        if (d.place) router.replace("/app");
+        if (d.place) router.replace("/network");
       });
   }, [router]);
 
@@ -79,7 +79,7 @@ export default function ChoosePlaceClient() {
       setError(d.error || "Could not save your place");
       return;
     }
-    router.replace("/app");
+    router.replace("/network");
   }
 
   async function loadSchools(countySlug: string) {

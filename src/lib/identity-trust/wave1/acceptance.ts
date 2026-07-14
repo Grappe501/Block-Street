@@ -1,6 +1,6 @@
 import { randomBytes } from "crypto";
 import { acceptInvitation } from "@/lib/auth/invitations";
-import { loadUsers, persistUsers } from "@/lib/auth/data";
+import { getHomePlaceForUser, loadUsers, persistUsers } from "@/lib/auth/data";
 import { hashPassword } from "@/lib/auth/crypto";
 import { issueSession } from "@/lib/auth/session";
 import { hashSecret } from "@/lib/auth/crypto";
@@ -18,6 +18,7 @@ import {
 import { recordWave1Audit } from "./lineage";
 import { startProvisionalPeriod } from "../wave2/trust-lifecycle";
 import { evaluateAssuranceAndTrust } from "../wave2/trust-lifecycle";
+import { createPersonalNetwork, getNetworkProfileBySlug } from "@/lib/network";
 import type { Wave1Invitation } from "./types";
 
 export function findWave1InvitationByToken(token: string): Wave1Invitation | null {
@@ -47,6 +48,7 @@ export function completeWave1Activation(
     public_name: string;
     preferred_short_name?: string;
     link_existing_user_id?: string;
+    referred_by?: string | null;
   },
   meta?: { ip?: string; userAgent?: string }
 ) {
@@ -267,6 +269,24 @@ export function completeWave1Activation(
     result: "success",
   });
 
+  const rawRef = (input.referred_by ?? "").trim().toLowerCase();
+  let referredBy: string | null = null;
+  if (rawRef) {
+    if (rawRef.startsWith("usr-")) referredBy = rawRef;
+    else if (getNetworkProfileBySlug(rawRef)) referredBy = rawRef;
+    else if (/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(rawRef)) referredBy = rawRef;
+  }
+
+  const network = createPersonalNetwork({
+    user_id: userId,
+    display_name: input.public_name,
+    preferred_name: input.preferred_short_name ?? input.public_name.split(" ")[0] ?? input.public_name,
+    referred_by: referredBy,
+  });
+
+  const hasPlace = Boolean(getHomePlaceForUser(userId));
+  const next = hasPlace ? "/network" : "/choose-place";
+
   return {
     user_id: userId,
     global_human_id: globalHumanId,
@@ -275,5 +295,7 @@ export function completeWave1Activation(
     provisional: membership.status === "provisional",
     activated_role: membership.activated_role_id,
     proposed_role: membership.proposed_role_id,
+    share_slug: network.share_slug,
+    next,
   };
 }

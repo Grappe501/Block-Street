@@ -43,7 +43,7 @@ export function CommitPlaceButton({
       setMsg(d.error || "Could not save");
       return;
     }
-    router.push("/app");
+    router.push("/network");
   }
 
   return (

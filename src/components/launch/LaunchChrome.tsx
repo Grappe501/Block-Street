@@ -20,13 +20,13 @@ function navFor(stage: "guest" | "choose" | "member" | "admin"): NavItem[] {
   }
   if (stage === "admin") {
     return [
-      { href: "/app", label: "Home", primary: true },
+      { href: "/network", label: "Network", primary: true },
       { href: "/start", label: "Invite" },
       { href: "/july-14", label: "Tonight" },
     ];
   }
   return [
-    { href: "/app", label: "Home", primary: true },
+    { href: "/network", label: "Network", primary: true },
     { href: "/july-14", label: "Tonight" },
   ];
 }

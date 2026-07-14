@@ -51,6 +51,10 @@ export default function InviteTokenPage() {
     if (!token || !confirmed) return;
     setLoading(true);
     setError("");
+    const referredBy = document.cookie
+      .split("; ")
+      .find((row) => row.startsWith("bs_referred_by="))
+      ?.split("=")[1];
     const res = await fetch("/api/v1/invitations/wave1/accept", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -61,6 +65,7 @@ export default function InviteTokenPage() {
         password,
         public_name: publicName,
         preferred_short_name: preferredName || undefined,
+        referred_by: referredBy ? decodeURIComponent(referredBy) : undefined,
       }),
     });
     const data = await res.json();
@@ -69,7 +74,8 @@ export default function InviteTokenPage() {
       setError(data.error?.message ?? data.error ?? "Activation failed");
       return;
     }
-    router.push("/choose-place");
+    const next = (data.data?.next ?? data.next ?? "/choose-place") as string;
+    router.push(next);
   }
 
   return (

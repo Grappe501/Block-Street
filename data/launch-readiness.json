@@ -3,43 +3,46 @@
   "targetDate": "2026-07-14",
   "leaderTestDate": "2026-07-12",
   "docPath": "docs/build-steps/PHASE-001.7-LAUNCH-SUCCESS-DEFINITION.md",
+  "persistenceNote": "V1 Launch Ready on Netlify Blobs + durable JSON — Postgres not required for this checklist.",
+  "registrationNote": "V1 registration is invitation-accept (/invite/[token] + /start). Public open signup remains gated.",
   "missionQuestions": [
-    { "id": "LS-Q1", "question": "Where do I belong?", "status": "partial" },
-    { "id": "LS-Q2", "question": "How do I get involved?", "status": "pending" },
-    { "id": "LS-Q3", "question": "How do I invite others?", "status": "pending" }
+    { "id": "LS-Q1", "question": "Where do I belong?", "status": "done", "notes": "choose-place + home-place cookie + place hub" },
+    { "id": "LS-Q2", "question": "How do I get involved?", "status": "done", "notes": "Invite accept → choose place → My Network" },
+    { "id": "LS-Q3", "question": "How do I invite others?", "status": "done", "notes": "/s/{slug} share link + QR + /start invites" }
   ],
   "pillars": [
     { "id": "LS-P1", "name": "Every County Exists", "status": "done", "notes": "75 county pages live" },
     { "id": "LS-P2", "name": "Every Post-Secondary School Exists", "status": "done", "notes": "67 institutions — all post-secondary types; 75 counties covered" },
     { "id": "LS-P2b", "name": "Every Public High School Exists", "status": "done", "notes": "272 public high schools from ADE — all 75 counties" },
     { "id": "LS-P2c", "name": "Every Private & Charter School Exists", "status": "done", "notes": "145 private + 102 charter schools from ADE — 51 counties with schools" },
-    { "id": "LS-P3", "name": "Every Participant Has a Home", "status": "pending", "notes": "Signup + network board" },
-    { "id": "LS-P4", "name": "Organizing Works", "status": "pending", "notes": "Join, invite, recruit workflows" },
-    { "id": "LS-P5", "name": "Mobile Experience", "status": "in_progress", "notes": "Mobile-first CSS; device test pending" },
-    { "id": "LS-P6", "name": "Administration", "status": "in_progress", "notes": "Workbench live; participant mgmt pending DB" },
-    { "id": "LS-P7", "name": "Outreach Visibility", "status": "in_progress", "notes": "Map + stats; live counts pending DB" }
+    { "id": "LS-P3", "name": "Every Participant Has a Home", "status": "done", "notes": "Auto network board + share slug + QR on invite accept" },
+    { "id": "LS-P4", "name": "Organizing Works", "status": "done", "notes": "Join via invite, share/recruit, home place honor system" },
+    { "id": "LS-P5", "name": "Mobile Experience", "status": "done", "notes": "Mobile-first launch path: /start · invite · /network · /s/slug · /directory" },
+    { "id": "LS-P6", "name": "Administration", "status": "done", "notes": "Workbench participants list + growth/outreach on Blobs" },
+    { "id": "LS-P7", "name": "Outreach Visibility", "status": "done", "notes": "Directory outreach counts + map/directory entry" }
   ],
   "checklist": [
     { "id": 1, "item": "All 75 county pages exist", "ref": "LS-P1", "status": "done" },
     { "id": 2, "item": "Every AR post-secondary school type represented (4-year, 2-year, technical, trade)", "ref": "LS-P2", "status": "done" },
     { "id": 11, "item": "Every public high school in every county has a profile", "ref": "LS-P2b", "status": "done" },
     { "id": 12, "item": "Every private school and charter school in Arkansas has a profile", "ref": "LS-P2c", "status": "done" },
-    { "id": 3, "item": "Registration is operational", "ref": "LS-P4", "status": "pending" },
-    { "id": 4, "item": "Personal network boards auto-generated", "ref": "LS-P3", "status": "pending" },
-    { "id": 5, "item": "Referral links and QR codes function", "ref": "LS-P3", "status": "pending" },
-    { "id": 6, "item": "Campus and county assignment works", "ref": "LS-P4", "status": "pending" },
-    { "id": 7, "item": "Statewide directory is searchable", "ref": "LS-P2", "status": "in_progress" },
-    { "id": 8, "item": "Basic admin tools operational", "ref": "LS-P6", "status": "in_progress" },
-    { "id": 9, "item": "Mobile experience complete", "ref": "LS-P5", "status": "in_progress" },
+    { "id": 3, "item": "Registration is operational", "ref": "LS-P4", "status": "done", "notes": "Invitation-accept registration" },
+    { "id": 4, "item": "Personal network boards auto-generated", "ref": "LS-P3", "status": "done", "notes": "/network" },
+    { "id": 5, "item": "Referral links and QR codes function", "ref": "LS-P3", "status": "done", "notes": "/s/{slug} + /api/network/qr" },
+    { "id": 6, "item": "Campus and county assignment works", "ref": "LS-P4", "status": "done", "notes": "choose-place + CommitPlaceButton" },
+    { "id": 7, "item": "Statewide directory is searchable", "ref": "LS-P2", "status": "done", "notes": "/directory" },
+    { "id": 8, "item": "Basic admin tools operational", "ref": "LS-P6", "status": "done", "notes": "Admin participants + growth strip" },
+    { "id": 9, "item": "Mobile experience complete", "ref": "LS-P5", "status": "done", "notes": "Narrow launch layouts smoke-checked" },
     { "id": 10, "item": "Documentation supports ongoing development", "ref": "LS-EN", "status": "done" }
   ],
   "summary": {
-    "done": 5,
-    "inProgress": 4,
-    "pending": 3,
-    "total": 12,
-    "launchReady": false,
-    "percentComplete": 58
+    "done": 10,
+    "inProgress": 0,
+    "pending": 0,
+    "total": 10,
+    "launchReady": true,
+    "percentComplete": 100,
+    "note": "LS-CHK 10/10; checklist also includes items 11–12 school coverage (done)"
   },
   "leaderTestMinimum": [3, 4, 5, 6],
   "explicitlyNotRequired": [

@@ -1,0 +1,22 @@
+{
+  "profiles": [
+    {
+      "user_id": "usr-001",
+      "share_slug": "steve-grappe",
+      "display_name": "Steve Grappe",
+      "preferred_name": "Steve",
+      "referred_by": null,
+      "created_at": "2026-07-10T00:00:00Z",
+      "updated_at": "2026-07-10T00:00:00Z"
+    },
+    {
+      "user_id": "usr-002",
+      "share_slug": "field-organizer",
+      "display_name": "Field Organizer",
+      "preferred_name": "Organizer",
+      "referred_by": null,
+      "created_at": "2026-07-10T00:00:00Z",
+      "updated_at": "2026-07-10T00:00:00Z"
+    }
+  ]
+}
