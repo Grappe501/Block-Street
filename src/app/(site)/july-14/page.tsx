@@ -50,7 +50,19 @@ export default function July14MeetingPage() {
             href="/presentations/july-14"
             className="rounded-lg bg-amber-400 px-4 py-2.5 text-sm font-bold text-slate-950 hover:bg-amber-300"
           >
-            Open July 14 agenda presentation
+            Open July 14 presentation hub
+          </Link>
+          <Link
+            href="/presentations/july-14/presenter?item=01"
+            className="rounded-lg border border-amber-300/50 px-4 py-2.5 text-sm font-semibold text-amber-100 hover:bg-white/10"
+          >
+            Presenter mode
+          </Link>
+          <Link
+            href="/presentations/july-14/participant?item=01"
+            className="rounded-lg border border-amber-300/50 px-4 py-2.5 text-sm font-semibold text-amber-100 hover:bg-white/10"
+          >
+            Participant mode
           </Link>
           <Link
             href="/presentations/college"

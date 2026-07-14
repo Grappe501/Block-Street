@@ -1,0 +1,894 @@
+{
+  "version": "1.0.0",
+  "meeting": "July 14 College Team / ASYON launch",
+  "updated": "2026-07-14T19:34:16.522Z",
+  "production_baseline_cited": "938ac14",
+  "canonical_sources": [
+    "src/lib/july14/i18n.ts (agenda.* keys)",
+    "src/lib/presentations/july14-agenda.ts (JULY14_AGENDA_SLIDES)",
+    "src/app/(site)/july-14/page.tsx",
+    "/presentations/july-14"
+  ],
+  "finding": {
+    "requested_range": "04–034",
+    "status": "mapped_from_existing_language",
+    "note": "No pre-existing agenda IDs 04–034 existed in the repository as keyed agenda items. Items 01–34 freeze exact English language from Identity i18n and the July 14 presentation twin without inventing replacement titles or reordering meeting sections. Item 34 also resolves alias 034 for deep links. Content leaves in the requested emphasis band begin at item 04 (Chance and Xay)."
+  },
+  "total_meeting_minutes_target": 45,
+  "total_leaf_duration_minutes": 40,
+  "timing_note": "Leaf durations currently sum to 40 minutes; preserve section order and use stay-on-agenda pacing. Recommended pacing only — do not rewrite agenda doctrine.",
+  "honesty": {
+    "working_now": [
+      "Director inspection hub",
+      "College Team KPI surfaces",
+      "Field Plan navigation and approved content",
+      "Position exploration",
+      "Soft-beta participation and interest flows",
+      "Power of 5 planning",
+      "Existing invitation soft-beta flow"
+    ],
+    "still_being_completed": [
+      "Certified invite-chain binding",
+      "Full Volunteer Manager workspace",
+      "Full County Command workspace",
+      "Full leader workbench",
+      "Postgres personnel persistence",
+      "Production RBAC",
+      "L4 execution"
+    ]
+  },
+  "items": [
+    {
+      "item_number": "01",
+      "aliases": [],
+      "sequence": 1,
+      "title": "Meeting Agenda: Launching ASYON",
+      "duration_minutes": 2,
+      "section": "open",
+      "source_reference": "agenda.title+agenda.goal",
+      "presenter_content": [
+        "Goal: Introduce the organization, rally participants, and assign roles to build collective power."
+      ],
+      "participant_content": [
+        "Goal: Introduce the organization, rally participants, and assign roles to build collective power."
+      ],
+      "current_route": "/presentations/july-14?slide=0",
+      "item_route": "/presentations/july-14/items/01",
+      "supporting_module": "/admin/college-command/meeting/july-14",
+      "drill_down_route": "/july-14",
+      "primary_action": "Review tonight’s purpose",
+      "position_id": null,
+      "family": "A",
+      "slide_id": "open",
+      "status": "live",
+      "notes": []
+    },
+    {
+      "item_number": "02",
+      "aliases": [],
+      "sequence": 2,
+      "title": "1. Introductions",
+      "duration_minutes": 1,
+      "section": "s1",
+      "source_reference": "agenda.s1.title",
+      "presenter_content": [
+        "Lead with people, not product."
+      ],
+      "participant_content": [
+        "Lead with people, not product."
+      ],
+      "current_route": "/presentations/july-14?slide=1",
+      "item_route": "/presentations/july-14/items/02",
+      "supporting_module": "/admin/college-command/meeting/july-14",
+      "drill_down_route": "/presentations/july-14?slide=1",
+      "primary_action": "Begin introductions",
+      "position_id": null,
+      "family": "A",
+      "slide_id": "intro",
+      "status": "live",
+      "notes": []
+    },
+    {
+      "item_number": "03",
+      "aliases": [],
+      "sequence": 3,
+      "title": "2. Why This Matters",
+      "duration_minutes": 1,
+      "section": "s2",
+      "source_reference": "agenda.s2.title",
+      "presenter_content": [
+        "We’re at a perfect political cusp. 2026–2028 can be decided by young voters — if we organize now."
+      ],
+      "participant_content": [
+        "We’re at a perfect political cusp. 2026–2028 can be decided by young voters — if we organize now."
+      ],
+      "current_route": "/presentations/july-14?slide=2",
+      "item_route": "/presentations/july-14/items/03",
+      "supporting_module": "/how-it-works",
+      "drill_down_route": "/how-it-works",
+      "primary_action": "Open How Block Street works",
+      "position_id": null,
+      "family": "B",
+      "slide_id": "urgency",
+      "status": "live",
+      "notes": []
+    },
+    {
+      "item_number": "04",
+      "aliases": [],
+      "sequence": 4,
+      "title": "Chance and Xay (Youth Leaders): Share vision, experience, and passion for organizing young people in politics.",
+      "duration_minutes": 2,
+      "section": "s1",
+      "source_reference": "agenda.s1.a",
+      "presenter_content": [
+        "Chance and Xay (Youth Leaders): Share vision, experience, and passion for organizing young people in politics."
+      ],
+      "participant_content": [
+        "Chance and Xay (Youth Leaders): Share vision, experience, and passion for organizing young people in politics."
+      ],
+      "current_route": "/presentations/july-14?slide=1",
+      "item_route": "/presentations/july-14/items/04",
+      "supporting_module": "/admin/college-command/meeting/july-14",
+      "drill_down_route": "/admin/college-command/meeting/july-14",
+      "primary_action": "Hear youth leaders",
+      "position_id": null,
+      "family": "A",
+      "slide_id": "intro",
+      "status": "live",
+      "notes": []
+    },
+    {
+      "item_number": "05",
+      "aliases": [],
+      "sequence": 5,
+      "title": "Politician Guests: Briefly introduce them and their role in supporting this effort.",
+      "duration_minutes": 1,
+      "section": "s1",
+      "source_reference": "agenda.s1.b",
+      "presenter_content": [
+        "Politician Guests: Briefly introduce them and their role in supporting this effort."
+      ],
+      "participant_content": [
+        "Politician Guests: Briefly introduce them and their role in supporting this effort."
+      ],
+      "current_route": "/presentations/july-14?slide=1",
+      "item_route": "/presentations/july-14/items/05",
+      "supporting_module": "/admin/college-command/meeting/july-14",
+      "drill_down_route": "/admin/college-command/meeting/july-14",
+      "primary_action": "Welcome guests",
+      "position_id": null,
+      "family": "A",
+      "slide_id": "intro",
+      "status": "live",
+      "notes": []
+    },
+    {
+      "item_number": "06",
+      "aliases": [],
+      "sequence": 6,
+      "title": "Quick Name and School: Each participant introduces themselves with their name & school (e.g., “Alex, University of Arkansas”).",
+      "duration_minutes": 2,
+      "section": "s1",
+      "source_reference": "agenda.s1.c",
+      "presenter_content": [
+        "Quick Name and School: Each participant introduces themselves with their name & school (e.g., “Alex, University of Arkansas”)."
+      ],
+      "participant_content": [
+        "Quick Name and School: Each participant introduces themselves with their name & school (e.g., “Alex, University of Arkansas”)."
+      ],
+      "current_route": "/presentations/july-14?slide=1",
+      "item_route": "/presentations/july-14/items/06",
+      "supporting_module": "/admin/college-command/meeting/july-14",
+      "drill_down_route": "/admin/college-command/meeting/july-14",
+      "primary_action": "Everyone introduces",
+      "position_id": null,
+      "family": "A",
+      "slide_id": "intro",
+      "status": "live",
+      "notes": []
+    },
+    {
+      "item_number": "07",
+      "aliases": [],
+      "sequence": 7,
+      "title": "We’re at a perfect political cusp. The next elections (2026–2028) have the capability to be decided by young voters. If we organize now, we can influence every seat in the state.",
+      "duration_minutes": 1,
+      "section": "s2",
+      "source_reference": "agenda.s2.urgency.a",
+      "presenter_content": [
+        "We’re at a perfect political cusp. The next elections (2026–2028) have the capability to be decided by young voters. If we organize now, we can influence every seat in the state."
+      ],
+      "participant_content": [
+        "We’re at a perfect political cusp. The next elections (2026–2028) have the capability to be decided by young voters. If we organize now, we can influence every seat in the state."
+      ],
+      "current_route": "/presentations/july-14?slide=2",
+      "item_route": "/presentations/july-14/items/07",
+      "supporting_module": "/how-it-works",
+      "drill_down_route": "/how-it-works",
+      "primary_action": "Discuss",
+      "position_id": null,
+      "family": "B",
+      "slide_id": "urgency",
+      "status": "live",
+      "notes": []
+    },
+    {
+      "item_number": "08",
+      "aliases": [],
+      "sequence": 8,
+      "title": "Steve (Overall Organizer) has never seen Arkansas colleges organize like this before. This is our chance to make history.",
+      "duration_minutes": 1,
+      "section": "s2",
+      "source_reference": "agenda.s2.urgency.b",
+      "presenter_content": [
+        "Steve (Overall Organizer) has never seen Arkansas colleges organize like this before. This is our chance to make history."
+      ],
+      "participant_content": [
+        "Steve (Overall Organizer) has never seen Arkansas colleges organize like this before. This is our chance to make history."
+      ],
+      "current_route": "/presentations/july-14?slide=2",
+      "item_route": "/presentations/july-14/items/08",
+      "supporting_module": "/how-it-works",
+      "drill_down_route": "/how-it-works/hierarchy",
+      "primary_action": "Discuss",
+      "position_id": null,
+      "family": "B",
+      "slide_id": "urgency",
+      "status": "live",
+      "notes": []
+    },
+    {
+      "item_number": "09",
+      "aliases": [],
+      "sequence": 9,
+      "title": "You are the most valuable thing to politicians. Young voters are the largest and most untapped voting bloc by large margin. Politicians need us to win, but we need to organize to demand power in return.",
+      "duration_minutes": 1,
+      "section": "s2",
+      "source_reference": "agenda.s2.urgency.c",
+      "presenter_content": [
+        "You are the most valuable thing to politicians. Young voters are the largest and most untapped voting bloc by large margin. Politicians need us to win, but we need to organize to demand power in return."
+      ],
+      "participant_content": [
+        "You are the most valuable thing to politicians. Young voters are the largest and most untapped voting bloc by large margin. Politicians need us to win, but we need to organize to demand power in return."
+      ],
+      "current_route": "/presentations/july-14?slide=2",
+      "item_route": "/presentations/july-14/items/09",
+      "supporting_module": "/how-it-works",
+      "drill_down_route": "/how-it-works/participation-journey",
+      "primary_action": "Discuss",
+      "position_id": null,
+      "family": "B",
+      "slide_id": "urgency",
+      "status": "live",
+      "notes": []
+    },
+    {
+      "item_number": "10",
+      "aliases": [],
+      "sequence": 10,
+      "title": "More than 50% of the voting population is under 50, but the rules are still made by those over 50. We have the numbers but not the organization to aid ourselves, yet.",
+      "duration_minutes": 1,
+      "section": "s2",
+      "source_reference": "agenda.s2.problem.a",
+      "presenter_content": [
+        "More than 50% of the voting population is under 50, but the rules are still made by those over 50. We have the numbers but not the organization to aid ourselves, yet."
+      ],
+      "participant_content": [
+        "More than 50% of the voting population is under 50, but the rules are still made by those over 50. We have the numbers but not the organization to aid ourselves, yet."
+      ],
+      "current_route": "/presentations/july-14?slide=3",
+      "item_route": "/presentations/july-14/items/10",
+      "supporting_module": "/how-it-works",
+      "drill_down_route": "/how-it-works",
+      "primary_action": "Discuss",
+      "position_id": null,
+      "family": "B",
+      "slide_id": "problem-opportunity",
+      "status": "live",
+      "notes": []
+    },
+    {
+      "item_number": "11",
+      "aliases": [],
+      "sequence": 11,
+      "title": "Ballot initiatives and lawmaking are areas where young people can have a massive impact—if we’re united.",
+      "duration_minutes": 1,
+      "section": "s2",
+      "source_reference": "agenda.s2.problem.b",
+      "presenter_content": [
+        "Ballot initiatives and lawmaking are areas where young people can have a massive impact—if we’re united."
+      ],
+      "participant_content": [
+        "Ballot initiatives and lawmaking are areas where young people can have a massive impact—if we’re united."
+      ],
+      "current_route": "/presentations/july-14?slide=3",
+      "item_route": "/presentations/july-14/items/11",
+      "supporting_module": "/field-plan/overview",
+      "drill_down_route": "/field-plan/overview",
+      "primary_action": "Open Field Plan",
+      "position_id": null,
+      "family": "C",
+      "slide_id": "problem-opportunity",
+      "status": "live",
+      "notes": []
+    },
+    {
+      "item_number": "12",
+      "aliases": [],
+      "sequence": 12,
+      "title": "Swinging the election for people like Kelly, people like Chris, or whoever we decide has our intentions best in mind. This isn’t about a single candidate. It’s about building team voting power to amplify our voice and demand change.",
+      "duration_minutes": 1,
+      "section": "s2",
+      "source_reference": "agenda.s2.opportunity.a",
+      "presenter_content": [
+        "Swinging the election for people like Kelly, people like Chris, or whoever we decide has our intentions best in mind. This isn’t about a single candidate. It’s about building team voting power to amplify our voice and demand change."
+      ],
+      "participant_content": [
+        "Swinging the election for people like Kelly, people like Chris, or whoever we decide has our intentions best in mind. This isn’t about a single candidate. It’s about building team voting power to amplify our voice and demand change."
+      ],
+      "current_route": "/presentations/july-14?slide=3",
+      "item_route": "/presentations/july-14/items/12",
+      "supporting_module": "/how-it-works",
+      "drill_down_route": "/how-it-works",
+      "primary_action": "Discuss",
+      "position_id": null,
+      "family": "B",
+      "slide_id": "problem-opportunity",
+      "status": "live",
+      "notes": []
+    },
+    {
+      "item_number": "13",
+      "aliases": [],
+      "sequence": 13,
+      "title": "After the election, we can uplift each other and future leaders to run for office in the coming years.",
+      "duration_minutes": 1,
+      "section": "s2",
+      "source_reference": "agenda.s2.opportunity.b",
+      "presenter_content": [
+        "After the election, we can uplift each other and future leaders to run for office in the coming years."
+      ],
+      "participant_content": [
+        "After the election, we can uplift each other and future leaders to run for office in the coming years."
+      ],
+      "current_route": "/presentations/july-14?slide=3",
+      "item_route": "/presentations/july-14/items/13",
+      "supporting_module": "/positions/college",
+      "drill_down_route": "/positions/college",
+      "primary_action": "Browse positions",
+      "position_id": null,
+      "family": "D",
+      "slide_id": "problem-opportunity",
+      "status": "live",
+      "notes": []
+    },
+    {
+      "item_number": "14",
+      "aliases": [],
+      "sequence": 14,
+      "title": "Every campus or group will be unique. We’re providing resources and support, but every group will shape this to fit their community.",
+      "duration_minutes": 1,
+      "section": "s3",
+      "source_reference": "agenda.s3.approach.body",
+      "presenter_content": [
+        "Every campus or group will be unique. We’re providing resources and support, but every group will shape this to fit their community."
+      ],
+      "participant_content": [
+        "Every campus or group will be unique. We’re providing resources and support, but every group will shape this to fit their community."
+      ],
+      "current_route": "/presentations/july-14?slide=4",
+      "item_route": "/presentations/july-14/items/14",
+      "supporting_module": "/how-it-works",
+      "drill_down_route": "/how-it-works",
+      "primary_action": "Explain approach",
+      "position_id": null,
+      "family": "B",
+      "slide_id": "how",
+      "status": "live",
+      "notes": []
+    },
+    {
+      "item_number": "15",
+      "aliases": [],
+      "sequence": 15,
+      "title": "Social Media Lead (to grow our network and spread the word)",
+      "duration_minutes": 1,
+      "section": "s3",
+      "source_reference": "agenda.s3.roles.a",
+      "presenter_content": [
+        "Social Media Lead (to grow our network and spread the word)"
+      ],
+      "participant_content": [
+        "Social Media Lead (to grow our network and spread the word)"
+      ],
+      "current_route": "/presentations/july-14?slide=4",
+      "item_route": "/presentations/july-14/items/15",
+      "supporting_module": "/positions/college",
+      "drill_down_route": "/positions/college-social-media-lead",
+      "primary_action": "Explore this position",
+      "position_id": "college-social-media-lead",
+      "family": "D",
+      "slide_id": "how",
+      "status": "live",
+      "notes": []
+    },
+    {
+      "item_number": "16",
+      "aliases": [],
+      "sequence": 16,
+      "title": "Voter Registration Lead (to ensure our peers are registered and ready to vote)",
+      "duration_minutes": 1,
+      "section": "s3",
+      "source_reference": "agenda.s3.roles.b",
+      "presenter_content": [
+        "Voter Registration Lead (to ensure our peers are registered and ready to vote)"
+      ],
+      "participant_content": [
+        "Voter Registration Lead (to ensure our peers are registered and ready to vote)"
+      ],
+      "current_route": "/presentations/july-14?slide=4",
+      "item_route": "/presentations/july-14/items/16",
+      "supporting_module": "/positions/college",
+      "drill_down_route": "/positions/college-voter-registration-lead",
+      "primary_action": "Explore this position",
+      "position_id": "college-voter-registration-lead",
+      "family": "D",
+      "slide_id": "how",
+      "status": "live",
+      "notes": []
+    },
+    {
+      "item_number": "17",
+      "aliases": [],
+      "sequence": 17,
+      "title": "College/Community Lead (to oversee and coordinate efforts locally)",
+      "duration_minutes": 1,
+      "section": "s3",
+      "source_reference": "agenda.s3.roles.c",
+      "presenter_content": [
+        "College/Community Lead (to oversee and coordinate efforts locally)"
+      ],
+      "participant_content": [
+        "College/Community Lead (to oversee and coordinate efforts locally)"
+      ],
+      "current_route": "/presentations/july-14?slide=4",
+      "item_route": "/presentations/july-14/items/17",
+      "supporting_module": "/positions/college",
+      "drill_down_route": "/positions/college-community-lead",
+      "primary_action": "Explore this position",
+      "position_id": "college-community-lead",
+      "family": "D",
+      "slide_id": "how",
+      "status": "live",
+      "notes": []
+    },
+    {
+      "item_number": "18",
+      "aliases": [],
+      "sequence": 18,
+      "title": "Event Lead (to organize fun, engaging, and informative events)",
+      "duration_minutes": 1,
+      "section": "s3",
+      "source_reference": "agenda.s3.roles.d",
+      "presenter_content": [
+        "Event Lead (to organize fun, engaging, and informative events)"
+      ],
+      "participant_content": [
+        "Event Lead (to organize fun, engaging, and informative events)"
+      ],
+      "current_route": "/presentations/july-14?slide=4",
+      "item_route": "/presentations/july-14/items/18",
+      "supporting_module": "/positions/college",
+      "drill_down_route": "/positions/college-event-lead",
+      "primary_action": "Explore this position",
+      "position_id": "college-event-lead",
+      "family": "D",
+      "slide_id": "how",
+      "status": "live",
+      "notes": []
+    },
+    {
+      "item_number": "19",
+      "aliases": [],
+      "sequence": 19,
+      "title": "Canvassing/Outreach Lead (to connect with peers and expand our network)",
+      "duration_minutes": 1,
+      "section": "s3",
+      "source_reference": "agenda.s3.roles.e",
+      "presenter_content": [
+        "Canvassing/Outreach Lead (to connect with peers and expand our network)"
+      ],
+      "participant_content": [
+        "Canvassing/Outreach Lead (to connect with peers and expand our network)"
+      ],
+      "current_route": "/presentations/july-14?slide=4",
+      "item_route": "/presentations/july-14/items/19",
+      "supporting_module": "/positions/college",
+      "drill_down_route": "/positions/college-canvass-outreach-lead",
+      "primary_action": "Explore this position",
+      "position_id": "college-canvass-outreach-lead",
+      "family": "D",
+      "slide_id": "how",
+      "status": "live",
+      "notes": []
+    },
+    {
+      "item_number": "20",
+      "aliases": [],
+      "sequence": 20,
+      "title": "Summer is the best time to organize. Life is less chaotic with school out so we can build momentum before the fall rush. Grinding this next month is essential.",
+      "duration_minutes": 1,
+      "section": "s3",
+      "source_reference": "agenda.s3.why.body",
+      "presenter_content": [
+        "Summer is the best time to organize. Life is less chaotic with school out so we can build momentum before the fall rush. Grinding this next month is essential."
+      ],
+      "participant_content": [
+        "Summer is the best time to organize. Life is less chaotic with school out so we can build momentum before the fall rush. Grinding this next month is essential."
+      ],
+      "current_route": "/presentations/july-14?slide=5",
+      "item_route": "/presentations/july-14/items/20",
+      "supporting_module": "/admin/college-command/meeting/july-14",
+      "drill_down_route": "/admin/college-command/meeting/july-14",
+      "primary_action": "Commit to summer window",
+      "position_id": null,
+      "family": "A",
+      "slide_id": "why-now",
+      "status": "live",
+      "notes": []
+    },
+    {
+      "item_number": "21",
+      "aliases": [],
+      "sequence": 21,
+      "title": "A social network across the state of young people (16–24) to get engaged, inform their peers, and establish political power.",
+      "duration_minutes": 1,
+      "section": "s4",
+      "source_reference": "agenda.s4.vision.a",
+      "presenter_content": [
+        "A social network across the state of young people (16–24) to get engaged, inform their peers, and establish political power."
+      ],
+      "participant_content": [
+        "A social network across the state of young people (16–24) to get engaged, inform their peers, and establish political power."
+      ],
+      "current_route": "/presentations/july-14?slide=6",
+      "item_route": "/presentations/july-14/items/21",
+      "supporting_module": "/field-plan/overview",
+      "drill_down_route": "/field-plan/overview",
+      "primary_action": "Open Field Plan overview",
+      "position_id": null,
+      "family": "C",
+      "slide_id": "building",
+      "status": "live",
+      "notes": []
+    },
+    {
+      "item_number": "22",
+      "aliases": [],
+      "sequence": 22,
+      "title": "Making politics fun",
+      "duration_minutes": 1,
+      "section": "s4",
+      "source_reference": "agenda.s4.vision.b",
+      "presenter_content": [
+        "Making politics fun"
+      ],
+      "participant_content": [
+        "Making politics fun"
+      ],
+      "current_route": "/presentations/july-14?slide=6",
+      "item_route": "/presentations/july-14/items/22",
+      "supporting_module": "/power-of-5",
+      "drill_down_route": "/power-of-5",
+      "primary_action": "Open Power of 5",
+      "position_id": null,
+      "family": "G",
+      "slide_id": "building",
+      "status": "live",
+      "notes": []
+    },
+    {
+      "item_number": "23",
+      "aliases": [],
+      "sequence": 23,
+      "title": "The Power of 5",
+      "duration_minutes": 2,
+      "section": "s4",
+      "source_reference": "agenda.s4.vision.c",
+      "presenter_content": [
+        "The Power of 5"
+      ],
+      "participant_content": [
+        "The Power of 5"
+      ],
+      "current_route": "/presentations/july-14?slide=6",
+      "item_route": "/presentations/july-14/items/23",
+      "supporting_module": "/power-of-5",
+      "drill_down_route": "/power-of-5/start",
+      "primary_action": "Start a Power of 5 plan",
+      "position_id": null,
+      "family": "G",
+      "slide_id": "building",
+      "status": "live",
+      "notes": []
+    },
+    {
+      "item_number": "24",
+      "aliases": [],
+      "sequence": 24,
+      "title": "Set a foundation for organizing young people to run for office in future elections.",
+      "duration_minutes": 1,
+      "section": "s4",
+      "source_reference": "agenda.s4.long.a",
+      "presenter_content": [
+        "Set a foundation for organizing young people to run for office in future elections."
+      ],
+      "participant_content": [
+        "Set a foundation for organizing young people to run for office in future elections."
+      ],
+      "current_route": "/presentations/july-14?slide=6",
+      "item_route": "/presentations/july-14/items/24",
+      "supporting_module": "/field-plan/overview",
+      "drill_down_route": "/field-plan/depths",
+      "primary_action": "Review depth layers",
+      "position_id": null,
+      "family": "C",
+      "slide_id": "building",
+      "status": "live",
+      "notes": []
+    },
+    {
+      "item_number": "25",
+      "aliases": [],
+      "sequence": 25,
+      "title": "Build soft power to influence local politics and politicians.",
+      "duration_minutes": 1,
+      "section": "s4",
+      "source_reference": "agenda.s4.long.b",
+      "presenter_content": [
+        "Build soft power to influence local politics and politicians."
+      ],
+      "participant_content": [
+        "Build soft power to influence local politics and politicians."
+      ],
+      "current_route": "/presentations/july-14?slide=6",
+      "item_route": "/presentations/july-14/items/25",
+      "supporting_module": "/field-plan/overview",
+      "drill_down_route": "/field-plan/overview",
+      "primary_action": "Review plan purpose",
+      "position_id": null,
+      "family": "C",
+      "slide_id": "building",
+      "status": "live",
+      "notes": []
+    },
+    {
+      "item_number": "26",
+      "aliases": [],
+      "sequence": 26,
+      "title": "Ballot initiatives and lawmaking — areas where we can have massive effect.",
+      "duration_minutes": 1,
+      "section": "s4",
+      "source_reference": "agenda.s4.long.c",
+      "presenter_content": [
+        "Ballot initiatives and lawmaking — areas where we can have massive effect."
+      ],
+      "participant_content": [
+        "Ballot initiatives and lawmaking — areas where we can have massive effect."
+      ],
+      "current_route": "/presentations/july-14?slide=6",
+      "item_route": "/presentations/july-14/items/26",
+      "supporting_module": "/field-plan/overview",
+      "drill_down_route": "/field-plan/responsibilities",
+      "primary_action": "Browse responsibilities",
+      "position_id": null,
+      "family": "C",
+      "slide_id": "building",
+      "status": "live",
+      "notes": []
+    },
+    {
+      "item_number": "27",
+      "aliases": [],
+      "sequence": 27,
+      "title": "Create a statewide network that prepares young leaders to take on leadership roles everywhere.",
+      "duration_minutes": 1,
+      "section": "s4",
+      "source_reference": "agenda.s4.long.d",
+      "presenter_content": [
+        "Create a statewide network that prepares young leaders to take on leadership roles everywhere."
+      ],
+      "participant_content": [
+        "Create a statewide network that prepares young leaders to take on leadership roles everywhere."
+      ],
+      "current_route": "/presentations/july-14?slide=6",
+      "item_route": "/presentations/july-14/items/27",
+      "supporting_module": "/positions/college",
+      "drill_down_route": "/positions/college",
+      "primary_action": "Browse college positions",
+      "position_id": null,
+      "family": "D",
+      "slide_id": "building",
+      "status": "live",
+      "notes": []
+    },
+    {
+      "item_number": "28",
+      "aliases": [],
+      "sequence": 28,
+      "title": "Build collective power so we can change the government together.",
+      "duration_minutes": 1,
+      "section": "s4",
+      "source_reference": "agenda.s4.long.e",
+      "presenter_content": [
+        "Build collective power so we can change the government together."
+      ],
+      "participant_content": [
+        "Build collective power so we can change the government together."
+      ],
+      "current_route": "/presentations/july-14?slide=6",
+      "item_route": "/presentations/july-14/items/28",
+      "supporting_module": "/how-it-works",
+      "drill_down_route": "/how-it-works/hierarchy",
+      "primary_action": "See hierarchy",
+      "position_id": null,
+      "family": "B",
+      "slide_id": "building",
+      "status": "live",
+      "notes": []
+    },
+    {
+      "item_number": "29",
+      "aliases": [],
+      "sequence": 29,
+      "title": "Walk through the website’s features",
+      "duration_minutes": 2,
+      "section": "s5",
+      "source_reference": "agenda.s5.a",
+      "presenter_content": [
+        "Walk through the website’s features"
+      ],
+      "participant_content": [
+        "Walk through the website’s features"
+      ],
+      "current_route": "/presentations/july-14?slide=7",
+      "item_route": "/presentations/july-14/items/29",
+      "supporting_module": "/how-it-works",
+      "drill_down_route": "/presentations/college",
+      "primary_action": "Open College walkthrough",
+      "position_id": null,
+      "family": "B",
+      "slide_id": "website",
+      "status": "live",
+      "notes": []
+    },
+    {
+      "item_number": "30",
+      "aliases": [],
+      "sequence": 30,
+      "title": "Highlight how they can access materials, training, and support to get started",
+      "duration_minutes": 1,
+      "section": "s5",
+      "source_reference": "agenda.s5.b",
+      "presenter_content": [
+        "Highlight how they can access materials, training, and support to get started"
+      ],
+      "participant_content": [
+        "Highlight how they can access materials, training, and support to get started"
+      ],
+      "current_route": "/presentations/july-14?slide=7",
+      "item_route": "/presentations/july-14/items/30",
+      "supporting_module": "/field-plan/overview",
+      "drill_down_route": "/field-plan",
+      "primary_action": "Open Field Plan library",
+      "position_id": null,
+      "family": "C",
+      "slide_id": "website",
+      "status": "live",
+      "notes": []
+    },
+    {
+      "item_number": "31",
+      "aliases": [],
+      "sequence": 31,
+      "title": "Tell us what dates you can’t make, and we’ll pick the widest availability.",
+      "duration_minutes": 1,
+      "section": "s6",
+      "source_reference": "agenda.s6.a",
+      "presenter_content": [
+        "Tell us what dates you can’t make, and we’ll pick the widest availability."
+      ],
+      "participant_content": [
+        "Tell us what dates you can’t make, and we’ll pick the widest availability."
+      ],
+      "current_route": "/presentations/july-14?slide=8",
+      "item_route": "/presentations/july-14/items/31",
+      "supporting_module": "/presentations/july-14/commitment",
+      "drill_down_route": "/presentations/july-14/commitment",
+      "primary_action": "Share availability",
+      "position_id": null,
+      "family": "I",
+      "slide_id": "next-meeting",
+      "status": "live",
+      "notes": []
+    },
+    {
+      "item_number": "32",
+      "aliases": [],
+      "sequence": 32,
+      "title": "Proposed window: July 20–26",
+      "duration_minutes": 1,
+      "section": "s6",
+      "source_reference": "agenda.s6.b",
+      "presenter_content": [
+        "Proposed window: July 20–26"
+      ],
+      "participant_content": [
+        "Proposed window: July 20–26"
+      ],
+      "current_route": "/presentations/july-14?slide=8",
+      "item_route": "/presentations/july-14/items/32",
+      "supporting_module": "/presentations/july-14/commitment",
+      "drill_down_route": "/admin/college-command/meeting/july-14",
+      "primary_action": "Note window",
+      "position_id": null,
+      "family": "I",
+      "slide_id": "next-meeting",
+      "status": "live",
+      "notes": []
+    },
+    {
+      "item_number": "33",
+      "aliases": [],
+      "sequence": 33,
+      "title": "7. Name Decision for the Organization",
+      "duration_minutes": 1,
+      "section": "s7",
+      "source_reference": "agenda.s7.title+agenda.s7.body",
+      "presenter_content": [
+        "Optional, if time allows — open the floor to brainstorm names for the organization."
+      ],
+      "participant_content": [
+        "Optional, if time allows — open the floor to brainstorm names for the organization."
+      ],
+      "current_route": "/presentations/july-14?slide=9",
+      "item_route": "/presentations/july-14/items/33",
+      "supporting_module": "/presentations/july-14/commitment",
+      "drill_down_route": "/presentations/july-14/items/33",
+      "primary_action": "Optional brainstorm",
+      "position_id": null,
+      "family": "I",
+      "slide_id": "name",
+      "status": "live",
+      "notes": []
+    },
+    {
+      "item_number": "34",
+      "aliases": [
+        "034"
+      ],
+      "sequence": 34,
+      "title": "Leave with a seat and a next step",
+      "duration_minutes": 2,
+      "section": "close",
+      "source_reference": "presentation.close",
+      "presenter_content": [
+        "Invite one person you trust. Choose your place. Take a campus role — or recruit for an open one. Feedback from beta partners makes this stronger — tell us what works and what doesn’t."
+      ],
+      "participant_content": [
+        "Invite one person you trust. Choose your place. Take a campus role — or recruit for an open one. Feedback from beta partners makes this stronger — tell us what works and what doesn’t."
+      ],
+      "current_route": "/presentations/july-14?slide=10",
+      "item_route": "/presentations/july-14/items/34",
+      "supporting_module": "/presentations/july-14/commitment",
+      "drill_down_route": "/presentations/july-14/commitment",
+      "primary_action": "Choose a commitment",
+      "position_id": null,
+      "family": "I",
+      "slide_id": "close",
+      "status": "live",
+      "notes": []
+    }
+  ]
+}

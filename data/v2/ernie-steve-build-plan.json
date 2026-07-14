@@ -38,7 +38,13 @@
     ]
   },
   "certification_states": ["ABSENT", "PRESENT", "TESTED", "CERTIFIED"],
-  "active_program": "WP-01 Invite Evidence + WP-03 Benton L2 (parallel)",
+  "active_program": "July 14 meeting-readiness (presentation-driven) + WP-01/WP-03",
+  "july14_meeting": {
+    "agenda_registry": "data/presentation/july-14-agenda.json",
+    "hub": "/presentations/july-14",
+    "finding": "04–034 were not pre-keyed; leaves 01–34 freeze exact i18n/presentation language; item 04=Chance and Xay; 34 aliases 034",
+    "classic_deck_preserved": "/presentations/july-14/deck"
+  },
   "next_meaningful_threshold": "WP-01 + WP-03 together: a real person safely bound to a real position inside a real geographic command",
   "non_negotiables": [
     "Vision → Product Truth → Journey Certification → Implementation → Deployment",

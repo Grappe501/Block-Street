@@ -128,7 +128,7 @@
       "evidence": "Separation",
       "required_proof": "Registration, VCI, and launch-team goals remain distinct",
       "status": "PRESENT",
-      "notes": "Canonical enrollment_share formula; flat 25% removed; invite path must not conflate goal lanes"
+      "notes": "Canonical enrollment_share formula; flat 25% retired; invite path must not conflate goal lanes"
     }
   ],
   "hard_rules": [

@@ -29,7 +29,7 @@ Present = code/UI exists. Tested = controlled tests passed. Certified = producti
 - Operator Command reflects live system truth
 - Director is a real inspection and oversight hub
 - College Command contains the strongest working KPI implementation
-- Enrollment-share formula is canonical; flat 25% removed
+- Enrollment-share formula is canonical; flat 25% retired
 - Field Plan structure frozen through V2-B.5
 - Twelve modular work packages define the remaining build
 
@@ -40,6 +40,16 @@ Present = code/UI exists. Tested = controlled tests passed. Certified = producti
 - Invite-chain PENDING, not certified
 - Postgres and production RBAC not active
 - L4 execution is not real until identity, invitations, persistence, permissions, and auditability are proven
+
+## July 14 meeting-readiness (tonight)
+
+Canonical spine remains the Identity agenda language + presentation twin — not a replacement 9-section deck.
+
+- Registry: `data/presentation/july-14-agenda.json` (+ `src/lib/presentations/july-14-agenda.json`)
+- Hub: `/presentations/july-14` · Presenter/Participant leaf modes · classic deck at `/presentations/july-14/deck`
+- Finding: IDs `04–034` were not pre-keyed in-repo; leaves `01–34` freeze exact existing English (item `04` = Chance and Xay; `34` aliases `034`)
+- Supporting modules: `/how-it-works`, `/field-plan`, `/positions`, `/power-of-5`, `/recruit`, `/join/interest`, College meeting workspace
+- Invite-chain still PRESENT not CERTIFIED · Postgres/RBAC off · L4 blocked
 
 ## Next modular build order
 
