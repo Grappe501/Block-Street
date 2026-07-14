@@ -12,7 +12,7 @@
     "phase8Status": "complete",
     "phase9Status": "complete",
     "phase10Status": "complete",
-    "lastUpdated": "2026-07-14T08:06:09.720Z",
+    "lastUpdated": "2026-07-14T08:15:59.817Z",
     "deployUrl": "https://block-street.netlify.app/",
     "githubRepo": "https://github.com/Grappe501/Block-Street",
     "netlifyStatus": "live",
@@ -21,8 +21,8 @@
     "launchCallDate": "2026-07-14",
     "leaderTestingDate": "2026-07-12",
     "phase11Status": "complete",
-    "activeProgram": "Phase 11 complete · first-run live @0fce658 · V1 Cert continuity (Pass 2+)",
-    "productionCommit": "0fce658"
+    "activeProgram": "V1 Launch Ready · PHASE-001.7 10/10 @bd24b7b",
+    "productionCommit": "bd24b7b"
   },
   "constitutionalLayer": {
     "status": "complete",
@@ -33,10 +33,10 @@
     "productionCodeGate": true,
     "launchReadinessPath": "data/launch-readiness.json",
     "releaseReadinessPath": "data/release-readiness.json",
-    "launchReady": false,
-    "launchChecklistComplete": 6,
+    "launchReady": true,
+    "launchChecklistComplete": 10,
     "launchChecklistTotal": 10,
-    "notes": "First-run invite-chain live (/start · choose-place · map lock · Netlify Blobs). Full LSA checklist still pending DB; CERTIFIED PRESENT = 0 until later passes."
+    "notes": "PHASE-001.7 Launch Ready on Netlify Blobs. Invite registration, /network, /s/slug+QR, choose-place, directory search, admin participants. Postgres still optional."
   },
   "volume0": {
     "id": 0,
@@ -1392,6 +1392,12 @@
     }
   ],
   "buildLog": [
+    {
+      "date": "2026-07-14",
+      "title": "PHASE-001.7 — V1 Launch Ready (network board, share/QR, directory, admin)",
+      "phase": 1,
+      "summary": "Jul 12 minimum 3–6 + items 7–9 closed on Blobs · /network · /s/{slug} · /directory · launchReady true"
+    },
     {
       "date": "2026-07-14",
       "title": "PHASE-011.LAUNCH — Live first-run path closed · Phase 11 Complete",
