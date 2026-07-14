@@ -9,7 +9,7 @@ export const FIELD_MANUAL_DEFAULT_PATH = "/field-strategy";
  */
 export const FIELD_PLATFORM_URL =
   process.env.NEXT_PUBLIC_FIELD_PLATFORM_URL?.trim() ||
-  "https://regnat-populus-field.netlify.app";
+  "https://kelly-field-operations.netlify.app";
 
 const POPUP_FEATURES = [
   "popup=yes",

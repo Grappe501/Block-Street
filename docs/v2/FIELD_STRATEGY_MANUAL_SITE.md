@@ -15,9 +15,10 @@ Static content only. No accounts, live assignments, mailers, voter files, or API
 
 ## Field Platform (standalone)
 
-Statewide production architecture lives in the separate repo
-[`Grappe501/regnat-populus-field`](https://github.com/Grappe501/regnat-populus-field)
-(Netlify target: `https://regnat-populus-field.netlify.app`).
+Statewide production architecture lives in the separate Next.js repo
+[`Grappe501/kelly-field-operations`](https://github.com/Grappe501/kelly-field-operations)
+at `H:\SOSWebsite\kelly-field-operations`
+(Netlify target: `https://kelly-field-operations.netlify.app`).
 
 Block-Street **Field Platform** nav tabs open that site in a second window.
 Override with `NEXT_PUBLIC_FIELD_PLATFORM_URL` after the Netlify domain is confirmed.
