@@ -33,6 +33,179 @@ export default function July14MeetingPage() {
 
   return (
     <IdentityShell title={t("join.july14_entry")} subtitle={String(meeting?.title ?? "July 14 Organizing Platform Launch")} showSwitcher>
+      <section
+        className="rounded-xl border-2 border-brand-600 bg-white p-5 shadow-sm sm:p-6"
+        aria-labelledby="launch-agenda-heading"
+      >
+        <p className="text-xs font-semibold uppercase tracking-wide text-brand-700">Tonight · 6:00 PM</p>
+        <h2 id="launch-agenda-heading" className="mt-1 text-2xl font-bold text-slate-900">
+          Meeting Agenda: Launching ASYON
+        </h2>
+        <p className="mt-1 text-sm text-slate-600">Duration: 30–45 minutes</p>
+        <p className="mt-3 rounded-lg bg-brand-50 px-3 py-2 text-sm font-medium text-brand-950">
+          Goal: Introduce the organization, rally participants, and assign roles to build collective power.
+        </p>
+
+        <ol className="mt-6 space-y-6 text-sm text-slate-800">
+          <li>
+            <h3 className="text-base font-bold text-slate-900">1. Introductions</h3>
+            <ul className="mt-2 list-disc space-y-1.5 pl-5">
+              <li>
+                <strong>Chance and Xay (Youth Leaders):</strong> Share vision, experience, and passion for organizing young
+                people in politics.
+              </li>
+              <li>
+                <strong>Politician Guests:</strong> Briefly introduce them and their role in supporting this effort.
+              </li>
+              <li>
+                <strong>Quick Name and School:</strong> Each participant introduces themselves with their name &amp; school
+                (e.g., “Alex, University of Arkansas”).
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <h3 className="text-base font-bold text-slate-900">2. Why This Matters</h3>
+            <div className="mt-2 space-y-3">
+              <div>
+                <p className="font-semibold text-slate-900">The Urgency</p>
+                <ul className="mt-1 list-disc space-y-1.5 pl-5">
+                  <li>
+                    We’re at a perfect political cusp. The next elections (2026–2028) have the capability to be decided by
+                    young voters. If we organize now, we can influence every seat in the state.
+                  </li>
+                  <li>
+                    Steve (Overall Organizer) has never seen Arkansas colleges organize like this before. This is our chance
+                    to make history.
+                  </li>
+                  <li>
+                    You are the most valuable thing to politicians. Young voters are the largest and most untapped voting
+                    bloc by large margin. Politicians need us to win, but we need to organize to demand power in return.
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <p className="font-semibold text-slate-900">The Problem</p>
+                <ul className="mt-1 list-disc space-y-1.5 pl-5">
+                  <li>
+                    More than 50% of the voting population is under 50, but the rules are still made by those over 50. We
+                    have the numbers but not the organization to aid ourselves, <em>yet</em>.
+                  </li>
+                  <li>
+                    Ballot initiatives and lawmaking are areas where young people can have a massive impact—if we’re united.
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <p className="font-semibold text-slate-900">The Opportunity</p>
+                <ul className="mt-1 list-disc space-y-1.5 pl-5">
+                  <li>
+                    Swinging the election for people like Kelly, people like Chris, or whoever we decide has our intentions
+                    best in mind. This isn’t about a single candidate. It’s about building team voting power to amplify our
+                    voice and demand change.
+                  </li>
+                  <li>After the election, we can uplift each other and future leaders to run for office in the coming years.</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <h3 className="text-base font-bold text-slate-900">3. How This Works</h3>
+            <div className="mt-2 space-y-3">
+              <div>
+                <p className="font-semibold text-slate-900">Our Approach</p>
+                <p className="mt-1 pl-0">
+                  Every campus or group will be unique. We’re providing resources and support, but every group will shape
+                  this to fit their community.
+                </p>
+              </div>
+              <div>
+                <p className="font-semibold text-slate-900">Core Roles Needed on Every Campus</p>
+                <ul className="mt-1 list-disc space-y-1 pl-5">
+                  <li>Social Media Lead (to grow our network and spread the word)</li>
+                  <li>Voter Registration Lead (to ensure our peers are registered and ready to vote)</li>
+                  <li>College/Community Lead (to oversee and coordinate efforts locally)</li>
+                  <li>Event Lead (to organize fun, engaging, and informative events)</li>
+                  <li>Canvassing/Outreach Lead (to connect with peers and expand our network)</li>
+                </ul>
+              </div>
+              <div>
+                <p className="font-semibold text-slate-900">Why Now?</p>
+                <p className="mt-1">
+                  Summer is the best time to organize. Life is less chaotic with school out so we can build momentum before
+                  the fall rush. Grinding this next month is <strong>essential</strong>.
+                </p>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <h3 className="text-base font-bold text-slate-900">4. What We’re Building</h3>
+            <div className="mt-2 space-y-3">
+              <div>
+                <p className="font-semibold text-slate-900">Our Vision</p>
+                <ul className="mt-1 list-disc space-y-1.5 pl-5">
+                  <li>
+                    A social network across the state of young people (16–24) to get engaged, inform their peers, and
+                    establish political power.
+                  </li>
+                  <li>Making politics fun</li>
+                  <li>The Power of 5</li>
+                </ul>
+              </div>
+              <div>
+                <p className="font-semibold text-slate-900">Long-Term Goals</p>
+                <ul className="mt-1 list-disc space-y-1.5 pl-5">
+                  <li>Set a foundation for organizing young people to run for office in future elections.</li>
+                  <li>Build soft power to influence local politics and politicians.</li>
+                  <li>Ballot initiatives and lawmaking — areas where we can have massive effect.</li>
+                  <li>Create a statewide network that prepares young leaders to take on leadership roles everywhere.</li>
+                  <li>Build collective power so we can change the government together.</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <h3 className="text-base font-bold text-slate-900">5. Show Them How to Use the Website</h3>
+            <ul className="mt-2 list-disc space-y-1.5 pl-5">
+              <li>Walk through the website’s features</li>
+              <li>Highlight how they can access materials, training, and support to get started</li>
+            </ul>
+            <div className="mt-3 flex flex-wrap gap-2">
+              <Link href="/start" className="rounded-lg bg-brand-700 px-3 py-2 text-xs font-semibold text-white hover:bg-brand-800">
+                Start / invite
+              </Link>
+              <Link href="/choose-place" className="rounded-lg border border-slate-300 bg-white px-3 py-2 text-xs font-semibold text-slate-900 hover:border-brand-400">
+                Choose place
+              </Link>
+              <Link href="/network" className="rounded-lg border border-slate-300 bg-white px-3 py-2 text-xs font-semibold text-slate-900 hover:border-brand-400">
+                My Network
+              </Link>
+              <Link href="/directory" className="rounded-lg border border-slate-300 bg-white px-3 py-2 text-xs font-semibold text-slate-900 hover:border-brand-400">
+                Directory
+              </Link>
+            </div>
+          </li>
+
+          <li>
+            <h3 className="text-base font-bold text-slate-900">6. Next Steps: Meeting Again</h3>
+            <ul className="mt-2 list-disc space-y-1.5 pl-5">
+              <li>Tell us what dates you <strong>can’t</strong> make, and we’ll pick the widest availability.</li>
+              <li>
+                Proposed window: <strong>July 20–26</strong>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <h3 className="text-base font-bold text-slate-900">7. Name Decision for the Organization</h3>
+            <p className="mt-2 text-slate-700">Optional, if time allows — open the floor to brainstorm names for the organization.</p>
+          </li>
+        </ol>
+      </section>
+
       {human && (
         <div className="rounded border border-indigo-200 bg-indigo-50 p-4">
           <p className="text-lg font-bold text-indigo-950">
