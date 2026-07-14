@@ -13,7 +13,11 @@ function BannerInner() {
     <div className="border-b-4 border-amber-400 bg-amber-50 px-4 py-3 text-sm text-amber-950">
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div>
-          <p className="font-semibold uppercase tracking-wide">Director inspection mode</p>
+          <p className="font-semibold uppercase tracking-wide">
+            {inspect === "college-command"
+              ? "College Leader inspection mode"
+              : "Director inspection mode"}
+          </p>
           <p className="mt-1 font-semibold">
             Viewing as: {inspect} · Scope: labeled surface · Changes disabled
           </p>

@@ -139,9 +139,9 @@ export function AdminOperatorCommand() {
             </Link>
           </li>
           <li>
-            Campus formula (canonical): <code>{CAMPUS_GOAL_FORMULA_VERSION}</code> (
-            {getFieldGoalsMeta().campus_goal_formula}) — enrollment ÷ estimated county VAP · flat 25%{" "}
-            <strong>superseded</strong>
+            Campus formula (canonical): <code>{CAMPUS_GOAL_FORMULA_VERSION}</code> —{" "}
+            {getFieldGoalsMeta().campus_goal_formula}. Same sub-goal for every college/HS in a county; does{" "}
+            <strong>not</strong> add on top of the county total.
           </li>
           <li>
             Field Plan: 30K-ft Victory Field Framework <strong>ingested</strong> — role content live via role keys;

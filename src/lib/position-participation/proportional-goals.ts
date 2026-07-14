@@ -1,6 +1,6 @@
 /**
- * Campus civic goals — enrollment share of estimated county VAP (V2-A.3).
- * Flat 25% institution sub-goal is superseded.
+ * Campus civic goals — flat 25% of RedDirt county goals.
+ * Same for every college and high school in the county (sub_goal_within_parent).
  */
 import {
   computeCampusCivicGoals,
@@ -20,7 +20,6 @@ export type ProportionalCivicGoals = {
   county_registration_goal: number;
   county_vci: number;
   registration_goal: number;
-  /** Campus VCI sub-goal (enrollment share) — distinct from county VCI context */
   vci_goal: number;
   formula: string;
   formula_version: string;
@@ -52,7 +51,7 @@ export function resolveCountyCivicGoals(countySlug: string): {
     population: campus.county_population,
     estimate: campus.vap_is_estimate,
     vci_definition: row.vci_definition,
-    source: "data/field-goals/county-field-goals.json",
+    source: "data/field-goals/county-field-goals.json ← H:/SOSWebsite/RedDirt",
   };
 }
 

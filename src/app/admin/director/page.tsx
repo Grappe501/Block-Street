@@ -1,9 +1,11 @@
 import { DirectorOmniview } from "@/components/director/DirectorOmniview";
+import { buildDirectorInspectCatalog } from "@/lib/director/inspect-catalog";
 
 export const metadata = {
   title: "Director Omniview — ASYON",
 };
 
 export default function DirectorPage() {
-  return <DirectorOmniview />;
+  const catalog = buildDirectorInspectCatalog();
+  return <DirectorOmniview catalog={catalog} />;
 }

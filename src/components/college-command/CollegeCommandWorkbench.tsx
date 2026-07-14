@@ -28,6 +28,8 @@ export function CollegeCommandWorkbench({ dashboard }: { dashboard: Dash }) {
   }, [dashboard.rows, q, typeFilter, leadFilter]);
 
   const s = dashboard.summary;
+  const kpiParticipants = dashboard.rows.reduce((n, r) => n + r.confirmedParticipants, 0);
+  const kpiCampusGoals = dashboard.rows.reduce((n, r) => n + r.institutionSubGoal, 0);
 
   return (
     <div className="min-h-screen bg-slate-100">
@@ -38,8 +40,9 @@ export function CollegeCommandWorkbench({ dashboard }: { dashboard: Dash }) {
           </p>
           <h1 className="mt-2 text-3xl font-bold">College Leader Workbench</h1>
           <p className="mt-2 max-w-3xl text-sm text-white/85">
-            Education organizing command beneath Volunteer Command — colleges, high schools, enrollment-share
-            campus goals (registration + VCI). Not a participant landing page.
+            Statewide education command — every college and high school, RedDirt-backed county goals with a flat
+            25% education sub-goal (identical for all schools in a county), progress, board/network inspect, and
+            relay contact.
           </p>
           <div className="mt-4 flex flex-wrap items-center gap-3 text-sm">
             <FieldManualNavTab variant="header" />
@@ -57,12 +60,13 @@ export function CollegeCommandWorkbench({ dashboard }: { dashboard: Dash }) {
       </div>
 
       <div className="mx-auto max-w-7xl space-y-6 px-4 py-8">
-        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
           {[
             ["Institutions", s.totalInstitutions],
             ["Colleges", s.colleges],
-            ["Secondary schools", s.highSchools],
+            ["Secondary", s.highSchools],
             ["Need a lead", s.withoutLead],
+            ["Confirmed participants", kpiParticipants],
           ].map(([label, value]) => (
             <div key={String(label)} className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
               <p className="text-xs font-semibold uppercase tracking-wide text-slate-600">{label}</p>
@@ -71,24 +75,32 @@ export function CollegeCommandWorkbench({ dashboard }: { dashboard: Dash }) {
           ))}
         </div>
 
-        <div className="rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-950">
-          <strong>Privacy:</strong> {dashboard.privacyNote}
-        </div>
-
         <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-          <p className="text-xs font-semibold uppercase text-slate-600">Field goal snapshot</p>
+          <p className="text-xs font-semibold uppercase text-slate-600">KPI · goals snapshot</p>
           <p className="mt-1 text-sm text-slate-800">
             {dashboard.meta.county_count} counties · statewide registration goal{" "}
-            {dashboard.meta.statewide_registration_goal?.toLocaleString()} · ingested {dashboard.meta.ingested_at}
+            {dashboard.meta.statewide_registration_goal?.toLocaleString()} · sum of displayed campus registration
+            sub-goals in filter table (not additive statewide): use county column for parent totals
           </p>
           <p className="mt-2 text-xs text-slate-600">{dashboard.meta.vci_definition}</p>
-          <p className="mt-2 text-xs text-slate-600">
-            Campus formula: <code>{dashboard.campus_goal_formula_version}</code> ·{" "}
-            {dashboard.meta.campus_goal_formula} · contribution model: sub_goal_within_parent
+          <p className="mt-2 text-xs text-slate-800">
+            Active formula: <code>{dashboard.campus_goal_formula_version}</code> —{" "}
+            {dashboard.meta.campus_goal_formula}
           </p>
           <p className="mt-1 text-[11px] text-slate-500">
-            Flat 25% rule superseded. County VAP is estimated until ACS loads.
+            Source: RedDirt Victory Plan JSON ingest → <code>data/field-goals/county-field-goals.json</code>.{" "}
+            {dashboard.meta.reddirt_db_warning
+              ? "RedDirt DB warning present on chapter-05 artifact (Lane-2 allocation fallback) — still the official RedDirt file Burt reads."
+              : "No RedDirt dbWarning on current snapshot."}
           </p>
+          <p className="mt-1 text-[11px] text-slate-500">
+            Displayed campus sub-goal sum across rows (illustrative, do not add to 50k):{" "}
+            {kpiCampusGoals.toLocaleString()}
+          </p>
+        </div>
+
+        <div className="rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-950">
+          <strong>Privacy:</strong> {dashboard.privacyNote}
         </div>
 
         <div className="flex flex-wrap gap-2">
@@ -126,15 +138,16 @@ export function CollegeCommandWorkbench({ dashboard }: { dashboard: Dash }) {
                   "Institution",
                   "Type",
                   "County",
-                  "County goal",
-                  "Campus reg goal",
-                  "Campus VCI goal",
+                  "County reg",
+                  "County VCI",
+                  "Ed sub-goal (25%)",
+                  "Ed VCI (25%)",
                   "Participants",
                   "Leads",
-                  "Volunteers",
+                  "Vols",
                   "Committee",
                   "Risk",
-                  "",
+                  "Inspect",
                 ].map((h) => (
                   <th key={h} className="whitespace-nowrap px-3 py-2 font-semibold">
                     {h}
@@ -149,6 +162,7 @@ export function CollegeCommandWorkbench({ dashboard }: { dashboard: Dash }) {
                   <td className="px-3 py-2">{r.type}</td>
                   <td className="px-3 py-2">{r.countyName}</td>
                   <td className="px-3 py-2 tabular-nums">{r.countyGoal.toLocaleString()}</td>
+                  <td className="px-3 py-2 tabular-nums">{r.countyVci.toLocaleString()}</td>
                   <td className="px-3 py-2 tabular-nums font-semibold">{r.institutionSubGoal.toLocaleString()}</td>
                   <td className="px-3 py-2 tabular-nums">{r.campusVciGoal.toLocaleString()}</td>
                   <td className="px-3 py-2 tabular-nums">{r.confirmedParticipants}</td>
@@ -168,9 +182,24 @@ export function CollegeCommandWorkbench({ dashboard }: { dashboard: Dash }) {
                       {r.risk}
                     </span>
                   </td>
-                  <td className="px-3 py-2">
-                    <Link href={`${r.boardHref}?inspect=college-command`} className="font-semibold text-brand-800 underline">
-                      Open board
+                  <td className="space-x-2 whitespace-nowrap px-3 py-2">
+                    <Link
+                      href={`${r.boardHref}?inspect=college-command`}
+                      className="font-semibold text-brand-800 underline"
+                    >
+                      Board
+                    </Link>
+                    <Link
+                      href={`${r.countyBoardHref}?inspect=college-command`}
+                      className="font-semibold text-brand-800 underline"
+                    >
+                      County
+                    </Link>
+                    <Link
+                      href={`${r.networkHref}&inspect=college-command`}
+                      className="font-semibold text-brand-800 underline"
+                    >
+                      Network
                     </Link>
                   </td>
                 </tr>
@@ -180,8 +209,9 @@ export function CollegeCommandWorkbench({ dashboard }: { dashboard: Dash }) {
         </div>
 
         <p className="text-xs text-slate-500">
-          Registration progress shows confirmed platform participants only. Verified voter-registration results: not
-          yet connected.
+          Registration progress tiles show confirmed platform participants only. Verified voter-registration
+          results from the state: not yet connected. Education sub-goals are shared within each county — do not
+          sum school goals into a new statewide total.
         </p>
 
         <EducationContactPanel snapshots={dashboard.contactSnapshots} />

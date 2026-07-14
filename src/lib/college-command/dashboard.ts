@@ -21,6 +21,7 @@ export type EducationInstitutionRow = {
   countySlug: string;
   countyName: string;
   countyGoal: number;
+  countyVci: number;
   institutionSubGoal: number;
   campusVciGoal: number;
   campusShare: number | null;
@@ -30,6 +31,8 @@ export type EducationInstitutionRow = {
   openPositions: number;
   committeeLabel: string;
   boardHref: string;
+  networkHref: string;
+  countyBoardHref: string;
   risk: "ok" | "needs_lead" | "forming";
 };
 
@@ -76,6 +79,7 @@ export function buildCollegeCommandDashboard() {
       countySlug: inst.county,
       countyName: county?.county_name ?? inst.county,
       countyGoal: county?.voter_registration_goal ?? 0,
+      countyVci: county?.vci ?? 0,
       institutionSubGoal: campus.campus_registration_goal,
       campusVciGoal: campus.campus_vci_goal,
       campusShare: campus.campus_share,
@@ -85,6 +89,8 @@ export function buildCollegeCommandDashboard() {
       openPositions,
       committeeLabel: committeeFromCounts(leads, vols),
       boardHref: `/schools/${inst.slug}`,
+      networkHref: `/network?place=${encodeURIComponent(inst.slug)}`,
+      countyBoardHref: `/county/${inst.county}`,
       risk: leads === 0 ? "needs_lead" : vols > 0 ? "ok" : "forming",
     });
   }
@@ -114,6 +120,7 @@ export function buildCollegeCommandDashboard() {
       countySlug: hs.county,
       countyName: county?.county_name ?? hs.county,
       countyGoal: county?.voter_registration_goal ?? 0,
+      countyVci: county?.vci ?? 0,
       institutionSubGoal: campus.campus_registration_goal,
       campusVciGoal: campus.campus_vci_goal,
       campusShare: campus.campus_share,
@@ -123,6 +130,8 @@ export function buildCollegeCommandDashboard() {
       openPositions: cards.filter((c) => c.lead_count + c.volunteer_count === 0).length,
       committeeLabel: committeeFromCounts(leads, vols),
       boardHref: `/high-schools/${hs.slug}`,
+      networkHref: `/network?place=${encodeURIComponent(hs.slug)}`,
+      countyBoardHref: `/county/${hs.county}`,
       risk: leads === 0 ? "needs_lead" : "forming",
     });
   }
@@ -152,6 +161,7 @@ export function buildCollegeCommandDashboard() {
       countySlug: ps.county,
       countyName: county?.county_name ?? ps.county,
       countyGoal: county?.voter_registration_goal ?? 0,
+      countyVci: county?.vci ?? 0,
       institutionSubGoal: campus.campus_registration_goal,
       campusVciGoal: campus.campus_vci_goal,
       campusShare: campus.campus_share,
@@ -161,6 +171,8 @@ export function buildCollegeCommandDashboard() {
       openPositions: cards.filter((c) => c.lead_count + c.volunteer_count === 0).length,
       committeeLabel: committeeFromCounts(leads, vols),
       boardHref: `/private-schools/${ps.slug}`,
+      networkHref: `/network?place=${encodeURIComponent(ps.slug)}`,
+      countyBoardHref: `/county/${ps.county}`,
       risk: leads === 0 ? "needs_lead" : "forming",
     });
   }

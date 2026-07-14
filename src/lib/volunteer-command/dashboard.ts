@@ -138,7 +138,7 @@ export function buildVolunteerCommandDashboard(input?: { section?: VolunteerComm
       relationship: "subordinate_to_volunteer_manager",
       summary: college.summary,
       campus_goal_formula_version: CAMPUS_GOAL_FORMULA_VERSION,
-      superseded_flat_25: SUPERSEDED_FLAT_25_RULE,
+      institution_sub_goal_rule: SUPERSEDED_FLAT_25_RULE,
     },
     attention: [
       {

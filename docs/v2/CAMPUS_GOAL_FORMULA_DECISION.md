@@ -1,43 +1,23 @@
-# Campus Goal Formula Decision (V2-A.3)
+# Campus Goal Formula Decision
 
-**Decision date:** 2026-07-14  
-**Status:** Canonical  
-**Machine twin:** `data/v2/campus-goal-formula-decision.json`
+**Status:** Locked 2026-07-14 (operator reaffirmation)  
+**Active version:** `flat_0.25_of_county_v1`
 
-## Supersession
-
-The flat **25%** institution sub-goal rule (`Math.ceil(county_goal × 0.25)`) is **superseded**.
-
-Prior feature id `FEAT-EDU-SUBGOAL-25` remains in the registry as historical lineage with certification `superseded`.
-
-## Current formula
+## Rule
 
 ```text
-campus_share = campus_enrollment ÷ county_voting_age_population
-
-campus_registration_goal = Math.ceil(county_registration_goal × campus_share)
-
-campus_vci_goal = Math.ceil(county_vci_goal × campus_share)
+education_institution_registration_sub_goal = ceil(county_voter_registration_goal × 0.25)
+education_institution_vci_sub_goal          = ceil(county_vci × 0.25)
 ```
 
-- Rounding: `Math.ceil` everywhere.
-- Contribution model: `sub_goal_within_parent` — campus goals do not inflate county totals.
-- Launch-team goal remains a separate metric.
+- Same number for **every** college and high school in that county.
+- Contribution model: **sub_goal_within_parent** (does not add on top of the county total).
+- County parent totals come from RedDirt Victory Plan artifacts on `H:\SOSWebsite\RedDirt` via read-only ingest into `data/field-goals/county-field-goals.json`.
 
-## County VAP
+## Superseded
 
-Source: `data/registry/county-demographics.json`
+`enrollment_share_of_county_vap_v1` (enrollment ÷ estimated county VAP) — no longer active for campus civic goals.
 
-County voting-age population is **estimated** (76% of total population) until verified ACS figures are loaded.
+## County source honesty
 
-**Do not** label estimated VAP as official ACS data.
-
-## Sources
-
-| Input | Source |
-|-------|--------|
-| County registration / VCI | RedDirt → `data/field-goals/county-field-goals.json` |
-| County VAP | `data/registry/county-demographics.json` (estimate) |
-| Campus enrollment | Institution registry |
-
-Formula version id: `enrollment_share_of_county_vap_v1`
+If RedDirt chapter-05 JSON carries `dbWarning` / `allocated_from_lane2_weight`, Burt still treats those artifacts as the official RedDirt file of record until RedDirt’s `CountyCampaignStats` DB path is repaired and re-exported.

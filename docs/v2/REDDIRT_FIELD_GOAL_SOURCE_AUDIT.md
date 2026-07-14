@@ -1,6 +1,6 @@
 # RedDirt Field Goal Source Audit
 
-**Ingested:** 2026-07-14T09:22:21.719Z  
+**Ingested:** 2026-07-14T17:11:00.567Z  
 **Counties complete:** 75 / 75  
 **Registration source:** `docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json`  
 **VCI source:** `docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json`
