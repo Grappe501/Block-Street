@@ -234,6 +234,73 @@
       "keywords": ["blobs", "postgres", "durability"],
       "dependsOn": [],
       "owner": "architect"
+    },
+    {
+      "id": "FEAT-EDU-KPI-DASHBOARD",
+      "title": "Education KPI Dashboard",
+      "audience": "field_lead",
+      "journey": [],
+      "product": "College Command",
+      "phase": "V2-A.2",
+      "certification": "implemented",
+      "nav": "/admin/college-command",
+      "data_source": "field-goals snapshot + position participation",
+      "keywords": ["kpi", "sub-goal", "participants", "vci"],
+      "dependsOn": ["FEAT-COLLEGE-COMMAND", "FEAT-REDDIRT-FIELD-GOALS"],
+      "owner": "operator"
+    },
+    {
+      "id": "FEAT-EDU-CONTACT-DIRECTORY",
+      "title": "Education Contact Directory",
+      "audience": "field_lead",
+      "journey": [],
+      "product": "College Command",
+      "phase": "V2-A.2",
+      "certification": "implemented",
+      "nav": "/admin/college-command",
+      "permissions": ["college_leader", "director", "operator"],
+      "keywords": ["contact", "relay", "high-school privacy"],
+      "dependsOn": ["FEAT-COLLEGE-COMMAND"],
+      "owner": "operator"
+    },
+    {
+      "id": "FEAT-INSTITUTION-BOARD-INSPECT",
+      "title": "Institution Board Inspection",
+      "audience": "field_lead",
+      "journey": [],
+      "product": "College Command",
+      "phase": "V2-A.2",
+      "certification": "implemented",
+      "nav": "/schools/[slug]?inspect=college-command",
+      "keywords": ["inspect", "read-only", "board"],
+      "dependsOn": ["FEAT-COLLEGE-COMMAND"],
+      "owner": "operator"
+    },
+    {
+      "id": "FEAT-DIRECTOR-LIVE-CONSOLE",
+      "title": "Director Live System Console",
+      "audience": "operator",
+      "journey": [],
+      "product": "Director",
+      "phase": "V2-A.2",
+      "certification": "implemented",
+      "nav": "/admin/director",
+      "keywords": ["live", "presence", "persistence", "deployment"],
+      "dependsOn": ["FEAT-DIRECTOR-OMNIVIEW", "FEAT-PERSISTENCE-STATUS"],
+      "owner": "architect"
+    },
+    {
+      "id": "FEAT-V2B-POSTGRES-READINESS",
+      "title": "Postgres Port Readiness",
+      "audience": "architect",
+      "journey": [],
+      "product": "Operator",
+      "phase": "V2-A.2",
+      "certification": "documented",
+      "nav": "docs/v2/V2B_POSTGRES_PORT_READINESS_MAP.md",
+      "keywords": ["v2-b", "postgres", "dual-write", "readiness"],
+      "dependsOn": ["FEAT-PERSISTENCE-STATUS"],
+      "owner": "architect"
     }
   ]
 }

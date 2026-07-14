@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import type { EducationInstitutionRow } from "@/lib/college-command/dashboard";
+import { EducationContactPanel } from "@/components/college-command/EducationContactPanel";
 
 type Dash = ReturnType<typeof import("@/lib/college-command/dashboard").buildCollegeCommandDashboard>;
 
@@ -169,6 +170,8 @@ export function CollegeCommandWorkbench({ dashboard }: { dashboard: Dash }) {
           Registration progress shows confirmed platform participants only. Verified voter-registration results: not
           yet connected.
         </p>
+
+        <EducationContactPanel snapshots={dashboard.contactSnapshots} />
       </div>
     </div>
   );

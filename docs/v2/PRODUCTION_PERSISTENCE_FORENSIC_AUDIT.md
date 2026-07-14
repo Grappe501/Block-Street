@@ -26,6 +26,7 @@ Machine twin: `data/v2/production-persistence-forensic-audit.json`
 | Position volunteer/lead | local JSON write on server FS / Blobs intended | `data/position-participation/store.json` — Blobs dual-path still evolving |
 | County goals / VCI | `static_seed` | `data/field-goals/county-field-goals.json` from RedDirt ingest |
 | Launch readiness / build % | `static_seed` | Not product certification |
+| Communication attempt | `not_persisted` | Education contact scaffold — durable log deferred |
 | Director inspection | `not_persisted` audit yet | Reason captured client-side only in this slice |
 | Event creation | varies by phase module | Many civic-action stores are JSON/Blobs |
 | Confirmed voter-registration results | `not_persisted` / unconnected | UI must say so |

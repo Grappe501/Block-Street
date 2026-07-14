@@ -64,13 +64,23 @@ export function DirectorOmniview() {
               Persistence backend: <strong>netlify_blobs + static_seed</strong> — Postgres / Netlify Database{" "}
               <strong>not</strong> canonical
             </li>
-            <li>Presence: No presence signal (realtime presence not certified)</li>
+            <li>
+              Presence: <strong>No presence signal</strong> (realtime presence not certified — do not label
+              historical activity as Live)
+            </li>
             <li>Field goals: RedDirt snapshot ingested · 75 counties</li>
+            <li>
+              Not yet persisted: director inspection audit, communication attempts, verified registration counts
+            </li>
             <li>Invite-chain certification: PENDING</li>
             <li>
               Return:{" "}
               <Link href="/admin?tab=command" className="font-semibold text-brand-800 underline">
                 Operator Command
+              </Link>
+              {" · "}
+              <Link href="/admin/college-command" className="font-semibold text-brand-800 underline">
+                College Command
               </Link>
             </li>
           </ul>

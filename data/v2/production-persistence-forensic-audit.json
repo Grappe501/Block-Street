@@ -1,18 +1,53 @@
 {
-  "version": "1.0.0",
-  "updated": "2026-07-14T10:30:00.000Z",
+  "version": "1.1.0",
+  "updated": "2026-07-14T10:45:00.000Z",
   "canonical_persistence_backend": "netlify_blobs_plus_static_seed",
   "netlify_database_postgres_active": false,
   "v2b_status": "deferred",
+  "do_not_claim": [
+    "Everything is stored",
+    "Postgres is live",
+    "Netlify Database is canonical"
+  ],
   "actions": [
     {
-      "action_type": "invite_create_accept",
+      "action_type": "signup",
       "storage_backend": "netlify_blobs",
       "durability": "production_enabled_with_flush_patterns",
       "certification_state": "implemented_pending_journey_cert"
     },
     {
-      "action_type": "position_membership_join",
+      "action_type": "invite_sent",
+      "storage_backend": "netlify_blobs",
+      "durability": "production_enabled_with_flush_patterns",
+      "certification_state": "implemented_pending_journey_cert"
+    },
+    {
+      "action_type": "invite_accepted",
+      "storage_backend": "netlify_blobs",
+      "durability": "production_enabled_with_flush_patterns",
+      "certification_state": "implemented_pending_journey_cert"
+    },
+    {
+      "action_type": "place_selection",
+      "storage_backend": "netlify_blobs",
+      "durability": "production_enabled",
+      "certification_state": "implemented"
+    },
+    {
+      "action_type": "map_lock",
+      "storage_backend": "netlify_blobs",
+      "durability": "production_enabled",
+      "certification_state": "implemented"
+    },
+    {
+      "action_type": "network_membership",
+      "storage_backend": "netlify_blobs",
+      "durability": "partial",
+      "certification_state": "partial"
+    },
+    {
+      "action_type": "position_volunteer_action",
       "storage_backend": "static_seed_json_store",
       "storage_key_or_table": "data/position-participation/store.json",
       "durability": "local_and_deploy_artifact_risk",
@@ -20,23 +55,85 @@
       "certification_state": "partial"
     },
     {
-      "action_type": "field_goal_display",
+      "action_type": "position_lead_action",
+      "storage_backend": "static_seed_json_store",
+      "storage_key_or_table": "data/position-participation/store.json",
+      "durability": "local_and_deploy_artifact_risk",
+      "certification_state": "partial"
+    },
+    {
+      "action_type": "committee_membership",
+      "storage_backend": "static_seed_json_store",
+      "durability": "derived_from_position_memberships",
+      "certification_state": "partial"
+    },
+    {
+      "action_type": "event_creation",
+      "storage_backend": "netlify_blobs",
+      "durability": "varies_by_module",
+      "certification_state": "partial"
+    },
+    {
+      "action_type": "event_response",
+      "storage_backend": "netlify_blobs",
+      "durability": "varies_by_module",
+      "certification_state": "partial"
+    },
+    {
+      "action_type": "user_profile_update",
+      "storage_backend": "netlify_blobs",
+      "durability": "partial",
+      "certification_state": "partial"
+    },
+    {
+      "action_type": "community_activity",
+      "storage_backend": "unknown",
+      "durability": "module_dependent",
+      "certification_state": "partial"
+    },
+    {
+      "action_type": "college_activity",
+      "storage_backend": "static_seed_json_store",
+      "durability": "partial",
+      "certification_state": "partial"
+    },
+    {
+      "action_type": "high_school_activity",
+      "storage_backend": "static_seed_json_store",
+      "durability": "partial",
+      "known_data_loss_risk": "privacy review incomplete for contact fields",
+      "certification_state": "partial"
+    },
+    {
+      "action_type": "goal_progress_update",
       "storage_backend": "static_seed",
       "storage_key_or_table": "data/field-goals/county-field-goals.json",
-      "durability": "build_artifact",
+      "durability": "build_artifact_ingest_only",
       "certification_state": "ingested_from_reddirt"
     },
     {
-      "action_type": "verified_voter_registration_count",
+      "action_type": "communication_attempt",
       "storage_backend": "not_persisted",
       "durability": "none",
-      "certification_state": "not_connected"
+      "certification_state": "scaffold"
     },
     {
       "action_type": "director_inspection",
       "storage_backend": "not_persisted",
       "durability": "client_reason_only_this_slice",
       "certification_state": "scaffold"
+    },
+    {
+      "action_type": "admin_modification",
+      "storage_backend": "unknown",
+      "durability": "module_dependent",
+      "certification_state": "partial"
+    },
+    {
+      "action_type": "verified_voter_registration_count",
+      "storage_backend": "not_persisted",
+      "durability": "none",
+      "certification_state": "not_connected"
     }
   ],
   "authority": "docs/v2/PRODUCTION_PERSISTENCE_FORENSIC_AUDIT.md"

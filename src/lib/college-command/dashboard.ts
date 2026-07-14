@@ -2,6 +2,8 @@ import { getCountyFieldGoal, getFieldGoalsMeta, listCountyFieldGoals } from "@/l
 import { getInstitutions, getHighSchools, getPrivateCharterSchools } from "@/lib/data";
 import { listPositionCards, getScopeMetrics } from "@/lib/position-participation";
 import type { CommunityKind } from "@/lib/community-workspace";
+import { listEducationContacts } from "./contact-directory";
+import { toCommunityId } from "@/lib/community-workspace/roles";
 
 export type EducationInstitutionRow = {
   id: string;
@@ -155,5 +157,16 @@ export function buildCollegeCommandDashboard() {
     rows: rows.sort((a, b) => a.name.localeCompare(b.name)),
     privacyNote:
       "High-school contact and directory access remain privacy-restricted. Full direct-contact features require age-safety review; campaign-controlled relay only until then.",
+    contactSnapshots: {
+      [toCommunityId("institution", "henderson-state")]: listEducationContacts({
+        role: "college_leader",
+        scopeId: toCommunityId("institution", "henderson-state"),
+      }),
+      // Representative secondary scope — always relay regardless of membership count
+      "high_school:privacy-review-example": listEducationContacts({
+        role: "college_leader",
+        scopeId: "high_school:privacy-review-example",
+      }),
+    },
   };
 }
