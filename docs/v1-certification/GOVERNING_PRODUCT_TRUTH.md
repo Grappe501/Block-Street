@@ -1,6 +1,7 @@
 # ASYON Governing Product Truth — Operator Acceptance
 
 **Accepted:** 2026-07-14  
+**Reaffirmed:** 2026-07-14 (operator / ChatGPT — forensic packet = governing product truth)  
 **Authority:** This stack overrides Build Control percentages on readiness conflicts.
 
 ## Governing document hierarchy

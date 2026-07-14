@@ -53,10 +53,11 @@ npm run v1:cert:pass1:all
 
 | Pass | Status |
 |------|--------|
-| 1 Vision | Artifacts generated — awaiting Steve acceptance |
-| 2–9 | Blocked until Pass 1 accepted |
-| 10 V2 planning | Blocked until 1–9 |
+| 1 Vision | Complete — forensic baseline **accepted** 2026-07-14 ([GOVERNING_PRODUCT_TRUTH.md](./GOVERNING_PRODUCT_TRUTH.md)) |
+| Invite chain (`V1-JRN-INVITE-CHAIN-01`) | **Active gate** — not yet CERTIFIED PRESENT |
+| 2–9 | Proceed under invite-only soft beta + additive V2 order |
+| V2 program | Accepted — see [V2_ADDITIVE_PROGRAM.md](../v2/V2_ADDITIVE_PROGRAM.md) |
 
-## Hard rule
+## Hard rule (updated post-acceptance)
 
-Do not authorize product repairs until Steve reviews P0 blockers, duplicated systems, and documented/scaffolded-only lists.
+Pass 1 NO-REPAIR audit is closed. Product work resumes as **additive overlays only**. Do **not** claim large-scale launch or CERTIFIED PRESENT from Build Control percentages. Public expansion stays frozen until the invite-chain gate passes.
