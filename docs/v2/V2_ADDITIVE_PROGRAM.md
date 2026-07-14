@@ -17,9 +17,12 @@
 
 ## Preferred next move (locked with governing truth)
 
-1. **`V1-JRN-INVITE-CHAIN-01`** — certify + evidence on production  
-2. **V2-A Operator Command** — surface cert truth / attention / next actions (`/admin?tab=command`)  
-3. **V2-B** Postgres — only after (1) and (2)
+1. **`V1-JRN-INVITE-CHAIN-01`** — named launch blocker · certify + evidence on production  
+2. **V2-B.1** Field Plan source contract + ingestion spine (schema/gates only; broad ingest blocked)  
+3. **V2-B.2+** position mapping → responsibilities → templates → KPI wiring → operator review  
+4. **V2-B Postgres / personnel durability** remains later — Blobs+seed until gates proven  
+
+Note: historical “V2-B Blobs→Postgres” in the original table remains a later durability lane; Field Plan operationalization is the active V2-B content lane.
 
 ## Immediate constraint
 

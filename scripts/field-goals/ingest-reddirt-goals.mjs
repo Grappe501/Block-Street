@@ -137,8 +137,9 @@ function main() {
           vci: vciFile.generatedAt,
         },
         reddirt_registration_source: g?.source || null,
-        institution_sub_goal_rule: "Math.ceil(county_goal * 0.25)",
-        institution_sub_goal: Math.ceil(Number(reg) * 0.25),
+        institution_sub_goal_rule: "SUPERSEDED_flat_0.25_lineage_only",
+        institution_sub_goal_status: "superseded",
+        institution_sub_goal_lineage: Math.ceil(Number(reg) * 0.25),
       });
     }
   }
@@ -158,9 +159,10 @@ function main() {
     statewide_registration_goal: goalsFile.statewideGoal ?? 50000,
     vci_definition: vciFile.formula,
     vci_use_cases: vciFile.useCases || [],
-    institution_sub_goal_rule: "Math.ceil(county_voter_registration_goal * 0.25)",
+    institution_sub_goal_rule: "SUPERSEDED_flat_0.25_lineage_only",
+    campus_goal_formula_version: "enrollment_share_of_county_vap_v1",
     institution_contribution_model: "sub_goal_within_parent",
-    note: "Institution sub-goals contribute toward the county total and must not be summed on top of it.",
+    note: "Campus goals use enrollment÷county VAP (active). Flat 25% institution_sub_goal fields below are lineage-only and must not drive UI.",
     reddirt_db_warning: goalsFile.dbWarning || null,
     counties,
   };

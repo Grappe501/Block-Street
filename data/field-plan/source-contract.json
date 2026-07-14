@@ -1,0 +1,96 @@
+{
+  "version": "1.0.0",
+  "phase": "V2-B.1",
+  "status": "schema_ready_awaiting_broad_ingest",
+  "updated": "2026-07-14T18:05:00.000Z",
+  "authority": "docs/v2/V2B1_FIELD_PLAN_SOURCE_CONTRACT.md",
+  "preserves": {
+    "campus_goal_formula_version": "enrollment_share_of_county_vap_v1",
+    "flat_25_status": "superseded_do_not_use",
+    "hierarchy": "V2-A.3 Volunteer Manager → County || Education → Area Leaders → Committees → Volunteers",
+    "persistence": "netlify_blobs_plus_static_seed",
+    "sensitive_personnel_mutations": "disabled"
+  },
+  "tree": [
+    "Field Plan",
+    "Commands",
+    "Positions",
+    "Responsibilities",
+    "Recurring Tasks",
+    "Milestone Tasks",
+    "KPIs",
+    "Reporting Relationships",
+    "Required Resources",
+    "Escalation Rules",
+    "Training Requirements"
+  ],
+  "entity_kinds": [
+    "command",
+    "position",
+    "responsibility",
+    "recurring_task",
+    "milestone_task",
+    "kpi",
+    "reporting_relationship",
+    "required_resource",
+    "escalation_rule",
+    "training_requirement"
+  ],
+  "required_record_fields": [
+    "stable_id",
+    "source_reference",
+    "command_level",
+    "position_owner",
+    "frequency_or_deadline",
+    "kpi_relationship",
+    "completion_evidence_requirement",
+    "sensitivity_classification",
+    "version",
+    "review_status"
+  ],
+  "review_statuses": [
+    "draft",
+    "queued_for_review",
+    "mapped",
+    "conflict",
+    "unmapped",
+    "approved",
+    "superseded",
+    "rejected"
+  ],
+  "sensitivity_classes": [
+    "public_safe",
+    "volunteer_internal",
+    "leader_internal",
+    "personnel_sensitive",
+    "director_only"
+  ],
+  "command_levels": [
+    "director",
+    "volunteer_manager",
+    "county_volunteer_command",
+    "education_volunteer_command",
+    "functional_command",
+    "institution",
+    "committee",
+    "general_volunteer"
+  ],
+  "mapping_questions": [
+    "where_does_position_sit",
+    "who_supervises",
+    "geography_or_institution",
+    "eventual_permissions",
+    "dashboard_owner",
+    "vacancy_behavior"
+  ],
+  "conflict_policy": "unmapped_or_conflicting_positions_enter_review_queue_never_silent_assign",
+  "broad_content_ingest_allowed": false,
+  "gates_before_broad_ingest": [
+    "schema_complete",
+    "source_traceability",
+    "conflict_handling",
+    "validation_gates_green",
+    "no_active_flat_25_formula",
+    "sensitive_actions_still_disabled"
+  ]
+}

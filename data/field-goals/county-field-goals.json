@@ -11,9 +11,9 @@
     "Direct mail priority",
     "Digital advertising priority"
   ],
-  "institution_sub_goal_rule": "Math.ceil(county_voter_registration_goal * 0.25)",
+  "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
   "institution_contribution_model": "sub_goal_within_parent",
-  "note": "Institution sub-goals contribute toward the county total and must not be summed on top of it.",
+  "note": "Campus goals use enrollment÷county VAP (active). Flat 25% fields are lineage-only and must not drive UI.",
   "reddirt_db_warning": "CountyCampaignStats unavailable; using staged JSON fallback (\nInvalid `prisma.countyCampaignStats.findMany()` invocation in\nH:\\SOSWebsite\\RedDirt\\src\\lib\\field-ops\\county-campaign-stats-source.ts:18:51\n\n  15   prisma: PrismaClient,\n  16 ): Promise<{ rows: CountyCampaignStatsSourceRow[]; warning?: string }> {\n  17   try {\n→ 18     const rows = await prisma.countyCampaignStats.findMany(\nError occurred during query execution:\nConnectorError(ConnectorError { user_facing_error: None, kind: QueryError(PostgresError { code: \"42883\", message: \"operator does not exist: uuid = text\", severity: \"ERROR\", detail: None, column: None, hint: Some(\"No operator matches the given name and argument types. You might need to add explicit type casts.\") }), transient: false })). No CountyCampaignStats.registrationGoal rows — using Lane 2-weighted allocation of 50,000 statewide.",
   "counties": [
     {
@@ -36,8 +36,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 53
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 53
     },
     {
       "county_slug": "ashley",
@@ -59,8 +60,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 57
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 57
     },
     {
       "county_slug": "baxter",
@@ -82,8 +84,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 144
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 144
     },
     {
       "county_slug": "benton",
@@ -105,8 +108,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 1796
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 1796
     },
     {
       "county_slug": "boone",
@@ -128,8 +132,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 82
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 82
     },
     {
       "county_slug": "bradley",
@@ -151,8 +156,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 30
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 30
     },
     {
       "county_slug": "calhoun",
@@ -174,8 +180,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 18
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 18
     },
     {
       "county_slug": "carroll",
@@ -197,8 +204,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 102
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 102
     },
     {
       "county_slug": "chicot",
@@ -220,8 +228,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 18
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 18
     },
     {
       "county_slug": "clark",
@@ -243,8 +252,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 73
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 73
     },
     {
       "county_slug": "clay",
@@ -266,8 +276,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 25
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 25
     },
     {
       "county_slug": "cleburne",
@@ -289,8 +300,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 65
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 65
     },
     {
       "county_slug": "cleveland",
@@ -312,8 +324,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 20
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 20
     },
     {
       "county_slug": "columbia",
@@ -335,8 +348,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 79
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 79
     },
     {
       "county_slug": "conway",
@@ -358,8 +372,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 66
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 66
     },
     {
       "county_slug": "craighead",
@@ -381,8 +396,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 355
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 355
     },
     {
       "county_slug": "crawford",
@@ -404,8 +420,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 152
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 152
     },
     {
       "county_slug": "crittenden",
@@ -427,8 +444,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 263
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 263
     },
     {
       "county_slug": "cross",
@@ -450,8 +468,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 69
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 69
     },
     {
       "county_slug": "dallas",
@@ -473,8 +492,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 23
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 23
     },
     {
       "county_slug": "desha",
@@ -496,8 +516,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 49
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 49
     },
     {
       "county_slug": "drew",
@@ -519,8 +540,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 47
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 47
     },
     {
       "county_slug": "faulkner",
@@ -542,8 +564,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 591
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 591
     },
     {
       "county_slug": "franklin",
@@ -565,8 +588,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 28
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 28
     },
     {
       "county_slug": "fulton",
@@ -588,8 +612,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 24
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 24
     },
     {
       "county_slug": "garland",
@@ -611,8 +636,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 370
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 370
     },
     {
       "county_slug": "grant",
@@ -634,8 +660,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 41
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 41
     },
     {
       "county_slug": "greene",
@@ -657,8 +684,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 91
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 91
     },
     {
       "county_slug": "hempstead",
@@ -680,8 +708,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 71
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 71
     },
     {
       "county_slug": "hot-spring",
@@ -703,8 +732,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 68
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 68
     },
     {
       "county_slug": "howard",
@@ -726,8 +756,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 32
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 32
     },
     {
       "county_slug": "independence",
@@ -749,8 +780,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 86
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 86
     },
     {
       "county_slug": "izard",
@@ -772,8 +804,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 25
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 25
     },
     {
       "county_slug": "jackson",
@@ -795,8 +828,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 22
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 22
     },
     {
       "county_slug": "jefferson",
@@ -818,8 +852,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 366
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 366
     },
     {
       "county_slug": "johnson",
@@ -841,8 +876,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 59
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 59
     },
     {
       "county_slug": "lafayette",
@@ -864,8 +900,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 18
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 18
     },
     {
       "county_slug": "lawrence",
@@ -887,8 +924,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 28
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 28
     },
     {
       "county_slug": "lee",
@@ -910,8 +948,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 41
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 41
     },
     {
       "county_slug": "lincoln",
@@ -933,8 +972,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 22
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 22
     },
     {
       "county_slug": "little-river",
@@ -956,8 +996,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 34
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 34
     },
     {
       "county_slug": "logan",
@@ -979,8 +1020,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 35
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 35
     },
     {
       "county_slug": "lonoke",
@@ -1002,8 +1044,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 236
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 236
     },
     {
       "county_slug": "madison",
@@ -1025,8 +1068,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 39
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 39
     },
     {
       "county_slug": "marion",
@@ -1048,8 +1092,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 59
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 59
     },
     {
       "county_slug": "miller",
@@ -1071,8 +1116,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 146
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 146
     },
     {
       "county_slug": "mississippi",
@@ -1094,8 +1140,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 69
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 69
     },
     {
       "county_slug": "monroe",
@@ -1117,8 +1164,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 18
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 18
     },
     {
       "county_slug": "montgomery",
@@ -1140,8 +1188,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 18
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 18
     },
     {
       "county_slug": "nevada",
@@ -1163,8 +1212,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 19
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 19
     },
     {
       "county_slug": "newton",
@@ -1186,8 +1236,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 18
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 18
     },
     {
       "county_slug": "ouachita",
@@ -1209,8 +1260,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 85
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 85
     },
     {
       "county_slug": "perry",
@@ -1232,8 +1284,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 22
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 22
     },
     {
       "county_slug": "phillips",
@@ -1255,8 +1308,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 63
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 63
     },
     {
       "county_slug": "pike",
@@ -1278,8 +1332,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 18
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 18
     },
     {
       "county_slug": "poinsett",
@@ -1301,8 +1356,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 27
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 27
     },
     {
       "county_slug": "polk",
@@ -1324,8 +1380,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 21
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 21
     },
     {
       "county_slug": "pope",
@@ -1347,8 +1404,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 186
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 186
     },
     {
       "county_slug": "prairie",
@@ -1370,8 +1428,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 18
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 18
     },
     {
       "county_slug": "pulaski",
@@ -1393,8 +1452,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 2646
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 2646
     },
     {
       "county_slug": "randolph",
@@ -1416,8 +1476,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 31
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 31
     },
     {
       "county_slug": "saline",
@@ -1439,8 +1500,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 665
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 665
     },
     {
       "county_slug": "scott",
@@ -1462,8 +1524,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 18
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 18
     },
     {
       "county_slug": "searcy",
@@ -1485,8 +1548,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 18
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 18
     },
     {
       "county_slug": "sebastian",
@@ -1508,8 +1572,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 465
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 465
     },
     {
       "county_slug": "sevier",
@@ -1531,8 +1596,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 25
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 25
     },
     {
       "county_slug": "sharp",
@@ -1554,8 +1620,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 39
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 39
     },
     {
       "county_slug": "st-francis",
@@ -1577,8 +1644,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 62
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 62
     },
     {
       "county_slug": "stone",
@@ -1600,8 +1668,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 18
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 18
     },
     {
       "county_slug": "union",
@@ -1623,8 +1692,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 178
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 178
     },
     {
       "county_slug": "van-buren",
@@ -1646,8 +1716,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 34
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 34
     },
     {
       "county_slug": "washington",
@@ -1669,8 +1740,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 1366
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 1366
     },
     {
       "county_slug": "white",
@@ -1692,8 +1764,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 202
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 202
     },
     {
       "county_slug": "woodruff",
@@ -1715,8 +1788,9 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 18
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 18
     },
     {
       "county_slug": "yell",
@@ -1738,8 +1812,10 @@
         "vci": "2026-06-18T21:54:24.575Z"
       },
       "reddirt_registration_source": "allocated_from_lane2_weight",
-      "institution_sub_goal_rule": "Math.ceil(county_goal * 0.25)",
-      "institution_sub_goal": 41
+      "institution_sub_goal_rule": "SUPERSEDED_flat_0.25_lineage_only",
+      "institution_sub_goal_status": "superseded",
+      "institution_sub_goal_lineage": 41
     }
-  ]
+  ],
+  "campus_goal_formula_version": "enrollment_share_of_county_vap_v1"
 }

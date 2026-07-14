@@ -1,0 +1,31 @@
+{
+  "stable_id": "FP-<kind>-<slug>",
+  "kind": "position",
+  "title": "",
+  "source_reference": {
+    "document": "",
+    "section": "",
+    "page_or_anchor": null,
+    "imported_at": null
+  },
+  "command_level": "institution",
+  "position_owner": null,
+  "reports_to_position_id": null,
+  "scope": {
+    "type": "county|institution|statewide|function",
+    "id": null
+  },
+  "frequency_or_deadline": {
+    "mode": "recurring|milestone|always_active",
+    "cadence": null,
+    "deadline": null
+  },
+  "kpi_relationship": [],
+  "completion_evidence_requirement": "",
+  "sensitivity_classification": "volunteer_internal",
+  "version": "0.0.0",
+  "review_status": "draft",
+  "dashboard_owner": null,
+  "vacancy_behavior": "open_recruitment_ask",
+  "permissions_deferred": true
+}

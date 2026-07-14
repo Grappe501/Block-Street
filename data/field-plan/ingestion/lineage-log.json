@@ -1,0 +1,15 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-07-14T18:05:00.000Z",
+  "entries": [
+    {
+      "at": "2026-07-14T18:05:00.000Z",
+      "event": "v2b1_source_contract_established",
+      "artifacts": [
+        "data/field-plan/source-contract.json",
+        "data/field-plan/ingestion/spine-state.json"
+      ],
+      "broad_ingest": false
+    }
+  ]
+}

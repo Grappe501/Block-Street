@@ -10,6 +10,13 @@ const errors = [];
 if (!Array.isArray(snap.counties) || snap.counties.length !== 75) {
   errors.push(`Expected 75 counties, got ${snap.counties?.length}`);
 }
+if (snap.campus_goal_formula_version && snap.campus_goal_formula_version !== "enrollment_share_of_county_vap_v1") {
+  errors.push(`Unexpected campus_goal_formula_version: ${snap.campus_goal_formula_version}`);
+}
+if (snap.institution_sub_goal_rule && !/SUPERSEDED/i.test(snap.institution_sub_goal_rule)) {
+  errors.push("institution_sub_goal_rule must be marked SUPERSEDED (flat 25% not active)");
+}
+
 const slugs = new Set();
 const fips = new Set();
 for (const c of snap.counties || []) {
@@ -24,9 +31,15 @@ for (const c of snap.counties || []) {
     errors.push(`bad registration goal for ${c.county_slug}`);
   }
   if (typeof c.vci !== "number" || c.vci < 0) errors.push(`bad vci for ${c.county_slug}`);
-  const expected = Math.ceil(c.voter_registration_goal * 0.25);
-  if (c.institution_sub_goal !== expected) {
-    errors.push(`sub-goal mismatch ${c.county_slug}: ${c.institution_sub_goal} != ${expected}`);
+  // Flat 25% may exist only as lineage — never as active institution_sub_goal driver
+  if (c.institution_sub_goal != null && c.institution_sub_goal_status !== "superseded") {
+    errors.push(`active institution_sub_goal not allowed for ${c.county_slug} — use lineage + superseded status`);
+  }
+  if (c.institution_sub_goal_lineage != null) {
+    const expected = Math.ceil(c.voter_registration_goal * 0.25);
+    if (c.institution_sub_goal_lineage !== expected) {
+      errors.push(`lineage mismatch ${c.county_slug}: ${c.institution_sub_goal_lineage} != ${expected}`);
+    }
   }
   if (!c.source_reference?.registration || !c.source_reference?.vci) {
     errors.push(`missing lineage ${c.county_slug}`);

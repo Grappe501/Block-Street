@@ -28,8 +28,8 @@ function buildAttention(): Attention[] {
     attention.push({
       id: "attn-invite-cert",
       severity: "high",
-      title: "Invite chain not CERTIFIED PRESENT",
-      next: "Run V1-JRN-INVITE-CHAIN-01 on production — docs/v1-certification/V1_INVITE_CHAIN_CERTIFICATION_GATE.md",
+      title: "NAMED LAUNCH BLOCKER — Invite chain not CERTIFIED PRESENT",
+      next: "V1-JRN-INVITE-CHAIN-01 must reach CERTIFIED PRESENT before V2-B Field Plan is operationally complete",
     });
   }
   if (launch?.largeScaleLaunch === "not_approved") {
@@ -186,6 +186,24 @@ export function AdminOperatorCommand() {
           </li>
           <li>V2-B: deferred — readiness map prepared, no blind cutover</li>
           <li>Product Run buttons: {(runAudit.participant_run_buttons ?? []).length} · Cursor IDE Run ≠ product</li>
+        </ul>
+      </div>
+
+      <div className="card border-slate-200 bg-white p-4">
+        <h3 className="text-sm font-bold text-slate-950">V2-B.1 Field Plan source contract</h3>
+        <ul className="mt-3 space-y-1.5 text-xs text-slate-800">
+          <li>
+            Spine: <strong>schema ready</strong> · broad ingest <strong>blocked</strong> until gates pass
+          </li>
+          <li>
+            Contract: <code>data/field-plan/source-contract.json</code> · docs/v2/V2B1_FIELD_PLAN_SOURCE_CONTRACT.md
+          </li>
+          <li>Conflict / review queues empty and ready · no silent position assignment</li>
+          <li>
+            Campus formula preserved: <code>{CAMPUS_GOAL_FORMULA_VERSION}</code> · flat 25% superseded lineage only
+          </li>
+          <li>Sensitive personnel mutations: still disabled · Postgres not active</li>
+          <li>Invite-chain CERTIFIED PRESENT: named launch blocker (parallel track)</li>
         </ul>
       </div>
 

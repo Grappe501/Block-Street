@@ -52,7 +52,7 @@ Not Started
 
 | Journey ID | Journey | Gate / notes | Status |
 |------------|---------|--------------|--------|
-| V1-JRN-INVITE-CHAIN-01 | Invite Chain (Steve → accept → place → network → share) | [`V1_INVITE_CHAIN_CERTIFICATION_GATE.md`](./V1_INVITE_CHAIN_CERTIFICATION_GATE.md) | **Pending** |
+| V1-JRN-INVITE-CHAIN-01 | Invite Chain (Steve → accept → place → network → share) | [`V1_INVITE_CHAIN_CERTIFICATION_GATE.md`](./V1_INVITE_CHAIN_CERTIFICATION_GATE.md) | **Pending · NAMED LAUNCH BLOCKER** |
 | V1-JRN-ONBOARDING-01 | New User first session after invite | Depends on invite chain | Not Started |
 | V1-JRN-SHARE-01 | Network Sharing / recruit via `/s/{slug}` | Share + QR + referral | Not Started |
 | V1-JRN-RETURN-01 | Returning Member resume session | Persist place + network | Not Started |
