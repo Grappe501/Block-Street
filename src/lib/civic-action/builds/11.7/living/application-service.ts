@@ -29,6 +29,8 @@ import { factoryRuntime } from "./factory/services/factory-service";
 import { seedFactoryIfEmpty } from "./factory/services/seed";
 import { twinRuntime } from "./twin/services/twin-service";
 import { seedTwinIfEmpty } from "./twin/services/seed";
+import { kernelRuntime } from "./kernel/services/kernel-service";
+import { seedKernelIfEmpty } from "./kernel/services/seed";
 
 let livingDataSeeded = false;
 
@@ -48,6 +50,7 @@ function ensureLivingDataSeeded() {
   seedAutomationIfEmpty();
   seedFactoryIfEmpty();
   seedTwinIfEmpty();
+  seedKernelIfEmpty();
   livingDataSeeded = true;
 }
 
@@ -845,6 +848,64 @@ export class LivingIntelligenceApplicationService {
   resetTwinSandbox(input: Parameters<typeof twinRuntime.digitalTwin.resetSandbox>[0]) {
     this.boot();
     return twinRuntime.digitalTwin.resetSandbox(input);
+  }
+
+  getKernelDashboard(input: { human_id: string; institution_id: string }) {
+    this.boot();
+    return kernelRuntime.kernel.dashboard(input);
+  }
+
+  listKernelExecutions(institutionId: string) {
+    this.boot();
+    return kernelRuntime.runtime.list(institutionId);
+  }
+
+  listKernelPolicies(institutionId: string) {
+    this.boot();
+    return kernelRuntime.policy.list(institutionId);
+  }
+
+  listKernelPermissions(institutionId: string) {
+    this.boot();
+    return kernelRuntime.permission.list(institutionId);
+  }
+
+  listKernelEvents(institutionId: string) {
+    this.boot();
+    return kernelRuntime.events.list(institutionId);
+  }
+
+  listKernelState(institutionId: string) {
+    this.boot();
+    return kernelRuntime.state.list(institutionId);
+  }
+
+  getKernelHealth(institutionId: string) {
+    this.boot();
+    const records = kernelRuntime.health.list(institutionId);
+    return records.length > 0
+      ? records[records.length - 1]
+      : kernelRuntime.health.measure({ institution_id: institutionId }).health;
+  }
+
+  executeKernelRuntime(input: Parameters<typeof kernelRuntime.runtime.execute>[0]) {
+    this.boot();
+    return kernelRuntime.runtime.execute(input);
+  }
+
+  evaluateKernelPolicy(input: Parameters<typeof kernelRuntime.policy.evaluate>[0]) {
+    this.boot();
+    return kernelRuntime.policy.evaluate(input);
+  }
+
+  checkKernelPermission(input: Parameters<typeof kernelRuntime.permission.check>[0]) {
+    this.boot();
+    return kernelRuntime.permission.check(input);
+  }
+
+  proposeConstitutionAmendment(input: Parameters<typeof kernelRuntime.evolution.propose>[0]) {
+    this.boot();
+    return kernelRuntime.evolution.propose(input);
   }
 }
 

@@ -77,9 +77,10 @@
 | W12 | Autonomous Institutional Operations & Human-Supervised Automation | **Complete** |
 | W13 | Self-Building Institution & Capability Factory | **Complete** |
 | W14 | Digital Twin, Institutional Simulation & Enterprise Sandbox | **Complete** |
-| W15–W16 | OS kernel, production certification | Pending |
+| W15 | Institutional Operating System Kernel & Constitutional Runtime | **Complete** |
+| W16 | Living Civilization Runtime & Canonical Genesis Framework | Pending |
 
-**Validation:** `npm run phase11:11.7:w1` · `npm run phase11:11.7:w2` · `npm run phase11:11.7:w3` · `npm run phase11:11.7:w4` · `npm run phase11:11.7:w5` · `npm run phase11:11.7:w6` · `npm run phase11:11.7:w7` · `npm run phase11:11.7:w8` · `npm run phase11:11.7:w9` · `npm run phase11:11.7:w10` · `npm run phase11:11.7:w11` · `npm run phase11:11.7:w12` · `npm run phase11:11.7:w13` · `npm run phase11:11.7:w14`  
+**Validation:** `npm run phase11:11.7:w1` · `npm run phase11:11.7:w2` · `npm run phase11:11.7:w3` · `npm run phase11:11.7:w4` · `npm run phase11:11.7:w5` · `npm run phase11:11.7:w6` · `npm run phase11:11.7:w7` · `npm run phase11:11.7:w8` · `npm run phase11:11.7:w9` · `npm run phase11:11.7:w10` · `npm run phase11:11.7:w11` · `npm run phase11:11.7:w12` · `npm run phase11:11.7:w13` · `npm run phase11:11.7:w14` · `npm run phase11:11.7:w15`  
 **Code:** `src/lib/civic-action/builds/11.7/living/`  
 **APIs:** `/api/v1/localbrain/*`
 
