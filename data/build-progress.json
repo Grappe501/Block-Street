@@ -21,8 +21,8 @@
     "launchCallDate": "2026-07-14",
     "leaderTestingDate": "2026-07-12",
     "phase11Status": "complete",
-    "activeProgram": "Phase 11 complete · first-run live · V1 Cert continuity (Pass 2+)",
-    "productionCommit": "4c8bfbc"
+    "activeProgram": "Phase 11 complete · first-run live @0fce658 · V1 Cert continuity (Pass 2+)",
+    "productionCommit": "0fce658"
   },
   "constitutionalLayer": {
     "status": "complete",
