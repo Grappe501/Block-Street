@@ -126,6 +126,9 @@ export function AdminDashboard({ progress }: { progress: BuildProgress }) {
               <h1 className="text-2xl font-bold text-slate-900">{PLATFORM.workingName} Build Control</h1>
               <p className="text-sm text-slate-500">
                 v{progress.project.version} · Phase {progress.project.currentPhase}: {progress.project.currentPhaseName}
+                {"productionCommit" in progress.project && progress.project.productionCommit
+                  ? ` · ${String(progress.project.productionCommit)}`
+                  : ""}
               </p>
             </div>
             <div className="flex items-center gap-4">

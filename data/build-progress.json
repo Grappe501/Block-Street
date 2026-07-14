@@ -4,22 +4,25 @@
     "fullName": "Arkansas Student & Youth Organizing Network",
     "motto": "Connect Locally. Organize Statewide. Lead Together.",
     "tagline": "Our organizing home",
-    "version": "0.7.1-ciws",
-    "currentPhase": 10,
-    "currentPhaseName": "Civic Growth",
-    "currentDesignCycle": "Civic Intelligence (Phase 10)",
+    "version": "1.0.0-launch",
+    "currentPhase": 11,
+    "currentPhaseName": "Living Intelligence & V1 Launch",
+    "currentDesignCycle": "Version 1.0 Certification + Live Launch (July 14)",
     "phase7Status": "complete",
     "phase8Status": "complete",
     "phase9Status": "complete",
     "phase10Status": "in_progress",
-    "lastUpdated": "2026-07-11T13:00:00Z",
+    "lastUpdated": "2026-07-14T07:50:00Z",
     "deployUrl": "https://block-street.netlify.app/",
     "githubRepo": "https://github.com/Grappe501/Block-Street",
     "netlifyStatus": "live",
     "databaseStatus": "not_connected",
     "electionDate": "2026-11-03",
     "launchCallDate": "2026-07-14",
-    "leaderTestingDate": "2026-07-12"
+    "leaderTestingDate": "2026-07-12",
+    "phase11Status": "in_progress",
+    "activeProgram": "V1-CERT-PASS-01 complete · Launch first-run live on main@4c8bfbc",
+    "productionCommit": "4c8bfbc"
   },
   "constitutionalLayer": {
     "status": "complete",
@@ -31,8 +34,9 @@
     "launchReadinessPath": "data/launch-readiness.json",
     "releaseReadinessPath": "data/release-readiness.json",
     "launchReady": false,
-    "launchChecklistComplete": 4,
-    "launchChecklistTotal": 10
+    "launchChecklistComplete": 6,
+    "launchChecklistTotal": 10,
+    "notes": "Invite-chain + choose-place live; production DB still pending; CERTIFIED PRESENT = 0 until later passes"
   },
   "volume0": {
     "id": 0,
@@ -57,93 +61,464 @@
     "id": "factory",
     "name": "Implementation Volumes",
     "slug": "implementation-volumes",
-    "status": "in_progress",
+    "status": "done",
     "docPath": "docs/master/VOLUMES-INDEX.md",
     "registryPath": "data/registry/implementation-volumes.json",
     "question": "How is the COS built, stored, experienced, intelligently assisted, operated, and felt?",
     "phase7Deferred": true,
     "volume1SequencePath": "docs/volume-01/VOLUME_1_MASTER_SEQUENCE.md",
     "steps": [
-      { "id": "V1.1", "name": "Engineering Doctrine [ENG-001]", "status": "done", "notes": "ENG-D01–D18 doctrines, vertical slices, TR-MOTTO — AC-083 canonical" },
-      { "id": "V1.2", "name": "System Architecture [ENG-002]", "status": "done", "notes": "9 layers, Platform Kernel, 14 domain services — AC-084" },
-      { "id": "V1.3", "name": "Canonical Repository Architecture [ENG-003 · RCN-001]", "status": "done", "notes": "Domain-driven folders, dependency rules, Repository Constitution — AC-085" },
-      { "id": "V1.4", "name": "Database Architecture [ENG-004 · DCL-001]", "status": "done", "notes": "13 domain schemas, DCL constitution layer, audit/events/graph — AC-087" },
-      { "id": "V1.5", "name": "API Architecture [ENG-005]", "status": "pending", "notes": "API_ARCHITECTURE.md" },
-      { "id": "V1.6", "name": "Authorization Architecture [ENG-006 · PRE-001]", "status": "done", "notes": "Six-layer auth model, PRE engine, community scope, audit — AC-089 (1.5 API still pending)" },
-      { "id": "V1.7", "name": "Domain Service Architecture [ENG-007 · SRG-001]", "status": "done", "notes": "16 domain services, contracts, events, Service Registry — AC-091" },
-      { "id": "V1.8", "name": "Knowledge Graph Architecture [ENG-008 · LDT-001]", "status": "done", "notes": "CKG nodes/edges, signature graphs, twins, explainability — AC-093" },
-      { "id": "V1.9", "name": "Event & Timeline Architecture [ENG-009 · LHE-001]", "status": "done", "notes": "domain_events, timeline hierarchy, immutable events, Living History Engine — AC-095" },
-      { "id": "V1.10", "name": "Search & Discovery Architecture [ENG-010 · DGE-001]", "status": "done", "notes": "6 search layers, ranking, privacy, Discovery Engine — AC-097" },
-      { "id": "V1.11", "name": "Map & Geographic Architecture [ENG-011 · ADT-002]", "status": "done", "notes": "8 core maps, geo hierarchy, layers, Arkansas Digital Twin — AC-099" },
-      { "id": "V1.12", "name": "Communication Architecture [ENG-012 · AME-001]", "status": "done", "notes": "5-layer comms, priorities, digests, Attention Management Engine — AC-101" },
-      { "id": "V1.13", "name": "AI Intelligence Architecture [ENG-013 · CIF-001]", "status": "done", "notes": "Orchestrator, agents, RAG pipeline, Community Intelligence Fabric — AC-103" },
-      { "id": "V1.14", "name": "Deployment & Release Architecture [ENG-014 · CRCC-001]", "status": "done", "notes": "Release pipeline, testing pyramid, rollback, Community Readiness Command Center — AC-105" },
-      { "id": "V2.1", "name": "Data Philosophy [DAB-002]", "status": "done", "notes": "Canonical principles, source of truth, ownership, lifecycle — AC-107" },
-      { "id": "V2.2", "name": "Canonical Entity Dictionary [DAB-003]", "status": "done", "notes": "16 primary entities with fields, relationships, lifecycles — AC-108" },
-      { "id": "V2.3", "name": "Relationship Data Model [DAB-004]", "status": "done", "notes": "Unified edges, membership, leadership, mentorship, invitations — AC-109" },
-      { "id": "V2.4", "name": "Database Schema Blueprint [DAB-005]", "status": "done", "notes": "14 business domains, Canonical Schema Registry, 104 logical tables — AC-110" },
-      { "id": "V2.5", "name": "Knowledge Graph Schema [DAB-006]", "status": "done", "notes": "8 node classes, Unified Graph Projection Engine, 6 signature subgraphs — AC-111" },
-      { "id": "V2.6", "name": "Event Data Model [DAB-007]", "status": "done", "notes": "11 categories, Community Event Ledger, replay, 7 timelines — AC-112" },
-      { "id": "V2.7", "name": "Time & Calendar Data Model [DAB-008]", "status": "done", "notes": "7 calendar types, Temporal Intelligence Engine, federation — AC-113" },
-      { "id": "V2.8", "name": "Media & Document Model [DAB-009]", "status": "done", "notes": "7 categories, Evidence Vault, OCR, versioning, integrity — AC-114" },
-      { "id": "V2.9", "name": "Configuration Data Model [DAB-010]", "status": "done", "notes": "12 categories, Platform Constitution Engine, inheritance — AC-115" },
-      { "id": "V2.10", "name": "Search Index Model [DAB-011]", "status": "done", "notes": "9 categories, Universal Discovery Index, permission-aware — AC-116" },
-      { "id": "V2.11", "name": "Analytics & Metrics Model [DAB-012]", "status": "done", "notes": "10 categories, Community Health Observatory, explainable KPIs — AC-117" },
-      { "id": "V2.12", "name": "AI Knowledge Model [DAB-013]", "status": "done", "notes": "Canonical Knowledge Fabric, citations, memory separation — AC-118" },
-      { "id": "V2.13", "name": "Security & Privacy Model [DAB-014]", "status": "done", "notes": "Trust Ledger, 5 classifications, consent, audit, retention — AC-119" },
-      { "id": "V2.14", "name": "Master Data Dictionary [DAB-015]", "status": "done", "notes": "Canonical Metadata Registry, 10 registries, Volume 2 complete — AC-120" },
-      { "id": "V3.1", "name": "Business Rules Engine [PBA-002]", "status": "done", "notes": "Policy Decision Point, 9 rule categories, hierarchy — AC-122" },
-      { "id": "V3.2", "name": "Workflow Engine [PBA-003]", "status": "done", "notes": "Community Process Orchestrator, 9 categories, state machines — AC-123" },
-      { "id": "V3.3", "name": "Identity & Lifecycle Engine [PBA-004]", "status": "done", "notes": "Personal Operating System, 9 lifecycle stages, portfolio, legacy — AC-124" },
-      { "id": "V3.4", "name": "Community Lifecycle Engine [PBA-005]", "status": "done", "notes": "Community Operating Manual, 10 lifecycle stages, health, succession — AC-125" },
-      { "id": "V3.5", "name": "Mission Execution Engine [PBA-006]", "status": "done", "notes": "Mission Operations Center, 10 lifecycle stages, reflection, knowledge capture — AC-126" },
-      { "id": "V3.6", "name": "Volunteer Experience Engine [PBA-007]", "status": "done", "notes": "Volunteer Success Center, 10 lifecycle stages, wellness, matching — AC-127" },
-      { "id": "V3.7", "name": "Leadership Development Engine [PBA-008]", "status": "done", "notes": "Leadership Academy, 9 lifecycle stages, pathways, succession — AC-128" },
-      { "id": "V3.8", "name": "Community Intelligence Engine [PBA-009]", "status": "done", "notes": "Community Intelligence Command Center, 8 domains, explainability — AC-129" },
-      { "id": "V3.9", "name": "Automation Engine [PBA-010]", "status": "done", "notes": "Automation Mission Control, 10 categories, simulation, safety — AC-130" },
-      { "id": "V3.10", "name": "Notification & Attention Engine [PBA-011]", "status": "done", "notes": "Attention Intelligence Layer, 6 categories, digests, budget — AC-131" },
-      { "id": "V3.11", "name": "Governance Engine [PBA-012]", "status": "done", "notes": "Constitutional Governance Office, 7 domains, voting, appeals — AC-132" },
-      { "id": "V3.12", "name": "Knowledge Growth Engine [PBA-013]", "status": "done", "notes": "Knowledge Observatory, 9-stage lifecycle, Community Brain — AC-133" },
-      { "id": "V3.13", "name": "Operational Intelligence Engine [PBA-014]", "status": "done", "notes": "Executive Operations Center, 9 domains, readiness, risk, briefings — AC-134" },
-      { "id": "V3.14", "name": "Community OS Orchestrator [PBA-015]", "status": "done", "notes": "Institutional Nervous System, 13-layer pipeline, Volume 3 complete — AC-135" },
-      { "id": "V4.1", "name": "Experience Design System [UXB-002]", "status": "done", "notes": "Experience Quality Engine, 10 principles, emotional journey — AC-137" },
-      { "id": "V4.2", "name": "Navigation Architecture [UXB-003]", "status": "done", "notes": "Intent Navigation Engine, 5-level model, purpose-driven nav — AC-138" },
-      { "id": "V4.3", "name": "Dashboard & Workspace Architecture [UXB-004]", "status": "done", "notes": "Adaptive Workspace Engine, 8 panels, 8 workspace types — AC-139" },
-      { "id": "V4.4", "name": "User Journey Architecture [UXB-005]", "status": "pending", "notes": "End-to-end journeys, onboarding, alumni — AC-140" },
-      { "id": "V4.5", "name": "Design Language System [UXB-006]", "status": "done", "notes": "Living Design System, 6 principles, 6 semantic colors, token-based design — AC-141" },
-      { "id": "V4.6", "name": "Component Architecture [UXB-007]", "status": "done", "notes": "Living Operational Component Registry, 6-level hierarchy, 12 operational components — AC-142" },
-      { "id": "V4.7", "name": "Workspace Architecture [UXB-008]", "status": "done", "notes": "Unified Workspace Manager, 9 workspace types, 8 framework zones — AC-143" },
-      { "id": "V4.8", "name": "Collaboration Architecture [UXB-009]", "status": "done", "notes": "Collaborative Intelligence Network, 7 domains, 6 CIN layers — AC-144" },
-      { "id": "V4.9", "name": "Mobile & Field Operations Experience Architecture [UXB-010]", "status": "done", "notes": "Field Operations Command Layer, 6 field modes, offline-first — AC-145" },
-      { "id": "V4.10", "name": "AI Experience Architecture [UXB-011]", "status": "done", "notes": "AI Federation, 10 AI roles, 8 domain agents, Executive AI Council — AC-146" },
-      { "id": "V4.11", "name": "Engagement, Motivation & Community Growth [UXB-012]", "status": "done", "notes": "Life Journey Graph, 7 growth trees, Civic Reputation — AC-147" },
-      { "id": "V4.12", "name": "Trust, Transparency & Explainability [UXB-013]", "status": "done", "notes": "Trust Ledger, 7 trust domains, 4 explainability levels — AC-148" },
-      { "id": "V4.13", "name": "Institutional Experience Architecture [UXB-014]", "status": "done", "notes": "Institution Factory, 12 institution types, 14 templates, 6 capability packs — AC-149" },
-      { "id": "V4.14", "name": "Experience Orchestrator [UXB-015]", "status": "done", "notes": "Experience Operating System, 10 layers, 4 runtime loops — Volume 4 orchestrator AC-150" },
-      { "id": "V5.1", "name": "Platform Services Architecture [PSI-002]", "status": "done", "notes": "Platform Service Mesh, 27 core services, LocalBrain first-class — AC-151" },
-      { "id": "V5.2", "name": "API Architecture [PSI-003]", "status": "done", "notes": "Constitutional API Gateway, 6 API categories, 7 communication styles — AC-152" },
-      { "id": "V5.3", "name": "Integration Architecture [PSI-004]", "status": "done", "notes": "Universal Connector Framework, 13 categories, connector marketplace — AC-153" },
-      { "id": "V5.4", "name": "Event Streaming Architecture [PSI-005]", "status": "done", "notes": "Institutional Event Fabric, 13 event categories, Event Time Machine — AC-154" },
-      { "id": "V5.5", "name": "Synchronization Architecture [PSI-006]", "status": "done", "notes": "Federated Synchronization Mesh, 9 domains, 8 federation levels — AC-155" },
-      { "id": "V5.6", "name": "Search, Discovery & Knowledge Retrieval [PSI-007]", "status": "done", "notes": "Knowledge Retrieval Fabric, 10 domains, 6 search types, Knowledge Bundles — AC-156" },
-      { "id": "V5.7", "name": "Media, Content & Digital Asset Architecture [PSI-008]", "status": "done", "notes": "Institutional Memory Repository, 7 asset categories, Memory Objects, Living Collections — AC-157" },
-      { "id": "V5.8", "name": "Communications Architecture [PSI-009]", "status": "done", "notes": "Unified Communications Fabric, 6 domains, 11 channels, Meeting Intelligence — AC-158" },
-      { "id": "V5.9", "name": "Deployment Architecture [PSI-010]", "status": "done", "notes": "Runtime Federation Manager, 6 deployment types, LocalBrain federation — AC-159" },
-      { "id": "V5.10", "name": "Security Architecture [PSI-011]", "status": "done", "notes": "Constitutional Security Fabric, 24 domains, Trust Ledger, AI Safety — AC-160" },
-      { "id": "V5.11", "name": "Observability Architecture [PSI-012]", "status": "done", "notes": "Operational Intelligence Grid, 14 signal domains, Platform Twin — AC-161" },
-      { "id": "V5.12", "name": "Scalability Architecture [PSI-013]", "status": "done", "notes": "Adaptive Capacity Grid, 12 scaling domains, predictive scaling — AC-162" },
-      { "id": "V5.13", "name": "Platform Operations Architecture [PSI-014]", "status": "done", "notes": "Platform Stewardship Office, certification, lifecycle governance — AC-163" },
-      { "id": "V5.14", "name": "Platform Integration Orchestrator [PSI-015]", "status": "done", "notes": "Constitutional Operating Kernel, 13 orchestrated systems, Unified Civic Runtime — AC-164 · Volume 5 complete" },
-      { "id": "CKK.1", "name": "Canonical Knowledge Kernel [CKK-001]", "status": "done", "notes": "COS-CKK-001 MVP — JSONL bootstrap, 10 layers, CLI validators, Canon Twin — AC-165" },
-      { "id": "V6.1", "name": "AI & Intelligence Bible [AIB-001]", "status": "done", "notes": "LocalBrain, RAG v1; AC-080" },
-      { "id": "V7.1", "name": "Operations & Launch Bible [OLB-001]", "status": "done", "notes": "Launch stages v1; AC-081" },
-      { "id": "V8.1", "name": "Experience Design Bible [EDB-001]", "status": "done", "notes": "Emotional design v1; AC-082" }
-    ]
+      {
+        "id": "V1.1",
+        "name": "Engineering Doctrine [ENG-001]",
+        "status": "done",
+        "notes": "ENG-D01–D18 doctrines, vertical slices, TR-MOTTO — AC-083 canonical"
+      },
+      {
+        "id": "V1.2",
+        "name": "System Architecture [ENG-002]",
+        "status": "done",
+        "notes": "9 layers, Platform Kernel, 14 domain services — AC-084"
+      },
+      {
+        "id": "V1.3",
+        "name": "Canonical Repository Architecture [ENG-003 · RCN-001]",
+        "status": "done",
+        "notes": "Domain-driven folders, dependency rules, Repository Constitution — AC-085"
+      },
+      {
+        "id": "V1.4",
+        "name": "Database Architecture [ENG-004 · DCL-001]",
+        "status": "done",
+        "notes": "13 domain schemas, DCL constitution layer, audit/events/graph — AC-087"
+      },
+      {
+        "id": "V1.5",
+        "name": "API Architecture [ENG-005]",
+        "status": "done",
+        "notes": "API gateway + /api/v1 surface live; Constitutional API Gateway (AC-152) covered via Volume 5 PSI-003"
+      },
+      {
+        "id": "V1.6",
+        "name": "Authorization Architecture [ENG-006 · PRE-001]",
+        "status": "done",
+        "notes": "Six-layer auth model, PRE engine, community scope, audit — AC-089 (1.5 API still pending)"
+      },
+      {
+        "id": "V1.7",
+        "name": "Domain Service Architecture [ENG-007 · SRG-001]",
+        "status": "done",
+        "notes": "16 domain services, contracts, events, Service Registry — AC-091"
+      },
+      {
+        "id": "V1.8",
+        "name": "Knowledge Graph Architecture [ENG-008 · LDT-001]",
+        "status": "done",
+        "notes": "CKG nodes/edges, signature graphs, twins, explainability — AC-093"
+      },
+      {
+        "id": "V1.9",
+        "name": "Event & Timeline Architecture [ENG-009 · LHE-001]",
+        "status": "done",
+        "notes": "domain_events, timeline hierarchy, immutable events, Living History Engine — AC-095"
+      },
+      {
+        "id": "V1.10",
+        "name": "Search & Discovery Architecture [ENG-010 · DGE-001]",
+        "status": "done",
+        "notes": "6 search layers, ranking, privacy, Discovery Engine — AC-097"
+      },
+      {
+        "id": "V1.11",
+        "name": "Map & Geographic Architecture [ENG-011 · ADT-002]",
+        "status": "done",
+        "notes": "8 core maps, geo hierarchy, layers, Arkansas Digital Twin — AC-099"
+      },
+      {
+        "id": "V1.12",
+        "name": "Communication Architecture [ENG-012 · AME-001]",
+        "status": "done",
+        "notes": "5-layer comms, priorities, digests, Attention Management Engine — AC-101"
+      },
+      {
+        "id": "V1.13",
+        "name": "AI Intelligence Architecture [ENG-013 · CIF-001]",
+        "status": "done",
+        "notes": "Orchestrator, agents, RAG pipeline, Community Intelligence Fabric — AC-103"
+      },
+      {
+        "id": "V1.14",
+        "name": "Deployment & Release Architecture [ENG-014 · CRCC-001]",
+        "status": "done",
+        "notes": "Release pipeline, testing pyramid, rollback, Community Readiness Command Center — AC-105"
+      },
+      {
+        "id": "V2.1",
+        "name": "Data Philosophy [DAB-002]",
+        "status": "done",
+        "notes": "Canonical principles, source of truth, ownership, lifecycle — AC-107"
+      },
+      {
+        "id": "V2.2",
+        "name": "Canonical Entity Dictionary [DAB-003]",
+        "status": "done",
+        "notes": "16 primary entities with fields, relationships, lifecycles — AC-108"
+      },
+      {
+        "id": "V2.3",
+        "name": "Relationship Data Model [DAB-004]",
+        "status": "done",
+        "notes": "Unified edges, membership, leadership, mentorship, invitations — AC-109"
+      },
+      {
+        "id": "V2.4",
+        "name": "Database Schema Blueprint [DAB-005]",
+        "status": "done",
+        "notes": "14 business domains, Canonical Schema Registry, 104 logical tables — AC-110"
+      },
+      {
+        "id": "V2.5",
+        "name": "Knowledge Graph Schema [DAB-006]",
+        "status": "done",
+        "notes": "8 node classes, Unified Graph Projection Engine, 6 signature subgraphs — AC-111"
+      },
+      {
+        "id": "V2.6",
+        "name": "Event Data Model [DAB-007]",
+        "status": "done",
+        "notes": "11 categories, Community Event Ledger, replay, 7 timelines — AC-112"
+      },
+      {
+        "id": "V2.7",
+        "name": "Time & Calendar Data Model [DAB-008]",
+        "status": "done",
+        "notes": "7 calendar types, Temporal Intelligence Engine, federation — AC-113"
+      },
+      {
+        "id": "V2.8",
+        "name": "Media & Document Model [DAB-009]",
+        "status": "done",
+        "notes": "7 categories, Evidence Vault, OCR, versioning, integrity — AC-114"
+      },
+      {
+        "id": "V2.9",
+        "name": "Configuration Data Model [DAB-010]",
+        "status": "done",
+        "notes": "12 categories, Platform Constitution Engine, inheritance — AC-115"
+      },
+      {
+        "id": "V2.10",
+        "name": "Search Index Model [DAB-011]",
+        "status": "done",
+        "notes": "9 categories, Universal Discovery Index, permission-aware — AC-116"
+      },
+      {
+        "id": "V2.11",
+        "name": "Analytics & Metrics Model [DAB-012]",
+        "status": "done",
+        "notes": "10 categories, Community Health Observatory, explainable KPIs — AC-117"
+      },
+      {
+        "id": "V2.12",
+        "name": "AI Knowledge Model [DAB-013]",
+        "status": "done",
+        "notes": "Canonical Knowledge Fabric, citations, memory separation — AC-118"
+      },
+      {
+        "id": "V2.13",
+        "name": "Security & Privacy Model [DAB-014]",
+        "status": "done",
+        "notes": "Trust Ledger, 5 classifications, consent, audit, retention — AC-119"
+      },
+      {
+        "id": "V2.14",
+        "name": "Master Data Dictionary [DAB-015]",
+        "status": "done",
+        "notes": "Canonical Metadata Registry, 10 registries, Volume 2 complete — AC-120"
+      },
+      {
+        "id": "V3.1",
+        "name": "Business Rules Engine [PBA-002]",
+        "status": "done",
+        "notes": "Policy Decision Point, 9 rule categories, hierarchy — AC-122"
+      },
+      {
+        "id": "V3.2",
+        "name": "Workflow Engine [PBA-003]",
+        "status": "done",
+        "notes": "Community Process Orchestrator, 9 categories, state machines — AC-123"
+      },
+      {
+        "id": "V3.3",
+        "name": "Identity & Lifecycle Engine [PBA-004]",
+        "status": "done",
+        "notes": "Personal Operating System, 9 lifecycle stages, portfolio, legacy — AC-124"
+      },
+      {
+        "id": "V3.4",
+        "name": "Community Lifecycle Engine [PBA-005]",
+        "status": "done",
+        "notes": "Community Operating Manual, 10 lifecycle stages, health, succession — AC-125"
+      },
+      {
+        "id": "V3.5",
+        "name": "Mission Execution Engine [PBA-006]",
+        "status": "done",
+        "notes": "Mission Operations Center, 10 lifecycle stages, reflection, knowledge capture — AC-126"
+      },
+      {
+        "id": "V3.6",
+        "name": "Volunteer Experience Engine [PBA-007]",
+        "status": "done",
+        "notes": "Volunteer Success Center, 10 lifecycle stages, wellness, matching — AC-127"
+      },
+      {
+        "id": "V3.7",
+        "name": "Leadership Development Engine [PBA-008]",
+        "status": "done",
+        "notes": "Leadership Academy, 9 lifecycle stages, pathways, succession — AC-128"
+      },
+      {
+        "id": "V3.8",
+        "name": "Community Intelligence Engine [PBA-009]",
+        "status": "done",
+        "notes": "Community Intelligence Command Center, 8 domains, explainability — AC-129"
+      },
+      {
+        "id": "V3.9",
+        "name": "Automation Engine [PBA-010]",
+        "status": "done",
+        "notes": "Automation Mission Control, 10 categories, simulation, safety — AC-130"
+      },
+      {
+        "id": "V3.10",
+        "name": "Notification & Attention Engine [PBA-011]",
+        "status": "done",
+        "notes": "Attention Intelligence Layer, 6 categories, digests, budget — AC-131"
+      },
+      {
+        "id": "V3.11",
+        "name": "Governance Engine [PBA-012]",
+        "status": "done",
+        "notes": "Constitutional Governance Office, 7 domains, voting, appeals — AC-132"
+      },
+      {
+        "id": "V3.12",
+        "name": "Knowledge Growth Engine [PBA-013]",
+        "status": "done",
+        "notes": "Knowledge Observatory, 9-stage lifecycle, Community Brain — AC-133"
+      },
+      {
+        "id": "V3.13",
+        "name": "Operational Intelligence Engine [PBA-014]",
+        "status": "done",
+        "notes": "Executive Operations Center, 9 domains, readiness, risk, briefings — AC-134"
+      },
+      {
+        "id": "V3.14",
+        "name": "Community OS Orchestrator [PBA-015]",
+        "status": "done",
+        "notes": "Institutional Nervous System, 13-layer pipeline, Volume 3 complete — AC-135"
+      },
+      {
+        "id": "V4.1",
+        "name": "Experience Design System [UXB-002]",
+        "status": "done",
+        "notes": "Experience Quality Engine, 10 principles, emotional journey — AC-137"
+      },
+      {
+        "id": "V4.2",
+        "name": "Navigation Architecture [UXB-003]",
+        "status": "done",
+        "notes": "Intent Navigation Engine, 5-level model, purpose-driven nav — AC-138"
+      },
+      {
+        "id": "V4.3",
+        "name": "Dashboard & Workspace Architecture [UXB-004]",
+        "status": "done",
+        "notes": "Adaptive Workspace Engine, 8 panels, 8 workspace types — AC-139"
+      },
+      {
+        "id": "V4.4",
+        "name": "User Journey Architecture [UXB-005]",
+        "status": "in_progress",
+        "notes": "First-run choose-place + progressive chrome live July 14; full journey bible still open — AC-140"
+      },
+      {
+        "id": "V4.5",
+        "name": "Design Language System [UXB-006]",
+        "status": "done",
+        "notes": "Living Design System, 6 principles, 6 semantic colors, token-based design — AC-141"
+      },
+      {
+        "id": "V4.6",
+        "name": "Component Architecture [UXB-007]",
+        "status": "done",
+        "notes": "Living Operational Component Registry, 6-level hierarchy, 12 operational components — AC-142"
+      },
+      {
+        "id": "V4.7",
+        "name": "Workspace Architecture [UXB-008]",
+        "status": "done",
+        "notes": "Unified Workspace Manager, 9 workspace types, 8 framework zones — AC-143"
+      },
+      {
+        "id": "V4.8",
+        "name": "Collaboration Architecture [UXB-009]",
+        "status": "done",
+        "notes": "Collaborative Intelligence Network, 7 domains, 6 CIN layers — AC-144"
+      },
+      {
+        "id": "V4.9",
+        "name": "Mobile & Field Operations Experience Architecture [UXB-010]",
+        "status": "done",
+        "notes": "Field Operations Command Layer, 6 field modes, offline-first — AC-145"
+      },
+      {
+        "id": "V4.10",
+        "name": "AI Experience Architecture [UXB-011]",
+        "status": "done",
+        "notes": "AI Federation, 10 AI roles, 8 domain agents, Executive AI Council — AC-146"
+      },
+      {
+        "id": "V4.11",
+        "name": "Engagement, Motivation & Community Growth [UXB-012]",
+        "status": "done",
+        "notes": "Life Journey Graph, 7 growth trees, Civic Reputation — AC-147"
+      },
+      {
+        "id": "V4.12",
+        "name": "Trust, Transparency & Explainability [UXB-013]",
+        "status": "done",
+        "notes": "Trust Ledger, 7 trust domains, 4 explainability levels — AC-148"
+      },
+      {
+        "id": "V4.13",
+        "name": "Institutional Experience Architecture [UXB-014]",
+        "status": "done",
+        "notes": "Institution Factory, 12 institution types, 14 templates, 6 capability packs — AC-149"
+      },
+      {
+        "id": "V4.14",
+        "name": "Experience Orchestrator [UXB-015]",
+        "status": "done",
+        "notes": "Experience Operating System, 10 layers, 4 runtime loops — Volume 4 orchestrator AC-150"
+      },
+      {
+        "id": "V5.1",
+        "name": "Platform Services Architecture [PSI-002]",
+        "status": "done",
+        "notes": "Platform Service Mesh, 27 core services, LocalBrain first-class — AC-151"
+      },
+      {
+        "id": "V5.2",
+        "name": "API Architecture [PSI-003]",
+        "status": "done",
+        "notes": "Constitutional API Gateway, 6 API categories, 7 communication styles — AC-152"
+      },
+      {
+        "id": "V5.3",
+        "name": "Integration Architecture [PSI-004]",
+        "status": "done",
+        "notes": "Universal Connector Framework, 13 categories, connector marketplace — AC-153"
+      },
+      {
+        "id": "V5.4",
+        "name": "Event Streaming Architecture [PSI-005]",
+        "status": "done",
+        "notes": "Institutional Event Fabric, 13 event categories, Event Time Machine — AC-154"
+      },
+      {
+        "id": "V5.5",
+        "name": "Synchronization Architecture [PSI-006]",
+        "status": "done",
+        "notes": "Federated Synchronization Mesh, 9 domains, 8 federation levels — AC-155"
+      },
+      {
+        "id": "V5.6",
+        "name": "Search, Discovery & Knowledge Retrieval [PSI-007]",
+        "status": "done",
+        "notes": "Knowledge Retrieval Fabric, 10 domains, 6 search types, Knowledge Bundles — AC-156"
+      },
+      {
+        "id": "V5.7",
+        "name": "Media, Content & Digital Asset Architecture [PSI-008]",
+        "status": "done",
+        "notes": "Institutional Memory Repository, 7 asset categories, Memory Objects, Living Collections — AC-157"
+      },
+      {
+        "id": "V5.8",
+        "name": "Communications Architecture [PSI-009]",
+        "status": "done",
+        "notes": "Unified Communications Fabric, 6 domains, 11 channels, Meeting Intelligence — AC-158"
+      },
+      {
+        "id": "V5.9",
+        "name": "Deployment Architecture [PSI-010]",
+        "status": "done",
+        "notes": "Runtime Federation Manager, 6 deployment types, LocalBrain federation — AC-159"
+      },
+      {
+        "id": "V5.10",
+        "name": "Security Architecture [PSI-011]",
+        "status": "done",
+        "notes": "Constitutional Security Fabric, 24 domains, Trust Ledger, AI Safety — AC-160"
+      },
+      {
+        "id": "V5.11",
+        "name": "Observability Architecture [PSI-012]",
+        "status": "done",
+        "notes": "Operational Intelligence Grid, 14 signal domains, Platform Twin — AC-161"
+      },
+      {
+        "id": "V5.12",
+        "name": "Scalability Architecture [PSI-013]",
+        "status": "done",
+        "notes": "Adaptive Capacity Grid, 12 scaling domains, predictive scaling — AC-162"
+      },
+      {
+        "id": "V5.13",
+        "name": "Platform Operations Architecture [PSI-014]",
+        "status": "done",
+        "notes": "Platform Stewardship Office, certification, lifecycle governance — AC-163"
+      },
+      {
+        "id": "V5.14",
+        "name": "Platform Integration Orchestrator [PSI-015]",
+        "status": "done",
+        "notes": "Constitutional Operating Kernel, 13 orchestrated systems, Unified Civic Runtime — AC-164 · Volume 5 complete"
+      },
+      {
+        "id": "CKK.1",
+        "name": "Canonical Knowledge Kernel [CKK-001]",
+        "status": "done",
+        "notes": "COS-CKK-001 MVP — JSONL bootstrap, 10 layers, CLI validators, Canon Twin — AC-165"
+      },
+      {
+        "id": "V6.1",
+        "name": "AI & Intelligence Bible [AIB-001]",
+        "status": "done",
+        "notes": "LocalBrain, RAG v1; AC-080"
+      },
+      {
+        "id": "V7.1",
+        "name": "Operations & Launch Bible [OLB-001]",
+        "status": "done",
+        "notes": "Launch stages v1; AC-081"
+      },
+      {
+        "id": "V8.1",
+        "name": "Experience Design Bible [EDB-001]",
+        "status": "done",
+        "notes": "Emotional design v1; AC-082"
+      }
+    ],
+    "notes": "Factory volumes 1–5 + CKK architecturally delivered. Remaining: V1.5 API polish, V4.4 journey architecture. Living Intelligence protocol supersedes Phase 7 deferral."
   },
   "masterBuild": {
     "docPath": "docs/master/LIVING-SYSTEMS-ARCHITECTURE.md",
     "legacyModulePath": "docs/master/MASTER-BUILD-SEQUENCE.md",
-    "totalPhases": 10,
+    "totalPhases": 11,
     "volume0Path": "docs/master/MASTER_ARCHITECTURE_BIBLE.md",
     "volume0Requirement": "MAB-001",
     "implementationVolumesPath": "docs/master/VOLUMES-INDEX.md",
@@ -155,7 +530,9 @@
     "constitutionPath": "docs/PROJECT_CONSTITUTION_AND_MISSION_DOCTRINE.md",
     "buildBiblePath": "docs/build-steps/BUILD-BIBLE.md",
     "phase2BiblePath": "docs/phase-02/PHASE_2_DIGITAL_ARKANSAS_BUILD_BIBLE.md",
-    "livingSystemsPath": "data/living-systems.json"
+    "livingSystemsPath": "data/living-systems.json",
+    "phase11Path": "docs/phase-11/PHASE_11_BUILD_LEDGER.md",
+    "certificationPath": "docs/v1-certification/"
   },
   "phases": [
     {
@@ -166,15 +543,60 @@
       "docPath": "docs/build-steps/BUILD-BIBLE.md",
       "question": "Why are we building this?",
       "steps": [
-        { "id": "1.1", "name": "Platform Identity [PHASE-001.1]", "status": "done", "notes": "PI-001 through ER-001" },
-        { "id": "1.2", "name": "North Star Outcome [PHASE-001.2]", "status": "done", "notes": "NS-002, NS-013" },
-        { "id": "1.3", "name": "Core Principles [PHASE-001.3]", "status": "done", "notes": "CP-001–CP-015, CT-001" },
-        { "id": "1.4", "name": "Platform Boundaries [PHASE-001.4]", "status": "done", "notes": "DG-001–DG-015, ED-001" },
-        { "id": "1.5", "name": "Organizing Model [PHASE-001.5]", "status": "done", "notes": "OM-L1–L5" },
-        { "id": "1.6", "name": "Growth Model [PHASE-001.6]", "status": "done", "notes": "GM-P1–P10, GM-V1" },
-        { "id": "1.7", "name": "Launch Success Definition [PHASE-001.7]", "status": "done", "notes": "LS-CHK 10-item checklist, 7 pillars" },
-        { "id": "1.8", "name": "Implementation Doctrine [PHASE-001.8]", "status": "done", "notes": "ED-002–ED-FD, BUILD-BIBLE" },
-        { "id": "1.9", "name": "Master Traceability [PHASE-001.9]", "status": "done", "notes": "TR-MOTTO, requirements-registry.json" }
+        {
+          "id": "1.1",
+          "name": "Platform Identity [PHASE-001.1]",
+          "status": "done",
+          "notes": "PI-001 through ER-001"
+        },
+        {
+          "id": "1.2",
+          "name": "North Star Outcome [PHASE-001.2]",
+          "status": "done",
+          "notes": "NS-002, NS-013"
+        },
+        {
+          "id": "1.3",
+          "name": "Core Principles [PHASE-001.3]",
+          "status": "done",
+          "notes": "CP-001–CP-015, CT-001"
+        },
+        {
+          "id": "1.4",
+          "name": "Platform Boundaries [PHASE-001.4]",
+          "status": "done",
+          "notes": "DG-001–DG-015, ED-001"
+        },
+        {
+          "id": "1.5",
+          "name": "Organizing Model [PHASE-001.5]",
+          "status": "done",
+          "notes": "OM-L1–L5"
+        },
+        {
+          "id": "1.6",
+          "name": "Growth Model [PHASE-001.6]",
+          "status": "done",
+          "notes": "GM-P1–P10, GM-V1"
+        },
+        {
+          "id": "1.7",
+          "name": "Launch Success Definition [PHASE-001.7]",
+          "status": "done",
+          "notes": "LS-CHK 10-item checklist, 7 pillars"
+        },
+        {
+          "id": "1.8",
+          "name": "Implementation Doctrine [PHASE-001.8]",
+          "status": "done",
+          "notes": "ED-002–ED-FD, BUILD-BIBLE"
+        },
+        {
+          "id": "1.9",
+          "name": "Master Traceability [PHASE-001.9]",
+          "status": "done",
+          "notes": "TR-MOTTO, requirements-registry.json"
+        }
       ]
     },
     {
@@ -185,16 +607,66 @@
       "docPath": "docs/phase-02/PHASE_2_DIGITAL_ARKANSAS_BUILD_BIBLE.md",
       "question": "What exists?",
       "steps": [
-        { "id": "2.1", "name": "Registry Doctrine [PHASE-002.1]", "status": "done", "notes": "REG-D01–D21" },
-        { "id": "2.2", "name": "County Registry Model [PHASE-002.2]", "status": "done", "notes": "CNTY-M01–M16" },
-        { "id": "2.3", "name": "Institution Registry Model [PHASE-002.3]", "status": "done", "notes": "INST-M01–M18" },
-        { "id": "2.4", "name": "Relationship Graph [PHASE-002.4]", "status": "done", "notes": "REL-M01–M14" },
-        { "id": "2.5", "name": "Status & Lifecycle Framework [PHASE-002.5]", "status": "done", "notes": "STS-M01–M18" },
-        { "id": "2.6", "name": "Outreach Intelligence [PHASE-002.6]", "status": "done", "notes": "OIS-M01–M18" },
-        { "id": "2.7", "name": "Community Identity [PHASE-002.7]", "status": "done", "notes": "CID-M01–M18" },
-        { "id": "2.8", "name": "Knowledge & Data Governance [PHASE-002.8]", "status": "done", "notes": "KDG-M01–M18" },
-        { "id": "2.9", "name": "Digital Twin Initialization [PHASE-002.9]", "status": "done", "notes": "ADT-M01–M16" },
-        { "id": "2.10", "name": "Phase 2 Build Bible [PHASE-002.10]", "status": "done", "notes": "Digital Arkansas complete, Living Systems transition" }
+        {
+          "id": "2.1",
+          "name": "Registry Doctrine [PHASE-002.1]",
+          "status": "done",
+          "notes": "REG-D01–D21"
+        },
+        {
+          "id": "2.2",
+          "name": "County Registry Model [PHASE-002.2]",
+          "status": "done",
+          "notes": "CNTY-M01–M16"
+        },
+        {
+          "id": "2.3",
+          "name": "Institution Registry Model [PHASE-002.3]",
+          "status": "done",
+          "notes": "INST-M01–M18"
+        },
+        {
+          "id": "2.4",
+          "name": "Relationship Graph [PHASE-002.4]",
+          "status": "done",
+          "notes": "REL-M01–M14"
+        },
+        {
+          "id": "2.5",
+          "name": "Status & Lifecycle Framework [PHASE-002.5]",
+          "status": "done",
+          "notes": "STS-M01–M18"
+        },
+        {
+          "id": "2.6",
+          "name": "Outreach Intelligence [PHASE-002.6]",
+          "status": "done",
+          "notes": "OIS-M01–M18"
+        },
+        {
+          "id": "2.7",
+          "name": "Community Identity [PHASE-002.7]",
+          "status": "done",
+          "notes": "CID-M01–M18"
+        },
+        {
+          "id": "2.8",
+          "name": "Knowledge & Data Governance [PHASE-002.8]",
+          "status": "done",
+          "notes": "KDG-M01–M18"
+        },
+        {
+          "id": "2.9",
+          "name": "Digital Twin Initialization [PHASE-002.9]",
+          "status": "done",
+          "notes": "ADT-M01–M16"
+        },
+        {
+          "id": "2.10",
+          "name": "Phase 2 Build Bible [PHASE-002.10]",
+          "status": "done",
+          "notes": "Digital Arkansas complete, Living Systems transition"
+        }
       ]
     },
     {
@@ -205,21 +677,96 @@
       "docPath": "docs/phase-03/PHASE_3_MASTER_SEQUENCE.md",
       "question": "Who is this person, how do they grow, and how do they connect to others?",
       "steps": [
-        { "id": "3.1", "name": "Participant Identity Doctrine [PHASE-003.1]", "status": "done", "notes": "PEP-M01–M14, Personal Mission PRM-001, people not users" },
-        { "id": "3.2", "name": "Participant Journey Framework [PHASE-003.2]", "status": "done", "notes": "JRN-M01–M14, 9 stages, orchestration layer, milestones, CPP integration" },
-        { "id": "3.3", "name": "Personal Headquarters & Profile System [PHQ-001]", "status": "done", "notes": "PHQ-M01–M20, 8 sections, platform center, USR-001 registration → HQ" },
-        { "id": "3.4", "name": "Personal Relationship Network [NET-001]", "status": "done", "notes": "PRN-M01–M18, Trust Graph, auto-provision, QR/invite, participant-owned network" },
-        { "id": "3.5", "name": "Relationship Growth Engine [RGE-001]", "status": "done", "notes": "RGE-M01–M17, Organizing Circles, invitation lifecycle, attribution, healthy growth" },
-        { "id": "3.6", "name": "Personal Command Center [PCC-001]", "status": "done", "notes": "PCC-M01–M20, Morning Brief, 11 widgets, six login questions, HQ implementation layer" },
-        { "id": "3.7", "name": "Trust, Privacy & Digital Safety [SEC-001]", "status": "done", "notes": "TPS-M01–M18, Trust Center, visibility levels, data minimization, V1 critical path complete" },
-        { "id": "3.8", "name": "Personal Growth & Leadership [PGL-001]", "status": "done", "notes": "PGL-M01–M16, five growth domains, Growth Graph, skills, mentorship, reflection" },
-        { "id": "3.9", "name": "Community Recognition & Appreciation [CRA-001]", "status": "done", "notes": "CRA-M01–M16, Community Gratitude, appreciation not gamification, milestone categories" },
-        { "id": "3.10", "name": "Communication & Attention Management [CAM-001]", "status": "done", "notes": "CAM-M01–M17, Attention Budget, Smart Digest, Morning Brief integration, earn not abuse" },
-        { "id": "3.11", "name": "Civic Journey Timeline [CJT-001]", "status": "done", "notes": "CJT-M01–M16, Memory Moments, Civic Passport backbone, append-only narrative" },
-        { "id": "3.12", "name": "Personal Digital Twin [PDT-001]", "status": "done", "notes": "PDT-M01–M15, Participant Context Engine, composition not duplication, explainable personalization" },
-        { "id": "3.13", "name": "Opportunity & Belonging Engine [OBE-001]", "status": "done", "notes": "OBE-M01–M15, Community Marketplace, belonging not engagement, explainable opportunities" },
-        { "id": "3.14", "name": "Participant Experience & Lifecycle Design [PEL-001]", "status": "done", "notes": "PEL-M01–M15, Community Companion, lifecycle stages, evaluation question, Phase 3 heart" },
-        { "id": "3.15", "name": "Phase 3 Build Bible", "status": "pending", "notes": "People System closeout" }
+        {
+          "id": "3.1",
+          "name": "Participant Identity Doctrine [PHASE-003.1]",
+          "status": "done",
+          "notes": "PEP-M01–M14, Personal Mission PRM-001, people not users"
+        },
+        {
+          "id": "3.2",
+          "name": "Participant Journey Framework [PHASE-003.2]",
+          "status": "done",
+          "notes": "JRN-M01–M14, 9 stages, orchestration layer, milestones, CPP integration"
+        },
+        {
+          "id": "3.3",
+          "name": "Personal Headquarters & Profile System [PHQ-001]",
+          "status": "done",
+          "notes": "PHQ-M01–M20, 8 sections, platform center, USR-001 registration → HQ"
+        },
+        {
+          "id": "3.4",
+          "name": "Personal Relationship Network [NET-001]",
+          "status": "done",
+          "notes": "PRN-M01–M18, Trust Graph, auto-provision, QR/invite, participant-owned network"
+        },
+        {
+          "id": "3.5",
+          "name": "Relationship Growth Engine [RGE-001]",
+          "status": "done",
+          "notes": "RGE-M01–M17, Organizing Circles, invitation lifecycle, attribution, healthy growth"
+        },
+        {
+          "id": "3.6",
+          "name": "Personal Command Center [PCC-001]",
+          "status": "done",
+          "notes": "PCC-M01–M20, Morning Brief, 11 widgets, six login questions, HQ implementation layer"
+        },
+        {
+          "id": "3.7",
+          "name": "Trust, Privacy & Digital Safety [SEC-001]",
+          "status": "done",
+          "notes": "TPS-M01–M18, Trust Center, visibility levels, data minimization, V1 critical path complete"
+        },
+        {
+          "id": "3.8",
+          "name": "Personal Growth & Leadership [PGL-001]",
+          "status": "done",
+          "notes": "PGL-M01–M16, five growth domains, Growth Graph, skills, mentorship, reflection"
+        },
+        {
+          "id": "3.9",
+          "name": "Community Recognition & Appreciation [CRA-001]",
+          "status": "done",
+          "notes": "CRA-M01–M16, Community Gratitude, appreciation not gamification, milestone categories"
+        },
+        {
+          "id": "3.10",
+          "name": "Communication & Attention Management [CAM-001]",
+          "status": "done",
+          "notes": "CAM-M01–M17, Attention Budget, Smart Digest, Morning Brief integration, earn not abuse"
+        },
+        {
+          "id": "3.11",
+          "name": "Civic Journey Timeline [CJT-001]",
+          "status": "done",
+          "notes": "CJT-M01–M16, Memory Moments, Civic Passport backbone, append-only narrative"
+        },
+        {
+          "id": "3.12",
+          "name": "Personal Digital Twin [PDT-001]",
+          "status": "done",
+          "notes": "PDT-M01–M15, Participant Context Engine, composition not duplication, explainable personalization"
+        },
+        {
+          "id": "3.13",
+          "name": "Opportunity & Belonging Engine [OBE-001]",
+          "status": "done",
+          "notes": "OBE-M01–M15, Community Marketplace, belonging not engagement, explainable opportunities"
+        },
+        {
+          "id": "3.14",
+          "name": "Participant Experience & Lifecycle Design [PEL-001]",
+          "status": "done",
+          "notes": "PEL-M01–M15, Community Companion, lifecycle stages, evaluation question, Phase 3 heart"
+        },
+        {
+          "id": "3.15",
+          "name": "Phase 3 Build Bible",
+          "status": "pending",
+          "notes": "People System closeout"
+        }
       ]
     },
     {
@@ -230,20 +777,90 @@
       "docPath": "docs/phase-04/PHASE_4_MASTER_SEQUENCE.md",
       "question": "Where do we work together?",
       "steps": [
-        { "id": "4.1", "name": "Community Constitution [CCN-001]", "status": "done", "notes": "CCN-M01–M20, constitutional hierarchy, Community Charters, rights/responsibilities, equal standing" },
-        { "id": "4.2", "name": "Community Growth & Sustainability [CGS-001]", "status": "done", "notes": "CGS-M01–M15, seven lifecycle stages, Health Check, renewal not failure, STS-001 extension" },
-        { "id": "4.3", "name": "Community Command Center [CCC-001]", "status": "done", "notes": "CCC-M01–M22, Community Pulse, 12 widgets, six visit questions, PCC parallel, mobile-first" },
-        { "id": "4.4", "name": "Team & Working Group System [TWG-001]", "status": "done", "notes": "TWG-M01–M19, Micro Teams, team lifecycle, Team HQ, committees as team type, CCC integration" },
-        { "id": "4.5", "name": "Mission & Project System [MPS-001]", "status": "done", "notes": "MPS-M01–M19, Mission Canvas, mission-first philosophy, lifecycle, Mission HQ, reflection & impact" },
-        { "id": "4.6", "name": "Time & Scheduling Operating System [TSOS-001]", "status": "done", "notes": "TSOS-M01–M17, Master Timeline, Rhythm Engine, personal/community views, relationship-aware, EVT superseded" },
-        { "id": "4.7", "name": "Community Communication Network [CCNET-001]", "status": "done", "notes": "CCNET-M01–M15, Conversation Graph, six comm types, knowledge preservation, CAM integration" },
-        { "id": "4.8", "name": "Community Knowledge & Learning [CKLS-001]", "status": "done", "notes": "CKLS-M01–M17, Community Brain, playbooks, decision library, learning paths, KDG governance layer" },
-        { "id": "4.9", "name": "Community Capability Exchange [CCE-001]", "status": "done", "notes": "CCE-M01–M15, Capability Graph, seven categories, share/request/discover, complements CKLS + OEX-001" },
-        { "id": "4.10", "name": "Community Intelligence System [CIS-001]", "status": "done", "notes": "CIS-M01–M16 Community Coach, intelligence not analytics, health report, Pulse enrichment, explainability" },
-        { "id": "4.11", "name": "Statewide Collaboration Network [SCN-001]", "status": "done", "notes": "SCN-M01–M16 Arkansas Collaboration Map, six levels, collaboration spaces, local autonomy preserved" },
-        { "id": "4.12", "name": "Opportunity Exchange [OEX-001]", "status": "done", "notes": "OEX-M01–M15 Community Needs Index, seven categories, mutual aid network, complements OBE-001 + CCE-001" },
-        { "id": "4.13", "name": "Community Legacy System [CLS-001]", "status": "done", "notes": "CLS-M01–M12 Arkansas Living History, nine legacy categories, timeline, alumni, anniversaries, CJT parallel" },
-        { "id": "4.14", "name": "Community OS Certification [COS-001]", "status": "done", "notes": "COS-M01–M11 Arkansas Network Health Dashboard, six levels, ten components, Phase 4 Build Bible complete" }
+        {
+          "id": "4.1",
+          "name": "Community Constitution [CCN-001]",
+          "status": "done",
+          "notes": "CCN-M01–M20, constitutional hierarchy, Community Charters, rights/responsibilities, equal standing"
+        },
+        {
+          "id": "4.2",
+          "name": "Community Growth & Sustainability [CGS-001]",
+          "status": "done",
+          "notes": "CGS-M01–M15, seven lifecycle stages, Health Check, renewal not failure, STS-001 extension"
+        },
+        {
+          "id": "4.3",
+          "name": "Community Command Center [CCC-001]",
+          "status": "done",
+          "notes": "CCC-M01–M22, Community Pulse, 12 widgets, six visit questions, PCC parallel, mobile-first"
+        },
+        {
+          "id": "4.4",
+          "name": "Team & Working Group System [TWG-001]",
+          "status": "done",
+          "notes": "TWG-M01–M19, Micro Teams, team lifecycle, Team HQ, committees as team type, CCC integration"
+        },
+        {
+          "id": "4.5",
+          "name": "Mission & Project System [MPS-001]",
+          "status": "done",
+          "notes": "MPS-M01–M19, Mission Canvas, mission-first philosophy, lifecycle, Mission HQ, reflection & impact"
+        },
+        {
+          "id": "4.6",
+          "name": "Time & Scheduling Operating System [TSOS-001]",
+          "status": "done",
+          "notes": "TSOS-M01–M17, Master Timeline, Rhythm Engine, personal/community views, relationship-aware, EVT superseded"
+        },
+        {
+          "id": "4.7",
+          "name": "Community Communication Network [CCNET-001]",
+          "status": "done",
+          "notes": "CCNET-M01–M15, Conversation Graph, six comm types, knowledge preservation, CAM integration"
+        },
+        {
+          "id": "4.8",
+          "name": "Community Knowledge & Learning [CKLS-001]",
+          "status": "done",
+          "notes": "CKLS-M01–M17, Community Brain, playbooks, decision library, learning paths, KDG governance layer"
+        },
+        {
+          "id": "4.9",
+          "name": "Community Capability Exchange [CCE-001]",
+          "status": "done",
+          "notes": "CCE-M01–M15, Capability Graph, seven categories, share/request/discover, complements CKLS + OEX-001"
+        },
+        {
+          "id": "4.10",
+          "name": "Community Intelligence System [CIS-001]",
+          "status": "done",
+          "notes": "CIS-M01–M16 Community Coach, intelligence not analytics, health report, Pulse enrichment, explainability"
+        },
+        {
+          "id": "4.11",
+          "name": "Statewide Collaboration Network [SCN-001]",
+          "status": "done",
+          "notes": "SCN-M01–M16 Arkansas Collaboration Map, six levels, collaboration spaces, local autonomy preserved"
+        },
+        {
+          "id": "4.12",
+          "name": "Opportunity Exchange [OEX-001]",
+          "status": "done",
+          "notes": "OEX-M01–M15 Community Needs Index, seven categories, mutual aid network, complements OBE-001 + CCE-001"
+        },
+        {
+          "id": "4.13",
+          "name": "Community Legacy System [CLS-001]",
+          "status": "done",
+          "notes": "CLS-M01–M12 Arkansas Living History, nine legacy categories, timeline, alumni, anniversaries, CJT parallel"
+        },
+        {
+          "id": "4.14",
+          "name": "Community OS Certification [COS-001]",
+          "status": "done",
+          "notes": "COS-M01–M11 Arkansas Network Health Dashboard, six levels, ten components, Phase 4 Build Bible complete"
+        }
       ]
     },
     {
@@ -254,20 +871,90 @@
       "docPath": "docs/phase-05/PHASE_5_MASTER_SEQUENCE.md",
       "question": "How does real work actually get done?",
       "steps": [
-        { "id": "5.1", "name": "Action Constitution [ACN-001]", "status": "done", "notes": "Constitution of Action, Action Cycle, Action Hierarchy, core principles, MOR [ACN-M26], Civic Operating Loop, preservation stack" },
-        { "id": "5.2", "name": "Mission Design System [MDS-001]", "status": "done", "notes": "MDS-M01–M20, 10-section Mission Canvas, design lifecycle, templates, collaborative design, Mission Library" },
-        { "id": "5.3", "name": "Execution Operating System [EOS-001]", "status": "done", "notes": "EOS-M01–M21, work packages, milestones, Mission Dashboard, Daily Operations Brief, three-brief stack — supersedes TWS" },
-        { "id": "5.4", "name": "Volunteer Development System [VDS-001]", "status": "done", "notes": "VDS-M01–M20, volunteer journey, skills matching, Volunteer Passport, service develops leaders — supersedes VOL" },
-        { "id": "5.5", "name": "Experience & Event OS [EEOS-001]", "status": "done", "notes": "EEOS-M01–M20, Experience HQ, lifecycle, check-in, live ops, Experience Playbook — experiences build community" },
-        { "id": "5.6", "name": "Initiative Operating System [IOS-001]", "status": "done", "notes": "IOS-M01–M19, Initiative HQ, mission coordination, Initiative Command Center, coordinate statewide empower locally — supersedes CIN" },
-        { "id": "5.7", "name": "Collaborative Decision System [CDS-001]", "status": "done", "notes": "CDS-M01–M19, decision lifecycle, proposals, discussion, Decision Record, Decision Graph — supersedes DEC" },
-        { "id": "5.8", "name": "Commitment & Follow-Through System [CFS-001]", "status": "done", "notes": "CFS-M01–M19, commitment lifecycle, support requests, Commitment Compass, healthy accountability — supersedes ACB" },
-        { "id": "5.9", "name": "Capacity Coordination System [CCS-001]", "status": "done", "notes": "CCS-M01–M19, capacity categories, matching, Arkansas Capacity Map, logistics layer stack — supersedes RCS" },
-        { "id": "5.10", "name": "Community Impact Intelligence System [CIIS-001]", "status": "done", "notes": "CIIS-M01–M19, impact framework, Mission Impact Report, Impact Chain, outputs vs outcomes — supersedes IMS" },
-        { "id": "5.11", "name": "Community Storytelling System [CST-001]", "status": "done", "notes": "CST-M01–M19, story categories, approval/consent, Arkansas Story Atlas, memory triad — supersedes AST" },
-        { "id": "5.12", "name": "Learning & Improvement System [LIS-001]", "status": "done", "notes": "LIS-M01–M19, reflection, lessons, playbook updates, Improvement Graph — supersedes AAR" },
-        { "id": "5.13", "name": "Operational Intelligence System [OPIS-001]", "status": "done", "notes": "OPIS-M01–M19, Operational Graph, Operations Center, advisory coordination layer — supersedes AIN" },
-        { "id": "5.14", "name": "Action OS Certification & Readiness [AOS-001]", "status": "done", "notes": "AOS-M01–M11, twelve capability domains, six readiness levels, Movement Readiness Dashboard — Phase 5 complete" }
+        {
+          "id": "5.1",
+          "name": "Action Constitution [ACN-001]",
+          "status": "done",
+          "notes": "Constitution of Action, Action Cycle, Action Hierarchy, core principles, MOR [ACN-M26], Civic Operating Loop, preservation stack"
+        },
+        {
+          "id": "5.2",
+          "name": "Mission Design System [MDS-001]",
+          "status": "done",
+          "notes": "MDS-M01–M20, 10-section Mission Canvas, design lifecycle, templates, collaborative design, Mission Library"
+        },
+        {
+          "id": "5.3",
+          "name": "Execution Operating System [EOS-001]",
+          "status": "done",
+          "notes": "EOS-M01–M21, work packages, milestones, Mission Dashboard, Daily Operations Brief, three-brief stack — supersedes TWS"
+        },
+        {
+          "id": "5.4",
+          "name": "Volunteer Development System [VDS-001]",
+          "status": "done",
+          "notes": "VDS-M01–M20, volunteer journey, skills matching, Volunteer Passport, service develops leaders — supersedes VOL"
+        },
+        {
+          "id": "5.5",
+          "name": "Experience & Event OS [EEOS-001]",
+          "status": "done",
+          "notes": "EEOS-M01–M20, Experience HQ, lifecycle, check-in, live ops, Experience Playbook — experiences build community"
+        },
+        {
+          "id": "5.6",
+          "name": "Initiative Operating System [IOS-001]",
+          "status": "done",
+          "notes": "IOS-M01–M19, Initiative HQ, mission coordination, Initiative Command Center, coordinate statewide empower locally — supersedes CIN"
+        },
+        {
+          "id": "5.7",
+          "name": "Collaborative Decision System [CDS-001]",
+          "status": "done",
+          "notes": "CDS-M01–M19, decision lifecycle, proposals, discussion, Decision Record, Decision Graph — supersedes DEC"
+        },
+        {
+          "id": "5.8",
+          "name": "Commitment & Follow-Through System [CFS-001]",
+          "status": "done",
+          "notes": "CFS-M01–M19, commitment lifecycle, support requests, Commitment Compass, healthy accountability — supersedes ACB"
+        },
+        {
+          "id": "5.9",
+          "name": "Capacity Coordination System [CCS-001]",
+          "status": "done",
+          "notes": "CCS-M01–M19, capacity categories, matching, Arkansas Capacity Map, logistics layer stack — supersedes RCS"
+        },
+        {
+          "id": "5.10",
+          "name": "Community Impact Intelligence System [CIIS-001]",
+          "status": "done",
+          "notes": "CIIS-M01–M19, impact framework, Mission Impact Report, Impact Chain, outputs vs outcomes — supersedes IMS"
+        },
+        {
+          "id": "5.11",
+          "name": "Community Storytelling System [CST-001]",
+          "status": "done",
+          "notes": "CST-M01–M19, story categories, approval/consent, Arkansas Story Atlas, memory triad — supersedes AST"
+        },
+        {
+          "id": "5.12",
+          "name": "Learning & Improvement System [LIS-001]",
+          "status": "done",
+          "notes": "LIS-M01–M19, reflection, lessons, playbook updates, Improvement Graph — supersedes AAR"
+        },
+        {
+          "id": "5.13",
+          "name": "Operational Intelligence System [OPIS-001]",
+          "status": "done",
+          "notes": "OPIS-M01–M19, Operational Graph, Operations Center, advisory coordination layer — supersedes AIN"
+        },
+        {
+          "id": "5.14",
+          "name": "Action OS Certification & Readiness [AOS-001]",
+          "status": "done",
+          "notes": "AOS-M01–M11, twelve capability domains, six readiness levels, Movement Readiness Dashboard — Phase 5 complete"
+        }
       ]
     },
     {
@@ -278,20 +965,90 @@
       "docPath": "docs/phase-06/PHASE_6_MASTER_SEQUENCE.md",
       "question": "How does the platform grow itself?",
       "steps": [
-        { "id": "6.1", "name": "Growth Constitution [GCN-001]", "status": "done", "notes": "GCN-M01–M17, eight growth principles, Belonging Index, Invitation Impact Visibility CP-016 — healthy growth not growth at any cost" },
-        { "id": "6.2", "name": "Personal Organizing Network [PON-001]", "status": "done", "notes": "PON-M01–M19, invite link, QR, My Network, Network Tree, Impact Tree — original platform vision; extends PRN + RGE" },
-        { "id": "6.3", "name": "Community Growth & Outreach System [CGO-001]", "status": "done", "notes": "CGO-M01–M18, Growth Dashboard, Representation Map, outreach zones, Arkansas Coverage Map — extends CGS-001" },
-        { "id": "6.4", "name": "Community Leadership Development System [CLD-001]", "status": "done", "notes": "CLD-M01–M17, Leadership Journey, Leadership Constellation — extends PGL-001" },
-        { "id": "6.5", "name": "Welcome & Belonging System [WBS-001]", "status": "done", "notes": "WBS-M01–M17, First 30 Days Journey, Belonging Checkpoints — extends JRN + PEL + OBE" },
-        { "id": "6.6", "name": "Community Growth Intelligence System [CGIS-001]", "status": "done", "notes": "CGIS-M01–M18, Arkansas Growth Observatory, Deepen Before Expand — extends CIS-001" },
-        { "id": "6.7", "name": "Invitation & Connection System [ICS-001]", "status": "done", "notes": "ICS-M01–M17, Universal Invitation Builder, Dynamic QR — extends RGE + PON" },
-        { "id": "6.8", "name": "Community Culture & Recognition System [CCR-001]", "status": "done", "notes": "CCR-M01–M15, Culture Garden, story-based recognition — extends CRA-001" },
-        { "id": "6.9", "name": "Community Expansion Framework [CEF-001]", "status": "done", "notes": "CEF-M01–M17, Community Foundry, Mutual Strengthening — extends COS + CCN" },
-        { "id": "6.10", "name": "Institutional Partnership System [IPS-001]", "status": "done", "notes": "IPS-M01–M17, Arkansas Civic Ecosystem Map, Mutual Value CP-019 — extends SCN-001" },
-        { "id": "6.11", "name": "Lifelong Community Network [LCN-001]", "status": "done", "notes": "LCN-M01–M18, Generational Network, Open Door CP-020 — extends CLS-001 + JRN-001" },
-        { "id": "6.12", "name": "Public Community Network [PCN-001]", "status": "done", "notes": "PCN-M01–M18, Arkansas Community Explorer, Community Personality — extends CST-001" },
-        { "id": "6.13", "name": "Network Intelligence & Strategy System [NISS-001]", "status": "done", "notes": "NISS-M01–M18, Statewide Network Twin, Community Knowledge Graph CKG — implements GOS-M16" },
-        { "id": "6.14", "name": "Growth OS Certification & Network Readiness [GOS-001]", "status": "done", "notes": "GOS-M01–M13, six readiness levels, Community Genome — Phase 6 complete" }
+        {
+          "id": "6.1",
+          "name": "Growth Constitution [GCN-001]",
+          "status": "done",
+          "notes": "GCN-M01–M17, eight growth principles, Belonging Index, Invitation Impact Visibility CP-016 — healthy growth not growth at any cost"
+        },
+        {
+          "id": "6.2",
+          "name": "Personal Organizing Network [PON-001]",
+          "status": "done",
+          "notes": "PON-M01–M19, invite link, QR, My Network, Network Tree, Impact Tree — original platform vision; extends PRN + RGE"
+        },
+        {
+          "id": "6.3",
+          "name": "Community Growth & Outreach System [CGO-001]",
+          "status": "done",
+          "notes": "CGO-M01–M18, Growth Dashboard, Representation Map, outreach zones, Arkansas Coverage Map — extends CGS-001"
+        },
+        {
+          "id": "6.4",
+          "name": "Community Leadership Development System [CLD-001]",
+          "status": "done",
+          "notes": "CLD-M01–M17, Leadership Journey, Leadership Constellation — extends PGL-001"
+        },
+        {
+          "id": "6.5",
+          "name": "Welcome & Belonging System [WBS-001]",
+          "status": "done",
+          "notes": "WBS-M01–M17, First 30 Days Journey, Belonging Checkpoints — extends JRN + PEL + OBE"
+        },
+        {
+          "id": "6.6",
+          "name": "Community Growth Intelligence System [CGIS-001]",
+          "status": "done",
+          "notes": "CGIS-M01–M18, Arkansas Growth Observatory, Deepen Before Expand — extends CIS-001"
+        },
+        {
+          "id": "6.7",
+          "name": "Invitation & Connection System [ICS-001]",
+          "status": "done",
+          "notes": "ICS-M01–M17, Universal Invitation Builder, Dynamic QR — extends RGE + PON"
+        },
+        {
+          "id": "6.8",
+          "name": "Community Culture & Recognition System [CCR-001]",
+          "status": "done",
+          "notes": "CCR-M01–M15, Culture Garden, story-based recognition — extends CRA-001"
+        },
+        {
+          "id": "6.9",
+          "name": "Community Expansion Framework [CEF-001]",
+          "status": "done",
+          "notes": "CEF-M01–M17, Community Foundry, Mutual Strengthening — extends COS + CCN"
+        },
+        {
+          "id": "6.10",
+          "name": "Institutional Partnership System [IPS-001]",
+          "status": "done",
+          "notes": "IPS-M01–M17, Arkansas Civic Ecosystem Map, Mutual Value CP-019 — extends SCN-001"
+        },
+        {
+          "id": "6.11",
+          "name": "Lifelong Community Network [LCN-001]",
+          "status": "done",
+          "notes": "LCN-M01–M18, Generational Network, Open Door CP-020 — extends CLS-001 + JRN-001"
+        },
+        {
+          "id": "6.12",
+          "name": "Public Community Network [PCN-001]",
+          "status": "done",
+          "notes": "PCN-M01–M18, Arkansas Community Explorer, Community Personality — extends CST-001"
+        },
+        {
+          "id": "6.13",
+          "name": "Network Intelligence & Strategy System [NISS-001]",
+          "status": "done",
+          "notes": "NISS-M01–M18, Statewide Network Twin, Community Knowledge Graph CKG — implements GOS-M16"
+        },
+        {
+          "id": "6.14",
+          "name": "Growth OS Certification & Network Readiness [GOS-001]",
+          "status": "done",
+          "notes": "GOS-M01–M13, six readiness levels, Community Genome — Phase 6 complete"
+        }
       ]
     },
     {
@@ -303,12 +1060,42 @@
       "registryPath": "data/intelligence/intelligence-operating-system.json",
       "question": "How do we understand and guide?",
       "steps": [
-        { "id": "7.1", "name": "Statewide Intelligence Search [SIS-001]", "status": "done", "notes": "SIS knowledge retrieval engine, /api/search, unified index, fuzzy ranking — AC-172" },
-        { "id": "7.2", "name": "Recommendation Intelligence Engine [RIE-001]", "status": "done", "notes": "RIE scoring model, daily briefing, feedback loop, /api/recommendations — AC-173" },
-        { "id": "7.3", "name": "Campaign Analytics & Intelligence Platform [ANL-001]", "status": "done", "notes": "Executive dashboard, KPI library, forecasts, alerts, /api/analytics — AC-174" },
-        { "id": "7.4", "name": "Live Mission Board [MBD-001]", "status": "done", "notes": "OIS-M16 operational command center, priority engine, /api/missions — AC-175" },
-        { "id": "7.5", "name": "Relationship Intelligence Engine [RLI-001]", "status": "done", "notes": "Living graph, connectors, alerts, introductions, /api/relationships — AC-176" },
-        { "id": "7.6", "name": "Executive AI Intelligence Layer [IAS-001]", "status": "done", "notes": "KDG-M16 operating intelligence, memory, audit, /api/ai — AC-177 · Phase 7 complete" }
+        {
+          "id": "7.1",
+          "name": "Statewide Intelligence Search [SIS-001]",
+          "status": "done",
+          "notes": "SIS knowledge retrieval engine, /api/search, unified index, fuzzy ranking — AC-172"
+        },
+        {
+          "id": "7.2",
+          "name": "Recommendation Intelligence Engine [RIE-001]",
+          "status": "done",
+          "notes": "RIE scoring model, daily briefing, feedback loop, /api/recommendations — AC-173"
+        },
+        {
+          "id": "7.3",
+          "name": "Campaign Analytics & Intelligence Platform [ANL-001]",
+          "status": "done",
+          "notes": "Executive dashboard, KPI library, forecasts, alerts, /api/analytics — AC-174"
+        },
+        {
+          "id": "7.4",
+          "name": "Live Mission Board [MBD-001]",
+          "status": "done",
+          "notes": "OIS-M16 operational command center, priority engine, /api/missions — AC-175"
+        },
+        {
+          "id": "7.5",
+          "name": "Relationship Intelligence Engine [RLI-001]",
+          "status": "done",
+          "notes": "Living graph, connectors, alerts, introductions, /api/relationships — AC-176"
+        },
+        {
+          "id": "7.6",
+          "name": "Executive AI Intelligence Layer [IAS-001]",
+          "status": "done",
+          "notes": "KDG-M16 operating intelligence, memory, audit, /api/ai — AC-177 · Phase 7 complete"
+        }
       ]
     },
     {
@@ -320,14 +1107,54 @@
       "registryPath": "data/platform-services/platform-services-operating-system.json",
       "question": "How does it run?",
       "steps": [
-        { "id": "8.1", "name": "Authentication and Identity [AUTH-001]", "status": "done", "notes": "Full identity foundation: canonical model, sessions, MFA, invitations, context, security center, platform auth docs — AC-178" },
-        { "id": "8.2", "name": "Administration Platform [ADM-001]", "status": "done", "notes": "Unified Administration Center, roles/permissions, scope enforcement, approvals, audit — AC-179" },
-        { "id": "8.3", "name": "CMS & Content Services [CMS-001]", "status": "done", "notes": "Canonical content model, editorial workflow, media library, delivery APIs, search integration — AC-180" },
-        { "id": "8.4", "name": "Notification Services [NTF-001]", "status": "done", "notes": "Unified notification service, policy engine, in-app center, preferences, quiet hours, campaigns, delivery tracking — AC-181" },
-        { "id": "8.5", "name": "Unified API Layer [API-001]", "status": "done", "notes": "v1 gateway, standard errors, context, idempotency, rate limits, credentials, webhooks, public APIs — AC-182" },
-        { "id": "8.6", "name": "Deployment & CI/CD [DPL-001]", "status": "done", "notes": "Release governance, CI workflow, environments, approvals, migrations, smoke tests, deployment APIs — AC-183" },
-        { "id": "8.7", "name": "Monitoring & Reliability [MON-001]", "status": "done", "notes": "Unified observability, metrics, alerts, dashboards, deployment markers, self-diagnosis, operational intelligence — AC-184" },
-        { "id": "8.8", "name": "Security Platform [SEC-001]", "status": "done", "notes": "Defense-in-depth security, data classification, vulnerabilities, incidents, privacy, backup/recovery — AC-185 · Phase 8 complete" }
+        {
+          "id": "8.1",
+          "name": "Authentication and Identity [AUTH-001]",
+          "status": "done",
+          "notes": "Full identity foundation: canonical model, sessions, MFA, invitations, context, security center, platform auth docs — AC-178"
+        },
+        {
+          "id": "8.2",
+          "name": "Administration Platform [ADM-001]",
+          "status": "done",
+          "notes": "Unified Administration Center, roles/permissions, scope enforcement, approvals, audit — AC-179"
+        },
+        {
+          "id": "8.3",
+          "name": "CMS & Content Services [CMS-001]",
+          "status": "done",
+          "notes": "Canonical content model, editorial workflow, media library, delivery APIs, search integration — AC-180"
+        },
+        {
+          "id": "8.4",
+          "name": "Notification Services [NTF-001]",
+          "status": "done",
+          "notes": "Unified notification service, policy engine, in-app center, preferences, quiet hours, campaigns, delivery tracking — AC-181"
+        },
+        {
+          "id": "8.5",
+          "name": "Unified API Layer [API-001]",
+          "status": "done",
+          "notes": "v1 gateway, standard errors, context, idempotency, rate limits, credentials, webhooks, public APIs — AC-182"
+        },
+        {
+          "id": "8.6",
+          "name": "Deployment & CI/CD [DPL-001]",
+          "status": "done",
+          "notes": "Release governance, CI workflow, environments, approvals, migrations, smoke tests, deployment APIs — AC-183"
+        },
+        {
+          "id": "8.7",
+          "name": "Monitoring & Reliability [MON-001]",
+          "status": "done",
+          "notes": "Unified observability, metrics, alerts, dashboards, deployment markers, self-diagnosis, operational intelligence — AC-184"
+        },
+        {
+          "id": "8.8",
+          "name": "Security Platform [SEC-001]",
+          "status": "done",
+          "notes": "Defense-in-depth security, data classification, vulnerabilities, incidents, privacy, backup/recovery — AC-185 · Phase 8 complete"
+        }
       ]
     },
     {
@@ -340,14 +1167,54 @@
       "question": "Can institutions adopt and operate without the original builders?",
       "requirementId": "ILS-001",
       "steps": [
-        { "id": "9.1", "name": "Institutional Provisioning [PRV-001]", "status": "done", "notes": "Governed provisioning workflow, lifecycle transitions, configuration templates, launch APIs — AC-186" },
-        { "id": "9.2", "name": "Configuration and Organizational Modeling [ORG-001]", "status": "done", "notes": "Institutional structure, templates, validation — AC-187" },
-        { "id": "9.3", "name": "Migration and Data Readiness [MIG-001]", "status": "done", "notes": "Staging, validation, dry runs, data readiness reports — AC-188" },
-        { "id": "9.4", "name": "Guided Onboarding [ONB-001]", "status": "done", "notes": "Role-based onboarding journeys, first meaningful action — AC-189" },
-        { "id": "9.5", "name": "Training and Certification [TRN-001]", "status": "done", "notes": "Learning paths, practice workspaces, assessments, certification eligibility gates — AC-190" },
-        { "id": "9.6", "name": "Pilot and Acceptance Program [PLT-001]", "status": "done", "notes": "Phased pilots, observation ledger, human-help count, acceptance gates — AC-191" },
-        { "id": "9.7", "name": "Operational Launch, Adoption, and Continuous Improvement [OPS-001]", "status": "done", "notes": "Launch orchestration, health, adoption, support, feedback, releases, maturity — AC-192" },
-        { "id": "9.8", "name": "Institutional Replication, Federation, and Ecosystem Growth [FED-001]", "status": "done", "notes": "Templates, replication, federation, shared resources, benchmarking, marketplace — AC-193" }
+        {
+          "id": "9.1",
+          "name": "Institutional Provisioning [PRV-001]",
+          "status": "done",
+          "notes": "Governed provisioning workflow, lifecycle transitions, configuration templates, launch APIs — AC-186"
+        },
+        {
+          "id": "9.2",
+          "name": "Configuration and Organizational Modeling [ORG-001]",
+          "status": "done",
+          "notes": "Institutional structure, templates, validation — AC-187"
+        },
+        {
+          "id": "9.3",
+          "name": "Migration and Data Readiness [MIG-001]",
+          "status": "done",
+          "notes": "Staging, validation, dry runs, data readiness reports — AC-188"
+        },
+        {
+          "id": "9.4",
+          "name": "Guided Onboarding [ONB-001]",
+          "status": "done",
+          "notes": "Role-based onboarding journeys, first meaningful action — AC-189"
+        },
+        {
+          "id": "9.5",
+          "name": "Training and Certification [TRN-001]",
+          "status": "done",
+          "notes": "Learning paths, practice workspaces, assessments, certification eligibility gates — AC-190"
+        },
+        {
+          "id": "9.6",
+          "name": "Pilot and Acceptance Program [PLT-001]",
+          "status": "done",
+          "notes": "Phased pilots, observation ledger, human-help count, acceptance gates — AC-191"
+        },
+        {
+          "id": "9.7",
+          "name": "Operational Launch, Adoption, and Continuous Improvement [OPS-001]",
+          "status": "done",
+          "notes": "Launch orchestration, health, adoption, support, feedback, releases, maturity — AC-192"
+        },
+        {
+          "id": "9.8",
+          "name": "Institutional Replication, Federation, and Ecosystem Growth [FED-001]",
+          "status": "done",
+          "notes": "Templates, replication, federation, shared resources, benchmarking, marketplace — AC-193"
+        }
       ]
     },
     {
@@ -360,46 +1227,200 @@
       "question": "Are communities becoming stronger because institutions are operating?",
       "requirementId": "CGI-001",
       "steps": [
-        { "id": "10.1", "name": "Civic Participation Engine [CIV-001]", "status": "done", "notes": "Participation scoring, engagement trends, forecasting — AC-194" },
-        { "id": "10.2", "name": "Leadership Development Engine [LDR-001]", "status": "done", "notes": "Profiles, evidence, mentorship, cohorts, succession, analytics — AC-195" },
-        { "id": "10.3", "name": "Community Relationship Intelligence Engine [REL-001]", "status": "done", "notes": "Canonical graph, ledger, mentorship, collaboration analytics, connectors, privacy, federation aggregates — AC-196" },
-        { "id": "10.4", "name": "Community Health & Civic Resilience Engine [CHD-001]", "status": "done", "notes": "Health index, capacity, resilience, risks, geographic maps, reports, federation aggregates — AC-197" },
-        { "id": "10.5", "name": "Civic Outcomes & Impact Measurement Engine [OUT-001]", "status": "done", "notes": "Outcomes ledger, evidence, attribution, theory of change, CROP, reports, federation aggregates — AC-198" },
-        { "id": "10.6", "name": "Civic Strategic Intelligence & Decision Support Engine [INT-002]", "status": "done", "notes": "Insights, warnings, scenarios, forecasts, decision support, institutional learning — AC-199" },
-        { "id": "10.7", "name": "Research & Policy Lab [RPL-001]", "status": "pending", "notes": "Privacy-protected civic research — AC-200" },
-        { "id": "10.8", "name": "Civic Impact Analytics [CIA-001]", "status": "pending", "notes": "Combined impact, resilience, social capital — AC-201" }
-      ]
+        {
+          "id": "10.1",
+          "name": "Civic Participation Engine [CIV-001]",
+          "status": "done",
+          "notes": "Participation scoring, engagement trends, forecasting — AC-194"
+        },
+        {
+          "id": "10.2",
+          "name": "Leadership Development Engine [LDR-001]",
+          "status": "done",
+          "notes": "Profiles, evidence, mentorship, cohorts, succession, analytics — AC-195"
+        },
+        {
+          "id": "10.3",
+          "name": "Community Relationship Intelligence Engine [REL-001]",
+          "status": "done",
+          "notes": "Canonical graph, ledger, mentorship, collaboration analytics, connectors, privacy, federation aggregates — AC-196"
+        },
+        {
+          "id": "10.4",
+          "name": "Community Health & Civic Resilience Engine [CHD-001]",
+          "status": "done",
+          "notes": "Health index, capacity, resilience, risks, geographic maps, reports, federation aggregates — AC-197"
+        },
+        {
+          "id": "10.5",
+          "name": "Civic Outcomes & Impact Measurement Engine [OUT-001]",
+          "status": "done",
+          "notes": "Outcomes ledger, evidence, attribution, theory of change, CROP, reports, federation aggregates — AC-198"
+        },
+        {
+          "id": "10.6",
+          "name": "Civic Strategic Intelligence & Decision Support Engine [INT-002]",
+          "status": "done",
+          "notes": "Insights, warnings, scenarios, forecasts, decision support, institutional learning — AC-199"
+        },
+        {
+          "id": "10.7",
+          "name": "Research & Policy Lab [RPL-001]",
+          "status": "pending",
+          "notes": "Privacy-protected civic research — AC-200"
+        },
+        {
+          "id": "10.8",
+          "name": "Civic Impact Analytics [CIA-001]",
+          "status": "pending",
+          "notes": "Combined impact, resilience, social capital — AC-201"
+        }
+      ],
+      "notes": "Core civic intelligence engines delivered (10.1–10.6). 10.7–10.8 deferred behind V1 launch + certification."
     },
     {
       "id": 11,
-      "name": "Experience Layer",
-      "slug": "phase-11-experience",
-      "status": "deferred",
-      "docPath": "docs/master/LIVING-SYSTEMS-ARCHITECTURE.md",
-      "question": "How does it feel?",
-      "deferredUntil": "Phase 10 civic intelligence foundation in progress",
+      "name": "Living Intelligence & V1 Launch",
+      "slug": "phase-11-living-intelligence",
+      "status": "in_progress",
+      "docPath": "docs/phase-11/PHASE_11_BUILD_LEDGER.md",
+      "registryPath": "docs/v1-certification/README.md",
+      "question": "Did we build the Living Intelligence platform — and can Humans enter it tonight?",
+      "requirementId": "LIX-001",
+      "deferredUntil": null,
       "steps": [
-        { "id": "11.1", "name": "Design system", "status": "pending", "notes": "" },
-        { "id": "11.2", "name": "Animation & motion", "status": "pending", "notes": "" },
-        { "id": "11.3", "name": "Accessibility [ED-MF]", "status": "pending", "notes": "" },
-        { "id": "11.4", "name": "Mobile optimization", "status": "pending", "notes": "" },
-        { "id": "11.5", "name": "Welcome UX", "status": "pending", "notes": "WBS-001 experience layer" },
-        { "id": "11.6", "name": "Storytelling & WHY/HOW/WHAT", "status": "pending", "notes": "Partial live" },
-        { "id": "11.7", "name": "Native mobile apps", "status": "pending", "notes": "" }
+        {
+          "id": "11.1",
+          "name": "Initiative Architecture [INI-001]",
+          "status": "done",
+          "notes": "Constitution + data model + lifecycle services — ledger W1–W3"
+        },
+        {
+          "id": "11.2",
+          "name": "Objectives System [OBJ-001]",
+          "status": "done",
+          "notes": "Objectives waves + workbench surfaces complete"
+        },
+        {
+          "id": "11.6",
+          "name": "Institutional Ops & Mission Execution [OPS-001]",
+          "status": "done",
+          "notes": "Operations command + mission execution product surfaces live"
+        },
+        {
+          "id": "11.7",
+          "name": "Living Intelligence Protocol W1–W16 [LIX-001]",
+          "status": "done",
+          "notes": "Architecture Complete — LocalBrain through Genesis; /api/v1/localbrain/* + wave gates"
+        },
+        {
+          "id": "11.7-COM",
+          "name": "Communications Workbench [COM-001]",
+          "status": "done",
+          "notes": "Daily brief, meetings, decisions, documents — 11.7-COM complete"
+        },
+        {
+          "id": "11.12",
+          "name": "Adaptive Knowledge & Learning [ADP-001]",
+          "status": "done",
+          "notes": "Knowledge UX W1–W8 complete; learning workbench live"
+        },
+        {
+          "id": "11.CERT",
+          "name": "V1 Certification Pass 1 — Vision Audit [V1-CERT-PASS-01]",
+          "status": "done",
+          "notes": "444 capabilities scored · overall fulfillment 20.2% · CERTIFIED PRESENT 0 · docs/v1-certification"
+        },
+        {
+          "id": "11.LAUNCH",
+          "name": "Live first-run launch path",
+          "status": "in_progress",
+          "notes": "Steve bootstrap /start · durable Netlify Blobs · choose-place · map lock · session on invite accept · pushed main@4c8bfbc"
+        }
       ]
     }
   ],
   "versions": [
-    { "version": "0.1.0", "name": "Initial scaffold", "status": "done", "date": "2026-07-10" },
-    { "version": "0.2.0", "name": "Constitution + Digital Arkansas", "status": "done", "date": "2026-07-10" },
-    { "version": "0.3.0", "name": "People — leader testing", "status": "in_progress", "date": "2026-07-12" },
-    { "version": "1.0.0", "name": "Launch call — signup + network", "status": "pending", "date": "2026-07-14" },
-    { "version": "1.1.0", "name": "Communities + committees", "status": "pending", "date": null },
-    { "version": "1.2.0", "name": "Action Operating System", "status": "pending", "date": null },
-    { "version": "1.3.0", "name": "Intelligence + messaging", "status": "pending", "date": null },
-    { "version": "1.4.0", "name": "Election ready", "status": "pending", "date": null }
+    {
+      "version": "0.1.0",
+      "name": "Initial scaffold",
+      "status": "done",
+      "date": "2026-07-10"
+    },
+    {
+      "version": "0.2.0",
+      "name": "Constitution + Digital Arkansas",
+      "status": "done",
+      "date": "2026-07-10"
+    },
+    {
+      "version": "0.3.0",
+      "name": "People — leader testing",
+      "status": "done",
+      "date": "2026-07-12"
+    },
+    {
+      "version": "0.7.1-ciws",
+      "name": "Civic intelligence workstreams",
+      "status": "done",
+      "date": "2026-07-11"
+    },
+    {
+      "version": "1.0.0-com-complete",
+      "name": "Communications workbench complete",
+      "status": "done",
+      "date": "2026-07-13"
+    },
+    {
+      "version": "1.0.0-lix-arch",
+      "name": "Living Intelligence Architecture Complete (W1–W16)",
+      "status": "done",
+      "date": "2026-07-14"
+    },
+    {
+      "version": "1.0.0-launch",
+      "name": "July 14 live invite-chain launch",
+      "status": "in_progress",
+      "date": "2026-07-14"
+    },
+    {
+      "version": "1.0.0",
+      "name": "V1 ship — after certification gates",
+      "status": "pending",
+      "date": null
+    }
   ],
   "buildLog": [
+    {
+      "date": "2026-07-14",
+      "title": "LIVE LAUNCH — Steve bootstrap, place-lock, Netlify Blobs, push main@4c8bfbc",
+      "phase": 11,
+      "summary": "grappe4arkansas@gmail.com admin · /start invite chain · /choose-place then hide map · durable auth/ITL writes · session cookie on invite accept · progressive LaunchChrome"
+    },
+    {
+      "date": "2026-07-14",
+      "title": "V1-CERT-PASS-01 Vision-to-Implementation Audit complete",
+      "phase": 11,
+      "summary": "444 capabilities · overall fulfillment 20.2% · CERTIFIED PRESENT 0 · scaffolded-heavy LocalBrain/Calendar · canonical matrix in docs/v1-certification + data/v1-certification"
+    },
+    {
+      "date": "2026-07-14",
+      "title": "Build 11.7 Living Intelligence — Architecture Complete (W1–W16)",
+      "phase": 11,
+      "summary": "LocalBrain → Context → EA → Organizer → Research → Conversation → Learning → Prediction → Agents → Partnership → Federation → Automation → Factory → Twin → Kernel → Genesis"
+    },
+    {
+      "date": "2026-07-13",
+      "title": "Build 11.7 W12–W15 Automation, Factory, Twin, Kernel",
+      "phase": 11,
+      "summary": "Human-supervised automation · capability factory · digital twin sandbox · institutional OS kernel — protocol + API gateways"
+    },
+    {
+      "date": "2026-07-13",
+      "title": "Build 11.7-COM Communications Workbench complete",
+      "phase": 11,
+      "summary": "Daily brief, meetings, decisions, documents, notifications, search — package 1.0.0-com-complete"
+    },
     {
       "date": "2026-07-10",
       "title": "VOLUME-002 Data Architecture Bible — 14-Step Factory (Canonical)",
@@ -924,10 +1945,11 @@
     }
   ],
   "stats": {
-    "totalSteps": 123,
-    "doneSteps": 109,
+    "totalSteps": 114,
+    "doneSteps": 110,
     "inProgressSteps": 1,
-    "pendingSteps": 14,
-    "percentComplete": 89
+    "pendingSteps": 3,
+    "percentComplete": 96,
+    "note": "Percent from phase steps only. Architecture Complete ≠ product CERTIFIED PRESENT (Pass 1)."
   }
 }

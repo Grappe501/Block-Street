@@ -32,6 +32,11 @@ export function AdminOverview({
       {/* Current Status */}
       <div className="card">
         <h2 className="text-lg font-bold text-slate-900">Current Build Status</h2>
+        {"activeProgram" in project && project.activeProgram && (
+          <p className="mt-2 rounded-lg border border-emerald-200 bg-emerald-50 px-3 py-2 text-sm text-emerald-900">
+            {String(project.activeProgram)}
+          </p>
+        )}
         <div className="mt-4 grid gap-4 md:grid-cols-2">
           <div>
             <p className="text-sm text-slate-500">Active Phase</p>
@@ -44,15 +49,24 @@ export function AdminOverview({
           <div>
             <p className="text-sm text-slate-500">Netlify</p>
             <StatusBadge status={project.netlifyStatus === "pending" ? "pending" : "done"} />
+            {"productionCommit" in project && project.productionCommit && (
+              <p className="mt-1 font-mono text-xs text-slate-500">{String(project.productionCommit)}</p>
+            )}
           </div>
           <div>
             <p className="text-sm text-slate-500">Database</p>
             <StatusBadge status={project.databaseStatus === "not_connected" ? "pending" : "done"} />
+            <p className="mt-1 text-xs text-slate-500">JSON seed + Netlify Blobs (no Postgres yet)</p>
           </div>
         </div>
+        {"currentDesignCycle" in project && project.currentDesignCycle && (
+          <p className="mt-4 text-sm text-slate-600">
+            <span className="font-medium text-slate-800">Design cycle:</span> {String(project.currentDesignCycle)}
+          </p>
+        )}
       </div>
 
-      {/* Volume 0 */}
+      {/* Factory Layer */}
       {"implementationVolumes" in progress && progress.implementationVolumes && (
         <div className="card border-indigo-300 bg-indigo-50">
           <div className="flex items-center justify-between">
@@ -62,7 +76,7 @@ export function AdminOverview({
           <p className="mt-2 font-bold text-indigo-950">{progress.implementationVolumes.name}</p>
           <p className="mt-1 text-sm text-indigo-800">{progress.implementationVolumes.question}</p>
           <p className="mt-2 text-xs text-indigo-600">
-            Volumes 1–6 v1 · Phase 7 architecturally complete
+            Volumes 1–5 + CKK delivered · Phase 11 Living Intelligence Architecture Complete · V1 Certification active
           </p>
         </div>
       )}

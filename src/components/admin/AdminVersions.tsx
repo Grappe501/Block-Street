@@ -7,7 +7,7 @@ export function AdminVersions({ progress }: { progress: BuildProgress }) {
       <div className="card">
         <h2 className="text-lg font-bold text-slate-900">Version Roadmap</h2>
         <p className="mt-1 text-sm text-slate-500">
-          6 phases to launch, then 8 rapid feature versions post-launch.
+          Living Intelligence Architecture Complete · V1 Certification underway · July 14 live launch track.
         </p>
       </div>
 
