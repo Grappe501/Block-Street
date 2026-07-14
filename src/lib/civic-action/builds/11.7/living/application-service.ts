@@ -31,6 +31,8 @@ import { twinRuntime } from "./twin/services/twin-service";
 import { seedTwinIfEmpty } from "./twin/services/seed";
 import { kernelRuntime } from "./kernel/services/kernel-service";
 import { seedKernelIfEmpty } from "./kernel/services/seed";
+import { genesisRuntime } from "./genesis/services/genesis-service";
+import { seedGenesisIfEmpty } from "./genesis/services/seed";
 
 let livingDataSeeded = false;
 
@@ -51,6 +53,7 @@ function ensureLivingDataSeeded() {
   seedFactoryIfEmpty();
   seedTwinIfEmpty();
   seedKernelIfEmpty();
+  seedGenesisIfEmpty();
   livingDataSeeded = true;
 }
 
@@ -906,6 +909,61 @@ export class LivingIntelligenceApplicationService {
   proposeConstitutionAmendment(input: Parameters<typeof kernelRuntime.evolution.propose>[0]) {
     this.boot();
     return kernelRuntime.evolution.propose(input);
+  }
+
+  getGenesisDashboard(input: { human_id: string; institution_id: string }) {
+    this.boot();
+    return genesisRuntime.genesis.dashboard(input);
+  }
+
+  listGenesisDNA(institutionId: string) {
+    this.boot();
+    return genesisRuntime.dna.list(institutionId);
+  }
+
+  listGenesisArchives(institutionId: string) {
+    this.boot();
+    return genesisRuntime.archives.list(institutionId);
+  }
+
+  listGenesisContinuity(institutionId: string) {
+    this.boot();
+    return genesisRuntime.continuity.list(institutionId);
+  }
+
+  listGenesisTimeline(institutionId: string) {
+    this.boot();
+    return genesisRuntime.timeline.list(institutionId);
+  }
+
+  listGenesisLegacy(institutionId: string) {
+    this.boot();
+    return genesisRuntime.legacy.list(institutionId);
+  }
+
+  listGenesisVault(institutionId: string) {
+    this.boot();
+    return genesisRuntime.vault.list(institutionId);
+  }
+
+  exportGenesisPackage(input: Parameters<typeof genesisRuntime.packages.export>[0]) {
+    this.boot();
+    return genesisRuntime.packages.export(input);
+  }
+
+  testGenesisContinuity(input: Parameters<typeof genesisRuntime.continuity.test>[0]) {
+    this.boot();
+    return genesisRuntime.continuity.test(input);
+  }
+
+  verifyGenesisArchive(input: Parameters<typeof genesisRuntime.archives.verify>[0]) {
+    this.boot();
+    return genesisRuntime.archives.verify(input);
+  }
+
+  bootstrapInstitution(input: Parameters<typeof genesisRuntime.bootstrap.bootstrap>[0]) {
+    this.boot();
+    return genesisRuntime.bootstrap.bootstrap(input);
   }
 }
 

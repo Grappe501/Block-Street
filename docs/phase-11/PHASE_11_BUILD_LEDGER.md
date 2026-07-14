@@ -78,9 +78,10 @@
 | W13 | Self-Building Institution & Capability Factory | **Complete** |
 | W14 | Digital Twin, Institutional Simulation & Enterprise Sandbox | **Complete** |
 | W15 | Institutional Operating System Kernel & Constitutional Runtime | **Complete** |
-| W16 | Living Civilization Runtime & Canonical Genesis Framework | Pending |
+| W16 | Living Civilization Runtime & Canonical Genesis Framework | **Complete** |
 
-**Validation:** `npm run phase11:11.7:w1` · `npm run phase11:11.7:w2` · `npm run phase11:11.7:w3` · `npm run phase11:11.7:w4` · `npm run phase11:11.7:w5` · `npm run phase11:11.7:w6` · `npm run phase11:11.7:w7` · `npm run phase11:11.7:w8` · `npm run phase11:11.7:w9` · `npm run phase11:11.7:w10` · `npm run phase11:11.7:w11` · `npm run phase11:11.7:w12` · `npm run phase11:11.7:w13` · `npm run phase11:11.7:w14` · `npm run phase11:11.7:w15`  
+**Validation:** `npm run phase11:11.7:w1` · `…` · `npm run phase11:11.7:w15` · `npm run phase11:11.7:w16`  
+**Status:** Build 11.7 Living Intelligence — **all 16 waves complete**  
 **Code:** `src/lib/civic-action/builds/11.7/living/`  
 **APIs:** `/api/v1/localbrain/*`
 
