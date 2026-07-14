@@ -26,6 +26,11 @@
     "remaining_need": 5
   },
   "recommendedCorrection": "Ship honest metrics panel; stop inventing current via percentages",
+  "uiVerified": {
+    "component": "CommunityGoals",
+    "shows": ["Goal", "Current confirmed participants", "Still needed", "How is this goal calculated?"],
+    "doesNotPresentGoalAsCurrentParticipation": true
+  },
   "tests": ["npm run test:v2a-participation"],
   "authority": "docs/v2/V2A_PARTICIPATION_GOAL_FORENSIC_REPORT.md"
 }

@@ -82,6 +82,38 @@ export function CommunityGoals({
       </div>
 
       <div className="space-y-5 px-6 py-5">
+        <div className="rounded-2xl border border-amber-200 bg-gradient-to-br from-amber-50 to-white p-4">
+          <p className="text-[11px] font-semibold uppercase tracking-wider text-amber-900">
+            Leadership launch team (not current headcount)
+          </p>
+          <div className="mt-3 grid gap-3 sm:grid-cols-3">
+            <MetricTile
+              label="Goal"
+              value={metrics.participation_goal}
+              hint="Initial launch-team goal — strategic target, not people already here."
+              accent="amber"
+            />
+            <MetricTile
+              label="Current confirmed participants"
+              value={metrics.confirmed_participants}
+              hint={metrics.aliases_excluded_note}
+              accent="emerald"
+            />
+            <MetricTile
+              label="Still needed"
+              value={metrics.remaining_need}
+              hint={`max(0, goal ${metrics.participation_goal} − confirmed ${metrics.confirmed_participants})`}
+              accent="slate"
+            />
+          </div>
+          {metrics.system_identities > metrics.confirmed_participants ? (
+            <p className="mt-3 text-xs text-amber-950">
+              System identities: {metrics.system_identities} · confirmed people:{" "}
+              {metrics.confirmed_people} · aliases collapsed to canonical persons (do not count as extra humans).
+            </p>
+          ) : null}
+        </div>
+
         <div className="grid gap-3 sm:grid-cols-2">
           <MetricTile
             label={isCampus ? "Campus registration sub-goal" : "Voter-registration goal"}
@@ -94,18 +126,6 @@ export function CommunityGoals({
                 : "Canonical county total from RedDirt"
             }
             accent="brand"
-          />
-          <MetricTile
-            label="Confirmed platform participants"
-            value={metrics.confirmed_participants}
-            hint={metrics.aliases_excluded_note}
-            accent="emerald"
-          />
-          <MetricTile
-            label="Leadership launch-team target"
-            value={metrics.participation_goal}
-            hint="Team-building floor — separate from field registration and VCI goals."
-            accent="amber"
           />
           <MetricTile
             label={isCampus ? "Campus VCI sub-goal" : "County VCI"}
@@ -164,7 +184,7 @@ export function CommunityGoals({
             aria-expanded={showLaunch}
             onClick={() => setShowLaunch((v) => !v)}
           >
-            Launch-team explanation {showLaunch ? "▴" : "▾"}
+            How is this goal calculated? {showLaunch ? "▴" : "▾"}
           </button>
         </div>
 
@@ -200,7 +220,16 @@ export function CommunityGoals({
         )}
 
         {showLaunch && (
-          <div className="space-y-1 rounded-xl border border-amber-200 bg-amber-50 p-4 text-xs text-amber-950">
+          <div className="space-y-2 rounded-xl border border-amber-200 bg-amber-50 p-4 text-xs text-amber-950">
+            <p className="rounded-md bg-white px-2 py-1.5 font-mono text-[11px] text-slate-900 ring-1 ring-amber-200">
+              {metrics.goal_calculation.formula}
+            </p>
+            <p>
+              Minimum launch team: {metrics.goal_calculation.minimum_launch_team}
+              {metrics.goal_calculation.configured_manual_goal != null
+                ? ` · Manual override: ${metrics.goal_calculation.configured_manual_goal}`
+                : " · No manual override"}
+            </p>
             {(metrics.goal_calculation.explanation ?? []).map((line) => (
               <p key={line}>{line}</p>
             ))}

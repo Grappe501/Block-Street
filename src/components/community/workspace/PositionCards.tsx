@@ -4,7 +4,12 @@ import { useMemo, useState } from "react";
 import Link from "next/link";
 import { buildSignupHref } from "@/lib/data";
 import type { PositionCardView, TeamDisplayLabel } from "@/lib/position-participation";
-import { LEAD_CONFIRMATION } from "@/lib/position-participation/labels";
+import {
+  FIELD_PLAN_PLACEHOLDER,
+  LEAD_CONFIRMATION,
+  LEAD_MEANING,
+  VOLUNTEER_MEANING,
+} from "@/lib/position-participation/labels";
 
 const LABEL_CHIP: Record<TeamDisplayLabel, string> = {
   "Help Build This Team": "bg-amber-100 text-amber-950 ring-1 ring-amber-200",
@@ -33,7 +38,7 @@ function FieldPlanPanel({ card }: { card: PositionCardView }) {
     <div className="mt-4 space-y-3 rounded-xl border border-slate-200 bg-slate-50 p-4 text-xs">
       {fp.content_status === "placeholder" && (
         <p className="rounded-lg border border-amber-300 bg-amber-50 px-3 py-2 font-medium text-amber-950">
-          Field Plan status: placeholder — detailed responsibilities will be added from the campaign Field Plan.
+          Field Plan status: placeholder — {FIELD_PLAN_PLACEHOLDER}
         </p>
       )}
       <div className="grid gap-3 sm:grid-cols-2">
@@ -150,56 +155,73 @@ function PositionCard({
             )}
           </div>
 
-          <div className="flex flex-wrap items-start gap-2">
-            {myType === "volunteer" ? (
-              <span className="rounded-xl border border-slate-300 bg-slate-100 px-3 py-2 text-xs font-semibold text-slate-900">
-                Volunteering
-              </span>
-            ) : (
-              <button
-                type="button"
-                disabled={busy}
-                onClick={() => join("volunteer")}
-                className="rounded-xl border border-slate-300 bg-white px-3.5 py-2 text-xs font-semibold text-slate-900 shadow-sm transition hover:border-slate-400 hover:bg-slate-50 disabled:opacity-50"
-              >
-                Volunteer
-              </button>
-            )}
-            {myType === "lead" ? (
-              <span className="rounded-xl border border-brand-300 bg-brand-100 px-3 py-2 text-xs font-semibold text-brand-950">
-                Leading
-              </span>
-            ) : confirmLead ? (
-              <div className="max-w-xs rounded-xl border border-brand-300 bg-brand-50 p-3 text-xs text-brand-950 shadow-sm">
-                <p className="leading-relaxed">{LEAD_CONFIRMATION}</p>
-                <div className="mt-3 flex gap-2">
-                  <button
-                    type="button"
-                    disabled={busy}
-                    onClick={() => join("lead")}
-                    className="rounded-lg bg-brand-700 px-3 py-1.5 font-semibold text-white hover:bg-brand-800 disabled:opacity-50"
-                  >
-                    Confirm lead
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => setConfirmLead(false)}
-                    className="rounded-lg px-3 py-1.5 font-semibold text-slate-800 hover:bg-white/70"
-                  >
-                    Cancel
-                  </button>
+          <div className="flex max-w-sm flex-col gap-2">
+            <div className="flex flex-wrap items-start gap-2">
+              {myType === "volunteer" ? (
+                <span className="rounded-xl border border-slate-300 bg-slate-100 px-3 py-2 text-xs font-semibold text-slate-900">
+                  Volunteering
+                </span>
+              ) : (
+                <button
+                  type="button"
+                  disabled={busy}
+                  title={VOLUNTEER_MEANING}
+                  onClick={() => join("volunteer")}
+                  className="rounded-xl border border-slate-300 bg-white px-3.5 py-2 text-xs font-semibold text-slate-900 shadow-sm transition hover:border-slate-400 hover:bg-slate-50 disabled:opacity-50"
+                >
+                  {myType === "lead" ? "Switch to Volunteer" : "Volunteer"}
+                </button>
+              )}
+              {myType === "lead" ? (
+                <span className="rounded-xl border border-brand-300 bg-brand-100 px-3 py-2 text-xs font-semibold text-brand-950">
+                  Leading
+                </span>
+              ) : confirmLead ? (
+                <div className="max-w-xs rounded-xl border border-brand-300 bg-brand-50 p-3 text-xs text-brand-950 shadow-sm">
+                  <p className="font-semibold">Help lead — not sole ownership</p>
+                  <p className="mt-1 leading-relaxed">{LEAD_CONFIRMATION}</p>
+                  <div className="mt-3 flex gap-2">
+                    <button
+                      type="button"
+                      disabled={busy}
+                      onClick={() => join("lead")}
+                      className="rounded-lg bg-brand-700 px-3 py-1.5 font-semibold text-white hover:bg-brand-800 disabled:opacity-50"
+                    >
+                      Confirm lead
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setConfirmLead(false)}
+                      className="rounded-lg px-3 py-1.5 font-semibold text-slate-800 hover:bg-white/70"
+                    >
+                      Cancel
+                    </button>
+                  </div>
                 </div>
-              </div>
-            ) : (
-              <button
-                type="button"
-                disabled={busy}
-                onClick={() => setConfirmLead(true)}
-                className="rounded-xl bg-brand-700 px-3.5 py-2 text-xs font-semibold text-white shadow-sm transition hover:bg-brand-800 disabled:opacity-50"
-              >
-                Lead
-              </button>
-            )}
+              ) : (
+                <button
+                  type="button"
+                  disabled={busy}
+                  title={LEAD_MEANING}
+                  onClick={() => setConfirmLead(true)}
+                  className="rounded-xl bg-brand-700 px-3.5 py-2 text-xs font-semibold text-white shadow-sm transition hover:bg-brand-800 disabled:opacity-50"
+                >
+                  {myType === "volunteer" ? "Switch to Lead" : "Lead"}
+                </button>
+              )}
+            </div>
+            {!myType && !confirmLead ? (
+              <dl className="space-y-1 text-[11px] leading-snug text-slate-600">
+                <div>
+                  <dt className="inline font-semibold text-slate-800">Volunteer: </dt>
+                  <dd className="inline">{VOLUNTEER_MEANING}</dd>
+                </div>
+                <div>
+                  <dt className="inline font-semibold text-slate-800">Lead: </dt>
+                  <dd className="inline">{LEAD_MEANING}</dd>
+                </div>
+              </dl>
+            ) : null}
           </div>
         </div>
 

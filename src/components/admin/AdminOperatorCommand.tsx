@@ -203,10 +203,11 @@ export function AdminOperatorCommand() {
             {goalForensic.formula}) — not aliases
           </li>
           <li>
-            Honest metrics: goal {goalForensic.honestPostFix?.participation_goal} · confirmed{" "}
-            {goalForensic.honestPostFix?.confirmed_participants} · need{" "}
-            {goalForensic.honestPostFix?.remaining_need} · identities{" "}
-            {goalForensic.honestPostFix?.system_identities}
+            Honest metrics on school/county goals UI: Goal{" "}
+            {goalForensic.honestPostFix?.participation_goal} · Current confirmed{" "}
+            {goalForensic.honestPostFix?.confirmed_participants} · Still needed{" "}
+            {goalForensic.honestPostFix?.remaining_need} · system identities{" "}
+            {goalForensic.honestPostFix?.system_identities} (aliases collapsed)
           </li>
           <li>
             Alias dedupe: <strong>canonical_person_id</strong> COUNT DISTINCT
