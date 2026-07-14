@@ -34,6 +34,40 @@ export default function July14MeetingPage() {
   return (
     <IdentityShell title={t("join.july14_entry")} subtitle={String(meeting?.title ?? "July 14 Organizing Platform Launch")} showSwitcher>
       <section
+        className="rounded-xl border-2 border-slate-900 bg-slate-950 p-5 text-white shadow-sm sm:p-6"
+        aria-labelledby="presentation-entry"
+      >
+        <p id="presentation-entry" className="text-xs font-semibold uppercase tracking-[0.16em] text-amber-300">
+          Present tonight
+        </p>
+        <h2 className="mt-2 text-2xl font-bold">Agenda as presentation</h2>
+        <p className="mt-2 text-sm text-white/80">
+          Walk the room through tonight’s agenda slide by slide — then hand college guests their own
+          onboarding deck.
+        </p>
+        <div className="mt-4 flex flex-wrap gap-2">
+          <Link
+            href="/presentations/july-14"
+            className="rounded-lg bg-amber-400 px-4 py-2.5 text-sm font-bold text-slate-950 hover:bg-amber-300"
+          >
+            Open July 14 agenda presentation
+          </Link>
+          <Link
+            href="/presentations/college"
+            className="rounded-lg border border-white/30 px-4 py-2.5 text-sm font-semibold text-white hover:bg-white/10"
+          >
+            College new-user presentation
+          </Link>
+          <Link
+            href="/feedback"
+            className="rounded-lg border border-white/30 px-4 py-2.5 text-sm font-semibold text-white hover:bg-white/10"
+          >
+            Beta feedback
+          </Link>
+        </div>
+      </section>
+
+      <section
         className="rounded-xl border-2 border-brand-600 bg-white p-5 shadow-sm sm:p-6"
         aria-labelledby="launch-agenda-heading"
       >
@@ -137,7 +171,10 @@ export default function July14MeetingPage() {
               <li>{t("agenda.s5.b")}</li>
             </ul>
             <div className="mt-3 flex flex-wrap gap-2">
-              <Link href="/start" className="rounded-lg bg-brand-700 px-3 py-2 text-xs font-semibold text-white hover:bg-brand-800">
+              <Link href="/presentations/college" className="rounded-lg bg-brand-700 px-3 py-2 text-xs font-semibold text-white hover:bg-brand-800">
+                College walkthrough
+              </Link>
+              <Link href="/start" className="rounded-lg border border-slate-300 bg-white px-3 py-2 text-xs font-semibold text-slate-900 hover:border-brand-400">
                 {t("agenda.s5.start")}
               </Link>
               <Link href="/choose-place" className="rounded-lg border border-slate-300 bg-white px-3 py-2 text-xs font-semibold text-slate-900 hover:border-brand-400">
@@ -146,8 +183,11 @@ export default function July14MeetingPage() {
               <Link href="/network" className="rounded-lg border border-slate-300 bg-white px-3 py-2 text-xs font-semibold text-slate-900 hover:border-brand-400">
                 {t("agenda.s5.network")}
               </Link>
-              <Link href="/directory" className="rounded-lg border border-slate-300 bg-white px-3 py-2 text-xs font-semibold text-slate-900 hover:border-brand-400">
-                {t("agenda.s5.directory")}
+              <Link href="/login" className="rounded-lg border border-slate-300 bg-white px-3 py-2 text-xs font-semibold text-slate-900 hover:border-brand-400">
+                Sign in
+              </Link>
+              <Link href="/feedback" className="rounded-lg border border-slate-300 bg-white px-3 py-2 text-xs font-semibold text-slate-900 hover:border-brand-400">
+                Feedback
               </Link>
             </div>
           </li>

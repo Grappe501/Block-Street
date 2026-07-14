@@ -13,6 +13,8 @@ function navFor(stage: "guest" | "choose" | "member" | "admin"): NavItem[] {
     return [
       { href: "/join", label: "Join", primary: true },
       { href: "/login", label: "Sign in" },
+      { href: "/presentations/college", label: "College" },
+      { href: "/feedback", label: "Feedback" },
     ];
   }
   if (stage === "choose") {
@@ -22,13 +24,17 @@ function navFor(stage: "guest" | "choose" | "member" | "admin"): NavItem[] {
     return [
       { href: "/network", label: "Network", primary: true },
       { href: "/field-strategy", label: "Field Manual" },
+      { href: "/presentations/college", label: "College" },
       { href: "/start", label: "Invite" },
       { href: "/july-14", label: "Tonight" },
+      { href: "/feedback", label: "Feedback" },
     ];
   }
   return [
     { href: "/network", label: "Network", primary: true },
     { href: "/july-14", label: "Tonight" },
+    { href: "/presentations/college", label: "College" },
+    { href: "/feedback", label: "Feedback" },
   ];
 }
 

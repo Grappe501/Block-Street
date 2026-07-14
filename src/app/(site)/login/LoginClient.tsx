@@ -26,7 +26,7 @@ export default function LoginClient() {
       setError("We could not sign you in. Check your email and password.");
       return;
     }
-    const next = searchParams.get("next") ?? "/account/security";
+    const next = searchParams.get("next") ?? "/network";
     router.push(next);
   }
 

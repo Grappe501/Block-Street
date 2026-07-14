@@ -127,5 +127,7 @@ export const config = {
     "/choose-place",
     "/start",
     "/july-14",
+    "/feedback",
+    "/presentations/:path*",
   ],
 };
