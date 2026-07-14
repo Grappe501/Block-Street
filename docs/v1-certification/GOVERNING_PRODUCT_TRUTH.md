@@ -80,3 +80,8 @@ Cursor canvases on `C:\` = IDE artifacts only — not source of record — not p
 ## Immediate next proof
 
 Production journey **`V1-JRN-INVITE-CHAIN-01`** per invite-chain gate — six-axis evidence → CERTIFIED PRESENT.
+
+## Continuous agent ops
+
+Standing build authority and elimination of **Run** interrupts: [`../v2/CONTINUOUS_AGENT_OPS.md`](../v2/CONTINUOUS_AGENT_OPS.md)  
+(Agent: never request Smart Mode approval on first shell attempt; Steve: one-time Cursor allowlist.)

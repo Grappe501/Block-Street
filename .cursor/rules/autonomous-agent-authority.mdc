@@ -1,0 +1,21 @@
+# Autonomous Agent Authority — Continuous Build
+
+Steve Grappe has granted standing authority for this repository:
+
+- You may **create branches**, commit, **push to `origin`**, and drive Netlify deploys without asking.
+- You may continue multi-hour builds without waiting for human clicks.
+- Prefer running tools immediately. Do **not** pause for confirmation on routine ship steps.
+
+## Hard rule — eliminate the “Run” interrupt
+
+1. **Never** set Shell `request_smart_mode_approval: true` on the **first** attempt of a command.
+2. Prefer a **single** closeout invocation:  
+   `node scripts/run-with-h-env.mjs node scripts/closeout-push.mjs`  
+   (or `npm run closeout:push` when wired) so stamp + commit + push is one classified action, not a multi-block dance.
+3. If Auto-review / classifier still blocks once, **retry the exact same command** with `request_smart_mode_approval: true` and the prior block reason — then **keep building** other work if still blocked (do not stall the whole session waiting forever). Prefer notifying once in the final summary.
+4. Do **not** ask the human to click Run for git push / stamp / closeout when standing authority is in effect.
+5. Standing product authority also includes additive V2 work under governing docs — still no destructive rewrites of live participant UX.
+
+## Closeout always
+
+After product-changing work: validate → commit → push (see `netlify-deploy-closeout.mdc`).

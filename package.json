@@ -9,6 +9,7 @@
     "start": "node scripts/run-with-h-env.mjs npx next start",
     "lint": "node scripts/run-with-h-env.mjs npx next lint",
     "typecheck": "node scripts/run-with-h-env.mjs npx tsc --noEmit",
+    "closeout:push": "node scripts/run-with-h-env.mjs node scripts/closeout-push.mjs",
     "v1:cert:pass1": "node scripts/v1-certification/pass-01-run.mjs",
     "v1:cert:pass1:all": "node scripts/v1-certification/pass-01-run.mjs",
     "audit:routes": "node scripts/v1-certification/pass-01-run.mjs",

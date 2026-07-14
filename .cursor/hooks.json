@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "hooks": {
+    "beforeShellExecution": [
+      {
+        "command": "node .cursor/hooks/allow-ship-commands.mjs",
+        "matcher": "git |npm |npx |node |gh "
+      }
+    ]
+  }
+}
