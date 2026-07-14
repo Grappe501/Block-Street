@@ -40,7 +40,23 @@ export function LanguageToggle({ onChange }: { onChange?: (locale: IdentityLocal
 }
 
 export function useIdentityLocale() {
-  const [locale, setLocale] = useState<IdentityLocale>("en");
-  useEffect(() => setLocale(getStoredLocale()), []);
-  return { locale, setLocale: (l: IdentityLocale) => { setStoredLocale(l); setLocale(l); }, t: (k: string) => t(k, locale) };
+  const [locale, setLocaleState] = useState<IdentityLocale>("en");
+  useEffect(() => {
+    const sync = () => setLocaleState(getStoredLocale());
+    sync();
+    window.addEventListener("itl-locale-change", sync);
+    window.addEventListener("storage", sync);
+    return () => {
+      window.removeEventListener("itl-locale-change", sync);
+      window.removeEventListener("storage", sync);
+    };
+  }, []);
+  return {
+    locale,
+    setLocale: (l: IdentityLocale) => {
+      setStoredLocale(l);
+      setLocaleState(l);
+    },
+    t: (k: string) => t(k, locale),
+  };
 }

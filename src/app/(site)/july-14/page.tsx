@@ -37,171 +37,132 @@ export default function July14MeetingPage() {
         className="rounded-xl border-2 border-brand-600 bg-white p-5 shadow-sm sm:p-6"
         aria-labelledby="launch-agenda-heading"
       >
-        <p className="text-xs font-semibold uppercase tracking-wide text-brand-700">Tonight · 6:00 PM</p>
+        <p className="text-xs font-semibold uppercase tracking-wide text-brand-700">{t("agenda.tonight")}</p>
         <h2 id="launch-agenda-heading" className="mt-1 text-2xl font-bold text-slate-900">
-          Meeting Agenda: Launching ASYON
+          {t("agenda.title")}
         </h2>
-        <p className="mt-1 text-sm text-slate-600">Duration: 30–45 minutes</p>
-        <p className="mt-3 rounded-lg bg-brand-50 px-3 py-2 text-sm font-medium text-brand-950">
-          Goal: Introduce the organization, rally participants, and assign roles to build collective power.
-        </p>
+        <p className="mt-1 text-sm text-slate-600">{t("agenda.duration")}</p>
+        <p className="mt-3 rounded-lg bg-brand-50 px-3 py-2 text-sm font-medium text-brand-950">{t("agenda.goal")}</p>
 
         <ol className="mt-6 space-y-6 text-sm text-slate-800">
           <li>
-            <h3 className="text-base font-bold text-slate-900">1. Introductions</h3>
+            <h3 className="text-base font-bold text-slate-900">{t("agenda.s1.title")}</h3>
             <ul className="mt-2 list-disc space-y-1.5 pl-5">
-              <li>
-                <strong>Chance and Xay (Youth Leaders):</strong> Share vision, experience, and passion for organizing young
-                people in politics.
-              </li>
-              <li>
-                <strong>Politician Guests:</strong> Briefly introduce them and their role in supporting this effort.
-              </li>
-              <li>
-                <strong>Quick Name and School:</strong> Each participant introduces themselves with their name &amp; school
-                (e.g., “Alex, University of Arkansas”).
-              </li>
+              <li>{t("agenda.s1.a")}</li>
+              <li>{t("agenda.s1.b")}</li>
+              <li>{t("agenda.s1.c")}</li>
             </ul>
           </li>
 
           <li>
-            <h3 className="text-base font-bold text-slate-900">2. Why This Matters</h3>
+            <h3 className="text-base font-bold text-slate-900">{t("agenda.s2.title")}</h3>
             <div className="mt-2 space-y-3">
               <div>
-                <p className="font-semibold text-slate-900">The Urgency</p>
+                <p className="font-semibold text-slate-900">{t("agenda.s2.urgency")}</p>
                 <ul className="mt-1 list-disc space-y-1.5 pl-5">
-                  <li>
-                    We’re at a perfect political cusp. The next elections (2026–2028) have the capability to be decided by
-                    young voters. If we organize now, we can influence every seat in the state.
-                  </li>
-                  <li>
-                    Steve (Overall Organizer) has never seen Arkansas colleges organize like this before. This is our chance
-                    to make history.
-                  </li>
-                  <li>
-                    You are the most valuable thing to politicians. Young voters are the largest and most untapped voting
-                    bloc by large margin. Politicians need us to win, but we need to organize to demand power in return.
-                  </li>
+                  <li>{t("agenda.s2.urgency.a")}</li>
+                  <li>{t("agenda.s2.urgency.b")}</li>
+                  <li>{t("agenda.s2.urgency.c")}</li>
                 </ul>
               </div>
               <div>
-                <p className="font-semibold text-slate-900">The Problem</p>
+                <p className="font-semibold text-slate-900">{t("agenda.s2.problem")}</p>
                 <ul className="mt-1 list-disc space-y-1.5 pl-5">
-                  <li>
-                    More than 50% of the voting population is under 50, but the rules are still made by those over 50. We
-                    have the numbers but not the organization to aid ourselves, <em>yet</em>.
-                  </li>
-                  <li>
-                    Ballot initiatives and lawmaking are areas where young people can have a massive impact—if we’re united.
-                  </li>
+                  <li>{t("agenda.s2.problem.a")}</li>
+                  <li>{t("agenda.s2.problem.b")}</li>
                 </ul>
               </div>
               <div>
-                <p className="font-semibold text-slate-900">The Opportunity</p>
+                <p className="font-semibold text-slate-900">{t("agenda.s2.opportunity")}</p>
                 <ul className="mt-1 list-disc space-y-1.5 pl-5">
-                  <li>
-                    Swinging the election for people like Kelly, people like Chris, or whoever we decide has our intentions
-                    best in mind. This isn’t about a single candidate. It’s about building team voting power to amplify our
-                    voice and demand change.
-                  </li>
-                  <li>After the election, we can uplift each other and future leaders to run for office in the coming years.</li>
+                  <li>{t("agenda.s2.opportunity.a")}</li>
+                  <li>{t("agenda.s2.opportunity.b")}</li>
                 </ul>
               </div>
             </div>
           </li>
 
           <li>
-            <h3 className="text-base font-bold text-slate-900">3. How This Works</h3>
+            <h3 className="text-base font-bold text-slate-900">{t("agenda.s3.title")}</h3>
             <div className="mt-2 space-y-3">
               <div>
-                <p className="font-semibold text-slate-900">Our Approach</p>
-                <p className="mt-1 pl-0">
-                  Every campus or group will be unique. We’re providing resources and support, but every group will shape
-                  this to fit their community.
-                </p>
+                <p className="font-semibold text-slate-900">{t("agenda.s3.approach")}</p>
+                <p className="mt-1">{t("agenda.s3.approach.body")}</p>
               </div>
               <div>
-                <p className="font-semibold text-slate-900">Core Roles Needed on Every Campus</p>
+                <p className="font-semibold text-slate-900">{t("agenda.s3.roles")}</p>
                 <ul className="mt-1 list-disc space-y-1 pl-5">
-                  <li>Social Media Lead (to grow our network and spread the word)</li>
-                  <li>Voter Registration Lead (to ensure our peers are registered and ready to vote)</li>
-                  <li>College/Community Lead (to oversee and coordinate efforts locally)</li>
-                  <li>Event Lead (to organize fun, engaging, and informative events)</li>
-                  <li>Canvassing/Outreach Lead (to connect with peers and expand our network)</li>
+                  <li>{t("agenda.s3.roles.a")}</li>
+                  <li>{t("agenda.s3.roles.b")}</li>
+                  <li>{t("agenda.s3.roles.c")}</li>
+                  <li>{t("agenda.s3.roles.d")}</li>
+                  <li>{t("agenda.s3.roles.e")}</li>
                 </ul>
               </div>
               <div>
-                <p className="font-semibold text-slate-900">Why Now?</p>
-                <p className="mt-1">
-                  Summer is the best time to organize. Life is less chaotic with school out so we can build momentum before
-                  the fall rush. Grinding this next month is <strong>essential</strong>.
-                </p>
+                <p className="font-semibold text-slate-900">{t("agenda.s3.why")}</p>
+                <p className="mt-1">{t("agenda.s3.why.body")}</p>
               </div>
             </div>
           </li>
 
           <li>
-            <h3 className="text-base font-bold text-slate-900">4. What We’re Building</h3>
+            <h3 className="text-base font-bold text-slate-900">{t("agenda.s4.title")}</h3>
             <div className="mt-2 space-y-3">
               <div>
-                <p className="font-semibold text-slate-900">Our Vision</p>
+                <p className="font-semibold text-slate-900">{t("agenda.s4.vision")}</p>
                 <ul className="mt-1 list-disc space-y-1.5 pl-5">
-                  <li>
-                    A social network across the state of young people (16–24) to get engaged, inform their peers, and
-                    establish political power.
-                  </li>
-                  <li>Making politics fun</li>
-                  <li>The Power of 5</li>
+                  <li>{t("agenda.s4.vision.a")}</li>
+                  <li>{t("agenda.s4.vision.b")}</li>
+                  <li>{t("agenda.s4.vision.c")}</li>
                 </ul>
               </div>
               <div>
-                <p className="font-semibold text-slate-900">Long-Term Goals</p>
+                <p className="font-semibold text-slate-900">{t("agenda.s4.long")}</p>
                 <ul className="mt-1 list-disc space-y-1.5 pl-5">
-                  <li>Set a foundation for organizing young people to run for office in future elections.</li>
-                  <li>Build soft power to influence local politics and politicians.</li>
-                  <li>Ballot initiatives and lawmaking — areas where we can have massive effect.</li>
-                  <li>Create a statewide network that prepares young leaders to take on leadership roles everywhere.</li>
-                  <li>Build collective power so we can change the government together.</li>
+                  <li>{t("agenda.s4.long.a")}</li>
+                  <li>{t("agenda.s4.long.b")}</li>
+                  <li>{t("agenda.s4.long.c")}</li>
+                  <li>{t("agenda.s4.long.d")}</li>
+                  <li>{t("agenda.s4.long.e")}</li>
                 </ul>
               </div>
             </div>
           </li>
 
           <li>
-            <h3 className="text-base font-bold text-slate-900">5. Show Them How to Use the Website</h3>
+            <h3 className="text-base font-bold text-slate-900">{t("agenda.s5.title")}</h3>
             <ul className="mt-2 list-disc space-y-1.5 pl-5">
-              <li>Walk through the website’s features</li>
-              <li>Highlight how they can access materials, training, and support to get started</li>
+              <li>{t("agenda.s5.a")}</li>
+              <li>{t("agenda.s5.b")}</li>
             </ul>
             <div className="mt-3 flex flex-wrap gap-2">
               <Link href="/start" className="rounded-lg bg-brand-700 px-3 py-2 text-xs font-semibold text-white hover:bg-brand-800">
-                Start / invite
+                {t("agenda.s5.start")}
               </Link>
               <Link href="/choose-place" className="rounded-lg border border-slate-300 bg-white px-3 py-2 text-xs font-semibold text-slate-900 hover:border-brand-400">
-                Choose place
+                {t("agenda.s5.place")}
               </Link>
               <Link href="/network" className="rounded-lg border border-slate-300 bg-white px-3 py-2 text-xs font-semibold text-slate-900 hover:border-brand-400">
-                My Network
+                {t("agenda.s5.network")}
               </Link>
               <Link href="/directory" className="rounded-lg border border-slate-300 bg-white px-3 py-2 text-xs font-semibold text-slate-900 hover:border-brand-400">
-                Directory
+                {t("agenda.s5.directory")}
               </Link>
             </div>
           </li>
 
           <li>
-            <h3 className="text-base font-bold text-slate-900">6. Next Steps: Meeting Again</h3>
+            <h3 className="text-base font-bold text-slate-900">{t("agenda.s6.title")}</h3>
             <ul className="mt-2 list-disc space-y-1.5 pl-5">
-              <li>Tell us what dates you <strong>can’t</strong> make, and we’ll pick the widest availability.</li>
-              <li>
-                Proposed window: <strong>July 20–26</strong>
-              </li>
+              <li>{t("agenda.s6.a")}</li>
+              <li>{t("agenda.s6.b")}</li>
             </ul>
           </li>
 
           <li>
-            <h3 className="text-base font-bold text-slate-900">7. Name Decision for the Organization</h3>
-            <p className="mt-2 text-slate-700">Optional, if time allows — open the floor to brainstorm names for the organization.</p>
+            <h3 className="text-base font-bold text-slate-900">{t("agenda.s7.title")}</h3>
+            <p className="mt-2 text-slate-700">{t("agenda.s7.body")}</p>
           </li>
         </ol>
       </section>
