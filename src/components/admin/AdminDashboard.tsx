@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import type { BuildProgress, Phase } from "@/lib/data";
 import { StatusBadge, ProgressBar } from "@/components/StatusBadge";
 import { PLATFORM } from "@/lib/data";
@@ -54,8 +54,10 @@ import { AdminPlatformServicesLayer } from "@/components/admin/AdminPlatformServ
 import { AdminInstitutionalLaunchLayer } from "@/components/admin/AdminInstitutionalLaunchLayer";
 import { AdminCivicGrowthLayer } from "@/components/admin/AdminCivicGrowthLayer";
 import { AdminCivicActionLayer } from "@/components/admin/AdminCivicActionLayer";
+import { AdminOperatorCommand } from "@/components/admin/AdminOperatorCommand";
 
 const TABS = [
+  { id: "command", label: "Op Command", icon: "📡" },
   { id: "overview", label: "Overview", icon: "📊" },
   { id: "volume0", label: "Volume 0", icon: "📖" },
   { id: "factory", label: "Factory", icon: "🏭" },
@@ -110,8 +112,24 @@ const TABS = [
 type TabId = (typeof TABS)[number]["id"];
 
 export function AdminDashboard({ progress }: { progress: BuildProgress }) {
-  const [activeTab, setActiveTab] = useState<TabId>("overview");
+  const [activeTab, setActiveTab] = useState<TabId>("command");
   const [selectedPhase, setSelectedPhase] = useState<Phase | null>(null);
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const tab = params.get("tab");
+    if (tab && TABS.some((t) => t.id === tab)) {
+      setActiveTab(tab as TabId);
+    }
+  }, []);
+
+  const selectTab = (id: TabId) => {
+    setActiveTab(id);
+    if (id !== "phases") setSelectedPhase(null);
+    const url = new URL(window.location.href);
+    url.searchParams.set("tab", id);
+    window.history.replaceState({}, "", url.toString());
+  };
 
   return (
     <div className="min-h-screen bg-slate-100">
@@ -121,9 +139,12 @@ export function AdminDashboard({ progress }: { progress: BuildProgress }) {
           <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <div>
               <p className="text-xs font-semibold uppercase tracking-wider text-brand-600">
-                Director Workbench
+                Director Workbench · Operator first
               </p>
               <h1 className="text-2xl font-bold text-slate-900">{PLATFORM.workingName} Build Control</h1>
+              <p className="mt-1 max-w-2xl text-sm text-slate-600">
+                Product truth lives in Op Command. Build % is implementation progress — not launch certification.
+              </p>
               <p className="text-sm text-slate-500">
                 v{progress.project.version} · Phase {progress.project.currentPhase}: {progress.project.currentPhaseName}
                 {"productionCommit" in progress.project && progress.project.productionCommit
@@ -134,7 +155,7 @@ export function AdminDashboard({ progress }: { progress: BuildProgress }) {
             <div className="flex items-center gap-4">
               <div className="text-right">
                 <p className="text-2xl font-bold text-brand-600">{progress.stats.percentComplete}%</p>
-                <p className="text-xs text-slate-500">Overall Progress</p>
+                <p className="text-xs text-slate-500">Build artifact %</p>
               </div>
               <div className="w-32">
                 <ProgressBar percent={progress.stats.percentComplete} />
@@ -151,10 +172,7 @@ export function AdminDashboard({ progress }: { progress: BuildProgress }) {
             {TABS.map((tab) => (
               <button
                 key={tab.id}
-                onClick={() => {
-                  setActiveTab(tab.id);
-                  if (tab.id !== "phases") setSelectedPhase(null);
-                }}
+                onClick={() => selectTab(tab.id)}
                 className={`whitespace-nowrap border-b-2 px-4 py-3 text-sm font-medium transition ${
                   activeTab === tab.id
                     ? "border-brand-600 text-brand-600"
@@ -171,7 +189,8 @@ export function AdminDashboard({ progress }: { progress: BuildProgress }) {
 
       {/* Content */}
       <div className="mx-auto max-w-7xl px-4 py-8">
-        {activeTab === "overview" && <AdminOverview progress={progress} onSelectPhase={(p) => { setSelectedPhase(p); setActiveTab("phases"); }} />}
+        {activeTab === "command" && <AdminOperatorCommand />}
+        {activeTab === "overview" && <AdminOverview progress={progress} onSelectPhase={(p) => { setSelectedPhase(p); selectTab("phases"); }} />}
         {activeTab === "volume0" && <AdminMasterArchitectureBible />}
         {activeTab === "factory" && <AdminImplementationVolumes />}
         {activeTab === "engineering" && <AdminEngineeringArchitecture />}

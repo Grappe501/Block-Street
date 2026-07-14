@@ -20,7 +20,7 @@
     { "id": "V1-JRN-RETURN-01", "name": "Returning Member", "status": "not_started" },
     { "id": "V1-JRN-COMMUNITY-01", "name": "Community Room", "status": "not_started", "lane": "V2-C" },
     { "id": "V1-JRN-LOCALBRAIN-01", "name": "LocalBrain", "status": "not_started", "lane": "V2-D" },
-    { "id": "V1-JRN-OPERATOR-01", "name": "Operator Command", "status": "not_started", "lane": "V2-A" },
+    { "id": "V1-JRN-OPERATOR-01", "name": "Operator Command", "status": "implemented", "lane": "V2-A", "note": "First surface shipped; journey cert still pending invite-chain + human ops test" },
     { "id": "V1-JRN-ASSURANCE-01", "name": "Assurance Dashboard", "status": "not_started", "lane": "V2-F" }
   ]
 }

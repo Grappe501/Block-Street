@@ -58,7 +58,7 @@ Not Started
 | V1-JRN-RETURN-01 | Returning Member resume session | Persist place + network | Not Started |
 | V1-JRN-COMMUNITY-01 | Community Room | V2-C | Not Started |
 | V1-JRN-LOCALBRAIN-01 | LocalBrain Shell | V2-D | Not Started |
-| V1-JRN-OPERATOR-01 | Operator Command daily work | V2-A | Not Started |
+| V1-JRN-OPERATOR-01 | Operator Command daily work | V2-A | Implemented (surface); journey cert pending |
 | V1-JRN-ASSURANCE-01 | Assurance / certification view | V2-F | Not Started |
 
 Evidence folders: `data/v1-certification/journeys/{Journey-ID}/`

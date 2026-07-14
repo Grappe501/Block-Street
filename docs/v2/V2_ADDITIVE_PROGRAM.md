@@ -15,12 +15,21 @@
 | 5 | V2-E | Network Graph | Living visible network of invites/places/membership |
 | 6 | V2-F | Assurance Dashboard | Certification truth, journey proof, deploy/risk state |
 
+## Preferred next move (locked with governing truth)
+
+1. **`V1-JRN-INVITE-CHAIN-01`** — certify + evidence on production  
+2. **V2-A Operator Command** — surface cert truth / attention / next actions (`/admin?tab=command`)  
+3. **V2-B** Postgres — only after (1) and (2)
+
 ## Immediate constraint
 
-`V1-JRN-INVITE-CHAIN-01` must reach **CERTIFIED PRESENT** (or fail with recorded defects) before marketing expansion beyond invite-only soft beta. V2-A operator/docs prep may proceed in parallel; participant-facing claim expansion may not.
+`V1-JRN-INVITE-CHAIN-01` must reach **CERTIFIED PRESENT** (or fail with recorded defects) before marketing expansion beyond invite-only soft beta. V2-A may proceed in parallel; participant-facing claim expansion may not.
 
-Journey ledger: [`../v1-certification/PRODUCT_CERTIFICATION_REGISTRY.md`](../v1-certification/PRODUCT_CERTIFICATION_REGISTRY.md)  
-Audience bands (Field Plan): [`AUDIENCE_SECTIONING_DOCTRINE.md`](./AUDIENCE_SECTIONING_DOCTRINE.md)
+Governance registries:
+
+- Journey ledger: [`../v1-certification/PRODUCT_CERTIFICATION_REGISTRY.md`](../v1-certification/PRODUCT_CERTIFICATION_REGISTRY.md)
+- Audience bands: [`AUDIENCE_SECTIONING_DOCTRINE.md`](./AUDIENCE_SECTIONING_DOCTRINE.md)
+- Feature discovery: [`FEATURE_DISCOVERY_REGISTRY.md`](./FEATURE_DISCOVERY_REGISTRY.md)
 
 ## Closeout
 

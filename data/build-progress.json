@@ -7,12 +7,12 @@
     "version": "1.0.0-launch",
     "currentPhase": 11,
     "currentPhaseName": "Living Intelligence & V1 Launch",
-    "currentDesignCycle": "Human Certification > Build % · Audience sectioning for Field Plan",
+    "currentDesignCycle": "Cert hierarchy Vision→…→Deploy · V2-A Op Command default · Invite chain cert next",
     "phase7Status": "complete",
     "phase8Status": "complete",
     "phase9Status": "complete",
     "phase10Status": "complete",
-    "lastUpdated": "2026-07-14T08:43:26.648Z",
+    "lastUpdated": "2026-07-14T08:55:00.000Z",
     "deployUrl": "https://block-street.netlify.app/",
     "githubRepo": "https://github.com/Grappe501/Block-Street",
     "netlifyStatus": "live",
@@ -21,7 +21,7 @@
     "launchCallDate": "2026-07-14",
     "leaderTestingDate": "2026-07-12",
     "phase11Status": "complete",
-    "activeProgram": "Certification registry live · Invite chain PENDING · Soft beta only · V2-A next · Field plan sectioning doctrine",
+    "activeProgram": "V2-A Op Command shipped · Invite chain PENDING · Soft beta only · V2-B after cert",
     "productionCommit": "a1e9651"
   },
   "constitutionalLayer": {

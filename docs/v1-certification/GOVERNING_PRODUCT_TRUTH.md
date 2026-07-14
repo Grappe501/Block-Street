@@ -12,21 +12,27 @@
 | 3 | [`V1_INVITE_CHAIN_CERTIFICATION_GATE.md`](./V1_INVITE_CHAIN_CERTIFICATION_GATE.md) | Production gate for invite journey |
 | 4 | [`PRODUCT_CERTIFICATION_REGISTRY.md`](./PRODUCT_CERTIFICATION_REGISTRY.md) | Master ledger of all human journeys |
 | 5 | [`../v2/V2_ADDITIVE_PROGRAM.md`](../v2/V2_ADDITIVE_PROGRAM.md) | V2 execution order (additive only) |
-| 6 | [`../v2/AUDIENCE_SECTIONING_DOCTRINE.md`](../v2/AUDIENCE_SECTIONING_DOCTRINE.md) | Who sees what — Field Plan prep |
+| 6 | [`../v2/AUDIENCE_SECTIONING_DOCTRINE.md`](../v2/AUDIENCE_SECTIONING_DOCTRINE.md) | Permanent pillar — who sees what |
+| 7 | [`../v2/FEATURE_DISCOVERY_REGISTRY.md`](../v2/FEATURE_DISCOVERY_REGISTRY.md) | Capability discovery registry |
+| 8 | [`../v2/V2_A_OPERATOR_COMMAND.md`](../v2/V2_A_OPERATOR_COMMAND.md) | Operator coherence surface |
 
-## Product truth hierarchy
+## Certification hierarchy (locked — not the reverse)
 
 ```text
-Human Certification
-        ↑
-Forensic Audit
-        ↑
-Journey Gates
-        ↑
-Implementation Metrics
-        ↑
-Build Percentages
+Vision
+    ↓
+Product Truth
+    ↓
+Journey Certification
+    ↓
+Implementation
+    ↓
+Deployment
 ```
+
+A deployment can succeed while certification remains incomplete. That is now explicitly represented: soft beta may ship; large-scale launch stays **NOT APPROVED** until journey gates are CERTIFIED PRESENT.
+
+## Product truth vs build metrics
 
 | Term | Meaning |
 |------|---------|
@@ -35,6 +41,18 @@ Build Percentages
 | **Certified** | CERTIFIED PRESENT via defined gate |
 
 **“100%” in Build Control is not a product-launch claim** unless the journey is CERTIFIED PRESENT.
+
+## Audience hierarchy (permanent pillar)
+
+```text
+Participant → Field Lead → County Command → Regional Command → State Command → Operator → Architect
+```
+
+Every page/dashboard/workflow/nav answers **“Who is this built for?”** before **“What feature is this?”**
+
+## Feature Discovery Registry
+
+Fifth governance ledger: every capability classified by audience, journey, product, phase, certification, nav, keywords, dependencies, owner — machine twin `data/registry/feature-discovery-registry.json`.
 
 ## Accepted baseline
 
@@ -77,9 +95,13 @@ Project Truth → H:\Block-Street
 
 Cursor canvases on `C:\` = IDE artifacts only — not source of record — not precedent for Regnat Populus or other projects. H-drive-only remains the standard for new platforms.
 
-## Immediate next proof
+## Preferred next move (locked)
 
-Production journey **`V1-JRN-INVITE-CHAIN-01`** per invite-chain gate — six-axis evidence → CERTIFIED PRESENT.
+1. Execute **`V1-JRN-INVITE-CHAIN-01`** certification and collect production evidence.
+2. Build / harden **V2-A Operator Command** so certification results surface immediately (`/admin` → Op Command).
+3. Only then begin **V2-B** (Postgres migration).
+
+Do **not** jump into more participant features ahead of this sequence.
 
 ## Continuous agent ops
 
