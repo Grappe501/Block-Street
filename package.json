@@ -21,6 +21,11 @@
     "test:july14-meeting-path": "node scripts/run-with-h-env.mjs node scripts/phase11/test-july14-meeting-path.mjs",
     "sandbox:july14-command": "node scripts/run-with-h-env.mjs node scripts/phase11/sandbox-july14-command.mjs",
     "test:calendar": "node scripts/run-with-h-env.mjs node scripts/phase11/test-calendar-system.mjs",
+    "test:calendar:persistence": "node scripts/run-with-h-env.mjs node scripts/phase11/test-calendar-persistence.mjs",
+    "calendar:db:probe": "node scripts/run-with-h-env.mjs node scripts/phase11/calendar-p1-tool.mjs probe",
+    "calendar:db:migrate": "node scripts/run-with-h-env.mjs node scripts/phase11/calendar-p1-tool.mjs migrate",
+    "calendar:seed-import": "node scripts/run-with-h-env.mjs node scripts/phase11/calendar-p1-tool.mjs seed-import",
+    "calendar:shadow-compare": "node scripts/run-with-h-env.mjs node scripts/phase11/calendar-p1-tool.mjs shadow-compare",
     "test:v2a-participation": "node scripts/run-with-h-env.mjs npx tsx scripts/v2a-participation-tests.ts",
     "test:field-goals": "node scripts/run-with-h-env.mjs npx tsx scripts/test-field-goals.ts && node scripts/field-goals/validate-field-goals.mjs",
     "test:college-command": "node scripts/run-with-h-env.mjs npx tsx scripts/test-college-command.ts",
@@ -421,7 +426,9 @@
   },
   "dependencies": {
     "@netlify/blobs": "^10.7.9",
+    "@types/pg": "^8.20.0",
     "next": "^15.1.0",
+    "pg": "^8.22.0",
     "qrcode": "^1.5.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"

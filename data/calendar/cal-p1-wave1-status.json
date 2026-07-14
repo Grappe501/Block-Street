@@ -1,0 +1,30 @@
+{
+  "phase": "CAL-P1",
+  "wave": "1",
+  "subphases": ["CAL-P1.0", "CAL-P1.1"],
+  "architecture_state": "PRESENT",
+  "certification_state": "ABSENT",
+  "authority": "not_production_scheduling_authority",
+  "baseline_soft_beta_content": "dd2841c",
+  "persistence_modes": ["seed_only", "session_soft_beta", "postgres_shadow", "postgres_primary"],
+  "safe_defaults": {
+    "CALENDAR_PERSISTENCE_MODE": "session_soft_beta",
+    "CALENDAR_WRITE_ENABLED": false,
+    "CALENDAR_RBAC_MODE": "audit_only",
+    "CALENDAR_PUBLICATION_ENABLED": false,
+    "CALENDAR_NOTIFICATION_MODE": "disabled"
+  },
+  "migration": "database/migrations/20260714190000_calendar_p1_core.sql",
+  "rollback": "database/migrations/20260714190000_calendar_p1_core.down.sql",
+  "repository": "src/lib/calendar/persistence/repository.ts",
+  "docs": [
+    "docs/calendar/CAL_P1_DURABILITY_ARCHITECTURE.md",
+    "docs/calendar/CAL_P1_MIGRATION_AND_ROLLBACK_PLAN.md"
+  ],
+  "gates": {
+    "A_shadow": "open_until_database_url_and_compare_pass",
+    "B_primary": "blocked",
+    "C_rbac_enforced": "blocked",
+    "F_certified": "blocked"
+  }
+}
