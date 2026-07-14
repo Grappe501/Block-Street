@@ -2,10 +2,22 @@
 
 **Phase:** Version 1.0 Certification  
 **Stance:** Product Review Board  
-**Active pass:** Pass 1 — Vision-to-Implementation Audit (`V1-CERT-PASS-01`)  
-**Repair posture:** NO REPAIRS DURING AUDIT
+**Governing truth:** [`GOVERNING_PRODUCT_TRUTH.md`](./GOVERNING_PRODUCT_TRUTH.md) (accepted 2026-07-14)  
+**Active focus:** Invite-chain gate `V1-JRN-INVITE-CHAIN-01` → CERTIFIED PRESENT  
+**Repair posture during Pass 1 audit:** NO REPAIRS DURING AUDIT (Pass 1 complete)
 
-## Start here (Pass 1)
+## Governing (start here)
+
+| Artifact | Path |
+|----------|------|
+| Governing product truth | [GOVERNING_PRODUCT_TRUTH.md](./GOVERNING_PRODUCT_TRUTH.md) |
+| Forensic audit (baseline packet) | [FORENSIC_PLATFORM_AUDIT_2026-07-14.md](./FORENSIC_PLATFORM_AUDIT_2026-07-14.md) |
+| Invite-chain certification gate | [V1_INVITE_CHAIN_CERTIFICATION_GATE.md](./V1_INVITE_CHAIN_CERTIFICATION_GATE.md) |
+| V2 additive program | [../v2/V2_ADDITIVE_PROGRAM.md](../v2/V2_ADDITIVE_PROGRAM.md) |
+
+**Rule:** Build Control “100%” measures artifacts. Product-launch claims require **CERTIFIED PRESENT** journeys.
+
+## Pass 1 (complete — reference)
 
 | Artifact | Path |
 |----------|------|

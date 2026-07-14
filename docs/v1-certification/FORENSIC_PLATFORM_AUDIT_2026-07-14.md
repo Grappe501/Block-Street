@@ -3,7 +3,9 @@
 **Date:** 2026-07-14  
 **Audience:** Steve Grappe · Ernie (architecture) · Build Control  
 **Tip commit at publish:** includes invite Wave1 fix `180c503`  
-**Interactive canvas:** Cursor canvas `asyon-forensic-platform-audit.canvas.tsx`
+**Operator acceptance:** [`GOVERNING_PRODUCT_TRUTH.md`](./GOVERNING_PRODUCT_TRUTH.md) (accepted — forensic packet is governing product truth)
+
+> **Locked:** Build completion ≠ CERTIFIED PRESENT. “100%” is not a launch claim without journey certification.
 
 ---
 

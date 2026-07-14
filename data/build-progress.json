@@ -7,12 +7,12 @@
     "version": "1.0.0-launch",
     "currentPhase": 11,
     "currentPhaseName": "Living Intelligence & V1 Launch",
-    "currentDesignCycle": "Version 1.0 Certification + Live Launch (July 14)",
+    "currentDesignCycle": "Governing truth accepted · V1 invite-chain CERT gate · V2-A next",
     "phase7Status": "complete",
     "phase8Status": "complete",
     "phase9Status": "complete",
     "phase10Status": "complete",
-    "lastUpdated": "2026-07-14T08:29:33.601Z",
+    "lastUpdated": "2026-07-14T08:37:57.611Z",
     "deployUrl": "https://block-street.netlify.app/",
     "githubRepo": "https://github.com/Grappe501/Block-Street",
     "netlifyStatus": "live",
@@ -21,7 +21,7 @@
     "launchCallDate": "2026-07-14",
     "leaderTestingDate": "2026-07-12",
     "phase11Status": "complete",
-    "activeProgram": "Forensic audit published · V1 narrow Launch Ready · Cert 20.2% · V2 additive lanes",
+    "activeProgram": "GOVERNING: forensic packet over Build % · Gate V1-JRN-INVITE-CHAIN-01 · V2-A Operator Command next",
     "productionCommit": "b838585"
   },
   "constitutionalLayer": {
@@ -36,7 +36,7 @@
     "launchReady": true,
     "launchChecklistComplete": 10,
     "launchChecklistTotal": 10,
-    "notes": "PHASE-001.7 Launch Ready on Netlify Blobs. Invite registration, /network, /s/slug+QR, choose-place, directory search, admin participants. Postgres still optional."
+    "notes": "PHASE-001.7 Launch Ready on Blobs. Product-launch claims require CERTIFIED PRESENT journeys. Large-scale launch = no. Invite-only soft beta after invite-chain gate."
   },
   "volume0": {
     "id": 0,
@@ -1392,6 +1392,12 @@
     }
   ],
   "buildLog": [
+    {
+      "date": "2026-07-14",
+      "title": "GOVERNING TRUTH ACCEPTED — invite-chain CERT gate + V2 order locked",
+      "phase": 11,
+      "summary": "Forensic packet governs. Build % ≠ launch claim. Immediate gate V1-JRN-INVITE-CHAIN-01. V2-A→F ordered. Netlify closeout standing."
+    },
     {
       "date": "2026-07-14",
       "title": "FORENSIC AUDIT — Mission vs build vs Cert Pass 1 + V2 additive lanes",
