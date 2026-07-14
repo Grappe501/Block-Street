@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updated": "2026-07-14T18:42:07.924Z",
+  "updated": "2026-07-14T19:00:41.907Z",
   "entries": [
     {
       "at": "2026-07-14T18:05:00.000Z",
@@ -85,6 +85,31 @@
       },
       "broad_ingest": false,
       "personnel_assignment": false
+    },
+    {
+      "at": "2026-07-14T19:00:41.907Z",
+      "event": "v2b5_durability_prep_freeze",
+      "artifacts": [
+        "data/field-plan/approved-template-durability-registry.json",
+        "data/v2/v2b-postgres-port-readiness-map.json"
+      ],
+      "summary": {
+        "approved_responsibilities": 44,
+        "approved_templates": 44,
+        "approved_kpis": 17,
+        "durability_records": 105,
+        "gates_pass": 8,
+        "gates_total": 8,
+        "all_gates_green": true,
+        "storage_backend": "static_seed",
+        "dual_write_started": false,
+        "postgres_live": false,
+        "personnel_assignments": 0,
+        "broad_ingest_allowed": false
+      },
+      "broad_ingest": false,
+      "personnel_assignment": false,
+      "postgres_cutover": false
     }
   ]
 }

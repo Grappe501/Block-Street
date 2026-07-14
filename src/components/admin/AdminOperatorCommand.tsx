@@ -12,6 +12,7 @@ import persistAudit from "../../../data/v2/production-persistence-forensic-audit
 import positionMapping from "../../../data/field-plan/position-mapping-registry.json";
 import responsibilityLibrary from "../../../data/field-plan/responsibility-library.json";
 import kpiBinding from "../../../data/field-plan/kpi-binding-registry.json";
+import durabilityRegistry from "../../../data/field-plan/approved-template-durability-registry.json";
 import reviewQueue from "../../../data/field-plan/ingestion/review-queue.json";
 import conflictQueue from "../../../data/field-plan/ingestion/conflict-queue.json";
 import { getCountyFieldGoal, getFieldGoalsMeta, CAMPUS_GOAL_FORMULA_VERSION } from "@/lib/field-goals";
@@ -316,8 +317,45 @@ export function AdminOperatorCommand() {
             · broad ingest still blocked
           </li>
           <li>
-            Twin: <code>data/field-plan/kpi-binding-registry.json</code> · docs/v2/V2B4_KPI_WIRING.md · next
-            V2-B.5 durability prep
+            Twin: <code>data/field-plan/kpi-binding-registry.json</code> · docs/v2/V2B4_KPI_WIRING.md
+          </li>
+        </ul>
+      </div>
+
+      <div className="card border-slate-200 bg-white p-4">
+        <h3 className="text-sm font-bold text-slate-950">V2-B.5 Durability prep</h3>
+        <ul className="mt-3 space-y-1.5 text-xs text-slate-800">
+          <li>
+            Freeze:{" "}
+            <strong>
+              {(durabilityRegistry.summary as { approved_templates?: number })?.approved_templates ?? 0}{" "}
+              templates
+            </strong>{" "}
+            · {(durabilityRegistry.summary as { approved_responsibilities?: number })
+              ?.approved_responsibilities ?? 0}{" "}
+            responsibilities ·{" "}
+            {(durabilityRegistry.summary as { approved_kpis?: number })?.approved_kpis ?? 0} KPIs
+          </li>
+          <li>
+            Storage: <code>{String((durabilityRegistry.summary as { storage_backend?: string })?.storage_backend ?? "static_seed")}</code>{" "}
+            · dual-write{" "}
+            {(durabilityRegistry.summary as { dual_write_started?: boolean })?.dual_write_started
+              ? "started"
+              : "not started"}{" "}
+            · Postgres{" "}
+            {(durabilityRegistry.summary as { postgres_live?: boolean })?.postgres_live ? "live" : "not live"}
+          </li>
+          <li>
+            Gates:{" "}
+            {(durabilityRegistry.summary as { gates_pass?: number })?.gates_pass ?? 0}/
+            {(durabilityRegistry.summary as { gates_total?: number })?.gates_total ?? 0} green · personnel
+            assigns{" "}
+            {(durabilityRegistry.summary as { personnel_assignments?: number })?.personnel_assignments ?? 0} ·
+            broad ingest blocked
+          </li>
+          <li>
+            Twin: <code>data/field-plan/approved-template-durability-registry.json</code> ·
+            docs/v2/V2B5_DURABILITY_PREP.md · invite-chain CERTIFIED PRESENT still launch blocker
           </li>
         </ul>
       </div>

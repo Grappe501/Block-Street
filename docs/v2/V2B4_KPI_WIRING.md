@@ -35,4 +35,4 @@ npm run test:v2b4-kpi-wiring
 
 ## Next
 
-V2-B.5 — durability prep for approved templates (still Blobs+seed until Postgres/RBAC gates) · invite-chain CERTIFIED PRESENT remains the named launch blocker.
+**V2-B.5** Durability prep — see [`V2B5_DURABILITY_PREP.md`](./V2B5_DURABILITY_PREP.md).

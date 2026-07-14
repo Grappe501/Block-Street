@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updated": "2026-07-14T10:30:00.000Z",
+  "updated": "2026-07-14T19:00:41.907Z",
   "status": "prepared_not_started",
   "safe_order": [
     "read_only_schema",
@@ -15,13 +15,44 @@
     "blob_retirement_after_cert"
   ],
   "entities": [
-    { "id": "field_goals", "class": "static_seed" },
-    { "id": "invites", "class": "Blob temporary", "note": "dual-write candidate" },
-    { "id": "position_memberships", "class": "Blob temporary" },
-    { "id": "identity", "class": "requires identity reconciliation" },
-    { "id": "hs_contacts", "class": "requires privacy review" },
-    { "id": "verified_registrations", "class": "not persisted", "state": "blocked" },
-    { "id": "director_audit", "class": "not persisted" }
+    {
+      "id": "field_goals",
+      "class": "static_seed"
+    },
+    {
+      "id": "invites",
+      "class": "Blob temporary",
+      "note": "dual-write candidate"
+    },
+    {
+      "id": "position_memberships",
+      "class": "Blob temporary"
+    },
+    {
+      "id": "identity",
+      "class": "requires identity reconciliation"
+    },
+    {
+      "id": "hs_contacts",
+      "class": "requires privacy review"
+    },
+    {
+      "id": "verified_registrations",
+      "class": "not persisted",
+      "state": "blocked"
+    },
+    {
+      "id": "director_audit",
+      "class": "not persisted"
+    },
+    {
+      "id": "field_plan_approved_templates",
+      "class": "static_seed",
+      "note": "V2-B.5 freeze — Blobs dual-write later; no personnel assign; no Postgres cutover",
+      "approved_templates": 44,
+      "approved_responsibilities": 44,
+      "twin": "data/field-plan/approved-template-durability-registry.json"
+    }
   ],
   "netlify_database_live": false
 }

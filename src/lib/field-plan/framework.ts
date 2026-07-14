@@ -21,6 +21,8 @@ export {
 
 export { matchingKpisFor, wireFieldPlanKpis } from "./kpi-wiring";
 
+export { buildDurabilityPrep, durabilityPrepReady } from "./durability-prep";
+
 export function getVictoryFieldFramework() {
   return framework;
 }

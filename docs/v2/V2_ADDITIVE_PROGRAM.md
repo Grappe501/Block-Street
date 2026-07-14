@@ -22,8 +22,8 @@
 3. **V2-B.2** Position mapping registry + review/conflict queues (map into V2-A.3; no silent assign)  
 4. **V2-B.3** Expandable responsibility library bound to mapped seats (task scaffolds; no personnel assign)  
 5. **V2-B.4** KPI wiring + review resolution for content-backed responsibilities (templates approved; still unassigned)  
-6. **V2-B.5+** durability prep for approved templates · Postgres/personnel later  
-7. **V2-B Postgres / personnel durability** remains later — Blobs+seed until gates proven  
+6. **V2-B.5** Durability prep — freeze approved templates on static_seed (no Postgres cutover; no personnel assign)  
+7. **V2-B.6+ / Postgres lane** dual-write candidates later — Blobs+seed until gates proven · invite-chain CERTIFIED PRESENT still blocks expansion  
 
 Note: historical “V2-B Blobs→Postgres” in the original table remains a later durability lane; Field Plan operationalization is the active V2-B content lane.
 

@@ -21,6 +21,7 @@ Machine twin: `data/v2/v2b-postgres-port-readiness-map.json`
 | Entity | Classification |
 |--------|----------------|
 | Field goals snapshot | `static_seed` → later dual-write optional |
+| Field Plan approved templates (V2-B.5) | `static_seed` freeze — dual-write later; no personnel assign |
 | Invites / accept | `Blob temporary` → `ready for dual-write` candidate |
 | Position memberships | `Blob temporary` / local JSON — needs durability proof first |
 | Identity/GHID | `requires identity reconciliation` |
