@@ -1,0 +1,11 @@
+{
+  "pattern": "RedDirt → read-only ingest → Block-Street snapshot → app views",
+  "no_runtime_h_drive_dependency": true,
+  "no_reddirt_writes": true,
+  "mapping": {
+    "goals[].goal": "counties[].voter_registration_goal",
+    "counties[].vci": "counties[].vci",
+    "institution_sub_goal": "Math.ceil(voter_registration_goal * 0.25)"
+  },
+  "acronym_note": "RedDirt VCI = Victory Contribution Index. Distinct from any prior Block-Street 'Vote Civic Involvement' label."
+}

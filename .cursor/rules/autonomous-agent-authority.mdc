@@ -52,6 +52,23 @@ GitHub → Netlify deploys automatically. There is **no** “pending Steve appro
 
 Do **not** claim Cursor will run indefinitely after the application closes. Ongoing product jobs must run on Netlify scheduled/background functions, GitHub Actions, durable queues, or event-triggered server functions. The browser is a monitor — not the worker. Cursor IDE “Run” approvals are not ASYON product UI (`docs/v2/V2A_RUN_BUTTON_AUDIT.md`).
 
-## Machine prerequisite (Steve, once)
+## Cursor application setting (required)
 
-Without **Cursor Settings → Agents → Approvals & Execution → Run Everything** and Dotfile Protection **OFF**, no rule file can remove the IDE Run button. Document: `docs/v2/CONTINUOUS_AGENT_OPS.md`.
+Repository rules **cannot** override Cursor’s own command-approval UI.
+
+Steve must enable the most permissive trusted-workspace execution for `H:\Block-Street` — typically labeled:
+
+```text
+Run Everything
+Always allow
+Auto-run commands
+Trusted workspace
+```
+
+(Use the exact wording in the installed Cursor version.)
+
+Dotfile Protection must not block approved repository rule updates.
+
+Agent: continue the full assigned slice without pausing after every command. Stop only for hard boundaries listed below.
+
+Do not claim Burt continues after Cursor/machine closes. Do not claim asynchronous offline work.

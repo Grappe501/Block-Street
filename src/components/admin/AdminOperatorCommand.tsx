@@ -7,6 +7,9 @@ import launchReadiness from "../../../data/launch-readiness.json";
 import buildProgress from "../../../data/build-progress.json";
 import goalForensic from "../../../data/v2/participation-goal-forensic-report.json";
 import runAudit from "../../../data/v2/run-button-audit.json";
+import fieldMeta from "../../../data/field-goals/ingestion-manifest.json";
+import persistAudit from "../../../data/v2/production-persistence-forensic-audit.json";
+import { getCountyFieldGoal } from "@/lib/field-goals";
 
 type Attention = { id: string; severity: "high" | "medium" | "low"; title: string; next: string };
 
@@ -71,6 +74,7 @@ export function AdminOperatorCommand() {
     "productionCommit" in (buildProgress.project ?? {})
       ? String((buildProgress.project as { productionCommit?: string }).productionCommit ?? "")
       : "";
+  const clark = getCountyFieldGoal("clark");
 
   return (
     <div className="space-y-6">
@@ -113,6 +117,42 @@ export function AdminOperatorCommand() {
           <p className="text-2xl font-bold text-slate-900">{features.length}</p>
           <p className="text-xs text-slate-600">Features registered</p>
         </div>
+      </div>
+
+      <div className="card border-slate-200 bg-white p-4">
+        <h3 className="text-sm font-bold text-slate-950">V2-A.2 — RedDirt · College Command · Persistence</h3>
+        <ul className="mt-3 space-y-1.5 text-xs text-slate-800">
+          <li>
+            RedDirt ingestion: <strong>{fieldMeta.county_count ?? 0} / 75</strong> counties ·{" "}
+            {(fieldMeta.missing as unknown[] | undefined)?.length ? "gaps present" : "complete snapshot"}
+          </li>
+          <li>
+            Clark sample: registration {clark?.voter_registration_goal ?? "—"} · VCI {clark?.vci ?? "—"} · school
+            25% sub-goal {clark?.institution_sub_goal ?? "—"}
+          </li>
+          <li>
+            Institution rule: <code>Math.ceil(county_goal × 0.25)</code> · sub_goal_within_parent (does not inflate
+            county)
+          </li>
+          <li>
+            College Command: <a className="text-brand-800 underline" href="/admin/college-command">/admin/college-command</a>{" "}
+            (alias /college-command)
+          </li>
+          <li>
+            Director Omniview: <a className="text-brand-800 underline" href="/admin/director">/admin/director</a> ·
+            read-only inspect banners
+          </li>
+          <li>
+            Persistence: <strong>{String(persistAudit.canonical_persistence_backend)}</strong> · Postgres active?{" "}
+            <strong>{String(persistAudit.netlify_database_postgres_active)}</strong>
+          </li>
+          <li>V2-B: deferred — readiness map prepared, no blind cutover</li>
+          <li>
+            Prior goal forensic (fake “6”): {goalForensic.roleOfDisplayedValue} — superseded by RedDirt for field
+            goals
+          </li>
+          <li>Product Run buttons: {(runAudit.participant_run_buttons ?? []).length} · Cursor IDE Run ≠ product</li>
+        </ul>
       </div>
 
       <div className="card border-slate-200 bg-white p-4">

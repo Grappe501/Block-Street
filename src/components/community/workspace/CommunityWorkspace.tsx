@@ -9,6 +9,7 @@ import { SocialMeetupHub } from "./SocialMeetupHub";
 import { FunctionalLanes } from "./FunctionalLanes";
 import { PeopleDirectoryGate } from "./PeopleDirectoryGate";
 import { CommitPlaceButton } from "@/components/launch/CommitPlaceButton";
+import { InspectBanner } from "./InspectBanner";
 
 type CommunityWorkspaceProps = {
   kind: CommunityKind;
@@ -101,6 +102,7 @@ export function CommunityWorkspace({
           goals={workspace.goals}
           metrics={workspace.participationMetrics}
           primaryColor={workspace.primaryColor}
+          scopeKind={workspace.kind}
         />
         <PositionCards
           cards={workspace.positionCards}
@@ -148,6 +150,7 @@ export function CommunityWorkspace({
 
   return (
     <div>
+      <InspectBanner />
       {header}
       {body}
     </div>

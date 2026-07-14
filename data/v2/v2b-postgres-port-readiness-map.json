@@ -1,0 +1,27 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-07-14T10:30:00.000Z",
+  "status": "prepared_not_started",
+  "safe_order": [
+    "read_only_schema",
+    "identity_tenancy",
+    "dual_write",
+    "read_comparison",
+    "backfill",
+    "verification",
+    "selective_read_cutover",
+    "rollback_proof",
+    "canonical_store_declaration",
+    "blob_retirement_after_cert"
+  ],
+  "entities": [
+    { "id": "field_goals", "class": "static_seed" },
+    { "id": "invites", "class": "Blob temporary", "note": "dual-write candidate" },
+    { "id": "position_memberships", "class": "Blob temporary" },
+    { "id": "identity", "class": "requires identity reconciliation" },
+    { "id": "hs_contacts", "class": "requires privacy review" },
+    { "id": "verified_registrations", "class": "not persisted", "state": "blocked" },
+    { "id": "director_audit", "class": "not persisted" }
+  ],
+  "netlify_database_live": false
+}

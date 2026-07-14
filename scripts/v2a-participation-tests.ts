@@ -62,14 +62,10 @@ function testHendersonProportionalCivic() {
     enrollment: 3190,
     countySlug: "clark",
   });
-  assert.ok(m.campus_enrollment === 3190);
-  assert.ok((m.county_voting_age_population ?? 0) > 10000);
-  assert.ok((m.campus_share_of_county_vap ?? 0) > 0.1);
-  assert.ok(m.registration_target >= 15);
-  assert.ok(m.vote_participation_target >= 10);
-  assert.ok(m.civic_goal_formula?.includes("county_voting_age_population"));
-  // Proportional: not the old 5%-of-enrollment invention (160)
-  assert.ok(m.registration_target < 160);
+  // RedDirt Clark registration 291 → ceil(291*0.25)=73
+  assert.strictEqual(m.registration_target, 73);
+  assert.strictEqual(m.county_vci, 2543);
+  assert.ok(m.civic_goal_formula?.includes("0.25"));
 }
 
 function testLegacySixForensic() {

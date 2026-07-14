@@ -107,6 +107,9 @@ export type HonestParticipationMetrics = {
   campus_share_of_county_vap?: number | null;
   county_voting_age_population?: number | null;
   campus_enrollment?: number | null;
+  /** RedDirt Victory Contribution Index (county-level) */
+  county_vci?: number;
+  vci_definition?: string;
 };
 
 export type PositionCardView = {

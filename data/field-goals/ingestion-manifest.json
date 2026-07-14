@@ -1,0 +1,28 @@
+{
+  "ingested_at": "2026-07-14T09:22:21.719Z",
+  "sources": [
+    {
+      "path": "H:\\SOSWebsite\\RedDirt\\docs\\strategic-plan\\plurality-victory-plan\\part-ii-electoral-math\\chapter-05-fifty-thousand-new-voter-plan\\statewide-registration-summary.json",
+      "role": "registration_goals",
+      "generatedAt": "2026-06-14T14:11:58.501Z"
+    },
+    {
+      "path": "H:\\SOSWebsite\\RedDirt\\docs\\strategic-plan\\plurality-victory-plan\\command-center\\victory-contribution-index.json",
+      "role": "vci",
+      "generatedAt": "2026-06-18T21:54:24.575Z"
+    },
+    {
+      "path": "H:\\SOSWebsite\\RedDirt\\docs\\strategic-plan\\plurality-victory-plan\\opportunity-scorecard\\statewide-opportunity-scorecard.json",
+      "role": "fips_support",
+      "present": false
+    }
+  ],
+  "county_count": 75,
+  "missing": [],
+  "conflicts": [],
+  "write_targets": [
+    "data/field-goals/county-field-goals.json",
+    "data/field-goals/ingestion-manifest.json",
+    "data/field-goals/source-lineage.json"
+  ]
+}

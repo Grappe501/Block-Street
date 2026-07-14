@@ -4,31 +4,6 @@ import { useState } from "react";
 import type { CommunityGoal } from "@/lib/community-workspace";
 import type { HonestParticipationMetrics } from "@/lib/position-participation";
 
-function GoalBar({ goal }: { goal: CommunityGoal }) {
-  return (
-    <div className="rounded-xl border border-slate-200/80 bg-white p-4 shadow-sm">
-      <div className="flex items-baseline justify-between gap-2 text-sm">
-        <span className="font-semibold text-slate-900">{goal.label}</span>
-        <span className="tabular-nums font-medium text-slate-700">
-          {goal.current.toLocaleString()}
-          <span className="text-slate-400"> / </span>
-          {goal.target.toLocaleString()}
-        </span>
-      </div>
-      <div className="mt-3 h-3 overflow-hidden rounded-full bg-slate-100">
-        <div
-          className="h-full rounded-full bg-gradient-to-r from-brand-500 to-brand-700 transition-all duration-500"
-          style={{ width: `${Math.max(goal.percent, goal.percent > 0 ? 2 : 0)}%` }}
-        />
-      </div>
-      <p className="mt-2 text-xs text-slate-600">
-        Confirmed progress · deadline{" "}
-        {new Date(goal.deadline).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}
-      </p>
-    </div>
-  );
-}
-
 function MetricTile({
   label,
   value,
@@ -38,25 +13,28 @@ function MetricTile({
   label: string;
   value: string | number;
   hint?: string;
-  accent: "brand" | "amber" | "slate" | "emerald";
+  accent: "brand" | "amber" | "slate" | "emerald" | "sky";
 }) {
   const shell = {
     brand: "border-brand-200 bg-gradient-to-br from-white to-brand-50",
     amber: "border-amber-200 bg-gradient-to-br from-white to-amber-50",
     slate: "border-slate-200 bg-gradient-to-br from-white to-slate-50",
     emerald: "border-emerald-200 bg-gradient-to-br from-white to-emerald-50",
+    sky: "border-sky-200 bg-gradient-to-br from-white to-sky-50",
   }[accent];
   const valueColor = {
     brand: "text-brand-950",
     amber: "text-amber-950",
     slate: "text-slate-950",
     emerald: "text-emerald-950",
+    sky: "text-sky-950",
   }[accent];
   const labelColor = {
     brand: "text-brand-800",
     amber: "text-amber-900",
     slate: "text-slate-700",
     emerald: "text-emerald-900",
+    sky: "text-sky-900",
   }[accent];
 
   return (
@@ -72,15 +50,19 @@ export function CommunityGoals({
   goals,
   metrics,
   primaryColor,
+  scopeKind,
 }: {
   goals: CommunityGoal[];
   metrics: HonestParticipationMetrics;
   primaryColor?: string;
+  scopeKind?: string;
 }) {
-  const [showCalc, setShowCalc] = useState(false);
+  const [showLaunch, setShowLaunch] = useState(false);
   const [showCivic, setShowCivic] = useState(false);
-  const calc = metrics.goal_calculation;
+  const [showVci, setShowVci] = useState(false);
   const accent = primaryColor ?? "#0d9488";
+  const isCampus = scopeKind && scopeKind !== "county";
+  const regGoal = goals.find((g) => g.kind === "registration");
 
   return (
     <section className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
@@ -90,116 +72,143 @@ export function CommunityGoals({
           background: `linear-gradient(120deg, ${accent}14 0%, #ffffff 55%, #f8fafc 100%)`,
         }}
       >
-        <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-slate-700">Participation truth</p>
-        <h2 className="mt-1 text-xl font-bold text-slate-950">Where this community stands</h2>
-        <p className="mt-1 max-w-xl text-sm text-slate-700">
-          Goals are targets. Confirmed people are real humans — aliases count once.
+        <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-slate-700">Field &amp; team goals</p>
+        <h2 className="mt-1 text-xl font-bold text-slate-950">Truthful targets</h2>
+        <p className="mt-1 max-w-2xl text-sm text-slate-700">
+          {isCampus
+            ? "Institution registration sub-goal is 25% of the county RedDirt goal — inside the county total, not added on top."
+            : "County registration goal and VCI come from the RedDirt Victory Plan snapshot."}
         </p>
       </div>
 
       <div className="space-y-5 px-6 py-5">
         <div className="grid gap-3 sm:grid-cols-2">
           <MetricTile
-            label="Goal"
-            value={metrics.participation_goal}
-            hint={`Initial launch-team goal: ${metrics.participation_goal} people.`}
+            label={isCampus ? "Voter-registration sub-goal" : "Voter-registration goal"}
+            value={metrics.registration_target.toLocaleString()}
+            hint={
+              isCampus
+                ? `25% of county goal (${(metrics.civic_goal_explanation?.[0] || "").replace(/^.*:\s*/, "") || "RedDirt"})`
+                : "Canonical county total from RedDirt"
+            }
             accent="brand"
           />
           <MetricTile
-            label="Confirmed participants"
+            label="Confirmed platform participants"
             value={metrics.confirmed_participants}
-            hint="Unique people who joined this campus or county."
+            hint={metrics.aliases_excluded_note}
             accent="emerald"
           />
           <MetricTile
-            label="Still needed"
-            value={metrics.remaining_need}
-            hint="Goal minus confirmed participants."
+            label="Leadership launch-team target"
+            value={metrics.participation_goal}
+            hint="Team-building floor — separate from field registration goals."
             accent="amber"
           />
           <MetricTile
-            label="People · identities"
-            value={`${metrics.confirmed_people} · ${metrics.system_identities}`}
-            hint={metrics.aliases_excluded_note}
-            accent="slate"
+            label="County VCI"
+            value={(metrics.county_vci ?? metrics.vote_participation_target).toLocaleString()}
+            hint="Victory Contribution Index — county context, not a school score."
+            accent="sky"
           />
         </div>
 
-        <button
-          type="button"
-          className="inline-flex items-center gap-1 rounded-lg border border-slate-200 bg-slate-50 px-3 py-1.5 text-xs font-semibold text-slate-800 transition hover:border-brand-300 hover:bg-brand-50 hover:text-brand-950"
-          aria-expanded={showCalc}
-          onClick={() => setShowCalc((v) => !v)}
-        >
-          How is this goal calculated?{" "}
-          <span aria-hidden className="text-slate-500">
-            {showCalc ? "▴" : "▾"}
-          </span>
-        </button>
-        {showCalc && (
+        <div className="rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm text-slate-800">
+          {isCampus ? (
+            <p>
+              This institution’s goal equals <strong>25% of the county goal</strong>. It is included within the county
+              target and is <strong>not</strong> added on top of it.
+            </p>
+          ) : (
+            <p>
+              The county goal is the <strong>total</strong> target. College and high-school goals are organizing
+              sub-goals that contribute toward this county total.
+            </p>
+          )}
+        </div>
+
+        <div className="flex flex-wrap gap-2">
+          <button
+            type="button"
+            className="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-xs font-semibold text-slate-800 hover:bg-slate-50"
+            aria-expanded={showCivic}
+            onClick={() => setShowCivic((v) => !v)}
+          >
+            How is the registration goal calculated? {showCivic ? "▴" : "▾"}
+          </button>
+          <button
+            type="button"
+            className="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-xs font-semibold text-slate-800 hover:bg-slate-50"
+            aria-expanded={showVci}
+            onClick={() => setShowVci((v) => !v)}
+          >
+            What is County VCI? {showVci ? "▴" : "▾"}
+          </button>
+          <button
+            type="button"
+            className="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-xs font-semibold text-slate-800 hover:bg-slate-50"
+            aria-expanded={showLaunch}
+            onClick={() => setShowLaunch((v) => !v)}
+          >
+            Launch-team explanation {showLaunch ? "▴" : "▾"}
+          </button>
+        </div>
+
+        {showCivic && (
           <div className="space-y-2 rounded-xl border border-slate-200 bg-slate-50 p-4 text-xs text-slate-800">
             <p className="rounded-md bg-white px-2 py-1.5 font-mono text-[11px] text-slate-900 ring-1 ring-slate-200">
-              {calc.formula}
+              {metrics.civic_goal_formula}
             </p>
-            <ul className="list-disc space-y-1 pl-4 text-slate-700">
-              {calc.explanation.map((line) => (
+            <ul className="list-disc space-y-1 pl-4">
+              {(metrics.civic_goal_explanation ?? []).map((line) => (
                 <li key={line}>{line}</li>
               ))}
             </ul>
-            <p className="pt-1 text-slate-600">
-              Long-horizon registration / vote targets below are separate strategic goals — not current headcount.
+            <p className="text-slate-600">
+              Verified completed registrations:{" "}
+              <strong>Not yet connected to verified registration-result data</strong>
             </p>
           </div>
         )}
 
-        <div className="border-t border-slate-100 pt-5">
-          <h3 className="text-sm font-bold text-slate-950">Civic targets — registration &amp; VCI</h3>
-          <p className="mt-1 text-xs text-slate-600">
-            {metrics.campus_enrollment != null
-              ? "Campus treated like a city: goals scale with enrollment ÷ county voting-age population."
-              : "County targets use voting-age population rates (or seeded county goals)."}{" "}
-            Progress “current” uses confirmed participants only.
-          </p>
-          {metrics.civic_goal_formula && (
-            <>
-              <button
-                type="button"
-                className="mt-3 inline-flex items-center gap-1 rounded-lg border border-slate-200 bg-slate-50 px-3 py-1.5 text-xs font-semibold text-slate-800 transition hover:border-brand-300 hover:bg-brand-50 hover:text-brand-950"
-                aria-expanded={showCivic}
-                onClick={() => setShowCivic((v) => !v)}
-              >
-                How are registration &amp; VCI calculated?{" "}
-                <span aria-hidden className="text-slate-500">
-                  {showCivic ? "▴" : "▾"}
-                </span>
-              </button>
-              {showCivic && (
-                <div className="mt-2 space-y-2 rounded-xl border border-slate-200 bg-slate-50 p-4 text-xs text-slate-800">
-                  <p className="rounded-md bg-white px-2 py-1.5 font-mono text-[11px] text-slate-900 ring-1 ring-slate-200">
-                    {metrics.civic_goal_formula}
-                  </p>
-                  {metrics.campus_enrollment != null && (
-                    <p className="text-slate-700">
-                      Enrollment {metrics.campus_enrollment.toLocaleString()} · County VAP{" "}
-                      {(metrics.county_voting_age_population ?? 0).toLocaleString()} · Share{" "}
-                      {((metrics.campus_share_of_county_vap ?? 0) * 100).toFixed(2)}%
-                    </p>
-                  )}
-                  <ul className="list-disc space-y-1 pl-4 text-slate-700">
-                    {(metrics.civic_goal_explanation ?? []).map((line) => (
-                      <li key={line}>{line}</li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-            </>
-          )}
-          <div className="mt-3 space-y-3">
-            {goals.map((goal) => (
-              <GoalBar key={goal.kind} goal={goal} />
+        {showVci && (
+          <div className="space-y-2 rounded-xl border border-sky-200 bg-sky-50 p-4 text-xs text-sky-950">
+            <p className="font-semibold">Victory Contribution Index (RedDirt)</p>
+            <p>{metrics.vci_definition}</p>
+            <p>
+              Value {(metrics.county_vci ?? 0).toLocaleString()} — distinct from the voter-registration goal. Schools
+              show <strong>County VCI</strong> as context only.
+            </p>
+          </div>
+        )}
+
+        {showLaunch && (
+          <div className="space-y-1 rounded-xl border border-amber-200 bg-amber-50 p-4 text-xs text-amber-950">
+            {(metrics.goal_calculation.explanation ?? []).map((line) => (
+              <p key={line}>{line}</p>
             ))}
           </div>
-        </div>
+        )}
+
+        {regGoal && (
+          <div className="border-t border-slate-100 pt-4">
+            <div className="flex items-baseline justify-between gap-2 text-sm">
+              <span className="font-semibold text-slate-900">{regGoal.label}</span>
+              <span className="tabular-nums text-slate-700">
+                {regGoal.current.toLocaleString()} confirmed / {regGoal.target.toLocaleString()} goal
+              </span>
+            </div>
+            <div className="mt-2 h-3 overflow-hidden rounded-full bg-slate-100">
+              <div
+                className="h-full rounded-full bg-gradient-to-r from-brand-500 to-brand-700"
+                style={{ width: `${Math.max(regGoal.percent, regGoal.percent > 0 ? 2 : 0)}%` }}
+              />
+            </div>
+            <p className="mt-2 text-xs text-slate-600">
+              Progress uses confirmed platform participants only — not fabricated registration results.
+            </p>
+          </div>
+        )}
       </div>
     </section>
   );

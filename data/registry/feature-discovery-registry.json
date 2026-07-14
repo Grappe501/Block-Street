@@ -167,6 +167,73 @@
       "keywords": ["goal", "confirmed", "canonical person", "launch team"],
       "dependsOn": ["FEAT-POSITION-MEMBERSHIP"],
       "owner": "operator"
+    },
+    {
+      "id": "FEAT-REDDIRT-FIELD-GOALS",
+      "title": "County Field Goal + VCI Snapshot",
+      "audience": "operator",
+      "journey": [],
+      "product": "Field Goals",
+      "phase": "V2-A.2",
+      "certification": "implemented",
+      "nav": "data/field-goals/county-field-goals.json",
+      "data_source": "RedDirt chapter-05 + Victory Contribution Index",
+      "keywords": ["reddirt", "vci", "registration goal"],
+      "dependsOn": [],
+      "owner": "architect"
+    },
+    {
+      "id": "FEAT-EDU-SUBGOAL-25",
+      "title": "Education Institution 25% Sub-Goal",
+      "audience": "participant",
+      "journey": [],
+      "product": "Community Workspace",
+      "phase": "V2-A.2",
+      "certification": "implemented",
+      "nav": "/schools/[slug]",
+      "keywords": ["25%", "sub-goal", "county goal"],
+      "dependsOn": ["FEAT-REDDIRT-FIELD-GOALS"],
+      "owner": "operator"
+    },
+    {
+      "id": "FEAT-COLLEGE-COMMAND",
+      "title": "College Leader Workbench",
+      "audience": "field_lead",
+      "journey": [],
+      "product": "College Command",
+      "phase": "V2-A.2",
+      "certification": "implemented",
+      "nav": "/admin/college-command",
+      "permissions": ["college_leader", "director", "operator"],
+      "keywords": ["college command", "education workbench"],
+      "dependsOn": ["FEAT-REDDIRT-FIELD-GOALS"],
+      "owner": "operator"
+    },
+    {
+      "id": "FEAT-DIRECTOR-OMNIVIEW",
+      "title": "Director Omniview",
+      "audience": "operator",
+      "journey": [],
+      "product": "Director",
+      "phase": "V2-A.2",
+      "certification": "implemented",
+      "nav": "/admin/director",
+      "keywords": ["omniview", "inspect", "view as"],
+      "dependsOn": [],
+      "owner": "architect"
+    },
+    {
+      "id": "FEAT-PERSISTENCE-STATUS",
+      "title": "Persistence Status",
+      "audience": "architect",
+      "journey": [],
+      "product": "Operator",
+      "phase": "V2-A.2",
+      "certification": "implemented",
+      "nav": "/admin?tab=command",
+      "keywords": ["blobs", "postgres", "durability"],
+      "dependsOn": [],
+      "owner": "architect"
     }
   ]
 }

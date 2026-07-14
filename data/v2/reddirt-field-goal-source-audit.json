@@ -1,0 +1,1807 @@
+{
+  "version": "1.0.0",
+  "rows": [
+    {
+      "county_slug": "arkansas",
+      "county_name": "Arkansas",
+      "county_fips": null,
+      "voter_registration_goal": 209,
+      "vci_value": 1666,
+      "vci_rank": 35,
+      "vci_priority": "Priority 3",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "ashley",
+      "county_name": "Ashley",
+      "county_fips": null,
+      "voter_registration_goal": 226,
+      "vci_value": 1466,
+      "vci_rank": 36,
+      "vci_priority": "Priority 3",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "baxter",
+      "county_name": "Baxter",
+      "county_fips": null,
+      "voter_registration_goal": 576,
+      "vci_value": 4405,
+      "vci_rank": 17,
+      "vci_priority": "Priority 2",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "benton",
+      "county_name": "Benton",
+      "county_fips": null,
+      "voter_registration_goal": 7183,
+      "vci_value": 46015,
+      "vci_rank": 3,
+      "vci_priority": "Priority 1",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "boone",
+      "county_name": "Boone",
+      "county_fips": null,
+      "voter_registration_goal": 328,
+      "vci_value": 3320,
+      "vci_rank": 20,
+      "vci_priority": "Priority 2",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "bradley",
+      "county_name": "Bradley",
+      "county_fips": null,
+      "voter_registration_goal": 117,
+      "vci_value": 1036,
+      "vci_rank": 48,
+      "vci_priority": "Priority 3",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "calhoun",
+      "county_name": "Calhoun",
+      "county_fips": null,
+      "voter_registration_goal": 72,
+      "vci_value": 260,
+      "vci_rank": 74,
+      "vci_priority": "Priority 4",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "carroll",
+      "county_name": "Carroll",
+      "county_fips": null,
+      "voter_registration_goal": 406,
+      "vci_value": 2410,
+      "vci_rank": 26,
+      "vci_priority": "Priority 2",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "chicot",
+      "county_name": "Chicot",
+      "county_fips": null,
+      "voter_registration_goal": 72,
+      "vci_value": 313,
+      "vci_rank": 71,
+      "vci_priority": "Priority 4",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "clark",
+      "county_name": "Clark",
+      "county_fips": null,
+      "voter_registration_goal": 291,
+      "vci_value": 2543,
+      "vci_rank": 24,
+      "vci_priority": "Priority 2",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "clay",
+      "county_name": "Clay",
+      "county_fips": null,
+      "voter_registration_goal": 99,
+      "vci_value": 556,
+      "vci_rank": 58,
+      "vci_priority": "Priority 3",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "cleburne",
+      "county_name": "Cleburne",
+      "county_fips": null,
+      "voter_registration_goal": 257,
+      "vci_value": 2343,
+      "vci_rank": 28,
+      "vci_priority": "Priority 2",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "cleveland",
+      "county_name": "Cleveland",
+      "county_fips": null,
+      "voter_registration_goal": 79,
+      "vci_value": 418,
+      "vci_rank": 63,
+      "vci_priority": "Priority 4",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "columbia",
+      "county_name": "Columbia",
+      "county_fips": null,
+      "voter_registration_goal": 316,
+      "vci_value": 2508,
+      "vci_rank": 25,
+      "vci_priority": "Priority 2",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "conway",
+      "county_name": "Conway",
+      "county_fips": null,
+      "voter_registration_goal": 261,
+      "vci_value": 2140,
+      "vci_rank": 30,
+      "vci_priority": "Priority 2",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "craighead",
+      "county_name": "Craighead",
+      "county_fips": null,
+      "voter_registration_goal": 1418,
+      "vci_value": 13827,
+      "vci_rank": 7,
+      "vci_priority": "Priority 1",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "crawford",
+      "county_name": "Crawford",
+      "county_fips": null,
+      "voter_registration_goal": 605,
+      "vci_value": 5862,
+      "vci_rank": 14,
+      "vci_priority": "Priority 2",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "crittenden",
+      "county_name": "Crittenden",
+      "county_fips": null,
+      "voter_registration_goal": 1049,
+      "vci_value": 8578,
+      "vci_rank": 10,
+      "vci_priority": "Priority 1",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "cross",
+      "county_name": "Cross",
+      "county_fips": null,
+      "voter_registration_goal": 273,
+      "vci_value": 1901,
+      "vci_rank": 33,
+      "vci_priority": "Priority 3",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "dallas",
+      "county_name": "Dallas",
+      "county_fips": null,
+      "voter_registration_goal": 89,
+      "vci_value": 322,
+      "vci_rank": 70,
+      "vci_priority": "Priority 4",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "desha",
+      "county_name": "Desha",
+      "county_fips": null,
+      "voter_registration_goal": 194,
+      "vci_value": 564,
+      "vci_rank": 57,
+      "vci_priority": "Priority 3",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "drew",
+      "county_name": "Drew",
+      "county_fips": null,
+      "voter_registration_goal": 186,
+      "vci_value": 1977,
+      "vci_rank": 32,
+      "vci_priority": "Priority 3",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "faulkner",
+      "county_name": "Faulkner",
+      "county_fips": null,
+      "voter_registration_goal": 2361,
+      "vci_value": 17907,
+      "vci_rank": 4,
+      "vci_priority": "Priority 1",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "franklin",
+      "county_name": "Franklin",
+      "county_fips": null,
+      "voter_registration_goal": 109,
+      "vci_value": 702,
+      "vci_rank": 54,
+      "vci_priority": "Priority 3",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "fulton",
+      "county_name": "Fulton",
+      "county_fips": null,
+      "voter_registration_goal": 95,
+      "vci_value": 1075,
+      "vci_rank": 45,
+      "vci_priority": "Priority 3",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "garland",
+      "county_name": "Garland",
+      "county_fips": null,
+      "voter_registration_goal": 1477,
+      "vci_value": 10843,
+      "vci_rank": 9,
+      "vci_priority": "Priority 1",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "grant",
+      "county_name": "Grant",
+      "county_fips": null,
+      "voter_registration_goal": 162,
+      "vci_value": 1450,
+      "vci_rank": 37,
+      "vci_priority": "Priority 3",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "greene",
+      "county_name": "Greene",
+      "county_fips": null,
+      "voter_registration_goal": 362,
+      "vci_value": 4322,
+      "vci_rank": 18,
+      "vci_priority": "Priority 2",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "hempstead",
+      "county_name": "Hempstead",
+      "county_fips": null,
+      "voter_registration_goal": 284,
+      "vci_value": 1794,
+      "vci_rank": 34,
+      "vci_priority": "Priority 3",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "hot-spring",
+      "county_name": "Hot Spring",
+      "county_fips": null,
+      "voter_registration_goal": 272,
+      "vci_value": 2629,
+      "vci_rank": 23,
+      "vci_priority": "Priority 2",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "howard",
+      "county_name": "Howard",
+      "county_fips": null,
+      "voter_registration_goal": 127,
+      "vci_value": 1042,
+      "vci_rank": 47,
+      "vci_priority": "Priority 3",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "independence",
+      "county_name": "Independence",
+      "county_fips": null,
+      "voter_registration_goal": 341,
+      "vci_value": 3034,
+      "vci_rank": 21,
+      "vci_priority": "Priority 2",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "izard",
+      "county_name": "Izard",
+      "county_fips": null,
+      "voter_registration_goal": 99,
+      "vci_value": 627,
+      "vci_rank": 55,
+      "vci_priority": "Priority 3",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "jackson",
+      "county_name": "Jackson",
+      "county_fips": null,
+      "voter_registration_goal": 86,
+      "vci_value": 1249,
+      "vci_rank": 41,
+      "vci_priority": "Priority 3",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "jefferson",
+      "county_name": "Jefferson",
+      "county_fips": null,
+      "voter_registration_goal": 1464,
+      "vci_value": 13330,
+      "vci_rank": 8,
+      "vci_priority": "Priority 1",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "johnson",
+      "county_name": "Johnson",
+      "county_fips": null,
+      "voter_registration_goal": 236,
+      "vci_value": 2132,
+      "vci_rank": 31,
+      "vci_priority": "Priority 3",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "lafayette",
+      "county_name": "Lafayette",
+      "county_fips": null,
+      "voter_registration_goal": 72,
+      "vci_value": 263,
+      "vci_rank": 73,
+      "vci_priority": "Priority 4",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "lawrence",
+      "county_name": "Lawrence",
+      "county_fips": null,
+      "voter_registration_goal": 109,
+      "vci_value": 1123,
+      "vci_rank": 43,
+      "vci_priority": "Priority 3",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "lee",
+      "county_name": "Lee",
+      "county_fips": null,
+      "voter_registration_goal": 162,
+      "vci_value": 426,
+      "vci_rank": 61,
+      "vci_priority": "Priority 4",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "lincoln",
+      "county_name": "Lincoln",
+      "county_fips": null,
+      "voter_registration_goal": 85,
+      "vci_value": 394,
+      "vci_rank": 66,
+      "vci_priority": "Priority 4",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "little-river",
+      "county_name": "Little River",
+      "county_fips": null,
+      "voter_registration_goal": 133,
+      "vci_value": 1107,
+      "vci_rank": 44,
+      "vci_priority": "Priority 3",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "logan",
+      "county_name": "Logan",
+      "county_fips": null,
+      "voter_registration_goal": 140,
+      "vci_value": 864,
+      "vci_rank": 51,
+      "vci_priority": "Priority 3",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "lonoke",
+      "county_name": "Lonoke",
+      "county_fips": null,
+      "voter_registration_goal": 941,
+      "vci_value": 7836,
+      "vci_rank": 11,
+      "vci_priority": "Priority 1",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "madison",
+      "county_name": "Madison",
+      "county_fips": null,
+      "voter_registration_goal": 156,
+      "vci_value": 839,
+      "vci_rank": 53,
+      "vci_priority": "Priority 3",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "marion",
+      "county_name": "Marion",
+      "county_fips": null,
+      "voter_registration_goal": 234,
+      "vci_value": 1043,
+      "vci_rank": 46,
+      "vci_priority": "Priority 3",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "miller",
+      "county_name": "Miller",
+      "county_fips": null,
+      "voter_registration_goal": 582,
+      "vci_value": 5406,
+      "vci_rank": 15,
+      "vci_priority": "Priority 2",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "mississippi",
+      "county_name": "Mississippi",
+      "county_fips": null,
+      "voter_registration_goal": 274,
+      "vci_value": 4050,
+      "vci_rank": 19,
+      "vci_priority": "Priority 2",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "monroe",
+      "county_name": "Monroe",
+      "county_fips": null,
+      "voter_registration_goal": 72,
+      "vci_value": 243,
+      "vci_rank": 75,
+      "vci_priority": "Priority 4",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "montgomery",
+      "county_name": "Montgomery",
+      "county_fips": null,
+      "voter_registration_goal": 72,
+      "vci_value": 420,
+      "vci_rank": 62,
+      "vci_priority": "Priority 4",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "nevada",
+      "county_name": "Nevada",
+      "county_fips": null,
+      "voter_registration_goal": 74,
+      "vci_value": 329,
+      "vci_rank": 69,
+      "vci_priority": "Priority 4",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "newton",
+      "county_name": "Newton",
+      "county_fips": null,
+      "voter_registration_goal": 72,
+      "vci_value": 418,
+      "vci_rank": 64,
+      "vci_priority": "Priority 4",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "ouachita",
+      "county_name": "Ouachita",
+      "county_fips": null,
+      "voter_registration_goal": 337,
+      "vci_value": 2333,
+      "vci_rank": 29,
+      "vci_priority": "Priority 2",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "perry",
+      "county_name": "Perry",
+      "county_fips": null,
+      "voter_registration_goal": 88,
+      "vci_value": 511,
+      "vci_rank": 59,
+      "vci_priority": "Priority 3",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "phillips",
+      "county_name": "Phillips",
+      "county_fips": null,
+      "voter_registration_goal": 249,
+      "vci_value": 2400,
+      "vci_rank": 27,
+      "vci_priority": "Priority 2",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "pike",
+      "county_name": "Pike",
+      "county_fips": null,
+      "voter_registration_goal": 72,
+      "vci_value": 482,
+      "vci_rank": 60,
+      "vci_priority": "Priority 3",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "poinsett",
+      "county_name": "Poinsett",
+      "county_fips": null,
+      "voter_registration_goal": 108,
+      "vci_value": 1312,
+      "vci_rank": 40,
+      "vci_priority": "Priority 3",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "polk",
+      "county_name": "Polk",
+      "county_fips": null,
+      "voter_registration_goal": 81,
+      "vci_value": 1391,
+      "vci_rank": 39,
+      "vci_priority": "Priority 3",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "pope",
+      "county_name": "Pope",
+      "county_fips": null,
+      "voter_registration_goal": 744,
+      "vci_value": 6122,
+      "vci_rank": 13,
+      "vci_priority": "Priority 2",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "prairie",
+      "county_name": "Prairie",
+      "county_fips": null,
+      "voter_registration_goal": 72,
+      "vci_value": 385,
+      "vci_rank": 68,
+      "vci_priority": "Priority 4",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "pulaski",
+      "county_name": "Pulaski",
+      "county_fips": null,
+      "voter_registration_goal": 10584,
+      "vci_value": 97376,
+      "vci_rank": 1,
+      "vci_priority": "Priority 1",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "randolph",
+      "county_name": "Randolph",
+      "county_fips": null,
+      "voter_registration_goal": 121,
+      "vci_value": 1427,
+      "vci_rank": 38,
+      "vci_priority": "Priority 3",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "saline",
+      "county_name": "Saline",
+      "county_fips": null,
+      "voter_registration_goal": 2659,
+      "vci_value": 16767,
+      "vci_rank": 5,
+      "vci_priority": "Priority 1",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "scott",
+      "county_name": "Scott",
+      "county_fips": null,
+      "voter_registration_goal": 72,
+      "vci_value": 393,
+      "vci_rank": 67,
+      "vci_priority": "Priority 4",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "searcy",
+      "county_name": "Searcy",
+      "county_fips": null,
+      "voter_registration_goal": 72,
+      "vci_value": 418,
+      "vci_rank": 65,
+      "vci_priority": "Priority 4",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "sebastian",
+      "county_name": "Sebastian",
+      "county_fips": null,
+      "voter_registration_goal": 1859,
+      "vci_value": 16648,
+      "vci_rank": 6,
+      "vci_priority": "Priority 1",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "sevier",
+      "county_name": "Sevier",
+      "county_fips": null,
+      "voter_registration_goal": 99,
+      "vci_value": 997,
+      "vci_rank": 49,
+      "vci_priority": "Priority 3",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "sharp",
+      "county_name": "Sharp",
+      "county_fips": null,
+      "voter_registration_goal": 154,
+      "vci_value": 886,
+      "vci_rank": 50,
+      "vci_priority": "Priority 3",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "st-francis",
+      "county_name": "St. Francis",
+      "county_fips": null,
+      "voter_registration_goal": 248,
+      "vci_value": 2658,
+      "vci_rank": 22,
+      "vci_priority": "Priority 2",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "stone",
+      "county_name": "Stone",
+      "county_fips": null,
+      "voter_registration_goal": 72,
+      "vci_value": 592,
+      "vci_rank": 56,
+      "vci_priority": "Priority 3",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "union",
+      "county_name": "Union",
+      "county_fips": null,
+      "voter_registration_goal": 712,
+      "vci_value": 5363,
+      "vci_rank": 16,
+      "vci_priority": "Priority 2",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "van-buren",
+      "county_name": "Van Buren",
+      "county_fips": null,
+      "voter_registration_goal": 136,
+      "vci_value": 851,
+      "vci_rank": 52,
+      "vci_priority": "Priority 3",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "washington",
+      "county_name": "Washington",
+      "county_fips": null,
+      "voter_registration_goal": 5462,
+      "vci_value": 46814,
+      "vci_rank": 2,
+      "vci_priority": "Priority 1",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "white",
+      "county_name": "White",
+      "county_fips": null,
+      "voter_registration_goal": 807,
+      "vci_value": 6898,
+      "vci_rank": 12,
+      "vci_priority": "Priority 1",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "woodruff",
+      "county_name": "Woodruff",
+      "county_fips": null,
+      "voter_registration_goal": 72,
+      "vci_value": 267,
+      "vci_rank": 72,
+      "vci_priority": "Priority 4",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    },
+    {
+      "county_slug": "yell",
+      "county_name": "Yell",
+      "county_fips": null,
+      "voter_registration_goal": 161,
+      "vci_value": 1194,
+      "vci_rank": 42,
+      "vci_priority": "Priority 3",
+      "source_registration_file": "docs/strategic-plan/plurality-victory-plan/part-ii-electoral-math/chapter-05-fifty-thousand-new-voter-plan/statewide-registration-summary.json",
+      "source_registration_field": "goals[].goal",
+      "source_vci_file": "docs/strategic-plan/plurality-victory-plan/command-center/victory-contribution-index.json",
+      "source_vci_field": "counties[].vci",
+      "source_version_or_timestamp": {
+        "registration": "2026-06-14T14:11:58.501Z",
+        "vci": "2026-06-18T21:54:24.575Z"
+      },
+      "calculation_method": {
+        "registration": "allocated_from_lane2_weight",
+        "vci": "VCI = Lane 2 @ 50% + Registration Goal + GOP Conversion @ 12% + City Influence (Top 75 vote targets in county)"
+      },
+      "source_confidence": "canonical",
+      "ingestion_status": "ok",
+      "notes": "registration_source=allocated_from_lane2_weight; chapter05_dbWarning_present"
+    }
+  ],
+  "missing": [],
+  "conflicts": []
+}

@@ -25,7 +25,7 @@ type SeedFile = typeof workspaceSeeds;
 
 const GOAL_LABELS: Record<GoalKind, string> = {
   registration: "Voter Registration Goal",
-  vote_participation: "VCI Goal",
+  vote_participation: "County VCI (context)",
 };
 
 const DEFAULT_DEADLINES: Record<GoalKind, string> = {

@@ -1,0 +1,43 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-07-14T10:30:00.000Z",
+  "canonical_persistence_backend": "netlify_blobs_plus_static_seed",
+  "netlify_database_postgres_active": false,
+  "v2b_status": "deferred",
+  "actions": [
+    {
+      "action_type": "invite_create_accept",
+      "storage_backend": "netlify_blobs",
+      "durability": "production_enabled_with_flush_patterns",
+      "certification_state": "implemented_pending_journey_cert"
+    },
+    {
+      "action_type": "position_membership_join",
+      "storage_backend": "static_seed_json_store",
+      "storage_key_or_table": "data/position-participation/store.json",
+      "durability": "local_and_deploy_artifact_risk",
+      "known_data_loss_risk": "serverless cold starts / non-blob path may not retain writes across instances",
+      "certification_state": "partial"
+    },
+    {
+      "action_type": "field_goal_display",
+      "storage_backend": "static_seed",
+      "storage_key_or_table": "data/field-goals/county-field-goals.json",
+      "durability": "build_artifact",
+      "certification_state": "ingested_from_reddirt"
+    },
+    {
+      "action_type": "verified_voter_registration_count",
+      "storage_backend": "not_persisted",
+      "durability": "none",
+      "certification_state": "not_connected"
+    },
+    {
+      "action_type": "director_inspection",
+      "storage_backend": "not_persisted",
+      "durability": "client_reason_only_this_slice",
+      "certification_state": "scaffold"
+    }
+  ],
+  "authority": "docs/v2/PRODUCTION_PERSISTENCE_FORENSIC_AUDIT.md"
+}

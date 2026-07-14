@@ -1,19 +1,13 @@
-import workspaceSeeds from "../../../data/communities/workspace-seeds.json";
 import { loadPositionStore, resolveCanonicalPersonId } from "./store";
-import {
-  computeCampusProportionalCivicGoals,
-  resolveCountyCivicGoals,
-} from "./proportional-goals";
+import { computeCampusProportionalCivicGoals, resolveCountyCivicGoals } from "./proportional-goals";
 import type { GoalCalculation, HonestParticipationMetrics, ScopeType } from "./types";
 import { toCommunityId } from "@/lib/community-workspace/roles";
+import { getCountyFieldGoal } from "@/lib/field-goals";
 
 const PLACEHOLDER_FIELD_PLAN = "Detailed responsibilities will be added from the campaign Field Plan.";
 
 export { PLACEHOLDER_FIELD_PLAN };
 
-/**
- * Strategic participation (launch-team) goal — never equal to "how many accounts exist now".
- */
 export function computeParticipationGoal(input: {
   scopeId: string;
   enrollment?: number | null;
@@ -22,16 +16,7 @@ export function computeParticipationGoal(input: {
   const store = loadPositionStore();
   const minimum_launch_team = store.minimum_launch_team ?? 6;
   const manual = store.manual_goals[input.scopeId]?.launch_team ?? null;
-
   const computed_goal = Math.max(manual ?? 0, minimum_launch_team);
-
-  const explanation = [
-    `minimum_launch_team = ${minimum_launch_team}`,
-    manual != null ? `configured_manual_goal = ${manual}` : "configured_manual_goal = (none)",
-    `computed = max(manual, minimum_launch_team) = ${computed_goal}`,
-    "Launch-team goal is separate from voter registration / VCI civic targets.",
-    "This is a strategic TARGET, not a count of people already participating.",
-  ];
 
   return {
     kind: "launch_team",
@@ -46,7 +31,11 @@ export function computeParticipationGoal(input: {
     participation_rate: null,
     minimum_launch_team,
     computed_goal,
-    explanation,
+    explanation: [
+      `Leadership launch-team target: ${computed_goal}`,
+      "Separate from voter-registration field goals and County VCI.",
+      "Not a count of people already participating.",
+    ],
   };
 }
 
@@ -60,14 +49,12 @@ export function computeHonestMetrics(input: {
   const store = loadPositionStore();
   const peopleInScope = store.persons.filter((p) => p.scopes.includes(input.scopeId));
   const confirmed_people = peopleInScope.length;
-
   const activeMemberships = store.memberships.filter(
     (m) => m.scope_id === input.scopeId && m.status === "active"
   );
-  const participantIds = activeMemberships.map((m) => m.canonical_person_id);
   const confirmedSet = new Set<string>([
     ...peopleInScope.map((p) => p.canonical_person_id),
-    ...participantIds.map((id) => resolveCanonicalPersonId(id, store)),
+    ...activeMemberships.map((m) => resolveCanonicalPersonId(m.canonical_person_id, store)),
   ]);
   const confirmed_participants = confirmedSet.size;
   const system_identities = peopleInScope.reduce((n, p) => n + (p.system_identity_ids?.length ?? 0), 0);
@@ -78,50 +65,46 @@ export function computeHonestMetrics(input: {
     kind: input.kind,
   });
 
-  const countyCommunityId = toCommunityId("county", input.countySlug);
-  const countySeed = (workspaceSeeds.seeds as Record<string, { goals?: { registration?: { target?: number }; vote_participation?: { target?: number } } }>)[
-    countyCommunityId
-  ]?.goals;
-
   let registration_target: number;
   let vote_participation_target: number;
-  let civic_goal_explanation: string[] | undefined;
-  let civic_goal_formula: string | undefined;
-  let campus_share_of_county_vap: number | null = null;
-  let county_voting_age_population: number | null = null;
-  let campus_enrollment: number | null = null;
+  let civic_goal_explanation: string[];
+  let civic_goal_formula: string;
+  let campus_enrollment: number | null = input.enrollment ?? null;
+  let county_vci: number;
+  let vci_definition: string;
 
   if (input.kind === "county") {
-    const county = resolveCountyCivicGoals(input.countySlug, countySeed);
+    const county = resolveCountyCivicGoals(input.countySlug);
+    const row = getCountyFieldGoal(input.countySlug);
     registration_target = county.registration;
     vote_participation_target = county.vci;
-    county_voting_age_population = county.vap;
-    civic_goal_formula = "county_goal = max(default_floor, round(county_vap × registration_rate)) · VCI = registration × share";
+    county_vci = county.vci;
+    vci_definition = county.vci_definition;
+    civic_goal_formula = "RedDirt county voter_registration_goal + Victory Contribution Index";
     civic_goal_explanation = [
-      `County voting-age population${county.estimate ? " (estimate)" : ""}: ${county.vap.toLocaleString()}`,
-      `Voter registration goal: ${county.registration.toLocaleString()}`,
-      `VCI goal: ${county.vci.toLocaleString()}`,
+      `County voter-registration goal (RedDirt): ${county.registration.toLocaleString()}`,
+      `County VCI (Victory Contribution Index): ${county.vci.toLocaleString()}`,
+      `VCI definition: ${county.vci_definition}`,
+      "The county goal is the total target. College and high-school goals are organizing sub-goals that contribute toward this county total.",
+      row?.source_reference
+        ? `Source: ${row.source_reference.registration}`
+        : "Source: data/field-goals/county-field-goals.json",
     ];
   } else {
-    const enrollment = input.enrollment ?? 0;
     const proportional = computeCampusProportionalCivicGoals({
       countySlug: input.countySlug,
-      enrollment,
-      countySeed,
+      enrollment: input.enrollment,
     });
     registration_target = proportional.registration_goal;
-    vote_participation_target = proportional.vci_goal;
-    civic_goal_explanation = proportional.explanation;
+    vote_participation_target = proportional.county_vci;
+    county_vci = proportional.county_vci;
+    vci_definition = proportional.vci_definition;
     civic_goal_formula = proportional.formula;
-    campus_share_of_county_vap = proportional.share_of_county_vap;
-    county_voting_age_population = proportional.county_voting_age_population;
-    campus_enrollment = proportional.enrollment;
+    civic_goal_explanation = proportional.explanation;
   }
 
   const manualReg = store.manual_goals[input.scopeId]?.registration;
-  const manualVote = store.manual_goals[input.scopeId]?.vote_participation;
   if (manualReg != null) registration_target = manualReg;
-  if (manualVote != null) vote_participation_target = manualVote;
 
   return {
     scope_id: input.scopeId,
@@ -136,13 +119,14 @@ export function computeHonestMetrics(input: {
     vote_participation_target,
     civic_goal_explanation,
     civic_goal_formula,
-    campus_share_of_county_vap,
-    county_voting_age_population,
+    campus_share_of_county_vap: null,
+    county_voting_age_population: null,
     campus_enrollment,
+    county_vci,
+    vci_definition,
   };
 }
 
-/** Forensic: explain why Henderson historically displayed "6" as if it were people. */
 export function explainLegacyFakeCurrentSix(enrollment: number): {
   displayed: number;
   source: string;
@@ -156,8 +140,8 @@ export function explainLegacyFakeCurrentSix(enrollment: number): {
   const fakeCurrent = Math.round(voteTarget * 0.05);
   return {
     displayed: fakeCurrent,
-    source: "src/lib/community-workspace/engine.ts defaultGoals — unseeded vote_participation current",
-    formula: "Math.round(voteTarget * 0.05) where voteTarget = round(max(50, enrollment*0.05)*0.75)",
+    source: "legacy mock formula (retired)",
+    formula: "Math.round(voteTarget * 0.05)",
     inputs: { enrollment, regTarget, voteTarget, fakeCurrent },
     isGoal: false,
     isActualPeople: false,

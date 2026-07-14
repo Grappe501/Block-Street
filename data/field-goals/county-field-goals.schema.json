@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CountyFieldGoals",
+  "type": "object",
+  "required": [
+    "version",
+    "counties",
+    "institution_sub_goal_rule"
+  ],
+  "properties": {
+    "counties": {
+      "type": "array",
+      "minItems": 75,
+      "maxItems": 75
+    }
+  }
+}

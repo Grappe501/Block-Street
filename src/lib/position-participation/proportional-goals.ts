@@ -1,120 +1,93 @@
-import demographics from "../../../data/registry/county-demographics.json";
-import workspaceSeeds from "../../../data/communities/workspace-seeds.json";
-
-export type CivicGoalKind = "registration" | "vote_participation";
+/**
+ * Education institution civic goals — RedDirt county totals with 25% sub-goals.
+ * VCI remains a county-level Victory Contribution Index (contextual on schools).
+ */
+import {
+  getCountyFieldGoal,
+  getInstitutionRegistrationSubGoal,
+  INSTITUTION_SUB_GOAL_RULE,
+} from "@/lib/field-goals";
 
 export type ProportionalCivicGoals = {
-  enrollment: number;
+  enrollment: number | null;
   county_slug: string;
-  county_population: number;
-  county_voting_age_population: number;
+  county_population: number | null;
+  county_voting_age_population: number | null;
   vap_is_estimate: boolean;
-  share_of_county_vap: number;
+  share_of_county_vap: number | null;
   county_registration_goal: number;
-  county_vci_goal: number;
+  /** County Victory Contribution Index (RedDirt) — not a school goal */
+  county_vci: number;
   registration_goal: number;
+  /** @deprecated Schools do not own a separate VCI goal; mirrors county for compatibility */
   vci_goal: number;
   formula: string;
   explanation: string[];
+  contribution_model: "sub_goal_within_parent" | "county_total";
+  vci_definition: string;
 };
 
-type SeedGoals = {
-  registration?: { target?: number };
-  vote_participation?: { target?: number };
-};
-
-const DEFAULTS = workspaceSeeds.defaultGoalTargets;
-
-/** Floor so small campuses still have a usable organizing target. */
-const CAMPUS_REG_FLOOR = 15;
-const CAMPUS_VCI_FLOOR = 10;
-
-export function getCountyDemographics(countySlug: string): {
-  population: number;
-  voting_age_population: number;
+export function resolveCountyCivicGoals(countySlug: string): {
+  registration: number;
+  vci: number;
+  vap: number | null;
+  population: number | null;
   estimate: boolean;
-} | null {
-  const row = (demographics.counties as Record<string, { population: number; voting_age_population: number }>)[
-    countySlug
-  ];
-  if (!row) return null;
+  vci_definition: string;
+  source: string;
+} {
+  const row = getCountyFieldGoal(countySlug);
+  if (!row) {
+    throw new Error(`Missing RedDirt field goal snapshot for county: ${countySlug}`);
+  }
   return {
-    population: row.population,
-    voting_age_population: row.voting_age_population,
-    estimate: Boolean(demographics.estimate),
+    registration: row.voter_registration_goal,
+    vci: row.vci,
+    vap: null,
+    population: null,
+    estimate: false,
+    vci_definition: row.vci_definition,
+    source: "data/field-goals/county-field-goals.json",
   };
 }
 
 /**
- * County civic goals: manual/seed override, else rate × voting-age population,
- * else legacy fixed defaults as floor.
- */
-export function resolveCountyCivicGoals(
-  countySlug: string,
-  countySeed?: SeedGoals
-): { registration: number; vci: number; vap: number; population: number; estimate: boolean } {
-  const demo = getCountyDemographics(countySlug);
-  const vap = demo?.voting_age_population ?? 0;
-  const population = demo?.population ?? 0;
-  const estimate = demo?.estimate ?? true;
-
-  const rate =
-    (DEFAULTS as { county?: { registrationRateOfVap?: number; vciShareOfRegistration?: number } }).county
-      ?.registrationRateOfVap ?? 0.015;
-  const vciShare =
-    (DEFAULTS as { county?: { vciShareOfRegistration?: number } }).county?.vciShareOfRegistration ?? 0.75;
-
-  const derivedReg = vap > 0 ? Math.max(DEFAULTS.county.registration, Math.round(vap * rate)) : DEFAULTS.county.registration;
-  const registration = countySeed?.registration?.target ?? derivedReg;
-  const derivedVci = Math.round(registration * vciShare);
-  const vci = countySeed?.vote_participation?.target ?? Math.max(DEFAULTS.county.vote_participation, derivedVci);
-
-  return { registration, vci, vap, population, estimate };
-}
-
-/**
- * Treat campus/school like a city: goals proportional to
- * campus enrollment ÷ county voting-age population × county civic goals.
+ * Campus/school registration sub-goal = 25% of county RedDirt registration goal.
+ * Same value for every college and high school in that county.
  */
 export function computeCampusProportionalCivicGoals(input: {
   countySlug: string;
-  enrollment: number;
-  countySeed?: SeedGoals;
+  enrollment?: number | null;
 }): ProportionalCivicGoals {
-  const county = resolveCountyCivicGoals(input.countySlug, input.countySeed);
-  const enrollment = Math.max(0, Math.round(input.enrollment));
-  const vap = Math.max(county.vap, 1);
-  const share = enrollment / vap;
-
-  const registration_goal = Math.max(CAMPUS_REG_FLOOR, Math.round(county.registration * share));
-  const vci_goal = Math.max(CAMPUS_VCI_FLOOR, Math.round(county.vci * share));
-
-  const formula =
-    "campus_goal = max(floor, round(county_goal × (campus_enrollment ÷ county_voting_age_population)))";
-
-  const explanation = [
-    `Campus enrollment (city population stand-in): ${enrollment.toLocaleString()}`,
-    `County voting-age population${county.estimate ? " (estimate)" : ""}: ${county.vap.toLocaleString()}`,
-    `Share of county VAP: ${(share * 100).toFixed(2)}%`,
-    `County voter registration goal: ${county.registration.toLocaleString()}`,
-    `County VCI goal: ${county.vci.toLocaleString()}`,
-    `Campus voter registration goal: ${registration_goal.toLocaleString()}`,
-    `Campus VCI goal: ${vci_goal.toLocaleString()}`,
-    "Campus is treated like a city inside the county — goals scale with enrollment relative to county voting-age adults.",
-  ];
+  const sub = getInstitutionRegistrationSubGoal(input.countySlug);
+  if (!sub) {
+    throw new Error(`Missing RedDirt field goal snapshot for county: ${input.countySlug}`);
+  }
+  const county = getCountyFieldGoal(input.countySlug)!;
 
   return {
-    enrollment,
+    enrollment: input.enrollment ?? null,
     county_slug: input.countySlug,
-    county_population: county.population,
-    county_voting_age_population: county.vap,
-    vap_is_estimate: county.estimate,
-    share_of_county_vap: share,
-    county_registration_goal: county.registration,
-    county_vci_goal: county.vci,
-    registration_goal,
-    vci_goal,
-    formula,
-    explanation,
+    county_population: null,
+    county_voting_age_population: null,
+    vap_is_estimate: false,
+    share_of_county_vap: null,
+    county_registration_goal: sub.county_registration_goal,
+    county_vci: sub.county_vci ?? county.vci,
+    registration_goal: sub.institution_sub_goal,
+    vci_goal: sub.county_vci ?? county.vci,
+    formula: INSTITUTION_SUB_GOAL_RULE,
+    contribution_model: "sub_goal_within_parent",
+    vci_definition: sub.vci_definition || county.vci_definition,
+    explanation: [
+      `County voter-registration goal (RedDirt): ${sub.county_registration_goal.toLocaleString()}`,
+      `Institution sub-goal (25%): ${sub.institution_sub_goal.toLocaleString()}`,
+      `Rounding rule: ${INSTITUTION_SUB_GOAL_RULE}`,
+      "Contribution model: sub_goal_within_parent — does not inflate the county total.",
+      sub.display_explanation,
+      `County VCI (Victory Contribution Index): ${(sub.county_vci ?? 0).toLocaleString()}`,
+      `VCI definition: ${sub.vci_definition}`,
+      "Schools display County VCI as context — they do not have a separate VCI score unless RedDirt defines one.",
+    ],
   };
 }
