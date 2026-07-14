@@ -30,8 +30,14 @@ export default function LoginClient() {
     router.push(next);
   }
 
+  const next = searchParams.get("next") ?? "/network";
+  const inviteReturn = next.startsWith("/invite/");
+
   return (
-    <AuthPageShell title="Sign in" subtitle="Verify our identity to continue">
+    <AuthPageShell
+      title="Sign in"
+      subtitle={inviteReturn ? "Sign in, then we’ll return you to your invitation." : "Welcome back — continue to your board."}
+    >
       <form onSubmit={handleSubmit} className="space-y-4">
         {error && <p className="rounded bg-red-50 p-2 text-sm text-red-800" role="alert">{error}</p>}
         <label className="block text-sm font-medium text-blue-950">
@@ -42,16 +48,20 @@ export default function LoginClient() {
           Password
           <input type="password" required autoComplete="current-password" className="mt-1 w-full rounded border border-blue-200 px-3 py-2" value={password} onChange={(e) => setPassword(e.target.value)} />
         </label>
-        <button type="submit" disabled={loading} className="w-full rounded bg-blue-700 px-4 py-2 text-white hover:bg-blue-800 disabled:opacity-50">
+        <button type="submit" disabled={loading} className="w-full rounded-lg bg-blue-700 px-4 py-3 font-semibold text-white hover:bg-blue-800 disabled:opacity-50">
           {loading ? "Signing in…" : "Sign in"}
         </button>
-        <p className="text-center text-xs text-blue-700">
-          <a href="/passwordless" className="underline">Email me a sign-in link</a>
-          {" · "}
-          <a href="/register" className="underline">Create account</a>
-          {" · "}
-          <a href="/forgot-password" className="underline">Forgot password</a>
-        </p>
+        {inviteReturn ? (
+          <p className="text-center text-xs text-blue-700">
+            New here? Use your invitation link instead of creating a public account.
+          </p>
+        ) : (
+          <p className="text-center text-xs text-blue-700">
+            <a href="/forgot-password" className="underline">Forgot password</a>
+            {" · "}
+            <a href="/join" className="underline">I have an invitation</a>
+          </p>
+        )}
       </form>
     </AuthPageShell>
   );

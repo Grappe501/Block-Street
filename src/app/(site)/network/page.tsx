@@ -12,6 +12,7 @@ export default function NetworkBoardPage() {
   const [error, setError] = useState("");
   const [copied, setCopied] = useState(false);
   const [shareUrl, setShareUrl] = useState("");
+  const [canCreateDirectInvite, setCanCreateDirectInvite] = useState(false);
 
   useEffect(() => {
     (async () => {
@@ -25,6 +26,7 @@ export default function NetworkBoardPage() {
       const sd = await s.json();
       const email = sd.profile?.primary_email as string | undefined;
       const isAdmin = email === "grappe4arkansas@gmail.com" || email === "director@block-street.local";
+      setCanCreateDirectInvite(isAdmin);
       if (!pd.place && !isAdmin) {
         router.replace("/choose-place");
         return;
@@ -83,8 +85,12 @@ export default function NetworkBoardPage() {
       )}
 
       <div className="mt-8 rounded-xl border border-slate-200 bg-white p-5">
-        <h2 className="text-sm font-bold uppercase tracking-wide text-slate-700">Invite others</h2>
-        <p className="mt-1 break-all text-sm text-slate-600">{shareUrl}</p>
+        <h2 className="text-sm font-bold uppercase tracking-wide text-slate-700">Share your board</h2>
+        <p className="mt-2 text-sm text-slate-600">
+          This link shows your board and remembers you referred them. Soft beta still needs a real invitation before someone
+          can create an account — send them an invite from a host when you have one, or ask Steve/hosts tonight.
+        </p>
+        <p className="mt-3 break-all text-sm text-slate-600">{shareUrl}</p>
         <div className="mt-4 flex flex-wrap gap-2">
           <button
             type="button"
@@ -122,7 +128,9 @@ export default function NetworkBoardPage() {
       <div className="mt-8">
         <h2 className="text-sm font-bold uppercase tracking-wide text-slate-700">People you brought in</h2>
         {board.members.length === 0 ? (
-          <p className="mt-3 text-sm text-slate-500">No one yet — share your link or create an invite from Start.</p>
+          <p className="mt-3 text-sm text-slate-500">
+            No one yet — share your board, then make sure each person also receives a real invitation link before they sign up.
+          </p>
         ) : (
           <ul className="mt-3 space-y-2">
             {board.members.map((m) => (
@@ -138,12 +146,19 @@ export default function NetworkBoardPage() {
       </div>
 
       <div className="mt-10 space-y-3">
-        <Link href="/app" className="block text-center text-sm font-medium text-brand-700 hover:underline">
-          Open place hub
+        <Link href="/choose-place" className="block text-center text-sm font-medium text-brand-700 hover:underline">
+          Review your place
         </Link>
-        <Link href="/start" className="block text-center text-sm font-medium text-slate-600 hover:underline">
-          Create a direct invite
-        </Link>
+        {canCreateDirectInvite ? (
+          <Link href="/start" className="block text-center text-sm font-medium text-slate-600 hover:underline">
+            Create a direct invite (host)
+          </Link>
+        ) : (
+          <p className="text-center text-xs text-slate-500">
+            Account invites are issued by meeting hosts in soft beta. Your share link helps people find you — it is not an
+            account invite by itself.
+          </p>
+        )}
       </div>
     </div>
   );

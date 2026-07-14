@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useRouter, useParams } from "next/navigation";
 import Link from "next/link";
 import { AuthPageShell } from "@/components/auth/AuthPageShell";
-import { LanguageToggle, useIdentityLocale } from "@/components/identity/LanguageToggle";
+import { LanguageToggle } from "@/components/identity/LanguageToggle";
 
 function errorMessage(data: unknown): string {
   if (!data || typeof data !== "object") return "Activation failed";
@@ -21,7 +21,6 @@ export default function InviteTokenPage() {
   const router = useRouter();
   const routeParams = useParams();
   const token = typeof routeParams.token === "string" ? routeParams.token : "";
-  const { t } = useIdentityLocale();
   const [gateMessage, setGateMessage] = useState("");
   const [decision, setDecision] = useState<string | null>(null);
   const [invitation, setInvitation] = useState<Record<string, unknown> | null>(null);
@@ -132,11 +131,13 @@ export default function InviteTokenPage() {
     });
   }
 
+  const friendlyGate =
+    decision === "proceed"
+      ? "This invitation looks good. Create your account to continue."
+      : gateMessage;
+
   return (
-    <AuthPageShell
-      title={t("invite.title")}
-      subtitle={invitation ? String(invitation.institution_id ?? "Invitation") : undefined}
-    >
+    <AuthPageShell title="Accept your invitation" subtitle="Three quick steps: confirm it’s you, set a password, continue.">
       <div className="mb-4 flex justify-end">
         <LanguageToggle />
       </div>
@@ -146,7 +147,7 @@ export default function InviteTokenPage() {
           {error}
         </p>
       )}
-      {gateMessage && !error && <p className="text-sm text-blue-900">{gateMessage}</p>}
+      {friendlyGate && !error && <p className="text-sm text-blue-900">{friendlyGate}</p>}
 
       {decision === "already_accepted" && (
         <div className="mt-4 rounded-lg border border-emerald-200 bg-emerald-50 p-4 text-sm text-emerald-950">
@@ -159,10 +160,10 @@ export default function InviteTokenPage() {
 
       {decision === "identity_review_required" && (
         <div className="mt-4 rounded-lg border border-amber-200 bg-amber-50 p-4 text-sm text-amber-950">
-          <p className="font-semibold">Identity review needed</p>
+          <p className="font-semibold">Sign in needed</p>
           <p className="mt-1">
-            Sign in with the account that matches this invitation email, then return to this link — or ask
-            your sponsor for a fresh invite if the email is wrong.
+            An account already matches this email. Sign in, then return to this link — or ask your host for a fresh
+            invite if the email is wrong.
           </p>
           <Link href={`/login?next=/invite/${token}`} className="mt-2 inline-block font-semibold underline">
             Sign in, then accept →
@@ -171,16 +172,11 @@ export default function InviteTokenPage() {
       )}
 
       {invitation && (
-        <div className="mt-4 space-y-2 rounded border border-blue-100 bg-blue-50 p-3 text-xs text-blue-900">
+        <div className="mt-4 space-y-1 rounded-lg border border-blue-100 bg-blue-50 p-3 text-sm text-blue-950">
           <p>
-            <strong>For:</strong> {String(invitation.intended_recipient_name ?? "—")}
+            <strong>{String(invitation.intended_recipient_name ?? "Invited guest")}</strong>
           </p>
-          <p>
-            <strong>Email:</strong> {String(invitation.recipient_contact_reference ?? "—")}
-          </p>
-          <p>
-            <strong>Role:</strong> {String(invitation.intended_role ?? invitation.proposed_role_id ?? "member")}
-          </p>
+          <p className="text-xs text-blue-900">{String(invitation.recipient_contact_reference ?? "")}</p>
         </div>
       )}
 
@@ -192,7 +188,7 @@ export default function InviteTokenPage() {
             type="button"
             disabled={loading}
             onClick={() => void acceptSignedIn()}
-            className="mt-3 w-full rounded bg-brand-700 px-4 py-3 font-semibold text-white disabled:opacity-50"
+            className="mt-3 w-full rounded-lg bg-brand-700 px-4 py-3 font-semibold text-white disabled:opacity-50"
           >
             {loading ? "Accepting…" : "Accept with my signed-in account"}
           </button>
@@ -212,22 +208,23 @@ export default function InviteTokenPage() {
             <span>Confirm this invitation is intended for me.</span>
           </label>
 
-          <p className="text-xs text-blue-800">{t("invite.public_name_hint")}</p>
           <label className="block font-medium">
-            {t("invite.public_name")}
+            Your name
             <input
               required
-              className="mt-1 w-full rounded border border-blue-200 px-3 py-2"
+              className="mt-1 w-full rounded-lg border border-blue-200 px-3 py-2"
               value={publicName}
               onChange={(e) => setPublicName(e.target.value)}
+              placeholder="How people know you"
             />
           </label>
           <label className="block font-medium">
-            Preferred short name (optional)
+            Short name (optional)
             <input
-              className="mt-1 w-full rounded border border-blue-200 px-3 py-2"
+              className="mt-1 w-full rounded-lg border border-blue-200 px-3 py-2"
               value={preferredName}
               onChange={(e) => setPreferredName(e.target.value)}
+              placeholder="What to show on your board"
             />
           </label>
           <label className="block font-medium">
@@ -236,7 +233,7 @@ export default function InviteTokenPage() {
               type="email"
               required
               readOnly
-              className="mt-1 w-full rounded border border-blue-200 bg-blue-50 px-3 py-2"
+              className="mt-1 w-full rounded-lg border border-blue-200 bg-blue-50 px-3 py-2"
               value={email}
             />
           </label>
@@ -246,7 +243,7 @@ export default function InviteTokenPage() {
               type="password"
               required
               minLength={8}
-              className="mt-1 w-full rounded border border-blue-200 px-3 py-2"
+              className="mt-1 w-full rounded-lg border border-blue-200 px-3 py-2"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               autoComplete="new-password"
@@ -255,9 +252,9 @@ export default function InviteTokenPage() {
           <button
             type="submit"
             disabled={loading || !confirmed}
-            className="w-full rounded bg-blue-700 px-4 py-3 text-white disabled:opacity-50"
+            className="w-full rounded-lg bg-blue-700 px-4 py-3 font-semibold text-white disabled:opacity-50"
           >
-            {loading ? "Activating…" : t("invite.activate")}
+            {loading ? "Creating account…" : "Create account and continue"}
           </button>
           <p className="text-center text-xs text-blue-700">
             Already have an account?{" "}

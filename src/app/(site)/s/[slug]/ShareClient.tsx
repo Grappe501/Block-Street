@@ -17,34 +17,34 @@ export function RedirectShareClient({ card, referralCookie }: { card: Card; refe
 
   return (
     <div className="mx-auto max-w-lg px-4 py-12">
-      <p className="text-sm font-medium text-brand-700">You&apos;re invited</p>
-      <h1 className="mt-2 text-3xl font-bold text-slate-900">Join {card.preferred_name} on ASYON</h1>
+      <p className="text-sm font-medium text-brand-700">You&apos;re almost in</p>
+      <h1 className="mt-2 text-3xl font-bold text-slate-900">Join {card.preferred_name} on Block Street</h1>
       <p className="mt-3 text-lg text-slate-600">
-        {card.display_name} wants you in Arkansas youth organizing
+        {card.display_name} invited you to organize together
         {card.home_place_name ? (
           <>
             {" "}
-            · home: <span className="font-semibold text-slate-900">{card.home_place_name}</span>
+            · <span className="font-semibold text-slate-900">{card.home_place_name}</span>
           </>
         ) : null}
         .
       </p>
       <p className="mt-6 text-sm text-slate-600">
-        Ask {card.preferred_name} for an invite link, or sign in if you already have one. Your visit is attributed to their share
-        link when you register.
+        Soft beta is invitation-only. Ask {card.preferred_name} for their personal invite link, then paste it on the next
+        screen. Already have an account? Sign in.
       </p>
       <div className="mt-8 space-y-3">
         <Link
-          href="/start"
+          href="/join"
           className="block rounded-xl bg-brand-700 px-4 py-4 text-center font-semibold text-white hover:bg-brand-800"
         >
-          I have an invite — continue
+          I have an invite link — continue
         </Link>
         <Link
-          href="/directory"
+          href="/login?next=/network"
           className="block rounded-xl border border-slate-200 bg-white px-4 py-4 text-center font-semibold text-slate-900 hover:border-brand-400"
         >
-          Explore the directory
+          Sign in
         </Link>
       </div>
     </div>

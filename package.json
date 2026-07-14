@@ -36,6 +36,7 @@
     "field-plan:prep-durability": "node scripts/run-with-h-env.mjs npx tsx scripts/field-plan/prep-durability.ts",
     "test:v2b5-durability-prep": "node scripts/run-with-h-env.mjs npx tsx scripts/test-v2b5-durability-prep.ts",
     "sandbox:invite-accept": "node scripts/run-with-h-env.mjs npx tsx scripts/sandbox-invite-accept.ts",
+    "sandbox:invite-ux": "node scripts/run-with-h-env.mjs node scripts/sandbox-invite-ux-audit.mjs",
     "test:field-strategy-manual": "node scripts/run-with-h-env.mjs npx tsx scripts/test-field-strategy-manual.ts",
     "test:leadership-hierarchy": "node scripts/run-with-h-env.mjs npx tsx scripts/test-leadership-hierarchy.ts",
     "test:role-dashboards": "node scripts/run-with-h-env.mjs npx tsx scripts/test-role-dashboards.ts",
