@@ -14,6 +14,11 @@ export {
 
 export { mapFieldPlanPositions, mappingAnswersFor } from "./position-mapper";
 
+export {
+  buildResponsibilityLibrary,
+  responsibilitiesForCanonical,
+} from "./responsibility-library";
+
 export function getVictoryFieldFramework() {
   return framework;
 }

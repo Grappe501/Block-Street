@@ -28,6 +28,8 @@
     "field-plan:assert-no-flat-25": "node scripts/run-with-h-env.mjs node scripts/field-plan/assert-no-active-flat-25.mjs",
     "field-plan:map-positions": "node scripts/run-with-h-env.mjs npx tsx scripts/field-plan/map-positions.ts",
     "test:v2b2-position-mapping": "node scripts/run-with-h-env.mjs npx tsx scripts/test-v2b2-position-mapping.ts",
+    "field-plan:build-responsibility-library": "node scripts/run-with-h-env.mjs npx tsx scripts/field-plan/build-responsibility-library.ts",
+    "test:v2b3-responsibility-library": "node scripts/run-with-h-env.mjs npx tsx scripts/test-v2b3-responsibility-library.ts",
     "test:field-strategy-manual": "node scripts/run-with-h-env.mjs npx tsx scripts/test-field-strategy-manual.ts",
     "test:leadership-hierarchy": "node scripts/run-with-h-env.mjs npx tsx scripts/test-leadership-hierarchy.ts",
     "test:role-dashboards": "node scripts/run-with-h-env.mjs npx tsx scripts/test-role-dashboards.ts",

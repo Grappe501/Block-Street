@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updated": "2026-07-14T18:15:44.570Z",
+  "updated": "2026-07-14T18:21:55.781Z",
   "entries": [
     {
       "at": "2026-07-14T18:05:00.000Z",
@@ -44,6 +44,25 @@
         "total_considered": 32
       },
       "broad_ingest": false
+    },
+    {
+      "at": "2026-07-14T18:21:55.781Z",
+      "event": "v2b3_responsibility_library_build",
+      "artifacts": [
+        "data/field-plan/responsibility-library.json"
+      ],
+      "summary": {
+        "mapped_canonical_positions": 13,
+        "positions_with_content": 7,
+        "positions_placeholder": 6,
+        "responsibilities": 55,
+        "task_templates": 49,
+        "skipped_unmapped": 2,
+        "skipped_conflict": 1,
+        "skipped_deferred_central": 16
+      },
+      "broad_ingest": false,
+      "personnel_assignment": false
     }
   ]
 }

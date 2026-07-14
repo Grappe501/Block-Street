@@ -1,0 +1,2835 @@
+{
+  "version": "1.0.0",
+  "phase": "V2-B.3",
+  "generated_at": "2026-07-14T18:21:55.781Z",
+  "authority": "docs/v2/V2B3_RESPONSIBILITY_LIBRARY.md",
+  "mapping_registry": "data/field-plan/position-mapping-registry.json",
+  "role_content": "data/field-plan/position-content.json",
+  "policy": {
+    "bound_to_mapped_only": true,
+    "no_silent_assign_unmapped": true,
+    "task_templates_not_assigned_to_personnel": true,
+    "kpi_wiring": "deferred_to_later_b3_plus",
+    "do_not_invent_doctrine": true
+  },
+  "summary": {
+    "mapped_canonical_positions": 13,
+    "positions_with_content": 7,
+    "positions_placeholder": 6,
+    "responsibilities": 55,
+    "task_templates": 49,
+    "skipped_unmapped": 2,
+    "skipped_conflict": 1,
+    "skipped_deferred_central": 16
+  },
+  "skipped_unmapped": [
+    "media_lead",
+    "logistics_lead"
+  ],
+  "skipped_conflict": [
+    "recruitment_lead+community_social_lead"
+  ],
+  "skipped_deferred_central": [
+    "field_director",
+    "volunteer_management",
+    "central_social",
+    "graphic_design",
+    "email_team",
+    "phone_bank",
+    "text_bank",
+    "postcard_team",
+    "young_adult_team",
+    "county_strike_team",
+    "communications_director",
+    "press_office",
+    "data_team",
+    "voter_registration_director",
+    "fundraising",
+    "operations"
+  ],
+  "responsibilities": [
+    {
+      "stable_id": "FP-resp-event_lead-summary",
+      "kind": "responsibility",
+      "title": "Event Lead — role summary",
+      "canonical_key": "event_lead",
+      "field_plan_key": "event_lead",
+      "phase": "always_active",
+      "body": "Owns local event execution so the stop leaves permanent organization, not just a crowd.",
+      "summary": "Owns local event execution so the stop leaves permanent organization, not just a crowd.",
+      "source_reference": "Arkansas Victory Field Framework · Phases 1–7, 13",
+      "command_level": "committee",
+      "position_owner": "event_lead",
+      "reports_to": [
+        "county_volunteer_lead",
+        "institution_lead"
+      ],
+      "scope_types": [
+        "county",
+        "institution",
+        "city",
+        "community"
+      ],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "frequency_or_deadline": {
+        "mode": "always_active",
+        "cadence": null,
+        "deadline": null
+      },
+      "kpi_relationship": [],
+      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "sensitivity_classification": "volunteer_internal",
+      "version": "0.1.0",
+      "review_status": "queued_for_review",
+      "content_status": "ingested",
+      "expandable": true,
+      "task_template_ids": [
+        "FP-tmpl-event_lead-summary"
+      ],
+      "hierarchy_role": "functional_lead",
+      "function_key": "events"
+    },
+    {
+      "stable_id": "FP-resp-event_lead-always_active",
+      "kind": "responsibility",
+      "title": "Event Lead — always active",
+      "canonical_key": "event_lead",
+      "field_plan_key": "event_lead",
+      "phase": "always_active",
+      "body": "Locate venue, run logistics with Logistics Lead, keep the event funnel moving toward Power of Five launches.",
+      "summary": "Owns local event execution so the stop leaves permanent organization, not just a crowd.",
+      "source_reference": "Arkansas Victory Field Framework · Phases 1–7, 13",
+      "command_level": "committee",
+      "position_owner": "event_lead",
+      "reports_to": [
+        "county_volunteer_lead",
+        "institution_lead"
+      ],
+      "scope_types": [
+        "county",
+        "institution",
+        "city",
+        "community"
+      ],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "frequency_or_deadline": {
+        "mode": "always_active",
+        "cadence": null,
+        "deadline": null
+      },
+      "kpi_relationship": [],
+      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "sensitivity_classification": "volunteer_internal",
+      "version": "0.1.0",
+      "review_status": "queued_for_review",
+      "content_status": "ingested",
+      "expandable": true,
+      "task_template_ids": [
+        "FP-tmpl-event_lead-always_active"
+      ],
+      "hierarchy_role": "functional_lead",
+      "function_key": "events"
+    },
+    {
+      "stable_id": "FP-resp-event_lead-before_event",
+      "kind": "responsibility",
+      "title": "Event Lead — before event",
+      "canonical_key": "event_lead",
+      "field_plan_key": "event_lead",
+      "phase": "before_event",
+      "body": "Confirm venue/parking/weather backup; stand up local event committee; sync calendar; drive timeline to Central Field/Volunteer Management.",
+      "summary": "Owns local event execution so the stop leaves permanent organization, not just a crowd.",
+      "source_reference": "Arkansas Victory Field Framework · Phases 1–7, 13",
+      "command_level": "committee",
+      "position_owner": "event_lead",
+      "reports_to": [
+        "county_volunteer_lead",
+        "institution_lead"
+      ],
+      "scope_types": [
+        "county",
+        "institution",
+        "city",
+        "community"
+      ],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "frequency_or_deadline": {
+        "mode": "milestone",
+        "cadence": null,
+        "deadline": "before_event"
+      },
+      "kpi_relationship": [],
+      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "sensitivity_classification": "volunteer_internal",
+      "version": "0.1.0",
+      "review_status": "queued_for_review",
+      "content_status": "ingested",
+      "expandable": true,
+      "task_template_ids": [
+        "FP-tmpl-event_lead-before_event"
+      ],
+      "hierarchy_role": "functional_lead",
+      "function_key": "events"
+    },
+    {
+      "stable_id": "FP-resp-event_lead-event_day",
+      "kind": "responsibility",
+      "title": "Event Lead — event day",
+      "canonical_key": "event_lead",
+      "field_plan_key": "event_lead",
+      "phase": "event_day",
+      "body": "Run arrival → sign-in → registration check → Meet Kelly → Power of Five invite → role choice → training invite.",
+      "summary": "Owns local event execution so the stop leaves permanent organization, not just a crowd.",
+      "source_reference": "Arkansas Victory Field Framework · Phases 1–7, 13",
+      "command_level": "committee",
+      "position_owner": "event_lead",
+      "reports_to": [
+        "county_volunteer_lead",
+        "institution_lead"
+      ],
+      "scope_types": [
+        "county",
+        "institution",
+        "city",
+        "community"
+      ],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "frequency_or_deadline": {
+        "mode": "milestone",
+        "cadence": null,
+        "deadline": "event_day"
+      },
+      "kpi_relationship": [],
+      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "sensitivity_classification": "volunteer_internal",
+      "version": "0.1.0",
+      "review_status": "queued_for_review",
+      "content_status": "ingested",
+      "expandable": true,
+      "task_template_ids": [
+        "FP-tmpl-event_lead-event_day"
+      ],
+      "hierarchy_role": "functional_lead",
+      "function_key": "events"
+    },
+    {
+      "stable_id": "FP-resp-event_lead-after_event",
+      "kind": "responsibility",
+      "title": "Event Lead — after event",
+      "canonical_key": "event_lead",
+      "field_plan_key": "event_lead",
+      "phase": "after_event",
+      "body": "Within 24h: thank-yous, photo recap, P5 kickoff invites. Within 1 week: orientation and neighborhood meetings.",
+      "summary": "Owns local event execution so the stop leaves permanent organization, not just a crowd.",
+      "source_reference": "Arkansas Victory Field Framework · Phases 1–7, 13",
+      "command_level": "committee",
+      "position_owner": "event_lead",
+      "reports_to": [
+        "county_volunteer_lead",
+        "institution_lead"
+      ],
+      "scope_types": [
+        "county",
+        "institution",
+        "city",
+        "community"
+      ],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "frequency_or_deadline": {
+        "mode": "milestone",
+        "cadence": null,
+        "deadline": "after_event"
+      },
+      "kpi_relationship": [],
+      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "sensitivity_classification": "volunteer_internal",
+      "version": "0.1.0",
+      "review_status": "queued_for_review",
+      "content_status": "ingested",
+      "expandable": true,
+      "task_template_ids": [
+        "FP-tmpl-event_lead-after_event"
+      ],
+      "hierarchy_role": "functional_lead",
+      "function_key": "events"
+    },
+    {
+      "stable_id": "FP-resp-event_lead-canvassing",
+      "kind": "responsibility",
+      "title": "Event Lead — canvassing",
+      "canonical_key": "event_lead",
+      "field_plan_key": "event_lead",
+      "phase": "canvassing",
+      "body": "Coordinate with Canvassing Lead on Saturday-prior door hangers inviting neighbors to meet Kelly.",
+      "summary": "Owns local event execution so the stop leaves permanent organization, not just a crowd.",
+      "source_reference": "Arkansas Victory Field Framework · Phases 1–7, 13",
+      "command_level": "committee",
+      "position_owner": "event_lead",
+      "reports_to": [
+        "county_volunteer_lead",
+        "institution_lead"
+      ],
+      "scope_types": [
+        "county",
+        "institution",
+        "city",
+        "community"
+      ],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "frequency_or_deadline": {
+        "mode": "recurring",
+        "cadence": "phase_window",
+        "deadline": null
+      },
+      "kpi_relationship": [],
+      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "sensitivity_classification": "volunteer_internal",
+      "version": "0.1.0",
+      "review_status": "queued_for_review",
+      "content_status": "ingested",
+      "expandable": true,
+      "task_template_ids": [
+        "FP-tmpl-event_lead-canvassing"
+      ],
+      "hierarchy_role": "functional_lead",
+      "function_key": "events"
+    },
+    {
+      "stable_id": "FP-resp-event_lead-election_week",
+      "kind": "responsibility",
+      "title": "Event Lead — election week",
+      "canonical_key": "event_lead",
+      "field_plan_key": "event_lead",
+      "phase": "election_week",
+      "body": "Every event should seed Power of Five capacity that later covers polls and October Strike Team Saturdays.",
+      "summary": "Owns local event execution so the stop leaves permanent organization, not just a crowd.",
+      "source_reference": "Arkansas Victory Field Framework · Phases 1–7, 13",
+      "command_level": "committee",
+      "position_owner": "event_lead",
+      "reports_to": [
+        "county_volunteer_lead",
+        "institution_lead"
+      ],
+      "scope_types": [
+        "county",
+        "institution",
+        "city",
+        "community"
+      ],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "frequency_or_deadline": {
+        "mode": "milestone",
+        "cadence": null,
+        "deadline": "election_week"
+      },
+      "kpi_relationship": [],
+      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "sensitivity_classification": "volunteer_internal",
+      "version": "0.1.0",
+      "review_status": "queued_for_review",
+      "content_status": "ingested",
+      "expandable": true,
+      "task_template_ids": [
+        "FP-tmpl-event_lead-election_week"
+      ],
+      "hierarchy_role": "functional_lead",
+      "function_key": "events"
+    },
+    {
+      "stable_id": "FP-resp-social_lead-summary",
+      "kind": "responsibility",
+      "title": "Social Media Lead — role summary",
+      "canonical_key": "social_lead",
+      "field_plan_key": "social_media_lead",
+      "phase": "always_active",
+      "body": "Local social + community belonging; pairs with Central Social for campaign graphics and protocol.",
+      "summary": "Local social + community belonging; pairs with Central Social for campaign graphics and protocol.",
+      "source_reference": "Arkansas Victory Field Framework · Phases 3, 5, 6, 13",
+      "command_level": "committee",
+      "position_owner": "social_lead",
+      "reports_to": [
+        "county_volunteer_lead",
+        "institution_lead"
+      ],
+      "scope_types": [
+        "county",
+        "institution"
+      ],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "frequency_or_deadline": {
+        "mode": "always_active",
+        "cadence": null,
+        "deadline": null
+      },
+      "kpi_relationship": [],
+      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "sensitivity_classification": "volunteer_internal",
+      "version": "0.1.0",
+      "review_status": "queued_for_review",
+      "content_status": "ingested",
+      "expandable": true,
+      "task_template_ids": [
+        "FP-tmpl-social_lead-summary"
+      ],
+      "hierarchy_role": "functional_lead",
+      "function_key": "social_media"
+    },
+    {
+      "stable_id": "FP-resp-social_lead-always_active",
+      "kind": "responsibility",
+      "title": "Social Media Lead — always active",
+      "canonical_key": "social_lead",
+      "field_plan_key": "social_media_lead",
+      "phase": "always_active",
+      "body": "Launch the social campaign with Central Social; plan pure social after-event; recruit through civic life.",
+      "summary": "Local social + community belonging; pairs with Central Social for campaign graphics and protocol.",
+      "source_reference": "Arkansas Victory Field Framework · Phases 3, 5, 6, 13",
+      "command_level": "committee",
+      "position_owner": "social_lead",
+      "reports_to": [
+        "county_volunteer_lead",
+        "institution_lead"
+      ],
+      "scope_types": [
+        "county",
+        "institution"
+      ],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "frequency_or_deadline": {
+        "mode": "always_active",
+        "cadence": null,
+        "deadline": null
+      },
+      "kpi_relationship": [],
+      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "sensitivity_classification": "volunteer_internal",
+      "version": "0.1.0",
+      "review_status": "queued_for_review",
+      "content_status": "ingested",
+      "expandable": true,
+      "task_template_ids": [
+        "FP-tmpl-social_lead-always_active"
+      ],
+      "hierarchy_role": "functional_lead",
+      "function_key": "social_media"
+    },
+    {
+      "stable_id": "FP-resp-social_lead-before_event",
+      "kind": "responsibility",
+      "title": "Social Media Lead — before event",
+      "canonical_key": "social_lead",
+      "field_plan_key": "social_media_lead",
+      "phase": "before_event",
+      "body": "Wave One graphics with Central Social; Wave Two community calendars, FB groups, Nextdoor, org shares; Wave Three reminders.",
+      "summary": "Local social + community belonging; pairs with Central Social for campaign graphics and protocol.",
+      "source_reference": "Arkansas Victory Field Framework · Phases 3, 5, 6, 13",
+      "command_level": "committee",
+      "position_owner": "social_lead",
+      "reports_to": [
+        "county_volunteer_lead",
+        "institution_lead"
+      ],
+      "scope_types": [
+        "county",
+        "institution"
+      ],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "frequency_or_deadline": {
+        "mode": "milestone",
+        "cadence": null,
+        "deadline": "before_event"
+      },
+      "kpi_relationship": [],
+      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "sensitivity_classification": "volunteer_internal",
+      "version": "0.1.0",
+      "review_status": "queued_for_review",
+      "content_status": "ingested",
+      "expandable": true,
+      "task_template_ids": [
+        "FP-tmpl-social_lead-before_event"
+      ],
+      "hierarchy_role": "functional_lead",
+      "function_key": "social_media"
+    },
+    {
+      "stable_id": "FP-resp-social_lead-event_day",
+      "kind": "responsibility",
+      "title": "Social Media Lead — event day",
+      "canonical_key": "social_lead",
+      "field_plan_key": "social_media_lead",
+      "phase": "event_day",
+      "body": "Capture content, welcome newcomers, steer people to sign-in and Power of Five.",
+      "summary": "Local social + community belonging; pairs with Central Social for campaign graphics and protocol.",
+      "source_reference": "Arkansas Victory Field Framework · Phases 3, 5, 6, 13",
+      "command_level": "committee",
+      "position_owner": "social_lead",
+      "reports_to": [
+        "county_volunteer_lead",
+        "institution_lead"
+      ],
+      "scope_types": [
+        "county",
+        "institution"
+      ],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "frequency_or_deadline": {
+        "mode": "milestone",
+        "cadence": null,
+        "deadline": "event_day"
+      },
+      "kpi_relationship": [],
+      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "sensitivity_classification": "volunteer_internal",
+      "version": "0.1.0",
+      "review_status": "queued_for_review",
+      "content_status": "ingested",
+      "expandable": true,
+      "task_template_ids": [
+        "FP-tmpl-social_lead-event_day"
+      ],
+      "hierarchy_role": "functional_lead",
+      "function_key": "social_media"
+    },
+    {
+      "stable_id": "FP-resp-social_lead-after_event",
+      "kind": "responsibility",
+      "title": "Social Media Lead — after event",
+      "canonical_key": "social_lead",
+      "field_plan_key": "social_media_lead",
+      "phase": "after_event",
+      "body": "Photos/recap within 24h; after-event social plan; keep new contacts in the volunteer funnel.",
+      "summary": "Local social + community belonging; pairs with Central Social for campaign graphics and protocol.",
+      "source_reference": "Arkansas Victory Field Framework · Phases 3, 5, 6, 13",
+      "command_level": "committee",
+      "position_owner": "social_lead",
+      "reports_to": [
+        "county_volunteer_lead",
+        "institution_lead"
+      ],
+      "scope_types": [
+        "county",
+        "institution"
+      ],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "frequency_or_deadline": {
+        "mode": "milestone",
+        "cadence": null,
+        "deadline": "after_event"
+      },
+      "kpi_relationship": [],
+      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "sensitivity_classification": "volunteer_internal",
+      "version": "0.1.0",
+      "review_status": "queued_for_review",
+      "content_status": "ingested",
+      "expandable": true,
+      "task_template_ids": [
+        "FP-tmpl-social_lead-after_event"
+      ],
+      "hierarchy_role": "functional_lead",
+      "function_key": "social_media"
+    },
+    {
+      "stable_id": "FP-resp-social_lead-canvassing",
+      "kind": "responsibility",
+      "title": "Social Media Lead — canvassing",
+      "canonical_key": "social_lead",
+      "field_plan_key": "social_media_lead",
+      "phase": "canvassing",
+      "body": "Support shared messaging for door hangers and partner asks.",
+      "summary": "Local social + community belonging; pairs with Central Social for campaign graphics and protocol.",
+      "source_reference": "Arkansas Victory Field Framework · Phases 3, 5, 6, 13",
+      "command_level": "committee",
+      "position_owner": "social_lead",
+      "reports_to": [
+        "county_volunteer_lead",
+        "institution_lead"
+      ],
+      "scope_types": [
+        "county",
+        "institution"
+      ],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "frequency_or_deadline": {
+        "mode": "recurring",
+        "cadence": "phase_window",
+        "deadline": null
+      },
+      "kpi_relationship": [],
+      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "sensitivity_classification": "volunteer_internal",
+      "version": "0.1.0",
+      "review_status": "queued_for_review",
+      "content_status": "ingested",
+      "expandable": true,
+      "task_template_ids": [
+        "FP-tmpl-social_lead-canvassing"
+      ],
+      "hierarchy_role": "functional_lead",
+      "function_key": "social_media"
+    },
+    {
+      "stable_id": "FP-resp-social_lead-election_week",
+      "kind": "responsibility",
+      "title": "Social Media Lead — election week",
+      "canonical_key": "social_lead",
+      "field_plan_key": "social_media_lead",
+      "phase": "election_week",
+      "body": "Sustain recognition and digital toolkit use for Power of Five leaders.",
+      "summary": "Local social + community belonging; pairs with Central Social for campaign graphics and protocol.",
+      "source_reference": "Arkansas Victory Field Framework · Phases 3, 5, 6, 13",
+      "command_level": "committee",
+      "position_owner": "social_lead",
+      "reports_to": [
+        "county_volunteer_lead",
+        "institution_lead"
+      ],
+      "scope_types": [
+        "county",
+        "institution"
+      ],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "frequency_or_deadline": {
+        "mode": "milestone",
+        "cadence": null,
+        "deadline": "election_week"
+      },
+      "kpi_relationship": [],
+      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "sensitivity_classification": "volunteer_internal",
+      "version": "0.1.0",
+      "review_status": "queued_for_review",
+      "content_status": "ingested",
+      "expandable": true,
+      "task_template_ids": [
+        "FP-tmpl-social_lead-election_week"
+      ],
+      "hierarchy_role": "functional_lead",
+      "function_key": "social_media"
+    },
+    {
+      "stable_id": "FP-resp-canvass_lead-summary",
+      "kind": "responsibility",
+      "title": "Canvassing Lead — role summary",
+      "canonical_key": "canvass_lead",
+      "field_plan_key": "canvass_lead",
+      "phase": "always_active",
+      "body": "Neighborhood outreach around the event radius and October Strike Team Saturdays.",
+      "summary": "Neighborhood outreach around the event radius and October Strike Team Saturdays.",
+      "source_reference": "Arkansas Victory Field Framework · Phases 4, 11, 12",
+      "command_level": "committee",
+      "position_owner": "canvass_lead",
+      "reports_to": [
+        "county_volunteer_lead",
+        "institution_lead"
+      ],
+      "scope_types": [
+        "county",
+        "institution"
+      ],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "frequency_or_deadline": {
+        "mode": "always_active",
+        "cadence": null,
+        "deadline": null
+      },
+      "kpi_relationship": [],
+      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "sensitivity_classification": "volunteer_internal",
+      "version": "0.1.0",
+      "review_status": "queued_for_review",
+      "content_status": "ingested",
+      "expandable": true,
+      "task_template_ids": [
+        "FP-tmpl-canvass_lead-summary"
+      ],
+      "hierarchy_role": "functional_lead",
+      "function_key": "canvassing"
+    },
+    {
+      "stable_id": "FP-resp-canvass_lead-always_active",
+      "kind": "responsibility",
+      "title": "Canvassing Lead — always active",
+      "canonical_key": "canvass_lead",
+      "field_plan_key": "canvass_lead",
+      "phase": "always_active",
+      "body": "Door hangers the Saturday before inviting people to meet Kelly and share community concerns.",
+      "summary": "Neighborhood outreach around the event radius and October Strike Team Saturdays.",
+      "source_reference": "Arkansas Victory Field Framework · Phases 4, 11, 12",
+      "command_level": "committee",
+      "position_owner": "canvass_lead",
+      "reports_to": [
+        "county_volunteer_lead",
+        "institution_lead"
+      ],
+      "scope_types": [
+        "county",
+        "institution"
+      ],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "frequency_or_deadline": {
+        "mode": "always_active",
+        "cadence": null,
+        "deadline": null
+      },
+      "kpi_relationship": [],
+      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "sensitivity_classification": "volunteer_internal",
+      "version": "0.1.0",
+      "review_status": "queued_for_review",
+      "content_status": "ingested",
+      "expandable": true,
+      "task_template_ids": [
+        "FP-tmpl-canvass_lead-always_active"
+      ],
+      "hierarchy_role": "functional_lead",
+      "function_key": "canvassing"
+    },
+    {
+      "stable_id": "FP-resp-canvass_lead-before_event",
+      "kind": "responsibility",
+      "title": "Canvassing Lead — before event",
+      "canonical_key": "canvass_lead",
+      "field_plan_key": "canvass_lead",
+      "phase": "before_event",
+      "body": "Map radius; train walkers; coordinate literature/door hangers; sync with Recruitment and Registration leads.",
+      "summary": "Neighborhood outreach around the event radius and October Strike Team Saturdays.",
+      "source_reference": "Arkansas Victory Field Framework · Phases 4, 11, 12",
+      "command_level": "committee",
+      "position_owner": "canvass_lead",
+      "reports_to": [
+        "county_volunteer_lead",
+        "institution_lead"
+      ],
+      "scope_types": [
+        "county",
+        "institution"
+      ],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "frequency_or_deadline": {
+        "mode": "milestone",
+        "cadence": null,
+        "deadline": "before_event"
+      },
+      "kpi_relationship": [],
+      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "sensitivity_classification": "volunteer_internal",
+      "version": "0.1.0",
+      "review_status": "queued_for_review",
+      "content_status": "ingested",
+      "expandable": true,
+      "task_template_ids": [
+        "FP-tmpl-canvass_lead-before_event"
+      ],
+      "hierarchy_role": "functional_lead",
+      "function_key": "canvassing"
+    },
+    {
+      "stable_id": "FP-resp-canvass_lead-event_day",
+      "kind": "responsibility",
+      "title": "Canvassing Lead — event day",
+      "canonical_key": "canvass_lead",
+      "field_plan_key": "canvass_lead",
+      "phase": "event_day",
+      "body": "Greeters and pathing; capture volunteer interest from walk conversations.",
+      "summary": "Neighborhood outreach around the event radius and October Strike Team Saturdays.",
+      "source_reference": "Arkansas Victory Field Framework · Phases 4, 11, 12",
+      "command_level": "committee",
+      "position_owner": "canvass_lead",
+      "reports_to": [
+        "county_volunteer_lead",
+        "institution_lead"
+      ],
+      "scope_types": [
+        "county",
+        "institution"
+      ],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "frequency_or_deadline": {
+        "mode": "milestone",
+        "cadence": null,
+        "deadline": "event_day"
+      },
+      "kpi_relationship": [],
+      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "sensitivity_classification": "volunteer_internal",
+      "version": "0.1.0",
+      "review_status": "queued_for_review",
+      "content_status": "ingested",
+      "expandable": true,
+      "task_template_ids": [
+        "FP-tmpl-canvass_lead-event_day"
+      ],
+      "hierarchy_role": "functional_lead",
+      "function_key": "canvassing"
+    },
+    {
+      "stable_id": "FP-resp-canvass_lead-after_event",
+      "kind": "responsibility",
+      "title": "Canvassing Lead — after event",
+      "canonical_key": "canvass_lead",
+      "field_plan_key": "canvass_lead",
+      "phase": "after_event",
+      "body": "Log doors, shifts, and follow-ups; feed Power of Five neighborhood coverage.",
+      "summary": "Neighborhood outreach around the event radius and October Strike Team Saturdays.",
+      "source_reference": "Arkansas Victory Field Framework · Phases 4, 11, 12",
+      "command_level": "committee",
+      "position_owner": "canvass_lead",
+      "reports_to": [
+        "county_volunteer_lead",
+        "institution_lead"
+      ],
+      "scope_types": [
+        "county",
+        "institution"
+      ],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "frequency_or_deadline": {
+        "mode": "milestone",
+        "cadence": null,
+        "deadline": "after_event"
+      },
+      "kpi_relationship": [],
+      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "sensitivity_classification": "volunteer_internal",
+      "version": "0.1.0",
+      "review_status": "queued_for_review",
+      "content_status": "ingested",
+      "expandable": true,
+      "task_template_ids": [
+        "FP-tmpl-canvass_lead-after_event"
+      ],
+      "hierarchy_role": "functional_lead",
+      "function_key": "canvassing"
+    },
+    {
+      "stable_id": "FP-resp-canvass_lead-canvassing",
+      "kind": "responsibility",
+      "title": "Canvassing Lead — canvassing",
+      "canonical_key": "canvass_lead",
+      "field_plan_key": "canvass_lead",
+      "phase": "canvassing",
+      "body": "Primary lane — neighborhood walk, business visits where useful, Saturday-prior hangers.",
+      "summary": "Neighborhood outreach around the event radius and October Strike Team Saturdays.",
+      "source_reference": "Arkansas Victory Field Framework · Phases 4, 11, 12",
+      "command_level": "committee",
+      "position_owner": "canvass_lead",
+      "reports_to": [
+        "county_volunteer_lead",
+        "institution_lead"
+      ],
+      "scope_types": [
+        "county",
+        "institution"
+      ],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "frequency_or_deadline": {
+        "mode": "recurring",
+        "cadence": "phase_window",
+        "deadline": null
+      },
+      "kpi_relationship": [],
+      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "sensitivity_classification": "volunteer_internal",
+      "version": "0.1.0",
+      "review_status": "queued_for_review",
+      "content_status": "ingested",
+      "expandable": true,
+      "task_template_ids": [
+        "FP-tmpl-canvass_lead-canvassing"
+      ],
+      "hierarchy_role": "functional_lead",
+      "function_key": "canvassing"
+    },
+    {
+      "stable_id": "FP-resp-canvass_lead-election_week",
+      "kind": "responsibility",
+      "title": "Canvassing Lead — election week",
+      "canonical_key": "canvass_lead",
+      "field_plan_key": "canvass_lead",
+      "phase": "election_week",
+      "body": "October Saturdays: canvass + Strike Team cookout staging with local candidates where appropriate.",
+      "summary": "Neighborhood outreach around the event radius and October Strike Team Saturdays.",
+      "source_reference": "Arkansas Victory Field Framework · Phases 4, 11, 12",
+      "command_level": "committee",
+      "position_owner": "canvass_lead",
+      "reports_to": [
+        "county_volunteer_lead",
+        "institution_lead"
+      ],
+      "scope_types": [
+        "county",
+        "institution"
+      ],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "frequency_or_deadline": {
+        "mode": "milestone",
+        "cadence": null,
+        "deadline": "election_week"
+      },
+      "kpi_relationship": [],
+      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "sensitivity_classification": "volunteer_internal",
+      "version": "0.1.0",
+      "review_status": "queued_for_review",
+      "content_status": "ingested",
+      "expandable": true,
+      "task_template_ids": [
+        "FP-tmpl-canvass_lead-election_week"
+      ],
+      "hierarchy_role": "functional_lead",
+      "function_key": "canvassing"
+    },
+    {
+      "stable_id": "FP-resp-community_lead-summary",
+      "kind": "responsibility",
+      "title": "Volunteer Recruitment Lead — role summary",
+      "canonical_key": "community_lead",
+      "field_plan_key": "recruitment_lead",
+      "phase": "always_active",
+      "body": "Local volunteer recruitment lead — works with Central Volunteer Management / Field Manager.",
+      "summary": "Local volunteer recruitment lead — works with Central Volunteer Management / Field Manager.",
+      "source_reference": "Arkansas Victory Field Framework · Phases 1, 7, 8, 13",
+      "command_level": "committee",
+      "position_owner": "community_lead",
+      "reports_to": [
+        "county_volunteer_lead",
+        "volunteer_manager"
+      ],
+      "scope_types": [
+        "county",
+        "institution",
+        "community"
+      ],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "frequency_or_deadline": {
+        "mode": "always_active",
+        "cadence": null,
+        "deadline": null
+      },
+      "kpi_relationship": [],
+      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "sensitivity_classification": "volunteer_internal",
+      "version": "0.1.0",
+      "review_status": "queued_for_review",
+      "content_status": "ingested",
+      "expandable": true,
+      "task_template_ids": [
+        "FP-tmpl-community_lead-summary"
+      ],
+      "hierarchy_role": "functional_lead",
+      "function_key": "community_outreach"
+    },
+    {
+      "stable_id": "FP-resp-community_lead-always_active",
+      "kind": "responsibility",
+      "title": "Volunteer Recruitment Lead — always active",
+      "canonical_key": "community_lead",
+      "field_plan_key": "recruitment_lead",
+      "phase": "always_active",
+      "body": "Build the local volunteer base around the event so the stop creates lasting organizers.",
+      "summary": "Local volunteer recruitment lead — works with Central Volunteer Management / Field Manager.",
+      "source_reference": "Arkansas Victory Field Framework · Phases 1, 7, 8, 13",
+      "command_level": "committee",
+      "position_owner": "community_lead",
+      "reports_to": [
+        "county_volunteer_lead",
+        "volunteer_manager"
+      ],
+      "scope_types": [
+        "county",
+        "institution",
+        "community"
+      ],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "frequency_or_deadline": {
+        "mode": "always_active",
+        "cadence": null,
+        "deadline": null
+      },
+      "kpi_relationship": [],
+      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "sensitivity_classification": "volunteer_internal",
+      "version": "0.1.0",
+      "review_status": "queued_for_review",
+      "content_status": "ingested",
+      "expandable": true,
+      "task_template_ids": [
+        "FP-tmpl-community_lead-always_active"
+      ],
+      "hierarchy_role": "functional_lead",
+      "function_key": "community_outreach"
+    },
+    {
+      "stable_id": "FP-resp-community_lead-before_event",
+      "kind": "responsibility",
+      "title": "Volunteer Recruitment Lead — before event",
+      "canonical_key": "community_lead",
+      "field_plan_key": "recruitment_lead",
+      "phase": "before_event",
+      "body": "Fill open leads/co-leads; ask every contact to bring a friend; feed orientation pipeline.",
+      "summary": "Local volunteer recruitment lead — works with Central Volunteer Management / Field Manager.",
+      "source_reference": "Arkansas Victory Field Framework · Phases 1, 7, 8, 13",
+      "command_level": "committee",
+      "position_owner": "community_lead",
+      "reports_to": [
+        "county_volunteer_lead",
+        "volunteer_manager"
+      ],
+      "scope_types": [
+        "county",
+        "institution",
+        "community"
+      ],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "frequency_or_deadline": {
+        "mode": "milestone",
+        "cadence": null,
+        "deadline": "before_event"
+      },
+      "kpi_relationship": [],
+      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "sensitivity_classification": "volunteer_internal",
+      "version": "0.1.0",
+      "review_status": "queued_for_review",
+      "content_status": "ingested",
+      "expandable": true,
+      "task_template_ids": [
+        "FP-tmpl-community_lead-before_event"
+      ],
+      "hierarchy_role": "functional_lead",
+      "function_key": "community_outreach"
+    },
+    {
+      "stable_id": "FP-resp-community_lead-event_day",
+      "kind": "responsibility",
+      "title": "Volunteer Recruitment Lead — event day",
+      "canonical_key": "community_lead",
+      "field_plan_key": "recruitment_lead",
+      "phase": "event_day",
+      "body": "Meet volunteers station; convert attendees into Power of Five / volunteer roles.",
+      "summary": "Local volunteer recruitment lead — works with Central Volunteer Management / Field Manager.",
+      "source_reference": "Arkansas Victory Field Framework · Phases 1, 7, 8, 13",
+      "command_level": "committee",
+      "position_owner": "community_lead",
+      "reports_to": [
+        "county_volunteer_lead",
+        "volunteer_manager"
+      ],
+      "scope_types": [
+        "county",
+        "institution",
+        "community"
+      ],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "frequency_or_deadline": {
+        "mode": "milestone",
+        "cadence": null,
+        "deadline": "event_day"
+      },
+      "kpi_relationship": [],
+      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "sensitivity_classification": "volunteer_internal",
+      "version": "0.1.0",
+      "review_status": "queued_for_review",
+      "content_status": "ingested",
+      "expandable": true,
+      "task_template_ids": [
+        "FP-tmpl-community_lead-event_day"
+      ],
+      "hierarchy_role": "functional_lead",
+      "function_key": "community_outreach"
+    },
+    {
+      "stable_id": "FP-resp-community_lead-after_event",
+      "kind": "responsibility",
+      "title": "Volunteer Recruitment Lead — after event",
+      "canonical_key": "community_lead",
+      "field_plan_key": "recruitment_lead",
+      "phase": "after_event",
+      "body": "24h interest follow-up; 1 week orientation; move people up the leadership ladder.",
+      "summary": "Local volunteer recruitment lead — works with Central Volunteer Management / Field Manager.",
+      "source_reference": "Arkansas Victory Field Framework · Phases 1, 7, 8, 13",
+      "command_level": "committee",
+      "position_owner": "community_lead",
+      "reports_to": [
+        "county_volunteer_lead",
+        "volunteer_manager"
+      ],
+      "scope_types": [
+        "county",
+        "institution",
+        "community"
+      ],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "frequency_or_deadline": {
+        "mode": "milestone",
+        "cadence": null,
+        "deadline": "after_event"
+      },
+      "kpi_relationship": [],
+      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "sensitivity_classification": "volunteer_internal",
+      "version": "0.1.0",
+      "review_status": "queued_for_review",
+      "content_status": "ingested",
+      "expandable": true,
+      "task_template_ids": [
+        "FP-tmpl-community_lead-after_event"
+      ],
+      "hierarchy_role": "functional_lead",
+      "function_key": "community_outreach"
+    },
+    {
+      "stable_id": "FP-resp-community_lead-canvassing",
+      "kind": "responsibility",
+      "title": "Volunteer Recruitment Lead — canvassing",
+      "canonical_key": "community_lead",
+      "field_plan_key": "recruitment_lead",
+      "phase": "canvassing",
+      "body": "Recruit canvassers for Saturday-prior and October Strike Team Saturdays.",
+      "summary": "Local volunteer recruitment lead — works with Central Volunteer Management / Field Manager.",
+      "source_reference": "Arkansas Victory Field Framework · Phases 1, 7, 8, 13",
+      "command_level": "committee",
+      "position_owner": "community_lead",
+      "reports_to": [
+        "county_volunteer_lead",
+        "volunteer_manager"
+      ],
+      "scope_types": [
+        "county",
+        "institution",
+        "community"
+      ],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "frequency_or_deadline": {
+        "mode": "recurring",
+        "cadence": "phase_window",
+        "deadline": null
+      },
+      "kpi_relationship": [],
+      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "sensitivity_classification": "volunteer_internal",
+      "version": "0.1.0",
+      "review_status": "queued_for_review",
+      "content_status": "ingested",
+      "expandable": true,
+      "task_template_ids": [
+        "FP-tmpl-community_lead-canvassing"
+      ],
+      "hierarchy_role": "functional_lead",
+      "function_key": "community_outreach"
+    },
+    {
+      "stable_id": "FP-resp-community_lead-election_week",
+      "kind": "responsibility",
+      "title": "Volunteer Recruitment Lead — election week",
+      "canonical_key": "community_lead",
+      "field_plan_key": "recruitment_lead",
+      "phase": "election_week",
+      "body": "Grow reliable volunteers toward poll coverage and precinct leadership.",
+      "summary": "Local volunteer recruitment lead — works with Central Volunteer Management / Field Manager.",
+      "source_reference": "Arkansas Victory Field Framework · Phases 1, 7, 8, 13",
+      "command_level": "committee",
+      "position_owner": "community_lead",
+      "reports_to": [
+        "county_volunteer_lead",
+        "volunteer_manager"
+      ],
+      "scope_types": [
+        "county",
+        "institution",
+        "community"
+      ],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "frequency_or_deadline": {
+        "mode": "milestone",
+        "cadence": null,
+        "deadline": "election_week"
+      },
+      "kpi_relationship": [],
+      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "sensitivity_classification": "volunteer_internal",
+      "version": "0.1.0",
+      "review_status": "queued_for_review",
+      "content_status": "ingested",
+      "expandable": true,
+      "task_template_ids": [
+        "FP-tmpl-community_lead-election_week"
+      ],
+      "hierarchy_role": "functional_lead",
+      "function_key": "community_outreach"
+    },
+    {
+      "stable_id": "FP-resp-community_social_lead-placeholder",
+      "kind": "responsibility",
+      "title": "Community/Social Lead — awaiting Field Plan responsibilities",
+      "canonical_key": "community_social_lead",
+      "field_plan_key": "community_social_lead",
+      "phase": "always_active",
+      "body": "Detailed responsibilities will be populated from the campaign Field Plan.",
+      "summary": null,
+      "source_reference": "victory-field-framework.local_event_committee:community_social_lead",
+      "command_level": "committee",
+      "position_owner": "community_social_lead",
+      "reports_to": [
+        "county_volunteer_lead",
+        "institution_lead"
+      ],
+      "scope_types": [
+        "county",
+        "institution",
+        "community"
+      ],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "frequency_or_deadline": {
+        "mode": "always_active",
+        "cadence": null,
+        "deadline": null
+      },
+      "kpi_relationship": [],
+      "completion_evidence_requirement": "awaiting_field_plan_content",
+      "sensitivity_classification": "leader_internal",
+      "version": "0.1.0",
+      "review_status": "draft",
+      "content_status": "placeholder",
+      "expandable": true,
+      "task_template_ids": [],
+      "hierarchy_role": "functional_lead",
+      "function_key": "community_outreach"
+    },
+    {
+      "stable_id": "FP-resp-registration_lead-summary",
+      "kind": "responsibility",
+      "title": "Voter Registration Lead — role summary",
+      "canonical_key": "registration_lead",
+      "field_plan_key": "registration_lead",
+      "phase": "always_active",
+      "body": "Hits registration goals; builds local registration team plans with Central Voter Registration Director.",
+      "summary": "Hits registration goals; builds local registration team plans with Central Voter Registration Director.",
+      "source_reference": "Arkansas Victory Field Framework · Phases 6, 9",
+      "command_level": "committee",
+      "position_owner": "registration_lead",
+      "reports_to": [
+        "county_volunteer_lead",
+        "institution_lead"
+      ],
+      "scope_types": [
+        "county",
+        "institution"
+      ],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "frequency_or_deadline": {
+        "mode": "always_active",
+        "cadence": null,
+        "deadline": null
+      },
+      "kpi_relationship": [],
+      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "sensitivity_classification": "volunteer_internal",
+      "version": "0.1.0",
+      "review_status": "queued_for_review",
+      "content_status": "ingested",
+      "expandable": true,
+      "task_template_ids": [
+        "FP-tmpl-registration_lead-summary"
+      ],
+      "hierarchy_role": "functional_lead",
+      "function_key": "voter_registration"
+    },
+    {
+      "stable_id": "FP-resp-registration_lead-always_active",
+      "kind": "responsibility",
+      "title": "Voter Registration Lead — always active",
+      "canonical_key": "registration_lead",
+      "field_plan_key": "registration_lead",
+      "phase": "always_active",
+      "body": "Separate operation from launch-team: county/city/campus/neighborhood registration goals.",
+      "summary": "Hits registration goals; builds local registration team plans with Central Voter Registration Director.",
+      "source_reference": "Arkansas Victory Field Framework · Phases 6, 9",
+      "command_level": "committee",
+      "position_owner": "registration_lead",
+      "reports_to": [
+        "county_volunteer_lead",
+        "institution_lead"
+      ],
+      "scope_types": [
+        "county",
+        "institution"
+      ],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "frequency_or_deadline": {
+        "mode": "always_active",
+        "cadence": null,
+        "deadline": null
+      },
+      "kpi_relationship": [],
+      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "sensitivity_classification": "volunteer_internal",
+      "version": "0.1.0",
+      "review_status": "queued_for_review",
+      "content_status": "ingested",
+      "expandable": true,
+      "task_template_ids": [
+        "FP-tmpl-registration_lead-always_active"
+      ],
+      "hierarchy_role": "functional_lead",
+      "function_key": "voter_registration"
+    },
+    {
+      "stable_id": "FP-resp-registration_lead-before_event",
+      "kind": "responsibility",
+      "title": "Voter Registration Lead — before event",
+      "canonical_key": "registration_lead",
+      "field_plan_key": "registration_lead",
+      "phase": "before_event",
+      "body": "Staff registration check at event funnel; recruit registration shifts for markets, faith, campuses.",
+      "summary": "Hits registration goals; builds local registration team plans with Central Voter Registration Director.",
+      "source_reference": "Arkansas Victory Field Framework · Phases 6, 9",
+      "command_level": "committee",
+      "position_owner": "registration_lead",
+      "reports_to": [
+        "county_volunteer_lead",
+        "institution_lead"
+      ],
+      "scope_types": [
+        "county",
+        "institution"
+      ],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "frequency_or_deadline": {
+        "mode": "milestone",
+        "cadence": null,
+        "deadline": "before_event"
+      },
+      "kpi_relationship": [],
+      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "sensitivity_classification": "volunteer_internal",
+      "version": "0.1.0",
+      "review_status": "queued_for_review",
+      "content_status": "ingested",
+      "expandable": true,
+      "task_template_ids": [
+        "FP-tmpl-registration_lead-before_event"
+      ],
+      "hierarchy_role": "functional_lead",
+      "function_key": "voter_registration"
+    },
+    {
+      "stable_id": "FP-resp-registration_lead-event_day",
+      "kind": "responsibility",
+      "title": "Voter Registration Lead — event day",
+      "canonical_key": "registration_lead",
+      "field_plan_key": "registration_lead",
+      "phase": "event_day",
+      "body": "Voter registration check is a required step in the arrival funnel.",
+      "summary": "Hits registration goals; builds local registration team plans with Central Voter Registration Director.",
+      "source_reference": "Arkansas Victory Field Framework · Phases 6, 9",
+      "command_level": "committee",
+      "position_owner": "registration_lead",
+      "reports_to": [
+        "county_volunteer_lead",
+        "institution_lead"
+      ],
+      "scope_types": [
+        "county",
+        "institution"
+      ],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "frequency_or_deadline": {
+        "mode": "milestone",
+        "cadence": null,
+        "deadline": "event_day"
+      },
+      "kpi_relationship": [],
+      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "sensitivity_classification": "volunteer_internal",
+      "version": "0.1.0",
+      "review_status": "queued_for_review",
+      "content_status": "ingested",
+      "expandable": true,
+      "task_template_ids": [
+        "FP-tmpl-registration_lead-event_day"
+      ],
+      "hierarchy_role": "functional_lead",
+      "function_key": "voter_registration"
+    },
+    {
+      "stable_id": "FP-resp-registration_lead-after_event",
+      "kind": "responsibility",
+      "title": "Voter Registration Lead — after event",
+      "canonical_key": "registration_lead",
+      "field_plan_key": "registration_lead",
+      "phase": "after_event",
+      "body": "Count completed registrations; schedule follow-on registration opportunities.",
+      "summary": "Hits registration goals; builds local registration team plans with Central Voter Registration Director.",
+      "source_reference": "Arkansas Victory Field Framework · Phases 6, 9",
+      "command_level": "committee",
+      "position_owner": "registration_lead",
+      "reports_to": [
+        "county_volunteer_lead",
+        "institution_lead"
+      ],
+      "scope_types": [
+        "county",
+        "institution"
+      ],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "frequency_or_deadline": {
+        "mode": "milestone",
+        "cadence": null,
+        "deadline": "after_event"
+      },
+      "kpi_relationship": [],
+      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "sensitivity_classification": "volunteer_internal",
+      "version": "0.1.0",
+      "review_status": "queued_for_review",
+      "content_status": "ingested",
+      "expandable": true,
+      "task_template_ids": [
+        "FP-tmpl-registration_lead-after_event"
+      ],
+      "hierarchy_role": "functional_lead",
+      "function_key": "voter_registration"
+    },
+    {
+      "stable_id": "FP-resp-registration_lead-canvassing",
+      "kind": "responsibility",
+      "title": "Voter Registration Lead — canvassing",
+      "canonical_key": "registration_lead",
+      "field_plan_key": "registration_lead",
+      "phase": "canvassing",
+      "body": "Pair registration asks with door/neighborhood work where lawful and appropriate.",
+      "summary": "Hits registration goals; builds local registration team plans with Central Voter Registration Director.",
+      "source_reference": "Arkansas Victory Field Framework · Phases 6, 9",
+      "command_level": "committee",
+      "position_owner": "registration_lead",
+      "reports_to": [
+        "county_volunteer_lead",
+        "institution_lead"
+      ],
+      "scope_types": [
+        "county",
+        "institution"
+      ],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "frequency_or_deadline": {
+        "mode": "recurring",
+        "cadence": "phase_window",
+        "deadline": null
+      },
+      "kpi_relationship": [],
+      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "sensitivity_classification": "volunteer_internal",
+      "version": "0.1.0",
+      "review_status": "queued_for_review",
+      "content_status": "ingested",
+      "expandable": true,
+      "task_template_ids": [
+        "FP-tmpl-registration_lead-canvassing"
+      ],
+      "hierarchy_role": "functional_lead",
+      "function_key": "voter_registration"
+    },
+    {
+      "stable_id": "FP-resp-registration_lead-election_week",
+      "kind": "responsibility",
+      "title": "Voter Registration Lead — election week",
+      "canonical_key": "registration_lead",
+      "field_plan_key": "registration_lead",
+      "phase": "election_week",
+      "body": "Registered-and-ready universe supports GOTV and poll coverage later.",
+      "summary": "Hits registration goals; builds local registration team plans with Central Voter Registration Director.",
+      "source_reference": "Arkansas Victory Field Framework · Phases 6, 9",
+      "command_level": "committee",
+      "position_owner": "registration_lead",
+      "reports_to": [
+        "county_volunteer_lead",
+        "institution_lead"
+      ],
+      "scope_types": [
+        "county",
+        "institution"
+      ],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "frequency_or_deadline": {
+        "mode": "milestone",
+        "cadence": null,
+        "deadline": "election_week"
+      },
+      "kpi_relationship": [],
+      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "sensitivity_classification": "volunteer_internal",
+      "version": "0.1.0",
+      "review_status": "queued_for_review",
+      "content_status": "ingested",
+      "expandable": true,
+      "task_template_ids": [
+        "FP-tmpl-registration_lead-election_week"
+      ],
+      "hierarchy_role": "functional_lead",
+      "function_key": "voter_registration"
+    },
+    {
+      "stable_id": "FP-resp-phone_bank_lead-summary",
+      "kind": "responsibility",
+      "title": "phone bank lead — role summary",
+      "canonical_key": "phone_bank_lead",
+      "field_plan_key": "phone_bank_lead",
+      "phase": "always_active",
+      "body": "Invitations, volunteer asks, bring-a-friend, and follow-up around the event.",
+      "summary": "Invitations, volunteer asks, bring-a-friend, and follow-up around the event.",
+      "source_reference": "Arkansas Victory Field Framework · Phase 4",
+      "command_level": "committee",
+      "position_owner": "phone_bank_lead",
+      "reports_to": [
+        "volunteer_manager",
+        "county_volunteer_lead"
+      ],
+      "scope_types": [
+        "county",
+        "statewide"
+      ],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "frequency_or_deadline": {
+        "mode": "always_active",
+        "cadence": null,
+        "deadline": null
+      },
+      "kpi_relationship": [],
+      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "sensitivity_classification": "volunteer_internal",
+      "version": "0.1.0",
+      "review_status": "queued_for_review",
+      "content_status": "ingested",
+      "expandable": true,
+      "task_template_ids": [
+        "FP-tmpl-phone_bank_lead-summary"
+      ],
+      "hierarchy_role": "functional_lead",
+      "function_key": "phone_text"
+    },
+    {
+      "stable_id": "FP-resp-phone_bank_lead-always_active",
+      "kind": "responsibility",
+      "title": "phone bank lead — always active",
+      "canonical_key": "phone_bank_lead",
+      "field_plan_key": "phone_bank_lead",
+      "phase": "always_active",
+      "body": "Run phone/text invitation banks tied to the event catalyst timeline.",
+      "summary": "Invitations, volunteer asks, bring-a-friend, and follow-up around the event.",
+      "source_reference": "Arkansas Victory Field Framework · Phase 4",
+      "command_level": "committee",
+      "position_owner": "phone_bank_lead",
+      "reports_to": [
+        "volunteer_manager",
+        "county_volunteer_lead"
+      ],
+      "scope_types": [
+        "county",
+        "statewide"
+      ],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "frequency_or_deadline": {
+        "mode": "always_active",
+        "cadence": null,
+        "deadline": null
+      },
+      "kpi_relationship": [],
+      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "sensitivity_classification": "volunteer_internal",
+      "version": "0.1.0",
+      "review_status": "queued_for_review",
+      "content_status": "ingested",
+      "expandable": true,
+      "task_template_ids": [
+        "FP-tmpl-phone_bank_lead-always_active"
+      ],
+      "hierarchy_role": "functional_lead",
+      "function_key": "phone_text"
+    },
+    {
+      "stable_id": "FP-resp-phone_bank_lead-before_event",
+      "kind": "responsibility",
+      "title": "phone bank lead — before event",
+      "canonical_key": "phone_bank_lead",
+      "field_plan_key": "phone_bank_lead",
+      "phase": "before_event",
+      "body": "Wave Three reminder calls; volunteer asks; confirm location/parking language.",
+      "summary": "Invitations, volunteer asks, bring-a-friend, and follow-up around the event.",
+      "source_reference": "Arkansas Victory Field Framework · Phase 4",
+      "command_level": "committee",
+      "position_owner": "phone_bank_lead",
+      "reports_to": [
+        "volunteer_manager",
+        "county_volunteer_lead"
+      ],
+      "scope_types": [
+        "county",
+        "statewide"
+      ],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "frequency_or_deadline": {
+        "mode": "milestone",
+        "cadence": null,
+        "deadline": "before_event"
+      },
+      "kpi_relationship": [],
+      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "sensitivity_classification": "volunteer_internal",
+      "version": "0.1.0",
+      "review_status": "queued_for_review",
+      "content_status": "ingested",
+      "expandable": true,
+      "task_template_ids": [
+        "FP-tmpl-phone_bank_lead-before_event"
+      ],
+      "hierarchy_role": "functional_lead",
+      "function_key": "phone_text"
+    },
+    {
+      "stable_id": "FP-resp-phone_bank_lead-event_day",
+      "kind": "responsibility",
+      "title": "phone bank lead — event day",
+      "canonical_key": "phone_bank_lead",
+      "field_plan_key": "phone_bank_lead",
+      "phase": "event_day",
+      "body": "Standby for last-minute confirmation calls if needed.",
+      "summary": "Invitations, volunteer asks, bring-a-friend, and follow-up around the event.",
+      "source_reference": "Arkansas Victory Field Framework · Phase 4",
+      "command_level": "committee",
+      "position_owner": "phone_bank_lead",
+      "reports_to": [
+        "volunteer_manager",
+        "county_volunteer_lead"
+      ],
+      "scope_types": [
+        "county",
+        "statewide"
+      ],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "frequency_or_deadline": {
+        "mode": "milestone",
+        "cadence": null,
+        "deadline": "event_day"
+      },
+      "kpi_relationship": [],
+      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "sensitivity_classification": "volunteer_internal",
+      "version": "0.1.0",
+      "review_status": "queued_for_review",
+      "content_status": "ingested",
+      "expandable": true,
+      "task_template_ids": [
+        "FP-tmpl-phone_bank_lead-event_day"
+      ],
+      "hierarchy_role": "functional_lead",
+      "function_key": "phone_text"
+    },
+    {
+      "stable_id": "FP-resp-phone_bank_lead-after_event",
+      "kind": "responsibility",
+      "title": "phone bank lead — after event",
+      "canonical_key": "phone_bank_lead",
+      "field_plan_key": "phone_bank_lead",
+      "phase": "after_event",
+      "body": "Thank-you / orientation invites for new interested contacts.",
+      "summary": "Invitations, volunteer asks, bring-a-friend, and follow-up around the event.",
+      "source_reference": "Arkansas Victory Field Framework · Phase 4",
+      "command_level": "committee",
+      "position_owner": "phone_bank_lead",
+      "reports_to": [
+        "volunteer_manager",
+        "county_volunteer_lead"
+      ],
+      "scope_types": [
+        "county",
+        "statewide"
+      ],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "frequency_or_deadline": {
+        "mode": "milestone",
+        "cadence": null,
+        "deadline": "after_event"
+      },
+      "kpi_relationship": [],
+      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "sensitivity_classification": "volunteer_internal",
+      "version": "0.1.0",
+      "review_status": "queued_for_review",
+      "content_status": "ingested",
+      "expandable": true,
+      "task_template_ids": [
+        "FP-tmpl-phone_bank_lead-after_event"
+      ],
+      "hierarchy_role": "functional_lead",
+      "function_key": "phone_text"
+    },
+    {
+      "stable_id": "FP-resp-phone_bank_lead-canvassing",
+      "kind": "responsibility",
+      "title": "phone bank lead — canvassing",
+      "canonical_key": "phone_bank_lead",
+      "field_plan_key": "phone_bank_lead",
+      "phase": "canvassing",
+      "body": "Complement doors with phone follow-up on soft IDs.",
+      "summary": "Invitations, volunteer asks, bring-a-friend, and follow-up around the event.",
+      "source_reference": "Arkansas Victory Field Framework · Phase 4",
+      "command_level": "committee",
+      "position_owner": "phone_bank_lead",
+      "reports_to": [
+        "volunteer_manager",
+        "county_volunteer_lead"
+      ],
+      "scope_types": [
+        "county",
+        "statewide"
+      ],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "frequency_or_deadline": {
+        "mode": "recurring",
+        "cadence": "phase_window",
+        "deadline": null
+      },
+      "kpi_relationship": [],
+      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "sensitivity_classification": "volunteer_internal",
+      "version": "0.1.0",
+      "review_status": "queued_for_review",
+      "content_status": "ingested",
+      "expandable": true,
+      "task_template_ids": [
+        "FP-tmpl-phone_bank_lead-canvassing"
+      ],
+      "hierarchy_role": "functional_lead",
+      "function_key": "phone_text"
+    },
+    {
+      "stable_id": "FP-resp-phone_bank_lead-election_week",
+      "kind": "responsibility",
+      "title": "phone bank lead — election week",
+      "canonical_key": "phone_bank_lead",
+      "field_plan_key": "phone_bank_lead",
+      "phase": "election_week",
+      "body": "Later used for GOTV reminders — keep lists clean with Data Team.",
+      "summary": "Invitations, volunteer asks, bring-a-friend, and follow-up around the event.",
+      "source_reference": "Arkansas Victory Field Framework · Phase 4",
+      "command_level": "committee",
+      "position_owner": "phone_bank_lead",
+      "reports_to": [
+        "volunteer_manager",
+        "county_volunteer_lead"
+      ],
+      "scope_types": [
+        "county",
+        "statewide"
+      ],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "frequency_or_deadline": {
+        "mode": "milestone",
+        "cadence": null,
+        "deadline": "election_week"
+      },
+      "kpi_relationship": [],
+      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "sensitivity_classification": "volunteer_internal",
+      "version": "0.1.0",
+      "review_status": "queued_for_review",
+      "content_status": "ingested",
+      "expandable": true,
+      "task_template_ids": [
+        "FP-tmpl-phone_bank_lead-election_week"
+      ],
+      "hierarchy_role": "functional_lead",
+      "function_key": "phone_text"
+    },
+    {
+      "stable_id": "FP-resp-postcard_lead-summary",
+      "kind": "responsibility",
+      "title": "postcard lead — role summary",
+      "canonical_key": "postcard_lead",
+      "field_plan_key": "postcard_lead",
+      "phase": "always_active",
+      "body": "Targeted postcard universe — often older/reliable/independent households.",
+      "summary": "Targeted postcard universe — often older/reliable/independent households.",
+      "source_reference": "Arkansas Victory Field Framework · Phase 4",
+      "command_level": "committee",
+      "position_owner": "postcard_lead",
+      "reports_to": [
+        "volunteer_manager",
+        "county_volunteer_lead"
+      ],
+      "scope_types": [
+        "county",
+        "statewide"
+      ],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "frequency_or_deadline": {
+        "mode": "always_active",
+        "cadence": null,
+        "deadline": null
+      },
+      "kpi_relationship": [],
+      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "sensitivity_classification": "volunteer_internal",
+      "version": "0.1.0",
+      "review_status": "queued_for_review",
+      "content_status": "ingested",
+      "expandable": true,
+      "task_template_ids": [
+        "FP-tmpl-postcard_lead-summary"
+      ],
+      "hierarchy_role": "functional_lead",
+      "function_key": "postcards"
+    },
+    {
+      "stable_id": "FP-resp-postcard_lead-always_active",
+      "kind": "responsibility",
+      "title": "postcard lead — always active",
+      "canonical_key": "postcard_lead",
+      "field_plan_key": "postcard_lead",
+      "phase": "always_active",
+      "body": "Handwritten outreach timed to the event and later GOTV.",
+      "summary": "Targeted postcard universe — often older/reliable/independent households.",
+      "source_reference": "Arkansas Victory Field Framework · Phase 4",
+      "command_level": "committee",
+      "position_owner": "postcard_lead",
+      "reports_to": [
+        "volunteer_manager",
+        "county_volunteer_lead"
+      ],
+      "scope_types": [
+        "county",
+        "statewide"
+      ],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "frequency_or_deadline": {
+        "mode": "always_active",
+        "cadence": null,
+        "deadline": null
+      },
+      "kpi_relationship": [],
+      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "sensitivity_classification": "volunteer_internal",
+      "version": "0.1.0",
+      "review_status": "queued_for_review",
+      "content_status": "ingested",
+      "expandable": true,
+      "task_template_ids": [
+        "FP-tmpl-postcard_lead-always_active"
+      ],
+      "hierarchy_role": "functional_lead",
+      "function_key": "postcards"
+    },
+    {
+      "stable_id": "FP-resp-postcard_lead-before_event",
+      "kind": "responsibility",
+      "title": "postcard lead — before event",
+      "canonical_key": "postcard_lead",
+      "field_plan_key": "postcard_lead",
+      "phase": "before_event",
+      "body": "Drop to targeted universe before Wave Three reminders.",
+      "summary": "Targeted postcard universe — often older/reliable/independent households.",
+      "source_reference": "Arkansas Victory Field Framework · Phase 4",
+      "command_level": "committee",
+      "position_owner": "postcard_lead",
+      "reports_to": [
+        "volunteer_manager",
+        "county_volunteer_lead"
+      ],
+      "scope_types": [
+        "county",
+        "statewide"
+      ],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "frequency_or_deadline": {
+        "mode": "milestone",
+        "cadence": null,
+        "deadline": "before_event"
+      },
+      "kpi_relationship": [],
+      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "sensitivity_classification": "volunteer_internal",
+      "version": "0.1.0",
+      "review_status": "queued_for_review",
+      "content_status": "ingested",
+      "expandable": true,
+      "task_template_ids": [
+        "FP-tmpl-postcard_lead-before_event"
+      ],
+      "hierarchy_role": "functional_lead",
+      "function_key": "postcards"
+    },
+    {
+      "stable_id": "FP-resp-postcard_lead-event_day",
+      "kind": "responsibility",
+      "title": "postcard lead — event day",
+      "canonical_key": "postcard_lead",
+      "field_plan_key": "postcard_lead",
+      "phase": "event_day",
+      "body": "Not primary; may collect thank-you writers.",
+      "summary": "Targeted postcard universe — often older/reliable/independent households.",
+      "source_reference": "Arkansas Victory Field Framework · Phase 4",
+      "command_level": "committee",
+      "position_owner": "postcard_lead",
+      "reports_to": [
+        "volunteer_manager",
+        "county_volunteer_lead"
+      ],
+      "scope_types": [
+        "county",
+        "statewide"
+      ],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "frequency_or_deadline": {
+        "mode": "milestone",
+        "cadence": null,
+        "deadline": "event_day"
+      },
+      "kpi_relationship": [],
+      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "sensitivity_classification": "volunteer_internal",
+      "version": "0.1.0",
+      "review_status": "queued_for_review",
+      "content_status": "ingested",
+      "expandable": true,
+      "task_template_ids": [
+        "FP-tmpl-postcard_lead-event_day"
+      ],
+      "hierarchy_role": "functional_lead",
+      "function_key": "postcards"
+    },
+    {
+      "stable_id": "FP-resp-postcard_lead-after_event",
+      "kind": "responsibility",
+      "title": "postcard lead — after event",
+      "canonical_key": "postcard_lead",
+      "field_plan_key": "postcard_lead",
+      "phase": "after_event",
+      "body": "Thank-you cards for hosts/partners where useful.",
+      "summary": "Targeted postcard universe — often older/reliable/independent households.",
+      "source_reference": "Arkansas Victory Field Framework · Phase 4",
+      "command_level": "committee",
+      "position_owner": "postcard_lead",
+      "reports_to": [
+        "volunteer_manager",
+        "county_volunteer_lead"
+      ],
+      "scope_types": [
+        "county",
+        "statewide"
+      ],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "frequency_or_deadline": {
+        "mode": "milestone",
+        "cadence": null,
+        "deadline": "after_event"
+      },
+      "kpi_relationship": [],
+      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "sensitivity_classification": "volunteer_internal",
+      "version": "0.1.0",
+      "review_status": "queued_for_review",
+      "content_status": "ingested",
+      "expandable": true,
+      "task_template_ids": [
+        "FP-tmpl-postcard_lead-after_event"
+      ],
+      "hierarchy_role": "functional_lead",
+      "function_key": "postcards"
+    },
+    {
+      "stable_id": "FP-resp-postcard_lead-canvassing",
+      "kind": "responsibility",
+      "title": "postcard lead — canvassing",
+      "canonical_key": "postcard_lead",
+      "field_plan_key": "postcard_lead",
+      "phase": "canvassing",
+      "body": "Coordinate universes so doors and cards do not collide wastefully.",
+      "summary": "Targeted postcard universe — often older/reliable/independent households.",
+      "source_reference": "Arkansas Victory Field Framework · Phase 4",
+      "command_level": "committee",
+      "position_owner": "postcard_lead",
+      "reports_to": [
+        "volunteer_manager",
+        "county_volunteer_lead"
+      ],
+      "scope_types": [
+        "county",
+        "statewide"
+      ],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "frequency_or_deadline": {
+        "mode": "recurring",
+        "cadence": "phase_window",
+        "deadline": null
+      },
+      "kpi_relationship": [],
+      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "sensitivity_classification": "volunteer_internal",
+      "version": "0.1.0",
+      "review_status": "queued_for_review",
+      "content_status": "ingested",
+      "expandable": true,
+      "task_template_ids": [
+        "FP-tmpl-postcard_lead-canvassing"
+      ],
+      "hierarchy_role": "functional_lead",
+      "function_key": "postcards"
+    },
+    {
+      "stable_id": "FP-resp-postcard_lead-election_week",
+      "kind": "responsibility",
+      "title": "postcard lead — election week",
+      "canonical_key": "postcard_lead",
+      "field_plan_key": "postcard_lead",
+      "phase": "election_week",
+      "body": "Reliable vehicle for October reminders.",
+      "summary": "Targeted postcard universe — often older/reliable/independent households.",
+      "source_reference": "Arkansas Victory Field Framework · Phase 4",
+      "command_level": "committee",
+      "position_owner": "postcard_lead",
+      "reports_to": [
+        "volunteer_manager",
+        "county_volunteer_lead"
+      ],
+      "scope_types": [
+        "county",
+        "statewide"
+      ],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "frequency_or_deadline": {
+        "mode": "milestone",
+        "cadence": null,
+        "deadline": "election_week"
+      },
+      "kpi_relationship": [],
+      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "sensitivity_classification": "volunteer_internal",
+      "version": "0.1.0",
+      "review_status": "queued_for_review",
+      "content_status": "ingested",
+      "expandable": true,
+      "task_template_ids": [
+        "FP-tmpl-postcard_lead-election_week"
+      ],
+      "hierarchy_role": "functional_lead",
+      "function_key": "postcards"
+    },
+    {
+      "stable_id": "FP-resp-campaign_director-placeholder",
+      "kind": "responsibility",
+      "title": "Campaign Director — awaiting Field Plan responsibilities",
+      "canonical_key": "campaign_director",
+      "field_plan_key": "campaign_director",
+      "phase": "always_active",
+      "body": "Detailed responsibilities will be populated from the campaign Field Plan.",
+      "summary": null,
+      "source_reference": "leadership-role-registry:director",
+      "command_level": "director",
+      "position_owner": "campaign_director",
+      "reports_to": [],
+      "scope_types": [
+        "statewide"
+      ],
+      "dashboard_owner": "/admin/director",
+      "frequency_or_deadline": {
+        "mode": "always_active",
+        "cadence": null,
+        "deadline": null
+      },
+      "kpi_relationship": [],
+      "completion_evidence_requirement": "awaiting_field_plan_content",
+      "sensitivity_classification": "leader_internal",
+      "version": "0.1.0",
+      "review_status": "draft",
+      "content_status": "placeholder",
+      "expandable": true,
+      "task_template_ids": [],
+      "hierarchy_role": "director",
+      "function_key": null
+    },
+    {
+      "stable_id": "FP-resp-volunteer_manager-placeholder",
+      "kind": "responsibility",
+      "title": "Volunteer Manager — awaiting Field Plan responsibilities",
+      "canonical_key": "volunteer_manager",
+      "field_plan_key": "volunteer_manager",
+      "phase": "always_active",
+      "body": "Detailed responsibilities will be populated from the campaign Field Plan.",
+      "summary": null,
+      "source_reference": "leadership-role-registry:volunteer_manager",
+      "command_level": "volunteer_manager",
+      "position_owner": "volunteer_manager",
+      "reports_to": [
+        "director"
+      ],
+      "scope_types": [
+        "statewide"
+      ],
+      "dashboard_owner": "/admin/volunteer-command",
+      "frequency_or_deadline": {
+        "mode": "always_active",
+        "cadence": null,
+        "deadline": null
+      },
+      "kpi_relationship": [],
+      "completion_evidence_requirement": "awaiting_field_plan_content",
+      "sensitivity_classification": "leader_internal",
+      "version": "0.1.0",
+      "review_status": "draft",
+      "content_status": "placeholder",
+      "expandable": true,
+      "task_template_ids": [],
+      "hierarchy_role": "volunteer_manager",
+      "function_key": null
+    },
+    {
+      "stable_id": "FP-resp-college_leader-placeholder",
+      "kind": "responsibility",
+      "title": "College Leader / Education Organizing Lead — awaiting Field Plan responsibilities",
+      "canonical_key": "college_leader",
+      "field_plan_key": "college_leader",
+      "phase": "always_active",
+      "body": "Detailed responsibilities will be populated from the campaign Field Plan.",
+      "summary": null,
+      "source_reference": "leadership-role-registry:college_leader",
+      "command_level": "education_volunteer_command",
+      "position_owner": "college_leader",
+      "reports_to": [
+        "volunteer_manager"
+      ],
+      "scope_types": [
+        "education_statewide"
+      ],
+      "dashboard_owner": "/admin/college-command",
+      "frequency_or_deadline": {
+        "mode": "always_active",
+        "cadence": null,
+        "deadline": null
+      },
+      "kpi_relationship": [],
+      "completion_evidence_requirement": "awaiting_field_plan_content",
+      "sensitivity_classification": "leader_internal",
+      "version": "0.1.0",
+      "review_status": "draft",
+      "content_status": "placeholder",
+      "expandable": true,
+      "task_template_ids": [],
+      "hierarchy_role": "college_leader",
+      "function_key": null
+    },
+    {
+      "stable_id": "FP-resp-county_volunteer_lead-placeholder",
+      "kind": "responsibility",
+      "title": "County Volunteer Lead — awaiting Field Plan responsibilities",
+      "canonical_key": "county_volunteer_lead",
+      "field_plan_key": "county_volunteer_lead",
+      "phase": "always_active",
+      "body": "Detailed responsibilities will be populated from the campaign Field Plan.",
+      "summary": null,
+      "source_reference": "leadership-role-registry:county_volunteer_lead",
+      "command_level": "county_volunteer_command",
+      "position_owner": "county_volunteer_lead",
+      "reports_to": [
+        "volunteer_manager"
+      ],
+      "scope_types": [
+        "county"
+      ],
+      "dashboard_owner": "/admin/counties/:countySlug/volunteer-command",
+      "frequency_or_deadline": {
+        "mode": "always_active",
+        "cadence": null,
+        "deadline": null
+      },
+      "kpi_relationship": [],
+      "completion_evidence_requirement": "awaiting_field_plan_content",
+      "sensitivity_classification": "leader_internal",
+      "version": "0.1.0",
+      "review_status": "draft",
+      "content_status": "placeholder",
+      "expandable": true,
+      "task_template_ids": [],
+      "hierarchy_role": "county_volunteer_lead",
+      "function_key": null
+    },
+    {
+      "stable_id": "FP-resp-institution_lead-placeholder",
+      "kind": "responsibility",
+      "title": "Institution Lead — awaiting Field Plan responsibilities",
+      "canonical_key": "institution_lead",
+      "field_plan_key": "institution_lead",
+      "phase": "always_active",
+      "body": "Detailed responsibilities will be populated from the campaign Field Plan.",
+      "summary": null,
+      "source_reference": "leadership-role-registry:institution_lead",
+      "command_level": "institution",
+      "position_owner": "institution_lead",
+      "reports_to": [
+        "college_leader"
+      ],
+      "scope_types": [
+        "institution",
+        "high_school"
+      ],
+      "dashboard_owner": "/leader/:leadershipAssignmentId",
+      "frequency_or_deadline": {
+        "mode": "always_active",
+        "cadence": null,
+        "deadline": null
+      },
+      "kpi_relationship": [],
+      "completion_evidence_requirement": "awaiting_field_plan_content",
+      "sensitivity_classification": "leader_internal",
+      "version": "0.1.0",
+      "review_status": "draft",
+      "content_status": "placeholder",
+      "expandable": true,
+      "task_template_ids": [],
+      "hierarchy_role": "institution_lead",
+      "function_key": null
+    }
+  ],
+  "task_templates": [
+    {
+      "stable_id": "FP-tmpl-event_lead-summary",
+      "kind": "recurring_task",
+      "title": "Event Lead: hold role purpose",
+      "linked_responsibility_id": "FP-resp-event_lead-summary",
+      "canonical_key": "event_lead",
+      "phase": "always_active",
+      "body_hint": "Locate venue, run logistics with Logistics Lead, keep the event funnel moving toward Power of Five launches.",
+      "assignment_policy": "not_assigned_until_postgres_rbac",
+      "review_status": "draft",
+      "version": "0.1.0",
+      "source_reference": "Arkansas Victory Field Framework · Phases 1–7, 13"
+    },
+    {
+      "stable_id": "FP-tmpl-event_lead-always_active",
+      "kind": "recurring_task",
+      "title": "Event Lead: always active",
+      "linked_responsibility_id": "FP-resp-event_lead-always_active",
+      "canonical_key": "event_lead",
+      "phase": "always_active",
+      "body_hint": "Locate venue, run logistics with Logistics Lead, keep the event funnel moving toward Power of Five launches.",
+      "assignment_policy": "not_assigned_until_postgres_rbac",
+      "review_status": "draft",
+      "version": "0.1.0",
+      "source_reference": "Arkansas Victory Field Framework · Phases 1–7, 13"
+    },
+    {
+      "stable_id": "FP-tmpl-event_lead-before_event",
+      "kind": "milestone_task",
+      "title": "Event Lead: before event",
+      "linked_responsibility_id": "FP-resp-event_lead-before_event",
+      "canonical_key": "event_lead",
+      "phase": "before_event",
+      "body_hint": "Confirm venue/parking/weather backup; stand up local event committee; sync calendar; drive timeline to Central Field/Volunteer Management.",
+      "assignment_policy": "not_assigned_until_postgres_rbac",
+      "review_status": "draft",
+      "version": "0.1.0",
+      "source_reference": "Arkansas Victory Field Framework · Phases 1–7, 13"
+    },
+    {
+      "stable_id": "FP-tmpl-event_lead-event_day",
+      "kind": "milestone_task",
+      "title": "Event Lead: event day",
+      "linked_responsibility_id": "FP-resp-event_lead-event_day",
+      "canonical_key": "event_lead",
+      "phase": "event_day",
+      "body_hint": "Run arrival → sign-in → registration check → Meet Kelly → Power of Five invite → role choice → training invite.",
+      "assignment_policy": "not_assigned_until_postgres_rbac",
+      "review_status": "draft",
+      "version": "0.1.0",
+      "source_reference": "Arkansas Victory Field Framework · Phases 1–7, 13"
+    },
+    {
+      "stable_id": "FP-tmpl-event_lead-after_event",
+      "kind": "milestone_task",
+      "title": "Event Lead: after event",
+      "linked_responsibility_id": "FP-resp-event_lead-after_event",
+      "canonical_key": "event_lead",
+      "phase": "after_event",
+      "body_hint": "Within 24h: thank-yous, photo recap, P5 kickoff invites. Within 1 week: orientation and neighborhood meetings.",
+      "assignment_policy": "not_assigned_until_postgres_rbac",
+      "review_status": "draft",
+      "version": "0.1.0",
+      "source_reference": "Arkansas Victory Field Framework · Phases 1–7, 13"
+    },
+    {
+      "stable_id": "FP-tmpl-event_lead-canvassing",
+      "kind": "recurring_task",
+      "title": "Event Lead: canvassing",
+      "linked_responsibility_id": "FP-resp-event_lead-canvassing",
+      "canonical_key": "event_lead",
+      "phase": "canvassing",
+      "body_hint": "Coordinate with Canvassing Lead on Saturday-prior door hangers inviting neighbors to meet Kelly.",
+      "assignment_policy": "not_assigned_until_postgres_rbac",
+      "review_status": "draft",
+      "version": "0.1.0",
+      "source_reference": "Arkansas Victory Field Framework · Phases 1–7, 13"
+    },
+    {
+      "stable_id": "FP-tmpl-event_lead-election_week",
+      "kind": "milestone_task",
+      "title": "Event Lead: election week",
+      "linked_responsibility_id": "FP-resp-event_lead-election_week",
+      "canonical_key": "event_lead",
+      "phase": "election_week",
+      "body_hint": "Every event should seed Power of Five capacity that later covers polls and October Strike Team Saturdays.",
+      "assignment_policy": "not_assigned_until_postgres_rbac",
+      "review_status": "draft",
+      "version": "0.1.0",
+      "source_reference": "Arkansas Victory Field Framework · Phases 1–7, 13"
+    },
+    {
+      "stable_id": "FP-tmpl-social_lead-summary",
+      "kind": "recurring_task",
+      "title": "Social Media Lead: hold role purpose",
+      "linked_responsibility_id": "FP-resp-social_lead-summary",
+      "canonical_key": "social_lead",
+      "phase": "always_active",
+      "body_hint": "Launch the social campaign with Central Social; plan pure social after-event; recruit through civic life.",
+      "assignment_policy": "not_assigned_until_postgres_rbac",
+      "review_status": "draft",
+      "version": "0.1.0",
+      "source_reference": "Arkansas Victory Field Framework · Phases 3, 5, 6, 13"
+    },
+    {
+      "stable_id": "FP-tmpl-social_lead-always_active",
+      "kind": "recurring_task",
+      "title": "Social Media Lead: always active",
+      "linked_responsibility_id": "FP-resp-social_lead-always_active",
+      "canonical_key": "social_lead",
+      "phase": "always_active",
+      "body_hint": "Launch the social campaign with Central Social; plan pure social after-event; recruit through civic life.",
+      "assignment_policy": "not_assigned_until_postgres_rbac",
+      "review_status": "draft",
+      "version": "0.1.0",
+      "source_reference": "Arkansas Victory Field Framework · Phases 3, 5, 6, 13"
+    },
+    {
+      "stable_id": "FP-tmpl-social_lead-before_event",
+      "kind": "milestone_task",
+      "title": "Social Media Lead: before event",
+      "linked_responsibility_id": "FP-resp-social_lead-before_event",
+      "canonical_key": "social_lead",
+      "phase": "before_event",
+      "body_hint": "Wave One graphics with Central Social; Wave Two community calendars, FB groups, Nextdoor, org shares; Wave Three reminders.",
+      "assignment_policy": "not_assigned_until_postgres_rbac",
+      "review_status": "draft",
+      "version": "0.1.0",
+      "source_reference": "Arkansas Victory Field Framework · Phases 3, 5, 6, 13"
+    },
+    {
+      "stable_id": "FP-tmpl-social_lead-event_day",
+      "kind": "milestone_task",
+      "title": "Social Media Lead: event day",
+      "linked_responsibility_id": "FP-resp-social_lead-event_day",
+      "canonical_key": "social_lead",
+      "phase": "event_day",
+      "body_hint": "Capture content, welcome newcomers, steer people to sign-in and Power of Five.",
+      "assignment_policy": "not_assigned_until_postgres_rbac",
+      "review_status": "draft",
+      "version": "0.1.0",
+      "source_reference": "Arkansas Victory Field Framework · Phases 3, 5, 6, 13"
+    },
+    {
+      "stable_id": "FP-tmpl-social_lead-after_event",
+      "kind": "milestone_task",
+      "title": "Social Media Lead: after event",
+      "linked_responsibility_id": "FP-resp-social_lead-after_event",
+      "canonical_key": "social_lead",
+      "phase": "after_event",
+      "body_hint": "Photos/recap within 24h; after-event social plan; keep new contacts in the volunteer funnel.",
+      "assignment_policy": "not_assigned_until_postgres_rbac",
+      "review_status": "draft",
+      "version": "0.1.0",
+      "source_reference": "Arkansas Victory Field Framework · Phases 3, 5, 6, 13"
+    },
+    {
+      "stable_id": "FP-tmpl-social_lead-canvassing",
+      "kind": "recurring_task",
+      "title": "Social Media Lead: canvassing",
+      "linked_responsibility_id": "FP-resp-social_lead-canvassing",
+      "canonical_key": "social_lead",
+      "phase": "canvassing",
+      "body_hint": "Support shared messaging for door hangers and partner asks.",
+      "assignment_policy": "not_assigned_until_postgres_rbac",
+      "review_status": "draft",
+      "version": "0.1.0",
+      "source_reference": "Arkansas Victory Field Framework · Phases 3, 5, 6, 13"
+    },
+    {
+      "stable_id": "FP-tmpl-social_lead-election_week",
+      "kind": "milestone_task",
+      "title": "Social Media Lead: election week",
+      "linked_responsibility_id": "FP-resp-social_lead-election_week",
+      "canonical_key": "social_lead",
+      "phase": "election_week",
+      "body_hint": "Sustain recognition and digital toolkit use for Power of Five leaders.",
+      "assignment_policy": "not_assigned_until_postgres_rbac",
+      "review_status": "draft",
+      "version": "0.1.0",
+      "source_reference": "Arkansas Victory Field Framework · Phases 3, 5, 6, 13"
+    },
+    {
+      "stable_id": "FP-tmpl-canvass_lead-summary",
+      "kind": "recurring_task",
+      "title": "Canvassing Lead: hold role purpose",
+      "linked_responsibility_id": "FP-resp-canvass_lead-summary",
+      "canonical_key": "canvass_lead",
+      "phase": "always_active",
+      "body_hint": "Door hangers the Saturday before inviting people to meet Kelly and share community concerns.",
+      "assignment_policy": "not_assigned_until_postgres_rbac",
+      "review_status": "draft",
+      "version": "0.1.0",
+      "source_reference": "Arkansas Victory Field Framework · Phases 4, 11, 12"
+    },
+    {
+      "stable_id": "FP-tmpl-canvass_lead-always_active",
+      "kind": "recurring_task",
+      "title": "Canvassing Lead: always active",
+      "linked_responsibility_id": "FP-resp-canvass_lead-always_active",
+      "canonical_key": "canvass_lead",
+      "phase": "always_active",
+      "body_hint": "Door hangers the Saturday before inviting people to meet Kelly and share community concerns.",
+      "assignment_policy": "not_assigned_until_postgres_rbac",
+      "review_status": "draft",
+      "version": "0.1.0",
+      "source_reference": "Arkansas Victory Field Framework · Phases 4, 11, 12"
+    },
+    {
+      "stable_id": "FP-tmpl-canvass_lead-before_event",
+      "kind": "milestone_task",
+      "title": "Canvassing Lead: before event",
+      "linked_responsibility_id": "FP-resp-canvass_lead-before_event",
+      "canonical_key": "canvass_lead",
+      "phase": "before_event",
+      "body_hint": "Map radius; train walkers; coordinate literature/door hangers; sync with Recruitment and Registration leads.",
+      "assignment_policy": "not_assigned_until_postgres_rbac",
+      "review_status": "draft",
+      "version": "0.1.0",
+      "source_reference": "Arkansas Victory Field Framework · Phases 4, 11, 12"
+    },
+    {
+      "stable_id": "FP-tmpl-canvass_lead-event_day",
+      "kind": "milestone_task",
+      "title": "Canvassing Lead: event day",
+      "linked_responsibility_id": "FP-resp-canvass_lead-event_day",
+      "canonical_key": "canvass_lead",
+      "phase": "event_day",
+      "body_hint": "Greeters and pathing; capture volunteer interest from walk conversations.",
+      "assignment_policy": "not_assigned_until_postgres_rbac",
+      "review_status": "draft",
+      "version": "0.1.0",
+      "source_reference": "Arkansas Victory Field Framework · Phases 4, 11, 12"
+    },
+    {
+      "stable_id": "FP-tmpl-canvass_lead-after_event",
+      "kind": "milestone_task",
+      "title": "Canvassing Lead: after event",
+      "linked_responsibility_id": "FP-resp-canvass_lead-after_event",
+      "canonical_key": "canvass_lead",
+      "phase": "after_event",
+      "body_hint": "Log doors, shifts, and follow-ups; feed Power of Five neighborhood coverage.",
+      "assignment_policy": "not_assigned_until_postgres_rbac",
+      "review_status": "draft",
+      "version": "0.1.0",
+      "source_reference": "Arkansas Victory Field Framework · Phases 4, 11, 12"
+    },
+    {
+      "stable_id": "FP-tmpl-canvass_lead-canvassing",
+      "kind": "recurring_task",
+      "title": "Canvassing Lead: canvassing",
+      "linked_responsibility_id": "FP-resp-canvass_lead-canvassing",
+      "canonical_key": "canvass_lead",
+      "phase": "canvassing",
+      "body_hint": "Primary lane — neighborhood walk, business visits where useful, Saturday-prior hangers.",
+      "assignment_policy": "not_assigned_until_postgres_rbac",
+      "review_status": "draft",
+      "version": "0.1.0",
+      "source_reference": "Arkansas Victory Field Framework · Phases 4, 11, 12"
+    },
+    {
+      "stable_id": "FP-tmpl-canvass_lead-election_week",
+      "kind": "milestone_task",
+      "title": "Canvassing Lead: election week",
+      "linked_responsibility_id": "FP-resp-canvass_lead-election_week",
+      "canonical_key": "canvass_lead",
+      "phase": "election_week",
+      "body_hint": "October Saturdays: canvass + Strike Team cookout staging with local candidates where appropriate.",
+      "assignment_policy": "not_assigned_until_postgres_rbac",
+      "review_status": "draft",
+      "version": "0.1.0",
+      "source_reference": "Arkansas Victory Field Framework · Phases 4, 11, 12"
+    },
+    {
+      "stable_id": "FP-tmpl-community_lead-summary",
+      "kind": "recurring_task",
+      "title": "Volunteer Recruitment Lead: hold role purpose",
+      "linked_responsibility_id": "FP-resp-community_lead-summary",
+      "canonical_key": "community_lead",
+      "phase": "always_active",
+      "body_hint": "Build the local volunteer base around the event so the stop creates lasting organizers.",
+      "assignment_policy": "not_assigned_until_postgres_rbac",
+      "review_status": "draft",
+      "version": "0.1.0",
+      "source_reference": "Arkansas Victory Field Framework · Phases 1, 7, 8, 13"
+    },
+    {
+      "stable_id": "FP-tmpl-community_lead-always_active",
+      "kind": "recurring_task",
+      "title": "Volunteer Recruitment Lead: always active",
+      "linked_responsibility_id": "FP-resp-community_lead-always_active",
+      "canonical_key": "community_lead",
+      "phase": "always_active",
+      "body_hint": "Build the local volunteer base around the event so the stop creates lasting organizers.",
+      "assignment_policy": "not_assigned_until_postgres_rbac",
+      "review_status": "draft",
+      "version": "0.1.0",
+      "source_reference": "Arkansas Victory Field Framework · Phases 1, 7, 8, 13"
+    },
+    {
+      "stable_id": "FP-tmpl-community_lead-before_event",
+      "kind": "milestone_task",
+      "title": "Volunteer Recruitment Lead: before event",
+      "linked_responsibility_id": "FP-resp-community_lead-before_event",
+      "canonical_key": "community_lead",
+      "phase": "before_event",
+      "body_hint": "Fill open leads/co-leads; ask every contact to bring a friend; feed orientation pipeline.",
+      "assignment_policy": "not_assigned_until_postgres_rbac",
+      "review_status": "draft",
+      "version": "0.1.0",
+      "source_reference": "Arkansas Victory Field Framework · Phases 1, 7, 8, 13"
+    },
+    {
+      "stable_id": "FP-tmpl-community_lead-event_day",
+      "kind": "milestone_task",
+      "title": "Volunteer Recruitment Lead: event day",
+      "linked_responsibility_id": "FP-resp-community_lead-event_day",
+      "canonical_key": "community_lead",
+      "phase": "event_day",
+      "body_hint": "Meet volunteers station; convert attendees into Power of Five / volunteer roles.",
+      "assignment_policy": "not_assigned_until_postgres_rbac",
+      "review_status": "draft",
+      "version": "0.1.0",
+      "source_reference": "Arkansas Victory Field Framework · Phases 1, 7, 8, 13"
+    },
+    {
+      "stable_id": "FP-tmpl-community_lead-after_event",
+      "kind": "milestone_task",
+      "title": "Volunteer Recruitment Lead: after event",
+      "linked_responsibility_id": "FP-resp-community_lead-after_event",
+      "canonical_key": "community_lead",
+      "phase": "after_event",
+      "body_hint": "24h interest follow-up; 1 week orientation; move people up the leadership ladder.",
+      "assignment_policy": "not_assigned_until_postgres_rbac",
+      "review_status": "draft",
+      "version": "0.1.0",
+      "source_reference": "Arkansas Victory Field Framework · Phases 1, 7, 8, 13"
+    },
+    {
+      "stable_id": "FP-tmpl-community_lead-canvassing",
+      "kind": "recurring_task",
+      "title": "Volunteer Recruitment Lead: canvassing",
+      "linked_responsibility_id": "FP-resp-community_lead-canvassing",
+      "canonical_key": "community_lead",
+      "phase": "canvassing",
+      "body_hint": "Recruit canvassers for Saturday-prior and October Strike Team Saturdays.",
+      "assignment_policy": "not_assigned_until_postgres_rbac",
+      "review_status": "draft",
+      "version": "0.1.0",
+      "source_reference": "Arkansas Victory Field Framework · Phases 1, 7, 8, 13"
+    },
+    {
+      "stable_id": "FP-tmpl-community_lead-election_week",
+      "kind": "milestone_task",
+      "title": "Volunteer Recruitment Lead: election week",
+      "linked_responsibility_id": "FP-resp-community_lead-election_week",
+      "canonical_key": "community_lead",
+      "phase": "election_week",
+      "body_hint": "Grow reliable volunteers toward poll coverage and precinct leadership.",
+      "assignment_policy": "not_assigned_until_postgres_rbac",
+      "review_status": "draft",
+      "version": "0.1.0",
+      "source_reference": "Arkansas Victory Field Framework · Phases 1, 7, 8, 13"
+    },
+    {
+      "stable_id": "FP-tmpl-registration_lead-summary",
+      "kind": "recurring_task",
+      "title": "Voter Registration Lead: hold role purpose",
+      "linked_responsibility_id": "FP-resp-registration_lead-summary",
+      "canonical_key": "registration_lead",
+      "phase": "always_active",
+      "body_hint": "Separate operation from launch-team: county/city/campus/neighborhood registration goals.",
+      "assignment_policy": "not_assigned_until_postgres_rbac",
+      "review_status": "draft",
+      "version": "0.1.0",
+      "source_reference": "Arkansas Victory Field Framework · Phases 6, 9"
+    },
+    {
+      "stable_id": "FP-tmpl-registration_lead-always_active",
+      "kind": "recurring_task",
+      "title": "Voter Registration Lead: always active",
+      "linked_responsibility_id": "FP-resp-registration_lead-always_active",
+      "canonical_key": "registration_lead",
+      "phase": "always_active",
+      "body_hint": "Separate operation from launch-team: county/city/campus/neighborhood registration goals.",
+      "assignment_policy": "not_assigned_until_postgres_rbac",
+      "review_status": "draft",
+      "version": "0.1.0",
+      "source_reference": "Arkansas Victory Field Framework · Phases 6, 9"
+    },
+    {
+      "stable_id": "FP-tmpl-registration_lead-before_event",
+      "kind": "milestone_task",
+      "title": "Voter Registration Lead: before event",
+      "linked_responsibility_id": "FP-resp-registration_lead-before_event",
+      "canonical_key": "registration_lead",
+      "phase": "before_event",
+      "body_hint": "Staff registration check at event funnel; recruit registration shifts for markets, faith, campuses.",
+      "assignment_policy": "not_assigned_until_postgres_rbac",
+      "review_status": "draft",
+      "version": "0.1.0",
+      "source_reference": "Arkansas Victory Field Framework · Phases 6, 9"
+    },
+    {
+      "stable_id": "FP-tmpl-registration_lead-event_day",
+      "kind": "milestone_task",
+      "title": "Voter Registration Lead: event day",
+      "linked_responsibility_id": "FP-resp-registration_lead-event_day",
+      "canonical_key": "registration_lead",
+      "phase": "event_day",
+      "body_hint": "Voter registration check is a required step in the arrival funnel.",
+      "assignment_policy": "not_assigned_until_postgres_rbac",
+      "review_status": "draft",
+      "version": "0.1.0",
+      "source_reference": "Arkansas Victory Field Framework · Phases 6, 9"
+    },
+    {
+      "stable_id": "FP-tmpl-registration_lead-after_event",
+      "kind": "milestone_task",
+      "title": "Voter Registration Lead: after event",
+      "linked_responsibility_id": "FP-resp-registration_lead-after_event",
+      "canonical_key": "registration_lead",
+      "phase": "after_event",
+      "body_hint": "Count completed registrations; schedule follow-on registration opportunities.",
+      "assignment_policy": "not_assigned_until_postgres_rbac",
+      "review_status": "draft",
+      "version": "0.1.0",
+      "source_reference": "Arkansas Victory Field Framework · Phases 6, 9"
+    },
+    {
+      "stable_id": "FP-tmpl-registration_lead-canvassing",
+      "kind": "recurring_task",
+      "title": "Voter Registration Lead: canvassing",
+      "linked_responsibility_id": "FP-resp-registration_lead-canvassing",
+      "canonical_key": "registration_lead",
+      "phase": "canvassing",
+      "body_hint": "Pair registration asks with door/neighborhood work where lawful and appropriate.",
+      "assignment_policy": "not_assigned_until_postgres_rbac",
+      "review_status": "draft",
+      "version": "0.1.0",
+      "source_reference": "Arkansas Victory Field Framework · Phases 6, 9"
+    },
+    {
+      "stable_id": "FP-tmpl-registration_lead-election_week",
+      "kind": "milestone_task",
+      "title": "Voter Registration Lead: election week",
+      "linked_responsibility_id": "FP-resp-registration_lead-election_week",
+      "canonical_key": "registration_lead",
+      "phase": "election_week",
+      "body_hint": "Registered-and-ready universe supports GOTV and poll coverage later.",
+      "assignment_policy": "not_assigned_until_postgres_rbac",
+      "review_status": "draft",
+      "version": "0.1.0",
+      "source_reference": "Arkansas Victory Field Framework · Phases 6, 9"
+    },
+    {
+      "stable_id": "FP-tmpl-phone_bank_lead-summary",
+      "kind": "recurring_task",
+      "title": "phone bank lead: hold role purpose",
+      "linked_responsibility_id": "FP-resp-phone_bank_lead-summary",
+      "canonical_key": "phone_bank_lead",
+      "phase": "always_active",
+      "body_hint": "Run phone/text invitation banks tied to the event catalyst timeline.",
+      "assignment_policy": "not_assigned_until_postgres_rbac",
+      "review_status": "draft",
+      "version": "0.1.0",
+      "source_reference": "Arkansas Victory Field Framework · Phase 4"
+    },
+    {
+      "stable_id": "FP-tmpl-phone_bank_lead-always_active",
+      "kind": "recurring_task",
+      "title": "phone bank lead: always active",
+      "linked_responsibility_id": "FP-resp-phone_bank_lead-always_active",
+      "canonical_key": "phone_bank_lead",
+      "phase": "always_active",
+      "body_hint": "Run phone/text invitation banks tied to the event catalyst timeline.",
+      "assignment_policy": "not_assigned_until_postgres_rbac",
+      "review_status": "draft",
+      "version": "0.1.0",
+      "source_reference": "Arkansas Victory Field Framework · Phase 4"
+    },
+    {
+      "stable_id": "FP-tmpl-phone_bank_lead-before_event",
+      "kind": "milestone_task",
+      "title": "phone bank lead: before event",
+      "linked_responsibility_id": "FP-resp-phone_bank_lead-before_event",
+      "canonical_key": "phone_bank_lead",
+      "phase": "before_event",
+      "body_hint": "Wave Three reminder calls; volunteer asks; confirm location/parking language.",
+      "assignment_policy": "not_assigned_until_postgres_rbac",
+      "review_status": "draft",
+      "version": "0.1.0",
+      "source_reference": "Arkansas Victory Field Framework · Phase 4"
+    },
+    {
+      "stable_id": "FP-tmpl-phone_bank_lead-event_day",
+      "kind": "milestone_task",
+      "title": "phone bank lead: event day",
+      "linked_responsibility_id": "FP-resp-phone_bank_lead-event_day",
+      "canonical_key": "phone_bank_lead",
+      "phase": "event_day",
+      "body_hint": "Standby for last-minute confirmation calls if needed.",
+      "assignment_policy": "not_assigned_until_postgres_rbac",
+      "review_status": "draft",
+      "version": "0.1.0",
+      "source_reference": "Arkansas Victory Field Framework · Phase 4"
+    },
+    {
+      "stable_id": "FP-tmpl-phone_bank_lead-after_event",
+      "kind": "milestone_task",
+      "title": "phone bank lead: after event",
+      "linked_responsibility_id": "FP-resp-phone_bank_lead-after_event",
+      "canonical_key": "phone_bank_lead",
+      "phase": "after_event",
+      "body_hint": "Thank-you / orientation invites for new interested contacts.",
+      "assignment_policy": "not_assigned_until_postgres_rbac",
+      "review_status": "draft",
+      "version": "0.1.0",
+      "source_reference": "Arkansas Victory Field Framework · Phase 4"
+    },
+    {
+      "stable_id": "FP-tmpl-phone_bank_lead-canvassing",
+      "kind": "recurring_task",
+      "title": "phone bank lead: canvassing",
+      "linked_responsibility_id": "FP-resp-phone_bank_lead-canvassing",
+      "canonical_key": "phone_bank_lead",
+      "phase": "canvassing",
+      "body_hint": "Complement doors with phone follow-up on soft IDs.",
+      "assignment_policy": "not_assigned_until_postgres_rbac",
+      "review_status": "draft",
+      "version": "0.1.0",
+      "source_reference": "Arkansas Victory Field Framework · Phase 4"
+    },
+    {
+      "stable_id": "FP-tmpl-phone_bank_lead-election_week",
+      "kind": "milestone_task",
+      "title": "phone bank lead: election week",
+      "linked_responsibility_id": "FP-resp-phone_bank_lead-election_week",
+      "canonical_key": "phone_bank_lead",
+      "phase": "election_week",
+      "body_hint": "Later used for GOTV reminders — keep lists clean with Data Team.",
+      "assignment_policy": "not_assigned_until_postgres_rbac",
+      "review_status": "draft",
+      "version": "0.1.0",
+      "source_reference": "Arkansas Victory Field Framework · Phase 4"
+    },
+    {
+      "stable_id": "FP-tmpl-postcard_lead-summary",
+      "kind": "recurring_task",
+      "title": "postcard lead: hold role purpose",
+      "linked_responsibility_id": "FP-resp-postcard_lead-summary",
+      "canonical_key": "postcard_lead",
+      "phase": "always_active",
+      "body_hint": "Handwritten outreach timed to the event and later GOTV.",
+      "assignment_policy": "not_assigned_until_postgres_rbac",
+      "review_status": "draft",
+      "version": "0.1.0",
+      "source_reference": "Arkansas Victory Field Framework · Phase 4"
+    },
+    {
+      "stable_id": "FP-tmpl-postcard_lead-always_active",
+      "kind": "recurring_task",
+      "title": "postcard lead: always active",
+      "linked_responsibility_id": "FP-resp-postcard_lead-always_active",
+      "canonical_key": "postcard_lead",
+      "phase": "always_active",
+      "body_hint": "Handwritten outreach timed to the event and later GOTV.",
+      "assignment_policy": "not_assigned_until_postgres_rbac",
+      "review_status": "draft",
+      "version": "0.1.0",
+      "source_reference": "Arkansas Victory Field Framework · Phase 4"
+    },
+    {
+      "stable_id": "FP-tmpl-postcard_lead-before_event",
+      "kind": "milestone_task",
+      "title": "postcard lead: before event",
+      "linked_responsibility_id": "FP-resp-postcard_lead-before_event",
+      "canonical_key": "postcard_lead",
+      "phase": "before_event",
+      "body_hint": "Drop to targeted universe before Wave Three reminders.",
+      "assignment_policy": "not_assigned_until_postgres_rbac",
+      "review_status": "draft",
+      "version": "0.1.0",
+      "source_reference": "Arkansas Victory Field Framework · Phase 4"
+    },
+    {
+      "stable_id": "FP-tmpl-postcard_lead-event_day",
+      "kind": "milestone_task",
+      "title": "postcard lead: event day",
+      "linked_responsibility_id": "FP-resp-postcard_lead-event_day",
+      "canonical_key": "postcard_lead",
+      "phase": "event_day",
+      "body_hint": "Not primary; may collect thank-you writers.",
+      "assignment_policy": "not_assigned_until_postgres_rbac",
+      "review_status": "draft",
+      "version": "0.1.0",
+      "source_reference": "Arkansas Victory Field Framework · Phase 4"
+    },
+    {
+      "stable_id": "FP-tmpl-postcard_lead-after_event",
+      "kind": "milestone_task",
+      "title": "postcard lead: after event",
+      "linked_responsibility_id": "FP-resp-postcard_lead-after_event",
+      "canonical_key": "postcard_lead",
+      "phase": "after_event",
+      "body_hint": "Thank-you cards for hosts/partners where useful.",
+      "assignment_policy": "not_assigned_until_postgres_rbac",
+      "review_status": "draft",
+      "version": "0.1.0",
+      "source_reference": "Arkansas Victory Field Framework · Phase 4"
+    },
+    {
+      "stable_id": "FP-tmpl-postcard_lead-canvassing",
+      "kind": "recurring_task",
+      "title": "postcard lead: canvassing",
+      "linked_responsibility_id": "FP-resp-postcard_lead-canvassing",
+      "canonical_key": "postcard_lead",
+      "phase": "canvassing",
+      "body_hint": "Coordinate universes so doors and cards do not collide wastefully.",
+      "assignment_policy": "not_assigned_until_postgres_rbac",
+      "review_status": "draft",
+      "version": "0.1.0",
+      "source_reference": "Arkansas Victory Field Framework · Phase 4"
+    },
+    {
+      "stable_id": "FP-tmpl-postcard_lead-election_week",
+      "kind": "milestone_task",
+      "title": "postcard lead: election week",
+      "linked_responsibility_id": "FP-resp-postcard_lead-election_week",
+      "canonical_key": "postcard_lead",
+      "phase": "election_week",
+      "body_hint": "Reliable vehicle for October reminders.",
+      "assignment_policy": "not_assigned_until_postgres_rbac",
+      "review_status": "draft",
+      "version": "0.1.0",
+      "source_reference": "Arkansas Victory Field Framework · Phase 4"
+    }
+  ]
+}

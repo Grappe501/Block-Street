@@ -30,4 +30,4 @@ npm run test:v2b2-position-mapping
 
 ## Next
 
-V2-B.3 — expandable responsibility library bound to **mapped** positions only.
+**V2-B.3** Expandable responsibility library — see [`V2B3_RESPONSIBILITY_LIBRARY.md`](./V2B3_RESPONSIBILITY_LIBRARY.md).

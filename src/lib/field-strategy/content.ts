@@ -44,61 +44,104 @@ export const SCALE_OBJECTIVES = [
 ];
 
 export const OVERVIEW_CARDS = [
-  { title: "Build Visibility", body: "Make Kelly and the campaign consistently visible across Arkansas communities." },
-  { title: "Build Relationships", body: "Connect residents, organizations, candidates, businesses, and community leaders." },
-  { title: "Build Teams", body: "Recruit local leaders and launch Power of 5 neighborhood organizing." },
-  { title: "Build Capacity", body: "Prepare counties for registration, canvassing, turnout, signs, and poll coverage." },
-  { title: "Build the Brand", body: "Create a recognizable statewide field identity through Regnat Populus." },
+  { title: "WHY", body: "Government works best when communities organize themselves." },
+  { title: "HOW", body: "Every Kelly event launches a permanent organizing effort." },
+  { title: "WHAT", body: "A statewide network of trained neighborhood leaders." },
+];
+
+export const STRATEGY_CHAIN = [
+  "Kelly Event",
+  "Local Team",
+  "Central Campaign",
+  "Community Outreach",
+  "Event",
+  "Power of Five",
+  "County Growth",
+  "Election Victory",
+];
+
+export const EVENT_BRANCHES = [
+  "Event Approved",
+  "County Command",
+  "Local Team",
+  "Central Teams",
+  "Graphics",
+  "Emails",
+  "Phone",
+  "Postcards",
+  "Canvassing",
+  "Media",
+  "Registration",
+  "Event Day",
+  "Power of Five",
+  "Follow Up",
+];
+
+export const COMM_TIMELINE = [
+  "Today",
+  "Save the Date",
+  "Graphics",
+  "Emails",
+  "Radio",
+  "Newspaper",
+  "Door Hangers",
+  "Reminder",
+  "Event",
+  "After Event",
+];
+
+export const P5_CASCADE = ["1", "5", "25", "125", "625", "3,125", "Arkansas"];
+
+export const JOIN_NEEDS = [
+  "County Command",
+  "City Leads",
+  "Canvassing",
+  "Registration",
+  "Power of Five",
+  "Media",
+  "Communications",
+  "Strike Teams",
+  "Event Planning",
 ];
 
 export const SECTIONS: Record<ManualSectionId, ManualSection> = {
   overview: {
     id: "overview",
-    eyebrow: "Level 1 · Strategy",
-    headline: "The People-Powered Field Strategy",
-    oneLiner: "We are not traveling Arkansas simply to hold events. We are using every event to build the organization required to win.",
-    levelNote: "Start here. Drill deeper from any tab in Explore Mode, or open Presentation Mode for tomorrow night.",
-    overview: [
-      "Every Kelly Grappe campaign event triggers a coordinated chain reaction: local leaders, central teams, communications, canvassing, voter registration, volunteer recruitment, Power of 5, and county election readiness.",
-      DOCTRINE,
-      "Success is not attendance alone. It is the organization built around the event — and the leadership that remains after it.",
-    ],
+    eyebrow: "The Mission",
+    headline: "The Most Organized Grassroots Campaign Arkansas Has Ever Seen",
+    oneLiner: "We aren't building events. We're building communities that organize themselves.",
+    levelNote: "Feel: Hope",
+    overview: [DOCTRINE],
     chain: LANDING_CHAIN,
     tabs: [
       {
-        id: "doctrine",
-        label: "Doctrine",
-        body: [
-          "An event is a catalyst, not a finish line.",
-          "Public awareness, local visibility, volunteers, registrations, Power of 5 teams, neighborhood leadership, county organization, and election-period readiness are the products of every stop.",
-        ],
-      },
-      {
-        id: "depth",
-        label: "How to read this manual",
-        body: [
-          "Level 1 — Strategy: the 30,000-foot view.",
-          "Level 2 — Operating systems: Event Engine, Local Teams, Central Campaign, and more.",
-          "Level 3 — Playbooks: how each system works day to day.",
-          "Level 4 — Execution detail: checklists, scripts, templates, and county/city plans (future layer — visibly reserved).",
-        ],
-      },
-      {
-        id: "tomorrow",
-        label: "Benton County tonight",
-        body: [
-          "Benton County leaders should leave seeing both the statewide vision and exactly where Benton fits.",
-          "The last presentation screens ask who will lead, recruit, organize, communicate, register voters, and build the county operation.",
-        ],
+        id: "mission",
+        label: "The Mission",
+        body: ["An event is a catalyst, not a finish line.", "Organization that remains after Kelly leaves is the product."],
       },
     ],
-    success: [
-      "A first-time visitor understands the strategy in five minutes.",
-      "A county leader can drill several layers deeper.",
-      "Benton County can fill its first leadership map.",
+    success: ["Leave believing Arkansas can glow county by county."],
+    nextHref: "/field-strategy/strategy",
+    nextLabel: "Show Me How",
+  },
+  strategy: {
+    id: "strategy",
+    eyebrow: "The Entire Strategy",
+    headline: "One Board. One Cascade. Statewide Victory.",
+    oneLiner: "Thirty thousand feet — the whole chain reaction on one screen.",
+    levelNote: "Feel: Clarity",
+    overview: ["Click each stage. See how a single Kelly event compounds into county strength."],
+    chain: STRATEGY_CHAIN,
+    tabs: [
+      {
+        id: "board",
+        label: "The Board",
+        body: ["Kelly Event starts the cascade. Local + Central execute. Power of 5 compounds. Counties grow. Elections are won."],
+      },
     ],
+    success: ["Audience can redraw the chain from memory."],
     nextHref: "/field-strategy/event-engine",
-    nextLabel: "Open the Event Engine",
+    nextLabel: "Enter the Event Engine",
   },
   "event-engine": {
     id: "event-engine",

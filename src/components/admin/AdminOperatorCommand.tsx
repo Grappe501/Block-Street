@@ -10,6 +10,7 @@ import runAudit from "../../../data/v2/run-button-audit.json";
 import fieldMeta from "../../../data/field-goals/ingestion-manifest.json";
 import persistAudit from "../../../data/v2/production-persistence-forensic-audit.json";
 import positionMapping from "../../../data/field-plan/position-mapping-registry.json";
+import responsibilityLibrary from "../../../data/field-plan/responsibility-library.json";
 import reviewQueue from "../../../data/field-plan/ingestion/review-queue.json";
 import conflictQueue from "../../../data/field-plan/ingestion/conflict-queue.json";
 import { getCountyFieldGoal, getFieldGoalsMeta, CAMPUS_GOAL_FORMULA_VERSION } from "@/lib/field-goals";
@@ -59,6 +60,17 @@ function buildAttention(): Attention[] {
       severity: conflictCount > 0 ? "high" : "medium",
       title: `Field Plan mapping queues: ${reviewCount} review · ${conflictCount} conflict`,
       next: "Resolve V2-B.2 review/conflict queues before broad Field Plan ingest",
+    });
+  }
+  const respPending = ((responsibilityLibrary.responsibilities ?? []) as { review_status?: string }[]).filter(
+    (r) => r.review_status === "queued_for_review" || r.review_status === "draft",
+  ).length;
+  if (respPending > 0) {
+    attention.push({
+      id: "attn-fp-resp",
+      severity: "medium",
+      title: `Field Plan responsibilities awaiting review: ${respPending}`,
+      next: "V2-B.3 library review — approve content before KPI wiring (V2-B.4)",
     });
   }
   const pendingFeatures = (featureDiscovery.features ?? []).filter((f) => f.certification === "pending_cert");
@@ -240,8 +252,42 @@ export function AdminOperatorCommand() {
             Explicit unmapped: media_lead · logistics_lead (CIWS deferred) · docs/v2/V2B2_POSITION_MAPPING.md
           </li>
           <li>
-            Hierarchy preserved: V2-A.3 · campus <code>{CAMPUS_GOAL_FORMULA_VERSION}</code> · next V2-B.3
-            responsibility library
+            Hierarchy preserved: V2-A.3 · campus <code>{CAMPUS_GOAL_FORMULA_VERSION}</code>
+          </li>
+        </ul>
+      </div>
+
+      <div className="card border-slate-200 bg-white p-4">
+        <h3 className="text-sm font-bold text-slate-950">V2-B.3 Responsibility library</h3>
+        <ul className="mt-3 space-y-1.5 text-xs text-slate-800">
+          <li>
+            Library:{" "}
+            <strong>
+              {(responsibilityLibrary.summary as { responsibilities?: number })?.responsibilities ?? 0}{" "}
+              responsibilities
+            </strong>{" "}
+            · {(responsibilityLibrary.summary as { task_templates?: number })?.task_templates ?? 0} task
+            scaffolds ·{" "}
+            {(responsibilityLibrary.summary as { mapped_canonical_positions?: number })
+              ?.mapped_canonical_positions ?? 0}{" "}
+            mapped seats
+          </li>
+          <li>
+            Content-backed:{" "}
+            {(responsibilityLibrary.summary as { positions_with_content?: number })?.positions_with_content ??
+              0}{" "}
+            · placeholders:{" "}
+            {(responsibilityLibrary.summary as { positions_placeholder?: number })?.positions_placeholder ??
+              0}{" "}
+            · unmapped excluded: media_lead · logistics_lead
+          </li>
+          <li>
+            Task templates: <strong>not assigned to personnel</strong> until Postgres + RBAC · KPI wiring
+            deferred
+          </li>
+          <li>
+            Twin: <code>data/field-plan/responsibility-library.json</code> · docs/v2/V2B3_RESPONSIBILITY_LIBRARY.md
+            · next V2-B.4
           </li>
         </ul>
       </div>
