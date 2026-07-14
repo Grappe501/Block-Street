@@ -1,8 +1,8 @@
 {
   "version": "1.0.0",
-  "phase": "V2-B.3",
-  "updated": "2026-07-14T18:21:55.781Z",
-  "status": "responsibility_library_generated_awaiting_operator_review",
+  "phase": "V2-B.4",
+  "updated": "2026-07-14T18:42:07.924Z",
+  "status": "kpi_wiring_complete_placeholders_awaiting_content",
   "broad_ingest": "blocked_until_gates_pass",
   "source_contract": "data/field-plan/source-contract.json",
   "review_queue": "data/field-plan/ingestion/review-queue.json",
@@ -16,8 +16,11 @@
     "Invite-chain CERTIFIED PRESENT remains a named launch blocker in parallel.",
     "V2-B.2 mapping: 12 mapped · 3 unmapped · 1 conflicts · 16 central deferred",
     "V2-B.2 mapping: 13 mapped · 2 unmapped · 1 conflicts · 16 central deferred",
-    "V2-B.3 library: 55 responsibilities · 49 task scaffolds · 13 mapped seats"
+    "V2-B.3 library: 55 responsibilities · 49 task scaffolds · 13 mapped seats",
+    "V2-B.4 KPI wiring: 44 wired · 44 approved · 6 placeholders deferred · 0 personnel assigns"
   ],
   "position_mapping_registry": "data/field-plan/position-mapping-registry.json",
-  "responsibility_library": "data/field-plan/responsibility-library.json"
+  "responsibility_library": "data/field-plan/responsibility-library.json",
+  "kpi_catalog": "data/field-plan/kpi-catalog.json",
+  "kpi_binding_registry": "data/field-plan/kpi-binding-registry.json"
 }

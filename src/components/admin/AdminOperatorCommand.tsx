@@ -11,6 +11,7 @@ import fieldMeta from "../../../data/field-goals/ingestion-manifest.json";
 import persistAudit from "../../../data/v2/production-persistence-forensic-audit.json";
 import positionMapping from "../../../data/field-plan/position-mapping-registry.json";
 import responsibilityLibrary from "../../../data/field-plan/responsibility-library.json";
+import kpiBinding from "../../../data/field-plan/kpi-binding-registry.json";
 import reviewQueue from "../../../data/field-plan/ingestion/review-queue.json";
 import conflictQueue from "../../../data/field-plan/ingestion/conflict-queue.json";
 import { getCountyFieldGoal, getFieldGoalsMeta, CAMPUS_GOAL_FORMULA_VERSION } from "@/lib/field-goals";
@@ -68,9 +69,9 @@ function buildAttention(): Attention[] {
   if (respPending > 0) {
     attention.push({
       id: "attn-fp-resp",
-      severity: "medium",
-      title: `Field Plan responsibilities awaiting review: ${respPending}`,
-      next: "V2-B.3 library review — approve content before KPI wiring (V2-B.4)",
+      severity: "low",
+      title: `Field Plan placeholders / unbound rows: ${respPending}`,
+      next: "Content-backed rows approved in V2-B.4 — placeholders await Field Plan prose",
     });
   }
   const pendingFeatures = (featureDiscovery.features ?? []).filter((f) => f.certification === "pending_cert");
@@ -282,12 +283,41 @@ export function AdminOperatorCommand() {
             · unmapped excluded: media_lead · logistics_lead
           </li>
           <li>
-            Task templates: <strong>not assigned to personnel</strong> until Postgres + RBAC · KPI wiring
-            deferred
+            Task templates: <strong>not assigned to personnel</strong> until Postgres + RBAC
           </li>
           <li>
             Twin: <code>data/field-plan/responsibility-library.json</code> · docs/v2/V2B3_RESPONSIBILITY_LIBRARY.md
-            · next V2-B.4
+          </li>
+        </ul>
+      </div>
+
+      <div className="card border-slate-200 bg-white p-4">
+        <h3 className="text-sm font-bold text-slate-950">V2-B.4 KPI wiring</h3>
+        <ul className="mt-3 space-y-1.5 text-xs text-slate-800">
+          <li>
+            Wired:{" "}
+            <strong>
+              {(kpiBinding.summary as { bindings_wired?: number })?.bindings_wired ?? 0} bindings
+            </strong>{" "}
+            · approved responsibilities{" "}
+            {(kpiBinding.summary as { responsibilities_approved?: number })?.responsibilities_approved ?? 0}{" "}
+            · templates approved{" "}
+            {(kpiBinding.summary as { task_templates_approved?: number })?.task_templates_approved ?? 0}
+          </li>
+          <li>
+            Placeholders deferred:{" "}
+            {(kpiBinding.summary as { placeholders_deferred?: number })?.placeholders_deferred ?? 0} ·
+            catalog {(kpiBinding.summary as { catalog_kpis?: number })?.catalog_kpis ?? 0} framework KPIs
+            (not live telemetry)
+          </li>
+          <li>
+            Personnel assignments:{" "}
+            <strong>{(kpiBinding.summary as { personnel_assignments?: number })?.personnel_assignments ?? 0}</strong>{" "}
+            · broad ingest still blocked
+          </li>
+          <li>
+            Twin: <code>data/field-plan/kpi-binding-registry.json</code> · docs/v2/V2B4_KPI_WIRING.md · next
+            V2-B.5 durability prep
           </li>
         </ul>
       </div>

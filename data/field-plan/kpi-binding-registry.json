@@ -1,0 +1,1123 @@
+{
+  "version": "1.0.0",
+  "phase": "V2-B.4",
+  "generated_at": "2026-07-14T18:42:07.924Z",
+  "authority": "docs/v2/V2B4_KPI_WIRING.md",
+  "catalog": "data/field-plan/kpi-catalog.json",
+  "responsibility_library": "data/field-plan/responsibility-library.json",
+  "policy": {
+    "mapped_content_only": true,
+    "placeholders_not_auto_approved": true,
+    "no_personnel_assignment": true,
+    "broad_ingest_blocked": true,
+    "framework_targets_not_live_telemetry": true
+  },
+  "summary": {
+    "catalog_kpis": 17,
+    "responsibilities_considered": 55,
+    "bindings_wired": 44,
+    "placeholders_deferred": 6,
+    "no_matching_kpi": 5,
+    "responsibilities_approved": 44,
+    "task_templates_approved": 44,
+    "task_templates_total": 49,
+    "personnel_assignments": 0
+  },
+  "bindings": [
+    {
+      "responsibility_id": "FP-resp-event_lead-summary",
+      "canonical_key": "event_lead",
+      "phase": "always_active",
+      "kpi_ids": [
+        "FP-kpi-volunteers-recruited",
+        "FP-kpi-p5-commitments",
+        "FP-kpi-leaders-named",
+        "FP-kpi-shirt-visibility",
+        "FP-kpi-p5-active",
+        "FP-kpi-retention-7d",
+        "FP-kpi-next-activity",
+        "FP-kpi-outreach-wave"
+      ],
+      "evidence_requirements": [
+        "named_volunteer_list_or_membership_delta",
+        "p5_commitment_sheet_or_membership",
+        "leadership_map_or_open_recruitment_ask",
+        "photo_or_activity_note",
+        "p5_check_in",
+        "follow_up_completion_within_7_days",
+        "calendar_entry_or_owner_note",
+        "wave_checklist_signoff",
+        "operator_review_of_field_plan_source"
+      ],
+      "review_status": "approved",
+      "content_status": "ingested",
+      "task_template_ids": [
+        "FP-tmpl-event_lead-summary"
+      ],
+      "wiring_status": "wired"
+    },
+    {
+      "responsibility_id": "FP-resp-event_lead-always_active",
+      "canonical_key": "event_lead",
+      "phase": "always_active",
+      "kpi_ids": [
+        "FP-kpi-volunteers-recruited",
+        "FP-kpi-p5-commitments",
+        "FP-kpi-leaders-named",
+        "FP-kpi-shirt-visibility",
+        "FP-kpi-p5-active",
+        "FP-kpi-retention-7d",
+        "FP-kpi-next-activity",
+        "FP-kpi-outreach-wave"
+      ],
+      "evidence_requirements": [
+        "named_volunteer_list_or_membership_delta",
+        "p5_commitment_sheet_or_membership",
+        "leadership_map_or_open_recruitment_ask",
+        "photo_or_activity_note",
+        "p5_check_in",
+        "follow_up_completion_within_7_days",
+        "calendar_entry_or_owner_note",
+        "wave_checklist_signoff",
+        "operator_review_of_field_plan_source"
+      ],
+      "review_status": "approved",
+      "content_status": "ingested",
+      "task_template_ids": [
+        "FP-tmpl-event_lead-always_active"
+      ],
+      "wiring_status": "wired"
+    },
+    {
+      "responsibility_id": "FP-resp-event_lead-before_event",
+      "canonical_key": "event_lead",
+      "phase": "before_event",
+      "kpi_ids": [
+        "FP-kpi-leaders-named",
+        "FP-kpi-outreach-wave"
+      ],
+      "evidence_requirements": [
+        "leadership_map_or_open_recruitment_ask",
+        "wave_checklist_signoff",
+        "operator_review_of_field_plan_source"
+      ],
+      "review_status": "approved",
+      "content_status": "ingested",
+      "task_template_ids": [
+        "FP-tmpl-event_lead-before_event"
+      ],
+      "wiring_status": "wired"
+    },
+    {
+      "responsibility_id": "FP-resp-event_lead-event_day",
+      "canonical_key": "event_lead",
+      "phase": "event_day",
+      "kpi_ids": [
+        "FP-kpi-volunteers-recruited",
+        "FP-kpi-p5-commitments",
+        "FP-kpi-shirt-visibility"
+      ],
+      "evidence_requirements": [
+        "named_volunteer_list_or_membership_delta",
+        "p5_commitment_sheet_or_membership",
+        "photo_or_activity_note",
+        "operator_review_of_field_plan_source"
+      ],
+      "review_status": "approved",
+      "content_status": "ingested",
+      "task_template_ids": [
+        "FP-tmpl-event_lead-event_day"
+      ],
+      "wiring_status": "wired"
+    },
+    {
+      "responsibility_id": "FP-resp-event_lead-after_event",
+      "canonical_key": "event_lead",
+      "phase": "after_event",
+      "kpi_ids": [
+        "FP-kpi-volunteers-recruited",
+        "FP-kpi-p5-commitments",
+        "FP-kpi-leaders-named",
+        "FP-kpi-shirt-visibility",
+        "FP-kpi-p5-active",
+        "FP-kpi-retention-7d",
+        "FP-kpi-next-activity"
+      ],
+      "evidence_requirements": [
+        "named_volunteer_list_or_membership_delta",
+        "p5_commitment_sheet_or_membership",
+        "leadership_map_or_open_recruitment_ask",
+        "photo_or_activity_note",
+        "p5_check_in",
+        "follow_up_completion_within_7_days",
+        "calendar_entry_or_owner_note",
+        "operator_review_of_field_plan_source"
+      ],
+      "review_status": "approved",
+      "content_status": "ingested",
+      "task_template_ids": [
+        "FP-tmpl-event_lead-after_event"
+      ],
+      "wiring_status": "wired"
+    },
+    {
+      "responsibility_id": "FP-resp-event_lead-canvassing",
+      "canonical_key": "event_lead",
+      "phase": "canvassing",
+      "kpi_ids": [
+        "FP-kpi-shirt-visibility"
+      ],
+      "evidence_requirements": [
+        "photo_or_activity_note",
+        "operator_review_of_field_plan_source"
+      ],
+      "review_status": "approved",
+      "content_status": "ingested",
+      "task_template_ids": [
+        "FP-tmpl-event_lead-canvassing"
+      ],
+      "wiring_status": "wired"
+    },
+    {
+      "responsibility_id": "FP-resp-event_lead-election_week",
+      "canonical_key": "event_lead",
+      "phase": "election_week",
+      "kpi_ids": [
+        "FP-kpi-p5-active"
+      ],
+      "evidence_requirements": [
+        "p5_check_in",
+        "operator_review_of_field_plan_source"
+      ],
+      "review_status": "approved",
+      "content_status": "ingested",
+      "task_template_ids": [
+        "FP-tmpl-event_lead-election_week"
+      ],
+      "wiring_status": "wired"
+    },
+    {
+      "responsibility_id": "FP-resp-social_lead-summary",
+      "canonical_key": "social_lead",
+      "phase": "always_active",
+      "kpi_ids": [
+        "FP-kpi-shirt-visibility",
+        "FP-kpi-communities-touched",
+        "FP-kpi-outreach-wave"
+      ],
+      "evidence_requirements": [
+        "photo_or_activity_note",
+        "partner_touch_log",
+        "wave_checklist_signoff",
+        "operator_review_of_field_plan_source"
+      ],
+      "review_status": "approved",
+      "content_status": "ingested",
+      "task_template_ids": [
+        "FP-tmpl-social_lead-summary"
+      ],
+      "wiring_status": "wired"
+    },
+    {
+      "responsibility_id": "FP-resp-social_lead-always_active",
+      "canonical_key": "social_lead",
+      "phase": "always_active",
+      "kpi_ids": [
+        "FP-kpi-shirt-visibility",
+        "FP-kpi-communities-touched",
+        "FP-kpi-outreach-wave"
+      ],
+      "evidence_requirements": [
+        "photo_or_activity_note",
+        "partner_touch_log",
+        "wave_checklist_signoff",
+        "operator_review_of_field_plan_source"
+      ],
+      "review_status": "approved",
+      "content_status": "ingested",
+      "task_template_ids": [
+        "FP-tmpl-social_lead-always_active"
+      ],
+      "wiring_status": "wired"
+    },
+    {
+      "responsibility_id": "FP-resp-social_lead-before_event",
+      "canonical_key": "social_lead",
+      "phase": "before_event",
+      "kpi_ids": [
+        "FP-kpi-communities-touched",
+        "FP-kpi-outreach-wave"
+      ],
+      "evidence_requirements": [
+        "partner_touch_log",
+        "wave_checklist_signoff",
+        "operator_review_of_field_plan_source"
+      ],
+      "review_status": "approved",
+      "content_status": "ingested",
+      "task_template_ids": [
+        "FP-tmpl-social_lead-before_event"
+      ],
+      "wiring_status": "wired"
+    },
+    {
+      "responsibility_id": "FP-resp-social_lead-event_day",
+      "canonical_key": "social_lead",
+      "phase": "event_day",
+      "kpi_ids": [
+        "FP-kpi-shirt-visibility"
+      ],
+      "evidence_requirements": [
+        "photo_or_activity_note",
+        "operator_review_of_field_plan_source"
+      ],
+      "review_status": "approved",
+      "content_status": "ingested",
+      "task_template_ids": [
+        "FP-tmpl-social_lead-event_day"
+      ],
+      "wiring_status": "wired"
+    },
+    {
+      "responsibility_id": "FP-resp-social_lead-after_event",
+      "canonical_key": "social_lead",
+      "phase": "after_event",
+      "kpi_ids": [
+        "FP-kpi-shirt-visibility",
+        "FP-kpi-communities-touched"
+      ],
+      "evidence_requirements": [
+        "photo_or_activity_note",
+        "partner_touch_log",
+        "operator_review_of_field_plan_source"
+      ],
+      "review_status": "approved",
+      "content_status": "ingested",
+      "task_template_ids": [
+        "FP-tmpl-social_lead-after_event"
+      ],
+      "wiring_status": "wired"
+    },
+    {
+      "responsibility_id": "FP-resp-social_lead-canvassing",
+      "canonical_key": "social_lead",
+      "phase": "canvassing",
+      "kpi_ids": [
+        "FP-kpi-shirt-visibility"
+      ],
+      "evidence_requirements": [
+        "photo_or_activity_note",
+        "operator_review_of_field_plan_source"
+      ],
+      "review_status": "approved",
+      "content_status": "ingested",
+      "task_template_ids": [
+        "FP-tmpl-social_lead-canvassing"
+      ],
+      "wiring_status": "wired"
+    },
+    {
+      "responsibility_id": "FP-resp-social_lead-election_week",
+      "canonical_key": "social_lead",
+      "phase": "election_week",
+      "kpi_ids": [],
+      "evidence_requirements": [],
+      "review_status": "queued_for_review",
+      "content_status": "ingested",
+      "task_template_ids": [
+        "FP-tmpl-social_lead-election_week"
+      ],
+      "wiring_status": "no_matching_kpi"
+    },
+    {
+      "responsibility_id": "FP-resp-canvass_lead-summary",
+      "canonical_key": "canvass_lead",
+      "phase": "always_active",
+      "kpi_ids": [
+        "FP-kpi-conversations",
+        "FP-kpi-shifts",
+        "FP-kpi-shirt-visibility",
+        "FP-kpi-poll-coverage"
+      ],
+      "evidence_requirements": [
+        "canvass_or_phone_contact_log",
+        "shift_roster",
+        "photo_or_activity_note",
+        "poll_inventory_plan",
+        "operator_review_of_field_plan_source"
+      ],
+      "review_status": "approved",
+      "content_status": "ingested",
+      "task_template_ids": [
+        "FP-tmpl-canvass_lead-summary"
+      ],
+      "wiring_status": "wired"
+    },
+    {
+      "responsibility_id": "FP-resp-canvass_lead-always_active",
+      "canonical_key": "canvass_lead",
+      "phase": "always_active",
+      "kpi_ids": [
+        "FP-kpi-conversations",
+        "FP-kpi-shifts",
+        "FP-kpi-shirt-visibility",
+        "FP-kpi-poll-coverage"
+      ],
+      "evidence_requirements": [
+        "canvass_or_phone_contact_log",
+        "shift_roster",
+        "photo_or_activity_note",
+        "poll_inventory_plan",
+        "operator_review_of_field_plan_source"
+      ],
+      "review_status": "approved",
+      "content_status": "ingested",
+      "task_template_ids": [
+        "FP-tmpl-canvass_lead-always_active"
+      ],
+      "wiring_status": "wired"
+    },
+    {
+      "responsibility_id": "FP-resp-canvass_lead-before_event",
+      "canonical_key": "canvass_lead",
+      "phase": "before_event",
+      "kpi_ids": [
+        "FP-kpi-doors",
+        "FP-kpi-conversations",
+        "FP-kpi-hangers",
+        "FP-kpi-shifts"
+      ],
+      "evidence_requirements": [
+        "canvass_turf_log",
+        "canvass_or_phone_contact_log",
+        "turf_completion_note",
+        "shift_roster",
+        "operator_review_of_field_plan_source"
+      ],
+      "review_status": "approved",
+      "content_status": "ingested",
+      "task_template_ids": [
+        "FP-tmpl-canvass_lead-before_event"
+      ],
+      "wiring_status": "wired"
+    },
+    {
+      "responsibility_id": "FP-resp-canvass_lead-event_day",
+      "canonical_key": "canvass_lead",
+      "phase": "event_day",
+      "kpi_ids": [
+        "FP-kpi-shirt-visibility"
+      ],
+      "evidence_requirements": [
+        "photo_or_activity_note",
+        "operator_review_of_field_plan_source"
+      ],
+      "review_status": "approved",
+      "content_status": "ingested",
+      "task_template_ids": [
+        "FP-tmpl-canvass_lead-event_day"
+      ],
+      "wiring_status": "wired"
+    },
+    {
+      "responsibility_id": "FP-resp-canvass_lead-after_event",
+      "canonical_key": "canvass_lead",
+      "phase": "after_event",
+      "kpi_ids": [
+        "FP-kpi-shirt-visibility"
+      ],
+      "evidence_requirements": [
+        "photo_or_activity_note",
+        "operator_review_of_field_plan_source"
+      ],
+      "review_status": "approved",
+      "content_status": "ingested",
+      "task_template_ids": [
+        "FP-tmpl-canvass_lead-after_event"
+      ],
+      "wiring_status": "wired"
+    },
+    {
+      "responsibility_id": "FP-resp-canvass_lead-canvassing",
+      "canonical_key": "canvass_lead",
+      "phase": "canvassing",
+      "kpi_ids": [
+        "FP-kpi-doors",
+        "FP-kpi-conversations",
+        "FP-kpi-hangers",
+        "FP-kpi-shifts",
+        "FP-kpi-shirt-visibility"
+      ],
+      "evidence_requirements": [
+        "canvass_turf_log",
+        "canvass_or_phone_contact_log",
+        "turf_completion_note",
+        "shift_roster",
+        "photo_or_activity_note",
+        "operator_review_of_field_plan_source"
+      ],
+      "review_status": "approved",
+      "content_status": "ingested",
+      "task_template_ids": [
+        "FP-tmpl-canvass_lead-canvassing"
+      ],
+      "wiring_status": "wired"
+    },
+    {
+      "responsibility_id": "FP-resp-canvass_lead-election_week",
+      "canonical_key": "canvass_lead",
+      "phase": "election_week",
+      "kpi_ids": [
+        "FP-kpi-doors",
+        "FP-kpi-conversations",
+        "FP-kpi-shifts",
+        "FP-kpi-poll-coverage"
+      ],
+      "evidence_requirements": [
+        "canvass_turf_log",
+        "canvass_or_phone_contact_log",
+        "shift_roster",
+        "poll_inventory_plan",
+        "operator_review_of_field_plan_source"
+      ],
+      "review_status": "approved",
+      "content_status": "ingested",
+      "task_template_ids": [
+        "FP-tmpl-canvass_lead-election_week"
+      ],
+      "wiring_status": "wired"
+    },
+    {
+      "responsibility_id": "FP-resp-community_lead-summary",
+      "canonical_key": "community_lead",
+      "phase": "always_active",
+      "kpi_ids": [
+        "FP-kpi-volunteers-recruited",
+        "FP-kpi-p5-commitments",
+        "FP-kpi-leaders-named",
+        "FP-kpi-communities-touched",
+        "FP-kpi-p5-active",
+        "FP-kpi-retention-7d"
+      ],
+      "evidence_requirements": [
+        "named_volunteer_list_or_membership_delta",
+        "p5_commitment_sheet_or_membership",
+        "leadership_map_or_open_recruitment_ask",
+        "partner_touch_log",
+        "p5_check_in",
+        "follow_up_completion_within_7_days",
+        "operator_review_of_field_plan_source"
+      ],
+      "review_status": "approved",
+      "content_status": "ingested",
+      "task_template_ids": [
+        "FP-tmpl-community_lead-summary"
+      ],
+      "wiring_status": "wired"
+    },
+    {
+      "responsibility_id": "FP-resp-community_lead-always_active",
+      "canonical_key": "community_lead",
+      "phase": "always_active",
+      "kpi_ids": [
+        "FP-kpi-volunteers-recruited",
+        "FP-kpi-p5-commitments",
+        "FP-kpi-leaders-named",
+        "FP-kpi-communities-touched",
+        "FP-kpi-p5-active",
+        "FP-kpi-retention-7d"
+      ],
+      "evidence_requirements": [
+        "named_volunteer_list_or_membership_delta",
+        "p5_commitment_sheet_or_membership",
+        "leadership_map_or_open_recruitment_ask",
+        "partner_touch_log",
+        "p5_check_in",
+        "follow_up_completion_within_7_days",
+        "operator_review_of_field_plan_source"
+      ],
+      "review_status": "approved",
+      "content_status": "ingested",
+      "task_template_ids": [
+        "FP-tmpl-community_lead-always_active"
+      ],
+      "wiring_status": "wired"
+    },
+    {
+      "responsibility_id": "FP-resp-community_lead-before_event",
+      "canonical_key": "community_lead",
+      "phase": "before_event",
+      "kpi_ids": [
+        "FP-kpi-leaders-named",
+        "FP-kpi-communities-touched"
+      ],
+      "evidence_requirements": [
+        "leadership_map_or_open_recruitment_ask",
+        "partner_touch_log",
+        "operator_review_of_field_plan_source"
+      ],
+      "review_status": "approved",
+      "content_status": "ingested",
+      "task_template_ids": [
+        "FP-tmpl-community_lead-before_event"
+      ],
+      "wiring_status": "wired"
+    },
+    {
+      "responsibility_id": "FP-resp-community_lead-event_day",
+      "canonical_key": "community_lead",
+      "phase": "event_day",
+      "kpi_ids": [
+        "FP-kpi-volunteers-recruited",
+        "FP-kpi-p5-commitments"
+      ],
+      "evidence_requirements": [
+        "named_volunteer_list_or_membership_delta",
+        "p5_commitment_sheet_or_membership",
+        "operator_review_of_field_plan_source"
+      ],
+      "review_status": "approved",
+      "content_status": "ingested",
+      "task_template_ids": [
+        "FP-tmpl-community_lead-event_day"
+      ],
+      "wiring_status": "wired"
+    },
+    {
+      "responsibility_id": "FP-resp-community_lead-after_event",
+      "canonical_key": "community_lead",
+      "phase": "after_event",
+      "kpi_ids": [
+        "FP-kpi-volunteers-recruited",
+        "FP-kpi-p5-commitments",
+        "FP-kpi-leaders-named",
+        "FP-kpi-communities-touched",
+        "FP-kpi-p5-active",
+        "FP-kpi-retention-7d"
+      ],
+      "evidence_requirements": [
+        "named_volunteer_list_or_membership_delta",
+        "p5_commitment_sheet_or_membership",
+        "leadership_map_or_open_recruitment_ask",
+        "partner_touch_log",
+        "p5_check_in",
+        "follow_up_completion_within_7_days",
+        "operator_review_of_field_plan_source"
+      ],
+      "review_status": "approved",
+      "content_status": "ingested",
+      "task_template_ids": [
+        "FP-tmpl-community_lead-after_event"
+      ],
+      "wiring_status": "wired"
+    },
+    {
+      "responsibility_id": "FP-resp-community_lead-canvassing",
+      "canonical_key": "community_lead",
+      "phase": "canvassing",
+      "kpi_ids": [],
+      "evidence_requirements": [],
+      "review_status": "queued_for_review",
+      "content_status": "ingested",
+      "task_template_ids": [
+        "FP-tmpl-community_lead-canvassing"
+      ],
+      "wiring_status": "no_matching_kpi"
+    },
+    {
+      "responsibility_id": "FP-resp-community_lead-election_week",
+      "canonical_key": "community_lead",
+      "phase": "election_week",
+      "kpi_ids": [
+        "FP-kpi-p5-active"
+      ],
+      "evidence_requirements": [
+        "p5_check_in",
+        "operator_review_of_field_plan_source"
+      ],
+      "review_status": "approved",
+      "content_status": "ingested",
+      "task_template_ids": [
+        "FP-tmpl-community_lead-election_week"
+      ],
+      "wiring_status": "wired"
+    },
+    {
+      "responsibility_id": "FP-resp-community_social_lead-placeholder",
+      "canonical_key": "community_social_lead",
+      "phase": "always_active",
+      "kpi_ids": [],
+      "evidence_requirements": [],
+      "review_status": "draft",
+      "content_status": "placeholder",
+      "task_template_ids": [],
+      "wiring_status": "placeholder_deferred"
+    },
+    {
+      "responsibility_id": "FP-resp-registration_lead-summary",
+      "canonical_key": "registration_lead",
+      "phase": "always_active",
+      "kpi_ids": [
+        "FP-kpi-shifts",
+        "FP-kpi-registrations",
+        "FP-kpi-registration-activities"
+      ],
+      "evidence_requirements": [
+        "shift_roster",
+        "registration_activity_count",
+        "local_vr_calendar_entry",
+        "operator_review_of_field_plan_source"
+      ],
+      "review_status": "approved",
+      "content_status": "ingested",
+      "task_template_ids": [
+        "FP-tmpl-registration_lead-summary"
+      ],
+      "wiring_status": "wired"
+    },
+    {
+      "responsibility_id": "FP-resp-registration_lead-always_active",
+      "canonical_key": "registration_lead",
+      "phase": "always_active",
+      "kpi_ids": [
+        "FP-kpi-shifts",
+        "FP-kpi-registrations",
+        "FP-kpi-registration-activities"
+      ],
+      "evidence_requirements": [
+        "shift_roster",
+        "registration_activity_count",
+        "local_vr_calendar_entry",
+        "operator_review_of_field_plan_source"
+      ],
+      "review_status": "approved",
+      "content_status": "ingested",
+      "task_template_ids": [
+        "FP-tmpl-registration_lead-always_active"
+      ],
+      "wiring_status": "wired"
+    },
+    {
+      "responsibility_id": "FP-resp-registration_lead-before_event",
+      "canonical_key": "registration_lead",
+      "phase": "before_event",
+      "kpi_ids": [
+        "FP-kpi-shifts",
+        "FP-kpi-registrations",
+        "FP-kpi-registration-activities"
+      ],
+      "evidence_requirements": [
+        "shift_roster",
+        "registration_activity_count",
+        "local_vr_calendar_entry",
+        "operator_review_of_field_plan_source"
+      ],
+      "review_status": "approved",
+      "content_status": "ingested",
+      "task_template_ids": [
+        "FP-tmpl-registration_lead-before_event"
+      ],
+      "wiring_status": "wired"
+    },
+    {
+      "responsibility_id": "FP-resp-registration_lead-event_day",
+      "canonical_key": "registration_lead",
+      "phase": "event_day",
+      "kpi_ids": [
+        "FP-kpi-registrations"
+      ],
+      "evidence_requirements": [
+        "registration_activity_count",
+        "operator_review_of_field_plan_source"
+      ],
+      "review_status": "approved",
+      "content_status": "ingested",
+      "task_template_ids": [
+        "FP-tmpl-registration_lead-event_day"
+      ],
+      "wiring_status": "wired"
+    },
+    {
+      "responsibility_id": "FP-resp-registration_lead-after_event",
+      "canonical_key": "registration_lead",
+      "phase": "after_event",
+      "kpi_ids": [
+        "FP-kpi-registrations",
+        "FP-kpi-registration-activities"
+      ],
+      "evidence_requirements": [
+        "registration_activity_count",
+        "local_vr_calendar_entry",
+        "operator_review_of_field_plan_source"
+      ],
+      "review_status": "approved",
+      "content_status": "ingested",
+      "task_template_ids": [
+        "FP-tmpl-registration_lead-after_event"
+      ],
+      "wiring_status": "wired"
+    },
+    {
+      "responsibility_id": "FP-resp-registration_lead-canvassing",
+      "canonical_key": "registration_lead",
+      "phase": "canvassing",
+      "kpi_ids": [
+        "FP-kpi-shifts"
+      ],
+      "evidence_requirements": [
+        "shift_roster",
+        "operator_review_of_field_plan_source"
+      ],
+      "review_status": "approved",
+      "content_status": "ingested",
+      "task_template_ids": [
+        "FP-tmpl-registration_lead-canvassing"
+      ],
+      "wiring_status": "wired"
+    },
+    {
+      "responsibility_id": "FP-resp-registration_lead-election_week",
+      "canonical_key": "registration_lead",
+      "phase": "election_week",
+      "kpi_ids": [
+        "FP-kpi-shifts"
+      ],
+      "evidence_requirements": [
+        "shift_roster",
+        "operator_review_of_field_plan_source"
+      ],
+      "review_status": "approved",
+      "content_status": "ingested",
+      "task_template_ids": [
+        "FP-tmpl-registration_lead-election_week"
+      ],
+      "wiring_status": "wired"
+    },
+    {
+      "responsibility_id": "FP-resp-phone_bank_lead-summary",
+      "canonical_key": "phone_bank_lead",
+      "phase": "always_active",
+      "kpi_ids": [
+        "FP-kpi-conversations",
+        "FP-kpi-shifts",
+        "FP-kpi-retention-7d",
+        "FP-kpi-outreach-wave"
+      ],
+      "evidence_requirements": [
+        "canvass_or_phone_contact_log",
+        "shift_roster",
+        "follow_up_completion_within_7_days",
+        "wave_checklist_signoff",
+        "operator_review_of_field_plan_source"
+      ],
+      "review_status": "approved",
+      "content_status": "ingested",
+      "task_template_ids": [
+        "FP-tmpl-phone_bank_lead-summary"
+      ],
+      "wiring_status": "wired"
+    },
+    {
+      "responsibility_id": "FP-resp-phone_bank_lead-always_active",
+      "canonical_key": "phone_bank_lead",
+      "phase": "always_active",
+      "kpi_ids": [
+        "FP-kpi-conversations",
+        "FP-kpi-shifts",
+        "FP-kpi-retention-7d",
+        "FP-kpi-outreach-wave"
+      ],
+      "evidence_requirements": [
+        "canvass_or_phone_contact_log",
+        "shift_roster",
+        "follow_up_completion_within_7_days",
+        "wave_checklist_signoff",
+        "operator_review_of_field_plan_source"
+      ],
+      "review_status": "approved",
+      "content_status": "ingested",
+      "task_template_ids": [
+        "FP-tmpl-phone_bank_lead-always_active"
+      ],
+      "wiring_status": "wired"
+    },
+    {
+      "responsibility_id": "FP-resp-phone_bank_lead-before_event",
+      "canonical_key": "phone_bank_lead",
+      "phase": "before_event",
+      "kpi_ids": [
+        "FP-kpi-conversations",
+        "FP-kpi-shifts",
+        "FP-kpi-outreach-wave"
+      ],
+      "evidence_requirements": [
+        "canvass_or_phone_contact_log",
+        "shift_roster",
+        "wave_checklist_signoff",
+        "operator_review_of_field_plan_source"
+      ],
+      "review_status": "approved",
+      "content_status": "ingested",
+      "task_template_ids": [
+        "FP-tmpl-phone_bank_lead-before_event"
+      ],
+      "wiring_status": "wired"
+    },
+    {
+      "responsibility_id": "FP-resp-phone_bank_lead-event_day",
+      "canonical_key": "phone_bank_lead",
+      "phase": "event_day",
+      "kpi_ids": [],
+      "evidence_requirements": [],
+      "review_status": "queued_for_review",
+      "content_status": "ingested",
+      "task_template_ids": [
+        "FP-tmpl-phone_bank_lead-event_day"
+      ],
+      "wiring_status": "no_matching_kpi"
+    },
+    {
+      "responsibility_id": "FP-resp-phone_bank_lead-after_event",
+      "canonical_key": "phone_bank_lead",
+      "phase": "after_event",
+      "kpi_ids": [
+        "FP-kpi-retention-7d"
+      ],
+      "evidence_requirements": [
+        "follow_up_completion_within_7_days",
+        "operator_review_of_field_plan_source"
+      ],
+      "review_status": "approved",
+      "content_status": "ingested",
+      "task_template_ids": [
+        "FP-tmpl-phone_bank_lead-after_event"
+      ],
+      "wiring_status": "wired"
+    },
+    {
+      "responsibility_id": "FP-resp-phone_bank_lead-canvassing",
+      "canonical_key": "phone_bank_lead",
+      "phase": "canvassing",
+      "kpi_ids": [
+        "FP-kpi-conversations",
+        "FP-kpi-shifts"
+      ],
+      "evidence_requirements": [
+        "canvass_or_phone_contact_log",
+        "shift_roster",
+        "operator_review_of_field_plan_source"
+      ],
+      "review_status": "approved",
+      "content_status": "ingested",
+      "task_template_ids": [
+        "FP-tmpl-phone_bank_lead-canvassing"
+      ],
+      "wiring_status": "wired"
+    },
+    {
+      "responsibility_id": "FP-resp-phone_bank_lead-election_week",
+      "canonical_key": "phone_bank_lead",
+      "phase": "election_week",
+      "kpi_ids": [
+        "FP-kpi-conversations",
+        "FP-kpi-shifts"
+      ],
+      "evidence_requirements": [
+        "canvass_or_phone_contact_log",
+        "shift_roster",
+        "operator_review_of_field_plan_source"
+      ],
+      "review_status": "approved",
+      "content_status": "ingested",
+      "task_template_ids": [
+        "FP-tmpl-phone_bank_lead-election_week"
+      ],
+      "wiring_status": "wired"
+    },
+    {
+      "responsibility_id": "FP-resp-postcard_lead-summary",
+      "canonical_key": "postcard_lead",
+      "phase": "always_active",
+      "kpi_ids": [
+        "FP-kpi-shifts",
+        "FP-kpi-postcards",
+        "FP-kpi-outreach-wave"
+      ],
+      "evidence_requirements": [
+        "shift_roster",
+        "postcard_batch_count",
+        "wave_checklist_signoff",
+        "operator_review_of_field_plan_source"
+      ],
+      "review_status": "approved",
+      "content_status": "ingested",
+      "task_template_ids": [
+        "FP-tmpl-postcard_lead-summary"
+      ],
+      "wiring_status": "wired"
+    },
+    {
+      "responsibility_id": "FP-resp-postcard_lead-always_active",
+      "canonical_key": "postcard_lead",
+      "phase": "always_active",
+      "kpi_ids": [
+        "FP-kpi-shifts",
+        "FP-kpi-postcards",
+        "FP-kpi-outreach-wave"
+      ],
+      "evidence_requirements": [
+        "shift_roster",
+        "postcard_batch_count",
+        "wave_checklist_signoff",
+        "operator_review_of_field_plan_source"
+      ],
+      "review_status": "approved",
+      "content_status": "ingested",
+      "task_template_ids": [
+        "FP-tmpl-postcard_lead-always_active"
+      ],
+      "wiring_status": "wired"
+    },
+    {
+      "responsibility_id": "FP-resp-postcard_lead-before_event",
+      "canonical_key": "postcard_lead",
+      "phase": "before_event",
+      "kpi_ids": [
+        "FP-kpi-shifts",
+        "FP-kpi-postcards",
+        "FP-kpi-outreach-wave"
+      ],
+      "evidence_requirements": [
+        "shift_roster",
+        "postcard_batch_count",
+        "wave_checklist_signoff",
+        "operator_review_of_field_plan_source"
+      ],
+      "review_status": "approved",
+      "content_status": "ingested",
+      "task_template_ids": [
+        "FP-tmpl-postcard_lead-before_event"
+      ],
+      "wiring_status": "wired"
+    },
+    {
+      "responsibility_id": "FP-resp-postcard_lead-event_day",
+      "canonical_key": "postcard_lead",
+      "phase": "event_day",
+      "kpi_ids": [],
+      "evidence_requirements": [],
+      "review_status": "queued_for_review",
+      "content_status": "ingested",
+      "task_template_ids": [
+        "FP-tmpl-postcard_lead-event_day"
+      ],
+      "wiring_status": "no_matching_kpi"
+    },
+    {
+      "responsibility_id": "FP-resp-postcard_lead-after_event",
+      "canonical_key": "postcard_lead",
+      "phase": "after_event",
+      "kpi_ids": [],
+      "evidence_requirements": [],
+      "review_status": "queued_for_review",
+      "content_status": "ingested",
+      "task_template_ids": [
+        "FP-tmpl-postcard_lead-after_event"
+      ],
+      "wiring_status": "no_matching_kpi"
+    },
+    {
+      "responsibility_id": "FP-resp-postcard_lead-canvassing",
+      "canonical_key": "postcard_lead",
+      "phase": "canvassing",
+      "kpi_ids": [
+        "FP-kpi-shifts"
+      ],
+      "evidence_requirements": [
+        "shift_roster",
+        "operator_review_of_field_plan_source"
+      ],
+      "review_status": "approved",
+      "content_status": "ingested",
+      "task_template_ids": [
+        "FP-tmpl-postcard_lead-canvassing"
+      ],
+      "wiring_status": "wired"
+    },
+    {
+      "responsibility_id": "FP-resp-postcard_lead-election_week",
+      "canonical_key": "postcard_lead",
+      "phase": "election_week",
+      "kpi_ids": [
+        "FP-kpi-shifts",
+        "FP-kpi-postcards"
+      ],
+      "evidence_requirements": [
+        "shift_roster",
+        "postcard_batch_count",
+        "operator_review_of_field_plan_source"
+      ],
+      "review_status": "approved",
+      "content_status": "ingested",
+      "task_template_ids": [
+        "FP-tmpl-postcard_lead-election_week"
+      ],
+      "wiring_status": "wired"
+    },
+    {
+      "responsibility_id": "FP-resp-campaign_director-placeholder",
+      "canonical_key": "campaign_director",
+      "phase": "always_active",
+      "kpi_ids": [],
+      "evidence_requirements": [],
+      "review_status": "draft",
+      "content_status": "placeholder",
+      "task_template_ids": [],
+      "wiring_status": "placeholder_deferred"
+    },
+    {
+      "responsibility_id": "FP-resp-volunteer_manager-placeholder",
+      "canonical_key": "volunteer_manager",
+      "phase": "always_active",
+      "kpi_ids": [],
+      "evidence_requirements": [],
+      "review_status": "draft",
+      "content_status": "placeholder",
+      "task_template_ids": [],
+      "wiring_status": "placeholder_deferred"
+    },
+    {
+      "responsibility_id": "FP-resp-college_leader-placeholder",
+      "canonical_key": "college_leader",
+      "phase": "always_active",
+      "kpi_ids": [],
+      "evidence_requirements": [],
+      "review_status": "draft",
+      "content_status": "placeholder",
+      "task_template_ids": [],
+      "wiring_status": "placeholder_deferred"
+    },
+    {
+      "responsibility_id": "FP-resp-county_volunteer_lead-placeholder",
+      "canonical_key": "county_volunteer_lead",
+      "phase": "always_active",
+      "kpi_ids": [],
+      "evidence_requirements": [],
+      "review_status": "draft",
+      "content_status": "placeholder",
+      "task_template_ids": [],
+      "wiring_status": "placeholder_deferred"
+    },
+    {
+      "responsibility_id": "FP-resp-institution_lead-placeholder",
+      "canonical_key": "institution_lead",
+      "phase": "always_active",
+      "kpi_ids": [],
+      "evidence_requirements": [],
+      "review_status": "draft",
+      "content_status": "placeholder",
+      "task_template_ids": [],
+      "wiring_status": "placeholder_deferred"
+    }
+  ]
+}

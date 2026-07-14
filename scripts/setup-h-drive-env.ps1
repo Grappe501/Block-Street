@@ -1,26 +1,45 @@
-# One-time setup: redirect Windows USER temp and npm cache to H:\Block-Street
+# One-time / re-run setup: redirect USER temp + tool caches to H:\Block-Street
+# Never leave npm/pip/pnpm/playwright/temp on C: (C: is critically low).
 $ErrorActionPreference = "Stop"
 
 $repo = Split-Path -Parent $PSScriptRoot
 $tmp = Join-Path $repo ".tmp"
 $npmCache = Join-Path $repo ".npm-cache"
+$caches = Join-Path $repo ".caches"
 
-New-Item -ItemType Directory -Force -Path $tmp, $npmCache | Out-Null
+New-Item -ItemType Directory -Force -Path @(
+  $tmp,
+  $npmCache,
+  $caches,
+  (Join-Path $caches "pip"),
+  (Join-Path $caches "pnpm-store"),
+  (Join-Path $caches "playwright"),
+  (Join-Path $caches "uv")
+) | Out-Null
 
-[Environment]::SetEnvironmentVariable("TEMP", $tmp, "User")
-[Environment]::SetEnvironmentVariable("TMP", $tmp, "User")
-[Environment]::SetEnvironmentVariable("npm_config_cache", $npmCache, "User")
-[Environment]::SetEnvironmentVariable("npm_config_tmp", $tmp, "User")
+$map = @{
+  TEMP                     = $tmp
+  TMP                      = $tmp
+  TMPDIR                   = $tmp
+  npm_config_cache         = $npmCache
+  npm_config_tmp           = $tmp
+  PIP_CACHE_DIR            = (Join-Path $caches "pip")
+  UV_CACHE_DIR             = (Join-Path $caches "uv")
+  XDG_CACHE_HOME           = $caches
+  PNPM_STORE_DIR           = (Join-Path $caches "pnpm-store")
+  PLAYWRIGHT_BROWSERS_PATH = (Join-Path $caches "playwright")
+}
 
-# Apply to current session too
-$env:TEMP = $tmp
-$env:TMP = $tmp
-$env:npm_config_cache = $npmCache
-$env:npm_config_tmp = $tmp
+foreach ($key in $map.Keys) {
+  [Environment]::SetEnvironmentVariable($key, $map[$key], "User")
+  Set-Item -Path "Env:$key" -Value $map[$key]
+}
 
-Write-Host "USER environment updated:"
-Write-Host "  TEMP=$tmp"
-Write-Host "  TMP=$tmp"
-Write-Host "  npm_config_cache=$npmCache"
+Write-Host "USER environment redirected to H:"
+foreach ($key in ($map.Keys | Sort-Object)) {
+  Write-Host ("  {0}={1}" -f $key, $map[$key])
+}
 Write-Host ""
-Write-Host "Restart Cursor/terminals for this to take effect everywhere."
+Write-Host "Restart Cursor after first run so all child processes inherit these values."
+Write-Host "To reclaim C: space from Cursor itself (state.vscdb ~20GB), quit Cursor and run:"
+Write-Host "  powershell -File scripts\relocate-cursor-state-to-h.ps1"

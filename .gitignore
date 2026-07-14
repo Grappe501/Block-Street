@@ -1,7 +1,9 @@
-# Dependencies & caches (H: drive local)
+# Dependencies & caches (H: drive local — never C:)
 node_modules/
 .npm-cache/
 .tmp/
+.caches/
+.cursor-ide/
 .next/
 out/
 dist/

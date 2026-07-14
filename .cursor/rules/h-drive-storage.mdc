@@ -5,7 +5,7 @@ alwaysApply: true
 
 # H: Drive Storage Only — C: Is Off Limits
 
-The C: drive is full. **Never write temporary, cache, scratch, or output files to C:.**
+The C: drive is critically full (~1 GB free). **Never write temporary, cache, scratch, or output files to C.**
 
 ## Required paths (Block-Street repo on H:)
 
@@ -13,27 +13,50 @@ The C: drive is full. **Never write temporary, cache, scratch, or output files t
 |---------|------|
 | Temp / scratch | `H:\Block-Street\.tmp` |
 | npm cache | `H:\Block-Street\.npm-cache` |
+| Tool caches (pip/pnpm/playwright) | `H:\Block-Street\.caches` |
+| Agent IDE spill (junctioned) | `H:\Block-Street\.cursor-ide` |
 | Build output | `H:\Block-Street\.next` |
-| Project files | `H:\Block-Street\` (workspace root) |
+| Project files | `H:\Block-Street\` |
+| Cursor globalStorage (after relocate) | `H:\CursorData\globalStorage` |
 
-## Shell commands
+## Shell commands (mandatory every session)
 
-Before running npm, node, tsc, next, or other tools in PowerShell, set:
+Before any npm, node, tsc, next, pip, pnpm, playwright, or python tool in PowerShell:
 
 ```powershell
 $env:TEMP = 'H:\Block-Street\.tmp'
 $env:TMP = 'H:\Block-Street\.tmp'
+$env:TMPDIR = 'H:\Block-Street\.tmp'
 $env:npm_config_cache = 'H:\Block-Street\.npm-cache'
+$env:npm_config_tmp = 'H:\Block-Street\.tmp'
+$env:PIP_CACHE_DIR = 'H:\Block-Street\.caches\pip'
+$env:XDG_CACHE_HOME = 'H:\Block-Street\.caches'
+$env:PNPM_STORE_DIR = 'H:\Block-Street\.caches\pnpm-store'
+$env:PLAYWRIGHT_BROWSERS_PATH = 'H:\Block-Street\.caches\playwright'
 ```
 
 Prefer: `node scripts/run-with-h-env.mjs <command>` which applies env automatically.
 
+One-time / repair:
+
+```powershell
+powershell -File H:\Block-Street\scripts\setup-h-drive-env.ps1
+powershell -File H:\Block-Street\scripts\free-c-drive-caches.ps1
+```
+
+If C: still screams about free space, Cursor's `state.vscdb` (~20GB) is the culprit. Quit Cursor and run:
+
+```powershell
+powershell -File H:\Block-Street\scripts\relocate-cursor-state-to-h.ps1
+```
+
 ## Forbidden
 
 - Do not use `C:\Users\...\AppData\Local\Temp` for scratch files
-- Do not create temp files on `C:\` anywhere
+- Do not create temp/cache files on `C:\` anywhere
 - Do not redirect output to `C:\` paths
-- Do not use `Travel-Expense` temp paths — use `H:\Block-Street\.tmp` only
+- Do not use Travel-Expense or other project temp paths — use `H:\Block-Street\.tmp` only
+- Do not leave pip/pnpm/playwright/npm caches on C:
 
 ## Scripts
 

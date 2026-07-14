@@ -1,0 +1,187 @@
+{
+  "version": "1.0.0",
+  "phase": "V2-B.4",
+  "authority": "docs/v2/V2B4_KPI_WIRING.md",
+  "source": "field-strategy success-measures · Arkansas Victory Field Framework",
+  "note": "Framework targets only — not live telemetry. No fake current counts.",
+  "kpis": [
+    {
+      "stable_id": "FP-kpi-volunteers-recruited",
+      "key": "volunteers_recruited",
+      "label": "Volunteers recruited",
+      "category": "event",
+      "evidence": "named_volunteer_list_or_membership_delta",
+      "phases": ["after_event", "always_active", "event_day"],
+      "function_keys": ["events", "community_outreach", null],
+      "canonical_keys": ["event_lead", "community_lead", "volunteer_manager"]
+    },
+    {
+      "stable_id": "FP-kpi-p5-commitments",
+      "key": "p5_commitments",
+      "label": "Power of 5 commitments",
+      "category": "event",
+      "evidence": "p5_commitment_sheet_or_membership",
+      "phases": ["after_event", "event_day", "always_active"],
+      "function_keys": ["events", "community_outreach", null],
+      "canonical_keys": ["event_lead", "community_lead", "institution_lead", "college_leader"]
+    },
+    {
+      "stable_id": "FP-kpi-leaders-named",
+      "key": "leaders_named",
+      "label": "Leaders named or open asks posted",
+      "category": "event",
+      "evidence": "leadership_map_or_open_recruitment_ask",
+      "phases": ["before_event", "after_event", "always_active"],
+      "function_keys": ["events", "community_outreach", null],
+      "canonical_keys": [
+        "event_lead",
+        "community_lead",
+        "volunteer_manager",
+        "county_volunteer_lead",
+        "college_leader",
+        "institution_lead",
+        "campaign_director"
+      ]
+    },
+    {
+      "stable_id": "FP-kpi-doors",
+      "key": "doors_contacted",
+      "label": "Doors contacted",
+      "category": "field",
+      "evidence": "canvass_turf_log",
+      "phases": ["canvassing", "before_event", "election_week"],
+      "function_keys": ["canvassing"],
+      "canonical_keys": ["canvass_lead"]
+    },
+    {
+      "stable_id": "FP-kpi-conversations",
+      "key": "conversations",
+      "label": "Conversations logged",
+      "category": "field",
+      "evidence": "canvass_or_phone_contact_log",
+      "phases": ["canvassing", "before_event", "election_week", "always_active"],
+      "function_keys": ["canvassing", "phone_text"],
+      "canonical_keys": ["canvass_lead", "phone_bank_lead"]
+    },
+    {
+      "stable_id": "FP-kpi-hangers",
+      "key": "door_hangers",
+      "label": "Door hangers placed",
+      "category": "field",
+      "evidence": "turf_completion_note",
+      "phases": ["canvassing", "before_event"],
+      "function_keys": ["canvassing"],
+      "canonical_keys": ["canvass_lead"]
+    },
+    {
+      "stable_id": "FP-kpi-shifts",
+      "key": "shifts_staffed",
+      "label": "Shifts staffed",
+      "category": "field",
+      "evidence": "shift_roster",
+      "phases": ["canvassing", "before_event", "election_week", "always_active"],
+      "function_keys": ["canvassing", "phone_text", "postcards", "voter_registration"],
+      "canonical_keys": ["canvass_lead", "phone_bank_lead", "postcard_lead", "registration_lead"]
+    },
+    {
+      "stable_id": "FP-kpi-registrations",
+      "key": "registrations_completed",
+      "label": "Registrations completed",
+      "category": "field",
+      "evidence": "registration_activity_count",
+      "phases": ["event_day", "before_event", "after_event", "always_active"],
+      "function_keys": ["voter_registration"],
+      "canonical_keys": ["registration_lead"]
+    },
+    {
+      "stable_id": "FP-kpi-registration-activities",
+      "key": "registration_activities",
+      "label": "Registration activities held",
+      "category": "field",
+      "evidence": "local_vr_calendar_entry",
+      "phases": ["before_event", "after_event", "always_active"],
+      "function_keys": ["voter_registration"],
+      "canonical_keys": ["registration_lead"]
+    },
+    {
+      "stable_id": "FP-kpi-shirt-visibility",
+      "key": "shirt_visibility_moments",
+      "label": "Regnat Populus visibility moments",
+      "category": "field",
+      "evidence": "photo_or_activity_note",
+      "phases": ["event_day", "after_event", "canvassing", "always_active"],
+      "function_keys": ["social_media", "events", "canvassing"],
+      "canonical_keys": ["social_lead", "event_lead", "canvass_lead"]
+    },
+    {
+      "stable_id": "FP-kpi-communities-touched",
+      "key": "communities_touched",
+      "label": "Communities / orgs engaged",
+      "category": "field",
+      "evidence": "partner_touch_log",
+      "phases": ["before_event", "after_event", "always_active"],
+      "function_keys": ["community_outreach", "social_media"],
+      "canonical_keys": ["community_lead", "community_social_lead", "social_lead"]
+    },
+    {
+      "stable_id": "FP-kpi-postcards",
+      "key": "postcards_sent",
+      "label": "Postcards sent",
+      "category": "field",
+      "evidence": "postcard_batch_count",
+      "phases": ["before_event", "election_week", "always_active"],
+      "function_keys": ["postcards"],
+      "canonical_keys": ["postcard_lead"]
+    },
+    {
+      "stable_id": "FP-kpi-p5-active",
+      "key": "p5_still_active",
+      "label": "Power of 5 teams still active",
+      "category": "continuity",
+      "evidence": "p5_check_in",
+      "phases": ["after_event", "election_week", "always_active"],
+      "function_keys": ["events", "community_outreach", null],
+      "canonical_keys": ["event_lead", "community_lead", "county_volunteer_lead", "institution_lead"]
+    },
+    {
+      "stable_id": "FP-kpi-retention-7d",
+      "key": "retention_7_day",
+      "label": "7-day volunteer retention",
+      "category": "continuity",
+      "evidence": "follow_up_completion_within_7_days",
+      "phases": ["after_event", "always_active"],
+      "function_keys": ["events", "community_outreach", "phone_text", null],
+      "canonical_keys": ["event_lead", "community_lead", "phone_bank_lead", "volunteer_manager"]
+    },
+    {
+      "stable_id": "FP-kpi-next-activity",
+      "key": "next_activity_scheduled",
+      "label": "Next local activity scheduled",
+      "category": "continuity",
+      "evidence": "calendar_entry_or_owner_note",
+      "phases": ["after_event", "always_active"],
+      "function_keys": ["events", null],
+      "canonical_keys": ["event_lead", "county_volunteer_lead", "institution_lead", "volunteer_manager"]
+    },
+    {
+      "stable_id": "FP-kpi-poll-coverage",
+      "key": "poll_coverage_planned",
+      "label": "Polling places with coverage plan",
+      "category": "continuity",
+      "evidence": "poll_inventory_plan",
+      "phases": ["election_week", "always_active"],
+      "function_keys": ["canvassing", null],
+      "canonical_keys": ["canvass_lead", "county_volunteer_lead", "campaign_director", "volunteer_manager"]
+    },
+    {
+      "stable_id": "FP-kpi-outreach-wave",
+      "key": "outreach_wave_complete",
+      "label": "Outreach wave complete on schedule",
+      "category": "outreach",
+      "evidence": "wave_checklist_signoff",
+      "phases": ["before_event", "always_active"],
+      "function_keys": ["social_media", "phone_text", "postcards", "events"],
+      "canonical_keys": ["social_lead", "phone_bank_lead", "postcard_lead", "event_lead"]
+    }
+  ]
+}

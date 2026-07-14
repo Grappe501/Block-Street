@@ -14,7 +14,7 @@ Expandable responsibility entities promote Field Plan role narratives (`position
 - **Mapped only** — `media_lead`, `logistics_lead`, conflict rows, and central-activation seats stay out until mapping/review clears them.
 - **No silent invent** — placeholder copy only when content is missing (`FIELD_PLAN_INTEGRATION_CONTRACT` language).
 - **Task templates are scaffolds** — never assigned to real personnel until Postgres + RBAC.
-- **KPI wiring deferred** — `kpi_relationship` arrays stay empty in this wave.
+- **KPI wiring** — completed in V2-B.4 (`docs/v2/V2B4_KPI_WIRING.md`).
 - Broad Field Plan ingest remains **blocked**.
 
 ## Entity shape
@@ -30,4 +30,4 @@ npm run test:v2b3-responsibility-library
 
 ## Next
 
-V2-B.4 — task/KPI binding for approved responsibilities · operator review resolution · still no personnel assignment without durability gates.
+**V2-B.4** KPI wiring — see [`V2B4_KPI_WIRING.md`](./V2B4_KPI_WIRING.md).

@@ -49,7 +49,10 @@ for (const r of result.responsibilities) {
 const libPath = join(root, "data/field-plan/responsibility-library.json");
 assert.ok(existsSync(libPath), "run npm run field-plan:build-responsibility-library before ship");
 const library = JSON.parse(readFileSync(libPath, "utf8"));
-assert.strictEqual(library.phase, "V2-B.3");
+assert.ok(
+  library.phase === "V2-B.3" || library.phase === "V2-B.4",
+  `library phase should be V2-B.3+ (got ${library.phase})`,
+);
 assert.strictEqual(library.policy.bound_to_mapped_only, true);
 assert.ok(library.summary.responsibilities >= 20);
 

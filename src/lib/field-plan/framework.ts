@@ -19,6 +19,8 @@ export {
   responsibilitiesForCanonical,
 } from "./responsibility-library";
 
+export { matchingKpisFor, wireFieldPlanKpis } from "./kpi-wiring";
+
 export function getVictoryFieldFramework() {
   return framework;
 }

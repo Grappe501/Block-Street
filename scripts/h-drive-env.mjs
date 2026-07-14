@@ -1,5 +1,5 @@
 /**
- * Force temp and npm cache onto the repo drive (H:) — never C:.
+ * Force temp and tool caches onto the repo drive (H:) — never C:.
  * Import this module (side effect) or call applyHDriveEnv() before spawning children.
  */
 import { mkdirSync } from "fs";
@@ -12,23 +12,39 @@ export const REPO_ROOT = join(__dirname, "..");
 export function applyHDriveEnv(root = REPO_ROOT) {
   const tmp = join(root, ".tmp");
   const npmCache = join(root, ".npm-cache");
+  const caches = join(root, ".caches");
 
-  mkdirSync(tmp, { recursive: true });
-  mkdirSync(npmCache, { recursive: true });
+  for (const dir of [
+    tmp,
+    npmCache,
+    caches,
+    join(caches, "pip"),
+    join(caches, "pnpm-store"),
+    join(caches, "playwright"),
+    join(caches, "node-gyp"),
+    join(caches, "uv"),
+  ]) {
+    mkdirSync(dir, { recursive: true });
+  }
 
   process.env.TEMP = tmp;
   process.env.TMP = tmp;
   process.env.TMPDIR = tmp;
   process.env.npm_config_cache = npmCache;
   process.env.npm_config_tmp = tmp;
+  process.env.PIP_CACHE_DIR = join(caches, "pip");
+  process.env.UV_CACHE_DIR = join(caches, "uv");
+  process.env.XDG_CACHE_HOME = caches;
+  process.env.PNPM_STORE_DIR = join(caches, "pnpm-store");
+  process.env.PLAYWRIGHT_BROWSERS_PATH = join(caches, "playwright");
   process.env.NEXT_TELEMETRY_DISABLED = "1";
 
-  return { root, tmp, npmCache };
+  return { root, tmp, npmCache, caches };
 }
 
 /** Env object safe to pass to spawn/spawnSync */
 export function hDriveEnv(root = REPO_ROOT) {
-  const { tmp, npmCache } = applyHDriveEnv(root);
+  const { tmp, npmCache, caches } = applyHDriveEnv(root);
   return {
     ...process.env,
     TEMP: tmp,
@@ -36,6 +52,11 @@ export function hDriveEnv(root = REPO_ROOT) {
     TMPDIR: tmp,
     npm_config_cache: npmCache,
     npm_config_tmp: tmp,
+    PIP_CACHE_DIR: join(caches, "pip"),
+    UV_CACHE_DIR: join(caches, "uv"),
+    XDG_CACHE_HOME: caches,
+    PNPM_STORE_DIR: join(caches, "pnpm-store"),
+    PLAYWRIGHT_BROWSERS_PATH: join(caches, "playwright"),
     NEXT_TELEMETRY_DISABLED: "1",
   };
 }

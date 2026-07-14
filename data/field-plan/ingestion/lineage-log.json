@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updated": "2026-07-14T18:21:55.781Z",
+  "updated": "2026-07-14T18:42:07.924Z",
   "entries": [
     {
       "at": "2026-07-14T18:05:00.000Z",
@@ -60,6 +60,28 @@
         "skipped_unmapped": 2,
         "skipped_conflict": 1,
         "skipped_deferred_central": 16
+      },
+      "broad_ingest": false,
+      "personnel_assignment": false
+    },
+    {
+      "at": "2026-07-14T18:42:07.924Z",
+      "event": "v2b4_kpi_wiring_run",
+      "artifacts": [
+        "data/field-plan/kpi-catalog.json",
+        "data/field-plan/kpi-binding-registry.json",
+        "data/field-plan/responsibility-library.json"
+      ],
+      "summary": {
+        "catalog_kpis": 17,
+        "responsibilities_considered": 55,
+        "bindings_wired": 44,
+        "placeholders_deferred": 6,
+        "no_matching_kpi": 5,
+        "responsibilities_approved": 44,
+        "task_templates_approved": 44,
+        "task_templates_total": 49,
+        "personnel_assignments": 0
       },
       "broad_ingest": false,
       "personnel_assignment": false

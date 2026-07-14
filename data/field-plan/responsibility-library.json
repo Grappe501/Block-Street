@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "phase": "V2-B.3",
-  "generated_at": "2026-07-14T18:21:55.781Z",
+  "phase": "V2-B.4",
+  "generated_at": "2026-07-14T18:42:07.924Z",
   "authority": "docs/v2/V2B3_RESPONSIBILITY_LIBRARY.md",
   "mapping_registry": "data/field-plan/position-mapping-registry.json",
   "role_content": "data/field-plan/position-content.json",
@@ -9,8 +9,10 @@
     "bound_to_mapped_only": true,
     "no_silent_assign_unmapped": true,
     "task_templates_not_assigned_to_personnel": true,
-    "kpi_wiring": "deferred_to_later_b3_plus",
-    "do_not_invent_doctrine": true
+    "kpi_wiring": "v2b4_bound_for_content_backed_rows",
+    "do_not_invent_doctrine": true,
+    "placeholders_remain_draft": true,
+    "operator_review_resolution": "content_backed_auto_approved_on_kpi_bind"
   },
   "summary": {
     "mapped_canonical_positions": 13,
@@ -20,7 +22,16 @@
     "task_templates": 49,
     "skipped_unmapped": 2,
     "skipped_conflict": 1,
-    "skipped_deferred_central": 16
+    "skipped_deferred_central": 16,
+    "catalog_kpis": 17,
+    "responsibilities_considered": 55,
+    "bindings_wired": 44,
+    "placeholders_deferred": 6,
+    "no_matching_kpi": 5,
+    "responsibilities_approved": 44,
+    "task_templates_approved": 44,
+    "task_templates_total": 49,
+    "personnel_assignments": 0
   },
   "skipped_unmapped": [
     "media_lead",
@@ -76,11 +87,20 @@
         "cadence": null,
         "deadline": null
       },
-      "kpi_relationship": [],
-      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "kpi_relationship": [
+        "FP-kpi-volunteers-recruited",
+        "FP-kpi-p5-commitments",
+        "FP-kpi-leaders-named",
+        "FP-kpi-shirt-visibility",
+        "FP-kpi-p5-active",
+        "FP-kpi-retention-7d",
+        "FP-kpi-next-activity",
+        "FP-kpi-outreach-wave"
+      ],
+      "completion_evidence_requirement": "named_volunteer_list_or_membership_delta | p5_commitment_sheet_or_membership | leadership_map_or_open_recruitment_ask | photo_or_activity_note | p5_check_in | follow_up_completion_within_7_days | calendar_entry_or_owner_note | wave_checklist_signoff | operator_review_of_field_plan_source",
       "sensitivity_classification": "volunteer_internal",
       "version": "0.1.0",
-      "review_status": "queued_for_review",
+      "review_status": "approved",
       "content_status": "ingested",
       "expandable": true,
       "task_template_ids": [
@@ -117,11 +137,20 @@
         "cadence": null,
         "deadline": null
       },
-      "kpi_relationship": [],
-      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "kpi_relationship": [
+        "FP-kpi-volunteers-recruited",
+        "FP-kpi-p5-commitments",
+        "FP-kpi-leaders-named",
+        "FP-kpi-shirt-visibility",
+        "FP-kpi-p5-active",
+        "FP-kpi-retention-7d",
+        "FP-kpi-next-activity",
+        "FP-kpi-outreach-wave"
+      ],
+      "completion_evidence_requirement": "named_volunteer_list_or_membership_delta | p5_commitment_sheet_or_membership | leadership_map_or_open_recruitment_ask | photo_or_activity_note | p5_check_in | follow_up_completion_within_7_days | calendar_entry_or_owner_note | wave_checklist_signoff | operator_review_of_field_plan_source",
       "sensitivity_classification": "volunteer_internal",
       "version": "0.1.0",
-      "review_status": "queued_for_review",
+      "review_status": "approved",
       "content_status": "ingested",
       "expandable": true,
       "task_template_ids": [
@@ -158,11 +187,14 @@
         "cadence": null,
         "deadline": "before_event"
       },
-      "kpi_relationship": [],
-      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "kpi_relationship": [
+        "FP-kpi-leaders-named",
+        "FP-kpi-outreach-wave"
+      ],
+      "completion_evidence_requirement": "leadership_map_or_open_recruitment_ask | wave_checklist_signoff | operator_review_of_field_plan_source",
       "sensitivity_classification": "volunteer_internal",
       "version": "0.1.0",
-      "review_status": "queued_for_review",
+      "review_status": "approved",
       "content_status": "ingested",
       "expandable": true,
       "task_template_ids": [
@@ -199,11 +231,15 @@
         "cadence": null,
         "deadline": "event_day"
       },
-      "kpi_relationship": [],
-      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "kpi_relationship": [
+        "FP-kpi-volunteers-recruited",
+        "FP-kpi-p5-commitments",
+        "FP-kpi-shirt-visibility"
+      ],
+      "completion_evidence_requirement": "named_volunteer_list_or_membership_delta | p5_commitment_sheet_or_membership | photo_or_activity_note | operator_review_of_field_plan_source",
       "sensitivity_classification": "volunteer_internal",
       "version": "0.1.0",
-      "review_status": "queued_for_review",
+      "review_status": "approved",
       "content_status": "ingested",
       "expandable": true,
       "task_template_ids": [
@@ -240,11 +276,19 @@
         "cadence": null,
         "deadline": "after_event"
       },
-      "kpi_relationship": [],
-      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "kpi_relationship": [
+        "FP-kpi-volunteers-recruited",
+        "FP-kpi-p5-commitments",
+        "FP-kpi-leaders-named",
+        "FP-kpi-shirt-visibility",
+        "FP-kpi-p5-active",
+        "FP-kpi-retention-7d",
+        "FP-kpi-next-activity"
+      ],
+      "completion_evidence_requirement": "named_volunteer_list_or_membership_delta | p5_commitment_sheet_or_membership | leadership_map_or_open_recruitment_ask | photo_or_activity_note | p5_check_in | follow_up_completion_within_7_days | calendar_entry_or_owner_note | operator_review_of_field_plan_source",
       "sensitivity_classification": "volunteer_internal",
       "version": "0.1.0",
-      "review_status": "queued_for_review",
+      "review_status": "approved",
       "content_status": "ingested",
       "expandable": true,
       "task_template_ids": [
@@ -281,11 +325,13 @@
         "cadence": "phase_window",
         "deadline": null
       },
-      "kpi_relationship": [],
-      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "kpi_relationship": [
+        "FP-kpi-shirt-visibility"
+      ],
+      "completion_evidence_requirement": "photo_or_activity_note | operator_review_of_field_plan_source",
       "sensitivity_classification": "volunteer_internal",
       "version": "0.1.0",
-      "review_status": "queued_for_review",
+      "review_status": "approved",
       "content_status": "ingested",
       "expandable": true,
       "task_template_ids": [
@@ -322,11 +368,13 @@
         "cadence": null,
         "deadline": "election_week"
       },
-      "kpi_relationship": [],
-      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "kpi_relationship": [
+        "FP-kpi-p5-active"
+      ],
+      "completion_evidence_requirement": "p5_check_in | operator_review_of_field_plan_source",
       "sensitivity_classification": "volunteer_internal",
       "version": "0.1.0",
-      "review_status": "queued_for_review",
+      "review_status": "approved",
       "content_status": "ingested",
       "expandable": true,
       "task_template_ids": [
@@ -361,11 +409,15 @@
         "cadence": null,
         "deadline": null
       },
-      "kpi_relationship": [],
-      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "kpi_relationship": [
+        "FP-kpi-shirt-visibility",
+        "FP-kpi-communities-touched",
+        "FP-kpi-outreach-wave"
+      ],
+      "completion_evidence_requirement": "photo_or_activity_note | partner_touch_log | wave_checklist_signoff | operator_review_of_field_plan_source",
       "sensitivity_classification": "volunteer_internal",
       "version": "0.1.0",
-      "review_status": "queued_for_review",
+      "review_status": "approved",
       "content_status": "ingested",
       "expandable": true,
       "task_template_ids": [
@@ -400,11 +452,15 @@
         "cadence": null,
         "deadline": null
       },
-      "kpi_relationship": [],
-      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "kpi_relationship": [
+        "FP-kpi-shirt-visibility",
+        "FP-kpi-communities-touched",
+        "FP-kpi-outreach-wave"
+      ],
+      "completion_evidence_requirement": "photo_or_activity_note | partner_touch_log | wave_checklist_signoff | operator_review_of_field_plan_source",
       "sensitivity_classification": "volunteer_internal",
       "version": "0.1.0",
-      "review_status": "queued_for_review",
+      "review_status": "approved",
       "content_status": "ingested",
       "expandable": true,
       "task_template_ids": [
@@ -439,11 +495,14 @@
         "cadence": null,
         "deadline": "before_event"
       },
-      "kpi_relationship": [],
-      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "kpi_relationship": [
+        "FP-kpi-communities-touched",
+        "FP-kpi-outreach-wave"
+      ],
+      "completion_evidence_requirement": "partner_touch_log | wave_checklist_signoff | operator_review_of_field_plan_source",
       "sensitivity_classification": "volunteer_internal",
       "version": "0.1.0",
-      "review_status": "queued_for_review",
+      "review_status": "approved",
       "content_status": "ingested",
       "expandable": true,
       "task_template_ids": [
@@ -478,11 +537,13 @@
         "cadence": null,
         "deadline": "event_day"
       },
-      "kpi_relationship": [],
-      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "kpi_relationship": [
+        "FP-kpi-shirt-visibility"
+      ],
+      "completion_evidence_requirement": "photo_or_activity_note | operator_review_of_field_plan_source",
       "sensitivity_classification": "volunteer_internal",
       "version": "0.1.0",
-      "review_status": "queued_for_review",
+      "review_status": "approved",
       "content_status": "ingested",
       "expandable": true,
       "task_template_ids": [
@@ -517,11 +578,14 @@
         "cadence": null,
         "deadline": "after_event"
       },
-      "kpi_relationship": [],
-      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "kpi_relationship": [
+        "FP-kpi-shirt-visibility",
+        "FP-kpi-communities-touched"
+      ],
+      "completion_evidence_requirement": "photo_or_activity_note | partner_touch_log | operator_review_of_field_plan_source",
       "sensitivity_classification": "volunteer_internal",
       "version": "0.1.0",
-      "review_status": "queued_for_review",
+      "review_status": "approved",
       "content_status": "ingested",
       "expandable": true,
       "task_template_ids": [
@@ -556,11 +620,13 @@
         "cadence": "phase_window",
         "deadline": null
       },
-      "kpi_relationship": [],
-      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "kpi_relationship": [
+        "FP-kpi-shirt-visibility"
+      ],
+      "completion_evidence_requirement": "photo_or_activity_note | operator_review_of_field_plan_source",
       "sensitivity_classification": "volunteer_internal",
       "version": "0.1.0",
-      "review_status": "queued_for_review",
+      "review_status": "approved",
       "content_status": "ingested",
       "expandable": true,
       "task_template_ids": [
@@ -634,11 +700,16 @@
         "cadence": null,
         "deadline": null
       },
-      "kpi_relationship": [],
-      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "kpi_relationship": [
+        "FP-kpi-conversations",
+        "FP-kpi-shifts",
+        "FP-kpi-shirt-visibility",
+        "FP-kpi-poll-coverage"
+      ],
+      "completion_evidence_requirement": "canvass_or_phone_contact_log | shift_roster | photo_or_activity_note | poll_inventory_plan | operator_review_of_field_plan_source",
       "sensitivity_classification": "volunteer_internal",
       "version": "0.1.0",
-      "review_status": "queued_for_review",
+      "review_status": "approved",
       "content_status": "ingested",
       "expandable": true,
       "task_template_ids": [
@@ -673,11 +744,16 @@
         "cadence": null,
         "deadline": null
       },
-      "kpi_relationship": [],
-      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "kpi_relationship": [
+        "FP-kpi-conversations",
+        "FP-kpi-shifts",
+        "FP-kpi-shirt-visibility",
+        "FP-kpi-poll-coverage"
+      ],
+      "completion_evidence_requirement": "canvass_or_phone_contact_log | shift_roster | photo_or_activity_note | poll_inventory_plan | operator_review_of_field_plan_source",
       "sensitivity_classification": "volunteer_internal",
       "version": "0.1.0",
-      "review_status": "queued_for_review",
+      "review_status": "approved",
       "content_status": "ingested",
       "expandable": true,
       "task_template_ids": [
@@ -712,11 +788,16 @@
         "cadence": null,
         "deadline": "before_event"
       },
-      "kpi_relationship": [],
-      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "kpi_relationship": [
+        "FP-kpi-doors",
+        "FP-kpi-conversations",
+        "FP-kpi-hangers",
+        "FP-kpi-shifts"
+      ],
+      "completion_evidence_requirement": "canvass_turf_log | canvass_or_phone_contact_log | turf_completion_note | shift_roster | operator_review_of_field_plan_source",
       "sensitivity_classification": "volunteer_internal",
       "version": "0.1.0",
-      "review_status": "queued_for_review",
+      "review_status": "approved",
       "content_status": "ingested",
       "expandable": true,
       "task_template_ids": [
@@ -751,11 +832,13 @@
         "cadence": null,
         "deadline": "event_day"
       },
-      "kpi_relationship": [],
-      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "kpi_relationship": [
+        "FP-kpi-shirt-visibility"
+      ],
+      "completion_evidence_requirement": "photo_or_activity_note | operator_review_of_field_plan_source",
       "sensitivity_classification": "volunteer_internal",
       "version": "0.1.0",
-      "review_status": "queued_for_review",
+      "review_status": "approved",
       "content_status": "ingested",
       "expandable": true,
       "task_template_ids": [
@@ -790,11 +873,13 @@
         "cadence": null,
         "deadline": "after_event"
       },
-      "kpi_relationship": [],
-      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "kpi_relationship": [
+        "FP-kpi-shirt-visibility"
+      ],
+      "completion_evidence_requirement": "photo_or_activity_note | operator_review_of_field_plan_source",
       "sensitivity_classification": "volunteer_internal",
       "version": "0.1.0",
-      "review_status": "queued_for_review",
+      "review_status": "approved",
       "content_status": "ingested",
       "expandable": true,
       "task_template_ids": [
@@ -829,11 +914,17 @@
         "cadence": "phase_window",
         "deadline": null
       },
-      "kpi_relationship": [],
-      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "kpi_relationship": [
+        "FP-kpi-doors",
+        "FP-kpi-conversations",
+        "FP-kpi-hangers",
+        "FP-kpi-shifts",
+        "FP-kpi-shirt-visibility"
+      ],
+      "completion_evidence_requirement": "canvass_turf_log | canvass_or_phone_contact_log | turf_completion_note | shift_roster | photo_or_activity_note | operator_review_of_field_plan_source",
       "sensitivity_classification": "volunteer_internal",
       "version": "0.1.0",
-      "review_status": "queued_for_review",
+      "review_status": "approved",
       "content_status": "ingested",
       "expandable": true,
       "task_template_ids": [
@@ -868,11 +959,16 @@
         "cadence": null,
         "deadline": "election_week"
       },
-      "kpi_relationship": [],
-      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "kpi_relationship": [
+        "FP-kpi-doors",
+        "FP-kpi-conversations",
+        "FP-kpi-shifts",
+        "FP-kpi-poll-coverage"
+      ],
+      "completion_evidence_requirement": "canvass_turf_log | canvass_or_phone_contact_log | shift_roster | poll_inventory_plan | operator_review_of_field_plan_source",
       "sensitivity_classification": "volunteer_internal",
       "version": "0.1.0",
-      "review_status": "queued_for_review",
+      "review_status": "approved",
       "content_status": "ingested",
       "expandable": true,
       "task_template_ids": [
@@ -908,11 +1004,18 @@
         "cadence": null,
         "deadline": null
       },
-      "kpi_relationship": [],
-      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "kpi_relationship": [
+        "FP-kpi-volunteers-recruited",
+        "FP-kpi-p5-commitments",
+        "FP-kpi-leaders-named",
+        "FP-kpi-communities-touched",
+        "FP-kpi-p5-active",
+        "FP-kpi-retention-7d"
+      ],
+      "completion_evidence_requirement": "named_volunteer_list_or_membership_delta | p5_commitment_sheet_or_membership | leadership_map_or_open_recruitment_ask | partner_touch_log | p5_check_in | follow_up_completion_within_7_days | operator_review_of_field_plan_source",
       "sensitivity_classification": "volunteer_internal",
       "version": "0.1.0",
-      "review_status": "queued_for_review",
+      "review_status": "approved",
       "content_status": "ingested",
       "expandable": true,
       "task_template_ids": [
@@ -948,11 +1051,18 @@
         "cadence": null,
         "deadline": null
       },
-      "kpi_relationship": [],
-      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "kpi_relationship": [
+        "FP-kpi-volunteers-recruited",
+        "FP-kpi-p5-commitments",
+        "FP-kpi-leaders-named",
+        "FP-kpi-communities-touched",
+        "FP-kpi-p5-active",
+        "FP-kpi-retention-7d"
+      ],
+      "completion_evidence_requirement": "named_volunteer_list_or_membership_delta | p5_commitment_sheet_or_membership | leadership_map_or_open_recruitment_ask | partner_touch_log | p5_check_in | follow_up_completion_within_7_days | operator_review_of_field_plan_source",
       "sensitivity_classification": "volunteer_internal",
       "version": "0.1.0",
-      "review_status": "queued_for_review",
+      "review_status": "approved",
       "content_status": "ingested",
       "expandable": true,
       "task_template_ids": [
@@ -988,11 +1098,14 @@
         "cadence": null,
         "deadline": "before_event"
       },
-      "kpi_relationship": [],
-      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "kpi_relationship": [
+        "FP-kpi-leaders-named",
+        "FP-kpi-communities-touched"
+      ],
+      "completion_evidence_requirement": "leadership_map_or_open_recruitment_ask | partner_touch_log | operator_review_of_field_plan_source",
       "sensitivity_classification": "volunteer_internal",
       "version": "0.1.0",
-      "review_status": "queued_for_review",
+      "review_status": "approved",
       "content_status": "ingested",
       "expandable": true,
       "task_template_ids": [
@@ -1028,11 +1141,14 @@
         "cadence": null,
         "deadline": "event_day"
       },
-      "kpi_relationship": [],
-      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "kpi_relationship": [
+        "FP-kpi-volunteers-recruited",
+        "FP-kpi-p5-commitments"
+      ],
+      "completion_evidence_requirement": "named_volunteer_list_or_membership_delta | p5_commitment_sheet_or_membership | operator_review_of_field_plan_source",
       "sensitivity_classification": "volunteer_internal",
       "version": "0.1.0",
-      "review_status": "queued_for_review",
+      "review_status": "approved",
       "content_status": "ingested",
       "expandable": true,
       "task_template_ids": [
@@ -1068,11 +1184,18 @@
         "cadence": null,
         "deadline": "after_event"
       },
-      "kpi_relationship": [],
-      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "kpi_relationship": [
+        "FP-kpi-volunteers-recruited",
+        "FP-kpi-p5-commitments",
+        "FP-kpi-leaders-named",
+        "FP-kpi-communities-touched",
+        "FP-kpi-p5-active",
+        "FP-kpi-retention-7d"
+      ],
+      "completion_evidence_requirement": "named_volunteer_list_or_membership_delta | p5_commitment_sheet_or_membership | leadership_map_or_open_recruitment_ask | partner_touch_log | p5_check_in | follow_up_completion_within_7_days | operator_review_of_field_plan_source",
       "sensitivity_classification": "volunteer_internal",
       "version": "0.1.0",
-      "review_status": "queued_for_review",
+      "review_status": "approved",
       "content_status": "ingested",
       "expandable": true,
       "task_template_ids": [
@@ -1148,11 +1271,13 @@
         "cadence": null,
         "deadline": "election_week"
       },
-      "kpi_relationship": [],
-      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "kpi_relationship": [
+        "FP-kpi-p5-active"
+      ],
+      "completion_evidence_requirement": "p5_check_in | operator_review_of_field_plan_source",
       "sensitivity_classification": "volunteer_internal",
       "version": "0.1.0",
-      "review_status": "queued_for_review",
+      "review_status": "approved",
       "content_status": "ingested",
       "expandable": true,
       "task_template_ids": [
@@ -1225,11 +1350,15 @@
         "cadence": null,
         "deadline": null
       },
-      "kpi_relationship": [],
-      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "kpi_relationship": [
+        "FP-kpi-shifts",
+        "FP-kpi-registrations",
+        "FP-kpi-registration-activities"
+      ],
+      "completion_evidence_requirement": "shift_roster | registration_activity_count | local_vr_calendar_entry | operator_review_of_field_plan_source",
       "sensitivity_classification": "volunteer_internal",
       "version": "0.1.0",
-      "review_status": "queued_for_review",
+      "review_status": "approved",
       "content_status": "ingested",
       "expandable": true,
       "task_template_ids": [
@@ -1264,11 +1393,15 @@
         "cadence": null,
         "deadline": null
       },
-      "kpi_relationship": [],
-      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "kpi_relationship": [
+        "FP-kpi-shifts",
+        "FP-kpi-registrations",
+        "FP-kpi-registration-activities"
+      ],
+      "completion_evidence_requirement": "shift_roster | registration_activity_count | local_vr_calendar_entry | operator_review_of_field_plan_source",
       "sensitivity_classification": "volunteer_internal",
       "version": "0.1.0",
-      "review_status": "queued_for_review",
+      "review_status": "approved",
       "content_status": "ingested",
       "expandable": true,
       "task_template_ids": [
@@ -1303,11 +1436,15 @@
         "cadence": null,
         "deadline": "before_event"
       },
-      "kpi_relationship": [],
-      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "kpi_relationship": [
+        "FP-kpi-shifts",
+        "FP-kpi-registrations",
+        "FP-kpi-registration-activities"
+      ],
+      "completion_evidence_requirement": "shift_roster | registration_activity_count | local_vr_calendar_entry | operator_review_of_field_plan_source",
       "sensitivity_classification": "volunteer_internal",
       "version": "0.1.0",
-      "review_status": "queued_for_review",
+      "review_status": "approved",
       "content_status": "ingested",
       "expandable": true,
       "task_template_ids": [
@@ -1342,11 +1479,13 @@
         "cadence": null,
         "deadline": "event_day"
       },
-      "kpi_relationship": [],
-      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "kpi_relationship": [
+        "FP-kpi-registrations"
+      ],
+      "completion_evidence_requirement": "registration_activity_count | operator_review_of_field_plan_source",
       "sensitivity_classification": "volunteer_internal",
       "version": "0.1.0",
-      "review_status": "queued_for_review",
+      "review_status": "approved",
       "content_status": "ingested",
       "expandable": true,
       "task_template_ids": [
@@ -1381,11 +1520,14 @@
         "cadence": null,
         "deadline": "after_event"
       },
-      "kpi_relationship": [],
-      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "kpi_relationship": [
+        "FP-kpi-registrations",
+        "FP-kpi-registration-activities"
+      ],
+      "completion_evidence_requirement": "registration_activity_count | local_vr_calendar_entry | operator_review_of_field_plan_source",
       "sensitivity_classification": "volunteer_internal",
       "version": "0.1.0",
-      "review_status": "queued_for_review",
+      "review_status": "approved",
       "content_status": "ingested",
       "expandable": true,
       "task_template_ids": [
@@ -1420,11 +1562,13 @@
         "cadence": "phase_window",
         "deadline": null
       },
-      "kpi_relationship": [],
-      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "kpi_relationship": [
+        "FP-kpi-shifts"
+      ],
+      "completion_evidence_requirement": "shift_roster | operator_review_of_field_plan_source",
       "sensitivity_classification": "volunteer_internal",
       "version": "0.1.0",
-      "review_status": "queued_for_review",
+      "review_status": "approved",
       "content_status": "ingested",
       "expandable": true,
       "task_template_ids": [
@@ -1459,11 +1603,13 @@
         "cadence": null,
         "deadline": "election_week"
       },
-      "kpi_relationship": [],
-      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "kpi_relationship": [
+        "FP-kpi-shifts"
+      ],
+      "completion_evidence_requirement": "shift_roster | operator_review_of_field_plan_source",
       "sensitivity_classification": "volunteer_internal",
       "version": "0.1.0",
-      "review_status": "queued_for_review",
+      "review_status": "approved",
       "content_status": "ingested",
       "expandable": true,
       "task_template_ids": [
@@ -1498,11 +1644,16 @@
         "cadence": null,
         "deadline": null
       },
-      "kpi_relationship": [],
-      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "kpi_relationship": [
+        "FP-kpi-conversations",
+        "FP-kpi-shifts",
+        "FP-kpi-retention-7d",
+        "FP-kpi-outreach-wave"
+      ],
+      "completion_evidence_requirement": "canvass_or_phone_contact_log | shift_roster | follow_up_completion_within_7_days | wave_checklist_signoff | operator_review_of_field_plan_source",
       "sensitivity_classification": "volunteer_internal",
       "version": "0.1.0",
-      "review_status": "queued_for_review",
+      "review_status": "approved",
       "content_status": "ingested",
       "expandable": true,
       "task_template_ids": [
@@ -1537,11 +1688,16 @@
         "cadence": null,
         "deadline": null
       },
-      "kpi_relationship": [],
-      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "kpi_relationship": [
+        "FP-kpi-conversations",
+        "FP-kpi-shifts",
+        "FP-kpi-retention-7d",
+        "FP-kpi-outreach-wave"
+      ],
+      "completion_evidence_requirement": "canvass_or_phone_contact_log | shift_roster | follow_up_completion_within_7_days | wave_checklist_signoff | operator_review_of_field_plan_source",
       "sensitivity_classification": "volunteer_internal",
       "version": "0.1.0",
-      "review_status": "queued_for_review",
+      "review_status": "approved",
       "content_status": "ingested",
       "expandable": true,
       "task_template_ids": [
@@ -1576,11 +1732,15 @@
         "cadence": null,
         "deadline": "before_event"
       },
-      "kpi_relationship": [],
-      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "kpi_relationship": [
+        "FP-kpi-conversations",
+        "FP-kpi-shifts",
+        "FP-kpi-outreach-wave"
+      ],
+      "completion_evidence_requirement": "canvass_or_phone_contact_log | shift_roster | wave_checklist_signoff | operator_review_of_field_plan_source",
       "sensitivity_classification": "volunteer_internal",
       "version": "0.1.0",
-      "review_status": "queued_for_review",
+      "review_status": "approved",
       "content_status": "ingested",
       "expandable": true,
       "task_template_ids": [
@@ -1654,11 +1814,13 @@
         "cadence": null,
         "deadline": "after_event"
       },
-      "kpi_relationship": [],
-      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "kpi_relationship": [
+        "FP-kpi-retention-7d"
+      ],
+      "completion_evidence_requirement": "follow_up_completion_within_7_days | operator_review_of_field_plan_source",
       "sensitivity_classification": "volunteer_internal",
       "version": "0.1.0",
-      "review_status": "queued_for_review",
+      "review_status": "approved",
       "content_status": "ingested",
       "expandable": true,
       "task_template_ids": [
@@ -1693,11 +1855,14 @@
         "cadence": "phase_window",
         "deadline": null
       },
-      "kpi_relationship": [],
-      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "kpi_relationship": [
+        "FP-kpi-conversations",
+        "FP-kpi-shifts"
+      ],
+      "completion_evidence_requirement": "canvass_or_phone_contact_log | shift_roster | operator_review_of_field_plan_source",
       "sensitivity_classification": "volunteer_internal",
       "version": "0.1.0",
-      "review_status": "queued_for_review",
+      "review_status": "approved",
       "content_status": "ingested",
       "expandable": true,
       "task_template_ids": [
@@ -1732,11 +1897,14 @@
         "cadence": null,
         "deadline": "election_week"
       },
-      "kpi_relationship": [],
-      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "kpi_relationship": [
+        "FP-kpi-conversations",
+        "FP-kpi-shifts"
+      ],
+      "completion_evidence_requirement": "canvass_or_phone_contact_log | shift_roster | operator_review_of_field_plan_source",
       "sensitivity_classification": "volunteer_internal",
       "version": "0.1.0",
-      "review_status": "queued_for_review",
+      "review_status": "approved",
       "content_status": "ingested",
       "expandable": true,
       "task_template_ids": [
@@ -1771,11 +1939,15 @@
         "cadence": null,
         "deadline": null
       },
-      "kpi_relationship": [],
-      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "kpi_relationship": [
+        "FP-kpi-shifts",
+        "FP-kpi-postcards",
+        "FP-kpi-outreach-wave"
+      ],
+      "completion_evidence_requirement": "shift_roster | postcard_batch_count | wave_checklist_signoff | operator_review_of_field_plan_source",
       "sensitivity_classification": "volunteer_internal",
       "version": "0.1.0",
-      "review_status": "queued_for_review",
+      "review_status": "approved",
       "content_status": "ingested",
       "expandable": true,
       "task_template_ids": [
@@ -1810,11 +1982,15 @@
         "cadence": null,
         "deadline": null
       },
-      "kpi_relationship": [],
-      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "kpi_relationship": [
+        "FP-kpi-shifts",
+        "FP-kpi-postcards",
+        "FP-kpi-outreach-wave"
+      ],
+      "completion_evidence_requirement": "shift_roster | postcard_batch_count | wave_checklist_signoff | operator_review_of_field_plan_source",
       "sensitivity_classification": "volunteer_internal",
       "version": "0.1.0",
-      "review_status": "queued_for_review",
+      "review_status": "approved",
       "content_status": "ingested",
       "expandable": true,
       "task_template_ids": [
@@ -1849,11 +2025,15 @@
         "cadence": null,
         "deadline": "before_event"
       },
-      "kpi_relationship": [],
-      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "kpi_relationship": [
+        "FP-kpi-shifts",
+        "FP-kpi-postcards",
+        "FP-kpi-outreach-wave"
+      ],
+      "completion_evidence_requirement": "shift_roster | postcard_batch_count | wave_checklist_signoff | operator_review_of_field_plan_source",
       "sensitivity_classification": "volunteer_internal",
       "version": "0.1.0",
-      "review_status": "queued_for_review",
+      "review_status": "approved",
       "content_status": "ingested",
       "expandable": true,
       "task_template_ids": [
@@ -1966,11 +2146,13 @@
         "cadence": "phase_window",
         "deadline": null
       },
-      "kpi_relationship": [],
-      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "kpi_relationship": [
+        "FP-kpi-shifts"
+      ],
+      "completion_evidence_requirement": "shift_roster | operator_review_of_field_plan_source",
       "sensitivity_classification": "volunteer_internal",
       "version": "0.1.0",
-      "review_status": "queued_for_review",
+      "review_status": "approved",
       "content_status": "ingested",
       "expandable": true,
       "task_template_ids": [
@@ -2005,11 +2187,14 @@
         "cadence": null,
         "deadline": "election_week"
       },
-      "kpi_relationship": [],
-      "completion_evidence_requirement": "operator_review_of_field_plan_source",
+      "kpi_relationship": [
+        "FP-kpi-shifts",
+        "FP-kpi-postcards"
+      ],
+      "completion_evidence_requirement": "shift_roster | postcard_batch_count | operator_review_of_field_plan_source",
       "sensitivity_classification": "volunteer_internal",
       "version": "0.1.0",
-      "review_status": "queued_for_review",
+      "review_status": "approved",
       "content_status": "ingested",
       "expandable": true,
       "task_template_ids": [
@@ -2203,7 +2388,7 @@
       "phase": "always_active",
       "body_hint": "Locate venue, run logistics with Logistics Lead, keep the event funnel moving toward Power of Five launches.",
       "assignment_policy": "not_assigned_until_postgres_rbac",
-      "review_status": "draft",
+      "review_status": "approved",
       "version": "0.1.0",
       "source_reference": "Arkansas Victory Field Framework · Phases 1–7, 13"
     },
@@ -2216,7 +2401,7 @@
       "phase": "always_active",
       "body_hint": "Locate venue, run logistics with Logistics Lead, keep the event funnel moving toward Power of Five launches.",
       "assignment_policy": "not_assigned_until_postgres_rbac",
-      "review_status": "draft",
+      "review_status": "approved",
       "version": "0.1.0",
       "source_reference": "Arkansas Victory Field Framework · Phases 1–7, 13"
     },
@@ -2229,7 +2414,7 @@
       "phase": "before_event",
       "body_hint": "Confirm venue/parking/weather backup; stand up local event committee; sync calendar; drive timeline to Central Field/Volunteer Management.",
       "assignment_policy": "not_assigned_until_postgres_rbac",
-      "review_status": "draft",
+      "review_status": "approved",
       "version": "0.1.0",
       "source_reference": "Arkansas Victory Field Framework · Phases 1–7, 13"
     },
@@ -2242,7 +2427,7 @@
       "phase": "event_day",
       "body_hint": "Run arrival → sign-in → registration check → Meet Kelly → Power of Five invite → role choice → training invite.",
       "assignment_policy": "not_assigned_until_postgres_rbac",
-      "review_status": "draft",
+      "review_status": "approved",
       "version": "0.1.0",
       "source_reference": "Arkansas Victory Field Framework · Phases 1–7, 13"
     },
@@ -2255,7 +2440,7 @@
       "phase": "after_event",
       "body_hint": "Within 24h: thank-yous, photo recap, P5 kickoff invites. Within 1 week: orientation and neighborhood meetings.",
       "assignment_policy": "not_assigned_until_postgres_rbac",
-      "review_status": "draft",
+      "review_status": "approved",
       "version": "0.1.0",
       "source_reference": "Arkansas Victory Field Framework · Phases 1–7, 13"
     },
@@ -2268,7 +2453,7 @@
       "phase": "canvassing",
       "body_hint": "Coordinate with Canvassing Lead on Saturday-prior door hangers inviting neighbors to meet Kelly.",
       "assignment_policy": "not_assigned_until_postgres_rbac",
-      "review_status": "draft",
+      "review_status": "approved",
       "version": "0.1.0",
       "source_reference": "Arkansas Victory Field Framework · Phases 1–7, 13"
     },
@@ -2281,7 +2466,7 @@
       "phase": "election_week",
       "body_hint": "Every event should seed Power of Five capacity that later covers polls and October Strike Team Saturdays.",
       "assignment_policy": "not_assigned_until_postgres_rbac",
-      "review_status": "draft",
+      "review_status": "approved",
       "version": "0.1.0",
       "source_reference": "Arkansas Victory Field Framework · Phases 1–7, 13"
     },
@@ -2294,7 +2479,7 @@
       "phase": "always_active",
       "body_hint": "Launch the social campaign with Central Social; plan pure social after-event; recruit through civic life.",
       "assignment_policy": "not_assigned_until_postgres_rbac",
-      "review_status": "draft",
+      "review_status": "approved",
       "version": "0.1.0",
       "source_reference": "Arkansas Victory Field Framework · Phases 3, 5, 6, 13"
     },
@@ -2307,7 +2492,7 @@
       "phase": "always_active",
       "body_hint": "Launch the social campaign with Central Social; plan pure social after-event; recruit through civic life.",
       "assignment_policy": "not_assigned_until_postgres_rbac",
-      "review_status": "draft",
+      "review_status": "approved",
       "version": "0.1.0",
       "source_reference": "Arkansas Victory Field Framework · Phases 3, 5, 6, 13"
     },
@@ -2320,7 +2505,7 @@
       "phase": "before_event",
       "body_hint": "Wave One graphics with Central Social; Wave Two community calendars, FB groups, Nextdoor, org shares; Wave Three reminders.",
       "assignment_policy": "not_assigned_until_postgres_rbac",
-      "review_status": "draft",
+      "review_status": "approved",
       "version": "0.1.0",
       "source_reference": "Arkansas Victory Field Framework · Phases 3, 5, 6, 13"
     },
@@ -2333,7 +2518,7 @@
       "phase": "event_day",
       "body_hint": "Capture content, welcome newcomers, steer people to sign-in and Power of Five.",
       "assignment_policy": "not_assigned_until_postgres_rbac",
-      "review_status": "draft",
+      "review_status": "approved",
       "version": "0.1.0",
       "source_reference": "Arkansas Victory Field Framework · Phases 3, 5, 6, 13"
     },
@@ -2346,7 +2531,7 @@
       "phase": "after_event",
       "body_hint": "Photos/recap within 24h; after-event social plan; keep new contacts in the volunteer funnel.",
       "assignment_policy": "not_assigned_until_postgres_rbac",
-      "review_status": "draft",
+      "review_status": "approved",
       "version": "0.1.0",
       "source_reference": "Arkansas Victory Field Framework · Phases 3, 5, 6, 13"
     },
@@ -2359,7 +2544,7 @@
       "phase": "canvassing",
       "body_hint": "Support shared messaging for door hangers and partner asks.",
       "assignment_policy": "not_assigned_until_postgres_rbac",
-      "review_status": "draft",
+      "review_status": "approved",
       "version": "0.1.0",
       "source_reference": "Arkansas Victory Field Framework · Phases 3, 5, 6, 13"
     },
@@ -2385,7 +2570,7 @@
       "phase": "always_active",
       "body_hint": "Door hangers the Saturday before inviting people to meet Kelly and share community concerns.",
       "assignment_policy": "not_assigned_until_postgres_rbac",
-      "review_status": "draft",
+      "review_status": "approved",
       "version": "0.1.0",
       "source_reference": "Arkansas Victory Field Framework · Phases 4, 11, 12"
     },
@@ -2398,7 +2583,7 @@
       "phase": "always_active",
       "body_hint": "Door hangers the Saturday before inviting people to meet Kelly and share community concerns.",
       "assignment_policy": "not_assigned_until_postgres_rbac",
-      "review_status": "draft",
+      "review_status": "approved",
       "version": "0.1.0",
       "source_reference": "Arkansas Victory Field Framework · Phases 4, 11, 12"
     },
@@ -2411,7 +2596,7 @@
       "phase": "before_event",
       "body_hint": "Map radius; train walkers; coordinate literature/door hangers; sync with Recruitment and Registration leads.",
       "assignment_policy": "not_assigned_until_postgres_rbac",
-      "review_status": "draft",
+      "review_status": "approved",
       "version": "0.1.0",
       "source_reference": "Arkansas Victory Field Framework · Phases 4, 11, 12"
     },
@@ -2424,7 +2609,7 @@
       "phase": "event_day",
       "body_hint": "Greeters and pathing; capture volunteer interest from walk conversations.",
       "assignment_policy": "not_assigned_until_postgres_rbac",
-      "review_status": "draft",
+      "review_status": "approved",
       "version": "0.1.0",
       "source_reference": "Arkansas Victory Field Framework · Phases 4, 11, 12"
     },
@@ -2437,7 +2622,7 @@
       "phase": "after_event",
       "body_hint": "Log doors, shifts, and follow-ups; feed Power of Five neighborhood coverage.",
       "assignment_policy": "not_assigned_until_postgres_rbac",
-      "review_status": "draft",
+      "review_status": "approved",
       "version": "0.1.0",
       "source_reference": "Arkansas Victory Field Framework · Phases 4, 11, 12"
     },
@@ -2450,7 +2635,7 @@
       "phase": "canvassing",
       "body_hint": "Primary lane — neighborhood walk, business visits where useful, Saturday-prior hangers.",
       "assignment_policy": "not_assigned_until_postgres_rbac",
-      "review_status": "draft",
+      "review_status": "approved",
       "version": "0.1.0",
       "source_reference": "Arkansas Victory Field Framework · Phases 4, 11, 12"
     },
@@ -2463,7 +2648,7 @@
       "phase": "election_week",
       "body_hint": "October Saturdays: canvass + Strike Team cookout staging with local candidates where appropriate.",
       "assignment_policy": "not_assigned_until_postgres_rbac",
-      "review_status": "draft",
+      "review_status": "approved",
       "version": "0.1.0",
       "source_reference": "Arkansas Victory Field Framework · Phases 4, 11, 12"
     },
@@ -2476,7 +2661,7 @@
       "phase": "always_active",
       "body_hint": "Build the local volunteer base around the event so the stop creates lasting organizers.",
       "assignment_policy": "not_assigned_until_postgres_rbac",
-      "review_status": "draft",
+      "review_status": "approved",
       "version": "0.1.0",
       "source_reference": "Arkansas Victory Field Framework · Phases 1, 7, 8, 13"
     },
@@ -2489,7 +2674,7 @@
       "phase": "always_active",
       "body_hint": "Build the local volunteer base around the event so the stop creates lasting organizers.",
       "assignment_policy": "not_assigned_until_postgres_rbac",
-      "review_status": "draft",
+      "review_status": "approved",
       "version": "0.1.0",
       "source_reference": "Arkansas Victory Field Framework · Phases 1, 7, 8, 13"
     },
@@ -2502,7 +2687,7 @@
       "phase": "before_event",
       "body_hint": "Fill open leads/co-leads; ask every contact to bring a friend; feed orientation pipeline.",
       "assignment_policy": "not_assigned_until_postgres_rbac",
-      "review_status": "draft",
+      "review_status": "approved",
       "version": "0.1.0",
       "source_reference": "Arkansas Victory Field Framework · Phases 1, 7, 8, 13"
     },
@@ -2515,7 +2700,7 @@
       "phase": "event_day",
       "body_hint": "Meet volunteers station; convert attendees into Power of Five / volunteer roles.",
       "assignment_policy": "not_assigned_until_postgres_rbac",
-      "review_status": "draft",
+      "review_status": "approved",
       "version": "0.1.0",
       "source_reference": "Arkansas Victory Field Framework · Phases 1, 7, 8, 13"
     },
@@ -2528,7 +2713,7 @@
       "phase": "after_event",
       "body_hint": "24h interest follow-up; 1 week orientation; move people up the leadership ladder.",
       "assignment_policy": "not_assigned_until_postgres_rbac",
-      "review_status": "draft",
+      "review_status": "approved",
       "version": "0.1.0",
       "source_reference": "Arkansas Victory Field Framework · Phases 1, 7, 8, 13"
     },
@@ -2554,7 +2739,7 @@
       "phase": "election_week",
       "body_hint": "Grow reliable volunteers toward poll coverage and precinct leadership.",
       "assignment_policy": "not_assigned_until_postgres_rbac",
-      "review_status": "draft",
+      "review_status": "approved",
       "version": "0.1.0",
       "source_reference": "Arkansas Victory Field Framework · Phases 1, 7, 8, 13"
     },
@@ -2567,7 +2752,7 @@
       "phase": "always_active",
       "body_hint": "Separate operation from launch-team: county/city/campus/neighborhood registration goals.",
       "assignment_policy": "not_assigned_until_postgres_rbac",
-      "review_status": "draft",
+      "review_status": "approved",
       "version": "0.1.0",
       "source_reference": "Arkansas Victory Field Framework · Phases 6, 9"
     },
@@ -2580,7 +2765,7 @@
       "phase": "always_active",
       "body_hint": "Separate operation from launch-team: county/city/campus/neighborhood registration goals.",
       "assignment_policy": "not_assigned_until_postgres_rbac",
-      "review_status": "draft",
+      "review_status": "approved",
       "version": "0.1.0",
       "source_reference": "Arkansas Victory Field Framework · Phases 6, 9"
     },
@@ -2593,7 +2778,7 @@
       "phase": "before_event",
       "body_hint": "Staff registration check at event funnel; recruit registration shifts for markets, faith, campuses.",
       "assignment_policy": "not_assigned_until_postgres_rbac",
-      "review_status": "draft",
+      "review_status": "approved",
       "version": "0.1.0",
       "source_reference": "Arkansas Victory Field Framework · Phases 6, 9"
     },
@@ -2606,7 +2791,7 @@
       "phase": "event_day",
       "body_hint": "Voter registration check is a required step in the arrival funnel.",
       "assignment_policy": "not_assigned_until_postgres_rbac",
-      "review_status": "draft",
+      "review_status": "approved",
       "version": "0.1.0",
       "source_reference": "Arkansas Victory Field Framework · Phases 6, 9"
     },
@@ -2619,7 +2804,7 @@
       "phase": "after_event",
       "body_hint": "Count completed registrations; schedule follow-on registration opportunities.",
       "assignment_policy": "not_assigned_until_postgres_rbac",
-      "review_status": "draft",
+      "review_status": "approved",
       "version": "0.1.0",
       "source_reference": "Arkansas Victory Field Framework · Phases 6, 9"
     },
@@ -2632,7 +2817,7 @@
       "phase": "canvassing",
       "body_hint": "Pair registration asks with door/neighborhood work where lawful and appropriate.",
       "assignment_policy": "not_assigned_until_postgres_rbac",
-      "review_status": "draft",
+      "review_status": "approved",
       "version": "0.1.0",
       "source_reference": "Arkansas Victory Field Framework · Phases 6, 9"
     },
@@ -2645,7 +2830,7 @@
       "phase": "election_week",
       "body_hint": "Registered-and-ready universe supports GOTV and poll coverage later.",
       "assignment_policy": "not_assigned_until_postgres_rbac",
-      "review_status": "draft",
+      "review_status": "approved",
       "version": "0.1.0",
       "source_reference": "Arkansas Victory Field Framework · Phases 6, 9"
     },
@@ -2658,7 +2843,7 @@
       "phase": "always_active",
       "body_hint": "Run phone/text invitation banks tied to the event catalyst timeline.",
       "assignment_policy": "not_assigned_until_postgres_rbac",
-      "review_status": "draft",
+      "review_status": "approved",
       "version": "0.1.0",
       "source_reference": "Arkansas Victory Field Framework · Phase 4"
     },
@@ -2671,7 +2856,7 @@
       "phase": "always_active",
       "body_hint": "Run phone/text invitation banks tied to the event catalyst timeline.",
       "assignment_policy": "not_assigned_until_postgres_rbac",
-      "review_status": "draft",
+      "review_status": "approved",
       "version": "0.1.0",
       "source_reference": "Arkansas Victory Field Framework · Phase 4"
     },
@@ -2684,7 +2869,7 @@
       "phase": "before_event",
       "body_hint": "Wave Three reminder calls; volunteer asks; confirm location/parking language.",
       "assignment_policy": "not_assigned_until_postgres_rbac",
-      "review_status": "draft",
+      "review_status": "approved",
       "version": "0.1.0",
       "source_reference": "Arkansas Victory Field Framework · Phase 4"
     },
@@ -2710,7 +2895,7 @@
       "phase": "after_event",
       "body_hint": "Thank-you / orientation invites for new interested contacts.",
       "assignment_policy": "not_assigned_until_postgres_rbac",
-      "review_status": "draft",
+      "review_status": "approved",
       "version": "0.1.0",
       "source_reference": "Arkansas Victory Field Framework · Phase 4"
     },
@@ -2723,7 +2908,7 @@
       "phase": "canvassing",
       "body_hint": "Complement doors with phone follow-up on soft IDs.",
       "assignment_policy": "not_assigned_until_postgres_rbac",
-      "review_status": "draft",
+      "review_status": "approved",
       "version": "0.1.0",
       "source_reference": "Arkansas Victory Field Framework · Phase 4"
     },
@@ -2736,7 +2921,7 @@
       "phase": "election_week",
       "body_hint": "Later used for GOTV reminders — keep lists clean with Data Team.",
       "assignment_policy": "not_assigned_until_postgres_rbac",
-      "review_status": "draft",
+      "review_status": "approved",
       "version": "0.1.0",
       "source_reference": "Arkansas Victory Field Framework · Phase 4"
     },
@@ -2749,7 +2934,7 @@
       "phase": "always_active",
       "body_hint": "Handwritten outreach timed to the event and later GOTV.",
       "assignment_policy": "not_assigned_until_postgres_rbac",
-      "review_status": "draft",
+      "review_status": "approved",
       "version": "0.1.0",
       "source_reference": "Arkansas Victory Field Framework · Phase 4"
     },
@@ -2762,7 +2947,7 @@
       "phase": "always_active",
       "body_hint": "Handwritten outreach timed to the event and later GOTV.",
       "assignment_policy": "not_assigned_until_postgres_rbac",
-      "review_status": "draft",
+      "review_status": "approved",
       "version": "0.1.0",
       "source_reference": "Arkansas Victory Field Framework · Phase 4"
     },
@@ -2775,7 +2960,7 @@
       "phase": "before_event",
       "body_hint": "Drop to targeted universe before Wave Three reminders.",
       "assignment_policy": "not_assigned_until_postgres_rbac",
-      "review_status": "draft",
+      "review_status": "approved",
       "version": "0.1.0",
       "source_reference": "Arkansas Victory Field Framework · Phase 4"
     },
@@ -2814,7 +2999,7 @@
       "phase": "canvassing",
       "body_hint": "Coordinate universes so doors and cards do not collide wastefully.",
       "assignment_policy": "not_assigned_until_postgres_rbac",
-      "review_status": "draft",
+      "review_status": "approved",
       "version": "0.1.0",
       "source_reference": "Arkansas Victory Field Framework · Phase 4"
     },
@@ -2827,7 +3012,7 @@
       "phase": "election_week",
       "body_hint": "Reliable vehicle for October reminders.",
       "assignment_policy": "not_assigned_until_postgres_rbac",
-      "review_status": "draft",
+      "review_status": "approved",
       "version": "0.1.0",
       "source_reference": "Arkansas Victory Field Framework · Phase 4"
     }

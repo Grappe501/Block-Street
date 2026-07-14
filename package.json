@@ -30,6 +30,8 @@
     "test:v2b2-position-mapping": "node scripts/run-with-h-env.mjs npx tsx scripts/test-v2b2-position-mapping.ts",
     "field-plan:build-responsibility-library": "node scripts/run-with-h-env.mjs npx tsx scripts/field-plan/build-responsibility-library.ts",
     "test:v2b3-responsibility-library": "node scripts/run-with-h-env.mjs npx tsx scripts/test-v2b3-responsibility-library.ts",
+    "field-plan:wire-kpis": "node scripts/run-with-h-env.mjs npx tsx scripts/field-plan/wire-kpis.ts",
+    "test:v2b4-kpi-wiring": "node scripts/run-with-h-env.mjs npx tsx scripts/test-v2b4-kpi-wiring.ts",
     "test:field-strategy-manual": "node scripts/run-with-h-env.mjs npx tsx scripts/test-field-strategy-manual.ts",
     "test:leadership-hierarchy": "node scripts/run-with-h-env.mjs npx tsx scripts/test-leadership-hierarchy.ts",
     "test:role-dashboards": "node scripts/run-with-h-env.mjs npx tsx scripts/test-role-dashboards.ts",
