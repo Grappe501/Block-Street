@@ -32,13 +32,18 @@ export function CollegeCommandWorkbench({ dashboard }: { dashboard: Dash }) {
     <div className="min-h-screen bg-slate-100">
       <div className="border-b border-slate-200 bg-gradient-to-r from-brand-800 to-slate-900 text-white">
         <div className="mx-auto max-w-7xl px-4 py-8">
-          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-brand-100">Audience · College Leader</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-brand-100">
+            Under Volunteer Manager · Audience · College Leader
+          </p>
           <h1 className="mt-2 text-3xl font-bold">College Leader Workbench</h1>
           <p className="mt-2 max-w-3xl text-sm text-white/85">
-            Statewide education command — colleges, high schools, county RedDirt goals, and 25% institution
-            sub-goals. Not a participant landing page.
+            Education organizing command beneath Volunteer Command — colleges, high schools, enrollment-share
+            campus goals (registration + VCI). Not a participant landing page.
           </p>
           <div className="mt-4 flex flex-wrap gap-3 text-sm">
+            <Link href={dashboard.parentCommand.href} className="underline text-white/90">
+              ↑ {dashboard.parentCommand.label}
+            </Link>
             <Link href="/admin?tab=command" className="underline text-white/90">
               Operator Command
             </Link>
@@ -76,7 +81,11 @@ export function CollegeCommandWorkbench({ dashboard }: { dashboard: Dash }) {
           </p>
           <p className="mt-2 text-xs text-slate-600">{dashboard.meta.vci_definition}</p>
           <p className="mt-2 text-xs text-slate-600">
-            Rule: {dashboard.meta.institution_sub_goal_rule} · contribution model: sub_goal_within_parent
+            Campus formula: <code>{dashboard.campus_goal_formula_version}</code> ·{" "}
+            {dashboard.meta.campus_goal_formula} · contribution model: sub_goal_within_parent
+          </p>
+          <p className="mt-1 text-[11px] text-slate-500">
+            Flat 25% rule superseded. County VAP is estimated until ACS loads.
           </p>
         </div>
 
@@ -116,7 +125,8 @@ export function CollegeCommandWorkbench({ dashboard }: { dashboard: Dash }) {
                   "Type",
                   "County",
                   "County goal",
-                  "Sub-goal (25%)",
+                  "Campus reg goal",
+                  "Campus VCI goal",
                   "Participants",
                   "Leads",
                   "Volunteers",
@@ -138,6 +148,7 @@ export function CollegeCommandWorkbench({ dashboard }: { dashboard: Dash }) {
                   <td className="px-3 py-2">{r.countyName}</td>
                   <td className="px-3 py-2 tabular-nums">{r.countyGoal.toLocaleString()}</td>
                   <td className="px-3 py-2 tabular-nums font-semibold">{r.institutionSubGoal.toLocaleString()}</td>
+                  <td className="px-3 py-2 tabular-nums">{r.campusVciGoal.toLocaleString()}</td>
                   <td className="px-3 py-2 tabular-nums">{r.confirmedParticipants}</td>
                   <td className="px-3 py-2 tabular-nums">{r.leadCount}</td>
                   <td className="px-3 py-2 tabular-nums">{r.volunteerCount}</td>

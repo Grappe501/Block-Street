@@ -1,0 +1,19 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-07-14T11:00:00.000Z",
+  "canonical_formula_version": "enrollment_share_of_county_vap_v1",
+  "rounding": "Math.ceil",
+  "contribution_model": "sub_goal_within_parent",
+  "superseded": {
+    "rule": "Math.ceil(county_voter_registration_goal * 0.25)",
+    "feature_id": "FEAT-EDU-SUBGOAL-25",
+    "status": "superseded"
+  },
+  "vap": {
+    "source": "data/registry/county-demographics.json",
+    "estimated": true,
+    "method": "estimate_share_0.76",
+    "acs_status": "pending"
+  },
+  "authority": "docs/v2/CAMPUS_GOAL_FORMULA_DECISION.md"
+}

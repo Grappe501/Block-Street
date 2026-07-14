@@ -76,7 +76,7 @@ export function CommunityGoals({
         <h2 className="mt-1 text-xl font-bold text-slate-950">Truthful targets</h2>
         <p className="mt-1 max-w-2xl text-sm text-slate-700">
           {isCampus
-            ? "Institution registration sub-goal is 25% of the county RedDirt goal — inside the county total, not added on top."
+            ? "Campus goals scale by enrollment ÷ county voting-age population (estimated VAP). Sub-goals stay inside the county total."
             : "County registration goal and VCI come from the RedDirt Victory Plan snapshot."}
         </p>
       </div>
@@ -84,11 +84,13 @@ export function CommunityGoals({
       <div className="space-y-5 px-6 py-5">
         <div className="grid gap-3 sm:grid-cols-2">
           <MetricTile
-            label={isCampus ? "Voter-registration sub-goal" : "Voter-registration goal"}
+            label={isCampus ? "Campus registration sub-goal" : "Voter-registration goal"}
             value={metrics.registration_target.toLocaleString()}
             hint={
               isCampus
-                ? `25% of county goal (${(metrics.civic_goal_explanation?.[0] || "").replace(/^.*:\s*/, "") || "RedDirt"})`
+                ? metrics.campus_share_of_county_vap != null
+                  ? `${(metrics.campus_share_of_county_vap * 100).toFixed(2)}% of county VAP × county registration goal`
+                  : "Enrollment-share formula (missing enrollment/VAP)"
                 : "Canonical county total from RedDirt"
             }
             accent="brand"
@@ -102,13 +104,21 @@ export function CommunityGoals({
           <MetricTile
             label="Leadership launch-team target"
             value={metrics.participation_goal}
-            hint="Team-building floor — separate from field registration goals."
+            hint="Team-building floor — separate from field registration and VCI goals."
             accent="amber"
           />
           <MetricTile
-            label="County VCI"
-            value={(metrics.county_vci ?? metrics.vote_participation_target).toLocaleString()}
-            hint="Victory Contribution Index — county context, not a school score."
+            label={isCampus ? "Campus VCI sub-goal" : "County VCI"}
+            value={(
+              isCampus
+                ? metrics.campus_vci_goal ?? metrics.vote_participation_target
+                : metrics.county_vci ?? metrics.vote_participation_target
+            ).toLocaleString()}
+            hint={
+              isCampus
+                ? "Enrollment share of county VCI — separate from launch-team and registration."
+                : "Victory Contribution Index — county parent goal."
+            }
             accent="sky"
           />
         </div>
@@ -116,8 +126,12 @@ export function CommunityGoals({
         <div className="rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm text-slate-800">
           {isCampus ? (
             <p>
-              This institution’s goal equals <strong>25% of the county goal</strong>. It is included within the county
-              target and is <strong>not</strong> added on top of it.
+              Campus registration and VCI goals equal the county goals times{" "}
+              <strong>campus enrollment ÷ county VAP</strong>. They are organizing sub-goals within the county
+              total — <strong>not</strong> added on top.{" "}
+              {metrics.vap_is_estimate
+                ? "County VAP is currently estimated (not official ACS)."
+                : null}
             </p>
           ) : (
             <p>
@@ -176,8 +190,11 @@ export function CommunityGoals({
             <p className="font-semibold">Victory Contribution Index (RedDirt)</p>
             <p>{metrics.vci_definition}</p>
             <p>
-              Value {(metrics.county_vci ?? 0).toLocaleString()} — distinct from the voter-registration goal. Schools
-              show <strong>County VCI</strong> as context only.
+              County VCI {(metrics.county_vci ?? 0).toLocaleString()}
+              {isCampus && metrics.campus_vci_goal != null
+                ? ` · Campus VCI sub-goal ${metrics.campus_vci_goal.toLocaleString()}`
+                : ""}
+              . Distinct from voter-registration and launch-team goals.
             </p>
           </div>
         )}

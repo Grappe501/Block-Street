@@ -73,6 +73,11 @@ export function computeHonestMetrics(input: {
   let county_vci: number;
   let vci_definition: string;
 
+  let campus_share_of_county_vap: number | null = null;
+  let county_voting_age_population: number | null = null;
+  let vap_is_estimate = false;
+  let campus_vci_goal: number | null = null;
+
   if (input.kind === "county") {
     const county = resolveCountyCivicGoals(input.countySlug);
     const row = getCountyFieldGoal(input.countySlug);
@@ -80,6 +85,8 @@ export function computeHonestMetrics(input: {
     vote_participation_target = county.vci;
     county_vci = county.vci;
     vci_definition = county.vci_definition;
+    county_voting_age_population = county.vap;
+    vap_is_estimate = county.estimate;
     civic_goal_formula = "RedDirt county voter_registration_goal + Victory Contribution Index";
     civic_goal_explanation = [
       `County voter-registration goal (RedDirt): ${county.registration.toLocaleString()}`,
@@ -96,11 +103,15 @@ export function computeHonestMetrics(input: {
       enrollment: input.enrollment,
     });
     registration_target = proportional.registration_goal;
-    vote_participation_target = proportional.county_vci;
+    vote_participation_target = proportional.vci_goal;
     county_vci = proportional.county_vci;
+    campus_vci_goal = proportional.vci_goal;
     vci_definition = proportional.vci_definition;
     civic_goal_formula = proportional.formula;
     civic_goal_explanation = proportional.explanation;
+    campus_share_of_county_vap = proportional.share_of_county_vap;
+    county_voting_age_population = proportional.county_voting_age_population;
+    vap_is_estimate = proportional.vap_is_estimate;
   }
 
   const manualReg = store.manual_goals[input.scopeId]?.registration;
@@ -119,10 +130,12 @@ export function computeHonestMetrics(input: {
     vote_participation_target,
     civic_goal_explanation,
     civic_goal_formula,
-    campus_share_of_county_vap: null,
-    county_voting_age_population: null,
+    campus_share_of_county_vap,
+    county_voting_age_population,
     campus_enrollment,
     county_vci,
+    campus_vci_goal,
+    vap_is_estimate,
     vci_definition,
   };
 }

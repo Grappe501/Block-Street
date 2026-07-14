@@ -1,0 +1,151 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-07-14T11:00:00.000Z",
+  "principle": "least_information + least_authority + clear_upward_visibility",
+  "roles": {
+    "participant": {
+      "visible_routes": ["/network", "/schools/*"],
+      "visible_dashboards": ["participant"],
+      "visible_people": "self_and_public",
+      "visible_contact_data": "none_unless_consented_peer",
+      "editable_entities": ["own_profile_limited"],
+      "communication_scope": "supporting_leader",
+      "inspection_scope": [],
+      "export_permissions": [],
+      "administrative_actions": [],
+      "escalation_target": "supporting_leader"
+    },
+    "general_volunteer": {
+      "visible_routes": ["/network", "/leader/*"],
+      "visible_dashboards": ["volunteer_assignment"],
+      "visible_people": "same_committee_public",
+      "visible_contact_data": "relay_or_approved",
+      "editable_entities": ["own_availability"],
+      "communication_scope": "supporting_leader",
+      "inspection_scope": [],
+      "export_permissions": [],
+      "administrative_actions": [],
+      "escalation_target": "supporting_leader"
+    },
+    "committee_member": {
+      "visible_routes": ["/committee/*"],
+      "visible_dashboards": ["committee"],
+      "visible_people": "same_committee",
+      "visible_contact_data": "relay_or_approved",
+      "editable_entities": [],
+      "communication_scope": "same_committee",
+      "inspection_scope": [],
+      "export_permissions": [],
+      "administrative_actions": [],
+      "escalation_target": "co_lead"
+    },
+    "co_lead": {
+      "visible_routes": ["/leader/*", "/committee/*"],
+      "visible_dashboards": ["leader"],
+      "visible_people": "same_position",
+      "visible_contact_data": "committee_approved",
+      "editable_entities": ["committee_tasks_scaffold"],
+      "communication_scope": "same_committee",
+      "inspection_scope": ["own_committee"],
+      "export_permissions": [],
+      "administrative_actions": [],
+      "escalation_target": "supporting_leader"
+    },
+    "functional_lead": {
+      "visible_routes": ["/leader/*", "/admin/volunteer-command/functions"],
+      "visible_dashboards": ["functional_lead"],
+      "visible_people": "function_and_scope",
+      "visible_contact_data": "function_approved",
+      "editable_entities": ["function_assignments_scaffold"],
+      "communication_scope": "function_assignees",
+      "inspection_scope": ["own_function"],
+      "export_permissions": [],
+      "administrative_actions": [],
+      "escalation_target": "parent_leader"
+    },
+    "institution_lead": {
+      "visible_routes": ["/schools/*", "/high-schools/*", "/leader/*"],
+      "visible_dashboards": ["institution_lead"],
+      "visible_people": "institution",
+      "visible_contact_data": "institution_approved_or_relay",
+      "editable_entities": ["institution_assignments_scaffold"],
+      "communication_scope": "institution",
+      "inspection_scope": ["own_institution"],
+      "export_permissions": [],
+      "administrative_actions": [],
+      "escalation_target": "college_leader"
+    },
+    "county_volunteer_lead": {
+      "visible_routes": ["/admin/counties/:countySlug/volunteer-command", "/county/:countySlug", "/leader/*"],
+      "visible_dashboards": ["county_volunteer"],
+      "visible_people": "assigned_county_only",
+      "visible_contact_data": "county_approved",
+      "editable_entities": ["county_assignments_scaffold"],
+      "communication_scope": "assigned_county",
+      "inspection_scope": ["assigned_county"],
+      "export_permissions": [],
+      "administrative_actions": [],
+      "escalation_target": "volunteer_manager"
+    },
+    "college_leader": {
+      "visible_routes": ["/admin/college-command", "/schools/*", "/high-schools/*"],
+      "visible_dashboards": ["college_command"],
+      "visible_people": "education_only",
+      "visible_contact_data": "education_approved_or_relay",
+      "editable_entities": ["education_assignments_scaffold"],
+      "communication_scope": "education_system",
+      "inspection_scope": ["education"],
+      "export_permissions": [],
+      "administrative_actions": [],
+      "escalation_target": "volunteer_manager"
+    },
+    "volunteer_manager": {
+      "visible_routes": ["/admin/volunteer-command", "/admin/volunteer-command/*", "/admin/college-command", "/admin/counties/*/volunteer-command"],
+      "visible_dashboards": ["volunteer_command"],
+      "visible_people": "all_volunteers",
+      "visible_contact_data": "authorized_campaign",
+      "editable_entities": ["personnel_scaffold_when_durable"],
+      "communication_scope": "all_authorized_volunteers",
+      "inspection_scope": ["volunteer_system"],
+      "export_permissions": ["reports_scaffold"],
+      "administrative_actions": ["personnel_actions_when_durable"],
+      "escalation_target": "director"
+    },
+    "operator": {
+      "visible_routes": ["/admin", "/admin/*"],
+      "visible_dashboards": ["operator_command", "volunteer_command"],
+      "visible_people": "all_volunteers",
+      "visible_contact_data": "authorized_campaign",
+      "editable_entities": ["operator_scoped"],
+      "communication_scope": "authorized",
+      "inspection_scope": ["operational"],
+      "export_permissions": ["operator"],
+      "administrative_actions": ["operator"],
+      "escalation_target": "director"
+    },
+    "director": {
+      "visible_routes": ["/admin/*", "/leader/*", "/committee/*"],
+      "visible_dashboards": ["all_supported"],
+      "visible_people": "all",
+      "visible_contact_data": "authorized_except_secrets",
+      "editable_entities": ["director_controls_not_silent_impersonation"],
+      "communication_scope": "authorized",
+      "inspection_scope": ["all_supported_read_only"],
+      "export_permissions": ["director"],
+      "administrative_actions": ["director"],
+      "escalation_target": null
+    },
+    "architect": {
+      "visible_routes": ["/admin?tab=command"],
+      "visible_dashboards": ["operator_command"],
+      "visible_people": "none_by_default",
+      "visible_contact_data": "none",
+      "editable_entities": ["architecture_docs"],
+      "communication_scope": "none",
+      "inspection_scope": ["system_status"],
+      "export_permissions": ["architecture"],
+      "administrative_actions": [],
+      "escalation_target": "director"
+    }
+  }
+}

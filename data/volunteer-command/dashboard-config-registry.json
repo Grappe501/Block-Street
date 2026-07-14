@@ -1,0 +1,71 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-07-14T11:00:00.000Z",
+  "dashboards": [
+    {
+      "dashboard_key": "volunteer_command",
+      "role_key": "volunteer_manager",
+      "scope_type": "statewide",
+      "route": "/admin/volunteer-command",
+      "navigation_sections": [
+        "Command",
+        "People",
+        "Leadership",
+        "Committees",
+        "Counties",
+        "Education",
+        "Functions",
+        "Events",
+        "Intake",
+        "Orientation",
+        "Placement",
+        "Retention",
+        "Coverage",
+        "Communications",
+        "Reports",
+        "Risks"
+      ],
+      "persistence": "static_scaffold_plus_seed_rollups",
+      "field_plan_bindings": ["volunteer_manager"]
+    },
+    {
+      "dashboard_key": "college_command",
+      "role_key": "college_leader",
+      "scope_type": "education_statewide",
+      "route": "/admin/college-command",
+      "parent_dashboard": "volunteer_command",
+      "navigation_sections": ["Command", "People", "Committees", "Education", "Events", "Communications", "Reports", "Risks"],
+      "persistence": "static_scaffold_plus_seed_rollups",
+      "field_plan_bindings": ["college_leader"]
+    },
+    {
+      "dashboard_key": "county_volunteer_command",
+      "role_key": "county_volunteer_lead",
+      "scope_type": "county",
+      "route": "/admin/counties/:countySlug/volunteer-command",
+      "parent_dashboard": "volunteer_command",
+      "navigation_sections": ["Command", "People", "Leadership", "Committees", "Events", "Goals", "Communications", "Risks"],
+      "persistence": "static_scaffold",
+      "field_plan_bindings": ["county_volunteer_lead"]
+    },
+    {
+      "dashboard_key": "functional_lead",
+      "role_key": "functional_lead",
+      "scope_type": "function",
+      "route": "/admin/leader/:leadershipAssignmentId",
+      "parent_dashboard": "volunteer_command",
+      "navigation_sections": ["Command", "People", "Committee", "Goals", "Events", "Tasks", "Communications", "Field Plan", "Progress", "Risks"],
+      "persistence": "static_scaffold",
+      "field_plan_bindings": ["dynamic_by_function"]
+    },
+    {
+      "dashboard_key": "campaign_leader",
+      "role_key": "any_leadership_assignment",
+      "scope_type": "assignment",
+      "route": "/leader/:leadershipAssignmentId",
+      "navigation_sections": ["Command", "People", "Committee", "Goals", "Events", "Tasks", "Communications", "Field Plan", "Progress", "Risks", "Reports"],
+      "persistence": "static_scaffold",
+      "field_plan_bindings": ["by_position_key"]
+    }
+  ]
+}

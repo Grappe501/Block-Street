@@ -109,6 +109,9 @@ export type HonestParticipationMetrics = {
   campus_enrollment?: number | null;
   /** RedDirt Victory Contribution Index (county-level) */
   county_vci?: number;
+  /** Campus VCI sub-goal via enrollment share — separate from county VCI */
+  campus_vci_goal?: number | null;
+  vap_is_estimate?: boolean;
   vci_definition?: string;
 };
 

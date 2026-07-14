@@ -62,10 +62,12 @@ function testHendersonProportionalCivic() {
     enrollment: 3190,
     countySlug: "clark",
   });
-  // RedDirt Clark registration 291 → ceil(291*0.25)=73
-  assert.strictEqual(m.registration_target, 73);
+  // Enrollment share of estimated Clark VAP (16299): ceil(291 * 3190/16299) = 57
+  assert.strictEqual(m.registration_target, 57);
+  assert.strictEqual(m.campus_vci_goal, 498);
   assert.strictEqual(m.county_vci, 2543);
-  assert.ok(m.civic_goal_formula?.includes("0.25"));
+  assert.ok(m.civic_goal_formula?.includes("campus_enrollment"));
+  assert.strictEqual(m.vap_is_estimate, true);
 }
 
 function testLegacySixForensic() {

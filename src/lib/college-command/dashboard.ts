@@ -1,4 +1,10 @@
-import { getCountyFieldGoal, getFieldGoalsMeta, listCountyFieldGoals } from "@/lib/field-goals";
+import {
+  getCountyFieldGoal,
+  getFieldGoalsMeta,
+  listCountyFieldGoals,
+  computeCampusCivicGoals,
+  CAMPUS_GOAL_FORMULA_VERSION,
+} from "@/lib/field-goals";
 import { getInstitutions, getHighSchools, getPrivateCharterSchools } from "@/lib/data";
 import { listPositionCards, getScopeMetrics } from "@/lib/position-participation";
 import type { CommunityKind } from "@/lib/community-workspace";
@@ -16,6 +22,8 @@ export type EducationInstitutionRow = {
   countyName: string;
   countyGoal: number;
   institutionSubGoal: number;
+  campusVciGoal: number;
+  campusShare: number | null;
   confirmedParticipants: number;
   leadCount: number;
   volunteerCount: number;
@@ -44,6 +52,10 @@ export function buildCollegeCommandDashboard() {
 
   for (const inst of institutions) {
     const county = getCountyFieldGoal(inst.county);
+    const campus = computeCampusCivicGoals({
+      countySlug: inst.county,
+      enrollment: inst.enrollment,
+    });
     const metrics = getScopeMetrics({
       kind: "institution",
       slug: inst.slug,
@@ -64,7 +76,9 @@ export function buildCollegeCommandDashboard() {
       countySlug: inst.county,
       countyName: county?.county_name ?? inst.county,
       countyGoal: county?.voter_registration_goal ?? 0,
-      institutionSubGoal: county ? Math.ceil(county.voter_registration_goal * 0.25) : 0,
+      institutionSubGoal: campus.campus_registration_goal,
+      campusVciGoal: campus.campus_vci_goal,
+      campusShare: campus.campus_share,
       confirmedParticipants: metrics.confirmed_participants,
       leadCount: leads,
       volunteerCount: vols,
@@ -77,6 +91,10 @@ export function buildCollegeCommandDashboard() {
 
   for (const hs of highSchools as Array<{ slug: string; name: string; shortName: string; county: string; enrollment?: number }>) {
     const county = getCountyFieldGoal(hs.county);
+    const campus = computeCampusCivicGoals({
+      countySlug: hs.county,
+      enrollment: hs.enrollment,
+    });
     const metrics = getScopeMetrics({
       kind: "high_school",
       slug: hs.slug,
@@ -96,7 +114,9 @@ export function buildCollegeCommandDashboard() {
       countySlug: hs.county,
       countyName: county?.county_name ?? hs.county,
       countyGoal: county?.voter_registration_goal ?? 0,
-      institutionSubGoal: county ? Math.ceil(county.voter_registration_goal * 0.25) : 0,
+      institutionSubGoal: campus.campus_registration_goal,
+      campusVciGoal: campus.campus_vci_goal,
+      campusShare: campus.campus_share,
       confirmedParticipants: metrics.confirmed_participants,
       leadCount: leads,
       volunteerCount: vols,
@@ -109,6 +129,10 @@ export function buildCollegeCommandDashboard() {
 
   for (const ps of privateSchools as Array<{ slug: string; name: string; shortName: string; county: string; enrollment?: number }>) {
     const county = getCountyFieldGoal(ps.county);
+    const campus = computeCampusCivicGoals({
+      countySlug: ps.county,
+      enrollment: ps.enrollment,
+    });
     const metrics = getScopeMetrics({
       kind: "private_charter",
       slug: ps.slug,
@@ -128,7 +152,9 @@ export function buildCollegeCommandDashboard() {
       countySlug: ps.county,
       countyName: county?.county_name ?? ps.county,
       countyGoal: county?.voter_registration_goal ?? 0,
-      institutionSubGoal: county ? Math.ceil(county.voter_registration_goal * 0.25) : 0,
+      institutionSubGoal: campus.campus_registration_goal,
+      campusVciGoal: campus.campus_vci_goal,
+      campusShare: campus.campus_share,
       confirmedParticipants: metrics.confirmed_participants,
       leadCount: leads,
       volunteerCount: vols,
@@ -155,6 +181,12 @@ export function buildCollegeCommandDashboard() {
       needingAttention: rows.filter((r) => r.risk === "needs_lead").length,
     },
     rows: rows.sort((a, b) => a.name.localeCompare(b.name)),
+    parentCommand: {
+      label: "Volunteer Command",
+      href: "/admin/volunteer-command",
+      relationship: "College Leader is subordinate to Volunteer Manager",
+    },
+    campus_goal_formula_version: CAMPUS_GOAL_FORMULA_VERSION,
     privacyNote:
       "High-school contact and directory access remain privacy-restricted. Full direct-contact features require age-safety review; campaign-controlled relay only until then.",
     contactSnapshots: {

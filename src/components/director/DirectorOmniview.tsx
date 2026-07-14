@@ -5,7 +5,10 @@ import { useMemo, useState } from "react";
 
 const SURFACES = [
   { id: "participant", label: "View as participant", href: "/network" },
+  { id: "volunteer", label: "View as Volunteer Manager", href: "/admin/volunteer-command" },
   { id: "college", label: "View as college leader", href: "/admin/college-command" },
+  { id: "county", label: "View as Clark County Volunteer Lead", href: "/admin/counties/clark/volunteer-command" },
+  { id: "functional", label: "View canvassing functional scaffold", href: "/admin/leader/function-canvassing" },
   { id: "operator", label: "View as operator", href: "/admin?tab=command" },
   { id: "henderson", label: "Inspect Henderson State board", href: "/schools/henderson-state?inspect=director" },
   { id: "clark", label: "Inspect Clark County board", href: "/county/clark?inspect=director" },
