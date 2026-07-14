@@ -57,12 +57,15 @@ export function buildDirectorInspectCatalog(): {
   ];
 
   const system: InspectTarget[] = [
-    { id: "sys-network", label: "Participant network surface", kind: "system", href: "/network" },
-    { id: "sys-start", label: "Invite start", kind: "system", href: "/start" },
-    { id: "sys-volunteer", label: "Volunteer Command", kind: "system", href: "/admin/volunteer-command" },
+    { id: "sys-operator", label: "Operator Command (truth board)", kind: "system", href: "/admin?tab=command" },
+    { id: "sys-volunteer", label: "Volunteer Command (shell)", kind: "system", href: "/admin/volunteer-command" },
     { id: "sys-college", label: "College Leader Workbench", kind: "system", href: "/admin/college-command" },
-    { id: "sys-operator", label: "Operator Command", kind: "system", href: "/admin?tab=command" },
-    { id: "sys-clark-vc", label: "Clark County Volunteer Lead", kind: "system", href: "/admin/counties/clark/volunteer-command" },
+    { id: "sys-clark-vc", label: "Clark County Volunteer Lead (shell)", kind: "system", href: "/admin/counties/clark/volunteer-command" },
+    { id: "sys-benton-vc", label: "Benton County Volunteer Lead (shell)", kind: "system", href: "/admin/counties/benton/volunteer-command" },
+    { id: "sys-leader-demo", label: "Area Leader demo shell (DEMO)", kind: "system", href: "/leader/demo-committee-canvass" },
+    { id: "sys-field-manual", label: "Field Manual (static presentation)", kind: "system", href: "/field-strategy" },
+    { id: "sys-start", label: "Invite start", kind: "system", href: "/start" },
+    { id: "sys-network", label: "Participant network surface", kind: "system", href: "/network" },
   ];
 
   return {

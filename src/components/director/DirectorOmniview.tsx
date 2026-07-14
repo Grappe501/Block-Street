@@ -4,6 +4,9 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 import { FieldManualNavTab } from "@/components/field-strategy/FieldManualNavTab";
 import type { InspectTarget } from "@/lib/director/inspect-catalog";
+import { CAMPUS_GOAL_FORMULA_VERSION } from "@/lib/field-goals";
+import buildProgress from "../../../data/build-progress.json";
+import durabilityRegistry from "../../../data/field-plan/approved-template-durability-registry.json";
 
 type Catalog = {
   counties: InspectTarget[];
@@ -59,11 +62,45 @@ export function DirectorOmniview({ catalog }: { catalog: Catalog }) {
             <Link href="/admin?tab=command" className="text-sm underline text-white/90">
               Operator Command
             </Link>
+            <Link href="/field-strategy" className="text-sm underline text-white/90">
+              Field Manual
+            </Link>
           </div>
         </div>
       </div>
 
       <div className="mx-auto max-w-6xl space-y-6 px-4 py-8">
+        <div className="rounded-2xl border border-slate-800 bg-white p-4 text-sm text-slate-800">
+          <h2 className="font-bold text-slate-950">Director program board (honest)</h2>
+          <ul className="mt-2 list-disc space-y-1 pl-5 text-xs">
+            <li>
+              Active program:{" "}
+              <strong>
+                {String((buildProgress.project as { activeProgram?: string })?.activeProgram ?? "—")}
+              </strong>
+            </li>
+            <li>
+              Tip: <code>{String((buildProgress.project as { productionCommit?: string })?.productionCommit ?? "—")}</code>{" "}
+              · Build % ≠ launch · large-scale launch not approved
+            </li>
+            <li>
+              Field Plan freeze:{" "}
+              {(durabilityRegistry.summary as { approved_templates?: number })?.approved_templates ?? 0}{" "}
+              templates · {(durabilityRegistry.summary as { approved_responsibilities?: number })
+                ?.approved_responsibilities ?? 0}{" "}
+              responsibilities · storage static_seed · Postgres not live
+            </li>
+            <li>
+              Depth: L0–L1 present · L2–L3 missing · L4 blocked —{" "}
+              <Link className="text-brand-800 underline" href="/admin?tab=command">
+                Operator Command
+              </Link>{" "}
+              for Field Plan cards
+            </li>
+            <li>Invite-chain CERTIFIED PRESENT: still PENDING (named launch blocker)</li>
+          </ul>
+        </div>
+
         <div className="rounded-2xl border border-amber-300 bg-amber-50 p-4 text-sm text-amber-950">
           <p className="font-semibold">Inspection mode: Director</p>
           <p className="mt-1">Opened at {stamp}. Use a reason when walking someone through a board.</p>
@@ -88,7 +125,7 @@ export function DirectorOmniview({ catalog }: { catalog: Catalog }) {
           <ul className="mt-2 list-disc space-y-1 pl-5 text-xs">
             <li>
               Persistence backend: <strong>netlify_blobs + static_seed</strong> — Postgres / Netlify Database{" "}
-              <strong>not</strong> canonical (V2-B deferred)
+              <strong>not</strong> live (dual-write not started)
             </li>
             <li>
               Not every action is durable in production Blobs; invite/place/share paths are Blobs-backed; many
@@ -98,8 +135,11 @@ export function DirectorOmniview({ catalog }: { catalog: Catalog }) {
               Presence: <strong>No presence signal</strong> (realtime presence not certified — do not label
               historical activity as Live)
             </li>
-            <li>Field goals: RedDirt snapshot from H:/SOSWebsite/RedDirt · 75 counties · campus = 25% county</li>
-            <li>Invite-chain certification: PENDING</li>
+            <li>
+              Field goals: RedDirt · 75 counties · campus formula{" "}
+              <code>{CAMPUS_GOAL_FORMULA_VERSION}</code> · flat 25% superseded · VAP estimated until ACS
+            </li>
+            <li>Invite-chain certification: PENDING · personnel assign disabled</li>
           </ul>
         </div>
 

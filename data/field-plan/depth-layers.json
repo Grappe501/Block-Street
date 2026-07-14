@@ -1,0 +1,97 @@
+{
+  "version": "1.0.0",
+  "phase": "V2-B.5+",
+  "updated": "2026-07-14T19:05:00.000Z",
+  "authority": "docs/v2/FIELD_PLAN_DEPTH_LAYERS.md",
+  "altitude_lock": "Do not invent Field Plan doctrine — fill only from campaign Field Plan / Victory Field Framework.",
+  "layers": [
+    {
+      "id": "L0",
+      "name": "Doctrine & altitude",
+      "status": "present",
+      "altitude": "30000_feet",
+      "twins": [
+        "data/field-plan/victory-field-framework.json",
+        "docs/v2/ARKANSAS_VICTORY_FIELD_FRAMEWORK.md",
+        "src/app/field-strategy"
+      ],
+      "description": "Statewide why/how: event as catalyst, Power of 5 product, Regnat Populus identity."
+    },
+    {
+      "id": "L1",
+      "name": "Role narrative by position",
+      "status": "partial",
+      "altitude": "10000_feet",
+      "twins": [
+        "data/field-plan/position-content.json",
+        "data/field-plan/position-mapping-registry.json",
+        "data/field-plan/responsibility-library.json",
+        "data/field-plan/kpi-binding-registry.json"
+      ],
+      "description": "Mapped seats with expandable responsibilities and KPI links. 7 content-backed functional roles; hierarchy seats still placeholder.",
+      "gaps": [
+        "media_lead / logistics_lead unmapped",
+        "6 hierarchy placeholders without prose",
+        "16 central activation deferred"
+      ]
+    },
+    {
+      "id": "L2",
+      "name": "Geographic playbooks",
+      "status": "missing",
+      "altitude": "county_city",
+      "twins": ["data/field-plan/depth/l2-geographic-playbooks/"],
+      "description": "Per-county and priority-city adaptation: venues, partners, media, open seats, first event window, inheritance from L1 roles.",
+      "required_fields": [
+        "county_slug",
+        "priority_communities",
+        "venue_candidates",
+        "partner_orgs",
+        "media_targets",
+        "open_leadership_seats",
+        "first_trigger_event_window",
+        "source_reference"
+      ],
+      "pilot_targets": ["benton", "clark", "pulaski", "washington"]
+    },
+    {
+      "id": "L3",
+      "name": "Phase × place operations",
+      "status": "missing",
+      "altitude": "timeline_turf",
+      "twins": ["data/field-plan/depth/l3-phase-place-ops/"],
+      "description": "Dated timelines, turf packs, shift plans, institution funnels bound into /leader/:id for content-backed seats.",
+      "required_fields": [
+        "scope_type",
+        "scope_id",
+        "position_canonical_key",
+        "phase",
+        "checklist",
+        "resources",
+        "escalation",
+        "kpi_ids",
+        "source_reference"
+      ]
+    },
+    {
+      "id": "L4",
+      "name": "Execution loop",
+      "status": "blocked",
+      "altitude": "assign_complete_evidence",
+      "twins": ["data/field-plan/depth/l4-execution-loop/"],
+      "description": "Assign → complete → evidence → escalate with durable RBAC. Blocked until invite-chain CERTIFIED PRESENT and Postgres/RBAC gates.",
+      "blockers": [
+        "invite_chain_not_certified_present",
+        "postgres_not_live",
+        "personnel_mutations_disabled",
+        "broad_ingest_blocked"
+      ]
+    }
+  ],
+  "steve_ernie_next": [
+    "Close invite-chain evidence pack (named launch blocker)",
+    "Fill L2 for Benton pilot from real Field Plan (no invented doctrine)",
+    "Bind L1 responsibilities into /leader/:id for content-backed seats",
+    "Admin chrome diet — keep Op Command / Director / VC / College first-class"
+  ]
+}

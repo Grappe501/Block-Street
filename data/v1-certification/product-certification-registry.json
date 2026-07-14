@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "updated": "2026-07-14T18:05:00.000Z",
+  "updated": "2026-07-14T19:05:00.000Z",
   "authority": "docs/v1-certification/PRODUCT_CERTIFICATION_REGISTRY.md",
   "launchDoctrine": {
     "phase001_7": "complete",
@@ -10,7 +10,7 @@
     "largeScaleLaunch": "not_approved",
     "v2bFieldPlanOperationalCompleteRequiresInviteCert": true
   },
-  "activeBuildLane": "V2-B.1",
+  "activeBuildLane": "V2-B.5",
   "journeys": [
     {
       "id": "V1-JRN-INVITE-CHAIN-01",

@@ -1,0 +1,19 @@
+{
+  "version": "0.1.0",
+  "layer": "L2",
+  "county_slug": "benton",
+  "status": "awaiting_field_plan_source",
+  "content_status": "placeholder",
+  "note": "Skeleton only — do not invent venues, partners, or seats. Fill from campaign Field Plan.",
+  "priority_communities": [],
+  "venue_candidates": [],
+  "partner_orgs": [],
+  "media_targets": [],
+  "open_leadership_seats": [],
+  "first_trigger_event_window": null,
+  "source_reference": null,
+  "inherits_from": [
+    "data/field-plan/victory-field-framework.json",
+    "data/field-plan/responsibility-library.json"
+  ]
+}

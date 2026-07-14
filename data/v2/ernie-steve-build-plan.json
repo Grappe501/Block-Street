@@ -1,0 +1,103 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-07-14T19:05:00.000Z",
+  "audience": ["ernie", "steve"],
+  "authority": "docs/v2/ERNIE_STEVE_FORENSIC_BUILD_BRIEF.md",
+  "production_tip": "fdf1430",
+  "active_program": "V2-B.5 Field Plan durability prep",
+  "non_negotiables": [
+    "Vision → Product Truth → Journey Certification → Implementation → Deployment",
+    "Build % is not launch",
+    "Invite-chain CERTIFIED PRESENT is named launch blocker",
+    "Persistence remains netlify_blobs + static_seed until dual-write proven",
+    "Do not invent Field Plan doctrine",
+    "No personnel assign until Postgres + RBAC",
+    "Commit and push after every ship interaction"
+  ],
+  "work_packages": [
+    {
+      "id": "WP-01",
+      "owner": "steve",
+      "title": "Invite-chain six-axis evidence on production",
+      "priority": 1,
+      "acceptance": "data/v1-certification/journeys/V1-JRN-INVITE-CHAIN-01/run.json exists; ledger CERTIFIED PRESENT or recorded fail"
+    },
+    {
+      "id": "WP-02",
+      "owner": "ernie",
+      "title": "Dashboard honesty pass",
+      "priority": 2,
+      "acceptance": "No live 25% campus claims; shells labeled; demo leaders tagged DEMO; activeBuildLane matches tip"
+    },
+    {
+      "id": "WP-03",
+      "owner": "ernie+steve",
+      "title": "Field Plan L2 Benton (geographic playbook)",
+      "priority": 3,
+      "acceptance": "benton L2 JSON filled from real Field Plan; venues/partners/seats/source_reference present"
+    },
+    {
+      "id": "WP-04",
+      "owner": "ernie",
+      "title": "Bind L1 into /leader/:id for content-backed seats",
+      "priority": 4,
+      "acceptance": "Leader shell shows responsibilities + KPIs from library for mapped content seats"
+    },
+    {
+      "id": "WP-05",
+      "owner": "ernie+steve",
+      "title": "Clear V2-B.2 mapping queues",
+      "priority": 5,
+      "acceptance": "media/logistics mapped or explicitly deferred in UI; community_outreach conflict resolved"
+    },
+    {
+      "id": "WP-06",
+      "owner": "ernie",
+      "title": "Placeholder hierarchy prose (L1 completion)",
+      "priority": 6,
+      "acceptance": "6 placeholder seats → ingested → re-wire KPIs → refresh B.5 freeze; 0 personnel assigns"
+    },
+    {
+      "id": "WP-07",
+      "owner": "ernie",
+      "title": "Field Plan L3 phase×place packs (pilot)",
+      "priority": 7,
+      "acceptance": "At least one Benton event_lead phase pack with checklist + kpi_ids + source_reference"
+    },
+    {
+      "id": "WP-08",
+      "owner": "ernie",
+      "title": "Admin chrome diet",
+      "priority": 8,
+      "acceptance": "Doctrine tabs behind Architecture library; Op Command / Director / VC / College first-class"
+    },
+    {
+      "id": "WP-09",
+      "owner": "steve",
+      "title": "Participant copy demilitarize",
+      "priority": 9,
+      "acceptance": "/invite /choose-place /network use belong language; Command jargon behind lead roles"
+    },
+    {
+      "id": "WP-10",
+      "owner": "ernie",
+      "title": "Postgres dual-write design (no cutover)",
+      "priority": 10,
+      "acceptance": "Entity list + fail-closed plan for invite/place/network; cutover blocked until WP-01"
+    },
+    {
+      "id": "WP-11",
+      "owner": "ernie+steve",
+      "title": "Return + share journey stubs",
+      "priority": 11,
+      "acceptance": "V1-JRN-RETURN-01 and V1-JRN-SHARE-01 human-tested with evidence stubs"
+    },
+    {
+      "id": "WP-12",
+      "owner": "ernie",
+      "title": "Thin Assurance strip (V2-F seed)",
+      "priority": 12,
+      "acceptance": "Op Command or strip shows journey statuses, tip SHA, Flat-25 absence, Postgres=off"
+    }
+  ]
+}

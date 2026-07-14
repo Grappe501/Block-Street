@@ -163,7 +163,8 @@ export function buildVolunteerCommandDashboard(input?: { section?: VolunteerComm
       },
       {
         id: "field-plan",
-        label: "Field Plan not uploaded — placeholders only",
+        label:
+          "Field Plan L0–L1 ingested + V2-B.5 freeze — L2/L3 geographic & phase depth still missing; L4 blocked",
         severity: "medium" as const,
       },
       {

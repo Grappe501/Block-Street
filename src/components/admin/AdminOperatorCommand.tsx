@@ -13,6 +13,7 @@ import positionMapping from "../../../data/field-plan/position-mapping-registry.
 import responsibilityLibrary from "../../../data/field-plan/responsibility-library.json";
 import kpiBinding from "../../../data/field-plan/kpi-binding-registry.json";
 import durabilityRegistry from "../../../data/field-plan/approved-template-durability-registry.json";
+import depthLayers from "../../../data/field-plan/depth-layers.json";
 import reviewQueue from "../../../data/field-plan/ingestion/review-queue.json";
 import conflictQueue from "../../../data/field-plan/ingestion/conflict-queue.json";
 import { getCountyFieldGoal, getFieldGoalsMeta, CAMPUS_GOAL_FORMULA_VERSION } from "@/lib/field-goals";
@@ -357,6 +358,13 @@ export function AdminOperatorCommand() {
             Twin: <code>data/field-plan/approved-template-durability-registry.json</code> ·
             docs/v2/V2B5_DURABILITY_PREP.md · invite-chain CERTIFIED PRESENT still launch blocker
           </li>
+          <li>
+            Depth layers:{" "}
+            {(depthLayers.layers as { id: string; status: string }[])
+              .map((l) => `${l.id}=${l.status}`)
+              .join(" · ")}{" "}
+            · docs/v2/FIELD_PLAN_DEPTH_LAYERS.md
+          </li>
         </ul>
       </div>
 
@@ -469,11 +477,14 @@ export function AdminOperatorCommand() {
         <div className="card border-slate-200 bg-white p-4">
           <h3 className="text-sm font-bold text-slate-950">What should happen next</h3>
           <ol className="mt-2 list-decimal space-y-1 pl-5 text-xs text-slate-800">
-            <li>Collect evidence for V1-JRN-INVITE-CHAIN-01 on production</li>
-            <li>Upload Field Plan to replace position-content placeholders</li>
-            <li>Defer V2-B Postgres until invite cert is solid</li>
+            <li>Collect production evidence for V1-JRN-INVITE-CHAIN-01 → CERTIFIED PRESENT</li>
+            <li>Fill Field Plan L2 (Benton/Clark geographic) + L3 phase packs — no invented doctrine</li>
+            <li>Bind L1 responsibilities into /leader/:id for content-backed seats</li>
+            <li>Admin chrome diet + shell honesty — then Postgres dual-write design after invite cert</li>
           </ol>
-          <p className="mt-3 text-xs text-slate-600">V2 order: V2-A → V2-B → V2-C → V2-D → V2-E → V2-F</p>
+          <p className="mt-3 text-xs text-slate-600">
+            Ernie+Steve plan: docs/v2/ERNIE_STEVE_FORENSIC_BUILD_BRIEF.md · data/v2/ernie-steve-build-plan.json
+          </p>
         </div>
       </div>
 

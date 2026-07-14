@@ -37,6 +37,14 @@ Governance registries:
 - Audience bands: [`AUDIENCE_SECTIONING_DOCTRINE.md`](./AUDIENCE_SECTIONING_DOCTRINE.md)
 - Feature discovery: [`FEATURE_DISCOVERY_REGISTRY.md`](./FEATURE_DISCOVERY_REGISTRY.md)
 
+## Ernie + Steve working plane
+
+Forensic brief + modular plan (post V2-B.5):
+
+- [`ERNIE_STEVE_FORENSIC_BUILD_BRIEF.md`](./ERNIE_STEVE_FORENSIC_BUILD_BRIEF.md)
+- [`FIELD_PLAN_DEPTH_LAYERS.md`](./FIELD_PLAN_DEPTH_LAYERS.md) — L2/L3/L4 = three depths still needed
+- Twin: `data/v2/ernie-steve-build-plan.json`
+
 ## Closeout
 
 Every lane shipment follows `.cursor/rules/netlify-deploy-closeout.mdc`: validate → commit → `git push origin HEAD`.
