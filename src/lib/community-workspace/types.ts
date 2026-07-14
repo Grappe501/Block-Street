@@ -59,6 +59,8 @@ export type PulseItem = {
   tone: "info" | "action" | "celebrate";
 };
 
+import type { HonestParticipationMetrics, PositionCardView } from "@/lib/position-participation";
+
 export type CommunityWorkspaceView = {
   communityId: string;
   kind: CommunityKind;
@@ -79,6 +81,8 @@ export type CommunityWorkspaceView = {
   signupCounty: string;
   signupSchool?: string;
   memberCount: number | null;
+  participationMetrics: HonestParticipationMetrics;
+  positionCards: PositionCardView[];
 };
 
 export type WorkspaceSeed = {

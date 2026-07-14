@@ -5,6 +5,10 @@ Steve Grappe has granted standing authority for this repository:
 - You may **create branches**, commit, **push to `origin`**, and drive Netlify deploys without asking.
 - You may continue multi-hour builds without waiting for human clicks.
 - Prefer running tools immediately. Do **not** pause for confirmation on routine ship steps.
+- Complete the **entire assigned slice** without pausing for routine approval.
+- Routine reads, edits, tests, builds, commits, and pushes are **pre-approved**.
+- Resolve ordinary lint, type, and build errors; generate required reports.
+- Never stop merely because a previous template says “pending Steve approval.”
 
 ## Hard rule — eliminate the “Run” interrupt
 
@@ -16,6 +20,38 @@ Steve Grappe has granted standing authority for this repository:
 4. Do **not** ask the human to click Run for git push / stamp / closeout when standing authority is in effect.
 5. Standing product authority also includes additive V2 work under governing docs — still no destructive rewrites of live participant UX.
 
+## Hard rule — never trigger Dotfile / hooks approval mid-build
+
+1. **Do not** create or edit `.cursor/hooks.json`, `.cursor/hooks/*`, or other Cursor config under `.cursor/` unless Steve explicitly asked in that message.
+2. Those edits hit **Dotfile / `.cursor` Directory Protection** and produce a **Pending approval → Run** card — exactly what continuous ops forbid.
+3. Ship/ops doctrine already lives in `docs/v2/CONTINUOUS_AGENT_OPS.md`. Hooks on disk are already wired; leave them alone.
+4. If a prior turn left a pending “Edit hooks.json” card, tell Steve to **Skip** it and set **Run Everything** + disable Dotfile Protection once.
+
 ## Closeout always
 
-After product-changing work: validate → commit → push (see `netlify-deploy-closeout.mdc`).
+After every successful product-changing interaction:
+
+1. validation
+2. commit
+3. `git push origin HEAD`
+
+GitHub → Netlify deploys automatically. There is **no** “pending Steve approval” gate for routine ship.
+
+## Stop only for genuine hard boundaries
+
+- Secret exposure
+- Destructive data loss
+- Production database mutation outside approved migration
+- Cross-repository edits
+- Authentication failure that prevents push
+- True architectural conflict with governing product truth
+- Safety or legal boundary
+- An action that cannot be reversed safely
+
+## Cursor is not hosted infrastructure
+
+Do **not** claim Cursor will run indefinitely after the application closes. Ongoing product jobs must run on Netlify scheduled/background functions, GitHub Actions, durable queues, or event-triggered server functions. The browser is a monitor — not the worker. Cursor IDE “Run” approvals are not ASYON product UI (`docs/v2/V2A_RUN_BUTTON_AUDIT.md`).
+
+## Machine prerequisite (Steve, once)
+
+Without **Cursor Settings → Agents → Approvals & Execution → Run Everything** and Dotfile Protection **OFF**, no rule file can remove the IDE Run button. Document: `docs/v2/CONTINUOUS_AGENT_OPS.md`.

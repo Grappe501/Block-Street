@@ -4,7 +4,7 @@ import { STATUS_COLORS, STATUS_LABELS, PLATFORM_DISCLAIMER } from "@/lib/data";
 import { SignupButton } from "@/components/community/SignupButton";
 import { CommunityPulse } from "./CommunityPulse";
 import { CommunityGoals } from "./CommunityGoals";
-import { LeadershipLattice } from "./LeadershipLattice";
+import { PositionCards } from "./PositionCards";
 import { SocialMeetupHub } from "./SocialMeetupHub";
 import { FunctionalLanes } from "./FunctionalLanes";
 import { PeopleDirectoryGate } from "./PeopleDirectoryGate";
@@ -61,7 +61,11 @@ export function CommunityWorkspace({
           {subtitle ?? `${workspace.countyName} · Our organizing workspace`}
         </p>
         {workspace.memberCount != null && (
-          <p className="mt-2 text-sm text-white/75">~{workspace.memberCount.toLocaleString()} members building here</p>
+          <p className="mt-2 text-sm text-white/75">
+            {workspace.memberCount.toLocaleString()} confirmed participant
+            {workspace.memberCount === 1 ? "" : "s"} · launch goal{" "}
+            {workspace.participationMetrics.participation_goal}
+          </p>
         )}
       </div>
     </div>
@@ -86,9 +90,9 @@ export function CommunityWorkspace({
   const body = (
     <div className="mx-auto max-w-4xl space-y-6 px-4 py-8">
       <CommunityPulse items={workspace.pulse} />
-      <CommunityGoals goals={workspace.goals} />
-      <LeadershipLattice
-        roles={workspace.roles}
+      <CommunityGoals goals={workspace.goals} metrics={workspace.participationMetrics} />
+      <PositionCards
+        cards={workspace.positionCards}
         countySlug={workspace.countySlug}
         schoolSlug={workspace.signupSchool}
       />

@@ -141,6 +141,32 @@
       "keywords": ["localbrain", "living intelligence"],
       "dependsOn": [],
       "owner": "architect"
+    },
+    {
+      "id": "FEAT-POSITION-MEMBERSHIP",
+      "title": "Position Membership (Volunteer / Lead / Co-Leads)",
+      "audience": "participant",
+      "journey": ["V1-JRN-ONBOARDING-01"],
+      "product": "Community Workspace",
+      "phase": "V2-A",
+      "certification": "implemented",
+      "nav": "/schools/[slug] · /county/[slug]",
+      "keywords": ["volunteer", "lead", "co-lead", "committee"],
+      "dependsOn": [],
+      "owner": "operator"
+    },
+    {
+      "id": "FEAT-HONEST-PARTICIPATION-METRICS",
+      "title": "Honest Participation Metrics",
+      "audience": "participant",
+      "journey": [],
+      "product": "Community Workspace",
+      "phase": "V2-A",
+      "certification": "implemented",
+      "nav": "/schools/henderson-state",
+      "keywords": ["goal", "confirmed", "canonical person", "launch team"],
+      "dependsOn": ["FEAT-POSITION-MEMBERSHIP"],
+      "owner": "operator"
     }
   ]
 }

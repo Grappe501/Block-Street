@@ -1,0 +1,31 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-07-14T10:00:00.000Z",
+  "route": "/schools/henderson-state",
+  "communityId": "school:henderson-state",
+  "displayedValue": 6,
+  "roleOfDisplayedValue": "fabricated_current_not_goal",
+  "canonicalSource": "src/lib/community-workspace/engine.ts#defaultGoals (pre-fix)",
+  "formula": "Math.round(voteTarget * 0.05) where voteTarget = round(max(50, enrollment*0.05)*0.75)",
+  "inputs": {
+    "enrollment": 3190,
+    "registrationPercentOfEnrollment": 0.05,
+    "voteParticipationPercentOfRegistration": 0.75,
+    "regTarget": 160,
+    "voteTarget": 120,
+    "fakeCurrent": 6
+  },
+  "aliasesAffectDisplayedSix": false,
+  "isGoal": false,
+  "isActualPeople": false,
+  "honestPostFix": {
+    "participation_goal": 6,
+    "goal_source": "minimum_launch_team",
+    "confirmed_participants": 1,
+    "system_identities": 2,
+    "remaining_need": 5
+  },
+  "recommendedCorrection": "Ship honest metrics panel; stop inventing current via percentages",
+  "tests": ["npm run test:v2a-participation"],
+  "authority": "docs/v2/V2A_PARTICIPATION_GOAL_FORENSIC_REPORT.md"
+}

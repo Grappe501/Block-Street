@@ -1,0 +1,40 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-07-14T10:00:00.000Z",
+  "participant_run_buttons": [],
+  "occurrences": [
+    {
+      "id": "cursor-ide-run",
+      "location": "Cursor Agents Pending approval UI",
+      "label": "Run",
+      "classification": "developer_control",
+      "audience": "operator_machine",
+      "disposition": "document_not_product — set Cursor Run Everything; not solvable by product UI",
+      "product_surface": false
+    },
+    {
+      "id": "ops-wave7-cert",
+      "location": "src/app/(site)/ops/identity/certification/page.tsx",
+      "label": "Run Wave 7 certification / Run red-team scenarios",
+      "classification": "operator_tool",
+      "audience": "operator",
+      "disposition": "keep_operator_only",
+      "product_surface": true
+    },
+    {
+      "id": "admin-acceptance-demos",
+      "location": "src/components/admin/Admin*.tsx",
+      "label": "Run Acceptance Demo / Run Wave N certification",
+      "classification": "operator_tool",
+      "audience": "architect",
+      "disposition": "keep_doctrine_tabs — not shown on participant routes",
+      "product_surface": true
+    }
+  ],
+  "hosted_execution_readiness": {
+    "netlify_git_deploy": true,
+    "browser_as_worker_forbidden": true,
+    "scheduled_jobs": "use_when_required_background"
+  },
+  "authority": "docs/v2/V2A_RUN_BUTTON_AUDIT.md"
+}

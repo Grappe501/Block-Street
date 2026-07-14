@@ -18,6 +18,7 @@
     "validate:release": "node scripts/deployment/validate-release.mjs",
     "smoke:test": "node scripts/deployment/smoke-test.mjs",
     "test:july14": "node scripts/identity-trust/july14-smoke.mjs",
+    "test:v2a-participation": "node scripts/run-with-h-env.mjs npx tsx scripts/v2a-participation-tests.ts",
     "test:civic-action": "node scripts/civic-action/cae-smoke.mjs",
     "july14:all": "npm run typecheck && npm run lint && npm run test:july14 && node scripts/identity-trust/wave7-smoke.mjs",
     "cae:all": "npm run typecheck && npm run lint && npm run test:civic-action",

@@ -5,6 +5,8 @@ import certRegistry from "../../../data/v1-certification/product-certification-r
 import featureDiscovery from "../../../data/registry/feature-discovery-registry.json";
 import launchReadiness from "../../../data/launch-readiness.json";
 import buildProgress from "../../../data/build-progress.json";
+import goalForensic from "../../../data/v2/participation-goal-forensic-report.json";
+import runAudit from "../../../data/v2/run-button-audit.json";
 
 type Attention = { id: string; severity: "high" | "medium" | "low"; title: string; next: string };
 
@@ -114,6 +116,49 @@ export function AdminOperatorCommand() {
       </div>
 
       <div className="card border-slate-200 bg-white p-4">
+        <h3 className="text-sm font-bold text-slate-950">V2-A participation slice (honest status)</h3>
+        <ul className="mt-3 space-y-1.5 text-xs text-slate-800">
+          <li>
+            Position membership model: <strong>shipped</strong> (multi co-lead + volunteer · no single leader_id)
+          </li>
+          <li>
+            Position cards — county &amp; college: <strong>shipped</strong> via CommunityWorkspace PositionCards
+          </li>
+          <li>
+            Goal forensic (Henderson): displayed 6 was <strong>fake current</strong> (
+            {goalForensic.formula}) — not aliases
+          </li>
+          <li>
+            Honest metrics: goal {goalForensic.honestPostFix?.participation_goal} · confirmed{" "}
+            {goalForensic.honestPostFix?.confirmed_participants} · need{" "}
+            {goalForensic.honestPostFix?.remaining_need} · identities{" "}
+            {goalForensic.honestPostFix?.system_identities}
+          </li>
+          <li>
+            Alias dedupe: <strong>canonical_person_id</strong> COUNT DISTINCT
+          </li>
+          <li>
+            Product participant “Run” buttons: <strong>{(runAudit.participant_run_buttons ?? []).length}</strong>{" "}
+            found · Cursor IDE Run is not product UI
+          </li>
+          <li>
+            Hosted execution: Git→Netlify live · browser-as-worker forbidden · V2-B Postgres still deferred
+          </li>
+          <li>
+            Certification impact: invite-chain still <strong>PENDING</strong> — this slice does not grant large-scale
+            launch
+          </li>
+          <li>
+            Remaining blockers: invite-chain evidence · Field Plan upload for position details · Steve Cursor Run
+            Everything setting
+          </li>
+        </ul>
+        <p className="mt-2 text-[11px] text-slate-500">
+          Docs: V2A_PARTICIPATION_GOAL_FORENSIC_REPORT · V2A_RUN_BUTTON_AUDIT — artifact complete ≠ launch claim
+        </p>
+      </div>
+
+      <div className="card border-slate-200 bg-white p-4">
         <h3 className="text-sm font-bold text-slate-950">Needs attention</h3>
         <ul className="mt-3 space-y-2">
           {attention.map((a) => (
@@ -159,14 +204,17 @@ export function AdminOperatorCommand() {
           <h3 className="text-sm font-bold text-slate-950">What should happen next</h3>
           <ol className="mt-2 list-decimal space-y-1 pl-5 text-xs text-slate-800">
             <li>Collect evidence for V1-JRN-INVITE-CHAIN-01 on production</li>
-            <li>Keep Operator Command as the default operator view</li>
-            <li>Defer V2-B Postgres until invite cert + this Command slice are solid</li>
+            <li>Upload Field Plan to replace position-content placeholders</li>
+            <li>Defer V2-B Postgres until invite cert is solid</li>
           </ol>
           <p className="mt-3 text-xs text-slate-600">V2 order: V2-A → V2-B → V2-C → V2-D → V2-E → V2-F</p>
         </div>
       </div>
 
       <div className="flex flex-wrap gap-3 text-sm">
+        <Link href="/schools/henderson-state" className="font-medium text-brand-700 underline">
+          /schools/henderson-state
+        </Link>
         <Link href="/start" className="font-medium text-brand-700 underline">
           /start (invite)
         </Link>

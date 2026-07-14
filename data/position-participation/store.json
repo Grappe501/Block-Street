@@ -1,0 +1,31 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-07-14T09:03:20.406Z",
+  "minimum_launch_team": 6,
+  "persons": [
+    {
+      "canonical_person_id": "person-henderson-founder",
+      "display_name": "Founding organizer",
+      "aliases": [
+        "alias-henderson-primary",
+        "alias-henderson-secondary"
+      ],
+      "system_identity_ids": [
+        "acct-henderson-primary",
+        "acct-henderson-alias"
+      ],
+      "scopes": [
+        "school:henderson-state"
+      ]
+    }
+  ],
+  "memberships": [],
+  "manual_goals": {
+    "school:henderson-state": {
+      "launch_team": null
+    }
+  },
+  "notes": {
+    "school:henderson-state": "Two system identities are aliases of one canonical person. Confirmed people = 1."
+  }
+}

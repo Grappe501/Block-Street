@@ -6,6 +6,7 @@ import {
   getPrivateCharterSchoolBySlug,
   type RepresentationStatus,
 } from "@/lib/data";
+import { getScopeMetrics, listPositionCards } from "@/lib/position-participation";
 import { FUNCTIONAL_LANES, FUNCTIONAL_ROLES, roleLabel, toCommunityId } from "./roles";
 import type {
   CommunityGoal,
@@ -107,34 +108,24 @@ function resolveContext(kind: CommunityKind, slug: string): CommunityContext | n
   };
 }
 
-function defaultGoals(ctx: CommunityContext): CommunityGoal[] {
-  const defaults = workspaceSeeds.defaultGoalTargets;
+function defaultGoals(ctx: CommunityContext, confirmedParticipants: number): CommunityGoal[] {
   const seed = (workspaceSeeds.seeds as Record<string, WorkspaceSeed>)[toCommunityId(ctx.kind, ctx.slug)];
+  const metrics = getScopeMetrics({
+    kind: ctx.kind,
+    slug: ctx.slug,
+    enrollment: ctx.enrollment,
+  });
 
-  let regTarget: number;
-  let voteTarget: number;
+  const regTarget = metrics.registration_target;
+  const voteTarget = metrics.vote_participation_target;
 
-  if (ctx.kind === "county") {
-    regTarget = defaults.county.registration;
-    voteTarget = defaults.county.vote_participation;
-  } else if (ctx.kind === "institution" && ctx.enrollment) {
-    regTarget = Math.max(50, Math.round(ctx.enrollment * defaults.institution.registrationPercentOfEnrollment));
-    voteTarget = Math.round(regTarget * defaults.institution.voteParticipationPercentOfRegistration);
-  } else if (ctx.kind === "high_school") {
-    regTarget = defaults.high_school.registration;
-    voteTarget = defaults.high_school.vote_participation;
-  } else {
-    regTarget = defaults.private_charter.registration;
-    voteTarget = defaults.private_charter.vote_participation;
-  }
-
-  const regCurrent = seed?.goals?.registration?.current ?? (ctx.representationStatus === "needs_organizer" ? 0 : Math.round(regTarget * 0.08));
-  const voteCurrent = seed?.goals?.vote_participation?.current ?? Math.round(voteTarget * 0.05);
-
+  // Never invent people via percentage floors. Current = confirmed participants only
+  // (or explicit seed.current when operators have published verified tallies).
   return (["registration", "vote_participation"] as GoalKind[]).map((kind) => {
     const seeded = seed?.goals?.[kind];
     const target = seeded?.target ?? (kind === "registration" ? regTarget : voteTarget);
-    const current = seeded?.current ?? (kind === "registration" ? regCurrent : voteCurrent);
+    const current =
+      typeof seeded?.current === "number" ? seeded.current : confirmedParticipants;
     const deadline = seeded?.deadline ?? DEFAULT_DEADLINES[kind];
     return {
       kind,
@@ -268,13 +259,6 @@ function buildPulse(ctx: CommunityContext, goals: CommunityGoal[], roles: RoleAs
   return items.slice(0, 5);
 }
 
-function estimateMemberCount(ctx: CommunityContext, goals: CommunityGoal[]): number | null {
-  if (ctx.representationStatus === "needs_organizer") return null;
-  const reg = goals.find((g) => g.kind === "registration");
-  if (!reg) return null;
-  return Math.max(reg.current, Math.round(reg.target * 0.12));
-}
-
 export function assembleCommunityWorkspace(kind: CommunityKind, slug: string): CommunityWorkspaceView | null {
   const ctx = resolveContext(kind, slug);
   if (!ctx) return null;
@@ -282,10 +266,12 @@ export function assembleCommunityWorkspace(kind: CommunityKind, slug: string): C
   const communityId = toCommunityId(kind, slug);
   const seed = (workspaceSeeds.seeds as Record<string, WorkspaceSeed>)[communityId];
   const county = getCountyBySlug(ctx.countySlug);
-  const goals = defaultGoals(ctx);
+  const metrics = getScopeMetrics({ kind: ctx.kind, slug: ctx.slug, enrollment: ctx.enrollment });
+  const goals = defaultGoals(ctx, metrics.confirmed_participants);
   const roles = defaultRoles(ctx);
   const meetup = defaultMeetup(ctx, roles);
-  const openRoleCount = roles.filter((r) => r.status === "open").length;
+  const positionCards = listPositionCards({ kind: ctx.kind, slug: ctx.slug });
+  const openRoleCount = positionCards.filter((c) => c.lead_count + c.volunteer_count === 0).length;
 
   return {
     communityId,
@@ -306,7 +292,9 @@ export function assembleCommunityWorkspace(kind: CommunityKind, slug: string): C
     openRoleCount,
     signupCounty: ctx.countySlug,
     signupSchool: ctx.kind === "county" ? undefined : ctx.slug,
-    memberCount: estimateMemberCount(ctx, goals),
+    memberCount: metrics.confirmed_participants,
+    participationMetrics: metrics,
+    positionCards,
   };
 }
 
