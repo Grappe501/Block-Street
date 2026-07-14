@@ -27,6 +27,8 @@ import { automationRuntime } from "./automation/services/automation-service";
 import { seedAutomationIfEmpty } from "./automation/services/seed";
 import { factoryRuntime } from "./factory/services/factory-service";
 import { seedFactoryIfEmpty } from "./factory/services/seed";
+import { twinRuntime } from "./twin/services/twin-service";
+import { seedTwinIfEmpty } from "./twin/services/seed";
 
 let livingDataSeeded = false;
 
@@ -45,6 +47,7 @@ function ensureLivingDataSeeded() {
   seedFederationIfEmpty();
   seedAutomationIfEmpty();
   seedFactoryIfEmpty();
+  seedTwinIfEmpty();
   livingDataSeeded = true;
 }
 
@@ -785,6 +788,63 @@ export class LivingIntelligenceApplicationService {
   publishExtension(input: Parameters<typeof factoryRuntime.marketplace.publish>[0]) {
     this.boot();
     return factoryRuntime.marketplace.publish(input);
+  }
+
+  getTwinDashboard(input: { human_id: string; institution_id: string }) {
+    this.boot();
+    return twinRuntime.twin.dashboard(input);
+  }
+
+  listTwinSimulations(institutionId: string) {
+    this.boot();
+    return twinRuntime.simulation.list(institutionId);
+  }
+
+  listTwinExperiments(institutionId: string) {
+    this.boot();
+    return twinRuntime.experiments.list(institutionId);
+  }
+
+  listTwinScenarios(institutionId: string) {
+    this.boot();
+    return twinRuntime.scenarios.list(institutionId);
+  }
+
+  getTwinObservatory(institutionId: string) {
+    this.boot();
+    const records = twinRuntime.observatory.list(institutionId);
+    if (records.length > 0) return records[records.length - 1];
+    const twins = twinRuntime.digitalTwin.list(institutionId);
+    if (twins.length === 0) return null;
+    return twinRuntime.observatory.measure({
+      institution_id: institutionId,
+      twin_id: twins[twins.length - 1].twin_id,
+    }).observatory;
+  }
+
+  runSimulation(input: Parameters<typeof twinRuntime.simulation.run>[0]) {
+    this.boot();
+    return twinRuntime.simulation.run(input);
+  }
+
+  createExperiment(input: Parameters<typeof twinRuntime.experiments.create>[0]) {
+    this.boot();
+    return twinRuntime.experiments.create(input);
+  }
+
+  compareScenarios(input: Parameters<typeof twinRuntime.scenarios.compare>[0]) {
+    this.boot();
+    return twinRuntime.scenarios.compare(input);
+  }
+
+  synchronizeTwin(input: Parameters<typeof twinRuntime.sync.synchronize>[0]) {
+    this.boot();
+    return twinRuntime.sync.synchronize(input);
+  }
+
+  resetTwinSandbox(input: Parameters<typeof twinRuntime.digitalTwin.resetSandbox>[0]) {
+    this.boot();
+    return twinRuntime.digitalTwin.resetSandbox(input);
   }
 }
 
