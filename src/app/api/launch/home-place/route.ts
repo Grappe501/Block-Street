@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { hydrateAuthStore, setHomePlaceForUser, type HomePlace } from "@/lib/auth/data";
 import { getSessionFromRequest } from "@/lib/auth/session";
 
-export const PLACE_COOKIE = "bs_home_place";
+const PLACE_COOKIE = "bs_home_place";
 
 export async function POST(request: NextRequest) {
   await hydrateAuthStore();
