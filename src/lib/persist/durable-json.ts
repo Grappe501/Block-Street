@@ -61,6 +61,16 @@ export function readDurableText(namespace: string, key: string, seedPath: string
 }
 
 export function writeDurableText(namespace: string, key: string, text: string, seedPath: string): void {
+  void writeDurableTextAsync(namespace, key, text, seedPath);
+}
+
+/** Awaitable write — use when another serverless instance must see the data (invites, sessions). */
+export async function writeDurableTextAsync(
+  namespace: string,
+  key: string,
+  text: string,
+  seedPath: string
+): Promise<void> {
   const cacheKey = `${namespace}:${key}`;
   memory.set(cacheKey, text);
   try {
@@ -69,15 +79,19 @@ export function writeDurableText(namespace: string, key: string, text: string, s
   } catch {
     /* Netlify FS may be read-only */
   }
-  void (async () => {
-    try {
-      if (!isNetlifyRuntime()) return;
-      const store = await getBlobStore(namespace);
-      await store.set(key, text);
-    } catch (err) {
-      console.error("durable_blob_write_failed", namespace, key, err);
-    }
-  })();
+  try {
+    if (!isNetlifyRuntime()) return;
+    const store = await getBlobStore(namespace);
+    await store.set(key, text);
+  } catch (err) {
+    console.error("durable_blob_write_failed", namespace, key, err);
+    throw err instanceof Error ? err : new Error("Durable blob write failed");
+  }
+}
+
+/** Drop cached hydrate so the next hydrateNamespace pull is fresh from Blobs. */
+export function invalidateDurableNamespace(namespace: string) {
+  clearDurableMemory(namespace);
 }
 
 export function clearDurableMemory(namespace?: string) {

@@ -3,7 +3,6 @@ import { acceptInvitation } from "@/lib/auth/invitations";
 import { getHomePlaceForUser, loadUsers, persistUsers } from "@/lib/auth/data";
 import { hashPassword } from "@/lib/auth/crypto";
 import { issueSession } from "@/lib/auth/session";
-import { hashSecret } from "@/lib/auth/crypto";
 import { loadHumanIdentities, loadSponsorRelationships, persistHumanIdentities, persistSponsorRelationships } from "../data";
 import { itlId, nowIso } from "../utils";
 import { loadWave1Invitations, persistWave1Invitations } from "./data";
@@ -12,18 +11,18 @@ import {
   declarePublicIdentity,
   evaluateEntryGate,
   generateHumGlobalId,
+  resolveWave1InvitationByToken,
   screenDuplicate,
   validatePublicHumanName,
 } from "./engine";
 import { recordWave1Audit } from "./lineage";
 import { startProvisionalPeriod } from "../wave2/trust-lifecycle";
 import { evaluateAssuranceAndTrust } from "../wave2/trust-lifecycle";
-import { createPersonalNetwork, getNetworkProfileBySlug } from "@/lib/network";
+import { createPersonalNetwork } from "@/lib/network";
 import type { Wave1Invitation } from "./types";
 
 export function findWave1InvitationByToken(token: string): Wave1Invitation | null {
-  const hash = hashSecret(token);
-  return loadWave1Invitations().find((i) => i.token_hash === hash) ?? null;
+  return resolveWave1InvitationByToken(token);
 }
 
 export function startWave1Acceptance(token: string, email?: string) {
@@ -273,7 +272,6 @@ export function completeWave1Activation(
   let referredBy: string | null = null;
   if (rawRef) {
     if (rawRef.startsWith("usr-")) referredBy = rawRef;
-    else if (getNetworkProfileBySlug(rawRef)) referredBy = rawRef;
     else if (/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(rawRef)) referredBy = rawRef;
   }
 

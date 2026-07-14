@@ -1,16 +1,29 @@
 import { withApiGateway } from "@/lib/api/http";
 import { apiSuccess } from "@/lib/api/errors";
 import { completeWave1Activation, startWave1Acceptance } from "@/lib/identity-trust/wave1/acceptance";
-import { hydrateAuthStore, loadSessions } from "@/lib/auth/data";
-import { hydrateIdentityTrustStore } from "@/lib/identity-trust/data";
+import { hydrateAuthStore, clearAuthCache, loadSessions } from "@/lib/auth/data";
+import { hydrateIdentityTrustStore, clearIdentityTrustCache } from "@/lib/identity-trust/data";
 import { hydrateNetworkStore } from "@/lib/network";
+import { clearWave1Cache } from "@/lib/identity-trust/wave1/data";
 import { setSessionCookie } from "@/lib/auth/http";
+import { invalidateDurableNamespace } from "@/lib/persist/durable-json";
+
+async function refreshStoresForAccept() {
+  // Force a fresh Blobs read so invites created on another serverless instance are visible
+  invalidateDurableNamespace("auth");
+  invalidateDurableNamespace("identity-trust");
+  invalidateDurableNamespace("network");
+  clearAuthCache();
+  clearIdentityTrustCache();
+  clearWave1Cache();
+  await hydrateAuthStore();
+  await hydrateIdentityTrustStore();
+  await hydrateNetworkStore();
+}
 
 export const POST = withApiGateway(
   async (ctx, request) => {
-    await hydrateAuthStore();
-    await hydrateIdentityTrustStore();
-    await hydrateNetworkStore();
+    await refreshStoresForAccept();
 
     const body = (await request.json()) as Record<string, unknown>;
     const action = (body.action as string) ?? "accept";
@@ -45,6 +58,21 @@ export const POST = withApiGateway(
         setSessionCookie(response, session);
       }
     }
+
+    // Persist activation (new user + wave1 status) before responding
+    const { flushWave1StoreToBlobs } = await import("@/lib/identity-trust/wave1/data");
+    const { writeDurableTextAsync } = await import("@/lib/persist/durable-json");
+    const { DATA_DIR, loadUsers, loadSessions: loadSess, loadInvitations } = await import("@/lib/auth/data");
+    const { join } = await import("path");
+    await flushWave1StoreToBlobs();
+    await writeDurableTextAsync("auth", "users.json", JSON.stringify({ users: loadUsers() }, null, 2), join(DATA_DIR, "users.json"));
+    await writeDurableTextAsync("auth", "sessions.json", JSON.stringify({ sessions: loadSess() }, null, 2), join(DATA_DIR, "sessions.json"));
+    await writeDurableTextAsync(
+      "auth",
+      "invitations.json",
+      JSON.stringify({ invitations: loadInvitations() }, null, 2),
+      join(DATA_DIR, "invitations.json")
+    );
 
     return response;
   },

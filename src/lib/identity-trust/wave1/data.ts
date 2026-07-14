@@ -28,6 +28,18 @@ function readStore(): Record<string, unknown> {
 function writeStore(store: Record<string, unknown>) {
   writeDurableText(NS, STORE_KEY, JSON.stringify(store, null, 2), join(ITL_DATA, STORE_KEY));
   cache.clear();
+  void import("@/lib/identity-trust/data").then((m) => m.clearIdentityTrustCache());
+}
+
+/** Ensure identity-trust store.json is written to Netlify Blobs before returning invite links. */
+export async function flushWave1StoreToBlobs(): Promise<void> {
+  const { writeDurableTextAsync } = await import("@/lib/persist/durable-json");
+  if (cache.has("store")) {
+    await writeDurableTextAsync(NS, STORE_KEY, JSON.stringify(cache.get("store"), null, 2), join(ITL_DATA, STORE_KEY));
+    return;
+  }
+  const raw = readDurableText(NS, STORE_KEY, join(ITL_DATA, STORE_KEY));
+  await writeDurableTextAsync(NS, STORE_KEY, raw, join(ITL_DATA, STORE_KEY));
 }
 
 function readJson<T>(file: string): T {
@@ -39,6 +51,10 @@ function readJson<T>(file: string): T {
 }
 
 export function clearWave1Cache() {
+  cache.clear();
+}
+
+export function clearWave1DurableAndCache() {
   cache.clear();
   clearDurableMemory(NS);
 }

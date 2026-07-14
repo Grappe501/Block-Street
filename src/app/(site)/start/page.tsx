@@ -137,10 +137,11 @@ export default function StartPage() {
         <label className="block text-sm">
           Their name
           <input
+            required
             className="mt-1 w-full rounded-lg border px-3 py-2"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            placeholder="Optional — helps them feel welcomed"
+            placeholder="First and last name they are known by"
           />
         </label>
         <label className="block text-sm">

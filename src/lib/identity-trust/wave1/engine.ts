@@ -1,8 +1,8 @@
 import { randomBytes } from "crypto";
 import { hashSecret } from "@/lib/auth/crypto";
-import { createInvitation } from "@/lib/auth/invitations";
+import { createInvitation, getInvitationByToken } from "@/lib/auth/invitations";
 import { loadUsers } from "@/lib/auth/data";
-import { loadHumanIdentities, persistHumanIdentities } from "../data";
+import { loadHumanIdentities, loadTrustInvitations, persistHumanIdentities } from "../data";
 import { generateGlobalHumanId, itlId, nowIso } from "../utils";
 import {
   loadAcceptanceAttempts,
@@ -289,14 +289,65 @@ export function createWave1Invitation(input: {
   return { invitation: inv, token };
 }
 
-export function evaluateEntryGate(token: string, email?: string): InvitationEntryGateResult {
-  const invitations = loadWave1Invitations();
+/** Resolve Wave1 invite by token; bridge legacy auth/trust invites created by older /start. */
+export function resolveWave1InvitationByToken(token: string): Wave1Invitation | null {
   const hash = hashSecret(token);
-  const inv = invitations.find((i) => i.token_hash === hash);
+  const existing = loadWave1Invitations().find((i) => i.token_hash === hash);
+  if (existing) return existing;
+
+  const authInv = getInvitationByToken(token);
+  if (!authInv) return null;
+  const already = loadWave1Invitations().find((i) => i.auth_invitation_id === authInv.id);
+  if (already) return already;
+
+  const trust = loadTrustInvitations().find((t) => t.auth_invitation_id === authInv.id);
+  const policy = loadWave1Policy();
+  const bridged: Wave1Invitation = {
+    id: itlId("winv"),
+    public_invitation_id: `pinv_bridge_${authInv.id.slice(-6)}`,
+    institution_id: trust?.institution_id ?? "inst-block-street",
+    organization_unit_id: trust?.organization_id ?? authInv.organization_id,
+    workspace_id: authInv.workspace_id,
+    created_by_human_id: authInv.invited_by,
+    originating_sponsor_human_id: trust?.sponsor_id ?? authInv.invited_by,
+    intended_recipient_name: (authInv.email.split("@")[0] || "Guest").replace(/[._]/g, " "),
+    recipient_contact_reference: authInv.email,
+    recipient_contact_type: "email",
+    proposed_membership_type: "basic_member",
+    proposed_role_id: authInv.role_id ?? trust?.intended_role ?? "member",
+    invitation_purpose: trust?.invite_reason ?? authInv.message_optional ?? "Launch invitation",
+    relationship_basis: "other_directly_known",
+    sponsor_attestation_version: policy.sponsor_attestation_version,
+    sponsor_attestation_accepted_at: trust?.sponsor_agreement_accepted_at ?? authInv.created_at,
+    status: "sent",
+    auth_invitation_id: authInv.id,
+    token_hash: hash,
+    created_at: authInv.created_at,
+    sent_at: authInv.created_at,
+    viewed_at: null,
+    accepted_at: null,
+    expires_at: authInv.expires_at,
+    revoked_at: null,
+    revoked_by: null,
+    revocation_reason: null,
+    accepted_human_id: null,
+    replacement_invitation_id: null,
+    resend_count: 0,
+    correlation_id: itlId("corr"),
+  };
+  const all = loadWave1Invitations();
+  all.push(bridged);
+  persistWave1Invitations(all);
+  return bridged;
+}
+
+export function evaluateEntryGate(token: string, email?: string): InvitationEntryGateResult {
+  const inv = resolveWave1InvitationByToken(token);
 
   if (!inv) {
     return gateResult("blocked", null, "Invitation is invalid or not found.");
   }
+  const invitations = loadWave1Invitations();
   if (inv.status === "revoked") {
     recordAttempt(inv.id, "blocked", "Revoked invitation replay");
     return gateResult("blocked", inv, "This invitation has been revoked.");

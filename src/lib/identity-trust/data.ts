@@ -38,6 +38,7 @@ function readStore(): Record<string, unknown> {
 function writeStore(store: Record<string, unknown>) {
   writeDurableText(NS, STORE_KEY, JSON.stringify(store, null, 2), join(ITL_DATA, STORE_KEY));
   cache.clear();
+  void import("@/lib/identity-trust/wave1/data").then((m) => m.clearWave1Cache());
 }
 
 function readJsonFile<T>(file: string): T {
@@ -49,6 +50,10 @@ function readJsonFile<T>(file: string): T {
 }
 
 export function clearIdentityTrustCache() {
+  cache.clear();
+}
+
+export function clearIdentityTrustDurableAndCache() {
   cache.clear();
   clearDurableMemory(NS);
 }
