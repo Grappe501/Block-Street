@@ -4,6 +4,8 @@ import { evaluateStaffingReadiness } from "../staffing/readiness-integration";
 import { evaluateEventTasksReadiness } from "../tasks/readiness-integration";
 import { evaluateMaterialsReadiness, evaluatePromotionReadiness } from "../preparation/readiness-integration";
 import { evaluateFollowUpReadiness } from "../followup/readiness-integration";
+import { evaluateRsvpReadiness } from "../rsvp/readiness-integration";
+import { evaluateVerificationReadiness } from "../verification/readiness-integration";
 
 function eventRoute(eventId: string, suffix = ""): string {
   return `/calendar/event/${eventId}${suffix}`;
@@ -273,69 +275,6 @@ function evaluateTasks(event: CalendarEvent): EventReadinessItem {
   return evaluateEventTasksReadiness(event);
 }
 
-function evaluateRsvp(event: CalendarEvent): EventReadinessItem {
-  const needsRsvp = event.event_type === "networking_event" || event.event_type === "social";
-  if (!needsRsvp) {
-    return {
-      dimension: "rsvp",
-      state: "not_required",
-      label: "RSVP",
-      explanation: "RSVP tracking not required for this event type.",
-      route: eventRoute(event.event_id),
-    };
-  }
-  return {
-    dimension: "rsvp",
-    state: "in_progress",
-    label: "RSVP",
-    explanation: "Networking event — RSVP workflow soft-beta preview. Awaiting durable persistence.",
-    route: eventRoute(event.event_id, "/volunteer"),
-  };
-}
-
-function evaluateVerification(event: CalendarEvent): EventReadinessItem {
-  const route = eventRoute(event.event_id, "/approvals");
-  const needsVerification =
-    isPublicFacing(event) &&
-    (event.location_type === "in_person" || event.event_type === "festival_or_public_appearance");
-  if (!needsVerification && event.approval_status === "approved") {
-    return {
-      dimension: "verification",
-      state: "not_required",
-      label: "Verification",
-      explanation: "No separate venue/legal verification required for this scope.",
-      route,
-    };
-  }
-  if (!needsVerification) {
-    return {
-      dimension: "verification",
-      state: "not_started",
-      label: "Verification",
-      explanation:
-        "Campus permission / venue verification may be needed. Calendar approval ≠ venue or legal approval.",
-      route,
-    };
-  }
-  if (event.approval_status === "approved" && event.location_name) {
-    return {
-      dimension: "verification",
-      state: "in_progress",
-      label: "Verification",
-      explanation: "Public in-person event — venue/legal verification tracked separately from calendar approval.",
-      route,
-    };
-  }
-  return {
-    dimension: "verification",
-    state: "not_started",
-    label: "Verification",
-    explanation: "Public event — campus permission and location verification not yet recorded.",
-    route,
-  };
-}
-
-
 const EVALUATORS: Record<
   EventReadinessDimension,
   (event: CalendarEvent, now: Date) => EventReadinessItem
@@ -349,8 +288,8 @@ const EVALUATORS: Record<
   tasks: (e, n) => evaluateEventTasksReadiness(e, n),
   materials: (e, n) => evaluateMaterialsReadiness(e, n),
   promotion: (e, n) => evaluatePromotionReadiness(e, n),
-  rsvp: (e) => evaluateRsvp(e),
-  verification: (e) => evaluateVerification(e),
+  rsvp: (e, n) => evaluateRsvpReadiness(e, n),
+  verification: (e, n) => evaluateVerificationReadiness(e, n),
   follow_up: (e, n) => evaluateFollowUpReadiness(e, n),
 };
 

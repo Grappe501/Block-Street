@@ -7,12 +7,15 @@ import { EventStaffingSummaryCard } from "@/components/calendar/staffing/EventSt
 import { EventTaskSummaryCard } from "@/components/calendar/tasks/EventTaskSummaryCard";
 import { EventPreparationSummaryCard } from "@/components/calendar/preparation/EventPreparationSummaryCard";
 import { EventReportSummaryCard } from "@/components/calendar/followup/ReportChecklistTable";
+import { EventRsvpSummaryCard, EventVerificationSummaryCard } from "@/components/calendar/attendance/AttendancePanels";
 import { getEventById } from "@/lib/calendar";
 import { buildEventOperationsSummary } from "@/lib/calendar/operations";
 import { calculateEventStaffingSummary, ensureStaffingFromEvent } from "@/lib/calendar/staffing";
 import { buildTaskChecklistSummary, ensureTasksFromEvent } from "@/lib/calendar/tasks";
 import { buildPreparationSummary, ensurePreparationFromEvent } from "@/lib/calendar/preparation";
 import { buildFollowUpSummary, ensureFollowUpFromEvent } from "@/lib/calendar/followup";
+import { buildRsvpSummary, ensureRsvpFromEvent } from "@/lib/calendar/rsvp";
+import { buildVerificationSummary, ensureVerificationFromEvent } from "@/lib/calendar/verification";
 
 export const metadata = { title: "Calendar · Event" };
 
@@ -29,6 +32,10 @@ export default async function EventDetailPage({ params }: { params: Promise<{ ev
   const preparation = buildPreparationSummary(eventId);
   ensureFollowUpFromEvent(event);
   const followUp = buildFollowUpSummary(eventId);
+  ensureRsvpFromEvent(event);
+  const rsvp = buildRsvpSummary(eventId);
+  ensureVerificationFromEvent(event);
+  const verification = buildVerificationSummary(eventId);
 
   return (
     <CalendarChrome title={event.title} subtitle="Event detail from canonical catalog." backHref="/calendar/list">
@@ -39,6 +46,8 @@ export default async function EventDetailPage({ params }: { params: Promise<{ ev
         <EventTaskSummaryCard summary={tasks} eventId={eventId} />
         <EventPreparationSummaryCard summary={preparation} eventId={eventId} />
         <EventReportSummaryCard summary={followUp} eventId={eventId} />
+        <EventRsvpSummaryCard summary={rsvp} eventId={eventId} />
+        <EventVerificationSummaryCard summary={verification} eventId={eventId} />
         <EventSeriesPanel event={event} />
         <EventDetailView event={event} mode="internal" />
       </div>

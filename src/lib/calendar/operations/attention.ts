@@ -8,6 +8,8 @@ import { buildPreparationSummary, listPreparationItems } from "../preparation";
 import { isPreparationReady } from "../preparation/status";
 import { buildFollowUpSummary, ensureFollowUpFromEvent } from "../followup";
 import { isFollowUpDue } from "../followup/template-integration";
+import { buildRsvpSummary, ensureRsvpFromEvent } from "../rsvp";
+import { buildVerificationSummary, ensureVerificationFromEvent } from "../verification";
 import type { AttentionKey, EventAttentionSeverity, EventReadinessItem } from "./types";
 import { ATTENTION_KEYS } from "./types";
 
@@ -222,12 +224,37 @@ export function evaluateEventAttention(
   }
 
   const verify = readiness.find((r) => r.dimension === "verification");
-  if (verify?.state === "not_started" && event.visibility === "public" && within48) {
-    signals.push({
-      key: "missing_verification",
-      severity: event.publication_status === "published" ? "critical" : "urgent",
-      reason: "Public event missing venue/legal verification (separate from calendar approval).",
-    });
+  if (verify?.state === "blocked" || verify?.state === "not_started") {
+    ensureVerificationFromEvent(event);
+    const vSummary = buildVerificationSummary(event.event_id);
+    if (vSummary.incompleteRequired > 0 && (within48 || event.visibility === "public")) {
+      signals.push({
+        key: "missing_verification",
+        severity: event.publication_status === "published" ? "critical" : "urgent",
+        reason: "Public event missing venue/legal verification (separate from calendar approval).",
+      });
+      if (vSummary.overdueCount > 0) {
+        signals.push({ key: "verification_overdue", severity: "urgent", reason: `${vSummary.overdueCount} verification item(s) overdue.` });
+      } else {
+        signals.push({ key: "verification_incomplete", severity: "needs_attention", reason: `${vSummary.incompleteRequired} verification item(s) incomplete.` });
+      }
+    }
+  }
+
+  const rsvp = readiness.find((r) => r.dimension === "rsvp");
+  if (rsvp?.state === "blocked" || rsvp?.state === "in_progress") {
+    ensureRsvpFromEvent(event);
+    const rSummary = buildRsvpSummary(event.event_id);
+    if (rSummary.incompleteRequired > 0 && within48) {
+      signals.push({ key: "rsvp_open_needed", severity: "needs_attention", reason: "RSVP checklist incomplete near event." });
+    }
+    if (
+      rSummary.targetHeadcount != null &&
+      rSummary.headcountEstimate < rSummary.targetHeadcount * 0.5 &&
+      within48
+    ) {
+      signals.push({ key: "rsvp_below_target", severity: "watch", reason: "RSVP headcount below half of target." });
+    }
   }
 
   if (isFollowUpDue(event, now)) {

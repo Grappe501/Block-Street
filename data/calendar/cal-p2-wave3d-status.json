@@ -1,0 +1,50 @@
+{
+  "phase": "CAL-P2",
+  "wave": "3D",
+  "package": "event_rsvp_and_verification_engine",
+  "generated_at": "2026-07-15T18:00:00.000Z",
+  "baseline_commit": "82554f6",
+  "wave_3c_content_commit": "d93d7c4",
+  "gate_a": "OPEN",
+  "persistence_mode": "session_soft_beta",
+  "rbac_mode": "audit_only",
+  "enforcement_active": false,
+  "rsvp_fixture_count": 0,
+  "verification_fixture_count": 0,
+  "template_seed_integration": "PASS",
+  "readiness_integration": "PASS",
+  "rsvp_readiness": "PASS",
+  "verification_readiness": "PASS",
+  "routes_created": [
+    "/calendar/event/:eventId/rsvp",
+    "/calendar/event/:eventId/rsvp/:itemId",
+    "/calendar/event/:eventId/rsvp/records",
+    "/calendar/event/:eventId/rsvp/capacity",
+    "/calendar/event/:eventId/verification",
+    "/calendar/event/:eventId/verification/:itemId",
+    "/calendar/event/:eventId/verification/venue",
+    "/calendar/event/:eventId/verification/compliance",
+    "/command/events/rsvp",
+    "/command/events/rsvp/low",
+    "/command/events/verification",
+    "/command/events/verification/gaps",
+    "/command/events/verification/due"
+  ],
+  "tests": [
+    "calendar:rsvp:validate",
+    "calendar:verification:validate",
+    "test:calendar:rsvp-model",
+    "test:calendar:verification-model",
+    "test:calendar:attendance-readiness",
+    "test:calendar:wave3d"
+  ],
+  "known_limitations": [
+    "RSVP and verification remain soft-beta — durableAuthority=false while Gate A open",
+    "Template items seeded on first ensure only",
+    "No automated ticketing or legal approval workflow",
+    "RBAC audit_only",
+    "No Postgres durability"
+  ],
+  "final_wave_3d_claim": "TESTED",
+  "next_wave": "CAL-P2 Wave 3E"
+}

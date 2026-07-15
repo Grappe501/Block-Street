@@ -14,4 +14,4 @@ Event follow-up and report engine — template-seeded metrics, follow-up actions
 
 ## Next wave
 
-CAL-P2 Wave 3D (TBD)
+CAL-P2 Wave 3D — Event RSVP and Verification Engine
