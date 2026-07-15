@@ -1,6 +1,6 @@
 {
   "package": "CAL-P1.2",
-  "generated_at": "2026-07-15T02:22:09.201Z",
+  "generated_at": "2026-07-15T02:44:11.544Z",
   "gate_a": "OPEN",
   "rbac_mode": "audit_only",
   "enforcement_active": false,
