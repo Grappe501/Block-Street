@@ -2,6 +2,7 @@ import type { CalendarEvent } from "../types";
 import type { EventReadinessDimension, EventReadinessItem, EventReadinessState } from "./types";
 import { evaluateStaffingReadiness } from "../staffing/readiness-integration";
 import { evaluateEventTasksReadiness } from "../tasks/readiness-integration";
+import { evaluateMaterialsReadiness, evaluatePromotionReadiness } from "../preparation/readiness-integration";
 
 function eventRoute(eventId: string, suffix = ""): string {
   return `/calendar/event/${eventId}${suffix}`;
@@ -271,80 +272,6 @@ function evaluateTasks(event: CalendarEvent): EventReadinessItem {
   return evaluateEventTasksReadiness(event);
 }
 
-function evaluateMaterials(event: CalendarEvent): EventReadinessItem {
-  const route = eventRoute(event.event_id, "/edit");
-  const needsMaterials =
-    event.event_type === "voter_registration_drive" ||
-    event.event_type === "tabling" ||
-    event.event_type === "canvass";
-  if (!needsMaterials) {
-    return {
-      dimension: "materials",
-      state: "not_required",
-      label: "Materials",
-      explanation: "Materials checklist not required for this event type.",
-      route,
-    };
-  }
-  const hasAttachments = event.attachments.length > 0;
-  if (hasAttachments) {
-    return {
-      dimension: "materials",
-      state: "ready",
-      label: "Materials",
-      explanation: "Materials references attached to event record.",
-      route,
-    };
-  }
-  return {
-    dimension: "materials",
-    state: "in_progress",
-    label: "Materials",
-    explanation: "Registration/canvass materials — checklist soft-beta preview only.",
-    route,
-  };
-}
-
-function evaluatePromotion(event: CalendarEvent): EventReadinessItem {
-  if (!isPublicFacing(event)) {
-    return {
-      dimension: "promotion",
-      state: "not_required",
-      label: "Promotion",
-      explanation: "Internal or non-public event — promotion not required.",
-      route: eventRoute(event.event_id),
-    };
-  }
-  if (event.social_promotion_enabled || event.publication_status === "published") {
-    return {
-      dimension: "promotion",
-      state: event.publication_status === "published" ? "ready" : "in_progress",
-      label: "Promotion",
-      explanation:
-        event.publication_status === "published"
-          ? "Published — promotion may be active."
-          : "Promotion enabled — publication not yet live.",
-      route: eventRoute(event.event_id),
-    };
-  }
-  if (event.publication_status === "ready_to_publish") {
-    return {
-      dimension: "promotion",
-      state: "in_progress",
-      label: "Promotion",
-      explanation: "Ready to publish — promotion prep may be underway.",
-      route: eventRoute(event.event_id),
-    };
-  }
-  return {
-    dimension: "promotion",
-    state: "not_started",
-    label: "Promotion",
-    explanation: "Public-facing event without promotion plan on record.",
-    route: eventRoute(event.event_id),
-  };
-}
-
 function evaluateRsvp(event: CalendarEvent): EventReadinessItem {
   const needsRsvp = event.event_type === "networking_event" || event.event_type === "social";
   if (!needsRsvp) {
@@ -450,8 +377,8 @@ const EVALUATORS: Record<
   candidate: (e) => evaluateCandidate(e),
   staffing: (e, n) => evaluateStaffingReadiness(e, n),
   tasks: (e, n) => evaluateEventTasksReadiness(e, n),
-  materials: (e) => evaluateMaterials(e),
-  promotion: (e) => evaluatePromotion(e),
+  materials: (e, n) => evaluateMaterialsReadiness(e, n),
+  promotion: (e, n) => evaluatePromotionReadiness(e, n),
   rsvp: (e) => evaluateRsvp(e),
   verification: (e) => evaluateVerification(e),
   follow_up: (e) => evaluateFollowUp(e),

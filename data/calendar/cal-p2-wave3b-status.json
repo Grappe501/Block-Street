@@ -1,0 +1,43 @@
+{
+  "phase": "CAL-P2",
+  "wave": "3B",
+  "package": "event_preparation_engine_and_checklist_runtime",
+  "generated_at": "2026-07-15T16:00:00.000Z",
+  "baseline_commit": "40f0558",
+  "wave_3a_content_commit": "8a8b82a",
+  "gate_a": "OPEN",
+  "persistence_mode": "session_soft_beta",
+  "rbac_mode": "audit_only",
+  "enforcement_active": false,
+  "preparation_fixture_count": 0,
+  "template_seed_integration": "PASS",
+  "readiness_integration": "PASS",
+  "materials_readiness": "PASS",
+  "promotion_readiness": "PASS",
+  "routes_created": [
+    "/calendar/event/:eventId/preparation",
+    "/calendar/event/:eventId/preparation/:itemId",
+    "/calendar/event/:eventId/preparation/logistics",
+    "/calendar/event/:eventId/preparation/materials",
+    "/calendar/event/:eventId/preparation/promotion",
+    "/calendar/event/:eventId/preparation/reminders",
+    "/command/events/preparation",
+    "/command/events/preparation/gaps",
+    "/command/events/preparation/due"
+  ],
+  "tests": [
+    "calendar:preparation:validate",
+    "test:calendar:preparation-model",
+    "test:calendar:preparation-readiness",
+    "test:calendar:wave3b"
+  ],
+  "known_limitations": [
+    "Preparation items remain soft-beta — durableAuthority=false while Gate A open",
+    "Template items seeded on first ensurePreparationFromEvent only",
+    "No automated promotion or reminder sends",
+    "RBAC audit_only",
+    "No Postgres durability"
+  ],
+  "final_wave_3b_claim": "TESTED",
+  "next_wave": "CAL-P2 Wave 3C"
+}

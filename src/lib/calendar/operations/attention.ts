@@ -4,6 +4,8 @@ import { listAssignments, listOffers, listReviews } from "../assignments/store";
 import { listOpenReplacementNeeds } from "../assignments/replacements";
 import { buildTaskChecklistSummary, listTasks } from "../tasks";
 import { isTaskComplete } from "../tasks/status";
+import { buildPreparationSummary, listPreparationItems } from "../preparation";
+import { isPreparationReady } from "../preparation/status";
 import type { AttentionKey, EventAttentionSeverity, EventReadinessItem } from "./types";
 import { ATTENTION_KEYS } from "./types";
 
@@ -27,6 +29,10 @@ function isSameDay(a: Date, b: Date): boolean {
 
 function hoursUntil(startAt: string, now: Date): number {
   return (new Date(startAt).getTime() - now.getTime()) / 36e5;
+}
+
+function isPublicFacing(event: CalendarEvent): boolean {
+  return event.visibility === "public" || event.publication_status === "published" || event.publication_status === "ready_to_publish";
 }
 
 export function evaluateEventAttention(
@@ -288,6 +294,23 @@ export function evaluateEventAttention(
   const unowned = listTasks({ eventId: event.event_id }).filter((t) => t.required && !t.ownerUserId && !isTaskComplete(t.taskStatus));
   if (unowned.length > 0) {
     signals.push({ key: "task_no_owner", severity: "watch", reason: "Required task without owner." });
+  }
+
+  const prep = buildPreparationSummary(event.event_id);
+  if (prep.materialsTotal > prep.materialsReady && within48) {
+    signals.push({ key: "materials_gap", severity: "urgent", reason: "Materials checklist incomplete near event." });
+  }
+  if (prep.promotionTotal > prep.promotionReady && isPublicFacing(event) && within48) {
+    signals.push({ key: "promotion_not_ready", severity: "needs_attention", reason: "Promotion checklist incomplete." });
+  }
+  if (prep.logisticsTotal > prep.logisticsReady) {
+    signals.push({ key: "logistics_incomplete", severity: "watch", reason: "Logistics items not ready." });
+  }
+  const dueReminders = listPreparationItems({ eventId: event.event_id, category: "reminder" }).filter(
+    (r) => r.scheduledAt && new Date(r.scheduledAt).getTime() - now.getTime() < 86400000 && !isPreparationReady(r.itemStatus),
+  );
+  if (dueReminders.length > 0) {
+    signals.push({ key: "reminder_due", severity: "watch", reason: "Reminder scheduled within 24 hours." });
   }
 
   return signals;
