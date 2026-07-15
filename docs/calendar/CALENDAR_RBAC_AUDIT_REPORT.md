@@ -1,6 +1,6 @@
 # Calendar RBAC Audit Report
 
-**Generated:** 2026-07-15T01:11:48.310Z
+**Generated:** 2026-07-15T02:22:08.912Z
 
 | Field | Value |
 |-------|-------|
