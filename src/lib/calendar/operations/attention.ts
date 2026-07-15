@@ -1,5 +1,7 @@
 import type { CalendarEvent } from "../types";
 import { calculateEventStaffingSummary } from "../staffing/coverage";
+import { listAssignments, listOffers, listReviews } from "../assignments/store";
+import { listOpenReplacementNeeds } from "../assignments/replacements";
 import type { AttentionKey, EventAttentionSeverity, EventReadinessItem } from "./types";
 import { ATTENTION_KEYS } from "./types";
 
@@ -235,6 +237,40 @@ export function evaluateEventAttention(
       severity: "needs_attention",
       reason: "Event date passed — outcome capture or status update may be overdue.",
     });
+  }
+
+  const offers = listOffers({ eventId: event.event_id });
+  const expiring = offers.filter(
+    (o) => o.expiresAt && new Date(o.expiresAt).getTime() - now.getTime() < 86400000 && ["offered", "viewed"].includes(o.offerStatus),
+  );
+  if (expiring.length > 0) {
+    signals.push({ key: "offer_expiring", severity: within48 ? "urgent" : "needs_attention", reason: "Shift offer expiring within 24 hours." });
+  }
+  if (offers.some((o) => o.offerStatus === "ready")) {
+    signals.push({ key: "offer_ready_not_sent", severity: "watch", reason: "Offer prepared but not sent." });
+  }
+  if (offers.some((o) => o.offerStatus === "declined")) {
+    signals.push({ key: "offer_declined", severity: "needs_attention", reason: "Volunteer declined a shift offer." });
+  }
+  if (offers.some((o) => o.offerStatus === "change_requested")) {
+    signals.push({ key: "offer_change_requested", severity: "needs_attention", reason: "Volunteer requested offer changes." });
+  }
+  const criticalRep = listOpenReplacementNeeds({ eventId: event.event_id }).filter((n) => n.urgency === "critical");
+  if (criticalRep.length > 0) {
+    signals.push({ key: "critical_replacement_needed", severity: "critical", reason: "Critical replacement need unfilled." });
+  }
+  const openRep = listOpenReplacementNeeds({ eventId: event.event_id });
+  if (openRep.length > 0 && criticalRep.length === 0) {
+    signals.push({ key: "replacement_needed", severity: "needs_attention", reason: "Open replacement need." });
+  }
+  const unreviewedCritical = listReviews({ eventId: event.event_id }).filter(
+    (r) => r.reviewStatus === "not_reviewed" && staffingSummary.criticalRequirementsBelowMinimum > 0,
+  );
+  if (unreviewedCritical.length > 0) {
+    signals.push({ key: "unreviewed_critical_interest", severity: "urgent", reason: "Unreviewed interest on critical shift." });
+  }
+  if (listAssignments({ eventId: event.event_id, activeOnly: true }).some((a) => a.trainingConditionStatus === "pending")) {
+    signals.push({ key: "training_condition_pending", severity: "watch", reason: "Training condition pending on assignment." });
   }
 
   return signals;

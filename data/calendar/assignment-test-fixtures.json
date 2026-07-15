@@ -1,0 +1,44 @@
+{
+  "demoUser": "usr-demo-001",
+  "primaryEvent": "evt-henderson-vr-drive",
+  "reviews": [
+    {
+      "reviewId": "rev-fixture-001",
+      "interestId": "int-fixture-001",
+      "eventId": "evt-henderson-vr-drive",
+      "shiftId": "shf-fixture-001",
+      "requirementId": "req-fixture-001",
+      "volunteerUserId": "usr-demo-002",
+      "reviewStatus": "eligible",
+      "roleEligibility": "eligible",
+      "trainingStatus": "eligible",
+      "scheduleStatus": "clear",
+      "reviewerUserId": "usr-mgr-001",
+      "reviewerRoleKey": "volunteer_manager",
+      "volunteerSafeExplanation": "Eligible for check-in volunteer role.",
+      "reviewedAt": "2026-07-10T12:00:00.000Z",
+      "createdAt": "2026-07-09T12:00:00.000Z",
+      "updatedAt": "2026-07-10T12:00:00.000Z"
+    }
+  ],
+  "assignments": [],
+  "waitlists": [
+    {
+      "waitlistEntryId": "wl-fixture-001",
+      "eventId": "evt-henderson-vr-drive",
+      "shiftId": "shf-fixture-002",
+      "requirementId": "req-fixture-001",
+      "volunteerUserId": "usr-demo-003",
+      "waitlistStatus": "active",
+      "priorityGroup": "trained",
+      "priorityScore": 3,
+      "priorityReasons": ["Fully trained with clear availability"],
+      "trainingEligibility": "eligible",
+      "scheduleStatus": "clear",
+      "addedAt": "2026-07-08T10:00:00.000Z",
+      "updatedAt": "2026-07-08T10:00:00.000Z"
+    }
+  ],
+  "cancellations": [],
+  "replacementNeeds": []
+}

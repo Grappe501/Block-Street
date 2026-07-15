@@ -1,0 +1,4 @@
+{
+  "demoUser": "usr-demo-001",
+  "sections": ["softBetaConfirmed", "pendingOffers", "waitlists", "interests", "rsvps"]
+}

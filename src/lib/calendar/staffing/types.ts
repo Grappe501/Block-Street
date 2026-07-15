@@ -159,6 +159,11 @@ export type CalendarShiftCoverage = {
   coverageStatus: CoverageStatus;
   confidence: "low" | "medium" | "high";
   reasons: string[];
+  softBetaConfirmedCount?: number;
+  durableConfirmedCount?: number;
+  offeredCount?: number;
+  waitlistCount?: number;
+  reviewedCount?: number;
 };
 
 export type EventStaffingOverallStatus =

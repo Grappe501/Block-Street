@@ -1,0 +1,12 @@
+{
+  "entries": [
+    {
+      "waitlistEntryId": "wl-fixture-001",
+      "eventId": "evt-henderson-vr-drive",
+      "shiftId": "shf-fixture-002",
+      "volunteerUserId": "usr-demo-003",
+      "priorityGroup": "trained",
+      "waitlistStatus": "active"
+    }
+  ]
+}

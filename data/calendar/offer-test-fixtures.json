@@ -1,0 +1,25 @@
+{
+  "offers": [
+    {
+      "offerId": "off-fixture-demo-001",
+      "eventId": "evt-henderson-vr-drive",
+      "shiftId": "shf-fixture-001",
+      "requirementId": "req-fixture-001",
+      "volunteerUserId": "usr-demo-001",
+      "offeredRoleKey": "check_in_volunteer",
+      "offeredRoleLabel": "Check-in volunteer",
+      "offeredStartAt": "2026-08-15T09:00:00.000Z",
+      "offeredEndAt": "2026-08-15T13:00:00.000Z",
+      "offeredArrivalAt": "2026-08-15T08:45:00.000Z",
+      "offerStatus": "offered",
+      "expiresAt": "2026-08-10T23:59:00.000Z",
+      "trainingConditionKeys": ["voter_registration_rules"],
+      "conditions": [],
+      "volunteerInstructions": "Arrive 15 minutes early for briefing.",
+      "source": "soft_beta_fixture",
+      "offeredAt": "2026-07-12T10:00:00.000Z",
+      "createdAt": "2026-07-12T09:00:00.000Z",
+      "updatedAt": "2026-07-12T10:00:00.000Z"
+    }
+  ]
+}

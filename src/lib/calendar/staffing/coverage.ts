@@ -14,6 +14,9 @@ import {
   listShifts,
 } from "./store";
 import { aggregateRequirementCounts } from "./requirements";
+import { countConfirmedCoverageForShift, getShiftPipelineCounts } from "../assignments/coverage-integration";
+import { countSoftBetaConfirmedForShift } from "../assignments/assignments";
+import { listAssignments } from "../assignments/store";
 
 function deriveCoverageStatus(
   minimumGap: number,
@@ -43,15 +46,20 @@ export function calculateShiftCoverage(shift: CalendarVolunteerShift, criticalit
   const suggestedCount = allInterests.filter((i) => i.interestStatus === "suggested").length;
   const eligibleInterestCount = allInterests.filter((i) => i.trainingEligibility === "eligible").length;
   const confirmations = listConfirmations(shift.shiftId);
-  const confirmedCount = confirmations.length;
+  const softBetaConfirmedCount = countSoftBetaConfirmedForShift(shift.shiftId);
+  const durableConfirmedCount = 0;
+  const confirmedCount = countConfirmedCoverageForShift(shift.shiftId);
+  const pipeline = getShiftPipelineCounts(shift.shiftId, interestedCount);
   const leads = listLeadAssignments(shift.shiftId);
   const acceptedLeadCount = leads.filter((l) => l.status === "accepted").length;
   const leadCovered = !shift.leadRequired || acceptedLeadCount > 0;
   const minimumGap = Math.max(0, shift.minimumNeeded - confirmedCount);
   const targetGap = Math.max(0, shift.targetNeeded - confirmedCount);
-  const trainingEligibleCount = confirmations.filter((c) =>
-    trainingEligibilityLabel(c.userId, shift.trainingRequirementKeys) === "eligible",
-  ).length;
+  const trainingEligibleCount =
+    confirmations.filter((c) => trainingEligibilityLabel(c.userId, shift.trainingRequirementKeys) === "eligible").length +
+    listAssignments({ shiftId: shift.shiftId, activeOnly: true }).filter(
+      (a) => trainingEligibilityLabel(a.volunteerUserId, shift.trainingRequirementKeys) === "eligible",
+    ).length;
   const trainingGap = Math.max(0, shift.minimumNeeded - trainingEligibleCount);
 
   const reasons: string[] = [];
@@ -84,6 +92,11 @@ export function calculateShiftCoverage(shift: CalendarVolunteerShift, criticalit
     coverageStatus,
     confidence: confirmedCount > 0 ? "medium" : "low",
     reasons,
+    softBetaConfirmedCount,
+    durableConfirmedCount,
+    offeredCount: pipeline.offeredCount,
+    waitlistCount: pipeline.waitlistCount,
+    reviewedCount: pipeline.reviewedCount,
   };
 }
 

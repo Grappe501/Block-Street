@@ -22,6 +22,12 @@ export default function CommandStaffingDashboard() {
       <StaffingSoftBetaNote />
       <CommandSection title="Priority views">
         <div className="grid gap-2 sm:grid-cols-2 font-fieldSans text-sm">
+          <Link href="/command/events/staffing/review" className="rounded-lg border bg-white p-3 underline">Review queue</Link>
+          <Link href="/command/events/staffing/offers" className="rounded-lg border bg-white p-3 underline">Offers</Link>
+          <Link href="/command/events/staffing/assignments" className="rounded-lg border bg-white p-3 underline">Assignments</Link>
+          <Link href="/command/events/staffing/waitlists" className="rounded-lg border bg-white p-3 underline">Waitlists</Link>
+          <Link href="/command/events/staffing/cancellations" className="rounded-lg border bg-white p-3 underline">Cancellations</Link>
+          <Link href="/command/events/staffing/replacements" className="rounded-lg border bg-white p-3 underline">Replacements</Link>
           <Link href="/command/events/staffing/critical" className="rounded-lg border bg-white p-3 underline">Critical gaps ({critical.length})</Link>
           <Link href="/command/events/staffing/gaps" className="rounded-lg border bg-white p-3 underline">All gaps ({belowMin.length})</Link>
           <Link href="/command/events/staffing/training" className="rounded-lg border bg-white p-3 underline">Training gaps</Link>

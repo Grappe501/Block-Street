@@ -1,41 +1,49 @@
 import Link from "next/link";
 import { CalendarChrome, CalendarHonestyBanner, CalendarSection } from "@/components/calendar/CalendarChrome";
 import { CalendarNav } from "@/components/calendar/CalendarNav";
-import { StaffingSoftBetaNote } from "@/components/calendar/staffing/StaffingSoftBetaNote";
-import { listMyInterests, listLeadAssignments } from "@/lib/calendar/staffing";
-import { listMyScheduleEvents } from "@/lib/calendar";
-
-export const metadata = { title: "Calendar · My schedule" };
+import { AssignmentSoftBetaNote } from "@/components/calendar/assignments/AssignmentSoftBetaNote";
+import { buildPersonalSchedule, ensureAssignmentDemoFixtures } from "@/lib/calendar/assignments";
 
 const DEMO_USER = "usr-demo-001";
 
-export default function MySchedulePage() {
-  const interests = listMyInterests(DEMO_USER);
-  const leads = listLeadAssignments().filter((l) => l.userId === DEMO_USER);
-  const rsvpEvents = listMyScheduleEvents();
-
+function Section({ title, items }: { title: string; items: { itemId: string; title: string; statusLabel: string; roleLabel?: string | null }[] }) {
   return (
-    <CalendarChrome title="My schedule" subtitle="Soft-beta — interest ≠ assignment" nav={<CalendarNav />}>
-      <CalendarHonestyBanner />
-      <StaffingSoftBetaNote />
-      <CalendarSection title="Lead commitments (soft beta)">
-        {leads.length === 0 ? <p className="font-fieldSans text-sm text-field-ink/70">No lead invitations or acceptances.</p> : (
-          <ul className="font-fieldSans text-sm">{leads.map((l) => <li key={l.assignmentId}>{l.shiftId} — {l.status}</li>)}</ul>
-        )}
-      </CalendarSection>
-      <CalendarSection title="Volunteer interests">
-        {interests.length === 0 ? <p className="font-fieldSans text-sm text-field-ink/70">No volunteer interests on record.</p> : (
-          <ul className="font-fieldSans text-sm">{interests.map((i) => <li key={i.interestId}><Link href={`/calendar/event/${i.eventId}`} className="underline">{i.eventId}</Link> ({i.interestStatus})</li>)}</ul>
-        )}
-      </CalendarSection>
-      <CalendarSection title="Personal RSVPs / demo schedule">
-        <p className="mb-2 font-fieldSans text-xs text-field-ink/60">No durable confirmed shifts yet unless explicitly recorded in Wave 2B.</p>
+    <CalendarSection title={title}>
+      {items.length === 0 ? <p className="font-fieldSans text-sm text-field-ink/70">None</p> : (
         <ul className="space-y-2 font-fieldSans text-sm">
-          {rsvpEvents.map((e) => (
-            <li key={e.event_id}><Link href={`/calendar/event/${e.event_id}`} className="text-field-pine underline">{e.title}</Link></li>
+          {items.map((i) => (
+            <li key={i.itemId} className="rounded-lg border bg-white p-3">
+              <p className="font-bold">{i.title}</p>
+              <p className="text-field-ink/70">{i.roleLabel ?? "—"} · {i.statusLabel}</p>
+            </li>
           ))}
         </ul>
-      </CalendarSection>
+      )}
+    </CalendarSection>
+  );
+}
+
+export default function MySchedulePage() {
+  ensureAssignmentDemoFixtures();
+  const schedule = buildPersonalSchedule(DEMO_USER);
+
+  return (
+    <CalendarChrome title="My schedule" subtitle="Authority levels separated" nav={<CalendarNav />}>
+      <CalendarHonestyBanner />
+      <AssignmentSoftBetaNote />
+      <Section title="Soft-beta confirmed shifts" items={schedule.softBetaConfirmed} />
+      <Section title="Pending offers" items={schedule.pendingOffers} />
+      <Section title="Lead commitments" items={schedule.leadCommitments} />
+      <Section title="Waitlists" items={schedule.waitlists} />
+      <Section title="Volunteer interests" items={schedule.interests} />
+      <Section title="Personal RSVPs" items={schedule.rsvps} />
+      <Section title="Training needed" items={schedule.trainingNeeded} />
+      <Section title="Canceled or replaced" items={schedule.canceledOrReplaced} />
+      <div className="flex flex-wrap gap-2 font-fieldSans text-sm">
+        <Link href="/calendar/my-shift-offers" className="underline text-field-pine">My offers</Link>
+        <Link href="/calendar/my-shifts" className="underline text-field-pine">My shifts</Link>
+        <Link href="/calendar/my-waitlists" className="underline text-field-pine">My waitlists</Link>
+      </div>
     </CalendarChrome>
   );
 }

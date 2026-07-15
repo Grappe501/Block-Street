@@ -4,6 +4,7 @@ export * from "./templates";
 export * from "./recurrence";
 export * from "./series";
 export * from "./staffing";
+export * from "./assignments";
 export * from "./copy";
 export * from "./canonical";
 export * from "./events";
