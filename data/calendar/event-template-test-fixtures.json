@@ -1,0 +1,17 @@
+{
+  "flagshipTemplateIds": [
+    "tpl-campus-voter-registration-drive",
+    "tpl-campus-networking-event"
+  ],
+  "collegeScopeSlug": "henderson-state",
+  "countyScopeSlug": "clark",
+  "sampleApplyScope": {
+    "collegeSlugs": [
+      "uca"
+    ],
+    "countySlugs": [],
+    "citySlugs": [],
+    "teamIds": [],
+    "campaignWide": false
+  }
+}

@@ -55,6 +55,16 @@ type SeedInput = {
   assigned_human_ids?: string[];
   history?: { at: string; note: string }[];
   volunteer_manager?: string | null;
+  template_id?: string | null;
+  template_version?: string | null;
+  template_applied_at?: string | null;
+  template_snapshot?: Record<string, unknown> | null;
+  template_readiness?: CalendarEvent["template_readiness"];
+  series_id?: string | null;
+  occurrence_key?: string | null;
+  series_sequence_number?: number | null;
+  generated_from_series?: boolean;
+  series_rule_version?: string | null;
 };
 
 function slugify(title: string): string {
@@ -229,5 +239,15 @@ export function buildCanonicalEvent(input: SeedInput): CalendarEvent {
       },
     ],
     city_ready: true,
+    template_id: input.template_id ?? null,
+    template_version: input.template_version ?? null,
+    template_applied_at: input.template_applied_at ?? null,
+    template_snapshot: input.template_snapshot ?? null,
+    template_readiness: input.template_readiness ?? null,
+    series_id: input.series_id ?? null,
+    occurrence_key: input.occurrence_key ?? null,
+    series_sequence_number: input.series_sequence_number ?? null,
+    generated_from_series: input.generated_from_series ?? false,
+    series_rule_version: input.series_rule_version ?? null,
   };
 }

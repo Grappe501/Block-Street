@@ -1,0 +1,57 @@
+{
+  "rules": [
+    {
+      "id": "daily",
+      "seriesStartDate": "2026-07-14",
+      "rule": { "frequency": "daily", "interval": 1, "count": 5 }
+    },
+    {
+      "id": "every-n-days",
+      "seriesStartDate": "2026-07-14",
+      "rule": { "frequency": "daily", "interval": 2, "count": 4 }
+    },
+    {
+      "id": "weekly-monday",
+      "seriesStartDate": "2026-07-14",
+      "defaultStartTime": "18:00",
+      "rule": { "frequency": "weekly", "interval": 1, "daysOfWeek": ["MO"], "count": 6 }
+    },
+    {
+      "id": "biweekly-wednesday",
+      "seriesStartDate": "2026-07-15",
+      "rule": { "frequency": "weekly", "interval": 2, "daysOfWeek": ["WE"], "count": 4 }
+    },
+    {
+      "id": "weekdays-two-weeks",
+      "seriesStartDate": "2026-07-14",
+      "rule": { "frequency": "weekly", "interval": 1, "daysOfWeek": ["MO", "TU", "WE", "TH", "FR"], "count": 10 }
+    },
+    {
+      "id": "monthly-15th",
+      "seriesStartDate": "2026-07-15",
+      "rule": { "frequency": "monthly", "interval": 1, "dayOfMonth": 15, "count": 3 }
+    },
+    {
+      "id": "first-saturday",
+      "seriesStartDate": "2026-08-01",
+      "rule": { "frequency": "monthly", "interval": 1, "monthDayPattern": { "week": 1, "day": "SA" }, "count": 3 }
+    },
+    {
+      "id": "last-thursday",
+      "seriesStartDate": "2026-07-01",
+      "rule": { "frequency": "monthly", "interval": 1, "monthDayPattern": { "week": -1, "day": "TH" }, "count": 3 }
+    },
+    {
+      "id": "end-by-date",
+      "seriesStartDate": "2026-07-14",
+      "seriesEndDate": "2026-08-14",
+      "rule": { "frequency": "weekly", "interval": 1, "daysOfWeek": ["TU"], "until": "2026-08-14" }
+    },
+    {
+      "id": "dst-fall",
+      "seriesStartDate": "2026-11-01",
+      "defaultStartTime": "18:00",
+      "rule": { "frequency": "weekly", "interval": 1, "daysOfWeek": ["SU"], "count": 4 }
+    }
+  ]
+}

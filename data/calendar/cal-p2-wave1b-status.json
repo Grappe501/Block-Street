@@ -1,0 +1,82 @@
+{
+  "phase": "CAL-P2",
+  "wave": "1B",
+  "package": "event_template_library_and_recurring_series",
+  "generated_at": "2026-07-15T04:30:00.000Z",
+  "baseline_commit": "5a6186e",
+  "wave_1a_content_commit": "23cebf1",
+  "wave_1a_evidence_correction": "d303b05",
+  "gate_a": "OPEN",
+  "persistence_mode": "session_soft_beta",
+  "calendar_write_enabled": false,
+  "rbac_mode": "audit_only",
+  "enforcement_active": false,
+  "scheduling_authority": "soft_beta_scheduling_path_only",
+  "template_count": 18,
+  "template_categories": 12,
+  "flagship_templates": [
+    "tpl-campus-voter-registration-drive",
+    "tpl-campus-networking-event"
+  ],
+  "routes_created": {
+    "templates": [
+      "/calendar/templates",
+      "/calendar/templates/new",
+      "/calendar/templates/:templateId",
+      "/calendar/templates/:templateId/use",
+      "/calendar/templates/:templateId/preview",
+      "/calendar/templates/:templateId/edit"
+    ],
+    "series": [
+      "/calendar/series",
+      "/calendar/series/new",
+      "/calendar/series/:seriesId",
+      "/calendar/series/:seriesId/edit",
+      "/calendar/series/:seriesId/instances",
+      "/calendar/series/:seriesId/exceptions"
+    ],
+    "command": [
+      "/command/events/templates",
+      "/command/events/series"
+    ],
+    "deepened": [
+      "/calendar/create",
+      "/command/events",
+      "/calendar/event/:eventId"
+    ]
+  },
+  "recurrence_patterns_supported": [
+    "daily",
+    "every_n_days",
+    "weekly",
+    "every_n_weeks",
+    "selected_weekdays",
+    "monthly_by_date",
+    "monthly_first_weekday",
+    "monthly_last_weekday",
+    "end_by_count",
+    "end_by_date",
+    "preview_horizon_12_or_90_days"
+  ],
+  "series_fixtures": "data/calendar/recurring-series-fixtures.json",
+  "tests": [
+    "calendar:templates:validate",
+    "calendar:recurrence:validate",
+    "test:calendar:templates",
+    "test:calendar:template-application",
+    "test:calendar:recurrence",
+    "test:calendar:series",
+    "test:calendar:series-exceptions",
+    "test:calendar:wave1b"
+  ],
+  "known_limitations": [
+    "Template use flow is a 4-step soft-beta UI (spec lists 7 steps; core path present)",
+    "Series edit scopes UI is disclosure-only; splitSeriesAtOccurrence is session-local",
+    "No durable Postgres series persistence while Gate A is open",
+    "RBAC audit_only — template and series permissions logged, not enforced",
+    "Volunteer shift builder deferred to CAL-P2 Wave 2A",
+    "Full occurrence regeneration on entire-series edit not automated in UI"
+  ],
+  "final_wave_1b_claim": "TESTED",
+  "next_wave": "CAL-P2 Wave 2A"
+}

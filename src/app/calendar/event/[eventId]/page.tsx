@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { CalendarChrome, CalendarHonestyBanner } from "@/components/calendar/CalendarChrome";
 import { EventDetailView } from "@/components/calendar/EventDetailView";
 import { EventOperationsPanel } from "@/components/calendar/operations/EventOperationsPanel";
+import { EventSeriesPanel } from "@/components/calendar/series/EventSeriesPanel";
 import { getEventById } from "@/lib/calendar";
 import { buildEventOperationsSummary } from "@/lib/calendar/operations";
 
@@ -18,6 +19,7 @@ export default async function EventDetailPage({ params }: { params: Promise<{ ev
       <CalendarHonestyBanner />
       <div className="space-y-6">
         <EventOperationsPanel summary={ops} />
+        <EventSeriesPanel event={event} />
         <EventDetailView event={event} mode="internal" />
       </div>
     </CalendarChrome>

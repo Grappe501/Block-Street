@@ -6,6 +6,19 @@ import type { CalendarEvent, CalendarScope, ProposeEventInput } from "./types";
 
 let proposedEvents: CalendarEvent[] = [];
 
+export function appendProposedEvent(event: CalendarEvent): CalendarEvent {
+  proposedEvents = [event, ...proposedEvents];
+  return event;
+}
+
+export function getSessionProposedEvents(): CalendarEvent[] {
+  return [...proposedEvents];
+}
+
+export function clearSessionProposedEventsForTest(): void {
+  proposedEvents = [];
+}
+
 function normalizeDatetime(value: string): string {
   if (/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}$/.test(value)) {
     return `${value}:00-05:00`;
@@ -214,8 +227,7 @@ export function proposeEvent(input: ProposeEventInput): CalendarEvent {
     history: [{ at: new Date().toISOString(), note: "Soft-beta proposal submitted (session-local)." }],
   });
 
-  proposedEvents = [event, ...proposedEvents];
-  return event;
+  return appendProposedEvent(event);
 }
 
 export function groupEventsByCityCounty(events: CalendarEvent[]) {

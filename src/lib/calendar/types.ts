@@ -290,6 +290,22 @@ export type CalendarEvent = {
   external_sync: ExternalSyncRecord[];
   /** Future city readiness — always present even when empty */
   city_ready: true;
+  /** CAL-P2 Wave 1B template metadata */
+  template_id?: string | null;
+  template_version?: string | null;
+  template_applied_at?: string | null;
+  template_snapshot?: Record<string, unknown> | null;
+  template_readiness?: {
+    requiredDimensions: string[];
+    optionalDimensions: string[];
+    nonApplicableDimensions: string[];
+  } | null;
+  /** CAL-P2 Wave 1B series metadata */
+  series_id?: string | null;
+  occurrence_key?: string | null;
+  series_sequence_number?: number | null;
+  generated_from_series?: boolean;
+  series_rule_version?: string | null;
 };
 
 export type VolunteerNeed = {

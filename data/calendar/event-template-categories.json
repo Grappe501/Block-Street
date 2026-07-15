@@ -1,0 +1,50 @@
+[
+  {
+    "id": "organizing",
+    "label": "Organizing"
+  },
+  {
+    "id": "voter_registration",
+    "label": "Voter registration"
+  },
+  {
+    "id": "volunteer",
+    "label": "Volunteer"
+  },
+  {
+    "id": "leadership",
+    "label": "Leadership"
+  },
+  {
+    "id": "campaign",
+    "label": "Campaign"
+  },
+  {
+    "id": "candidate",
+    "label": "Candidate"
+  },
+  {
+    "id": "fundraising",
+    "label": "Fundraising"
+  },
+  {
+    "id": "community",
+    "label": "Community"
+  },
+  {
+    "id": "media",
+    "label": "Media"
+  },
+  {
+    "id": "partner",
+    "label": "Partner"
+  },
+  {
+    "id": "training",
+    "label": "Training"
+  },
+  {
+    "id": "internal_operations",
+    "label": "Internal operations"
+  }
+]

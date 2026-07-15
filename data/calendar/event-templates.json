@@ -1,0 +1,1983 @@
+[
+  {
+    "version": "1.0.0",
+    "status": "active",
+    "createdAt": "2026-07-15T03:00:00.000Z",
+    "updatedAt": "2026-07-15T03:00:00.000Z",
+    "templateId": "tpl-college-community-meeting",
+    "slug": "college-community-meeting",
+    "name": "College Community Meeting",
+    "shortDescription": "Establish or maintain a College Community; recruit leaders and plan campus events.",
+    "fullDescription": "Meeting to build the College Community, review goals, and plan voter-registration and networking events.",
+    "category": "organizing",
+    "eventType": "college_community_meeting",
+    "recurringSuitable": true,
+    "recommendedFor": {
+      "campaignWide": false,
+      "college": true,
+      "county": false,
+      "city": false,
+      "team": true
+    },
+    "defaults": {
+      "durationMinutes": 60,
+      "visibility": "internal",
+      "timezone": "America/Chicago",
+      "candidateAttendance": "optional",
+      "approvalPathKey": "college_local",
+      "publicationRequired": false,
+      "rsvpMode": "recommended",
+      "internalPurpose": "College Community leadership and planning"
+    },
+    "ownership": {
+      "suggestedRoleKeys": [
+        "college_leader"
+      ],
+      "owningTeamKeys": [
+        "college-community"
+      ],
+      "ownerRequired": true
+    },
+    "readiness": {
+      "requiredDimensions": [
+        "ownership",
+        "approval",
+        "date_time",
+        "venue",
+        "rsvp",
+        "follow_up"
+      ],
+      "optionalDimensions": [
+        "staffing",
+        "tasks",
+        "promotion"
+      ],
+      "nonApplicableDimensions": [
+        "candidate",
+        "materials",
+        "verification"
+      ]
+    },
+    "volunteerRoles": [
+      {
+        "roleKey": "host",
+        "title": "Meeting host",
+        "numberNeeded": 1,
+        "trainingRequired": false,
+        "required": true
+      },
+      {
+        "roleKey": "check-in",
+        "title": "Check-in",
+        "numberNeeded": 1,
+        "trainingRequired": false,
+        "required": false
+      },
+      {
+        "roleKey": "notes",
+        "title": "Note taker",
+        "numberNeeded": 1,
+        "trainingRequired": false,
+        "required": false
+      },
+      {
+        "roleKey": "follow-up",
+        "title": "Follow-up lead",
+        "numberNeeded": 1,
+        "trainingRequired": false,
+        "required": true
+      }
+    ],
+    "tasks": [
+      {
+        "taskKey": "room",
+        "title": "Confirm room",
+        "required": true
+      },
+      {
+        "taskKey": "contact",
+        "title": "Confirm campus contact",
+        "required": true
+      },
+      {
+        "taskKey": "agenda",
+        "title": "Prepare agenda",
+        "required": true
+      },
+      {
+        "taskKey": "invite",
+        "title": "Invite participants",
+        "required": true
+      },
+      {
+        "taskKey": "leadership-form",
+        "title": "Prepare leadership-interest form",
+        "required": false
+      },
+      {
+        "taskKey": "attendance",
+        "title": "Record attendance",
+        "required": true
+      }
+    ],
+    "logistics": [
+      {
+        "itemKey": "room",
+        "label": "Meeting room",
+        "required": true
+      }
+    ],
+    "materials": [],
+    "promotion": [],
+    "reminders": [],
+    "reportFields": [
+      {
+        "fieldKey": "attendees",
+        "label": "Attendees",
+        "required": true,
+        "metricType": "count"
+      },
+      {
+        "fieldKey": "leadership-interest",
+        "label": "Leadership interest",
+        "required": true,
+        "metricType": "count"
+      }
+    ],
+    "complianceNotes": [
+      "Interest ≠ appointment"
+    ],
+    "accessibilityNotes": [
+      "Confirm accessible meeting space"
+    ],
+    "tags": [
+      "college",
+      "community",
+      "organizing"
+    ]
+  },
+  {
+    "version": "1.0.0",
+    "status": "active",
+    "createdAt": "2026-07-15T03:00:00.000Z",
+    "updatedAt": "2026-07-15T03:00:00.000Z",
+    "templateId": "tpl-campus-voter-registration-drive",
+    "slug": "campus-voter-registration-drive",
+    "name": "Campus Voter-Registration Drive",
+    "shortDescription": "Flagship campus voter-registration drive with volunteer staffing and reporting.",
+    "fullDescription": "Register eligible voters, provide election information, recruit volunteers, and build College Community relationships.",
+    "category": "voter_registration",
+    "eventType": "voter_registration_drive",
+    "recurringSuitable": true,
+    "recommendedFor": {
+      "campaignWide": true,
+      "college": true,
+      "county": true,
+      "city": false,
+      "team": true
+    },
+    "defaults": {
+      "durationMinutes": 180,
+      "visibility": "public",
+      "timezone": "America/Chicago",
+      "candidateAttendance": "optional",
+      "approvalPathKey": "college_and_county",
+      "publicationRequired": true,
+      "rsvpMode": "none",
+      "publicSummary": "Campus voter-registration drive — volunteer shifts open."
+    },
+    "ownership": {
+      "suggestedRoleKeys": [
+        "college_voter_registration_lead"
+      ],
+      "owningTeamKeys": [
+        "voter-registration"
+      ],
+      "ownerRequired": true
+    },
+    "readiness": {
+      "requiredDimensions": [
+        "ownership",
+        "approval",
+        "date_time",
+        "venue",
+        "staffing",
+        "materials",
+        "verification",
+        "follow_up"
+      ],
+      "optionalDimensions": [
+        "promotion",
+        "candidate",
+        "tasks"
+      ],
+      "nonApplicableDimensions": [
+        "rsvp"
+      ]
+    },
+    "volunteerRoles": [
+      {
+        "roleKey": "event-lead",
+        "title": "Event lead",
+        "numberNeeded": 1,
+        "trainingRequired": true,
+        "required": true
+      },
+      {
+        "roleKey": "registration",
+        "title": "Registration-table volunteer",
+        "numberNeeded": 6,
+        "trainingRequired": true,
+        "required": true
+      },
+      {
+        "roleKey": "greeter",
+        "title": "Greeter",
+        "numberNeeded": 2,
+        "trainingRequired": false,
+        "required": false
+      },
+      {
+        "roleKey": "campus-liaison",
+        "title": "Campus liaison",
+        "numberNeeded": 1,
+        "trainingRequired": true,
+        "required": true
+      },
+      {
+        "roleKey": "materials",
+        "title": "Materials runner",
+        "numberNeeded": 1,
+        "trainingRequired": false,
+        "required": false
+      },
+      {
+        "roleKey": "tally",
+        "title": "Data and tally lead",
+        "numberNeeded": 1,
+        "trainingRequired": true,
+        "required": true
+      }
+    ],
+    "tasks": [
+      {
+        "taskKey": "campus-permission",
+        "title": "Campus permission",
+        "required": true
+      },
+      {
+        "taskKey": "table-setup",
+        "title": "Table setup plan",
+        "required": true
+      },
+      {
+        "taskKey": "weather",
+        "title": "Weather plan",
+        "required": true
+      }
+    ],
+    "logistics": [
+      {
+        "itemKey": "table",
+        "label": "Table",
+        "required": true
+      },
+      {
+        "itemKey": "chairs",
+        "label": "Chairs",
+        "required": true
+      },
+      {
+        "itemKey": "signage",
+        "label": "Signage",
+        "required": true
+      },
+      {
+        "itemKey": "parking",
+        "label": "Parking",
+        "required": false
+      },
+      {
+        "itemKey": "accessibility",
+        "label": "Accessibility plan",
+        "required": true
+      }
+    ],
+    "materials": [
+      {
+        "materialKey": "forms",
+        "label": "Registration forms or approved digital path",
+        "required": true
+      },
+      {
+        "materialKey": "clipboards",
+        "label": "Clipboards and pens",
+        "required": true
+      }
+    ],
+    "promotion": [
+      {
+        "itemKey": "campus-flyers",
+        "label": "Campus promotion plan",
+        "required": true
+      }
+    ],
+    "reminders": [],
+    "reportFields": [
+      {
+        "fieldKey": "attendees",
+        "label": "Attendees",
+        "required": true,
+        "metricType": "count"
+      },
+      {
+        "fieldKey": "conversations",
+        "label": "Conversations",
+        "required": true,
+        "metricType": "count"
+      },
+      {
+        "fieldKey": "applications-assisted",
+        "label": "Registration applications assisted",
+        "required": true,
+        "metricType": "count",
+        "disclaimer": "Not completed registrations unless verified"
+      },
+      {
+        "fieldKey": "volunteer-interest",
+        "label": "Volunteer interest",
+        "required": true,
+        "metricType": "count"
+      },
+      {
+        "fieldKey": "leadership-interest",
+        "label": "Leadership interest",
+        "required": true,
+        "metricType": "count"
+      },
+      {
+        "fieldKey": "power-of-5",
+        "label": "Power of 5 invitations",
+        "required": false,
+        "metricType": "count"
+      }
+    ],
+    "complianceNotes": [
+      "Assisted applications ≠ completed registrations unless verified",
+      "Calendar approval ≠ campus permission"
+    ],
+    "accessibilityNotes": [
+      "Accessible table placement required"
+    ],
+    "tags": [
+      "flagship",
+      "college",
+      "voter-registration",
+      "public"
+    ]
+  },
+  {
+    "version": "1.0.0",
+    "status": "active",
+    "createdAt": "2026-07-15T03:00:00.000Z",
+    "updatedAt": "2026-07-15T03:00:00.000Z",
+    "templateId": "tpl-campus-networking-event",
+    "slug": "campus-networking-event",
+    "name": "Campus Networking Event",
+    "shortDescription": "Flagship campus networking and recruitment event.",
+    "fullDescription": "Connect students, introduce Block Street, identify leaders, and recruit for future events.",
+    "category": "community",
+    "eventType": "networking_event",
+    "recurringSuitable": false,
+    "recommendedFor": {
+      "campaignWide": false,
+      "college": true,
+      "county": true,
+      "city": false,
+      "team": true
+    },
+    "defaults": {
+      "durationMinutes": 90,
+      "visibility": "public",
+      "timezone": "America/Chicago",
+      "candidateAttendance": "recommended",
+      "approvalPathKey": "college_local",
+      "publicationRequired": true,
+      "rsvpMode": "recommended",
+      "publicSummary": "Campus networking night — meet peers and learn about campus teams."
+    },
+    "ownership": {
+      "suggestedRoleKeys": [
+        "college_social_events_lead"
+      ],
+      "owningTeamKeys": [
+        "social-events"
+      ],
+      "ownerRequired": true
+    },
+    "readiness": {
+      "requiredDimensions": [
+        "ownership",
+        "approval",
+        "date_time",
+        "venue",
+        "staffing",
+        "promotion",
+        "rsvp",
+        "follow_up"
+      ],
+      "optionalDimensions": [
+        "candidate",
+        "materials",
+        "verification"
+      ],
+      "nonApplicableDimensions": []
+    },
+    "volunteerRoles": [
+      {
+        "roleKey": "host",
+        "title": "Host",
+        "numberNeeded": 2,
+        "trainingRequired": false,
+        "required": true
+      },
+      {
+        "roleKey": "greeter",
+        "title": "Greeter",
+        "numberNeeded": 3,
+        "trainingRequired": false,
+        "required": true
+      },
+      {
+        "roleKey": "facilitator",
+        "title": "Discussion facilitator",
+        "numberNeeded": 1,
+        "trainingRequired": false,
+        "required": false
+      },
+      {
+        "roleKey": "follow-up",
+        "title": "Follow-up lead",
+        "numberNeeded": 1,
+        "trainingRequired": false,
+        "required": true
+      }
+    ],
+    "tasks": [
+      {
+        "taskKey": "agenda",
+        "title": "Prepare agenda (welcome → follow-up)",
+        "required": true
+      },
+      {
+        "taskKey": "venue",
+        "title": "Confirm venue hospitality",
+        "required": true
+      }
+    ],
+    "logistics": [
+      {
+        "itemKey": "venue",
+        "label": "Student center or lobby space",
+        "required": true
+      }
+    ],
+    "materials": [
+      {
+        "materialKey": "sign-in",
+        "label": "Sign-in materials",
+        "required": true
+      }
+    ],
+    "promotion": [
+      {
+        "itemKey": "campus-promo",
+        "label": "Campus promotion plan",
+        "required": true
+      }
+    ],
+    "reminders": [],
+    "reportFields": [
+      {
+        "fieldKey": "attendees",
+        "label": "Attendees",
+        "required": true,
+        "metricType": "count"
+      },
+      {
+        "fieldKey": "follow-up-contacts",
+        "label": "Follow-up contacts",
+        "required": true,
+        "metricType": "count"
+      },
+      {
+        "fieldKey": "leadership-interest",
+        "label": "Leadership interest",
+        "required": true,
+        "metricType": "count"
+      }
+    ],
+    "candidateRequest": {
+      "defaultMode": "optional",
+      "briefingRequired": true,
+      "travelReviewRequired": true,
+      "publicLanguageApprovalRequired": true
+    },
+    "complianceNotes": [
+      "Kelly request ≠ confirmation"
+    ],
+    "accessibilityNotes": [
+      "Welcoming layout for introductions"
+    ],
+    "tags": [
+      "flagship",
+      "college",
+      "networking",
+      "public"
+    ]
+  },
+  {
+    "version": "1.0.0",
+    "status": "active",
+    "createdAt": "2026-07-15T03:00:00.000Z",
+    "updatedAt": "2026-07-15T03:00:00.000Z",
+    "templateId": "tpl-volunteer-orientation",
+    "slug": "volunteer-orientation",
+    "name": "Volunteer Orientation",
+    "shortDescription": "Orient new volunteers to Block Street.",
+    "category": "volunteer",
+    "eventType": "orientation",
+    "recurringSuitable": true,
+    "recommendedFor": {
+      "campaignWide": true,
+      "college": true,
+      "county": true,
+      "city": true,
+      "team": true
+    },
+    "defaults": {
+      "durationMinutes": 60,
+      "visibility": "internal",
+      "timezone": "America/Chicago",
+      "candidateAttendance": "not_applicable",
+      "approvalPathKey": "volunteer_manager",
+      "publicationRequired": false,
+      "rsvpMode": "required"
+    },
+    "ownership": {
+      "suggestedRoleKeys": [
+        "volunteer_manager"
+      ],
+      "owningTeamKeys": [
+        "volunteer-management"
+      ],
+      "ownerRequired": true
+    },
+    "readiness": {
+      "requiredDimensions": [
+        "ownership",
+        "approval",
+        "date_time",
+        "venue",
+        "rsvp",
+        "follow_up",
+        "staffing"
+      ],
+      "optionalDimensions": [
+        "tasks"
+      ],
+      "nonApplicableDimensions": [
+        "candidate",
+        "promotion",
+        "verification"
+      ]
+    },
+    "volunteerRoles": [
+      {
+        "roleKey": "trainer",
+        "title": "Orientation trainer",
+        "numberNeeded": 2,
+        "trainingRequired": true,
+        "required": true
+      }
+    ],
+    "tasks": [
+      {
+        "taskKey": "materials",
+        "title": "Prepare orientation materials",
+        "required": true
+      }
+    ],
+    "logistics": [],
+    "materials": [
+      {
+        "materialKey": "handout",
+        "label": "Orientation handout",
+        "required": true
+      }
+    ],
+    "promotion": [],
+    "reminders": [],
+    "reportFields": [
+      {
+        "fieldKey": "attendees",
+        "label": "Attendees",
+        "required": true,
+        "metricType": "count"
+      }
+    ],
+    "complianceNotes": [
+      "RSVP ≠ attendance confirmation"
+    ],
+    "accessibilityNotes": [],
+    "tags": [
+      "volunteer",
+      "training"
+    ],
+    "fullDescription": "Orient volunteers to roles, expectations, and next steps."
+  },
+  {
+    "version": "1.0.0",
+    "status": "active",
+    "createdAt": "2026-07-15T03:00:00.000Z",
+    "updatedAt": "2026-07-15T03:00:00.000Z",
+    "templateId": "tpl-volunteer-training",
+    "slug": "volunteer-training",
+    "name": "Volunteer Training",
+    "shortDescription": "Skills training for field volunteers.",
+    "category": "training",
+    "eventType": "volunteer_training",
+    "recurringSuitable": true,
+    "recommendedFor": {
+      "campaignWide": true,
+      "college": false,
+      "county": true,
+      "city": false,
+      "team": true
+    },
+    "defaults": {
+      "durationMinutes": 90,
+      "visibility": "internal",
+      "timezone": "America/Chicago",
+      "candidateAttendance": "not_applicable",
+      "approvalPathKey": "volunteer_manager",
+      "publicationRequired": false,
+      "rsvpMode": "required"
+    },
+    "ownership": {
+      "suggestedRoleKeys": [
+        "volunteer_manager"
+      ],
+      "owningTeamKeys": [
+        "volunteer-management"
+      ],
+      "ownerRequired": true
+    },
+    "readiness": {
+      "requiredDimensions": [
+        "ownership",
+        "approval",
+        "date_time",
+        "venue",
+        "staffing",
+        "materials",
+        "follow_up"
+      ],
+      "optionalDimensions": [
+        "tasks"
+      ],
+      "nonApplicableDimensions": [
+        "candidate",
+        "promotion",
+        "rsvp",
+        "verification"
+      ]
+    },
+    "volunteerRoles": [
+      {
+        "roleKey": "trainer",
+        "title": "Training host",
+        "numberNeeded": 2,
+        "trainingRequired": false,
+        "required": true
+      }
+    ],
+    "tasks": [
+      {
+        "taskKey": "curriculum",
+        "title": "Confirm curriculum",
+        "required": true
+      }
+    ],
+    "logistics": [],
+    "materials": [
+      {
+        "materialKey": "training-kit",
+        "label": "Training materials",
+        "required": true
+      }
+    ],
+    "promotion": [],
+    "reminders": [],
+    "reportFields": [
+      {
+        "fieldKey": "completion",
+        "label": "Trainees completed",
+        "required": true,
+        "metricType": "count"
+      }
+    ],
+    "complianceNotes": [
+      "Completion record expected — soft-beta session only"
+    ],
+    "accessibilityNotes": [],
+    "tags": [
+      "volunteer",
+      "training"
+    ],
+    "fullDescription": "Structured volunteer skills training with completion tracking."
+  },
+  {
+    "version": "1.0.0",
+    "status": "active",
+    "createdAt": "2026-07-15T03:00:00.000Z",
+    "updatedAt": "2026-07-15T03:00:00.000Z",
+    "templateId": "tpl-canvass-launch",
+    "slug": "canvass-launch",
+    "name": "Canvass Launch",
+    "shortDescription": "Neighborhood canvass launch with field shift.",
+    "category": "campaign",
+    "eventType": "canvass",
+    "recurringSuitable": true,
+    "recommendedFor": {
+      "campaignWide": false,
+      "college": false,
+      "county": true,
+      "city": true,
+      "team": true
+    },
+    "defaults": {
+      "durationMinutes": 30,
+      "visibility": "public",
+      "timezone": "America/Chicago",
+      "candidateAttendance": "not_applicable",
+      "approvalPathKey": "county_local",
+      "publicationRequired": true,
+      "rsvpMode": "optional"
+    },
+    "ownership": {
+      "suggestedRoleKeys": [
+        "county_canvass_lead"
+      ],
+      "owningTeamKeys": [
+        "canvass"
+      ],
+      "ownerRequired": true
+    },
+    "readiness": {
+      "requiredDimensions": [
+        "ownership",
+        "approval",
+        "date_time",
+        "venue",
+        "staffing",
+        "tasks",
+        "follow_up"
+      ],
+      "optionalDimensions": [
+        "promotion"
+      ],
+      "nonApplicableDimensions": [
+        "candidate",
+        "rsvp",
+        "verification"
+      ]
+    },
+    "volunteerRoles": [
+      {
+        "roleKey": "canvasser",
+        "title": "Canvass volunteer",
+        "numberNeeded": 12,
+        "trainingRequired": true,
+        "required": true
+      }
+    ],
+    "tasks": [
+      {
+        "taskKey": "turf",
+        "title": "Turf or assignment plan",
+        "required": true
+      },
+      {
+        "taskKey": "check-in",
+        "title": "Check-in plan",
+        "required": true
+      }
+    ],
+    "logistics": [
+      {
+        "itemKey": "meetup",
+        "label": "Meet-up location",
+        "required": true
+      }
+    ],
+    "materials": [
+      {
+        "materialKey": "walk-packets",
+        "label": "Walk packets",
+        "required": true
+      }
+    ],
+    "promotion": [],
+    "reminders": [],
+    "reportFields": [
+      {
+        "fieldKey": "doors",
+        "label": "Doors knocked",
+        "required": true,
+        "metricType": "count"
+      }
+    ],
+    "complianceNotes": [],
+    "accessibilityNotes": [],
+    "tags": [
+      "canvass",
+      "county"
+    ],
+    "fullDescription": "Launch meeting plus neighborhood turf walk."
+  },
+  {
+    "version": "1.0.0",
+    "status": "active",
+    "createdAt": "2026-07-15T03:00:00.000Z",
+    "updatedAt": "2026-07-15T03:00:00.000Z",
+    "templateId": "tpl-phone-bank",
+    "slug": "phone-bank",
+    "name": "Phone Bank",
+    "shortDescription": "Volunteer phone bank session.",
+    "category": "campaign",
+    "eventType": "phone_bank",
+    "recurringSuitable": true,
+    "recommendedFor": {
+      "campaignWide": true,
+      "college": false,
+      "county": true,
+      "city": false,
+      "team": true
+    },
+    "defaults": {
+      "durationMinutes": 120,
+      "visibility": "internal",
+      "timezone": "America/Chicago",
+      "candidateAttendance": "not_applicable",
+      "approvalPathKey": "campaign_operations",
+      "publicationRequired": false,
+      "rsvpMode": "optional"
+    },
+    "ownership": {
+      "suggestedRoleKeys": [
+        "volunteer_manager"
+      ],
+      "owningTeamKeys": [
+        "phone-bank"
+      ],
+      "ownerRequired": true
+    },
+    "readiness": {
+      "requiredDimensions": [
+        "ownership",
+        "approval",
+        "date_time",
+        "staffing",
+        "tasks",
+        "follow_up"
+      ],
+      "optionalDimensions": [
+        "materials"
+      ],
+      "nonApplicableDimensions": [
+        "candidate",
+        "venue",
+        "promotion",
+        "rsvp",
+        "verification"
+      ]
+    },
+    "volunteerRoles": [
+      {
+        "roleKey": "caller",
+        "title": "Phone bank volunteer",
+        "numberNeeded": 10,
+        "trainingRequired": true,
+        "required": true
+      }
+    ],
+    "tasks": [
+      {
+        "taskKey": "script",
+        "title": "Script readiness",
+        "required": true
+      },
+      {
+        "taskKey": "tech",
+        "title": "Technology check",
+        "required": true
+      }
+    ],
+    "logistics": [
+      {
+        "itemKey": "dialer",
+        "label": "Dialer or call system",
+        "required": true
+      }
+    ],
+    "materials": [],
+    "promotion": [],
+    "reminders": [],
+    "reportFields": [
+      {
+        "fieldKey": "calls",
+        "label": "Calls attempted",
+        "required": true,
+        "metricType": "count"
+      }
+    ],
+    "complianceNotes": [],
+    "accessibilityNotes": [],
+    "tags": [
+      "phone-bank"
+    ],
+    "fullDescription": "Internal phone bank with script and technology readiness."
+  },
+  {
+    "version": "1.0.0",
+    "status": "active",
+    "createdAt": "2026-07-15T03:00:00.000Z",
+    "updatedAt": "2026-07-15T03:00:00.000Z",
+    "templateId": "tpl-text-bank",
+    "slug": "text-bank",
+    "name": "Text Bank",
+    "shortDescription": "Volunteer text bank with compliance review.",
+    "category": "campaign",
+    "eventType": "text_bank",
+    "recurringSuitable": true,
+    "recommendedFor": {
+      "campaignWide": true,
+      "college": false,
+      "county": false,
+      "city": false,
+      "team": true
+    },
+    "defaults": {
+      "durationMinutes": 120,
+      "visibility": "internal",
+      "timezone": "America/Chicago",
+      "candidateAttendance": "not_applicable",
+      "approvalPathKey": "campaign_operations",
+      "publicationRequired": false,
+      "rsvpMode": "optional"
+    },
+    "ownership": {
+      "suggestedRoleKeys": [
+        "volunteer_manager"
+      ],
+      "owningTeamKeys": [
+        "text-bank"
+      ],
+      "ownerRequired": true
+    },
+    "readiness": {
+      "requiredDimensions": [
+        "ownership",
+        "approval",
+        "staffing",
+        "verification",
+        "follow_up"
+      ],
+      "optionalDimensions": [
+        "tasks"
+      ],
+      "nonApplicableDimensions": [
+        "candidate",
+        "venue",
+        "promotion",
+        "rsvp"
+      ]
+    },
+    "volunteerRoles": [
+      {
+        "roleKey": "texter",
+        "title": "Text bank volunteer",
+        "numberNeeded": 8,
+        "trainingRequired": true,
+        "required": true
+      }
+    ],
+    "tasks": [
+      {
+        "taskKey": "script-approval",
+        "title": "Approved script on file",
+        "required": true
+      }
+    ],
+    "logistics": [],
+    "materials": [],
+    "promotion": [],
+    "reminders": [],
+    "reportFields": [
+      {
+        "fieldKey": "messages",
+        "label": "Messages sent",
+        "required": true,
+        "metricType": "count"
+      }
+    ],
+    "complianceNotes": [
+      "Compliance verification required — calendar does not determine legality"
+    ],
+    "accessibilityNotes": [],
+    "tags": [
+      "text-bank",
+      "compliance"
+    ],
+    "fullDescription": "Text bank session with approved scripts and compliance check."
+  },
+  {
+    "version": "1.0.0",
+    "status": "active",
+    "createdAt": "2026-07-15T03:00:00.000Z",
+    "updatedAt": "2026-07-15T03:00:00.000Z",
+    "templateId": "tpl-county-organizing-meeting",
+    "slug": "county-organizing-meeting",
+    "name": "County Organizing Meeting",
+    "shortDescription": "County-wide organizing meeting.",
+    "category": "organizing",
+    "eventType": "county_meeting",
+    "recurringSuitable": true,
+    "recommendedFor": {
+      "campaignWide": false,
+      "college": false,
+      "county": true,
+      "city": false,
+      "team": true
+    },
+    "defaults": {
+      "durationMinutes": 75,
+      "visibility": "internal",
+      "timezone": "America/Chicago",
+      "candidateAttendance": "optional",
+      "approvalPathKey": "county_local",
+      "publicationRequired": false,
+      "rsvpMode": "recommended"
+    },
+    "ownership": {
+      "suggestedRoleKeys": [
+        "county_leader"
+      ],
+      "owningTeamKeys": [
+        "county-organizing"
+      ],
+      "ownerRequired": true
+    },
+    "readiness": {
+      "requiredDimensions": [
+        "ownership",
+        "approval",
+        "date_time",
+        "venue",
+        "follow_up"
+      ],
+      "optionalDimensions": [
+        "staffing",
+        "rsvp",
+        "candidate"
+      ],
+      "nonApplicableDimensions": [
+        "promotion",
+        "materials",
+        "verification",
+        "tasks"
+      ]
+    },
+    "volunteerRoles": [],
+    "tasks": [
+      {
+        "taskKey": "agenda",
+        "title": "County agenda",
+        "required": true
+      }
+    ],
+    "logistics": [],
+    "materials": [],
+    "promotion": [],
+    "reminders": [],
+    "reportFields": [
+      {
+        "fieldKey": "attendees",
+        "label": "Attendees",
+        "required": true,
+        "metricType": "count"
+      }
+    ],
+    "complianceNotes": [],
+    "accessibilityNotes": [],
+    "tags": [
+      "county",
+      "organizing"
+    ],
+    "fullDescription": "County organizing rhythm meeting with follow-up."
+  },
+  {
+    "version": "1.0.0",
+    "status": "active",
+    "createdAt": "2026-07-15T03:00:00.000Z",
+    "updatedAt": "2026-07-15T03:00:00.000Z",
+    "templateId": "tpl-city-organizing-meeting",
+    "slug": "city-organizing-meeting",
+    "name": "City Organizing Meeting",
+    "shortDescription": "City organizing meeting with county review.",
+    "category": "organizing",
+    "eventType": "city_meeting",
+    "recurringSuitable": true,
+    "recommendedFor": {
+      "campaignWide": false,
+      "college": false,
+      "county": true,
+      "city": true,
+      "team": true
+    },
+    "defaults": {
+      "durationMinutes": 75,
+      "visibility": "internal",
+      "timezone": "America/Chicago",
+      "candidateAttendance": "optional",
+      "approvalPathKey": "city_with_county_review",
+      "publicationRequired": false,
+      "rsvpMode": "recommended"
+    },
+    "ownership": {
+      "suggestedRoleKeys": [
+        "city_leader"
+      ],
+      "owningTeamKeys": [
+        "city-organizing"
+      ],
+      "ownerRequired": true
+    },
+    "readiness": {
+      "requiredDimensions": [
+        "ownership",
+        "approval",
+        "date_time",
+        "venue",
+        "verification",
+        "follow_up"
+      ],
+      "optionalDimensions": [
+        "staffing",
+        "rsvp",
+        "candidate"
+      ],
+      "nonApplicableDimensions": [
+        "promotion",
+        "materials",
+        "tasks"
+      ]
+    },
+    "volunteerRoles": [],
+    "tasks": [],
+    "logistics": [],
+    "materials": [],
+    "promotion": [],
+    "reminders": [],
+    "reportFields": [
+      {
+        "fieldKey": "attendees",
+        "label": "Attendees",
+        "required": true,
+        "metricType": "count"
+      }
+    ],
+    "complianceNotes": [
+      "County review may be required per policy"
+    ],
+    "accessibilityNotes": [],
+    "tags": [
+      "city",
+      "organizing"
+    ],
+    "fullDescription": "City-level organizing with parent-county scope."
+  },
+  {
+    "version": "1.0.0",
+    "status": "active",
+    "createdAt": "2026-07-15T03:00:00.000Z",
+    "updatedAt": "2026-07-15T03:00:00.000Z",
+    "templateId": "tpl-community-forum",
+    "slug": "community-forum",
+    "name": "Community Forum",
+    "shortDescription": "Public community forum with moderation.",
+    "category": "community",
+    "eventType": "community_forum",
+    "recurringSuitable": false,
+    "recommendedFor": {
+      "campaignWide": true,
+      "college": true,
+      "county": true,
+      "city": true,
+      "team": false
+    },
+    "defaults": {
+      "durationMinutes": 105,
+      "visibility": "public",
+      "timezone": "America/Chicago",
+      "candidateAttendance": "optional",
+      "approvalPathKey": "campaign_communications",
+      "publicationRequired": true,
+      "rsvpMode": "recommended"
+    },
+    "ownership": {
+      "suggestedRoleKeys": [
+        "community_lead"
+      ],
+      "owningTeamKeys": [
+        "community"
+      ],
+      "ownerRequired": true
+    },
+    "readiness": {
+      "requiredDimensions": [
+        "ownership",
+        "approval",
+        "date_time",
+        "venue",
+        "staffing",
+        "promotion",
+        "rsvp",
+        "verification",
+        "follow_up"
+      ],
+      "optionalDimensions": [
+        "candidate"
+      ],
+      "nonApplicableDimensions": []
+    },
+    "volunteerRoles": [
+      {
+        "roleKey": "moderator",
+        "title": "Moderator",
+        "numberNeeded": 1,
+        "trainingRequired": true,
+        "required": true
+      },
+      {
+        "roleKey": "check-in",
+        "title": "Check-in",
+        "numberNeeded": 2,
+        "trainingRequired": false,
+        "required": true
+      }
+    ],
+    "tasks": [],
+    "logistics": [
+      {
+        "itemKey": "venue",
+        "label": "Accessible public venue",
+        "required": true
+      }
+    ],
+    "materials": [],
+    "promotion": [
+      {
+        "itemKey": "outreach",
+        "label": "Community outreach plan",
+        "required": true
+      }
+    ],
+    "reminders": [],
+    "reportFields": [
+      {
+        "fieldKey": "attendees",
+        "label": "Attendees",
+        "required": true,
+        "metricType": "count"
+      }
+    ],
+    "complianceNotes": [],
+    "accessibilityNotes": [
+      "Accessibility plan required"
+    ],
+    "tags": [
+      "public",
+      "forum"
+    ],
+    "fullDescription": "Public forum with moderator, check-in, and follow-up report."
+  },
+  {
+    "version": "1.0.0",
+    "status": "active",
+    "createdAt": "2026-07-15T03:00:00.000Z",
+    "updatedAt": "2026-07-15T03:00:00.000Z",
+    "templateId": "tpl-candidate-appearance",
+    "slug": "candidate-appearance",
+    "name": "Candidate Appearance",
+    "shortDescription": "Kelly appearance with briefing and travel review.",
+    "category": "candidate",
+    "eventType": "candidate_appearance",
+    "recurringSuitable": false,
+    "recommendedFor": {
+      "campaignWide": true,
+      "college": true,
+      "county": true,
+      "city": true,
+      "team": false
+    },
+    "defaults": {
+      "durationMinutes": 60,
+      "visibility": "internal",
+      "timezone": "America/Chicago",
+      "candidateAttendance": "required",
+      "approvalPathKey": "candidate_desk",
+      "publicationRequired": false,
+      "rsvpMode": "none"
+    },
+    "ownership": {
+      "suggestedRoleKeys": [
+        "campaign_manager"
+      ],
+      "owningTeamKeys": [
+        "candidate-desk"
+      ],
+      "ownerRequired": true
+    },
+    "readiness": {
+      "requiredDimensions": [
+        "ownership",
+        "approval",
+        "date_time",
+        "venue",
+        "candidate",
+        "verification",
+        "follow_up"
+      ],
+      "optionalDimensions": [
+        "staffing",
+        "promotion"
+      ],
+      "nonApplicableDimensions": [
+        "rsvp"
+      ]
+    },
+    "volunteerRoles": [],
+    "tasks": [
+      {
+        "taskKey": "briefing",
+        "title": "Candidate briefing",
+        "required": true
+      },
+      {
+        "taskKey": "travel",
+        "title": "Travel review",
+        "required": true
+      }
+    ],
+    "logistics": [],
+    "materials": [],
+    "promotion": [],
+    "reminders": [],
+    "reportFields": [
+      {
+        "fieldKey": "outcome",
+        "label": "Appearance outcome",
+        "required": true,
+        "metricType": "text"
+      }
+    ],
+    "candidateRequest": {
+      "defaultMode": "required",
+      "briefingRequired": true,
+      "travelReviewRequired": true,
+      "publicLanguageApprovalRequired": true
+    },
+    "complianceNotes": [
+      "Publication blocked until permitted",
+      "Request ≠ confirmation"
+    ],
+    "accessibilityNotes": [],
+    "tags": [
+      "candidate",
+      "kelly",
+      "private"
+    ],
+    "fullDescription": "Candidate appearance requiring request, briefing, and approval paths."
+  },
+  {
+    "version": "1.0.0",
+    "status": "active",
+    "createdAt": "2026-07-15T03:00:00.000Z",
+    "updatedAt": "2026-07-15T03:00:00.000Z",
+    "templateId": "tpl-festival-community-appearance",
+    "slug": "festival-community-appearance",
+    "name": "Festival or Community Appearance",
+    "shortDescription": "Long-duration public community appearance.",
+    "category": "community",
+    "eventType": "festival_or_public_appearance",
+    "recurringSuitable": false,
+    "recommendedFor": {
+      "campaignWide": true,
+      "college": false,
+      "county": true,
+      "city": true,
+      "team": false
+    },
+    "defaults": {
+      "durationMinutes": 240,
+      "visibility": "public",
+      "timezone": "America/Chicago",
+      "candidateAttendance": "optional",
+      "approvalPathKey": "campaign_communications",
+      "publicationRequired": true,
+      "rsvpMode": "none"
+    },
+    "ownership": {
+      "suggestedRoleKeys": [
+        "events_lead"
+      ],
+      "owningTeamKeys": [
+        "events"
+      ],
+      "ownerRequired": true
+    },
+    "readiness": {
+      "requiredDimensions": [
+        "ownership",
+        "approval",
+        "date_time",
+        "venue",
+        "staffing",
+        "materials",
+        "promotion",
+        "follow_up"
+      ],
+      "optionalDimensions": [
+        "candidate",
+        "verification"
+      ],
+      "nonApplicableDimensions": [
+        "rsvp"
+      ]
+    },
+    "volunteerRoles": [
+      {
+        "roleKey": "shift-volunteer",
+        "title": "Shift volunteer",
+        "numberNeeded": 8,
+        "trainingRequired": false,
+        "required": false
+      }
+    ],
+    "tasks": [
+      {
+        "taskKey": "weather",
+        "title": "Weather plan",
+        "required": true
+      }
+    ],
+    "logistics": [
+      {
+        "itemKey": "booth",
+        "label": "Booth or table space",
+        "required": true
+      }
+    ],
+    "materials": [
+      {
+        "materialKey": "tent",
+        "label": "Tent or shade plan",
+        "required": false
+      }
+    ],
+    "promotion": [
+      {
+        "itemKey": "visibility",
+        "label": "Public visibility plan",
+        "required": true
+      }
+    ],
+    "reminders": [],
+    "reportFields": [
+      {
+        "fieldKey": "contacts",
+        "label": "Contacts made",
+        "required": true,
+        "metricType": "count"
+      }
+    ],
+    "complianceNotes": [],
+    "accessibilityNotes": [
+      "Weather and materials planning"
+    ],
+    "tags": [
+      "festival",
+      "public"
+    ],
+    "fullDescription": "Festival or fair appearance with shift-based staffing placeholders."
+  },
+  {
+    "version": "1.0.0",
+    "status": "active",
+    "createdAt": "2026-07-15T03:00:00.000Z",
+    "updatedAt": "2026-07-15T03:00:00.000Z",
+    "templateId": "tpl-press-conference",
+    "slug": "press-conference",
+    "name": "Press Conference",
+    "shortDescription": "Press event with communications ownership.",
+    "category": "media",
+    "eventType": "press_event",
+    "recurringSuitable": false,
+    "recommendedFor": {
+      "campaignWide": true,
+      "college": false,
+      "county": false,
+      "city": false,
+      "team": false
+    },
+    "defaults": {
+      "durationMinutes": 45,
+      "visibility": "public",
+      "timezone": "America/Chicago",
+      "candidateAttendance": "required",
+      "approvalPathKey": "communications",
+      "publicationRequired": true,
+      "rsvpMode": "none"
+    },
+    "ownership": {
+      "suggestedRoleKeys": [
+        "communications_lead"
+      ],
+      "owningTeamKeys": [
+        "communications"
+      ],
+      "ownerRequired": true
+    },
+    "readiness": {
+      "requiredDimensions": [
+        "ownership",
+        "approval",
+        "date_time",
+        "venue",
+        "candidate",
+        "verification",
+        "promotion",
+        "follow_up"
+      ],
+      "optionalDimensions": [
+        "staffing"
+      ],
+      "nonApplicableDimensions": [
+        "rsvp"
+      ]
+    },
+    "volunteerRoles": [],
+    "tasks": [
+      {
+        "taskKey": "media-list",
+        "title": "Media list",
+        "required": true
+      },
+      {
+        "taskKey": "advisory",
+        "title": "Press advisory",
+        "required": true
+      },
+      {
+        "taskKey": "talking-points",
+        "title": "Talking points",
+        "required": true
+      }
+    ],
+    "logistics": [
+      {
+        "itemKey": "location-verify",
+        "label": "Location verification",
+        "required": true
+      }
+    ],
+    "materials": [],
+    "promotion": [
+      {
+        "itemKey": "press-advisory",
+        "label": "Press advisory distribution",
+        "required": true
+      }
+    ],
+    "reminders": [],
+    "reportFields": [
+      {
+        "fieldKey": "outlets",
+        "label": "Outlets represented",
+        "required": true,
+        "metricType": "count"
+      }
+    ],
+    "candidateRequest": {
+      "defaultMode": "required",
+      "briefingRequired": true,
+      "travelReviewRequired": false,
+      "publicLanguageApprovalRequired": true
+    },
+    "complianceNotes": [
+      "Candidate public-language approval required"
+    ],
+    "accessibilityNotes": [],
+    "tags": [
+      "press",
+      "media"
+    ],
+    "fullDescription": "Press conference with briefing, media list, and advisory requirements."
+  },
+  {
+    "version": "1.0.0",
+    "status": "active",
+    "createdAt": "2026-07-15T03:00:00.000Z",
+    "updatedAt": "2026-07-15T03:00:00.000Z",
+    "templateId": "tpl-partner-meeting",
+    "slug": "partner-meeting",
+    "name": "Partner Meeting",
+    "shortDescription": "Partner relationship meeting with restricted notes.",
+    "category": "partner",
+    "eventType": "partner_event",
+    "recurringSuitable": true,
+    "recommendedFor": {
+      "campaignWide": true,
+      "college": true,
+      "county": true,
+      "city": true,
+      "team": true
+    },
+    "defaults": {
+      "durationMinutes": 60,
+      "visibility": "private",
+      "timezone": "America/Chicago",
+      "candidateAttendance": "optional",
+      "approvalPathKey": "campaign_operations",
+      "publicationRequired": false,
+      "rsvpMode": "optional"
+    },
+    "ownership": {
+      "suggestedRoleKeys": [
+        "partnerships_lead"
+      ],
+      "owningTeamKeys": [
+        "partnerships"
+      ],
+      "ownerRequired": true
+    },
+    "readiness": {
+      "requiredDimensions": [
+        "ownership",
+        "approval",
+        "date_time",
+        "follow_up"
+      ],
+      "optionalDimensions": [
+        "candidate"
+      ],
+      "nonApplicableDimensions": [
+        "promotion",
+        "staffing",
+        "rsvp",
+        "verification"
+      ]
+    },
+    "volunteerRoles": [],
+    "tasks": [
+      {
+        "taskKey": "partner-contact",
+        "title": "Partner contact confirmed",
+        "required": true
+      }
+    ],
+    "logistics": [],
+    "materials": [],
+    "promotion": [],
+    "reminders": [],
+    "reportFields": [
+      {
+        "fieldKey": "relationship-notes",
+        "label": "Relationship notes (restricted)",
+        "required": true,
+        "metricType": "text"
+      }
+    ],
+    "complianceNotes": [
+      "Relationship notes restricted — not public"
+    ],
+    "accessibilityNotes": [],
+    "tags": [
+      "partner",
+      "private"
+    ],
+    "fullDescription": "Partner meeting with restricted relationship notes."
+  },
+  {
+    "version": "1.0.0",
+    "status": "active",
+    "createdAt": "2026-07-15T03:00:00.000Z",
+    "updatedAt": "2026-07-15T03:00:00.000Z",
+    "templateId": "tpl-fundraiser",
+    "slug": "fundraiser",
+    "name": "Fundraiser",
+    "shortDescription": "Fundraising event with compliance review.",
+    "category": "fundraising",
+    "eventType": "fundraiser",
+    "recurringSuitable": false,
+    "recommendedFor": {
+      "campaignWide": true,
+      "college": false,
+      "county": true,
+      "city": true,
+      "team": false
+    },
+    "defaults": {
+      "durationMinutes": 120,
+      "visibility": "private",
+      "timezone": "America/Chicago",
+      "candidateAttendance": "optional",
+      "approvalPathKey": "finance_compliance",
+      "publicationRequired": false,
+      "rsvpMode": "required"
+    },
+    "ownership": {
+      "suggestedRoleKeys": [
+        "finance_lead"
+      ],
+      "owningTeamKeys": [
+        "finance"
+      ],
+      "ownerRequired": true
+    },
+    "readiness": {
+      "requiredDimensions": [
+        "ownership",
+        "approval",
+        "date_time",
+        "venue",
+        "verification",
+        "rsvp",
+        "follow_up"
+      ],
+      "optionalDimensions": [
+        "candidate",
+        "promotion"
+      ],
+      "nonApplicableDimensions": [
+        "staffing"
+      ]
+    },
+    "volunteerRoles": [],
+    "tasks": [
+      {
+        "taskKey": "compliance",
+        "title": "Compliance review",
+        "required": true
+      }
+    ],
+    "logistics": [],
+    "materials": [],
+    "promotion": [],
+    "reminders": [],
+    "reportFields": [
+      {
+        "fieldKey": "attendance",
+        "label": "Attendance",
+        "required": true,
+        "metricType": "count",
+        "disclaimer": "Financial reporting handled outside calendar"
+      }
+    ],
+    "complianceNotes": [
+      "Financial reporting not inferred from calendar attendance"
+    ],
+    "accessibilityNotes": [],
+    "tags": [
+      "fundraising",
+      "compliance"
+    ],
+    "fullDescription": "Fundraiser with finance team involvement and compliance review."
+  },
+  {
+    "version": "1.0.0",
+    "status": "active",
+    "createdAt": "2026-07-15T03:00:00.000Z",
+    "updatedAt": "2026-07-15T03:00:00.000Z",
+    "templateId": "tpl-leadership-cohort-meeting",
+    "slug": "leadership-cohort-meeting",
+    "name": "Leadership Cohort Meeting",
+    "shortDescription": "Recurring leadership team meeting.",
+    "category": "leadership",
+    "eventType": "leadership_meeting",
+    "recurringSuitable": true,
+    "recommendedFor": {
+      "campaignWide": true,
+      "college": true,
+      "county": true,
+      "city": false,
+      "team": true
+    },
+    "defaults": {
+      "durationMinutes": 60,
+      "visibility": "internal",
+      "timezone": "America/Chicago",
+      "candidateAttendance": "optional",
+      "approvalPathKey": "leadership_team",
+      "publicationRequired": false,
+      "rsvpMode": "optional"
+    },
+    "ownership": {
+      "suggestedRoleKeys": [
+        "leadership_chair"
+      ],
+      "owningTeamKeys": [
+        "leadership"
+      ],
+      "ownerRequired": true
+    },
+    "readiness": {
+      "requiredDimensions": [
+        "ownership",
+        "approval",
+        "date_time",
+        "follow_up"
+      ],
+      "optionalDimensions": [
+        "tasks",
+        "candidate"
+      ],
+      "nonApplicableDimensions": [
+        "promotion",
+        "staffing",
+        "rsvp",
+        "verification"
+      ]
+    },
+    "volunteerRoles": [],
+    "tasks": [
+      {
+        "taskKey": "agenda",
+        "title": "Agenda prepared",
+        "required": true
+      }
+    ],
+    "logistics": [],
+    "materials": [],
+    "promotion": [],
+    "reminders": [],
+    "reportFields": [
+      {
+        "fieldKey": "decisions",
+        "label": "Decisions captured",
+        "required": true,
+        "metricType": "text"
+      }
+    ],
+    "complianceNotes": [],
+    "accessibilityNotes": [],
+    "tags": [
+      "leadership",
+      "recurring"
+    ],
+    "fullDescription": "Internal leadership cohort meeting with agenda and follow-up."
+  },
+  {
+    "version": "1.0.0",
+    "status": "active",
+    "createdAt": "2026-07-15T03:00:00.000Z",
+    "updatedAt": "2026-07-15T03:00:00.000Z",
+    "templateId": "tpl-power-of-5-recruitment",
+    "slug": "power-of-5-recruitment",
+    "name": "Power of 5 Recruitment Event",
+    "shortDescription": "Recruitment-focused Power of 5 event.",
+    "category": "organizing",
+    "eventType": "recruitment_event",
+    "recurringSuitable": false,
+    "recommendedFor": {
+      "campaignWide": true,
+      "college": true,
+      "county": true,
+      "city": false,
+      "team": true
+    },
+    "defaults": {
+      "durationMinutes": 60,
+      "visibility": "public",
+      "timezone": "America/Chicago",
+      "candidateAttendance": "not_applicable",
+      "approvalPathKey": "college_local",
+      "publicationRequired": true,
+      "rsvpMode": "recommended"
+    },
+    "ownership": {
+      "suggestedRoleKeys": [
+        "college_leader"
+      ],
+      "owningTeamKeys": [
+        "recruitment"
+      ],
+      "ownerRequired": true
+    },
+    "readiness": {
+      "requiredDimensions": [
+        "ownership",
+        "approval",
+        "date_time",
+        "follow_up"
+      ],
+      "optionalDimensions": [
+        "staffing",
+        "promotion",
+        "rsvp"
+      ],
+      "nonApplicableDimensions": [
+        "candidate",
+        "verification"
+      ]
+    },
+    "volunteerRoles": [],
+    "tasks": [
+      {
+        "taskKey": "invites",
+        "title": "Power of 5 invitation plan",
+        "required": true
+      }
+    ],
+    "logistics": [],
+    "materials": [],
+    "promotion": [
+      {
+        "itemKey": "invite-plan",
+        "label": "Invitation outreach",
+        "required": true
+      }
+    ],
+    "reminders": [],
+    "reportFields": [
+      {
+        "fieldKey": "invitations",
+        "label": "Power of 5 invitations",
+        "required": true,
+        "metricType": "count",
+        "disclaimer": "Invitations tracked separately from confirmed participation"
+      }
+    ],
+    "complianceNotes": [
+      "Invitations ≠ confirmed participation"
+    ],
+    "accessibilityNotes": [],
+    "tags": [
+      "power-of-5",
+      "recruitment"
+    ],
+    "fullDescription": "Recruitment event focused on Power of 5 invitations."
+  }
+]

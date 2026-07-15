@@ -491,7 +491,20 @@ const EVALUATORS: Record<
 };
 
 export function evaluateEventReadiness(event: CalendarEvent, now: Date = new Date()): EventReadinessItem[] {
-  return (Object.keys(EVALUATORS) as EventReadinessDimension[]).map((dim) => EVALUATORS[dim](event, now));
+  const items = (Object.keys(EVALUATORS) as EventReadinessDimension[]).map((dim) => EVALUATORS[dim](event, now));
+  const tr = event.template_readiness;
+  if (!tr) return items;
+  return items.map((item) => {
+    if (tr.nonApplicableDimensions.includes(item.dimension)) {
+      return {
+        ...item,
+        state: "not_required",
+        explanation: "Not required for this event template.",
+        blocker: null,
+      };
+    }
+    return item;
+  });
 }
 
 export function aggregateOverallReadiness(

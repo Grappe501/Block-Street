@@ -1,0 +1,17 @@
+{
+  "sampleWeekly": {
+    "title": "County organizing meeting",
+    "templateId": "tpl-county-organizing-meeting",
+    "seriesStartDate": "2026-08-04",
+    "defaultStartTime": "18:00",
+    "defaultDurationMinutes": 60,
+    "recurrenceRule": {
+      "frequency": "weekly",
+      "interval": 1,
+      "daysOfWeek": [
+        "MO"
+      ],
+      "count": 8
+    }
+  }
+}

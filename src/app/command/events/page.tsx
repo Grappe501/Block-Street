@@ -46,8 +46,11 @@ export default function EventOperationsDashboardPage() {
 
       <CommandSection title="Existing Event Board routes">
         <div className="grid gap-3 sm:grid-cols-2">
+          <CommandCard href="/calendar/templates" title="Event Template Library" note="Start from template or preview" accent />
+          <CommandCard href="/command/events/templates" title="Command templates view" note="Most-used and scoped templates" />
+          <CommandCard href="/command/events/series" title="Recurring series" note="Active and paused series" />
+          <CommandCard href="/calendar/create" title="Propose without template" note="Blank-page path still available" />
           <CommandCard href="/command/events/calendar" title="Event board calendar" note="Month, list, drill-downs" />
-          <CommandCard href="/command/events/pending" title="Pending proposals" note="Awaiting review" />
           <CommandCard href="/command/events/staffing" title="Staffing gaps" note="Open volunteer slots" />
           <CommandCard href="/command/events/kelly-requests" title="Kelly requests" note="Candidate visit windows" />
           <CommandCard href="/command/events/conflicts" title="Conflicts" note="Scheduling overlaps" />
