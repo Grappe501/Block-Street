@@ -1,12 +1,12 @@
 import Link from "next/link";
 import { CommandCard, CommandChrome, CommandSection } from "@/components/command/CommandChrome";
-import { CalendarWidget } from "@/components/calendar/CalendarWidget";
+import { EventOperationsWidget } from "@/components/calendar/operations/EventOperationsWidget";
 import {
   COMMAND_BOARD,
   listCommandLanes,
   listJobSignupLinks,
 } from "@/lib/command/board";
-import { listEventsForScope, listPendingApprovals, listVolunteerNeeds } from "@/lib/calendar";
+import { listEventOperationsSummaries } from "@/lib/calendar/operations";
 
 export const metadata = { title: "Command boards · soft beta" };
 
@@ -16,9 +16,9 @@ export default function CommandHubPage() {
   const vm = COMMAND_BOARD.oversight.volunteer_manager;
   const cm = COMMAND_BOARD.oversight.campaign_manager;
   const acm = COMMAND_BOARD.oversight.assistant_campaign_manager;
-  const weekEvents = listEventsForScope({ kind: "command" }).slice(0, 5);
-  const pending = listPendingApprovals().length;
-  const gaps = listVolunteerNeeds({ kind: "volunteer" }).length;
+  const opsSummaries = listEventOperationsSummaries({ kind: "command" });
+  const pending = opsSummaries.filter((s) => s.attentionKeys.includes("approval_pending")).length;
+  const gaps = opsSummaries.filter((s) => s.attentionKeys.includes("critical_staffing_gap")).length;
 
   return (
     <CommandChrome
@@ -28,12 +28,18 @@ export default function CommandHubPage() {
       backLabel="July 14 hub"
     >
       <div className="mb-6 grid gap-3 sm:grid-cols-3">
-        <CommandCard href="/command/calendar" accent title="Command calendar" note="Universal campaign view" />
+        <CommandCard href="/command/events" accent title="Event Operations Command" note="Carol Eagan · attention & readiness" />
+        <CommandCard href="/command/events/attention" title={`Needs attention (${opsSummaries.filter((s) => s.attentionSeverity !== "none").length})`} note="Operational queue" />
+        <CommandCard href="/command/calendar" title="Command calendar" note="Universal campaign view" />
         <CommandCard href="/command/events/pending" title={`Pending approvals (${pending})`} note="Event Board queue" />
         <CommandCard href="/command/events/volunteer-needs" title={`Volunteer gaps (${gaps})`} note="Staffing attention" />
       </div>
 
-      <CalendarWidget title="This week’s attention" events={weekEvents} moreHref="/command/events/calendar" />
+      <EventOperationsWidget
+        title="Event Operations — this week"
+        summaries={opsSummaries}
+        moreHref="/command/events"
+      />
 
       <div className="mt-8 grid gap-3 sm:grid-cols-2">
         <CommandCard

@@ -1,5 +1,7 @@
 import { CommandCard, CommandChrome, CommandSection } from "@/components/command/CommandChrome";
+import { EventOperationsWidget } from "@/components/calendar/operations/EventOperationsWidget";
 import { listCampusCommandLinks } from "@/lib/command/board";
+import { listEventOperationsSummaries } from "@/lib/calendar/operations";
 
 export const metadata = { title: "Campus command boards" };
 
@@ -23,6 +25,14 @@ export default function CampusCommandIndexPage() {
           ))}
         </div>
       </CommandSection>
+
+      <EventOperationsWidget
+        title="Campus events needing attention"
+        summaries={listEventOperationsSummaries({ kind: "command" }).filter((s) =>
+          s.scopeLabels.some((l) => l.startsWith("College:")),
+        )}
+        moreHref="/command/events/attention"
+      />
     </CommandChrome>
   );
 }

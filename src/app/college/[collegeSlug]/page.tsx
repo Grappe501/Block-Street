@@ -1,8 +1,10 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CollegeChrome } from "@/components/college-community/CollegeChrome";
+import { EventOperationsWidget } from "@/components/calendar/operations/EventOperationsWidget";
 import { CAMPUS_TEAMS, MONTH_PLAN } from "@/lib/college-community/catalog";
 import { getCollege, listColleges } from "@/lib/college-community/institutions";
+import { listEventOperationsSummaries } from "@/lib/calendar/operations";
 
 export function generateStaticParams() {
   return listColleges().map((c) => ({ collegeSlug: c.slug }));
@@ -17,6 +19,7 @@ export default async function CollegeCommunityHomePage({
   const college = getCollege(collegeSlug);
   if (!college) notFound();
   const base = `/college/${college.slug}`;
+  const campusOps = listEventOperationsSummaries({ kind: "college", collegeSlug: college.slug });
 
   return (
     <CollegeChrome slug={college.slug} name={college.name}>
@@ -78,6 +81,23 @@ export default async function CollegeCommunityHomePage({
           <p className="text-xs font-bold text-brand-700">Campus networking event</p>
           <p className="mt-1 text-sm text-slate-700">Social recruitment experience — dates, venues, hospitality, follow-up.</p>
         </Link>
+      </section>
+
+      <section className="mt-6">
+        <EventOperationsWidget
+          title="Campus event operations"
+          summaries={campusOps}
+          moreHref={`${base}/calendar`}
+          variant="college"
+        />
+        <div className="mt-2 flex flex-wrap gap-3">
+          <Link href={`${base}/calendar`} className="text-sm font-semibold text-brand-700 underline">
+            View college calendar →
+          </Link>
+          <Link href="/command/events" className="text-sm font-semibold text-brand-700 underline">
+            Event Operations Command →
+          </Link>
+        </div>
       </section>
 
       <section className="mt-6">

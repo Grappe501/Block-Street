@@ -1,5 +1,7 @@
 import { CommandCard, CommandChrome, CommandSection } from "@/components/command/CommandChrome";
+import { EventOperationsWidget } from "@/components/calendar/operations/EventOperationsWidget";
 import { listCommandLanes } from "@/lib/command/board";
+import { listEventOperationsSummaries } from "@/lib/calendar/operations";
 
 export const metadata = { title: "Campaign lane boards" };
 
@@ -27,6 +29,13 @@ export default function CampaignBoardsPage() {
           ))}
         </div>
       </CommandSection>
+
+      <EventOperationsWidget
+        title="Campaign event operations"
+        summaries={listEventOperationsSummaries({ kind: "campaign" })}
+        moreHref="/command/events"
+        variant="campaign"
+      />
     </CommandChrome>
   );
 }

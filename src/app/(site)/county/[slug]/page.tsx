@@ -8,6 +8,8 @@ import {
   getInstitutionTypeLabel,
 } from "@/lib/data";
 import { CommunityWorkspace } from "@/components/community/workspace/CommunityWorkspace";
+import { EventOperationsWidget } from "@/components/calendar/operations/EventOperationsWidget";
+import { listEventOperationsSummaries } from "@/lib/calendar/operations";
 
 export default async function CountyPage({
   params,
@@ -23,6 +25,7 @@ export default async function CountyPage({
   const privateCharter = getPrivateCharterSchoolsByCounty(slug);
   const privateSchools = privateCharter.filter((s) => s.sector === "private");
   const charterSchools = privateCharter.filter((s) => s.sector === "charter");
+  const countyOps = listEventOperationsSummaries({ kind: "county", countySlug: slug });
 
   const PostSecondaryList = ({ items, subtitle }: { items: typeof localSchools; subtitle?: string }) => (
     <div className="mt-4 grid gap-3">
@@ -52,6 +55,18 @@ export default async function CountyPage({
       backLabel="← Arkansas Map"
       subtitle="County youth organizing workspace — for students and young workers ages 16–24"
     >
+      <div>
+        <EventOperationsWidget
+          title="County event operations"
+          summaries={countyOps}
+          moreHref={`/county/${slug}/calendar`}
+          variant="county"
+        />
+        <Link href={`/county/${slug}/calendar`} className="mt-2 inline-block text-sm font-semibold text-brand-600 underline">
+          View county calendar →
+        </Link>
+      </div>
+
       {(localSchools.length > 0 || servedSchools.length > 0) && (
         <div>
           <h2 className="text-lg font-bold text-slate-900">Post-Secondary Schools</h2>

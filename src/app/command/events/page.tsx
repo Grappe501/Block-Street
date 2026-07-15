@@ -1,73 +1,63 @@
 import Link from "next/link";
-import { CommandCard, CommandChrome, CommandSection } from "@/components/command/CommandChrome";
-import { buildEventsBoard, listCampusCommandLinks } from "@/lib/command/board";
+import { CommandCard, CommandSection } from "@/components/command/CommandChrome";
+import { EventOperationsChrome } from "@/components/calendar/operations/EventOperationsChrome";
+import { EventOperationsMatrix } from "@/components/calendar/operations/EventOperationsMatrix";
+import { EventOperationsQueue } from "@/components/calendar/operations/EventOperationsRow";
+import { EventOperationsSummaryCards } from "@/components/calendar/operations/EventOperationsSummaryCards";
+import {
+  countSummaryMetrics,
+  listEventOperationsSummaries,
+  sortByAttention,
+} from "@/lib/calendar/operations";
+import { buildEventsBoard } from "@/lib/command/board";
 
-export const metadata = { title: "Event Board · Carol Eagan" };
+export const metadata = { title: "Event Operations Command · Carol Eagan" };
 
-export default function EventsBoardPage() {
+export default function EventOperationsDashboardPage() {
   const board = buildEventsBoard();
-  const campuses = listCampusCommandLinks().slice(0, 12);
+  const summaries = listEventOperationsSummaries({ kind: "command" });
+  const metrics = countSummaryMetrics(summaries);
+  const queue = sortByAttention(summaries).filter((s) => s.attentionSeverity !== "none").slice(0, 12);
 
   return (
-    <CommandChrome
-      title="Event Board"
-      subtitle={`Owned by Volunteer Manager ${board.owner.person}. Campus Event / Social-Events leads connect here on the events lane. Campaign Manager and Assistant still oversee the lane.`}
-      eyebrow="Volunteer Manager · events"
+    <EventOperationsChrome
+      title="Event Operations Command"
+      subtitle="What is happening, what needs attention, why, who owns it, and what should happen next — soft-beta honest."
     >
-      <div className="rounded-xl bg-field-dusk p-5 text-field-mist">
-        <p className="font-fieldSans text-xs font-semibold uppercase tracking-[0.14em] text-field-wheat">Owner</p>
-        <p className="mt-1 font-fieldDisplay text-3xl text-white">{board.owner.person}</p>
-        <p className="mt-2 font-fieldSans text-sm text-field-mist/90">{board.owner.display_name}</p>
-      </div>
+      <EventOperationsSummaryCards metrics={metrics} />
 
-      <CommandSection title="What this board is for">
-        <ul className="list-disc space-y-2 pl-5 font-fieldSans text-sm text-field-ink/85">
-          <li>Statewide rhythm for campus networking and recruitment events</li>
-          <li>Same-lane connection between campaign Event Lead and campus Social & Events Team</li>
-          <li>Clear signup path for the College Team Event Lead seat</li>
-        </ul>
-      </CommandSection>
-
-      <CommandSection title="Actions">
-        <div className="grid gap-3 sm:grid-cols-2">
-          <CommandCard href={board.campaignHref} title="Campaign events lane" note="Statewide events board" accent />
-          <CommandCard href="/command/events/calendar" title="Event board calendar" note="Month, list, and drill-downs" />
-          <CommandCard href="/command/events/pending" title="Pending proposals" note="Awaiting Carol Eagan review" />
-          <CommandCard href="/command/events/staffing" title="Staffing gaps" note="Open volunteer slots" />
-          <CommandCard href="/command/events/kelly-requests" title="Kelly requests" note="Candidate visit windows" />
-          <CommandCard href="/command/events/conflicts" title="Conflicts" note="Scheduling overlaps" />
-          <CommandCard href="/command/events/approvals" title="Approvals queue" note="Command approval shell" />
-          <CommandCard href="/command/events/volunteer-needs" title="Volunteer needs" note="Command-wide gaps" />
-          <CommandCard href="/command/events/completed" title="Completed events" note="Past events" />
-          <CommandCard href="/calendar/month" title="Public calendar" note="Public month view (soft beta)" />
-          <CommandCard href={board.signupHref} title="Sign up — Event Lead" note="Interest form (soft beta)" />
-          <CommandCard href={board.lane.position_href} title="Event Lead role page" note={board.meeting?.primaryContribution} />
-          <CommandCard href="/command/managers" title="CM / ACM oversight" note="Managers over both sides" />
-        </div>
-      </CommandSection>
-
-      <CommandSection title="Campus Social & Events (sample)">
-        <p className="mb-3 font-fieldSans text-sm text-field-ink/70">
-          Every campus has its own page. Open a college, then Social & Events — that lead still connects to this campaign events board.
-        </p>
-        <ul className="grid gap-2 sm:grid-cols-2">
-          {campuses.map((c) => (
-            <li key={c.slug}>
-              <Link
-                href={`/college/${c.slug}/teams/social-events`}
-                className="block rounded-lg border border-field-ink/15 bg-white px-3 py-2 font-fieldSans text-sm font-semibold text-field-ink hover:border-field-pine/50"
-              >
-                {c.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
+      <CommandSection title="Primary attention queue">
+        <EventOperationsQueue summaries={queue.length ? queue : sortByAttention(summaries).slice(0, 6)} />
         <p className="mt-3">
-          <Link href="/command/campus" className="font-fieldSans text-sm font-semibold text-field-pine underline">
-            Browse all campus boards →
+          <Link href="/command/events/attention" className="font-fieldSans text-sm font-semibold text-field-pine underline">
+            View full attention queue →
           </Link>
         </p>
       </CommandSection>
-    </CommandChrome>
+
+      <CommandSection title="Readiness matrix (upcoming)">
+        <EventOperationsMatrix summaries={summaries} />
+        <p className="mt-3">
+          <Link href="/command/events/readiness" className="font-fieldSans text-sm font-semibold text-field-pine underline">
+            Open readiness view →
+          </Link>
+        </p>
+      </CommandSection>
+
+      <CommandSection title="Existing Event Board routes">
+        <div className="grid gap-3 sm:grid-cols-2">
+          <CommandCard href="/command/events/calendar" title="Event board calendar" note="Month, list, drill-downs" />
+          <CommandCard href="/command/events/pending" title="Pending proposals" note="Awaiting review" />
+          <CommandCard href="/command/events/staffing" title="Staffing gaps" note="Open volunteer slots" />
+          <CommandCard href="/command/events/kelly-requests" title="Kelly requests" note="Candidate visit windows" />
+          <CommandCard href="/command/events/conflicts" title="Conflicts" note="Scheduling overlaps" />
+          <CommandCard href="/command/events/approvals" title="Approvals queue" note="Calendar approval shell" />
+          <CommandCard href="/command/events/volunteer-needs" title="Volunteer needs" note="Command-wide gaps" />
+          <CommandCard href="/command/events/completed" title="Completed events" note="Past events" />
+          <CommandCard href={board.signupHref} title="Sign up — Event Lead" note="Interest form (soft beta)" />
+          <CommandCard href="/command/managers" title="CM / ACM oversight" note="Managers over both sides" />
+        </div>
+      </CommandSection>
+    </EventOperationsChrome>
   );
 }

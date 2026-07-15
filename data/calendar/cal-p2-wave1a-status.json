@@ -1,0 +1,68 @@
+{
+  "phase": "CAL-P2",
+  "wave": "1A",
+  "package": "event_operations_dashboard_and_readiness",
+  "generated_at": "2026-07-15T02:00:00.000Z",
+  "baseline_commit": "7f96f04",
+  "cal_p1_2_content_commit": "7b21870",
+  "gate_a": "OPEN",
+  "persistence_mode": "session_soft_beta",
+  "calendar_write_enabled": false,
+  "rbac_mode": "audit_only",
+  "enforcement_active": false,
+  "scheduling_authority": "soft_beta_scheduling_path_only",
+  "events_evaluated": 8,
+  "readiness_dimensions": 12,
+  "attention_rules": 17,
+  "routes_created": [
+    "/command/events",
+    "/command/events/today",
+    "/command/events/upcoming",
+    "/command/events/attention",
+    "/command/events/readiness",
+    "/command/events/at-risk",
+    "/command/events/unowned",
+    "/command/events/reports-due"
+  ],
+  "routes_preserved": [
+    "/command/events/calendar",
+    "/command/events/pending",
+    "/command/events/staffing",
+    "/command/events/conflicts",
+    "/command/events/approvals",
+    "/command/events/volunteer-needs",
+    "/command/events/kelly-requests",
+    "/command/events/completed"
+  ],
+  "scoped_widgets": [
+    "/command",
+    "/command/managers",
+    "/command/campaign",
+    "/command/campus",
+    "/admin/college-command",
+    "/college/:collegeSlug",
+    "/county/:countySlug"
+  ],
+  "event_detail_integration": "EventOperationsPanel on /calendar/event/:eventId",
+  "tests": [
+    "test:calendar:event-operations",
+    "test:calendar:readiness",
+    "test:calendar:attention",
+    "test:calendar",
+    "test:calendar:rbac",
+    "test:july14-meeting-path",
+    "typecheck",
+    "build"
+  ],
+  "known_limitations": [
+    "No template library (Wave 1B)",
+    "No shift builder (Wave 2A)",
+    "Task engine and durable ownership not production-persistent",
+    "Publication and conflict drill-down routes use honest planned labels where modules are incomplete",
+    "Readiness evaluates seed/session catalog only — not Postgres-authoritative"
+  ],
+  "final_state": "TESTED",
+  "not_certified": true,
+  "next_wave": "CAL-P2 Wave 1B — template library and campus event templates",
+  "governing_statement": "Event Operations Command is PRESENT and TESTED in soft beta. Gate A remains OPEN — not CERTIFIED."
+}

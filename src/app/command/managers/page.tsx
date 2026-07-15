@@ -1,5 +1,7 @@
 import { CommandCard, CommandChrome, CommandSection } from "@/components/command/CommandChrome";
+import { EventOperationsWidget } from "@/components/calendar/operations/EventOperationsWidget";
 import { buildManagersBoard, listCommandLanes } from "@/lib/command/board";
+import { listEventOperationsSummaries } from "@/lib/calendar/operations";
 
 export const metadata = { title: "Campaign managers · soft beta" };
 
@@ -43,10 +45,16 @@ export default function ManagersPage() {
           <h2 className="mt-1 font-fieldDisplay text-2xl text-white">{board.volunteer_manager.person}</h2>
           <p className="mt-2 font-fieldSans text-sm text-field-mist/90">{board.volunteer_manager.scope}</p>
           <div className="mt-4">
-            <CommandCard href="/command/events" accent title="Open Event Board" note="Events lane campaign + campus bridge" />
+            <CommandCard href="/command/events" accent title="Open Event Operations Command" note="Attention, readiness, and Event Board" />
           </div>
         </div>
       </CommandSection>
+
+      <EventOperationsWidget
+        title="Event Operations oversight"
+        summaries={listEventOperationsSummaries({ kind: "command" })}
+        moreHref="/command/events"
+      />
 
       <CommandSection title="Boards under CM / ACM oversight">
         <div className="grid gap-2 sm:grid-cols-2">

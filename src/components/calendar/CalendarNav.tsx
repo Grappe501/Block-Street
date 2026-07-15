@@ -85,6 +85,14 @@ export function EventSubnav({ eventId }: { eventId: string }) {
 
 export function CommandCalendarNav() {
   const links = [
+    ["/command/events", "Operations"],
+    ["/command/events/today", "Today"],
+    ["/command/events/upcoming", "Upcoming"],
+    ["/command/events/attention", "Attention"],
+    ["/command/events/readiness", "Readiness"],
+    ["/command/events/at-risk", "At risk"],
+    ["/command/events/unowned", "Unowned"],
+    ["/command/events/reports-due", "Reports due"],
     ["/command/calendar", "Hub"],
     ["/command/events/calendar", "Event board"],
     ["/command/events/pending", "Pending"],
