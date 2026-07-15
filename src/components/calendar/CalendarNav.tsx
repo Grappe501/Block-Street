@@ -109,6 +109,7 @@ export function CommandCalendarNav() {
     ["/command/events/follow-up", "Follow-up"],
     ["/command/events/rsvp", "RSVP"],
     ["/command/events/verification", "Verification"],
+    ["/command/events/candidate-requests", "Candidate requests"],
     ["/command/events/conflicts", "Conflicts"],
     ["/command/events/approvals", "Approvals"],
     ["/command/events/volunteer-needs", "Volunteer needs"],

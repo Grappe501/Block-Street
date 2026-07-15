@@ -13,4 +13,4 @@ Event RSVP and verification engines — template-seeded checklists with readines
 
 ## Next wave
 
-CAL-P2 Wave 3E (TBD)
+CAL-P2 Wave 3E — Event Candidate Request Engine

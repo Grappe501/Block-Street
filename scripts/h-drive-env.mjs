@@ -65,7 +65,7 @@ export function hDriveEnv(root = REPO_ROOT) {
 function mergeNodeHeapOptions(existing) {
   const opts = existing ?? "";
   if (opts.includes("max-old-space-size")) return opts;
-  return `${opts} --max-old-space-size=4096`.trim();
+  return `${opts} --max-old-space-size=6144`.trim();
 }
 
 // Auto-apply when imported

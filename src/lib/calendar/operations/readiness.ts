@@ -6,6 +6,7 @@ import { evaluateMaterialsReadiness, evaluatePromotionReadiness } from "../prepa
 import { evaluateFollowUpReadiness } from "../followup/readiness-integration";
 import { evaluateRsvpReadiness } from "../rsvp/readiness-integration";
 import { evaluateVerificationReadiness } from "../verification/readiness-integration";
+import { evaluateCandidateReadiness } from "../candidate-request/readiness-integration";
 
 function eventRoute(eventId: string, suffix = ""): string {
   return `/calendar/event/${eventId}${suffix}`;
@@ -170,57 +171,6 @@ function evaluateVenue(event: CalendarEvent): EventReadinessItem {
   };
 }
 
-function evaluateCandidate(event: CalendarEvent): EventReadinessItem {
-  const route = eventRoute(event.event_id, "/candidate-request");
-  if (!event.kelly_requested) {
-    return {
-      dimension: "candidate",
-      state: "not_required",
-      label: "Candidate",
-      explanation: "Kelly attendance not requested for this event.",
-      route,
-    };
-  }
-  const status = event.kelly_attendance_status ?? "not_requested";
-  if (status === "confirmed" || status === "completed") {
-    return {
-      dimension: "candidate",
-      state: "ready",
-      label: "Candidate",
-      explanation: "Kelly attendance confirmed on internal record.",
-      route,
-    };
-  }
-  if (status === "declined" || status === "canceled") {
-    const needsAlternate = isPublicFacing(event) && event.operational_status !== "canceled";
-    return {
-      dimension: "candidate",
-      state: needsAlternate ? "blocked" : "complete",
-      label: "Candidate",
-      explanation: needsAlternate
-        ? "Kelly declined — public event needs an alternate plan."
-        : "Kelly declined — event adjusted or canceled.",
-      blocker: needsAlternate ? "Approve no-candidate plan or adjust event." : null,
-      route,
-    };
-  }
-  if (status === "hold_placed" || status === "tentatively_accepted") {
-    return {
-      dimension: "candidate",
-      state: "in_progress",
-      label: "Candidate",
-      explanation: `Kelly hold/tentative (${status}). Request ≠ confirmation.`,
-      route,
-    };
-  }
-  return {
-    dimension: "candidate",
-    state: "in_progress",
-    label: "Candidate",
-    explanation: `Kelly request ${status.replace(/_/g, " ")}. Request ≠ confirmation.`,
-    route,
-  };
-}
 
 function evaluateStaffing(event: CalendarEvent, now: Date): EventReadinessItem {
   const route = eventRoute(event.event_id, "/staffing");
@@ -283,7 +233,7 @@ const EVALUATORS: Record<
   approval: (e) => evaluateApproval(e),
   date_time: (e) => evaluateDateTime(e),
   venue: (e) => evaluateVenue(e),
-  candidate: (e) => evaluateCandidate(e),
+  candidate: (e, n) => evaluateCandidateReadiness(e, n),
   staffing: (e, n) => evaluateStaffingReadiness(e, n),
   tasks: (e, n) => evaluateEventTasksReadiness(e, n),
   materials: (e, n) => evaluateMaterialsReadiness(e, n),

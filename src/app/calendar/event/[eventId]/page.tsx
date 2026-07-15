@@ -8,6 +8,7 @@ import { EventTaskSummaryCard } from "@/components/calendar/tasks/EventTaskSumma
 import { EventPreparationSummaryCard } from "@/components/calendar/preparation/EventPreparationSummaryCard";
 import { EventReportSummaryCard } from "@/components/calendar/followup/ReportChecklistTable";
 import { EventRsvpSummaryCard, EventVerificationSummaryCard } from "@/components/calendar/attendance/AttendancePanels";
+import { EventCandidateSummaryCard } from "@/components/calendar/candidate/CandidatePanels";
 import { getEventById } from "@/lib/calendar";
 import { buildEventOperationsSummary } from "@/lib/calendar/operations";
 import { calculateEventStaffingSummary, ensureStaffingFromEvent } from "@/lib/calendar/staffing";
@@ -16,6 +17,7 @@ import { buildPreparationSummary, ensurePreparationFromEvent } from "@/lib/calen
 import { buildFollowUpSummary, ensureFollowUpFromEvent } from "@/lib/calendar/followup";
 import { buildRsvpSummary, ensureRsvpFromEvent } from "@/lib/calendar/rsvp";
 import { buildVerificationSummary, ensureVerificationFromEvent } from "@/lib/calendar/verification";
+import { buildCandidateSummary, ensureCandidateRequestFromEvent } from "@/lib/calendar/candidate-request";
 
 export const metadata = { title: "Calendar · Event" };
 
@@ -36,6 +38,8 @@ export default async function EventDetailPage({ params }: { params: Promise<{ ev
   const rsvp = buildRsvpSummary(eventId);
   ensureVerificationFromEvent(event);
   const verification = buildVerificationSummary(eventId);
+  ensureCandidateRequestFromEvent(event);
+  const candidate = buildCandidateSummary(eventId, event.kelly_attendance_status ?? "not_requested");
 
   return (
     <CalendarChrome title={event.title} subtitle="Event detail from canonical catalog." backHref="/calendar/list">
@@ -48,6 +52,7 @@ export default async function EventDetailPage({ params }: { params: Promise<{ ev
         <EventReportSummaryCard summary={followUp} eventId={eventId} />
         <EventRsvpSummaryCard summary={rsvp} eventId={eventId} />
         <EventVerificationSummaryCard summary={verification} eventId={eventId} />
+        <EventCandidateSummaryCard summary={candidate} eventId={eventId} />
         <EventSeriesPanel event={event} />
         <EventDetailView event={event} mode="internal" />
       </div>

@@ -1,0 +1,42 @@
+{
+  "phase": "CAL-P2",
+  "wave": "3E",
+  "package": "event_candidate_request_engine",
+  "generated_at": "2026-07-15T19:00:00.000Z",
+  "baseline_commit": "5e62186",
+  "wave_3d_content_commit": "7718cca",
+  "gate_a": "OPEN",
+  "persistence_mode": "session_soft_beta",
+  "rbac_mode": "audit_only",
+  "enforcement_active": false,
+  "candidate_fixture_count": 0,
+  "template_seed_integration": "PASS",
+  "readiness_integration": "PASS",
+  "candidate_readiness": "PASS",
+  "routes_created": [
+    "/calendar/event/:eventId/candidate-request",
+    "/calendar/event/:eventId/candidate-request/:itemId",
+    "/calendar/event/:eventId/candidate-request/briefing",
+    "/calendar/event/:eventId/candidate-request/travel",
+    "/command/events/candidate-requests",
+    "/command/events/candidate-requests/pending",
+    "/command/events/candidate-requests/conflicts"
+  ],
+  "tests": [
+    "calendar:candidate:validate",
+    "test:calendar:candidate-model",
+    "test:calendar:candidate-readiness",
+    "test:calendar:wave3e",
+    "calendar:route-audit",
+    "test:calendar:cal-p2-sandbox"
+  ],
+  "known_limitations": [
+    "Candidate request items remain soft-beta — durableAuthority=false while Gate A open",
+    "Request ≠ confirmation preserved — no automated Kelly desk integration",
+    "RBAC audit_only",
+    "No Postgres durability"
+  ],
+  "final_wave_3e_claim": "TESTED",
+  "wave_3_complete": true,
+  "next_wave": "CAL-P2 Wave 4A"
+}

@@ -10,6 +10,7 @@ export * from "./preparation";
 export * from "./followup";
 export * from "./rsvp";
 export * from "./verification";
+export * from "./candidate-request";
 export * from "./copy";
 export * from "./canonical";
 export * from "./events";
