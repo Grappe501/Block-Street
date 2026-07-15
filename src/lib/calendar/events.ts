@@ -1,4 +1,6 @@
 import { buildCanonicalEvent } from "./canonical";
+import { requireCalendarPermission } from "./rbac/guards";
+import { emptyActor } from "./rbac/types";
 import { SEED_EVENTS } from "./seed";
 import type { CalendarEvent, CalendarScope, ProposeEventInput } from "./types";
 
@@ -129,11 +131,45 @@ export function listMyScheduleEvents(humanId = "usr-demo-001"): CalendarEvent[] 
 }
 
 export function proposeEvent(input: ProposeEventInput): CalendarEvent {
-  const start = normalizeDatetime(input.start_time);
-  const end = normalizeDatetime(input.end_time);
   const college = input.college_slug ? [input.college_slug] : [];
   const county = input.county_slug ? [input.county_slug] : [];
   const city = input.city_slug ? [input.city_slug] : [];
+
+  // CAL-P1.2 audit-only: evaluate + record; soft-beta write path remains authoritative.
+  requireCalendarPermission({
+    actor: emptyActor({
+      authenticated: true,
+      systemRoleKeys: college.length
+        ? ["college_leader"]
+        : county.length
+          ? ["county_leader"]
+          : city.length
+            ? ["city_leader"]
+            : ["volunteer_manager"],
+      collegeSlugs: college,
+      countySlugs: county,
+      citySlugs: city,
+      campaignWide: input.scope === "statewide",
+    }),
+    permission: "calendar.event.propose",
+    resource: {
+      collegeSlugs: college,
+      countySlugs: county,
+      citySlugs: city,
+      operationalStatus: "draft",
+      campaignWide: input.scope === "statewide",
+    },
+    context: {
+      route: "/calendar/propose",
+      method: "POST",
+      source: "server_action",
+      isMutation: true,
+    },
+    actualBehavior: "allowed",
+  });
+
+  const start = normalizeDatetime(input.start_time);
+  const end = normalizeDatetime(input.end_time);
   const roles = (input.volunteer_roles ?? []).map((r, i) => ({
     role_id: `role-${i + 1}`,
     title: r.title,

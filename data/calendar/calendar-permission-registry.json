@@ -1,0 +1,517 @@
+{
+  "version": "1.0.0",
+  "phase": "CAL-P1.2",
+  "updated": "2026-07-15",
+  "permissions": [
+    {
+      "key": "calendar.event.view_public",
+      "category": "read",
+      "sensitive": false,
+      "description": "event view_public"
+    },
+    {
+      "key": "calendar.event.view_participant",
+      "category": "read",
+      "sensitive": false,
+      "description": "event view_participant"
+    },
+    {
+      "key": "calendar.event.view_internal",
+      "category": "read",
+      "sensitive": false,
+      "description": "event view_internal"
+    },
+    {
+      "key": "calendar.event.view_private_contact",
+      "category": "read",
+      "sensitive": false,
+      "description": "event view_private_contact"
+    },
+    {
+      "key": "calendar.event.view_candidate_status",
+      "category": "read",
+      "sensitive": false,
+      "description": "event view_candidate_status"
+    },
+    {
+      "key": "calendar.event.view_candidate_private",
+      "category": "read",
+      "sensitive": true,
+      "description": "event view_candidate_private"
+    },
+    {
+      "key": "calendar.event.view_staffing_summary",
+      "category": "read",
+      "sensitive": false,
+      "description": "event view_staffing_summary"
+    },
+    {
+      "key": "calendar.event.view_staffing_personnel",
+      "category": "read",
+      "sensitive": false,
+      "description": "event view_staffing_personnel"
+    },
+    {
+      "key": "calendar.event.view_approval_history",
+      "category": "read",
+      "sensitive": false,
+      "description": "event view_approval_history"
+    },
+    {
+      "key": "calendar.event.view_audit_history",
+      "category": "read",
+      "sensitive": false,
+      "description": "event view_audit_history"
+    },
+    {
+      "key": "calendar.event.view_report",
+      "category": "read",
+      "sensitive": false,
+      "description": "event view_report"
+    },
+    {
+      "key": "calendar.event.propose",
+      "category": "lifecycle",
+      "sensitive": false,
+      "description": "event propose"
+    },
+    {
+      "key": "calendar.event.create_internal",
+      "category": "lifecycle",
+      "sensitive": false,
+      "description": "event create_internal"
+    },
+    {
+      "key": "calendar.event.edit_owned",
+      "category": "lifecycle",
+      "sensitive": false,
+      "description": "event edit_owned"
+    },
+    {
+      "key": "calendar.event.edit_scoped",
+      "category": "lifecycle",
+      "sensitive": false,
+      "description": "event edit_scoped"
+    },
+    {
+      "key": "calendar.event.edit_any",
+      "category": "lifecycle",
+      "sensitive": false,
+      "description": "event edit_any"
+    },
+    {
+      "key": "calendar.event.submit",
+      "category": "lifecycle",
+      "sensitive": false,
+      "description": "event submit"
+    },
+    {
+      "key": "calendar.event.withdraw",
+      "category": "lifecycle",
+      "sensitive": false,
+      "description": "event withdraw"
+    },
+    {
+      "key": "calendar.event.cancel",
+      "category": "lifecycle",
+      "sensitive": false,
+      "description": "event cancel"
+    },
+    {
+      "key": "calendar.event.postpone",
+      "category": "lifecycle",
+      "sensitive": false,
+      "description": "event postpone"
+    },
+    {
+      "key": "calendar.event.complete",
+      "category": "lifecycle",
+      "sensitive": false,
+      "description": "event complete"
+    },
+    {
+      "key": "calendar.event.archive",
+      "category": "lifecycle",
+      "sensitive": false,
+      "description": "event archive"
+    },
+    {
+      "key": "calendar.event.add_scope",
+      "category": "lifecycle",
+      "sensitive": false,
+      "description": "event add_scope"
+    },
+    {
+      "key": "calendar.event.remove_scope",
+      "category": "lifecycle",
+      "sensitive": false,
+      "description": "event remove_scope"
+    },
+    {
+      "key": "calendar.event.transfer_owner",
+      "category": "lifecycle",
+      "sensitive": false,
+      "description": "event transfer_owner"
+    },
+    {
+      "key": "calendar.approval.review_local",
+      "category": "approval",
+      "sensitive": false,
+      "description": "approval review_local"
+    },
+    {
+      "key": "calendar.approval.approve_local",
+      "category": "approval",
+      "sensitive": false,
+      "description": "approval approve_local"
+    },
+    {
+      "key": "calendar.approval.review_college",
+      "category": "approval",
+      "sensitive": false,
+      "description": "approval review_college"
+    },
+    {
+      "key": "calendar.approval.approve_college",
+      "category": "approval",
+      "sensitive": false,
+      "description": "approval approve_college"
+    },
+    {
+      "key": "calendar.approval.review_county",
+      "category": "approval",
+      "sensitive": false,
+      "description": "approval review_county"
+    },
+    {
+      "key": "calendar.approval.approve_county",
+      "category": "approval",
+      "sensitive": false,
+      "description": "approval approve_county"
+    },
+    {
+      "key": "calendar.approval.review_campaign",
+      "category": "approval",
+      "sensitive": false,
+      "description": "approval review_campaign"
+    },
+    {
+      "key": "calendar.approval.approve_campaign",
+      "category": "approval",
+      "sensitive": false,
+      "description": "approval approve_campaign"
+    },
+    {
+      "key": "calendar.approval.request_revision",
+      "category": "approval",
+      "sensitive": false,
+      "description": "approval request_revision"
+    },
+    {
+      "key": "calendar.approval.reject",
+      "category": "approval",
+      "sensitive": false,
+      "description": "approval reject"
+    },
+    {
+      "key": "calendar.approval.withdraw",
+      "category": "approval",
+      "sensitive": false,
+      "description": "approval withdraw"
+    },
+    {
+      "key": "calendar.approval.override",
+      "category": "approval",
+      "sensitive": true,
+      "description": "approval override"
+    },
+    {
+      "key": "calendar.candidate.request",
+      "category": "candidate",
+      "sensitive": false,
+      "description": "candidate request"
+    },
+    {
+      "key": "calendar.candidate.review",
+      "category": "candidate",
+      "sensitive": false,
+      "description": "candidate review"
+    },
+    {
+      "key": "calendar.candidate.place_hold",
+      "category": "candidate",
+      "sensitive": false,
+      "description": "candidate place_hold"
+    },
+    {
+      "key": "calendar.candidate.tentative_accept",
+      "category": "candidate",
+      "sensitive": false,
+      "description": "candidate tentative_accept"
+    },
+    {
+      "key": "calendar.candidate.confirm",
+      "category": "candidate",
+      "sensitive": true,
+      "description": "candidate confirm"
+    },
+    {
+      "key": "calendar.candidate.decline",
+      "category": "candidate",
+      "sensitive": false,
+      "description": "candidate decline"
+    },
+    {
+      "key": "calendar.candidate.cancel",
+      "category": "candidate",
+      "sensitive": false,
+      "description": "candidate cancel"
+    },
+    {
+      "key": "calendar.candidate.manage_travel",
+      "category": "candidate",
+      "sensitive": true,
+      "description": "candidate manage_travel"
+    },
+    {
+      "key": "calendar.candidate.resolve_conflict",
+      "category": "candidate",
+      "sensitive": false,
+      "description": "candidate resolve_conflict"
+    },
+    {
+      "key": "calendar.candidate.approve_public_language",
+      "category": "candidate",
+      "sensitive": false,
+      "description": "candidate approve_public_language"
+    },
+    {
+      "key": "calendar.staffing.define_requirement",
+      "category": "staffing",
+      "sensitive": false,
+      "description": "staffing define_requirement"
+    },
+    {
+      "key": "calendar.staffing.edit_requirement",
+      "category": "staffing",
+      "sensitive": false,
+      "description": "staffing edit_requirement"
+    },
+    {
+      "key": "calendar.staffing.create_shift",
+      "category": "staffing",
+      "sensitive": false,
+      "description": "staffing create_shift"
+    },
+    {
+      "key": "calendar.staffing.edit_shift",
+      "category": "staffing",
+      "sensitive": false,
+      "description": "staffing edit_shift"
+    },
+    {
+      "key": "calendar.staffing.cancel_shift",
+      "category": "staffing",
+      "sensitive": false,
+      "description": "staffing cancel_shift"
+    },
+    {
+      "key": "calendar.staffing.view_interest",
+      "category": "staffing",
+      "sensitive": false,
+      "description": "staffing view_interest"
+    },
+    {
+      "key": "calendar.staffing.confirm_participant",
+      "category": "staffing",
+      "sensitive": true,
+      "description": "staffing confirm_participant"
+    },
+    {
+      "key": "calendar.staffing.waitlist_participant",
+      "category": "staffing",
+      "sensitive": false,
+      "description": "staffing waitlist_participant"
+    },
+    {
+      "key": "calendar.staffing.cancel_participant",
+      "category": "staffing",
+      "sensitive": false,
+      "description": "staffing cancel_participant"
+    },
+    {
+      "key": "calendar.staffing.assign_shift_lead",
+      "category": "staffing",
+      "sensitive": false,
+      "description": "staffing assign_shift_lead"
+    },
+    {
+      "key": "calendar.staffing.check_in",
+      "category": "staffing",
+      "sensitive": false,
+      "description": "staffing check_in"
+    },
+    {
+      "key": "calendar.staffing.complete",
+      "category": "staffing",
+      "sensitive": false,
+      "description": "staffing complete"
+    },
+    {
+      "key": "calendar.staffing.mark_no_show",
+      "category": "staffing",
+      "sensitive": false,
+      "description": "staffing mark_no_show"
+    },
+    {
+      "key": "calendar.staffing.express_interest",
+      "category": "staffing",
+      "sensitive": false,
+      "description": "staffing express_interest"
+    },
+    {
+      "key": "calendar.conflict.view",
+      "category": "conflict",
+      "sensitive": false,
+      "description": "conflict view"
+    },
+    {
+      "key": "calendar.conflict.review",
+      "category": "conflict",
+      "sensitive": false,
+      "description": "conflict review"
+    },
+    {
+      "key": "calendar.conflict.resolve",
+      "category": "conflict",
+      "sensitive": false,
+      "description": "conflict resolve"
+    },
+    {
+      "key": "calendar.conflict.override",
+      "category": "conflict",
+      "sensitive": true,
+      "description": "conflict override"
+    },
+    {
+      "key": "calendar.conflict.view_candidate_private",
+      "category": "conflict",
+      "sensitive": true,
+      "description": "conflict view_candidate_private"
+    },
+    {
+      "key": "calendar.publication.prepare",
+      "category": "publication",
+      "sensitive": false,
+      "description": "publication prepare"
+    },
+    {
+      "key": "calendar.publication.review",
+      "category": "publication",
+      "sensitive": false,
+      "description": "publication review"
+    },
+    {
+      "key": "calendar.publication.approve",
+      "category": "publication",
+      "sensitive": false,
+      "description": "publication approve"
+    },
+    {
+      "key": "calendar.publication.schedule",
+      "category": "publication",
+      "sensitive": false,
+      "description": "publication schedule"
+    },
+    {
+      "key": "calendar.publication.publish",
+      "category": "publication",
+      "sensitive": true,
+      "description": "publication publish"
+    },
+    {
+      "key": "calendar.publication.unpublish",
+      "category": "publication",
+      "sensitive": true,
+      "description": "publication unpublish"
+    },
+    {
+      "key": "calendar.publication.archive",
+      "category": "publication",
+      "sensitive": false,
+      "description": "publication archive"
+    },
+    {
+      "key": "calendar.report.create",
+      "category": "reporting",
+      "sensitive": false,
+      "description": "report create"
+    },
+    {
+      "key": "calendar.report.edit_owned",
+      "category": "reporting",
+      "sensitive": false,
+      "description": "report edit_owned"
+    },
+    {
+      "key": "calendar.report.submit",
+      "category": "reporting",
+      "sensitive": false,
+      "description": "report submit"
+    },
+    {
+      "key": "calendar.report.review",
+      "category": "reporting",
+      "sensitive": false,
+      "description": "report review"
+    },
+    {
+      "key": "calendar.report.approve",
+      "category": "reporting",
+      "sensitive": false,
+      "description": "report approve"
+    },
+    {
+      "key": "calendar.admin.view_health",
+      "category": "administration",
+      "sensitive": false,
+      "description": "admin view_health"
+    },
+    {
+      "key": "calendar.admin.view_policy_log",
+      "category": "administration",
+      "sensitive": false,
+      "description": "admin view_policy_log"
+    },
+    {
+      "key": "calendar.admin.view_denials",
+      "category": "administration",
+      "sensitive": false,
+      "description": "admin view_denials"
+    },
+    {
+      "key": "calendar.admin.manage_role_assignments",
+      "category": "administration",
+      "sensitive": false,
+      "description": "admin manage_role_assignments"
+    },
+    {
+      "key": "calendar.admin.manage_permission_registry",
+      "category": "administration",
+      "sensitive": false,
+      "description": "admin manage_permission_registry"
+    },
+    {
+      "key": "calendar.admin.change_rbac_mode",
+      "category": "administration",
+      "sensitive": true,
+      "description": "admin change_rbac_mode"
+    },
+    {
+      "key": "calendar.admin.export_audit",
+      "category": "administration",
+      "sensitive": false,
+      "description": "admin export_audit"
+    }
+  ]
+}

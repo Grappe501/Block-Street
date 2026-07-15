@@ -1,0 +1,136 @@
+{
+  "version": "1.0.0",
+  "actors": {
+    "public_viewer": {
+      "userId": null,
+      "authenticated": false,
+      "systemRoleKeys": [
+        "viewer"
+      ],
+      "teamIds": [],
+      "collegeSlugs": [],
+      "countySlugs": [],
+      "citySlugs": [],
+      "positionIds": [],
+      "campaignWide": false,
+      "candidateScheduleAccess": false,
+      "publicationAccess": false,
+      "auditAccess": false,
+      "accountStatus": "active"
+    },
+    "henderson_leader": {
+      "userId": "u-hend",
+      "authenticated": true,
+      "systemRoleKeys": [
+        "college_leader"
+      ],
+      "teamIds": [],
+      "collegeSlugs": [
+        "henderson-state"
+      ],
+      "countySlugs": [],
+      "citySlugs": [],
+      "positionIds": [],
+      "campaignWide": false,
+      "candidateScheduleAccess": false,
+      "publicationAccess": false,
+      "auditAccess": false,
+      "accountStatus": "active"
+    },
+    "carol_vm": {
+      "userId": "u-carol",
+      "authenticated": true,
+      "systemRoleKeys": [
+        "volunteer_manager"
+      ],
+      "teamIds": [],
+      "collegeSlugs": [],
+      "countySlugs": [],
+      "citySlugs": [],
+      "positionIds": [],
+      "campaignWide": true,
+      "candidateScheduleAccess": false,
+      "publicationAccess": false,
+      "auditAccess": true,
+      "accountStatus": "active"
+    },
+    "cm": {
+      "userId": "u-cm",
+      "authenticated": true,
+      "systemRoleKeys": [
+        "campaign_manager"
+      ],
+      "teamIds": [],
+      "collegeSlugs": [],
+      "countySlugs": [],
+      "citySlugs": [],
+      "positionIds": [],
+      "campaignWide": true,
+      "candidateScheduleAccess": false,
+      "publicationAccess": true,
+      "auditAccess": true,
+      "accountStatus": "active"
+    },
+    "kelly_scheduler": {
+      "userId": "u-sched",
+      "authenticated": true,
+      "systemRoleKeys": [
+        "candidate_scheduler"
+      ],
+      "teamIds": [],
+      "collegeSlugs": [],
+      "countySlugs": [],
+      "citySlugs": [],
+      "positionIds": [],
+      "campaignWide": false,
+      "candidateScheduleAccess": true,
+      "publicationAccess": false,
+      "auditAccess": false,
+      "accountStatus": "active"
+    },
+    "suspended": {
+      "userId": "u-sus",
+      "authenticated": true,
+      "systemRoleKeys": [
+        "college_leader"
+      ],
+      "teamIds": [],
+      "collegeSlugs": [
+        "henderson-state"
+      ],
+      "countySlugs": [],
+      "citySlugs": [],
+      "positionIds": [],
+      "campaignWide": false,
+      "candidateScheduleAccess": false,
+      "publicationAccess": false,
+      "auditAccess": false,
+      "accountStatus": "suspended"
+    }
+  },
+  "public_fields": [
+    "event_id",
+    "title",
+    "public_summary",
+    "event_type",
+    "start_at",
+    "end_at",
+    "timezone",
+    "approved_public_location",
+    "approved_virtual_url",
+    "approved_candidate_attendance_language",
+    "public_volunteer_needs",
+    "public_contact",
+    "accessibility_information"
+  ],
+  "candidate_private_fields": [
+    "private_travel_notes",
+    "private_security_notes",
+    "exact_arrival_time",
+    "exact_departure_time",
+    "unpublished_location",
+    "lodging",
+    "private_transportation",
+    "candidate_conflict_notes"
+  ]
+}

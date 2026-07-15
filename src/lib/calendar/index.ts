@@ -7,4 +7,28 @@ export * from "./needs";
 export { SEED_EVENTS, SEED_CONFLICTS, FUTURE_CITY_CALENDAR_READY } from "./seed";
 export { buildIcsCalendar, eventsToIcs } from "./ics";
 export * from "./persistence";
-export * from "./rbac";
+export {
+  evaluatePolicy,
+  evaluateCalendarPermission,
+  requireCalendarPermission,
+  filterCalendarEventForActor,
+  projectPublicCalendarEvent,
+  listCalendarRoles,
+  listCalendarPermissions,
+  getCalendarRbacMode,
+  isRbacEnforcementBlocked,
+  getGateAStatus,
+  getAuthorityMatrixSummary,
+  getEnforcementReadinessSummary,
+  getAuditOnlyDecisions,
+  CALENDAR_RBAC_MATRIX,
+  emptyActor,
+  defaultPolicyContext,
+} from "./rbac";
+export type {
+  CalendarActor,
+  CalendarPolicyDecision,
+  CalendarPolicyRequest,
+  CalendarPermissionKey,
+  CalendarRoleKey,
+} from "./rbac";

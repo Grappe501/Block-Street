@@ -1,0 +1,16 @@
+{
+  "package": "CAL-P1.2",
+  "generated_at": "2026-07-15T01:14:24.763Z",
+  "gate_a": "OPEN",
+  "rbac_mode": "audit_only",
+  "enforcement_active": false,
+  "enforcement_readiness": "BLOCKED",
+  "hashes": {
+    "roles_matrix": "106b5d54b9eb0a81",
+    "permissions": "2d8d1404e9ca3a83",
+    "scenarios": "ddffa3744d4f7d73"
+  },
+  "certification_claim": "TESTED",
+  "not_certified": true,
+  "note": "TESTED in audit_only. Not CERTIFIED. Enforcement BLOCKED while Gate A OPEN."
+}

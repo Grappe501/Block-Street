@@ -1,0 +1,488 @@
+{
+  "version": "1.0.0",
+  "phase": "CAL-P1.2",
+  "scenarios": [
+    {
+      "id": "s1",
+      "name": "Henderson College Leader proposes local event",
+      "expected": "ALLOW",
+      "actor": {
+        "systemRoleKeys": [
+          "college_leader"
+        ],
+        "collegeSlugs": [
+          "henderson-state"
+        ],
+        "authenticated": true,
+        "accountStatus": "active"
+      },
+      "permission": "calendar.event.propose",
+      "resource": {
+        "collegeSlugs": [
+          "henderson-state"
+        ],
+        "operationalStatus": "draft"
+      }
+    },
+    {
+      "id": "s2",
+      "name": "Henderson College Leader edits unrelated college event",
+      "expected": "DENY",
+      "actor": {
+        "systemRoleKeys": [
+          "college_leader"
+        ],
+        "collegeSlugs": [
+          "henderson-state"
+        ],
+        "authenticated": true,
+        "accountStatus": "active"
+      },
+      "permission": "calendar.event.edit_owned",
+      "resource": {
+        "collegeSlugs": [
+          "uca"
+        ],
+        "ownerUserId": "other",
+        "operationalStatus": "draft"
+      }
+    },
+    {
+      "id": "s3",
+      "name": "College Leader requests Kelly attendance",
+      "expected": "ALLOW",
+      "actor": {
+        "systemRoleKeys": [
+          "college_leader"
+        ],
+        "collegeSlugs": [
+          "henderson-state"
+        ],
+        "authenticated": true,
+        "accountStatus": "active"
+      },
+      "permission": "calendar.candidate.request",
+      "resource": {
+        "collegeSlugs": [
+          "henderson-state"
+        ]
+      }
+    },
+    {
+      "id": "s4",
+      "name": "College Leader confirms Kelly attendance",
+      "expected": "DENY",
+      "actor": {
+        "systemRoleKeys": [
+          "college_leader"
+        ],
+        "collegeSlugs": [
+          "henderson-state"
+        ],
+        "authenticated": true,
+        "accountStatus": "active"
+      },
+      "permission": "calendar.candidate.confirm",
+      "resource": {
+        "collegeSlugs": [
+          "henderson-state"
+        ]
+      }
+    },
+    {
+      "id": "s5",
+      "name": "Volunteer Manager defines shifts",
+      "expected": "ALLOW",
+      "actor": {
+        "systemRoleKeys": [
+          "volunteer_manager"
+        ],
+        "campaignWide": true,
+        "authenticated": true,
+        "accountStatus": "active"
+      },
+      "permission": "calendar.staffing.create_shift",
+      "resource": {
+        "campaignWide": true
+      }
+    },
+    {
+      "id": "s6",
+      "name": "Volunteer confirms own assignment",
+      "expected": "DENY",
+      "actor": {
+        "systemRoleKeys": [
+          "volunteer"
+        ],
+        "userId": "vol-1",
+        "authenticated": true,
+        "accountStatus": "active"
+      },
+      "permission": "calendar.staffing.confirm_participant",
+      "resource": {
+        "eventId": "evt-1"
+      },
+      "context": {
+        "selfConfirm": true
+      }
+    },
+    {
+      "id": "s7",
+      "name": "Event Board member reviews staffing",
+      "expected": "ALLOW",
+      "actor": {
+        "systemRoleKeys": [
+          "event_board_member"
+        ],
+        "authenticated": true,
+        "accountStatus": "active"
+      },
+      "permission": "calendar.staffing.view_interest",
+      "resource": {
+        "eventId": "evt-board-1"
+      },
+      "context": {
+        "relationship": "assigned_event_board_member"
+      }
+    },
+    {
+      "id": "s8",
+      "name": "Event Board member publishes event",
+      "expected": "DENY",
+      "actor": {
+        "systemRoleKeys": [
+          "event_board_member"
+        ],
+        "authenticated": true,
+        "accountStatus": "active"
+      },
+      "permission": "calendar.publication.publish",
+      "resource": {
+        "approvalStatus": "approved",
+        "publicationStatus": "ready"
+      }
+    },
+    {
+      "id": "s9",
+      "name": "Campaign Manager approves campaign event",
+      "expected": "ALLOW",
+      "actor": {
+        "systemRoleKeys": [
+          "campaign_manager"
+        ],
+        "campaignWide": true,
+        "authenticated": true,
+        "accountStatus": "active"
+      },
+      "permission": "calendar.approval.approve_campaign",
+      "resource": {
+        "approvalStatus": "submitted",
+        "ownerUserId": "other-user"
+      }
+    },
+    {
+      "id": "s10",
+      "name": "Campaign Manager views private Kelly travel without explicit grant",
+      "expected": "DENY",
+      "actor": {
+        "systemRoleKeys": [
+          "campaign_manager"
+        ],
+        "campaignWide": true,
+        "authenticated": true,
+        "accountStatus": "active",
+        "candidateScheduleAccess": false
+      },
+      "permission": "calendar.event.view_candidate_private",
+      "resource": {
+        "containsCandidatePrivateData": true
+      }
+    },
+    {
+      "id": "s11",
+      "name": "Candidate Scheduler confirms Kelly attendance",
+      "expected": "ALLOW",
+      "actor": {
+        "systemRoleKeys": [
+          "candidate_scheduler"
+        ],
+        "authenticated": true,
+        "accountStatus": "active",
+        "candidateScheduleAccess": true
+      },
+      "permission": "calendar.candidate.confirm",
+      "resource": {
+        "candidateAttendanceStatus": "requested"
+      }
+    },
+    {
+      "id": "s12",
+      "name": "Candidate Scheduler approves underlying campaign event",
+      "expected": "DENY",
+      "actor": {
+        "systemRoleKeys": [
+          "candidate_scheduler"
+        ],
+        "authenticated": true,
+        "accountStatus": "active"
+      },
+      "permission": "calendar.approval.approve_campaign",
+      "resource": {
+        "approvalStatus": "submitted"
+      }
+    },
+    {
+      "id": "s13",
+      "name": "County Leader manages assigned county event",
+      "expected": "ALLOW",
+      "actor": {
+        "systemRoleKeys": [
+          "county_leader"
+        ],
+        "countySlugs": [
+          "pulaski"
+        ],
+        "authenticated": true,
+        "accountStatus": "active"
+      },
+      "permission": "calendar.event.edit_owned",
+      "resource": {
+        "countySlugs": [
+          "pulaski"
+        ],
+        "ownerUserId": "u1",
+        "operationalStatus": "draft"
+      },
+      "context": {
+        "actorIsOwner": true
+      }
+    },
+    {
+      "id": "s14",
+      "name": "County Leader manages unrelated county event",
+      "expected": "DENY",
+      "actor": {
+        "systemRoleKeys": [
+          "county_leader"
+        ],
+        "countySlugs": [
+          "pulaski"
+        ],
+        "authenticated": true,
+        "accountStatus": "active"
+      },
+      "permission": "calendar.event.edit_owned",
+      "resource": {
+        "countySlugs": [
+          "benton"
+        ],
+        "operationalStatus": "draft"
+      }
+    },
+    {
+      "id": "s15",
+      "name": "City Leader proposes event in assigned city",
+      "expected": "ALLOW",
+      "actor": {
+        "systemRoleKeys": [
+          "city_leader"
+        ],
+        "citySlugs": [
+          "little-rock"
+        ],
+        "countySlugs": [
+          "pulaski"
+        ],
+        "authenticated": true,
+        "accountStatus": "active"
+      },
+      "permission": "calendar.event.propose",
+      "resource": {
+        "citySlugs": [
+          "little-rock"
+        ],
+        "countySlugs": [
+          "pulaski"
+        ]
+      }
+    },
+    {
+      "id": "s16",
+      "name": "City Leader bypasses parent county review",
+      "expected": "DENY",
+      "actor": {
+        "systemRoleKeys": [
+          "city_leader"
+        ],
+        "citySlugs": [
+          "little-rock"
+        ],
+        "authenticated": true,
+        "accountStatus": "active"
+      },
+      "permission": "calendar.approval.approve_county",
+      "resource": {
+        "citySlugs": [
+          "little-rock"
+        ],
+        "countySlugs": [
+          "pulaski"
+        ]
+      }
+    },
+    {
+      "id": "s17",
+      "name": "Public user views published public event",
+      "expected": "ALLOW",
+      "actor": {
+        "systemRoleKeys": [
+          "viewer"
+        ],
+        "authenticated": false,
+        "accountStatus": "active"
+      },
+      "permission": "calendar.event.view_public",
+      "resource": {
+        "visibility": "public",
+        "publicationStatus": "published"
+      },
+      "context": {
+        "isPublicProjection": true
+      }
+    },
+    {
+      "id": "s18",
+      "name": "Public user views internal event",
+      "expected": "DENY",
+      "actor": {
+        "systemRoleKeys": [
+          "viewer"
+        ],
+        "authenticated": false,
+        "accountStatus": "active"
+      },
+      "permission": "calendar.event.view_internal",
+      "resource": {
+        "visibility": "internal"
+      }
+    },
+    {
+      "id": "s19",
+      "name": "Event creator performs final approval",
+      "expected": "DENY",
+      "actor": {
+        "systemRoleKeys": [
+          "college_leader"
+        ],
+        "userId": "creator-1",
+        "collegeSlugs": [
+          "henderson-state"
+        ],
+        "authenticated": true,
+        "accountStatus": "active"
+      },
+      "permission": "calendar.approval.approve_campaign",
+      "resource": {
+        "ownerUserId": "creator-1",
+        "collegeSlugs": [
+          "henderson-state"
+        ],
+        "approvalStatus": "submitted"
+      },
+      "context": {
+        "separationOfDuties": true
+      }
+    },
+    {
+      "id": "s20",
+      "name": "Authorized publisher publishes approved event",
+      "expected": "ALLOW",
+      "actor": {
+        "systemRoleKeys": [
+          "campaign_manager"
+        ],
+        "campaignWide": true,
+        "publicationAccess": true,
+        "authenticated": true,
+        "accountStatus": "active"
+      },
+      "permission": "calendar.publication.publish",
+      "resource": {
+        "approvalStatus": "approved",
+        "publicationStatus": "ready",
+        "visibility": "public"
+      }
+    },
+    {
+      "id": "s21",
+      "name": "Publisher attempts publication before approvals",
+      "expected": "DENY",
+      "actor": {
+        "systemRoleKeys": [
+          "campaign_manager"
+        ],
+        "campaignWide": true,
+        "publicationAccess": true,
+        "authenticated": true,
+        "accountStatus": "active"
+      },
+      "permission": "calendar.publication.publish",
+      "resource": {
+        "approvalStatus": "draft",
+        "publicationStatus": "not_ready",
+        "visibility": "public"
+      }
+    },
+    {
+      "id": "s22",
+      "name": "Shift Lead marks check-in for assigned shift",
+      "expected": "ALLOW",
+      "actor": {
+        "systemRoleKeys": [
+          "shift_lead"
+        ],
+        "authenticated": true,
+        "accountStatus": "active"
+      },
+      "permission": "calendar.staffing.check_in",
+      "resource": {
+        "eventId": "evt-shift-1"
+      },
+      "context": {
+        "relationship": "assigned_shift_lead"
+      }
+    },
+    {
+      "id": "s23",
+      "name": "Shift Lead views candidate-private details",
+      "expected": "DENY",
+      "actor": {
+        "systemRoleKeys": [
+          "shift_lead"
+        ],
+        "authenticated": true,
+        "accountStatus": "active"
+      },
+      "permission": "calendar.event.view_candidate_private",
+      "resource": {
+        "containsCandidatePrivateData": true
+      }
+    },
+    {
+      "id": "s24",
+      "name": "System Operator changes event political approval",
+      "expected": "DENY",
+      "actor": {
+        "systemRoleKeys": [
+          "system_operator"
+        ],
+        "authenticated": true,
+        "accountStatus": "active"
+      },
+      "permission": "calendar.approval.approve_campaign",
+      "resource": {
+        "approvalStatus": "submitted"
+      }
+    }
+  ]
+}

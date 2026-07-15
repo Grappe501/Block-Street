@@ -4,7 +4,7 @@ export type CalendarPersistenceMode =
   | "postgres_shadow"
   | "postgres_primary";
 
-export type CalendarRbacMode = "audit_only" | "enforced";
+export type CalendarRbacMode = "disabled" | "audit_only" | "enforced";
 export type CalendarNotificationMode = "disabled" | "in_app" | "email_draft" | "sms_draft";
 
 function env(name: string, fallback = ""): string {
@@ -21,7 +21,15 @@ export function getCalendarPersistenceConfig() {
   const mode = (env("CALENDAR_PERSISTENCE_MODE", "session_soft_beta") ||
     "session_soft_beta") as CalendarPersistenceMode;
   const writeEnabled = boolEnv("CALENDAR_WRITE_ENABLED", false);
-  const rbacMode = (env("CALENDAR_RBAC_MODE", "audit_only") || "audit_only") as CalendarRbacMode;
+  const rawRbac = (env("CALENDAR_RBAC_MODE", "audit_only") || "audit_only").toLowerCase();
+  const rbacMode = (
+    rawRbac === "disabled" || rawRbac === "audit_only" || rawRbac === "enforced" ? rawRbac : "audit_only"
+  ) as CalendarRbacMode;
+  if (rbacMode === "disabled") {
+    console.warn(
+      "[calendar-rbac] CALENDAR_RBAC_MODE=disabled — emergency local development only; must never be production default",
+    );
+  }
   const publicationEnabled = boolEnv("CALENDAR_PUBLICATION_ENABLED", false);
   const notificationMode = (env("CALENDAR_NOTIFICATION_MODE", "disabled") ||
     "disabled") as CalendarNotificationMode;
