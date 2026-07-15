@@ -14,4 +14,4 @@ Event preparation engine for logistics, materials, promotion, and reminders — 
 
 ## Next wave
 
-CAL-P2 Wave 3C (TBD)
+CAL-P2 Wave 3C — Event Follow-up and Report Engine

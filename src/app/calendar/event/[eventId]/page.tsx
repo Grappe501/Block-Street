@@ -6,11 +6,13 @@ import { EventSeriesPanel } from "@/components/calendar/series/EventSeriesPanel"
 import { EventStaffingSummaryCard } from "@/components/calendar/staffing/EventStaffingSummaryCard";
 import { EventTaskSummaryCard } from "@/components/calendar/tasks/EventTaskSummaryCard";
 import { EventPreparationSummaryCard } from "@/components/calendar/preparation/EventPreparationSummaryCard";
+import { EventReportSummaryCard } from "@/components/calendar/followup/ReportChecklistTable";
 import { getEventById } from "@/lib/calendar";
 import { buildEventOperationsSummary } from "@/lib/calendar/operations";
 import { calculateEventStaffingSummary, ensureStaffingFromEvent } from "@/lib/calendar/staffing";
 import { buildTaskChecklistSummary, ensureTasksFromEvent } from "@/lib/calendar/tasks";
 import { buildPreparationSummary, ensurePreparationFromEvent } from "@/lib/calendar/preparation";
+import { buildFollowUpSummary, ensureFollowUpFromEvent } from "@/lib/calendar/followup";
 
 export const metadata = { title: "Calendar · Event" };
 
@@ -25,6 +27,8 @@ export default async function EventDetailPage({ params }: { params: Promise<{ ev
   const tasks = buildTaskChecklistSummary(eventId);
   ensurePreparationFromEvent(event);
   const preparation = buildPreparationSummary(eventId);
+  ensureFollowUpFromEvent(event);
+  const followUp = buildFollowUpSummary(eventId);
 
   return (
     <CalendarChrome title={event.title} subtitle="Event detail from canonical catalog." backHref="/calendar/list">
@@ -34,6 +38,7 @@ export default async function EventDetailPage({ params }: { params: Promise<{ ev
         <EventStaffingSummaryCard summary={staffing} eventId={eventId} />
         <EventTaskSummaryCard summary={tasks} eventId={eventId} />
         <EventPreparationSummaryCard summary={preparation} eventId={eventId} />
+        <EventReportSummaryCard summary={followUp} eventId={eventId} />
         <EventSeriesPanel event={event} />
         <EventDetailView event={event} mode="internal" />
       </div>

@@ -1,0 +1,40 @@
+{
+  "phase": "CAL-P2",
+  "wave": "3C",
+  "package": "event_followup_engine_and_report_runtime",
+  "generated_at": "2026-07-15T17:00:00.000Z",
+  "baseline_commit": "3881420",
+  "wave_3b_content_commit": "32d4c1f",
+  "gate_a": "OPEN",
+  "persistence_mode": "session_soft_beta",
+  "rbac_mode": "audit_only",
+  "enforcement_active": false,
+  "followup_fixture_count": 0,
+  "template_seed_integration": "PASS",
+  "readiness_integration": "PASS",
+  "follow_up_readiness": "PASS",
+  "routes_created": [
+    "/calendar/event/:eventId/report",
+    "/calendar/event/:eventId/report/:itemId",
+    "/calendar/event/:eventId/report/metrics",
+    "/calendar/event/:eventId/report/follow-up",
+    "/command/events/follow-up",
+    "/command/events/follow-up/incomplete",
+    "/command/events/follow-up/overdue"
+  ],
+  "tests": [
+    "calendar:followup:validate",
+    "test:calendar:followup-model",
+    "test:calendar:followup-readiness",
+    "test:calendar:wave3c"
+  ],
+  "known_limitations": [
+    "Report items remain soft-beta — durableAuthority=false while Gate A open",
+    "Template items seeded on first ensureFollowUpFromEvent only",
+    "No automated CRM sync or report approval workflow",
+    "RBAC audit_only",
+    "No Postgres durability"
+  ],
+  "final_wave_3c_claim": "TESTED",
+  "next_wave": "CAL-P2 Wave 3D"
+}

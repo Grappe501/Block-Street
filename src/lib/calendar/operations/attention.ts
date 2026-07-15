@@ -6,6 +6,8 @@ import { buildTaskChecklistSummary, listTasks } from "../tasks";
 import { isTaskComplete } from "../tasks/status";
 import { buildPreparationSummary, listPreparationItems } from "../preparation";
 import { isPreparationReady } from "../preparation/status";
+import { buildFollowUpSummary, ensureFollowUpFromEvent } from "../followup";
+import { isFollowUpDue } from "../followup/template-integration";
 import type { AttentionKey, EventAttentionSeverity, EventReadinessItem } from "./types";
 import { ATTENTION_KEYS } from "./types";
 
@@ -228,13 +230,29 @@ export function evaluateEventAttention(
     });
   }
 
-  if (past && event.operational_status === "completed") {
+  if (isFollowUpDue(event, now)) {
+    ensureFollowUpFromEvent(event);
+    const followUpSummary = buildFollowUpSummary(event.event_id);
     const followUp = readiness.find((r) => r.dimension === "follow_up");
     if (followUp?.state === "blocked") {
       signals.push({
         key: "report_overdue",
-        severity: "needs_attention",
-        reason: "Completed event — post-event report missing.",
+        severity: followUpSummary.overdueCount > 0 ? "urgent" : "needs_attention",
+        reason: "Completed or past event — post-event report missing.",
+      });
+    }
+    if (followUpSummary.incompleteRequired > 0) {
+      signals.push({
+        key: "report_incomplete",
+        severity: followUpSummary.overdueCount > 0 ? "urgent" : "needs_attention",
+        reason: `${followUpSummary.incompleteRequired} required report item(s) incomplete.`,
+      });
+    }
+    if (followUpSummary.actionsTotal > followUpSummary.actionsSubmitted) {
+      signals.push({
+        key: "follow_up_action_due",
+        severity: followUpSummary.overdueCount > 0 ? "urgent" : "watch",
+        reason: "Follow-up actions pending after event.",
       });
     }
   }

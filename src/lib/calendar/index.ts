@@ -7,6 +7,7 @@ export * from "./staffing";
 export * from "./assignments";
 export * from "./tasks";
 export * from "./preparation";
+export * from "./followup";
 export * from "./copy";
 export * from "./canonical";
 export * from "./events";

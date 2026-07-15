@@ -3,6 +3,7 @@ import type { EventReadinessDimension, EventReadinessItem, EventReadinessState }
 import { evaluateStaffingReadiness } from "../staffing/readiness-integration";
 import { evaluateEventTasksReadiness } from "../tasks/readiness-integration";
 import { evaluateMaterialsReadiness, evaluatePromotionReadiness } from "../preparation/readiness-integration";
+import { evaluateFollowUpReadiness } from "../followup/readiness-integration";
 
 function eventRoute(eventId: string, suffix = ""): string {
   return `/calendar/event/${eventId}${suffix}`;
@@ -334,37 +335,6 @@ function evaluateVerification(event: CalendarEvent): EventReadinessItem {
   };
 }
 
-function evaluateFollowUp(event: CalendarEvent): EventReadinessItem {
-  const route = eventRoute(event.event_id, "/report");
-  const isDone = event.operational_status === "completed";
-  if (!isDone) {
-    return {
-      dimension: "follow_up",
-      state: "not_required",
-      label: "Follow-up",
-      explanation: "Pre-event — follow-up and reporting not yet due.",
-      route,
-    };
-  }
-  const hasReport = event.history.some((h) => /report|follow-up|outcome/i.test(h.note));
-  if (hasReport) {
-    return {
-      dimension: "follow_up",
-      state: "complete",
-      label: "Follow-up",
-      explanation: "Post-event report or follow-up noted in history.",
-      route,
-    };
-  }
-  return {
-    dimension: "follow_up",
-    state: "blocked",
-    label: "Follow-up",
-    explanation: "Event completed — report or outcome capture missing.",
-    blocker: "Submit post-event report.",
-    route,
-  };
-}
 
 const EVALUATORS: Record<
   EventReadinessDimension,
@@ -381,7 +351,7 @@ const EVALUATORS: Record<
   promotion: (e, n) => evaluatePromotionReadiness(e, n),
   rsvp: (e) => evaluateRsvp(e),
   verification: (e) => evaluateVerification(e),
-  follow_up: (e) => evaluateFollowUp(e),
+  follow_up: (e, n) => evaluateFollowUpReadiness(e, n),
 };
 
 export function evaluateEventReadiness(event: CalendarEvent, now: Date = new Date()): EventReadinessItem[] {

@@ -136,6 +136,8 @@ export const ATTENTION_KEYS = [
   "missing_verification",
   "report_overdue",
   "follow_up_overdue",
+  "report_incomplete",
+  "follow_up_action_due",
 ] as const;
 
 export type AttentionKey = (typeof ATTENTION_KEYS)[number];
