@@ -1,5 +1,7 @@
 import type { CalendarEvent } from "../types";
+import { calculateEventStaffingSummary } from "../staffing/coverage";
 import type { AttentionKey, EventAttentionSeverity, EventReadinessItem } from "./types";
+import { ATTENTION_KEYS } from "./types";
 
 export type AttentionSignal = {
   key: AttentionKey;
@@ -160,6 +162,18 @@ export function evaluateEventAttention(
       severity: "needs_attention",
       reason: "Volunteers needed but no staffing plan on record.",
     });
+  }
+
+  const staffingSummary = calculateEventStaffingSummary(event.event_id);
+  for (const reason of staffingSummary.attentionReasons) {
+    const key = reason as AttentionKey;
+    if (!ATTENTION_KEYS.includes(key)) continue;
+    let severity: EventAttentionSeverity = "needs_attention";
+    if (key === "critical_staffing_gap") severity = today || within48 ? "critical" : "urgent";
+    if (key === "missing_shift_lead") severity = within48 ? "urgent" : "needs_attention";
+    if (key === "volunteer_training_gap") severity = "urgent";
+    if (key === "unreviewed_volunteer_interest") severity = "watch";
+    signals.push({ key, severity, reason: reason.replace(/_/g, " ") });
   }
 
   if (

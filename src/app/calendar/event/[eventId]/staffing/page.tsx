@@ -2,7 +2,10 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CalendarChrome, CalendarHonestyBanner, CalendarSection } from "@/components/calendar/CalendarChrome";
 import { EventSubnav } from "@/components/calendar/CalendarNav";
+import { EventStaffingSummaryCard } from "@/components/calendar/staffing/EventStaffingSummaryCard";
+import { StaffingSoftBetaNote } from "@/components/calendar/staffing/StaffingSoftBetaNote";
 import { getEventById } from "@/lib/calendar";
+import { calculateEventStaffingSummary, ensureStaffingFromEvent, listActiveRequirements, listShifts } from "@/lib/calendar/staffing";
 
 export const metadata = { title: "Calendar · Event staffing" };
 
@@ -10,40 +13,29 @@ export default async function EventStaffingPage({ params }: { params: Promise<{ 
   const { eventId } = await params;
   const event = getEventById(eventId);
   if (!event) notFound();
+  ensureStaffingFromEvent(event);
+  const summary = calculateEventStaffingSummary(eventId);
+  const reqs = listActiveRequirements(eventId);
+  const shifts = listShifts(eventId);
 
   return (
-    <CalendarChrome
-      title={`${event.title} — Staffing`}
-      subtitle={`Staffing status: ${event.staffing_status.replace(/_/g, " ")} · Event Board: ${event.volunteer_manager ?? "Carol Eagan"}`}
-      backHref={`/calendar/event/${eventId}`}
-      backLabel="Event"
-    >
+    <CalendarChrome title={`${event.title} — Staffing`} subtitle="Volunteer shift planning — soft beta" backHref={`/calendar/event/${eventId}`} backLabel="Event">
       <CalendarHonestyBanner />
+      <StaffingSoftBetaNote />
       <EventSubnav eventId={eventId} />
-      <CalendarSection title="Roles">
-        <ul className="space-y-2">
-          {event.volunteer_roles.length === 0 ? (
-            <li className="font-fieldSans text-sm text-field-ink/70">No volunteer roles defined.</li>
-          ) : (
-            event.volunteer_roles.map((r) => (
-              <li key={r.role_id} className="rounded-lg border border-field-ink/15 bg-white px-3 py-2 font-fieldSans text-sm">
-                <span className="font-semibold text-field-ink">{r.title}</span>
-                <span className="text-field-ink/70">
-                  {" "}
-                  — {r.number_confirmed}/{r.number_needed}
-                  {r.training_required ? " · training required" : ""}
-                </span>
-              </li>
-            ))
-          )}
-        </ul>
-        <p className="mt-3 font-fieldSans text-xs text-field-ink/60">
-          Open seats: {event.volunteer_slots_open}. Interest ≠ confirmed assignment.
-        </p>
-        <Link href={`/calendar/event/${eventId}/volunteer`} className="mt-3 inline-block font-fieldSans text-sm font-semibold text-field-pine underline">
-          Volunteer interest →
-        </Link>
-      </CalendarSection>
+      <div className="mt-4 space-y-6">
+        <EventStaffingSummaryCard summary={summary} eventId={eventId} />
+        <CalendarSection title="Quick links">
+          <div className="flex flex-wrap gap-2 font-fieldSans text-sm">
+            <Link href={`/calendar/event/${eventId}/staffing/requirements`} className="rounded-lg border px-3 py-2 underline">Requirements ({reqs.length})</Link>
+            <Link href={`/calendar/event/${eventId}/shifts`} className="rounded-lg border px-3 py-2 underline">Shifts ({shifts.length})</Link>
+            <Link href={`/calendar/event/${eventId}/staffing/interests`} className="rounded-lg border px-3 py-2 underline">Interests</Link>
+            <Link href={`/calendar/event/${eventId}/staffing/leads`} className="rounded-lg border px-3 py-2 underline">Leads</Link>
+            <Link href={`/calendar/event/${eventId}/staffing/training`} className="rounded-lg border px-3 py-2 underline">Training</Link>
+            <Link href={`/calendar/event/${eventId}/staffing/coverage`} className="rounded-lg border px-3 py-2 underline">Coverage</Link>
+          </div>
+        </CalendarSection>
+      </div>
     </CalendarChrome>
   );
 }

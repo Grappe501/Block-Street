@@ -1,0 +1,192 @@
+[
+  {
+    "trainingKey": "general_volunteer_orientation",
+    "label": "General volunteer orientation",
+    "description": "General volunteer orientation",
+    "category": "orientation",
+    "completionMode": "self_attested",
+    "validityDays": 365,
+    "requiredForRoleKeys": [
+      "greeter",
+      "discussion_facilitator"
+    ],
+    "blocksConfirmationIfMissing": false,
+    "allowsInterestIfMissing": true,
+    "active": true
+  },
+  {
+    "trainingKey": "event_check_in_training",
+    "label": "Event check-in training",
+    "description": "Event check-in training",
+    "category": "operations",
+    "completionMode": "self_attested",
+    "validityDays": 365,
+    "requiredForRoleKeys": [
+      "check_in",
+      "registration_table"
+    ],
+    "blocksConfirmationIfMissing": true,
+    "allowsInterestIfMissing": true,
+    "active": true
+  },
+  {
+    "trainingKey": "voter_registration_rules",
+    "label": "Voter registration rules",
+    "description": "Voter registration rules",
+    "category": "compliance",
+    "completionMode": "self_attested",
+    "validityDays": 365,
+    "requiredForRoleKeys": [
+      "registration_table"
+    ],
+    "blocksConfirmationIfMissing": true,
+    "allowsInterestIfMissing": false,
+    "active": true
+  },
+  {
+    "trainingKey": "campus_access_orientation",
+    "label": "Campus access orientation",
+    "description": "Campus access orientation",
+    "category": "compliance",
+    "completionMode": "self_attested",
+    "validityDays": 365,
+    "requiredForRoleKeys": [
+      "campus_liaison"
+    ],
+    "blocksConfirmationIfMissing": false,
+    "allowsInterestIfMissing": true,
+    "active": true
+  },
+  {
+    "trainingKey": "canvass_training",
+    "label": "Canvass training",
+    "description": "Canvass training",
+    "category": "field",
+    "completionMode": "self_attested",
+    "validityDays": 365,
+    "requiredForRoleKeys": [
+      "canvass_captain",
+      "canvasser"
+    ],
+    "blocksConfirmationIfMissing": true,
+    "allowsInterestIfMissing": true,
+    "active": true
+  },
+  {
+    "trainingKey": "phone_bank_training",
+    "label": "Phone bank training",
+    "description": "Phone bank training",
+    "category": "field",
+    "completionMode": "self_attested",
+    "validityDays": 365,
+    "requiredForRoleKeys": [
+      "phone_bank_lead",
+      "phone_banker"
+    ],
+    "blocksConfirmationIfMissing": false,
+    "allowsInterestIfMissing": true,
+    "active": true
+  },
+  {
+    "trainingKey": "text_bank_training",
+    "label": "Text bank training",
+    "description": "Text bank training",
+    "category": "field",
+    "completionMode": "self_attested",
+    "validityDays": 365,
+    "requiredForRoleKeys": [
+      "text_bank_lead",
+      "text_banker"
+    ],
+    "blocksConfirmationIfMissing": false,
+    "allowsInterestIfMissing": true,
+    "active": true
+  },
+  {
+    "trainingKey": "data_privacy_training",
+    "label": "Data privacy training",
+    "description": "Data privacy training",
+    "category": "compliance",
+    "completionMode": "self_attested",
+    "validityDays": 365,
+    "requiredForRoleKeys": [
+      "data_tally",
+      "text_bank_lead",
+      "text_banker"
+    ],
+    "blocksConfirmationIfMissing": false,
+    "allowsInterestIfMissing": true,
+    "active": true
+  },
+  {
+    "trainingKey": "candidate_support_briefing",
+    "label": "Candidate support briefing",
+    "description": "Candidate support briefing",
+    "category": "candidate",
+    "completionMode": "manager_verified",
+    "validityDays": 365,
+    "requiredForRoleKeys": [
+      "candidate_support"
+    ],
+    "blocksConfirmationIfMissing": true,
+    "allowsInterestIfMissing": true,
+    "active": true
+  },
+  {
+    "trainingKey": "press_support_briefing",
+    "label": "Press support briefing",
+    "description": "Press support briefing",
+    "category": "media",
+    "completionMode": "self_attested",
+    "validityDays": 365,
+    "requiredForRoleKeys": [
+      "press_support"
+    ],
+    "blocksConfirmationIfMissing": false,
+    "allowsInterestIfMissing": true,
+    "active": true
+  },
+  {
+    "trainingKey": "accessibility_support_briefing",
+    "label": "Accessibility support briefing",
+    "description": "Accessibility support briefing",
+    "category": "safety",
+    "completionMode": "self_attested",
+    "validityDays": 365,
+    "requiredForRoleKeys": [
+      "accessibility_support"
+    ],
+    "blocksConfirmationIfMissing": false,
+    "allowsInterestIfMissing": true,
+    "active": true
+  },
+  {
+    "trainingKey": "shift_lead_orientation",
+    "label": "Shift lead orientation",
+    "description": "Shift lead orientation",
+    "category": "leadership",
+    "completionMode": "self_attested",
+    "validityDays": 365,
+    "requiredForRoleKeys": [
+      "shift_lead",
+      "event_lead",
+      "phone_bank_lead",
+      "text_bank_lead"
+    ],
+    "blocksConfirmationIfMissing": true,
+    "allowsInterestIfMissing": true,
+    "active": true
+  },
+  {
+    "trainingKey": "on_site_event_briefing",
+    "label": "On-site event briefing",
+    "description": "On-site event briefing",
+    "category": "operations",
+    "completionMode": "on_site_briefing",
+    "validityDays": 365,
+    "requiredForRoleKeys": [],
+    "blocksConfirmationIfMissing": false,
+    "allowsInterestIfMissing": true,
+    "active": true
+  }
+]

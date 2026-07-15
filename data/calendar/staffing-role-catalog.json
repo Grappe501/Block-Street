@@ -1,0 +1,412 @@
+[
+  {
+    "roleKey": "event_lead",
+    "label": "Event lead",
+    "description": "Event lead",
+    "category": "leadership",
+    "defaultCriticality": "critical",
+    "defaultLeadRequired": true,
+    "defaultTrainingRequirementKeys": [
+      "shift_lead_orientation"
+    ],
+    "defaultArrivalOffsetMinutes": null,
+    "publicSafeDescription": "Event lead",
+    "active": true
+  },
+  {
+    "roleKey": "shift_lead",
+    "label": "Shift lead",
+    "description": "Shift lead",
+    "category": "leadership",
+    "defaultCriticality": "required",
+    "defaultLeadRequired": true,
+    "defaultTrainingRequirementKeys": [
+      "shift_lead_orientation"
+    ],
+    "defaultArrivalOffsetMinutes": null,
+    "publicSafeDescription": "Shift lead",
+    "active": true
+  },
+  {
+    "roleKey": "setup",
+    "label": "Setup",
+    "description": "Setup",
+    "category": "logistics",
+    "defaultCriticality": "required",
+    "defaultLeadRequired": false,
+    "defaultTrainingRequirementKeys": [],
+    "defaultArrivalOffsetMinutes": null,
+    "publicSafeDescription": "Setup",
+    "active": true
+  },
+  {
+    "roleKey": "breakdown",
+    "label": "Breakdown",
+    "description": "Breakdown",
+    "category": "logistics",
+    "defaultCriticality": "required",
+    "defaultLeadRequired": false,
+    "defaultTrainingRequirementKeys": [],
+    "defaultArrivalOffsetMinutes": null,
+    "publicSafeDescription": "Breakdown",
+    "active": true
+  },
+  {
+    "roleKey": "greeter",
+    "label": "Greeter",
+    "description": "Greeter",
+    "category": "guest_support",
+    "defaultCriticality": "required",
+    "defaultLeadRequired": false,
+    "defaultTrainingRequirementKeys": [
+      "general_volunteer_orientation"
+    ],
+    "defaultArrivalOffsetMinutes": null,
+    "publicSafeDescription": "Greeter",
+    "active": true
+  },
+  {
+    "roleKey": "check_in",
+    "label": "Check-in",
+    "description": "Check-in",
+    "category": "guest_support",
+    "defaultCriticality": "required",
+    "defaultLeadRequired": false,
+    "defaultTrainingRequirementKeys": [
+      "event_check_in_training"
+    ],
+    "defaultArrivalOffsetMinutes": null,
+    "publicSafeDescription": "Check-in",
+    "active": true
+  },
+  {
+    "roleKey": "registration_table",
+    "label": "Registration table",
+    "description": "Registration table",
+    "category": "registration",
+    "defaultCriticality": "critical",
+    "defaultLeadRequired": false,
+    "defaultTrainingRequirementKeys": [
+      "voter_registration_rules",
+      "event_check_in_training"
+    ],
+    "defaultArrivalOffsetMinutes": null,
+    "publicSafeDescription": "Registration table",
+    "active": true
+  },
+  {
+    "roleKey": "line_support",
+    "label": "Line support",
+    "description": "Line support",
+    "category": "guest_support",
+    "defaultCriticality": "required",
+    "defaultLeadRequired": false,
+    "defaultTrainingRequirementKeys": [],
+    "defaultArrivalOffsetMinutes": null,
+    "publicSafeDescription": "Line support",
+    "active": true
+  },
+  {
+    "roleKey": "campus_liaison",
+    "label": "Campus liaison",
+    "description": "Campus liaison",
+    "category": "organizing",
+    "defaultCriticality": "required",
+    "defaultLeadRequired": false,
+    "defaultTrainingRequirementKeys": [
+      "campus_access_orientation"
+    ],
+    "defaultArrivalOffsetMinutes": null,
+    "publicSafeDescription": "Campus liaison",
+    "active": true
+  },
+  {
+    "roleKey": "county_liaison",
+    "label": "County liaison",
+    "description": "County liaison",
+    "category": "organizing",
+    "defaultCriticality": "required",
+    "defaultLeadRequired": false,
+    "defaultTrainingRequirementKeys": [],
+    "defaultArrivalOffsetMinutes": null,
+    "publicSafeDescription": "County liaison",
+    "active": true
+  },
+  {
+    "roleKey": "city_liaison",
+    "label": "City liaison",
+    "description": "City liaison",
+    "category": "organizing",
+    "defaultCriticality": "required",
+    "defaultLeadRequired": false,
+    "defaultTrainingRequirementKeys": [],
+    "defaultArrivalOffsetMinutes": null,
+    "publicSafeDescription": "City liaison",
+    "active": true
+  },
+  {
+    "roleKey": "materials_runner",
+    "label": "Materials runner",
+    "description": "Materials runner",
+    "category": "logistics",
+    "defaultCriticality": "required",
+    "defaultLeadRequired": false,
+    "defaultTrainingRequirementKeys": [],
+    "defaultArrivalOffsetMinutes": null,
+    "publicSafeDescription": "Materials runner",
+    "active": true
+  },
+  {
+    "roleKey": "data_tally",
+    "label": "Data and tally lead",
+    "description": "Data and tally lead",
+    "category": "organizing",
+    "defaultCriticality": "required",
+    "defaultLeadRequired": false,
+    "defaultTrainingRequirementKeys": [
+      "data_privacy_training"
+    ],
+    "defaultArrivalOffsetMinutes": null,
+    "publicSafeDescription": "Data and tally lead",
+    "active": true
+  },
+  {
+    "roleKey": "photography_content",
+    "label": "Photography / content",
+    "description": "Photography / content",
+    "category": "communications",
+    "defaultCriticality": "required",
+    "defaultLeadRequired": false,
+    "defaultTrainingRequirementKeys": [],
+    "defaultArrivalOffsetMinutes": null,
+    "publicSafeDescription": "Photography / content",
+    "active": true
+  },
+  {
+    "roleKey": "discussion_facilitator",
+    "label": "Discussion facilitator",
+    "description": "Discussion facilitator",
+    "category": "organizing",
+    "defaultCriticality": "required",
+    "defaultLeadRequired": false,
+    "defaultTrainingRequirementKeys": [
+      "general_volunteer_orientation"
+    ],
+    "defaultArrivalOffsetMinutes": null,
+    "publicSafeDescription": "Discussion facilitator",
+    "active": true
+  },
+  {
+    "roleKey": "meeting_host",
+    "label": "Meeting host",
+    "description": "Meeting host",
+    "category": "leadership",
+    "defaultCriticality": "required",
+    "defaultLeadRequired": true,
+    "defaultTrainingRequirementKeys": [],
+    "defaultArrivalOffsetMinutes": null,
+    "publicSafeDescription": "Meeting host",
+    "active": true
+  },
+  {
+    "roleKey": "note_taker",
+    "label": "Note taker",
+    "description": "Note taker",
+    "category": "follow_up",
+    "defaultCriticality": "required",
+    "defaultLeadRequired": false,
+    "defaultTrainingRequirementKeys": [],
+    "defaultArrivalOffsetMinutes": null,
+    "publicSafeDescription": "Note taker",
+    "active": true
+  },
+  {
+    "roleKey": "follow_up",
+    "label": "Follow-up lead",
+    "description": "Follow-up lead",
+    "category": "follow_up",
+    "defaultCriticality": "required",
+    "defaultLeadRequired": false,
+    "defaultTrainingRequirementKeys": [],
+    "defaultArrivalOffsetMinutes": null,
+    "publicSafeDescription": "Follow-up lead",
+    "active": true
+  },
+  {
+    "roleKey": "canvass_captain",
+    "label": "Canvass captain",
+    "description": "Canvass captain",
+    "category": "field",
+    "defaultCriticality": "critical",
+    "defaultLeadRequired": true,
+    "defaultTrainingRequirementKeys": [
+      "canvass_training"
+    ],
+    "defaultArrivalOffsetMinutes": null,
+    "publicSafeDescription": "Canvass captain",
+    "active": true
+  },
+  {
+    "roleKey": "canvasser",
+    "label": "Canvasser",
+    "description": "Canvasser",
+    "category": "field",
+    "defaultCriticality": "required",
+    "defaultLeadRequired": false,
+    "defaultTrainingRequirementKeys": [
+      "canvass_training"
+    ],
+    "defaultArrivalOffsetMinutes": null,
+    "publicSafeDescription": "Canvasser",
+    "active": true
+  },
+  {
+    "roleKey": "phone_bank_lead",
+    "label": "Phone bank lead",
+    "description": "Phone bank lead",
+    "category": "field",
+    "defaultCriticality": "required",
+    "defaultLeadRequired": true,
+    "defaultTrainingRequirementKeys": [
+      "phone_bank_training",
+      "shift_lead_orientation"
+    ],
+    "defaultArrivalOffsetMinutes": null,
+    "publicSafeDescription": "Phone bank lead",
+    "active": true
+  },
+  {
+    "roleKey": "phone_banker",
+    "label": "Phone banker",
+    "description": "Phone banker",
+    "category": "field",
+    "defaultCriticality": "required",
+    "defaultLeadRequired": false,
+    "defaultTrainingRequirementKeys": [
+      "phone_bank_training"
+    ],
+    "defaultArrivalOffsetMinutes": null,
+    "publicSafeDescription": "Phone banker",
+    "active": true
+  },
+  {
+    "roleKey": "text_bank_lead",
+    "label": "Text bank lead",
+    "description": "Text bank lead",
+    "category": "field",
+    "defaultCriticality": "required",
+    "defaultLeadRequired": true,
+    "defaultTrainingRequirementKeys": [
+      "text_bank_training",
+      "data_privacy_training"
+    ],
+    "defaultArrivalOffsetMinutes": null,
+    "publicSafeDescription": "Text bank lead",
+    "active": true
+  },
+  {
+    "roleKey": "text_banker",
+    "label": "Text banker",
+    "description": "Text banker",
+    "category": "field",
+    "defaultCriticality": "required",
+    "defaultLeadRequired": false,
+    "defaultTrainingRequirementKeys": [
+      "text_bank_training",
+      "data_privacy_training"
+    ],
+    "defaultArrivalOffsetMinutes": null,
+    "publicSafeDescription": "Text banker",
+    "active": true
+  },
+  {
+    "roleKey": "hospitality",
+    "label": "Hospitality",
+    "description": "Hospitality",
+    "category": "guest_support",
+    "defaultCriticality": "required",
+    "defaultLeadRequired": false,
+    "defaultTrainingRequirementKeys": [],
+    "defaultArrivalOffsetMinutes": null,
+    "publicSafeDescription": "Hospitality",
+    "active": true
+  },
+  {
+    "roleKey": "parking",
+    "label": "Parking",
+    "description": "Parking",
+    "category": "logistics",
+    "defaultCriticality": "required",
+    "defaultLeadRequired": false,
+    "defaultTrainingRequirementKeys": [],
+    "defaultArrivalOffsetMinutes": null,
+    "publicSafeDescription": "Parking",
+    "active": true
+  },
+  {
+    "roleKey": "accessibility_support",
+    "label": "Accessibility support",
+    "description": "Accessibility support",
+    "category": "safety",
+    "defaultCriticality": "required",
+    "defaultLeadRequired": false,
+    "defaultTrainingRequirementKeys": [
+      "accessibility_support_briefing"
+    ],
+    "defaultArrivalOffsetMinutes": null,
+    "publicSafeDescription": "Accessibility support",
+    "active": true
+  },
+  {
+    "roleKey": "technology_support",
+    "label": "Technology support",
+    "description": "Technology support",
+    "category": "technology",
+    "defaultCriticality": "required",
+    "defaultLeadRequired": false,
+    "defaultTrainingRequirementKeys": [],
+    "defaultArrivalOffsetMinutes": null,
+    "publicSafeDescription": "Technology support",
+    "active": true
+  },
+  {
+    "roleKey": "security_liaison",
+    "label": "Security liaison",
+    "description": "Security liaison",
+    "category": "safety",
+    "defaultCriticality": "required",
+    "defaultLeadRequired": false,
+    "defaultTrainingRequirementKeys": [],
+    "defaultArrivalOffsetMinutes": null,
+    "publicSafeDescription": "Security liaison",
+    "active": true
+  },
+  {
+    "roleKey": "candidate_support",
+    "label": "Candidate support",
+    "description": "Candidate support",
+    "category": "candidate",
+    "defaultCriticality": "critical",
+    "defaultLeadRequired": false,
+    "defaultTrainingRequirementKeys": [
+      "candidate_support_briefing"
+    ],
+    "defaultArrivalOffsetMinutes": null,
+    "publicSafeDescription": "Candidate support",
+    "active": true
+  },
+  {
+    "roleKey": "press_support",
+    "label": "Press support",
+    "description": "Press support",
+    "category": "media",
+    "defaultCriticality": "required",
+    "defaultLeadRequired": false,
+    "defaultTrainingRequirementKeys": [
+      "press_support_briefing"
+    ],
+    "defaultArrivalOffsetMinutes": null,
+    "publicSafeDescription": "Press support",
+    "active": true
+  }
+]

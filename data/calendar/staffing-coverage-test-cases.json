@@ -1,0 +1,15 @@
+[
+  {
+    "id": "interest-not-confirmed",
+    "minimumNeeded": 2,
+    "interestedCount": 5,
+    "confirmedCount": 0,
+    "expectedMinimumGap": 2
+  },
+  {
+    "id": "confirmed-covers-minimum",
+    "minimumNeeded": 2,
+    "confirmedCount": 2,
+    "expectedMinimumGap": 0
+  }
+]

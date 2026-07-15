@@ -1,5 +1,6 @@
 import type { CalendarEvent } from "../types";
 import type { EventReadinessDimension, EventReadinessItem, EventReadinessState } from "./types";
+import { evaluateStaffingReadiness, evaluateTasksReadiness } from "../staffing/readiness-integration";
 
 function eventRoute(eventId: string, suffix = ""): string {
   return `/calendar/event/${eventId}${suffix}`;
@@ -481,8 +482,8 @@ const EVALUATORS: Record<
   date_time: (e) => evaluateDateTime(e),
   venue: (e) => evaluateVenue(e),
   candidate: (e) => evaluateCandidate(e),
-  staffing: (e, n) => evaluateStaffing(e, n),
-  tasks: (e) => evaluateTasks(e),
+  staffing: (e, n) => evaluateStaffingReadiness(e, n),
+  tasks: (e) => evaluateTasksReadiness(e),
   materials: (e) => evaluateMaterials(e),
   promotion: (e) => evaluatePromotion(e),
   rsvp: (e) => evaluateRsvp(e),

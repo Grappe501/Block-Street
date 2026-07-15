@@ -3,6 +3,7 @@ export * from "./operations";
 export * from "./templates";
 export * from "./recurrence";
 export * from "./series";
+export * from "./staffing";
 export * from "./copy";
 export * from "./canonical";
 export * from "./events";
