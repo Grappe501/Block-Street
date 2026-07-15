@@ -58,7 +58,14 @@ export function hDriveEnv(root = REPO_ROOT) {
     PNPM_STORE_DIR: join(caches, "pnpm-store"),
     PLAYWRIGHT_BROWSERS_PATH: join(caches, "playwright"),
     NEXT_TELEMETRY_DISABLED: "1",
+    NODE_OPTIONS: mergeNodeHeapOptions(process.env.NODE_OPTIONS),
   };
+}
+
+function mergeNodeHeapOptions(existing) {
+  const opts = existing ?? "";
+  if (opts.includes("max-old-space-size")) return opts;
+  return `${opts} --max-old-space-size=4096`.trim();
 }
 
 // Auto-apply when imported
