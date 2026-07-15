@@ -6,12 +6,12 @@ import { getCounties } from "@/lib/data";
 import { getEventById, listVolunteerNeeds } from "@/lib/calendar";
 
 export function generateStaticParams() {
-  return getCounties().map((c) => ({ countySlug: c.slug }));
+  return getCounties().map((c) => ({ slug: c.slug }));
 }
 
-export default async function CountyCalendarVolunteerNeedsPage({ params }: { params: Promise<{ countySlug: string }> }) {
-  const { countySlug } = await params;
-  const county = getCounties().find((c) => c.slug === countySlug);
+export default async function CountyCalendarVolunteerNeedsPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const county = getCounties().find((c) => c.slug === slug);
   if (!county) notFound();
 
   const needs = listVolunteerNeeds({ kind: "county", countySlug: county.slug });

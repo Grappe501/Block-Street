@@ -6,7 +6,7 @@ import { getCounties } from "@/lib/data";
 import { proposeEvent } from "@/lib/calendar";
 
 export function generateStaticParams() {
-  return getCounties().map((c) => ({ countySlug: c.slug }));
+  return getCounties().map((c) => ({ slug: c.slug }));
 }
 
 async function proposeAction(input: Parameters<typeof proposeEvent>[0]) {
@@ -15,9 +15,9 @@ async function proposeAction(input: Parameters<typeof proposeEvent>[0]) {
   return { event_id: event.event_id };
 }
 
-export default async function CountyCalendarProposePage({ params }: { params: Promise<{ countySlug: string }> }) {
-  const { countySlug } = await params;
-  const county = getCounties().find((c) => c.slug === countySlug);
+export default async function CountyCalendarProposePage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const county = getCounties().find((c) => c.slug === slug);
   if (!county) notFound();
 
   return (
