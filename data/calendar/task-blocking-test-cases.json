@@ -1,0 +1,9 @@
+{
+  "cases": [
+    {
+      "eventId": "evt-henderson-vr-drive",
+      "hoursUntilEvent": 48,
+      "expectReadinessBlocked": true
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 import type { CalendarEvent } from "../types";
 import type { EventReadinessDimension, EventReadinessItem, EventReadinessState } from "./types";
-import { evaluateStaffingReadiness, evaluateTasksReadiness } from "../staffing/readiness-integration";
+import { evaluateStaffingReadiness } from "../staffing/readiness-integration";
+import { evaluateEventTasksReadiness } from "../tasks/readiness-integration";
 
 function eventRoute(eventId: string, suffix = ""): string {
   return `/calendar/event/${eventId}${suffix}`;
@@ -267,42 +268,7 @@ function evaluateStaffing(event: CalendarEvent, now: Date): EventReadinessItem {
 }
 
 function evaluateTasks(event: CalendarEvent): EventReadinessItem {
-  const route = eventRoute(event.event_id, "/edit");
-  if (event.operational_status === "completed" || event.operational_status === "canceled") {
-    return {
-      dimension: "tasks",
-      state: "not_required",
-      label: "Tasks",
-      explanation: "Event closed — task tracking not required.",
-      route,
-    };
-  }
-  const hasShiftPlan = event.shift_required || event.shifts.length > 0;
-  if (!hasShiftPlan && needsVolunteers(event)) {
-    return {
-      dimension: "tasks",
-      state: "not_started",
-      label: "Tasks",
-      explanation: "Awaiting shift workflow (CAL-P2 Wave 2A). Role list exists; task engine not live.",
-      route: eventRoute(event.event_id, "/staffing"),
-    };
-  }
-  if (hasShiftPlan) {
-    return {
-      dimension: "tasks",
-      state: "in_progress",
-      label: "Tasks",
-      explanation: "Shift placeholders present. Full task engine planned for CAL-P2.",
-      route,
-    };
-  }
-  return {
-    dimension: "tasks",
-    state: "not_required",
-    label: "Tasks",
-    explanation: "No task checklist required for this event type.",
-    route,
-  };
+  return evaluateEventTasksReadiness(event);
 }
 
 function evaluateMaterials(event: CalendarEvent): EventReadinessItem {
@@ -483,7 +449,7 @@ const EVALUATORS: Record<
   venue: (e) => evaluateVenue(e),
   candidate: (e) => evaluateCandidate(e),
   staffing: (e, n) => evaluateStaffingReadiness(e, n),
-  tasks: (e) => evaluateTasksReadiness(e),
+  tasks: (e, n) => evaluateEventTasksReadiness(e, n),
   materials: (e) => evaluateMaterials(e),
   promotion: (e) => evaluatePromotion(e),
   rsvp: (e) => evaluateRsvp(e),

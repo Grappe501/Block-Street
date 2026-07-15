@@ -2,6 +2,8 @@ import type { CalendarEvent } from "../types";
 import { calculateEventStaffingSummary } from "../staffing/coverage";
 import { listAssignments, listOffers, listReviews } from "../assignments/store";
 import { listOpenReplacementNeeds } from "../assignments/replacements";
+import { buildTaskChecklistSummary, listTasks } from "../tasks";
+import { isTaskComplete } from "../tasks/status";
 import type { AttentionKey, EventAttentionSeverity, EventReadinessItem } from "./types";
 import { ATTENTION_KEYS } from "./types";
 
@@ -271,6 +273,21 @@ export function evaluateEventAttention(
   }
   if (listAssignments({ eventId: event.event_id, activeOnly: true }).some((a) => a.trainingConditionStatus === "pending")) {
     signals.push({ key: "training_condition_pending", severity: "watch", reason: "Training condition pending on assignment." });
+  }
+
+  const taskSummary = buildTaskChecklistSummary(event.event_id);
+  if (taskSummary.overdueCount > 0) {
+    signals.push({ key: "task_overdue", severity: within48 ? "urgent" : "needs_attention", reason: `${taskSummary.overdueCount} overdue task(s).` });
+  }
+  if (taskSummary.blockedCount > 0) {
+    signals.push({ key: "task_blocking", severity: "needs_attention", reason: `${taskSummary.blockedCount} task(s) blocked by dependencies.` });
+  }
+  if (taskSummary.incompleteRequiredCount > 0 && within48) {
+    signals.push({ key: "incomplete_required_tasks", severity: "urgent", reason: "Required tasks incomplete within 48 hours." });
+  }
+  const unowned = listTasks({ eventId: event.event_id }).filter((t) => t.required && !t.ownerUserId && !isTaskComplete(t.taskStatus));
+  if (unowned.length > 0) {
+    signals.push({ key: "task_no_owner", severity: "watch", reason: "Required task without owner." });
   }
 
   return signals;

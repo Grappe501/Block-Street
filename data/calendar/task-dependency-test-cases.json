@@ -1,0 +1,9 @@
+{
+  "cases": [
+    {
+      "eventId": "evt-henderson-vr-drive",
+      "chainLength": 3,
+      "expectBlockedUntilPrereqComplete": true
+    }
+  ]
+}

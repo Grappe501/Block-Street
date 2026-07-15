@@ -1,0 +1,44 @@
+{
+  "phase": "CAL-P2",
+  "wave": "3A",
+  "package": "event_task_engine_and_checklist_runtime",
+  "generated_at": "2026-07-15T15:00:00.000Z",
+  "baseline_commit": "68eecff",
+  "wave_2b_content_commit": "bc1f865",
+  "gate_a": "OPEN",
+  "persistence_mode": "session_soft_beta",
+  "rbac_mode": "audit_only",
+  "enforcement_active": false,
+  "task_fixture_count": 0,
+  "dependency_fixture_count": 0,
+  "template_seed_integration": "PASS",
+  "readiness_integration": "PASS",
+  "blocking_detection": "PASS",
+  "cycle_detection": "PASS",
+  "routes_created": [
+    "/calendar/event/:eventId/tasks",
+    "/calendar/event/:eventId/tasks/:taskId",
+    "/calendar/event/:eventId/tasks/dependencies",
+    "/calendar/event/:eventId/tasks/blocking",
+    "/command/events/tasks",
+    "/command/events/tasks/overdue",
+    "/command/events/tasks/blocking",
+    "/command/events/tasks/incomplete-required"
+  ],
+  "tests": [
+    "calendar:tasks:validate",
+    "calendar:tasks:transitions",
+    "test:calendar:task-model",
+    "test:calendar:task-dependencies",
+    "test:calendar:task-readiness",
+    "test:calendar:wave3a"
+  ],
+  "known_limitations": [
+    "Tasks remain soft-beta — durableAuthority=false while Gate A open",
+    "Template tasks seeded on first ensureTasksFromEvent only",
+    "RBAC audit_only",
+    "No Postgres durability"
+  ],
+  "final_wave_3a_claim": "TESTED",
+  "next_wave": "CAL-P2 Wave 3B"
+}
