@@ -12,7 +12,7 @@
     "phase8Status": "complete",
     "phase9Status": "complete",
     "phase10Status": "complete",
-    "lastUpdated": "2026-07-15T00:40:50.899Z",
+    "lastUpdated": "2026-07-15T01:15:33.505Z",
     "deployUrl": "https://block-street.netlify.app/",
     "githubRepo": "https://github.com/Grappe501/Block-Street",
     "netlifyStatus": "live",
@@ -22,7 +22,7 @@
     "leaderTestingDate": "2026-07-12",
     "phase11Status": "complete",
     "activeProgram": "V2-B.5 Field Plan durability prep",
-    "productionCommit": "64b0f38"
+    "productionCommit": "7b21870"
   },
   "constitutionalLayer": {
     "status": "complete",
