@@ -1,10 +1,14 @@
 import { createHmac, timingSafeEqual } from "crypto";
 import type { Session } from "./types";
 
-const SESSION_SECRET =
-  process.env.AUTH_SESSION_SECRET ??
-  process.env.AUTH_BOOTSTRAP_PASSWORD ??
-  "Forevermost-dev-session-key";
+const SESSION_SECRET = (() => {
+  const secret = process.env.AUTH_SESSION_SECRET;
+  if (secret) return secret;
+  if (process.env.NODE_ENV === "production") {
+    throw new Error("AUTH_SESSION_SECRET must be set in production");
+  }
+  return process.env.AUTH_BOOTSTRAP_PASSWORD ?? "Forevermost-dev-session-key";
+})();
 
 export type SignedSessionPayload = Pick<
   Session,

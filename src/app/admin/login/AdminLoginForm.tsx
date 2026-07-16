@@ -64,7 +64,9 @@ export default function AdminLoginForm({ next = "/admin" }: { next?: string }) {
           </button>
         </form>
         <p className="mt-4 text-xs text-slate-500">
-          Bootstrap: director@block-street.local · Password: Forvermost (or AUTH_BOOTSTRAP_PASSWORD env)
+          {process.env.NODE_ENV !== "production"
+            ? "Bootstrap: director@block-street.local · Password: Forvermost (or AUTH_BOOTSTRAP_PASSWORD env)"
+            : "Use your assigned platform credentials."}
         </p>
       </div>
     </div>

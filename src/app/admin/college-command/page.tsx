@@ -2,13 +2,15 @@ import { buildCollegeCommandDashboard } from "@/lib/college-command/dashboard";
 import { CollegeCommandWorkbench } from "@/components/college-command/CollegeCommandWorkbench";
 import { EventOperationsWidget } from "@/components/calendar/operations/EventOperationsWidget";
 import { listEventOperationsSummaries } from "@/lib/calendar/operations";
+import { requireAdminPageAccess } from "@/lib/admin/guard";
 
 export const metadata = {
   title: "College Leader Workbench — ASYON",
   description: "Statewide education organizing command",
 };
 
-export default function CollegeCommandPage() {
+export default async function CollegeCommandPage() {
+  await requireAdminPageAccess();
   const dashboard = buildCollegeCommandDashboard();
   const ops = listEventOperationsSummaries({ kind: "command" }).filter((s) =>
     s.scopeLabels.some((l) => l.startsWith("College:")),

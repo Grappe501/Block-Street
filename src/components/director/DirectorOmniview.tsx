@@ -238,7 +238,10 @@ export function DirectorOmniview({ catalog }: { catalog: Catalog }) {
               Persistence: <strong>netlify_blobs + static_seed</strong> — Postgres not live
             </li>
             <li>Presence: <strong>No presence signal</strong> — do not label activity as Live</li>
-            <li>Director login: <code>/admin/login</code> → <code>director@block-street.local</code> / Forvermost</li>
+            <li>Director login: <code>/admin/login</code></li>
+            {process.env.NODE_ENV !== "production" && (
+              <li>Bootstrap: <code>director@block-street.local</code> / Forvermost</li>
+            )}
           </ul>
         </div>
 

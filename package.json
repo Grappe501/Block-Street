@@ -121,6 +121,7 @@
     "test:v2a-participation": "node scripts/run-with-h-env.mjs npx tsx scripts/v2a-participation-tests.ts",
     "test:field-goals": "node scripts/run-with-h-env.mjs npx tsx scripts/test-field-goals.ts && node scripts/field-goals/validate-field-goals.mjs",
     "test:college-command": "node scripts/run-with-h-env.mjs npx tsx scripts/test-college-command.ts",
+    "test:platform-hardening": "node scripts/run-with-h-env.mjs npx tsx scripts/platform-hardening-pass.ts",
     "test:volunteer-command": "node scripts/run-with-h-env.mjs npx tsx scripts/test-volunteer-command.ts",
     "test:field-plan": "node scripts/run-with-h-env.mjs npx tsx scripts/test-field-plan.ts",
     "test:v2b1-field-plan-spine": "node scripts/run-with-h-env.mjs npx tsx scripts/test-v2b1-field-plan-spine.ts",

@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
+import { applySecurityHeaders } from "@/lib/security/headers";
 
 const SESSION_COOKIE = "cos_session";
 const PLACE_COOKIE = "bs_home_place";
@@ -51,12 +52,16 @@ export function middleware(request: NextRequest) {
   const session = request.cookies.get(SESSION_COOKIE)?.value;
   const hasPlace = Boolean(request.cookies.get(PLACE_COOKIE)?.value);
 
+  let response: NextResponse;
+
   if (pathname === "/admin/login" || pathname === "/login") {
-    return NextResponse.next();
+    response = NextResponse.next();
+    return applySecurityHeaders(response);
   }
 
   if (PUBLIC_PAGE_PREFIXES.some((p) => pathname.startsWith(p))) {
-    return NextResponse.next();
+    response = NextResponse.next();
+    return applySecurityHeaders(response);
   }
 
   // After a place is committed, hide map / browse entry points (directory search stays available)
@@ -68,7 +73,8 @@ export function middleware(request: NextRequest) {
       pathname === "/high-schools" ||
       pathname === "/private-schools"
     ) {
-      return NextResponse.redirect(new URL("/network", request.url));
+      response = NextResponse.redirect(new URL("/network", request.url));
+      return applySecurityHeaders(response);
     }
   }
 
@@ -83,20 +89,24 @@ export function middleware(request: NextRequest) {
     if (!session) {
       const login = new URL(pathname.startsWith("/admin") ? "/admin/login" : "/login", request.url);
       login.searchParams.set("next", pathname);
-      return NextResponse.redirect(login);
+      response = NextResponse.redirect(login);
+      return applySecurityHeaders(response);
     }
-    return NextResponse.next();
+    response = NextResponse.next();
+    return applySecurityHeaders(response);
   }
 
   if (pathname.startsWith("/api/")) {
     if (!isPublicApi(pathname, request.method)) {
       if (!session) {
-        return NextResponse.json({ error: "Authentication required" }, { status: 401 });
+        response = NextResponse.json({ error: "Authentication required" }, { status: 401 });
+        return applySecurityHeaders(response);
       }
     }
   }
 
-  return NextResponse.next();
+  response = NextResponse.next();
+  return applySecurityHeaders(response);
 }
 
 export const config = {

@@ -1,8 +1,7 @@
 import { createHash, randomBytes } from "crypto";
 import { getSessionFromRequest } from "@/lib/auth/session";
 import { getUserById, resolveMemberships } from "@/lib/auth/engine";
-import { resolveAdminContext } from "@/lib/admin/engine";
-import { editorialPermissionsForUser } from "@/lib/cms/permissions";
+import { resolveUserApiPermissions } from "@/lib/security/user-permissions";
 import type { NextRequest } from "next/server";
 import { ApiError } from "./errors";
 import type { ApiRequestContext } from "./types";
@@ -85,29 +84,10 @@ export function resolveApiContext(request: NextRequest): ApiRequestContext {
     };
   }
 
-  let adminPerms: string[] = [];
-  try {
-    const ctx = resolveAdminContext(session);
-    adminPerms = ctx.effective_permissions ?? [];
-  } catch {
-    adminPerms = [];
-  }
-
   const memberships = resolveMemberships(session.user_id);
-  const orgId = memberships[0]?.organization_id ?? null;
-  const wsId = memberships[0]?.workspace_id ?? null;
-  const editorial = editorialPermissionsForUser(session.user_id);
-
-  const apiScopes = new Set<string>([...adminPerms, ...editorial]);
-  if (adminPerms.includes("users.view")) apiScopes.add("users.read");
-  apiScopes.add("users.read");
-  apiScopes.add("missions.read");
-  apiScopes.add("missions.write");
-  apiScopes.add("civic_action.view");
-  apiScopes.add("civic_action.manage");
-  apiScopes.add("content.read");
-  apiScopes.add("notifications.request");
-  apiScopes.add("analytics.read");
+  const orgId = session.active_organization_id ?? memberships[0]?.organization_id ?? null;
+  const wsId = session.active_workspace_id ?? memberships[0]?.workspace_id ?? null;
+  const effective_permissions = resolveUserApiPermissions(session.user_id, memberships);
 
   return {
     request_id,
@@ -119,7 +99,7 @@ export function resolveApiContext(request: NextRequest): ApiRequestContext {
     organization_id_optional: orgId,
     workspace_id_optional: wsId,
     active_role_ids: [],
-    effective_permissions: [...apiScopes],
+    effective_permissions,
     authentication_strength: session.authentication_strength ?? "password",
     api_client_id_optional: null,
     source_ip_reference,

@@ -1,15 +1,32 @@
 import { NextRequest, NextResponse } from "next/server";
-import { assertAuthenticated, listInvitations } from "@/lib/auth/engine";
+import { assertAuthenticated, listInvitations, resolveMemberships } from "@/lib/auth/engine";
 import { authErrorResponse } from "@/lib/auth/http";
+import { AdminError, assertAdminPermission, resolveAdminContext } from "@/lib/admin/engine";
 import { createWave1Invitation } from "@/lib/identity-trust/wave1/engine";
 import { loadWave1Flags } from "@/lib/identity-trust/wave1/data";
 
 export async function GET(request: NextRequest) {
   try {
-    assertAuthenticated(request.headers.get("cookie"));
+    const session = assertAuthenticated(request.headers.get("cookie"));
     const orgId = request.nextUrl.searchParams.get("organization_id") ?? undefined;
-    return NextResponse.json({ invitations: listInvitations(orgId) });
+    const adminCtx = resolveAdminContext(session);
+    const memberships = resolveMemberships(session.user_id);
+    const allowedOrgIds = new Set(memberships.map((m) => m.organization_id));
+
+    if (orgId) {
+      const platformScope = adminCtx.scopes.some((s) => s.type === "platform");
+      if (!platformScope && !allowedOrgIds.has(orgId) && !adminCtx.effective_permissions.includes("users.view")) {
+        throw new AdminError("You do not have permission to view invitations for this organization", 403);
+      }
+      return NextResponse.json({ invitations: listInvitations(orgId) });
+    }
+
+    assertAdminPermission(adminCtx, "users.view");
+    return NextResponse.json({ invitations: listInvitations() });
   } catch (e) {
+    if (e instanceof AdminError) {
+      return NextResponse.json({ error: e.message }, { status: e.status });
+    }
     return authErrorResponse(e);
   }
 }

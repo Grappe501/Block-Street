@@ -6,7 +6,8 @@ import launchReadiness from "../../../../../data/launch-readiness.json";
 import buildProgress from "../../../../../data/build-progress.json";
 
 /** Authenticated mirror of Operator Command summary (Build Control UI loads registries client-side). */
-export const GET = withAdmin(() => {
+export const GET = withAdmin(
+  () => {
   const journeys = certRegistry.journeys ?? [];
   const pendingCert = journeys.filter((j) => j.status === "pending" || j.status === "not_started");
   const features = featureDiscovery.features ?? [];
@@ -34,4 +35,6 @@ export const GET = withAdmin(() => {
     },
     v2Order: ["V2-A", "V2-B", "V2-C", "V2-D", "V2-E", "V2-F"],
   });
-});
+  },
+  { permission: "audit.view" }
+);
