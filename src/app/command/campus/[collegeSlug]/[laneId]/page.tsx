@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { GetLoudResourceSection } from "@/components/civic-resources/GetLoudResourceSection";
 import { CommandCard, CommandChrome, CommandSection } from "@/components/command/CommandChrome";
 import { buildLaneBoard, listCommandLanes } from "@/lib/command/board";
 import { getCollege, listColleges } from "@/lib/college-community/institutions";
@@ -97,6 +98,12 @@ export default async function CampusLanePage({
           ))}
         </ul>
       </CommandSection>
+
+      {laneId === "registration" && (
+        <CommandSection title="Registration resources">
+          <GetLoudResourceSection variant="voter_registration_command" />
+        </CommandSection>
+      )}
 
       <CommandSection title="College Team job (meeting seat)">
         <CommandCard

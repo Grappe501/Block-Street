@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { GetLoudResourceSection } from "@/components/civic-resources/GetLoudResourceSection";
 import { CollegeChrome } from "@/components/college-community/CollegeChrome";
 import { collegeStaticParams, requireCollege } from "@/lib/college-community/page-helpers";
 
@@ -43,6 +44,7 @@ export default async function Page({ params }: { params: Promise<{ collegeSlug: 
       <p className="text-sm text-slate-700">
         Prepare a back-to-school registration drive during the first week students return. Plans are not campus approval or legal certification.
       </p>
+      <GetLoudResourceSection variant="standard" className="mt-4" />
       <section className="mt-4 rounded-xl border bg-white p-4">
         <h2 className="font-bold">Readiness board</h2>
         <ul className="mt-3 space-y-2 text-sm">

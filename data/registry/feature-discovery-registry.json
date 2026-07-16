@@ -654,6 +654,19 @@
       "keywords": ["training", "learn", "help"],
       "dependsOn": ["FEAT-QDL-MY-HOME"],
       "owner": "operator"
+    },
+    {
+      "id": "FEAT-GET-LOUD-RESOURCES",
+      "title": "Get Loud Arkansas Voter Registration Resources",
+      "audience": "participant",
+      "journey": [],
+      "product": "QDL",
+      "phase": "BS-GET-LOUD-VOTER-REGISTRATION-1.0",
+      "certification": "documented",
+      "nav": "/learn/voter-registration/get-loud-arkansas",
+      "keywords": ["voter", "registration", "get loud", "qr", "external"],
+      "dependsOn": ["FEAT-QDL-PROGRAM"],
+      "owner": "operator"
     }
   ]
 }

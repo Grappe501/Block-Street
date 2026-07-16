@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
+import { GetLoudRegistrationResourceCard } from "@/components/civic-resources/GetLoudRegistrationResourceCard";
+import type { CivicResourceCardProjection } from "@/lib/civic-resources/types";
 import type { PersonalHome } from "@/lib/person-home/types";
 
 export function PersonalHomeShell() {
@@ -12,6 +14,8 @@ export function PersonalHomeShell() {
   const [home, setHome] = useState<PersonalHome | null>(null);
   const [error, setError] = useState("");
   const [showLeadershipLinks, setShowLeadershipLinks] = useState(false);
+  const [showExplore, setShowExplore] = useState(false);
+  const [getLoudCard, setGetLoudCard] = useState<CivicResourceCardProjection | null>(null);
 
   useEffect(() => {
     (async () => {
@@ -32,6 +36,13 @@ export function PersonalHomeShell() {
         return;
       }
       setHome(data.home as PersonalHome);
+      if ((data.home as PersonalHome).explore_resources?.length) {
+        const resourceRes = await fetch("/api/civic-resources/get-loud?variant=compact");
+        if (resourceRes.ok) {
+          const resourceData = await resourceRes.json();
+          setGetLoudCard(resourceData.projection as CivicResourceCardProjection);
+        }
+      }
     })();
   }, [router]);
 
@@ -106,6 +117,26 @@ export function PersonalHomeShell() {
           </ul>
         )}
       </section>
+
+      {home.explore_resources.length > 0 && (
+        <section className="mt-6 rounded-2xl border border-slate-200 bg-white p-5">
+          <h2 className="text-lg font-bold text-slate-900">Explore</h2>
+          {!showExplore ? (
+            <button
+              type="button"
+              onClick={() => setShowExplore(true)}
+              className="mt-3 block w-full rounded-xl border border-slate-200 bg-slate-50 p-4 text-left hover:border-brand-300"
+            >
+              <p className="font-semibold text-slate-900">{home.explore_resources[0]?.title}</p>
+              <p className="mt-1 text-sm text-slate-600">{home.explore_resources[0]?.description}</p>
+            </button>
+          ) : getLoudCard ? (
+            <GetLoudRegistrationResourceCard projection={getLoudCard} variant="compact" className="mt-3 border-0 p-0 shadow-none" />
+          ) : (
+            <p className="mt-2 text-sm text-slate-600">Loading resource…</p>
+          )}
+        </section>
+      )}
 
       <footer className="mt-8 flex flex-wrap gap-3 text-sm">
         <Link href={home.links.network} className="text-brand-700 underline">My people</Link>

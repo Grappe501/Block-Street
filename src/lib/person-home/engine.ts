@@ -5,6 +5,7 @@ import { getUserById } from "@/lib/auth/engine";
 import { loadPositionStore } from "@/lib/position-participation/store";
 import geographicClusters from "../../../data/volunteer-command/geographic-clusters.json";
 import type { OnboardingResponse, OnboardingStage, PersonalHome, PersonalNextAction } from "./types";
+import { projectGetLoudCard } from "@/lib/civic-resources/registry";
 
 const STORE_PATH = path.join(process.cwd(), "data", "person-home", "store.json");
 
@@ -103,6 +104,8 @@ export function buildPersonalHome(userId: string): PersonalHome | null {
   const disclosure: PersonalHome["disclosure_level"] =
     stage === "registered" || stage === "profile_started" ? "welcome" : stage === "profile_complete" ? "standard" : "full";
 
+  const getLoud = projectGetLoudCard("compact");
+
   return {
     user_id: userId,
     welcome_name: user.preferred_name || user.display_name,
@@ -168,6 +171,17 @@ export function buildPersonalHome(userId: string): PersonalHome | null {
       calendar: "/calendar",
       outreach_queue: null,
     },
+    explore_resources: getLoud
+      ? [
+          {
+            id: "get-loud-registration",
+            title: "Register or update voter information",
+            description: getLoud.shortDescription,
+            href: getLoud.learnHref,
+            kind: "voter_registration" as const,
+          },
+        ]
+      : [],
   };
 }
 

@@ -1,0 +1,99 @@
+{
+  "organizationKey": "get-loud-arkansas",
+  "name": "Get Loud Arkansas",
+  "organizationUrl": "https://getloudarkansas.org/",
+  "organizationType": "independent_nonpartisan_civic_organization",
+  "relationshipLabel": "Independent Arkansas civic-engagement resource",
+  "missionSummary": "Get Loud Arkansas is a nonpartisan civic-engagement organization focused on registering voters, increasing turnout, expanding voting access, providing civic education, and empowering Arkansas communities to use their vote.",
+  "historySummary": "Get Loud Arkansas describes itself as a movement to register new voters and mobilize Arkansans year-round. Public materials reference campus cohorts, high-school registration encouragement, election protection, language access, accessibility work, rights restoration, and voter-purge education.",
+  "initiativeSummaries": [
+    {
+      "key": "voter-registration-drives",
+      "title": "Voter registration drives",
+      "summary": "Community and campus registration drives to help eligible Arkansans apply to register.",
+      "sourceUrl": "https://getloudarkansas.org/",
+      "audienceKeys": ["participant", "field_lead"],
+      "voterRegistrationRelevant": true
+    },
+    {
+      "key": "campus-cohorts",
+      "title": "Campus Cohorts",
+      "summary": "Campus-oriented civic engagement and registration support attributed to Get Loud's public programs.",
+      "sourceUrl": "https://getloudarkansas.org/",
+      "audienceKeys": ["participant", "field_lead"],
+      "voterRegistrationRelevant": true
+    },
+    {
+      "key": "generation-democracy",
+      "title": "Generation Democracy",
+      "summary": "High-school oriented civic engagement initiative described by Get Loud as encouraging eligible students to register.",
+      "sourceUrl": "https://getloudarkansas.org/",
+      "audienceKeys": ["participant", "field_lead"],
+      "voterRegistrationRelevant": true
+    },
+    {
+      "key": "election-protection",
+      "title": "Election Protection Teams",
+      "summary": "Volunteer election protection and voter assistance work described in Get Loud public materials.",
+      "sourceUrl": "https://getloudarkansas.org/",
+      "audienceKeys": ["field_lead"],
+      "voterRegistrationRelevant": false
+    },
+    {
+      "key": "language-access",
+      "title": "Language access",
+      "summary": "Multilingual civic materials and registration assistance, including Spanish and other languages on the Easy Application.",
+      "sourceUrl": "https://form.jotform.com/222275227390050",
+      "audienceKeys": ["participant"],
+      "voterRegistrationRelevant": true
+    },
+    {
+      "key": "voter-purge-education",
+      "title": "Voter Purge Project",
+      "summary": "Education about voter list maintenance and how to verify registration status.",
+      "sourceUrl": "https://getloudarkansas.org/",
+      "audienceKeys": ["participant", "field_lead"],
+      "voterRegistrationRelevant": true
+    }
+  ],
+  "registrationTool": {
+    "url": "https://form.jotform.com/222275227390050",
+    "title": "Get Loud Easy Application",
+    "isOnlineRegistrationPortal": false,
+    "operator": "Get Loud Arkansas",
+    "dataCustodian": "Get Loud Arkansas / Jotform",
+    "blockStreetReceivesData": false,
+    "requiresCountyAcceptance": true,
+    "sensitiveInformationWarning": "The external form may ask for sensitive identifying information required by the Arkansas voter-registration application, such as a driver's-license number or the last four digits of a Social Security number. Enter that information only on the Get Loud Arkansas form after confirming that you are on form.jotform.com.",
+    "postSubmissionGuidance": "Follow the instructions displayed by Get Loud Arkansas when you use the form. Contact Get Loud Arkansas directly with questions about printing, delivery, or processing."
+  },
+  "officialConfirmationResource": {
+    "provider": "Arkansas Secretary of State",
+    "url": "https://www.voterview.ar.gov/"
+  },
+  "attribution": "Resource provided by Get Loud Arkansas",
+  "disclaimer": "This voter-registration assistance tool is operated by Get Loud Arkansas, an independent civic-engagement organization. Block-Street does not own or operate the form, receive or store the information you enter, submit your application, determine whether you are eligible to vote, or confirm that your registration has been accepted.",
+  "fullDisclosure": "This voter-registration assistance tool is operated by Get Loud Arkansas, an independent civic-engagement organization. Block-Street does not own or operate the form, receive or store the information you enter, submit your application, determine whether you are eligible to vote, or confirm that your registration has been accepted.\n\nThe tool is not an online voter-registration portal. It assists with preparing Arkansas's paper voter-registration application. You are not registered to vote until your county clerk accepts your application. Follow up with your county clerk or Arkansas VoterView to confirm your registration status.",
+  "shortDisclosure": "Get Loud Arkansas provides this independent voter-registration assistance tool. Block-Street does not operate the form or receive the information you enter.",
+  "lastReviewedAt": "2026-07-16",
+  "sourceUrls": [
+    "https://getloudarkansas.org/",
+    "https://form.jotform.com/222275227390050",
+    "https://www.sos.arkansas.gov/elections/voter-information/voter-registration-information",
+    "https://www.voterview.ar.gov/"
+  ],
+  "auditFlags": [
+    {
+      "id": "application-delivery-inconsistency",
+      "severity": "needs_clarification",
+      "summary": "Get Loud homepage says applicant mails the form; Jotform says Get Loud prints and delivers.",
+      "blockStreetPosture": "Follow the instructions displayed by Get Loud Arkansas when you use the form."
+    },
+    {
+      "id": "spanish-content-staleness",
+      "severity": "stale_external_content",
+      "summary": "Spanish homepage may contain outdated 2022 election references. Block-Street does not reproduce those dates.",
+      "blockStreetPosture": "Use Block-Street-reviewed Spanish copy only; link to external sources with clear labeling."
+    }
+  ]
+}

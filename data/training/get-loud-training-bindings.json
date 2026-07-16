@@ -1,0 +1,89 @@
+{
+  "buildId": "BS-GET-LOUD-VOTER-REGISTRATION-1.0",
+  "bindings": [
+    {
+      "key": "what-get-loud-is",
+      "title": "What Get Loud Arkansas is",
+      "learnHowLabel": "What Get Loud Arkansas is",
+      "href": "/learn/voter-registration/get-loud-arkansas#what-is",
+      "audience": ["participant", "field_lead"]
+    },
+    {
+      "key": "how-easy-application-works",
+      "title": "How the Easy Application works",
+      "learnHowLabel": "How the Easy Application works",
+      "href": "/learn/voter-registration/get-loud-arkansas#easy-application",
+      "audience": ["participant", "field_lead"]
+    },
+    {
+      "key": "why-form-is-external",
+      "title": "Why the form is external",
+      "learnHowLabel": "Why the form is external",
+      "href": "/learn/voter-registration/get-loud-arkansas#privacy",
+      "audience": ["participant", "field_lead"]
+    },
+    {
+      "key": "what-block-street-receives",
+      "title": "What information Block-Street receives",
+      "learnHowLabel": "What Block-Street receives",
+      "href": "/learn/voter-registration/get-loud-arkansas#privacy",
+      "audience": ["participant", "field_lead"]
+    },
+    {
+      "key": "protect-personal-information",
+      "title": "How to protect personal information",
+      "learnHowLabel": "Protect personal information",
+      "href": "/learn/voter-registration/get-loud-arkansas#privacy",
+      "audience": ["field_lead"]
+    },
+    {
+      "key": "confirm-registration",
+      "title": "How to confirm registration",
+      "learnHowLabel": "Confirm registration",
+      "href": "/learn/voter-registration/get-loud-arkansas#confirm",
+      "audience": ["participant", "field_lead"]
+    },
+    {
+      "key": "qr-at-event",
+      "title": "How to use the QR at an event",
+      "learnHowLabel": "Use the QR at an event",
+      "href": "/resources/voter-registration/get-loud/present",
+      "audience": ["field_lead"]
+    },
+    {
+      "key": "explain-resource",
+      "title": "How to explain the resource",
+      "learnHowLabel": "Explain the resource",
+      "href": "/learn/voter-registration/get-loud-arkansas#conversation-guide",
+      "audience": ["field_lead"]
+    },
+    {
+      "key": "what-not-to-promise",
+      "title": "What not to promise",
+      "learnHowLabel": "What not to promise",
+      "href": "/learn/voter-registration/get-loud-arkansas#conversation-guide",
+      "audience": ["field_lead"]
+    },
+    {
+      "key": "help-college-student",
+      "title": "How to help a college student",
+      "learnHowLabel": "Help a college student",
+      "href": "/learn/voter-registration/get-loud-arkansas#college",
+      "audience": ["field_lead"]
+    },
+    {
+      "key": "contact-county-clerk",
+      "title": "How to contact a county clerk",
+      "learnHowLabel": "Contact a county clerk",
+      "href": "/learn/voter-registration/get-loud-arkansas#confirm",
+      "audience": ["field_lead"]
+    },
+    {
+      "key": "report-broken-link",
+      "title": "How to report a broken external link",
+      "learnHowLabel": "Report a problem",
+      "href": "/resources/voter-registration/get-loud",
+      "audience": ["field_lead"]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "buildId": "BS-GET-LOUD-VOTER-REGISTRATION-1.0",
+  "lastReviewedAt": "2026-07-16",
+  "externalFormLanguages": {
+    "provider": "Get Loud Arkansas / Jotform",
+    "reportedLanguages": ["en", "es", "vi", "ar"],
+    "availabilityNote": "Language choices may be available on the external form. Block-Street does not guarantee continued language availability.",
+    "formUrl": "https://form.jotform.com/222275227390050"
+  },
+  "blockStreetCopy": {
+    "en": {
+      "compactTitle": "Register or update your voter information",
+      "compactBody": "Get Loud Arkansas offers an independent tool that helps prepare Arkansas's paper voter-registration application.",
+      "shortDisclosure": "Get Loud Arkansas provides this independent voter-registration assistance tool. Block-Street does not operate the form or receive the information you enter.",
+      "qrHeading": "Scan to open the Get Loud Easy Application",
+      "qrSubtext": "This opens an external form operated by Get Loud Arkansas. It is not an online voter-registration portal, and Block-Street will not receive your answers.",
+      "followUpReminder": "Submitting an application does not by itself confirm that you are registered. Check with your county clerk or Arkansas VoterView to make sure your application was accepted.",
+      "learnMore": "Learn more about Get Loud Arkansas",
+      "showQr": "Show QR",
+      "learnHow": "Learn how",
+      "openForm": "Open external form",
+      "copyLink": "Copy link",
+      "sensitiveWarning": "The external form may ask for sensitive identifying information required by the Arkansas voter-registration application, such as a driver's-license number or the last four digits of a Social Security number. Enter that information only on the Get Loud Arkansas form after confirming that you are on form.jotform.com."
+    },
+    "es": {
+      "compactTitle": "Regístrese o actualice su información de votante",
+      "compactBody": "Get Loud Arkansas ofrece una herramienta independiente que ayuda a preparar la solicitud en papel de registro de votantes de Arkansas.",
+      "shortDisclosure": "Get Loud Arkansas proporciona esta herramienta independiente de asistencia para el registro de votantes. Block-Street no opera el formulario ni recibe la información que usted ingresa.",
+      "qrHeading": "Escanee para abrir la Solicitud Fácil de Get Loud",
+      "qrSubtext": "Esto abre un formulario externo operado por Get Loud Arkansas. No es un portal de registro de votantes en línea, y Block-Street no recibirá sus respuestas.",
+      "followUpReminder": "Enviar una solicitud no confirma por sí sola que usted esté registrado. Verifique con su secretario del condado o Arkansas VoterView que su solicitud fue aceptada.",
+      "learnMore": "Más información sobre Get Loud Arkansas",
+      "showQr": "Mostrar código QR",
+      "learnHow": "Aprenda cómo",
+      "openForm": "Abrir formulario externo",
+      "copyLink": "Copiar enlace",
+      "sensitiveWarning": "El formulario externo puede solicitar información de identificación sensible requerida por la solicitud de registro de votantes de Arkansas, como un número de licencia de conducir o los últimos cuatro dígitos de un número de Seguro Social. Ingrese esa información solo en el formulario de Get Loud Arkansas después de confirmar que está en form.jotform.com."
+    }
+  },
+  "stalenessPolicy": {
+    "doNotImportExternalElectionDatesFrom": ["https://getloudarkansas.org/es/"],
+    "officialProceduralSources": [
+      "https://www.sos.arkansas.gov/elections/voter-information/voter-registration-information",
+      "https://www.voterview.ar.gov/"
+    ]
+  }
+}

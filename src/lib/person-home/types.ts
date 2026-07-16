@@ -93,4 +93,11 @@ export type PersonalHome = {
     calendar: string;
     outreach_queue: string | null;
   };
+  explore_resources: Array<{
+    id: string;
+    title: string;
+    description: string;
+    href: string;
+    kind: "voter_registration";
+  }>;
 };

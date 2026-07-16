@@ -1,0 +1,100 @@
+{
+  "buildId": "BS-GET-LOUD-VOTER-REGISTRATION-1.0",
+  "auditedAt": "2026-07-16T07:30:00.000Z",
+  "sourceBaseUrl": "https://getloudarkansas.org/",
+  "entries": [
+    {
+      "pageUrl": "https://getloudarkansas.org/",
+      "pageTitle": "Get Loud Arkansas — Homepage (English)",
+      "topic": "mission_and_registration",
+      "publicClaim": "Nonpartisan organization registering voters and mobilizing Arkansans year-round.",
+      "currentDateRelevance": "2026 election cycle referenced on English homepage",
+      "potentialStaleContent": false,
+      "languageAvailability": ["en"],
+      "externalDestinations": ["https://form.jotform.com/222275227390050", "https://www.voterview.ar.gov/"],
+      "recommendedBlockStreetUse": "Mission summary and attribution only; link out for registration",
+      "reviewDate": "2026-07-16"
+    },
+    {
+      "pageUrl": "https://getloudarkansas.org/es/",
+      "pageTitle": "Get Loud Arkansas — Homepage (Spanish)",
+      "topic": "mission_and_registration",
+      "publicClaim": "Spanish-language civic engagement content",
+      "currentDateRelevance": "May contain outdated 2022 election references",
+      "potentialStaleContent": true,
+      "languageAvailability": ["es"],
+      "externalDestinations": ["https://form.jotform.com/222275227390050"],
+      "recommendedBlockStreetUse": "Do not import election dates; use Block-Street-reviewed Spanish copy",
+      "reviewDate": "2026-07-16",
+      "auditFlag": "spanish-content-staleness"
+    },
+    {
+      "pageUrl": "https://form.jotform.com/222275227390050",
+      "pageTitle": "GLA Easy Application",
+      "topic": "registration_assistance_form",
+      "publicClaim": "Populates Arkansas paper application; Get Loud prints and delivers after submission",
+      "currentDateRelevance": "2026 November election deadline October 5, 2026 on form",
+      "potentialStaleContent": false,
+      "languageAvailability": ["en", "es", "vi", "ar"],
+      "externalDestinations": [],
+      "recommendedBlockStreetUse": "Link and QR only; never embed or proxy",
+      "reviewDate": "2026-07-16",
+      "auditFlag": "application-delivery-inconsistency"
+    },
+    {
+      "pageUrl": "https://getloudarkansas.org/",
+      "pageTitle": "How to Vote — Register step",
+      "topic": "registration_process",
+      "publicClaim": "Fill out form HERE; mail to Secretary of State with one stamp",
+      "currentDateRelevance": "Conflicts with Jotform delivery description",
+      "potentialStaleContent": false,
+      "languageAvailability": ["en"],
+      "externalDestinations": ["https://form.jotform.com/222275227390050"],
+      "recommendedBlockStreetUse": "Note conflict in audit; direct users to form instructions",
+      "reviewDate": "2026-07-16",
+      "auditFlag": "application-delivery-inconsistency"
+    },
+    {
+      "pageUrl": "https://www.sos.arkansas.gov/elections/voter-information/voter-registration-information",
+      "pageTitle": "Arkansas SOS voter registration information",
+      "topic": "official_procedures",
+      "publicClaim": "Official Arkansas registration procedures",
+      "currentDateRelevance": "authoritative",
+      "potentialStaleContent": false,
+      "languageAvailability": ["en"],
+      "externalDestinations": [],
+      "recommendedBlockStreetUse": "Official procedural facts and paper form reference",
+      "reviewDate": "2026-07-16"
+    },
+    {
+      "pageUrl": "https://www.voterview.ar.gov/",
+      "pageTitle": "Arkansas VoterView",
+      "topic": "registration_confirmation",
+      "publicClaim": "Verify registration and find polling place",
+      "currentDateRelevance": "authoritative",
+      "potentialStaleContent": false,
+      "languageAvailability": ["en"],
+      "externalDestinations": [],
+      "recommendedBlockStreetUse": "Confirmation guidance after any registration attempt",
+      "reviewDate": "2026-07-16"
+    }
+  ],
+  "socialDestinations": [
+    "https://twitter.com/GetLoudArkansas",
+    "https://www.facebook.com/GetLoudArkansas",
+    "https://www.instagram.com/getloudarkansas/"
+  ],
+  "conflicts": [
+    {
+      "id": "application-delivery-inconsistency",
+      "homepageClaim": "Applicant mails the completed form to Secretary of State.",
+      "jotformClaim": "Get Loud prints and delivers the form to appropriate election officials.",
+      "blockStreetLanguage": "Follow the instructions displayed by Get Loud Arkansas when you use the form. Contact Get Loud Arkansas directly with questions about printing, delivery, or processing."
+    },
+    {
+      "id": "spanish-content-staleness",
+      "issue": "Spanish homepage may display 2022 election information while English shows 2026.",
+      "blockStreetLanguage": "Use Block-Street-reviewed Spanish educational copy; never import stale election dates from external Spanish pages."
+    }
+  ]
+}

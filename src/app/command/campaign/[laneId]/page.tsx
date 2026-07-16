@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { GetLoudResourceSection } from "@/components/civic-resources/GetLoudResourceSection";
 import { CommandCard, CommandChrome, CommandSection } from "@/components/command/CommandChrome";
 import { buildLaneBoard, listCommandLanes } from "@/lib/command/board";
 
@@ -69,6 +70,12 @@ export default async function CampaignLanePage({ params }: { params: Promise<{ l
           </div>
         </div>
       </CommandSection>
+
+      {laneId === "registration" && (
+        <CommandSection title="Registration resources">
+          <GetLoudResourceSection variant="voter_registration_command" />
+        </CommandSection>
+      )}
 
       <CommandSection title="Same-lane campus team">
         <p className="font-fieldSans text-sm text-field-ink/80">

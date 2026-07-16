@@ -1,0 +1,43 @@
+{
+  "checkedAt": "2026-07-16T07:22:08.730Z",
+  "results": [
+    {
+      "resourceKey": "get-loud-arkansas-homepage",
+      "url": "https://getloudarkansas.org/",
+      "lastCheckedAt": "2026-07-16T07:22:05.930Z",
+      "httpStatus": 200,
+      "redirectDestination": null,
+      "expectedDomain": "getloudarkansas.org",
+      "finalDomain": "getloudarkansas.org",
+      "status": "ok"
+    },
+    {
+      "resourceKey": "get-loud-easy-application",
+      "url": "https://form.jotform.com/222275227390050",
+      "lastCheckedAt": "2026-07-16T07:22:07.689Z",
+      "httpStatus": 200,
+      "redirectDestination": null,
+      "expectedDomain": "form.jotform.com",
+      "finalDomain": "form.jotform.com",
+      "status": "ok"
+    },
+    {
+      "resourceKey": "arkansas-sos-voter-registration",
+      "url": "https://www.sos.arkansas.gov/elections/voter-information/voter-registration-information",
+      "lastCheckedAt": "2026-07-16T07:22:08.724Z",
+      "httpStatus": 200,
+      "redirectDestination": null,
+      "expectedDomain": "www.sos.arkansas.gov",
+      "finalDomain": "www.sos.arkansas.gov",
+      "status": "ok"
+    },
+    {
+      "resourceKey": "arkansas-voterview",
+      "url": "https://www.voterview.ar.gov/",
+      "lastCheckedAt": "2026-07-16T07:22:08.730Z",
+      "httpStatus": null,
+      "status": "needs_review",
+      "error": "fetch failed"
+    }
+  ]
+}
