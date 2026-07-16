@@ -4,6 +4,7 @@
   "package": "volunteer_review_offers_assignments_waitlists_replacements_schedule",
   "generated_at": "2026-07-15T12:00:00.000Z",
   "baseline_commit": "2a03ee5",
+  "content_commit": "bc1f865",
   "wave_2a_content_commit": "2b54ff0",
   "wave_2a_deploy_stamp": "2a90535",
   "gate_a": "OPEN",

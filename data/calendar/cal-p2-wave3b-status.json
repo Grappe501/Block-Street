@@ -4,6 +4,7 @@
   "package": "event_preparation_engine_and_checklist_runtime",
   "generated_at": "2026-07-15T16:00:00.000Z",
   "baseline_commit": "40f0558",
+  "content_commit": "32d4c1f",
   "wave_3a_content_commit": "8a8b82a",
   "gate_a": "OPEN",
   "persistence_mode": "session_soft_beta",

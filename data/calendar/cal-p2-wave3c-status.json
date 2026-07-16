@@ -4,6 +4,7 @@
   "package": "event_followup_engine_and_report_runtime",
   "generated_at": "2026-07-15T17:00:00.000Z",
   "baseline_commit": "3881420",
+  "content_commit": "d93d7c4",
   "wave_3b_content_commit": "32d4c1f",
   "gate_a": "OPEN",
   "persistence_mode": "session_soft_beta",

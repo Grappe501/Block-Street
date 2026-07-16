@@ -4,6 +4,7 @@
   "package": "event_candidate_request_engine",
   "generated_at": "2026-07-15T19:00:00.000Z",
   "baseline_commit": "5e62186",
+  "content_commit": "b0ef310",
   "wave_3d_content_commit": "7718cca",
   "gate_a": "OPEN",
   "persistence_mode": "session_soft_beta",
