@@ -1,0 +1,36 @@
+{
+  "version": "1.2.0",
+  "program": "CPOS-DURABLE-AUTHORITY-1.2",
+  "updated": "2026-07-16T06:29:50.412Z",
+  "total_mutations": 455,
+  "scope_protected": 416,
+  "base_gated_only": 0,
+  "authenticated_self_service": 17,
+  "public_by_design": 11,
+  "legacy_unused": 11,
+  "needs_investigation": 0,
+  "unprotected": 0,
+  "overall_scope_coverage": 0.914,
+  "priority_domains": {
+    "appointments": {
+      "total": 8,
+      "scope_protected": 8
+    },
+    "invitations": {
+      "total": 9,
+      "scope_protected": 9
+    },
+    "onboarding": {
+      "total": 9,
+      "scope_protected": 9
+    },
+    "committee": {
+      "total": 4,
+      "scope_protected": 4
+    },
+    "communications": {
+      "total": 26,
+      "scope_protected": 21
+    }
+  }
+}

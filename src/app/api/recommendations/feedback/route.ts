@@ -1,26 +1,32 @@
-import { NextRequest, NextResponse } from "next/server";
+import { withApiGateway } from "@/lib/api/http";
+import { apiSuccess } from "@/lib/api/errors";
 import { readFileSync } from "fs";
 import { join } from "path";
 import { recordFeedback, getTelemetry } from "@/lib/recommendations/engine";
 import type { FeedbackAction } from "@/lib/recommendations/types";
 
-export async function GET() {
-  const path = join(process.cwd(), "data", "recommendations", "feedback.json");
-  const data = JSON.parse(readFileSync(path, "utf8"));
-  return NextResponse.json({ ...data, telemetry: getTelemetry() });
-}
+export const GET = withApiGateway(
+  async (ctx) => {
+    const path = join(process.cwd(), "data", "recommendations", "feedback.json");
+    const data = JSON.parse(readFileSync(path, "utf8"));
+    return apiSuccess({ ...data, telemetry: getTelemetry() }, { request_id: ctx.request_id, correlation_id: ctx.correlation_id });
+  },
+  { permission: "analytics.view", endpoint: "/api/recommendations/feedback" }
+);
 
-export async function POST(request: NextRequest) {
-  const body = await request.json();
-  const { recommendationId, action, userId, notes } = body as {
-    recommendationId: string;
-    action: FeedbackAction;
-    userId?: string;
-    notes?: string;
-  };
-  if (!recommendationId || !action) {
-    return NextResponse.json({ error: "recommendationId and action required" }, { status: 400 });
-  }
-  const entry = recordFeedback(recommendationId, action, userId, notes);
-  return NextResponse.json({ ok: true, feedback: entry, telemetry: getTelemetry() });
-}
+export const POST = withApiGateway(
+  async (ctx, request) => {
+    const body = (await request.json()) as {
+      recommendationId: string;
+      action: FeedbackAction;
+      userId?: string;
+      notes?: string;
+    };
+    if (!body.recommendationId || !body.action) {
+      return apiSuccess({ error: "recommendationId and action required" }, { request_id: ctx.request_id, correlation_id: ctx.correlation_id }, 400);
+    }
+    const entry = recordFeedback(body.recommendationId, body.action, body.userId ?? ctx.actor_id ?? undefined, body.notes);
+    return apiSuccess({ ok: true, feedback: entry, telemetry: getTelemetry() }, { request_id: ctx.request_id, correlation_id: ctx.correlation_id });
+  },
+  { permission: "analytics.view", endpoint: "/api/recommendations/feedback" }
+);

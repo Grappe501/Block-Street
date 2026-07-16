@@ -1,12 +1,14 @@
-import { NextResponse } from "next/server";
+import { withApiGateway } from "@/lib/api/http";
+import { apiSuccess } from "@/lib/api/errors";
 import { completeMission } from "@/lib/missions/engine";
 
-export async function POST(
-  _request: Request,
-  { params }: { params: Promise<{ id: string }> }
-) {
-  const { id } = await params;
-  const mission = completeMission(id);
-  if (!mission) return NextResponse.json({ error: "Mission not found" }, { status: 404 });
-  return NextResponse.json({ ok: true, mission });
-}
+export const POST = withApiGateway(
+  async (ctx, request) => {
+    const parts = request.nextUrl.pathname.split("/").filter(Boolean);
+    const id = parts[parts.length - 2] ?? "";
+    const mission = completeMission(id);
+    if (!mission) return apiSuccess({ error: "Mission not found" }, { request_id: ctx.request_id, correlation_id: ctx.correlation_id }, 404);
+    return apiSuccess({ ok: true, mission }, { request_id: ctx.request_id, correlation_id: ctx.correlation_id });
+  },
+  { permission: "missions.write", endpoint: "/api/missions/{id}/complete" }
+);

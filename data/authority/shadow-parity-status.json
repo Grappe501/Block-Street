@@ -1,0 +1,11 @@
+{
+  "mode": "json_primary_postgres_shadow",
+  "appointmentsCompared": 10,
+  "scopeBindingsCompared": 10,
+  "decisionFixturesCompared": 0,
+  "decisionMismatches": 0,
+  "postgresCount": 0,
+  "lastComparedAt": "2026-07-16T06:30:02.442Z",
+  "promotionReady": false,
+  "mismatches": []
+}

@@ -1,5 +1,6 @@
 import { randomBytes } from "crypto";
 import { loadAppointments, loadRolePermissions, appendDenialAudit } from "./data";
+import { shadowWriteDenial, shadowWriteOverride } from "./shadow";
 import { appointmentCoversRequested, expandAppointmentScopes, institutionCounty } from "./scope";
 import type {
   AuthorizationDecision,
@@ -40,7 +41,7 @@ function normalizeRequestedScopes(req: AuthorizationRequest): string[] {
 }
 
 function logDenial(req: AuthorizationRequest, reasonCode: AuthorizationDecision["reasonCode"]): void {
-  appendDenialAudit({
+  const event = {
     id: `deny-${randomBytes(6).toString("hex")}`,
     actor_id: req.actorId,
     route: req.route ?? null,
@@ -51,7 +52,9 @@ function logDenial(req: AuthorizationRequest, reasonCode: AuthorizationDecision[
     resource_id: req.resourceId ?? null,
     reason_code: reasonCode,
     correlation_id: req.correlationId ?? null,
-  });
+  };
+  appendDenialAudit(event);
+  void shadowWriteDenial(event);
 }
 
 /**
@@ -100,6 +103,18 @@ export function authorize(req: AuthorizationRequest): AuthorizationDecision {
   }
 
   if (matched.some((a) => a.role_key === "platform_administrator")) {
+    void shadowWriteOverride({
+      actor_id: req.actorId,
+      override_by: req.actorId,
+      permission: req.permission,
+      resource_type: req.resourceType,
+      resource_id: req.resourceId,
+      scope_granted: [...authorizedScopeIds],
+      route: req.route,
+      method: req.method,
+      override_reason: "platform_administrator_emergency_access",
+      correlation_id: req.correlationId,
+    });
     return {
       allowed: true,
       permission: req.permission,

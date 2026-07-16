@@ -1,0 +1,482 @@
+{
+  "updated": "2026-07-16T06:29:50.423Z",
+  "total_high_risk": 79,
+  "scope_protected": 68,
+  "remaining": 11,
+  "routes": [
+    {
+      "routePattern": "/api/admin/approvals/[approvalId]/approve",
+      "classification": "scope_protected",
+      "permission": "audit.view",
+      "scopeResolver": "admin_operator"
+    },
+    {
+      "routePattern": "/api/admin/civic-impact-analytics/overview",
+      "classification": "scope_protected",
+      "permission": "audit.view",
+      "scopeResolver": "admin_operator"
+    },
+    {
+      "routePattern": "/api/admin/organizations/[organizationId]",
+      "classification": "scope_protected",
+      "permission": "audit.view",
+      "scopeResolver": "admin_operator"
+    },
+    {
+      "routePattern": "/api/admin/research-policy-lab/overview",
+      "classification": "scope_protected",
+      "permission": "audit.view",
+      "scopeResolver": "admin_operator"
+    },
+    {
+      "routePattern": "/api/admin/users/[userId]",
+      "classification": "scope_protected",
+      "permission": "users.manage",
+      "scopeResolver": "admin_operator"
+    },
+    {
+      "routePattern": "/api/admin/users/[userId]/revoke-sessions",
+      "classification": "scope_protected",
+      "permission": "users.manage",
+      "scopeResolver": "admin_operator"
+    },
+    {
+      "routePattern": "/api/ai/analyze",
+      "classification": "legacy_unused",
+      "permission": "platform.manage",
+      "scopeResolver": "campaign:arkansas"
+    },
+    {
+      "routePattern": "/api/ai/calendar",
+      "classification": "legacy_unused",
+      "permission": "platform.manage",
+      "scopeResolver": "campaign:arkansas"
+    },
+    {
+      "routePattern": "/api/ai/chat",
+      "classification": "legacy_unused",
+      "permission": "platform.manage",
+      "scopeResolver": "campaign:arkansas"
+    },
+    {
+      "routePattern": "/api/ai/meeting",
+      "classification": "legacy_unused",
+      "permission": "platform.manage",
+      "scopeResolver": "campaign:arkansas"
+    },
+    {
+      "routePattern": "/api/ai/memory",
+      "classification": "legacy_unused",
+      "permission": "platform.manage",
+      "scopeResolver": "campaign:arkansas"
+    },
+    {
+      "routePattern": "/api/ai/memory",
+      "classification": "legacy_unused",
+      "permission": "platform.manage",
+      "scopeResolver": "campaign:arkansas"
+    },
+    {
+      "routePattern": "/api/ai/mission",
+      "classification": "legacy_unused",
+      "permission": "platform.manage",
+      "scopeResolver": "campaign:arkansas"
+    },
+    {
+      "routePattern": "/api/ai/plan",
+      "classification": "legacy_unused",
+      "permission": "platform.manage",
+      "scopeResolver": "campaign:arkansas"
+    },
+    {
+      "routePattern": "/api/ai/research",
+      "classification": "legacy_unused",
+      "permission": "platform.manage",
+      "scopeResolver": "campaign:arkansas"
+    },
+    {
+      "routePattern": "/api/ai/summarize",
+      "classification": "legacy_unused",
+      "permission": "platform.manage",
+      "scopeResolver": "campaign:arkansas"
+    },
+    {
+      "routePattern": "/api/ai/write",
+      "classification": "legacy_unused",
+      "permission": "platform.manage",
+      "scopeResolver": "campaign:arkansas"
+    },
+    {
+      "routePattern": "/api/cms/content/[id]/approve",
+      "classification": "scope_protected",
+      "permission": "communications.create",
+      "scopeResolver": "social_content"
+    },
+    {
+      "routePattern": "/api/cms/content/[id]/archive",
+      "classification": "scope_protected",
+      "permission": "communications.create",
+      "scopeResolver": "social_content"
+    },
+    {
+      "routePattern": "/api/cms/content/[id]/publish",
+      "classification": "scope_protected",
+      "permission": "social.publish",
+      "scopeResolver": "social_content"
+    },
+    {
+      "routePattern": "/api/cms/content/[id]/schedule",
+      "classification": "scope_protected",
+      "permission": "communications.create",
+      "scopeResolver": "social_content"
+    },
+    {
+      "routePattern": "/api/cms/content/[id]/submit-review",
+      "classification": "scope_protected",
+      "permission": "communications.create",
+      "scopeResolver": "social_content"
+    },
+    {
+      "routePattern": "/api/cms/content/[id]/versions",
+      "classification": "scope_protected",
+      "permission": "communications.create",
+      "scopeResolver": "social_content"
+    },
+    {
+      "routePattern": "/api/invitations",
+      "classification": "scope_protected",
+      "permission": "recruits.manage",
+      "scopeResolver": "onboarding_invitation"
+    },
+    {
+      "routePattern": "/api/invitations/revoke",
+      "classification": "scope_protected",
+      "permission": "recruits.manage",
+      "scopeResolver": "onboarding_invitation"
+    },
+    {
+      "routePattern": "/api/missions",
+      "classification": "scope_protected",
+      "permission": "missions.write",
+      "scopeResolver": "mission"
+    },
+    {
+      "routePattern": "/api/missions/[id]",
+      "classification": "scope_protected",
+      "permission": "missions.write",
+      "scopeResolver": "mission"
+    },
+    {
+      "routePattern": "/api/missions/[id]/assign",
+      "classification": "scope_protected",
+      "permission": "missions.write",
+      "scopeResolver": "mission"
+    },
+    {
+      "routePattern": "/api/missions/[id]/complete",
+      "classification": "scope_protected",
+      "permission": "missions.write",
+      "scopeResolver": "mission"
+    },
+    {
+      "routePattern": "/api/notifications/campaigns/[id]/approve",
+      "classification": "scope_protected",
+      "permission": "communications.approve",
+      "scopeResolver": "notification_campaign"
+    },
+    {
+      "routePattern": "/api/notifications/campaigns/[id]/preview",
+      "classification": "scope_protected",
+      "permission": "communications.approve",
+      "scopeResolver": "notification_campaign"
+    },
+    {
+      "routePattern": "/api/notifications/campaigns/[id]/send",
+      "classification": "scope_protected",
+      "permission": "communications.send",
+      "scopeResolver": "notification_campaign"
+    },
+    {
+      "routePattern": "/api/notifications/campaigns/[id]/submit-approval",
+      "classification": "scope_protected",
+      "permission": "communications.approve",
+      "scopeResolver": "notification_campaign"
+    },
+    {
+      "routePattern": "/api/v1/ai/communications/explain",
+      "classification": "scope_protected",
+      "permission": "communications.create",
+      "scopeResolver": "communications"
+    },
+    {
+      "routePattern": "/api/v1/ai/communications/optimize",
+      "classification": "scope_protected",
+      "permission": "communications.create",
+      "scopeResolver": "communications"
+    },
+    {
+      "routePattern": "/api/v1/ai/communications/query",
+      "classification": "scope_protected",
+      "permission": "communications.create",
+      "scopeResolver": "communications"
+    },
+    {
+      "routePattern": "/api/v1/civic-action/communications/commands",
+      "classification": "scope_protected",
+      "permission": "communications.create",
+      "scopeResolver": "communications"
+    },
+    {
+      "routePattern": "/api/v1/communications",
+      "classification": "scope_protected",
+      "permission": "communications.create",
+      "scopeResolver": "communications"
+    },
+    {
+      "routePattern": "/api/v1/communications/[id]/actions/[action]",
+      "classification": "scope_protected",
+      "permission": "communications.create",
+      "scopeResolver": "communications"
+    },
+    {
+      "routePattern": "/api/v1/communications/ai/summarize",
+      "classification": "scope_protected",
+      "permission": "communications.create",
+      "scopeResolver": "communications"
+    },
+    {
+      "routePattern": "/api/v1/communications/commands",
+      "classification": "scope_protected",
+      "permission": "communications.create",
+      "scopeResolver": "communications"
+    },
+    {
+      "routePattern": "/api/v1/communications/decisions",
+      "classification": "scope_protected",
+      "permission": "communications.create",
+      "scopeResolver": "communications"
+    },
+    {
+      "routePattern": "/api/v1/communications/documents",
+      "classification": "scope_protected",
+      "permission": "communications.create",
+      "scopeResolver": "communications"
+    },
+    {
+      "routePattern": "/api/v1/communications/meetings",
+      "classification": "scope_protected",
+      "permission": "communications.create",
+      "scopeResolver": "communications"
+    },
+    {
+      "routePattern": "/api/v1/communications/messages",
+      "classification": "scope_protected",
+      "permission": "communications.create",
+      "scopeResolver": "communications"
+    },
+    {
+      "routePattern": "/api/v1/communications/production/sign-off",
+      "classification": "scope_protected",
+      "permission": "communications.create",
+      "scopeResolver": "communications"
+    },
+    {
+      "routePattern": "/api/v1/communications/webhooks",
+      "classification": "scope_protected",
+      "permission": "communications.create",
+      "scopeResolver": "communications"
+    },
+    {
+      "routePattern": "/api/v1/federation/invitations",
+      "classification": "scope_protected",
+      "permission": "recruits.manage",
+      "scopeResolver": "onboarding_invitation"
+    },
+    {
+      "routePattern": "/api/v1/identity-trust/invitations",
+      "classification": "scope_protected",
+      "permission": "recruits.manage",
+      "scopeResolver": "onboarding_invitation"
+    },
+    {
+      "routePattern": "/api/v1/invitations/wave1",
+      "classification": "scope_protected",
+      "permission": "recruits.manage",
+      "scopeResolver": "wave1_invitation"
+    },
+    {
+      "routePattern": "/api/v1/leadership/cohorts",
+      "classification": "scope_protected",
+      "permission": "appointments.manage",
+      "scopeResolver": "appointment"
+    },
+    {
+      "routePattern": "/api/v1/leadership/development-plans",
+      "classification": "scope_protected",
+      "permission": "appointments.manage",
+      "scopeResolver": "appointment"
+    },
+    {
+      "routePattern": "/api/v1/leadership/evidence",
+      "classification": "scope_protected",
+      "permission": "appointments.manage",
+      "scopeResolver": "appointment"
+    },
+    {
+      "routePattern": "/api/v1/leadership/insights",
+      "classification": "scope_protected",
+      "permission": "appointments.manage",
+      "scopeResolver": "appointment"
+    },
+    {
+      "routePattern": "/api/v1/leadership/mentorship",
+      "classification": "scope_protected",
+      "permission": "appointments.manage",
+      "scopeResolver": "appointment"
+    },
+    {
+      "routePattern": "/api/v1/leadership/profiles",
+      "classification": "scope_protected",
+      "permission": "appointments.manage",
+      "scopeResolver": "appointment"
+    },
+    {
+      "routePattern": "/api/v1/leadership/succession",
+      "classification": "scope_protected",
+      "permission": "appointments.manage",
+      "scopeResolver": "appointment"
+    },
+    {
+      "routePattern": "/api/v1/onboarding/invitations",
+      "classification": "scope_protected",
+      "permission": "onboarding.manage",
+      "scopeResolver": "onboarding_invitation"
+    },
+    {
+      "routePattern": "/api/v1/onboarding/invitations/[token]/accept",
+      "classification": "scope_protected",
+      "permission": "onboarding.manage",
+      "scopeResolver": "onboarding_invitation"
+    },
+    {
+      "routePattern": "/api/v1/onboarding/journeys",
+      "classification": "scope_protected",
+      "permission": "onboarding.manage",
+      "scopeResolver": "onboarding_journey"
+    },
+    {
+      "routePattern": "/api/v1/onboarding/journeys/[id]",
+      "classification": "scope_protected",
+      "permission": "onboarding.manage",
+      "scopeResolver": "onboarding_journey"
+    },
+    {
+      "routePattern": "/api/v1/onboarding/journeys/[id]/checklist",
+      "classification": "scope_protected",
+      "permission": "onboarding.manage",
+      "scopeResolver": "onboarding_journey"
+    },
+    {
+      "routePattern": "/api/v1/onboarding/journeys/[id]/mission",
+      "classification": "scope_protected",
+      "permission": "onboarding.manage",
+      "scopeResolver": "onboarding_journey"
+    },
+    {
+      "routePattern": "/api/v1/onboarding/journeys/[id]/resume",
+      "classification": "scope_protected",
+      "permission": "onboarding.manage",
+      "scopeResolver": "onboarding_journey"
+    },
+    {
+      "routePattern": "/api/v1/onboarding/journeys/[id]/tour",
+      "classification": "scope_protected",
+      "permission": "onboarding.manage",
+      "scopeResolver": "onboarding_journey"
+    },
+    {
+      "routePattern": "/api/v1/onboarding/journeys/[id]/training",
+      "classification": "scope_protected",
+      "permission": "onboarding.manage",
+      "scopeResolver": "onboarding_journey"
+    },
+    {
+      "routePattern": "/api/v1/optimization/communications/analyze",
+      "classification": "scope_protected",
+      "permission": "communications.create",
+      "scopeResolver": "communications"
+    },
+    {
+      "routePattern": "/api/v1/optimization/communications/feedback",
+      "classification": "scope_protected",
+      "permission": "communications.create",
+      "scopeResolver": "communications"
+    },
+    {
+      "routePattern": "/api/v1/optimization/communications/simulate",
+      "classification": "scope_protected",
+      "permission": "communications.create",
+      "scopeResolver": "communications"
+    },
+    {
+      "routePattern": "/api/v1/organizational-units/[id]",
+      "classification": "scope_protected",
+      "permission": "appointments.manage",
+      "scopeResolver": "leadership_unit"
+    },
+    {
+      "routePattern": "/api/v1/organizational-units/[id]/archive",
+      "classification": "scope_protected",
+      "permission": "appointments.manage",
+      "scopeResolver": "leadership_unit"
+    },
+    {
+      "routePattern": "/api/v1/organizational-units/[id]/leadership",
+      "classification": "scope_protected",
+      "permission": "appointments.manage",
+      "scopeResolver": "leadership_unit"
+    },
+    {
+      "routePattern": "/api/v1/organizational-units/[id]/move",
+      "classification": "scope_protected",
+      "permission": "appointments.manage",
+      "scopeResolver": "leadership_unit"
+    },
+    {
+      "routePattern": "/api/v1/organizational-units/[id]/owners",
+      "classification": "scope_protected",
+      "permission": "appointments.manage",
+      "scopeResolver": "leadership_unit"
+    },
+    {
+      "routePattern": "/api/v1/organizational-units/[id]/roles",
+      "classification": "scope_protected",
+      "permission": "appointments.manage",
+      "scopeResolver": "leadership_unit"
+    },
+    {
+      "routePattern": "/api/v1/workforce/assignments",
+      "classification": "scope_protected",
+      "permission": "committee.manage",
+      "scopeResolver": "workforce"
+    },
+    {
+      "routePattern": "/api/v1/workforce/availability",
+      "classification": "scope_protected",
+      "permission": "civic_action.manage",
+      "scopeResolver": "workforce"
+    },
+    {
+      "routePattern": "/api/v1/workforce/delegate",
+      "classification": "scope_protected",
+      "permission": "committee.manage",
+      "scopeResolver": "workforce"
+    },
+    {
+      "routePattern": "/api/v1/workforce/recognition",
+      "classification": "scope_protected",
+      "permission": "civic_action.manage",
+      "scopeResolver": "workforce"
+    }
+  ]
+}

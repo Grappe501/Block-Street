@@ -14,7 +14,7 @@ export type ScopeResolverInput = {
 export type ScopeResolver = (
   ctx: ApiRequestContext,
   request: NextRequest
-) => ScopeResolverInput;
+) => ScopeResolverInput | Promise<ScopeResolverInput>;
 
 /** Default self-scope for volunteer-facing reads. */
 export function selfScopeResolver(ctx: ApiRequestContext): ScopeResolverInput {

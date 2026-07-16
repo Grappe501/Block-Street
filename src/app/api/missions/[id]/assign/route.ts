@@ -1,15 +1,16 @@
-import { NextRequest, NextResponse } from "next/server";
+import { withApiGateway } from "@/lib/api/http";
+import { apiSuccess } from "@/lib/api/errors";
 import { assignMission } from "@/lib/missions/engine";
 
-export async function POST(
-  request: NextRequest,
-  { params }: { params: Promise<{ id: string }> }
-) {
-  const { id } = await params;
-  const body = await request.json();
-  const { owner } = body as { owner: string };
-  if (!owner) return NextResponse.json({ error: "owner required" }, { status: 400 });
-  const mission = assignMission(id, owner);
-  if (!mission) return NextResponse.json({ error: "Mission not found" }, { status: 404 });
-  return NextResponse.json({ ok: true, mission });
-}
+export const POST = withApiGateway(
+  async (ctx, request) => {
+    const parts = request.nextUrl.pathname.split("/").filter(Boolean);
+    const id = parts[parts.length - 2] ?? "";
+    const body = (await request.json()) as { owner: string };
+    if (!body.owner) return apiSuccess({ error: "owner required" }, { request_id: ctx.request_id, correlation_id: ctx.correlation_id }, 400);
+    const mission = assignMission(id, body.owner);
+    if (!mission) return apiSuccess({ error: "Mission not found" }, { request_id: ctx.request_id, correlation_id: ctx.correlation_id }, 404);
+    return apiSuccess({ ok: true, mission }, { request_id: ctx.request_id, correlation_id: ctx.correlation_id });
+  },
+  { permission: "missions.write", endpoint: "/api/missions/{id}/assign" }
+);

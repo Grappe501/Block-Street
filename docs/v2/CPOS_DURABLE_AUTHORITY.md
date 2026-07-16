@@ -27,6 +27,10 @@ When `AUTHORITY_SCOPE_ENFORCEMENT_ENABLED` is true, API gateway routes may suppl
 npm run test:durable-authority
 npm run preflight:h-drive
 
-## Postgres (Track A1 — next)
+## Postgres (Track A1)
 
-Users, roles, permissions, appointments, committee memberships, sessions, denial audit → durable records.
+See **CPOS-DURABLE-AUTHORITY-1.1** (`docs/v2/CPOS_DURABLE_AUTHORITY_1_1.md`):
+
+- Full mutation inventory (`npm run authority:inventory`)
+- Narrow Postgres schema (`database/migrations/20260716060000_authority_p1_core.sql`)
+- Shadow persistence and JSON/Postgres parity (next)

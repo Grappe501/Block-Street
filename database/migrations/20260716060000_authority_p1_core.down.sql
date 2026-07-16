@@ -1,0 +1,9 @@
+DROP TABLE IF EXISTS authority_override_events;
+DROP TABLE IF EXISTS authority_denial_events;
+DROP TABLE IF EXISTS authority_scope_edges;
+DROP TABLE IF EXISTS authority_appointment_scopes;
+DROP TABLE IF EXISTS authority_appointments;
+DROP TABLE IF EXISTS authority_role_permissions;
+DROP TABLE IF EXISTS authority_permissions;
+DROP TABLE IF EXISTS authority_roles;
+DROP TABLE IF EXISTS authority_schema_migrations;

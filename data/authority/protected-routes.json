@@ -1,61 +1,6444 @@
 {
-  "version": "1.0.0",
-  "updated": "2026-07-16T05:00:00.000Z",
+  "version": "1.2.0",
+  "program": "CPOS-DURABLE-AUTHORITY-1.2",
+  "updated": "2026-07-16T06:29:50.410Z",
   "routes": [
     {
-      "routePattern": "/api/admin/operator-command",
-      "methods": ["GET"],
-      "requiredPermissions": ["audit.view"],
-      "scopeResolver": "campaign:arkansas",
-      "csrfRequired": false,
-      "validationSchema": null,
-      "auditRequired": true
+      "routePattern": "/api/admin/approvals/[approvalId]/approve",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "audit.view",
+      "resourceType": "admin",
+      "scopeResolver": "admin_operator",
+      "csrfRequired": true,
+      "validationSchema": "admin.mutation",
+      "auditRequired": true,
+      "ownerDomain": "platform_admin",
+      "riskLevel": "critical"
     },
     {
-      "routePattern": "/api/admin/users",
-      "methods": ["GET"],
-      "requiredPermissions": ["users.view"],
-      "scopeResolver": "request.organization_scope",
+      "routePattern": "/api/admin/civic-impact-analytics/overview",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "audit.view",
+      "resourceType": "admin",
+      "scopeResolver": "admin_operator",
+      "csrfRequired": true,
+      "validationSchema": "admin.mutation",
+      "auditRequired": true,
+      "ownerDomain": "platform_admin",
+      "riskLevel": "critical"
+    },
+    {
+      "routePattern": "/api/admin/organizations/[organizationId]",
+      "methods": [
+        "PATCH"
+      ],
+      "classification": "scope_protected",
+      "permission": "audit.view",
+      "resourceType": "admin",
+      "scopeResolver": "admin_operator",
+      "csrfRequired": true,
+      "validationSchema": "admin.mutation",
+      "auditRequired": true,
+      "ownerDomain": "platform_admin",
+      "riskLevel": "critical"
+    },
+    {
+      "routePattern": "/api/admin/research-policy-lab/overview",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "audit.view",
+      "resourceType": "admin",
+      "scopeResolver": "admin_operator",
+      "csrfRequired": true,
+      "validationSchema": "admin.mutation",
+      "auditRequired": true,
+      "ownerDomain": "platform_admin",
+      "riskLevel": "critical"
+    },
+    {
+      "routePattern": "/api/admin/users/[userId]",
+      "methods": [
+        "PATCH"
+      ],
+      "classification": "scope_protected",
+      "permission": "users.manage",
+      "resourceType": "admin",
+      "scopeResolver": "admin_operator",
+      "csrfRequired": true,
+      "validationSchema": "admin.mutation",
+      "auditRequired": true,
+      "ownerDomain": "platform_admin",
+      "riskLevel": "critical"
+    },
+    {
+      "routePattern": "/api/admin/users/[userId]/revoke-sessions",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "users.manage",
+      "resourceType": "admin",
+      "scopeResolver": "admin_operator",
+      "csrfRequired": true,
+      "validationSchema": "admin.mutation",
+      "auditRequired": true,
+      "ownerDomain": "platform_admin",
+      "riskLevel": "critical"
+    },
+    {
+      "routePattern": "/api/ai/analyze",
+      "methods": [
+        "POST"
+      ],
+      "classification": "legacy_unused",
+      "permission": "platform.manage",
+      "resourceType": "ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "high",
+      "notes": "Legacy AI route — non-production scaffold"
+    },
+    {
+      "routePattern": "/api/ai/calendar",
+      "methods": [
+        "POST"
+      ],
+      "classification": "legacy_unused",
+      "permission": "platform.manage",
+      "resourceType": "ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "high",
+      "notes": "Legacy AI route — non-production scaffold"
+    },
+    {
+      "routePattern": "/api/ai/chat",
+      "methods": [
+        "POST"
+      ],
+      "classification": "legacy_unused",
+      "permission": "platform.manage",
+      "resourceType": "ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "high",
+      "notes": "Legacy AI route — non-production scaffold"
+    },
+    {
+      "routePattern": "/api/ai/meeting",
+      "methods": [
+        "POST"
+      ],
+      "classification": "legacy_unused",
+      "permission": "platform.manage",
+      "resourceType": "ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "high",
+      "notes": "Legacy AI route — non-production scaffold"
+    },
+    {
+      "routePattern": "/api/ai/memory",
+      "methods": [
+        "DELETE"
+      ],
+      "classification": "legacy_unused",
+      "permission": "platform.manage",
+      "resourceType": "ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "high",
+      "notes": "Legacy AI route — non-production scaffold"
+    },
+    {
+      "routePattern": "/api/ai/memory",
+      "methods": [
+        "PATCH"
+      ],
+      "classification": "legacy_unused",
+      "permission": "platform.manage",
+      "resourceType": "ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "high",
+      "notes": "Legacy AI route — non-production scaffold"
+    },
+    {
+      "routePattern": "/api/ai/mission",
+      "methods": [
+        "POST"
+      ],
+      "classification": "legacy_unused",
+      "permission": "platform.manage",
+      "resourceType": "ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "high",
+      "notes": "Legacy AI route — non-production scaffold"
+    },
+    {
+      "routePattern": "/api/ai/plan",
+      "methods": [
+        "POST"
+      ],
+      "classification": "legacy_unused",
+      "permission": "platform.manage",
+      "resourceType": "ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "high",
+      "notes": "Legacy AI route — non-production scaffold"
+    },
+    {
+      "routePattern": "/api/ai/research",
+      "methods": [
+        "POST"
+      ],
+      "classification": "legacy_unused",
+      "permission": "platform.manage",
+      "resourceType": "ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "high",
+      "notes": "Legacy AI route — non-production scaffold"
+    },
+    {
+      "routePattern": "/api/ai/summarize",
+      "methods": [
+        "POST"
+      ],
+      "classification": "legacy_unused",
+      "permission": "platform.manage",
+      "resourceType": "ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "high",
+      "notes": "Legacy AI route — non-production scaffold"
+    },
+    {
+      "routePattern": "/api/ai/write",
+      "methods": [
+        "POST"
+      ],
+      "classification": "legacy_unused",
+      "permission": "platform.manage",
+      "resourceType": "ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "high",
+      "notes": "Legacy AI route — non-production scaffold"
+    },
+    {
+      "routePattern": "/api/auth/login",
+      "methods": [
+        "POST"
+      ],
+      "classification": "public_by_design",
       "csrfRequired": false,
-      "validationSchema": null,
-      "auditRequired": true
+      "auditRequired": false,
+      "ownerDomain": "platform_auth",
+      "riskLevel": "low",
+      "notes": "Public by design — token or bootstrap validation required"
+    },
+    {
+      "routePattern": "/api/auth/logout-all",
+      "methods": [
+        "POST"
+      ],
+      "classification": "authenticated_self_service",
+      "permission": "civic_action.view",
+      "resourceType": "self",
+      "scopeResolver": "self",
+      "csrfRequired": false,
+      "auditRequired": false,
+      "ownerDomain": "platform_auth",
+      "riskLevel": "low"
+    },
+    {
+      "routePattern": "/api/auth/mfa/[methodId]",
+      "methods": [
+        "DELETE"
+      ],
+      "classification": "authenticated_self_service",
+      "permission": "civic_action.view",
+      "resourceType": "self",
+      "scopeResolver": "self",
+      "csrfRequired": false,
+      "auditRequired": false,
+      "ownerDomain": "platform_auth",
+      "riskLevel": "low"
+    },
+    {
+      "routePattern": "/api/auth/mfa/enroll",
+      "methods": [
+        "POST"
+      ],
+      "classification": "authenticated_self_service",
+      "permission": "civic_action.view",
+      "resourceType": "self",
+      "scopeResolver": "self",
+      "csrfRequired": false,
+      "auditRequired": false,
+      "ownerDomain": "platform_auth",
+      "riskLevel": "low"
+    },
+    {
+      "routePattern": "/api/auth/mfa/verify",
+      "methods": [
+        "POST"
+      ],
+      "classification": "authenticated_self_service",
+      "permission": "civic_action.view",
+      "resourceType": "self",
+      "scopeResolver": "self",
+      "csrfRequired": false,
+      "auditRequired": false,
+      "ownerDomain": "platform_auth",
+      "riskLevel": "low"
+    },
+    {
+      "routePattern": "/api/auth/password/reset-request",
+      "methods": [
+        "POST"
+      ],
+      "classification": "public_by_design",
+      "csrfRequired": false,
+      "auditRequired": false,
+      "ownerDomain": "platform_auth",
+      "riskLevel": "low",
+      "notes": "Public by design — token or bootstrap validation required"
+    },
+    {
+      "routePattern": "/api/auth/password/reset",
+      "methods": [
+        "POST"
+      ],
+      "classification": "public_by_design",
+      "csrfRequired": false,
+      "auditRequired": false,
+      "ownerDomain": "platform_auth",
+      "riskLevel": "low",
+      "notes": "Public by design — token or bootstrap validation required"
+    },
+    {
+      "routePattern": "/api/auth/passwordless/request",
+      "methods": [
+        "POST"
+      ],
+      "classification": "public_by_design",
+      "csrfRequired": false,
+      "auditRequired": false,
+      "ownerDomain": "platform_auth",
+      "riskLevel": "low",
+      "notes": "Public by design — token or bootstrap validation required"
+    },
+    {
+      "routePattern": "/api/auth/passwordless/verify",
+      "methods": [
+        "POST"
+      ],
+      "classification": "public_by_design",
+      "csrfRequired": false,
+      "auditRequired": false,
+      "ownerDomain": "platform_auth",
+      "riskLevel": "low",
+      "notes": "Public by design — token or bootstrap validation required"
+    },
+    {
+      "routePattern": "/api/auth/providers/link",
+      "methods": [
+        "POST"
+      ],
+      "classification": "authenticated_self_service",
+      "permission": "civic_action.view",
+      "resourceType": "self",
+      "scopeResolver": "self",
+      "csrfRequired": false,
+      "auditRequired": false,
+      "ownerDomain": "platform_auth",
+      "riskLevel": "low"
+    },
+    {
+      "routePattern": "/api/auth/recovery-codes/regenerate",
+      "methods": [
+        "POST"
+      ],
+      "classification": "authenticated_self_service",
+      "permission": "civic_action.view",
+      "resourceType": "self",
+      "scopeResolver": "self",
+      "csrfRequired": false,
+      "auditRequired": false,
+      "ownerDomain": "platform_auth",
+      "riskLevel": "low"
+    },
+    {
+      "routePattern": "/api/auth/register",
+      "methods": [
+        "POST"
+      ],
+      "classification": "public_by_design",
+      "csrfRequired": false,
+      "auditRequired": false,
+      "ownerDomain": "platform_auth",
+      "riskLevel": "low",
+      "notes": "Public by design — token or bootstrap validation required"
+    },
+    {
+      "routePattern": "/api/auth/session",
+      "methods": [
+        "POST"
+      ],
+      "classification": "public_by_design",
+      "csrfRequired": false,
+      "auditRequired": false,
+      "ownerDomain": "platform_auth",
+      "riskLevel": "low",
+      "notes": "Public by design — token or bootstrap validation required"
+    },
+    {
+      "routePattern": "/api/auth/sessions/[id]",
+      "methods": [
+        "DELETE"
+      ],
+      "classification": "authenticated_self_service",
+      "permission": "civic_action.view",
+      "resourceType": "self",
+      "scopeResolver": "self",
+      "csrfRequired": false,
+      "auditRequired": false,
+      "ownerDomain": "platform_auth",
+      "riskLevel": "low"
+    },
+    {
+      "routePattern": "/api/beta/feedback",
+      "methods": [
+        "POST"
+      ],
+      "classification": "public_by_design",
+      "csrfRequired": false,
+      "auditRequired": false,
+      "ownerDomain": "unknown",
+      "riskLevel": "low",
+      "notes": "Public by design — token or bootstrap validation required"
+    },
+    {
+      "routePattern": "/api/cms/content/[id]/approve",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "communications.create",
+      "resourceType": "social",
+      "scopeResolver": "social_content",
+      "csrfRequired": true,
+      "validationSchema": "cms.content_mutation",
+      "auditRequired": true,
+      "ownerDomain": "social_media",
+      "riskLevel": "high"
+    },
+    {
+      "routePattern": "/api/cms/content/[id]/archive",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "communications.create",
+      "resourceType": "social",
+      "scopeResolver": "social_content",
+      "csrfRequired": true,
+      "validationSchema": "cms.content_mutation",
+      "auditRequired": true,
+      "ownerDomain": "social_media",
+      "riskLevel": "high"
+    },
+    {
+      "routePattern": "/api/cms/content/[id]/publish",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "social.publish",
+      "resourceType": "social",
+      "scopeResolver": "social_content",
+      "csrfRequired": true,
+      "validationSchema": "cms.content_mutation",
+      "auditRequired": true,
+      "ownerDomain": "social_media",
+      "riskLevel": "high"
+    },
+    {
+      "routePattern": "/api/cms/content/[id]/schedule",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "communications.create",
+      "resourceType": "social",
+      "scopeResolver": "social_content",
+      "csrfRequired": true,
+      "validationSchema": "cms.content_mutation",
+      "auditRequired": true,
+      "ownerDomain": "social_media",
+      "riskLevel": "high"
+    },
+    {
+      "routePattern": "/api/cms/content/[id]/submit-review",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "communications.create",
+      "resourceType": "social",
+      "scopeResolver": "social_content",
+      "csrfRequired": true,
+      "validationSchema": "cms.content_mutation",
+      "auditRequired": true,
+      "ownerDomain": "social_media",
+      "riskLevel": "high"
+    },
+    {
+      "routePattern": "/api/cms/content/[id]/versions",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "communications.create",
+      "resourceType": "social",
+      "scopeResolver": "social_content",
+      "csrfRequired": true,
+      "validationSchema": "cms.content_mutation",
+      "auditRequired": true,
+      "ownerDomain": "social_media",
+      "riskLevel": "high"
+    },
+    {
+      "routePattern": "/api/identity/context",
+      "methods": [
+        "POST"
+      ],
+      "classification": "authenticated_self_service",
+      "permission": "civic_action.view",
+      "resourceType": "self",
+      "scopeResolver": "self",
+      "csrfRequired": false,
+      "auditRequired": false,
+      "ownerDomain": "unknown",
+      "riskLevel": "low"
+    },
+    {
+      "routePattern": "/api/identity/me",
+      "methods": [
+        "PATCH"
+      ],
+      "classification": "authenticated_self_service",
+      "permission": "civic_action.view",
+      "resourceType": "self",
+      "scopeResolver": "self",
+      "csrfRequired": false,
+      "auditRequired": false,
+      "ownerDomain": "unknown",
+      "riskLevel": "low"
     },
     {
       "routePattern": "/api/invitations",
-      "methods": ["GET", "POST"],
-      "requiredPermissions": ["users.view", "onboarding.manage"],
-      "scopeResolver": "request.organization_scope",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "recruits.manage",
+      "resourceType": "invitation",
+      "scopeResolver": "onboarding_invitation",
       "csrfRequired": true,
       "validationSchema": "invitations.mutation",
-      "auditRequired": true
+      "auditRequired": true,
+      "ownerDomain": "onboarding",
+      "riskLevel": "high"
     },
     {
-      "routePattern": "/api/home",
-      "methods": ["GET"],
-      "requiredPermissions": ["civic_action.view"],
+      "routePattern": "/api/invitations/[token]/accept",
+      "methods": [
+        "POST"
+      ],
+      "classification": "public_by_design",
+      "csrfRequired": false,
+      "auditRequired": false,
+      "ownerDomain": "onboarding",
+      "riskLevel": "low",
+      "notes": "Public by design — token or bootstrap validation required"
+    },
+    {
+      "routePattern": "/api/invitations/revoke",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "recruits.manage",
+      "resourceType": "invitation",
+      "scopeResolver": "onboarding_invitation",
+      "csrfRequired": true,
+      "validationSchema": "invitations.mutation",
+      "auditRequired": true,
+      "ownerDomain": "onboarding",
+      "riskLevel": "high"
+    },
+    {
+      "routePattern": "/api/launch/home-place",
+      "methods": [
+        "POST"
+      ],
+      "classification": "authenticated_self_service",
+      "permission": "civic_action.view",
+      "resourceType": "self",
       "scopeResolver": "self",
       "csrfRequired": false,
-      "validationSchema": null,
-      "auditRequired": false
+      "auditRequired": false,
+      "ownerDomain": "unknown",
+      "riskLevel": "low"
     },
     {
-      "routePattern": "/api/v1/workforce/delegate",
-      "methods": ["POST"],
-      "requiredPermissions": ["civic_action.manage"],
-      "scopeResolver": "request.institution_scope",
+      "routePattern": "/api/launch/start-invite",
+      "methods": [
+        "POST"
+      ],
+      "classification": "authenticated_self_service",
+      "permission": "civic_action.view",
+      "resourceType": "self",
+      "scopeResolver": "self",
+      "csrfRequired": false,
+      "auditRequired": false,
+      "ownerDomain": "unknown",
+      "riskLevel": "low"
+    },
+    {
+      "routePattern": "/api/missions",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "missions.write",
+      "resourceType": "mission",
+      "scopeResolver": "mission",
       "csrfRequired": true,
-      "validationSchema": "workforce.delegate",
-      "auditRequired": true
+      "validationSchema": "missions.mutation",
+      "auditRequired": true,
+      "ownerDomain": "campaign_command",
+      "riskLevel": "high"
+    },
+    {
+      "routePattern": "/api/missions/[id]",
+      "methods": [
+        "PATCH"
+      ],
+      "classification": "scope_protected",
+      "permission": "missions.write",
+      "resourceType": "mission",
+      "scopeResolver": "mission",
+      "csrfRequired": true,
+      "validationSchema": "missions.mutation",
+      "auditRequired": true,
+      "ownerDomain": "campaign_command",
+      "riskLevel": "high"
+    },
+    {
+      "routePattern": "/api/missions/[id]/assign",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "missions.write",
+      "resourceType": "mission",
+      "scopeResolver": "mission",
+      "csrfRequired": true,
+      "validationSchema": "missions.mutation",
+      "auditRequired": true,
+      "ownerDomain": "campaign_command",
+      "riskLevel": "high"
+    },
+    {
+      "routePattern": "/api/missions/[id]/complete",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "missions.write",
+      "resourceType": "mission",
+      "scopeResolver": "mission",
+      "csrfRequired": true,
+      "validationSchema": "missions.mutation",
+      "auditRequired": true,
+      "ownerDomain": "campaign_command",
+      "riskLevel": "high"
+    },
+    {
+      "routePattern": "/api/notifications/[id]/archive",
+      "methods": [
+        "POST"
+      ],
+      "classification": "authenticated_self_service",
+      "permission": "notifications.request",
+      "resourceType": "self",
+      "scopeResolver": "self",
+      "csrfRequired": true,
+      "validationSchema": "notifications.self",
+      "auditRequired": false,
+      "ownerDomain": "communications",
+      "riskLevel": "low"
+    },
+    {
+      "routePattern": "/api/notifications/[id]/dismiss",
+      "methods": [
+        "POST"
+      ],
+      "classification": "authenticated_self_service",
+      "permission": "notifications.request",
+      "resourceType": "self",
+      "scopeResolver": "self",
+      "csrfRequired": true,
+      "validationSchema": "notifications.self",
+      "auditRequired": false,
+      "ownerDomain": "communications",
+      "riskLevel": "low"
+    },
+    {
+      "routePattern": "/api/notifications/[id]/read",
+      "methods": [
+        "POST"
+      ],
+      "classification": "authenticated_self_service",
+      "permission": "notifications.request",
+      "resourceType": "self",
+      "scopeResolver": "self",
+      "csrfRequired": true,
+      "validationSchema": "notifications.self",
+      "auditRequired": false,
+      "ownerDomain": "communications",
+      "riskLevel": "low"
+    },
+    {
+      "routePattern": "/api/notifications/[id]/snooze",
+      "methods": [
+        "POST"
+      ],
+      "classification": "authenticated_self_service",
+      "permission": "notifications.request",
+      "resourceType": "self",
+      "scopeResolver": "self",
+      "csrfRequired": true,
+      "validationSchema": "notifications.self",
+      "auditRequired": false,
+      "ownerDomain": "communications",
+      "riskLevel": "low"
+    },
+    {
+      "routePattern": "/api/notifications/[id]/unread",
+      "methods": [
+        "POST"
+      ],
+      "classification": "authenticated_self_service",
+      "permission": "notifications.request",
+      "resourceType": "self",
+      "scopeResolver": "self",
+      "csrfRequired": true,
+      "validationSchema": "notifications.self",
+      "auditRequired": false,
+      "ownerDomain": "communications",
+      "riskLevel": "low"
+    },
+    {
+      "routePattern": "/api/notifications/campaigns/[id]/approve",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "communications.approve",
+      "resourceType": "notifications",
+      "scopeResolver": "notification_campaign",
+      "csrfRequired": true,
+      "validationSchema": "notifications.campaign",
+      "auditRequired": true,
+      "ownerDomain": "outreach",
+      "riskLevel": "critical"
+    },
+    {
+      "routePattern": "/api/notifications/campaigns/[id]/preview",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "communications.approve",
+      "resourceType": "notifications",
+      "scopeResolver": "notification_campaign",
+      "csrfRequired": true,
+      "validationSchema": "notifications.campaign",
+      "auditRequired": true,
+      "ownerDomain": "outreach",
+      "riskLevel": "critical"
+    },
+    {
+      "routePattern": "/api/notifications/campaigns/[id]/send",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "communications.send",
+      "resourceType": "notifications",
+      "scopeResolver": "notification_campaign",
+      "csrfRequired": true,
+      "validationSchema": "notifications.campaign",
+      "auditRequired": true,
+      "ownerDomain": "outreach",
+      "riskLevel": "critical"
+    },
+    {
+      "routePattern": "/api/notifications/campaigns/[id]/submit-approval",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "communications.approve",
+      "resourceType": "notifications",
+      "scopeResolver": "notification_campaign",
+      "csrfRequired": true,
+      "validationSchema": "notifications.campaign",
+      "auditRequired": true,
+      "ownerDomain": "outreach",
+      "riskLevel": "critical"
+    },
+    {
+      "routePattern": "/api/recommendations/feedback",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "analytics.view",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/relationships/introduction",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/admin/identity-intelligence/signals",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "identity_trust.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/ai/communications/explain",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "communications.create",
+      "resourceType": "communications",
+      "scopeResolver": "communications",
+      "csrfRequired": true,
+      "validationSchema": "communications.mutation",
+      "auditRequired": true,
+      "ownerDomain": "outreach",
+      "riskLevel": "critical"
+    },
+    {
+      "routePattern": "/api/v1/ai/communications/optimize",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "communications.create",
+      "resourceType": "communications",
+      "scopeResolver": "communications",
+      "csrfRequired": true,
+      "validationSchema": "communications.mutation",
+      "auditRequired": true,
+      "ownerDomain": "outreach",
+      "riskLevel": "critical"
+    },
+    {
+      "routePattern": "/api/v1/ai/communications/query",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "communications.create",
+      "resourceType": "communications",
+      "scopeResolver": "communications",
+      "csrfRequired": true,
+      "validationSchema": "communications.mutation",
+      "auditRequired": true,
+      "ownerDomain": "outreach",
+      "riskLevel": "critical"
+    },
+    {
+      "routePattern": "/api/v1/ai/knowledge/optimize",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.view",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/ai/knowledge/query",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.view",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/ai/objectives/explain",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.view",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/ai/objectives/optimize",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.view",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/ai/objectives/query",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.view",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/ai/objectives/recommend",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.view",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/ai/optimize",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.view",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/ai/query",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.view",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/ai/summarize",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "communications.view",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/ai/workspace",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "experience.view",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/announcements",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "communications.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/assets",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "resources.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/audits",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "certification.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/broadcasts",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "communications.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/calendar/events",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "calendar.manage",
+      "resourceType": "volunteer_management",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "volunteer_management",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/calendar/reservations",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "calendar.manage",
+      "resourceType": "volunteer_management",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "volunteer_management",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/calendar/sync",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "calendar.manage",
+      "resourceType": "volunteer_management",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "volunteer_management",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/calendar/travel",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "calendar.manage",
+      "resourceType": "volunteer_management",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "volunteer_management",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/canon",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "evolution.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/canon/review",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "evolution.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/certifications",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "certification.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/certifications/commands",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/civic-action/communications/commands",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "communications.create",
+      "resourceType": "communications",
+      "scopeResolver": "communications",
+      "csrfRequired": true,
+      "validationSchema": "communications.mutation",
+      "auditRequired": true,
+      "ownerDomain": "outreach",
+      "riskLevel": "critical"
+    },
+    {
+      "routePattern": "/api/v1/civic-action/initiatives/commands",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.manage",
+      "resourceType": "campaign_command",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "campaign_command",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/civic-action/missions",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.manage",
+      "resourceType": "campaign_command",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "campaign_command",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/civic-action/objectives/commands",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.manage",
+      "resourceType": "campaign_command",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "campaign_command",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/civic-action/overview",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.manage",
+      "resourceType": "campaign_command",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "campaign_command",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/civic-outcomes/evaluations",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_outcomes.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/civic-outcomes/evidence",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_outcomes.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/civic-outcomes/outcomes",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_outcomes.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/civic-outcomes/outputs",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_outcomes.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/civic-outcomes/reports",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_outcomes.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/civic-outcomes/sync",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_outcomes.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/civic-outcomes/theory-of-change",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_outcomes.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/civic/participation",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/civic/privacy",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
     },
     {
       "routePattern": "/api/v1/communications",
-      "methods": ["POST"],
-      "requiredPermissions": ["communications.send"],
-      "scopeResolver": "request.initiative_scope",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "communications.create",
+      "resourceType": "communications",
+      "scopeResolver": "communications",
       "csrfRequired": true,
-      "validationSchema": "communications.create",
-      "auditRequired": true
+      "validationSchema": "communications.mutation",
+      "auditRequired": true,
+      "ownerDomain": "outreach",
+      "riskLevel": "critical"
+    },
+    {
+      "routePattern": "/api/v1/communications/[id]/actions/[action]",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "communications.create",
+      "resourceType": "communications",
+      "scopeResolver": "communications",
+      "csrfRequired": true,
+      "validationSchema": "communications.mutation",
+      "auditRequired": true,
+      "ownerDomain": "outreach",
+      "riskLevel": "critical"
+    },
+    {
+      "routePattern": "/api/v1/communications/ai/summarize",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "communications.create",
+      "resourceType": "communications",
+      "scopeResolver": "communications",
+      "csrfRequired": true,
+      "validationSchema": "communications.mutation",
+      "auditRequired": true,
+      "ownerDomain": "outreach",
+      "riskLevel": "critical"
+    },
+    {
+      "routePattern": "/api/v1/communications/commands",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "communications.create",
+      "resourceType": "communications",
+      "scopeResolver": "communications",
+      "csrfRequired": true,
+      "validationSchema": "communications.mutation",
+      "auditRequired": true,
+      "ownerDomain": "outreach",
+      "riskLevel": "critical"
+    },
+    {
+      "routePattern": "/api/v1/communications/decisions",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "communications.create",
+      "resourceType": "communications",
+      "scopeResolver": "communications",
+      "csrfRequired": true,
+      "validationSchema": "communications.mutation",
+      "auditRequired": true,
+      "ownerDomain": "outreach",
+      "riskLevel": "critical"
+    },
+    {
+      "routePattern": "/api/v1/communications/documents",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "communications.create",
+      "resourceType": "communications",
+      "scopeResolver": "communications",
+      "csrfRequired": true,
+      "validationSchema": "communications.mutation",
+      "auditRequired": true,
+      "ownerDomain": "outreach",
+      "riskLevel": "critical"
+    },
+    {
+      "routePattern": "/api/v1/communications/meetings",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "communications.create",
+      "resourceType": "communications",
+      "scopeResolver": "communications",
+      "csrfRequired": true,
+      "validationSchema": "communications.mutation",
+      "auditRequired": true,
+      "ownerDomain": "outreach",
+      "riskLevel": "critical"
+    },
+    {
+      "routePattern": "/api/v1/communications/messages",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "communications.create",
+      "resourceType": "communications",
+      "scopeResolver": "communications",
+      "csrfRequired": true,
+      "validationSchema": "communications.mutation",
+      "auditRequired": true,
+      "ownerDomain": "outreach",
+      "riskLevel": "critical"
+    },
+    {
+      "routePattern": "/api/v1/communications/production/sign-off",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "communications.create",
+      "resourceType": "communications",
+      "scopeResolver": "communications",
+      "csrfRequired": true,
+      "validationSchema": "communications.mutation",
+      "auditRequired": true,
+      "ownerDomain": "outreach",
+      "riskLevel": "critical"
+    },
+    {
+      "routePattern": "/api/v1/communications/webhooks",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "communications.create",
+      "resourceType": "communications",
+      "scopeResolver": "communications",
+      "csrfRequired": true,
+      "validationSchema": "communications.mutation",
+      "auditRequired": true,
+      "ownerDomain": "outreach",
+      "riskLevel": "critical"
+    },
+    {
+      "routePattern": "/api/v1/community-health/profiles",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "community_health.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/community-health/projects",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "community_health.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/community-health/reports",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "community_health.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/community-relationship/events",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "community_relationship.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/community-relationship/mentorship",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "community_relationship.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/community-relationship/nodes",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "community_relationship.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/community-relationship/privacy",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "community_relationship.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/compliance/validate",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "certification.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/context/switch",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "identity_trust.view",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/conversations",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "communications.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/deployments/[id]/approve",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "deployments.approve",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/deployments/[id]/deploy-production",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "deployments.deploy_production",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/deployments/[id]/deploy-staging",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "deployments.deploy_staging",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/deployments/[id]/rollback",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "deployments.rollback",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/deployments/[id]/verify",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "deployments.view",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/deployments/release-candidates",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "deployments.create_candidate",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/digital-twin",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "evolution.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/digital-twin/run",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "evolution.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/digital-twin/test",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.view",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/documentation/generate",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "evolution.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/evolution",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "evolution.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/executive/approve",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "executive.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/executive/briefing/generate",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "executive.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/executive/identity/overview",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "identity_trust.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/executive/scenarios",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "executive.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/executive/warroom",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "executive.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/exercises",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "resilience.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/experiments",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "improvement.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/factory/generate",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "evolution.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/federation/analytics",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "federation.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/federation/benchmarks",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "federation.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/federation/invitations",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "recruits.manage",
+      "resourceType": "invitation",
+      "scopeResolver": "onboarding_invitation",
+      "csrfRequired": true,
+      "validationSchema": "invitations.mutation",
+      "auditRequired": true,
+      "ownerDomain": "onboarding",
+      "riskLevel": "high"
+    },
+    {
+      "routePattern": "/api/v1/federation/knowledge",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "federation.publish",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/federation/marketplace",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "federation.publish",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/federation/membership",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "federation.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/federation/replicate",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "federation.replicate",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/federation/resources",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "federation.publish",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/federation/templates",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "federation.publish",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/federations",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "federation.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/federations/agreements",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "federation.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/federations/join",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "federation.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/federations/missions",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "federation.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/federations/mutual-aid",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "federation.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/future-builds",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "evolution.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/humans",
+      "methods": [
+        "PATCH"
+      ],
+      "classification": "scope_protected",
+      "permission": "identity_trust.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/identity-audit/events",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "identity_trust.manage",
+      "resourceType": "platform_identity",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_identity",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/identity-certification/continuity/drills",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "identity_trust.manage",
+      "resourceType": "platform_identity",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_identity",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/identity-certification/drift",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "identity_trust.manage",
+      "resourceType": "platform_identity",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_identity",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/identity-certification/ledger/reconstruct",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "identity_trust.manage",
+      "resourceType": "platform_identity",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_identity",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/identity-certification/migration/reconciliation",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "identity_trust.manage",
+      "resourceType": "platform_identity",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_identity",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/identity-certification/runs",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "identity_trust.manage",
+      "resourceType": "platform_identity",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_identity",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/identity-launch/plans",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "identity_trust.manage",
+      "resourceType": "platform_identity",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_identity",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/identity-ops/intelligence-signals",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "identity_trust.manage",
+      "resourceType": "platform_identity",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_identity",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/identity-ops/work-items",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "identity_trust.manage",
+      "resourceType": "platform_identity",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_identity",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/identity-red-team/engagements",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "identity_trust.manage",
+      "resourceType": "platform_identity",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_identity",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/identity-reports/metrics",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "identity_trust.manage",
+      "resourceType": "platform_identity",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_identity",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/identity-support/requests",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "identity_trust.view",
+      "resourceType": "platform_identity",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_identity",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/identity-trust/analytics",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "identity_trust.view",
+      "resourceType": "platform_identity",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_identity",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/identity-trust/appeals",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "identity_trust.manage",
+      "resourceType": "platform_identity",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_identity",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/identity-trust/certification",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "identity_trust.manage",
+      "resourceType": "platform_identity",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_identity",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/identity-trust/federation",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "identity_trust.manage",
+      "resourceType": "platform_identity",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_identity",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/identity-trust/identity/update",
+      "methods": [
+        "PATCH"
+      ],
+      "classification": "scope_protected",
+      "permission": "identity_trust.manage",
+      "resourceType": "platform_identity",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_identity",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/identity-trust/invitations",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "recruits.manage",
+      "resourceType": "invitation",
+      "scopeResolver": "onboarding_invitation",
+      "csrfRequired": true,
+      "validationSchema": "invitations.mutation",
+      "auditRequired": true,
+      "ownerDomain": "onboarding",
+      "riskLevel": "high"
+    },
+    {
+      "routePattern": "/api/v1/identity-trust/register",
+      "methods": [
+        "POST"
+      ],
+      "classification": "public_by_design",
+      "csrfRequired": false,
+      "auditRequired": false,
+      "ownerDomain": "platform_identity",
+      "riskLevel": "low",
+      "notes": "Public by design — token or bootstrap validation required"
+    },
+    {
+      "routePattern": "/api/v1/identity-trust/reviews",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "identity_trust.manage",
+      "resourceType": "platform_identity",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_identity",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/identity-trust/verifications",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "identity_trust.manage",
+      "resourceType": "platform_identity",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_identity",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/identity-trust/wave7/certification",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "identity_trust.manage",
+      "resourceType": "platform_identity",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_identity",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/identity/aliases",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "identity_trust.manage",
+      "resourceType": "platform_identity",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_identity",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/identity/appeals",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "identity_trust.manage",
+      "resourceType": "platform_identity",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_identity",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/identity/cases",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "identity_trust.manage",
+      "resourceType": "platform_identity",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_identity",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/identity/challenges",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "identity_trust.manage",
+      "resourceType": "platform_identity",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_identity",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/identity/me/institutions/switch",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "identity_trust.view",
+      "resourceType": "platform_identity",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_identity",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/identity/verification-requests",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "identity_trust.manage",
+      "resourceType": "platform_identity",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_identity",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/identity/verifier-qualification",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "identity_trust.manage",
+      "resourceType": "platform_identity",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_identity",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/improvements",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "improvement.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/improvements/[id]/implement",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.edit",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/improvements/[id]/outcomes",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.edit",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/improvements/[id]/triage",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.edit",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/improvements/candidates",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.edit",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/improvements/pilots",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.edit",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/improvements/pilots/[id]/start",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.edit",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/improvements/pilots/[id]/stop",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.edit",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/incidents",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "resilience.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/initiatives",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/initiatives/[id]/actions/[action]",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/initiatives/[id]/draft",
+      "methods": [
+        "PATCH"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/initiatives/commands",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/initiatives/export",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/initiatives/import",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/initiatives/webhooks",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/institutions/[id]/configuration",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "organization.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/institutions/[id]/configuration/validate",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "organization.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/institutions/[id]/data-readiness",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "migration.approve",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/institutions/[id]/provisioning/pause",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "institutions.provision",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/institutions/[id]/provisioning/resume",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "institutions.provision",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/institutions/[id]/provisioning/run",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "institutions.provision",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/institutions/[id]/provisioning/validate",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "institutions.provision",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/institutions/[id]/reorganizations",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "organization.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/institutions/[id]/units",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "organization.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/institutions/provision",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "institutions.provision",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/institutions/requests",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "institutions.request",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/institutions/requests/[id]",
+      "methods": [
+        "PATCH"
+      ],
+      "classification": "scope_protected",
+      "permission": "institutions.request",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/institutions/requests/[id]/approve",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "institutions.approve",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/institutions/requests/[id]/reject",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "institutions.approve",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/institutions/requests/[id]/submit",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "institutions.request",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/intelligence/capability/role-readiness",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "training.view",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/intelligence/evaluate",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "intelligence.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/intelligence/feedback",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.view",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/intelligence/forecast",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "intelligence.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/intelligence/knowledge/impact",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.view",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/intelligence/knowledge/query",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.view",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/intelligence/knowledge/related",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.view",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/intelligence/learning/next-step",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "training.view",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/intelligence/memory/query",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.view",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/intelligence/objectives/feedback",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.view",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/intelligence/research/synthesize",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.view",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/intelligence/scenario",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "intelligence.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/intelligence/scenarios",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "intelligence.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/intelligence/simulate",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "intelligence.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/intelligence/tutor/turns",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "training.view",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/inventory/adjust",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "resources.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/invitations/wave1",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "recruits.manage",
+      "resourceType": "invitation",
+      "scopeResolver": "wave1_invitation",
+      "csrfRequired": true,
+      "validationSchema": "invitations.mutation",
+      "auditRequired": true,
+      "ownerDomain": "onboarding",
+      "riskLevel": "high"
+    },
+    {
+      "routePattern": "/api/v1/invitations/wave1/accept",
+      "methods": [
+        "POST"
+      ],
+      "classification": "public_by_design",
+      "csrfRequired": false,
+      "auditRequired": false,
+      "ownerDomain": "unknown",
+      "riskLevel": "low",
+      "notes": "Public by design — token or bootstrap validation required"
+    },
+    {
+      "routePattern": "/api/v1/knowledge-ai/tutor/turns",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "training.view",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/knowledge-certification/continuous-verification",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/knowledge-certification/runs",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/knowledge-certification/runs/[runId]/complete",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/knowledge-certification/runs/[runId]/gates",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/knowledge-certification/runs/[runId]/start",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/knowledge",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/knowledge/[id]/actions/[action]",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/knowledge/commands",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/knowledge/events/outbox",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/knowledge/webhooks",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/launch/approve",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "certification.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/launch/provisionings",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "launch.provision",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/launch/provisionings/[id]/transition",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "launch.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/leadership/cohorts",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "appointments.manage",
+      "resourceType": "appointment",
+      "scopeResolver": "appointment",
+      "csrfRequired": true,
+      "validationSchema": "appointments.mutation",
+      "auditRequired": true,
+      "ownerDomain": "volunteer_management",
+      "riskLevel": "critical"
+    },
+    {
+      "routePattern": "/api/v1/leadership/development-plans",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "appointments.manage",
+      "resourceType": "appointment",
+      "scopeResolver": "appointment",
+      "csrfRequired": true,
+      "validationSchema": "appointments.mutation",
+      "auditRequired": true,
+      "ownerDomain": "volunteer_management",
+      "riskLevel": "critical"
+    },
+    {
+      "routePattern": "/api/v1/leadership/evidence",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "appointments.manage",
+      "resourceType": "appointment",
+      "scopeResolver": "appointment",
+      "csrfRequired": true,
+      "validationSchema": "appointments.mutation",
+      "auditRequired": true,
+      "ownerDomain": "volunteer_management",
+      "riskLevel": "critical"
+    },
+    {
+      "routePattern": "/api/v1/leadership/insights",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "appointments.manage",
+      "resourceType": "appointment",
+      "scopeResolver": "appointment",
+      "csrfRequired": true,
+      "validationSchema": "appointments.mutation",
+      "auditRequired": true,
+      "ownerDomain": "volunteer_management",
+      "riskLevel": "critical"
+    },
+    {
+      "routePattern": "/api/v1/leadership/mentorship",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "appointments.manage",
+      "resourceType": "appointment",
+      "scopeResolver": "appointment",
+      "csrfRequired": true,
+      "validationSchema": "appointments.mutation",
+      "auditRequired": true,
+      "ownerDomain": "volunteer_management",
+      "riskLevel": "critical"
+    },
+    {
+      "routePattern": "/api/v1/leadership/profiles",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "appointments.manage",
+      "resourceType": "appointment",
+      "scopeResolver": "appointment",
+      "csrfRequired": true,
+      "validationSchema": "appointments.mutation",
+      "auditRequired": true,
+      "ownerDomain": "volunteer_management",
+      "riskLevel": "critical"
+    },
+    {
+      "routePattern": "/api/v1/leadership/succession",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "appointments.manage",
+      "resourceType": "appointment",
+      "scopeResolver": "appointment",
+      "csrfRequired": true,
+      "validationSchema": "appointments.mutation",
+      "auditRequired": true,
+      "ownerDomain": "volunteer_management",
+      "riskLevel": "critical"
+    },
+    {
+      "routePattern": "/api/v1/learning/commands",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/agents/consensus",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/agents/install",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/agents/retire",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/agents/run",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/automation/workflow/approve",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/automation/workflow/cancel",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/automation/workflow/pause",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/automation/workflow/resume",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/automation/workflow/start",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/briefings",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/commitments/[id]/confirm",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/context",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/context/confirm",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/context/correct",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/context/pause",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/context/select",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/conversations/import",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/conversations/promote",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/conversations/summarize",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/conversations/transcripts",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/decisions",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/delegations/prepare",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/digital-twin/experiment/create",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/digital-twin/sandbox/reset",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/digital-twin/scenario/compare",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/digital-twin/simulation/run",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/digital-twin/twin/synchronize",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/drafts",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/executive-inquiry",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.view",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/executive-output/[id]/report-problem",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/factory/capability/build",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/factory/capability/propose",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/factory/deployment/rollback",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/factory/deployment/start",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/factory/extension/publish",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/federation/coalition/create",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/federation/institution/join",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/federation/institution/share",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/federation/knowledge/publish",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/federation/trust/update",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/focus-sessions",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/genesis/archive/verify",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/genesis/continuity/test",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/genesis/genesis/export",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/genesis/institution/bootstrap",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/kernel/constitution/propose",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/kernel/permission/check",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/kernel/policy/evaluate",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/kernel/runtime/execute",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/learning/assessment",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/learning/courses",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/learning/plan",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/learning/promote",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/learning/simulation",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/meetings/[eventId]/preparation",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/memory",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/next-actions/[id]/dismiss",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/organizer/daily-plan",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/organizer/mission-plan",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/organizer/recommendation",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/organizer/review",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/partnership/feedback",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/partnership/outcomes",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/partnership/reflection",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/partnership/trust/recalculate",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/prediction/assumptions/update",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/prediction/forecast",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/prediction/forecast/run",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/prediction/scenario/create",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/prediction/scenarios",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/prediction/simulation/run",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/preferences",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/promote-memory",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/research/brief",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/research/briefs",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/research/monitor",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/research/promote",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/localbrain/research/search",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "localbrain.manage",
+      "resourceType": "platform_ai",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "platform_ai",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/maintenance",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "resources.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/measurements",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "improvement.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/meetings",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "communications.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/messages",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "communications.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/migration-exceptions/[id]/resolve",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "migration.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/migrations",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "migration.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/migrations/[id]",
+      "methods": [
+        "PATCH"
+      ],
+      "classification": "scope_protected",
+      "permission": "migration.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/migrations/[id]/approve",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "migration.approve",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/migrations/[id]/dry-run",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "migration.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/migrations/[id]/import",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "migration.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/migrations/[id]/intake/complete",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "migration.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/migrations/[id]/reconcile",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "migration.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/migrations/[id]/sources",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "migration.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/migrations/[id]/validate",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "migration.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/missions",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "missions.write",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/monitoring/alerts",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "monitoring.manage_alerts",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/monitoring/alerts/[id]/resolve",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "monitoring.manage_alerts",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/mutual-aid",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "resilience.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/objectives",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/objectives/[id]/actions/[action]",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/objectives/commands",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/objectives/production/sign-off",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.view",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/objectives/webhooks",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/offline/sync",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "experience.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/onboarding/invitations",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "onboarding.manage",
+      "resourceType": "onboarding",
+      "scopeResolver": "onboarding_invitation",
+      "csrfRequired": true,
+      "validationSchema": "onboarding.mutation",
+      "auditRequired": true,
+      "ownerDomain": "onboarding",
+      "riskLevel": "high"
+    },
+    {
+      "routePattern": "/api/v1/onboarding/invitations/[token]/accept",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "onboarding.manage",
+      "resourceType": "onboarding",
+      "scopeResolver": "onboarding_invitation",
+      "csrfRequired": true,
+      "validationSchema": "onboarding.mutation",
+      "auditRequired": true,
+      "ownerDomain": "onboarding",
+      "riskLevel": "high"
+    },
+    {
+      "routePattern": "/api/v1/onboarding/journeys",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "onboarding.manage",
+      "resourceType": "onboarding",
+      "scopeResolver": "onboarding_journey",
+      "csrfRequired": true,
+      "validationSchema": "onboarding.mutation",
+      "auditRequired": true,
+      "ownerDomain": "onboarding",
+      "riskLevel": "high"
+    },
+    {
+      "routePattern": "/api/v1/onboarding/journeys/[id]",
+      "methods": [
+        "PATCH"
+      ],
+      "classification": "scope_protected",
+      "permission": "onboarding.manage",
+      "resourceType": "onboarding",
+      "scopeResolver": "onboarding_journey",
+      "csrfRequired": true,
+      "validationSchema": "onboarding.mutation",
+      "auditRequired": true,
+      "ownerDomain": "onboarding",
+      "riskLevel": "high"
+    },
+    {
+      "routePattern": "/api/v1/onboarding/journeys/[id]/checklist",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "onboarding.manage",
+      "resourceType": "onboarding",
+      "scopeResolver": "onboarding_journey",
+      "csrfRequired": true,
+      "validationSchema": "onboarding.mutation",
+      "auditRequired": true,
+      "ownerDomain": "onboarding",
+      "riskLevel": "high"
+    },
+    {
+      "routePattern": "/api/v1/onboarding/journeys/[id]/mission",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "onboarding.manage",
+      "resourceType": "onboarding",
+      "scopeResolver": "onboarding_journey",
+      "csrfRequired": true,
+      "validationSchema": "onboarding.mutation",
+      "auditRequired": true,
+      "ownerDomain": "onboarding",
+      "riskLevel": "high"
+    },
+    {
+      "routePattern": "/api/v1/onboarding/journeys/[id]/resume",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "onboarding.manage",
+      "resourceType": "onboarding",
+      "scopeResolver": "onboarding_journey",
+      "csrfRequired": true,
+      "validationSchema": "onboarding.mutation",
+      "auditRequired": true,
+      "ownerDomain": "onboarding",
+      "riskLevel": "high"
+    },
+    {
+      "routePattern": "/api/v1/onboarding/journeys/[id]/tour",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "onboarding.manage",
+      "resourceType": "onboarding",
+      "scopeResolver": "onboarding_journey",
+      "csrfRequired": true,
+      "validationSchema": "onboarding.mutation",
+      "auditRequired": true,
+      "ownerDomain": "onboarding",
+      "riskLevel": "high"
+    },
+    {
+      "routePattern": "/api/v1/onboarding/journeys/[id]/training",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "onboarding.manage",
+      "resourceType": "onboarding",
+      "scopeResolver": "onboarding_journey",
+      "csrfRequired": true,
+      "validationSchema": "onboarding.mutation",
+      "auditRequired": true,
+      "ownerDomain": "onboarding",
+      "riskLevel": "high"
+    },
+    {
+      "routePattern": "/api/v1/operations/federation/join",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "organization.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/operations/feedback",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "operations.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/operations/governance/decision",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "organization.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/operations/institutions",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "organization.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/operations/launch-plans",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "operations.launch",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/operations/missions",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/operations/missions/[id]",
+      "methods": [
+        "PATCH"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/operations/missions/[id]/complete",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/operations/missions/[id]/evidence",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/operations/missions/[id]/tasks",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/operations/organizations",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "organization.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/operations/releases",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "operations.launch",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/operations/support",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "operations.support",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/optimization/communications/analyze",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "communications.create",
+      "resourceType": "communications",
+      "scopeResolver": "communications",
+      "csrfRequired": true,
+      "validationSchema": "communications.mutation",
+      "auditRequired": true,
+      "ownerDomain": "outreach",
+      "riskLevel": "critical"
+    },
+    {
+      "routePattern": "/api/v1/optimization/communications/feedback",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "communications.create",
+      "resourceType": "communications",
+      "scopeResolver": "communications",
+      "csrfRequired": true,
+      "validationSchema": "communications.mutation",
+      "auditRequired": true,
+      "ownerDomain": "outreach",
+      "riskLevel": "critical"
+    },
+    {
+      "routePattern": "/api/v1/optimization/communications/simulate",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "communications.create",
+      "resourceType": "communications",
+      "scopeResolver": "communications",
+      "csrfRequired": true,
+      "validationSchema": "communications.mutation",
+      "auditRequired": true,
+      "ownerDomain": "outreach",
+      "riskLevel": "critical"
+    },
+    {
+      "routePattern": "/api/v1/optimization/feedback",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.view",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/optimization/objectives/analyze",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.view",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/optimization/objectives/feedback",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.view",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/optimization/objectives/simulate",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.view",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/organizational-units/[id]",
+      "methods": [
+        "PATCH"
+      ],
+      "classification": "scope_protected",
+      "permission": "appointments.manage",
+      "resourceType": "appointment",
+      "scopeResolver": "leadership_unit",
+      "csrfRequired": true,
+      "validationSchema": "appointments.mutation",
+      "auditRequired": true,
+      "ownerDomain": "volunteer_management",
+      "riskLevel": "critical"
+    },
+    {
+      "routePattern": "/api/v1/organizational-units/[id]/archive",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "appointments.manage",
+      "resourceType": "appointment",
+      "scopeResolver": "leadership_unit",
+      "csrfRequired": true,
+      "validationSchema": "appointments.mutation",
+      "auditRequired": true,
+      "ownerDomain": "volunteer_management",
+      "riskLevel": "critical"
+    },
+    {
+      "routePattern": "/api/v1/organizational-units/[id]/leadership",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "appointments.manage",
+      "resourceType": "appointment",
+      "scopeResolver": "leadership_unit",
+      "csrfRequired": true,
+      "validationSchema": "appointments.mutation",
+      "auditRequired": true,
+      "ownerDomain": "volunteer_management",
+      "riskLevel": "critical"
+    },
+    {
+      "routePattern": "/api/v1/organizational-units/[id]/move",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "appointments.manage",
+      "resourceType": "appointment",
+      "scopeResolver": "leadership_unit",
+      "csrfRequired": true,
+      "validationSchema": "appointments.mutation",
+      "auditRequired": true,
+      "ownerDomain": "volunteer_management",
+      "riskLevel": "critical"
+    },
+    {
+      "routePattern": "/api/v1/organizational-units/[id]/owners",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "appointments.manage",
+      "resourceType": "appointment",
+      "scopeResolver": "leadership_unit",
+      "csrfRequired": true,
+      "validationSchema": "appointments.mutation",
+      "auditRequired": true,
+      "ownerDomain": "volunteer_management",
+      "riskLevel": "critical"
+    },
+    {
+      "routePattern": "/api/v1/organizational-units/[id]/roles",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "appointments.manage",
+      "resourceType": "appointment",
+      "scopeResolver": "leadership_unit",
+      "csrfRequired": true,
+      "validationSchema": "appointments.mutation",
+      "auditRequired": true,
+      "ownerDomain": "volunteer_management",
+      "riskLevel": "critical"
+    },
+    {
+      "routePattern": "/api/v1/pilot-issues/[issueId]/[action]",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "pilot.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/pilot-sessions/[sessionId]/[action]",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "pilot.observe",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/pilot-workflows/[workflowId]/sessions",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "pilot.observe",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/pilots",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "pilot.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/pilots/[pilotId]/[action]",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "pilot.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/pilots/[pilotId]/acceptance",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "pilot.accept",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/pilots/[pilotId]/cohorts",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "pilot.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/pilots/[pilotId]/issues",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "pilot.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/position-memberships",
+      "methods": [
+        "POST"
+      ],
+      "classification": "authenticated_self_service",
+      "permission": "civic_action.view",
+      "resourceType": "self",
+      "scopeResolver": "self",
+      "csrfRequired": false,
+      "auditRequired": false,
+      "ownerDomain": "unknown",
+      "riskLevel": "low"
+    },
+    {
+      "routePattern": "/api/v1/production/sign-off",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.view",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/purchases",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "resources.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/readiness",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "certification.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/readiness/assess",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "resilience.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/recovery",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "resilience.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/reorganizations/[id]/execute",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "organization.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/reorganizations/[id]/preview",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "organization.view",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/reservations",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "resources.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/root-cause",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "improvement.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/scenario/compare",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.view",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/search",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "experience.view",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/security/incidents",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "security.manage_incidents",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/security/incidents/[id]/close",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "security.manage_incidents",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/security/incidents/[id]/contain",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "security.manage_incidents",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/security/privacy-requests",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "security.privacy_requests",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/security/recovery-tests",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "security.manage_recovery",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/security/vulnerabilities/[id]/verify",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "security.manage_vulnerabilities",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/simulation/run",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.view",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/sponsors/me",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "identity_trust.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/strategic-intelligence/cycle",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "strategic_intelligence.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/strategic-intelligence/decisions",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "strategic_intelligence.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/strategic-intelligence/forecasts",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "strategic_intelligence.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/strategic-intelligence/insights",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "strategic_intelligence.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/strategic-intelligence/scenarios",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "strategic_intelligence.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/strategy/goals",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/strategy/key-results",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/strategy/objectives",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/strategy/review",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/training/assessment-attempts/[id]/evaluate",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "training.evaluate",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/training/assessments/[id]/attempts",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "training.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/training/assignments",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "training.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/training/certification-awards/[id]/[action]",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "training.certify",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/training/certifications/[id]/issue",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "training.certify",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/training/lessons/[id]/complete",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "training.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/training/practice-workspaces",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "training.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/training/scenarios/[id]",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "training.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/workflows",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "workflows.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/workflows/[id]/execute",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "workflows.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/workflows/[id]/pause",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "workflows.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/workflows/[id]/publish",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "workflows.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/workflows/[id]/resume",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "workflows.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/workflows/[id]/rollback",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "workflows.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/workforce/assignments",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "committee.manage",
+      "resourceType": "workforce",
+      "scopeResolver": "workforce",
+      "csrfRequired": true,
+      "validationSchema": "workforce.mutation",
+      "auditRequired": true,
+      "ownerDomain": "volunteer_management",
+      "riskLevel": "high"
+    },
+    {
+      "routePattern": "/api/v1/workforce/availability",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.manage",
+      "resourceType": "workforce",
+      "scopeResolver": "workforce",
+      "csrfRequired": true,
+      "validationSchema": "workforce.mutation",
+      "auditRequired": true,
+      "ownerDomain": "volunteer_management",
+      "riskLevel": "high"
+    },
+    {
+      "routePattern": "/api/v1/workforce/delegate",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "committee.manage",
+      "resourceType": "workforce",
+      "scopeResolver": "workforce",
+      "csrfRequired": true,
+      "validationSchema": "workforce.mutation",
+      "auditRequired": true,
+      "ownerDomain": "volunteer_management",
+      "riskLevel": "high"
+    },
+    {
+      "routePattern": "/api/v1/workforce/recognition",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.manage",
+      "resourceType": "workforce",
+      "scopeResolver": "workforce",
+      "csrfRequired": true,
+      "validationSchema": "workforce.mutation",
+      "auditRequired": true,
+      "ownerDomain": "volunteer_management",
+      "riskLevel": "high"
+    },
+    {
+      "routePattern": "/api/v1/workspace/bookmarks",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "training.view",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/workspace/customize",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "experience.manage",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "/api/v1/workspace/notes",
+      "methods": [
+        "POST"
+      ],
+      "classification": "scope_protected",
+      "permission": "training.view",
+      "resourceType": "unknown",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "unknown",
+      "riskLevel": "medium"
+    },
+    {
+      "routePattern": "server_action:src/lib/calendar/assignments/actions.ts:acceptAndRedirect",
+      "methods": [
+        "ACTION"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.manage",
+      "resourceType": "volunteer_management",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "volunteer_management",
+      "riskLevel": "medium",
+      "notes": "Default scope protection contract — verify owner"
+    },
+    {
+      "routePattern": "server_action:src/lib/calendar/assignments/actions.ts:acceptShiftOffer",
+      "methods": [
+        "ACTION"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.manage",
+      "resourceType": "volunteer_management",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "volunteer_management",
+      "riskLevel": "medium",
+      "notes": "Default scope protection contract — verify owner"
+    },
+    {
+      "routePattern": "server_action:src/lib/calendar/assignments/actions.ts:declineShiftOffer",
+      "methods": [
+        "ACTION"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.manage",
+      "resourceType": "volunteer_management",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "volunteer_management",
+      "riskLevel": "medium",
+      "notes": "Default scope protection contract — verify owner"
+    },
+    {
+      "routePattern": "server_action:src/lib/calendar/assignments/actions.ts:requestOfferChange",
+      "methods": [
+        "ACTION"
+      ],
+      "classification": "scope_protected",
+      "permission": "civic_action.manage",
+      "resourceType": "volunteer_management",
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": true,
+      "auditRequired": true,
+      "ownerDomain": "volunteer_management",
+      "riskLevel": "medium",
+      "notes": "Default scope protection contract — verify owner"
     }
   ],
-  "mutation_inventory_status": "seed — expand via scripts/inventory-protected-routes.mjs"
+  "mutation_inventory_ref": "data/authority/mutation-inventory.json"
 }

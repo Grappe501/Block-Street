@@ -1,6 +1,7 @@
 import { withApiGateway } from "@/lib/api/http";
 import { ApiError, apiSuccess } from "@/lib/api/errors";
 import { createInstitutionalInvitation, listInstitutionInvitations } from "@/lib/onboarding/engine";
+import { onboardingInvitationScopeResolver } from "@/lib/authority/scope-resolvers";
 
 export const GET = withApiGateway(
   async (ctx, request) => {
@@ -8,7 +9,7 @@ export const GET = withApiGateway(
     const invitations = institutionId ? listInstitutionInvitations(institutionId) : [];
     return apiSuccess({ invitations }, { request_id: ctx.request_id, correlation_id: ctx.correlation_id });
   },
-  { permission: "onboarding.view", endpoint: "/api/v1/onboarding/invitations" }
+  { permission: "onboarding.view", endpoint: "/api/v1/onboarding/invitations", scopeResolver: onboardingInvitationScopeResolver }
 );
 
 export const POST = withApiGateway(
@@ -43,5 +44,5 @@ export const POST = withApiGateway(
       throw new ApiError("INVALID_REQUEST", e instanceof Error ? e.message : "Invitation failed", 400);
     }
   },
-  { permission: "onboarding.manage", endpoint: "/api/v1/onboarding/invitations" }
+  { permission: "onboarding.manage", endpoint: "/api/v1/onboarding/invitations", scopeResolver: onboardingInvitationScopeResolver }
 );

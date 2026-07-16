@@ -1,17 +1,25 @@
-import { NextRequest, NextResponse } from "next/server";
+import { withApiGateway } from "@/lib/api/http";
+import { apiSuccess } from "@/lib/api/errors";
 import { suggestIntroduction } from "@/lib/relationships/engine";
 
-export async function POST(request: NextRequest) {
-  const body = await request.json();
-  const { fromLabel, toLabel, reason, evidence } = body as {
-    fromLabel: string;
-    toLabel: string;
-    reason: string;
-    evidence?: string[];
-  };
-  if (!fromLabel || !toLabel || !reason) {
-    return NextResponse.json({ error: "fromLabel, toLabel, reason required" }, { status: 400 });
-  }
-  const introduction = suggestIntroduction({ fromLabel, toLabel, reason, evidence });
-  return NextResponse.json({ ok: true, introduction });
-}
+export const POST = withApiGateway(
+  async (ctx, request) => {
+    const body = (await request.json()) as {
+      fromLabel: string;
+      toLabel: string;
+      reason: string;
+      evidence?: string[];
+    };
+    if (!body.fromLabel || !body.toLabel || !body.reason) {
+      return apiSuccess({ error: "fromLabel, toLabel, reason required" }, { request_id: ctx.request_id, correlation_id: ctx.correlation_id }, 400);
+    }
+    const introduction = suggestIntroduction({
+      fromLabel: body.fromLabel,
+      toLabel: body.toLabel,
+      reason: body.reason,
+      evidence: body.evidence,
+    });
+    return apiSuccess({ ok: true, introduction }, { request_id: ctx.request_id, correlation_id: ctx.correlation_id });
+  },
+  { permission: "civic_action.manage", endpoint: "/api/relationships/introduction" }
+);

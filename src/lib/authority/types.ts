@@ -54,6 +54,26 @@ export type ProtectedRoute = {
   auditRequired: boolean;
 };
 
+export type MutationClassification =
+  | "protected"
+  | "base_gated_only"
+  | "authenticated_only"
+  | "unprotected"
+  | "public_by_design"
+  | "legacy_unused"
+  | "needs_investigation";
+
+export type MutationInventoryEntry = {
+  id: string;
+  kind: "api_route" | "server_action";
+  routePattern: string | null;
+  method: string;
+  sourceFile: string;
+  classification: MutationClassification;
+  gateway: string;
+  ownership: string;
+};
+
 export type PermissionDefinition = {
   key: string;
   resource: string;
