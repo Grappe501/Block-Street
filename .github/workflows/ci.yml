@@ -9,15 +9,21 @@ on:
 jobs:
   validate:
     runs-on: ubuntu-latest
+    env:
+      AUTH_SESSION_SECRET: ${{ secrets.AUTH_SESSION_SECRET }}
+      CI_BUILD: "true"
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
       - run: npm ci
+      - run: node scripts/deployment/ci-preflight.mjs
       - run: npm run lint
       - run: npm run typecheck
       - run: npm run build
-        env:
-          AUTH_SESSION_SECRET: ci-build-placeholder-not-for-production
+      - run: npm run test:get-loud-resource
+      - run: npm run test:get-loud-privacy-boundary
+      - run: npm run test:get-loud-qr
+      - run: npm run test:get-loud-authority
       - run: npm run validate:release

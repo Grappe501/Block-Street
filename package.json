@@ -16,6 +16,7 @@
     "audit:capabilities": "node scripts/v1-certification/pass-01-run.mjs",
     "setup:h-drive": "powershell -ExecutionPolicy Bypass -File scripts/setup-h-drive-env.ps1",
     "validate:release": "node scripts/deployment/validate-release.mjs",
+    "ci:preflight": "node scripts/deployment/ci-preflight.mjs",
     "smoke:test": "node scripts/deployment/smoke-test.mjs",
     "test:july14": "node scripts/identity-trust/july14-smoke.mjs",
     "test:july14-meeting-path": "node scripts/run-with-h-env.mjs node scripts/phase11/test-july14-meeting-path.mjs",
