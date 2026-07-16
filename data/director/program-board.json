@@ -1,6 +1,6 @@
 {
   "updated_at": "2026-07-16T04:00:00.000Z",
-  "wave_5b_content_commit": null,
+  "wave_5b_content_commit": "2f937ba",
   "active_program": "CAL-P2 — Event Operations (Calendar Phase 2)",
   "production_commit": "4b763dd",
   "wave_5a_content_commit": "62f65e1",
@@ -40,7 +40,7 @@
     { "wave": "4A", "package": "event_lifecycle_engine", "status": "TESTED", "content_commit": "fcadd57" },
     { "wave": "4B", "package": "event_core_record_engine", "status": "TESTED", "content_commit": "b3709f6" },
     { "wave": "5A", "package": "event_conflict_engine", "status": "TESTED", "content_commit": "62f65e1" },
-    { "wave": "5B", "package": "event_conflict_engine_phase2", "status": "TESTED", "content_commit": null },
+    { "wave": "5B", "package": "event_conflict_engine_phase2", "status": "TESTED", "content_commit": "2f937ba" },
     { "wave": "6A", "package": "event_notifications_engine (planned)", "status": "NEXT", "content_commit": null }
   ],
   "key_routes": [

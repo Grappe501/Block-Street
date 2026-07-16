@@ -4,7 +4,7 @@
   "package": "event_conflict_engine_phase2",
   "generated_at": "2026-07-16T04:00:00.000Z",
   "baseline_commit": "62f65e1",
-  "content_commit": null,
+  "content_commit": "2f937ba",
   "wave_5a_content_commit": "62f65e1",
   "gate_a": "OPEN",
   "persistence_mode": "session_soft_beta",
