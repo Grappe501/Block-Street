@@ -1,0 +1,41 @@
+{
+  "phase": "CAL-P2",
+  "wave": "4A",
+  "package": "event_lifecycle_engine",
+  "generated_at": "2026-07-15T20:00:00.000Z",
+  "baseline_commit": "5577107",
+  "content_commit": "6c517d2",
+  "wave_3e_content_commit": "b0ef310",
+  "gate_a": "OPEN",
+  "persistence_mode": "session_soft_beta",
+  "rbac_mode": "audit_only",
+  "enforcement_active": false,
+  "template_seed_integration": "PASS",
+  "readiness_integration": "PASS",
+  "approval_readiness": "PASS",
+  "history_seed_integration": "PASS",
+  "routes_created": [
+    "/calendar/event/:eventId/lifecycle",
+    "/calendar/event/:eventId/lifecycle/history",
+    "/calendar/event/:eventId/lifecycle/transitions",
+    "/command/events/lifecycle",
+    "/command/events/lifecycle/pending",
+    "/command/events/lifecycle/transitions"
+  ],
+  "tests": [
+    "calendar:lifecycle:validate",
+    "test:calendar:lifecycle-model",
+    "test:calendar:lifecycle-readiness",
+    "test:calendar:wave4a",
+    "calendar:route-audit",
+    "test:calendar:cal-p2-sandbox"
+  ],
+  "known_limitations": [
+    "Lifecycle transitions remain soft-beta — durableAuthority=false while Gate A open",
+    "Operational status on canonical event record is read-only from seed — session overlay only for checklist",
+    "RBAC audit_only",
+    "No Postgres durability"
+  ],
+  "final_wave_4a_claim": "TESTED",
+  "next_wave": "CAL-P2 Wave 4B"
+}

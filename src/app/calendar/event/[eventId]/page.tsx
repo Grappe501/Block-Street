@@ -9,6 +9,7 @@ import { EventPreparationSummaryCard } from "@/components/calendar/preparation/E
 import { EventReportSummaryCard } from "@/components/calendar/followup/ReportChecklistTable";
 import { EventRsvpSummaryCard, EventVerificationSummaryCard } from "@/components/calendar/attendance/AttendancePanels";
 import { EventCandidateSummaryCard } from "@/components/calendar/candidate/CandidatePanels";
+import { EventLifecycleSummaryCard } from "@/components/calendar/lifecycle/LifecyclePanels";
 import { getEventById } from "@/lib/calendar";
 import { buildEventOperationsSummary } from "@/lib/calendar/operations";
 import { calculateEventStaffingSummary, ensureStaffingFromEvent } from "@/lib/calendar/staffing";
@@ -18,6 +19,7 @@ import { buildFollowUpSummary, ensureFollowUpFromEvent } from "@/lib/calendar/fo
 import { buildRsvpSummary, ensureRsvpFromEvent } from "@/lib/calendar/rsvp";
 import { buildVerificationSummary, ensureVerificationFromEvent } from "@/lib/calendar/verification";
 import { buildCandidateSummary, ensureCandidateRequestFromEvent } from "@/lib/calendar/candidate-request";
+import { buildLifecycleSummary, ensureLifecycleFromEvent } from "@/lib/calendar/lifecycle";
 
 export const metadata = { title: "Calendar · Event" };
 
@@ -40,6 +42,8 @@ export default async function EventDetailPage({ params }: { params: Promise<{ ev
   const verification = buildVerificationSummary(eventId);
   ensureCandidateRequestFromEvent(event);
   const candidate = buildCandidateSummary(eventId, event.kelly_attendance_status ?? "not_requested");
+  ensureLifecycleFromEvent(event);
+  const lifecycle = buildLifecycleSummary(eventId, event.operational_status, event.approval_status);
 
   return (
     <CalendarChrome title={event.title} subtitle="Event detail from canonical catalog." backHref="/calendar/list">
@@ -53,6 +57,7 @@ export default async function EventDetailPage({ params }: { params: Promise<{ ev
         <EventRsvpSummaryCard summary={rsvp} eventId={eventId} />
         <EventVerificationSummaryCard summary={verification} eventId={eventId} />
         <EventCandidateSummaryCard summary={candidate} eventId={eventId} />
+        <EventLifecycleSummaryCard summary={lifecycle} eventId={eventId} />
         <EventSeriesPanel event={event} />
         <EventDetailView event={event} mode="internal" />
       </div>

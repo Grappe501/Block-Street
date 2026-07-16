@@ -4,9 +4,9 @@ import { EventSubnav } from "@/components/calendar/CalendarNav";
 import { LifecycleHistoryTimeline, LifecycleSoftBetaNote } from "@/components/calendar/lifecycle/LifecyclePanels";
 import { buildMergedHistoryTimeline, ensureLifecycleFromEvent, getEventById } from "@/lib/calendar";
 
-export const metadata = { title: "Calendar · Event history" };
+export const metadata = { title: "Calendar · Status history" };
 
-export default async function EventHistoryPage({ params }: { params: Promise<{ eventId: string }> }) {
+export default async function EventLifecycleHistoryPage({ params }: { params: Promise<{ eventId: string }> }) {
   const { eventId } = await params;
   const event = getEventById(eventId);
   if (!event) notFound();
@@ -14,11 +14,11 @@ export default async function EventHistoryPage({ params }: { params: Promise<{ e
   const timeline = buildMergedHistoryTimeline(eventId);
 
   return (
-    <CalendarChrome title={`${event.title} — History`} subtitle="Status history timeline" backHref={`/calendar/event/${eventId}`} backLabel="Event">
+    <CalendarChrome title={`${event.title} — Status history`} subtitle="Audited lifecycle timeline" backHref={`/calendar/event/${eventId}/lifecycle`} backLabel="Lifecycle">
       <CalendarHonestyBanner />
       <EventSubnav eventId={eventId} />
       <LifecycleSoftBetaNote />
-      <CalendarSection title="History">
+      <CalendarSection title="Timeline">
         <LifecycleHistoryTimeline entries={timeline} />
       </CalendarSection>
     </CalendarChrome>

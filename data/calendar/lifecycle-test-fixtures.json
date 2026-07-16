@@ -1,0 +1,16 @@
+[
+  {
+    "eventId": "evt-uca-networking",
+    "operationalStatus": "confirmed",
+    "approvalStatus": "approved",
+    "expectApprovalItems": 4,
+    "expectHistoryMin": 2
+  },
+  {
+    "eventId": "evt-kelly-campus-hold-asu",
+    "operationalStatus": "tentative",
+    "approvalStatus": "under_review",
+    "expectApprovalItems": 4,
+    "expectHistoryMin": 1
+  }
+]

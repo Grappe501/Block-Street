@@ -10,6 +10,7 @@ import { buildFollowUpSummary, ensureFollowUpFromEvent } from "../followup";
 import { isFollowUpDue } from "../followup/template-integration";
 import { buildRsvpSummary, ensureRsvpFromEvent } from "../rsvp";
 import { buildVerificationSummary, ensureVerificationFromEvent } from "../verification";
+import { buildLifecycleSummary, ensureLifecycleFromEvent } from "../lifecycle";
 import type { AttentionKey, EventAttentionSeverity, EventReadinessItem } from "./types";
 import { ATTENTION_KEYS } from "./types";
 
@@ -125,6 +126,34 @@ export function evaluateEventAttention(
       key: "approval_blocked",
       severity: "urgent",
       reason: `Calendar approval blocked (${approval}).`,
+    });
+  }
+
+  ensureLifecycleFromEvent(event);
+  const lifecycle = buildLifecycleSummary(event.event_id, event.operational_status, event.approval_status);
+  if (
+    ["proposed", "tentative", "draft"].includes(event.operational_status) &&
+    h <= 168 &&
+    h >= 0
+  ) {
+    signals.push({
+      key: "lifecycle_stalled",
+      severity: within48 ? "urgent" : "needs_attention",
+      reason: `Operational status still ${event.operational_status.replace(/_/g, " ")} within a week of event.`,
+    });
+  }
+  if (past && event.operational_status !== "completed" && event.operational_status !== "canceled") {
+    signals.push({
+      key: "completion_pending",
+      severity: "needs_attention",
+      reason: "Event ended — mark completed or capture outcome.",
+    });
+  }
+  if (lifecycle.incompleteRequired > 0 && lifecycle.readinessImpact === "blocked" && !signals.some((s) => s.key === "approval_pending")) {
+    signals.push({
+      key: "approval_pending",
+      severity: "urgent",
+      reason: lifecycle.primaryGap ?? "Lifecycle approval checklist blocked.",
     });
   }
 

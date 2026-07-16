@@ -17,4 +17,4 @@ With Wave 3E, all twelve readiness dimensions now have runtime engines or integr
 
 ## Next wave
 
-CAL-P2 Wave 4A (TBD)
+CAL-P2 Wave 4B (TBD)

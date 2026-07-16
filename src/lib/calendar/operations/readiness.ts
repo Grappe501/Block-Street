@@ -7,6 +7,7 @@ import { evaluateFollowUpReadiness } from "../followup/readiness-integration";
 import { evaluateRsvpReadiness } from "../rsvp/readiness-integration";
 import { evaluateVerificationReadiness } from "../verification/readiness-integration";
 import { evaluateCandidateReadiness } from "../candidate-request/readiness-integration";
+import { evaluateApprovalReadiness } from "../lifecycle/readiness-integration";
 
 function eventRoute(eventId: string, suffix = ""): string {
   return `/calendar/event/${eventId}${suffix}`;
@@ -42,55 +43,6 @@ function evaluateOwnership(event: CalendarEvent): EventReadinessItem {
     label: "Ownership",
     explanation: `Owner: ${owner}. Event Board oversight: ${event.volunteer_manager ?? "Carol Eagan"} (not operational ownership).`,
     route: eventRoute(event.event_id),
-  };
-}
-
-function evaluateApproval(event: CalendarEvent): EventReadinessItem {
-  const status = event.approval_status ?? "not_submitted";
-  const route = eventRoute(event.event_id, "/approvals");
-  if (status === "not_submitted" || status === null) {
-    return {
-      dimension: "approval",
-      state: "not_started",
-      label: "Approval",
-      explanation: "No approval submission on record.",
-      route,
-    };
-  }
-  if (status === "submitted" || status === "under_review" || status === "pending") {
-    return {
-      dimension: "approval",
-      state: "in_progress",
-      label: "Approval",
-      explanation: `Calendar approval in review (${status}). Not venue or legal approval.`,
-      route,
-    };
-  }
-  if (status === "revision_requested") {
-    return {
-      dimension: "approval",
-      state: "in_progress",
-      label: "Approval",
-      explanation: "Revision requested — calendar approval path only.",
-      route,
-    };
-  }
-  if (status === "rejected" || status === "approval_withdrawn") {
-    return {
-      dimension: "approval",
-      state: "blocked",
-      label: "Approval",
-      explanation: `Calendar approval ${status}.`,
-      blocker: "Resolve approval before proceeding.",
-      route,
-    };
-  }
-  return {
-    dimension: "approval",
-    state: "ready",
-    label: "Approval",
-    explanation: `Calendar approval satisfied (${status}). Separate from venue/legal verification.`,
-    route,
   };
 }
 
@@ -230,7 +182,7 @@ const EVALUATORS: Record<
   (event: CalendarEvent, now: Date) => EventReadinessItem
 > = {
   ownership: (e) => evaluateOwnership(e),
-  approval: (e) => evaluateApproval(e),
+  approval: (e) => evaluateApprovalReadiness(e),
   date_time: (e) => evaluateDateTime(e),
   venue: (e) => evaluateVenue(e),
   candidate: (e, n) => evaluateCandidateReadiness(e, n),

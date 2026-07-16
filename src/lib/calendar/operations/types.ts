@@ -142,6 +142,8 @@ export const ATTENTION_KEYS = [
   "rsvp_below_target",
   "verification_incomplete",
   "verification_overdue",
+  "lifecycle_stalled",
+  "completion_pending",
 ] as const;
 
 export type AttentionKey = (typeof ATTENTION_KEYS)[number];
