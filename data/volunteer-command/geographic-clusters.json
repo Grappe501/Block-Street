@@ -1,0 +1,34 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-07-15T04:00:00.000Z",
+  "doctrine": "docs/v2/MATRIX_COMMAND_DOCTRINE.md",
+  "state": "arkansas",
+  "county_count": 75,
+  "clusters": [
+    {
+      "cluster_key": "northwest",
+      "display_name": "Northwest Arkansas Cluster",
+      "county_slugs": ["baxter","benton","boone","carroll","cleburne","conway","madison","marion","newton","perry","pope","searcy","stone","van-buren","washington"]
+    },
+    {
+      "cluster_key": "northeast",
+      "display_name": "Northeast Arkansas Cluster",
+      "county_slugs": ["clay","craighead","crittenden","cross","fulton","greene","independence","izard","jackson","lawrence","mississippi","poinsett","randolph","sharp","woodruff"]
+    },
+    {
+      "cluster_key": "central",
+      "display_name": "Central Arkansas Cluster",
+      "county_slugs": ["arkansas","faulkner","garland","grant","hot-spring","jefferson","johnson","logan","lonoke","monroe","prairie","pulaski","saline","scott","white"]
+    },
+    {
+      "cluster_key": "southwest",
+      "display_name": "Southwest Arkansas Cluster",
+      "county_slugs": ["clark","columbia","crawford","franklin","hempstead","howard","little-river","miller","montgomery","nevada","ouachita","pike","polk","sebastian","sevier"]
+    },
+    {
+      "cluster_key": "southeast",
+      "display_name": "Southeast / Delta Arkansas Cluster",
+      "county_slugs": ["ashley","bradley","calhoun","chicot","cleveland","dallas","desha","drew","lafayette","lee","lincoln","phillips","st-francis","union","yell"]
+    }
+  ]
+}

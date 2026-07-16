@@ -106,6 +106,7 @@ export function CommunityWorkspace({
           metrics={workspace.participationMetrics}
           primaryColor={workspace.primaryColor}
           scopeKind={workspace.kind}
+          goalAccountable={workspace.goalAccountable}
         />
         <PositionCards
           cards={workspace.positionCards}

@@ -18,6 +18,6 @@
 |------|------|
 | General volunteer | Own assignments and campus/county opportunities |
 | Campus / functional lead | Committee, goals, events for that assignment |
-| College Leader | All colleges and high schools |
+| College Leader | Goal-scope post-secondary colleges; HS/trade/tech/private as bonus |
 | Volunteer Manager | County + education + functional people systems |
 | Director | Complete platform (inspect) |

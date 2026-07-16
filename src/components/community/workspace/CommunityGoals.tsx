@@ -51,11 +51,13 @@ export function CommunityGoals({
   metrics,
   primaryColor,
   scopeKind,
+  goalAccountable = true,
 }: {
   goals: CommunityGoal[];
   metrics: HonestParticipationMetrics;
   primaryColor?: string;
   scopeKind?: string;
+  goalAccountable?: boolean;
 }) {
   const [showLaunch, setShowLaunch] = useState(false);
   const [showCivic, setShowCivic] = useState(false);
@@ -75,9 +77,11 @@ export function CommunityGoals({
         <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-slate-700">Field &amp; team goals</p>
         <h2 className="mt-1 text-xl font-bold text-slate-950">Truthful targets</h2>
         <p className="mt-1 max-w-2xl text-sm text-slate-700">
-          {isCampus
-            ? "Campus goals scale like a city inside the county: enrollment ÷ estimated county VAP × county RedDirt goals. Sub-goals sit inside the county total (not additive). Launch-team goal stays separate."
-            : "County registration goal and VCI come from the RedDirt Victory Plan snapshot on H:/SOSWebsite/RedDirt."}
+          {goalAccountable
+            ? isCampus
+              ? "Campus goals scale like a city inside the county: enrollment ÷ estimated county VAP × county RedDirt goals. Sub-goals sit inside the county total (not additive). Launch-team goal stays separate."
+              : "County registration goal and VCI come from the RedDirt Victory Plan snapshot on H:/SOSWebsite/RedDirt."
+            : "Bonus coverage — high schools, trade/technical schools, and private/charter scopes are welcome when leaders step up, but they are not College Leader accountability targets."}
         </p>
       </div>
 
@@ -114,49 +118,63 @@ export function CommunityGoals({
           ) : null}
         </div>
 
-        <div className="grid gap-3 sm:grid-cols-2">
-          <MetricTile
-            label={isCampus ? "Campus registration sub-goal" : "Voter-registration goal"}
-            value={metrics.registration_target.toLocaleString()}
-            hint={
-              isCampus
-                ? metrics.campus_share_of_county_vap != null
-                  ? `${(metrics.campus_share_of_county_vap * 100).toFixed(2)}% of county VAP × county registration goal`
-                  : "Enrollment-share formula (missing enrollment/VAP)"
-                : "Canonical county total from RedDirt Victory Plan snapshot"
-            }
-            accent="brand"
-          />
-          <MetricTile
-            label={isCampus ? "Campus VCI sub-goal" : "County VCI"}
-            value={(
-              isCampus
-                ? metrics.campus_vci_goal ?? metrics.vote_participation_target
-                : metrics.county_vci ?? metrics.vote_participation_target
-            ).toLocaleString()}
-            hint={
-              isCampus
-                ? "Enrollment share of county VCI — separate from launch-team and registration"
-                : "Victory Contribution Index — county parent goal from RedDirt"
-            }
-            accent="sky"
-          />
-        </div>
+        {goalAccountable ? (
+          <div className="grid gap-3 sm:grid-cols-2">
+            <MetricTile
+              label={isCampus ? "Campus registration sub-goal" : "Voter-registration goal"}
+              value={metrics.registration_target.toLocaleString()}
+              hint={
+                isCampus
+                  ? metrics.campus_share_of_county_vap != null
+                    ? `${(metrics.campus_share_of_county_vap * 100).toFixed(2)}% of county VAP × county registration goal`
+                    : "Enrollment-share formula (missing enrollment/VAP)"
+                  : "Canonical county total from RedDirt Victory Plan snapshot"
+              }
+              accent="brand"
+            />
+            <MetricTile
+              label={isCampus ? "Campus VCI sub-goal" : "County VCI"}
+              value={(
+                isCampus
+                  ? metrics.campus_vci_goal ?? metrics.vote_participation_target
+                  : metrics.county_vci ?? metrics.vote_participation_target
+              ).toLocaleString()}
+              hint={
+                isCampus
+                  ? "Enrollment share of county VCI — separate from launch-team and registration"
+                  : "Victory Contribution Index — county parent goal from RedDirt"
+              }
+              accent="sky"
+            />
+          </div>
+        ) : (
+          <div className="rounded-xl border border-violet-200 bg-violet-50 p-4 text-sm text-violet-950">
+            Registration and VCI sub-goals are <strong>not</strong> College Leader accountability targets for
+            this scope. Local launch-team building still applies when volunteers step up.
+          </div>
+        )}
 
         <div className="rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm text-slate-800">
-          {isCampus ? (
-            <p>
-              Campus registration and VCI goals equal the county goals times{" "}
-              <strong>campus enrollment ÷ county VAP</strong>. They are organizing sub-goals within the county
-              total — <strong>not</strong> added on top.{" "}
-              {metrics.vap_is_estimate
-                ? "County VAP is currently estimated (not official ACS)."
-                : null}
-            </p>
+          {goalAccountable ? (
+            isCampus ? (
+              <p>
+                Campus registration and VCI goals equal the county goals times{" "}
+                <strong>campus enrollment ÷ county VAP</strong>. They are organizing sub-goals within the county
+                total — <strong>not</strong> added on top.{" "}
+                {metrics.vap_is_estimate
+                  ? "County VAP is currently estimated (not official ACS)."
+                  : null}
+              </p>
+            ) : (
+              <p>
+                The county goal is the <strong>total</strong> target. College campus goals are organizing
+                sub-goals that contribute toward this county total.
+              </p>
+            )
           ) : (
             <p>
-              The county goal is the <strong>total</strong> target. College and high-school goals are organizing
-              sub-goals that contribute toward this county total.
+              This scope is <strong>bonus coverage</strong> — celebrate when staffed, but do not count against
+              College Leader goal KPIs.
             </p>
           )}
         </div>

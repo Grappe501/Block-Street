@@ -83,6 +83,8 @@ export type CommunityWorkspaceView = {
   memberCount: number | null;
   participationMetrics: HonestParticipationMetrics;
   positionCards: PositionCardView[];
+  /** False for HS, trade/tech, private-charter — bonus coverage, not College Leader KPIs */
+  goalAccountable: boolean;
 };
 
 export type WorkspaceSeed = {

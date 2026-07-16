@@ -10,13 +10,13 @@ type Dash = ReturnType<typeof import("@/lib/college-command/dashboard").buildCol
 
 export function CollegeCommandWorkbench({ dashboard }: { dashboard: Dash }) {
   const [q, setQ] = useState("");
-  const [typeFilter, setTypeFilter] = useState<"all" | "college" | "high_school">("all");
+  const [typeFilter, setTypeFilter] = useState<"all" | "required" | "bonus">("required");
   const [leadFilter, setLeadFilter] = useState<"all" | "needs_lead" | "has_lead">("all");
 
   const rows = useMemo(() => {
     return dashboard.rows.filter((r: EducationInstitutionRow) => {
-      if (typeFilter === "college" && r.kind !== "institution") return false;
-      if (typeFilter === "high_school" && r.kind === "institution") return false;
+      if (typeFilter === "required" && r.goalTier !== "required") return false;
+      if (typeFilter === "bonus" && r.goalTier !== "bonus") return false;
       if (leadFilter === "needs_lead" && r.leadCount > 0) return false;
       if (leadFilter === "has_lead" && r.leadCount === 0) return false;
       if (q) {
@@ -28,20 +28,25 @@ export function CollegeCommandWorkbench({ dashboard }: { dashboard: Dash }) {
   }, [dashboard.rows, q, typeFilter, leadFilter]);
 
   const s = dashboard.summary;
-  const kpiParticipants = dashboard.rows.reduce((n, r) => n + r.confirmedParticipants, 0);
-  const kpiCampusGoals = dashboard.rows.reduce((n, r) => n + r.institutionSubGoal, 0);
+  const kpiParticipants = dashboard.rows
+    .filter((r) => r.goalTier === "required")
+    .reduce((n, r) => n + r.confirmedParticipants, 0);
+  const kpiCampusGoals = dashboard.rows
+    .filter((r) => r.goalTier === "required")
+    .reduce((n, r) => n + r.institutionSubGoal, 0);
 
   return (
     <div className="min-h-screen bg-slate-100">
       <div className="border-b border-slate-200 bg-gradient-to-r from-brand-800 to-slate-900 text-white">
         <div className="mx-auto max-w-7xl px-4 py-8">
           <p className="text-xs font-semibold uppercase tracking-[0.16em] text-brand-100">
-            Under Volunteer Manager · Audience · College Leader
+            Functional · Volunteer Manager · Geographic · County Commander
           </p>
           <h1 className="mt-2 text-3xl font-bold">College Leader Workbench</h1>
           <p className="mt-2 max-w-3xl text-sm text-white/85">
-            Specialized education command under Volunteer Manager — every college and high school, RedDirt-backed
-            goals with enrollment-share campus sub-goals, progress, board/network inspect, and relay contact.
+            Education Command under Volunteer Manager (functional standards) — with matrix coordination to County
+            Commanders where each campus sits in county geography. Post-secondary colleges in goal scope, RedDirt-backed
+            campus sub-goals, progress tracking, board/network inspect, and relay contact.
           </p>
           <div className="mt-4 flex flex-wrap items-center gap-3 text-sm">
             <FieldManualNavTab variant="header" />
@@ -61,17 +66,37 @@ export function CollegeCommandWorkbench({ dashboard }: { dashboard: Dash }) {
       <div className="mx-auto max-w-7xl space-y-6 px-4 py-8">
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
           {[
-            ["Institutions", s.totalInstitutions],
-            ["Colleges", s.colleges],
-            ["Secondary", s.highSchools],
-            ["Need a lead", s.withoutLead],
-            ["Confirmed participants", kpiParticipants],
+            ["Goal-scope colleges", s.colleges],
+            ["Bonus coverage", s.bonusCoverage],
+            ["Need a lead (goal scope)", s.withoutLead],
+            ["Bonus with lead", s.bonusWithLead],
+            ["Confirmed participants (goal scope)", kpiParticipants],
           ].map(([label, value]) => (
             <div key={String(label)} className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
               <p className="text-xs font-semibold uppercase tracking-wide text-slate-600">{label}</p>
               <p className="mt-1 text-3xl font-bold text-slate-950">{value}</p>
             </div>
           ))}
+        </div>
+
+        <div className="rounded-2xl border border-sky-200 bg-sky-50 p-4 text-sm text-sky-950">
+          <strong>Matrix command:</strong> {dashboard.matrixCommand.doctrine_summary}
+          <ul className="mt-2 list-disc space-y-1 pl-5 text-xs">
+            {dashboard.matrixCommand.college_leader_reporting.functional.map((link) => (
+              <li key={`f-${link.parent_role_key}`}>
+                <strong>Functional →</strong> {link.display_name}: {link.question}
+              </li>
+            ))}
+            {dashboard.matrixCommand.college_leader_reporting.geographic.map((link) => (
+              <li key={`g-${link.parent_role_key}`}>
+                <strong>Geographic →</strong> {link.display_name}: {link.question}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-4 text-sm text-emerald-950">
+          <strong>Goal doctrine:</strong> {dashboard.goalDoctrine}
         </div>
 
         <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
@@ -94,8 +119,8 @@ export function CollegeCommandWorkbench({ dashboard }: { dashboard: Dash }) {
               : null}
           </p>
           <p className="mt-1 text-[11px] text-slate-500">
-            Sum of campus registration sub-goals in table (illustrative — do not add on top of county totals):{" "}
-            {kpiCampusGoals.toLocaleString()}
+            Sum of campus registration sub-goals in goal-scope table (illustrative — do not add on top of county
+            totals): {kpiCampusGoals.toLocaleString()}
           </p>
         </div>
 
@@ -115,9 +140,9 @@ export function CollegeCommandWorkbench({ dashboard }: { dashboard: Dash }) {
             onChange={(e) => setTypeFilter(e.target.value as typeof typeFilter)}
             className="rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900"
           >
-            <option value="all">All types</option>
-            <option value="college">Colleges</option>
-            <option value="high_school">High / secondary</option>
+            <option value="all">All scopes</option>
+            <option value="required">Goal scope (colleges)</option>
+            <option value="bonus">Bonus (HS · trade · tech · private)</option>
           </select>
           <select
             value={leadFilter}
@@ -135,9 +160,11 @@ export function CollegeCommandWorkbench({ dashboard }: { dashboard: Dash }) {
             <thead className="border-b border-slate-200 bg-slate-50 text-slate-700">
               <tr>
                 {[
+                  "Goal",
                   "Institution",
                   "Type",
                   "County",
+                  "Cluster",
                   "County reg",
                   "County VCI",
                   "Campus reg goal",
@@ -158,13 +185,29 @@ export function CollegeCommandWorkbench({ dashboard }: { dashboard: Dash }) {
             <tbody>
               {rows.map((r) => (
                 <tr key={r.id} className="border-b border-slate-100 text-slate-800">
+                  <td className="px-3 py-2">
+                    <span
+                      className={`rounded-full px-2 py-0.5 text-[10px] font-semibold ${
+                        r.goalTier === "required"
+                          ? "bg-brand-100 text-brand-950"
+                          : "bg-violet-100 text-violet-950"
+                      }`}
+                    >
+                      {r.goalTier === "required" ? "goal" : "bonus"}
+                    </span>
+                  </td>
                   <td className="px-3 py-2 font-medium text-slate-950">{r.shortName}</td>
                   <td className="px-3 py-2">{r.type}</td>
                   <td className="px-3 py-2">{r.countyName}</td>
+                  <td className="px-3 py-2 text-[10px] text-slate-600">{r.clusterName ?? "—"}</td>
                   <td className="px-3 py-2 tabular-nums">{r.countyGoal.toLocaleString()}</td>
                   <td className="px-3 py-2 tabular-nums">{r.countyVci.toLocaleString()}</td>
-                  <td className="px-3 py-2 tabular-nums font-semibold">{r.institutionSubGoal.toLocaleString()}</td>
-                  <td className="px-3 py-2 tabular-nums">{r.campusVciGoal.toLocaleString()}</td>
+                  <td className="px-3 py-2 tabular-nums font-semibold">
+                    {r.goalTier === "required" ? r.institutionSubGoal.toLocaleString() : "—"}
+                  </td>
+                  <td className="px-3 py-2 tabular-nums">
+                    {r.goalTier === "required" ? r.campusVciGoal.toLocaleString() : "—"}
+                  </td>
                   <td className="px-3 py-2 tabular-nums">{r.confirmedParticipants}</td>
                   <td className="px-3 py-2 tabular-nums">{r.leadCount}</td>
                   <td className="px-3 py-2 tabular-nums">{r.volunteerCount}</td>
@@ -176,7 +219,9 @@ export function CollegeCommandWorkbench({ dashboard }: { dashboard: Dash }) {
                           ? "bg-amber-100 text-amber-950"
                           : r.risk === "forming"
                             ? "bg-sky-100 text-sky-950"
-                            : "bg-emerald-100 text-emerald-950"
+                            : r.risk === "bonus"
+                              ? "bg-violet-100 text-violet-950"
+                              : "bg-emerald-100 text-emerald-950"
                       }`}
                     >
                       {r.risk}
@@ -188,6 +233,12 @@ export function CollegeCommandWorkbench({ dashboard }: { dashboard: Dash }) {
                       className="font-semibold text-brand-800 underline"
                     >
                       Board
+                    </Link>
+                    <Link
+                      href={`${r.countyCommandHref}?inspect=college-command`}
+                      className="font-semibold text-brand-800 underline"
+                    >
+                      Cmd
                     </Link>
                     <Link
                       href={`${r.countyBoardHref}?inspect=college-command`}

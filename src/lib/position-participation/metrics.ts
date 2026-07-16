@@ -92,7 +92,7 @@ export function computeHonestMetrics(input: {
       `County voter-registration goal (RedDirt): ${county.registration.toLocaleString()}`,
       `County VCI (Victory Contribution Index): ${county.vci.toLocaleString()}`,
       `VCI definition: ${county.vci_definition}`,
-      "The county goal is the total target. College and high-school goals are organizing sub-goals that contribute toward this county total.",
+      "The county goal is the total target. College campus goals are organizing sub-goals that contribute toward this county total. High schools and trade/technical schools are bonus coverage — not College Leader KPIs.",
       row?.source_reference
         ? `Source: ${row.source_reference.registration}`
         : "Source: data/field-goals/county-field-goals.json",

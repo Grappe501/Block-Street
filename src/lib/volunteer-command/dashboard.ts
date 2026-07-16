@@ -22,6 +22,11 @@ import {
   listFieldPlanPhases,
   listIngestedRoleKeys,
 } from "@/lib/field-plan/framework";
+import {
+  getExecutiveCommandCouncil,
+  getMatrixCommandMeta,
+  listGeographicClusters,
+} from "./matrix-command";
 
 export type VolunteerCommandSection =
   | "command"
@@ -91,7 +96,7 @@ export function buildVolunteerCommandDashboard(input?: { section?: VolunteerComm
     header: {
       title: "VOLUNTEER COMMAND",
       subtitle:
-        "Statewide grassroots personnel command — all volunteers and volunteer leaders (counties + colleges + high schools)",
+        "Statewide grassroots personnel command — all volunteers and volunteer leaders (counties + post-secondary colleges; HS/trade/tech as bonus)",
       role: "Volunteer Manager",
       scope: "Statewide volunteer workforce",
       staffing_model: "grassroots_volunteer_only",
@@ -115,9 +120,14 @@ export function buildVolunteerCommandDashboard(input?: { section?: VolunteerComm
       college_leader_under_vm: roleIsUnderVolunteerManager("college_leader"),
       county_lead_under_vm: roleIsUnderVolunteerManager("county_volunteer_lead"),
       doctrine: chainOfCommand.doctrine,
+      matrix_doctrine: chainOfCommand.matrix_doctrine,
+      matrix_command: chainOfCommand.matrix_command,
       unity_of_command: chainOfCommand.unity_of_command,
       need_to_know: chainOfCommand.need_to_know_dashboards,
       nodes: chainOfCommand.nodes,
+      matrix: getMatrixCommandMeta(),
+      executive_command_council: getExecutiveCommandCouncil(),
+      geographic_clusters: listGeographicClusters(),
     },
     personnel: {
       unique_confirmed_volunteers: uniquePeople.size,
@@ -141,7 +151,10 @@ export function buildVolunteerCommandDashboard(input?: { section?: VolunteerComm
       counties_without_volunteer_leads: "scaffold" as const,
       colleges: college.summary.colleges,
       colleges_without_lead: college.summary.withoutLead,
-      high_schools: college.summary.highSchools,
+      bonus_coverage: college.summary.bonusCoverage,
+      bonus_with_lead: college.summary.bonusWithLead,
+      /** @deprecated Use bonus_coverage */
+      high_schools: college.summary.bonusCoverage,
       institutions_needing_attention: college.summary.needingAttention,
     },
     functional_coverage: functionalCoverage,
@@ -174,7 +187,7 @@ export function buildVolunteerCommandDashboard(input?: { section?: VolunteerComm
       },
       {
         id: "education-gaps",
-        label: `${college.summary.withoutLead} education institutions without a lead`,
+        label: `${college.summary.withoutLead} goal-scope colleges without a lead`,
         severity: "medium" as const,
       },
     ],

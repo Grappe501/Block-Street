@@ -10,6 +10,17 @@ import { listPositionCards, getScopeMetrics } from "@/lib/position-participation
 import type { CommunityKind } from "@/lib/community-workspace";
 import { listEducationContacts } from "./contact-directory";
 import { toCommunityId } from "@/lib/community-workspace/roles";
+import {
+  buildCountyGeographicContext,
+  getMatrixCommandMeta,
+  resolveMatrixReporting,
+  type MatrixReporting,
+} from "@/lib/volunteer-command/matrix-command";
+import {
+  EDUCATION_GOAL_DOCTRINE,
+  educationGoalTier,
+  type EducationGoalTier,
+} from "./goal-scope";
 
 export type EducationInstitutionRow = {
   id: string;
@@ -17,6 +28,7 @@ export type EducationInstitutionRow = {
   shortName: string;
   type: string;
   kind: CommunityKind;
+  goalTier: EducationGoalTier;
   slug: string;
   countySlug: string;
   countyName: string;
@@ -33,8 +45,36 @@ export type EducationInstitutionRow = {
   boardHref: string;
   networkHref: string;
   countyBoardHref: string;
-  risk: "ok" | "needs_lead" | "forming";
+  countyCommandHref: string;
+  clusterName: string | null;
+  matrixReporting: MatrixReporting;
+  risk: "ok" | "needs_lead" | "forming" | "bonus";
 };
+
+function countyMatrixFields(countySlug: string) {
+  const geo = buildCountyGeographicContext(countySlug);
+  return {
+    countyCommandHref: geo.county_command_href,
+    clusterName: geo.cluster_name,
+    matrixReporting: resolveMatrixReporting({
+      role_key: "institution_lead",
+      county_slug: countySlug,
+    }),
+  };
+}
+
+function riskForRow(
+  goalTier: EducationGoalTier,
+  leads: number,
+  vols: number,
+): EducationInstitutionRow["risk"] {
+  if (goalTier === "bonus") {
+    if (leads === 0) return "bonus";
+    return vols > 0 ? "ok" : "forming";
+  }
+  if (leads === 0) return "needs_lead";
+  return vols > 0 ? "ok" : "forming";
+}
 
 function committeeFromCounts(leads: number, vols: number): string {
   if (leads + vols === 0) return "Help Build This Team";
@@ -69,12 +109,15 @@ export function buildCollegeCommandDashboard() {
     const leads = cards.reduce((n, c) => n + c.lead_count, 0);
     const vols = cards.reduce((n, c) => n + c.volunteer_count, 0);
     const openPositions = cards.filter((c) => c.lead_count + c.volunteer_count === 0).length;
+    const goalTier = educationGoalTier({ kind: "institution", institutionType: inst.type });
+    const countyMatrix = countyMatrixFields(inst.county);
     rows.push({
       id: `school:${inst.slug}`,
       name: inst.name,
       shortName: inst.shortName,
       type: inst.type,
       kind: "institution",
+      goalTier,
       slug: inst.slug,
       countySlug: inst.county,
       countyName: county?.county_name ?? inst.county,
@@ -91,7 +134,8 @@ export function buildCollegeCommandDashboard() {
       boardHref: `/schools/${inst.slug}`,
       networkHref: `/network?place=${encodeURIComponent(inst.slug)}`,
       countyBoardHref: `/county/${inst.county}`,
-      risk: leads === 0 ? "needs_lead" : vols > 0 ? "ok" : "forming",
+      ...countyMatrix,
+      risk: riskForRow(goalTier, leads, vols),
     });
   }
 
@@ -110,12 +154,15 @@ export function buildCollegeCommandDashboard() {
     const cards = listPositionCards({ kind: "high_school", slug: hs.slug });
     const leads = cards.reduce((n, c) => n + c.lead_count, 0);
     const vols = cards.reduce((n, c) => n + c.volunteer_count, 0);
+    const goalTier = educationGoalTier({ kind: "high_school" });
+    const countyMatrix = countyMatrixFields(hs.county);
     rows.push({
       id: `high_school:${hs.slug}`,
       name: hs.name,
       shortName: hs.shortName,
       type: "high_school",
       kind: "high_school",
+      goalTier,
       slug: hs.slug,
       countySlug: hs.county,
       countyName: county?.county_name ?? hs.county,
@@ -132,7 +179,8 @@ export function buildCollegeCommandDashboard() {
       boardHref: `/high-schools/${hs.slug}`,
       networkHref: `/network?place=${encodeURIComponent(hs.slug)}`,
       countyBoardHref: `/county/${hs.county}`,
-      risk: leads === 0 ? "needs_lead" : "forming",
+      ...countyMatrix,
+      risk: riskForRow(goalTier, leads, vols),
     });
   }
 
@@ -151,12 +199,15 @@ export function buildCollegeCommandDashboard() {
     const cards = listPositionCards({ kind: "private_charter", slug: ps.slug });
     const leads = cards.reduce((n, c) => n + c.lead_count, 0);
     const vols = cards.reduce((n, c) => n + c.volunteer_count, 0);
+    const goalTier = educationGoalTier({ kind: "private_charter" });
+    const countyMatrix = countyMatrixFields(ps.county);
     rows.push({
       id: `private_charter:${ps.slug}`,
       name: ps.name,
       shortName: ps.shortName,
       type: "private_charter",
       kind: "private_charter",
+      goalTier,
       slug: ps.slug,
       countySlug: ps.county,
       countyName: county?.county_name ?? ps.county,
@@ -173,30 +224,41 @@ export function buildCollegeCommandDashboard() {
       boardHref: `/private-schools/${ps.slug}`,
       networkHref: `/network?place=${encodeURIComponent(ps.slug)}`,
       countyBoardHref: `/county/${ps.county}`,
-      risk: leads === 0 ? "needs_lead" : "forming",
+      ...countyMatrix,
+      risk: riskForRow(goalTier, leads, vols),
     });
   }
 
-  const colleges = rows.filter((r) => r.kind === "institution");
-  const secondary = rows.filter((r) => r.kind !== "institution");
+  const goalScope = rows.filter((r) => r.goalTier === "required");
+  const bonusCoverage = rows.filter((r) => r.goalTier === "bonus");
 
   return {
     meta,
     countyCount: counties.length,
+    goalDoctrine: EDUCATION_GOAL_DOCTRINE,
     summary: {
       totalInstitutions: rows.length,
-      colleges: colleges.length,
-      highSchools: secondary.length,
-      withoutLead: rows.filter((r) => r.leadCount === 0).length,
+      colleges: goalScope.length,
+      bonusCoverage: bonusCoverage.length,
+      /** @deprecated Use bonusCoverage — kept for transitional callers */
+      highSchools: bonusCoverage.length,
+      withoutLead: goalScope.filter((r) => r.leadCount === 0).length,
       withCoLeads: rows.filter((r) => r.leadCount >= 2).length,
       totalVolunteers: rows.reduce((n, r) => n + r.volunteerCount, 0),
-      needingAttention: rows.filter((r) => r.risk === "needs_lead").length,
+      needingAttention: goalScope.filter((r) => r.risk === "needs_lead").length,
+      bonusWithLead: bonusCoverage.filter((r) => r.leadCount > 0).length,
     },
     rows: rows.sort((a, b) => a.name.localeCompare(b.name)),
     parentCommand: {
       label: "Volunteer Command",
       href: "/admin/volunteer-command",
-      relationship: "College Leader is subordinate to Volunteer Manager",
+      relationship: "College Leader reports functionally to Volunteer Manager",
+    },
+    matrixCommand: {
+      ...getMatrixCommandMeta(),
+      college_leader_reporting: resolveMatrixReporting({ role_key: "college_leader" }),
+      doctrine_summary:
+        "Matrix command — functional chain through Volunteer Manager; geographic coordination with County Commanders for each campus county",
     },
     campus_goal_formula_version: CAMPUS_GOAL_FORMULA_VERSION,
     privacyNote:

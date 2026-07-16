@@ -85,42 +85,53 @@ export function VolunteerCommandWorkbench({ dashboard }: { dashboard: Dash }) {
               Leadership support structure
             </h2>
             <p className="mt-1 text-sm text-slate-700">
-              Clear responsibility · need-to-know dashboards · shared leadership · County and Education systems
-              supported from here.{" "}
-              <Link href={dashboard.hierarchy.doctrine} className="font-semibold text-brand-800 underline">
-                Doctrine
+              Matrix command — functional excellence through statewide managers; geographic execution through
+              clusters and counties. County and Education systems both connect here.{" "}
+              <Link href={dashboard.hierarchy.matrix_doctrine ?? dashboard.hierarchy.doctrine} className="font-semibold text-brand-800 underline">
+                Matrix doctrine
               </Link>
             </p>
             <ol className="mt-4 space-y-2 border-l-4 border-brand-600 pl-4 text-sm text-slate-800">
               <li>
-                <strong>Campaign Director</strong> — may inspect any surface; supports the whole campaign
+                <strong>Campaign Director</strong> — may inspect any surface; chairs Executive Command Council
               </li>
               <li>
-                <strong>Volunteer Manager (you)</strong> — overall people system for counties + education +
-                functions
+                <strong>Volunteer Manager (you)</strong> — functional people system: counties + education + functions
               </li>
               <li className="grid gap-2 sm:grid-cols-2">
                 <span>
-                  <strong>County Volunteer Lead</strong> — their county only →{" "}
+                  <strong>County Commander</strong> — geographic execution in their county →{" "}
                   <Link href="/admin/volunteer-command/counties" className="text-brand-800 underline">
                     County Command
                   </Link>
                 </span>
                 <span>
-                  <strong>College Leader</strong> — colleges &amp; high schools →{" "}
+                  <strong>College Leader</strong> — functional education standards →{" "}
                   <Link href="/admin/college-command" className="text-brand-800 underline">
                     Education Command
                   </Link>
+                  {" "}(coordinates with County Commander per campus)
                 </span>
               </li>
               <li>
-                <strong>Institution / Functional / Co-Leads</strong> → Area Campaign Leader Dashboard (
-                <code>/leader/{"{assignment}"}</code>)
+                <strong>Cluster Commanders</strong> — {dashboard.hierarchy.geographic_clusters.length} clusters · ~
+                {Math.round(dashboard.hierarchy.matrix.county_count / dashboard.hierarchy.geographic_clusters.length)}{" "}
+                counties each — coach County Commanders regionally
+              </li>
+              <li>
+                <strong>Institution / Functional / Co-Leads</strong> — dual reporting (functional + geographic) →
+                Area Campaign Leader Dashboard (<code>/leader/{"{assignment}"}</code>)
               </li>
               <li>
                 <strong>General Volunteers</strong> — committee members · participant surfaces
               </li>
             </ol>
+            {dashboard.hierarchy.executive_command_council ? (
+              <p className="mt-3 text-xs text-slate-600">
+                Executive Command Council:{" "}
+                {dashboard.hierarchy.executive_command_council.members.map((m) => m.seat).join(" · ")}
+              </p>
+            ) : null}
             <p className="mt-3 text-xs text-slate-600">
               Subordinate commands: {dashboard.hierarchy.subordinate_commands.join(" · ")}
             </p>
@@ -147,9 +158,9 @@ export function VolunteerCommandWorkbench({ dashboard }: { dashboard: Dash }) {
               <h2 className="text-sm font-bold uppercase tracking-wide text-slate-700">Geographic coverage</h2>
               <div className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
                 <Stat label="Counties (RedDirt)" value={g.counties_total} />
-                <Stat label="Colleges" value={g.colleges} />
-                <Stat label="Secondary schools" value={g.high_schools} />
-                <Stat label="Education needing lead" value={g.institutions_needing_attention} />
+                <Stat label="Goal-scope colleges" value={g.colleges} />
+                <Stat label="Bonus coverage" value={g.bonus_coverage} />
+                <Stat label="Colleges needing lead" value={g.institutions_needing_attention} />
               </div>
             </section>
 
@@ -177,18 +188,21 @@ export function VolunteerCommandWorkbench({ dashboard }: { dashboard: Dash }) {
           <section className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
             <h2 className="text-sm font-bold text-slate-950">Education Volunteer Command (subordinate)</h2>
             <p className="mt-1 text-sm text-slate-700">
-              College Leader / Education Organizing Lead sits <strong>under</strong> Volunteer Manager. College
-              Command and education leaderboards are not a peer of Volunteer Command.
+              College Leader sits <strong>functionally under</strong> Volunteer Manager. Each campus also connects{" "}
+              <strong>geographically</strong> to its County Commander for resources and local coordination — matrix
+              command, not a flat committee list.
             </p>
             <ul className="mt-3 list-disc space-y-1 pl-5 text-xs text-slate-700">
-              <li>Chain: Volunteer Manager → College Leader → Institution Leads → Committees → Volunteers</li>
+              <li>Functional: Volunteer Manager → College Leader → Institution Leads → Committees → Volunteers</li>
+              <li>Geographic: County Commander → campus execution within county (Cluster Commander above)</li>
               <li>
                 Campus formula (active): <code>{dashboard.education_command.campus_goal_formula_version}</code> —
                 enrollment ÷ county VAP
               </li>
               <li className="text-slate-500">{dashboard.education_command.superseded_flat_25}</li>
               <li>
-                Institutions: {dashboard.education_command.summary.totalInstitutions} · without lead:{" "}
+                Institutions: {dashboard.education_command.summary.colleges} in goal scope ·{" "}
+                {dashboard.education_command.summary.bonusCoverage} bonus · without lead (goal scope):{" "}
                 {dashboard.education_command.summary.withoutLead}
               </li>
             </ul>
@@ -205,7 +219,8 @@ export function VolunteerCommandWorkbench({ dashboard }: { dashboard: Dash }) {
           <section className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
             <h2 className="text-sm font-bold text-slate-950">County Volunteer Command (subordinate)</h2>
             <p className="mt-1 text-sm text-slate-700">
-              County Volunteer Leads operate in parallel under Volunteer Manager — each sees their county only.
+              County Commanders operate functionally under Volunteer Manager and geographically under Cluster
+              Commanders — each sees their county only, including campus coordination needs.
             </p>
             <div className="mt-3 flex flex-wrap gap-2 text-xs">
               {["clark", "pulaski", "benton", "washington"].map((slug) => (

@@ -30,7 +30,7 @@ Product-review bands remain: Operator · Architect.
 |------|-----|------------------|---------------|
 | **Participant** | Invitees, students, 16–24 members | `/invite`, `/choose-place`, `/network`, `/s/{slug}`, place hub, `/july-14` when linked | Doctrine, Build Control, LocalBrain APIs, full OS maps |
 | **Field Lead** | Campus / function leads | Area Campaign Leader Dashboard `/leader/{id}` + Field Plan packet for that seat only | Other counties, full education ledger, engineering tabs |
-| **College Leader** | Education organizing lead under VM | `/admin/college-command` — colleges & high schools only | Unrelated county volunteer records |
+| **College Leader** | Education organizing lead under VM | `/admin/college-command` — goal-scope colleges; bonus HS/trade/tech/private | Unrelated county volunteer records |
 | **County Volunteer Lead** | County personnel lead under VM | `/admin/counties/{slug}/volunteer-command` — that county only | Other counties, statewide personnel chrome |
 | **Volunteer Manager** | Statewide grassroots personnel lead | `/admin/volunteer-command` — people, leadership, counties, education, intake… | Treating Build % as launch proof; paid-staff language |
 | **Campaign Director** | Director | Omniview + inspect any subordinate board | Impersonating another user’s session |

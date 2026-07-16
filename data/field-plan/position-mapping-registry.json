@@ -283,6 +283,10 @@
       "who_supervises": [
         "volunteer_manager"
       ],
+      "geographic_coordination": [
+        "county_volunteer_lead"
+      ],
+      "matrix_note": "Functionally under Volunteer Manager; coordinates with County Commanders for campus counties",
       "geography_or_institution": [
         "education_statewide"
       ],
@@ -331,9 +335,18 @@
       "who_supervises": [
         "college_leader"
       ],
+      "geographic_supervision": [
+        "county_volunteer_lead"
+      ],
+      "geographic_resolved_by": "institution_county",
       "geography_or_institution": [
-        "institution",
-        "high_school"
+        "institution"
+      ],
+      "bonus_geography_or_institution": [
+        "high_school",
+        "trade_school",
+        "technical_college",
+        "private_charter"
       ],
       "permissions_eventually": [
         "contact_institution",

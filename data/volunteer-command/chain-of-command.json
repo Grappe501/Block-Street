@@ -1,10 +1,69 @@
 {
-  "version": "1.0.0",
-  "updated": "2026-07-14T17:20:00.000Z",
+  "version": "1.1.0",
+  "updated": "2026-07-15T04:00:00.000Z",
   "doctrine": "docs/v2/CHAIN_OF_COMMAND_DOCTRINE.md",
+  "matrix_doctrine": "docs/v2/MATRIX_COMMAND_DOCTRINE.md",
   "staffing_model": "grassroots_volunteer_only",
-  "unity_of_command": true,
+  "matrix_command": true,
+  "unity_of_command": false,
+  "unity_of_command_note": "Matrix dual reporting — functional + geographic chains are both legitimate; primary escalation remains functional unless geographic coordination is required.",
   "need_to_know_dashboards": true,
+  "executive_command_council": {
+    "chair": "director",
+    "members": [
+      { "role_key": "campaign_manager", "dimension": "functional", "seat": "Campaign Manager" },
+      { "role_key": "outreach_manager", "dimension": "functional", "seat": "Outreach Manager" },
+      { "role_key": "social_media_manager", "dimension": "functional", "seat": "Social Media Manager" },
+      { "role_key": "volunteer_manager", "dimension": "functional", "seat": "Volunteer Manager" },
+      { "role_key": "campaign_command_manager", "dimension": "geographic", "seat": "Campaign Command Manager" }
+    ],
+    "cadence": "regular_executive_sync",
+    "shared_dashboard": "campaign_manager_workbench"
+  },
+  "matrix": {
+    "doctrine": "docs/v2/MATRIX_COMMAND_DOCTRINE.md",
+    "clusters_registry": "data/volunteer-command/geographic-clusters.json",
+    "command_dimensions": [
+      {
+        "key": "functional",
+        "question": "How do we do the work?",
+        "owns": ["standards", "training", "procedures", "metrics", "best_practices"]
+      },
+      {
+        "key": "geographic",
+        "question": "Where does the work happen?",
+        "owns": ["territory_execution", "local_resources", "county_readiness", "cluster_coordination"]
+      }
+    ],
+    "functional_chain": [
+      { "role_key": "director", "label": "Campaign Commander" },
+      { "role_key": "campaign_manager", "label": "Campaign Manager", "reports_to": "director" },
+      { "role_key": "volunteer_manager", "label": "Volunteer Manager", "reports_to": "director" },
+      { "role_key": "college_leader", "label": "College Command (Education)", "reports_to": "volunteer_manager" },
+      { "role_key": "institution_lead", "label": "Institution Lead", "reports_to": "college_leader" }
+    ],
+    "geographic_chain": [
+      { "role_key": "campaign_command_manager", "label": "Campaign Command Manager", "reports_to": "director" },
+      { "role_key": "cluster_commander", "label": "Cluster Commander", "reports_to": "campaign_command_manager" },
+      { "role_key": "county_volunteer_lead", "label": "County Commander", "reports_to": "cluster_commander" }
+    ],
+    "dual_reporting_examples": [
+      {
+        "position": "Campus registration chair",
+        "functional_to": "voter_registration_director",
+        "geographic_to": "county_volunteer_lead",
+        "functional_question": "Are you following statewide registration standards?",
+        "geographic_question": "How is registration progressing in this county?"
+      },
+      {
+        "position": "Institution lead (college campus)",
+        "functional_to": "college_leader",
+        "geographic_to": "county_volunteer_lead",
+        "functional_question": "Are campus education goals on track?",
+        "geographic_question": "How are campus needs resourced in this county?"
+      }
+    ]
+  },
   "nodes": [
     {
       "role_key": "director",
@@ -25,21 +84,38 @@
       "role_key": "county_volunteer_lead",
       "rank_order": 2,
       "reports_to": "volunteer_manager",
+      "matrix_reporting": {
+        "functional": { "reports_to": "volunteer_manager" },
+        "geographic": { "reports_to": "cluster_commander", "resolved_by": "assignment_county" }
+      },
       "dashboard": "/admin/counties/:countySlug/volunteer-command",
-      "scope": "assigned_county_only"
+      "scope": "assigned_county_only",
+      "subordinate_commands": ["community_command", "county_volunteer_command", "county_outreach", "county_events", "county_registration", "county_education"]
     },
     {
       "role_key": "college_leader",
       "rank_order": 2,
       "reports_to": "volunteer_manager",
+      "matrix_reporting": {
+        "functional": { "reports_to": "volunteer_manager", "chain": "Education Command under Volunteer Manager" },
+        "geographic": {
+          "coordinates_with": "county_volunteer_lead",
+          "scope": "per_campus_county",
+          "note": "College population exists within county geography — County Commanders help resource and support campus needs"
+        }
+      },
       "dashboard": "/admin/college-command",
       "scope": "education_statewide",
-      "note": "College Leader Workbench + education leaderboards fall under Volunteer Manager"
+      "note": "College Leader Workbench under Volunteer Manager; institution leads also connect to County Commander in their county"
     },
     {
       "role_key": "institution_lead",
       "rank_order": 3,
       "reports_to": "college_leader",
+      "matrix_reporting": {
+        "functional": { "reports_to": "college_leader" },
+        "geographic": { "reports_to": "county_volunteer_lead", "resolved_by": "institution_county" }
+      },
       "dashboard": "/leader/:leadershipAssignmentId",
       "scope": "assigned_institution"
     },
@@ -47,6 +123,10 @@
       "role_key": "functional_lead",
       "rank_order": 3,
       "reports_to": ["volunteer_manager", "county_volunteer_lead", "college_leader"],
+      "matrix_reporting": {
+        "functional": { "reports_to": ["volunteer_manager", "college_leader"], "resolved_by": "function" },
+        "geographic": { "reports_to": "county_volunteer_lead", "resolved_by": "assignment_county" }
+      },
       "dashboard": "/leader/:leadershipAssignmentId",
       "scope": "function_and_assignment_scope"
     },

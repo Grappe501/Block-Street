@@ -8,6 +8,7 @@ import {
 } from "@/lib/data";
 import { getScopeMetrics, listPositionCards } from "@/lib/position-participation";
 import { FUNCTIONAL_LANES, FUNCTIONAL_ROLES, roleLabel, toCommunityId } from "./roles";
+import { isEducationGoalAccountable } from "@/lib/college-command/goal-scope";
 import type {
   CommunityGoal,
   CommunityKind,
@@ -42,6 +43,7 @@ type CommunityContext = {
   primaryColor: string;
   representationStatus: RepresentationStatus;
   enrollment?: number;
+  institutionType?: string;
 };
 
 function percent(current: number, target: number): number {
@@ -76,6 +78,7 @@ function resolveContext(kind: CommunityKind, slug: string): CommunityContext | n
       primaryColor: school.colors.primary,
       representationStatus: school.representationStatus,
       enrollment: school.enrollment,
+      institutionType: school.type,
     };
   }
 
@@ -280,6 +283,10 @@ export function assembleCommunityWorkspace(kind: CommunityKind, slug: string): C
   const meetup = defaultMeetup(ctx, roles);
   const positionCards = listPositionCards({ kind: ctx.kind, slug: ctx.slug });
   const openRoleCount = positionCards.filter((c) => c.lead_count + c.volunteer_count === 0).length;
+  const goalAccountable = isEducationGoalAccountable({
+    kind: ctx.kind,
+    institutionType: ctx.institutionType,
+  });
 
   return {
     communityId,
@@ -303,6 +310,7 @@ export function assembleCommunityWorkspace(kind: CommunityKind, slug: string): C
     memberCount: metrics.confirmed_participants,
     participationMetrics: metrics,
     positionCards,
+    goalAccountable,
   };
 }
 
