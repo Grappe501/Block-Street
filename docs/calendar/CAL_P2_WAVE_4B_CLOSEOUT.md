@@ -16,4 +16,4 @@ With Wave 4B, ownership, date_time, and venue readiness no longer use inline stu
 
 ## Next wave
 
-CAL-P2 Wave 5A (TBD)
+CAL-P2 Wave 5B (TBD)

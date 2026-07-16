@@ -36,6 +36,7 @@ export function DirectorOmniview({ catalog }: { catalog: Catalog }) {
     active_program: string;
     production_commit: string;
     wave_4b_content_commit: string;
+    wave_5a_content_commit?: string | null;
     deploy_url: string;
     claim: string;
     gate_a: string;

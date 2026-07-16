@@ -1,0 +1,15 @@
+[
+  {
+    "eventId": "evt-kelly-campus-hold-asu",
+    "expectConflictIds": ["conf-kelly-asu-buffer"],
+    "expectResolutionItemsMin": 4,
+    "state": "possible_conflict",
+    "kind": "kelly_travel"
+  },
+  {
+    "eventId": "evt-henderson-vr-drive",
+    "expectConflictIds": ["conf-kelly-asu-buffer"],
+    "expectResolutionItemsMin": 4,
+    "linkedToKelly": true
+  }
+]

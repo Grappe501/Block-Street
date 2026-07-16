@@ -1,0 +1,42 @@
+{
+  "phase": "CAL-P2",
+  "wave": "5A",
+  "package": "event_conflict_engine",
+  "generated_at": "2026-07-16T03:00:00.000Z",
+  "baseline_commit": "b3709f6",
+  "content_commit": null,
+  "wave_4b_content_commit": "b3709f6",
+  "gate_a": "OPEN",
+  "persistence_mode": "session_soft_beta",
+  "rbac_mode": "audit_only",
+  "enforcement_active": false,
+  "event_seed_integration": "PASS",
+  "conflict_detection": "PASS",
+  "resolution_checklist": "PASS",
+  "attention_integration": "PASS",
+  "routes_created": [
+    "/calendar/event/:eventId/conflicts",
+    "/calendar/event/:eventId/conflicts/:conflictId",
+    "/calendar/event/:eventId/conflicts/:conflictId/resolution",
+    "/command/events/conflicts",
+    "/command/events/conflicts/unresolved",
+    "/command/events/conflicts/candidate",
+    "/command/events/conflicts/overrides"
+  ],
+  "tests": [
+    "calendar:conflicts:validate",
+    "test:calendar:conflicts-model",
+    "test:calendar:conflicts-readiness",
+    "test:calendar:wave5a",
+    "calendar:route-audit",
+    "test:calendar:cal-p2-sandbox"
+  ],
+  "known_limitations": [
+    "Conflict records remain soft-beta — durableAuthority=false while Gate A open",
+    "Seed catalog plus overlap detection — no production override mutations",
+    "RBAC audit_only",
+    "No Postgres durability"
+  ],
+  "final_wave_5a_claim": "TESTED",
+  "next_wave": "CAL-P2 Wave 5B (TBD)"
+}

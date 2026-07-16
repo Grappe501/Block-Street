@@ -13,6 +13,7 @@ export * from "./verification";
 export * from "./candidate-request";
 export * from "./lifecycle";
 export * from "./core-record";
+export * from "./conflicts";
 export * from "./copy";
 export * from "./canonical";
 export * from "./events";

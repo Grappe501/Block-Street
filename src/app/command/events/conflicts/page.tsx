@@ -1,44 +1,52 @@
 import Link from "next/link";
 import { CommandChrome, CommandSection } from "@/components/command/CommandChrome";
 import { CommandCalendarNav } from "@/components/calendar/CalendarNav";
-import { getEventById, listConflicts } from "@/lib/calendar";
-import { buildEventsBoard } from "@/lib/command/board";
+import { ConflictRecordList, ConflictSoftBetaNote } from "@/components/calendar/conflicts/ConflictPanels";
+import {
+  buildConflictSummary,
+  ensureConflictsFromEvents,
+  listAllConflictRecords,
+  listCandidateConflicts,
+  listOverrideCandidates,
+  listUnresolvedConflicts,
+  SEED_EVENTS,
+} from "@/lib/calendar";
 
 export const metadata = { title: "Event conflicts" };
 
 export default function CommandEventsConflictsPage() {
-  const board = buildEventsBoard();
-  const conflicts = listConflicts();
+  ensureConflictsFromEvents(SEED_EVENTS);
+  const records = listAllConflictRecords();
+  const summaries = records.map((r) => buildConflictSummary(r.conflictId)).filter((s) => s !== null);
+  const unresolved = listUnresolvedConflicts();
+  const candidates = listCandidateConflicts();
+  const overrides = listOverrideCandidates();
 
   return (
     <CommandChrome
       title="Event conflicts"
-      subtitle={`Owned by ${board.owner.person}. Detected scheduling overlaps.`}
+      subtitle="Detected scheduling overlaps and Kelly travel buffer review"
       eyebrow="Volunteer Manager · events"
       backHref="/command/events"
       backLabel="Event board"
       nav={<CommandCalendarNav />}
     >
-      <CommandSection title={`${conflicts.length} conflicts`}>
-        <ul className="space-y-3">
-          {conflicts.map((c) => (
-            <li key={c.conflict_id} className="rounded-xl border border-field-ink/15 bg-white px-4 py-3">
-              <p className="font-fieldSans text-sm font-bold">{c.summary}</p>
-              <ul className="mt-2 space-y-1">
-                {c.event_ids.map((id) => {
-                  const e = getEventById(id);
-                  return e ? (
-                    <li key={id}>
-                      <Link href={`/calendar/event/${id}`} className="text-field-pine underline">
-                        {e.title}
-                      </Link>
-                    </li>
-                  ) : null;
-                })}
-              </ul>
-            </li>
-          ))}
-        </ul>
+      <ConflictSoftBetaNote />
+      <CommandSection title="Priority views">
+        <div className="grid gap-2 sm:grid-cols-3 font-fieldSans text-sm">
+          <Link href="/command/events/conflicts/unresolved" className="rounded-lg border bg-white p-3 underline">
+            Unresolved ({unresolved.length})
+          </Link>
+          <Link href="/command/events/conflicts/candidate" className="rounded-lg border bg-white p-3 underline">
+            Candidate / Kelly ({candidates.length})
+          </Link>
+          <Link href="/command/events/conflicts/overrides" className="rounded-lg border bg-white p-3 underline">
+            Override candidates ({overrides.length})
+          </Link>
+        </div>
+      </CommandSection>
+      <CommandSection title={`${records.length} conflict records`}>
+        <ConflictRecordList summaries={summaries} />
       </CommandSection>
     </CommandChrome>
   );

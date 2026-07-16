@@ -11,6 +11,7 @@ import { EventRsvpSummaryCard, EventVerificationSummaryCard } from "@/components
 import { EventCandidateSummaryCard } from "@/components/calendar/candidate/CandidatePanels";
 import { EventLifecycleSummaryCard } from "@/components/calendar/lifecycle/LifecyclePanels";
 import { EventCoreRecordSummaryCard } from "@/components/calendar/core-record/CoreRecordPanels";
+import { EventConflictSummaryCard } from "@/components/calendar/conflicts/ConflictPanels";
 import { getEventById } from "@/lib/calendar";
 import { buildEventOperationsSummary } from "@/lib/calendar/operations";
 import { calculateEventStaffingSummary, ensureStaffingFromEvent } from "@/lib/calendar/staffing";
@@ -22,6 +23,7 @@ import { buildVerificationSummary, ensureVerificationFromEvent } from "@/lib/cal
 import { buildCandidateSummary, ensureCandidateRequestFromEvent } from "@/lib/calendar/candidate-request";
 import { buildLifecycleSummary, ensureLifecycleFromEvent } from "@/lib/calendar/lifecycle";
 import { buildCoreRecordSummary, ensureCoreRecordFromEvent } from "@/lib/calendar/core-record";
+import { ensureConflictsForEvent, listEventConflictSummaries } from "@/lib/calendar/conflicts";
 
 export const metadata = { title: "Calendar · Event" };
 
@@ -48,6 +50,8 @@ export default async function EventDetailPage({ params }: { params: Promise<{ ev
   const lifecycle = buildLifecycleSummary(eventId, event.operational_status, event.approval_status);
   ensureCoreRecordFromEvent(event);
   const coreRecord = buildCoreRecordSummary(eventId);
+  ensureConflictsForEvent(event);
+  const conflicts = listEventConflictSummaries(eventId);
 
   return (
     <CalendarChrome title={event.title} subtitle="Event detail from canonical catalog." backHref="/calendar/list">
@@ -63,6 +67,7 @@ export default async function EventDetailPage({ params }: { params: Promise<{ ev
         <EventCandidateSummaryCard summary={candidate} eventId={eventId} />
         <EventLifecycleSummaryCard summary={lifecycle} eventId={eventId} />
         <EventCoreRecordSummaryCard summary={coreRecord} eventId={eventId} />
+        <EventConflictSummaryCard summaries={conflicts} eventId={eventId} />
         <EventSeriesPanel event={event} />
         <EventDetailView event={event} mode="internal" />
       </div>

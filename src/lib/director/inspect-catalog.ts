@@ -62,6 +62,7 @@ export function buildDirectorInspectCatalog(): {
     { id: "sys-events", label: "Event Operations Command", kind: "system", href: "/command/events" },
     { id: "sys-events-lifecycle", label: "Event lifecycle command", kind: "system", href: "/command/events/lifecycle" },
     { id: "sys-events-core", label: "Core records command", kind: "system", href: "/command/events/core-records" },
+    { id: "sys-events-conflicts", label: "Event conflicts command", kind: "system", href: "/command/events/conflicts" },
     { id: "sys-events-staffing", label: "Event staffing command", kind: "system", href: "/command/events/staffing" },
     { id: "sys-calendar-list", label: "Calendar event list", kind: "system", href: "/calendar/list" },
     { id: "sys-volunteer", label: "Volunteer Command (shell)", kind: "system", href: "/admin/volunteer-command" },

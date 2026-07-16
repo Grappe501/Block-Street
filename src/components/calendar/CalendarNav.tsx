@@ -71,6 +71,7 @@ export function EventSubnav({ eventId }: { eventId: string }) {
     ["/core-record", "Core record"],
     ["/approvals", "Approvals"],
     ["/lifecycle", "Lifecycle"],
+    ["/conflicts", "Conflicts"],
     ["/history", "History"],
     ["/volunteer", "Volunteer"],
     ["/candidate-request", "Candidate request"],

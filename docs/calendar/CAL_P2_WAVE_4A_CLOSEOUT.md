@@ -13,4 +13,4 @@ Event lifecycle and status history engine — operational transitions, approval 
 
 ## Next wave
 
-CAL-P2 Wave 5A (TBD)
+CAL-P2 Wave 5B (TBD)

@@ -1,7 +1,8 @@
 {
-  "updated_at": "2026-07-16T02:15:00.000Z",
+  "updated_at": "2026-07-16T03:00:00.000Z",
   "active_program": "CAL-P2 — Event Operations (Calendar Phase 2)",
   "production_commit": "4b763dd",
+  "wave_5a_content_commit": null,
   "wave_4b_content_commit": "b3709f6",
   "deploy_url": "https://block-street.netlify.app/",
   "claim": "TESTED — not CERTIFIED",
@@ -10,12 +11,13 @@
   "rbac_mode": "audit_only",
   "enforcement_active": false,
   "working_toward": [
-    "CAL-P2 Wave 5A — Event conflict detection and resolution engine (per CAL-P1 migration plan)",
+    "CAL-P2 Wave 5B — TBD (post conflict engine)",
     "Gate B — postgres_primary with restricted writes (not started)",
     "Invite-chain CERTIFIED PRESENT — still a named launch blocker",
     "Field Plan L2–L4 depth — durability beyond static seed"
   ],
   "milestones_complete": [
+    "Event conflict detection and resolution engine (Wave 5A)",
     "All 12 event readiness dimensions have runtime engines (Wave 4B)",
     "Event Operations command at /command/events",
     "Volunteer staffing + assignment workflow (Waves 2A–2B)",
@@ -35,12 +37,14 @@
     { "wave": "3E", "package": "event_candidate_request_engine", "status": "TESTED", "content_commit": "b0ef310" },
     { "wave": "4A", "package": "event_lifecycle_engine", "status": "TESTED", "content_commit": "fcadd57" },
     { "wave": "4B", "package": "event_core_record_engine", "status": "TESTED", "content_commit": "b3709f6" },
-    { "wave": "5A", "package": "event_conflict_engine (planned)", "status": "NEXT", "content_commit": null }
+    { "wave": "5A", "package": "event_conflict_engine", "status": "TESTED", "content_commit": null },
+    { "wave": "5B", "package": "event_conflict_engine_phase2 (planned)", "status": "NEXT", "content_commit": null }
   ],
   "key_routes": [
     { "label": "Event Operations Command", "href": "/command/events" },
     { "label": "Event lifecycle (command)", "href": "/command/events/lifecycle" },
     { "label": "Core records (command)", "href": "/command/events/core-records" },
+    { "label": "Event conflicts (command)", "href": "/command/events/conflicts" },
     { "label": "Candidate requests", "href": "/command/events/candidate-requests" },
     { "label": "Staffing command", "href": "/command/events/staffing" },
     { "label": "Calendar list", "href": "/calendar/list" },

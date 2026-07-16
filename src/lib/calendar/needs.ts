@@ -1,12 +1,16 @@
-import { getEventById, listEventsForScope, publicKellyLabel } from "./events";
-import { SEED_CONFLICTS } from "./seed";
-import type {
-  CalendarConflict,
-  CalendarScope,
-  KellyRequest,
-  PendingApproval,
-  VolunteerNeed,
-} from "./types";
+import { listEventsForScope, publicKellyLabel } from "./events";
+import { listAllConflictRecords } from "./conflicts/template-integration";
+import type { CalendarConflict, CalendarScope, KellyRequest, PendingApproval, VolunteerNeed } from "./types";
+
+export function listConflicts(): CalendarConflict[] {
+  return listAllConflictRecords().map((r) => ({
+    conflict_id: r.conflictId,
+    event_ids: r.eventIds,
+    summary: r.summary,
+    severity: r.severity,
+    state: r.state,
+  }));
+}
 
 export function listVolunteerNeeds(scope: CalendarScope = { kind: "volunteer" }): VolunteerNeed[] {
   const needs: VolunteerNeed[] = [];
@@ -74,11 +78,4 @@ export function listPendingApprovals(scope: CalendarScope = { kind: "command" })
       submitted_at: e.submitted_at ?? e.history[0]?.at ?? e.start_at,
       stage: e.approval_stage,
     }));
-}
-
-export function listConflicts(): CalendarConflict[] {
-  return SEED_CONFLICTS.map((c) => ({
-    ...c,
-    event_ids: c.event_ids.filter((id) => getEventById(id) != null),
-  }));
 }
