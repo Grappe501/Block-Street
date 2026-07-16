@@ -4,7 +4,10 @@
       "user_id": "usr-001",
       "public_id": "pub-usr-001",
       "primary_email": "grappe4arkansas@gmail.com",
-      "verified_emails": ["grappe4arkansas@gmail.com", "director@block-street.local"],
+      "verified_emails": [
+        "grappe4arkansas@gmail.com",
+        "director@block-street.local"
+      ],
       "display_name": "Steve Grappe",
       "preferred_name": "Steve",
       "legal_name_optional": null,
@@ -13,9 +16,11 @@
       "phone_optional": null,
       "locale": "en-US",
       "timezone": "America/Chicago",
-      "authentication_methods": ["email_password"],
+      "authentication_methods": [
+        "email_password"
+      ],
       "account_status": "active",
-      "password_hash": "85c9ea8f95e5a959fffee793e578c87cc1770a8f2b246a347f2ea82d690b2fce",
+      "password_hash": "d867c10eed4fe41319df9421978a0a191eb6d3d6929a523e7d400c69609d0c4a",
       "mfa_enabled": false,
       "mfa_secret": null,
       "identity_assurance_level": "ial2",
@@ -33,7 +38,9 @@
       "user_id": "usr-director",
       "public_id": "pub-usr-director",
       "primary_email": "director@block-street.local",
-      "verified_emails": ["director@block-street.local"],
+      "verified_emails": [
+        "director@block-street.local"
+      ],
       "display_name": "Director",
       "preferred_name": "Director",
       "legal_name_optional": null,
@@ -42,9 +49,11 @@
       "phone_optional": null,
       "locale": "en-US",
       "timezone": "America/Chicago",
-      "authentication_methods": ["email_password"],
+      "authentication_methods": [
+        "email_password"
+      ],
       "account_status": "active",
-      "password_hash": null,
+      "password_hash": "d867c10eed4fe41319df9421978a0a191eb6d3d6929a523e7d400c69609d0c4a",
       "mfa_enabled": false,
       "mfa_secret": null,
       "identity_assurance_level": "ial2",
@@ -62,7 +71,9 @@
       "user_id": "usr-002",
       "public_id": "pub-usr-002",
       "primary_email": "organizer@block-street.local",
-      "verified_emails": ["organizer@block-street.local"],
+      "verified_emails": [
+        "organizer@block-street.local"
+      ],
       "display_name": "Field Organizer",
       "preferred_name": "Organizer",
       "legal_name_optional": null,
@@ -71,9 +82,11 @@
       "phone_optional": null,
       "locale": "en-US",
       "timezone": "America/Chicago",
-      "authentication_methods": ["email_password"],
+      "authentication_methods": [
+        "email_password"
+      ],
       "account_status": "active",
-      "password_hash": "85c9ea8f95e5a959fffee793e578c87cc1770a8f2b246a347f2ea82d690b2fce",
+      "password_hash": "d867c10eed4fe41319df9421978a0a191eb6d3d6929a523e7d400c69609d0c4a",
       "mfa_enabled": false,
       "mfa_secret": null,
       "identity_assurance_level": "ial1",

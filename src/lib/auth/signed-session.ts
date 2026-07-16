@@ -7,7 +7,7 @@ const SESSION_SECRET = (() => {
   if (process.env.NODE_ENV === "production") {
     throw new Error("AUTH_SESSION_SECRET must be set in production");
   }
-  return process.env.AUTH_BOOTSTRAP_PASSWORD ?? "Forevermost-dev-session-key";
+  return "dev-only-session-key-set-AUTH_SESSION_SECRET";
 })();
 
 export type SignedSessionPayload = Pick<

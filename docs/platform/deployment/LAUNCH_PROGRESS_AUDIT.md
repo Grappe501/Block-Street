@@ -34,7 +34,7 @@
 |------|--------|
 | Login page | `/admin/login` |
 | Bootstrap user | `director@block-street.local` |
-| Password | `Forevermost` (or `AUTH_BOOTSTRAP_PASSWORD` env) |
+| Password | Set via `AUTH_BOOTSTRAP_PASSWORD` in Netlify (never commit) |
 | Session | Signed cookie `cos_session` (serverless-safe) |
 | Netlify env | Set `AUTH_SESSION_SECRET` in production |
 

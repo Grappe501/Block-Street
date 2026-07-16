@@ -111,7 +111,7 @@ export default function StartPage() {
               className="mt-1 w-full rounded-lg border px-3 py-2"
               value={loginPassword}
               onChange={(e) => setLoginPassword(e.target.value)}
-              placeholder="AUTH_BOOTSTRAP_PASSWORD or Forevermost"
+              placeholder="Your platform password"
             />
           </label>
           <button

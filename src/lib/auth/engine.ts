@@ -37,8 +37,6 @@ import type {
 
 export { hashPassword } from "./crypto";
 
-const BOOTSTRAP_PASSWORD = process.env.AUTH_BOOTSTRAP_PASSWORD ?? "Forvermost";
-
 function audit(event: Omit<AuthAuditEvent, "timestamp">) {
   appendAudit({ event_type: event.action, ...event });
 }
@@ -46,7 +44,9 @@ function audit(event: Omit<AuthAuditEvent, "timestamp">) {
 function verifyPassword(user: PlatformUser, password: string): boolean {
   const hash = hashPassword(password);
   if (user.password_hash) return user.password_hash === hash;
-  return hash === hashPassword(BOOTSTRAP_PASSWORD);
+  const bootstrap = process.env.AUTH_BOOTSTRAP_PASSWORD;
+  if (!bootstrap) return false;
+  return hash === hashPassword(bootstrap);
 }
 
 function isLoginEligible(user: PlatformUser): boolean {

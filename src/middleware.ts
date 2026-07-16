@@ -84,6 +84,7 @@ export function middleware(request: NextRequest) {
     pathname.startsWith("/notifications") ||
     pathname.startsWith("/app") ||
     pathname.startsWith("/network") ||
+    pathname.startsWith("/home") ||
     pathname.startsWith("/choose-place")
   ) {
     if (!session) {
@@ -132,6 +133,7 @@ export const config = {
     "/private-schools",
     "/app",
     "/network",
+    "/home",
     "/directory",
     "/s/:path*",
     "/choose-place",

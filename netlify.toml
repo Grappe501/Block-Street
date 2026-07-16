@@ -10,7 +10,7 @@
   # Next.js production compile exceeds default ~2GB heap on Netlify builders.
   NODE_OPTIONS = "--max-old-space-size=6144"
   # Production (Netlify UI):
-  #   AUTH_SESSION_SECRET — required for signed cookies
-  #   AUTH_BOOTSTRAP_PASSWORD — Steve/admin password (default Forevermost if unset)
+  #   AUTH_SESSION_SECRET — required for signed cookies (production)
+  #   AUTH_BOOTSTRAP_PASSWORD — set in Netlify UI only; never commit
   # Auth + identity-trust writes use Netlify Blobs when NETLIFY runtime is detected.
 

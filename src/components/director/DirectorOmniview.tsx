@@ -239,9 +239,6 @@ export function DirectorOmniview({ catalog }: { catalog: Catalog }) {
             </li>
             <li>Presence: <strong>No presence signal</strong> — do not label activity as Live</li>
             <li>Director login: <code>/admin/login</code></li>
-            {process.env.NODE_ENV !== "production" && (
-              <li>Bootstrap: <code>director@block-street.local</code> / Forvermost</li>
-            )}
           </ul>
         </div>
 
