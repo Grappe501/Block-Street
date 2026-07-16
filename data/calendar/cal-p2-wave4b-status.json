@@ -4,6 +4,7 @@
   "package": "event_core_record_engine",
   "generated_at": "2026-07-16T01:30:00.000Z",
   "baseline_commit": "59d0c0f",
+  "content_commit": "b3709f6",
   "wave_4a_content_commit": "fcadd57",
   "gate_a": "OPEN",
   "persistence_mode": "session_soft_beta",
