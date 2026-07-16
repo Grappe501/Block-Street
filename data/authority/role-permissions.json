@@ -1,0 +1,61 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-07-16T05:00:00.000Z",
+  "role_permissions": [
+    {
+      "role_key": "platform_administrator",
+      "display_name": "Platform Administrator",
+      "permissions": ["platform.manage", "audit.view", "users.view", "users.manage", "appointments.view", "appointments.manage", "analytics.view", "civic_action.manage", "committee.manage", "calendar.manage"]
+    },
+    {
+      "role_key": "campaign_manager",
+      "display_name": "Campaign Manager",
+      "permissions": ["audit.view", "users.view", "analytics.view", "appointments.view", "civic_action.view", "calendar.view"]
+    },
+    {
+      "role_key": "outreach_manager",
+      "display_name": "Outreach Manager",
+      "permissions": ["recruits.view", "recruits.manage", "onboarding.manage", "communications.create", "communications.approve", "communications.send", "users.view", "analytics.view", "calendar.view"]
+    },
+    {
+      "role_key": "social_media_manager",
+      "display_name": "Social Media Manager",
+      "permissions": ["communications.create", "communications.approve", "social.publish", "analytics.view"]
+    },
+    {
+      "role_key": "volunteer_manager",
+      "display_name": "Volunteer Manager",
+      "permissions": ["users.view", "users.manage", "appointments.view", "appointments.manage", "committee.view", "committee.manage", "calendar.view", "calendar.manage", "civic_action.manage", "analytics.view", "missions.write"]
+    },
+    {
+      "role_key": "campaign_command_manager",
+      "display_name": "Campaign Command Manager",
+      "permissions": ["users.view", "analytics.view", "appointments.view", "calendar.view", "civic_action.view", "committee.view"]
+    },
+    {
+      "role_key": "cluster_commander",
+      "display_name": "Cluster Commander",
+      "permissions": ["users.view", "analytics.view", "calendar.view", "committee.view", "civic_action.view"]
+    },
+    {
+      "role_key": "county_commander",
+      "display_name": "County Commander",
+      "permissions": ["users.view", "calendar.view", "calendar.propose", "committee.view", "committee.manage", "civic_action.view", "missions.write"]
+    },
+    {
+      "role_key": "institution_lead",
+      "display_name": "Institution Lead",
+      "permissions": ["users.view", "committee.view", "committee.manage", "calendar.view", "calendar.propose", "civic_action.view", "missions.write"]
+    },
+    {
+      "role_key": "committee_lead",
+      "display_name": "Committee Lead",
+      "permissions": ["users.view", "committee.view", "committee.manage", "calendar.view", "calendar.propose", "civic_action.view", "missions.write"]
+    },
+    {
+      "role_key": "volunteer",
+      "display_name": "Volunteer",
+      "permissions": ["civic_action.view", "committee.view", "calendar.view", "missions.read", "notifications.request"]
+    }
+  ]
+}

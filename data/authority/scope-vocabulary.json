@@ -1,0 +1,65 @@
+{
+  "version": "1.0.0",
+  "program": "CPOS-DURABLE-AUTHORITY-1.0",
+  "updated": "2026-07-16T05:00:00.000Z",
+  "doctrine": "docs/v2/CPOS_DURABLE_AUTHORITY.md",
+  "scope_kinds": [
+    {
+      "kind": "campaign",
+      "label": "Campaign",
+      "description": "Statewide campaign boundary",
+      "example_id": "arkansas"
+    },
+    {
+      "kind": "functional_lane",
+      "label": "Functional lane",
+      "description": "Outreach, social, volunteer management, events, registration, education, technology",
+      "example_id": "outreach"
+    },
+    {
+      "kind": "cluster",
+      "label": "Geographic cluster",
+      "description": "Approximately 15 counties per cluster commander span",
+      "example_id": "southwest"
+    },
+    {
+      "kind": "county",
+      "label": "County",
+      "description": "County-level geographic execution",
+      "example_id": "clark"
+    },
+    {
+      "kind": "institution",
+      "label": "Institution",
+      "description": "College, high school, or civic institution",
+      "example_id": "henderson-state"
+    },
+    {
+      "kind": "committee",
+      "label": "Committee",
+      "description": "Position-scoped volunteer committee",
+      "example_id": "committee:clark::events-lead"
+    },
+    {
+      "kind": "team",
+      "label": "Team",
+      "description": "Power of 5 or small recruiting team",
+      "example_id": "team:usr-001"
+    },
+    {
+      "kind": "self",
+      "label": "Self",
+      "description": "Actor's own records only",
+      "example_id": "self"
+    }
+  ],
+  "scope_token_format": "{kind}:{id}",
+  "hierarchy_notes": [
+    "campaign contains all in-state scopes",
+    "cluster contains assigned counties",
+    "county contains institutions and committees in that county",
+    "institution contains campus committees",
+    "committee contains team and peer visibility rules",
+    "self is always the narrowest scope"
+  ]
+}

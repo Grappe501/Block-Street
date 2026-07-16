@@ -1,0 +1,117 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-07-16T05:00:00.000Z",
+  "doctrine": "A permission is usable only when backed by an active appointment with matching scope.",
+  "appointments": [
+    {
+      "id": "appt-platform-001",
+      "user_id": "usr-001",
+      "role_key": "platform_administrator",
+      "status": "active",
+      "scope_kind": "campaign",
+      "scope_id": "arkansas",
+      "functional_lane": null,
+      "starts_at": "2026-07-10T00:00:00Z",
+      "expires_at": null
+    },
+    {
+      "id": "appt-outreach-demo",
+      "user_id": "usr-outreach-demo",
+      "role_key": "outreach_manager",
+      "status": "active",
+      "scope_kind": "campaign",
+      "scope_id": "arkansas",
+      "functional_lane": "outreach",
+      "starts_at": "2026-07-10T00:00:00Z",
+      "expires_at": null
+    },
+    {
+      "id": "appt-social-demo",
+      "user_id": "usr-social-demo",
+      "role_key": "social_media_manager",
+      "status": "active",
+      "scope_kind": "campaign",
+      "scope_id": "arkansas",
+      "functional_lane": "social",
+      "starts_at": "2026-07-10T00:00:00Z",
+      "expires_at": null
+    },
+    {
+      "id": "appt-vm-demo",
+      "user_id": "usr-vm-demo",
+      "role_key": "volunteer_manager",
+      "status": "active",
+      "scope_kind": "campaign",
+      "scope_id": "arkansas",
+      "functional_lane": "volunteer_management",
+      "starts_at": "2026-07-10T00:00:00Z",
+      "expires_at": null
+    },
+    {
+      "id": "appt-cluster-sw",
+      "user_id": "usr-cluster-sw",
+      "role_key": "cluster_commander",
+      "status": "active",
+      "scope_kind": "cluster",
+      "scope_id": "southwest",
+      "functional_lane": "geographic_command",
+      "starts_at": "2026-07-10T00:00:00Z",
+      "expires_at": null
+    },
+    {
+      "id": "appt-county-clark",
+      "user_id": "usr-county-clark",
+      "role_key": "county_commander",
+      "status": "active",
+      "scope_kind": "county",
+      "scope_id": "clark",
+      "functional_lane": "geographic_command",
+      "starts_at": "2026-07-10T00:00:00Z",
+      "expires_at": null
+    },
+    {
+      "id": "appt-county-benton",
+      "user_id": "usr-county-benton",
+      "role_key": "county_commander",
+      "status": "active",
+      "scope_kind": "county",
+      "scope_id": "benton",
+      "functional_lane": "geographic_command",
+      "starts_at": "2026-07-10T00:00:00Z",
+      "expires_at": null
+    },
+    {
+      "id": "appt-inst-henderson",
+      "user_id": "usr-inst-henderson",
+      "role_key": "institution_lead",
+      "status": "active",
+      "scope_kind": "institution",
+      "scope_id": "henderson-state",
+      "functional_lane": "education",
+      "starts_at": "2026-07-10T00:00:00Z",
+      "expires_at": null
+    },
+    {
+      "id": "appt-volunteer-demo",
+      "user_id": "usr-volunteer-demo",
+      "role_key": "volunteer",
+      "status": "active",
+      "scope_kind": "committee",
+      "scope_id": "committee:clark::events-lead",
+      "functional_lane": null,
+      "starts_at": "2026-07-10T00:00:00Z",
+      "expires_at": null
+    },
+    {
+      "id": "appt-inactive-demo",
+      "user_id": "usr-inactive-demo",
+      "role_key": "county_commander",
+      "status": "inactive",
+      "scope_kind": "county",
+      "scope_id": "pulaski",
+      "functional_lane": "geographic_command",
+      "starts_at": "2026-01-01T00:00:00Z",
+      "expires_at": "2026-06-01T00:00:00Z"
+    }
+  ]
+}

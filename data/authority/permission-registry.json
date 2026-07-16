@@ -1,0 +1,35 @@
+{
+  "version": "1.0.0",
+  "program": "CPOS-DURABLE-AUTHORITY-1.0",
+  "updated": "2026-07-16T05:00:00.000Z",
+  "permissions": [
+    { "key": "platform.manage", "resource": "platform", "action": "manage", "description": "Emergency platform administration", "workbench": "platform_administrator", "risk": "critical" },
+    { "key": "audit.view", "resource": "audit", "action": "view", "description": "View audit and operator truth surfaces", "workbench": "platform_administrator", "risk": "low" },
+    { "key": "users.view", "resource": "users", "action": "view", "description": "View user records within authorized scope", "workbench": "multiple", "risk": "moderate" },
+    { "key": "users.manage", "resource": "users", "action": "manage", "description": "Manage user records within authorized scope", "workbench": "volunteer_manager", "risk": "high" },
+    { "key": "recruits.view", "resource": "recruits", "action": "view", "description": "View recruitment funnel records", "workbench": "outreach_manager", "risk": "moderate" },
+    { "key": "recruits.manage", "resource": "recruits", "action": "manage", "description": "Manage recruitment pipeline stages", "workbench": "outreach_manager", "risk": "high" },
+    { "key": "onboarding.manage", "resource": "onboarding", "action": "manage", "description": "Own onboarding queue through placement recommendation", "workbench": "outreach_manager", "risk": "high" },
+    { "key": "communications.create", "resource": "communications", "action": "create", "description": "Draft campaign communications or social assets", "workbench": "multiple", "risk": "moderate" },
+    { "key": "communications.approve", "resource": "communications", "action": "approve", "description": "Approve communications before send or publish", "workbench": "multiple", "risk": "high" },
+    { "key": "communications.send", "resource": "communications", "action": "send", "description": "Send email, text, or phone-bank operations", "workbench": "outreach_manager", "risk": "high" },
+    { "key": "social.publish", "resource": "social", "action": "publish", "description": "Publish social content to public channels", "workbench": "social_media_manager", "risk": "high" },
+    { "key": "calendar.view", "resource": "calendar", "action": "view", "description": "View calendar events within scope", "workbench": "multiple", "risk": "low" },
+    { "key": "calendar.propose", "resource": "calendar", "action": "propose", "description": "Propose calendar events within scope", "workbench": "multiple", "risk": "moderate" },
+    { "key": "calendar.manage", "resource": "calendar", "action": "manage", "description": "Manage calendar events within scope", "workbench": "volunteer_manager", "risk": "high" },
+    { "key": "committee.view", "resource": "committee", "action": "view", "description": "View committee roster and bulletin within scope", "workbench": "multiple", "risk": "low" },
+    { "key": "committee.manage", "resource": "committee", "action": "manage", "description": "Manage committee membership and operations", "workbench": "volunteer_manager", "risk": "high" },
+    { "key": "appointments.view", "resource": "appointments", "action": "view", "description": "View leadership appointments within scope", "workbench": "multiple", "risk": "moderate" },
+    { "key": "appointments.manage", "resource": "appointments", "action": "manage", "description": "Create or revoke leadership appointments", "workbench": "volunteer_manager", "risk": "critical" },
+    { "key": "analytics.view", "resource": "analytics", "action": "view", "description": "View KPIs within authorized scope", "workbench": "multiple", "risk": "moderate" },
+    { "key": "civic_action.view", "resource": "civic_action", "action": "view", "description": "View civic operations within scope", "workbench": "volunteer", "risk": "low" },
+    { "key": "civic_action.manage", "resource": "civic_action", "action": "manage", "description": "Manage civic operations within scope", "workbench": "leadership", "risk": "high" },
+    { "key": "missions.read", "resource": "missions", "action": "read", "description": "Read assigned missions", "workbench": "volunteer", "risk": "low" },
+    { "key": "missions.write", "resource": "missions", "action": "write", "description": "Create or update missions within scope", "workbench": "leadership", "risk": "moderate" },
+    { "key": "notifications.request", "resource": "notifications", "action": "request", "description": "Request notifications for self or authorized scope", "workbench": "volunteer", "risk": "low" }
+  ],
+  "deprecated_permissions": [
+    { "key": "users.read", "replacement": "users.view", "reason": "Ambiguous read scope — use users.view with scope resolver" },
+    { "key": "analytics.read", "replacement": "analytics.view", "reason": "Use analytics.view with scope resolver" }
+  ]
+}

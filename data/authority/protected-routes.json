@@ -1,0 +1,61 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-07-16T05:00:00.000Z",
+  "routes": [
+    {
+      "routePattern": "/api/admin/operator-command",
+      "methods": ["GET"],
+      "requiredPermissions": ["audit.view"],
+      "scopeResolver": "campaign:arkansas",
+      "csrfRequired": false,
+      "validationSchema": null,
+      "auditRequired": true
+    },
+    {
+      "routePattern": "/api/admin/users",
+      "methods": ["GET"],
+      "requiredPermissions": ["users.view"],
+      "scopeResolver": "request.organization_scope",
+      "csrfRequired": false,
+      "validationSchema": null,
+      "auditRequired": true
+    },
+    {
+      "routePattern": "/api/invitations",
+      "methods": ["GET", "POST"],
+      "requiredPermissions": ["users.view", "onboarding.manage"],
+      "scopeResolver": "request.organization_scope",
+      "csrfRequired": true,
+      "validationSchema": "invitations.mutation",
+      "auditRequired": true
+    },
+    {
+      "routePattern": "/api/home",
+      "methods": ["GET"],
+      "requiredPermissions": ["civic_action.view"],
+      "scopeResolver": "self",
+      "csrfRequired": false,
+      "validationSchema": null,
+      "auditRequired": false
+    },
+    {
+      "routePattern": "/api/v1/workforce/delegate",
+      "methods": ["POST"],
+      "requiredPermissions": ["civic_action.manage"],
+      "scopeResolver": "request.institution_scope",
+      "csrfRequired": true,
+      "validationSchema": "workforce.delegate",
+      "auditRequired": true
+    },
+    {
+      "routePattern": "/api/v1/communications",
+      "methods": ["POST"],
+      "requiredPermissions": ["communications.send"],
+      "scopeResolver": "request.initiative_scope",
+      "csrfRequired": true,
+      "validationSchema": "communications.create",
+      "auditRequired": true
+    }
+  ],
+  "mutation_inventory_status": "seed — expand via scripts/inventory-protected-routes.mjs"
+}

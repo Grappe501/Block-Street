@@ -5,11 +5,19 @@ import { apiErrorResponse, apiSuccess, ApiError } from "./errors";
 import { checkRateLimit } from "./rate-limit";
 import { checkIdempotency, storeIdempotency } from "./idempotency";
 import { auditApiRequest } from "./gateway";
+import { assertScopedPermission, type ScopeResolver } from "@/lib/authority/gateway";
 import type { ApiRequestContext } from "./types";
 
 type Handler = (ctx: ApiRequestContext, request: NextRequest) => NextResponse | Promise<NextResponse>;
 
-export function withApiGateway(handler: Handler, options?: { public?: boolean; permission?: string; endpoint?: string }) {
+type GatewayOptions = {
+  public?: boolean;
+  permission?: string;
+  endpoint?: string;
+  scopeResolver?: ScopeResolver;
+};
+
+export function withApiGateway(handler: Handler, options?: GatewayOptions) {
   return async (request: NextRequest) => {
     const ctx = resolveApiContext(request);
     const endpoint = options?.endpoint ?? request.nextUrl.pathname;
@@ -19,7 +27,13 @@ export function withApiGateway(handler: Handler, options?: { public?: boolean; p
         throw new ApiError("SERVICE_DEGRADED", "API gateway is not enabled.", 503);
       }
       if (!options?.public) assertAuthenticatedContext(ctx);
-      if (options?.permission) assertPermission(ctx, options.permission);
+      if (options?.permission) {
+        if (flags.AUTHORITY_SCOPE_ENFORCEMENT_ENABLED && options.scopeResolver) {
+          assertScopedPermission(ctx, options.permission, options.scopeResolver(ctx, request), request);
+        } else {
+          assertPermission(ctx, options.permission);
+        }
+      }
       if (flags.API_RATE_LIMITING_ENABLED) checkRateLimit(ctx, endpoint);
       const response = await handler(ctx, request);
       auditApiRequest(ctx, endpoint, request.method, response.status, "success");
