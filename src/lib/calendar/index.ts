@@ -12,6 +12,7 @@ export * from "./rsvp";
 export * from "./verification";
 export * from "./candidate-request";
 export * from "./lifecycle";
+export * from "./core-record";
 export * from "./copy";
 export * from "./canonical";
 export * from "./events";

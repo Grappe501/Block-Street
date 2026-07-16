@@ -1,0 +1,22 @@
+[
+  {
+    "eventId": "evt-henderson-vr-drive",
+    "expectOwnershipItems": 3,
+    "expectScheduleItems": 3,
+    "expectVenueItems": 3,
+    "ownershipReady": true
+  },
+  {
+    "eventId": "evt-ops-committee-review",
+    "expectOwnershipItems": 3,
+    "expectScheduleItems": 3,
+    "expectVenueItems": 3,
+    "ownershipReady": false
+  },
+  {
+    "eventId": "evt-college-command-kickoff",
+    "expectOwnershipItems": 3,
+    "expectVenueItems": 3,
+    "venueVirtual": true
+  }
+]

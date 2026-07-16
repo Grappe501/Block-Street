@@ -8,6 +8,11 @@ import { evaluateRsvpReadiness } from "../rsvp/readiness-integration";
 import { evaluateVerificationReadiness } from "../verification/readiness-integration";
 import { evaluateCandidateReadiness } from "../candidate-request/readiness-integration";
 import { evaluateApprovalReadiness } from "../lifecycle/readiness-integration";
+import {
+  evaluateDateTimeReadiness,
+  evaluateOwnershipReadiness,
+  evaluateVenueReadiness,
+} from "../core-record/readiness-integration";
 
 function eventRoute(eventId: string, suffix = ""): string {
   return `/calendar/event/${eventId}${suffix}`;
@@ -24,105 +29,6 @@ function isPublicFacing(event: CalendarEvent): boolean {
 function needsVolunteers(event: CalendarEvent): boolean {
   return event.volunteers_needed > 0 || event.volunteer_roles.length > 0;
 }
-
-function evaluateOwnership(event: CalendarEvent): EventReadinessItem {
-  const owner = event.owned_by_team ?? event.primary_contact;
-  if (!owner) {
-    return {
-      dimension: "ownership",
-      state: "blocked",
-      label: "Ownership",
-      explanation: "No operational owner or owning team is assigned.",
-      blocker: "Assign an event owner or campus team lead.",
-      route: eventRoute(event.event_id, "/edit"),
-    };
-  }
-  return {
-    dimension: "ownership",
-    state: "ready",
-    label: "Ownership",
-    explanation: `Owner: ${owner}. Event Board oversight: ${event.volunteer_manager ?? "Carol Eagan"} (not operational ownership).`,
-    route: eventRoute(event.event_id),
-  };
-}
-
-function evaluateDateTime(event: CalendarEvent): EventReadinessItem {
-  if (!event.start_at || !event.end_at) {
-    return {
-      dimension: "date_time",
-      state: "blocked",
-      label: "Date and time",
-      explanation: "Start or end time is missing.",
-      blocker: "Set event date and time.",
-      route: eventRoute(event.event_id, "/edit"),
-    };
-  }
-  if (new Date(event.end_at) < new Date(event.start_at)) {
-    return {
-      dimension: "date_time",
-      state: "blocked",
-      label: "Date and time",
-      explanation: "End time is before start time.",
-      blocker: "Correct the event schedule.",
-      route: eventRoute(event.event_id, "/edit"),
-    };
-  }
-  return {
-    dimension: "date_time",
-    state: "ready",
-    label: "Date and time",
-    explanation: "Schedule is set on the canonical event record.",
-    route: eventRoute(event.event_id),
-  };
-}
-
-function evaluateVenue(event: CalendarEvent): EventReadinessItem {
-  if (event.location_type === "virtual" && event.virtual_url) {
-    return {
-      dimension: "venue",
-      state: "ready",
-      label: "Venue",
-      explanation: "Virtual venue link is present.",
-      route: eventRoute(event.event_id),
-    };
-  }
-  if (event.location_type === "virtual" || event.location_name === "Virtual") {
-    return {
-      dimension: "venue",
-      state: "ready",
-      label: "Venue",
-      explanation: "Virtual event — no physical venue required.",
-      route: eventRoute(event.event_id),
-    };
-  }
-  if (!event.location_name && event.location_type === "tbd") {
-    return {
-      dimension: "venue",
-      state: "not_started",
-      label: "Venue",
-      explanation: "Venue is marked TBD.",
-      route: eventRoute(event.event_id, "/edit"),
-    };
-  }
-  if (!event.location_name) {
-    return {
-      dimension: "venue",
-      state: "blocked",
-      label: "Venue",
-      explanation: "No location is set.",
-      blocker: "Confirm venue or mark virtual/TBD.",
-      route: eventRoute(event.event_id, "/edit"),
-    };
-  }
-  return {
-    dimension: "venue",
-    state: "ready",
-    label: "Venue",
-    explanation: `${event.location_name}. Calendar record only — not venue contract approval.`,
-    route: eventRoute(event.event_id),
-  };
-}
-
 
 function evaluateStaffing(event: CalendarEvent, now: Date): EventReadinessItem {
   const route = eventRoute(event.event_id, "/staffing");
@@ -181,10 +87,10 @@ const EVALUATORS: Record<
   EventReadinessDimension,
   (event: CalendarEvent, now: Date) => EventReadinessItem
 > = {
-  ownership: (e) => evaluateOwnership(e),
+  ownership: (e) => evaluateOwnershipReadiness(e),
   approval: (e) => evaluateApprovalReadiness(e),
-  date_time: (e) => evaluateDateTime(e),
-  venue: (e) => evaluateVenue(e),
+  date_time: (e) => evaluateDateTimeReadiness(e),
+  venue: (e) => evaluateVenueReadiness(e),
   candidate: (e, n) => evaluateCandidateReadiness(e, n),
   staffing: (e, n) => evaluateStaffingReadiness(e, n),
   tasks: (e, n) => evaluateEventTasksReadiness(e, n),

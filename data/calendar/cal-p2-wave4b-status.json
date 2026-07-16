@@ -1,0 +1,44 @@
+{
+  "phase": "CAL-P2",
+  "wave": "4B",
+  "package": "event_core_record_engine",
+  "generated_at": "2026-07-16T01:30:00.000Z",
+  "baseline_commit": "59d0c0f",
+  "wave_4a_content_commit": "fcadd57",
+  "gate_a": "OPEN",
+  "persistence_mode": "session_soft_beta",
+  "rbac_mode": "audit_only",
+  "enforcement_active": false,
+  "event_seed_integration": "PASS",
+  "readiness_integration": "PASS",
+  "ownership_readiness": "PASS",
+  "schedule_readiness": "PASS",
+  "venue_readiness": "PASS",
+  "routes_created": [
+    "/calendar/event/:eventId/core-record",
+    "/calendar/event/:eventId/core-record/ownership",
+    "/calendar/event/:eventId/core-record/schedule",
+    "/calendar/event/:eventId/core-record/venue",
+    "/command/events/core-records",
+    "/command/events/core-records/missing-ownership",
+    "/command/events/core-records/schedule-gaps",
+    "/command/events/core-records/venue-gaps"
+  ],
+  "tests": [
+    "calendar:core-record:validate",
+    "test:calendar:core-record-model",
+    "test:calendar:core-record-readiness",
+    "test:calendar:wave4b",
+    "calendar:route-audit",
+    "test:calendar:cal-p2-sandbox"
+  ],
+  "known_limitations": [
+    "Core record checklist remains soft-beta — durableAuthority=false while Gate A open",
+    "Canonical event fields read from seed — no production edit mutations",
+    "RBAC audit_only",
+    "No Postgres durability"
+  ],
+  "final_wave_4b_claim": "TESTED",
+  "wave_4_readiness_complete": true,
+  "next_wave": "CAL-P2 Wave 5A"
+}

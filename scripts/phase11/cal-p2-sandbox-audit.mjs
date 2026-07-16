@@ -9,6 +9,7 @@ const node = process.execPath;
 const env = process.env;
 
 const steps = [
+  ["test:calendar:wave4b", join(dir, "test-calendar-wave4b.mjs")],
   ["test:calendar:wave4a", join(dir, "test-calendar-wave4a.mjs")],
   ["test:calendar:wave3e", join(dir, "test-calendar-wave3e.mjs")],
   ["test:calendar:wave3d", join(dir, "test-calendar-wave3d.mjs")],
