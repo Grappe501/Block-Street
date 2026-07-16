@@ -7,12 +7,12 @@
     "version": "1.0.0-launch",
     "currentPhase": 11,
     "currentPhaseName": "Living Intelligence & V1 Launch",
-    "currentDesignCycle": "Ernie+Steve forensic brief · Field Plan L2–L4 depth plan · Director honesty",
+    "currentDesignCycle": "CAL-P2 Wave 4B complete · Director board refresh · Wave 5A conflict engine next",
     "phase7Status": "complete",
     "phase8Status": "complete",
     "phase9Status": "complete",
     "phase10Status": "complete",
-    "lastUpdated": "2026-07-16T02:10:45.272Z",
+    "lastUpdated": "2026-07-16T02:15:00.000Z",
     "deployUrl": "https://block-street.netlify.app/",
     "githubRepo": "https://github.com/Grappe501/Block-Street",
     "netlifyStatus": "live",
@@ -21,8 +21,8 @@
     "launchCallDate": "2026-07-14",
     "leaderTestingDate": "2026-07-12",
     "phase11Status": "complete",
-    "activeProgram": "V2-B.5 Field Plan durability prep",
-    "productionCommit": "53346b0"
+    "activeProgram": "CAL-P2 Event Operations — Wave 4B complete, Wave 5A next",
+    "productionCommit": "4b763dd"
   },
   "constitutionalLayer": {
     "status": "complete",

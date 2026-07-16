@@ -2,7 +2,7 @@
   "identities": [
     {
       "id": "authid-001",
-      "user_id": "usr-001",
+      "user_id": "usr-director",
       "provider_type": "email_password",
       "provider_subject": "director@block-street.local",
       "provider_email": "director@block-street.local",

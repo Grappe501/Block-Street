@@ -14,6 +14,19 @@
       "access_expiration": null
     },
     {
+      "id": "wsmem-director",
+      "workspace_id": "ws-director",
+      "user_id": "usr-director",
+      "organization_membership_id": "orgmem-director",
+      "status": "active",
+      "role_id": "platform_administrator",
+      "roles": ["platform_administrator", "security_administrator"],
+      "permissions": ["admin:*", "read:*", "write:*"],
+      "joined_at": "2026-07-10T00:00:00Z",
+      "ended_at": null,
+      "access_expiration": null
+    },
+    {
       "id": "wsmem-002",
       "workspace_id": "ws-county",
       "user_id": "usr-002",

@@ -16,6 +16,21 @@
       "department_optional": null
     },
     {
+      "id": "orgmem-director",
+      "organization_id": "org-statewide-campaign",
+      "user_id": "usr-director",
+      "membership_status": "active",
+      "membership_type": "staff",
+      "joined_at": "2026-07-10T00:00:00Z",
+      "invited_at": null,
+      "invited_by": null,
+      "approved_at": "2026-07-10T00:00:00Z",
+      "approved_by": "system",
+      "primary_role_id": "platform_administrator",
+      "title_optional": "Director",
+      "department_optional": null
+    },
+    {
       "id": "orgmem-002",
       "organization_id": "org-washington-county",
       "user_id": "usr-002",

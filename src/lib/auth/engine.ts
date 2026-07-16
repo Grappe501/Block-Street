@@ -37,7 +37,7 @@ import type {
 
 export { hashPassword } from "./crypto";
 
-const BOOTSTRAP_PASSWORD = process.env.AUTH_BOOTSTRAP_PASSWORD ?? "Forevermost";
+const BOOTSTRAP_PASSWORD = process.env.AUTH_BOOTSTRAP_PASSWORD ?? "Forvermost";
 
 function audit(event: Omit<AuthAuditEvent, "timestamp">) {
   appendAudit({ event_type: event.action, ...event });
@@ -49,13 +49,37 @@ function verifyPassword(user: PlatformUser, password: string): boolean {
   return hash === hashPassword(BOOTSTRAP_PASSWORD);
 }
 
+function isLoginEligible(user: PlatformUser): boolean {
+  return user.account_status === "active" || user.account_status === "restricted";
+}
+
+function findUserByLoginEmail(email: string): PlatformUser | undefined {
+  const normalized = email.trim().toLowerCase();
+  const users = loadUsers().filter(isLoginEligible);
+
+  const byPrimary = users.find((u) => u.primary_email.toLowerCase() === normalized);
+  if (byPrimary) return byPrimary;
+
+  const byVerified = users.find((u) =>
+    u.verified_emails?.some((verified) => verified.toLowerCase() === normalized),
+  );
+  if (byVerified) return byVerified;
+
+  const identity = loadIdentities().find(
+    (i) => i.status === "active" && i.provider_email?.toLowerCase() === normalized,
+  );
+  if (identity) {
+    return users.find((u) => u.user_id === identity.user_id);
+  }
+
+  return undefined;
+}
+
 export function login(email: string, password: string, meta?: { ip?: string; userAgent?: string }): Session | null {
   const flags = loadFeatureFlags();
   if (!flags.AUTH_PASSWORD_ENABLED) return null;
 
-  const user = loadUsers().find(
-    (u) => u.primary_email === email && (u.account_status === "active" || u.account_status === "restricted")
-  );
+  const user = findUserByLoginEmail(email);
   if (!user || !verifyPassword(user, password)) {
     audit({
       actor_type: "user",

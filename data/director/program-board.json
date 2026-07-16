@@ -1,0 +1,54 @@
+{
+  "updated_at": "2026-07-16T02:15:00.000Z",
+  "active_program": "CAL-P2 — Event Operations (Calendar Phase 2)",
+  "production_commit": "4b763dd",
+  "wave_4b_content_commit": "b3709f6",
+  "deploy_url": "https://block-street.netlify.app/",
+  "claim": "TESTED — not CERTIFIED",
+  "gate_a": "OPEN",
+  "persistence_mode": "session_soft_beta",
+  "rbac_mode": "audit_only",
+  "enforcement_active": false,
+  "working_toward": [
+    "CAL-P2 Wave 5A — Event conflict detection and resolution engine (per CAL-P1 migration plan)",
+    "Gate B — postgres_primary with restricted writes (not started)",
+    "Invite-chain CERTIFIED PRESENT — still a named launch blocker",
+    "Field Plan L2–L4 depth — durability beyond static seed"
+  ],
+  "milestones_complete": [
+    "All 12 event readiness dimensions have runtime engines (Wave 4B)",
+    "Event Operations command at /command/events",
+    "Volunteer staffing + assignment workflow (Waves 2A–2B)",
+    "Readiness dimension engines: tasks, preparation, follow-up, RSVP, verification, candidate (Waves 3A–3E)",
+    "Lifecycle + status history (Wave 4A)",
+    "Core record ownership/schedule/venue (Wave 4B)"
+  ],
+  "waves": [
+    { "wave": "1A", "package": "event_operations_dashboard_and_readiness", "status": "TESTED", "content_commit": "23cebf1" },
+    { "wave": "1B", "package": "event_template_library_and_recurring_series", "status": "TESTED", "content_commit": "5261bbf" },
+    { "wave": "2A", "package": "volunteer_shift_model_and_staffing_foundation", "status": "TESTED", "content_commit": "2b54ff0" },
+    { "wave": "2B", "package": "volunteer_review_offers_assignments_waitlists", "status": "TESTED", "content_commit": "bc1f865" },
+    { "wave": "3A", "package": "event_task_engine", "status": "TESTED", "content_commit": "32d4c1f" },
+    { "wave": "3B", "package": "event_preparation_engine", "status": "TESTED", "content_commit": "32d4c1f" },
+    { "wave": "3C", "package": "event_followup_engine", "status": "TESTED", "content_commit": "d93d7c4" },
+    { "wave": "3D", "package": "event_rsvp_and_verification_engine", "status": "TESTED", "content_commit": "7718cca" },
+    { "wave": "3E", "package": "event_candidate_request_engine", "status": "TESTED", "content_commit": "b0ef310" },
+    { "wave": "4A", "package": "event_lifecycle_engine", "status": "TESTED", "content_commit": "fcadd57" },
+    { "wave": "4B", "package": "event_core_record_engine", "status": "TESTED", "content_commit": "b3709f6" },
+    { "wave": "5A", "package": "event_conflict_engine (planned)", "status": "NEXT", "content_commit": null }
+  ],
+  "key_routes": [
+    { "label": "Event Operations Command", "href": "/command/events" },
+    { "label": "Event lifecycle (command)", "href": "/command/events/lifecycle" },
+    { "label": "Core records (command)", "href": "/command/events/core-records" },
+    { "label": "Candidate requests", "href": "/command/events/candidate-requests" },
+    { "label": "Staffing command", "href": "/command/events/staffing" },
+    { "label": "Calendar list", "href": "/calendar/list" },
+    { "label": "Operator Command (truth board)", "href": "/admin?tab=command" }
+  ],
+  "honesty": [
+    "Calendar data is session_soft_beta — Gate A open, Postgres not primary",
+    "Build % ≠ launch certified — large-scale public expansion not approved",
+    "Director inspection opens live surfaces — read-only by convention"
+  ]
+}

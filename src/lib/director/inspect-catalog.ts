@@ -57,7 +57,13 @@ export function buildDirectorInspectCatalog(): {
   ];
 
   const system: InspectTarget[] = [
+    { id: "sys-director", label: "Director program board (this page)", kind: "system", href: "/admin/director" },
     { id: "sys-operator", label: "Operator Command (truth board)", kind: "system", href: "/admin?tab=command" },
+    { id: "sys-events", label: "Event Operations Command", kind: "system", href: "/command/events" },
+    { id: "sys-events-lifecycle", label: "Event lifecycle command", kind: "system", href: "/command/events/lifecycle" },
+    { id: "sys-events-core", label: "Core records command", kind: "system", href: "/command/events/core-records" },
+    { id: "sys-events-staffing", label: "Event staffing command", kind: "system", href: "/command/events/staffing" },
+    { id: "sys-calendar-list", label: "Calendar event list", kind: "system", href: "/calendar/list" },
     { id: "sys-volunteer", label: "Volunteer Command (shell)", kind: "system", href: "/admin/volunteer-command" },
     { id: "sys-college", label: "College Leader Workbench", kind: "system", href: "/admin/college-command" },
     { id: "sys-clark-vc", label: "Clark County Volunteer Lead (shell)", kind: "system", href: "/admin/counties/clark/volunteer-command" },

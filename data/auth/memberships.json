@@ -12,6 +12,17 @@
       "status": "active"
     },
     {
+      "id": "mem-director",
+      "user_id": "usr-director",
+      "organization_id": "org-statewide-campaign",
+      "organization_name": "Statewide Campaign",
+      "workspace_id": "ws-director",
+      "workspace_name": "Director Workbench",
+      "roles": ["platform_administrator", "security_administrator"],
+      "permissions": ["admin:*", "read:*", "write:*"],
+      "status": "active"
+    },
+    {
       "id": "mem-002",
       "user_id": "usr-002",
       "organization_id": "org-washington-county",

@@ -6,6 +6,7 @@ import { FieldManualNavTab } from "@/components/field-strategy/FieldManualNavTab
 import type { InspectTarget } from "@/lib/director/inspect-catalog";
 import { CAMPUS_GOAL_FORMULA_VERSION } from "@/lib/field-goals";
 import buildProgress from "../../../data/build-progress.json";
+import programBoard from "../../../data/director/program-board.json";
 import durabilityRegistry from "../../../data/field-plan/approved-template-durability-registry.json";
 
 type Catalog = {
@@ -13,6 +14,13 @@ type Catalog = {
   colleges: InspectTarget[];
   highSchools: InspectTarget[];
   system: InspectTarget[];
+};
+
+type ProgramWave = {
+  wave: string;
+  package: string;
+  status: string;
+  content_commit: string | null;
 };
 
 function withInspect(href: string, reason: string) {
@@ -24,6 +32,21 @@ export function DirectorOmniview({ catalog }: { catalog: Catalog }) {
   const [reason, setReason] = useState("product diagnostic");
   const [q, setQ] = useState("");
   const stamp = useMemo(() => new Date().toISOString(), []);
+  const board = programBoard as {
+    active_program: string;
+    production_commit: string;
+    wave_4b_content_commit: string;
+    deploy_url: string;
+    claim: string;
+    gate_a: string;
+    persistence_mode: string;
+    rbac_mode: string;
+    working_toward: string[];
+    milestones_complete: string[];
+    waves: ProgramWave[];
+    key_routes: { label: string; href: string }[];
+    honesty: string[];
+  };
 
   const filtered = useMemo(() => {
     const needle = q.trim().toLowerCase();
@@ -40,27 +63,32 @@ export function DirectorOmniview({ catalog }: { catalog: Catalog }) {
     };
   }, [catalog, q]);
 
+  const wavesDone = board.waves.filter((w) => w.status === "TESTED").length;
+  const wavesTotal = board.waves.length;
+
   return (
     <div className="min-h-screen bg-slate-100">
       <div className="border-b-4 border-amber-400 bg-slate-950 text-white">
         <div className="mx-auto max-w-6xl px-4 py-6">
           <p className="text-xs font-semibold uppercase tracking-[0.16em] text-amber-300">Director · Omniview</p>
-          <h1 className="mt-2 text-3xl font-bold">See any board live</h1>
+          <h1 className="mt-2 text-3xl font-bold">Director program board</h1>
           <p className="mt-2 max-w-3xl text-sm text-white/80">
-            Full system visibility for diagnosis. Opens the same participant/command surfaces an end user sees,
-            labeled as Director inspection — read-only by convention. Does not replace the inspected person’s
-            session, preferences, or notifications.
+            Progress, working-toward targets, and live board inspection. Opens the same surfaces end users see —
+            labeled Director inspection (read-only by convention).
           </p>
           <div className="mt-4 flex flex-wrap gap-3">
             <FieldManualNavTab variant="header" />
+            <Link href="/admin?tab=command" className="text-sm underline text-white/90">
+              Operator Command
+            </Link>
+            <Link href="/command/events" className="text-sm underline text-white/90">
+              Event Operations
+            </Link>
             <Link href="/admin/volunteer-command" className="text-sm underline text-white/90">
               Volunteer Command
             </Link>
             <Link href="/admin/college-command" className="text-sm underline text-white/90">
               College Leader Workbench
-            </Link>
-            <Link href="/admin?tab=command" className="text-sm underline text-white/90">
-              Operator Command
             </Link>
             <Link href="/field-strategy" className="text-sm underline text-white/90">
               Field Manual
@@ -70,32 +98,114 @@ export function DirectorOmniview({ catalog }: { catalog: Catalog }) {
       </div>
 
       <div className="mx-auto max-w-6xl space-y-6 px-4 py-8">
+        <div className="rounded-2xl border-2 border-brand-600 bg-white p-5 text-sm text-slate-800 shadow-sm">
+          <h2 className="text-lg font-bold text-slate-950">{board.active_program}</h2>
+          <p className="mt-1 text-xs text-slate-600">
+            {board.claim} · Gate A <strong>{board.gate_a}</strong> · {board.persistence_mode} · RBAC {board.rbac_mode}
+          </p>
+          <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="rounded-lg bg-slate-50 px-3 py-2">
+              <p className="text-[10px] font-semibold uppercase text-slate-500">Waves tested</p>
+              <p className="text-xl font-bold text-brand-800">
+                {wavesDone}/{wavesTotal}
+              </p>
+            </div>
+            <div className="rounded-lg bg-slate-50 px-3 py-2">
+              <p className="text-[10px] font-semibold uppercase text-slate-500">Deploy HEAD</p>
+              <p className="font-mono text-sm font-bold">{board.production_commit}</p>
+            </div>
+            <div className="rounded-lg bg-slate-50 px-3 py-2">
+              <p className="text-[10px] font-semibold uppercase text-slate-500">Wave 4B content</p>
+              <p className="font-mono text-sm font-bold">{board.wave_4b_content_commit}</p>
+            </div>
+            <div className="rounded-lg bg-slate-50 px-3 py-2">
+              <p className="text-[10px] font-semibold uppercase text-slate-500">Live</p>
+              <a href={board.deploy_url} className="text-sm font-semibold text-brand-800 underline">
+                block-street.netlify.app
+              </a>
+            </div>
+          </div>
+
+          <h3 className="mt-5 text-xs font-bold uppercase tracking-wide text-slate-600">CAL-P2 wave ledger</h3>
+          <div className="mt-2 overflow-x-auto">
+            <table className="w-full min-w-[640px] text-left text-xs">
+              <thead>
+                <tr className="border-b text-slate-500">
+                  <th className="py-1 pr-3">Wave</th>
+                  <th className="py-1 pr-3">Package</th>
+                  <th className="py-1 pr-3">Status</th>
+                  <th className="py-1">Commit</th>
+                </tr>
+              </thead>
+              <tbody>
+                {board.waves.map((w) => (
+                  <tr key={w.wave} className="border-b border-slate-100">
+                    <td className="py-2 pr-3 font-semibold">{w.wave}</td>
+                    <td className="py-2 pr-3 text-slate-700">{w.package.replace(/_/g, " ")}</td>
+                    <td className="py-2 pr-3">
+                      <span
+                        className={
+                          w.status === "TESTED"
+                            ? "rounded bg-emerald-100 px-1.5 py-0.5 font-semibold text-emerald-900"
+                            : "rounded bg-amber-100 px-1.5 py-0.5 font-semibold text-amber-900"
+                        }
+                      >
+                        {w.status}
+                      </span>
+                    </td>
+                    <td className="py-2 font-mono text-[11px]">{w.content_commit ?? "—"}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <h3 className="mt-5 text-xs font-bold uppercase tracking-wide text-slate-600">Working toward</h3>
+          <ul className="mt-2 list-disc space-y-1 pl-5 text-xs text-slate-700">
+            {board.working_toward.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+
+          <h3 className="mt-5 text-xs font-bold uppercase tracking-wide text-slate-600">Milestones complete</h3>
+          <ul className="mt-2 list-disc space-y-1 pl-5 text-xs text-slate-700">
+            {board.milestones_complete.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+
+          <h3 className="mt-5 text-xs font-bold uppercase tracking-wide text-slate-600">Key routes</h3>
+          <div className="mt-2 flex flex-wrap gap-2">
+            {board.key_routes.map((r) => (
+              <Link
+                key={r.href}
+                href={withInspect(r.href, reason)}
+                className="rounded-lg border border-brand-200 bg-brand-50 px-3 py-1.5 text-xs font-semibold text-brand-900 hover:bg-brand-100"
+              >
+                {r.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+
         <div className="rounded-2xl border border-slate-800 bg-white p-4 text-sm text-slate-800">
-          <h2 className="font-bold text-slate-950">Director program board (honest)</h2>
+          <h2 className="font-bold text-slate-950">Platform honesty (unchanged truths)</h2>
           <ul className="mt-2 list-disc space-y-1 pl-5 text-xs">
+            {board.honesty.map((line) => (
+              <li key={line}>{line}</li>
+            ))}
             <li>
-              Active program:{" "}
-              <strong>
-                {String((buildProgress.project as { activeProgram?: string })?.activeProgram ?? "—")}
-              </strong>
-            </li>
-            <li>
-              Tip: <code>{String((buildProgress.project as { productionCommit?: string })?.productionCommit ?? "—")}</code>{" "}
-              · Build % ≠ launch · large-scale launch not approved
+              Legacy active program field:{" "}
+              <strong>{String((buildProgress.project as { activeProgram?: string })?.activeProgram ?? "—")}</strong>
             </li>
             <li>
               Field Plan freeze:{" "}
-              {(durabilityRegistry.summary as { approved_templates?: number })?.approved_templates ?? 0}{" "}
-              templates · {(durabilityRegistry.summary as { approved_responsibilities?: number })
-                ?.approved_responsibilities ?? 0}{" "}
+              {(durabilityRegistry.summary as { approved_templates?: number })?.approved_templates ?? 0} templates ·{" "}
+              {(durabilityRegistry.summary as { approved_responsibilities?: number })?.approved_responsibilities ?? 0}{" "}
               responsibilities · storage static_seed · Postgres not live
             </li>
             <li>
-              Depth: L0–L1 present · L2–L3 missing · L4 blocked —{" "}
-              <Link className="text-brand-800 underline" href="/admin?tab=command">
-                Operator Command
-              </Link>{" "}
-              for Field Plan cards
+              Field goals: RedDirt · 75 counties · campus formula <code>{CAMPUS_GOAL_FORMULA_VERSION}</code>
             </li>
             <li>Invite-chain CERTIFIED PRESENT: still PENDING (named launch blocker)</li>
           </ul>
@@ -121,25 +231,13 @@ export function DirectorOmniview({ catalog }: { catalog: Catalog }) {
         </div>
 
         <div className="rounded-2xl border border-slate-200 bg-white p-4 text-sm text-slate-800">
-          <h2 className="font-bold text-slate-950">Live system console (honest labels)</h2>
+          <h2 className="font-bold text-slate-950">Live system console</h2>
           <ul className="mt-2 list-disc space-y-1 pl-5 text-xs">
             <li>
-              Persistence backend: <strong>netlify_blobs + static_seed</strong> — Postgres / Netlify Database{" "}
-              <strong>not</strong> live (dual-write not started)
+              Persistence: <strong>netlify_blobs + static_seed</strong> — Postgres not live
             </li>
-            <li>
-              Not every action is durable in production Blobs; invite/place/share paths are Blobs-backed; many
-              admin/personnel/committee writes remain local-seed or scaffold
-            </li>
-            <li>
-              Presence: <strong>No presence signal</strong> (realtime presence not certified — do not label
-              historical activity as Live)
-            </li>
-            <li>
-              Field goals: RedDirt · 75 counties · campus formula{" "}
-              <code>{CAMPUS_GOAL_FORMULA_VERSION}</code> · flat 25% superseded · VAP estimated until ACS
-            </li>
-            <li>Invite-chain certification: PENDING · personnel assign disabled</li>
+            <li>Presence: <strong>No presence signal</strong> — do not label activity as Live</li>
+            <li>Director login: <code>/admin/login</code> → <code>director@block-street.local</code> / Forvermost</li>
           </ul>
         </div>
 
@@ -153,8 +251,7 @@ export function DirectorOmniview({ catalog }: { catalog: Catalog }) {
         ).map(([title, rows]) => (
           <section key={title} className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
             <h2 className="text-sm font-bold text-slate-950">
-              {title}{" "}
-              <span className="font-normal text-slate-500">({rows.length})</span>
+              {title} <span className="font-normal text-slate-500">({rows.length})</span>
             </h2>
             <ul className="mt-3 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
               {rows.slice(0, title === "County boards" || title.startsWith("High") ? 200 : 80).map((s) => (

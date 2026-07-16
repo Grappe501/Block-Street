@@ -64,7 +64,7 @@ export default function AdminLoginForm({ next = "/admin" }: { next?: string }) {
           </button>
         </form>
         <p className="mt-4 text-xs text-slate-500">
-          Bootstrap: director@block-street.local · Password: Forevermost (or AUTH_BOOTSTRAP_PASSWORD env)
+          Bootstrap: director@block-street.local · Password: Forvermost (or AUTH_BOOTSTRAP_PASSWORD env)
         </p>
       </div>
     </div>
