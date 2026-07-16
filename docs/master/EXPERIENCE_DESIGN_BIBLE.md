@@ -8,7 +8,7 @@
 
 > **Different from UI design.** Volume 3 defines screens. Volume 6 defines **how people should feel** — first visit through lifelong belonging.
 
-**Governed by:** [Volume 0](MASTER_ARCHITECTURE_BIBLE.md) · [Volume 3](USER_EXPERIENCE_BIBLE.md) · [WBS-001](../phase-06/WELCOME_BELONGING_SYSTEM.md) · [PEL-001](../phase-03/PARTICIPANT_EXPERIENCE_LIFECYCLE.md)
+**Governed by:** [Volume 0](MASTER_ARCHITECTURE_BIBLE.md) · [Volume 3](USER_EXPERIENCE_BIBLE.md) · [WBS-001](../phase-06/WELCOME_BELONGING_SYSTEM.md) · [PEL-001](../phase-03/PARTICIPANT_EXPERIENCE_LIFECYCLE.md) · [QDL-1.0](../v2/QUIET_DAILY_LIFE_DOCTRINE.md)
 
 ---
 

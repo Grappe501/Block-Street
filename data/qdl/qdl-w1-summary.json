@@ -1,0 +1,63 @@
+{
+  "buildId": "BLOCK-STREET-QUIET-DAILY-LIFE-1.0 — QDL-W1",
+  "auditedAt": "2026-07-16T06:53:45.082Z",
+  "metrics": {
+    "totalPageRoutes": 421,
+    "everydayRoutes": 7,
+    "occasionalRoutes": 231,
+    "leadershipRoutes": 146,
+    "directorRoutes": 18,
+    "engineeringDebugRoutes": 19,
+    "obsoleteRoutes": 0,
+    "navigationItemsAudited": 96,
+    "navigationRetained": 87,
+    "navigationRenamed": 0,
+    "navigationHidden": 9,
+    "navigationMoved": 0,
+    "participantRoutesWithBuildLanguage": 54,
+    "participantRoutesWithAuthorityLanguage": 2,
+    "emptyModulesIdentified": 35,
+    "emptyModulesHiddenW1": 3,
+    "duplicateRoutesIdentified": 3,
+    "routesRecommendedForLaterMerge": 3,
+    "collegeToCountyLinksPresent": 67,
+    "collegeToCountyLinksMissing": 0,
+    "trainingEntryPointsIdentified": 80
+  },
+  "progress": {
+    "routeInventory": 100,
+    "audienceClassification": 100,
+    "navigationClassification": 100,
+    "copySimplification": 35,
+    "buildLanguageRemoval": 25,
+    "emptyComplexityCleanup": 20,
+    "mobileDailyNavigationClarity": 60,
+    "growthStageMapping": 100,
+    "countyCollegeLinkageUnderstanding": 90,
+    "trainingEntryMapping": 85,
+    "directorUserSeparation": 70,
+    "qdlW2Readiness": 75,
+    "overallQdlReadiness": 55
+  },
+  "progressBars": {
+    "routeInventory": "████████████████████  100%",
+    "audienceClassification": "████████████████████  100%",
+    "navigationClassification": "████████████████████  100%",
+    "copySimplification": "███████░░░░░░░░░░░░░   35%",
+    "buildLanguageRemoval": "█████░░░░░░░░░░░░░░░   25%",
+    "emptyComplexityCleanup": "████░░░░░░░░░░░░░░░░   20%",
+    "mobileDailyNavigationClarity": "████████████░░░░░░░░   60%",
+    "growthStageMapping": "████████████████████  100%",
+    "countyCollegeLinkageUnderstanding": "██████████████████░░   90%",
+    "trainingEntryMapping": "█████████████████░░░   85%",
+    "directorUserSeparation": "██████████████░░░░░░   70%",
+    "qdlW2Readiness": "███████████████░░░░░   75%",
+    "overallQdlReadiness": "███████████░░░░░░░░░   55%"
+  },
+  "w1CleanupApplied": [
+    "LaunchChrome: member nav adds Home and Calendar; hides Start and Field Manual from members",
+    "PersonalHomeShell: removed Wave 2 build language; gated Outreach link",
+    "network/page: softened soft-beta copy for participants"
+  ],
+  "executiveFinding": "The application does not yet feel simple to an ordinary user. Daily navigation still centers Network instead of Home; build and soft-beta language appears on participant paths; legacy SiteHeader/Footer expose Director surfaces."
+}

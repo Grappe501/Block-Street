@@ -14,9 +14,10 @@
 | 4 | [`PRODUCT_CERTIFICATION_REGISTRY.md`](./PRODUCT_CERTIFICATION_REGISTRY.md) | Master ledger of all human journeys |
 | 5 | [`../v2/V2_ADDITIVE_PROGRAM.md`](../v2/V2_ADDITIVE_PROGRAM.md) | V2 execution order (additive only) |
 | 6 | [`../v2/AUDIENCE_SECTIONING_DOCTRINE.md`](../v2/AUDIENCE_SECTIONING_DOCTRINE.md) | Permanent pillar — who sees what |
-| 7 | [`../v2/CHAIN_OF_COMMAND_DOCTRINE.md`](../v2/CHAIN_OF_COMMAND_DOCTRINE.md) | Volunteer personnel chain (VM → County / College) |
-| 8 | [`../v2/FEATURE_DISCOVERY_REGISTRY.md`](../v2/FEATURE_DISCOVERY_REGISTRY.md) | Capability discovery registry |
-| 9 | [`../v2/V2_A_OPERATOR_COMMAND.md`](../v2/V2_A_OPERATOR_COMMAND.md) | Operator coherence surface |
+| 7 | [`../v2/QUIET_DAILY_LIFE_DOCTRINE.md`](../v2/QUIET_DAILY_LIFE_DOCTRINE.md) | Governing volunteer-facing experience — calm, personal, progressive |
+| 8 | [`../v2/CHAIN_OF_COMMAND_DOCTRINE.md`](../v2/CHAIN_OF_COMMAND_DOCTRINE.md) | Volunteer personnel chain (VM → County / College) |
+| 9 | [`../v2/FEATURE_DISCOVERY_REGISTRY.md`](../v2/FEATURE_DISCOVERY_REGISTRY.md) | Capability discovery registry |
+| 10 | [`../v2/V2_A_OPERATOR_COMMAND.md`](../v2/V2_A_OPERATOR_COMMAND.md) | Operator coherence surface |
 
 ## Certification hierarchy (locked — not the reverse)
 
@@ -88,6 +89,16 @@ V2-D  LocalBrain Shell
 V2-E  Network Graph
 V2-F  Assurance Dashboard
 ```
+
+## Next major human-facing program (accepted 2026-07-16)
+
+With authority coverage sufficient for safe expansion, product work shifts toward daily human usefulness:
+
+```text
+QDL-1.0  Quiet Daily Life — docs/v2/QUIET_DAILY_LIFE_DOCTRINE.md
+```
+
+Eight waves (W1 simplification audit → W8 daily-use certification). Runs **additively** alongside V2 lanes; does not bypass invite-chain certification gates for public expansion.
 
 ## Storage doctrine
 

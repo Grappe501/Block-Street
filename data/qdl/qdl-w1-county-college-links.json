@@ -1,0 +1,1289 @@
+{
+  "auditedAt": "2026-07-16T06:53:45.082Z",
+  "collegeCount": 67,
+  "countyCount": 75,
+  "clusterCount": 5,
+  "colleges": [
+    {
+      "slug": "phillips-dewitt",
+      "name": "Phillips Community College of the UA — DeWitt",
+      "county": "arkansas",
+      "countyValid": true,
+      "cluster": "central",
+      "clusterDisplay": "Central Arkansas Cluster",
+      "collegeRoute": "/schools/phillips-dewitt",
+      "countyRoute": "/county/arkansas",
+      "countyCommandRoute": "/admin/counties/arkansas/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "phillips-stuttgart",
+      "name": "Phillips Community College of the UA — Stuttgart",
+      "county": "arkansas",
+      "countyValid": true,
+      "cluster": "central",
+      "clusterDisplay": "Central Arkansas Cluster",
+      "collegeRoute": "/schools/phillips-stuttgart",
+      "countyRoute": "/county/arkansas",
+      "countyCommandRoute": "/admin/counties/arkansas/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "asu-mountain-home",
+      "name": "Arkansas State University-Mountain Home",
+      "county": "baxter",
+      "countyValid": true,
+      "cluster": "northwest",
+      "clusterDisplay": "Northwest Arkansas Cluster",
+      "collegeRoute": "/schools/asu-mountain-home",
+      "countyRoute": "/county/baxter",
+      "countyCommandRoute": "/admin/counties/baxter/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "john-brown",
+      "name": "John Brown University",
+      "county": "benton",
+      "countyValid": true,
+      "cluster": "northwest",
+      "clusterDisplay": "Northwest Arkansas Cluster",
+      "collegeRoute": "/schools/john-brown",
+      "countyRoute": "/county/benton",
+      "countyCommandRoute": "/admin/counties/benton/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "ecclesia",
+      "name": "Ecclesia College",
+      "county": "benton",
+      "countyValid": true,
+      "cluster": "northwest",
+      "clusterDisplay": "Northwest Arkansas Cluster",
+      "collegeRoute": "/schools/ecclesia",
+      "countyRoute": "/county/benton",
+      "countyCommandRoute": "/admin/counties/benton/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "nwacc",
+      "name": "NorthWest Arkansas Community College",
+      "county": "benton",
+      "countyValid": true,
+      "cluster": "northwest",
+      "clusterDisplay": "Northwest Arkansas Cluster",
+      "collegeRoute": "/schools/nwacc",
+      "countyRoute": "/county/benton",
+      "countyCommandRoute": "/admin/counties/benton/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "bryan-university-rogers",
+      "name": "Bryan University — Rogers",
+      "county": "benton",
+      "countyValid": true,
+      "cluster": "northwest",
+      "clusterDisplay": "Northwest Arkansas Cluster",
+      "collegeRoute": "/schools/bryan-university-rogers",
+      "countyRoute": "/county/benton",
+      "countyCommandRoute": "/admin/counties/benton/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "north-arkansas",
+      "name": "North Arkansas College",
+      "county": "boone",
+      "countyValid": true,
+      "cluster": "northwest",
+      "clusterDisplay": "Northwest Arkansas Cluster",
+      "collegeRoute": "/schools/north-arkansas",
+      "countyRoute": "/county/boone",
+      "countyCommandRoute": "/admin/counties/boone/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "south-arkansas-warren",
+      "name": "South Arkansas Community College — Warren",
+      "county": "bradley",
+      "countyValid": true,
+      "cluster": "southeast",
+      "clusterDisplay": "Southeast / Delta Arkansas Cluster",
+      "collegeRoute": "/schools/south-arkansas-warren",
+      "countyRoute": "/county/bradley",
+      "countyCommandRoute": "/admin/counties/bradley/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "north-arkansas-berryville",
+      "name": "North Arkansas College — Berryville",
+      "county": "carroll",
+      "countyValid": true,
+      "cluster": "northwest",
+      "clusterDisplay": "Northwest Arkansas Cluster",
+      "collegeRoute": "/schools/north-arkansas-berryville",
+      "countyRoute": "/county/carroll",
+      "countyCommandRoute": "/admin/counties/carroll/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "henderson-state",
+      "name": "Henderson State University",
+      "county": "clark",
+      "countyValid": true,
+      "cluster": "southwest",
+      "clusterDisplay": "Southwest Arkansas Cluster",
+      "collegeRoute": "/schools/henderson-state",
+      "countyRoute": "/county/clark",
+      "countyCommandRoute": "/admin/counties/clark/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "ouachita-baptist",
+      "name": "Ouachita Baptist University",
+      "county": "clark",
+      "countyValid": true,
+      "cluster": "southwest",
+      "clusterDisplay": "Southwest Arkansas Cluster",
+      "collegeRoute": "/schools/ouachita-baptist",
+      "countyRoute": "/county/clark",
+      "countyCommandRoute": "/admin/counties/clark/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "asu-beebe-heber-springs",
+      "name": "ASU-Beebe — Heber Springs",
+      "county": "cleburne",
+      "countyValid": true,
+      "cluster": "northwest",
+      "clusterDisplay": "Northwest Arkansas Cluster",
+      "collegeRoute": "/schools/asu-beebe-heber-springs",
+      "countyRoute": "/county/cleburne",
+      "countyCommandRoute": "/admin/counties/cleburne/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "southern-arkansas",
+      "name": "Southern Arkansas University",
+      "county": "columbia",
+      "countyValid": true,
+      "cluster": "southwest",
+      "clusterDisplay": "Southwest Arkansas Cluster",
+      "collegeRoute": "/schools/southern-arkansas",
+      "countyRoute": "/county/columbia",
+      "countyCommandRoute": "/admin/counties/columbia/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "uaccm",
+      "name": "University of Arkansas Community College at Morrilton",
+      "county": "conway",
+      "countyValid": true,
+      "cluster": "northwest",
+      "clusterDisplay": "Northwest Arkansas Cluster",
+      "collegeRoute": "/schools/uaccm",
+      "countyRoute": "/county/conway",
+      "countyCommandRoute": "/admin/counties/conway/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "arkansas-state",
+      "name": "Arkansas State University",
+      "county": "craighead",
+      "countyValid": true,
+      "cluster": "northeast",
+      "clusterDisplay": "Northeast Arkansas Cluster",
+      "collegeRoute": "/schools/arkansas-state",
+      "countyRoute": "/county/craighead",
+      "countyCommandRoute": "/admin/counties/craighead/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "asu-mid-south",
+      "name": "Arkansas State University Mid-South",
+      "county": "crittenden",
+      "countyValid": true,
+      "cluster": "northeast",
+      "clusterDisplay": "Northeast Arkansas Cluster",
+      "collegeRoute": "/schools/asu-mid-south",
+      "countyRoute": "/county/crittenden",
+      "countyCommandRoute": "/admin/counties/crittenden/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "ua-monticello",
+      "name": "University of Arkansas at Monticello",
+      "county": "drew",
+      "countyValid": true,
+      "cluster": "southeast",
+      "clusterDisplay": "Southeast / Delta Arkansas Cluster",
+      "collegeRoute": "/schools/ua-monticello",
+      "countyRoute": "/county/drew",
+      "countyCommandRoute": "/admin/counties/drew/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "uca",
+      "name": "University of Central Arkansas",
+      "county": "faulkner",
+      "countyValid": true,
+      "cluster": "central",
+      "clusterDisplay": "Central Arkansas Cluster",
+      "collegeRoute": "/schools/uca",
+      "countyRoute": "/county/faulkner",
+      "countyCommandRoute": "/admin/counties/faulkner/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "central-baptist",
+      "name": "Central Baptist College",
+      "county": "faulkner",
+      "countyValid": true,
+      "cluster": "central",
+      "clusterDisplay": "Central Arkansas Cluster",
+      "collegeRoute": "/schools/central-baptist",
+      "countyRoute": "/county/faulkner",
+      "countyCommandRoute": "/admin/counties/faulkner/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "hendrix",
+      "name": "Hendrix College",
+      "county": "faulkner",
+      "countyValid": true,
+      "cluster": "central",
+      "clusterDisplay": "Central Arkansas Cluster",
+      "collegeRoute": "/schools/hendrix",
+      "countyRoute": "/county/faulkner",
+      "countyCommandRoute": "/admin/counties/faulkner/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "ozarka-fulton",
+      "name": "Ozarka College — Fulton County Center",
+      "county": "fulton",
+      "countyValid": true,
+      "cluster": "northeast",
+      "clusterDisplay": "Northeast Arkansas Cluster",
+      "collegeRoute": "/schools/ozarka-fulton",
+      "countyRoute": "/county/fulton",
+      "countyCommandRoute": "/admin/counties/fulton/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "champion-christian",
+      "name": "Champion Christian College",
+      "county": "garland",
+      "countyValid": true,
+      "cluster": "central",
+      "clusterDisplay": "Central Arkansas Cluster",
+      "collegeRoute": "/schools/champion-christian",
+      "countyRoute": "/county/garland",
+      "countyCommandRoute": "/admin/counties/garland/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "national-park",
+      "name": "National Park College",
+      "county": "garland",
+      "countyValid": true,
+      "cluster": "central",
+      "clusterDisplay": "Central Arkansas Cluster",
+      "collegeRoute": "/schools/national-park",
+      "countyRoute": "/county/garland",
+      "countyCommandRoute": "/admin/counties/garland/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "crowleys-ridge",
+      "name": "Crowley's Ridge College",
+      "county": "greene",
+      "countyValid": true,
+      "cluster": "northeast",
+      "clusterDisplay": "Northeast Arkansas Cluster",
+      "collegeRoute": "/schools/crowleys-ridge",
+      "countyRoute": "/county/greene",
+      "countyCommandRoute": "/admin/counties/greene/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "uacch-hope",
+      "name": "University of Arkansas Community College at Hope",
+      "county": "hempstead",
+      "countyValid": true,
+      "cluster": "southwest",
+      "clusterDisplay": "Southwest Arkansas Cluster",
+      "collegeRoute": "/schools/uacch-hope",
+      "countyRoute": "/county/hempstead",
+      "countyCommandRoute": "/admin/counties/hempstead/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "asu-three-rivers",
+      "name": "Arkansas State University Three Rivers",
+      "county": "hot-spring",
+      "countyValid": true,
+      "cluster": "central",
+      "clusterDisplay": "Central Arkansas Cluster",
+      "collegeRoute": "/schools/asu-three-rivers",
+      "countyRoute": "/county/hot-spring",
+      "countyCommandRoute": "/admin/counties/hot-spring/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "cossatot-nashville",
+      "name": "Cossatot Community College of the UA — Nashville",
+      "county": "howard",
+      "countyValid": true,
+      "cluster": "southwest",
+      "clusterDisplay": "Southwest Arkansas Cluster",
+      "collegeRoute": "/schools/cossatot-nashville",
+      "countyRoute": "/county/howard",
+      "countyCommandRoute": "/admin/counties/howard/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "lyon-college",
+      "name": "Lyon College",
+      "county": "independence",
+      "countyValid": true,
+      "cluster": "northeast",
+      "clusterDisplay": "Northeast Arkansas Cluster",
+      "collegeRoute": "/schools/lyon-college",
+      "countyRoute": "/county/independence",
+      "countyCommandRoute": "/admin/counties/independence/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "uaccb",
+      "name": "University of Arkansas Community College at Batesville",
+      "county": "independence",
+      "countyValid": true,
+      "cluster": "northeast",
+      "clusterDisplay": "Northeast Arkansas Cluster",
+      "collegeRoute": "/schools/uaccb",
+      "countyRoute": "/county/independence",
+      "countyCommandRoute": "/admin/counties/independence/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "ozarka-melbourne",
+      "name": "Ozarka College — Melbourne",
+      "county": "izard",
+      "countyValid": true,
+      "cluster": "northeast",
+      "clusterDisplay": "Northeast Arkansas Cluster",
+      "collegeRoute": "/schools/ozarka-melbourne",
+      "countyRoute": "/county/izard",
+      "countyCommandRoute": "/admin/counties/izard/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "asu-newport",
+      "name": "Arkansas State University-Newport",
+      "county": "jackson",
+      "countyValid": true,
+      "cluster": "northeast",
+      "clusterDisplay": "Northeast Arkansas Cluster",
+      "collegeRoute": "/schools/asu-newport",
+      "countyRoute": "/county/jackson",
+      "countyCommandRoute": "/admin/counties/jackson/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "ua-pine-bluff",
+      "name": "University of Arkansas at Pine Bluff",
+      "county": "jefferson",
+      "countyValid": true,
+      "cluster": "central",
+      "clusterDisplay": "Central Arkansas Cluster",
+      "collegeRoute": "/schools/ua-pine-bluff",
+      "countyRoute": "/county/jefferson",
+      "countyCommandRoute": "/admin/counties/jefferson/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "southeast-arkansas",
+      "name": "Southeast Arkansas College",
+      "county": "jefferson",
+      "countyValid": true,
+      "cluster": "central",
+      "clusterDisplay": "Central Arkansas Cluster",
+      "collegeRoute": "/schools/southeast-arkansas",
+      "countyRoute": "/county/jefferson",
+      "countyCommandRoute": "/admin/counties/jefferson/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "university-of-the-ozarks",
+      "name": "University of the Ozarks",
+      "county": "johnson",
+      "countyValid": true,
+      "cluster": "central",
+      "clusterDisplay": "Central Arkansas Cluster",
+      "collegeRoute": "/schools/university-of-the-ozarks",
+      "countyRoute": "/county/johnson",
+      "countyCommandRoute": "/admin/counties/johnson/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "williams-baptist",
+      "name": "Williams Baptist University",
+      "county": "lawrence",
+      "countyValid": true,
+      "cluster": "northeast",
+      "clusterDisplay": "Northeast Arkansas Cluster",
+      "collegeRoute": "/schools/williams-baptist",
+      "countyRoute": "/county/lawrence",
+      "countyCommandRoute": "/admin/counties/lawrence/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "east-arkansas-marianna",
+      "name": "East Arkansas Community College — Marianna",
+      "county": "lee",
+      "countyValid": true,
+      "cluster": "southeast",
+      "clusterDisplay": "Southeast / Delta Arkansas Cluster",
+      "collegeRoute": "/schools/east-arkansas-marianna",
+      "countyRoute": "/county/lee",
+      "countyCommandRoute": "/admin/counties/lee/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "cossatot-ashdown",
+      "name": "Cossatot Community College of the UA — Ashdown",
+      "county": "little-river",
+      "countyValid": true,
+      "cluster": "southwest",
+      "clusterDisplay": "Southwest Arkansas Cluster",
+      "collegeRoute": "/schools/cossatot-ashdown",
+      "countyRoute": "/county/little-river",
+      "countyCommandRoute": "/admin/counties/little-river/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "asu-beebe-lrafb",
+      "name": "ASU-Beebe — Little Rock Air Force Base",
+      "county": "lonoke",
+      "countyValid": true,
+      "cluster": "central",
+      "clusterDisplay": "Central Arkansas Cluster",
+      "collegeRoute": "/schools/asu-beebe-lrafb",
+      "countyRoute": "/county/lonoke",
+      "countyCommandRoute": "/admin/counties/lonoke/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "arkansas-welding-academy",
+      "name": "Arkansas Welding Academy",
+      "county": "lonoke",
+      "countyValid": true,
+      "cluster": "central",
+      "clusterDisplay": "Central Arkansas Cluster",
+      "collegeRoute": "/schools/arkansas-welding-academy",
+      "countyRoute": "/county/lonoke",
+      "countyCommandRoute": "/admin/counties/lonoke/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "uacch-texarkana",
+      "name": "UA Community College at Hope — Texarkana",
+      "county": "miller",
+      "countyValid": true,
+      "cluster": "southwest",
+      "clusterDisplay": "Southwest Arkansas Cluster",
+      "collegeRoute": "/schools/uacch-texarkana",
+      "countyRoute": "/county/miller",
+      "countyCommandRoute": "/admin/counties/miller/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "arkansas-northeastern",
+      "name": "Arkansas Northeastern College",
+      "county": "mississippi",
+      "countyValid": true,
+      "cluster": "northeast",
+      "clusterDisplay": "Northeast Arkansas Cluster",
+      "collegeRoute": "/schools/arkansas-northeastern",
+      "countyRoute": "/county/mississippi",
+      "countyCommandRoute": "/admin/counties/mississippi/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "sau-tech",
+      "name": "Southern Arkansas University Tech",
+      "county": "ouachita",
+      "countyValid": true,
+      "cluster": "southwest",
+      "clusterDisplay": "Southwest Arkansas Cluster",
+      "collegeRoute": "/schools/sau-tech",
+      "countyRoute": "/county/ouachita",
+      "countyCommandRoute": "/admin/counties/ouachita/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "phillips-helena",
+      "name": "Phillips Community College of the UA — Helena",
+      "county": "phillips",
+      "countyValid": true,
+      "cluster": "southeast",
+      "clusterDisplay": "Southeast / Delta Arkansas Cluster",
+      "collegeRoute": "/schools/phillips-helena",
+      "countyRoute": "/county/phillips",
+      "countyCommandRoute": "/admin/counties/phillips/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "ua-rich-mountain",
+      "name": "University of Arkansas Rich Mountain",
+      "county": "polk",
+      "countyValid": true,
+      "cluster": "southwest",
+      "clusterDisplay": "Southwest Arkansas Cluster",
+      "collegeRoute": "/schools/ua-rich-mountain",
+      "countyRoute": "/county/polk",
+      "countyCommandRoute": "/admin/counties/polk/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "arkansas-tech",
+      "name": "Arkansas Tech University",
+      "county": "pope",
+      "countyValid": true,
+      "cluster": "northwest",
+      "clusterDisplay": "Northwest Arkansas Cluster",
+      "collegeRoute": "/schools/arkansas-tech",
+      "countyRoute": "/county/pope",
+      "countyCommandRoute": "/admin/counties/pope/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "philander-smith",
+      "name": "Philander Smith University",
+      "county": "pulaski",
+      "countyValid": true,
+      "cluster": "central",
+      "clusterDisplay": "Central Arkansas Cluster",
+      "collegeRoute": "/schools/philander-smith",
+      "countyRoute": "/county/pulaski",
+      "countyCommandRoute": "/admin/counties/pulaski/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "ua-little-rock",
+      "name": "University of Arkansas at Little Rock",
+      "county": "pulaski",
+      "countyValid": true,
+      "cluster": "central",
+      "clusterDisplay": "Central Arkansas Cluster",
+      "collegeRoute": "/schools/ua-little-rock",
+      "countyRoute": "/county/pulaski",
+      "countyCommandRoute": "/admin/counties/pulaski/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "uams",
+      "name": "University of Arkansas for Medical Sciences",
+      "county": "pulaski",
+      "countyValid": true,
+      "cluster": "central",
+      "clusterDisplay": "Central Arkansas Cluster",
+      "collegeRoute": "/schools/uams",
+      "countyRoute": "/county/pulaski",
+      "countyCommandRoute": "/admin/counties/pulaski/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "arkansas-baptist",
+      "name": "Arkansas Baptist College",
+      "county": "pulaski",
+      "countyValid": true,
+      "cluster": "central",
+      "clusterDisplay": "Central Arkansas Cluster",
+      "collegeRoute": "/schools/arkansas-baptist",
+      "countyRoute": "/county/pulaski",
+      "countyCommandRoute": "/admin/counties/pulaski/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "shorter-college",
+      "name": "Shorter College",
+      "county": "pulaski",
+      "countyValid": true,
+      "cluster": "central",
+      "clusterDisplay": "Central Arkansas Cluster",
+      "collegeRoute": "/schools/shorter-college",
+      "countyRoute": "/county/pulaski",
+      "countyCommandRoute": "/admin/counties/pulaski/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "ua-pulaski-tech",
+      "name": "University of Arkansas Pulaski Technical College",
+      "county": "pulaski",
+      "countyValid": true,
+      "cluster": "central",
+      "clusterDisplay": "Central Arkansas Cluster",
+      "collegeRoute": "/schools/ua-pulaski-tech",
+      "countyRoute": "/county/pulaski",
+      "countyCommandRoute": "/admin/counties/pulaski/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "baptist-health-college",
+      "name": "Baptist Health College Little Rock",
+      "county": "pulaski",
+      "countyValid": true,
+      "cluster": "central",
+      "clusterDisplay": "Central Arkansas Cluster",
+      "collegeRoute": "/schools/baptist-health-college",
+      "countyRoute": "/county/pulaski",
+      "countyCommandRoute": "/admin/counties/pulaski/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "platt-college",
+      "name": "Platt College — Little Rock",
+      "county": "pulaski",
+      "countyValid": true,
+      "cluster": "central",
+      "clusterDisplay": "Central Arkansas Cluster",
+      "collegeRoute": "/schools/platt-college",
+      "countyRoute": "/county/pulaski",
+      "countyCommandRoute": "/admin/counties/pulaski/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "black-river-technical",
+      "name": "Black River Technical College",
+      "county": "randolph",
+      "countyValid": true,
+      "cluster": "northeast",
+      "clusterDisplay": "Northeast Arkansas Cluster",
+      "collegeRoute": "/schools/black-river-technical",
+      "countyRoute": "/county/randolph",
+      "countyCommandRoute": "/admin/counties/randolph/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "ua-pulaski-tech-saline",
+      "name": "UA Pulaski Tech — Saline County",
+      "county": "saline",
+      "countyValid": true,
+      "cluster": "central",
+      "clusterDisplay": "Central Arkansas Cluster",
+      "collegeRoute": "/schools/ua-pulaski-tech-saline",
+      "countyRoute": "/county/saline",
+      "countyCommandRoute": "/admin/counties/saline/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "ua-rich-mountain-waldron",
+      "name": "UA Rich Mountain — Waldron",
+      "county": "scott",
+      "countyValid": true,
+      "cluster": "central",
+      "clusterDisplay": "Central Arkansas Cluster",
+      "collegeRoute": "/schools/ua-rich-mountain-waldron",
+      "countyRoute": "/county/scott",
+      "countyCommandRoute": "/admin/counties/scott/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "ua-fort-smith",
+      "name": "University of Arkansas at Fort Smith",
+      "county": "sebastian",
+      "countyValid": true,
+      "cluster": "southwest",
+      "clusterDisplay": "Southwest Arkansas Cluster",
+      "collegeRoute": "/schools/ua-fort-smith",
+      "countyRoute": "/county/sebastian",
+      "countyCommandRoute": "/admin/counties/sebastian/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "cossatot-de-queen",
+      "name": "Cossatot Community College of the UA — De Queen",
+      "county": "sevier",
+      "countyValid": true,
+      "cluster": "southwest",
+      "clusterDisplay": "Southwest Arkansas Cluster",
+      "collegeRoute": "/schools/cossatot-de-queen",
+      "countyRoute": "/county/sevier",
+      "countyCommandRoute": "/admin/counties/sevier/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "east-arkansas",
+      "name": "East Arkansas Community College",
+      "county": "st-francis",
+      "countyValid": true,
+      "cluster": "southeast",
+      "clusterDisplay": "Southeast / Delta Arkansas Cluster",
+      "collegeRoute": "/schools/east-arkansas",
+      "countyRoute": "/county/st-francis",
+      "countyCommandRoute": "/admin/counties/st-francis/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "ozarka-mountain-view",
+      "name": "Ozarka College — Mountain View",
+      "county": "stone",
+      "countyValid": true,
+      "cluster": "northwest",
+      "clusterDisplay": "Northwest Arkansas Cluster",
+      "collegeRoute": "/schools/ozarka-mountain-view",
+      "countyRoute": "/county/stone",
+      "countyCommandRoute": "/admin/counties/stone/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "south-arkansas",
+      "name": "South Arkansas Community College",
+      "county": "union",
+      "countyValid": true,
+      "cluster": "southeast",
+      "clusterDisplay": "Southeast / Delta Arkansas Cluster",
+      "collegeRoute": "/schools/south-arkansas",
+      "countyRoute": "/county/union",
+      "countyCommandRoute": "/admin/counties/union/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "ua-fayetteville",
+      "name": "University of Arkansas",
+      "county": "washington",
+      "countyValid": true,
+      "cluster": "northwest",
+      "clusterDisplay": "Northwest Arkansas Cluster",
+      "collegeRoute": "/schools/ua-fayetteville",
+      "countyRoute": "/county/washington",
+      "countyCommandRoute": "/admin/counties/washington/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "northwest-technical-institute",
+      "name": "Northwest Technical Institute",
+      "county": "washington",
+      "countyValid": true,
+      "cluster": "northwest",
+      "clusterDisplay": "Northwest Arkansas Cluster",
+      "collegeRoute": "/schools/northwest-technical-institute",
+      "countyRoute": "/county/washington",
+      "countyCommandRoute": "/admin/counties/washington/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "arkansas-state-beebe-searcy-center",
+      "name": "Arkansas State University — Searcy Center",
+      "county": "white",
+      "countyValid": true,
+      "cluster": "central",
+      "clusterDisplay": "Central Arkansas Cluster",
+      "collegeRoute": "/schools/arkansas-state-beebe-searcy-center",
+      "countyRoute": "/county/white",
+      "countyCommandRoute": "/admin/counties/white/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "harding",
+      "name": "Harding University",
+      "county": "white",
+      "countyValid": true,
+      "cluster": "central",
+      "clusterDisplay": "Central Arkansas Cluster",
+      "collegeRoute": "/schools/harding",
+      "countyRoute": "/county/white",
+      "countyCommandRoute": "/admin/counties/white/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    },
+    {
+      "slug": "asu-beebe",
+      "name": "Arkansas State University-Beebe",
+      "county": "white",
+      "countyValid": true,
+      "cluster": "central",
+      "clusterDisplay": "Central Arkansas Cluster",
+      "collegeRoute": "/schools/asu-beebe",
+      "countyRoute": "/county/white",
+      "countyCommandRoute": "/admin/counties/white/volunteer-command",
+      "collegeCommandRoute": "/admin/college-command",
+      "crossLinksPresent": {
+        "collegeToCountyPage": true,
+        "countyToCollegePage": false,
+        "collegeLeaderToCountyWorkbench": false,
+        "countyLeaderToCollegeContribution": false
+      },
+      "exception": null
+    }
+  ],
+  "missingNavigation": [
+    "College campus page → parent county hub (not linked in nav)",
+    "County hub → colleges in county (partial — data exists, nav weak)",
+    "College leader workbench → county volunteer command cross-link",
+    "County leader workbench → college education contribution view",
+    "Campaign leadership unified county+college map"
+  ],
+  "notes": "RedDirt county intelligence not connected in W1. Relationships derived from institutions.json county field and geographic-clusters.json."
+}

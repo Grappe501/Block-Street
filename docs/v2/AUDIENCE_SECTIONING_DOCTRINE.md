@@ -52,6 +52,7 @@ Every field surface declares `audience` in Feature Discovery Registry.
 
 ## Related
 
+- [`QUIET_DAILY_LIFE_DOCTRINE.md`](./QUIET_DAILY_LIFE_DOCTRINE.md) — calm volunteer-facing experience; progressive disclosure by growth stage
 - [`FEATURE_DISCOVERY_REGISTRY.md`](./FEATURE_DISCOVERY_REGISTRY.md)
 - [`../v1-certification/PRODUCT_CERTIFICATION_REGISTRY.md`](../v1-certification/PRODUCT_CERTIFICATION_REGISTRY.md)
 - [`V2_A_OPERATOR_COMMAND.md`](./V2_A_OPERATOR_COMMAND.md)

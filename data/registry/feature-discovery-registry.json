@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updated": "2026-07-14T09:00:00.000Z",
+  "updated": "2026-07-16T06:38:00.000Z",
   "authority": "docs/v2/FEATURE_DISCOVERY_REGISTRY.md",
   "audienceHierarchy": [
     "participant",
@@ -550,6 +550,110 @@
       "keywords": ["v2-b", "postgres", "dual-write", "readiness"],
       "dependsOn": ["FEAT-PERSISTENCE-STATUS"],
       "owner": "architect"
+    },
+    {
+      "id": "FEAT-QDL-PROGRAM",
+      "title": "Quiet Daily Life Program",
+      "audience": "participant",
+      "journey": [],
+      "product": "QDL",
+      "phase": "QDL-1.0",
+      "certification": "documented",
+      "nav": "docs/v2/QUIET_DAILY_LIFE_DOCTRINE.md",
+      "keywords": ["quiet", "daily", "home", "calm", "personal"],
+      "dependsOn": [],
+      "owner": "operator"
+    },
+    {
+      "id": "FEAT-QDL-MY-HOME",
+      "title": "My Home — Today · Community · Coming Up · People · Explore",
+      "audience": "participant",
+      "journey": ["V1-JRN-ONBOARDING-01"],
+      "product": "QDL",
+      "phase": "QDL-W2",
+      "certification": "not_started",
+      "nav": "/home (planned)",
+      "keywords": ["today", "community", "explore", "dashboard"],
+      "dependsOn": ["FEAT-QDL-PROGRAM", "FEAT-LAUNCH-PLACE"],
+      "owner": "operator"
+    },
+    {
+      "id": "FEAT-QDL-AVAILABILITY",
+      "title": "Personal Availability Calendar",
+      "audience": "participant",
+      "journey": [],
+      "product": "QDL",
+      "phase": "QDL-W2",
+      "certification": "not_started",
+      "nav": "personal board (planned)",
+      "keywords": ["availability", "calendar", "schedule"],
+      "dependsOn": ["FEAT-QDL-MY-HOME"],
+      "owner": "operator"
+    },
+    {
+      "id": "FEAT-QDL-PERSON-BOARD",
+      "title": "Manager Person Board",
+      "audience": "field_lead",
+      "journey": [],
+      "product": "QDL",
+      "phase": "QDL-W2",
+      "certification": "not_started",
+      "nav": "leader inspect (planned)",
+      "keywords": ["person", "availability", "interests", "committee"],
+      "dependsOn": ["FEAT-QDL-AVAILABILITY"],
+      "owner": "operator"
+    },
+    {
+      "id": "FEAT-QDL-COMMUNITY-BOARD",
+      "title": "Open Community Board",
+      "audience": "participant",
+      "journey": [],
+      "product": "QDL",
+      "phase": "QDL-W3",
+      "certification": "not_started",
+      "nav": "scoped boards (planned)",
+      "keywords": ["board", "ideas", "mentions", "open"],
+      "dependsOn": ["FEAT-QDL-MY-HOME"],
+      "owner": "operator"
+    },
+    {
+      "id": "FEAT-QDL-CONNECTIONS",
+      "title": "Friends and Trusted Connections",
+      "audience": "participant",
+      "journey": ["V1-JRN-SHARE-01"],
+      "product": "QDL",
+      "phase": "QDL-W4",
+      "certification": "not_started",
+      "nav": "people (planned)",
+      "keywords": ["friends", "connections", "trust"],
+      "dependsOn": ["FEAT-NETWORK-BOARD"],
+      "owner": "operator"
+    },
+    {
+      "id": "FEAT-QDL-COUNTY-BRIDGE",
+      "title": "County Workbench Bridge",
+      "audience": "field_lead",
+      "journey": [],
+      "product": "QDL",
+      "phase": "QDL-W5",
+      "certification": "not_started",
+      "nav": "county workbench (planned)",
+      "keywords": ["county", "reddirt", "workbench"],
+      "dependsOn": ["FEAT-QDL-PROGRAM"],
+      "owner": "operator"
+    },
+    {
+      "id": "FEAT-QDL-LEARN-HOW",
+      "title": "Learn How — Embedded Training",
+      "audience": "participant",
+      "journey": [],
+      "product": "QDL",
+      "phase": "QDL-W7",
+      "certification": "not_started",
+      "nav": "contextual drawers (planned)",
+      "keywords": ["training", "learn", "help"],
+      "dependsOn": ["FEAT-QDL-MY-HOME"],
+      "owner": "operator"
     }
   ]
 }

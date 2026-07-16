@@ -87,8 +87,8 @@ export default function NetworkBoardPage() {
       <div className="mt-8 rounded-xl border border-slate-200 bg-white p-5">
         <h2 className="text-sm font-bold uppercase tracking-wide text-slate-700">Share your board</h2>
         <p className="mt-2 text-sm text-slate-600">
-          This link shows your board and remembers you referred them. Soft beta still needs a real invitation before someone
-          can create an account — send them an invite from a host when you have one, or ask Steve/hosts tonight.
+          This link shows your board and remembers you referred them. New members still need a personal invitation
+          before they can create an account — share your link, then help them get invited.
         </p>
         <p className="mt-3 break-all text-sm text-slate-600">{shareUrl}</p>
         <div className="mt-4 flex flex-wrap gap-2">
@@ -155,8 +155,8 @@ export default function NetworkBoardPage() {
           </Link>
         ) : (
           <p className="text-center text-xs text-slate-500">
-            Account invites are issued by meeting hosts in soft beta. Your share link helps people find you — it is not an
-            account invite by itself.
+            Account invitations come from meeting hosts. Your share link helps people find you — it is not an account
+            invitation by itself.
           </p>
         )}
       </div>

@@ -13,7 +13,6 @@ function navFor(stage: "guest" | "choose" | "member" | "admin"): NavItem[] {
     return [
       { href: "/join", label: "Join", primary: true },
       { href: "/login", label: "Sign in" },
-      { href: "/presentations/college", label: "College" },
       { href: "/feedback", label: "Feedback" },
     ];
   }
@@ -22,18 +21,18 @@ function navFor(stage: "guest" | "choose" | "member" | "admin"): NavItem[] {
   }
   if (stage === "admin") {
     return [
-      { href: "/network", label: "Network", primary: true },
-      { href: "/field-strategy", label: "Field Manual" },
-      { href: "/presentations/college", label: "College" },
+      { href: "/home", label: "Home", primary: true },
+      { href: "/calendar", label: "Calendar" },
+      { href: "/network", label: "My people" },
       { href: "/start", label: "Invite" },
-      { href: "/july-14", label: "Tonight" },
+      { href: "/admin", label: "Director" },
       { href: "/feedback", label: "Feedback" },
     ];
   }
   return [
-    { href: "/network", label: "Network", primary: true },
-    { href: "/july-14", label: "Tonight" },
-    { href: "/presentations/college", label: "College" },
+    { href: "/home", label: "Home", primary: true },
+    { href: "/calendar", label: "Calendar" },
+    { href: "/network", label: "My people" },
     { href: "/feedback", label: "Feedback" },
   ];
 }
@@ -83,7 +82,7 @@ export function LaunchHeader() {
   return (
     <header className="border-b border-slate-200 bg-white">
       <div className="mx-auto flex max-w-3xl items-center justify-between gap-3 px-4 py-3 pr-36 sm:pr-48">
-        <Link href={stage === "guest" ? "/" : "/app"} className="flex items-center gap-2">
+        <Link href={stage === "guest" ? "/" : "/home"} className="flex items-center gap-2">
           <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-brand-600 text-xs font-bold text-white">
             {PLATFORM.workingName.slice(0, 2)}
           </span>

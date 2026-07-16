@@ -1,0 +1,104 @@
+{
+  "version": "1.0.0",
+  "programId": "BLOCK-STREET-QUIET-DAILY-LIFE-1.0",
+  "docPath": "docs/v2/QUIET_DAILY_LIFE_DOCTRINE.md",
+  "requirementPrefix": "QDL",
+  "status": "canonical",
+  "accepted": "2026-07-16",
+  "governingPrinciple": "The system may be complex underneath, but it must feel calm, personal, and almost obvious to the person using it.",
+  "atmosphere": [
+    "quiet",
+    "personal",
+    "useful",
+    "local",
+    "welcoming",
+    "unhurried",
+    "easy_to_understand",
+    "alive_without_noise"
+  ],
+  "psychologicalNeeds": [
+    "autonomy",
+    "competence",
+    "relatedness"
+  ],
+  "myHomeElements": [
+    "today",
+    "my_community",
+    "whats_coming_up",
+    "my_people",
+    "explore"
+  ],
+  "growthStages": [
+    "new_arrival",
+    "connected_member",
+    "active_volunteer",
+    "leader",
+    "senior_leadership"
+  ],
+  "mobilePrimaryNav": [
+    "today",
+    "community",
+    "calendar",
+    "people",
+    "me"
+  ],
+  "forbiddenVolunteerLanguage": [
+    "scope resolver",
+    "mutation coverage",
+    "shadow parity",
+    "CPOS doctrine",
+    "build stage",
+    "Postgres authority",
+    "certification terminology",
+    "route names",
+    "phase numbers"
+  ],
+  "waves": [
+    {
+      "id": "QDL-W1",
+      "title": "Interface simplification audit",
+      "status": "complete",
+      "completedAt": "2026-07-16T06:53:45.082Z"
+    },
+    {
+      "id": "QDL-W2",
+      "title": "Personal home evolution",
+      "status": "not_started"
+    },
+    {
+      "id": "QDL-W3",
+      "title": "Open community board",
+      "status": "not_started"
+    },
+    {
+      "id": "QDL-W4",
+      "title": "Friends and trusted connections",
+      "status": "not_started"
+    },
+    {
+      "id": "QDL-W5",
+      "title": "County Workbench bridge",
+      "status": "not_started"
+    },
+    {
+      "id": "QDL-W6",
+      "title": "College/county reciprocal views",
+      "status": "not_started"
+    },
+    {
+      "id": "QDL-W7",
+      "title": "Embedded training",
+      "status": "not_started"
+    },
+    {
+      "id": "QDL-W8",
+      "title": "Daily-use certification",
+      "status": "not_started"
+    }
+  ],
+  "relatedRegistries": [
+    "data/registry/personal-headquarters.json",
+    "data/registry/feature-discovery-registry.json",
+    "data/volunteer-command/dashboard-config-registry.json"
+  ]
+}

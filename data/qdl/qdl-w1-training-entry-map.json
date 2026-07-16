@@ -1,0 +1,805 @@
+{
+  "auditedAt": "2026-07-16T06:53:45.082Z",
+  "entries": [
+    {
+      "route": "/choose-place",
+      "action": "choose_your_place",
+      "label": "Choose your place",
+      "quickGuideNeeded": false,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": null,
+      "existingMaterial": null
+    },
+    {
+      "route": "/county/[slug]/calendar",
+      "action": "explore",
+      "label": "County-local organizing hub",
+      "quickGuideNeeded": false,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": null,
+      "existingMaterial": null
+    },
+    {
+      "route": "/county/[slug]",
+      "action": "explore",
+      "label": "County-local organizing hub",
+      "quickGuideNeeded": false,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": null,
+      "existingMaterial": null
+    },
+    {
+      "route": "/home",
+      "action": "see_your_next_action",
+      "label": "See your next action",
+      "quickGuideNeeded": true,
+      "fullLessonKey": "workflow.my-home-daily-loop",
+      "certificationRequired": false,
+      "likelyConfusion": null,
+      "existingMaterial": null
+    },
+    {
+      "route": "/network",
+      "action": "copy_share_link",
+      "label": "Copy share link",
+      "quickGuideNeeded": false,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": "Technical or beta language on screen",
+      "existingMaterial": null
+    },
+    {
+      "route": "/notifications",
+      "action": "explore",
+      "label": "Supporting surface — see route path",
+      "quickGuideNeeded": false,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": null,
+      "existingMaterial": null
+    },
+    {
+      "route": "/calendar",
+      "action": "view_upcoming_events",
+      "label": "View upcoming events",
+      "quickGuideNeeded": false,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": null,
+      "existingMaterial": null
+    },
+    {
+      "route": "/college-command",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": null,
+      "existingMaterial": null
+    },
+    {
+      "route": "/communications/brief",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": "Technical or beta language on screen",
+      "existingMaterial": null
+    },
+    {
+      "route": "/communications/decisions/[id]",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": "Technical or beta language on screen",
+      "existingMaterial": null
+    },
+    {
+      "route": "/communications/documents/[id]",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": "Technical or beta language on screen",
+      "existingMaterial": null
+    },
+    {
+      "route": "/communications/knowledge",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": "Technical or beta language on screen",
+      "existingMaterial": null
+    },
+    {
+      "route": "/communications/launch",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": "Technical or beta language on screen",
+      "existingMaterial": null
+    },
+    {
+      "route": "/communications/meetings/[id]",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": "Technical or beta language on screen",
+      "existingMaterial": null
+    },
+    {
+      "route": "/communications/missions/[missionId]",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": "Technical or beta language on screen",
+      "existingMaterial": null
+    },
+    {
+      "route": "/communications/notifications",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": "Technical or beta language on screen",
+      "existingMaterial": null
+    },
+    {
+      "route": "/communications/optimization",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": "Technical or beta language on screen",
+      "existingMaterial": null
+    },
+    {
+      "route": "/communications/search",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": "Technical or beta language on screen",
+      "existingMaterial": null
+    },
+    {
+      "route": "/field-plan/depths",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": "Technical or beta language on screen",
+      "existingMaterial": null
+    },
+    {
+      "route": "/field-plan/kpis",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": "Technical or beta language on screen",
+      "existingMaterial": null
+    },
+    {
+      "route": "/field-plan/overview",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": "Technical or beta language on screen",
+      "existingMaterial": null
+    },
+    {
+      "route": "/field-plan",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": "Technical or beta language on screen",
+      "existingMaterial": null
+    },
+    {
+      "route": "/field-plan/positions",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": "Technical or beta language on screen",
+      "existingMaterial": null
+    },
+    {
+      "route": "/field-plan/responsibilities",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": "Technical or beta language on screen",
+      "existingMaterial": null
+    },
+    {
+      "route": "/field-plan/tasks",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": "Technical or beta language on screen",
+      "existingMaterial": null
+    },
+    {
+      "route": "/initiatives/launch",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": "Technical or beta language on screen",
+      "existingMaterial": null
+    },
+    {
+      "route": "/initiatives/new",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": "Technical or beta language on screen",
+      "existingMaterial": null
+    },
+    {
+      "route": "/initiatives/optimization",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": "Technical or beta language on screen",
+      "existingMaterial": null
+    },
+    {
+      "route": "/initiatives",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": "Technical or beta language on screen",
+      "existingMaterial": null
+    },
+    {
+      "route": "/initiatives/[id]/approvals",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": null,
+      "existingMaterial": null
+    },
+    {
+      "route": "/initiatives/[id]/charter",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": "Technical or beta language on screen",
+      "existingMaterial": null
+    },
+    {
+      "route": "/initiatives/[id]/closeout",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": null,
+      "existingMaterial": null
+    },
+    {
+      "route": "/initiatives/[id]/dependencies",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": null,
+      "existingMaterial": null
+    },
+    {
+      "route": "/initiatives/[id]/history",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": "Technical or beta language on screen",
+      "existingMaterial": null
+    },
+    {
+      "route": "/initiatives/[id]/intelligence",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": "Technical or beta language on screen",
+      "existingMaterial": null
+    },
+    {
+      "route": "/initiatives/[id]/manage",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": "Technical or beta language on screen",
+      "existingMaterial": null
+    },
+    {
+      "route": "/initiatives/[id]/objectives/new",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": "Technical or beta language on screen",
+      "existingMaterial": null
+    },
+    {
+      "route": "/initiatives/[id]/objectives",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": "Technical or beta language on screen",
+      "existingMaterial": null
+    },
+    {
+      "route": "/initiatives/[id]/objectives/[objectiveId]/evidence",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": null,
+      "existingMaterial": null
+    },
+    {
+      "route": "/initiatives/[id]/objectives/[objectiveId]/history",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": null,
+      "existingMaterial": null
+    },
+    {
+      "route": "/initiatives/[id]/objectives/[objectiveId]/intelligence",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": null,
+      "existingMaterial": null
+    },
+    {
+      "route": "/initiatives/[id]/objectives/[objectiveId]/missions/[missionId]",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": "Technical or beta language on screen",
+      "existingMaterial": null
+    },
+    {
+      "route": "/initiatives/[id]/objectives/[objectiveId]/optimization",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": null,
+      "existingMaterial": null
+    },
+    {
+      "route": "/initiatives/[id]/objectives/[objectiveId]/outcomes",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": null,
+      "existingMaterial": null
+    },
+    {
+      "route": "/initiatives/[id]/objectives/[objectiveId]",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": "Technical or beta language on screen",
+      "existingMaterial": null
+    },
+    {
+      "route": "/initiatives/[id]/objectives/[objectiveId]/progress",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": "Technical or beta language on screen",
+      "existingMaterial": null
+    },
+    {
+      "route": "/initiatives/[id]/objectives/[objectiveId]/reviews",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": null,
+      "existingMaterial": null
+    },
+    {
+      "route": "/initiatives/[id]/objectives/[objectiveId]/settings",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": null,
+      "existingMaterial": null
+    },
+    {
+      "route": "/initiatives/[id]/objectives/[objectiveId]/today",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": "Technical or beta language on screen",
+      "existingMaterial": null
+    },
+    {
+      "route": "/initiatives/[id]/objectives/[objectiveId]/workstreams",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": "Technical or beta language on screen",
+      "existingMaterial": null
+    },
+    {
+      "route": "/initiatives/[id]",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": "Technical or beta language on screen",
+      "existingMaterial": null
+    },
+    {
+      "route": "/initiatives/[id]/people",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": "Technical or beta language on screen",
+      "existingMaterial": null
+    },
+    {
+      "route": "/initiatives/[id]/readiness",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": "Technical or beta language on screen",
+      "existingMaterial": null
+    },
+    {
+      "route": "/initiatives/[id]/reviews",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": null,
+      "existingMaterial": null
+    },
+    {
+      "route": "/initiatives/[id]/settings",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": null,
+      "existingMaterial": null
+    },
+    {
+      "route": "/leader/[leadershipAssignmentId]",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": "Technical or beta language on screen",
+      "existingMaterial": null
+    },
+    {
+      "route": "/positions/college",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": "Technical or beta language on screen",
+      "existingMaterial": null
+    },
+    {
+      "route": "/positions/county",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": "Technical or beta language on screen",
+      "existingMaterial": null
+    },
+    {
+      "route": "/positions/functional",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": "Technical or beta language on screen",
+      "existingMaterial": null
+    },
+    {
+      "route": "/positions/open",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": "Technical or beta language on screen",
+      "existingMaterial": null
+    },
+    {
+      "route": "/positions",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": "Technical or beta language on screen",
+      "existingMaterial": null
+    },
+    {
+      "route": "/positions/[positionId]/field-plan",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": "Technical or beta language on screen",
+      "existingMaterial": null
+    },
+    {
+      "route": "/positions/[positionId]/first-24-hours",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": null,
+      "existingMaterial": null
+    },
+    {
+      "route": "/positions/[positionId]/first-30-days",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": null,
+      "existingMaterial": null
+    },
+    {
+      "route": "/positions/[positionId]/first-7-days",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": null,
+      "existingMaterial": null
+    },
+    {
+      "route": "/positions/[positionId]",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": "Technical or beta language on screen",
+      "existingMaterial": null
+    },
+    {
+      "route": "/positions/[positionId]/responsibilities",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": null,
+      "existingMaterial": null
+    },
+    {
+      "route": "/positions/[positionId]/team",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": "Technical or beta language on screen",
+      "existingMaterial": null
+    },
+    {
+      "route": "/power-of-5/follow-up",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": "Technical or beta language on screen",
+      "existingMaterial": null
+    },
+    {
+      "route": "/power-of-5/invite",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": "Technical or beta language on screen",
+      "existingMaterial": null
+    },
+    {
+      "route": "/power-of-5/my-team",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": null,
+      "existingMaterial": null
+    },
+    {
+      "route": "/power-of-5",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": "Technical or beta language on screen",
+      "existingMaterial": null
+    },
+    {
+      "route": "/power-of-5/recruiting-guide",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": null,
+      "existingMaterial": null
+    },
+    {
+      "route": "/power-of-5/start",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": "Technical or beta language on screen",
+      "existingMaterial": null
+    },
+    {
+      "route": "/recruit/college",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": "Technical or beta language on screen",
+      "existingMaterial": null
+    },
+    {
+      "route": "/recruit/conversation",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": "Technical or beta language on screen",
+      "existingMaterial": null
+    },
+    {
+      "route": "/recruit/follow-up",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": "Technical or beta language on screen",
+      "existingMaterial": null
+    },
+    {
+      "route": "/recruit",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": "Technical or beta language on screen",
+      "existingMaterial": null
+    },
+    {
+      "route": "/recruit/power-of-5",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": "Technical or beta language on screen",
+      "existingMaterial": null
+    },
+    {
+      "route": "/recruit/text",
+      "action": "explore",
+      "label": "Leadership operations and staffing",
+      "quickGuideNeeded": true,
+      "fullLessonKey": null,
+      "certificationRequired": false,
+      "likelyConfusion": "Technical or beta language on screen",
+      "existingMaterial": null
+    }
+  ]
+}

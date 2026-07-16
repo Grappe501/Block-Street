@@ -11,6 +11,7 @@ export function PersonalHomeShell() {
   const panel = searchParams.get("panel");
   const [home, setHome] = useState<PersonalHome | null>(null);
   const [error, setError] = useState("");
+  const [showLeadershipLinks, setShowLeadershipLinks] = useState(false);
 
   useEffect(() => {
     (async () => {
@@ -19,6 +20,11 @@ export function PersonalHomeShell() {
         router.replace("/login?next=/home");
         return;
       }
+      const sessionData = await session.json();
+      const email = sessionData.profile?.primary_email as string | undefined;
+      const isOperator =
+        email === "grappe4arkansas@gmail.com" || email === "director@block-street.local";
+      setShowLeadershipLinks(isOperator);
       const res = await fetch("/api/home");
       const data = await res.json();
       if (!res.ok) {
@@ -47,7 +53,7 @@ export function PersonalHomeShell() {
         <p className="text-sm font-semibold uppercase tracking-wide text-brand-700">Your home</p>
         <h1 className="mt-1 text-3xl font-bold text-slate-900">Welcome, {home.welcome_name}</h1>
         <p className="mt-2 text-sm text-slate-600">
-          Real names only — this is a transparent system built for in-person organizing.
+          Your organizing home — what is happening, what you can do next, and who is nearby.
         </p>
       </header>
 
@@ -81,7 +87,7 @@ export function PersonalHomeShell() {
             <li>From home, in person, or both?</li>
             <li>How much time would you realistically like to give?</li>
           </ul>
-          <p className="mt-3 text-xs text-slate-500">Full onboarding form ships in Wave 2.</p>
+          <p className="mt-3 text-xs text-slate-500">More questions will appear here as you get settled in.</p>
         </section>
       )}
 
@@ -102,9 +108,11 @@ export function PersonalHomeShell() {
       </section>
 
       <footer className="mt-8 flex flex-wrap gap-3 text-sm">
-        <Link href={home.links.network} className="text-brand-700 underline">My network</Link>
+        <Link href={home.links.network} className="text-brand-700 underline">My people</Link>
         <Link href={home.links.calendar} className="text-brand-700 underline">Calendar</Link>
-        <Link href="/command/outreach" className="text-brand-700 underline">Outreach (leaders)</Link>
+        {showLeadershipLinks && (
+          <Link href="/command/outreach" className="text-brand-700 underline">Outreach</Link>
+        )}
       </footer>
     </div>
   );

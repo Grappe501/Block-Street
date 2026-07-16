@@ -1,0 +1,38 @@
+---
+description: Quiet Daily Life — calm, personal volunteer-facing UI doctrine
+globs: src/app/(site)/**/*,src/components/**/*,src/app/**/leader/**/*
+alwaysApply: false
+---
+
+# Quiet Daily Life UI [QDL-*]
+
+Canon: `docs/v2/QUIET_DAILY_LIFE_DOCTRINE.md`
+
+## Governing principle
+
+The system may be complex underneath; volunteer surfaces must feel **calm, personal, and obvious**.
+
+## Before changing volunteer-facing UI
+
+1. **One primary action** per viewport — no competing CTAs.
+2. **Plain language** — never show: scope resolver, mutation coverage, shadow parity, CPOS, build phase, Postgres/authority jargon.
+3. **Progressive disclosure** — title + one line + status + next action; details behind "View details".
+4. **Audience band** — match [Audience Sectioning](docs/v2/AUDIENCE_SECTIONING_DOCTRINE.md); no upward leakage of Operator/Architect chrome.
+5. **No empty modules** — hide unused nav; use helpful empty states.
+6. **Mobile first** for Today · Community · Calendar · People · Me.
+
+## Copy examples
+
+| Avoid | Use |
+|-------|-----|
+| Operational readiness dimension | Your next meeting |
+| Postgres authority shadow mode | Some changes may take longer to appear |
+| User dashboard | My home / organizing home |
+
+## Training
+
+Use one label: **Learn how** — drawer with what / three steps / why / full lesson.
+
+## Manager person view
+
+When leaders click a user, show: work, interests, **availability calendar**, locations, committee work — not engineering or certification internals.

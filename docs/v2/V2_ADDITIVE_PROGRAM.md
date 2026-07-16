@@ -45,6 +45,25 @@ Forensic brief + modular plan (post V2-B.5):
 - [`FIELD_PLAN_DEPTH_LAYERS.md`](./FIELD_PLAN_DEPTH_LAYERS.md) — L2/L3/L4 = three depths still needed
 - Twin: `data/v2/ernie-steve-build-plan.json`
 
+## QDL-1.0 — Quiet Daily Life (next human-facing program)
+
+**Accepted:** 2026-07-16 · **Canon:** [`QUIET_DAILY_LIFE_DOCTRINE.md`](./QUIET_DAILY_LIFE_DOCTRINE.md)
+
+Shifts emphasis from security architecture to **calm, personal, daily-use** volunteer experience once authority coverage is sufficient. Additive only — no destructive rebuild.
+
+| Wave | Focus |
+|------|-------|
+| W1 | Interface simplification audit |
+| W2 | Personal home (Today · Community · Coming Up · People · Explore) |
+| W3 | Open community board |
+| W4 | Friends and trusted connections |
+| W5 | County Workbench bridge (read-only first) |
+| W6 | College ↔ county reciprocal views |
+| W7 | Embedded training (Learn how) |
+| W8 | Daily-use certification |
+
+**Constraint:** QDL waves may proceed in parallel with V2-A/B where they reduce noise on existing paths. Public availability expansion still requires `V1-JRN-INVITE-CHAIN-01` CERTIFIED PRESENT.
+
 ## Closeout
 
 Every lane shipment follows `.cursor/rules/netlify-deploy-closeout.mdc`: validate → commit → `git push origin HEAD`.

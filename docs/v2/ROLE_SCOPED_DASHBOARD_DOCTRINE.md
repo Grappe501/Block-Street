@@ -1,6 +1,7 @@
 # Role-Scoped Dashboard Doctrine
 
-**Accepted:** V2-A.3
+**Accepted:** V2-A.3  
+**Experience canon:** [Quiet Daily Life Doctrine](./QUIET_DAILY_LIFE_DOCTRINE.md) — calm surfaces; manager person board ([QDL-007](./QUIET_DAILY_LIFE_DOCTRINE.md#qdl-007--manager-people-board))
 
 > What does this person need to know and do because of the position they hold?
 
