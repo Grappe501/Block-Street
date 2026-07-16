@@ -1,9 +1,11 @@
 import { listConflictItems, listConflictRecords } from "./store";
+import { validateConflictResolutionTransitions } from "./resolve-status";
 import { validateConflictTransitions } from "./status";
 
 export function validateConflictStore(): string[] {
   const errors: string[] = [];
   errors.push(...validateConflictTransitions());
+  errors.push(...validateConflictResolutionTransitions());
   const recordIds = new Set<string>();
   for (const r of listConflictRecords()) {
     if (recordIds.has(r.conflictId)) errors.push(`duplicate record ${r.conflictId}`);

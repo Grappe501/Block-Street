@@ -1,0 +1,13 @@
+[
+  {
+    "eventId": "evt-kelly-campus-hold-asu",
+    "expectTravelBuffer": true,
+    "pairedEventId": "evt-henderson-vr-drive"
+  },
+  {
+    "eventId": "evt-ops-committee-review",
+    "overlapWith": "evt-college-command-kickoff",
+    "sharedHuman": "usr-demo-001",
+    "expectResourceOverlap": true
+  }
+]

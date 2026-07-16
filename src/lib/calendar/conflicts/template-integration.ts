@@ -1,6 +1,8 @@
 import type { CalendarEvent } from "../types";
 import { SEED_CONFLICTS } from "../seed";
 import { allCanonicalEvents } from "../events";
+import { detectVolunteerAssignmentConflicts } from "./assignment-bridge";
+import { detectKellyTravelBuffers, detectResourceOverlaps } from "./detect-phase2";
 import { detectScheduleOverlaps, inferConflictState } from "./detect";
 import { createConflictItem } from "./items";
 import { isConflictItemReady } from "./status";
@@ -57,6 +59,8 @@ function upsertRecord(input: {
   summary: string;
   severity: "low" | "medium" | "high";
   state?: import("../types").ConflictState;
+  humanIds?: string[];
+  resourceIds?: string[];
 }): CalendarConflictRecord {
   const now = new Date().toISOString();
   const existing = getConflictRecordById(input.conflictId);
@@ -75,6 +79,8 @@ function upsertRecord(input: {
     durableAuthority: false,
     createdAt: existing?.createdAt ?? now,
     updatedAt: now,
+    humanIds: input.humanIds,
+    resourceIds: input.resourceIds,
   };
   saveConflictRecord(record);
   for (const eventId of input.eventIds) {
@@ -135,6 +141,53 @@ export function ensureConflictsFromEvents(events: CalendarEvent[] = allCanonical
           kind: overlap.kind,
           summary: overlap.summary,
           severity: overlap.severity,
+        }),
+      );
+    }
+  }
+
+  for (const [idx, overlap] of detectResourceOverlaps(events).entries()) {
+    const conflictId = `conf-resource-${overlap.eventIds.sort().join("-")}-${idx}`;
+    if (!getConflictRecordById(conflictId)) {
+      created.push(
+        upsertRecord({
+          conflictId,
+          eventIds: overlap.eventIds,
+          kind: "resource_overlap",
+          summary: overlap.summary,
+          severity: overlap.severity,
+          humanIds: overlap.humanIds,
+        }),
+      );
+    }
+  }
+
+  for (const [idx, buffer] of detectKellyTravelBuffers(events).entries()) {
+    const conflictId = `conf-travel-${buffer.eventIds.sort().join("-")}-${idx}`;
+    if (!getConflictRecordById(conflictId)) {
+      created.push(
+        upsertRecord({
+          conflictId,
+          eventIds: buffer.eventIds,
+          kind: "kelly_travel",
+          summary: buffer.summary,
+          severity: buffer.severity,
+        }),
+      );
+    }
+  }
+
+  for (const [idx, assignment] of detectVolunteerAssignmentConflicts().entries()) {
+    const conflictId = `conf-assignment-${assignment.eventIds.sort().join("-")}-${assignment.humanIds[0]}-${idx}`;
+    if (!getConflictRecordById(conflictId)) {
+      created.push(
+        upsertRecord({
+          conflictId,
+          eventIds: assignment.eventIds,
+          kind: "resource_overlap",
+          summary: assignment.summary,
+          severity: assignment.severity,
+          humanIds: assignment.humanIds,
         }),
       );
     }

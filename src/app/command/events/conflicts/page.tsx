@@ -8,6 +8,9 @@ import {
   listAllConflictRecords,
   listCandidateConflicts,
   listOverrideCandidates,
+  listResolvedConflicts,
+  listResourceOverlapConflicts,
+  listTravelBufferConflicts,
   listUnresolvedConflicts,
   SEED_EVENTS,
 } from "@/lib/calendar";
@@ -21,6 +24,9 @@ export default function CommandEventsConflictsPage() {
   const unresolved = listUnresolvedConflicts();
   const candidates = listCandidateConflicts();
   const overrides = listOverrideCandidates();
+  const resolved = listResolvedConflicts();
+  const travelBuffers = listTravelBufferConflicts();
+  const resourceOverlaps = listResourceOverlapConflicts();
 
   return (
     <CommandChrome
@@ -42,6 +48,15 @@ export default function CommandEventsConflictsPage() {
           </Link>
           <Link href="/command/events/conflicts/overrides" className="rounded-lg border bg-white p-3 underline">
             Override candidates ({overrides.length})
+          </Link>
+          <Link href="/command/events/conflicts/travel-buffers" className="rounded-lg border bg-white p-3 underline">
+            Travel buffers ({travelBuffers.length})
+          </Link>
+          <Link href="/command/events/conflicts/resource-overlaps" className="rounded-lg border bg-white p-3 underline">
+            Resource overlaps ({resourceOverlaps.length})
+          </Link>
+          <Link href="/command/events/conflicts/resolved" className="rounded-lg border bg-white p-3 underline">
+            Resolved ({resolved.length})
           </Link>
         </div>
       </CommandSection>

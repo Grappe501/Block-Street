@@ -6,4 +6,8 @@ export * from "./detect";
 export * from "./items";
 export * from "./checklist";
 export * from "./template-integration";
+export * from "./resolve-status";
+export * from "./resolve";
+export * from "./detect-phase2";
+export * from "./assignment-bridge";
 export * from "./validate";

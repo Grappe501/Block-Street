@@ -2,10 +2,10 @@ import type { CalendarConflictSummary } from "./types";
 import { isConflictItemReady } from "./status";
 import { getConflictRecordById, listConflictItems } from "./store";
 
-export function buildConflictSummary(conflictId: string): CalendarConflictSummary | null {
+export function buildConflictSummary(conflictId: string, eventId?: string): CalendarConflictSummary | null {
   const record = getConflictRecordById(conflictId);
   if (!record) return null;
-  const all = listConflictItems({ conflictId });
+  const all = listConflictItems({ conflictId, eventId });
   const count = (cat: import("./types").ConflictItemCategory) => {
     const subset = all.filter((i) => i.category === cat);
     return {
@@ -54,6 +54,6 @@ export function listEventConflictSummaries(eventId: string): CalendarConflictSum
   return listConflictItems({ eventId })
     .map((i) => i.conflictId)
     .filter((id, idx, arr) => arr.indexOf(id) === idx)
-    .map((id) => buildConflictSummary(id))
+    .map((id) => buildConflictSummary(id, eventId))
     .filter((s): s is CalendarConflictSummary => s !== null);
 }

@@ -2,12 +2,13 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CalendarChrome, CalendarHonestyBanner, CalendarSection } from "@/components/calendar/CalendarChrome";
 import { EventSubnav } from "@/components/calendar/CalendarNav";
-import { ConflictChecklistTable, ConflictSoftBetaNote } from "@/components/calendar/conflicts/ConflictPanels";
+import { ConflictChecklistTable, ConflictResolutionStatusPanel, ConflictSoftBetaNote } from "@/components/calendar/conflicts/ConflictPanels";
 import {
   buildConflictSummary,
   ensureConflictsForEvent,
   getConflictRecordById,
   getEventById,
+  isConflictRecordResolvable,
   listConflictRows,
 } from "@/lib/calendar";
 
@@ -37,6 +38,18 @@ export default async function EventConflictDetailPage({
       <CalendarHonestyBanner />
       <EventSubnav eventId={eventId} />
       <ConflictSoftBetaNote />
+      <CalendarSection title="Resolution status">
+        <ConflictResolutionStatusPanel record={record} />
+        {isConflictRecordResolvable(conflictId) && record.resolutionStatus === "open" && (
+          <p className="mt-2 font-fieldSans text-xs text-field-pine">Checklist complete — record eligible for resolve or override.</p>
+        )}
+        <Link
+          href={`/calendar/event/${eventId}/conflicts/${conflictId}/resolve`}
+          className="mt-2 inline-block font-fieldSans text-sm text-field-pine underline"
+        >
+          Resolution workflow
+        </Link>
+      </CalendarSection>
       <CalendarSection title="Conflict record">
         <p className="font-fieldSans text-sm text-field-ink/80">
           Kind: <strong>{record.kind.replace(/_/g, " ")}</strong> · Severity: <strong>{record.severity}</strong> ·

@@ -1,10 +1,10 @@
 import Link from "next/link";
-import type { CalendarConflictSummary } from "@/lib/calendar/conflicts/types";
+import type { CalendarConflictRecord, CalendarConflictSummary } from "@/lib/calendar/conflicts/types";
 
 export function ConflictSoftBetaNote() {
   return (
     <p className="rounded-md border border-amber-200 bg-amber-50 px-3 py-2 font-fieldSans text-xs text-amber-900">
-      Soft-beta conflict detection and resolution checklist. Records are session-local while Gate A is open — seed catalog plus overlap detection.
+      Soft-beta conflict detection and resolution. Records are session-local while Gate A is open — seed catalog, overlap detection, travel buffers, and volunteer assignment bridge.
     </p>
   );
 }
@@ -125,5 +125,27 @@ export function ConflictRecordList({
         </li>
       ))}
     </ul>
+  );
+}
+
+export function ConflictResolutionStatusPanel({ record }: { record: CalendarConflictRecord }) {
+  return (
+    <div className="rounded-lg border border-field-ink/15 bg-white px-4 py-3 font-fieldSans text-sm">
+      <p>
+        Resolution: <strong>{record.resolutionStatus.replace(/_/g, " ")}</strong> · State:{" "}
+        <strong>{record.state.replace(/_/g, " ")}</strong>
+      </p>
+      {record.humanIds && record.humanIds.length > 0 && (
+        <p className="mt-1 text-field-ink/60">Humans: {record.humanIds.join(", ")}</p>
+      )}
+      {record.resolvedAt && (
+        <p className="mt-1 text-xs text-field-ink/55">
+          Closed {record.resolvedAt}
+          {record.resolvedByUserId ? ` by ${record.resolvedByUserId}` : ""}
+        </p>
+      )}
+      {record.overrideReason && <p className="mt-1 text-xs text-amber-800">Override: {record.overrideReason}</p>}
+      {record.resolutionNote && <p className="mt-1 text-xs text-field-ink/60">{record.resolutionNote}</p>}
+    </div>
   );
 }

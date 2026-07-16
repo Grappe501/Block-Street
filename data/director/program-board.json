@@ -1,5 +1,6 @@
 {
-  "updated_at": "2026-07-16T03:00:00.000Z",
+  "updated_at": "2026-07-16T04:00:00.000Z",
+  "wave_5b_content_commit": null,
   "active_program": "CAL-P2 — Event Operations (Calendar Phase 2)",
   "production_commit": "4b763dd",
   "wave_5a_content_commit": "62f65e1",
@@ -11,12 +12,13 @@
   "rbac_mode": "audit_only",
   "enforcement_active": false,
   "working_toward": [
-    "CAL-P2 Wave 5B — TBD (post conflict engine)",
+    "CAL-P2 Wave 6A — Event notifications engine (per CAL-P1 migration plan)",
     "Gate B — postgres_primary with restricted writes (not started)",
     "Invite-chain CERTIFIED PRESENT — still a named launch blocker",
     "Field Plan L2–L4 depth — durability beyond static seed"
   ],
   "milestones_complete": [
+    "Event conflict resolution workflow and phase-2 detection (Wave 5B)",
     "Event conflict detection and resolution engine (Wave 5A)",
     "All 12 event readiness dimensions have runtime engines (Wave 4B)",
     "Event Operations command at /command/events",
@@ -38,13 +40,15 @@
     { "wave": "4A", "package": "event_lifecycle_engine", "status": "TESTED", "content_commit": "fcadd57" },
     { "wave": "4B", "package": "event_core_record_engine", "status": "TESTED", "content_commit": "b3709f6" },
     { "wave": "5A", "package": "event_conflict_engine", "status": "TESTED", "content_commit": "62f65e1" },
-    { "wave": "5B", "package": "event_conflict_engine_phase2 (planned)", "status": "NEXT", "content_commit": null }
+    { "wave": "5B", "package": "event_conflict_engine_phase2", "status": "TESTED", "content_commit": null },
+    { "wave": "6A", "package": "event_notifications_engine (planned)", "status": "NEXT", "content_commit": null }
   ],
   "key_routes": [
     { "label": "Event Operations Command", "href": "/command/events" },
     { "label": "Event lifecycle (command)", "href": "/command/events/lifecycle" },
     { "label": "Core records (command)", "href": "/command/events/core-records" },
     { "label": "Event conflicts (command)", "href": "/command/events/conflicts" },
+    { "label": "Travel buffer conflicts", "href": "/command/events/conflicts/travel-buffers" },
     { "label": "Candidate requests", "href": "/command/events/candidate-requests" },
     { "label": "Staffing command", "href": "/command/events/staffing" },
     { "label": "Calendar list", "href": "/calendar/list" },

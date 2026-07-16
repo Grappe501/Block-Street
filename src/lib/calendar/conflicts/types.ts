@@ -27,6 +27,12 @@ export type CalendarConflictRecord = {
   durableAuthority: boolean;
   createdAt: string;
   updatedAt: string;
+  humanIds?: string[];
+  resourceIds?: string[];
+  resolvedAt?: string | null;
+  resolvedByUserId?: string | null;
+  resolutionNote?: string | null;
+  overrideReason?: string | null;
 };
 
 export type CalendarConflictResolutionItem = {

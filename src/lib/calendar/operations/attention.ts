@@ -11,6 +11,7 @@ import { isFollowUpDue } from "../followup/template-integration";
 import { buildRsvpSummary, ensureRsvpFromEvent } from "../rsvp";
 import { buildVerificationSummary, ensureVerificationFromEvent } from "../verification";
 import { buildLifecycleSummary, ensureLifecycleFromEvent } from "../lifecycle";
+import { ensureConflictsForEvent, listEventConflictSummaries } from "../conflicts";
 import type { AttentionKey, EventAttentionSeverity, EventReadinessItem } from "./types";
 import { ATTENTION_KEYS } from "./types";
 
@@ -228,6 +229,16 @@ export function evaluateEventAttention(
       key: "unresolved_conflict",
       severity: event.conflict_state === "hard_conflict" ? "critical" : "needs_attention",
       reason: `Scheduling conflict: ${event.conflict_state.replace(/_/g, " ")}.`,
+    });
+  }
+
+  ensureConflictsForEvent(event);
+  const conflictSummaries = listEventConflictSummaries(event.event_id);
+  if (conflictSummaries.some((s) => s.incompleteRequired > 0 && s.resolutionStatus === "open")) {
+    signals.push({
+      key: "conflict_resolution_pending",
+      severity: "needs_attention",
+      reason: "Conflict resolution checklist items still open.",
     });
   }
 

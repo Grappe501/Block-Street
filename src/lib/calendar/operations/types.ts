@@ -131,6 +131,7 @@ export const ATTENTION_KEYS = [
   "overstaffed_shift",
   "invalid_shift_time",
   "unresolved_conflict",
+  "conflict_resolution_pending",
   "publication_not_ready",
   "missing_promotion",
   "missing_verification",

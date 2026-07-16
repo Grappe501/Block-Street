@@ -7,7 +7,7 @@
     "version": "1.0.0-launch",
     "currentPhase": 11,
     "currentPhaseName": "Living Intelligence & V1 Launch",
-    "currentDesignCycle": "CAL-P2 Wave 5A complete · Wave 5B next",
+    "currentDesignCycle": "CAL-P2 Wave 5B complete · Wave 6A next",
     "phase7Status": "complete",
     "phase8Status": "complete",
     "phase9Status": "complete",
@@ -21,7 +21,7 @@
     "launchCallDate": "2026-07-14",
     "leaderTestingDate": "2026-07-12",
     "phase11Status": "complete",
-    "activeProgram": "CAL-P2 Event Operations — Wave 5A complete, Wave 5B next",
+    "activeProgram": "CAL-P2 Event Operations — Wave 5B complete, Wave 6A next",
     "productionCommit": "f3066f6"
   },
   "constitutionalLayer": {

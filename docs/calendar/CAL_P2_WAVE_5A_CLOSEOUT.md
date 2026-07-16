@@ -20,4 +20,4 @@ Event conflict detection and resolution engine — seed catalog, schedule overla
 
 ## Next wave
 
-CAL-P2 Wave 5B (TBD)
+CAL-P2 Wave 6A (TBD)

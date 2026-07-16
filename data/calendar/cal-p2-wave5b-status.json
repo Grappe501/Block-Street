@@ -1,0 +1,40 @@
+{
+  "phase": "CAL-P2",
+  "wave": "5B",
+  "package": "event_conflict_engine_phase2",
+  "generated_at": "2026-07-16T04:00:00.000Z",
+  "baseline_commit": "62f65e1",
+  "content_commit": null,
+  "wave_5a_content_commit": "62f65e1",
+  "gate_a": "OPEN",
+  "persistence_mode": "session_soft_beta",
+  "rbac_mode": "audit_only",
+  "enforcement_active": false,
+  "record_resolution_workflow": "PASS",
+  "travel_buffer_detection": "PASS",
+  "resource_overlap_detection": "PASS",
+  "assignment_bridge": "PASS",
+  "attention_integration": "PASS",
+  "routes_created": [
+    "/calendar/event/:eventId/conflicts/:conflictId/resolve",
+    "/command/events/conflicts/resolved",
+    "/command/events/conflicts/travel-buffers",
+    "/command/events/conflicts/resource-overlaps"
+  ],
+  "tests": [
+    "calendar:conflicts:validate",
+    "test:calendar:conflicts-phase2-model",
+    "test:calendar:conflicts-phase2-readiness",
+    "test:calendar:wave5b",
+    "calendar:route-audit",
+    "test:calendar:cal-p2-sandbox"
+  ],
+  "known_limitations": [
+    "Record resolve/override remains session-local — durableAuthority=false while Gate A open",
+    "Volunteer assignment bridge reads in-memory assignment store only",
+    "RBAC audit_only — calendar.conflict.override not enforced in UI",
+    "No Postgres durability"
+  ],
+  "final_wave_5b_claim": "TESTED",
+  "next_wave": "CAL-P2 Wave 6A (TBD)"
+}
